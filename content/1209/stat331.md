@@ -70,6 +70,7 @@ The correlation satisfies \(-1 \leq r \leq 1\). Values of \(|r|\) near 1 indicat
 
 <div class="definition">
 <strong>Least Squares Criterion.</strong> The <strong>method of least squares</strong> estimates \(\beta_0\) and \(\beta_1\) by minimizing the sum of squared residuals:
+
 \[
 S(\beta_0, \beta_1) = \sum_{i=1}^n \bigl(y_i - (\beta_0 + \beta_1 x_i)\bigr)^2.
 \]
@@ -77,6 +78,7 @@ S(\beta_0, \beta_1) = \sum_{i=1}^n \bigl(y_i - (\beta_0 + \beta_1 x_i)\bigr)^2.
 
 <div class="theorem">
 <strong>Least Squares Estimators for SLR.</strong> The OLS estimators are
+
 \[
 \hat{\beta}_1 = \frac{S_{xy}}{S_{xx}} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2}, \qquad \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}.
 \]
@@ -88,6 +90,7 @@ Taking partial derivatives and setting them to zero:
 \[
 \frac{\partial S}{\partial \beta_0} = -2 \sum_{i=1}^n \bigl(y_i - \beta_0 - \beta_1 x_i\bigr) = 0 \quad \Longrightarrow \quad \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}.
 \]
+
 \[
 \frac{\partial S}{\partial \beta_1} = -2 \sum_{i=1}^n x_i \bigl(y_i - \beta_0 - \beta_1 x_i\bigr) = 0.
 \]
@@ -142,6 +145,7 @@ Since \(\hat{\beta}_1\) is a linear combination of the normally distributed \(Y_
 
 <div class="theorem">
 <strong>Distribution of the LS Estimators.</strong>
+
 \[
 \hat{\beta}_1 \sim \mathcal{N}\!\left(\beta_1, \frac{\sigma^2}{S_{xx}}\right), \qquad \hat{\beta}_0 \sim \mathcal{N}\!\left(\beta_0, \sigma^2\!\left(\frac{1}{n} + \frac{\bar{x}^2}{S_{xx}}\right)\right).
 \]
@@ -346,6 +350,7 @@ Important properties of the MVN:
 
 <div class="theorem">
 <strong>Least Squares Estimator for MLR.</strong> Assuming \(X^\top X\) is invertible (i.e., \(\operatorname{rank}(X) = p + 1\)),
+
 \[
 \hat{\boldsymbol{\beta}} = (X^\top X)^{-1} X^\top \boldsymbol{y}.
 \]
@@ -407,6 +412,7 @@ Moreover, \(\hat{\boldsymbol{\beta}}\) and \(\boldsymbol{e}\) are independent, w
 
 <div class="theorem">
 <strong>Distribution of \(\hat{\boldsymbol{\beta}}\).</strong> Under the normal linear model,
+
 \[
 \hat{\boldsymbol{\beta}} \sim \text{MVN}\!\left(\boldsymbol{\beta}, \; \sigma^2 (X^\top X)^{-1}\right).
 \]
@@ -424,6 +430,7 @@ Since \(\hat{\boldsymbol{\beta}} = (X^\top X)^{-1}X^\top \boldsymbol{Y}\) is a l
 \[
 \mathbb{E}[\hat{\boldsymbol{\beta}}] = (X^\top X)^{-1}X^\top \mathbb{E}[\boldsymbol{Y}] = (X^\top X)^{-1}X^\top X\boldsymbol{\beta} = \boldsymbol{\beta}.
 \]
+
 \[
 \operatorname{Var}(\hat{\boldsymbol{\beta}}) = (X^\top X)^{-1}X^\top (\sigma^2 I) \bigl[(X^\top X)^{-1}X^\top\bigr]^\top = \sigma^2(X^\top X)^{-1}.
 \]
@@ -529,6 +536,7 @@ Individual confidence intervals for \(\beta_j\) do not account for the joint dis
 
 <div class="theorem">
 <strong>Theorem (confidence ellipsoid).</strong> Under the normal linear model, a \(100(1-\alpha)\%\) confidence region for \(\boldsymbol{\beta}\) is the set of all \(\boldsymbol{b}\) satisfying
+
 \[
 \frac{(\hat{\boldsymbol{\beta}} - \boldsymbol{b})^\top (X^\top X)(\hat{\boldsymbol{\beta}} - \boldsymbol{b})}{(p+1)\hat\sigma^2} \leq F_{1-\alpha,\, p+1,\, n-p-1}.
 \]
@@ -546,6 +554,7 @@ A **joint confidence region** for a subvector \(({\beta}_j, \beta_k)\) is obtain
 
 <div class="example">
 <strong>House price regression.</strong> Model house selling price (\(Y\), in \$1000s) from floor area (\(x_1\), in m\(^2\)) and number of bathrooms (\(x_2\)). For \(n = 25\) houses, OLS yields \(\hat{\boldsymbol\beta} = (-18.4, 1.72, 22.3)^\top\) with \(\hat\sigma = 34.5\) on 22 degrees of freedom. The design matrix \(X\) satisfies
+
 \[
 (X^\top X)^{-1} = \begin{bmatrix} 0.81 & -0.0043 & -0.21 \\ -0.0043 & 0.000012 & 0.00061 \\ -0.21 & 0.00061 & 0.093 \end{bmatrix}.
 \]
@@ -569,6 +578,7 @@ When an explanatory variable is categorical with \(k\) levels, we encode it usin
 
 <div class="example">
 <strong>Promotion Study.</strong> Suppose 30 stores are assigned to one of three promotion types (promo1, promo2, control). We define
+
 \[
 x_{i1} = \begin{cases} 1 & \text{if store } i \text{ uses promo1} \\ 0 & \text{otherwise} \end{cases}, \qquad
 x_{i2} = \begin{cases} 1 & \text{if store } i \text{ uses promo2} \\ 0 & \text{otherwise} \end{cases}.
@@ -661,6 +671,7 @@ The numerator, \(\text{SS(Reg, Full)} - \text{SS(Reg, Reduced)}\), is the **extr
 
 <div class="example">
 <strong>Coffee Example.</strong> A model for coffee quality rating uses acidity (\(x_1\)), and two indicator variables for processing method: semi (\(x_2\)) and wet (\(x_3\)), with dry as reference. The full model is
+
 \[
 Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3} + \varepsilon_i.
 \]
@@ -809,12 +820,14 @@ Outlier detection should be followed by investigation, not automatic deletion. O
 Cook's distance measures global influence. Two related per-observation diagnostics provide more focused information:
 
 - **DFFITS\(_i\)**: the standardized change in the fitted value at observation \(i\) when it is deleted:
+
 \[
 \text{DFFITS}_i = \frac{\hat{y}_i - \hat{y}_{i(-i)}}{\hat\sigma_{(-i)}\sqrt{h_{ii}}} = r_{i(-i)}\sqrt{\frac{h_{ii}}{1 - h_{ii}}}.
 \]
 A rule of thumb flags \(|\text{DFFITS}_i| > 2\sqrt{(p+1)/n}\).
 
 - **DFBETAS\(_{ij}\)**: the standardized change in the \(j\)-th coefficient when observation \(i\) is deleted:
+
 \[
 \text{DFBETAS}_{ij} = \frac{\hat\beta_j - \hat\beta_{j(-i)}}{\hat\sigma_{(-i)}\sqrt{[(X^\top X)^{-1}]_{jj}}}.
 \]

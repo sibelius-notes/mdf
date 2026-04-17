@@ -87,6 +87,7 @@ The elegant coordinate-free definition identifies tangent vectors with **derivat
 
 <div class="definition">
 <strong>Tangent vector as derivation.</strong> A tangent vector at \(p \in M\) is an \(\mathbb{R}\)-linear map \(v: C^\infty(M) \to \mathbb{R}\) satisfying the Leibniz rule:
+
 \[
 v(fg) = f(p)\,v(g) + g(p)\,v(f).
 \]
@@ -325,6 +326,7 @@ This is independent of the parameterization (up to sign), confirming that the in
 
 <div class="theorem">
 <strong>Generalized Stokes' Theorem.</strong> Let \(M\) be a compact oriented \(n\)-manifold with boundary \(\partial M\), and let \(\omega\) be a smooth \((n-1)\)-form on \(M\). Then
+
 \[
 \int_M d\omega = \int_{\partial M} \omega.
 \]
@@ -415,7 +417,7 @@ Given a Hamiltonian \(H(q,p)\), Hamilton's equations are determined by
 \iota_{X_H} \omega = -dH,
 \]
 
-which yields the familiar equations \(\dot{q}^i = \partial H/\partial p_i\) and \(\dot{p}_i = -\partial H/\partial q^i$.
+which yields the familiar equations \(\dot{q}^i = \partial H/\partial p_i\) and \(\dot{p}_i = -\partial H/\partial q^i\).
 
 ### Poisson Brackets
 
@@ -570,6 +572,7 @@ The **Ricci tensor** \(R_{\mu\nu} = R^\lambda_{\ \mu\lambda\nu}\) and **Ricci sc
 
 <div class="theorem">
 <strong>Einstein's Field Equations.</strong>
+
 \[
 G_{\mu\nu} \equiv R_{\mu\nu} - \frac{1}{2} R\, g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu},
 \]

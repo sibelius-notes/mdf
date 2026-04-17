@@ -143,12 +143,15 @@ A formula with no free variables is called a <strong>sentence</strong>. A formul
 </ol>
 
 <strong>Free variables:</strong> Compute inductively.
+
 \[
 \mathrm{free}(x < y) = \{x, y\}.
 \]
+
 \[
 \mathrm{free}(\exists y\,(x < y)) = \{x,y\} \setminus \{y\} = \{x\}.
 \]
+
 \[
 \mathrm{free}(\forall x\, \exists y\,(x < y)) = \{x\} \setminus \{x\} = \emptyset.
 \]
@@ -184,6 +187,7 @@ A <strong>\( \sigma \)-structure</strong> \( \mathfrak{A} \) (or <strong>model</
 
 <div class="example">
 <strong>Worked Example 1.2 (The structure \( \mathfrak{N} \) and truth value computations).</strong> Define the structure
+
 \[
 \mathfrak{N} = (\mathbb{N},\, 0^{\mathfrak{N}},\, S^{\mathfrak{N}},\, +^{\mathfrak{N}},\, \cdot^{\mathfrak{N}})
 \]
@@ -234,7 +238,10 @@ The <strong>coincidence lemma</strong>: the truth value of \( \mathfrak{A} \mode
 
 <div class="theorem">
 <strong>(Coincidence Lemma)</strong> If \( \alpha \) and \( \beta \) are assignments that agree on all free variables of \( \varphi \), then
-\[ \mathfrak{A} \models \varphi[\alpha] \iff \mathfrak{A} \models \varphi[\beta]. \]
+
+\[
+\mathfrak{A} \models \varphi[\alpha] \iff \mathfrak{A} \models \varphi[\beta].
+\]
 </div>
 
 <div class="proof">
@@ -277,13 +284,19 @@ Let \( \mathfrak{A}, \mathfrak{B} \) be \( \sigma \)-structures. A function \( h
 
 <div class="definition">
 A homomorphism \( h : \mathfrak{A} \to \mathfrak{B} \) is an <strong>embedding</strong> if it is injective and the condition for relations is strengthened to a biconditional:
-\[ (a_1,\ldots,a_n) \in R^{\mathfrak{A}} \iff (h(a_1),\ldots,h(a_n)) \in R^{\mathfrak{B}}. \]
+
+\[
+(a_1,\ldots,a_n) \in R^{\mathfrak{A}} \iff (h(a_1),\ldots,h(a_n)) \in R^{\mathfrak{B}}.
+\]
 An embedding is an <strong>isomorphism</strong> if it is additionally surjective. We write \( \mathfrak{A} \cong \mathfrak{B} \) if an isomorphism exists.
 </div>
 
 <div class="theorem">
 <strong>(Isomorphism Theorem)</strong> If \( h : \mathfrak{A} \to \mathfrak{B} \) is an isomorphism and \( \varphi(x_1,\ldots,x_n) \) is any formula, then for all \( a_1,\ldots,a_n \in A \):
-\[ \mathfrak{A} \models \varphi[a_1,\ldots,a_n] \iff \mathfrak{B} \models \varphi[h(a_1),\ldots,h(a_n)]. \]
+
+\[
+\mathfrak{A} \models \varphi[a_1,\ldots,a_n] \iff \mathfrak{B} \models \varphi[h(a_1),\ldots,h(a_n)].
+\]
 In particular, isomorphic structures satisfy the same sentences.
 </div>
 
@@ -301,7 +314,10 @@ Note: for a substructure, we need \( A \) to be closed under the functions of \(
 
 <div class="definition">
 \( \mathfrak{A} \) is an <strong>elementary substructure</strong> of \( \mathfrak{B} \) (written \( \mathfrak{A} \preccurlyeq \mathfrak{B} \)) if \( \mathfrak{A} \subseteq \mathfrak{B} \) and for every formula \( \varphi(x_1,\ldots,x_n) \) and every \( a_1,\ldots,a_n \in A \):
-\[ \mathfrak{A} \models \varphi[a_1,\ldots,a_n] \iff \mathfrak{B} \models \varphi[a_1,\ldots,a_n]. \]
+
+\[
+\mathfrak{A} \models \varphi[a_1,\ldots,a_n] \iff \mathfrak{B} \models \varphi[a_1,\ldots,a_n].
+\]
 </div>
 
 <div class="theorem">
@@ -327,24 +343,54 @@ There are several equivalent proof systems for first-order logic: Hilbert-style 
 Fix a signature \( \sigma \). The **logical axioms** of the Hilbert calculus \( \mathcal{H} \) include:
 
 **Propositional axioms:**
-\[ \varphi \to (\psi \to \varphi) \]
-\[ (\varphi \to (\psi \to \chi)) \to ((\varphi \to \psi) \to (\varphi \to \chi)) \]
-\[ (\lnot \psi \to \lnot \varphi) \to (\varphi \to \psi) \]
+
+\[
+\varphi \to (\psi \to \varphi)
+\]
+
+\[
+(\varphi \to (\psi \to \chi)) \to ((\varphi \to \psi) \to (\varphi \to \chi))
+\]
+
+\[
+(\lnot \psi \to \lnot \varphi) \to (\varphi \to \psi)
+\]
 
 **Quantifier axioms** (where \( t \) is free for \( x \) in \( \varphi \)):
-\[ \forall x\, \varphi \to \varphi[t/x] \]
-\[ \varphi[t/x] \to \exists x\, \varphi \]
+
+\[
+\forall x\, \varphi \to \varphi[t/x]
+\]
+
+\[
+\varphi[t/x] \to \exists x\, \varphi
+\]
 
 **Quantifier distribution:**
-\[ \forall x\, (\varphi \to \psi) \to (\forall x\, \varphi \to \forall x\, \psi) \]
-\[ \forall x\, (\varphi \to \psi) \to (\exists x\, \varphi \to \exists x\, \psi) \]
+
+\[
+\forall x\, (\varphi \to \psi) \to (\forall x\, \varphi \to \forall x\, \psi)
+\]
+
+\[
+\forall x\, (\varphi \to \psi) \to (\exists x\, \varphi \to \exists x\, \psi)
+\]
 
 **Vacuous quantification** (\( x \notin \mathrm{free}(\varphi) \)):
-\[ \varphi \to \forall x\, \varphi \]
+
+\[
+\varphi \to \forall x\, \varphi
+\]
 
 **Equality axioms:**
-\[ x \doteq x \]
-\[ x \doteq y \to (\varphi(x) \to \varphi(y)) \quad \text{(for atomic } \varphi \text{)} \]
+
+\[
+x \doteq x
+\]
+
+\[
+x \doteq y \to (\varphi(x) \to \varphi(y)) \quad \text{(for atomic } \varphi \text{)}
+\]
 
 The sole **rule of inference** is Modus Ponens: from \( \varphi \) and \( \varphi \to \psi \), derive \( \psi \). There are also the **generalization rule**: from \( \varphi \), derive \( \forall x\, \varphi \).
 
@@ -388,7 +434,10 @@ A cleaner route uses the contrapositive axiom \( (\lnot\psi \to \lnot\varphi) \t
 </ol>
 
 The third propositional axiom is \( (\lnot\psi \to \lnot\varphi) \to (\varphi \to \psi) \). Set \( \psi := \varphi \) and treat \( \varphi \) as \( \lnot\varphi \):
-\[ (\lnot\varphi \to \lnot\lnot\varphi) \to (\lnot\varphi \to \varphi). \]
+
+\[
+(\lnot\varphi \to \lnot\lnot\varphi) \to (\lnot\varphi \to \varphi).
+\]
 
 We also need \( \lnot\lnot\varphi \to (\lnot\varphi \to \lnot\lnot\varphi) \) — an instance of axiom 1 with \( \varphi := \lnot\lnot\varphi \) and \( \psi := \lnot\varphi \).
 
@@ -446,7 +495,10 @@ One of the most surprising and powerful results in all of mathematics is Gödel'
 
 <div class="theorem">
 <strong>(Gödel's Completeness Theorem, 1930)</strong> Let \( \sigma \) be a countable signature and \( \Phi \) a set of \( \sigma \)-sentences. For any sentence \( \varphi \):
-\[ \Phi \models \varphi \iff \Phi \vdash \varphi. \]
+
+\[
+\Phi \models \varphi \iff \Phi \vdash \varphi.
+\]
 Equivalently, every consistent set of sentences has a model.
 </div>
 
@@ -467,7 +519,10 @@ A maximally consistent set \( \Phi \) has the <strong>witness property</strong> 
 **Step 2: Add Henkin axioms.** Let \( \Phi' = \Phi \cup \{\exists x\, \varphi(x) \to \varphi(c_\varphi) : \varphi(x) \in \mathrm{For}(\sigma)\} \). One verifies that \( \Phi' \) is still consistent (adding a finitely many axioms at a time preserves consistency since inconsistency requires a finite derivation).
 
 **Step 3: Maximal extension (Lindenbaum's lemma).** Enumerate all \( \sigma' \)-sentences as \( \psi_0, \psi_1, \psi_2, \ldots \) (possible since \( \sigma' \) is countable). Define:
-\[ \Phi_0 = \Phi', \quad \Phi_{n+1} = \begin{cases} \Phi_n \cup \{\psi_n\} & \text{if this is consistent,} \\ \Phi_n \cup \{\lnot \psi_n\} & \text{otherwise.} \end{cases} \]
+
+\[
+\Phi_0 = \Phi', \quad \Phi_{n+1} = \begin{cases} \Phi_n \cup \{\psi_n\} & \text{if this is consistent,} \\ \Phi_n \cup \{\lnot \psi_n\} & \text{otherwise.} \end{cases}
+\]
 Set \( \Delta = \bigcup_{n} \Phi_n \). Then \( \Delta \) is maximally consistent and has the witness property.
 
 <div class="theorem">
@@ -484,7 +539,10 @@ From \( \Delta \) (maximally consistent with witness property), build the **cano
 
 <div class="theorem">
 <strong>(Truth Lemma)</strong> For every closed \( \sigma' \)-formula \( \varphi \):
-\[ \mathfrak{A}_\Delta \models \varphi \iff \varphi \in \Delta. \]
+
+\[
+\mathfrak{A}_\Delta \models \varphi \iff \varphi \in \Delta.
+\]
 </div>
 
 <div class="proof">
@@ -536,6 +594,7 @@ This result is significant: it means that for testing \( k \)-colorability, glob
 <strong>Claim.</strong> There exists an ordered field extension \( {}^*\!\mathbb{R} \supset \mathbb{R} \) satisfying all first-order sentences true in \( \mathbb{R} \) (the **transfer principle**), yet containing a positive infinitesimal \( \varepsilon \) — an element with \( 0 < \varepsilon < \frac{1}{n} \) for every \( n \in \mathbb{N} \).
 
 <strong>Construction via Compactness.</strong> Work in the signature \( \sigma_{\mathrm{of}} \cup \{c_r : r \in \mathbb{R}\} \cup \{\varepsilon\} \), where each \( c_r \) is a constant naming the real number \( r \), and \( \varepsilon \) is a new constant. Form the theory
+
 \[
 T = \mathrm{Th}(\mathbb{R}, r)_{r \in \mathbb{R}} \cup \{\varepsilon > 0\} \cup \left\{\varepsilon < c_{1/n} : n \in \mathbb{N}, n \geq 1\right\}.
 \]
@@ -550,7 +609,10 @@ Here \( \mathrm{Th}(\mathbb{R}, r)_{r \in \mathbb{R}} \) is the theory of \( \ma
 
 <div class="definition">
 The <strong>complete theory</strong> (or <strong>theory</strong>) of a structure \( \mathfrak{A} \) is
-\[ \mathrm{Th}(\mathfrak{A}) = \{\varphi : \varphi \text{ is a sentence and } \mathfrak{A} \models \varphi\}. \]
+
+\[
+\mathrm{Th}(\mathfrak{A}) = \{\varphi : \varphi \text{ is a sentence and } \mathfrak{A} \models \varphi\}.
+\]
 Two structures \( \mathfrak{A} \) and \( \mathfrak{B} \) are <strong>elementarily equivalent</strong> (written \( \mathfrak{A} \equiv \mathfrak{B} \)) if \( \mathrm{Th}(\mathfrak{A}) = \mathrm{Th}(\mathfrak{B}) \).
 </div>
 
@@ -696,7 +758,10 @@ Let \( \mathcal{K} \) be a class of finite \( \sigma \)-structures. We say \( \m
 Cantor's paradise of infinite sets requires an axiomatic foundation to avoid paradoxes (Russell, Burali-Forti). The **Zermelo–Fraenkel axioms with Choice** (ZFC) provide the standard foundation. All mathematical objects are *sets*; the only primitive relation is \( \in \) (membership).
 
 The **cumulative hierarchy** is the universe of sets built inductively:
-\[ V_0 = \emptyset, \quad V_{\alpha+1} = \mathcal{P}(V_\alpha), \quad V_\lambda = \bigcup_{\alpha < \lambda} V_\alpha \text{ (for limit } \lambda). \]
+
+\[
+V_0 = \emptyset, \quad V_{\alpha+1} = \mathcal{P}(V_\alpha), \quad V_\lambda = \bigcup_{\alpha < \lambda} V_\alpha \text{ (for limit } \lambda).
+\]
 The universe of all sets is \( V = \bigcup_\alpha V_\alpha \). Every set \( x \) belongs to some \( V_\alpha \); the least such \( \alpha \) is the **rank** of \( x \).
 
 ## 4.2 The ZFC Axioms
@@ -704,43 +769,73 @@ The universe of all sets is \( V = \bigcup_\alpha V_\alpha \). Every set \( x \)
 All axioms are sentences in the language \( \{\in\} \):
 
 **1. Extensionality:**
-\[ \forall x\, \forall y\, (\forall z\, (z \in x \leftrightarrow z \in y) \to x = y). \]
+
+\[
+\forall x\, \forall y\, (\forall z\, (z \in x \leftrightarrow z \in y) \to x = y).
+\]
 A set is determined by its elements.
 
 **2. Empty Set:**
-\[ \exists x\, \forall y\, \lnot (y \in x). \]
+
+\[
+\exists x\, \forall y\, \lnot (y \in x).
+\]
 There is an empty set \( \emptyset \).
 
 **3. Pairing:**
-\[ \forall x\, \forall y\, \exists z\, \forall w\, (w \in z \leftrightarrow w = x \lor w = y). \]
+
+\[
+\forall x\, \forall y\, \exists z\, \forall w\, (w \in z \leftrightarrow w = x \lor w = y).
+\]
 For any \( x, y \) there is the set \( \{x, y\} \).
 
 **4. Union:**
-\[ \forall \mathcal{F}\, \exists A\, \forall x\, (x \in A \leftrightarrow \exists B\, (B \in \mathcal{F} \land x \in B)). \]
+
+\[
+\forall \mathcal{F}\, \exists A\, \forall x\, (x \in A \leftrightarrow \exists B\, (B \in \mathcal{F} \land x \in B)).
+\]
 For any family \( \mathcal{F} \), the union \( \bigcup \mathcal{F} \) exists.
 
 **5. Power Set:**
-\[ \forall x\, \exists y\, \forall z\, (z \in y \leftrightarrow z \subseteq x). \]
+
+\[
+\forall x\, \exists y\, \forall z\, (z \in y \leftrightarrow z \subseteq x).
+\]
 The power set \( \mathcal{P}(x) \) exists.
 
 **6. Separation Schema (Aussonderung):** For each formula \( \varphi(x, p) \):
-\[ \forall A\, \forall p\, \exists B\, \forall x\, (x \in B \leftrightarrow x \in A \land \varphi(x, p)). \]
+
+\[
+\forall A\, \forall p\, \exists B\, \forall x\, (x \in B \leftrightarrow x \in A \land \varphi(x, p)).
+\]
 We can form \( \{x \in A : \varphi(x, p)\} \).
 
 **7. Replacement Schema (Fraenkel):** For each formula \( \varphi(x, y, p) \):
-\[ \forall A\, \forall p\, \left(\forall x \in A\, \exists! y\, \varphi(x,y,p)\right) \to \exists B\, \forall x \in A\, \exists y \in B\, \varphi(x,y,p). \]
+
+\[
+\forall A\, \forall p\, \left(\forall x \in A\, \exists! y\, \varphi(x,y,p)\right) \to \exists B\, \forall x \in A\, \exists y \in B\, \varphi(x,y,p).
+\]
 The image of a set under a definable function is a set.
 
 **8. Infinity:**
-\[ \exists x\, (\emptyset \in x \land \forall y \in x\, (y \cup \{y\} \in x)). \]
+
+\[
+\exists x\, (\emptyset \in x \land \forall y \in x\, (y \cup \{y\} \in x)).
+\]
 An inductive set exists (its smallest element is \( \omega = \mathbb{N} \)).
 
 **9. Foundation (Regularity):**
-\[ \forall x\, (x \neq \emptyset \to \exists y \in x\, (y \cap x = \emptyset)). \]
+
+\[
+\forall x\, (x \neq \emptyset \to \exists y \in x\, (y \cap x = \emptyset)).
+\]
 Every nonempty set has a \( \in \)-minimal element. Equivalently: there is no infinite descending \( \in \)-chain.
 
 **10. Choice (AC):**
-\[ \forall \mathcal{F}\, \left(\emptyset \notin \mathcal{F} \to \exists f\, (f : \mathcal{F} \to \bigcup \mathcal{F} \land \forall A \in \mathcal{F}\, f(A) \in A)\right). \]
+
+\[
+\forall \mathcal{F}\, \left(\emptyset \notin \mathcal{F} \to \exists f\, (f : \mathcal{F} \to \bigcup \mathcal{F} \land \forall A \in \mathcal{F}\, f(A) \in A)\right).
+\]
 Every family of nonempty sets has a choice function.
 
 ## 4.3 Ordinals
@@ -783,7 +878,10 @@ Ordinal addition, multiplication, and exponentiation are defined by transfinite 
 
 <div class="theorem">
 <strong>(Cantor Normal Form)</strong> Every nonzero ordinal \( \alpha \) can be written uniquely in the form
-\[ \alpha = \omega^{\beta_1} \cdot k_1 + \omega^{\beta_2} \cdot k_2 + \cdots + \omega^{\beta_n} \cdot k_n \]
+
+\[
+\alpha = \omega^{\beta_1} \cdot k_1 + \omega^{\beta_2} \cdot k_2 + \cdots + \omega^{\beta_n} \cdot k_n
+\]
 where \( \beta_1 > \beta_2 > \cdots > \beta_n \) are ordinals and \( k_1, k_2, \ldots, k_n \) are positive integers.
 </div>
 
@@ -857,6 +955,7 @@ Define:
 \[
 \mathrm{add}(m, 0) = m = \pi^1_1(m),
 \]
+
 \[
 \mathrm{add}(m, n+1) = S(\mathrm{add}(m, n)).
 \]
@@ -864,18 +963,22 @@ Define:
 In terms of the primitive recursion schema: \( g(m) = \pi^1_1(m) \) (the projection function, hence primitive recursive) and \( h(m, n, p) = S(\pi^3_3(m, n, p)) = S(p) \) (composition of \( S \) and a projection, hence primitive recursive). The primitive recursion schema then gives \( \mathrm{add}(m, n) \) as primitive recursive.
 
 <strong>Multiplication</strong> builds on addition:
+
 \[
 \mathrm{mult}(m, 0) = 0 = Z(m),
 \]
+
 \[
 \mathrm{mult}(m, n+1) = \mathrm{add}(\mathrm{mult}(m, n), m).
 \]
 Here \( g(m) = Z(m) \) (zero function) and \( h(m, n, p) = \mathrm{add}(p, m) \) (addition applied to the two projections). Since addition is already shown primitive recursive and \( h \) is a composition of primitive recursive functions, multiplication is primitive recursive.
 
 <strong>Exponentiation:} \( m^n \) is defined similarly:}
+
 \[
 \mathrm{exp}(m, 0) = 1,
 \]
+
 \[
 \mathrm{exp}(m, n+1) = \mathrm{mult}(\mathrm{exp}(m, n), m).
 \]
@@ -910,6 +1013,7 @@ Assign codes to symbols, then encode sequences by prime factorization or by pair
 This is a terminating procedure — hence a total recursive algorithm. The set of Gödel numbers of propositional tautologies is **decidable** (recursive).
 
 <strong>First-order validity is not decidable.</strong> Church (1936) and Turing (1936) independently proved that the set
+
 \[
 \mathrm{Val} = \{\ulcorner \varphi \urcorner : \varphi \text{ is a first-order sentence that is logically valid}\}
 \]
@@ -930,7 +1034,10 @@ The contrast between propositional and first-order validity is fundamental: addi
 3. \( \forall x\, (x + 0 = x) \), \( \forall x \forall y\, (x + S(y) = S(x+y)) \)
 4. \( \forall x\, (x \cdot 0 = 0) \), \( \forall x \forall y\, (x \cdot S(y) = x \cdot y + x) \)
 5. **Induction schema**: for each formula \( \varphi(x) \):
-\[ (\varphi(0) \land \forall x\, (\varphi(x) \to \varphi(S(x)))) \to \forall x\, \varphi(x). \]
+
+\[
+(\varphi(0) \land \forall x\, (\varphi(x) \to \varphi(S(x)))) \to \forall x\, \varphi(x).
+\]
 
 <div class="definition">
 A relation \( R \subseteq \mathbb{N}^k \) is <strong>representable</strong> in PA if there is a formula \( \varphi(x_1,\ldots,x_k) \) such that for all \( n_1,\ldots,n_k \in \mathbb{N} \):
@@ -981,14 +1088,20 @@ In other words, \( T \) is <strong>incomplete</strong>: it has a statement that 
 
 <div class="theorem">
 <strong>(Fixed-Point / Diagonal Lemma)</strong> Let \( T \) extend Robinson's \( Q \) and let \( \psi(y) \) be any formula with one free variable. Then there exists a sentence \( \gamma \) such that
-\[ T \vdash \gamma \leftrightarrow \psi(\ulcorner \gamma \urcorner). \]
+
+\[
+T \vdash \gamma \leftrightarrow \psi(\ulcorner \gamma \urcorner).
+\]
 </div>
 
 <div class="proof">
 Define the <strong>substitution function</strong> \( \mathrm{sub}(m, n) \) to be the Gödel number of the formula obtained by substituting the numeral \( \overline{n} \) for the free variable in the formula with Gödel number \( m \). This is a primitive recursive function, hence representable by a formula \( \delta(x,y,z) \) in \( T \) — specifically, there is a term \( \mathrm{Sub} \) such that \( T \vdash \delta(\overline{m}, \overline{n}, \overline{\mathrm{sub}(m,n)}) \).
 
 Let \( \theta(x) = \psi(\mathrm{sub}(x,x)) \) (substitute \( x \) for the free variable in the formula coded by \( x \), then apply \( \psi \)). Let \( m = \ulcorner \theta(x) \urcorner \). Define \( \gamma = \theta(\overline{m}) \). Then:
-\[ \ulcorner \gamma \urcorner = \ulcorner \theta(\overline{m}) \urcorner = \mathrm{sub}(m, m). \]
+
+\[
+\ulcorner \gamma \urcorner = \ulcorner \theta(\overline{m}) \urcorner = \mathrm{sub}(m, m).
+\]
 And \( \gamma = \theta(\overline{m}) = \psi(\mathrm{sub}(\overline{m}, \overline{m})) = \psi(\overline{\mathrm{sub}(m,m)}) = \psi(\ulcorner \gamma \urcorner) \).
 Thus \( T \vdash \gamma \leftrightarrow \psi(\ulcorner \gamma \urcorner) \).
 </div>
@@ -999,12 +1112,14 @@ Thus \( T \vdash \gamma \leftrightarrow \psi(\ulcorner \gamma \urcorner) \).
 <strong>Step 1: Fix a Gödel numbering.</strong> Assign each symbol of the language of PA a code: \( \ulcorner 0 \urcorner = 3 \), \( \ulcorner S \urcorner = 5 \), \( \ulcorner + \urcorner = 7 \), \( \ulcorner \cdot \urcorner = 9 \), \( \ulcorner = \urcorner = 11 \), \( \ulcorner \lnot \urcorner = 13 \), \( \ulcorner \land \urcorner = 15 \), \( \ulcorner \forall \urcorner = 17 \), and variables \( v_k \) get code \( 2k + 4 \). A formula is encoded as the product \( 2^{a_1} \cdot 3^{a_2} \cdot 5^{a_3} \cdots p_n^{a_n} \) where \( a_1, \ldots, a_n \) are the codes of its symbols in order (prime factorization encoding). Call this encoding \( \ulcorner \cdot \urcorner \).
 
 <strong>Step 2: The provability predicate.</strong> A proof in PA is a finite sequence of formulas, each of which is an axiom or follows from earlier lines by modus ponens or generalization. The relation "\( n \) is a PA-proof of the formula with Gödel number \( m \)" — call it \( \mathrm{Proof}(n, m) \) — is primitive recursive (checking each line in a sequence is algorithmic). Since every primitive recursive relation is representable in PA, there is a PA-formula \( \mathrm{Proof}(x, y) \) representing this relation. Define:
+
 \[
 \mathrm{Prov}(y) := \exists x\, \mathrm{Proof}(x, y).
 \]
 This is a \( \Sigma^0_1 \) formula: \( \mathrm{Prov}(\overline{n}) \) is provable in PA iff \( n \) is the Gödel number of a PA-theorem.
 
 <strong>Step 3: Apply the Diagonal Lemma.</strong> Set \( \psi(y) = \lnot \mathrm{Prov}(y) \). By the Diagonal Lemma, there exists a sentence \( G \) such that
+
 \[
 \mathrm{PA} \vdash G \leftrightarrow \lnot \mathrm{Prov}(\ulcorner G \urcorner).
 \]
@@ -1048,18 +1163,26 @@ The completeness theorem (Chapter 2) says: everything that is true in all models
 
 <div class="definition">
 The <strong>consistency statement</strong> for \( T \) is the sentence
-\[ \mathrm{Con}(T) = \lnot \mathrm{Prov}_T(\ulcorner \bot \urcorner). \]
+
+\[
+\mathrm{Con}(T) = \lnot \mathrm{Prov}_T(\ulcorner \bot \urcorner).
+\]
 </div>
 
 <div class="theorem">
 <strong>(Gödel's Second Incompleteness Theorem)</strong> Let \( T \) be a consistent, recursively axiomatizable extension of \( Q \). Then
-\[ T \not\vdash \mathrm{Con}(T). \]
+
+\[
+T \not\vdash \mathrm{Con}(T).
+\]
 </div>
 
 <div class="proof">
 We showed in the First Incompleteness Theorem that \( T \not\vdash G \), where \( G \leftrightarrow \lnot \mathrm{Prov}_T(\ulcorner G \urcorner) \). The key is that the argument for "Claim 1" above can be formalized inside \( T \):
 
-\[ T \vdash \mathrm{Con}(T) \to G. \]
+\[
+T \vdash \mathrm{Con}(T) \to G.
+\]
 
 Specifically, the proof of "if \( T \vdash G \) then \( T \) is inconsistent" can itself be carried out in \( T \) (using the Hilbert–Bernays provability conditions, a.k.a. the **Löb conditions**):
 <ul>
@@ -1104,7 +1227,10 @@ Assuming \( T \vdash \mathrm{Prov}_T(\ulcorner \varphi \urcorner) \to \varphi \)
 
 <div class="theorem">
 <strong>(Tarski's Undefinability Theorem)</strong> Let \( T \) be any consistent extension of \( Q \). There is no formula \( \mathrm{True}(x) \) in the language of arithmetic such that for all sentences \( \varphi \):
-\[ T \vdash \mathrm{True}(\ulcorner \varphi \urcorner) \leftrightarrow \varphi. \]
+
+\[
+T \vdash \mathrm{True}(\ulcorner \varphi \urcorner) \leftrightarrow \varphi.
+\]
 In other words, arithmetic truth is not arithmetically definable.
 </div>
 
@@ -1141,7 +1267,10 @@ If all \( \mathfrak{A}_i = \mathfrak{A} \), this is the <strong>ultrapower</stro
 
 <div class="theorem">
 <strong>(Łoś's Theorem)</strong> For any formula \( \varphi(x_1,\ldots,x_n) \) and any elements \( [(a^1_i)], \ldots, [(a^n_i)] \) of the ultraproduct:
-\[ \prod_{\mathcal{U}} \mathfrak{A}_i \models \varphi\left[[(a^1_i)],\ldots,[(a^n_i)]\right] \iff \{i \in I : \mathfrak{A}_i \models \varphi[a^1_i,\ldots,a^n_i]\} \in \mathcal{U}. \]
+
+\[
+\prod_{\mathcal{U}} \mathfrak{A}_i \models \varphi\left[[(a^1_i)],\ldots,[(a^n_i)]\right] \iff \{i \in I : \mathfrak{A}_i \models \varphi[a^1_i,\ldots,a^n_i]\} \in \mathcal{U}.
+\]
 </div>
 
 <div class="proof">
@@ -1195,8 +1324,14 @@ A complete theory \( T \) is <strong>stable</strong> if for every cardinal \( \k
 ## 7.1 Zermelo–Fraenkel Set Theory and Gödel's Constructible Universe
 
 **Gödel's L (the Constructible Universe)** is built by:
-\[ L_0 = \emptyset, \quad L_{\alpha+1} = \mathrm{Def}(L_\alpha) = \{X \subseteq L_\alpha : X \text{ is first-order definable over } (L_\alpha, \in)\}, \]
-\[ L_\lambda = \bigcup_{\alpha < \lambda} L_\alpha \text{ for limit } \lambda, \quad L = \bigcup_\alpha L_\alpha. \]
+
+\[
+L_0 = \emptyset, \quad L_{\alpha+1} = \mathrm{Def}(L_\alpha) = \{X \subseteq L_\alpha : X \text{ is first-order definable over } (L_\alpha, \in)\},
+\]
+
+\[
+L_\lambda = \bigcup_{\alpha < \lambda} L_\alpha \text{ for limit } \lambda, \quad L = \bigcup_\alpha L_\alpha.
+\]
 
 <div class="theorem">
 <strong>(Gödel, 1938)</strong> \( L \) is a model of ZFC. Moreover, in \( L \):
@@ -1221,7 +1356,10 @@ The consistency strength of set-theoretic principles is measured by **large card
 
 <div class="theorem">
 <strong>(Reflection Principle)</strong> For every formula \( \varphi(x_1,\ldots,x_n) \) and every ordinal \( \alpha \), there exists \( \beta > \alpha \) such that for all \( a_1,\ldots,a_n \in V_\beta \):
-\[ V_\beta \models \varphi[a_1,\ldots,a_n] \iff V \models \varphi[a_1,\ldots,a_n]. \]
+
+\[
+V_\beta \models \varphi[a_1,\ldots,a_n] \iff V \models \varphi[a_1,\ldots,a_n].
+\]
 </div>
 
 This shows that the axioms of ZFC cannot be finite (since any finite list of axioms has a set-sized model, contradicting the incompleteness theorem — actually, this gives another proof that ZFC cannot prove its own consistency).
@@ -1373,7 +1511,10 @@ A <strong>Boolean algebra</strong> is a set \( B \) with operations \( \land, \l
 
 <div class="theorem">
 <strong>(Fagin's 0-1 Law, 1976)</strong> For any first-order sentence \( \varphi \) in the language of graphs, as \( n \to \infty \):
-\[ \Pr[\text{random graph on } n \text{ vertices satisfies } \varphi] \to 0 \text{ or } 1. \]
+
+\[
+\Pr[\text{random graph on } n \text{ vertices satisfies } \varphi] \to 0 \text{ or } 1.
+\]
 Moreover, the sentences with limiting probability 1 form a complete theory — the theory of the random (Rado) graph.
 </div>
 
@@ -1443,6 +1584,7 @@ The primitive recursive functions constitute the "safe" core of computability: e
 **Closure operations:**
 1. **Composition:** If \( g : \mathbb{N}^m \to \mathbb{N} \) and \( h_1, \ldots, h_m : \mathbb{N}^k \to \mathbb{N} \) are primitive recursive, then so is \( f(\vec{n}) = g(h_1(\vec{n}), \ldots, h_m(\vec{n})) \).
 2. **Primitive recursion:** If \( g : \mathbb{N}^k \to \mathbb{N} \) and \( h : \mathbb{N}^{k+2} \to \mathbb{N} \) are primitive recursive, then so is \( f \) defined by:
+
 \[
 f(\vec{n}, 0) = g(\vec{n}), \qquad f(\vec{n}, m+1) = h(\vec{n}, m, f(\vec{n}, m)).
 \]
@@ -1453,6 +1595,7 @@ f(\vec{n}, 0) = g(\vec{n}), \qquad f(\vec{n}, m+1) = h(\vec{n}, m, f(\vec{n}, m)
 <strong>Predecessor:</strong> Define \( \mathrm{pred}(0) = 0 \) and \( \mathrm{pred}(n+1) = n \). In the recursion schema: \( g = Z \) (the zero function on zero arguments, i.e., just the constant 0) and \( h(n, p) = \pi^2_1(n, p) = n \). This is primitive recursive.
 
 <strong>Monus (cut-off subtraction):</strong> \( m \dot{-} n = \max(m - n, 0) \). Define:
+
 \[
 m \dot{-} 0 = m, \qquad m \dot{-} (n+1) = \mathrm{pred}(m \dot{-} n).
 \]
@@ -1484,6 +1627,7 @@ The \( \mu \)-operator introduces potential non-termination: if \( g(\vec{n}, m)
 
 <div class="theorem">
 <strong>(Kleene's Normal Form Theorem)</strong> There is a primitive recursive predicate \( T(e, \vec{n}, s) \) (the <em>Kleene T-predicate</em>) and a primitive recursive function \( U(s) \) (the <em>result extraction function</em>) such that for every partial recursive function \( f : \mathbb{N}^k \to \mathbb{N} \):
+
 \[
 f(\vec{n}) = U(\mu s\, [T(e, \vec{n}, s)])
 \]
@@ -1501,6 +1645,7 @@ The Normal Form Theorem is a fundamental uniformization result: every partial re
 
 <div class="theorem">
 <strong>(Kleene's \( s\text{-}m\text{-}n \) Theorem)</strong> For each \( m, n \geq 1 \), there is a primitive recursive function \( s^m_n : \mathbb{N}^{m+1} \to \mathbb{N} \) such that for all \( e, x_1, \ldots, x_m, y_1, \ldots, y_n \in \mathbb{N} \):
+
 \[
 \phi_{s^m_n(e, x_1, \ldots, x_m)}(y_1, \ldots, y_n) = \phi_e(x_1, \ldots, x_m, y_1, \ldots, y_n).
 \]
@@ -1862,9 +2007,11 @@ Reading the tree: the entire formula is \( \forall x \) applied to \( \exists y 
 </ol>
 
 <strong>Step 5: Compute free variables formally.</strong>
+
 \[
 \mathrm{free}(x < y) = \{x, y\}.
 \]
+
 \[
 \mathrm{free}(y < x+1) = \{y, x\} = \{x, y\}.
 \]
@@ -1873,9 +2020,11 @@ Reading the tree: the entire formula is \( \forall x \) applied to \( \exists y 
 \[
 \mathrm{free}((x < y) \,\land\, (y < x+1)) = \{x,y\} \cup \{x,y\} = \{x,y\}.
 \]
+
 \[
 \mathrm{free}(\exists y\,(x < y \,\land\, y < x+1)) = \{x,y\} \setminus \{y\} = \{x\}.
 \]
+
 \[
 \mathrm{free}(\forall x\, \exists y\,(x < y \,\land\, y < x+1)) = \{x\} \setminus \{x\} = \emptyset.
 \]

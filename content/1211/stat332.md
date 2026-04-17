@@ -60,6 +60,7 @@ When \(y_i \in \{0,1\}\), the population mean becomes a **population proportion*
 
 <div class="definition">
 <strong>Definition (Inclusion Probabilities).</strong> The <strong>first-order inclusion probability</strong> of unit \(i\) is
+
 \[
 \pi_i = P(i \in \mathcal{S}) = \sum_{\mathcal{S} \ni i} P(\mathcal{S}).
 \]
@@ -84,6 +85,7 @@ The cornerstone of design-based inference is the Horvitz-Thompson (HT) estimator
 
 <div class="theorem">
 <strong>Theorem (Horvitz-Thompson Estimator).</strong> Suppose every unit has \(\pi_i > 0\). The HT estimator of the population total \(\tau = \sum_{i=1}^{N} y_i\) is
+
 \[
 \hat{\tau}_{\text{HT}} = \sum_{i \in \mathcal{S}} \frac{y_i}{\pi_i} = \sum_{i=1}^{N} \frac{I_i\, y_i}{\pi_i}.
 \]
@@ -98,6 +100,7 @@ The corresponding HT estimator of the population mean is \(\hat{\mu}_{\text{HT}}
 
 <div class="theorem">
 <strong>Theorem (Variance of the HT Estimator).</strong> The design variance of \(\hat{\tau}_{\text{HT}}\) is
+
 \[
 \text{Var}(\hat{\tau}_{\text{HT}}) = \sum_{i=1}^{N}\sum_{j=1}^{N} (\pi_{ij} - \pi_i \pi_j)\,\frac{y_i}{\pi_i}\,\frac{y_j}{\pi_j}.
 \]
@@ -115,6 +118,7 @@ Simple random sampling without replacement (SRSWOR, or simply SRS) is the most f
 
 <div class="definition">
 <strong>Definition (SRS).</strong> In <strong>simple random sampling without replacement</strong>, each of the \(\binom{N}{n}\) possible samples of size \(n\) is selected with equal probability:
+
 \[
 P(\mathcal{S}) = \frac{1}{\binom{N}{n}}.
 \]
@@ -150,6 +154,7 @@ The sample mean \(\bar{y}\) is an unbiased estimator of \(\mu\), and \(N\bar{y}\
 
 <div class="theorem">
 <strong>Theorem (Variance of the Sample Mean under SRS).</strong>
+
 \[
 \text{Var}(\bar{y}) = \left(1 - \frac{n}{N}\right)\frac{\sigma^2}{n},
 \]
@@ -158,6 +163,7 @@ where \(\sigma^2 = \frac{1}{N-1}\sum_{i=1}^{N}(y_i - \mu)^2\) is the population 
 
 <div class="proof">
 <strong>Proof sketch.</strong> Write \(\bar{y} = \sum_{i=1}^{N} I_i y_i / n\). Then
+
 \[
 \text{Var}(\bar{y}) = \frac{1}{n^2}\left[\sum_{i=1}^{N} y_i^2\,\text{Var}(I_i) + \sum_{i \neq j} y_i y_j\,\text{Cov}(I_i, I_j)\right].
 \]
@@ -197,6 +203,7 @@ For proportions, the worst-case variance is maximized at \(\hat{\pi} = 1/2\), so
 
 <div class="example">
 <strong>Example.</strong> A class has \(N = 200\) students. A preliminary sample gives \(\hat{\sigma} = 3\). For a 95% CI with margin of error \(E = 0.1\):
+
 \[
 n = \left(\frac{0.1^2}{1.96^2 \cdot 3^2} + \frac{1}{200}\right)^{-1} \approx 190.
 \]
@@ -250,6 +257,7 @@ Under stratified SRS, the inclusion probability for unit \(i\) in stratum \(h\) 
 
 <div class="theorem">
 <strong>Theorem (Unbiasedness and Variance under Stratified SRS).</strong> The stratified mean is unbiased for \(\mu\), and its variance is
+
 \[
 \text{Var}(\hat{\mu}_{\text{str}}) = \sum_{h=1}^{H} w_h^2\,\frac{\sigma_h^2}{n_h}\left(1 - \frac{n_h}{N_h}\right),
 \]
@@ -288,6 +296,7 @@ Allocate more to strata with higher variability. Minimizing \(\text{Var}(\hat{\m
 
 <div class="theorem">
 <strong>Theorem (Neyman Allocation).</strong>
+
 \[
 n_h = \frac{n \,\sigma_h\, w_h}{\sum_{j=1}^{H} \sigma_j\, w_j}.
 \]
@@ -330,11 +339,13 @@ Poststratification is useful when stratum membership is unknown before sampling,
 | 3 | Admin | 200 | 0.20 | 1.5 |
 
 <strong>Proportional allocation</strong>: \(n_1 = 50, n_2 = 30, n_3 = 20\). The variance is
+
 \[
 \text{Var}_{\text{prop}} = \sum w_h^2 \frac{\sigma_h^2}{n_h}(1 - n_h/N_h) = 0.25 \cdot \frac{4}{50}\cdot 0.9 + 0.09 \cdot \frac{9}{30}\cdot 0.9 + 0.04 \cdot \frac{2.25}{20}\cdot 0.9 = 0.0423.
 \]
 
 <strong>Neyman allocation</strong>: \(\sum w_h\sigma_h = 0.5(2) + 0.3(3) + 0.2(1.5) = 2.2\). So \(n_1 = 100(1.0/2.2) = 45\), \(n_2 = 100(0.9/2.2) = 41\), \(n_3 = 100(0.3/2.2) = 14\). The variance under Neyman is
+
 \[
 \text{Var}_{\text{Ney}} = \frac{(\sum w_h \sigma_h)^2}{n} = \frac{2.2^2}{100} = 0.0484 \cdot (1 - \text{fpc adjustments}) \approx 0.0387.
 \]
@@ -367,6 +378,7 @@ where \(s_{xy} = S_{xy}/(n-1)\) and \(s_x^2 = S_{xx}/(n-1)\).
 
 <div class="definition">
 <strong>Definition (Regression Estimator).</strong> The regression estimator of the population mean \(\mu_y\) is
+
 \[
 \hat{\mu}_{\text{reg}} = \bar{y} + \hat{\beta}(\mu_x - \bar{x}).
 \]
@@ -393,6 +405,7 @@ A confidence interval is
 
 <div class="definition">
 <strong>Definition (Ratio Estimator).</strong> When the relationship between \(y\) and \(x\) passes through the origin (i.e., \(y_i = \beta x_i + R_i\) with \(R_i \sim \mathcal{N}(0, x_i \sigma^2)\)), the ratio estimator is
+
 \[
 \hat{\mu}_{\text{ratio}} = \frac{\bar{y}}{\bar{x}}\,\mu_x.
 \]
@@ -448,6 +461,7 @@ Both regression and ratio estimators require knowledge of \(\mu_x\) and a strong
 
 <div class="definition">
 <strong>Definition (Hajek Estimator).</strong> The Hajek estimator of the population mean is
+
 \[
 \hat{\mu}_{\text{H}} = \frac{\sum_{i \in \mathcal{S}} y_i / \pi_i}{\sum_{i \in \mathcal{S}} 1/\pi_i}.
 \]
@@ -503,6 +517,7 @@ where \(\rho\) is the **intraclass correlation coefficient** measuring the simil
 
 <div class="example">
 <strong>Example (School survey).</strong> Suppose we sample \(m = 20\) schools from \(M = 200\), each school has \(\bar{N} = 30\) students, and the intraclass correlation for test scores is \(\rho = 0.05\). The total sample size is \(n = 600\), and the design effect is
+
 \[
 \text{deff} \approx 1 + (30 - 1)(0.05) = 2.45.
 \]
@@ -558,6 +573,7 @@ When clusters vary greatly in size, SRS of clusters is inefficient because a sam
 
 <div class="definition">
 <strong>Definition (PPS Sampling).</strong> In probability proportional to size (PPS) sampling, each cluster \(j\) is selected with probability proportional to a known size measure \(M_j\) (often the cluster population size \(N_j\)). The selection probability for cluster \(j\) in a single draw is
+
 \[
 p_j = \frac{M_j}{\sum_{k=1}^{M} M_k}.
 \]
@@ -667,6 +683,7 @@ The variance is then estimated as the design-based variance of the linearized st
 
 <div class="definition">
 <strong>Definition (Delete-One-Cluster Jackknife).</strong> In a stratified cluster design with \(H\) strata and \(m_h\) clusters per stratum, the jackknife proceeds as follows. For each stratum \(h\) and cluster \(j = 1, \ldots, m_h\), compute the estimate \(\hat{\theta}_{(hj)}\) obtained by dropping cluster \(j\) from stratum \(h\) and reweighting the remaining clusters. The jackknife variance is
+
 \[
 \widehat{\text{Var}}_{\text{JK}}(\hat{\theta}) = \sum_{h=1}^{H} \frac{m_h - 1}{m_h}\sum_{j=1}^{m_h} \bigl(\hat{\theta}_{(hj)} - \hat{\theta}\bigr)^2.
 \]
@@ -695,6 +712,7 @@ The second half of the course addresses experimental design. In an experiment, t
 
 <div class="definition">
 <strong>Definition (One-Way ANOVA Model / CRD).</strong> The <strong>completely randomized design</strong> (CRD) assigns \(n = tr\) experimental units at random to \(t\) treatments, with \(r\) replicates per treatment. The model is
+
 \[
 Y_{ij} = \mu + \tau_i + R_{ij}, \qquad R_{ij} \sim \mathcal{N}(0, \sigma^2),
 \]
@@ -726,6 +744,7 @@ A confidence interval for \(\tau_i\) is
 
 <div class="theorem">
 <strong>Theorem (ANOVA Decomposition).</strong> The total variability in the data can be partitioned as
+
 \[
 \underbrace{\sum_{ij}(y_{ij} - \bar{y}_{++})^2}_{\text{SS(Tot)}} = \underbrace{r\sum_{i}(\bar{y}_{i+} - \bar{y}_{++})^2}_{\text{SS(Trt)}} + \underbrace{\sum_{ij}(y_{ij} - \bar{y}_{i+})^2}_{\text{SS(Res)}}.
 \]
@@ -743,6 +762,7 @@ The degrees of freedom also partition: \(\text{df}_{\text{Tot}} = n-1 = (\text{d
 
 <div class="theorem">
 <strong>Theorem (F Statistic).</strong> Under \(H_0: \tau_1 = \tau_2 = \cdots = \tau_t = 0\),
+
 \[
 F = \frac{\text{MS(Trt)}}{\text{MS(Res)}} \sim F(t-1, n-t).
 \]
@@ -788,6 +808,7 @@ For \(k\) pre-planned comparisons, each at significance level \(\alpha/k\), the 
 
 <div class="definition">
 <strong>Definition (Unbalanced CRD).</strong> When treatment groups have unequal sizes \(r_1, r_2, \ldots, r_t\) (so \(n = r_1 + \cdots + r_t\)), the model is
+
 \[
 Y_{ij} = \mu + \tau_i + R_{ij}, \qquad R_{ij} \sim \mathcal{N}(0, \sigma^2),
 \]
@@ -814,6 +835,7 @@ The ANOVA model assumes: (i) \(E[R_{ij}] = 0\); (ii) \(\text{Var}(R_{ij}) = \sig
 
 <div class="definition">
 <strong>Definition (Two-Way ANOVA / Factorial CRD).</strong> For two factors with \(\ell_1\) and \(\ell_2\) levels respectively, each combination observed \(r\) times, the model is
+
 \[
 Y_{ijk} = \mu + \tau_{ij} + R_{ijk}, \qquad R_{ijk} \sim \mathcal{N}(0, \sigma^2),
 \]
@@ -840,6 +862,7 @@ Three methods to detect interaction:
 2. **Contrast method**: For a \(2 \times 2\) design, compute \(\hat{\theta} = \hat{\tau}_{11} - \hat{\tau}_{01} - \hat{\tau}_{10} + \hat{\tau}_{00}\). If the confidence interval for \(\theta\) includes 0, there is no evidence of interaction.
 
 3. **ANOVA table**: The treatment SS decomposes as
+
 \[
 \text{SS(Trt)} = \text{SS(A)} + \text{SS(B)} + \text{SS(A:B)}.
 \]
@@ -867,6 +890,7 @@ where
 \[
 \text{SS(A)} = r\ell_2 \sum_{i=1}^{\ell_1}(\bar{y}_{i++} - \bar{y}_{+++})^2, \qquad \text{SS(B)} = r\ell_1 \sum_{j=1}^{\ell_2}(\bar{y}_{+j+} - \bar{y}_{+++})^2,
 \]
+
 \[
 \text{SS(A:B)} = r \sum_{i=1}^{\ell_1}\sum_{j=1}^{\ell_2}(\bar{y}_{ij+} - \bar{y}_{i++} - \bar{y}_{+j+} + \bar{y}_{+++})^2.
 \]
@@ -878,12 +902,14 @@ In **unbalanced designs** (unequal cell sizes), the decomposition is no longer u
 - **Type I (Sequential)**: Each term is adjusted only for terms already in the model. The result depends on the order of entry --- \(\text{SS(A | 1)}\) differs from \(\text{SS(A | 1, B)}\). Used mainly when there is a natural ordering of factors.
 
 - **Type II**: Each main effect is adjusted for the other main effect but *not* for the interaction:
+
   \[
   \text{SS}_{\text{II}}(A) = \text{SS}(A \mid B), \qquad \text{SS}_{\text{II}}(B) = \text{SS}(B \mid A).
   \]
   Type II is appropriate when there is no significant interaction, as it uses more degrees of freedom for testing main effects.
 
 - **Type III**: Each effect is adjusted for all other effects, including the interaction:
+
   \[
   \text{SS}_{\text{III}}(A) = \text{SS}(A \mid B, A\!:\!B).
   \]
@@ -935,6 +961,7 @@ In a CRD, all variability not explained by treatments goes into the residual. If
 
 <div class="definition">
 <strong>Definition (Randomized Complete Block Design).</strong> The <strong>RCBD model</strong> has \(t\) treatments and \(r\) blocks. Each treatment appears exactly once in each block. The model is
+
 \[
 Y_{ij} = \mu + \tau_i + \beta_j + R_{ij}, \qquad R_{ij} \sim \mathcal{N}(0, \sigma^2),
 \]
@@ -948,6 +975,7 @@ The LS estimates are:
 \[
 \hat{\mu} = \bar{y}_{++}, \qquad \hat{\tau}_i = \bar{y}_{i+} - \bar{y}_{++}, \qquad \hat{\beta}_j = \bar{y}_{+j} - \bar{y}_{++},
 \]
+
 \[
 \hat{\sigma}^2 = \frac{W}{rt - (t + r + 1) + 2} = \frac{W}{(r-1)(t-1)}.
 \]
@@ -983,6 +1011,7 @@ For simultaneous comparisons of all \(\binom{t}{2}\) treatment pairs, Tukey's HS
 
 <div class="example">
 <strong>Example.</strong> Willow tree cuttings from 6 trees are assigned to high and low acidity soils (\(t = 2\), \(r = 6\)). The RCBD model accounts for tree-to-tree variability. The ANOVA table yields \(\hat{\sigma} = 1.065\) on 5 df. The CI for the treatment difference is
+
 \[
 (\hat{\tau}_1 - \hat{\tau}_2) \pm 2.57\,\frac{1.065}{\sqrt{3}} = (-0.167 - 0.167) \pm 1.58 = (-1.91, 1.25).
 \]
@@ -1084,6 +1113,7 @@ Each effect has 1 degree of freedom, for a total of 7 treatment df. The main eff
 
 <div class="definition">
 <strong>Definition (Effect Computation in \(2^3\) Designs).</strong> The main effect of factor A is
+
 \[
 \text{ME}(A) = \frac{1}{4}[(ab + a + ac + abc) - (b + (1) + bc + c)],
 \]

@@ -622,7 +622,7 @@ F_i = \int_\Omega \phi_i f\,dx - \sum_{j=N+1}^{N+N_\partial} U_j \int_\Omega \na
 
 ### 5.3 Discretization on Unstructured Triangular Meshes
 
-A key advantage of finite elements is their ability to handle **unstructured grids** on complex geometries. We discretize \(\Omega\) with a triangulation \mathcal{T}_h\) of triangles \(K_k\) satisfying: \(\cup_k \overline{K_k} = \Omega\), triangles do not overlap, and vertices of neighboring triangles coincide.
+A key advantage of finite elements is their ability to handle **unstructured grids** on complex geometries. We discretize \(\Omega\) with a triangulation \(\mathcal{T}_h\) of triangles \(K_k\) satisfying: \(\cup_k \overline{K_k} = \Omega\), triangles do not overlap, and vertices of neighboring triangles coincide.
 
 ![2D triangular FEM mesh on the unit square with one highlighted element K](/pics/amath442/fem_mesh_2d.png)
 

@@ -204,6 +204,7 @@ The Laplace transform is the natural tool for linear viscoelasticity because it 
 
 <div class="definition">
 <strong>Laplace Transform.</strong> For \(f : [0,\infty) \to \mathbb{R}\) of exponential order,
+
 \[
 F(s) = \mathcal{L}\{f(t)\} = \int_0^\infty e^{-st} f(t)\, dt
 \]
@@ -399,6 +400,7 @@ where \(u_{i,j} = \partial u_i / \partial a_j\). The last term is quadratic in d
 
 <div class="definition">
 <strong>Infinitesimal Strain Tensor.</strong>
+
 \[
 e_{ij} = \frac{1}{2}(u_{i,j} + u_{j,i})
 \]
@@ -424,6 +426,7 @@ Imagine slicing the deformed body along an imaginary internal surface with outwa
 
 <div class="theorem">
 <strong>Cauchy's Theorem.</strong> There exists a second-order tensor field \(\tau_{ij}\) — the <strong>Cauchy stress tensor</strong> — such that the traction on any surface with unit normal \(\hat{n}\) is:
+
 \[
 t_i = \tau_{ij}\, \hat{n}_j \qquad [N/m^2]
 \]
@@ -475,6 +478,7 @@ For small deformations of an isotropic, homogeneous elastic solid, the most gene
 
 <div class="theorem">
 <strong>Hooke's Law in Three Dimensions.</strong>
+
 \[
 \tau_{ij} = \lambda\, e_{kk}\, \delta_{ij} + 2\mu\, e_{ij}
 \]
@@ -500,6 +504,7 @@ In the absence of body forces, force balance on any material volume requires:
 
 <div class="theorem">
 <strong>Equilibrium Equations.</strong>
+
 \[
 \tau_{ij,j} = 0 \qquad \text{i.e., } \frac{\partial \tau_{ij}}{\partial x_j} = 0
 \]
@@ -564,6 +569,7 @@ The deviatoric constitutive relation \(s_{ij} = 2\mu\,\varepsilon_{ij}\) has exa
 
 <div class="theorem">
 <strong>Elastic–Viscoelastic Correspondence Principle.</strong> The solution to a viscoelastic boundary value problem in Laplace space is obtained from the elastic solution by replacing the shear modulus:
+
 \[
 2\mu \;\longrightarrow\; \frac{q_2 s^2 + q_1 s + q_0}{p_2 s^2 + p_1 s + p_0}
 \]
@@ -596,6 +602,7 @@ The velocity field \(\mathbf{u}(\mathbf{x}, t)\) is naturally Eulerian: it tells
 
 <div class="definition">
 <strong>Streamlines.</strong> At a fixed instant \(t^*\), the streamlines are curves \(\boldsymbol{\xi}(s)\) satisfying
+
 \[
 \boldsymbol{\xi}'(s) = \mathbf{u}\!\left(\boldsymbol{\xi}(s),\, t^*\right), \qquad \boldsymbol{\xi}(0) = \mathbf{x}_0
 \]
@@ -604,6 +611,7 @@ At each point, the velocity vector is tangent to the streamline passing through 
 
 <div class="definition">
 <strong>Pathlines.</strong> The pathline of a particle released at \(\mathbf{x}_0\) is the curve \(\boldsymbol{\xi}(t)\) satisfying
+
 \[
 \dot{\boldsymbol{\xi}}(t) = \mathbf{u}\!\left(\boldsymbol{\xi}(t),\, t\right), \qquad \boldsymbol{\xi}(0) = \mathbf{x}_0
 \]
@@ -618,6 +626,7 @@ When a quantity \(Q(\mathbf{x}, t)\) is observed in the Eulerian frame, its rate
 
 <div class="definition">
 <strong>Material (Substantial) Derivative.</strong>
+
 \[
 \frac{DQ}{Dt} = \frac{\partial Q}{\partial t} + (\mathbf{u} \cdot \nabla)\, Q
 \]
@@ -653,6 +662,7 @@ The first fundamental law is that matter is neither created nor destroyed. For a
 
 <div class="theorem">
 <strong>Conservation of Mass (Continuity Equation).</strong>
+
 \[
 \frac{D\rho}{Dt} + \rho(\nabla \cdot \mathbf{u}) = 0
 \]
@@ -678,6 +688,7 @@ For an **inviscid fluid** (\(\mu = 0\)), the stress is purely isotropic: \(\tau_
 
 <div class="theorem">
 <strong>Euler Equations for Incompressible Inviscid Flow.</strong>
+
 \[
 \nabla \cdot \mathbf{u} = 0, \qquad \frac{D\mathbf{u}}{Dt} = -\nabla\tilde{p}
 \]
@@ -700,6 +711,7 @@ The right-hand side is the **vortex stretching** term: if vortex lines are stret
 
 <div class="definition">
 <strong>Irrotational (Potential) Flow.</strong> A flow with \(\boldsymbol{\omega} = \nabla \times \mathbf{u} = \mathbf{0}\) everywhere. In a simply connected domain, this implies the existence of a scalar <strong>velocity potential</strong>:
+
 \[
 \mathbf{u} = \nabla\phi
 \]
@@ -732,6 +744,7 @@ The most important example of Euler-equation dynamics in this course is the prop
 
 <div class="theorem">
 <strong>Deep-Water Dispersion Relation.</strong>
+
 \[
 \omega^2 = g\,|k|
 \]
@@ -754,6 +767,7 @@ For a Newtonian fluid, the viscous stress tensor is \(2\mu\,\dot{e}_{ij}\). The 
 
 <div class="theorem">
 <strong>Navier–Stokes Equations (incompressible Newtonian fluid).</strong>
+
 \[
 \nabla \cdot \mathbf{u} = 0, \qquad \frac{D\mathbf{u}}{Dt} = -\nabla\tilde{p} + \nu\,\nabla^2\mathbf{u}
 \]
@@ -774,6 +788,7 @@ To understand when viscosity matters and when it does not, we nondimensionalise 
 
 <div class="definition">
 <strong>Reynolds Number.</strong>
+
 \[
 Re = \frac{UL}{\nu}
 \]
@@ -903,6 +918,7 @@ This says that the quantity in parentheses is constant along streamlines (curves
 
 <div class="theorem">
 <strong>Bernoulli's Theorem (steady, inviscid, incompressible flow).</strong> Along any streamline,
+
 \[
 p + \tfrac{1}{2}\rho|\mathbf{u}|^2 + \rho g z = \text{const}
 \]
@@ -913,6 +929,7 @@ If the flow is additionally **irrotational** (\(\boldsymbol{\omega} = 0\)), then
 
 <div class="theorem">
 <strong>Bernoulli's Theorem (irrotational form).</strong> For steady, inviscid, incompressible, irrotational flow,
+
 \[
 p + \tfrac{1}{2}\rho|\mathbf{u}|^2 + \rho g z = \text{const everywhere}
 \]
@@ -1079,6 +1096,7 @@ In rate form following a fluid parcel, \(T\,Ds/Dt = De/Dt + p\,D(1/\rho)/Dt\). C
 
 <div class="theorem">
 <strong>Entropy Equation.</strong> For a fluid parcel,
+
 \[
 T\,\frac{Ds}{Dt} = \dot{Q}
 \]
@@ -1095,6 +1113,7 @@ For an ideal gas the equation of state is:
 
 <div class="definition">
 <strong>Ideal Gas Law.</strong>
+
 \[
 p = \rho R T
 \]
@@ -1166,12 +1185,15 @@ The electromagnetic field is described by the electric field \(\mathbf{E}\) and 
 \[
 \nabla\cdot\mathbf{B} = 0
 \]
+
 \[
 \nabla\cdot\mathbf{E} = \frac{\rho_e}{\varepsilon_0}
 \]
+
 \[
 \nabla\times\mathbf{E} = -\frac{\partial\mathbf{B}}{\partial t}
 \]
+
 \[
 \nabla\times\mathbf{B} = \mu_0\mathbf{J} + \mu_0\varepsilon_0\frac{\partial\mathbf{E}}{\partial t}
 \]
@@ -1198,6 +1220,7 @@ For a **perfect conductor** (\(\sigma\to\infty\)) we must have \(\mathbf{E} + \m
 
 <div class="definition">
 <strong>Lorentz Force Density.</strong>
+
 \[
 \mathbf{f} = \mathbf{J}\times\mathbf{B}
 \]
@@ -1230,6 +1253,7 @@ Using \(\nabla\times(\nabla\times\mathbf{B}) = \nabla(\nabla\cdot\mathbf{B}) - \
 
 <div class="theorem">
 <strong>The Induction Equation.</strong>
+
 \[
 \frac{\partial\mathbf{B}}{\partial t} = \nabla\times(\mathbf{u}\times\mathbf{B}) + \eta\,\nabla^2\mathbf{B}
 \]
@@ -1242,6 +1266,7 @@ This equation has the same mathematical structure as the vorticity equation (Sec
 
 <div class="definition">
 <strong>Magnetic Reynolds Number.</strong>
+
 \[
 Rm = \frac{UL}{\eta}
 \]
@@ -1264,15 +1289,19 @@ Combining the Navier–Stokes equations (here in the inviscid limit for clarity)
 
 <div class="theorem">
 <strong>Ideal MHD Equations.</strong>
+
 \[
 \frac{\partial\rho}{\partial t} + \nabla\cdot(\rho\mathbf{u}) = 0 \quad\text{(continuity)}
 \]
+
 \[
 \rho\frac{D\mathbf{u}}{Dt} = -\nabla p + \frac{1}{\mu_0}(\nabla\times\mathbf{B})\times\mathbf{B} \quad\text{(momentum)}
 \]
+
 \[
 \frac{\partial\mathbf{B}}{\partial t} = \nabla\times(\mathbf{u}\times\mathbf{B}) \quad\text{(induction, ideal MHD)}
 \]
+
 \[
 \nabla\cdot\mathbf{B} = 0 \quad\text{(solenoidal constraint)}
 \]
@@ -1335,6 +1364,7 @@ For transverse perturbations (in the \(x\)- or \(y\)-direction, perpendicular to
 
 <div class="theorem">
 <strong>Alfvén Wave Dispersion Relation.</strong> For plane-wave solutions \(\propto e^{i(kz - \omega t)}\) propagating along the equilibrium field \(\mathbf{B}_0 = B_0\hat{\mathbf{z}}\),
+
 \[
 \omega = \pm v_A k, \qquad v_A = \frac{B_0}{\sqrt{\mu_0\rho_0}}
 \]

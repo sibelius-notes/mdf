@@ -16,6 +16,7 @@ Before giving the abstract definition of a vector space, it is instructive to ob
 <div class="definition">
 
 <strong>Definition 1.1 (\(\mathbb{R}^n\)).</strong> For a positive integer \(n\), <em>\(n\)-dimensional Euclidean space</em> is the set \(\mathbb{R}^n = \{(x_1, \ldots, x_n) : x_i \in \mathbb{R}\}\). We write elements as column vectors \(\mathbf{x} = \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix}\) and define <em>addition</em> and <em>scalar multiplication</em> componentwise:
+
 \[
 \mathbf{x} + \mathbf{y} = \begin{pmatrix} x_1 + y_1 \\ \vdots \\ x_n + y_n \end{pmatrix}, \qquad c\mathbf{x} = \begin{pmatrix} cx_1 \\ \vdots \\ cx_n \end{pmatrix}.
 \]
@@ -27,6 +28,7 @@ These two operations interact in exactly the right ways. One verifies that \(\ma
 <div class="definition">
 
 <strong>Definition 1.2 (Span).</strong> The <em>span</em> of a set of vectors \(\{\mathbf{v}_1, \ldots, \mathbf{v}_k\} \subseteq \mathbb{R}^n\) is the set of all their linear combinations:
+
 \[
 \operatorname{Span}\{\mathbf{v}_1, \ldots, \mathbf{v}_k\} = \{c_1 \mathbf{v}_1 + \cdots + c_k \mathbf{v}_k : c_1, \ldots, c_k \in \mathbb{R}\}.
 \]
@@ -121,6 +123,7 @@ Geometry in \(\mathbb{R}^n\) is organised by these flat, translated subspaces.
 <div class="definition">
 
 <strong>Definition 1.8 (\(k\)-plane).</strong> Let \(\mathbf{v}_1, \ldots, \mathbf{v}_k \in \mathbb{R}^n\) be linearly independent and let \(\mathbf{b} \in \mathbb{R}^n\). The set
+
 \[
 \{\mathbf{b} + c_1\mathbf{v}_1 + \cdots + c_k\mathbf{v}_k : c_1, \ldots, c_k \in \mathbb{R}\}
 \]
@@ -149,6 +152,7 @@ The dot product is <em>symmetric</em> (\(\mathbf{x} \cdot \mathbf{y} = \mathbf{y
 <div class="theorem">
 
 <strong>Theorem 1.11 (Cauchy–Schwarz Inequality).</strong> For all \(\mathbf{x}, \mathbf{y} \in \mathbb{R}^n\),
+
 \[
 |\mathbf{x} \cdot \mathbf{y}| \leq \|\mathbf{x}\| \|\mathbf{y}\|,
 \]
@@ -157,7 +161,10 @@ with equality if and only if \(\mathbf{x}\) and \(\mathbf{y}\) are linearly depe
 </div>
 
 *Proof.* If \(\mathbf{y} = \mathbf{0}\) both sides are zero. Otherwise, for any \(t \in \mathbb{R}\),
-\[0 \leq \|\mathbf{x} - t\mathbf{y}\|^2 = \|\mathbf{x}\|^2 - 2t(\mathbf{x} \cdot \mathbf{y}) + t^2\|\mathbf{y}\|^2.\]
+
+\[
+0 \leq \|\mathbf{x} - t\mathbf{y}\|^2 = \|\mathbf{x}\|^2 - 2t(\mathbf{x} \cdot \mathbf{y}) + t^2\|\mathbf{y}\|^2.
+\]
 Setting \(t = (\mathbf{x} \cdot \mathbf{y})/\|\mathbf{y}\|^2\) and simplifying yields the result. \(\square\)
 
 The Cauchy–Schwarz inequality justifies the definition of the angle \(\theta \in [0,\pi]\) between nonzero vectors by \(\cos\theta = (\mathbf{x} \cdot \mathbf{y})/(\|\mathbf{x}\|\|\mathbf{y}\|)\), since the right-hand side lies in \([-1,1]\).
@@ -169,6 +176,7 @@ Two vectors are <em>orthogonal</em> if \(\mathbf{x} \cdot \mathbf{y} = 0\), i.e.
 <div class="definition">
 
 <strong>Definition 1.12 (Projection and Perpendicular).</strong> For \(\mathbf{u}, \mathbf{v} \in \mathbb{R}^n\) with \(\mathbf{v} \neq \mathbf{0}\), the <em>projection</em> of \(\mathbf{u}\) onto \(\mathbf{v}\) and its <em>perpendicular component</em> are
+
 \[
 \operatorname{proj}_{\mathbf{v}} \mathbf{u} = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{v}\|^2}\,\mathbf{v}, \qquad \operatorname{perp}_{\mathbf{v}} \mathbf{u} = \mathbf{u} - \operatorname{proj}_{\mathbf{v}} \mathbf{u}.
 \]
@@ -420,6 +428,7 @@ A vector space without maps between vector spaces is like a set without function
 <div class="definition">
 
 <strong>Definition 4.1 (Linear Transformation).</strong> A function \(T : V \to W\) between vector spaces is a <em>linear transformation</em> (or <em>linear map</em>) if for all \(\mathbf{u}, \mathbf{v} \in V\) and \(c \in \mathbb{R}\),
+
 \[
 T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}) \quad \text{and} \quad T(c\mathbf{v}) = cT(\mathbf{v}).
 \]
@@ -442,6 +451,7 @@ The two fundamental subspaces attached to a linear map encode everything about i
 <div class="definition">
 
 <strong>Definition 4.3 (Kernel and Image).</strong> For \(T : V \to W\) linear, the <em>kernel</em> and <em>image</em> are
+
 \[
 \ker T = \{\mathbf{v} \in V : T(\mathbf{v}) = \mathbf{0}\} \subseteq V, \qquad \operatorname{im} T = \{T(\mathbf{v}) : \mathbf{v} \in V\} \subseteq W.
 \]
@@ -487,6 +497,7 @@ This is the central theorem of the chapter — indeed, one of the most important
 <div class="theorem">
 
 <strong>Theorem 4.8 (Rank-Nullity / Dimension Theorem).</strong> Let \(T : V \to W\) be a linear map with \(V\) finite-dimensional. Then
+
 \[
 \dim V = \operatorname{rank}(T) + \operatorname{nullity}(T).
 \]
@@ -526,6 +537,7 @@ Every linear map between finite-dimensional spaces can be encoded as a matrix, o
 <div class="definition">
 
 <strong>Definition 4.12 (Matrix of a Linear Map).</strong> Let \(T : V \to W\) be linear, \(\mathcal{B} = \{\mathbf{v}_1, \ldots, \mathbf{v}_n\}\) a basis for \(V\), \(\mathcal{C} = \{\mathbf{w}_1, \ldots, \mathbf{w}_m\}\) a basis for \(W\). The <em>matrix of \(T\) with respect to \(\mathcal{B}\) and \(\mathcal{C}\)</em> is
+
 \[
 [T]_{\mathcal{B}}^{\mathcal{C}} = \bigl[[T(\mathbf{v}_1)]_{\mathcal{C}} \;\; [T(\mathbf{v}_2)]_{\mathcal{C}} \;\; \cdots \;\; [T(\mathbf{v}_n)]_{\mathcal{C}}\bigr] \in M_{m \times n}(\mathbb{R}).
 \]
@@ -617,6 +629,7 @@ Think of a square matrix as \(n\) column vectors. A function of those \(n\) vect
 <div class="definition">
 
 <strong>Definition 6.3 (Determinant).</strong> The <em>determinant</em> \(\det : M_{n \times n}(\mathbb{R}) \to \mathbb{R}\) is the unique \(n\)-linear alternating form satisfying \(\det(I_n) = 1\). Explicitly:
+
 \[
 \det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma)\, a_{\sigma(1),1} a_{\sigma(2),2} \cdots a_{\sigma(n),n},
 \]
@@ -655,6 +668,7 @@ Consequently: \(\det A = 0\) if \(A\) has two equal rows, or a zero row, or a ro
 <div class="definition">
 
 <strong>Definition 6.7 (Cofactor Expansion).</strong> The <em>cofactor</em> \(C_{ij} = (-1)^{i+j}\det(A(i,j))\), where \(A(i,j)\) is the \((n-1) \times (n-1)\) matrix with row \(i\) and column \(j\) deleted. Then for any fixed \(i\):
+
 \[
 \det(A) = \sum_{j=1}^n a_{ij} C_{ij} \quad \text{(expansion along row } i\text{)}.
 \]

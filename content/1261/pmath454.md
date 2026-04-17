@@ -46,6 +46,7 @@ This orthonormality is the computational backbone of Fourier analysis: it means 
 
 <div class="definition">
 <strong>Definition (Fourier Coefficients).</strong> Let \(f \in L^1(\mathbb{T})\). The <strong>Fourier coefficients</strong> of \(f\) are defined by
+
 \[
 \hat{f}(n) = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x)e^{-inx}\,dx, \quad n \in \mathbb{Z}.
 \]
@@ -279,6 +280,7 @@ The Riemann–Lebesgue lemma tells us that Fourier coefficients must lie in \(c_
 
 <div class="definition">
 <strong>Definition (Convolution on \(\mathbb{T}\)).</strong> For \(f, g \in L^1(\mathbb{T})\), their <strong>convolution</strong> is
+
 \[
 (f * g)(x) = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x-t)g(t)\,dt.
 \]
@@ -306,6 +308,7 @@ where the **Dirichlet kernel** is:
 
 <div class="definition">
 <strong>Definition (Dirichlet Kernel).</strong>
+
 \[
 D_N(x) = \sum_{n=-N}^{N} e^{inx} = \frac{\sin\!\left((N+\tfrac{1}{2})x\right)}{\sin(x/2)}.
 \]
@@ -346,7 +349,7 @@ This divergence of the **Lebesgue constants** \(L_N = \|D_N\|_{L^1}\) is the roo
 
 The Gibbs phenomenon refers to the persistent overshoot of Fourier partial sums near a jump discontinuity. It was observed by Henry Wilbraham in 1848, rediscovered and reported by J. Willard Gibbs in 1898, and fully explained by Maxime Bôcher in 1906.
 
-Consider the partial sums \(S_N f\) of the sawtooth wave \(f(x) = x\) (which has a jump discontinuity of size \(2\pi\) at \(x = \pm\pi\)). The maximum of \(S_N f\) near the discontinuity exceeds the value \(\pi\) of the function itself by approximately a fixed fraction, even as \(N \to \infty$.
+Consider the partial sums \(S_N f\) of the sawtooth wave \(f(x) = x\) (which has a jump discontinuity of size \(2\pi\) at \(x = \pm\pi\)). The maximum of \(S_N f\) near the discontinuity exceeds the value \(\pi\) of the function itself by approximately a fixed fraction, even as \(N \to \infty\).
 
 **Locating the overshoot:** The partial sum \(S_N f(x) = 2\sum_{k=1}^N \frac{(-1)^{k+1}}{k}\sin(kx)\). Differentiating:
 
@@ -387,6 +390,7 @@ where the **Fejér kernel** is:
 
 <div class="definition">
 <strong>Definition (Fejér Kernel).</strong>
+
 \[
 K_N(x) = \frac{1}{N}\sum_{k=0}^{N-1} D_k(x) = \frac{1}{N}\left(\frac{\sin(Nx/2)}{\sin(x/2)}\right)^2.
 \]
@@ -456,6 +460,7 @@ Another important summability kernel is the **Poisson kernel**, which arises fro
 
 <div class="definition">
 <strong>Definition (Poisson Kernel on \(\mathbb{T}\)).</strong> For \(0 \leq r < 1\), the Poisson kernel is
+
 \[
 P_r(x) = \sum_{n=-\infty}^\infty r^{|n|} e^{inx} = \frac{1-r^2}{1 - 2r\cos x + r^2}.
 \]
@@ -504,6 +509,7 @@ While Fejér's theorem gives uniform convergence of Cesàro means for continuous
 
 <div class="theorem">
 <strong>Theorem (Dirichlet–Jordan).</strong> If \(f\) is of bounded variation on \([-\pi,\pi]\), then for every \(x\),
+
 \[
 S_N f(x) \to \frac{f(x^+) + f(x^-)}{2}.
 \]
@@ -550,6 +556,7 @@ Kolmogorov later (1926) strengthened his result to show an \(L^1\) function whos
 
 <div class="theorem">
 <strong>Theorem (Dini's Test).</strong> Let \(f \in L^1(\mathbb{T})\) and suppose that for some \(x_0 \in \mathbb{T}\) and \(s \in \mathbb{C}\), the function
+
 \[
 t \mapsto \frac{f(x_0 + t) + f(x_0 - t) - 2s}{t}
 \]
@@ -575,6 +582,7 @@ A striking feature of pointwise convergence is its local nature.
 
 <div class="theorem">
 <strong>Theorem (Localization Principle).</strong> Let \(f, g \in L^1(\mathbb{T})\). If \(f = g\) in a neighborhood of \(x_0\), then
+
 \[
 \lim_{N \to \infty} \left(S_N f(x_0) - S_N g(x_0)\right) = 0
 \]
@@ -623,6 +631,7 @@ Completeness here means that the only element orthogonal to all \(e^{inx}\) is t
 
 <div class="theorem">
 <strong>Theorem (Parseval's Identity).</strong> For \(f, g \in L^2(\mathbb{T})\),
+
 \[
 \langle f, g \rangle = \sum_{n=-\infty}^{\infty} \hat{f}(n)\overline{\hat{g}(n)}.
 \]
@@ -703,6 +712,7 @@ Many operators in Fourier analysis are bounded on two endpoint spaces but one wa
 
 <div class="theorem">
 <strong>Theorem (Riesz–Thorin Interpolation).</strong> Let \((X, \mu)\) and \((Y, \nu)\) be measure spaces. Suppose a linear operator \(T\) satisfies
+
 \[
 \|Tf\|_{L^{q_0}(Y)} \leq M_0\|f\|_{L^{p_0}(X)}, \quad \|Tf\|_{L^{q_1}(Y)} \leq M_1\|f\|_{L^{p_1}(X)}.
 \]
@@ -723,6 +733,7 @@ For \(0 < \theta < 1\), define \(\frac{1}{p} = \frac{1-\theta}{p_0} + \frac{\the
 
 <div class="theorem">
 <strong>Theorem (Hausdorff–Young Inequality).</strong> For \(1 \leq p \leq 2\) and \(f \in L^p(\mathbb{T})\),
+
 \[
 \left(\sum_{n \in \mathbb{Z}} |\hat{f}(n)|^{p'}\right)^{1/p'} \leq \|f\|_{L^p(\mathbb{T})},
 \]
@@ -745,6 +756,7 @@ Moving from the compact group \(\mathbb{T}\) to the locally compact group \(\mat
 
 <div class="definition">
 <strong>Definition (Fourier Transform on \(L^1(\mathbb{R})\)).</strong> For \(f \in L^1(\mathbb{R})\), the <strong>Fourier transform</strong> is
+
 \[
 \hat{f}(\xi) = \int_{\mathbb{R}} f(x)e^{-2\pi i x\xi}\,dx, \quad \xi \in \mathbb{R}.
 \]
@@ -806,6 +818,7 @@ To develop a robust theory including inversion, one works with spaces of rapidly
 
 <div class="definition">
 <strong>Definition (Schwartz Class).</strong> The <strong>Schwartz space</strong> \(\mathcal{S}(\mathbb{R})\) consists of all \(f \in C^\infty(\mathbb{R})\) such that for all \(m, k \geq 0\),
+
 \[
 \|f\|_{m,k} = \sup_{x \in \mathbb{R}} |x^m f^{(k)}(x)| < \infty.
 \]
@@ -878,6 +891,7 @@ Functions of polynomial growth define tempered distributions: if \(f\) is measur
 
 <div class="definition">
 <strong>Definition (Fourier Transform of a Tempered Distribution).</strong> For \(T \in \mathcal{S}'(\mathbb{R})\), define \(\hat{T} \in \mathcal{S}'(\mathbb{R})\) by
+
 \[
 \langle \hat{T}, \phi \rangle = \langle T, \hat{\phi} \rangle \quad \text{for all } \phi \in \mathcal{S}(\mathbb{R}).
 \]
@@ -913,6 +927,7 @@ Key examples:
 
 <div class="theorem">
 <strong>Theorem (Fourier Inversion on \(\mathcal{S}(\mathbb{R})\)).</strong> For \(f \in \mathcal{S}(\mathbb{R})\),
+
 \[
 f(x) = \int_{\mathbb{R}} \hat{f}(\xi)e^{2\pi ix\xi}\,d\xi.
 \]
@@ -937,6 +952,7 @@ For \(f \in L^1(\mathbb{R})\), the Fourier transform \(\hat{f}\) is continuous a
 
 <div class="theorem">
 <strong>Theorem (Plancherel on \(\mathbb{R}\)).</strong> The Fourier transform extends uniquely from \(L^1(\mathbb{R}) \cap L^2(\mathbb{R})\) to a unitary isomorphism \(\mathcal{F} : L^2(\mathbb{R}) \to L^2(\mathbb{R})\). That is, for all \(f \in L^2(\mathbb{R})\),
+
 \[
 \|\hat{f}\|_{L^2(\mathbb{R})} = \|f\|_{L^2(\mathbb{R})},
 \]
@@ -987,6 +1003,7 @@ The wave equation \(u_{tt} = u_{xx}\) transforms to \(\hat{u}_{tt} = -(2\pi\xi)^
 
 <div class="definition">
 <strong>Definition (Characteristic Function).</strong> The <strong>characteristic function</strong> of a random variable \(X\) with distribution \(\mu\) is
+
 \[
 \varphi_X(t) = \mathbb{E}[e^{itX}] = \int_{\mathbb{R}} e^{itx}\,d\mu(x) = \hat{\mu}(-t/(2\pi)).
 \]
@@ -1004,6 +1021,7 @@ Characteristic functions are the Fourier–Stieltjes transforms of probability m
 
 <div class="theorem">
 <strong>Theorem (Poisson Summation).</strong> For \(f \in \mathcal{S}(\mathbb{R})\),
+
 \[
 \sum_{n \in \mathbb{Z}} f(n) = \sum_{k \in \mathbb{Z}} \hat{f}(k).
 \]
@@ -1038,6 +1056,7 @@ The **Shannon–Nyquist sampling theorem** answers the question: when can a cont
 
 <div class="theorem">
 <strong>Theorem (Shannon–Nyquist).</strong> If \(f\) is band-limited with bandwidth \(B\), then \(f\) is completely determined by its samples \(\{f(n/(2B))\}_{n \in \mathbb{Z}}\), and can be reconstructed via:
+
 \[
 f(x) = \sum_{n \in \mathbb{Z}} f\!\left(\frac{n}{2B}\right) \text{sinc}(2Bx - n),
 \]
@@ -1056,6 +1075,7 @@ The Heisenberg uncertainty principle in quantum mechanics has a precise mathemat
 
 <div class="theorem">
 <strong>Theorem (Heisenberg–Pauli–Weyl Uncertainty Principle).</strong> For \(f \in L^2(\mathbb{R})\) with \(\|f\|_2 = 1\),
+
 \[
 \left(\int_{\mathbb{R}} x^2|f(x)|^2\,dx\right)\left(\int_{\mathbb{R}} \xi^2|\hat{f}(\xi)|^2\,d\xi\right) \geq \frac{1}{16\pi^2}.
 \]
@@ -1104,6 +1124,7 @@ giving \(\|xf\|_2\|\xi\hat{f}\|_2 \geq \frac{\|f\|_2^2}{4\pi}\). \(\square\)
 
 <div class="definition">
 <strong>Definition (Sobolev Spaces \(H^s(\mathbb{R})\)).</strong> For \(s \in \mathbb{R}\), the <strong>Sobolev space</strong> \(H^s(\mathbb{R})\) is defined as
+
 \[
 H^s(\mathbb{R}) = \left\{f \in \mathcal{S}'(\mathbb{R}) : (1 + |\xi|^2)^{s/2}\hat{f}(\xi) \in L^2(\mathbb{R})\right\},
 \]
@@ -1135,6 +1156,7 @@ Let \(M(\mathbb{R})\) denote the space of finite (complex) Borel measures on \(\
 
 <div class="definition">
 <strong>Definition (Fourier–Stieltjes Transform).</strong> For \(\mu \in M(\mathbb{R})\), the <strong>Fourier–Stieltjes transform</strong> is
+
 \[
 \hat{\mu}(\xi) = \int_{\mathbb{R}} e^{-2\pi ix\xi}\,d\mu(x), \quad \xi \in \mathbb{R}.
 \]
@@ -1151,6 +1173,7 @@ For absolutely continuous measures \(d\mu = f\,dx\) with \(f \in L^1(\mathbb{R})
 
 <div class="definition">
 <strong>Definition (Positive-Definite Function).</strong> A function \(\varphi : \mathbb{R} \to \mathbb{C}\) is <strong>positive definite</strong> if for all \(n \geq 1\), all \(x_1, \ldots, x_n \in \mathbb{R}\), and all \(c_1, \ldots, c_n \in \mathbb{C}\),
+
 \[
 \sum_{j=1}^n\sum_{k=1}^n c_j\overline{c_k}\varphi(x_j - x_k) \geq 0.
 \]
@@ -1168,6 +1191,7 @@ Bochner's theorem is the profound converse.
 
 <div class="theorem">
 <strong>Theorem (Bochner).</strong> A function \(\varphi : \mathbb{R} \to \mathbb{C}\) is continuous and positive definite if and only if there exists a finite positive Borel measure \(\mu\) on \(\mathbb{R}\) such that
+
 \[
 \varphi(x) = \hat{\mu}(x) = \int_{\mathbb{R}} e^{-2\pi it x}\,d\mu(t).
 \]
@@ -1297,6 +1321,7 @@ The **Hilbert transform** is the most important singular integral operator in ha
 
 <div class="definition">
 <strong>Definition (Hilbert Transform).</strong> The <strong>Hilbert transform</strong> of \(f \in \mathcal{S}(\mathbb{R})\) is
+
 \[
 (Hf)(x) = \text{p.v.}\frac{1}{\pi}\int_{-\infty}^\infty \frac{f(y)}{x-y}\,dy = \lim_{\varepsilon\to 0^+}\frac{1}{\pi}\int_{|x-y|>\varepsilon}\frac{f(y)}{x-y}\,dy.
 \]
@@ -1503,6 +1528,7 @@ Let \(\mathcal{H}\) be a Hilbert space with inner product \(\langle \cdot, \cdot
 
 <div class="theorem">
 <strong>Theorem (Bessel's Inequality).</strong> For any orthonormal system \(\{e_n\}\) in a Hilbert space \(\mathcal{H}\) and any \(f \in \mathcal{H}\),
+
 \[
 \sum_{n \in \mathbb{Z}} |\langle f, e_n\rangle|^2 \leq \|f\|^2.
 \]
@@ -1510,6 +1536,7 @@ Let \(\mathcal{H}\) be a Hilbert space with inner product \(\langle \cdot, \cdot
 
 <div class="proof">
 <strong>Proof.</strong> Let \(S_N = \sum_{|n| \leq N} \langle f, e_n\rangle e_n\) be the partial Fourier sum. Observe that \(S_N\) is the orthogonal projection of \(f\) onto \(V_N = \text{span}\{e_n : |n| \leq N\}\). The projection is characterized by \(f - S_N \perp V_N\), which we verify: for \(|m| \leq N\),
+
 \[
 \langle f - S_N, e_m\rangle = \langle f, e_m\rangle - \sum_{|n|\leq N}\langle f, e_n\rangle\langle e_n, e_m\rangle = \langle f, e_m\rangle - \langle f, e_m\rangle = 0.
 \]
@@ -1533,6 +1560,7 @@ The orthonormal system \(\{e^{inx}\}_{n \in \mathbb{Z}}\) is **complete** in \(L
 
 <div class="proof">
 <strong>Proof (via Fejér's theorem).</strong> Suppose \(\hat{f}(n) = 0\) for all \(n\). The Cesàro means are \(\sigma_N f = K_N * f\), and since \(K_N(x) = \sum_{|n| \leq N-1}(1 - |n|/N)e^{inx}\), we have:
+
 \[
 \sigma_N f(x) = \sum_{|n|\leq N-1}\left(1-\frac{|n|}{N}\right)\hat{f}(n)e^{inx} = 0,
 \]
@@ -1546,6 +1574,7 @@ The first term is \(< \varepsilon\). The last term is \(\|\sigma_N(g-f)\|_2 \leq
 
 <div class="theorem">
 <strong>Theorem (Parseval's Identity, full proof).</strong> For \(f \in L^2(\mathbb{T})\),
+
 \[
 \|f\|_{L^2(\mathbb{T})}^2 = \frac{1}{2\pi}\int_{-\pi}^\pi |f(x)|^2\,dx = \sum_{n=-\infty}^\infty |\hat{f}(n)|^2.
 \]
@@ -1553,6 +1582,7 @@ The first term is \(< \varepsilon\). The last term is \(\|\sigma_N(g-f)\|_2 \leq
 
 <div class="proof">
 <strong>Proof.</strong> From the completeness theorem, we know \(S_N f \to f\) in \(L^2\). (Indeed, by Bessel, \(\{S_N f\}\) is Cauchy: \(\|S_M f - S_N f\|_2^2 = \sum_{N < |n| \leq M}|\hat{f}(n)|^2 \to 0\), and its limit must be \(f\) since \(\langle f - \lim S_N f, e_n\rangle = 0\) for all \(n\), forcing the limit to equal \(f\) by completeness.) Now:
+
 \[
 \|f\|_2^2 = \langle f, f\rangle = \lim_{N\to\infty}\langle S_N f, f\rangle = \lim_{N\to\infty}\sum_{|n|\leq N}\hat{f}(n)\overline{\langle f, e_n\rangle} \cdot 2\pi
 \]
@@ -1703,6 +1733,7 @@ Abel summability is strictly weaker than convergence. The classic example: \(\su
 
 <div class="theorem">
 <strong>Theorem (Abel Summability of Fourier Series).</strong> Let \(f \in L^1(\mathbb{T})\). Then for any \(x_0 \in \mathbb{T}\) at which \(f\) is continuous:
+
 \[
 \lim_{r\to 1^-} \sum_{n=-\infty}^\infty \hat{f}(n)r^{|n|}e^{inx_0} = f(x_0).
 \]
@@ -1743,6 +1774,7 @@ This is consistent with the non-negativity of \(P_r\): since \(P_r \geq 0\) and 
 
 <div class="example">
 <strong>Example (Rectangle function).</strong> Let \(f = \mathbf{1}_{[-1/2, 1/2]}\), the indicator function of \([-1/2, 1/2]\). Then:
+
 \[
 \hat{f}(\xi) = \int_{-1/2}^{1/2} e^{-2\pi ix\xi}\,dx = \left[\frac{e^{-2\pi ix\xi}}{-2\pi i\xi}\right]_{-1/2}^{1/2} = \frac{e^{-\pi i\xi} - e^{\pi i\xi}}{-2\pi i\xi} = \frac{2\sin(\pi\xi)}{2\pi\xi} = \text{sinc}(\xi),
 \]
@@ -1783,6 +1815,7 @@ solves the Dirichlet problem for the upper half-plane with boundary data \(f\) o
 
 <div class="example">
 <strong>Example.</strong> Let \(f(x) = e^{-a|x|}\) for \(a > 0\). Then:
+
 \[
 \hat{f}(\xi) = \int_{-\infty}^\infty e^{-a|x|}e^{-2\pi ix\xi}\,dx = \int_0^\infty e^{-ax}e^{-2\pi ix\xi}\,dx + \int_{-\infty}^0 e^{ax}e^{-2\pi ix\xi}\,dx.
 \]
@@ -1931,6 +1964,7 @@ In applications, one works with finitely many samples rather than continuous fun
 
 <div class="definition">
 <strong>Definition (DFT).</strong> For a sequence \((x_0, x_1, \ldots, x_{N-1}) \in \mathbb{C}^N\), the DFT is the sequence \((\hat{x}_0, \ldots, \hat{x}_{N-1})\) defined by:
+
 \[
 \hat{x}_k = \sum_{n=0}^{N-1} x_n e^{-2\pi ink/N}, \quad k = 0, 1, \ldots, N-1.
 \]
@@ -2139,6 +2173,7 @@ Wavelets provide a multi-resolution decomposition that adapts to the local featu
 
 <div class="definition">
 <strong>Definition (Continuous Wavelet Transform).</strong> Let \(\psi \in L^2(\mathbb{R})\) be a **mother wavelet**, satisfying the **admissibility condition**:
+
 \[
 C_\psi = \int_\mathbb{R} \frac{|\hat{\psi}(\xi)|^2}{|\xi|}\,d\xi < \infty,
 \]
@@ -2241,6 +2276,7 @@ This is the area of Prof. Spronk's research: understanding the structure of Four
 <strong>Exercise 3.1 (Dini implies Dirichlet).</strong> Show that the Dini condition is satisfied (with \(s = f(x_0)\)) whenever \(f\) is Hölder continuous at \(x_0\): \(|f(x_0 + t) - f(x_0)| \leq C|t|^\alpha\) for some \(\alpha > 0\).
 
 <strong>Solution:</strong> The Dini condition requires integrability of \(\frac{f(x_0+t)+f(x_0-t)-2f(x_0)}{t}\) near 0. We have:
+
 \[
 |f(x_0+t)+f(x_0-t)-2f(x_0)| \leq |f(x_0+t)-f(x_0)| + |f(x_0-t)-f(x_0)| \leq 2C|t|^\alpha.
 \]
@@ -2253,6 +2289,7 @@ So the integrand is bounded by \(2C|t|^{\alpha-1}\), which is integrable near 0 
 <strong>Exercise 7.1.</strong> Compute the Fourier transform of \(f(x) = xe^{-a|x|}\) for \(a > 0\).
 
 <strong>Solution:</strong> Write \(f(x) = xe^{-a|x|} = x e^{-ax}\mathbf{1}_{x\geq 0} + xe^{ax}\mathbf{1}_{x<0}\). Using the formula \(\widehat{xf} = \frac{i}{2\pi}\hat{f}'\) (differentiation in frequency corresponds to multiplication by \(ix/(2\pi)\) in the Fourier domain — or more precisely, \(\widehat{xf}(\xi) = \frac{1}{-2\pi i}\frac{d}{d\xi}\hat{f}(\xi)\)): since \(\widehat{e^{-a|x|}}(\xi) = \frac{2a}{a^2+4\pi^2\xi^2}\), we have:
+
 \[
 \hat{f}(\xi) = \frac{i}{2\pi}\frac{d}{d\xi}\frac{2a}{a^2+4\pi^2\xi^2} = \frac{i}{2\pi}\cdot\frac{-16\pi^2 a\xi}{(a^2+4\pi^2\xi^2)^2} = \frac{-8\pi i a\xi}{(a^2+4\pi^2\xi^2)^2}.
 \]
@@ -2334,6 +2371,7 @@ In other words: if \(f\) is in the Wiener algebra and has no zeros, then its rec
 
 <div class="theorem">
 <strong>Theorem (Wiener's General Tauberian Theorem).</strong> Let \(f \in L^1(\mathbb{R})\) and suppose \(\hat{f}(\xi) \neq 0\) for all \(\xi \in \mathbb{R}\) (the "non-vanishing spectrum" condition). Let \(\mu\) be a bounded measure on \(\mathbb{R}\). If
+
 \[
 \lim_{t \to +\infty} (f * \mu)(t) = c \int_\mathbb{R} f\,dx,
 \]
@@ -2358,6 +2396,7 @@ A fundamental tool in harmonic analysis, discovered by G.H. Hardy and J.E. Littl
 
 <div class="definition">
 <strong>Definition (Hardy–Littlewood Maximal Function).</strong> For \(f \in L^1_{\text{loc}}(\mathbb{R}^n)\), the <strong>Hardy–Littlewood maximal function</strong> is:
+
 \[
 (Mf)(x) = \sup_{r > 0} \frac{1}{|B(x,r)|}\int_{B(x,r)} |f(y)|\,dy,
 \]
@@ -2370,6 +2409,7 @@ Intuitively, \(Mf(x)\) is the largest average of \(|f|\) over any ball centered 
 <strong>Theorem (Hardy–Littlewood Maximal Theorem).</strong>
 <ol>
 <li><strong>Weak-type (1,1):</strong> There is a constant \(C_n > 0\) such that for all \(f \in L^1(\mathbb{R}^n)\) and \(\lambda > 0\):
+
 \[
 |\{x : Mf(x) > \lambda\}| \leq \frac{C_n}{\lambda}\|f\|_{L^1(\mathbb{R}^n)}.
 \]
@@ -2461,6 +2501,7 @@ The Riesz–Thorin theorem (Chapter 6) uses complex analysis. There is a real-va
 
 <div class="definition">
 <strong>Definition (Weak \(L^p\) / Lorentz space).</strong> For \(1 \leq p < \infty\), the <strong>weak \(L^p\) space</strong> \(L^{p,\infty}(X)\) consists of all measurable \(f\) such that:
+
 \[
 \|f\|_{L^{p,\infty}} = \sup_{\lambda>0} \lambda \cdot \mu(\{|f| > \lambda\})^{1/p} < \infty.
 \]
@@ -2563,7 +2604,7 @@ The group \(\mathbb{Z}/N\mathbb{Z} = \{0, 1, 2, \ldots, N-1\}\) with addition mo
 \[
 \chi_k(j) = e^{2\pi ijk/N}, \quad k = 0, 1, \ldots, N-1.
 \]
-These form a complete orthonormal system in \(L^2(\mathbb{Z}/N\mathbb{Z}) = \mathbb{C}^N$ (with the inner product \(\langle x, y\rangle = \frac{1}{N}\sum_{j=0}^{N-1}x_j\overline{y_j}\)):
+These form a complete orthonormal system in \(L^2(\mathbb{Z}/N\mathbb{Z}) = \mathbb{C}^N\) (with the inner product \(\langle x, y\rangle = \frac{1}{N}\sum_{j=0}^{N-1}x_j\overline{y_j}\)):
 
 \[
 \frac{1}{N}\sum_{j=0}^{N-1}\chi_k(j)\overline{\chi_l(j)} = \frac{1}{N}\sum_{j=0}^{N-1}e^{2\pi ij(k-l)/N} = \delta_{kl}.
@@ -2641,7 +2682,7 @@ The Fourier transform allows a far-reaching generalization of differential opera
 \[
 (Pu)(x) = \int_{\mathbb{R}^n} p(x,\xi)\hat{u}(\xi)e^{2\pi ix\cdot\xi}\,d\xi,
 \]
-where \(p(x,\xi)$ is a "symbol" satisfying \(|\partial_x^\alpha\partial_\xi^\beta p(x,\xi)| \leq C_{\alpha\beta}(1+|\xi|)^{m-|\beta|}\). Differential operators \(P = \sum_{|\alpha|\leq m}a_\alpha(x)\partial^\alpha\) correspond to polynomial symbols \(p(x,\xi) = \sum_{|\alpha|\leq m}a_\alpha(x)(2\pi i\xi)^\alpha\). Pseudodifferential operators allow "fractional derivatives," operators whose symbol involves \(|\xi|^s\) for non-integer \(s\), and variable-coefficient versions of Fourier multipliers.
+where \(p(x,\xi)\) is a "symbol" satisfying \(|\partial_x^\alpha\partial_\xi^\beta p(x,\xi)| \leq C_{\alpha\beta}(1+|\xi|)^{m-|\beta|}\). Differential operators \(P = \sum_{|\alpha|\leq m}a_\alpha(x)\partial^\alpha\) correspond to polynomial symbols \(p(x,\xi) = \sum_{|\alpha|\leq m}a_\alpha(x)(2\pi i\xi)^\alpha\). Pseudodifferential operators allow "fractional derivatives," operators whose symbol involves \(|\xi|^s\) for non-integer \(s\), and variable-coefficient versions of Fourier multipliers.
 
 The **calculus of pseudodifferential operators** (composition, adjoint, parametrix) generalizes the calculus of differential operators and is the foundation of modern PDE theory, particularly the proof of elliptic regularity in full generality and the Atiyah–Singer index theorem.
 

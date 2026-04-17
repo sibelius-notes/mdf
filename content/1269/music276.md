@@ -17,14 +17,17 @@ The simplest and most fundamental type of vibration is *simple harmonic motion* 
 
 <div class="definition">
 A mechanical system exhibits <strong>simple harmonic motion</strong> when the net restoring force \(F\) on the oscillating object is proportional to its displacement \(x\) from equilibrium and directed opposite to that displacement:
+
 \[
 F = -kx,
 \]
 where \(k > 0\) is the <em>spring constant</em> (or stiffness) of the system, measured in newtons per metre (N/m). Newton's second law, \(F = m\ddot{x}\), then gives the <em>equation of motion</em>
+
 \[
 m\ddot{x} + kx = 0,
 \]
 whose general solution is
+
 \[
 x(t) = A\cos(\omega t + \phi),
 \]
@@ -34,16 +37,19 @@ where \(A\) is the <strong>amplitude</strong> (the maximum displacement from equ
 {{< score id="music276/31-shm-tuning-fork" caption="A tuning fork sounding A4 (440 Hz): the same pitch at different time resolutions, illustrating the periodicity of simple harmonic motion." >}}
 
 The angular frequency is entirely determined by the mechanical properties of the system:
+
 \[
 \omega = \sqrt{\frac{k}{m}}.
 \]
 The motion repeats with period \(T = 2\pi/\omega\), so the ordinary (cyclic) frequency in hertz is
+
 \[
 f = \frac{1}{T} = \frac{\omega}{2\pi} = \frac{1}{2\pi}\sqrt{\frac{k}{m}}.
 \]
 This formula encodes an important physical principle: stiffer systems (larger \(k\)) vibrate faster, while more massive systems (larger \(m\)) vibrate more slowly. Instrument makers have exploited this for millennia. Tightening a guitar string raises \(k\) (by increasing tension, which acts as an effective spring constant for transverse displacement) and raises the pitch. Winding bass strings with extra wire raises \(m\) per unit length, lowering the pitch without requiring an impractically long string.
 
 The velocity and acceleration in SHM follow directly by differentiation:
+
 \[
 \dot{x}(t) = -A\omega\sin(\omega t + \phi), \qquad \ddot{x}(t) = -A\omega^2\cos(\omega t + \phi).
 \]
@@ -51,10 +57,12 @@ Notice that velocity is 90° out of phase with displacement (the particle moves 
 
 <div class="example">
 <strong>Example 1.1.</strong> A tuning fork vibrating at concert pitch \(A_4 = 440\) Hz has angular frequency
+
 \[
 \omega = 2\pi \times 440 \approx 2764 \text{ rad/s}.
 \]
 If the tip of the fork moves with amplitude \(A = 0.1\) mm \(= 10^{-4}\) m, its displacement at time \(t\) (taking \(\phi = 0\) for convenience) is
+
 \[
 x(t) = 10^{-4}\cos(2764\, t) \text{ m}.
 \]
@@ -66,14 +74,17 @@ The maximum velocity is \(v_{\max} = A\omega = 10^{-4} \times 2764 \approx 0.276
 ### 1.2 Damping and Resonance
 
 Real oscillating systems lose energy over time due to friction, air resistance, and internal material losses. The equation of motion for a *damped* harmonic oscillator is
+
 \[
 m\ddot{x} + b\dot{x} + kx = 0,
 \]
 where \(b\) is the *damping coefficient* (N·s/m). Defining the natural frequency \(\omega_0 = \sqrt{k/m}\) and the damping ratio \(\zeta = b/(2m\omega_0)\), the solution for an underdamped system (\(\zeta < 1\)) is
+
 \[
 x(t) = A e^{-\zeta\omega_0 t}\cos(\omega_d t + \phi), \quad \omega_d = \omega_0\sqrt{1 - \zeta^2}.
 \]
 The amplitude decays exponentially with time constant \(\tau = 1/(\zeta\omega_0) = 2m/b\). In acoustics, the decay rate of a resonator is often characterized by the *quality factor*
+
 \[
 Q = \frac{\omega_0}{2\zeta\omega_0} = \frac{m\omega_0}{b} = \frac{f_0}{\Delta f},
 \]
@@ -82,6 +93,7 @@ where \(\Delta f\) is the half-power bandwidth of the resonance peak (the freque
 A high-\(Q\) resonator rings for a long time and has a very sharp frequency response; a low-\(Q\) resonator decays quickly and responds broadly. A guitar string may have \(Q \sim 1000\); a drum membrane \(Q \sim 10\); the ear canal resonance \(Q \sim 10\). The body of a violin, which must respond broadly enough to reinforce strings tuned to different pitches, has body resonances with \(Q \sim 20\)–50. In contrast, a tuning fork, designed to maintain a single precise frequency, has \(Q \sim 10{,}000\)–\(30{,}000\) depending on alloy and geometry.
 
 When an external periodic force \(F(t) = F_0\cos(\omega_{\text{drive}} t)\) is applied, the system reaches a *forced steady-state* response at the driving frequency \(\omega_{\text{drive}}\):
+
 \[
 x_{\text{ss}}(t) = \frac{F_0/m}{\sqrt{(\omega_0^2 - \omega_{\text{drive}}^2)^2 + (b\omega_{\text{drive}}/m)^2}}\cos(\omega_{\text{drive}} t - \delta),
 \]
@@ -98,26 +110,31 @@ For a one-dimensional medium (a string, or a narrow tube of air), the transverse
 \]
 
 where \(c\) is the phase speed of the wave. The general solution (d'Alembert, 1747) is a superposition of a right-traveling wave and a left-traveling wave:
+
 \[
 y(x, t) = f(x - ct) + g(x + ct),
 \]
 for arbitrary (twice-differentiable) functions \(f\) and \(g\) determined by the initial conditions \(y(x, 0)\) and \(\partial_t y(x, 0)\). A purely sinusoidal solution takes the form
+
 \[
 y(x, t) = A\cos(kx - \omega t + \phi),
 \]
 where \(k = \omega/c = 2\pi/\lambda\) is the *wavenumber* and \(\lambda = c/f\) is the *wavelength*. At 440 Hz in air, \(\lambda = 343/440 \approx 0.78\) m — roughly the length of a standard ruler. At 20 Hz (the lower limit of hearing), \(\lambda \approx 17\) m; at 20 kHz (the upper limit), \(\lambda \approx 1.7\) cm.
 
 In free air, sound waves are *longitudinal*: air molecules are displaced parallel to the direction of propagation, creating alternating regions of compression (elevated pressure) and rarefaction (reduced pressure). The three-dimensional wave equation governing the acoustic pressure fluctuation \(p(x, y, z, t)\) is
+
 \[
 \frac{\partial^2 p}{\partial t^2} = c^2 \nabla^2 p.
 \]
 
 <div class="remark">
 The speed of sound in an ideal gas is given by
+
 \[
 c = \sqrt{\frac{\gamma P_0}{\rho_0}},
 \]
 where \(\gamma\) is the adiabatic index (\(\gamma \approx 1.4\) for diatomic air), \(P_0\) is the ambient pressure, and \(\rho_0\) is the ambient density. At \(20^\circ\)C and standard atmospheric pressure (\(101{,}325\) Pa), this gives \(c \approx 343\) m/s. The temperature dependence is approximately linear for modest deviations from room temperature:
+
 \[
 c(T) \approx 331 + 0.6\, T \text{ m/s},
 \]
@@ -129,6 +146,7 @@ where \(T\) is in degrees Celsius. A wind instrument tuned at \(20^\circ\)C will
 ### 1.4 Sound Intensity and the Decibel Scale
 
 The physical strength of a sound wave is measured by its *intensity*, defined as the average power transmitted per unit area perpendicular to the direction of propagation. For a plane wave in air with pressure amplitude \(p_0\), the intensity is
+
 \[
 I = \frac{p_0^2}{2\rho_0 c}.
 \]
@@ -136,10 +154,12 @@ The human auditory system responds to an extraordinary range of intensities — 
 
 <div class="definition">
 The <strong>sound pressure level</strong> (SPL) in decibels is defined as
+
 \[
 L = 10\log_{10}\!\left(\frac{I}{I_0}\right) \text{ dB},
 \]
 where \(I_0 = 10^{-12}\) W/m\(^2\) is the internationally agreed reference intensity. Since intensity is proportional to the square of pressure amplitude, the equivalent definition in terms of root-mean-square pressure \(p_{\text{rms}}\) is
+
 \[
 L = 20\log_{10}\!\left(\frac{p_{\text{rms}}}{p_0}\right) \text{ dB},
 \]
@@ -149,6 +169,7 @@ where \(p_0 = 20\;\mu\text{Pa} = 2 \times 10^{-5}\) Pa is the reference pressure
 {{< score id="music276/19-loudness-dynamics" caption="The same pitch (A4) notated at ppp, mp, and fff: different dynamic levels correspond to different sound pressure levels on the decibel scale." >}}
 
 The logarithmic scale has several important properties. An increase of 10 dB corresponds to a tenfold increase in intensity. An increase of 3 dB (more precisely 3.01 dB) corresponds to a doubling of intensity. When two incoherent sound sources of levels \(L_1\) and \(L_2\) dB act simultaneously, the combined level is
+
 \[
 L_{\text{total}} = 10\log_{10}\!\left(10^{L_1/10} + 10^{L_2/10}\right).
 \]
@@ -171,6 +192,7 @@ At 30 phons, the equal-loudness contour passes through approximately 50 dB SPL a
 {{< score id="music276/03-octave-equivalence" caption="Octave equivalence across C2–C6: the equal-loudness contours show how much more SPL is needed at low frequencies to match the loudness of mid-range tones." >}}
 
 The *sone* is the unit of subjective loudness magnitude (not to be confused with loudness level in phons). By convention, 1 sone is defined as the loudness of a 1 kHz tone at 40 dB SPL. A doubling of sones corresponds to a doubling of perceived loudness, which empirically requires an increase of approximately 10 phons. The relationship is approximately
+
 \[
 S = 2^{(L_p - 40)/10},
 \]
@@ -188,14 +210,17 @@ If Chapter 1 gives us the physics of a single sinusoidal tone, Chapter 2 confron
 
 <div class="theorem">
 <strong>Fourier's Theorem.</strong> Any periodic function \(s(t)\) with fundamental period \(T_0 = 1/f_1\) that satisfies the Dirichlet conditions (finitely many discontinuities and extrema in any period, and absolute integrability over one period) can be represented as a convergent sum of sinusoids:
+
 \[
 s(t) = \frac{a_0}{2} + \sum_{n=1}^{\infty} \left[ a_n \cos(2\pi n f_1 t) + b_n \sin(2\pi n f_1 t) \right],
 \]
 where the Fourier coefficients are
+
 \[
 a_n = \frac{2}{T_0}\int_0^{T_0} s(t)\cos(2\pi n f_1 t)\, dt, \quad b_n = \frac{2}{T_0}\int_0^{T_0} s(t)\sin(2\pi n f_1 t)\, dt.
 \]
 In amplitude-phase form, this is equivalently
+
 \[
 s(t) = \sum_{n=1}^{\infty} A_n \cos(2\pi n f_1 t + \phi_n),
 \]
@@ -205,6 +230,7 @@ where \(A_n = \sqrt{a_n^2 + b_n^2}\) is the amplitude of the \(n\)th harmonic an
 {{< score id="music276/01-harmonic-series" caption="The harmonic series on C2: partials 1–8 notated with their frequencies and ratios, from bass through treble clef." >}}
 
 The integer \(n\) indexes the *harmonics* of the fundamental frequency \(f_1\): the \(n\)th harmonic has frequency
+
 \[
 f_n = n f_1, \quad n = 1, 2, 3, \ldots
 \]
@@ -214,6 +240,7 @@ The set \(\{f_1, 2f_1, 3f_1, 4f_1, \ldots\}\) is the *harmonic series*. The firs
 
 <div class="example">
 <strong>Example 2.1.</strong> A sawtooth wave with fundamental frequency \(f_1\) and unit amplitude has the Fourier series
+
 \[
 s(t) = \frac{2}{\pi}\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}\sin(2\pi n f_1 t),
 \]
@@ -227,6 +254,7 @@ so \(A_n = 2/(\pi n)\). The amplitude spectrum falls as \(1/n\) (equivalently, \
 The sequence \(\{A_n\}\) of harmonic amplitudes is the *amplitude spectrum* of the sound. The *timbre* of a steady-state periodic tone is determined primarily by the shape of this spectrum — specifically by the *spectral envelope*, the smooth curve interpolating the peaks \(A_n\) as a function of frequency \(nf_1\). Two tones with the same fundamental frequency but different spectral envelopes will have the same pitch but very different timbres.
 
 The *mel-frequency cepstral coefficients* (MFCCs) are one widely used mathematical representation of the spectral envelope that is motivated by auditory physiology. The cepstrum of a signal is the inverse Fourier transform of the log-magnitude spectrum:
+
 \[
 c(n) = \mathcal{F}^{-1}\!\left\{\log\left|\hat{S}(f)\right|\right\},
 \]
@@ -257,6 +285,7 @@ The <strong>ADSR envelope</strong> decomposes the amplitude trajectory of a musi
 <li><strong>Release</strong> (duration \(t_R\)): amplitude falls from \(A_S\) back to 0 after the note is released.</li>
 </ul>
 A simplified piecewise-linear model is:
+
 \[
 E(t) = \begin{cases}
 A_{\max}\, t/t_A & 0 \le t < t_A \\
@@ -280,11 +309,13 @@ The spectrogram is the standard tool for visualizing how the spectrum of a sound
 \]
 
 where \(w\) is a window function (commonly a Hann, Hamming, or Gaussian window) that localizes the analysis around time \(t\). The spectrogram is
+
 \[
 \mathcal{S}(t, f) = \left|\mathrm{STFT}(t, f)\right|^2.
 \]
 
 There is a fundamental *time-frequency uncertainty* in any spectrogram: a narrow time window gives good time resolution but poor frequency resolution, while a wide window gives good frequency resolution but poor time resolution. Formally, the time resolution \(\Delta t\) and frequency resolution \(\Delta f\) satisfy
+
 \[
 \Delta t \cdot \Delta f \ge \frac{1}{4\pi},
 \]
@@ -299,16 +330,19 @@ The vibrating string is among the most ancient and universal of musical sound so
 ### 3.1 Modes of the Ideal Vibrating String
 
 Consider a string of length \(L\), tension \(T\) (in newtons), and linear mass density \(\mu\) (mass per unit length, in kg/m), fixed at both ends. The transverse displacement \(y(x, t)\) satisfies the one-dimensional wave equation with wave speed
+
 \[
 c_s = \sqrt{\frac{T}{\mu}}.
 \]
 The boundary conditions \(y(0, t) = 0\) and \(y(L, t) = 0\) (fixed ends) restrict the allowed solutions to standing waves with nodes at both ends:
+
 \[
 y_n(x, t) = A_n\sin\!\left(\frac{n\pi x}{L}\right)\cos(2\pi f_n t + \phi_n), \quad n = 1, 2, 3, \ldots
 \]
 
 <div class="theorem">
 The <strong>modal frequencies</strong> of an ideal, perfectly flexible string of length \(L\), tension \(T\), and linear density \(\mu\) fixed at both ends are
+
 \[
 f_n = \frac{n}{2L}\sqrt{\frac{T}{\mu}}, \quad n = 1, 2, 3, \ldots
 \]
@@ -321,6 +355,7 @@ The mode shapes \(\sin(n\pi x/L)\) are the normal modes of the string: the first
 
 <div class="example">
 <strong>Example 3.1.</strong> A guitar string (open \(A\)) has length \(L = 0.65\) m, tension \(T = 70\) N, and linear density \(\mu = 3.5 \times 10^{-3}\) kg/m. Its fundamental frequency is
+
 \[
 f_1 = \frac{1}{2 \times 0.65}\sqrt{\frac{70}{3.5 \times 10^{-3}}} = \frac{1}{1.30}\sqrt{20{,}000} \approx \frac{141.4}{1.30} \approx 108.8 \text{ Hz} \approx A_2.
 \]
@@ -337,10 +372,12 @@ Real strings are not perfectly flexible — they have *bending stiffness*, which
 
 <div class="theorem">
 For a string with bending stiffness characterized by the dimensionless <strong>inharmonicity coefficient</strong>
+
 \[
 B = \frac{\pi^3 E d^4}{64 T L^2},
 \]
 where \(E\) is Young's modulus of the string material and \(d\) is the string diameter, the \(n\)th partial frequency is approximately
+
 \[
 f_n \approx n f_1 \sqrt{1 + B n^2}.
 \]
@@ -381,10 +418,12 @@ Consider a rigid cylindrical pipe of length \(L\) containing air at speed of sou
 
 <div class="theorem">
 For an <strong>open-open</strong> cylindrical pipe (open at both ends), the resonant frequencies form a complete harmonic series:
+
 \[
 f_n = \frac{nc}{2L}, \quad n = 1, 2, 3, \ldots
 \]
 For a <strong>closed-open</strong> pipe (rigidly closed at one end, open at the other), only odd harmonics are supported:
+
 \[
 f_n = \frac{(2n-1)\,c}{4L}, \quad n = 1, 2, 3, \ldots
 \]
@@ -403,6 +442,7 @@ The *clarinet* behaves acoustically as a closed-open pipe in its fundamental (ch
 
 <div class="example">
 <strong>Example 4.1.</strong> A B-flat clarinet has a sounding length of approximately \(L \approx 0.595\) m in its lowest register. As a closed-open pipe:
+
 \[
 f_1 = \frac{c}{4L} = \frac{343}{4 \times 0.595} \approx 144 \text{ Hz}.
 \]
@@ -436,6 +476,7 @@ The *mouthpiece* plays a specific acoustic role beyond simply holding the lips i
 In woodwind instruments, the pitch is controlled primarily by opening and closing *tone holes* — openings in the bore that effectively terminate the resonating air column at the position of the first open hole. When a tone hole is open, the acoustic pressure is approximately zero at that location (open boundary condition), shortening the effective resonating length. When all tone holes are closed, the full tube length resonates at the lowest note.
 
 The acoustic effect of a single open tone hole is not a perfect pressure node — the hole has finite size and its acoustic behavior depends on the ratio of hole diameter to bore diameter and on the height of the chimney (the tube connecting the hole opening to the interior of the bore). For a hole of radius \(a_h\) and chimney height \(t\), the acoustic length correction provided by the open hole (the amount by which it shortens the effective bore length) is approximately
+
 \[
 \Delta L \approx \frac{a^2}{a_h^2}\left(t + 0.7 a_h\right),
 \]
@@ -450,10 +491,12 @@ The previous chapters dealt with one-dimensional resonators — strings and tube
 ### 5.1 Vibrating Circular Membranes
 
 A circular membrane of radius \(a\), surface tension \(\sigma\) (N/m), and surface mass density \(\sigma_s\) (kg/m\(^2\)) vibrates according to the two-dimensional wave equation in polar coordinates \((r, \theta)\):
+
 \[
 \frac{\partial^2 z}{\partial t^2} = c_m^2 \left(\frac{\partial^2 z}{\partial r^2} + \frac{1}{r}\frac{\partial z}{\partial r} + \frac{1}{r^2}\frac{\partial^2 z}{\partial \theta^2}\right), \quad c_m = \sqrt{\frac{\sigma}{\sigma_s}}.
 \]
 The normal modes are separable in \((r, \theta)\) and are given by products of Bessel functions and trigonometric functions:
+
 \[
 z_{mn}(r, \theta, t) = J_m\!\left(\frac{z_{mn}^{(m)}}{a}\, r\right)\cos(m\theta + \psi_{mn})\cos(2\pi f_{mn} t + \varphi_{mn}),
 \]
@@ -461,6 +504,7 @@ where \(J_m\) is the Bessel function of the first kind of order \(m\), and \(z_{
 
 <div class="theorem">
 The <strong>modal frequencies</strong> of a circular membrane of radius \(a\) with fixed boundary conditions (\(z = 0\) at \(r = a\)) are
+
 \[
 f_{mn} = \frac{z_{mn}^{(m)}}{2\pi a}\, c_m, \quad m = 0, 1, 2, \ldots;\; n = 1, 2, 3, \ldots
 \]
@@ -489,6 +533,7 @@ The voice is perhaps the most sophisticated acoustic instrument in existence. Gu
 
 <div class="definition">
 In Fant's <strong>source-filter model</strong> of voice production, the radiated speech spectrum is the product of three components:
+
 \[
 \hat{S}(f) = \hat{U}_g(f)\cdot H(f)\cdot R(f),
 \]
@@ -503,6 +548,7 @@ where:
 {{< score id="music276/17-spectral-envelope" caption="Source-filter model illustration: the glottal source has harmonics at f₀, 2f₀, … with falling amplitude; the vocal tract formants shape the spectral envelope." >}}
 
 The vocal tract resonances — *formants* — are denoted \(F_1, F_2, F_3, \ldots\) in ascending order. For a uniform tube of length \(L_{vt} \approx 17\) cm (adult male), treating it as closed-open:
+
 \[
 F_n \approx \frac{(2n-1)c}{4 L_{vt}}, \quad n = 1, 2, 3, \ldots
 \]
@@ -534,10 +580,12 @@ When a sound source in a room suddenly stops, the sound energy decays gradually 
 
 <div class="theorem">
 <strong>Sabine's Formula.</strong> For a diffuse sound field in a room of volume \(V\) (m\(^3\)) and total absorption \(A\) (m\(^2\), or sabins), the reverberation time is
+
 \[
 T_{60} = \frac{0.161\, V}{A},
 \]
 where the total absorption is
+
 \[
 A = \sum_i S_i \alpha_i,
 \]
@@ -547,6 +595,7 @@ with \(S_i\) the area of the \(i\)th surface (m\(^2\)) and \(\alpha_i \in [0, 1]
 {{< score id="music276/22-dry-vs-reverberant" caption="Dry vs. reverberant acoustic: isolated staccato notes (studio) versus sustained blending notes (concert hall), illustrating the acoustic effect of different T₆₀ values." >}}
 
 The derivation of Sabine's formula assumes that the sound field is *diffuse* — that energy is uniformly distributed in all directions throughout the room, which is a good approximation when the room dimensions are large compared to the wavelength and when surfaces are reasonably irregular. For rooms with highly non-uniform absorption (e.g., a room with one very absorptive wall and highly reflective others), the Eyring-Norris formula is more accurate:
+
 \[
 T_{60} = \frac{0.161\, V}{-S\ln(1 - \bar{\alpha})},
 \]
@@ -554,6 +603,7 @@ where \(\bar{\alpha} = A/S\) is the mean absorption coefficient averaged over th
 
 <div class="example">
 <strong>Example 6.1.</strong> The Grosser Musikvereinssaal in Vienna has a volume of approximately \(V = 15{,}000\) m\(^3\) and a measured occupied \(T_{60} \approx 2.0\) s at 500 Hz. Sabine's formula gives the total occupied absorption:
+
 \[
 A = \frac{0.161 \times 15{,}000}{2.0} \approx 1{,}208 \text{ m}^2.
 \]
@@ -565,6 +615,7 @@ The unoccupied hall, with empty wood seats, has \(T_{60} \approx 3.2\) s, implyi
 ### 6.2 The Structure of Room Impulse Responses
 
 The *room impulse response* \(h(t)\) completely characterizes the acoustic behavior of a room between a specific source position and a specific receiver position. It is the pressure waveform arriving at the receiver when the source emits an ideal instantaneous impulse (\(\delta\)-function pulse). Any sound \(s(t)\) played in the room reaches the receiver as
+
 \[
 p(t) = (s * h)(t) = \int_{-\infty}^{\infty} s(\tau)\, h(t - \tau)\, d\tau,
 \]
@@ -587,6 +638,7 @@ The precedence effect has major implications for the acoustic design of concert 
 ### 6.4 Acoustic Measurement Methods
 
 The room impulse response can be measured experimentally by several methods. The classic method uses a pistol shot or balloon burst as an approximating impulse, but this is limited by the difficulty of creating a truly impulsive source with adequate signal-to-noise ratio. Modern practice instead uses *swept-sine excitation* (a sinusoidal signal whose frequency sweeps from the lowest to highest frequency of interest over several seconds) or *maximum-length sequence* (MLS) excitation (a pseudorandom binary signal with a flat power spectrum). The room impulse response is recovered by cross-correlating the received signal with the known excitation:
+
 \[
 h(t) = (r * x^{\text{rev}})(t),
 \]
@@ -628,6 +680,7 @@ When the stapes footplate moves in response to a sound, it creates a pressure wa
 
 <div class="definition">
 The <strong>characteristic frequency</strong> (CF) of a location \(x\) mm from the apex of the human cochlea is approximately given by the Greenwood function:
+
 \[
 f_{\mathrm{CF}}(x) = A\left(10^{ax} - k\right),
 \]
@@ -761,6 +814,7 @@ The <strong>Plomp-Levelt consonance function</strong> for two pure tones at freq
 {{< score id="music276/05-critical-bandwidth" caption="Plomp-Levelt critical bandwidth: unison (no beating), major 2nd (within critical band, rough), major 3rd (near CB edge), perfect 5th (outside CB, smooth)." >}}
 
 For complex tones with multiple harmonics, the total roughness of a dyad is the sum of roughnesses from all pairs of partials:
+
 \[
 D(f_1, f_2) = \sum_{m=1}^{N}\sum_{n=1}^{N} d(m f_1,\, n f_2,\, A_{1m},\, A_{2n}),
 \]
@@ -771,10 +825,12 @@ where \(d(f_a, f_b, a, b)\) is the Plomp-Levelt dissonance for two pure tones at
 The history of Western tuning is a history of compromise between competing ideals. We trace the major systems chronologically.
 
 *Pythagorean tuning* constructs the chromatic scale by stacking pure perfect fifths (ratio 3:2):
+
 \[
 f_n = f_0 \cdot \left(\frac{3}{2}\right)^n, \quad n = 0, 1, 2, \ldots, 11,
 \]
 reducing each result by factors of 2 to keep all pitches within a single octave. The twelve pitches generated by this process form the twelve chromatic notes, but they do not close into a perfect circle: twelve pure fifths overshoot seven pure octaves by the *Pythagorean comma*:
+
 \[
 \Pi = \left(\frac{3}{2}\right)^{12} \Big/ 2^7 = \frac{3^{12}}{2^{19}} = \frac{531441}{524288} \approx 1.01364 \approx 23.5 \text{ cents}.
 \]
@@ -782,6 +838,7 @@ reducing each result by factors of 2 to keep all pitches within a single octave.
 The Pythagorean major third has frequency ratio \((3/2)^4 / 4 = 81/64 \approx 1.2656\), which is 21.5 cents sharp of the pure major third \(5/4 = 1.250\) (the *syntonic comma* \(\approx 21.5\) cents). Pythagorean tuning gives beautiful fifths and fourths but harshly impure major thirds — suitable for medieval organum and early polyphony that avoided thirds, but problematic for Renaissance music that emphasized the major third as the defining interval of the triad.
 
 *Just intonation* corrects the third by using the pure 5:4 ratio, which requires introducing a second size of whole tone. The just diatonic scale has ratios:
+
 \[
 1 : \frac{9}{8} : \frac{5}{4} : \frac{4}{3} : \frac{3}{2} : \frac{5}{3} : \frac{15}{8} : 2.
 \]
@@ -794,6 +851,7 @@ The two whole tones are the *major tone* (9:8 \(\approx 203.9\) cents) and the *
 ### 8.5 Meantone Temperament and the Wolf Fifth
 
 *Meantone temperament*, developed in the 15th–17th centuries and used widely through the 18th century on keyboard instruments, distributes the syntonic comma evenly over the four fifths needed to build a major third. In quarter-comma meantone, each of these four fifths is tempered narrow by one-quarter of the syntonic comma (\(\approx 5.4\) cents), so four consecutive fifths sum to a pure major third plus two octaves:
+
 \[
 4 \times \left(\frac{3}{2} \cdot 2^{-1/(4 \times \ln(81/80)/\ln 2)}\right) \approx \frac{5}{4} \times 4 \quad \text{(over two octaves)}.
 \]
@@ -807,10 +865,12 @@ Meantone gives beautifully pure major thirds (the characteristic warmth of Renai
 
 <div class="definition">
 In <strong>12-tone equal temperament</strong>, the frequency ratio of a semitone is the twelfth root of two:
+
 \[
 r = 2^{1/12} \approx 1.05946.
 \]
 The frequency of the note \(n\) semitones above a reference pitch \(f_0\) is
+
 \[
 f_n = f_0 \cdot 2^{n/12}.
 \]
@@ -886,6 +946,7 @@ In practice, the bowed string produces a richer and more complex motion than the
 The acoustic theory developed in the preceding chapters is largely *linear*: we assumed that pressure fluctuations are small enough that the wave equation can be derived from a linear approximation to the equation of state of the gas. In practice, all acoustic systems exhibit some degree of nonlinearity — and in certain musical contexts, this nonlinearity becomes perceptually important.
 
 When two sinusoidal tones at frequencies \(f_1\) and \(f_2\) pass through a nonlinear system, the output contains not only the original frequencies but also *combination tones* at frequencies of the form
+
 \[
 f_{mn} = |m f_1 \pm n f_2|, \quad m, n = 0, 1, 2, \ldots
 \]
@@ -905,6 +966,7 @@ The decibel level of a complex sound is not a sufficient predictor of its percei
 
 <div class="definition">
 The <strong>threshold of masking</strong> \(L_m(f)\) is the minimum SPL of a sinusoidal target at frequency \(f\) that is detectable in the presence of a masker. For a narrowband noise masker at center frequency \(f_m\) and level \(L\) dB, the masked threshold at a frequency \(\Delta f\) above the masker (in the range \(\Delta f / f_m \in [0, 1]\)) is approximately
+
 \[
 L_m(f_m + \Delta f) \approx L - \alpha\, \frac{\Delta f}{f_m},
 \]
@@ -920,6 +982,7 @@ for a simplified linear model, where \(\alpha\) is a slope parameter on the orde
 The perception of the spatial direction and distance of a sound source is achieved through three primary cues: *interaural time difference* (ITD), *interaural level difference* (ILD), and spectral cues from the pinna (HRTF).
 
 The ITD is the difference in the time of arrival of a sound at the two ears. For a source at azimuth angle \(\theta\) (measured from the median plane), the ITD for a head of radius \(r \approx 8.5\) cm is approximately
+
 \[
 \mathrm{ITD} \approx \frac{r}{c}\left(\theta + \sin\theta\right),
 \]
@@ -937,6 +1000,7 @@ For a major triad in root position (frequencies \(f\), \(5f/4\), \(3f/2\) in jus
 
 <div class="example">
 <strong>Example S.1.</strong> A just major triad on C4 (262 Hz) has tones at approximately:
+
 \[
 f_1 = 262 \text{ Hz (C4)}, \quad f_2 = \frac{5}{4} \times 262 = 327.5 \text{ Hz (E4)}, \quad f_3 = \frac{3}{2} \times 262 = 393 \text{ Hz (G4)}.
 \]
@@ -960,12 +1024,14 @@ Modern music production, distribution, and analysis is almost entirely digital. 
 
 <div class="theorem">
 <strong>Nyquist-Shannon Sampling Theorem.</strong> A continuous-time signal \(s(t)\) that is <em>band-limited</em> — containing no frequency components above \(f_{\max}\) — is completely determined by its sample values at a uniform sampling rate \(f_s \ge 2 f_{\max}\). The original signal can be perfectly reconstructed from its samples via sinc interpolation:
+
 \[
 s(t) = \sum_{n=-\infty}^{\infty} s\!\left(\frac{n}{f_s}\right) \operatorname{sinc}\!\left(f_s t - n\right), \quad \operatorname{sinc}(x) = \frac{\sin(\pi x)}{\pi x}.
 \]
 </div>
 
 The sampling rate \(f_s = 44{,}100\) Hz used in the CD standard (established in 1980–1982) was chosen to slightly exceed \(2 \times 20{,}000 = 40{,}000\) Hz — the nominal upper limit of human hearing — with a margin for the practical anti-aliasing filter. At \(f_s = 44.1\) kHz, each second of audio requires \(44{,}100\) samples per channel. With 16-bit quantization (65,536 amplitude levels), a stereo CD stores approximately \(44{,}100 \times 2 \times 16 \approx 1.41\) megabits per second. The signal-to-quantization-noise ratio (SQNR) for uniform \(B\)-bit quantization is approximately
+
 \[
 \mathrm{SQNR} \approx 6.02B + 1.76 \text{ dB},
 \]
@@ -979,16 +1045,19 @@ The concept of *acoustic impedance* is the fundamental tool for analyzing the be
 
 <div class="definition">
 The <strong>acoustic impedance</strong> at a point in a duct is defined as the ratio of acoustic pressure \(p\) to volume velocity \(U\) (volume of air flowing past a cross-section per unit time):
+
 \[
 Z = \frac{p}{U} \quad \text{(Pa·s/m}^3\text{, or acoustic ohms)}.
 \]
 For a plane wave traveling in one direction in a duct of cross-sectional area \(S\), the <strong>characteristic impedance</strong> is
+
 \[
 Z_0 = \frac{\rho c}{S}.
 \]
 </div>
 
 The transmission line analogy maps acoustic systems onto electrical circuits: acoustic pressure corresponds to voltage, volume velocity to current, and characteristic impedance to the ratio of voltage to current in a transmission line. A tube of length \(L\) terminated by a load impedance \(Z_L\) has an input impedance
+
 \[
 Z_{\mathrm{in}} = Z_0 \frac{Z_L + i Z_0 \tan(kL)}{Z_0 + i Z_L \tan(kL)},
 \]
@@ -1011,10 +1080,12 @@ A subtler application is *acoustic glare reduction* using active diffusion: loud
 Sabine's diffuse-field theory (Chapter 6) becomes inaccurate at low frequencies, where the room dimensions are comparable to or smaller than the acoustic wavelength. In this regime — typically below a few hundred hertz, depending on room size — the acoustic field is dominated by a small number of *room modes*, the standing-wave resonances of the enclosure.
 
 For a rectangular room of dimensions \(L_x \times L_y \times L_z\), the modal frequencies are given by
+
 \[
 f_{mnp} = \frac{c}{2}\sqrt{\left(\frac{m}{L_x}\right)^2 + \left(\frac{n}{L_y}\right)^2 + \left(\frac{p}{L_z}\right)^2}, \quad m, n, p = 0, 1, 2, \ldots
 \]
 not all zero simultaneously. The lowest room mode is the *axial mode* along the longest dimension: for a 10 m room, \(f_{100} = 343/20 \approx 17\) Hz — below the range of most music. The density of modes increases as \(f^2\) (roughly), so above a certain *Schroeder frequency*
+
 \[
 f_S \approx 2000\sqrt{\frac{T_{60}}{V}} \text{ Hz},
 \]
@@ -1027,10 +1098,12 @@ Below \(f_S\), low-frequency acoustics in a room is a mode problem, not a diffus
 Vibrato and tremolo are two of the most common expressive devices in music, often confused but acoustically distinct.
 
 *Vibrato* is a periodic modulation of frequency (pitch) around a nominal center frequency. For a sinusoidal vibrato at modulation rate \(f_v\) Hz and depth \(\Delta f\) Hz, the instantaneous frequency is
+
 \[
 f(t) = f_0 + \Delta f \sin(2\pi f_v t),
 \]
 and the signal is a *frequency-modulated* (FM) tone. The instantaneous phase is
+
 \[
 \phi(t) = 2\pi \int_0^t f(\tau)\, d\tau = 2\pi f_0 t + \frac{\Delta f}{f_v}\cos(2\pi f_v t),
 \]
@@ -1039,10 +1112,12 @@ so the modulation index is \(\beta = \Delta f / f_v\). For a violin vibrato with
 Perceptually, vibrato at rates of 5–8 Hz with depths of 25–50 cents is characteristic of classical string and vocal performance. It enriches the timbre (FM sidebands spread energy around each harmonic), helps the voice or instrument project over accompaniment (frequency smearing reduces cancellation by room modes), and contributes to the perceived warmth and expressivity of the tone. Interestingly, vibrato also serves as a *perceptual glue* in ensemble intonation: the constant frequency fluctuation makes small pitch deviations between instruments less salient, partially masking the beats that would otherwise reveal mistuning.
 
 *Tremolo* is a periodic modulation of amplitude (loudness) at a modulation rate \(f_t\). For a sinusoidal amplitude modulation:
+
 \[
 s(t) = \bigl[1 + m\sin(2\pi f_t t)\bigr]\cos(2\pi f_0 t),
 \]
 where \(m \in [0, 1]\) is the modulation depth. By the product-to-sum identity, this equals
+
 \[
 s(t) = \cos(2\pi f_0 t) + \frac{m}{2}\cos\bigl(2\pi(f_0 + f_t)t\bigr) + \frac{m}{2}\cos\bigl(2\pi(f_0 - f_t)t\bigr),
 \]
@@ -1079,6 +1154,7 @@ The AAC (Advanced Audio Coding) codec, introduced in 1997 and used by iTunes and
 Tibetan singing bowls, crystal bowls, and the Chinese bianzhong (set of tuned bells) represent a distinct category of struck idiophones whose acoustic behavior illuminates several of the principles discussed throughout this course. The singing bowl, made of an alloy of five to seven metals, is struck with a padded mallet and sustained by rubbing the rim with a wooden or leather-covered stick. The friction between stick and rim excites the bowl into oscillation through a mechanism closely analogous to the bowed string: a stick-slip interaction that preferentially excites the fundamental mode, with the frequency determined by the bowl's geometry and material.
 
 The fundamental mode of a singing bowl is the \((2, 0)\) mode — two nodal lines and zero nodal circles — corresponding to an elliptical deformation of the circular rim: the rim alternately flattens and elongates in orthogonal directions. The frequency of this mode for a bowl of radius \(a\), wall thickness \(h\), density \(\rho\), and Young's modulus \(E\) is approximately
+
 \[
 f_{20} \approx \frac{h}{2\pi a^2}\sqrt{\frac{E}{3\rho(1-\nu^2)}},
 \]
@@ -1091,6 +1167,7 @@ The acoustic radiation from a singing bowl is *directional*: because the bowl ra
 No account of the science of musical sound would be complete without attention to the fragility of the auditory system and the occupational hazards faced by musicians. The cochlear hair cells that transduce acoustic energy into neural signals are among the most metabolically active cells in the body and are exquisitely sensitive to damage from excessive noise exposure and ototoxic chemicals.
 
 Noise-induced hearing loss (NIHL) results from both acute acoustic trauma (a single very loud event, such as an explosion or a gunshot, which can rupture the tectorial membrane or destroy hair cells outright) and cumulative noise exposure (prolonged exposure at moderate-to-high levels, which depletes the energy reserves of hair cells and eventually leads to their death). Hair cells, once destroyed, do not regenerate in mammals — hearing loss from NIHL is irreversible. The risk of damage is described by equal-energy models: the acoustic energy dose is
+
 \[
 \mathcal{D} = \int_0^T I(t)\, dt,
 \]

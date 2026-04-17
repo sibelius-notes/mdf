@@ -33,7 +33,9 @@ Search-and-matching models are built on probability theory. This chapter reviews
 
 A random variable \( X \) is characterised by its cumulative distribution function (CDF) \( F(x) = \Pr(X \leq x) \). For a continuous random variable, the probability density function (PDF) is \( f(x) = F'(x) \). The expectation is:
 
-\[ E[X] = \int_{-\infty}^\infty x \, f(x) \, dx \]
+\[
+E[X] = \int_{-\infty}^\infty x \, f(x) \, dx
+\]
 
 In wage-posting models, wages are drawn from a distribution \( F(w) \) over a support \( [\underline{w}, \bar{w}] \). A worker sampling from this distribution forms expectations of the wage offer and compares each realisation to their reservation wage.
 
@@ -41,7 +43,9 @@ In wage-posting models, wages are drawn from a distribution \( F(w) \) over a su
 
 If \( w_1, \ldots, w_n \) are independent draws from \( F(w) \), the maximum \( M_n = \max\{w_1, \ldots, w_n\} \) has CDF:
 
-\[ F_{M_n}(w) = \left[ F(w) \right]^n \]
+\[
+F_{M_n}(w) = \left[ F(w) \right]^n
+\]
 
 This is central to Stigler's analysis: a worker sampling \( n \) offers takes the best (maximum), and the expected value of the best offer increases with \( n \), but at a diminishing rate.
 
@@ -58,13 +62,19 @@ In the McCall model, job offers arrive at Poisson rate \( \lambda \), with each 
 
 The present value of a stream of payments \( \{x_t\}_{t=0}^\infty \) discounted at rate \( r \) is:
 
-\[ PV = \int_0^\infty e^{-rt} x_t \, dt \quad \text{(continuous time)} \]
+\[
+PV = \int_0^\infty e^{-rt} x_t \, dt \quad \text{(continuous time)}
+\]
 
-\[ PV = \sum_{t=0}^\infty \frac{x_t}{(1+r)^t} = \sum_{t=0}^\infty \beta^t x_t \quad \text{(discrete time, } \beta = 1/(1+r)\text{)} \]
+\[
+PV = \sum_{t=0}^\infty \frac{x_t}{(1+r)^t} = \sum_{t=0}^\infty \beta^t x_t \quad \text{(discrete time, } \beta = 1/(1+r)\text{)}
+\]
 
 The value of a permanent flow of \( x \) per period is:
 
-\[ PV = \frac{x}{r} \quad \text{(continuous time)} \quad \text{or} \quad PV = \frac{x}{1-\beta} \quad \text{(discrete time)} \]
+\[
+PV = \frac{x}{r} \quad \text{(continuous time)} \quad \text{or} \quad PV = \frac{x}{1-\beta} \quad \text{(discrete time)}
+\]
 
 These formulas are ubiquitous in search models when computing the value of being employed at wage \( w \).
 
@@ -82,7 +92,9 @@ Consider a buyer who observes prices drawn independently from a distribution \( 
 
 Expected minimum price from \( n \) draws:
 
-\[ E[\min\{p_1,\ldots,p_n\}] = \int_{\underline{p}}^{\bar{p}} p \cdot n \left[1 - F(p)\right]^{n-1} f(p) \, dp \]
+\[
+E[\min\{p_1,\ldots,p_n\}] = \int_{\underline{p}}^{\bar{p}} p \cdot n \left[1 - F(p)\right]^{n-1} f(p) \, dp
+\]
 
 As \( n \) increases by one, the expected savings in price (the marginal benefit of search) diminish. The marginal cost of search is a constant \( c \). The optimal sample size \( n^* \) balances marginal benefit and marginal cost.
 
@@ -114,11 +126,15 @@ McCall's model formalises optimal sequential job search. An unemployed worker re
 
 Let \( V_e(w) \) be the value of employment at wage \( w \) and \( V_u \) be the value of unemployment. Employment is an absorbing state (no separation), so:
 
-\[ V_e(w) = w + \beta V_e(w) \implies V_e(w) = \frac{w}{1-\beta} \]
+\[
+V_e(w) = w + \beta V_e(w) \implies V_e(w) = \frac{w}{1-\beta}
+\]
 
 The unemployed worker receives benefit \( b \) and draws a wage offer \( w' \). They accept if \( V_e(w') > V_u \) and reject otherwise:
 
-\[ V_u = b + \beta \int_{\underline{w}}^{\bar{w}} \max\left\{V_e(w'), V_u\right\} \, dF(w') \]
+\[
+V_u = b + \beta \int_{\underline{w}}^{\bar{w}} \max\left\{V_e(w'), V_u\right\} \, dF(w')
+\]
 
 This is the Bellman equation for the value of unemployment.
 
@@ -130,21 +146,31 @@ This is the Bellman equation for the value of unemployment.
 
 Since \( V_u = w^*/(1-\beta) \) at the reservation wage, the Bellman equation becomes:
 
-\[ \frac{w^*}{1-\beta} = b + \beta \int_{\underline{w}}^{\bar{w}} \max\left\{\frac{w'}{1-\beta}, \frac{w^*}{1-\beta}\right\} dF(w') \]
+\[
+\frac{w^*}{1-\beta} = b + \beta \int_{\underline{w}}^{\bar{w}} \max\left\{\frac{w'}{1-\beta}, \frac{w^*}{1-\beta}\right\} dF(w')
+\]
 
 Simplifying:
 
-\[ \frac{w^*}{1-\beta} = b + \frac{\beta}{1-\beta}\left[ w^* + \int_{w^*}^{\bar{w}} (w' - w^*) \, dF(w') \right] \]
+\[
+\frac{w^*}{1-\beta} = b + \frac{\beta}{1-\beta}\left[ w^* + \int_{w^*}^{\bar{w}} (w' - w^*) \, dF(w') \right]
+\]
 
 Rearranging yields the implicit equation for the reservation wage:
 
-\[ w^* = b(1-\beta) + \beta \int_{w^*}^{\bar{w}} (w' - w^*) \, dF(w') + \beta w^* \]
+\[
+w^* = b(1-\beta) + \beta \int_{w^*}^{\bar{w}} (w' - w^*) \, dF(w') + \beta w^*
+\]
 
-\[ w^*(1-\beta) = b(1-\beta) + \beta \int_{w^*}^{\bar{w}} (w' - w^*) \, dF(w') \]
+\[
+w^*(1-\beta) = b(1-\beta) + \beta \int_{w^*}^{\bar{w}} (w' - w^*) \, dF(w')
+\]
 
 Or equivalently:
 
-\[ w^* - b = \frac{\beta}{1-\beta} \int_{w^*}^{\bar{w}} (w - w^*) \, dF(w) \]
+\[
+w^* - b = \frac{\beta}{1-\beta} \int_{w^*}^{\bar{w}} (w - w^*) \, dF(w)
+\]
 
 The left side is the opportunity cost of one more period of search (foregone benefit \( b \)); the right side is the expected discounted gain from searching one more period (the option value of search).
 
@@ -162,15 +188,21 @@ The left side is the opportunity cost of one more period of search (foregone ben
 
 In continuous time with Poisson offer arrivals at rate \( \lambda \) and discount rate \( r \):
 
-\[ r V_u = b + \lambda \int_{w^*}^{\bar{w}} (V_e(w) - V_u) \, dF(w) \]
+\[
+r V_u = b + \lambda \int_{w^*}^{\bar{w}} (V_e(w) - V_u) \, dF(w)
+\]
 
 Since \( V_e(w) = w/r \), this becomes:
 
-\[ r V_u = b + \lambda \int_{w^*}^{\bar{w}} \left(\frac{w}{r} - V_u\right) dF(w) \]
+\[
+r V_u = b + \lambda \int_{w^*}^{\bar{w}} \left(\frac{w}{r} - V_u\right) dF(w)
+\]
 
 At the reservation wage \( r V_u = w^* \):
 
-\[ w^* = b + \frac{\lambda}{r} \int_{w^*}^{\bar{w}} (w - w^*) \, dF(w) \]
+\[
+w^* = b + \frac{\lambda}{r} \int_{w^*}^{\bar{w}} (w - w^*) \, dF(w)
+\]
 
 This is the continuous-time analogue: the flow value of unemployment equals the flow benefit \( b \) plus the expected capital gain from receiving an acceptable offer.
 
@@ -214,19 +246,27 @@ The model provides a coherent framework for understanding unemployment, vacancie
 
 The aggregate matching function \( M(u, v) \) gives the flow of new matches as a function of the mass of unemployed workers \( u \) and the mass of open vacancies \( v \):
 
-\[ M = M(u, v) = \mu \, u^\alpha v^{1-\alpha}, \quad \alpha \in (0,1) \]
+\[
+M = M(u, v) = \mu \, u^\alpha v^{1-\alpha}, \quad \alpha \in (0,1)
+\]
 
 This Cobb-Douglas form satisfies the standard properties: constant returns to scale (CRS), increasing in both arguments, concavity.
 
 Define labour market tightness:
 
-\[ \theta = \frac{v}{u} \]
+\[
+\theta = \frac{v}{u}
+\]
 
 A higher \( \theta \) means a tighter labour market — more vacancies relative to unemployed workers. The job-finding rate for workers and the vacancy-filling rate for firms are:
 
-\[ p(\theta) = \frac{M(u,v)}{u} = \mu \theta^{1-\alpha} \quad \text{(job-finding rate, increasing in } \theta\text{)} \]
+\[
+p(\theta) = \frac{M(u,v)}{u} = \mu \theta^{1-\alpha} \quad \text{(job-finding rate, increasing in } \theta\text{)}
+\]
 
-\[ q(\theta) = \frac{M(u,v)}{v} = \mu \theta^{-\alpha} \quad \text{(vacancy-filling rate, decreasing in } \theta\text{)} \]
+\[
+q(\theta) = \frac{M(u,v)}{v} = \mu \theta^{-\alpha} \quad \text{(vacancy-filling rate, decreasing in } \theta\text{)}
+\]
 
 <div class="definition">
 <strong>Labour Market Tightness:</strong> \( \theta = v/u \) summarises the state of the labour market. A higher \( \theta \) (tighter market) benefits workers (higher job-finding rate \( p(\theta) \)) but hurts firms (lower vacancy-filling rate \( q(\theta) \)).
@@ -240,15 +280,21 @@ Let all agents discount the future at rate \( r \). Jobs are destroyed at exogen
 
 Let \( V_e \) be the value of employment and \( V_u \) be the value of unemployment (receiving flow benefit \( b \)). In continuous time:
 
-\[ r V_e = w + s(V_u - V_e) \]
+\[
+r V_e = w + s(V_u - V_e)
+\]
 
-\[ r V_u = b + p(\theta)(V_e - V_u) \]
+\[
+r V_u = b + p(\theta)(V_e - V_u)
+\]
 
 The first equation says: the flow return on employment equals the wage plus the expected capital loss from job destruction (rate \( s \), loss \( V_e - V_u \)). The second says: the flow return on unemployment equals \( b \) plus the expected capital gain from finding a job (rate \( p(\theta) \), gain \( V_e - V_u \)).
 
 Equivalently, using the Bellman equation form:
 
-\[ r V_u = b + \lambda(\theta)\left[ V_e - V_u \right] \]
+\[
+r V_u = b + \lambda(\theta)\left[ V_e - V_u \right]
+\]
 
 where \( \lambda(\theta) \equiv p(\theta) \) is the contact rate.
 
@@ -256,25 +302,38 @@ where \( \lambda(\theta) \equiv p(\theta) \) is the contact rate.
 
 Let \( J_f \) be the value of a filled job and \( J_v \) be the value of a vacancy:
 
-\[ r J_f = (y - w) + s(J_v - J_f) \]
+\[
+r J_f = (y - w) + s(J_v - J_f)
+\]
 
-\[ r J_v = -\kappa + q(\theta)(J_f - J_v) \]
+\[
+r J_v = -\kappa + q(\theta)(J_f - J_v)
+\]
 
 **Free entry:** In equilibrium, firms post vacancies until profits are driven to zero. If \( J_v = 0 \) (which holds in steady state with free entry), then:
 
-\[ q(\theta) J_f = \kappa \]
+\[
+q(\theta) J_f = \kappa
+\]
 
 Substituting \( r J_f = y - w - s J_f \) (from the filled-job equation with \( J_v = 0 \)):
 
-\[ J_f = \frac{y - w}{r + s} \]
+\[
+J_f = \frac{y - w}{r + s}
+\]
 
 The job creation (JC) condition becomes:
 
-\[ \frac{y - w}{r + s} = \frac{\kappa}{q(\theta)} \]
+\[
+\frac{y - w}{r + s} = \frac{\kappa}{q(\theta)}
+\]
 
 <div class="theorem">
 <strong>Job Creation Condition:</strong>
-\[ \frac{y - w}{r + s} = \frac{\kappa}{q(\theta)} \]
+
+\[
+\frac{y - w}{r + s} = \frac{\kappa}{q(\theta)}
+\]
 This equates the value of a filled job (present value of the profit flow) to the cost of creating it (expected cost of vacancy posting, where \( \kappa/q(\theta) \) is the expected time-to-fill times cost per period). It pins down the equilibrium relationship between \( w \) and \( \theta \): higher wages reduce job creation, lowering \( \theta \) (a looser market for workers).
 </div>
 
@@ -282,17 +341,25 @@ This equates the value of a filled job (present value of the profit flow) to the
 
 Workers and firms divide the match surplus \( S = J_f + (V_e - V_u) \) — the total gain from the match over the next best alternatives. Nash bargaining allocates the surplus according to the worker's bargaining power \( \beta \in (0,1) \):
 
-\[ V_e - V_u = \beta S = \beta \left[ J_f + (V_e - V_u) \right] \]
+\[
+V_e - V_u = \beta S = \beta \left[ J_f + (V_e - V_u) \right]
+\]
 
-\[ J_f = (1-\beta) S \]
+\[
+J_f = (1-\beta) S
+\]
 
 The Nash bargaining wage satisfies:
 
-\[ \beta J_f = (1-\beta)(V_e - V_u) \]
+\[
+\beta J_f = (1-\beta)(V_e - V_u)
+\]
 
 Substituting the asset values and solving for \( w \):
 
-\[ w = (1-\beta)b + \beta(y + \kappa\theta) \]
+\[
+w = (1-\beta)b + \beta(y + \kappa\theta)
+\]
 
 <div class="theorem">
 <strong>Wage Equation:</strong> The bargained wage \( w = (1-\beta)b + \beta(y + \kappa\theta) \) is a weighted average of the worker's outside option (\( b \), the unemployment benefit) and the firm's productivity net of recruiting costs (\( y + \kappa\theta \)). Higher tightness \( \theta \) raises wages because workers have better outside options — they find jobs faster. Higher \( \beta \) gives workers a larger share of the surplus.
@@ -302,11 +369,15 @@ Substituting the asset values and solving for \( w \):
 
 The Beveridge curve describes the steady-state relationship between vacancies and unemployment. In steady state, flows into unemployment (job destruction) equal flows out (job finding):
 
-\[ s(1-u) = p(\theta) u \]
+\[
+s(1-u) = p(\theta) u
+\]
 
 Solving for \( u \):
 
-\[ u = \frac{s}{s + p(\theta)} \]
+\[
+u = \frac{s}{s + p(\theta)}
+\]
 
 This is the Beveridge curve: for a given \( \theta \), the unemployment rate is determined by the separation rate \( s \) and the job-finding rate \( p(\theta) = \mu\theta^{1-\alpha} \). A higher \( \theta \) (more vacancies per unemployed worker) reduces unemployment — the Beveridge curve slopes downward in \( (u, v) \) space.
 
@@ -324,7 +395,9 @@ The decentralised DMP equilibrium is generally inefficient because of a search e
 
 The efficiency condition — due to Hosios (1990) — requires that the worker's bargaining power \( \beta \) equal the elasticity of the matching function with respect to unemployment \( \alpha \):
 
-\[ \beta = \alpha \]
+\[
+\beta = \alpha
+\]
 
 When this holds, the private returns to job search and vacancy posting exactly equal the social returns, and the decentralised equilibrium achieves the social optimum. When \( \beta \neq \alpha \), the economy either under- or over-creates jobs.
 
@@ -350,7 +423,9 @@ In Moen's model, firms post wages \( w \) in advance. Workers observe all posted
 
 The key relationship is the market-utility curve: for a worker to be indifferent between submarkets with different wage-tightness combinations \( (w, \theta)  \), their expected value must be equal:
 
-\[ \frac{p(\theta) w}{r + s + p(\theta)} = \bar{U} \]
+\[
+\frac{p(\theta) w}{r + s + p(\theta)} = \bar{U}
+\]
 
 where \( \bar{U} \) is the equilibrium worker utility. Higher wages attract more workers (lower tightness per worker), while higher tightness makes it harder to fill vacancies.
 
@@ -409,7 +484,9 @@ Butters (1977) is one of the earliest directed search models, using a Poisson ur
 
 If there are \( M \) advertisements in total and \( L \) workers, the probability that a given worker receives at least one advertisement is:
 
-\[ \Pr(\text{at least one ad}) = 1 - \left(1 - \frac{1}{L}\right)^M \approx 1 - e^{-M/L} \]
+\[
+\Pr(\text{at least one ad}) = 1 - \left(1 - \frac{1}{L}\right)^M \approx 1 - e^{-M/L}
+\]
 
 where the approximation uses the law of large numbers as \( L \to \infty \). Let \( a = M/L \) be the ratio of advertisements to workers (ads per worker). The probability a worker receives at least one ad is \( 1 - e^{-a} \).
 
@@ -431,7 +508,9 @@ The matching process is urn-ball: each buyer applies to one seller, and each sel
 
 In equilibrium, buyers are indifferent across sellers, so all seller-specific submarkets deliver the same buyer utility \( \bar{u} \). A seller posting price \( p \) attracts a queue length \( \theta(p) \) solving:
 
-\[ \frac{p \cdot (1/\theta(p))}{1} = \bar{u} \implies p = \bar{u} \cdot \theta(p) \]
+\[
+\frac{p \cdot (1/\theta(p))}{1} = \bar{u} \implies p = \bar{u} \cdot \theta(p)
+\]
 
 Higher prices attract fewer applicants (lower \( \theta(p) \)); lower prices attract more. Sellers trade off margin against queue length.
 
@@ -526,13 +605,18 @@ All search models are applications of dynamic programming. Bellman's principle s
 
 Formally, for a stationary infinite-horizon problem:
 
-\[ V(x) = \max_{a \in A(x)} \left\{ u(x,a) + \beta \int V(x') \, dP(x' | x, a) \right\} \]
+\[
+V(x) = \max_{a \in A(x)} \left\{ u(x,a) + \beta \int V(x') \, dP(x' | x, a) \right\}
+\]
 
 where \( x \) is the state, \( a \) is the action, \( u(x,a) \) is the flow payoff, and \( P(x'|x,a) \) is the transition distribution over next-period states.
 
 <div class="theorem">
 <strong>Contraction Mapping Theorem:</strong> Under standard assumptions (bounded payoffs, \( \beta < 1 \)), the Bellman operator \( T \) defined by:
-\[ (TV)(x) = \max_{a \in A(x)} \left\{ u(x,a) + \beta \int V(x') \, dP(x' | x, a) \right\} \]
+
+\[
+(TV)(x) = \max_{a \in A(x)} \left\{ u(x,a) + \beta \int V(x') \, dP(x' | x, a) \right\}
+\]
 is a contraction on the space of bounded continuous functions, with unique fixed point \( V^* \). The sequence \( T^n V \) converges to \( V^* \) for any initial \( V \). This guarantees both existence and uniqueness of the value function, and the optimal policy is the argmax of the Bellman equation.
 </div>
 
@@ -551,11 +635,15 @@ Many search models are characterised not just by individual optimal decisions bu
 
 In the McCall model, the steady-state unemployment rate is:
 
-\[ u^* = \frac{1}{1 + \lambda[1 - F(w^*)]/\phi} \]
+\[
+u^* = \frac{1}{1 + \lambda[1 - F(w^*)]/\phi}
+\]
 
 where \( \phi \) is the rate of job destruction. In the DMP model, the Beveridge curve gives:
 
-\[ u^* = \frac{s}{s + p(\theta^*)} \]
+\[
+u^* = \frac{s}{s + p(\theta^*)}
+\]
 
 where \( \theta^* \) is the equilibrium market tightness. These steady-state relationships are the primary targets for calibration.
 

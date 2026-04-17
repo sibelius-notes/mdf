@@ -22,6 +22,7 @@ Why study discrete dynamical systems? There are at least three compelling reason
 
 <div class="definition">
 <strong>Definition (Forward Orbit).</strong> Given a seed point \(x_0 \in X\) and a mapping \(f : X \to X\), the <em>forward orbit</em> of \(x_0\) is the sequence
+
 \[
 \mathcal{O}(x_0) = \{x_0, x_1, x_2, \ldots\} = \{f^n(x_0)\}_{n=0}^{\infty},
 \]
@@ -38,6 +39,7 @@ The long-term behaviour of an orbit can take several qualitatively different for
 
 <div class="definition">
 <strong>Definition (Fixed Point).</strong> A point \(\bar{x} \in X\) is a <em>fixed point</em> of \(f\) if
+
 \[
 f(\bar{x}) = \bar{x}.
 \]
@@ -110,6 +112,7 @@ If the cobweb spirals inward toward a fixed point, that fixed point is attractiv
 
 <div class="proof">
 <strong>Proof.</strong> Since \(x_{n+1} = f(x_n)\), taking limits of both sides:
+
 \[
 \lim_{n \to \infty} x_{n+1} = \lim_{n \to \infty} f(x_n).
 \]
@@ -160,6 +163,7 @@ which behaves like the linear map \(g(y) = f'(\bar{x}) \cdot y\) in the displace
 
 <div class="proof">
 <strong>Proof (attracting case).</strong> Since \(|f'(\bar{x})| < 1\) and \(f'\) is continuous, there exists an open interval \(J \ni \bar{x}\) and a constant \(0 \leq K < 1\) such that \(|f'(x)| \leq K\) for all \(x \in J\). Let \(I \subset J\) be an open interval centered at \(\bar{x}\). For any \(x \in I\), the Mean Value Theorem gives a \(c\) between \(x\) and \(\bar{x}\) with
+
 \[
 |f(x) - \bar{x}| = |f(x) - f(\bar{x})| = |f'(c)| |x - \bar{x}| \leq K|x - \bar{x}|.
 \]
@@ -306,6 +310,7 @@ One of the most celebrated results in discrete dynamical systems is the followin
 
 <div class="theorem">
 <strong>Theorem (Li-Yorke, 1975).</strong> Let \(f : J \to J\) be a continuous function on an interval \(J\). Suppose there exists a point \(a \in J\) such that
+
 \[
 f^3(a) \leq a < f(a) < f^2(a) \quad \text{or} \quad f^3(a) \geq a > f(a) > f^2(a).
 \]
@@ -313,6 +318,7 @@ f^3(a) \leq a < f(a) < f^2(a) \quad \text{or} \quad f^3(a) \geq a > f(a) > f^2(a
 <ol>
 <li>For every \(n \geq 1\), \(f\) has a periodic point of period \(n\).</li>
 <li>There exists an uncountable set \(S \subset J\) (containing no periodic points) such that for all \(x, y \in S\) with \(x \neq y\):
+
 \[
 \limsup_{n \to \infty} |f^n(x) - f^n(y)| > 0 \quad \text{and} \quad \liminf_{n \to \infty} |f^n(x) - f^n(y)| = 0.
 \]
@@ -407,6 +413,7 @@ The Lyapunov exponent provides a *quantitative* measure of the rate at which nea
 
 <div class="definition">
 <strong>Definition (Lyapunov Exponent).</strong> For a \(C^1\) map \(f : I \to I\) and a seed point \(x_0 = x\), define the iteration sequence \(x_k = f^k(x)\). The <em>Lyapunov exponent of \(f\) at \(x\)</em> is
+
 \[
 \lambda(x) = \lim_{n \to \infty} \frac{1}{n} \ln |(f^n)'(x)|,
 \]
@@ -442,6 +449,7 @@ The positive Lyapunov exponent confirms that the tent map is expansive and chaot
 
 <div class="theorem">
 <strong>Theorem.</strong> If \(\bar{x}\) is an attracting fixed point of \(f \in C^1(I)\) and \(x_0 \in W(\bar{x})\) (the basin of attraction), then
+
 \[
 \lambda(x_0) = \ln |f'(\bar{x})| < 0.
 \]
@@ -520,7 +528,7 @@ The metric on \(\Sigma_2\) is \(d_{\Sigma_2}(b, b') = \sum_{k=0}^{\infty} \frac{
 
 ## Using Symbolic Dynamics to Prove Chaos
 
-**SDIC for \(B\):** Given any \(x : b = (b_0, b_1, \ldots)\) and any \(\delta > 0\), choose \(N\) so large that \(2^{-N} < \delta\). Define \(y : b' = (b_0, \ldots, b_{N-1}, \overline{b_N}, \ldots)\), agreeing with \(b\) to \(N\) digits but differing at position \(N\). Then \(|x - y| \leq 2^{-N} < \delta$. After \(N\) applications of \(B\), the first digit of \(B^N(x)\) is \(b_N\) while the first digit of \(B^N(y)\) is \(\overline{b_N} \neq b_N\). Hence \(B^N(x)\) and \(B^N(y)\) lie in different half-intervals, separated by at least \(\frac{1}{2}\). This proves SDIC with \(\varepsilon = \frac{1}{4}\).
+**SDIC for \(B\):** Given any \(x : b = (b_0, b_1, \ldots)\) and any \(\delta > 0\), choose \(N\) so large that \(2^{-N} < \delta\). Define \(y : b' = (b_0, \ldots, b_{N-1}, \overline{b_N}, \ldots)\), agreeing with \(b\) to \(N\) digits but differing at position \(N\). Then \(|x - y| \leq 2^{-N} < \delta\). After \(N\) applications of \(B\), the first digit of \(B^N(x)\) is \(b_N\) while the first digit of \(B^N(y)\) is \(\overline{b_N} \neq b_N\). Hence \(B^N(x)\) and \(B^N(y)\) lie in different half-intervals, separated by at least \(\frac{1}{2}\). This proves SDIC with \(\varepsilon = \frac{1}{4}\).
 
 **Density of periodic orbits:** For any \(x \in [0,1]\) and any neighbourhood \((x - \delta, x + \delta)\), choose \(N\) so that \(2^{-N} < \delta\). The repeating sequence \((b_0, b_1, \ldots, b_{N-1}, b_0, b_1, \ldots)\) defines a periodic point \(p\) of period \(N\) which satisfies \(|x - p| \leq 2^{-N} < \delta\).
 
@@ -589,6 +597,7 @@ normalized so that \(\int_0^1 \rho(x)\, dx = 1\). The conservation principle und
 
 <div class="definition">
 <strong>Definition (Invariant Measure).</strong> A probability density \(\rho : I \to [0,\infty)\) is <em>invariant</em> for \(f : I \to I\) if for all measurable \(S \subset I\),
+
 \[
 \int_S \rho(x)\, dx = \int_{f^{-1}(S)} \rho(x)\, dx,
 \]
@@ -807,7 +816,7 @@ We now move to the complex plane \(\mathbb{C} \cong \mathbb{R}^2\). The iteratio
 g_c(z) = z^2 + c, \qquad z \in \mathbb{C}, \quad c \in \mathbb{C}.
 \]
 
-For \(c = 0\), this reduces to \(g_0(z) = z^2\, whose dynamics we can analyze completely: \(|g_0^n(z)| = |z|^{2^n}\), so \(|z| < 1\) leads to \(0\), \(|z| > 1\) leads to \(\infty\), and \(|z| = 1\) is invariant.
+For \(c = 0\), this reduces to \(g_0(z) = z^2\), whose dynamics we can analyze completely: \(|g_0^n(z)| = |z|^{2^n}\), so \(|z| < 1\) leads to \(0\), \(|z| > 1\) leads to \(\infty\), and \(|z| = 1\) is invariant.
 
 ## Fixed Points of \(g_c\)
 
@@ -834,6 +843,7 @@ For \(c \neq \frac{1}{4}\), there are two distinct fixed points.
 
 <div class="definition">
 <strong>Definition.</strong> The <em>filled Julia set</em> (or <em>prisoner set</em>) of \(g_c\) is
+
 \[
 K_c = \{z \in \mathbb{C} : g_c^n(z) \not\to \infty\} = \{z : \text{the orbit of } z \text{ is bounded}\}.
 \]
@@ -852,6 +862,7 @@ Equivalently, the Julia set \(J_c\) is the closure of the set of all repelling p
 
 <div class="proof">
 <strong>Proof.</strong> For \(|z| > |c| + 1\), using the reverse triangle inequality:
+
 \[
 |g_c(z)| = |z^2 + c| \geq |z|^2 - |c| = |z|(|z| - |c|/|z|).
 \]
@@ -923,6 +934,7 @@ The **box-counting dimension** (or **Minkowski dimension**) is defined as follow
 
 <div class="definition">
 <strong>Definition (Box-Counting Dimension).</strong> The box-counting dimension of \(A\) is
+
 \[
 D = \lim_{\varepsilon \to 0} \frac{\ln N(\varepsilon)}{\ln(1/\varepsilon)},
 \]
@@ -945,6 +957,7 @@ N(r\varepsilon) = N \cdot N(\varepsilon) \quad \Rightarrow \quad r^{-D} = N \qua
 
 <div class="example">
 <strong>Example 1: The Ternary Cantor Set.</strong> \(C\) consists of \(N = 2\) copies of itself, each scaled by \(r = 1/3\). Thus
+
 \[
 D = \frac{\ln 2}{\ln 3} \approx 0.631.
 \]
@@ -953,6 +966,7 @@ This is consistent with \(C\) being "larger" than a finite point set (dimension 
 
 <div class="example">
 <strong>Example 2: The Sierpinski Triangle.</strong> The Sierpinski triangle \(S\) is the union of \(N = 3\) contracted copies, each with scale factor \(r = 1/2\):
+
 \[
 D = \frac{\ln 3}{\ln 2} \approx 1.585.
 \]
@@ -1059,6 +1073,7 @@ Key examples: \((\mathbb{R}^n, d_2)\) (Euclidean distance) is complete. The rati
 
 <div class="definition">
 <strong>Definition (Contraction Mapping).</strong> A map \(f : X \to X\) on a metric space \((X,d)\) is a <em>contraction mapping</em> (or <em>contraction</em>) if there exists a constant \(c_f \in [0,1)\) such that
+
 \[
 d(f(x), f(y)) \leq c_f \cdot d(x,y) \quad \text{for all } x, y \in X.
 \]
@@ -1071,6 +1086,7 @@ The constant \(c_f\) is called the <em>contraction factor</em> (or <em>Lipschitz
 <li>There exists a <em>unique</em> fixed point \(\bar{x} \in X\) with \(f(\bar{x}) = \bar{x}\).</li>
 <li>For any \(x_0 \in X\), the iteration sequence \(x_{n+1} = f(x_n)\) converges to \(\bar{x}\).</li>
 <li>The following error estimate holds:
+
 \[
 d(x_n, \bar{x}) \leq \frac{c_f^n}{1-c_f} d(x_0, x_1).
 \]
@@ -1080,6 +1096,7 @@ d(x_n, \bar{x}) \leq \frac{c_f^n}{1-c_f} d(x_0, x_1).
 
 <div class="proof">
 <strong>Proof sketch.</strong> Starting from any \(x_0\), the triangle inequality applied repeatedly gives
+
 \[
 d(x_m, x_n) \leq \left(c_f^m + c_f^{m+1} + \cdots + c_f^{n-1}\right) d(x_0, x_1) \leq \frac{c_f^m}{1-c_f} d(x_0, x_1).
 \]
@@ -1110,6 +1127,7 @@ where \(d(x, B) = \min_{y \in B} d(x, y)\). Informally, \(h(A,B)\) is the smalle
 
 <div class="theorem">
 <strong>Theorem (Hutchinson, 1981).</strong> The metric space \((\mathcal{H}(D), h)\) is complete. Moreover, the Hutchinson operator \(\hat{f}\) associated with an IFS \(\mathcal{F} = \{f_1, \ldots, f_N\}\) is itself a contraction on \((\mathcal{H}(D), h)\):
+
 \[
 h(\hat{f}(A), \hat{f}(B)) \leq c \cdot h(A, B), \qquad c = \max_{1 \leq k \leq N} c_k < 1.
 \]
@@ -1121,6 +1139,7 @@ By Banach's Fixed Point Theorem applied to \(\hat{f}\) on the complete metric sp
 
 <div class="theorem">
 <strong>Theorem (Existence and Uniqueness of IFS Attractor).</strong> There exists a unique nonempty compact set \(A \subset D\) satisfying
+
 \[
 A = \hat{f}(A) = \bigcup_{k=1}^{N} f_k(A).
 \]
@@ -1133,6 +1152,7 @@ The attractor \(A\) is self-similar by construction: it is the union of \(N\) co
 
 <div class="example">
 <strong>Example 1: Ternary Cantor Set.</strong> Consider the two-map IFS on \([0,1]\):
+
 \[
 f_1(x) = \frac{x}{3}, \qquad f_2(x) = \frac{x}{3} + \frac{2}{3}.
 \]
@@ -1141,6 +1161,7 @@ The attractor is the ternary Cantor set \(C\). Indeed, \(C = f_1(C) \cup f_2(C)\
 
 <div class="example">
 <strong>Example 2: Sierpinski Triangle.</strong> Consider the three-map IFS in \(\mathbb{R}^2\):
+
 \[
 w_1(x,y) = \left(\frac{x}{2}, \frac{y}{2}\right), \quad w_2(x,y) = \left(\frac{x}{2} + \frac{1}{2}, \frac{y}{2}\right), \quad w_3(x,y) = \left(\frac{x}{2} + \frac{1}{4}, \frac{y}{2} + \frac{\sqrt{3}}{4}\right).
 \]
@@ -1172,6 +1193,7 @@ An **affine IFS** uses affine contraction maps of the form \(f_k(\mathbf{x}) = A
 
 <div class="theorem">
 <strong>Theorem (Collage Theorem, Barnsley-Ervin-Hardin-Lancaster, 1985).</strong> Let \((X, d)\) be a complete metric space and \(\hat{f}\) a contraction on \((\mathcal{H}(X), h)\) with contraction factor \(c < 1\) and attractor \(A\). Then for any set \(S \in \mathcal{H}(X)\),
+
 \[
 h(S, A) \leq \frac{1}{1-c} h(S, \hat{f}(S)).
 \]
@@ -1189,7 +1211,7 @@ The Collage Theorem provides the theoretical basis for **fractal image compressi
 
 where \(w_i : [0,1]^2 \to [0,1]^2\) are spatial contractions and \(\phi_i : \mathbb{R} \to \mathbb{R}\) are greyscale transformations (typically affine: \(\phi_i(t) = \alpha_i t + \beta_i\)).
 
-If \(T\) is contractive in an appropriate function space, then it has a unique fixed-point function \(\bar{u} = T\bar{u}\), the *fractal image*. The encoding process finds contraction maps \(w_i, \phi_i\) such that \(T(u) \approx u\) (collage approximation); decoding iterates \(T\) from any starting image to recover \(\bar{u} \approx u$.
+If \(T\) is contractive in an appropriate function space, then it has a unique fixed-point function \(\bar{u} = T\bar{u}\), the *fractal image*. The encoding process finds contraction maps \(w_i, \phi_i\) such that \(T(u) \approx u\) (collage approximation); decoding iterates \(T\) from any starting image to recover \(\bar{u} \approx u\).
 
 **Properties of fractal image compression:**
 - Very high compression ratios possible (the attractor of a small IFS can describe a complex image).

@@ -46,7 +46,9 @@ Nonparametric estimators of the survival function make no assumption on the shap
 
 Suppose events occur at the ordered times \(t_1 < t_2 < \cdots < t_k\), with \(d_i\) deaths at time \(t_i\) and risk set size \(n_i\). The Kaplan–Meier (product-limit) estimator of \(S(t)\) is
 
-\[\hat S(t) = \prod_{t_i \leq t}\left(1 - \frac{d_i}{n_i}\right).\]
+\[
+\hat S(t) = \prod_{t_i \leq t}\left(1 - \frac{d_i}{n_i}\right).
+\]
 
 It is the nonparametric maximum-likelihood estimator of \(S\) under right censoring. The conditional survival probability through each event time, \(1 - d_i/n_i\), is an empirical estimate of the one-step survival. Between event times, \(\hat S\) is constant, producing the characteristic step function. When the largest observation is censored, \(\hat S\) does not drop to zero; when it is a death, it does.
 
@@ -54,7 +56,9 @@ It is the nonparametric maximum-likelihood estimator of \(S\) under right censor
 
 An alternative is the Nelson–Aalen estimator of the cumulative hazard,
 
-\[\hat H(t) = \sum_{t_i \leq t}\frac{d_i}{n_i},\]
+\[
+\hat H(t) = \sum_{t_i \leq t}\frac{d_i}{n_i},
+\]
 
 from which one obtains \(\hat S_{NA}(t) = e^{-\hat H(t)}\). The two estimators satisfy \(\hat S_{KM}(t) \approx \exp(-\hat H_{NA}(t))\) for small hazards, since \(\log(1 - x) \approx -x\) when \(x\) is small. In practice Nelson–Aalen tends to be slightly larger than Kaplan–Meier, because \(-\log(1-x) > x\). The Nelson–Aalen estimator is preferred when hazard estimation is the goal or when sample sizes are small and the product form is unstable.
 
@@ -62,17 +66,23 @@ from which one obtains \(\hat S_{NA}(t) = e^{-\hat H(t)}\). The two estimators s
 
 The variance of \(\hat S(t)\) is estimated by Greenwood's formula
 
-\[\widehat{\mathrm{Var}}(\hat S(t)) = [\hat S(t)]^2 \sum_{t_i \leq t}\frac{d_i}{n_i(n_i - d_i)}.\]
+\[
+\widehat{\mathrm{Var}}(\hat S(t)) = [\hat S(t)]^2 \sum_{t_i \leq t}\frac{d_i}{n_i(n_i - d_i)}.
+\]
 
 A naive Wald confidence interval \(\hat S(t) \pm z_{1-\alpha/2}\sqrt{\widehat{\mathrm{Var}}(\hat S(t))}\) may stray outside \([0,1]\). Two remedies are standard.
 
 The **log-transformed interval** uses \(\log \hat S(t)\) and back-transforms:
 
-\[\hat S(t)^{\exp(\pm z_{1-\alpha/2}\,\sigma_L(t)/\log\hat S(t))},\]
+\[
+\hat S(t)^{\exp(\pm z_{1-\alpha/2}\,\sigma_L(t)/\log\hat S(t))},
+\]
 
 where \(\sigma_L^2(t) = \widehat{\mathrm{Var}}(\hat S(t))/[\hat S(t)]^2\). The **log–log interval**, based on \(\log(-\log \hat S(t))\), is
 
-\[\hat S(t)^{\exp(\mp z_{1-\alpha/2}\,\sigma_L(t)/\log\hat S(t))},\]
+\[
+\hat S(t)^{\exp(\mp z_{1-\alpha/2}\,\sigma_L(t)/\log\hat S(t))},
+\]
 
 and has the advantage that both endpoints always lie in \((0,1)\). The log–log transform is preferred in the tails, where \(\hat S(t)\) is close to zero and symmetric intervals distort badly.
 
@@ -80,7 +90,9 @@ and has the advantage that both endpoints always lie in \((0,1)\). The log–log
 
 While \(\hat H\) is a step function, the hazard \(\mu(t) = H'(t)\) is not directly estimable without smoothing. A kernel estimator replaces each jump \(\Delta \hat H(t_i) = d_i/n_i\) by a smooth bump of bandwidth \(b\):
 
-\[\hat \mu(t) = \frac{1}{b}\sum_{t_i \leq \tau} K\!\left(\frac{t - t_i}{b}\right)\frac{d_i}{n_i},\]
+\[
+\hat \mu(t) = \frac{1}{b}\sum_{t_i \leq \tau} K\!\left(\frac{t - t_i}{b}\right)\frac{d_i}{n_i},
+\]
 
 where \(K\) is a symmetric kernel (Epanechnikov, biweight, Gaussian). The bandwidth \(b\) trades bias against variance; cross-validation or plug-in rules select it. Kernel hazards are indispensable for drawing smooth mortality curves from raw data.
 
@@ -104,7 +116,9 @@ When the analyst wishes to attach covariates to a lifetime distribution, the Cox
 
 For a subject with covariate vector \(\mathbf{x}\), the hazard is
 
-\[h(t \mid \mathbf{x}) = h_0(t)\,\exp(\boldsymbol\beta^\top \mathbf{x}),\]
+\[
+h(t \mid \mathbf{x}) = h_0(t)\,\exp(\boldsymbol\beta^\top \mathbf{x}),
+\]
 
 where \(h_0(t)\) is an unspecified baseline hazard and \(\boldsymbol\beta\) is the coefficient vector. The defining feature is that the ratio \(h(t \mid \mathbf{x}_1)/h(t \mid \mathbf{x}_2) = \exp(\boldsymbol\beta^\top(\mathbf{x}_1 - \mathbf{x}_2))\) does not depend on \(t\): hazards are proportional through time. A one-unit increase in a covariate multiplies the hazard by \(e^{\beta_j}\), the **hazard ratio**.
 
@@ -112,15 +126,21 @@ where \(h_0(t)\) is an unspecified baseline hazard and \(\boldsymbol\beta\) is t
 
 The genius of Cox's approach is that \(\boldsymbol\beta\) can be estimated without specifying \(h_0\). Conditional on the risk set \(R(t_i)\) at an event time \(t_i\), the probability that the actual death is subject \(i\) is
 
-\[\frac{e^{\boldsymbol\beta^\top \mathbf{x}_i}}{\sum_{j \in R(t_i)} e^{\boldsymbol\beta^\top \mathbf{x}_j}}.\]
+\[
+\frac{e^{\boldsymbol\beta^\top \mathbf{x}_i}}{\sum_{j \in R(t_i)} e^{\boldsymbol\beta^\top \mathbf{x}_j}}.
+\]
 
 Multiplying across all event times gives the **partial likelihood**
 
-\[L(\boldsymbol\beta) = \prod_{i : d_i = 1}\frac{e^{\boldsymbol\beta^\top \mathbf{x}_i}}{\sum_{j \in R(t_i)} e^{\boldsymbol\beta^\top \mathbf{x}_j}}.\]
+\[
+L(\boldsymbol\beta) = \prod_{i : d_i = 1}\frac{e^{\boldsymbol\beta^\top \mathbf{x}_i}}{\sum_{j \in R(t_i)} e^{\boldsymbol\beta^\top \mathbf{x}_j}}.
+\]
 
 Maximising \(\log L\) numerically yields \(\hat{\boldsymbol\beta}\); the observed information matrix provides standard errors. The baseline cumulative hazard is then estimated by the **Breslow estimator**
 
-\[\hat H_0(t) = \sum_{t_i \leq t}\frac{d_i}{\sum_{j \in R(t_i)} e^{\hat{\boldsymbol\beta}^\top \mathbf{x}_j}}.\]
+\[
+\hat H_0(t) = \sum_{t_i \leq t}\frac{d_i}{\sum_{j \in R(t_i)} e^{\hat{\boldsymbol\beta}^\top \mathbf{x}_j}}.
+\]
 
 ## Extensions
 
@@ -142,7 +162,9 @@ Insurance applications demand a single mortality table \(\{q_x\}\) indexed by in
 
 Assume that \(E_x\) lives are observed through age \([x, x+1]\), with each life independently dying with probability \(q_x\) during the year. Then
 
-\[D_x \sim \mathrm{Binomial}(E_x, q_x), \quad \hat q_x = D_x/E_x.\]
+\[
+D_x \sim \mathrm{Binomial}(E_x, q_x), \quad \hat q_x = D_x/E_x.
+\]
 
 Here \(E_x\) is the **initial exposure**, counting each life as a full year of exposure regardless of whether they died mid-year. The variance is \(E_x q_x (1-q_x)\). This model is conceptually simple but requires that every life be observed for the entire age interval, which is unrealistic under withdrawals.
 
@@ -150,7 +172,9 @@ Here \(E_x\) is the **initial exposure**, counting each life as a full year of e
 
 Letting \(E^c_x\) denote **central exposure** — the total person-years actually lived between ages \(x\) and \(x+1\) — and assuming a constant force of mortality \(\mu_x\) across the year,
 
-\[D_x \sim \mathrm{Poisson}(E^c_x \mu_x), \quad \hat\mu_x = D_x/E^c_x.\]
+\[
+D_x \sim \mathrm{Poisson}(E^c_x \mu_x), \quad \hat\mu_x = D_x/E^c_x.
+\]
 
 The maximum-likelihood estimator has standard error \(\sqrt{D_x}/E^c_x\). Under the constant-force assumption, \(q_x = 1 - e^{-\mu_x}\). The Poisson model handles withdrawals naturally because each life contributes only the time it was actually observed.
 
@@ -164,7 +188,9 @@ Several analytic families are used to describe how \(\mu_x\) varies with age:
 - **Makeham law**: \(\mu_x = A + B c^x\), adding a constant accidental term.
 - **Heligman–Pollard** 8-parameter law:
 
-\[\frac{q_x}{p_x} = A^{(x+B)^C} + D\,e^{-E(\ln(x/F))^2} + G H^x.\]
+\[
+\frac{q_x}{p_x} = A^{(x+B)^C} + D\,e^{-E(\ln(x/F))^2} + G H^x.
+\]
 
 The Heligman–Pollard form decomposes mortality into three components: infant and childhood mortality (first term), an adult accident hump centred near young adult ages (second term), and senescent Gompertz ageing (third term). Each parameter has an interpretable role.
 
@@ -172,7 +198,9 @@ The Heligman–Pollard form decomposes mortality into three components: infant a
 
 When no parametric form is imposed, the graduated values \(\{\dot q_x\}\) are chosen to balance fidelity to the data against smoothness. The **Whittaker–Henderson** penalty minimises
 
-\[\sum_x w_x (\dot q_x - \hat q_x)^2 + h\sum_x (\Delta^z \dot q_x)^2,\]
+\[
+\sum_x w_x (\dot q_x - \hat q_x)^2 + h\sum_x (\Delta^z \dot q_x)^2,
+\]
 
 where \(\Delta^z\) is the \(z\)-th finite difference (usually \(z = 3\)) and \(h\) is a smoothing parameter. Larger \(h\) gives smoother graduations. Cubic or P-splines offer similar flexibility with a basis-expansion interpretation.
 
@@ -197,11 +225,15 @@ Many actuarial products involve more than a simple alive/dead dichotomy: think o
 
 Let \(N^{ij}(t)\) denote the count of transitions from \(i\) to \(j\) by time \(t\), and \(v^i_t\) the number of lives in state \(i\) at time \(t\). Under the assumption of piecewise-constant intensities \(\mu^{ij}\), the log-likelihood contribution is
 
-\[\ell(\mu^{ij}) = N^{ij}\log\mu^{ij} - \mu^{ij}\int v^i_t\,dt,\]
+\[
+\ell(\mu^{ij}) = N^{ij}\log\mu^{ij} - \mu^{ij}\int v^i_t\,dt,
+\]
 
 summed over all transition types. Maximising gives the natural estimator
 
-\[\hat\mu^{ij} = \frac{N^{ij}}{\int v^i_t\,dt},\]
+\[
+\hat\mu^{ij} = \frac{N^{ij}}{\int v^i_t\,dt},
+\]
 
 which generalises the Poisson force estimator to the multi-state setting. The denominator \(\int v^i_t\,dt\) is the total person-time spent in state \(i\), a direct multi-state analogue of central exposure.
 
@@ -227,7 +259,9 @@ Insurance and pension liabilities extending over decades are sensitive to *chang
 
 The simplest approach projects a base-year table forward using improvement factors. Let \(q_{x,0}\) denote the base rate and \(\phi_{x,s}\) the one-year improvement in year \(s\). Then
 
-\[q_{x,t} = q_{x,0}\prod_{s=1}^{t}(1 - \phi_{x,s}).\]
+\[
+q_{x,t} = q_{x,0}\prod_{s=1}^{t}(1 - \phi_{x,s}).
+\]
 
 Two-dimensional improvement scales such as **Scale BB**, **MP-2014**, **MP-2021**, and the Canadian **CPM2014** publish tables of \(\phi_{x,s}\) varying by age and calendar year. The improvement structure may include a cohort component (lives born in the same year share a common improvement), as in the Continuous Mortality Investigation CMI Model used in the United Kingdom.
 
@@ -237,7 +271,9 @@ Deterministic scales are easy to implement and communicate, but they provide onl
 
 The Lee–Carter (1992) model is the canonical stochastic mortality model. It assumes
 
-\[\log m_{x,t} = a_x + b_x k_t + \epsilon_{x,t},\]
+\[
+\log m_{x,t} = a_x + b_x k_t + \epsilon_{x,t},
+\]
 
 where \(m_{x,t}\) is the central death rate at age \(x\) in year \(t\), \(a_x\) is an age-specific average log-rate, \(k_t\) is a time index capturing overall mortality level, and \(b_x\) describes how strongly each age responds to changes in \(k_t\). Identification is pinned down by the constraints \(\sum_x b_x = 1\) and \(\sum_t k_t = 0\).
 
@@ -247,7 +283,9 @@ Estimation proceeds by setting \(\hat a_x\) equal to the mean of \(\log m_{x,t}\
 
 For older ages, where the accident hump is absent and mortality rises almost linearly in log-odds space, Cairns, Blake, and Dowd (2006) proposed the two-factor model
 
-\[\mathrm{logit}\,q_{x,t} = \kappa^{(1)}_t + (x - \bar x)\,\kappa^{(2)}_t,\]
+\[
+\mathrm{logit}\,q_{x,t} = \kappa^{(1)}_t + (x - \bar x)\,\kappa^{(2)}_t,
+\]
 
 where \(\bar x\) is the mean age in the fit and \(\kappa^{(1)}_t, \kappa^{(2)}_t\) follow a bivariate random walk with drift. \(\kappa^{(1)}\) measures the overall level and \(\kappa^{(2)}\) the slope (the spread between young-old and old-old mortality). Unlike Lee–Carter, CBD has no age-specific \(b_x\), which both simplifies estimation and avoids overfitting when only older ages are modelled.
 

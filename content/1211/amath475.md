@@ -89,6 +89,7 @@ If \(\widetilde{\Lambda}^\mu{}_\nu\) is the Jacobian of the coordinate change \(
 \[
 \text{Contravariant (upper index):}\quad v'^\mu = \widetilde{\Lambda}^\mu{}_\nu\, v^\nu
 \]
+
 \[
 \text{Covariant (lower index):}\quad \omega'_\mu = \Lambda^\nu{}_\mu\, \omega_\nu
 \]
@@ -119,6 +120,7 @@ The basis vectors transform with \(\Lambda\); the dual basis transforms with \(\
 \[
 \flat: T_pM \to T^*_pM, \quad v^\mu \mapsto v_\mu = g_{\mu\nu}v^\nu \quad\text{(lowering)}
 \]
+
 \[
 \sharp: T^*_pM \to T_pM, \quad \omega_\mu \mapsto \omega^\mu = g^{\mu\nu}\omega_\nu \quad\text{(raising)}
 \]
@@ -353,6 +355,7 @@ The Standard Model of particle physics is invariant under \(CPT\) (charge conjug
 
 <div class="theorem">
 <strong>Noether's Theorem.</strong> Every continuous symmetry of the action corresponds to a conserved quantity. If the Lagrangian is invariant under the one-parameter transformation \(q^i \to q^i + \varepsilon \xi^i(q)\), then
+
 \[
 \mathcal{Q} = \sum_i \frac{\partial L}{\partial \dot{q}^i}\,\xi^i
 \]
@@ -788,6 +791,7 @@ The pattern: \(+\Gamma\) for each upper index, \(-\Gamma\) for each lower index.
 
 <div class="example">
 <strong>Computing Christoffel symbols for \(S^2\).</strong> The round 2-sphere of radius \(R\) has metric \(ds^2 = R^2(d\theta^2 + \sin^2\theta\,d\phi^2)\). The non-zero Christoffel symbols:
+
 \[
 \Gamma^\theta{}_{\phi\phi} = -\sin\theta\cos\theta, \qquad \Gamma^\phi{}_{\theta\phi} = \Gamma^\phi{}_{\phi\theta} = \cot\theta
 \]
@@ -924,6 +928,7 @@ The Riemann tensor is responsible for tidal forces — the geometric description
 
 <div class="theorem">
 <strong>Fundamental theorem of Riemannian geometry.</strong> Given a metric \(g\), there exists a unique connection that is torsion-free and metric-compatible (\(\nabla_\rho g_{\mu\nu} = 0\)) — the <strong>Levi-Civita connection</strong>:
+
 \[
 \Gamma^\rho{}_{\mu\nu} = \frac{1}{2}g^{\rho\sigma}\left(\partial_\mu g_{\nu\sigma} + \partial_\nu g_{\mu\sigma} - \partial_\sigma g_{\mu\nu}\right)
 \]
@@ -1052,6 +1057,7 @@ The \(g_{00}\) component encodes gravitational time dilation; the spatial compon
 
 <div class="definition">
 <strong>Postulate 3 (Einstein equations).</strong>
+
 \[
 R_{ab} - \frac{1}{2}R\,g_{ab} + \Lambda g_{ab} = \frac{8\pi G_N}{c^4}\,T_{ab}
 \]
@@ -1139,6 +1145,7 @@ with two undetermined functions \(\alpha(r)\) and \(\beta(r)\). Outside the sour
 \[
 R_{tt} = 0 \implies e^{2(\alpha-\beta)}\!\left(\alpha'' + (\alpha')^2 - \alpha'\beta' + \frac{2\alpha'}{r}\right) = 0
 \]
+
 \[
 R_{rr} = 0 \implies -\alpha'' - (\alpha')^2 + \alpha'\beta' + \frac{2\beta'}{r} = 0
 \]

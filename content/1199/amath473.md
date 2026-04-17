@@ -65,6 +65,7 @@ A vector space alone has no notion of length or angle. To give the space geometr
 
 <div class="example">
 <strong>Example.</strong> In \(\mathbb{C}^n\), the standard inner product (the Hermitian dot product) of two column vectors \(x\) and \(y\) conjugates the components of the first:
+
 \[
 \langle x, y \rangle = \sum_{k=1}^n x_k^* y_k .
 \]
@@ -108,6 +109,7 @@ A Banach space imposes completeness but need not have an inner product. When the
 <ul>
   <li>\(\mathbb{R}^n\) and \(\mathbb{C}^n\) with the standard Hermitian dot product are finite-dimensional Hilbert spaces. They are the arenas for qubit and finite-level quantum systems.</li>
   <li>The space \(L^2(\mathbb{R})\) of square-integrable functions over \(\mathbb{R}\), with inner product
+
 \[
 \langle f, g \rangle = \int_{\mathbb{R}} dx\, f(x)^* g(x),
 \]
@@ -142,6 +144,7 @@ A particularly important class of linear operators consists of those that map ve
 
 <div class="example">
 <strong>Example in \(\mathbb{C}^3\).</strong> Represent \(y \in \mathbb{C}^3\) as a column vector. A linear functional \(\hat{A}\) must produce a scalar, so it must be a row vector, say \(\hat{A} = (x_1^<em>, x_2^</em>, x_3^*)\), so that
+
 \[
 (x_1^<em>, x_2^</em>, x_3^<em>) \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = x_1^</em> y_1 + x_2^<em> y_2 + x_3^</em> y_3 \in \mathbb{C}.
 \]
@@ -158,6 +161,7 @@ Inspired by this and following Dirac's notation, we write:
 
 <div class="definition">
 <strong>Dirac bra-ket notation.</strong> Vectors \(y \in V\) are written as <strong>kets</strong> \(|y\rangle\). The element of the dual space \(V^*\) uniquely assigned to \(|x\rangle\) by the inner product is written as the <strong>bra</strong> \(\langle x|\). The inner product is then written as the <strong>bracket</strong>:
+
 \[
 \langle x, y \rangle = \langle x | y \rangle .
 \]
@@ -180,6 +184,7 @@ Every linear operator on a Hilbert space comes equipped with a companion operato
 
 <div class="definition">
 <strong>Definition (Adjoint of a linear operator).</strong> Consider a linear operator \(\hat{O}: V \to W\). The <strong>adjoint</strong> \(\hat{O}^\dagger\) is the unique operator on \(W\) satisfying
+
 \[
 \langle w, \hat{O} v \rangle = \langle \hat{O}^\dagger w, v \rangle
 \]
@@ -199,6 +204,7 @@ The reversal of order in the product rule is the operator analogue of \((AB)^T =
 
 <div class="definition">
 <strong>Definition (Hermitian operator).</strong> A linear operator \(\hat{H}\) is <strong>Hermitian</strong> if
+
 \[
 \langle u|\hat{H}|v\rangle = \langle u|\hat{H}^\dagger|v\rangle
 \]
@@ -221,6 +227,7 @@ The distinction between Hermitian and self-adjoint is subtle but physically impo
 
 <div class="definition">
 <strong>Definition (Eigenvector and eigenvalue).</strong> The <strong>eigenvectors</strong> of an operator \(\hat{O}\) with <strong>eigenvalue</strong> \(\lambda \in \mathbb{C}\) are all nonzero vectors \(u \in V\) satisfying
+
 \[
 \hat{O} u = \lambda u .
 \]
@@ -232,6 +239,7 @@ We now state two foundational theorems that underpin the entire observational st
 <strong>Theorem 1 (Eigenvalues of Hermitian operators are real).</strong> If \(\hat{H}\) is a Hermitian operator and \(|\lambda\rangle\) is one of its eigenvectors with eigenvalue \(\lambda\), then \(\lambda \in \mathbb{R}\).
 
 <em>Proof.</em> Since \(\hat{H}|\lambda\rangle = \lambda|\lambda\rangle\) and \(\hat{H}\) is Hermitian:
+
 \[
 \langle \lambda|\hat{H}|\lambda\rangle = \langle \lambda|\hat{H}^\dagger|\lambda\rangle \implies \lambda\langle\lambda|\lambda\rangle = \lambda^*\langle\lambda|\lambda\rangle.
 \]
@@ -244,6 +252,7 @@ This theorem is what makes Hermitian operators suitable to represent physical ob
 <strong>Theorem 2 (Eigenvectors of distinct eigenvalues are orthogonal).</strong> Let \(\hat{H}\) be Hermitian, and let \(\hat{H}|\lambda_1\rangle = \lambda_1|\lambda_1\rangle\) and \(\hat{H}|\lambda_2\rangle = \lambda_2|\lambda_2\rangle\) with \(\lambda_1 \neq \lambda_2\). Then \(\langle\lambda_1|\lambda_2\rangle = 0\).
 
 <em>Proof.</em> Using the Hermitian property:
+
 \[
 \langle\lambda_1|\hat{H}|\lambda_2\rangle = \langle\lambda_2|\hat{H}|\lambda_1\rangle^<em> \implies \langle\lambda_1|\lambda_2\rangle\lambda_2 = \langle\lambda_2|\lambda_1\rangle^</em>\lambda_1^* .
 \]
@@ -265,6 +274,7 @@ Having studied vectors and operators individually, we now need tools for combini
 
 <div class="definition">
 <strong>Definition (Outer product / tensor product of a ket and a bra).</strong> Let \(|x\rangle \in V\) and \(\langle y| \in W^*\). The <strong>outer product</strong> (or tensor product) \(|x\rangle\langle y|\) is a linear map from \(W\) to \(V\) defined by
+
 \[
 |x\rangle\langle y| : |w\rangle \mapsto \langle y|w\rangle\, |x\rangle .
 \]
@@ -273,6 +283,7 @@ In matrix language for \(\mathbb{C}^n\), this is exactly the outer product of a 
 
 <div class="remark">
 <strong>Remark.</strong> The adjoint of an outer product follows immediately from the rules of the adjoint:
+
 \[
 \bigl(|x\rangle\langle y|\bigr)^\dagger = |y\rangle\langle x| .
 \]
@@ -288,6 +299,7 @@ The coefficients \(v_i = \langle e_i|v\rangle\) are the coordinates of \(|v\rang
 
 <div class="theorem">
 <strong>Completeness relation (resolution of the identity).</strong> For any orthonormal basis \(\{|e_i\rangle\}\) of \(V\),
+
 \[
 \sum_i |e_i\rangle\langle e_i| = \hat{\mathbf{1}} .
 \]
@@ -317,6 +329,7 @@ The trace is basis-independent, a fact that underpins its central role in quantu
 
 <div class="example">
 <strong>Example (Projector onto the \(xy\)-plane in \(\mathbb{R}^3\)).</strong> With \(|e_1\rangle = (1,0,0)^\top\) and \(|e_2\rangle = (0,1,0)^\top\),
+
 \[
 \hat{P}_{xy} = |e_1\rangle\langle e_1| + |e_2\rangle\langle e_2| = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 0 \end{pmatrix} .
 \]
@@ -345,6 +358,7 @@ This definition is consistent with the Taylor-series definition for analytic \(f
 
 <div class="definition">
 <strong>Definition (Pauli operators).</strong>
+
 \[
 \hat{\sigma}_x = |0\rangle\langle 1| + |1\rangle\langle 0| , \qquad \hat{\sigma}_y = i|0\rangle\langle 1| - i|1\rangle\langle 0| , \qquad \hat{\sigma}_z = -|0\rangle\langle 0| + |1\rangle\langle 1| .
 \]
@@ -452,6 +466,7 @@ Symmetry transformations in quantum mechanics are implemented by operators that 
 
 <div class="definition">
 <strong>Definition (Unitary operator).</strong> A <strong>unitary operator</strong> \(\hat{U}\) is a bounded linear operator on \(\mathcal{H}\) satisfying
+
 \[
 \hat{U}\hat{U}^\dagger = \hat{U}^\dagger\hat{U} = \hat{\mathbf{1}} .
 \]
@@ -551,6 +566,7 @@ With the mathematical machinery in place, we can state the foundational postulat
 
 <div class="definition">
 <strong>Postulate 3 (Born's rule).</strong> If a system is in state \(|v\rangle\) and we measure the observable associated with \(\hat{A}\), the probability of obtaining eigenvalue \(a_i\) (with eigenvector \(|a_i\rangle\)) is
+
 \[
 P(A = a_i) = |\langle a_i|v\rangle|^2 .
 \]
@@ -595,6 +611,7 @@ This quadratic form in \(\omega\) is minimized at \(\omega = -\langle\hat{C}\ran
 
 <div class="theorem">
 <strong>Theorem (Generalized uncertainty relation).</strong> For any two self-adjoint operators satisfying \([\hat{A},\hat{B}] = i\hat{C}\) and any state \(|\psi\rangle\),
+
 \[
 \Delta_A\,\Delta_B \geq \frac{1}{2}\bigl|\langle\hat{C}\rangle\bigr| ,
 \]
@@ -603,6 +620,7 @@ where \(\Delta_A = \sqrt{\langle\hat{A}^2\rangle - \langle\hat{A}\rangle^2}\) is
 
 <div class="example">
 <strong>Heisenberg's uncertainty principle.</strong> The canonical commutation relation is \([\hat{X}, \hat{P}] = i\hat{\mathbf{1}}\) (we set \(\hbar = 1\)), so \(\hat{C} = \hat{\mathbf{1}}\) and \(\langle\hat{C}\rangle = 1\). The generalized uncertainty relation immediately gives
+
 \[
 \Delta_X\,\Delta_P \geq \frac{1}{2} .
 \]
@@ -659,6 +677,7 @@ This rule is consistent: the projectors are Hermitian, satisfy \(\hat{P}_n^2 = \
 
 <div class="definition">
 <strong>Postuloid 4 (Quantum measurements).</strong> A quantum measurement is described by a set \(\{\hat{M}_n\}\) of <strong>measurement operators</strong> acting on the state space of the system. They satisfy the <strong>completeness relation</strong>
+
 \[
 \sum_n \hat{M}_n^\dagger \hat{M}_n = \hat{\mathbf{1}} .
 \]
@@ -677,6 +696,7 @@ The name "Postuloid" — rather than "Postulate" — is deliberate. POVMs are no
 
 <div class="example">
 <strong>Example (Sequential \(\hat{\sigma}_z\) and \(\hat{\sigma}_x\) measurements).</strong> Consider a qubit in the state
+
 \[
 |\psi\rangle = a|0\rangle + b|1\rangle, \qquad |a|^2 + |b|^2 = 1,
 \]
@@ -723,6 +743,7 @@ More directly: \(p(\sigma_x = -1) = |\langle{-}|1\rangle|^2 = \bigl|\tfrac{1}{\s
 <strong>Key observation:</strong> this probability \(\tfrac{1}{2}\) is independent of the initial coefficients \(a\) and \(b\). The first measurement completely erased the initial state by projecting onto \(|1\rangle\); the second measurement's statistics are determined entirely by the first outcome.
 
 <strong>Step 4: Post-second-measurement state.</strong>
+
 \[
 |\psi''\rangle = \frac{\hat{P}_{-1}^x|1\rangle}{\sqrt{1/2}} = \sqrt{2}\cdot\frac{1}{\sqrt{2}}(|1\rangle\langle 1|1\rangle - |0\rangle\langle 1|1\rangle\cdots) = |{-}\rangle .
 \]
@@ -738,6 +759,7 @@ The POVM framework resolves this by working directly with probabilities, without
 
 <div class="definition">
 <strong>Definition (POVM elements).</strong> Given a set of measurement operators \(\{\hat{M}_n\}\) satisfying Postuloid 4, define the <strong>POVM elements</strong>
+
 \[
 \hat{E}_n = \hat{M}_n^\dagger\hat{M}_n .
 \]
@@ -764,12 +786,14 @@ The profound justification for POVMs is this: it can be proven that any physical
 <strong>Remark (Dirac's argument: the CCRs are not postulated — they are derived).</strong> It is tempting to present the canonical commutation relation \([\hat{x}, \hat{p}] = i\hbar\) as a bare postulate, introduced by fiat to match experiment. Dirac showed that something much deeper is true: the CCRs are the <em>unique</em> way to upgrade the Poisson algebra of classical Hamiltonian mechanics to a non-commutative algebra, while preserving all of the algebraic structure that underlies the equations of motion.
 
 <strong>Classical mechanics via Poisson brackets.</strong> In the Hamiltonian formulation, observables are functions on phase space and the equation of motion takes the elegant form
+
 \[
 \frac{d}{dt}f = \{f, H\},
 \]
 where \(\{f, g\}\) is the Poisson bracket, satisfying antisymmetry, linearity, the Leibniz (product) rule, and the Jacobi identity. In classical mechanics the positions \(x_i^{(r)}\) and momenta \(p_j^{(s)}\) are number-valued and therefore commute: \(x_i^{(r)} p_j^{(s)} - p_j^{(s)} x_i^{(r)} = 0\). This commutativity is not a trivial observation — it is a precise expression of the assumption that position and momentum can be measured simultaneously to arbitrary precision.
 
 <strong>The quantum upgrade: allowing non-commutativity.</strong> Dirac's key insight was to ask: what is the most general algebraic modification of the classical theory that preserves all Poisson bracket rules while allowing the observables \(\hat{x}_i^{(r)}, \hat{p}_j^{(s)}\) to be non-number-valued (i.e., non-commutative)? The Poisson product rule \(\{f, gh\} = \{f,g\}h + g\{f,h\}\) applied twice to a product \(\{\hat{u}_1\hat{u}_2, \hat{v}_1\hat{v}_2\}\) — in two different orders — yields the consistency requirement:
+
 \[
 \{\hat{u}_1, \hat{v}_1\}(\hat{v}_2\hat{u}_2 - \hat{u}_2\hat{v}_2) = (\hat{v}_1\hat{u}_1 - \hat{u}_1\hat{v}_1)\{\hat{u}_2, \hat{v}_2\}
 \]
@@ -781,6 +805,7 @@ for all observables \(\hat{u}_1, \hat{u}_2, \hat{v}_1, \hat{v}_2\). This must ho
 for some constant \(k\) that commutes with all observables. Setting \(k = 0\) recovers classical mechanics. Any nonzero \(k\) introduces genuine non-commutativity — and the Poisson algebra structure of the equations of motion is preserved exactly.
 
 <strong>The factor of \(i\) comes from hermiticity.</strong> The constant \(k\) must be imaginary. To see why: position and momentum observables must satisfy \(\hat{x}^\dagger = \hat{x}\) and \(\hat{p}^\dagger = \hat{p}\) (so that measurement outcomes are real). Taking the adjoint of \(\hat{x}\hat{p} - \hat{p}\hat{x} = k\{x, p\} = k\) gives \(\hat{p}\hat{x} - \hat{x}\hat{p} = k^<em>\), i.e., \(-(\hat{x}\hat{p} - \hat{p}\hat{x}) = k^</em>\). Together with the original equation: \(-k = k^*\), so \(k\) is purely imaginary. Nature chooses \(k = i\hbar\), and the CCRs follow:
+
 \[
 [\hat{x}_i^{(r)},\, \hat{p}_j^{(s)}] = i\hbar\,\delta_{ij}\delta^{rs}, \qquad [\hat{x}_i^{(r)},\, \hat{x}_j^{(s)}] = 0, \qquad [\hat{p}_i^{(r)},\, \hat{p}_j^{(s)}] = 0 .
 \]
@@ -807,6 +832,7 @@ The fundamental objects of quantum mechanics are rays in a Hilbert space. Two st
 
 <div class="definition">
 <strong>Theorem (Wigner, 1931).</strong> Any mapping \(U\) from a complex Hilbert space \(V\) onto itself that preserves the modulus of the inner product,
+
 \[
 |\langle U\psi | U\phi \rangle| = |\langle \psi | \phi \rangle| \quad \text{for all } |\psi\rangle, |\phi\rangle \in V,
 \]
@@ -880,6 +906,7 @@ Most symmetry groups arising in physics come in continuous families. A rotation 
 
 <div class="definition">
 <strong>Definition (Generator of a family of unitary operators).</strong> Consider a one-parameter family of unitary operators \(\hat{U}(s)\) depending smoothly on a real parameter \(s\), with \(\hat{U}(0) = \mathbb{1}\). The <strong>generator</strong> of this family is the self-adjoint (Hermitian) operator \(\hat{H}\) defined by
+
 \[
 \hat{U}(s) = e^{i\hat{H}s}
 \]
@@ -899,6 +926,7 @@ which forces \(\hat{H}^\dagger = \hat{H}\). Generators are therefore Hermitian o
 
 <div class="remark">
 <strong>Kempf (AQM10): What generators "generate" — a physical picture.</strong> The word "generator" acquires its meaning most vividly when you look at what actually happens to a state under an infinitesimal transformation. For a one-parameter family \(\hat{U}(s) = e^{is\hat{K}}\), expanding to first order in \(s\):
+
 \[
 \hat{U}(s)|\psi\rangle \approx |\psi\rangle + is\hat{K}|\psi\rangle.
 \]
@@ -974,6 +1002,7 @@ The composition of two Galilean transformations \(\tau_2\tau_1 = \tau_3\) must b
   <!-- Phase annotation -->
   <text x="250" y="148" text-anchor="middle" font-size="11" font-family="serif" fill="#555">Projective phase: $\hat{U}(\tau_2)\hat{U}(\tau_1) = e^{i\omega(\tau_2,\tau_1)}\hat{U}(\tau_2\tau_1)$</text>
 </svg>
+
 \[
 \hat{U}(\tau_2\tau_1) = e^{i\omega(\tau_2,\tau_1)}\hat{U}(\tau_2)\hat{U}(\tau_1). \tag{2.2.1}
 \]
@@ -1032,15 +1061,19 @@ The full set of commutation relations among the ten generators can be computed f
 \[
 [\hat{P}_\alpha, \hat{P}_\beta] = 0 \qquad [\hat{G}_\alpha, \hat{P}_\beta] = i\delta_{\alpha\beta}M\mathbb{1}
 \]
+
 \[
 [\hat{G}_\alpha, \hat{G}_\beta] = 0 \qquad [\hat{P}_\alpha, \hat{H}] = 0
 \]
+
 \[
 [\hat{J}_\alpha, \hat{J}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{J}_\gamma \qquad [\hat{G}_\alpha, \hat{H}] = i\hat{P}_\alpha
 \]
+
 \[
 [\hat{J}_\alpha, \hat{P}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{P}_\gamma \qquad [\hat{J}_\alpha, \hat{H}] = 0
 \]
+
 \[
 [\hat{J}_\alpha, \hat{G}_\beta] = i\varepsilon_{\alpha\beta}{}^\gamma\hat{G}_\gamma
 \]
@@ -1052,7 +1085,7 @@ The derivation of the rotation commutation relations is particularly instructive
 \[
 R_1(\theta) = \begin{pmatrix}1&0&0\\0&\cos\theta&-\sin\theta\\0&\sin\theta&\cos\theta\end{pmatrix}, \quad
 R_2(\theta) = \begin{pmatrix}\cos\theta&0&\sin\theta\\0&1&0\\-\sin\theta&0&\cos\theta\end{pmatrix}, \quad
-R_3(\theta) = \begin{pmatrix}\cos\theta&-\sin\theta&0\\\sin\theta&\cos\theta&0\\0&0&1\end{pmatrix}.
+R_3(\theta) = \begin{pmatrix}\cos\theta&-\sin\theta&0\\sin\theta&\cos\theta&0\\0&0&1\end{pmatrix}.
 \]
 
 Expanding for small \(\theta = \epsilon \ll 1\):
@@ -1102,7 +1135,7 @@ To derive the equations of motion and the explicit form of the Hamiltonian, we a
 \[
 |\boldsymbol{x}\rangle \to |\boldsymbol{x}\rangle' = e^{-i\boldsymbol{a}\cdot\hat{P}}|\boldsymbol{x}\rangle = |\boldsymbol{x}+\boldsymbol{a}\rangle,
 \]
-where we have used the eigenvalue equation \(\hat{X}|\boldsymbol{x}\rangle = \boldsymbol{x}|\boldsymbol{x}\rangle$. Under the same transformation, the position operator becomes:
+where we have used the eigenvalue equation \(\hat{X}|\boldsymbol{x}\rangle = \boldsymbol{x}|\boldsymbol{x}\rangle\). Under the same transformation, the position operator becomes:
 
 \[
 \hat{X} \to \hat{X}' = e^{-i\boldsymbol{a}\cdot\hat{P}}\hat{X}e^{i\boldsymbol{a}\cdot\hat{P}}. \tag{2.2.7}
@@ -1274,7 +1307,7 @@ This is again the angular momentum algebra, now for the spin degrees of freedom.
   <text x="240" y="172" text-anchor="middle" font-size="11" font-family="sans-serif" fill="#555">Clebsch-Gordan: |J,M⟩ = Σ ⟨j₁m₁j₂m₂|JM⟩ |j₁m₁⟩|j₂m₂⟩</text>
 </svg>
 
-For the boost generator, the argument from §6.2 shows that \(\hat{G}_\alpha - M\hat{X}_\alpha\) commutes with \(\hat{P}$ but is no longer necessarily a multiple of the identity — it could be a function of the internal operators. Since it must be a 3-vector under rotations, and the only 3-vector function of \(\hat{S}\) is \(\hat{S}\) itself (since cross products of \(\hat{S}\) are proportional to \(\hat{S}\) given \(\hat{S}\times\hat{S} = i\hat{S}\)), we would have \(\hat{G}_\alpha = M\hat{X}_\alpha + c\hat{S}_\alpha\). However, the commutation relation \([\hat{G}_\alpha, \hat{G}_\beta] = 0\) imposes \(c = 0\), because the three components of \(\hat{S}\) do not commute with each other. Therefore even in the presence of spin:
+For the boost generator, the argument from §6.2 shows that \(\hat{G}_\alpha - M\hat{X}_\alpha\) commutes with \(\hat{P}\) but is no longer necessarily a multiple of the identity — it could be a function of the internal operators. Since it must be a 3-vector under rotations, and the only 3-vector function of \(\hat{S}\) is \(\hat{S}\) itself (since cross products of \(\hat{S}\) are proportional to \(\hat{S}\) given \(\hat{S}\times\hat{S} = i\hat{S}\)), we would have \(\hat{G}_\alpha = M\hat{X}_\alpha + c\hat{S}_\alpha\). However, the commutation relation \([\hat{G}_\alpha, \hat{G}_\beta] = 0\) imposes \(c = 0\), because the three components of \(\hat{S}\) do not commute with each other. Therefore even in the presence of spin:
 
 \[
 \hat{G}_\alpha = M\hat{X}_\alpha.
@@ -1430,11 +1463,15 @@ Quantum mechanics is inherently probabilistic, but it is essential to distinguis
 
 The first is purely **quantum uncertainty**, rooted in the superposition principle. A system may genuinely be in a superposition of eigenstates of an observable, so that no definite value exists prior to measurement. For example, the state
 
-\[ |\psi_1\rangle = \frac{1}{\sqrt{2}}\bigl(|0\rangle + |1\rangle\bigr) \]
+\[
+|\psi_1\rangle = \frac{1}{\sqrt{2}}\bigl(|0\rangle + |1\rangle\bigr)
+\]
 
 is a superposition of the eigenstates \(|0\rangle\) and \(|1\rangle\) of \(\hat{\sigma}_z\). Born's rule then tells us the probability of finding the outcome \(+1\) (spin up) is
 
-\[ P_{+1} = |\langle 1|\psi_1\rangle|^2 = \frac{1}{2}. \]
+\[
+P_{+1} = |\langle 1|\psi_1\rangle|^2 = \frac{1}{2}.
+\]
 
 The second source is **classical uncertainty**, also called ignorance. Even before any quantum measurement takes place, we may not know which quantum state the system has been prepared in. This arises naturally in many physical contexts: an experimenter who does not disclose the preparation, a thermal reservoir that randomly populates different energy eigenstates, or the loss of information when one part of a larger system is discarded. Thermal fluctuations are a canonical example of this kind of classical ignorance.
 
@@ -1457,21 +1494,29 @@ The **density operator** (also called the density matrix) is the mathematical ob
 
 The structure of the density operator is deeply motivated by probability theory. If we know that the system is in state \(|\varphi_i\rangle\) with probability \(p_i\) (a classical probability distribution over quantum states), then the appropriate density operator is
 
-\[ \hat{\rho} = \sum_i p_i |\varphi_i\rangle\langle\varphi_i|. \]
+\[
+\hat{\rho} = \sum_i p_i |\varphi_i\rangle\langle\varphi_i|.
+\]
 
 The unit-trace condition is then simply the statement that probabilities sum to one: \(\operatorname{Tr}\hat{\rho} = \sum_i p_i = 1\). Conversely, it can be shown that any operator satisfying the three axioms above can be written in this form, so the axioms completely characterize the possible states of a quantum system.
 
 The **expectation value** of an observable \(\hat{O}\) in the state \(\hat{\rho}\) is defined as
 
-\[ \langle \hat{O} \rangle = \operatorname{Tr}(\hat{\rho}\,\hat{O}). \]
+\[
+\langle \hat{O} \rangle = \operatorname{Tr}(\hat{\rho}\,\hat{O}).
+\]
 
 This is the correct weighted average over the ensemble: expanding in any orthonormal basis \(\{|e_j\rangle\}\),
 
-\[ \operatorname{Tr}(\hat{\rho}\,\hat{O}) = \sum_j \langle e_j|\hat{\rho}\,\hat{O}|e_j\rangle = \sum_i p_i \langle\varphi_i|\hat{O}|\varphi_i\rangle, \]
+\[
+\operatorname{Tr}(\hat{\rho}\,\hat{O}) = \sum_j \langle e_j|\hat{\rho}\,\hat{O}|e_j\rangle = \sum_i p_i \langle\varphi_i|\hat{O}|\varphi_i\rangle,
+\]
 
 which is precisely the statistical average of the quantum expectation values over all states in the ensemble. The probability of obtaining eigenvalue \(o_i\) when measuring \(\hat{O}\) is similarly
 
-\[ P_{o_i} = \operatorname{Tr}(\hat{\rho}\,|o_i\rangle\langle o_i|). \]
+\[
+P_{o_i} = \operatorname{Tr}(\hat{\rho}\,|o_i\rangle\langle o_i|).
+\]
 
 <div class="remark">
 <strong>Remark (Kempf — Basis Independence as Physical Necessity).</strong> Kempf emphasizes one feature of the trace formula that is easy to overlook: the prediction \(\langle\hat{O}\rangle = \operatorname{Tr}(\hat{\rho}\hat{O})\) is basis-independent, and this <em>must</em> be so on physical grounds. The trace of any operator is independent of the basis in which you calculate it — the sum of diagonal elements changes when you change bases, but the sum doesn't change. So this is a very cool result of linear algebra. And we need it physically: the expectation value is something measurable, something real. It cannot depend on a human-made choice of basis in Hilbert space.
@@ -1481,12 +1526,15 @@ which is precisely the statistical average of the quantum expectation values ove
 
 When a system is in a definite quantum state \(|\psi\rangle\) — meaning there is no classical uncertainty about its preparation — the density operator takes the form
 
-\[ \hat{\rho} = |\psi\rangle\langle\psi|, \]
+\[
+\hat{\rho} = |\psi\rangle\langle\psi|,
+\]
 
 which is a rank-one projector. In this case \(\hat{\rho}^2 = |\psi\rangle\langle\psi|\psi\rangle\langle\psi| = \hat{\rho}\), so \(\operatorname{Tr}\hat{\rho}^2 = \operatorname{Tr}\hat{\rho} = 1\).
 
 <div class="definition">
 <strong>Definition 7.2 (Pure and Mixed States).</strong> A state \(\hat{\rho}\) is called a <strong>pure state</strong> if \(\operatorname{Tr}\hat{\rho}^2 = 1\), and a <strong>mixed state</strong> if \(\operatorname{Tr}\hat{\rho}^2 < 1\). The quantity
+
 \[
 \mathcal{P}(\hat{\rho}) = \operatorname{Tr}\hat{\rho}^2
 \]
@@ -1495,11 +1543,15 @@ is called the <strong>purity</strong> of the state.
 
 The purity satisfies the fundamental bounds
 
-\[ \frac{1}{d} \leq \mathcal{P}(\hat{\rho}) \leq 1, \]
+\[
+\frac{1}{d} \leq \mathcal{P}(\hat{\rho}) \leq 1,
+\]
 
 where \(d = \dim\mathcal{H}\). The upper bound \(\mathcal{P} = 1\) is achieved by pure states. The lower bound \(\mathcal{P} = 1/d\) is achieved by the **maximally mixed state**
 
-\[ \hat{\rho}_{\text{max}} = \frac{1}{d}\mathbb{1}, \]
+\[
+\hat{\rho}_{\text{max}} = \frac{1}{d}\mathbb{1},
+\]
 
 which has the same form in every basis, carries no quantum coherence whatsoever, and in fact carries no information at all.
 
@@ -1513,6 +1565,7 @@ Closely connected to purity is the information-theoretic content of a quantum st
 
 <div class="definition">
 <strong>Definition 7.3 (Von Neumann Entropy).</strong> The <strong>Von Neumann entropy</strong> of a state \(\hat{\rho}\) is
+
 \[
 S(\hat{\rho}) = -\operatorname{Tr}(\hat{\rho}\log\hat{\rho}) = -\sum_i \rho_i \log\rho_i,
 \]
@@ -1561,15 +1614,21 @@ For measurements of \(\hat{\sigma}_z\): both states give probability \(1/2\) for
 
 Now consider measurements of \(\hat{\sigma}_x = |0\rangle\langle 1| + |1\rangle\langle 0|\), whose eigenstates are
 
-\[ |+\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle), \qquad |-\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle). \]
+\[
+|+\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle), \qquad |-\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle).
+\]
 
 Since \(|\psi_1\rangle = |+\rangle\) is already an eigenstate of \(\hat{\sigma}_x\) with eigenvalue \(+1\), we find
 
-\[ P_{\hat{\sigma}_x = +1}^{|\psi_1\rangle} = |\langle +|\psi_1\rangle|^2 = 1, \qquad \langle\hat{\sigma}_x\rangle_{|\psi_1\rangle} = 1. \]
+\[
+P_{\hat{\sigma}_x = +1}^{|\psi_1\rangle} = |\langle +|\psi_1\rangle|^2 = 1, \qquad \langle\hat{\sigma}_x\rangle_{|\psi_1\rangle} = 1.
+\]
 
 For the mixed state, however, since \(\hat{\rho}_2\) is diagonal in the \(\hat{\sigma}_z\) eigenbasis,
 
-\[ \langle\hat{\sigma}_x\rangle_{\hat{\rho}_2} = \operatorname{Tr}(\hat{\rho}_2\hat{\sigma}_x) = \langle 1|\hat{\rho}_2|0\rangle + \langle 0|\hat{\rho}_2|1\rangle = 0, \]
+\[
+\langle\hat{\sigma}_x\rangle_{\hat{\rho}_2} = \operatorname{Tr}(\hat{\rho}_2\hat{\sigma}_x) = \langle 1|\hat{\rho}_2|0\rangle + \langle 0|\hat{\rho}_2|1\rangle = 0,
+\]
 
 and the probability of obtaining \(+1\) when measuring \(\hat{\sigma}_x\) is only \(1/2\).
 
@@ -1587,14 +1646,19 @@ Temperature introduces classical uncertainty into a quantum system by mixing tog
 
 The **Gibbs thermality criterion** states that the thermal state is the one that **maximizes the Von Neumann entropy subject to a fixed mean energy**. Formally, we maximize \(S = -\operatorname{Tr}[\hat{\rho}\log\hat{\rho}]\) subject to \(\operatorname{Tr}(\hat{\rho}\hat{H}) = E\) and \(\operatorname{Tr}(\hat{\rho}) = 1\), enforcing the constraints via Lagrange multipliers \(\beta\) and \(\mu\). Carrying out the variational calculation leads to
 
-\[ -\log\hat{\rho} - \mathbb{1} - \beta\hat{H} - \mu\mathbb{1} = 0, \]
+\[
+-\log\hat{\rho} - \mathbb{1} - \beta\hat{H} - \mu\mathbb{1} = 0,
+\]
 
 whose solution is
 
-\[ \hat{\rho}_\beta = \frac{e^{-\beta\hat{H}}}{Z(\beta)}, \qquad Z(\beta) = \operatorname{Tr}\bigl(e^{-\beta\hat{H}}\bigr). \]
+\[
+\hat{\rho}_\beta = \frac{e^{-\beta\hat{H}}}{Z(\beta)}, \qquad Z(\beta) = \operatorname{Tr}\bigl(e^{-\beta\hat{H}}\bigr).
+\]
 
 <div class="definition">
 <strong>Definition 8.1 (Gibbs State).</strong> The <strong>Gibbs (thermal) state</strong> at inverse temperature \(\beta = 1/(k_B T)\) is
+
 \[
 \hat{\rho}_\beta = \frac{e^{-\beta\hat{H}}}{Z(\beta)}, \qquad Z(\beta) = \operatorname{Tr}\bigl(e^{-\beta\hat{H}}\bigr),
 \]
@@ -1624,6 +1688,7 @@ A more general characterization of thermal equilibrium was provided by Kubo, Mar
 <ol>
 <li><strong>Holomorphicity:</strong> The expectation values \(\langle\hat{A}(0)\hat{B}(\tau)\rangle_{\hat{\rho}}\) and \(\langle\hat{B}(\tau)\hat{A}(0)\rangle_{\hat{\rho}}\) are boundary values of complex functions holomorphic in the strips \(0 < \operatorname{Im}z < \beta\) and \(-\beta < \operatorname{Im}z < 0\) respectively.</li>
 <li><strong>KMS condition:</strong> The boundary values satisfy the anti-periodicity
+
 \[
 \langle\hat{A}(0)\,\hat{B}(\tau + i\beta)\rangle_{\hat{\rho}} = \langle\hat{B}(\tau)\,\hat{A}(0)\rangle_{\hat{\rho}}.
 \]
@@ -1651,11 +1716,15 @@ The proof is elegant. Setting \(\hat{A} = \mathbb{1}\) in the KMS condition give
 
 The proof proceeds in both directions. For the Gibbs \(\Rightarrow\) KMS direction: given \(\hat{\rho} = e^{-\beta\hat{H}}/Z\), the Heisenberg-picture operator at complex time \(\tau + i\beta\) satisfies
 
-\[ \hat{B}(\tau + i\beta) = e^{i\hat{H}(\tau+i\beta)}\hat{B}(0)e^{-i\hat{H}(\tau+i\beta)} = e^{-\beta\hat{H}}\hat{B}(\tau)e^{\beta\hat{H}}. \]
+\[
+\hat{B}(\tau + i\beta) = e^{i\hat{H}(\tau+i\beta)}\hat{B}(0)e^{-i\hat{H}(\tau+i\beta)} = e^{-\beta\hat{H}}\hat{B}(\tau)e^{\beta\hat{H}}.
+\]
 
 Substituting into the correlator and using the cyclic property of the trace:
 
-\[ \langle\hat{A}(0)\hat{B}(\tau+i\beta)\rangle_{\hat{\rho}} = \frac{1}{Z}\operatorname{Tr}\bigl[\hat{A}(0)e^{-\beta\hat{H}}\hat{B}(\tau)e^{\beta\hat{H}}e^{-\beta\hat{H}}\bigr] = \frac{1}{Z}\operatorname{Tr}\bigl[\hat{B}(\tau)\hat{A}(0)e^{-\beta\hat{H}}\bigr] = \langle\hat{B}(\tau)\hat{A}(0)\rangle_{\hat{\rho}}, \]
+\[
+\langle\hat{A}(0)\hat{B}(\tau+i\beta)\rangle_{\hat{\rho}} = \frac{1}{Z}\operatorname{Tr}\bigl[\hat{A}(0)e^{-\beta\hat{H}}\hat{B}(\tau)e^{\beta\hat{H}}e^{-\beta\hat{H}}\bigr] = \frac{1}{Z}\operatorname{Tr}\bigl[\hat{B}(\tau)\hat{A}(0)e^{-\beta\hat{H}}\bigr] = \langle\hat{B}(\tau)\hat{A}(0)\rangle_{\hat{\rho}},
+\]
 
 which is exactly the KMS condition. For the reverse direction, taking the KMS condition at \(\tau = 0\) shows that \([{\hat{B}}, e^{\beta\hat{H}}\hat{\rho}] = 0\) for all bounded \(\hat{B}\), which forces \(e^{\beta\hat{H}}\hat{\rho} \propto \mathbb{1}\), giving the Gibbs form.
 
@@ -1677,6 +1746,7 @@ Not all information about the joint system is accessible to an observer who has 
 
 <div class="definition">
 <strong>Definition 9.1 (Partial Trace and Reduced State).</strong> The <strong>reduced density operator</strong> of subsystem \(A\) is obtained by tracing over \(B\):
+
 \[
 \hat{\rho}_A = \operatorname{Tr}_B(\hat{\rho}_{AB}) = \sum_i \langle b_i|\hat{\rho}_{AB}|b_i\rangle,
 \]
@@ -1685,7 +1755,9 @@ and similarly \(\hat{\rho}_B = \operatorname{Tr}_A(\hat{\rho}_{AB}) = \sum_i \la
 
 The partial trace is not merely a formal convenience — it is operationally mandatory. For any observable \(\hat{O}_A \otimes \mathbb{1}_B\) that belongs entirely to subsystem \(A\), the expectation value depends only on \(\hat{\rho}_A\):
 
-\[ \langle\hat{O}_A \otimes \mathbb{1}_B\rangle = \operatorname{Tr}(\hat{\rho}_{AB}\,\hat{O}_A \otimes \mathbb{1}_B) = \operatorname{Tr}_A(\hat{\rho}_A\,\hat{O}_A). \]
+\[
+\langle\hat{O}_A \otimes \mathbb{1}_B\rangle = \operatorname{Tr}(\hat{\rho}_{AB}\,\hat{O}_A \otimes \mathbb{1}_B) = \operatorname{Tr}_A(\hat{\rho}_A\,\hat{O}_A).
+\]
 
 This is the precise sense in which \(\hat{\rho}_A\) contains all the locally accessible information about subsystem \(A\). The central question of multipartite quantum mechanics is whether knowing \(\hat{\rho}_A\) and \(\hat{\rho}_B\) is sufficient to reconstruct \(\hat{\rho}_{AB}\) — and, as we shall see, in general the answer is no.
 
@@ -1697,15 +1769,21 @@ This is the precise sense in which \(\hat{\rho}_A\) contains all the locally acc
 
 Consider two qubits \(A\) and \(B\) with bases \(\{|0_A\rangle, |1_A\rangle\}\) and \(\{|0_B\rangle, |1_B\rangle\}\). The joint Hilbert space \(\mathcal{H}_{AB}\) is spanned by \(\{|00\rangle, |01\rangle, |10\rangle, |11\rangle\}\). Suppose each qubit is in an independent pure state:
 
-\[ |\psi_A\rangle = \alpha|0_A\rangle + \beta|1_A\rangle, \qquad |\psi_B\rangle = \gamma|0_B\rangle + \delta|1_B\rangle, \]
+\[
+|\psi_A\rangle = \alpha|0_A\rangle + \beta|1_A\rangle, \qquad |\psi_B\rangle = \gamma|0_B\rangle + \delta|1_B\rangle,
+\]
 
 with \(|\alpha|^2 + |\beta|^2 = |\gamma|^2 + |\delta|^2 = 1\). The joint state is then the product state
 
-\[ |\psi_{AB}\rangle = |\psi_A\rangle \otimes |\psi_B\rangle = \alpha\gamma|00\rangle + \alpha\delta|01\rangle + \beta\gamma|10\rangle + \beta\delta|11\rangle. \]
+\[
+|\psi_{AB}\rangle = |\psi_A\rangle \otimes |\psi_B\rangle = \alpha\gamma|00\rangle + \alpha\delta|01\rangle + \beta\gamma|10\rangle + \beta\delta|11\rangle.
+\]
 
 Computing the partial trace over \(B\),
 
-\[ \hat{\rho}_A = \operatorname{Tr}_B(|\psi_{AB}\rangle\langle\psi_{AB}|) = \langle 0_B|\psi_{AB}\rangle\langle\psi_{AB}|0_B\rangle + \langle 1_B|\psi_{AB}\rangle\langle\psi_{AB}|1_B\rangle. \]
+\[
+\hat{\rho}_A = \operatorname{Tr}_B(|\psi_{AB}\rangle\langle\psi_{AB}|) = \langle 0_B|\psi_{AB}\rangle\langle\psi_{AB}|0_B\rangle + \langle 1_B|\psi_{AB}\rangle\langle\psi_{AB}|1_B\rangle.
+\]
 
 After a short calculation using \(|\gamma|^2 + |\delta|^2 = 1\), one finds \(\hat{\rho}_A = |\psi_A\rangle\langle\psi_A|\), a pure state. This makes sense: if the two qubits were never correlated to begin with, discarding \(B\) leaves \(A\) in its original pure state.
 
@@ -1713,10 +1791,13 @@ After a short calculation using \(|\gamma|^2 + |\delta|^2 = 1\), one finds \(\ha
 
 In the matrix representation, tensor products of operators are computed via the **Kronecker product**. For an \(m\times n\) matrix \(\hat{A}\) and a \(p\times q\) matrix \(\hat{B}\), the tensor product \(\hat{A}\otimes\hat{B}\) is the \(mp\times nq\) block matrix
 
-\[ \hat{A}\otimes\hat{B} = \begin{pmatrix} a_{11}\hat{B} & a_{12}\hat{B} & \cdots & a_{1n}\hat{B} \\ a_{21}\hat{B} & a_{22}\hat{B} & \cdots & a_{2n}\hat{B} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1}\hat{B} & a_{m2}\hat{B} & \cdots & a_{mn}\hat{B} \end{pmatrix}. \]
+\[
+\hat{A}\otimes\hat{B} = \begin{pmatrix} a_{11}\hat{B} & a_{12}\hat{B} & \cdots & a_{1n}\hat{B} \\ a_{21}\hat{B} & a_{22}\hat{B} & \cdots & a_{2n}\hat{B} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1}\hat{B} & a_{m2}\hat{B} & \cdots & a_{mn}\hat{B} \end{pmatrix}.
+\]
 
 <div class="example">
 <strong>Example 9.1 (Two-Qubit Operators).</strong> In the standard qubit basis \(|0\rangle = (1,0)^T\), \(|1\rangle = (0,1)^T\), the operators \(\hat{\sigma}_z^A\otimes\mathbb{1}_B\) and \(\hat{\sigma}_z^A\otimes\hat{\sigma}_x^B\) are represented by the \(4\times 4\) matrices
+
 \[
 \hat{\sigma}_z^A\otimes\mathbb{1}_B =
 \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix},
@@ -1797,7 +1878,9 @@ The problem is: the same reactivity that makes two qubits interact usefully for 
 
 Before entering the conceptual labyrinth of EPR, we introduce the states at its heart. The four **Bell states** are the maximally entangled orthonormal basis of the two-qubit Hilbert space:
 
-\[ |\Phi^\pm\rangle = \frac{1}{\sqrt{2}}\bigl(|00\rangle \pm |11\rangle\bigr), \qquad |\Psi^\pm\rangle = \frac{1}{\sqrt{2}}\bigl(|01\rangle \pm |10\rangle\bigr). \]
+\[
+|\Phi^\pm\rangle = \frac{1}{\sqrt{2}}\bigl(|00\rangle \pm |11\rangle\bigr), \qquad |\Psi^\pm\rangle = \frac{1}{\sqrt{2}}\bigl(|01\rangle \pm |10\rangle\bigr).
+\]
 
 These four states are orthonormal and span all of \(\mathcal{H}_A \otimes \mathcal{H}_B\), forming a complete basis called the **Bell basis**. They will reappear as the central actors in both Bell's theorem and quantum teleportation.
 
@@ -1807,7 +1890,9 @@ In 1935, Einstein, Podolsky, and Rosen published a paper entitled "Can Quantum-M
 
 Consider the Bell state \(|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\). Neither qubit has a definite value of \(\hat{\sigma}_z\) — they are genuinely in superposition. Yet if Alice measures her qubit and obtains \(|0\rangle\), the state of the joint system collapses:
 
-\[ \frac{\hat{P}_{|0_A\rangle}|\Phi^+\rangle}{\|\hat{P}_{|0_A\rangle}|\Phi^+\rangle\|} = |0_A 0_B\rangle. \]
+\[
+\frac{\hat{P}_{|0_A\rangle}|\Phi^+\rangle}{\|\hat{P}_{|0_A\rangle}|\Phi^+\rangle\|} = |0_A 0_B\rangle.
+\]
 
 Bob's qubit is instantaneously projected to \(|0_B\rangle\), regardless of how far away Bob is. From a strict Copenhagen perspective, something seems to have propagated instantaneously across arbitrarily large distances — in apparent contradiction with relativity.
 
@@ -1825,10 +1910,13 @@ Bell's insight was to derive a mathematical inequality that **any** local hidden
 
 **Setting up local realism.** Consider two qubits in spacelike-separated regions. Alice can choose between measurement settings \(a\) or \(a'\), Bob between \(b\) or \(b'\), with outcomes \(\pm 1\). Local realism asserts that there exist functions \(A(a, \lambda) = \pm 1\) and \(B(b, \lambda) = \pm 1\), where \(\lambda\) denotes hidden variables distributed according to some probability density \(\Lambda(\lambda)\) with \(\int\Lambda(\lambda)\,d\lambda = 1\), and crucially \(A\) does not depend on \(b\) and \(B\) does not depend on \(a\) (locality). The correlation function is
 
-\[ C(a, b) = \int A(a,\lambda)\,B(b,\lambda)\,\Lambda(\lambda)\,d\lambda. \]
+\[
+C(a, b) = \int A(a,\lambda)\,B(b,\lambda)\,\Lambda(\lambda)\,d\lambda.
+\]
 
 <div class="theorem">
 <strong>Theorem 10.1 (Bell-CHSH Inequality).</strong> Under local realism,
+
 \[
 \bigl|C(a,b) - C(a,b')\bigr| + \bigl|C(a',b') + C(a',b)\bigr| \leq 2.
 \]
@@ -1836,11 +1924,15 @@ Bell's insight was to derive a mathematical inequality that **any** local hidden
 
 The proof is a short algebraic exercise. From the identity
 
-\[ C(a,b) - C(a,b') = \int A(a,\lambda)\,B(b,\lambda)\bigl[1 \pm A(a',\lambda)B(b',\lambda)\bigr]\,\Lambda(\lambda)\,d\lambda - \int A(a,\lambda)\,B(b',\lambda)\bigl[1 \pm A(a',\lambda)B(b,\lambda)\bigr]\,\Lambda(\lambda)\,d\lambda, \]
+\[
+C(a,b) - C(a,b') = \int A(a,\lambda)\,B(b,\lambda)\bigl[1 \pm A(a',\lambda)B(b',\lambda)\bigr]\,\Lambda(\lambda)\,d\lambda - \int A(a,\lambda)\,B(b',\lambda)\bigl[1 \pm A(a',\lambda)B(b,\lambda)\bigr]\,\Lambda(\lambda)\,d\lambda,
+\]
 
 and using \(|A|, |B| \leq 1\) together with \(\int\Lambda\,d\lambda = 1\), one arrives at
 
-\[ \bigl|C(a,b) - C(a,b')\bigr| \leq 2 \pm \bigl[C(a',b') + C(a',b)\bigr]. \]
+\[
+\bigl|C(a,b) - C(a,b')\bigr| \leq 2 \pm \bigl[C(a',b') + C(a',b)\bigr].
+\]
 
 Taking the appropriate sign gives the CHSH inequality. This is a **necessary** condition for local realism, satisfied by any theory with pre-defined outcomes and no faster-than-light influences.
 
@@ -1850,11 +1942,15 @@ Quantum mechanics can violate the CHSH inequality. Consider the Bell state \(|\P
 
 Computing all four correlators on \(|\Psi^-\rangle\),
 
-\[ \langle A(a)B(b)\rangle = \langle A(a')B(b')\rangle = \langle A(a')B(b)\rangle = -\langle A(a)B(b')\rangle = \frac{1}{\sqrt{2}}. \]
+\[
+\langle A(a)B(b)\rangle = \langle A(a')B(b')\rangle = \langle A(a')B(b)\rangle = -\langle A(a)B(b')\rangle = \frac{1}{\sqrt{2}}.
+\]
 
 Substituting into the left-hand side of the CHSH inequality:
 
-\[ \left|\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}\right| + \left|\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}}\right| = 0 + \frac{2}{\sqrt{2}} + \frac{2}{\sqrt{2}} = 2\sqrt{2} \approx 2.83 > 2. \]
+\[
+\left|\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}\right| + \left|\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}}\right| = 0 + \frac{2}{\sqrt{2}} + \frac{2}{\sqrt{2}} = 2\sqrt{2} \approx 2.83 > 2.
+\]
 
 <div class="theorem">
 <strong>Theorem 10.2.</strong> Quantum mechanics violates Bell's inequality. The maximum quantum violation of the CHSH inequality is \(2\sqrt{2}\) (the Tsirelson bound), achieved by maximally entangled states with optimally chosen measurement settings.
@@ -1882,6 +1978,7 @@ We now formalize the notion of entanglement for general (possibly mixed) biparti
 
 <div class="definition">
 <strong>Definition 11.1 (Separable and Entangled States).</strong> A bipartite state \(\hat{\rho}_{AB}\) is called <strong>separable</strong> if it can be written as a convex combination of product states:
+
 \[
 \hat{\rho}_{AB} = \sum_i p_i\,\hat{\rho}_A^{(i)}\otimes\hat{\rho}_B^{(i)},
 \]
@@ -1926,6 +2023,7 @@ For **pure** bipartite states, the Von Neumann entropy of either reduced state p
 
 <div class="definition">
 <strong>Definition 11.3 (Entanglement Entropy).</strong> For a pure bipartite state \(|\psi_{AB}\rangle\), the <strong>entanglement entropy</strong> is
+
 \[
 S_\text{ent}(\hat{\rho}_{AB}) = S(\hat{\rho}_A) = S(\hat{\rho}_B) = -\operatorname{Tr}(\hat{\rho}_A\log\hat{\rho}_A),
 \]
@@ -1967,7 +2065,9 @@ The most practically useful criterion for detecting entanglement in finite-dimen
 
 For a bipartite density matrix written in the product basis as \(\hat{\rho}_{AB} = \sum_{ijkl}\rho_{ijkl}|i\rangle_A|j\rangle_B\langle k|_A\langle l|_B\), the **partial transpose** with respect to \(B\) is
 
-\[ (\hat{\rho}_{AB}^{T_B})_{ij,kl} = \rho_{il,kj}, \]
+\[
+(\hat{\rho}_{AB}^{T_B})_{ij,kl} = \rho_{il,kj},
+\]
 
 corresponding to transposing only the \(B\) indices while leaving the \(A\) indices unchanged.
 
@@ -1981,6 +2081,7 @@ Based on the Peres criterion, the **negativity** provides a computable entanglem
 
 <div class="definition">
 <strong>Definition 11.4 (Negativity).</strong> The <strong>negativity</strong> of a bipartite state \(\hat{\rho}_{AB}\) is
+
 \[
 \mathcal{N}_{AB} = \sum_{\sigma_i < 0} |\sigma_i| = \frac{1}{2}\sum_i (|\sigma_i| - \sigma_i),
 \]
@@ -1995,6 +2096,7 @@ For two-qubit systems, another widely used measure is the **concurrence**, which
 
 <div class="definition">
 <strong>Definition 11.5 (Concurrence).</strong> For an arbitrary two-qubit state \(\hat{\rho}\), define
+
 \[
 \tilde{\rho} = (\hat{\sigma}_y \otimes \hat{\sigma}_y)\,\hat{\rho}^*\,(\hat{\sigma}_y \otimes \hat{\sigma}_y),
 \]
@@ -2007,11 +2109,15 @@ where \(\hat{\rho}^*\) is the complex conjugate in the computational basis. Let 
 
 The concurrence is 0 for separable states and 1 for maximally entangled Bell states. In the two-qubit case, concurrence and negativity are related by the inequality
 
-\[ \mathcal{C} > 2\mathcal{N} > \sqrt{(1-\mathcal{C})^2 + \mathcal{C}^2} - (1-\mathcal{C}). \]
+\[
+\mathcal{C} > 2\mathcal{N} > \sqrt{(1-\mathcal{C})^2 + \mathcal{C}^2} - (1-\mathcal{C}).
+\]
 
 The **entanglement of formation** \(E_F\) gives the concurrence an operational meaning: it quantifies the minimum average number of maximally entangled qubit pairs (ebits) needed to prepare \(\hat{\rho}\) by LOCC:
 
-\[ E_F(\hat{\rho}_{AB}) = h\!\left(\frac{1 + \sqrt{1 - \mathcal{C}(\hat{\rho})^2}}{2}\right), \]
+\[
+E_F(\hat{\rho}_{AB}) = h\!\left(\frac{1 + \sqrt{1 - \mathcal{C}(\hat{\rho})^2}}{2}\right),
+\]
 
 where \(h(x) = -x\log_2 x - (1-x)\log_2(1-x)\) is the binary entropy function. This gives entanglement in units of ebits (maximally entangled pairs), making it directly interpretable as a resource quantity.
 
@@ -2021,6 +2127,7 @@ Entanglement measures only capture purely quantum correlations. A complementary 
 
 <div class="definition">
 <strong>Definition 11.6 (Quantum Mutual Information).</strong> For a bipartite state \(\hat{\rho}_{AB}\), the <strong>quantum mutual information</strong> is
+
 \[
 I_{AB} = S(\hat{\rho}_A) + S(\hat{\rho}_B) - S(\hat{\rho}_{AB}),
 \]
@@ -2047,25 +2154,37 @@ We present the teleportation protocol step by step for a single qubit.
 
 **Step 0 — Entanglement distribution.** Alice and Bob share the Bell pair
 
-\[ |\Phi^+\rangle_{A_2 B_3} = \frac{1}{\sqrt{2}}\bigl(|00\rangle_{A_2 B_3} + |11\rangle_{A_2 B_3}\bigr). \]
+\[
+|\Phi^+\rangle_{A_2 B_3} = \frac{1}{\sqrt{2}}\bigl(|00\rangle_{A_2 B_3} + |11\rangle_{A_2 B_3}\bigr).
+\]
 
 Bob departs to a distant location, taking qubit \(B_3\) with him. Alice is then given a qubit \(|\varphi\rangle_{A_1} = \alpha_0|0\rangle + \alpha_1|1\rangle\) whose state she does not know and wants to transmit to Bob.
 
 **Step 1 — Writing the full state.** The initial state of all three qubits is
 
-\[ |\psi\rangle_{A_1 A_2 B_3} = |\varphi\rangle_{A_1} \otimes |\Phi^+\rangle_{A_2 B_3} = \frac{1}{\sqrt{2}}\bigl(\alpha_0|000\rangle + \alpha_0|011\rangle + \alpha_1|100\rangle + \alpha_1|111\rangle\bigr)_{A_1 A_2 B_3}. \]
+\[
+|\psi\rangle_{A_1 A_2 B_3} = |\varphi\rangle_{A_1} \otimes |\Phi^+\rangle_{A_2 B_3} = \frac{1}{\sqrt{2}}\bigl(\alpha_0|000\rangle + \alpha_0|011\rangle + \alpha_1|100\rangle + \alpha_1|111\rangle\bigr)_{A_1 A_2 B_3}.
+\]
 
 **Step 2 — Rewriting in the Bell basis.** Alice will measure her two qubits \(A_1 A_2\) in the Bell basis. To see the outcome, we rewrite \(|00\rangle, |01\rangle, |10\rangle, |11\rangle\) in the Bell basis:
 
-\[ |00\rangle = \frac{1}{\sqrt{2}}\bigl(|\Phi^+\rangle + |\Phi^-\rangle\bigr), \quad |11\rangle = \frac{1}{\sqrt{2}}\bigl(|\Phi^+\rangle - |\Phi^-\rangle\bigr), \]
+\[
+|00\rangle = \frac{1}{\sqrt{2}}\bigl(|\Phi^+\rangle + |\Phi^-\rangle\bigr), \quad |11\rangle = \frac{1}{\sqrt{2}}\bigl(|\Phi^+\rangle - |\Phi^-\rangle\bigr),
+\]
 
-\[ |01\rangle = \frac{1}{\sqrt{2}}\bigl(|\Psi^+\rangle + |\Psi^-\rangle\bigr), \quad |10\rangle = \frac{1}{\sqrt{2}}\bigl(|\Psi^+\rangle - |\Psi^-\rangle\bigr). \]
+\[
+|01\rangle = \frac{1}{\sqrt{2}}\bigl(|\Psi^+\rangle + |\Psi^-\rangle\bigr), \quad |10\rangle = \frac{1}{\sqrt{2}}\bigl(|\Psi^+\rangle - |\Psi^-\rangle\bigr).
+\]
 
 Substituting these into the tripartite state and collecting terms:
 
-\[ |\psi\rangle_{A_1 A_2 B_3} = \frac{1}{2}\Bigl[ |\Phi^+\rangle_{A_1 A_2}\otimes(\alpha_0|0\rangle + \alpha_1|1\rangle)_{B_3} + |\Phi^-\rangle_{A_1 A_2}\otimes(\alpha_0|0\rangle - \alpha_1|1\rangle)_{B_3} \]
+\[
+|\psi\rangle_{A_1 A_2 B_3} = \frac{1}{2}\Bigl[ |\Phi^+\rangle_{A_1 A_2}\otimes(\alpha_0|0\rangle + \alpha_1|1\rangle)_{B_3} + |\Phi^-\rangle_{A_1 A_2}\otimes(\alpha_0|0\rangle - \alpha_1|1\rangle)_{B_3}
+\]
 
-\[ + |\Psi^+\rangle_{A_1 A_2}\otimes(\alpha_0|1\rangle + \alpha_1|0\rangle)_{B_3} + |\Psi^-\rangle_{A_1 A_2}\otimes(\alpha_0|1\rangle - \alpha_1|0\rangle)_{B_3} \Bigr]. \]
+\[
++ |\Psi^+\rangle_{A_1 A_2}\otimes(\alpha_0|1\rangle + \alpha_1|0\rangle)_{B_3} + |\Psi^-\rangle_{A_1 A_2}\otimes(\alpha_0|1\rangle - \alpha_1|0\rangle)_{B_3} \Bigr].
+\]
 
 Each Bell state of Alice's two qubits occurs with equal probability \(1/4\), and conditioned on Alice's measurement outcome, Bob's qubit is projected into one of four states.
 
@@ -2112,15 +2231,21 @@ Several features of the teleportation protocol deserve emphasis:
 
 Time-dependent quantum mechanics begins with the Schrödinger equation. Rather than assuming from the outset that evolution is unitary, we derive that property from the self-adjointness of the Hamiltonian. Begin with
 
-\[ i \frac{d}{dt} |\psi(t)\rangle = \hat{H}(t) |\psi(t)\rangle \]
+\[
+i \frac{d}{dt} |\psi(t)\rangle = \hat{H}(t) |\psi(t)\rangle
+\]
 
 (setting \( \hbar = 1 \) throughout). Given an initial condition \( |\psi(t_0)\rangle \), the solution at any later time must be some linear transformation of the initial state — the linearity of the equation guarantees this. We write
 
-\[ |\psi(t)\rangle = \hat{U}(t, t_0) |\psi(t_0)\rangle \]
+\[
+|\psi(t)\rangle = \hat{U}(t, t_0) |\psi(t_0)\rangle
+\]
 
 and discover that the **time evolution operator** \( \hat{U}(t, t_0) \) satisfies exactly the same equation:
 
-\[ i \frac{d}{dt} \hat{U}(t, t_0) = \hat{H}(t) \hat{U}(t, t_0), \qquad \hat{U}(t_0, t_0) = \mathbf{1}. \]
+\[
+i \frac{d}{dt} \hat{U}(t, t_0) = \hat{H}(t) \hat{U}(t, t_0), \qquad \hat{U}(t_0, t_0) = \mathbf{1}.
+\]
 
 <div class="theorem">
 <strong>Theorem 13.1 (Unitarity of quantum evolution).</strong> If \( \hat{H}(t) \) is Hermitian (self-adjoint) for all \( t \), then \( \hat{U}(t, t_0) \) is unitary: \( \hat{U}^\dagger \hat{U} = \mathbf{1} \) for all \( t \).
@@ -2128,13 +2253,17 @@ and discover that the **time evolution operator** \( \hat{U}(t, t_0) \) satisfie
 
 The proof is direct. Differentiate \( \hat{U}\hat{U}^\dagger \) with respect to time and use the equation of motion:
 
-\[ \frac{\partial}{\partial t}\!\left(\hat{U}\hat{U}^\dagger\right) = \frac{\partial \hat{U}}{\partial t}\hat{U}^\dagger + \hat{U}\frac{\partial \hat{U}^\dagger}{\partial t} = \frac{-i}{\hbar}\hat{H}\hat{U}\hat{U}^\dagger + \hat{U}\hat{U}^\dagger \frac{i}{\hbar}\hat{H}^\dagger. \]
+\[
+\frac{\partial}{\partial t}\!\left(\hat{U}\hat{U}^\dagger\right) = \frac{\partial \hat{U}}{\partial t}\hat{U}^\dagger + \hat{U}\frac{\partial \hat{U}^\dagger}{\partial t} = \frac{-i}{\hbar}\hat{H}\hat{U}\hat{U}^\dagger + \hat{U}\hat{U}^\dagger \frac{i}{\hbar}\hat{H}^\dagger.
+\]
 
 Since \( \hat{H} = \hat{H}^\dagger \), the two terms cancel and \( \partial_t(\hat{U}\hat{U}^\dagger) = 0 \). Combined with the initial condition \( \hat{U}(t_0, t_0) = \mathbf{1} \), this gives \( \hat{U}\hat{U}^\dagger = \mathbf{1} \) for all time, so \( \hat{U}^\dagger = \hat{U}^{-1} \).
 
 When \( \hat{H} \) is time-independent the equation for \( \hat{U} \) has the closed-form solution
 
-\[ \hat{U}(t, t_0) = e^{-i(t - t_0)\hat{H}}. \]
+\[
+\hat{U}(t, t_0) = e^{-i(t - t_0)\hat{H}}.
+\]
 
 This is manifestly unitary. When \( \hat{H} \) depends on time there is no such simple closed form — the operators at different times generally do not commute — and we must work harder, as the Dyson series of Chapter 14 shows.
 
@@ -2144,7 +2273,9 @@ This is manifestly unitary. When \( \hat{H} \) depends on time there is no such 
 
 The physically meaningful quantities in quantum mechanics are probability distributions of observables, not the abstract state vectors or operators themselves. The expectation value of an observable \( \hat{O} \) at time \( t \) is
 
-\[ \langle \hat{O} \rangle_t = \langle \psi(t) | \hat{O} | \psi(t) \rangle = \langle \psi(t_0) | \hat{U}^\dagger(t, t_0)\, \hat{O}\, \hat{U}(t, t_0) | \psi(t_0) \rangle. \]
+\[
+\langle \hat{O} \rangle_t = \langle \psi(t) | \hat{O} | \psi(t) \rangle = \langle \psi(t_0) | \hat{U}^\dagger(t, t_0)\, \hat{O}\, \hat{U}(t, t_0) | \psi(t_0) \rangle.
+\]
 
 This single expression admits two completely equivalent interpretations, leading to the two fundamental **pictures** of quantum mechanics. The key insight is that physical content lives in the combination \( \hat{U}^\dagger \hat{O} \hat{U} \) — we may assign the time dependence to either factor.
 
@@ -2154,18 +2285,25 @@ This single expression admits two completely equivalent interpretations, leading
 
 <div class="definition">
 <strong>Definition 13.3 (Heisenberg picture).</strong> States are frozen at \( |\psi(t_0)\rangle \); operators carry all the time dependence via
-\[ \hat{O}_H(t) = \hat{U}^\dagger(t, t_0)\, \hat{O}\, \hat{U}(t, t_0). \]
+
+\[
+\hat{O}_H(t) = \hat{U}^\dagger(t, t_0)\, \hat{O}\, \hat{U}(t, t_0).
+\]
 </div>
 
 The expectation value reads \( \langle \hat{O} \rangle_t = \langle \psi(t_0)|\hat{O}_H(t)|\psi(t_0)\rangle \) in the Heisenberg picture — identical to the Schrödinger picture result, as it must be.
 
 Differentiating the definition of \( \hat{O}_H \) and using the equation of motion for \( \hat{U} \) gives the **Heisenberg equation of motion**:
 
-\[ \frac{d\hat{O}_H}{dt} = i\bigl[\hat{H}_H, \hat{O}_H\bigr] + \left(\frac{\partial \hat{O}}{\partial t}\right)_H, \]
+\[
+\frac{d\hat{O}_H}{dt} = i\bigl[\hat{H}_H, \hat{O}_H\bigr] + \left(\frac{\partial \hat{O}}{\partial t}\right)_H,
+\]
 
 where \( \hat{H}_H = \hat{U}^\dagger \hat{H} \hat{U} \) and the last term is nonzero only if \( \hat{O} \) carries an explicit time dependence beyond that generated by dynamics. Both pictures yield the same equation for \( \frac{d}{dt}\langle O \rangle_t \):
 
-\[ \frac{d}{dt}\langle O \rangle_t = \frac{i}{\hbar}\left\langle \bigl[\hat{H}, \hat{O}\bigr] \right\rangle_t + \left\langle \frac{\partial \hat{O}}{\partial t} \right\rangle_t. \]
+\[
+\frac{d}{dt}\langle O \rangle_t = \frac{i}{\hbar}\left\langle \bigl[\hat{H}, \hat{O}\bigr] \right\rangle_t + \left\langle \frac{\partial \hat{O}}{\partial t} \right\rangle_t.
+\]
 
 <div class="remark">
 <strong>Remark (Classical analogy).</strong> The Heisenberg equation of motion is the quantum analogue of the classical equation \( \frac{d f}{dt} = \{H, f\}_{\mathrm{PB}} + \frac{\partial f}{\partial t} \), where \( \{\cdot, \cdot\}_{\mathrm{PB}} \) denotes the Poisson bracket. The correspondence \( \{A, B\}_{\mathrm{PB}} \leftrightarrow -i[\hat{A}, \hat{B}] \) is the heuristic bridge from classical to quantum mechanics, though one must be careful about operator-ordering ambiguities when reading off a quantum Hamiltonian from a classical one.
@@ -2179,15 +2317,21 @@ The Schrödinger and Heisenberg pictures are the two extremes: all time dependen
 
 The setting is a Hamiltonian split into a time-independent free part and a (possibly time-dependent) interaction:
 
-\[ \hat{H} = \hat{H}_0 + \lambda \hat{V}(t). \]
+\[
+\hat{H} = \hat{H}_0 + \lambda \hat{V}(t).
+\]
 
 Define the unitary operator \( \hat{U}_0 \equiv e^{i\hat{H}_0 t} \) and the interaction-picture state and operators by
 
-\[ |\psi(t)\rangle_D = \hat{U}_0 |\psi(t)\rangle_S, \qquad \hat{O}_D(t) = \hat{U}_0 \hat{O}_S \hat{U}_0^\dagger. \]
+\[
+|\psi(t)\rangle_D = \hat{U}_0 |\psi(t)\rangle_S, \qquad \hat{O}_D(t) = \hat{U}_0 \hat{O}_S \hat{U}_0^\dagger.
+\]
 
 The subscript \( D \) stands for Dirac and \( S \) for Schrödinger. A short calculation — substituting into the Schrödinger equation, using \( \partial_t \hat{U}_0^\dagger = -i\hat{H}_0 \hat{U}_0^\dagger \), and noting that \( \hat{H}_{0D} = \hat{H}_0 \) because \( \hat{H}_0 \) commutes with every function of itself — yields cancellation of the free-evolution terms on both sides, leaving
 
-\[ i \frac{d}{dt}|\psi(t)\rangle_D = \lambda \hat{V}_D(t) |\psi(t)\rangle_D. \]
+\[
+i \frac{d}{dt}|\psi(t)\rangle_D = \lambda \hat{V}_D(t) |\psi(t)\rangle_D.
+\]
 
 <div class="theorem">
 <strong>Theorem 13.4 (Schrödinger equation in the interaction picture).</strong> In the interaction picture, states evolve only under the interaction part of the Hamiltonian. Operators evolve as in the free (non-interacting) theory, governed solely by \( \hat{H}_0 \).
@@ -2197,7 +2341,9 @@ The operators therefore oscillate at the free-theory frequencies, while the stat
 
 A critical caveat: the separation between free and interacting evolution cannot be made multiplicative in general. Even for a time-independent Hamiltonian,
 
-\[ e^{-i(\hat{H}_0 + \lambda\hat{V})t} \;\neq\; e^{-i\hat{H}_0 t} e^{-i\lambda\hat{V} t} \]
+\[
+e^{-i(\hat{H}_0 + \lambda\hat{V})t} \;\neq\; e^{-i\hat{H}_0 t} e^{-i\lambda\hat{V} t}
+\]
 
 unless \( [\hat{H}_0, \hat{V}] = 0 \). Handwaving descriptions of the interaction picture as "removing free evolution and watching only the interaction" must be taken with care.
 
@@ -2229,6 +2375,7 @@ i\hbar\,\frac{\partial}{\partial t}G(x, x', t) = \hat{H}\!\left(x,\, -i\hbar\fra
 The Schrödinger equation is therefore nothing more than the differential equation that the propagator satisfies. The delta-function initial condition encodes the statement that a particle sharply localized at \( x' \) at time \( t_0 \) is a point source propagating forward.
 
 <strong>Example (Harmonic oscillator).</strong> For \( \hat{H} = \hat{p}^2/2m + m\omega^2\hat{x}^2/2 \), one can show that (setting \( t_0 = 0 \)):
+
 \[
 G(x, x', t) = \sqrt{\frac{m\omega}{2\pi i\hbar\sin(\omega t)}}\exp\!\left(\frac{im\omega}{2\hbar\sin(\omega t)}\bigl[(x^2 + x'^2)\cos(\omega t) - 2xx'\bigr]\right).
 \]
@@ -2245,33 +2392,50 @@ This Green's function perspective sets up the path integral: instead of solving 
 
 In the interaction picture, the time evolution operator \( \hat{U}_D(t, t_0) \) defined by \( |\psi(t)\rangle_D = \hat{U}_D(t, t_0)|\psi(t_0)\rangle_D \) satisfies
 
-\[ \frac{d}{dt}\hat{U}_D(t, t_0) = -i\lambda \hat{V}_D(t) \hat{U}_D(t, t_0), \qquad \hat{U}_D(t_0, t_0) = \mathbf{1}. \]
+\[
+\frac{d}{dt}\hat{U}_D(t, t_0) = -i\lambda \hat{V}_D(t) \hat{U}_D(t, t_0), \qquad \hat{U}_D(t_0, t_0) = \mathbf{1}.
+\]
 
 If \( \hat{V}_D(t) \) commuted with itself at all times, the solution would be the simple exponential \( \exp\!\bigl(-i\lambda \int_{t_0}^t \hat{V}_D(t')\,dt'\bigr) \). But operators at different times generically do not commute. We must instead convert the differential equation into an integral equation:
 
-\[ \hat{U}_D(t, t_0) = \mathbf{1} - i\lambda \int_{t_0}^t dt_1\, \hat{V}_D(t_1)\, \hat{U}_D(t_1, t_0). \]
+\[
+\hat{U}_D(t, t_0) = \mathbf{1} - i\lambda \int_{t_0}^t dt_1\, \hat{V}_D(t_1)\, \hat{U}_D(t_1, t_0).
+\]
 
 Substituting the right-hand side recursively into itself generates the **Dyson series**:
 
-\[ \hat{U}_D(t, t_0) = \mathbf{1} + \hat{U}_D^{(1)} + \hat{U}_D^{(2)} + \hat{U}_D^{(3)} + \cdots \]
+\[
+\hat{U}_D(t, t_0) = \mathbf{1} + \hat{U}_D^{(1)} + \hat{U}_D^{(2)} + \hat{U}_D^{(3)} + \cdots
+\]
 
 where the successive terms are
 
-\[ \hat{U}_D^{(1)}(t,t_0) = -i\lambda \int_{t_0}^t dt_1\, \hat{V}_D(t_1), \]
+\[
+\hat{U}_D^{(1)}(t,t_0) = -i\lambda \int_{t_0}^t dt_1\, \hat{V}_D(t_1),
+\]
 
-\[ \hat{U}_D^{(2)}(t,t_0) = (-i\lambda)^2 \int_{t_0}^t dt_1 \int_{t_0}^{t_1} dt_2\, \hat{V}_D(t_1)\hat{V}_D(t_2), \]
+\[
+\hat{U}_D^{(2)}(t,t_0) = (-i\lambda)^2 \int_{t_0}^t dt_1 \int_{t_0}^{t_1} dt_2\, \hat{V}_D(t_1)\hat{V}_D(t_2),
+\]
 
-\[ \hat{U}_D^{(3)}(t,t_0) = (-i\lambda)^3 \int_{t_0}^t dt_1 \int_{t_0}^{t_1} dt_2 \int_{t_0}^{t_2} dt_3\, \hat{V}_D(t_1)\hat{V}_D(t_2)\hat{V}_D(t_3). \]
+\[
+\hat{U}_D^{(3)}(t,t_0) = (-i\lambda)^3 \int_{t_0}^t dt_1 \int_{t_0}^{t_1} dt_2 \int_{t_0}^{t_2} dt_3\, \hat{V}_D(t_1)\hat{V}_D(t_2)\hat{V}_D(t_3).
+\]
 
 The nested integration limits enforce the crucial ordering \( t \geq t_1 \geq t_2 \geq t_3 \geq \cdots \geq t_0 \): at each level, operators at earlier times act before operators at later times, which is the correct causal structure.
 
 This series is compactly written using the **time-ordering operator** \( \mathcal{T} \):
 
-\[ \hat{U}_D(t, t_0) = \mathcal{T}\exp\!\left(-i\lambda\int_{t_0}^t \hat{V}_D(t')\,dt'\right). \]
+\[
+\hat{U}_D(t, t_0) = \mathcal{T}\exp\!\left(-i\lambda\int_{t_0}^t \hat{V}_D(t')\,dt'\right).
+\]
 
 <div class="definition">
 <strong>Definition 14.1 (Time-ordering operator).</strong> The time-ordering operator \( \mathcal{T} \) reorders a product of operators so that those evaluated at later times stand to the left:
-\[ \mathcal{T}\!\left[\hat{f}(t)\hat{g}(s)\right] = \begin{cases} \hat{f}(t)\hat{g}(s) & t \geq s, \\ \hat{g}(s)\hat{f}(t) & s > t. \end{cases} \]
+
+\[
+\mathcal{T}\!\left[\hat{f}(t)\hat{g}(s)\right] = \begin{cases} \hat{f}(t)\hat{g}(s) & t \geq s, \\ \hat{g}(s)\hat{f}(t) & s > t. \end{cases}
+\]
 For fermionic operators an extra minus sign accompanies each transposition, but we work only with bosonic operators here.
 </div>
 
@@ -2287,7 +2451,10 @@ A key technical tool for computing interaction-picture operators is the followin
 
 <div class="theorem">
 <strong>Theorem 14.2 (Hadamard Lemma).</strong> For operators \( \hat{A} \) and \( \hat{B} \),
-\[ e^{x\hat{A}}\hat{B}e^{-x\hat{A}} = \hat{B} + [\hat{A},\hat{B}]\,x + \frac{[\hat{A},[\hat{A},\hat{B}]]}{2!}\,x^2 + \frac{[\hat{A},[\hat{A},[\hat{A},\hat{B}]]]}{3!}\,x^3 + \cdots \]
+
+\[
+e^{x\hat{A}}\hat{B}e^{-x\hat{A}} = \hat{B} + [\hat{A},\hat{B}]\,x + \frac{[\hat{A},[\hat{A},\hat{B}]]}{2!}\,x^2 + \frac{[\hat{A},[\hat{A},[\hat{A},\hat{B}]]]}{3!}\,x^3 + \cdots
+\]
 </div>
 
 This is proved by differentiating \( f(x) = e^{x\hat{A}}\hat{B}e^{-x\hat{A}} \) repeatedly and recognising that \( f^{(n)}(0) \) is the \(n\)-fold nested commutator of \( \hat{A} \) with \( \hat{B} \).
@@ -2298,23 +2465,33 @@ This is proved by differentiating \( f(x) = e^{x\hat{A}}\hat{B}e^{-x\hat{A}} \) 
 
 To illustrate the Dyson series concretely, consider \( N+1 \) quantum harmonic oscillators: one **detector** (labeled 0) linearly coupled to \( N \) **field modes**. In terms of position and momentum operators with masses \( m_n \) and frequencies \( \omega_n \), and with \( \kappa = \lambda\sqrt{2m_0\omega_0} \), this system is described by
 
-\[ \hat{H} = \omega_0 \hat{a}_0^\dagger \hat{a}_0 + \sum_{n=1}^N \omega_n \hat{a}_n^\dagger \hat{a}_n + \lambda(\hat{a}_0 + \hat{a}_0^\dagger)\sum_{n=1}^N \frac{1}{\sqrt{2\omega_n m_n}}(\hat{a}_n + \hat{a}_n^\dagger) + E_Z\mathbf{1}, \]
+\[
+\hat{H} = \omega_0 \hat{a}_0^\dagger \hat{a}_0 + \sum_{n=1}^N \omega_n \hat{a}_n^\dagger \hat{a}_n + \lambda(\hat{a}_0 + \hat{a}_0^\dagger)\sum_{n=1}^N \frac{1}{\sqrt{2\omega_n m_n}}(\hat{a}_n + \hat{a}_n^\dagger) + E_Z\mathbf{1},
+\]
 
 where \( [\hat{a}_n, \hat{a}_m^\dagger] = \delta_{nm} \) and \( E_Z \) is the (finite, for \( N < \infty \)) zero-point energy, which we absorb into the origin of energies. We split \( \hat{H} = \hat{H}_0 + \lambda\hat{V} \) with
 
-\[ \hat{H}_0 = \omega_0 \hat{a}_0^\dagger \hat{a}_0 + \sum_n \omega_n \hat{a}_n^\dagger \hat{a}_n, \qquad \hat{V} = (\hat{a}_0 + \hat{a}_0^\dagger)\sum_n \frac{\hat{a}_n + \hat{a}_n^\dagger}{\sqrt{2\omega_n m_n}}. \]
+\[
+\hat{H}_0 = \omega_0 \hat{a}_0^\dagger \hat{a}_0 + \sum_n \omega_n \hat{a}_n^\dagger \hat{a}_n, \qquad \hat{V} = (\hat{a}_0 + \hat{a}_0^\dagger)\sum_n \frac{\hat{a}_n + \hat{a}_n^\dagger}{\sqrt{2\omega_n m_n}}.
+\]
 
 To find \( \hat{V}_D \) we conjugate by \( \hat{U}_0 = e^{i\hat{H}_0 t} \). Applying the Hadamard lemma to the annihilation operator, using \( [\hat{a}_n^\dagger \hat{a}_n, \hat{a}_n] = -\hat{a}_n \), gives
 
-\[ e^{i\omega_n t \hat{a}_n^\dagger \hat{a}_n}\,\hat{a}_n\,e^{-i\omega_n t \hat{a}_n^\dagger \hat{a}_n} = e^{-i\omega_n t}\hat{a}_n, \]
+\[
+e^{i\omega_n t \hat{a}_n^\dagger \hat{a}_n}\,\hat{a}_n\,e^{-i\omega_n t \hat{a}_n^\dagger \hat{a}_n} = e^{-i\omega_n t}\hat{a}_n,
+\]
 
 and similarly \( e^{i\omega_n t \hat{a}_n^\dagger \hat{a}_n}\hat{a}_n^\dagger e^{-i\omega_n t \hat{a}_n^\dagger \hat{a}_n} = e^{i\omega_n t}\hat{a}_n^\dagger \). Therefore
 
-\[ \hat{V}_D(t) = \bigl(\hat{a}_0 e^{-i\omega_0 t} + \hat{a}_0^\dagger e^{i\omega_0 t}\bigr)\sum_n \frac{\hat{a}_n e^{-i\omega_n t} + \hat{a}_n^\dagger e^{i\omega_n t}}{\sqrt{2\omega_n m_n}}. \]
+\[
+\hat{V}_D(t) = \bigl(\hat{a}_0 e^{-i\omega_0 t} + \hat{a}_0^\dagger e^{i\omega_0 t}\bigr)\sum_n \frac{\hat{a}_n e^{-i\omega_n t} + \hat{a}_n^\dagger e^{i\omega_n t}}{\sqrt{2\omega_n m_n}}.
+\]
 
 At first order in \( \lambda \), the evolution operator \( \hat{U}_D^{(1)} \) contains four types of terms after expanding the product:
 
-\[ \hat{U}_D^{(1)}(t,0) = -i\lambda\sum_n \frac{1}{\sqrt{2\omega_n m_n}}\int_0^t dt_1 \Bigl[ \hat{a}_0\hat{a}_n^\dagger e^{-i(\omega_0 - \omega_n)t_1} + \hat{a}_0^\dagger\hat{a}_n e^{i(\omega_0-\omega_n)t_1} + \hat{a}_0\hat{a}_n e^{-i(\omega_0+\omega_n)t_1} + \hat{a}_0^\dagger\hat{a}_n^\dagger e^{i(\omega_0+\omega_n)t_1} \Bigr]. \]
+\[
+\hat{U}_D^{(1)}(t,0) = -i\lambda\sum_n \frac{1}{\sqrt{2\omega_n m_n}}\int_0^t dt_1 \Bigl[ \hat{a}_0\hat{a}_n^\dagger e^{-i(\omega_0 - \omega_n)t_1} + \hat{a}_0^\dagger\hat{a}_n e^{i(\omega_0-\omega_n)t_1} + \hat{a}_0\hat{a}_n e^{-i(\omega_0+\omega_n)t_1} + \hat{a}_0^\dagger\hat{a}_n^\dagger e^{i(\omega_0+\omega_n)t_1} \Bigr].
+\]
 
 The first two terms involve one excitation and one de-excitation; the last two create or destroy two excitations simultaneously.
 
@@ -2324,7 +2501,9 @@ The first two terms involve one excitation and one de-excitation; the last two c
 
 To understand when each type of term dominates, examine the time integral weighting each. A rotating-wave term carries the factor
 
-\[ \int_0^t dt_1\, e^{i(\omega_0 - \omega_n)t_1}. \]
+\[
+\int_0^t dt_1\, e^{i(\omega_0 - \omega_n)t_1}.
+\]
 
 For a non-resonant mode \( \omega_n \neq \omega_0 \), this integral is bounded by \( (\omega_0 - \omega_n)^{-1} \) as \( t \to \infty \), while for the resonant mode \( \omega_n = \omega_0 \) it grows as \( t \). At long times, the resonant contribution dominates all non-resonant ones — the **single-mode approximation** consists of keeping only the resonant contribution.
 
@@ -2342,33 +2521,47 @@ A counter-rotating term carries \( \int_0^t dt_1 \, e^{i(\omega_0+\omega_n)t_1} 
 
 Return to the general setup \( \hat{H} = \hat{H}_0 + \lambda\hat{V}(t) \) with eigenstates \( \hat{H}_0|n\rangle = E_n|n\rangle \). By Born's rule, the probability of transitioning from initial state \( |\psi(t_0)\rangle \) to final state \( |\phi\rangle \) is
 
-\[ P_{|\psi\rangle \to |\phi\rangle} = \bigl|\langle \phi | \hat{U}(t, t_0) | \psi(t_0)\rangle\bigr|^2. \]
+\[
+P_{|\psi\rangle \to |\phi\rangle} = \bigl|\langle \phi | \hat{U}(t, t_0) | \psi(t_0)\rangle\bigr|^2.
+\]
 
 When both the initial and final states are eigenstates of \( \hat{H}_0 \) — say \( |\psi(t_0)\rangle = |n\rangle \) and \( |\phi\rangle = |m\rangle \) — the interaction picture simplifies the calculation significantly. One shows that
 
-\[ \langle m | \hat{U}(t,t_0) | n \rangle = e^{-i(E_m t - E_n t_0)} \langle m | \hat{U}_D(t,t_0) | n \rangle, \]
+\[
+\langle m | \hat{U}(t,t_0) | n \rangle = e^{-i(E_m t - E_n t_0)} \langle m | \hat{U}_D(t,t_0) | n \rangle,
+\]
 
 so the transition **probability** is
 
-\[ P_{n \to m} = \bigl|\langle m | \hat{U}_D(t,t_0) | n \rangle\bigr|^2. \]
+\[
+P_{n \to m} = \bigl|\langle m | \hat{U}_D(t,t_0) | n \rangle\bigr|^2.
+\]
 
 The complex phase cancels in the squared modulus, so we may freely use the interaction-picture evolution operator and the Schrödinger-picture eigenstates.
 
 **Example 1 — Constant perturbation.** Suppose \( \hat{V}(t) = \hat{V} \) is switched on at \( t_0 = 0 \) and held constant. In the interaction picture, \( \hat{V}_D = e^{i\hat{H}_0 t}\hat{V}e^{-i\hat{H}_0 t} \), and the first-order transition probability from \( |n\rangle \) to \( |m\rangle \neq |n\rangle \) is
 
-\[ P_{n\to m} = \lambda^2 |V_{mn}|^2 \left|\int_0^t dt_1\, e^{i\omega_{mn} t_1}\right|^2 + O(\lambda^3), \]
+\[
+P_{n\to m} = \lambda^2 |V_{mn}|^2 \left|\int_0^t dt_1\, e^{i\omega_{mn} t_1}\right|^2 + O(\lambda^3),
+\]
 
 where \( V_{mn} \equiv \langle m|\hat{V}|n\rangle \) and \( \omega_{mn} = E_m - E_n \). The integral evaluates immediately:
 
-\[ P_{n\to m} = 4\lambda^2 |V_{mn}|^2 \frac{\sin^2(\omega_{mn} t/2)}{\omega_{mn}^2} + O(\lambda^3). \]
+\[
+P_{n\to m} = 4\lambda^2 |V_{mn}|^2 \frac{\sin^2(\omega_{mn} t/2)}{\omega_{mn}^2} + O(\lambda^3).
+\]
 
 **Example 2 — Harmonic perturbation.** For \( \hat{V}(t) = \hat{V}e^{i\Omega t} + \hat{V}^\dagger e^{-i\Omega t} \),
 
-\[ \langle m|\hat{V}_D|n\rangle = V_{mn} e^{i(\omega_{mn}+\Omega)t} + (V^\dagger)_{mn} e^{i(\omega_{mn}-\Omega)t}, \]
+\[
+\langle m|\hat{V}_D|n\rangle = V_{mn} e^{i(\omega_{mn}+\Omega)t} + (V^\dagger)_{mn} e^{i(\omega_{mn}-\Omega)t},
+\]
 
 giving a transition probability involving two competing terms:
 
-\[ P_{n\to m} = \lambda^2 \left| V_{mn}\frac{1 - e^{i(\omega_{mn}+\Omega)t}}{\omega_{mn}+\Omega} + (V^\dagger)_{mn}\frac{1 - e^{i(\omega_{mn}-\Omega)t}}{\omega_{mn}-\Omega} \right|^2. \]
+\[
+P_{n\to m} = \lambda^2 \left| V_{mn}\frac{1 - e^{i(\omega_{mn}+\Omega)t}}{\omega_{mn}+\Omega} + (V^\dagger)_{mn}\frac{1 - e^{i(\omega_{mn}-\Omega)t}}{\omega_{mn}-\Omega} \right|^2.
+\]
 
 In the long-time limit, one term or the other dominates depending on whether \( E_m \approx E_n - \Omega \) (emission) or \( E_m \approx E_n + \Omega \) (absorption).
 
@@ -2378,21 +2571,30 @@ In the long-time limit, one term or the other dominates depending on whether \( 
 
 When the final state belongs to a continuum, or to a dense set of states with a smooth density, the sum over final states becomes an integral. Define the **density of final states** \( \rho(E) \) as the number of final states per unit energy interval. The total transition probability to the set \( F \) of final states in \( (E_-, E_+) \) is
 
-\[ P_{n \to F} = \int_{E_-}^{E_+} dE_m\, \rho(E_m)\, P_{n\to m}(E_m). \]
+\[
+P_{n \to F} = \int_{E_-}^{E_+} dE_m\, \rho(E_m)\, P_{n\to m}(E_m).
+\]
 
 For a constant perturbation, substituting the result of Example 1 gives
 
-\[ P_{n \to F} = 4\lambda^2 \int_{E_-}^{E_+} dE_m\, \rho(E_m)\, |V_{mn}|^2\, \frac{\sin^2\!\left(\frac{(E_m - E_n)t}{2}\right)}{(E_m - E_n)^2}. \]
+\[
+P_{n \to F} = 4\lambda^2 \int_{E_-}^{E_+} dE_m\, \rho(E_m)\, |V_{mn}|^2\, \frac{\sin^2\!\left(\frac{(E_m - E_n)t}{2}\right)}{(E_m - E_n)^2}.
+\]
 
 The key limit is \( t \to \infty \). One uses the distributional identity
 
-\[ \lim_{t\to\infty} \frac{1}{\pi}\frac{\sin^2(at)}{at^2} = \delta(a), \]
+\[
+\lim_{t\to\infty} \frac{1}{\pi}\frac{\sin^2(at)}{at^2} = \delta(a),
+\]
 
 or equivalently \( \lim_{t\to\infty} \frac{\sin^2(\omega t/2)}{\omega^2} \sim \frac{\pi t}{2}\delta(\omega) \), to convert the \( \mathrm{sinc}^2 \) peak into a delta function. This yields:
 
 <div class="theorem">
 <strong>Theorem 15.1 (Fermi's Golden Rule — constant perturbation).</strong> In the long-time limit, the transition probability from eigenstate \( |n\rangle \) (energy \( E_n \)) to a continuum of final states with density \( \rho(E) \) under a constant perturbation \( \lambda\hat{V} \) is
-\[ P_{n \to F} \approx 2\pi\lambda^2 t\, |V_{mn}|^2\, \rho(E_n). \]
+
+\[
+P_{n \to F} \approx 2\pi\lambda^2 t\, |V_{mn}|^2\, \rho(E_n).
+\]
 Transitions occur only to states with the same energy as the initial state. The transition <em>rate</em> (probability per unit time) is \( \dot{P} = 2\pi\lambda^2|V_{mn}|^2\rho(E_n) \), independent of \( t \).
 </div>
 
@@ -2409,13 +2611,19 @@ The perturbation acts as an inexhaustible source (or sink) of energy quanta \( \
 
 It is convenient to package these results as the **differential transition rate** \( w_{n\to m} \) — the transition rate per unit time for a specific final state \( |m\rangle \). Integrating \( w_{n\to m} \) over the density of states recovers the total rate. For a constant perturbation:
 
-\[ w_{n\to m} = 2\pi\lambda^2 |V_{mn}|^2 \delta(E_m - E_n). \]
+\[
+w_{n\to m} = 2\pi\lambda^2 |V_{mn}|^2 \delta(E_m - E_n).
+\]
 
 For a harmonic perturbation, emission and absorption rates are respectively
 
-\[ w_{E_n \to E_n - \Omega} = 2\pi\lambda^2 |V_{mn}|^2 \delta(E_m - E_n + \Omega), \]
+\[
+w_{E_n \to E_n - \Omega} = 2\pi\lambda^2 |V_{mn}|^2 \delta(E_m - E_n + \Omega),
+\]
 
-\[ w_{E_n \to E_n + \Omega} = 2\pi\lambda^2 |(V^\dagger)_{mn}|^2 \delta(E_m - E_n - \Omega). \]
+\[
+w_{E_n \to E_n + \Omega} = 2\pi\lambda^2 |(V^\dagger)_{mn}|^2 \delta(E_m - E_n - \Omega).
+\]
 
 <div class="remark">
 <strong>Remark (Scope of Fermi's Golden Rule).</strong> Fermi's Golden Rule is perhaps the single most widely used result in quantum physics. Every calculation of decay rates of atoms, nuclei, and elementary particles, every computation of scattering cross sections, every estimate of transition rates in semiconductors and superconductors, traces back to this formula. Its domain of validity is broad: it requires only that \( \lambda \) be small (so perturbation theory holds) and that the time be long compared with the inverse energy scales of the problem (so the sinc\(^2\) can be replaced by a delta function). The following two chapters illustrate it in the context of electromagnetic radiation.
@@ -2433,31 +2641,43 @@ For a harmonic perturbation, emission and absorption rates are respectively
 
 To describe the interaction of a charged particle with an electromagnetic field we start from the **minimal coupling Hamiltonian**. An electron of charge \( e \) and mass \( m \) in an electromagnetic field described by vector potential \( A(x) \) and scalar potential \( \phi(x) \) has Hamiltonian (in natural units \( \hbar = c = 1 \))
 
-\[ \hat{H} = \frac{[\hat{p} - eA(\hat{x})]^2}{2m} + e\phi(\hat{x}) = \frac{\hat{p}^2}{2m} - \frac{e}{m}\hat{p}\cdot A(\hat{x}) + \frac{e^2}{2m}[A(\hat{x})]^2 + e\phi(\hat{x}). \]
+\[
+\hat{H} = \frac{[\hat{p} - eA(\hat{x})]^2}{2m} + e\phi(\hat{x}) = \frac{\hat{p}^2}{2m} - \frac{e}{m}\hat{p}\cdot A(\hat{x}) + \frac{e^2}{2m}[A(\hat{x})]^2 + e\phi(\hat{x}).
+\]
 
 The scalar potential \( \phi \) provides the static Coulomb attraction of the nucleus. The term proportional to \( A^2 \) enters at third order in the coupling \( e/m \) and is dropped for a first-order perturbative analysis. The crucial observation is that \( A(x) \) is a **classical** field (not a Hermitian operator) satisfying \( \nabla \cdot A = 0 \) (Coulomb gauge), while \( \hat{x} \) is the quantum position operator of the electron.
 
 We take a monochromatic plane wave,
 
-\[ A(x) = 2A_0 \boldsymbol{\epsilon}\cos(\mathbf{k}\cdot\mathbf{x} - \omega t) = A_0\boldsymbol{\epsilon}\Bigl(e^{i(\mathbf{k}\cdot\mathbf{x}-\omega t)} + e^{-i(\mathbf{k}\cdot\mathbf{x}-\omega t)}\Bigr), \]
+\[
+A(x) = 2A_0 \boldsymbol{\epsilon}\cos(\mathbf{k}\cdot\mathbf{x} - \omega t) = A_0\boldsymbol{\epsilon}\Bigl(e^{i(\mathbf{k}\cdot\mathbf{x}-\omega t)} + e^{-i(\mathbf{k}\cdot\mathbf{x}-\omega t)}\Bigr),
+\]
 
 with polarization vector \( \boldsymbol{\epsilon} \), wave vector \( |\mathbf{k}| = \omega \), and \( \mathbf{k}\cdot\boldsymbol{\epsilon} = 0 \). The interaction term then takes the form of a harmonic perturbation
 
-\[ \hat{V}(t) = \hat{V}e^{i\omega t} + \hat{V}^\dagger e^{-i\omega t}, \qquad \hat{V} = -\hat{p}\cdot\boldsymbol{\epsilon}\,e^{-i\mathbf{k}\cdot\hat{x}}, \]
+\[
+\hat{V}(t) = \hat{V}e^{i\omega t} + \hat{V}^\dagger e^{-i\omega t}, \qquad \hat{V} = -\hat{p}\cdot\boldsymbol{\epsilon}\,e^{-i\mathbf{k}\cdot\hat{x}},
+\]
 
 with coupling \( \lambda = eA_0/m \). This is precisely the setting of Example 2 above, and Fermi's Golden Rule applies directly.
 
 Focussing on the absorption process (electron gains energy \( \omega \) from the field), the differential transition rate from atomic state \( |n\rangle \) to state \( |m\rangle \) is
 
-\[ w_{n\to m} = 2\pi \frac{e^2 |A_0|^2}{m^2} \bigl|\langle m | e^{i\mathbf{k}\cdot\hat{x}}\hat{p}\cdot\boldsymbol{\epsilon} | n\rangle\bigr|^2 \delta(E_m - E_n - \omega). \]
+\[
+w_{n\to m} = 2\pi \frac{e^2 |A_0|^2}{m^2} \bigl|\langle m | e^{i\mathbf{k}\cdot\hat{x}}\hat{p}\cdot\boldsymbol{\epsilon} | n\rangle\bigr|^2 \delta(E_m - E_n - \omega).
+\]
 
 The **absorption cross section** — defined as the energy absorbed per unit time divided by the incident energy flux \( \Phi_{\mathrm{EM}} = \omega^2|A_0|^2 / (2\pi) \) — is
 
-\[ \sigma_{\mathrm{abs}} = \frac{4\pi^2 e^2}{m^2 \omega} \bigl|\langle m|e^{i\mathbf{k}\cdot\hat{x}}\hat{p}\cdot\boldsymbol{\epsilon}|n\rangle\bigr|^2 \delta(E_m - E_n - \omega). \]
+\[
+\sigma_{\mathrm{abs}} = \frac{4\pi^2 e^2}{m^2 \omega} \bigl|\langle m|e^{i\mathbf{k}\cdot\hat{x}}\hat{p}\cdot\boldsymbol{\epsilon}|n\rangle\bigr|^2 \delta(E_m - E_n - \omega).
+\]
 
 Restoring \( \hbar \) and \( c \) by dimensional analysis (the cross section has dimensions of area), one introduces the fine structure constant \( \alpha = e^2/(4\pi\varepsilon_0 \hbar c) \approx 1/137 \):
 
-\[ \sigma_{\mathrm{abs}} = \frac{4\pi^2\hbar\alpha}{m^2\omega}\bigl|\langle m|e^{i\mathbf{k}\cdot\hat{x}}\hat{p}\cdot\boldsymbol{\epsilon}|n\rangle\bigr|^2 \delta(E_m - E_n - \hbar\omega). \]
+\[
+\sigma_{\mathrm{abs}} = \frac{4\pi^2\hbar\alpha}{m^2\omega}\bigl|\langle m|e^{i\mathbf{k}\cdot\hat{x}}\hat{p}\cdot\boldsymbol{\epsilon}|n\rangle\bigr|^2 \delta(E_m - E_n - \hbar\omega).
+\]
 
 ---
 
@@ -2465,17 +2685,23 @@ Restoring \( \hbar \) and \( c \) by dimensional analysis (the cross section has
 
 The matrix element \( \langle m | e^{i\mathbf{k}\cdot\hat{x}}\hat{p}\cdot\boldsymbol{\epsilon} | n \rangle \) depends on how the phase \( e^{i\mathbf{k}\cdot x} \) varies across the atom. In typical optical transitions the photon wavelength satisfies \( \lambda_\omega \sim \omega^{-1} \gg a_0 \) (the Bohr radius), so \( |\mathbf{k}\cdot x| \ll 1 \) across the electron wavefunction. We may therefore expand the exponential:
 
-\[ e^{i\mathbf{k}\cdot\hat{x}} = \mathbf{1} + i k_\alpha \hat{x}^\alpha - \frac{1}{2}k_\alpha k_\beta \hat{x}^\alpha \hat{x}^\beta + \cdots \]
+\[
+e^{i\mathbf{k}\cdot\hat{x}} = \mathbf{1} + i k_\alpha \hat{x}^\alpha - \frac{1}{2}k_\alpha k_\beta \hat{x}^\alpha \hat{x}^\beta + \cdots
+\]
 
 Substituting term by term into the matrix element \( M = \epsilon^\gamma\langle m|(e^{i\mathbf{k}\cdot\hat{x}})p_\gamma|n\rangle \) gives a hierarchy of **multipole contributions**.
 
 **Electric dipole (E1) — zeroth order.** Retaining only \( \mathbf{1} \) in the expansion:
 
-\[ M^{(0)} = \boldsymbol{\epsilon}\cdot\langle m|\hat{p}|n\rangle. \]
+\[
+M^{(0)} = \boldsymbol{\epsilon}\cdot\langle m|\hat{p}|n\rangle.
+\]
 
 Using \( [\hat{x}^\gamma, \hat{H}_0] = i\hat{p}^\gamma/m \) (from the canonical commutation relations and \( \hat{H}_0 = \hat{p}^2/2m + e\phi \)), we obtain
 
-\[ \hat{p}^\gamma = -im[\hat{x}^\gamma, \hat{H}_0] \implies M^{(0)} = im(E_m - E_n)\,\boldsymbol{\epsilon}\cdot\langle m|\hat{x}|n\rangle. \]
+\[
+\hat{p}^\gamma = -im[\hat{x}^\gamma, \hat{H}_0] \implies M^{(0)} = im(E_m - E_n)\,\boldsymbol{\epsilon}\cdot\langle m|\hat{x}|n\rangle.
+\]
 
 <div class="theorem">
 <strong>Theorem 16.1 (Electric dipole selection rule).</strong> The E1 matrix element \( \langle m|\hat{x}|n\rangle \) is a matrix element of a vector operator (angular momentum 1). By the Wigner–Eckart theorem, it is nonzero only when the angular momentum quantum numbers satisfy \( \Delta \ell = \pm 1 \) and \( \Delta m_\ell = 0, \pm 1 \). Parity must also change: the E1 operator is odd under parity.
@@ -2483,7 +2709,9 @@ Using \( [\hat{x}^\gamma, \hat{H}_0] = i\hat{p}^\gamma/m \) (from the canonical 
 
 **Electric quadrupole (E2) and magnetic dipole (M1) — first order.** Retaining the linear term \( ik_\alpha \hat{x}^\alpha \) gives \( M^{(1)} = \epsilon^\gamma k^\alpha \langle m|\hat{x}^\alpha \hat{p}^\gamma|n\rangle \). Symmetrising and antisymmetrising in \( \alpha, \gamma \):
 
-\[ M^{(1)} = \underbrace{\frac{i m(E_m - E_n)}{2}\epsilon^\gamma k^\alpha \langle m|\hat{x}^\alpha\hat{x}^\gamma|n\rangle}_{\mathrm{E2}} + \underbrace{\frac{1}{2}(\mathbf{k}\times\boldsymbol{\epsilon})\cdot\langle m|\hat{x}\times\hat{p}|n\rangle}_{\mathrm{M1}}. \]
+\[
+M^{(1)} = \underbrace{\frac{i m(E_m - E_n)}{2}\epsilon^\gamma k^\alpha \langle m|\hat{x}^\alpha\hat{x}^\gamma|n\rangle}_{\mathrm{E2}} + \underbrace{\frac{1}{2}(\mathbf{k}\times\boldsymbol{\epsilon})\cdot\langle m|\hat{x}\times\hat{p}|n\rangle}_{\mathrm{M1}}.
+\]
 
 The E2 term is a matrix element of a rank-2 tensor operator, selecting \( \Delta\ell = 0, \pm 2 \). The M1 term involves the orbital angular momentum \( \hat{L} = \hat{x}\times\hat{p} \), a vector operator selecting \( \Delta\ell = 0, \pm 1 \) (with no parity change, since \( \hat{L} \) is a pseudovector). These transitions are suppressed relative to E1 by a factor of order \( (k\cdot x) \sim a_0/\lambda_\omega \ll 1 \).
 
@@ -2518,7 +2746,9 @@ The transition is from a bound atomic state \( |n\rangle \) (energy \( E_n < 0 \
 
 A subtlety arises immediately: the plane wave states \( \langle x | p\rangle = e^{ip\cdot x} \) are not normalizable in free space. We resolve this by placing the electron in a periodic box of volume \( V = L^3 \) with periodic boundary conditions. Within the box the normalized states are
 
-\[ \psi_{\mathbf{p}}(\mathbf{x}) = \langle \mathbf{x}|\mathbf{p}\rangle = \frac{1}{L^{3/2}} e^{i\mathbf{p}\cdot\mathbf{x}}, \]
+\[
+\psi_{\mathbf{p}}(\mathbf{x}) = \langle \mathbf{x}|\mathbf{p}\rangle = \frac{1}{L^{3/2}} e^{i\mathbf{p}\cdot\mathbf{x}},
+\]
 
 and the periodicity condition forces \( p_i = 2\pi n_i / L \) with \( n_i \in \mathbb{Z} \). We will verify at the end that \( L \) cancels from all physical results, allowing us to take \( L\to\infty \).
 
@@ -2528,11 +2758,15 @@ and the periodicity condition forces \( p_i = 2\pi n_i / L \) with \( n_i \in \m
 
 In the large-\( L \) limit, the discrete momenta form a fine lattice and we treat them as a continuum. Counting states in a spherical shell of the lattice:
 
-\[ \rho(\mathbf{n})\,d|\mathbf{n}| = |\mathbf{n}|^2\,d|\mathbf{n}|\,d\Omega, \]
+\[
+\rho(\mathbf{n})\,d|\mathbf{n}| = |\mathbf{n}|^2\,d|\mathbf{n}|\,d\Omega,
+\]
 
 where \( d\Omega \) is the solid angle element. The free-particle energy is \( E = p^2/(2m) = (2\pi/L)^2|\mathbf{n}|^2/(2m) \), giving \( d|\mathbf{n}| = m(L/2\pi)|p|^{-1}dE \). Substituting:
 
-\[ \rho(E)\,dE\,d\Omega = \left(\frac{L}{2\pi}\right)^3 m|\mathbf{p}|\,dE\,d\Omega. \]
+\[
+\rho(E)\,dE\,d\Omega = \left(\frac{L}{2\pi}\right)^3 m|\mathbf{p}|\,dE\,d\Omega.
+\]
 
 This is the density of free-electron states per unit energy per unit solid angle.
 
@@ -2542,31 +2776,46 @@ This is the density of free-electron states per unit energy per unit solid angle
 
 Applying Fermi's Golden Rule for harmonic perturbations (absorption) and integrating over the continuum of final states:
 
-\[ \frac{d\Sigma_{\mathrm{abs}}}{d\Omega} = \int dE\,\rho(E)\,\frac{4\pi^2 e^2}{m^2\omega}\bigl|\langle \mathbf{p}|e^{i\mathbf{k}\cdot\hat{x}}\hat{p}\cdot\boldsymbol{\epsilon}|n\rangle\bigr|^2 \delta(E - E_n - \omega). \]
+\[
+\frac{d\Sigma_{\mathrm{abs}}}{d\Omega} = \int dE\,\rho(E)\,\frac{4\pi^2 e^2}{m^2\omega}\bigl|\langle \mathbf{p}|e^{i\mathbf{k}\cdot\hat{x}}\hat{p}\cdot\boldsymbol{\epsilon}|n\rangle\bigr|^2 \delta(E - E_n - \omega).
+\]
 
 The energy delta fixes \( |\mathbf{p}| = \sqrt{2m(E_n + \omega)} \). Substituting the density of states and the explicit wavefunctions
 
-\[ \psi_{1s}(\mathbf{x}) = \frac{1}{\sqrt{\pi a_0^3}}\,e^{-|\mathbf{x}|/a_0}, \qquad \psi_{\mathbf{p}}(\mathbf{x}) = \frac{1}{L^{3/2}}\,e^{i\mathbf{p}\cdot\mathbf{x}}, \]
+\[
+\psi_{1s}(\mathbf{x}) = \frac{1}{\sqrt{\pi a_0^3}}\,e^{-|\mathbf{x}|/a_0}, \qquad \psi_{\mathbf{p}}(\mathbf{x}) = \frac{1}{L^{3/2}}\,e^{i\mathbf{p}\cdot\mathbf{x}},
+\]
 
 the differential cross section (before simplification) is
 
-\[ \frac{d\Sigma_{\mathrm{abs}}}{d\Omega} = \left(\frac{L}{2\pi}\right)^3 m|\mathbf{p}|\,\frac{4\pi^2 e^2}{m^2\omega}\left|\boldsymbol{\epsilon}\cdot\int d\mathbf{x}\,e^{i\mathbf{k}\cdot\mathbf{x}}\psi_{\mathbf{p}}^*(\mathbf{x})(-i\nabla)\psi_{1s}(\mathbf{x})\right|^2. \]
+\[
+\frac{d\Sigma_{\mathrm{abs}}}{d\Omega} = \left(\frac{L}{2\pi}\right)^3 m|\mathbf{p}|\,\frac{4\pi^2 e^2}{m^2\omega}\left|\boldsymbol{\epsilon}\cdot\int d\mathbf{x}\,e^{i\mathbf{k}\cdot\mathbf{x}}\psi_{\mathbf{p}}^*(\mathbf{x})(-i\nabla)\psi_{1s}(\mathbf{x})\right|^2.
+\]
 
 Inserting the explicit wavefunctions, the factor \( L^{3/2} \) from the denominator of \( \psi_{\mathbf{p}} \) cancels the prefactor \( (L/2\pi)^3 \), leaving an expression independent of \( L \):
 
-\[ \frac{d\Sigma_{\mathrm{abs}}}{d\Omega} = \frac{e^2 m|\mathbf{p}|}{2\pi^2 a_0^3 m^2\omega}\left|\boldsymbol{\epsilon}\cdot\int d\mathbf{x}\,e^{i(\mathbf{k}-\mathbf{p})\cdot\mathbf{x}}(-i\nabla)e^{-|\mathbf{x}|/a_0}\right|^2. \]
+\[
+\frac{d\Sigma_{\mathrm{abs}}}{d\Omega} = \frac{e^2 m|\mathbf{p}|}{2\pi^2 a_0^3 m^2\omega}\left|\boldsymbol{\epsilon}\cdot\int d\mathbf{x}\,e^{i(\mathbf{k}-\mathbf{p})\cdot\mathbf{x}}(-i\nabla)e^{-|\mathbf{x}|/a_0}\right|^2.
+\]
 
 To evaluate the remaining integral, we integrate by parts (using Gauss's theorem): since the integrand decays exponentially at infinity, the surface term vanishes, and
 
-\[ \boldsymbol{\epsilon}\cdot\int d\mathbf{x}\, e^{i(\mathbf{k}-\mathbf{p})\cdot\mathbf{x}}(-i\nabla)e^{-|\mathbf{x}|/a_0} = -(\boldsymbol{\epsilon}\cdot\mathbf{p})\int d\mathbf{x}\,e^{i(\mathbf{k}-\mathbf{p})\cdot\mathbf{x}}e^{-|\mathbf{x}|/a_0}, \]
+\[
+\boldsymbol{\epsilon}\cdot\int d\mathbf{x}\, e^{i(\mathbf{k}-\mathbf{p})\cdot\mathbf{x}}(-i\nabla)e^{-|\mathbf{x}|/a_0} = -(\boldsymbol{\epsilon}\cdot\mathbf{p})\int d\mathbf{x}\,e^{i(\mathbf{k}-\mathbf{p})\cdot\mathbf{x}}e^{-|\mathbf{x}|/a_0},
+\]
 
 where we used that \( -i\nabla e^{i(\mathbf{k}-\mathbf{p})\cdot x} = (\mathbf{k}-\mathbf{p})e^{i(\mathbf{k}-\mathbf{p})\cdot x} \) and then that \( \boldsymbol{\epsilon}\cdot\mathbf{k} = 0 \) (transversality) to discard the \( \mathbf{k} \) term. The remaining integral is the Fourier transform of the 1s wavefunction:
 
-\[ \mathcal{F}[\psi_{1s}](\mathbf{q}) = \int d\mathbf{x}\,e^{i\mathbf{q}\cdot\mathbf{x}}\,e^{-|\mathbf{x}|/a_0}, \qquad \mathbf{q} = \mathbf{k} - \mathbf{p}. \]
+\[
+\mathcal{F}[\psi_{1s}](\mathbf{q}) = \int d\mathbf{x}\,e^{i\mathbf{q}\cdot\mathbf{x}}\,e^{-|\mathbf{x}|/a_0}, \qquad \mathbf{q} = \mathbf{k} - \mathbf{p}.
+\]
 
 <div class="theorem">
 <strong>Theorem 17.1 (Photoelectric cross section).</strong> The differential absorption cross section for ejection of a hydrogen 1s electron into solid angle \( d\Omega \) in direction \( \hat{p} \) is
-\[ \frac{d\Sigma_{\mathrm{abs}}}{d\Omega} = \frac{e^2 m|\mathbf{p}|}{2\pi^2 a_0^3 m^2\omega}(\boldsymbol{\epsilon}\cdot\hat{p})^2 |\mathbf{p}|^2 \bigl|\mathcal{F}[\psi_{1s}](\mathbf{k}-\mathbf{p})\bigr|^2. \]
+
+\[
+\frac{d\Sigma_{\mathrm{abs}}}{d\Omega} = \frac{e^2 m|\mathbf{p}|}{2\pi^2 a_0^3 m^2\omega}(\boldsymbol{\epsilon}\cdot\hat{p})^2 |\mathbf{p}|^2 \bigl|\mathcal{F}[\psi_{1s}](\mathbf{k}-\mathbf{p})\bigr|^2.
+\]
 The result is independent of \( L \): the periodic box was a technical device, not physics.
 </div>
 
@@ -2600,11 +2849,15 @@ Consider a composite system consisting of two copies of the same type of subsyst
 
 Define the **swap operator** \( \hat{S} \) on \( \mathcal{H} \otimes \mathcal{H} \) by
 
-\[ \hat{S}\,|\psi\rangle \otimes |\phi\rangle = |\phi\rangle \otimes |\psi\rangle. \]
+\[
+\hat{S}\,|\psi\rangle \otimes |\phi\rangle = |\phi\rangle \otimes |\psi\rangle.
+\]
 
 If two particles are genuinely indistinguishable, no observable can distinguish whether the system is in state \( |\psi\rangle\otimes|\phi\rangle \) or the swapped state \( |\phi\rangle\otimes|\psi\rangle \). This means the physical state after swapping must be the same physical state, which in quantum mechanics allows a phase:
 
-\[ \hat{S}\,|\Psi_{\mathrm{phys}}\rangle = e^{i\alpha}\,|\Psi_{\mathrm{phys}}\rangle \]
+\[
+\hat{S}\,|\Psi_{\mathrm{phys}}\rangle = e^{i\alpha}\,|\Psi_{\mathrm{phys}}\rangle
+\]
 
 for some angle \( \alpha \in [0, 2\pi) \). Note that \( \hat{S}^2 = \mathbf{1} \), so \( e^{2i\alpha} = 1 \), giving \( e^{i\alpha} = \pm 1 \). In 3+1 dimensions, these are the only two possibilities.
 
@@ -2641,19 +2894,29 @@ This is not a postulate but a consequence of Lorentz invariance combined with th
 
 For \( N \) identical bosons, the physical Hilbert space is the **symmetric subspace** \( \mathcal{H}_{\mathrm{sym}} \subset \mathcal{H}^{\otimes N} \), spanned by states of the form
 
-\[ |\Psi_{\mathrm{bos}}\rangle \propto \sum_{\sigma \in S_N} |\psi_{\sigma(1)}\rangle \otimes |\psi_{\sigma(2)}\rangle \otimes \cdots \otimes |\psi_{\sigma(N)}\rangle. \]
+\[
+|\Psi_{\mathrm{bos}}\rangle \propto \sum_{\sigma \in S_N} |\psi_{\sigma(1)}\rangle \otimes |\psi_{\sigma(2)}\rangle \otimes \cdots \otimes |\psi_{\sigma(N)}\rangle.
+\]
 
 For \( N \) identical fermions, the physical space is the **antisymmetric subspace** \( \mathcal{H}_{\mathrm{anti}} \), spanned by **Slater determinants**:
 
-\[ |\Psi_{\mathrm{ferm}}\rangle \propto \sum_{\sigma \in S_N} \mathrm{sgn}(\sigma)\, |\psi_{\sigma(1)}\rangle \otimes \cdots \otimes |\psi_{\sigma(N)}\rangle. \]
+\[
+|\Psi_{\mathrm{ferm}}\rangle \propto \sum_{\sigma \in S_N} \mathrm{sgn}(\sigma)\, |\psi_{\sigma(1)}\rangle \otimes \cdots \otimes |\psi_{\sigma(N)}\rangle.
+\]
 
 **Concrete example (two particles, two-level system).** Suppose each particle has a two-dimensional Hilbert space spanned by \( |A_1\rangle \) and \( |A_2\rangle \). The full tensor product \( \mathcal{H} \otimes \mathcal{H} \) has dimension 4, spanned by \( \{|A_1 A_1\rangle,\, |A_1 A_2\rangle,\, |A_2 A_1\rangle,\, |A_2 A_2\rangle\} \).
 
 - **Bosonic subspace** (symmetric, dimension 3):
-\[ |A_1 A_1\rangle, \quad |A_2 A_2\rangle, \quad \tfrac{1}{\sqrt{2}}\bigl(|A_1 A_2\rangle + |A_2 A_1\rangle\bigr). \]
+
+\[
+|A_1 A_1\rangle, \quad |A_2 A_2\rangle, \quad \tfrac{1}{\sqrt{2}}\bigl(|A_1 A_2\rangle + |A_2 A_1\rangle\bigr).
+\]
 
 - **Fermionic subspace** (antisymmetric, dimension 1):
-\[ \tfrac{1}{\sqrt{2}}\bigl(|A_1 A_2\rangle - |A_2 A_1\rangle\bigr). \]
+
+\[
+\tfrac{1}{\sqrt{2}}\bigl(|A_1 A_2\rangle - |A_2 A_1\rangle\bigr).
+\]
 
 Note that the only fermionic state has the two particles in *different* single-particle states — this is the Pauli exclusion principle in action.
 
@@ -2671,7 +2934,9 @@ Kempf gives a particularly clean statistical argument for why bosons "prefer" to
 
 **Bosonic case.** Only three symmetric states are accessible, each equally probable. Two of these (\( |A_1 A_1\rangle \) and \( |A_2 A_2\rangle \)) have both particles in the same state. So:
 
-\[ P(\text{same state, bosons}) = \frac{2}{3} > \frac{1}{2} = P(\text{same state, distinguishable}). \]
+\[
+P(\text{same state, bosons}) = \frac{2}{3} > \frac{1}{2} = P(\text{same state, distinguishable}).
+\]
 
 <div class="remark">
 <strong>Remark (Kempf — Bose enhancement verbal explanation).</strong> "Just like fermions cannot be in the same state, bosons actually <em>want</em> to be in the same state — not just can, it is preferred for them to be in the same state. If you expose a bunch of identical bosons to a heat bath, they are more likely to be found in the same state than they would be if they were not bosons. For large numbers of identical bosons, this enhancement is dramatic. The combinatorial factor that ordinarily drives the system to explore many different states collapses — because symmetrization forces you to count only symmetric states — and what remains is the exponential suppression from the Boltzmann factor. The competition that normally prevents condensation is removed: almost all the bosons pile into the ground state. This is Bose-Einstein condensation."

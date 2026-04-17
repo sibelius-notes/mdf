@@ -44,7 +44,9 @@ To understand what econometrics is trying to accomplish, it is essential to be p
 
 Within that population, we hypothesise a <strong>population process</strong> linking two variables of interest. Returning to the education-wages example: each individual \(i\) in the population has their own education level \(x_i\) and their own wages \(y_i\). For that individual, we might imagine a relationship of the form
 
-\[ y_i = \alpha + \beta x_i + U_i \]
+\[
+y_i = \alpha + \beta x_i + U_i
+\]
 
 where \(\beta\) captures how wages respond to education for that individual. Because every individual is different, each person effectively has their own \(\beta_i\): one person might see a \$25 wage gain per extra year of education, while another sees a \$75 gain. When we aggregate across all individuals in the population, the <strong>population parameter</strong> \(\beta\) represents the average effect of one additional year of education on wages across everyone in the population.
 
@@ -56,7 +58,9 @@ The central task of econometrics is therefore: given that we only have a sample 
 
 The <strong>Population Regression Function (PRF)</strong> formalises the idea that there is a systematic relationship between a dependent variable \(Y\) and an independent variable \(X\) at the population level. For the education-wages example:
 
-\[ Y_i = \alpha + \beta X_i + U_i \]
+\[
+Y_i = \alpha + \beta X_i + U_i
+\]
 
 Here \(Y_i\) is the wage of individual \(i\), \(X_i\) is their years of education, \(\alpha\) is the intercept (the expected wage when education is zero), \(\beta\) is the slope (the average change in wages per one additional year of education), and \(U_i\) is the <strong>disturbance term</strong> or <strong>population error</strong>.
 
@@ -64,13 +68,17 @@ The disturbance term \(U_i\) captures all the factors that also influence wages 
 
 A key assumption about the disturbance term is that the errors \(U_i\) are <strong>independently and identically distributed (i.i.d.)</strong> with mean zero and constant variance \(\sigma^2\):
 
-\[ U_i \overset{i.i.d.}{\sim} (0, \sigma^2) \]
+\[
+U_i \overset{i.i.d.}{\sim} (0, \sigma^2)
+\]
 
 The assumption \(\mathbb{E}[U_i \mid X_i] = 0\) (zero conditional mean) means that, regardless of the level of education, the average of all the unobserved factors affecting wages is zero. <strong>Independence</strong> means that knowing one person's error term tells us nothing about another person's error term. <strong>Identically distributed</strong> means all error terms are drawn from the same underlying process, so the variance of wages around the regression line is constant regardless of education level — an assumption sometimes called <strong>homoskedasticity</strong>.
 
 Taking the conditional expectation of the PRF:
 
-\[ \mathbb{E}[Y_i \mid X_i] = \alpha + \beta X_i \]
+\[
+\mathbb{E}[Y_i \mid X_i] = \alpha + \beta X_i
+\]
 
 because \(\mathbb{E}[U_i \mid X_i] = 0\). This conditional expectation is the population regression function itself: it gives the average value of wages for a person with exactly \(X_i\) years of education.
 
@@ -80,25 +88,37 @@ Since we only have a sample, not the full population, we need an <strong>estimat
 
 The intuition behind OLS is geometric: given a scatter plot of \(n\) observed data points \((x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n)\), we want to find the line \(\hat{y}_i = \hat{\alpha} + \hat{\beta} x_i\) that fits the data as closely as possible. The <strong>residual</strong> for observation \(i\) is the gap between the actual observed value and the fitted value:
 
-\[ \hat{u}_i = y_i - \hat{\alpha} - \hat{\beta} x_i \]
+\[
+\hat{u}_i = y_i - \hat{\alpha} - \hat{\beta} x_i
+\]
 
 OLS chooses \(\hat{\alpha}\) and \(\hat{\beta}\) to minimise the <strong>Sum of Squared Residuals (SSR)</strong>:
 
-\[ \min_{\hat{\alpha}, \hat{\beta}} \sum_{i=1}^{n} \hat{u}_i^2 = \min_{\hat{\alpha}, \hat{\beta}} \sum_{i=1}^{n} (y_i - \hat{\alpha} - \hat{\beta} x_i)^2 \]
+\[
+\min_{\hat{\alpha}, \hat{\beta}} \sum_{i=1}^{n} \hat{u}_i^2 = \min_{\hat{\alpha}, \hat{\beta}} \sum_{i=1}^{n} (y_i - \hat{\alpha} - \hat{\beta} x_i)^2
+\]
 
 Taking first-order conditions with respect to \(\hat{\alpha}\) and \(\hat{\beta}\) and solving gives the closed-form OLS estimators:
 
-\[ \hat{\beta}_{OLS} = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^{n}(x_i - \bar{x})^2} = \frac{\widehat{\text{Cov}}(x,y)}{\widehat{\text{Var}}(x)} \]
+\[
+\hat{\beta}_{OLS} = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^{n}(x_i - \bar{x})^2} = \frac{\widehat{\text{Cov}}(x,y)}{\widehat{\text{Var}}(x)}
+\]
 
-\[ \hat{\alpha}_{OLS} = \bar{y} - \hat{\beta}_{OLS} \bar{x} \]
+\[
+\hat{\alpha}_{OLS} = \bar{y} - \hat{\beta}_{OLS} \bar{x}
+\]
 
 where \(\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i\) and \(\bar{y} = \frac{1}{n}\sum_{i=1}^{n} y_i\) are the sample means. The OLS slope estimator can also be written as the ratio of the sample covariance between \(x\) and \(y\) to the sample variance of \(x\).
 
 The OLS estimator can equivalently be derived as the solution to the <strong>sample moment conditions</strong> (population counterparts of \(\mathbb{E}[u] = 0\) and \(\mathbb{E}[uX] = 0\)):
 
-\[ \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{\alpha} - \hat{\beta} x_i) = 0 \]
+\[
+\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{\alpha} - \hat{\beta} x_i) = 0
+\]
 
-\[ \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{\alpha} - \hat{\beta} x_i) x_i = 0 \]
+\[
+\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{\alpha} - \hat{\beta} x_i) x_i = 0
+\]
 
 These two equations (the first-order conditions of the SSR minimisation) imply that the OLS residuals always sum to zero (\(\sum \hat{u}_i = 0\)) and are orthogonal to \(x\) (\(\sum \hat{u}_i x_i = 0\)). In practice these sums are not exactly zero but only to numerical precision (e.g., of order \(10^{-12}\)).
 
@@ -110,13 +130,17 @@ An important conceptual distinction must be drawn between the <strong>estimator<
 
 A fundamental decomposition of total variation in \(y\) is:
 
-\[ \underbrace{\sum_{i=1}^n (y_i - \bar{y})^2}_{\text{SST}} = \underbrace{\sum_{i=1}^n (\hat{y}_i - \bar{y})^2}_{\text{SSE}} + \underbrace{\sum_{i=1}^n \hat{u}_i^2}_{\text{SSR}} \]
+\[
+\underbrace{\sum_{i=1}^n (y_i - \bar{y})^2}_{\text{SST}} = \underbrace{\sum_{i=1}^n (\hat{y}_i - \bar{y})^2}_{\text{SSE}} + \underbrace{\sum_{i=1}^n \hat{u}_i^2}_{\text{SSR}}
+\]
 
 where <strong>SST</strong> (Total Sum of Squares) measures total variation in \(y\), <strong>SSE</strong> (Explained Sum of Squares) is the variation explained by the regression, and <strong>SSR</strong> (Sum of Squared Residuals) is the unexplained residual variation. Note that \(\bar{\hat{y}} = \bar{y}\) (a direct consequence of the OLS first-order conditions), which is why the "explained" and "residual" components are orthogonal and the decomposition holds exactly.
 
 The <strong>R-squared</strong> (\(R^2\)) is defined as the fraction of total variation explained by the model:
 
-\[ R^2 = \frac{\text{SSE}}{\text{SST}} = 1 - \frac{\text{SSR}}{\text{SST}} \]
+\[
+R^2 = \frac{\text{SSE}}{\text{SST}} = 1 - \frac{\text{SSR}}{\text{SST}}
+\]
 
 \(R^2 \in [0, 1]\) always. \(R^2 = 0\) means the regressors explain nothing; \(R^2 = 1\) means a perfect fit with zero residuals. In the simple bivariate regression, \(R^2\) equals the square of the sample correlation between \(x\) and \(y\): \(R^2 = [\widehat{\text{Corr}}(x,y)]^2\).
 
@@ -127,7 +151,9 @@ The <strong>R-squared</strong> (\(R^2\)) is defined as the fraction of total var
 
 <strong>Standard Error of the Regression (SER):</strong> The SER measures the average magnitude of the residuals in units of \(y\):
 
-\[ \text{SER} = \hat{\sigma} = \sqrt{\frac{\text{SSR}}{n - k - 1}} \]
+\[
+\text{SER} = \hat{\sigma} = \sqrt{\frac{\text{SSR}}{n - k - 1}}
+\]
 
 where \(k\) is the number of slope coefficients and the denominator \(n - k - 1\) is the <strong>degrees of freedom</strong>. For a simple regression (\(k = 1\)), this is \(\sqrt{\text{SSR}/(n-2)}\). Dividing by \(n-2\) rather than \(n\) corrects for the fact that two parameters (\(\hat{\alpha}, \hat{\beta}\)) have been estimated, consuming two degrees of freedom. For large \(n\), the distinction is negligible.
 
@@ -145,13 +171,17 @@ The <strong>Gauss-Markov Theorem</strong> establishes when OLS achieves all thre
 
 When we apply OLS to a sample and obtain \(\hat{\beta}_{OLS}\), we can show that:
 
-\[ \hat{\beta}_{OLS} = \beta_P + \frac{\sum_{i=1}^{n}(x_i - \bar{x}) U_i}{\sum_{i=1}^{n}(x_i - \bar{x})^2} \]
+\[
+\hat{\beta}_{OLS} = \beta_P + \frac{\sum_{i=1}^{n}(x_i - \bar{x}) U_i}{\sum_{i=1}^{n}(x_i - \bar{x})^2}
+\]
 
 This expression makes clear that the estimator equals the true population parameter plus a term involving the error \(U_i\). Under the zero-conditional-mean assumption, taking expectations of this expression yields \(\mathbb{E}[\hat{\beta}_{OLS}] = \beta_P\), establishing unbiasedness. The additional term — the source of sampling error — shrinks as \(n\) grows, establishing consistency.
 
 The variance of \(\hat{\beta}_{OLS}\) (under homoskedasticity) is:
 
-\[ \text{Var}(\hat{\beta}_{OLS}) = \frac{\sigma^2}{\sum_{i=1}^{n}(x_i - \bar{x})^2} \]
+\[
+\text{Var}(\hat{\beta}_{OLS}) = \frac{\sigma^2}{\sum_{i=1}^{n}(x_i - \bar{x})^2}
+\]
 
 This expression has intuitive implications. First, a larger error variance \(\sigma^2\) (more noise in the population process) increases the variance of our estimator, making estimates less precise. Second, more variation in the explanatory variable \(x\) (larger denominator) reduces the variance of the estimator, making it more precise. This is why it is beneficial to have explanatory variables that vary substantially across observations.
 
@@ -167,11 +197,15 @@ The setup is always the same: there is some population in which the true paramet
 
 To answer this, we need the <strong>sampling distribution</strong> of \(\hat{\beta}_{OLS}\). It can be shown — via asymptotic theory — that as \(n \to \infty\):
 
-\[ \hat{\beta}_{OLS} \overset{a}{\sim} \mathcal{N}\left(\beta_P, \frac{\sigma^2}{\sum(x_i - \bar{x})^2}\right) \]
+\[
+\hat{\beta}_{OLS} \overset{a}{\sim} \mathcal{N}\left(\beta_P, \frac{\sigma^2}{\sum(x_i - \bar{x})^2}\right)
+\]
 
 The problem is that this distribution depends on \(\sigma^2\), the variance of the population error, which we do not observe. We must estimate \(\sigma^2\) from the data. Replacing \(\sigma^2\) with its sample estimator \(\hat{\sigma}^2\) introduces additional uncertainty, and as a result the standardised statistic no longer follows a normal distribution but instead follows a <strong>t-distribution</strong>:
 
-\[ t = \frac{\hat{\beta}^* - \beta_0}{\widehat{SE}(\hat{\beta}_{OLS})} \sim t_{n-k} \]
+\[
+t = \frac{\hat{\beta}^* - \beta_0}{\widehat{SE}(\hat{\beta}_{OLS})} \sim t_{n-k}
+\]
 
 where \(\beta_0\) is the hypothesised null value (typically zero), \(\widehat{SE}(\hat{\beta}_{OLS})\) is the estimated standard error of the OLS estimator, \(n\) is the number of observations, and \(k\) is the number of regressors including the constant.
 
@@ -183,13 +217,17 @@ The general procedure for a hypothesis test in regression is as follows.
 
 <strong>Step 1 — Specify the null and alternative hypotheses.</strong> The null hypothesis \(H_0\) specifies a particular value for the population parameter, most commonly:
 
-\[ H_0: \beta_P = 0 \]
+\[
+H_0: \beta_P = 0
+\]
 
 The alternative hypothesis \(H_1\) specifies the region of departures from \(H_0\) that we would find economically meaningful. For a <strong>two-tailed test</strong>, \(H_1: \beta_P \neq 0\), meaning we care about both positive and negative effects. For a <strong>one-tailed test</strong>, either \(H_1: \beta_P > 0\) or \(H_1: \beta_P < 0\).
 
 <strong>Step 2 — Compute the t-statistic.</strong> Under \(H_0: \beta_P = \beta_0\):
 
-\[ t = \frac{\hat{\beta}^* - \beta_0}{\widehat{SE}(\hat{\beta}_{OLS})} \]
+\[
+t = \frac{\hat{\beta}^* - \beta_0}{\widehat{SE}(\hat{\beta}_{OLS})}
+\]
 
 Most statistical software assumes \(\beta_0 = 0\) by default, so the t-statistic reported in regression output is simply \(t = \hat{\beta}^* / \widehat{SE}(\hat{\beta}_{OLS})\).
 
@@ -203,11 +241,15 @@ As a worked example: suppose we have estimated the effect of TV advertising spen
 
 Consider a regression attempting to identify the determinants of a company's weekly sales. We estimate:
 
-\[ \widehat{\text{Sales}}_t = \hat{\alpha} + \hat{\beta}_1 \text{TV}_t + \hat{\beta}_2 \text{Radio}_t + \cdots \]
+\[
+\widehat{\text{Sales}}_t = \hat{\alpha} + \hat{\beta}_1 \text{TV}_t + \hat{\beta}_2 \text{Radio}_t + \cdots
+\]
 
 and obtain \(\hat{\beta}_1 = 10\) with \(\widehat{SE}(\hat{\beta}_1) = 3\). The null hypothesis is \(H_0: \beta_1 = 0\) (TV has no effect on sales), and the one-tailed alternative is \(H_1: \beta_1 > 0\) (TV increases sales). The t-statistic is:
 
-\[ t = \frac{10 - 0}{3} = \frac{10}{3} \approx 3.33 \]
+\[
+t = \frac{10 - 0}{3} = \frac{10}{3} \approx 3.33
+\]
 
 The degrees of freedom for this statistic are \(n - k\), where \(k\) is the total number of parameters estimated (including the constant). Looking up the t-distribution at a 5% significance level for a one-tailed test with the appropriate degrees of freedom gives a critical value of approximately 1.7. Because \(3.33 > 1.7\), we reject the null hypothesis and conclude, with statistical confidence, that TV advertising spending positively and significantly affects weekly sales.
 
@@ -217,7 +259,9 @@ It is important to remember that this inference is only valid if the model has b
 
 A <strong>confidence interval</strong> for a regression coefficient provides a range of plausible values for the population parameter, rather than just a single point estimate. A \(95\%\) confidence interval for \(\beta_P\) is constructed as:
 
-\[ \left[\hat{\beta}^<em> - t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS}), \quad \hat{\beta}^</em> + t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS})\right] \]
+\[
+\left[\hat{\beta}^<em> - t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS}), \quad \hat{\beta}^</em> + t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS})\right]
+\]
 
 where \(t_{\alpha/2, \, n-k}\) is the \((1 - \alpha/2)\) percentile (i.e., the 97.5th percentile for a 95% interval) of the t-distribution with \(n - k\) degrees of freedom. The choice of the 97.5th percentile arises because the two tails each contribute \(2.5\%\) probability, totalling the \(5\%\) outside the 95% region.
 
@@ -235,11 +279,15 @@ One of the most pernicious threats to valid econometric inference is <strong>omi
 
 To see the mechanism concretely, consider the goal of estimating the effect of education on wages. Suppose we estimate the simple regression:
 
-\[ \text{Wage}_i = \alpha + \beta_1 \text{Education}_i + U_i \]
+\[
+\text{Wage}_i = \alpha + \beta_1 \text{Education}_i + U_i
+\]
 
 The population, however, contains a richer truth: wages are also determined by an individual's innate <strong>ability</strong>, denoted \(A_i\), which affects earnings positively:
 
-\[ \text{Wage}_i = \alpha + \beta_1 \text{Education}_i + \beta_2 A_i + V_i \]
+\[
+\text{Wage}_i = \alpha + \beta_1 \text{Education}_i + \beta_2 A_i + V_i
+\]
 
 where \(\beta_2 > 0\) and \(V_i\) is the truly idiosyncratic component. The problem is that ability \(A_i\) is not included in our regression — it may be unobservable. Furthermore, there is a positive correlation between education and ability: more academically able individuals tend to stay in education longer. Therefore, when we omit ability, our error term \(U_i\) implicitly contains \(\beta_2 A_i + V_i\).
 
@@ -247,15 +295,21 @@ where \(\beta_2 > 0\) and \(V_i\) is the truly idiosyncratic component. The prob
 
 The OLS formula for \(\hat{\beta}_1\) in the simple regression is:
 
-\[ \hat{\beta}_1 = \beta_1 + \frac{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}}) \cdot U_i}{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}})^2} \]
+\[
+\hat{\beta}_1 = \beta_1 + \frac{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}}) \cdot U_i}{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}})^2}
+\]
 
 Since \(U_i = \beta_2 A_i + V_i\), substituting gives:
 
-\[ \hat{\beta}_1 = \beta_1 + \frac{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}})(\beta_2 A_i + V_i)}{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}})^2} \]
+\[
+\hat{\beta}_1 = \beta_1 + \frac{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}})(\beta_2 A_i + V_i)}{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}})^2}
+\]
 
 Taking expectations (and using the fact that \(V_i\) is orthogonal to education by assumption):
 
-\[ \mathbb{E}[\hat{\beta}_1] = \beta_1 + \beta_2 \cdot \frac{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}}) \cdot \mathbb{E}[A_i]}{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}})^2} \]
+\[
+\mathbb{E}[\hat{\beta}_1] = \beta_1 + \beta_2 \cdot \frac{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}}) \cdot \mathbb{E}[A_i]}{\sum_{i=1}^{n}(\text{Education}_i - \overline{\text{Education}})^2}
+\]
 
 The second term is the <strong>bias</strong>. Its sign depends on (a) the sign of \(\beta_2\) — the effect of the omitted variable on the dependent variable — and (b) the sign of the correlation between the omitted variable and the included regressor. In our example:
 
@@ -308,15 +362,21 @@ In a bivariate regression \(Y_i = \alpha + \beta X_i + U_i\), the coefficient \(
 
 In a multiple regression model with several explanatory variables:
 
-\[ Y_i = \alpha + \beta_1 X_{1i} + \beta_2 X_{2i} + \cdots + \beta_k X_{ki} + U_i \]
+\[
+Y_i = \alpha + \beta_1 X_{1i} + \beta_2 X_{2i} + \cdots + \beta_k X_{ki} + U_i
+\]
 
 each coefficient \(\beta_j\) is interpreted as the <strong>partial effect</strong> of variable \(X_j\) on \(Y\), holding all other explanatory variables constant. This is sometimes called the <strong>ceteris paribus</strong> interpretation. Mathematically, it is the partial derivative of the conditional expectation of \(Y\) with respect to \(X_j\):
 
-\[ \frac{\partial \mathbb{E}[Y \mid X_1, \ldots, X_k]}{\partial X_j} = \beta_j \]
+\[
+\frac{\partial \mathbb{E}[Y \mid X_1, \ldots, X_k]}{\partial X_j} = \beta_j
+\]
 
 For example, in a model explaining house prices as a function of both the number of bedrooms and the square meterage:
 
-\[ \text{Price}_i = \alpha + \beta_1 \text{Bedrooms}_i + \beta_2 \text{SqMetres}_i + U_i \]
+\[
+\text{Price}_i = \alpha + \beta_1 \text{Bedrooms}_i + \beta_2 \text{SqMetres}_i + U_i
+\]
 
 \(\beta_1\) represents the expected increase in house price for one additional bedroom, <strong>holding square meterage constant</strong>. Without the "holding constant" clause, \(\beta_1\) cannot be cleanly interpreted because larger houses tend to have both more bedrooms and more square metres, confounding the two effects.
 
@@ -332,7 +392,9 @@ The t-test developed in Unit 3 is designed for testing a single restriction on a
 
 The appropriate tool for joint hypothesis testing is the <strong>F-test</strong>, which uses the <strong>F-statistic</strong>. The null hypothesis for a standard F-test of overall model significance is:
 
-\[ H_0: \beta_1 = \beta_2 = \cdots = \beta_p = 0 \]
+\[
+H_0: \beta_1 = \beta_2 = \cdots = \beta_p = 0
+\]
 
 (all slope coefficients are zero), with the alternative that at least one \(\beta_j \neq 0\).
 
@@ -345,7 +407,9 @@ Because adding regressors always reduces (or at worst leaves unchanged) the SSR,
 
 The F-statistic is:
 
-\[ F = \frac{(\text{SSR}_R - \text{SSR}_U) / q}{\text{SSR}_U / (n - k - 1)} \]
+\[
+F = \frac{(\text{SSR}_R - \text{SSR}_U) / q}{\text{SSR}_U / (n - k - 1)}
+\]
 
 where \(q\) is the number of restrictions being tested (the number of coefficients set to zero under \(H_0\)), \(n\) is the number of observations, and \(k\) is the number of slope coefficients in the unrestricted model. Under \(H_0\) and the classical regression assumptions, this statistic follows an <strong>F-distribution</strong> with \((q, \, n - k - 1)\) degrees of freedom.
 
@@ -357,7 +421,9 @@ We reject \(H_0\) when the computed F-statistic exceeds the critical value \(F_{
 
 Consider the following regression explaining interest rates on government debt:
 
-\[ r_t = \alpha + \beta_1 G_t + \beta_2 D_t + U_t \]
+\[
+r_t = \alpha + \beta_1 G_t + \beta_2 D_t + U_t
+\]
 
 where \(G_t\) is government spending and \(D_t\) is the debt-to-GDP ratio. The hypothesis, grounded in standard economic theory, is that both variables should increase interest rates: government spending crowds out private investment (driving up \(r\)), and higher debt levels increase the perceived risk of default (also driving up \(r\)).
 
@@ -365,7 +431,9 @@ We want to test jointly whether \(H_0: \beta_1 = \beta_2 = 0\) (neither spending
 
 The F-statistic is:
 
-\[ F = \frac{(2000 - 1000)/2}{1000/(200 - 2 - 1)} = \frac{500}{1000/197} = \frac{500}{5.08} \approx 98.4 \]
+\[
+F = \frac{(2000 - 1000)/2}{1000/(200 - 2 - 1)} = \frac{500}{1000/197} = \frac{500}{5.08} \approx 98.4
+\]
 
 With \(q = 2\) numerator degrees of freedom and \(197\) denominator degrees of freedom, the critical value at the 5% level is approximately 3. Since \(98.4 \gg 3\), we strongly reject \(H_0\) and conclude that government spending and debt jointly have a significant effect on interest rates.
 
@@ -373,17 +441,23 @@ With \(q = 2\) numerator degrees of freedom and \(197\) denominator degrees of f
 
 Suppose we wish to explain SAT scores using three variables: parental SAT scores, class size, and number of siblings. The unrestricted regression is:
 
-\[ \text{SAT}_i = \alpha + \beta_1 \text{ParentalSAT}_i + \beta_2 \text{ClassSize}_i + \beta_3 \text{Siblings}_i + U_i \]
+\[
+\text{SAT}_i = \alpha + \beta_1 \text{ParentalSAT}_i + \beta_2 \text{ClassSize}_i + \beta_3 \text{Siblings}_i + U_i
+\]
 
 The t-statistic on \(\hat{\beta}_1\) is high (parental SAT scores appear significant), but the t-statistics on \(\hat{\beta}_2\) and \(\hat{\beta}_3\) are marginal. We test the joint hypothesis \(H_0: \beta_2 = \beta_3 = 0\).
 
 The restricted model is:
 
-\[ \text{SAT}_i = \alpha + \beta_1 \text{ParentalSAT}_i + U_i \]
+\[
+\text{SAT}_i = \alpha + \beta_1 \text{ParentalSAT}_i + U_i
+\]
 
 Suppose with \(n = 30\) observations, \(\text{SSR}_U = 110\) and \(\text{SSR}_R = 120\). The number of restrictions is \(q = 2\), and the denominator degrees of freedom are \(n - k - 1 = 30 - 3 - 1 = 26\).
 
-\[ F = \frac{(120 - 110)/2}{110/26} = \frac{5}{4.23} \approx 1.18 \]
+\[
+F = \frac{(120 - 110)/2}{110/26} = \frac{5}{4.23} \approx 1.18
+\]
 
 With the critical value for \(F_{2, 26}\) at the 5% level being approximately 3.37, the computed F-statistic of 1.18 does not exceed this threshold. We therefore <strong>fail to reject</strong> \(H_0\) and cannot conclude that class size and number of siblings jointly explain variation in SAT scores at the 5% significance level. In a case this marginal, it is especially important to consult the F-table rather than relying on approximations.
 
@@ -393,7 +467,9 @@ Not all economically interesting hypotheses are of the form \(\beta_j = 0\). Con
 
 <strong>Direct t-test:</strong> Compute the t-statistic using the variance-covariance matrix of \(\hat{\beta}\):
 
-\[ t = \frac{\hat{\beta}_{jc} - \hat{\beta}_{univ}}{\sqrt{\widehat{\text{Var}}(\hat{\beta}_{jc}) + \widehat{\text{Var}}(\hat{\beta}_{univ}) - 2\widehat{\text{Cov}}(\hat{\beta}_{jc}, \hat{\beta}_{univ})}} \]
+\[
+t = \frac{\hat{\beta}_{jc} - \hat{\beta}_{univ}}{\sqrt{\widehat{\text{Var}}(\hat{\beta}_{jc}) + \widehat{\text{Var}}(\hat{\beta}_{univ}) - 2\widehat{\text{Cov}}(\hat{\beta}_{jc}, \hat{\beta}_{univ})}}
+\]
 
 This requires `vcov(res)` to extract the full covariance matrix.
 
@@ -409,7 +485,10 @@ The F-statistic is \(F = t^2\) when there is one restriction.
 <strong>Indirect (reparametrisation) t-test:</strong> Rewrite the model so the coefficient of interest directly appears. Replace `jc` by `jc` and `jc + univ` (or similarly), so the coefficient on `jc` in the new model equals \(\beta_{jc} - \beta_{univ}\), and its t-statistic directly tests the hypothesis.
 
 For the two-year vs. four-year example with \(n = 6763\):
-\[ \widehat{\log(\text{wage})} = 1.472 + 0.067\,jc + 0.077\,univ + 0.005\,exper \]
+
+\[
+\widehat{\log(\text{wage})} = 1.472 + 0.067\,jc + 0.077\,univ + 0.005\,exper
+\]
 \(t = -1.47\) for \(H_0: \beta_{jc} = \beta_{univ}\), failing to reject at 5%.
 
 For testing \(H_0: \beta_1 = \beta_2 = 0.1\) (both returns equal 0.1):
@@ -422,7 +501,9 @@ linearHypothesis(res, c("jc=0.1", "univ=0.1"))
 
 An illuminating relationship exists between the F-test and the t-test: when the F-test is used to test a single restriction (\(q = 1\)), it is mathematically equivalent to the t-test. Specifically:
 
-\[ F_{1, \, n-k-1} \equiv t_{n-k-1}^2 \]
+\[
+F_{1, \, n-k-1} \equiv t_{n-k-1}^2
+\]
 
 That is, an F-statistic with one numerator degree of freedom and \(n-k-1\) denominator degrees of freedom equals the square of the t-statistic with \(n-k-1\) degrees of freedom. This means that for testing the significance of a single coefficient, the two tests yield exactly the same conclusion, and the t-test is preferred purely for convenience (it does not require running an auxiliary restricted regression).
 
@@ -436,31 +517,45 @@ The F-test becomes essential when testing <strong>joint restrictions</strong> �
 
 Econometrics is built on probability theory. A <strong>random variable</strong> \(X\) is a variable whose value is determined by a random experiment. For our purposes, we work exclusively with continuous random variables, characterised by a probability density function \(f(x)\) that satisfies:
 
-\[ f(x) \geq 0 \quad \text{and} \quad \int_{-\infty}^{\infty} f(x) \, dx = 1 \]
+\[
+f(x) \geq 0 \quad \text{and} \quad \int_{-\infty}^{\infty} f(x) \, dx = 1
+\]
 
 The <strong>expected value</strong> (or <strong>population mean</strong>) of a random variable is:
 
-\[ \mathbb{E}[X] = \int_{-\infty}^{\infty} x \, f(x) \, dx \]
+\[
+\mathbb{E}[X] = \int_{-\infty}^{\infty} x \, f(x) \, dx
+\]
 
 Because integration is a linear operator, the expected value inherits a linearity property that is fundamental to all the derivations in this course:
 
-\[ \mathbb{E}[a + bX + cY] = a + b\,\mathbb{E}[X] + c\,\mathbb{E}[Y] \]
+\[
+\mathbb{E}[a + bX + cY] = a + b\,\mathbb{E}[X] + c\,\mathbb{E}[Y]
+\]
 
 for any scalars \(a, b, c\) and random variables \(X, Y\). Critically, linearity does <strong>not</strong> extend to non-linear functions: in general, \(\mathbb{E}[g(X)] \neq g(\mathbb{E}[X])\) unless \(g\) is linear. In particular, \(\mathbb{E}[X^2] \neq (\mathbb{E}[X])^2\).
 
 The <strong>variance</strong> of \(X\) measures the dispersion of \(X\) around its mean:
 
-\[ \text{Var}(X) = \mathbb{E}\left[(X - \mathbb{E}[X])^2\right] = \mathbb{E}[X^2] - (\mathbb{E}[X])^2 \]
+\[
+\text{Var}(X) = \mathbb{E}\left[(X - \mathbb{E}[X])^2\right] = \mathbb{E}[X^2] - (\mathbb{E}[X])^2
+\]
 
 Key variance properties are:
 
-\[ \text{Var}(aX) = a^2 \, \text{Var}(X), \qquad \text{Var}(a + X) = \text{Var}(X) \]
+\[
+\text{Var}(aX) = a^2 \, \text{Var}(X), \qquad \text{Var}(a + X) = \text{Var}(X)
+\]
 
-\[ \text{Var}(aX + bY) = a^2 \text{Var}(X) + b^2 \text{Var}(Y) + 2ab \, \text{Cov}(X,Y) \]
+\[
+\text{Var}(aX + bY) = a^2 \text{Var}(X) + b^2 \text{Var}(Y) + 2ab \, \text{Cov}(X,Y)
+\]
 
 The <strong>covariance</strong> between two random variables \(X\) and \(Y\) is:
 
-\[ \text{Cov}(X, Y) = \mathbb{E}\left[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])\right] = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] \]
+\[
+\text{Cov}(X, Y) = \mathbb{E}\left[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])\right] = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y]
+\]
 
 If \(X\) and \(Y\) tend to move together (both above their means at the same time), the covariance is positive. If they tend to move in opposite directions, the covariance is negative.
 
@@ -472,7 +567,9 @@ The <strong>normal distribution</strong> is the most important distribution in e
 
 A crucial closure property of the normal is that linear combinations of independent normal random variables are also normal. If \(X \sim \mathcal{N}(\mu_X, \sigma^2_X)\) and \(Y \sim \mathcal{N}(\mu_Y, \sigma^2_Y)\) are independent, then:
 
-\[ Z = a + bX + cY \sim \mathcal{N}\left(a + b\mu_X + c\mu_Y, \; b^2\sigma^2_X + c^2\sigma^2_Y + 2bc\,\text{Cov}(X,Y)\right) \]
+\[
+Z = a + bX + cY \sim \mathcal{N}\left(a + b\mu_X + c\mu_Y, \; b^2\sigma^2_X + c^2\sigma^2_Y + 2bc\,\text{Cov}(X,Y)\right)
+\]
 
 This property is the reason why OLS estimators (which are linear functions of the observations) are normally distributed when the errors are normal — and approximately so by the Central Limit Theorem even when errors are not normal, for large samples.
 
@@ -480,7 +577,9 @@ This property is the reason why OLS estimators (which are linear functions of th
 
 The <strong>chi-squared distribution</strong> \(\chi^2(d)\) with \(d\) degrees of freedom is defined as the sum of \(d\) independent squared standard normal random variables:
 
-\[ Z = \sum_{i=1}^{d} X_i^2, \quad X_i \overset{i.i.d.}{\sim} \mathcal{N}(0,1) \implies Z \sim \chi^2(d) \]
+\[
+Z = \sum_{i=1}^{d} X_i^2, \quad X_i \overset{i.i.d.}{\sim} \mathcal{N}(0,1) \implies Z \sim \chi^2(d)
+\]
 
 Properties: \(\mathbb{E}[Z] = d\) and \(\text{Var}(Z) = 2d\). The chi-squared distribution is strictly positive (as it is a sum of squares) and skewed to the right. As \(d\) increases, the distribution becomes more symmetric and approaches a normal distribution.
 
@@ -488,7 +587,9 @@ Properties: \(\mathbb{E}[Z] = d\) and \(\text{Var}(Z) = 2d\). The chi-squared di
 
 The <strong>t-distribution</strong> with \(d\) degrees of freedom arises as the ratio of a standard normal to the square root of a chi-squared divided by its degrees of freedom:
 
-\[ T = \frac{X}{\sqrt{Y/d}}, \quad X \sim \mathcal{N}(0,1), \quad Y \sim \chi^2(d), \quad X \perp Y \implies T \sim t_d \]
+\[
+T = \frac{X}{\sqrt{Y/d}}, \quad X \sim \mathcal{N}(0,1), \quad Y \sim \chi^2(d), \quad X \perp Y \implies T \sim t_d
+\]
 
 The t-distribution is symmetric around zero (for \(d > 1\)) but has heavier tails than the standard normal, reflecting the additional uncertainty introduced by estimating the variance. As \(d \to \infty\), the t-distribution converges to \(\mathcal{N}(0,1)\). This is why, for large samples, one can use normal critical values instead of t critical values.
 
@@ -498,7 +599,9 @@ The t-distribution is the distribution of the OLS t-statistic under the null hyp
 
 The <strong>F-distribution</strong> with degrees of freedom \(d_1\) and \(d_2\) is defined as the ratio of two independent chi-squared random variables, each divided by its degrees of freedom:
 
-\[ F = \frac{X/d_1}{Y/d_2}, \quad X \sim \chi^2(d_1), \quad Y \sim \chi^2(d_2), \quad X \perp Y \implies F \sim F(d_1, d_2) \]
+\[
+F = \frac{X/d_1}{Y/d_2}, \quad X \sim \chi^2(d_1), \quad Y \sim \chi^2(d_2), \quad X \perp Y \implies F \sim F(d_1, d_2)
+\]
 
 The F-distribution is strictly positive and skewed to the right. It is the sampling distribution of the F-statistic under \(H_0\), and as established in Section 5.4, \(F(1, d_2) \equiv t_{d_2}^2\).
 
@@ -506,7 +609,9 @@ The F-distribution is strictly positive and skewed to the right. It is the sampl
 
 The <strong>conditional expectation</strong> \(\mathbb{E}[Y \mid X]\) is the expected value of \(Y\) given that \(X\) is fixed at a particular value. When \(X\) is treated as a known constant, all of the usual properties of expectation apply with \(X\) treated as a scalar. In particular:
 
-\[ \mathbb{E}[a + bX + cY \mid X] = a + bX + c\,\mathbb{E}[Y \mid X] \]
+\[
+\mathbb{E}[a + bX + cY \mid X] = a + bX + c\,\mathbb{E}[Y \mid X]
+\]
 
 The zero conditional mean assumption \(\mathbb{E}[U \mid X] = 0\) is the core identifying assumption of OLS. It states that the average value of the unobservable error, conditional on any given level of the regressor, is zero. This assumption ensures that OLS is unbiased and underlies all the inference procedures developed in this course.
 
@@ -840,7 +945,9 @@ The slope for `Age` in `model1` is the <strong>partial effect</strong> of age on
 
 The <strong>adjusted \(R^2\)</strong>:
 
-\[ \bar{R}^2 = 1 - \frac{\text{SSR}/(n-k-1)}{\text{SST}/(n-1)} \]
+\[
+\bar{R}^2 = 1 - \frac{\text{SSR}/(n-k-1)}{\text{SST}/(n-1)}
+\]
 
 penalises the inclusion of additional predictors that do not materially improve model fit, unlike the unadjusted \(R^2\) which always increases when a variable is added. Comparing adjusted \(R^2\) values across models is one way to assess whether including additional regressors is warranted.
 
@@ -854,7 +961,9 @@ penalises the inclusion of additional predictors that do not materially improve 
 
 A key invariance property of OLS is that rescaling the dependent or independent variables affects the coefficient estimates but leaves the model's inferential conclusions unchanged. Suppose the model is
 
-\[ \text{salary}_i = \beta_0 + \beta_1 \text{sales}_i + u_i \]
+\[
+\text{salary}_i = \beta_0 + \beta_1 \text{sales}_i + u_i
+\]
 
 where salary is in thousands of dollars and sales in millions. Multiplying salary by 1,000 multiplies \(\hat{\beta}_0\) and \(\hat{\beta}_1\) by 1,000, but the t-statistics, p-values, \(R^2\), and SSR (on the same relative scale) are unchanged. Multiplying sales by \(10^6\) divides \(\hat{\beta}_1\) by \(10^6\) and the standard error of \(\hat{\beta}_1\) by the same factor, leaving the t-statistic unchanged.
 
@@ -895,7 +1004,9 @@ A fundamental modelling choice is whether to enter variables in levels or logari
 
 In the Stock & Watson California school districts example:
 
-\[ \widehat{\log(\text{salary})} = 4.504 + 0.163\log(\text{sales}) + 0.109\log(\text{mktval}) + 0.012\,\text{ceoten} \]
+\[
+\widehat{\log(\text{salary})} = 4.504 + 0.163\log(\text{sales}) + 0.109\log(\text{mktval}) + 0.012\,\text{ceoten}
+\]
 
 Here the coefficient 0.163 means that a 1% increase in firm sales is associated with a 0.163% increase in CEO salary. The `ceoten` coefficient 0.012 (level regressor in a log model) means one additional year of tenure is associated with a 1.2% salary increase.
 
@@ -903,19 +1014,27 @@ Here the coefficient 0.163 means that a 1% increase in firm sales is associated 
 
 When theory suggests a relationship that first rises then falls (or vice versa), we include a squared term. The model
 
-\[ Y_i = \beta_0 + \beta_1 X_i + \beta_2 X_i^2 + u_i \]
+\[
+Y_i = \beta_0 + \beta_1 X_i + \beta_2 X_i^2 + u_i
+\]
 
 has partial effect
 
-\[ \frac{\partial \mathbb{E}[Y \mid X]}{\partial X} = \beta_1 + 2\beta_2 X \]
+\[
+\frac{\partial \mathbb{E}[Y \mid X]}{\partial X} = \beta_1 + 2\beta_2 X
+\]
 
 which depends on the current value of \(X\). The effect changes sign at the **turning point**:
 
-\[ X^* = -\frac{\hat{\beta}_1}{2\hat{\beta}_2} \]
+\[
+X^* = -\frac{\hat{\beta}_1}{2\hat{\beta}_2}
+\]
 
 For example, in the wage-experience model:
 
-\[ \widehat{\text{wage}} = 861.48 + 18.84\,\text{exper} - 0.794\,\text{exper}^2 \]
+\[
+\widehat{\text{wage}} = 861.48 + 18.84\,\text{exper} - 0.794\,\text{exper}^2
+\]
 
 The marginal effect of experience is \(18.84 - 2(0.794)\,\text{exper} = 18.84 - 1.588\,\text{exper}\), which equals zero at \(\text{exper}^* = 18.84 / 1.588 \approx 11.9\) years — wages peak at about 12 years of experience and decline thereafter (due to physical depreciation or technological obsolescence).
 
@@ -923,7 +1042,9 @@ The marginal effect of experience is \(18.84 - 2(0.794)\,\text{exper} = 18.84 - 
 
 Because the marginal effect of \(X\) varies across observations, one summary measure is the **average partial effect**:
 
-\[ \text{APE} = \hat{\beta}_1 + 2\hat{\beta}_2 \bar{X} \]
+\[
+\text{APE} = \hat{\beta}_1 + 2\hat{\beta}_2 \bar{X}
+\]
 
 where \(\bar{X}\) is the sample mean of \(X\). To test whether the APE is zero (\(H_0: \beta_1 + 2\bar{X}\beta_2 = 0\)), one can use the indirect t-test: reparametrise by including \(X\) and \(X^2 - 2\bar{X} \cdot X\) as regressors, so the coefficient on the first term directly equals the APE, with the appropriate standard error.
 
@@ -937,13 +1058,17 @@ Once a regression has been estimated, it can be used for prediction. There are t
 
 Formally, the prediction interval is:
 
-\[ \hat{Y}^* \pm t_{n-k-1, \alpha/2} \cdot \widehat{SE}_{\text{pred}} \]
+\[
+\hat{Y}^* \pm t_{n-k-1, \alpha/2} \cdot \widehat{SE}_{\text{pred}}
+\]
 
 where \(\widehat{SE}_{\text{pred}}^2 = \widehat{SE}_{\text{fit}}^2 + \hat{\sigma}^2\). In R: `predict(res, newdata = ..., interval = "prediction")` versus `interval = "confidence"`.
 
 For log-linear models, predicted values require retransformation. If the model is \(\log(Y) = X\beta + u\) with \(u \sim N(0, \sigma^2)\), then
 
-\[ \mathbb{E}[Y \mid X] = e^{X\beta + \sigma^2/2} \approx e^{\hat{X\beta}} \cdot e^{\hat{\sigma}^2/2} \]
+\[
+\mathbb{E}[Y \mid X] = e^{X\beta + \sigma^2/2} \approx e^{\hat{X\beta}} \cdot e^{\hat{\sigma}^2/2}
+\]
 
 Omitting the correction factor \(e^{\hat{\sigma}^2/2}\) systematically underestimates \(\mathbb{E}[Y]\).
 
@@ -955,7 +1080,9 @@ Omitting the correction factor \(e^{\hat{\sigma}^2/2}\) systematically underesti
 
 A <strong>dummy variable</strong> (or indicator variable) takes only two values: 1 if some condition holds, 0 otherwise. For example, in a housing price regression, `colonial` = 1 if the house is colonial style, 0 otherwise. The regression
 
-\[ \text{price}_i = \beta_0 + \beta_1 \text{colonial}_i + u_i \]
+\[
+\text{price}_i = \beta_0 + \beta_1 \text{colonial}_i + u_i
+\]
 
 gives \(\hat{\beta}_0 = \bar{Y}_{\text{non-colonial}}\) (the average price of non-colonial houses, i.e., the intercept for the base group) and \(\hat{\beta}_1 = \bar{Y}_{\text{colonial}} - \bar{Y}_{\text{non-colonial}}\) (the difference in means). This is exactly equivalent to the pooled two-sample t-test with equal variance. The t-statistic on \(\hat{\beta}_1\) tests \(H_0: \mu_{\text{colonial}} = \mu_{\text{non-colonial}}\).
 
@@ -965,7 +1092,9 @@ gives \(\hat{\beta}_0 = \bar{Y}_{\text{non-colonial}}\) (the average price of no
 
 <strong>Interaction terms</strong> between a dummy variable \(D\) and a continuous variable \(X\) allow the slope of \(X\) to differ across groups. Consider:
 
-\[ Y_i = \beta_0 + \beta_1 X_i + \beta_2 D_i + \beta_3 (D_i \cdot X_i) + u_i \]
+\[
+Y_i = \beta_0 + \beta_1 X_i + \beta_2 D_i + \beta_3 (D_i \cdot X_i) + u_i
+\]
 
 For \(D = 0\) (base group): \(\mathbb{E}[Y \mid X, D=0] = \beta_0 + \beta_1 X\)
 
@@ -975,7 +1104,9 @@ Thus \(\beta_2\) shifts the intercept and \(\beta_3\) shifts the slope. Testing 
 
 For example, in a wage regression including a female dummy and its interaction with education:
 
-\[ \widehat{\log(\text{wage})} = \hat{\beta}_0 + \hat{\beta}_1\,\text{educ} + \hat{\beta}_2\,\text{female} + \hat{\beta}_3\,(\text{female} \times \text{educ}) \]
+\[
+\widehat{\log(\text{wage})} = \hat{\beta}_0 + \hat{\beta}_1\,\text{educ} + \hat{\beta}_2\,\text{female} + \hat{\beta}_3\,(\text{female} \times \text{educ})
+\]
 
 \(\hat{\beta}_3 < 0\) would indicate that the return to education is lower for women than for men.
 
@@ -983,11 +1114,15 @@ For example, in a wage regression including a female dummy and its interaction w
 
 Using PSID 1982 data, a simple comparison of means shows a large raw wage gap:
 
-\[ \widehat{\text{wage}} = 1200.35 - 464.53\,\text{genderfemale} \]
+\[
+\widehat{\text{wage}} = 1200.35 - 464.53\,\text{genderfemale}
+\]
 
 Controlling for experience, education, union status, occupation, industry, ethnicity, marital status, and region dramatically reduces this gap to:
 
-\[ \widehat{\log(\text{wage})} = 6.053 - 0.307\,\text{genderfemale} + 0.061\,\text{education} + \cdots \]
+\[
+\widehat{\log(\text{wage})} = 6.053 - 0.307\,\text{genderfemale} + 0.061\,\text{education} + \cdots
+\]
 
 The controlled gap (approximately 26% lower earnings for women with otherwise similar characteristics) is substantially smaller than the raw gap. However, interpreting this residual 26% as discrimination is hazardous: characteristics that we cannot observe (e.g., motivation, negotiating behaviour, job preferences) may still differ systematically between men and women and would need to be controlled for before drawing causal conclusions.
 
@@ -995,7 +1130,9 @@ The controlled gap (approximately 26% lower earnings for women with otherwise si
 
 When the dependent variable is binary (\(Y_i \in \{0, 1\}\)), applying OLS directly is called the <strong>Linear Probability Model</strong>. The predicted value \(\hat{Y}_i\) is interpreted as the estimated probability that \(Y_i = 1\):
 
-\[ \Pr(Y_i = 1 \mid X_i) = \beta_0 + \beta_1 X_i + \cdots + \beta_k X_{ki} \]
+\[
+\Pr(Y_i = 1 \mid X_i) = \beta_0 + \beta_1 X_i + \cdots + \beta_k X_{ki}
+\]
 
 The coefficient \(\beta_j\) is the marginal effect of \(X_j\) on the probability of \(Y = 1\), holding other regressors fixed.
 
@@ -1020,7 +1157,9 @@ Dummy variables representing participation in a programme (e.g., job training gr
 
 <strong>Heteroskedasticity</strong> occurs when the variance of the error term is not constant across observations:
 
-\[ \text{Var}(u_i \mid X_i) = \sigma_i^2 \quad (\text{varies with } i) \]
+\[
+\text{Var}(u_i \mid X_i) = \sigma_i^2 \quad (\text{varies with } i)
+\]
 
 instead of the homoskedastic assumption \(\text{Var}(u_i \mid X_i) = \sigma^2\).
 
@@ -1035,11 +1174,15 @@ A simulation makes this vivid. With homoskedastic errors, the reported standard 
 
 The solution to invalid standard errors under heteroskedasticity is to use <strong>heteroskedasticity-robust</strong> (or <strong>sandwich</strong>) standard errors. The standard OLS variance estimator
 
-\[ \widehat{\text{Var}}_{\text{OLS}}(\hat{\beta}_1) = \frac{\hat{\sigma}^2}{\sum(x_i - \bar{x})^2} \]
+\[
+\widehat{\text{Var}}_{\text{OLS}}(\hat{\beta}_1) = \frac{\hat{\sigma}^2}{\sum(x_i - \bar{x})^2}
+\]
 
 is replaced by the HC (heteroskedasticity-consistent) estimator:
 
-\[ \widehat{\text{Var}}_{\text{HC}}(\hat{\beta}_1) = \frac{\sum_{i=1}^n (x_i - \bar{x})^2 \hat{u}_i^2}{\left[\sum_{i=1}^n (x_i - \bar{x})^2\right]^2} \]
+\[
+\widehat{\text{Var}}_{\text{HC}}(\hat{\beta}_1) = \frac{\sum_{i=1}^n (x_i - \bar{x})^2 \hat{u}_i^2}{\left[\sum_{i=1}^n (x_i - \bar{x})^2\right]^2}
+\]
 
 There are several versions (HC0, HC1, HC2, HC3), differing in how they adjust the residuals. All are asymptotically equivalent. In R:
 
@@ -1074,7 +1217,9 @@ If the BP or White test rejects \(H_0\), the appropriate response is to use robu
 
 If the form of heteroskedasticity is known — say, \(\text{Var}(u_i \mid X_i) = \sigma^2 h(X_i)\) for some known function \(h\) — we can achieve efficiency by dividing the entire regression equation by \(\sqrt{h(X_i)}\). This is equivalent to <strong>Weighted Least Squares (WLS)</strong> with weights \(w_i = 1/h(X_i)\):
 
-\[ \min_{\beta} \sum_{i=1}^n \frac{(y_i - \beta_0 - \beta_1 x_{1i} - \cdots)^2}{h(x_i)} \]
+\[
+\min_{\beta} \sum_{i=1}^n \frac{(y_i - \beta_0 - \beta_1 x_{1i} - \cdots)^2}{h(x_i)}
+\]
 
 The WLS estimator is BLUE under the correctly specified heteroskedastic model.
 
@@ -1097,7 +1242,9 @@ FGLS is asymptotically more efficient than OLS but is not guaranteed to be bette
 
 If the true relationship between \(Y\) and \(X\) is nonlinear but the estimated model is linear, the model is <strong>misspecified</strong>. A simulation example: if the true DGP is
 
-\[ y = 1 + x_1 + x_2 - 0.3 x_2^2 + u \]
+\[
+y = 1 + x_1 + x_2 - 0.3 x_2^2 + u
+\]
 
 but we estimate \(y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + u\) (omitting \(x_2^2\)), we get biased estimates for all coefficients — not just \(\beta_2\). This is because \(x_2^2\) is correlated with \(x_2\) (and often with \(x_1\)), so omitting it contaminates all coefficients.
 
@@ -1143,13 +1290,17 @@ summary(res_lad)   # tau = 0.5 by default (median regression)
 
 When different subgroups may follow different regression functions, we can test this via interaction terms. With a continuous variable \(X\) and binary variable \(D\) (e.g., female), the interaction model
 
-\[ Y_i = \beta_0 + \beta_1 X_i + \beta_2 D_i + \beta_3 (D_i \cdot X_i) + u_i \]
+\[
+Y_i = \beta_0 + \beta_1 X_i + \beta_2 D_i + \beta_3 (D_i \cdot X_i) + u_i
+\]
 
 allows both intercepts and slopes to differ. An F-test of \(H_0: \beta_2 = \beta_3 = 0\) tests the null that the regression function is identical across groups. Alternatively, one can estimate separate regressions for each group and compare.
 
 For example, with wage, education, and gender:
 
-\[ \widehat{\text{wage}} = -4.808 + 0.645\,\text{educ} - 0.184(\text{female} \times \text{educ}) + 2.893\,\text{female} \]
+\[
+\widehat{\text{wage}} = -4.808 + 0.645\,\text{educ} - 0.184(\text{female} \times \text{educ}) + 2.893\,\text{female}
+\]
 
 The interaction coefficient \(-0.184\) indicates that the return to education is 0.184 per year lower for women than for men. An F-test confirms whether this differential is statistically significant.
 
@@ -1166,6 +1317,7 @@ The classical assumptions (A1–A6) include normality of the error term (A6). Ho
 <div class="definition"><strong>Theorem 1 (Consistency):</strong> Under assumptions A1–A4, the OLS estimator \(\hat{\beta}_j\) is consistent for all \(j\). This result also holds under the weaker assumption A4': \(\mathbb{E}[u] = 0\) and \(\text{Cov}(x_j, u) = 0\) for all \(j\) (zero mean and zero covariance, but not necessarily full zero conditional mean).</div>
 
 <div class="definition"><strong>Theorem 2 (Asymptotic Normality):</strong> Under assumptions A1–A5 (normality not required), as \(n \to \infty\):
+
 \[
 \frac{\hat{\beta}_j - \beta_j}{\hat{\sigma}_{\beta_j}} \xrightarrow{d} \mathcal{N}(0,1)
 \]
@@ -1182,12 +1334,18 @@ The <strong>bootstrap</strong> is a simulation-based method for conducting infer
 The standard t-test uses critical values from the t-distribution (or normal). The bootstrap replaces these with critical values computed directly from the data. The procedure for testing \(H_0: \mu = c\):
 
 1. Compute the test statistic from the original sample:
-\[ t = \frac{\bar{x} - c}{s/\sqrt{n}} \]
+
+\[
+t = \frac{\bar{x} - c}{s/\sqrt{n}}
+\]
 
 2. Generate \(B\) <strong>bootstrap samples</strong> by sampling with replacement from the original data \(\{x_1, \ldots, x_n\}\).
 
 3. For each bootstrap sample \(b\), compute the bootstrap test statistic:
-\[ t^<em>_b = \frac{\bar{x}^</em>_b - \bar{x}}{s^*_b/\sqrt{n}} \]
+
+\[
+t^<em>_b = \frac{\bar{x}^</em>_b - \bar{x}}{s^*_b/\sqrt{n}}
+\]
 Note: the null value \(c\) is replaced by \(\bar{x}\), so the distribution of \(t^*\) is centred under what the data imply.
 
 4. Use the empirical 2.5th and 97.5th percentiles of \(\{t^<em>_1, \ldots, t^</em>_B\}\) as the bootstrap critical values. Reject if \(t\) falls outside this range.
@@ -1243,7 +1401,9 @@ The bootstrap standard error is the standard deviation of the bootstrap distribu
 
 The <strong>Fair model</strong> (Ray Fair, Yale) predicts the Democratic share of the two-party presidential vote using macroeconomic variables. The model estimated on elections from 1916–2012 is:
 
-\[ \widehat{VP} = 47.754 + 0.667\,I \cdot G - 0.690\,I \cdot P + 0.968\,I \cdot Z + 3.008\,\text{DPER} - 3.805\,\text{DUR} - 1.563\,I + 4.892\,\text{WAR} \]
+\[
+\widehat{VP} = 47.754 + 0.667\,I \cdot G - 0.690\,I \cdot P + 0.968\,I \cdot Z + 3.008\,\text{DPER} - 3.805\,\text{DUR} - 1.563\,I + 4.892\,\text{WAR}
+\]
 
 \(n = 25\), \(R^2 = 0.897\), SSR = 117.07.
 
@@ -1280,15 +1440,24 @@ The Redskins Rule (if Washington Redskins win their last home game before the el
 Using the Wooldridge campus crime dataset (\(n = 97\) universities), we can apply the statistical tools from Unit 1/Topic 1:
 
 <strong>Test 1:</strong> Is the mean crime count equal to 350? (\(H_0: \mu = 350\) vs \(H_1: \mu > 350\))
-\[ t = \frac{\sqrt{97}(\bar{x} - 350)}{s} = 0.95 < 1.645 \]
+
+\[
+t = \frac{\sqrt{97}(\bar{x} - 350)}{s} = 0.95 < 1.645
+\]
 Fail to reject at 5%.
 
 <strong>Test 2:</strong> Is mean crime equal in private vs public universities? (two-sample test with unequal variances)
-\[ t = \frac{\bar{x}_{\text{private}} - \bar{x}_{\text{public}}}{\sqrt{s_{\text{pr}}^2/n_{\text{pr}} + s_{\text{pu}}^2/n_{\text{pu}}}} = -4.85 \]
+
+\[
+t = \frac{\bar{x}_{\text{private}} - \bar{x}_{\text{public}}}{\sqrt{s_{\text{pr}}^2/n_{\text{pr}} + s_{\text{pu}}^2/n_{\text{pu}}}} = -4.85
+\]
 Strongly reject \(H_0\): public universities have far more crimes on average. But the mean enrollment is also much larger in public universities (17,473 vs 6,183). After normalising by enrollment (crimes per 100 students), the test statistic is only \(-0.19\), failing to reject — students in public and private universities are equally likely to be crime victims per capita.
 
 <strong>Test 3:</strong> Is the variance of crime equal across sectors? (F-test for equality of variances)
-\[ F = \frac{s_{\text{public}}^2}{s_{\text{private}}^2} = \frac{477.95^2}{129.44^2} = 13.63 \]
+
+\[
+F = \frac{s_{\text{public}}^2}{s_{\text{private}}^2} = \frac{477.95^2}{129.44^2} = 13.63
+\]
 Compared to the critical value \(F_{0.95}(n_{\text{pu}}-1, n_{\text{pr}}-1) \approx 2.47\), we strongly reject \(H_0: \sigma_{\text{pr}}^2 = \sigma_{\text{pu}}^2\). Crime counts are much more dispersed in public universities.
 
 ---

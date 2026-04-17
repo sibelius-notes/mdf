@@ -264,6 +264,7 @@ The Gauss-Weingarten equations express every second partial derivative of the su
 \[
 (h_{11})_v - (h_{12})_u = h_{11}\Gamma^1_{12} + h_{12}(\Gamma^2_{12} - \Gamma^1_{11}) - h_{22}\Gamma^2_{11},
 \]
+
 \[
 (h_{12})_v - (h_{22})_u = h_{11}\Gamma^1_{22} + h_{12}(\Gamma^2_{22} - \Gamma^1_{12}) - h_{22}\Gamma^2_{12},
 \]
@@ -344,6 +345,7 @@ These reduce to the **geodesic equations**:
 \[
 u'' + \Gamma^1_{11}(u')^2 + 2\Gamma^1_{12} u'v' + \Gamma^1_{22}(v')^2 = 0,
 \]
+
 \[
 v'' + \Gamma^2_{11}(u')^2 + 2\Gamma^2_{12} u'v' + \Gamma^2_{22}(v')^2 = 0.
 \]
@@ -392,6 +394,7 @@ for a smooth function \(\theta(s)\) (unique up to \(2\pi\). This \(\theta\) meas
 **Theorem 3.13** (Geodesic Curvature in Orthogonal Coordinates): With notation as above:
 1. Writing \(\beta(s) = (u(s), v(s))\), we have \(\cos\theta = \sqrt{g_{11}}\, u'\) and \(\sin\theta = \sqrt{g_{22}}\, v'\).
 2. The geodesic curvature satisfies
+
 \[
 k_g = \theta' + k_1 \cos\theta + k_2 \sin\theta.
 \]
@@ -626,8 +629,9 @@ The following classical theorems are all special cases of a single unified theor
 \]
 
 **Stokes' Theorem**: For a surface \(\Sigma\) in \(\mathbb{R}^3\) with boundary curve \(\partial\Sigma\):
-\(
-\iint_\Sigma \(\nabla \times F) \cdot dA = \oint_{\partial \Sigma} F \cdot dL.
+
+\[
+\iint_\Sigma (\nabla \times F) \cdot dA = \oint_{\partial \Sigma} F \cdot dL.
 \)
 
 ### Simplices, Chains, and the Boundary Operator
@@ -845,6 +849,7 @@ Since the determinant is \((n-1)\)-linear and alternating, the cross product is 
 5. **Volume formula**: \(|X(u_1, \ldots, u_{n-1})| = V(u_1, \ldots, u_{n-1})\).
 6. **Generalized Binet formula**: \(X(u_1,\ldots,u_{n-1}) \cdot X(v_1,\ldots,v_{n-1}) = \det(B^T A)\).
 7. **Iterated cross product**:
+
 \[
 X\big(u_1,\ldots,u_{n-2}, X(v_1,\ldots,v_{n-1})\big) = \sum_{i=1}^{n-1} (-1)^{n+i} \det\big((B^T A)^{(i)}\big) v_i
 \]

@@ -40,14 +40,20 @@ This chapter reviews key concepts from MATH 136 (subspaces, bases, dimension, li
 <div class="theorem">
 
 <strong>Theorem 7.1.4 (Dimension Theorem).</strong> Let \(A\) be an \(m \times n\) matrix. Then
-\[\text{rank}\, A + \dim \text{Null}(A) = n\]
+
+\[
+\text{rank}\, A + \dim \text{Null}(A) = n
+\]
 
 </div>
 
 <div class="corollary">
 
 <strong>Corollary 7.1.5.</strong> Let \(A\) be an \(m \times n\) matrix with \(\text{rank}\, A = r\). Then
-\[\dim \text{Null}(A) = n - r \qquad \dim \text{Null}(A^T) = m - r\]
+
+\[
+\dim \text{Null}(A) = n - r \qquad \dim \text{Null}(A^T) = m - r
+\]
 
 </div>
 
@@ -70,7 +76,10 @@ Recall that every linear mapping \(L : \mathbb{R}^n \to \mathbb{R}^m\) has a sta
 <div class="theorem">
 
 <strong>Theorem 7.2.3.</strong> Let \(L : \mathbb{R}^n \to \mathbb{R}^m\) be a linear mapping. Then
-\[\dim \text{Range}(L) + \dim \text{Ker}(L) = \dim(\mathbb{R}^n)\]
+
+\[
+\dim \text{Range}(L) + \dim \text{Ker}(L) = \dim(\mathbb{R}^n)
+\]
 
 </div>
 
@@ -85,7 +94,10 @@ This chapter generalizes linear mappings from \(\mathbb{R}^n \to \mathbb{R}^m\) 
 <div class="definition">
 
 <strong>Definition (Linear Mapping).</strong> Let \(V\) and \(W\) be vector spaces. A mapping \(L : V \to W\) is called linear if
-\[L(s\vec{x} + t\vec{y}) = sL(\vec{x}) + tL(\vec{y})\]
+
+\[
+L(s\vec{x} + t\vec{y}) = sL(\vec{x}) + tL(\vec{y})
+\]
 for all \(\vec{x}, \vec{y} \in V\) and \(s, t \in \mathbb{R}\).
 
 </div>
@@ -137,7 +149,10 @@ for all \(\vec{x}, \vec{y} \in V\) and \(s, t \in \mathbb{R}\).
 <div class="theorem">
 
 <strong>Theorem 8.2.2 (Rank-Nullity Theorem).</strong> Let \(V\) be an \(n\)-dimensional vector space and let \(W\) be a vector space. If \(L : V \to W\) is linear, then
-\[\text{rank}(L) + \text{nullity}(L) = n\]
+
+\[
+\text{rank}(L) + \text{nullity}(L) = n
+\]
 
 </div>
 
@@ -150,7 +165,10 @@ Using coordinate vectors, every linear mapping between finite-dimensional vector
 <div class="definition">
 
 <strong>Definition (Matrix of a Linear Mapping).</strong> Suppose \(B = \{\vec{v}_1, \ldots, \vec{v}_n\}\) is a basis for \(V\) and \(C\) is a basis for a finite-dimensional vector space \(W\), and let \(L : V \to W\) be linear. Then the matrix of \(L\) with respect to bases \(B\) and \(C\) is
-\[{}_C[L]_B = \begin{bmatrix} [L(\vec{v}_1)]_C & \cdots & [L(\vec{v}_n)]_C \end{bmatrix}\]
+
+\[
+{}_C[L]_B = \begin{bmatrix} [L(\vec{v}_1)]_C & \cdots & [L(\vec{v}_n)]_C \end{bmatrix}
+\]
 It satisfies \([L(\vec{x})]_C = {}_C[L]_B [\vec{x}]_B\) for all \(\vec{x} \in V\).
 
 </div>
@@ -158,7 +176,10 @@ It satisfies \([L(\vec{x})]_C = {}_C[L]_B [\vec{x}]_B\) for all \(\vec{x} \in V\
 <div class="definition">
 
 <strong>Definition (Matrix of a Linear Operator).</strong> Suppose \(B = \{\vec{v}_1, \ldots, \vec{v}_n\}\) is a basis for \(V\) and \(L : V \to V\) is a linear operator. Then the \(B\)-matrix of \(L\) is
-\[[L]_B = \begin{bmatrix} [L(\vec{v}_1)]_B & \cdots & [L(\vec{v}_n)]_B \end{bmatrix}\]
+
+\[
+[L]_B = \begin{bmatrix} [L(\vec{v}_1)]_B & \cdots & [L(\vec{v}_n)]_B \end{bmatrix}
+\]
 It satisfies \([L(\vec{x})]_B = [L]_B [\vec{x}]_B\) for all \(\vec{x} \in V\).
 
 </div>
@@ -286,7 +307,10 @@ Important examples include the standard dot product on \(\mathbb{R}^n\), the tra
 <div class="theorem">
 
 <strong>Theorem 9.2.4 (Coordinates w.r.t. Orthogonal Basis).</strong> If \(S = \{\vec{v}_1, \ldots, \vec{v}_n\}\) is an orthogonal basis for an inner product space \(V\) and \(\vec{v} \in V\), then
-\[\vec{v} = \frac{\langle \vec{v}, \vec{v}_1 \rangle}{\|\vec{v}_1\|^2}\vec{v}_1 + \cdots + \frac{\langle \vec{v}, \vec{v}_n \rangle}{\|\vec{v}_n\|^2}\vec{v}_n\]
+
+\[
+\vec{v} = \frac{\langle \vec{v}, \vec{v}_1 \rangle}{\|\vec{v}_1\|^2}\vec{v}_1 + \cdots + \frac{\langle \vec{v}, \vec{v}_n \rangle}{\|\vec{v}_n\|^2}\vec{v}_n
+\]
 
 </div>
 
@@ -299,7 +323,10 @@ Important examples include the standard dot product on \(\mathbb{R}^n\), the tra
 <div class="theorem">
 
 <strong>Theorem 9.2.5 (Coordinates w.r.t. Orthonormal Basis).</strong> If \(B = \{\vec{v}_1, \ldots, \vec{v}_n\}\) is an orthonormal basis for \(V\) and \(\vec{v} \in V\), then
-\[\vec{v} = \langle \vec{v}, \vec{v}_1 \rangle \vec{v}_1 + \cdots + \langle \vec{v}, \vec{v}_n \rangle \vec{v}_n\]
+
+\[
+\vec{v} = \langle \vec{v}, \vec{v}_1 \rangle \vec{v}_1 + \cdots + \langle \vec{v}, \vec{v}_n \rangle \vec{v}_n
+\]
 
 </div>
 
@@ -336,9 +363,18 @@ Given any basis for a subspace of an inner product space, the Gram-Schmidt proce
 <div class="theorem">
 
 <strong>Theorem 9.3.1 (Gram-Schmidt Orthogonalization).</strong> Let \(W\) be a subspace of an inner product space with basis \(\{\vec{w}_1, \ldots, \vec{w}_k\}\). Define successively:
-\[\vec{v}_1 = \vec{w}_1\]
-\[\vec{v}_2 = \vec{w}_2 - \frac{\langle \vec{w}_2, \vec{v}_1 \rangle}{\|\vec{v}_1\|^2}\vec{v}_1\]
-\[\vec{v}_i = \vec{w}_i - \frac{\langle \vec{w}_i, \vec{v}_1 \rangle}{\|\vec{v}_1\|^2}\vec{v}_1 - \frac{\langle \vec{w}_i, \vec{v}_2 \rangle}{\|\vec{v}_2\|^2}\vec{v}_2 - \cdots - \frac{\langle \vec{w}_i, \vec{v}_{i-1} \rangle}{\|\vec{v}_{i-1}\|^2}\vec{v}_{i-1}\]
+
+\[
+\vec{v}_1 = \vec{w}_1
+\]
+
+\[
+\vec{v}_2 = \vec{w}_2 - \frac{\langle \vec{w}_2, \vec{v}_1 \rangle}{\|\vec{v}_1\|^2}\vec{v}_1
+\]
+
+\[
+\vec{v}_i = \vec{w}_i - \frac{\langle \vec{w}_i, \vec{v}_1 \rangle}{\|\vec{v}_1\|^2}\vec{v}_1 - \frac{\langle \vec{w}_i, \vec{v}_2 \rangle}{\|\vec{v}_2\|^2}\vec{v}_2 - \cdots - \frac{\langle \vec{w}_i, \vec{v}_{i-1} \rangle}{\|\vec{v}_{i-1}\|^2}\vec{v}_{i-1}
+\]
 for \(3 \leq i \leq k\). Then \(\text{Span}\{\vec{v}_1, \ldots, \vec{v}_i\} = \text{Span}\{\vec{w}_1, \ldots, \vec{w}_i\}\) for \(1 \leq i \leq k\). In particular, \(\{\vec{v}_1, \ldots, \vec{v}_k\}\) is an orthogonal basis for \(W\).
 
 </div>
@@ -392,7 +428,10 @@ If a vector \(\vec{v}_i\) turns out to be \(\vec{0}\), this indicates that \(\ve
 <div class="definition">
 
 <strong>Definition (Orthogonal Complement).</strong> Let \(W\) be a subspace of an inner product space \(V\). The orthogonal complement of \(W\) is
-\[W^\perp = \{\vec{v} \in V \mid \langle \vec{w}, \vec{v} \rangle = 0 \text{ for all } \vec{w} \in W\}\]
+
+\[
+W^\perp = \{\vec{v} \in V \mid \langle \vec{w}, \vec{v} \rangle = 0 \text{ for all } \vec{w} \in W\}
+\]
 
 </div>
 
@@ -416,8 +455,14 @@ If a vector \(\vec{v}_i\) turns out to be \(\vec{0}\), this indicates that \(\ve
 <div class="definition">
 
 <strong>Definition (Projection, Perpendicular).</strong> Suppose \(W\) is a \(k\)-dimensional subspace of an inner product space \(V\) and \(\{\vec{v}_1, \ldots, \vec{v}_k\}\) is an orthogonal basis for \(W\). For any \(\vec{v} \in V\):
-\[\text{proj}_W \vec{v} = \frac{\langle \vec{v}, \vec{v}_1 \rangle}{\|\vec{v}_1\|^2}\vec{v}_1 + \cdots + \frac{\langle \vec{v}, \vec{v}_k \rangle}{\|\vec{v}_k\|^2}\vec{v}_k\]
-\[\text{perp}_W \vec{v} = \vec{v} - \text{proj}_W \vec{v}\]
+
+\[
+\text{proj}_W \vec{v} = \frac{\langle \vec{v}, \vec{v}_1 \rangle}{\|\vec{v}_1\|^2}\vec{v}_1 + \cdots + \frac{\langle \vec{v}, \vec{v}_k \rangle}{\|\vec{v}_k\|^2}\vec{v}_k
+\]
+
+\[
+\text{perp}_W \vec{v} = \vec{v} - \text{proj}_W \vec{v}
+\]
 
 </div>
 
@@ -462,7 +507,10 @@ If a vector \(\vec{v}_i\) turns out to be \(\vec{0}\), this indicates that \(\ve
 <div class="theorem">
 
 <strong>Theorem 9.5.3 (The Fundamental Theorem of Linear Algebra).</strong> Let \(A\) be an \(m \times n\) matrix. Then \(\text{Col}(A)^\perp = \text{Null}(A^T)\) and \(\text{Row}(A)^\perp = \text{Null}(A)\). In particular,
-\[\mathbb{R}^n = \text{Row}(A) \oplus \text{Null}(A) \qquad \mathbb{R}^m = \text{Col}(A) \oplus \text{Null}(A^T)\]
+
+\[
+\mathbb{R}^n = \text{Row}(A) \oplus \text{Null}(A) \qquad \mathbb{R}^m = \text{Col}(A) \oplus \text{Null}(A^T)
+\]
 
 </div>
 
@@ -519,7 +567,10 @@ By the Fundamental Theorem, \(\vec{b} - A\vec{x} \in \text{Null}(A^T)\), giving 
 <div class="theorem">
 
 <strong>Theorem 9.6.2 (Least Squares).</strong> Given data points \((x_1, y_1), \ldots, (x_m, y_m)\), let
-\[X = \begin{bmatrix} 1 & x_1 & \cdots & x_1^n \\ \vdots & \vdots & & \vdots \\ 1 & x_m & \cdots & x_m^n \end{bmatrix}, \quad \vec{y} = \begin{bmatrix} y_1 \\ \vdots \\ y_m \end{bmatrix}\]
+
+\[
+X = \begin{bmatrix} 1 & x_1 & \cdots & x_1^n \\ \vdots & \vdots & & \vdots \\ 1 & x_m & \cdots & x_m^n \end{bmatrix}, \quad \vec{y} = \begin{bmatrix} y_1 \\ \vdots \\ y_m \end{bmatrix}
+\]
 If \(\vec{a}\) solves the normal system \(X^T X \vec{a} = X^T \vec{y}\), then \(p(x) = a_0 + a_1 x + \cdots + a_n x^n\) is the best fitting polynomial of degree \(n\). Moreover, if at least \(n+1\) of the \(x_i\) are distinct, then \(X^T X\) is invertible and \(\vec{a} = (X^T X)^{-1} X^T \vec{y}\).
 
 </div>
@@ -918,7 +969,10 @@ The standard dot product on \(\mathbb{C}^n\) does not yield a non-negative real 
 <div class="definition">
 
 <strong>Definition (Standard Inner Product on \(\mathbb{C}^n\)).</strong> For \(\vec{z}, \vec{w} \in \mathbb{C}^n\),
-\[\langle \vec{z}, \vec{w} \rangle = \vec{z} \cdot \bar{\vec{w}} = z_1 \bar{w}_1 + \cdots + z_n \bar{w}_n\]
+
+\[
+\langle \vec{z}, \vec{w} \rangle = \vec{z} \cdot \bar{\vec{w}} = z_1 \bar{w}_1 + \cdots + z_n \bar{w}_n
+\]
 
 </div>
 
@@ -1119,7 +1173,10 @@ Hermitian, skew-Hermitian, unitary, and real orthogonal matrices are all normal.
 <div class="theorem">
 
 <strong>Theorem 11.6.1 (Cayley-Hamilton Theorem).</strong> If \(A \in M_{n \times n}(\mathbb{C})\), then \(A\) is a root of its characteristic polynomial \(C(\lambda)\). That is, if \(C(\lambda) = c_n \lambda^n + \cdots + c_1 \lambda + c_0\), then
-\[C(A) = c_n A^n + c_{n-1} A^{n-1} + \cdots + c_1 A + c_0 I = O\]
+
+\[
+C(A) = c_n A^n + c_{n-1} A^{n-1} + \cdots + c_1 A + c_0 I = O
+\]
 
 </div>
 

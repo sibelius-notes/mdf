@@ -11,6 +11,7 @@ subjects: "AMATH"
 A good portion of this course is devoted to the study of **linear, second-order ordinary differential equations** (ODEs). You have already seen a special case of these in AMATH 250 or 251, namely, linear, second-order DEs with constant coefficients. With these ODEs, one is already able to model a number of interesting natural phenomena. But linear, second order ODEs arise in a wide variety of applications in both classical and quantum mechanics.
 
 <div class="definition"><strong>Definition (Ordinary Differential Equation).</strong> An <em>ordinary differential equation</em> (ODE) is an equation involving a real-valued function \( y(x) \) and one or more of its derivatives \( y'(x), y''(x), \ldots \). This equation is satisfied over some nontrivial interval \( I \subseteq \mathbb{R} \). Any ODE may be written in the generic form
+
 \[
 F(y, y', y'', \ldots, y^{(n)}; x) = 0.
 \]
@@ -57,6 +58,7 @@ y(x_0) = A, \qquad y'(x_0) = B,
 where \( A, B \in \mathbb{R} \). Geometrically, this selects the unique solution curve passing through the point \( (x_0, A) \) with tangent slope \( B \) there.
 
 <div class="example"><strong>Example.</strong> The ODE \( y'' + y = \cos 2x \) has general solution
+
 \[
 y_G(x) = c_1 \cos x + c_2 \sin x - \frac{1}{3}\cos 2x.
 \]
@@ -130,6 +132,7 @@ For example, solutions to \( y'' + (1+x)y = 0 \) (with \( q(x) = 1 + x \) increa
 ## Existence and Uniqueness for IVPs
 
 <div class="theorem"><strong>Theorem (Existence-Uniqueness).</strong> Suppose that \( P \), \( Q \), and \( R \) are continuous on a closed interval \( [a,b] \). Let \( x_0 \in [a,b] \). Then for any \( A, B \in \mathbb{R} \), there exists a <em>unique</em> solution to
+
 \[
 y'' + P(x)y' + Q(x)y = R(x), \qquad y(x_0) = A, \quad y'(x_0) = B,
 \]
@@ -147,6 +150,7 @@ which in standard form reads \( y'' + \frac{1}{x}y' + y = 0 \). Here \( P(x) = 1
 ## The Superposition Principle
 
 <div class="theorem"><strong>Theorem (Superposition Principle).</strong> If \( y_1(x) \) and \( y_2(x) \) are any two solutions of the homogeneous DE
+
 \[
 y'' + P(x)y' + Q(x)y = 0,
 \]
@@ -154,6 +158,7 @@ then \( y(x) = c_1 y_1(x) + c_2 y_2(x) \) is also a solution for any \( c_1, c_2
 </div>
 
 <div class="proof"><strong>Proof.</strong> Substitute \( y = c_1 y_1 + c_2 y_2 \) into the DE:
+
 \[
 y'' + Py' + Qy = c_1[y_1'' + Py_1' + Qy_1] + c_2[y_2'' + Py_2' + Qy_2] = c_1 \cdot 0 + c_2 \cdot 0 = 0. \quad \blacksquare
 \]
@@ -164,6 +169,7 @@ This confirms that the set of all solutions to the homogeneous DE forms a **line
 ## Linear Independence and the Wronskian
 
 <div class="definition"><strong>Definition (Linear Independence).</strong> Two functions \( f(x) \) and \( g(x) \) are <em>linearly independent</em> over \( [a,b] \) if
+
 \[
 c_1 f(x) + c_2 g(x) = 0 \quad \text{for all } x \in [a,b]
 \]
@@ -171,6 +177,7 @@ implies \( c_1 = c_2 = 0 \). Otherwise they are <em>linearly dependent</em>, mea
 </div>
 
 <div class="definition"><strong>Definition (Wronskian).</strong> The <em>Wronskian</em> of two differentiable functions \( y_1 \) and \( y_2 \) is
+
 \[
 W(y_1, y_2)(x) = \begin{vmatrix} y_1(x) & y_2(x) \\ y_1'(x) & y_2'(x) \end{vmatrix} = y_1 y_2' - y_1' y_2.
 \]
@@ -179,6 +186,7 @@ W(y_1, y_2)(x) = \begin{vmatrix} y_1(x) & y_2(x) \\ y_1'(x) & y_2'(x) \end{vmatr
 The Wronskian is the key tool for detecting linear independence of solutions to a homogeneous ODE. The following two lemmas establish the connection.
 
 <div class="theorem"><strong>Lemma (Abel's Theorem).</strong> Let \( y_1 \) and \( y_2 \) be any two solutions to the homogeneous DE on \( [a,b] \). Their Wronskian satisfies the first-order linear ODE
+
 \[
 \frac{dW}{dx} + P(x)W = 0,
 \]
@@ -191,6 +199,7 @@ Therefore \( W(x) \) is either identically zero or never zero on \( [a,b] \).
 </div>
 
 <div class="proof"><strong>Proof.</strong> Differentiate \( W = y_1 y_2' - y_1' y_2 \):
+
 \[
 W' = y_1 y_2'' - y_1'' y_2.
 \]
@@ -200,6 +209,7 @@ Since \( y_1'' = -Py_1' - Qy_1 \) and \( y_2'' = -Py_2' - Qy_2 \), substitution 
 </div>
 
 <div class="example"><strong>Example.</strong> For \( y'' + y = 0 \), we have \( y_1 = \cos x \), \( y_2 = \sin x \). Their Wronskian is
+
 \[
 W(\cos x, \sin x) = \cos x \cdot \cos x - (-\sin x)\sin x = \cos^2 x + \sin^2 x = 1 \neq 0,
 \]
@@ -209,6 +219,7 @@ confirming linear independence on all of \( \mathbb{R} \).
 ## The General Solution Theorem
 
 <div class="theorem"><strong>Theorem (Completeness of Solutions).</strong> Let \( y_1(x) \) and \( y_2(x) \) be two linearly independent solutions to the homogeneous DE on \( [a,b] \). Then the general solution — in the sense that every solution can be obtained from it — is
+
 \[
 y_h(x) = c_1 y_1(x) + c_2 y_2(x).
 \]
@@ -219,6 +230,7 @@ The proof uses the Existence-Uniqueness theorem: any solution \( y(x) \) is uniq
 ## General Solution of the Inhomogeneous DE
 
 <div class="theorem"><strong>Theorem.</strong> Let \( y_h = c_1 y_1 + c_2 y_2 \) be the general solution to the associated homogeneous DE, and let \( y_p \) be any particular solution to the inhomogeneous DE. Then the general solution to the inhomogeneous DE is
+
 \[
 y_G(x) = y_p(x) + c_1 y_1(x) + c_2 y_2(x).
 \]
@@ -284,6 +296,7 @@ y'' + P(x)y' + Q(x)y = 0,
 the point \( x = x_0 \) is an **ordinary point** if \( P(x) \) and \( Q(x) \) are analytic there (i.e., they possess convergent Taylor series in a neighbourhood of \( x_0 \)).
 
 <div class="theorem"><strong>Theorem (Series Solution at Ordinary Points).</strong> If \( P(x) \) and \( Q(x) \) both converge for \( |x - x_0| < R \), then the ODE possesses two linearly independent power series solutions
+
 \[
 y(x) = \sum_{n=0}^{\infty} a_n(x - x_0)^n
 \]
@@ -295,6 +308,7 @@ that both converge for \( |x - x_0| < R \). In particular, if \( P \) and \( Q \
 The practical procedure: substitute \( y = \sum_{n=0}^{\infty} a_n x^n \) into the DE, differentiate term by term, and collect like powers of \( x^n \). Setting each coefficient to zero yields a **recurrence relation** for the \( a_n \).
 
 <div class="example"><strong>Example (The equation \( y'' + y = 0 \)).</strong> Assume \( y = \sum_{n=0}^\infty a_n x^n \). Then
+
 \[
 y''(x) = \sum_{n=0}^{\infty}(n+2)(n+1)a_{n+2}x^n.
 \]
@@ -329,6 +343,7 @@ both with infinite radius of convergence.
 Notice that \( a_0 \) and \( a_1 \) are the two free parameters — they correspond to the initial conditions \( y(0) = a_0 \) and \( y'(0) = a_1 \).
 
 <div class="example"><strong>Example (The Airy equation \( y'' - xy = 0 \)).</strong> Here \( P = 0 \) and \( Q = -x \), both analytic everywhere. The substitution \( y = \sum a_n x^n \) yields the recurrence
+
 \[
 (n+2)(n+1)a_{n+2} = a_{n-1}, \qquad n \geq 1,
 \]
@@ -336,6 +351,7 @@ with \( a_2 = 0 \). Setting \( a_0 = 1 \), \( a_1 = 0 \) gives one solution; set
 </div>
 
 <div class="example"><strong>Example (The equation \( y'' + 2x^2 y' + xy = 0 \)).</strong> With \( P(x) = 2x^2 \) and \( Q(x) = x \), both polynomial, we substitute \( y = \sum a_n x^n \). The resulting recurrence (allowing coefficients with negative index to be zero) gives
+
 \[
 (n+2)(n+1)a_{n+2} + (2n-1)a_{n-1} = 0,
 \]
@@ -485,6 +501,7 @@ This explains why, for example, the solutions to \( y'' - y = 0 \) (i.e., \( e^x
 ## Oscillatory Solutions: The Integral Condition
 
 <div class="theorem"><strong>Theorem.</strong> Let \( u(x) \) be a nontrivial solution to \( u'' + q(x)u = 0 \), where \( q(x) > 0 \) for all \( x > 0 \). If
+
 \[
 \int_1^{\infty} q(x)\,dx = \infty,
 \]
@@ -600,6 +617,7 @@ A solution is a **fixed point** of the **Picard operator** \( T \), defined by
 ## The Lipschitz Condition
 
 <div class="definition"><strong>Definition (Lipschitz Condition).</strong> A function \( f(y,x) \) satisfies a <em>Lipschitz condition</em> in \( y \) over an interval \( I \) if there exists a constant \( K \geq 0 \) such that
+
 \[
 |f(y_1, x) - f(y_2, x)| \leq K|y_1 - y_2| \quad \text{for all } x \in I.
 \]
@@ -611,6 +629,7 @@ A sufficient condition: if \( \partial f/\partial y \) is bounded by \( K \) on 
 ## Contraction Mapping and Banach's Fixed Point Theorem
 
 <div class="definition"><strong>Definition (Contraction).</strong> An operator \( T \) on a complete metric space \( (F, d) \) is a <em>contraction mapping</em> if there exists \( 0 \leq C < 1 \) such that
+
 \[
 d(Tu, Tv) \leq C\, d(u, v) \quad \text{for all } u, v \in F.
 \]
@@ -729,6 +748,7 @@ e^{tA} = Pe^{tD}P^{-1}, \qquad e^{tD} = \mathrm{diag}(e^{\lambda_1 t}, \ldots, e
 \]
 
 <div class="example"><strong>Example.</strong> For \( A = \begin{pmatrix} 1 & 1 \\ 4 & 1 \end{pmatrix} \), the eigenvalues are \( \lambda_1 = 3 \) and \( \lambda_2 = -1 \) with eigenvectors \( \mathbf{v}_1 = (1,2)^T \) and \( \mathbf{v}_2 = (1,-2)^T \). The general solution is
+
 \[
 \mathbf{x}(t) = c_1\begin{pmatrix}1\\2\end{pmatrix}e^{3t} + c_2\begin{pmatrix}1\\-2\end{pmatrix}e^{-t}.
 \]
@@ -789,6 +809,7 @@ For a \( 2 \times 2 \) real matrix \( A \) with eigenvalues \( \lambda_1, \lambd
 The classification can be summarised in the \( (\tau, \Delta) \)-plane. The parabola \( \tau^2 = 4\Delta \) separates spiral/centre types (above) from node/saddle types (below). The \( \Delta > 0 \), \( \tau < 0 \) region corresponds to stable equilibria; \( \Delta > 0 \), \( \tau > 0 \) to unstable; \( \Delta < 0 \) to saddles.
 
 <div class="example"><strong>Example: Harmonic Oscillator.</strong> The system \( \dot{x}_1 = x_2 \), \( \dot{x}_2 = -\omega^2 x_1 \) has
+
 \[
 A = \begin{pmatrix}0 & 1 \\ -\omega^2 & 0\end{pmatrix}, \qquad \tau = 0, \quad \Delta = \omega^2 > 0.
 \]
@@ -877,6 +898,7 @@ Y(s) = \underbrace{\frac{U(s)}{s^2+ps+q}}_{Y_p(s)} + \underbrace{\frac{(s+p)y_0 
 The first term gives the particular solution (driven by \( u \)); the second gives the homogeneous solution satisfying the initial conditions.
 
 <div class="example"><strong>Example.</strong> Solve \( y'' + 3y' + 2y = e^t \), \( y(0) = 1 \), \( y'(0) = 2 \). Taking LTs:
+
 \[
 (s^2+3s+2)Y(s) - (s+5) = \frac{1}{s-1}.
 \]
@@ -942,6 +964,7 @@ Mathematically, we model such an instantaneous impulse at time \( t = a \) by a 
 ## The Dirac Delta "Function"
 
 <div class="definition"><strong>Definition (Dirac Delta).</strong> The <em>Dirac delta</em> \( \delta(t - a) \) is defined by its action on test functions:
+
 \[
 \int_{-\infty}^{\infty} \delta(t-a)\phi(t)\,dt = \phi(a),
 \]
@@ -961,6 +984,7 @@ This follows from the sifting property: \( \mathcal{L}[\delta(t-a)] = \int_0^\in
 ## Solving IVPs with Impulsive Forcing
 
 <div class="example"><strong>Example (Impulsive forcing in mechanics).</strong> A particle of mass \( m \) at rest receives an instantaneous impulse \( I \) at time \( t = a \). Newton's law with the delta forcing:
+
 \[
 m\frac{dv}{dt} = I\delta(t-a), \qquad v(0) = v_0.
 \]
@@ -973,6 +997,7 @@ Inverting: \( v(t) = v_0 + (I/m)H(t-a) \), a step change in velocity at \( t = a
 </div>
 
 <div class="example"><strong>Example (Delta forcing in a first-order DE).</strong> Suppose substance X decays at rate \( k \) but an amount \( A \) is added instantaneously at time \( a \):
+
 \[
 \frac{dx}{dt} = -kx + A\delta(t-a), \qquad x(0) = x_0.
 \]
@@ -1033,6 +1058,7 @@ For nontrivial solutions, \( \sin(\sqrt{\lambda}\,\pi) = 0 \), which means \( \s
 ## Eigenvalues and Eigenfunctions
 
 <div class="definition"><strong>Definition.</strong> For the BVP above, the values \( \lambda_n = n^2 \), \( n = 1, 2, 3, \ldots \), are called <em>eigenvalues</em>. The corresponding solutions
+
 \[
 y_n(x) = \sin(nx), \qquad n = 1, 2, 3, \ldots,
 \]
@@ -1087,6 +1113,7 @@ y'' + \lambda q(x)y = 0, \qquad y(a) = y(b) = 0, \quad q(x) > 0 \text{ on } [a,b
 This arises, for instance, from a vibrating string with variable mass density \( \rho(x) \), where \( q(x) = \rho(x)/T \) plays the role of the weight function.
 
 <div class="theorem"><strong>Theorem.</strong> The above eigenvalue problem has an infinite sequence of positive eigenvalues
+
 \[
 0 < \lambda_1 < \lambda_2 < \lambda_3 < \cdots, \qquad \lambda_n \to \infty,
 \]
@@ -1096,12 +1123,14 @@ with corresponding eigenfunctions \( u_n(x) \) forming a complete orthogonal set
 ## Orthogonality with Respect to a Weight Function
 
 <div class="theorem"><strong>Theorem (Weighted Orthogonality).</strong> If \( u_m \) and \( u_n \) are eigenfunctions corresponding to distinct eigenvalues \( \lambda_m \neq \lambda_n \), then they are orthogonal with respect to the weight function \( q(x) \):
+
 \[
 \langle u_m, u_n\rangle_q = \int_a^b u_m(x)u_n(x)q(x)\,dx = 0 \qquad (m \neq n).
 \]
 </div>
 
 <div class="proof"><strong>Proof.</strong> Multiply the DE for \( u_m \) by \( u_n \), the DE for \( u_n \) by \( u_m \), and subtract:
+
 \[
 u_m''u_n - u_m u_n'' + (\lambda_m - \lambda_n)q(x)u_m u_n = 0.
 \]
@@ -1160,6 +1189,7 @@ The completeness of the eigenfunction expansion is expressed by **Parseval's ide
 Partial sums satisfy the **Bessel inequality**: \( \sum_{n=1}^{N} c_n^2 N_n \leq \langle f, f\rangle_q \).
 
 <div class="example"><strong>Example: Fourier Sine Series.</strong> For the simple eigenvalue problem \( y'' + \lambda y = 0 \), \( y(0) = y(\pi) = 0 \) (with \( q = 1 \), \( [a,b] = [0,\pi] \)), the eigenfunctions are \( u_n = \sin nx \) with
+
 \[
 N_n = \int_0^\pi \sin^2 nx\,dx = \frac{\pi}{2}.
 \]

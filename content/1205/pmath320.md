@@ -1380,6 +1380,7 @@ If a symmetry group contains translations in two linearly independent directions
 
 <div class="proof">
 <strong>Proof (matrix trace argument).</strong> Suppose rotation by angle \(\theta\) is a symmetry, with center at the origin (we can always translate). The rotation matrix is
+
 \[
 R_\theta = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}.
 \]
@@ -1694,7 +1695,10 @@ Formally, a **sphere packing** in \(\mathbb{R}^n\) is a collection of non-overla
 
 <div class="definition">
 <strong>Packing density</strong>: The <em>density</em> \(\Delta\) of a sphere packing is the fraction of volume covered by the spheres:
-\[\Delta = \limsup_{R \to \infty} \frac{\text{Vol}(S \cap B_R) \cdot \omega_n}{\text{Vol}(B_R)},\]
+
+\[
+\Delta = \limsup_{R \to \infty} \frac{\text{Vol}(S \cap B_R) \cdot \omega_n}{\text{Vol}(B_R)},
+\]
 where \(\omega_n = \pi^{n/2}/\Gamma(n/2 + 1)\) is the volume of a unit ball in \(\mathbb{R}^n\) and the limit is taken over balls \(B_R\) of radius \(R\) centered at the origin.
 </div>
 
@@ -2080,6 +2084,7 @@ In hyperbolic geometry, the angle sum of a triangle is *less* than \(180°\), an
 
 <div class="theorem">
 <strong>Theorem (Gauss–Bonnet for hyperbolic triangles).</strong> The area of a hyperbolic triangle with angles \(\alpha, \beta, \gamma\) is
+
 \[
 \text{Area} = \pi - \alpha - \beta - \gamma.
 \]
@@ -2146,6 +2151,7 @@ In **elliptic geometry**, there are no parallel lines — any two distinct lines
 
 <div class="theorem">
 <strong>Theorem (Spherical excess).</strong> The area of a spherical triangle with angles \(\alpha, \beta, \gamma\) on a sphere of radius \(R\) is
+
 \[
 \text{Area} = R^2(\alpha + \beta + \gamma - \pi).
 \]
@@ -2229,6 +2235,7 @@ For a conic section (like the unit circle \(x^2 + y^2 = 1\)), the **polar line**
 
 <div class="theorem">
 <strong>Pascal's Theorem.</strong> If six points \(A, B, C, D, E, F\) lie on a conic (in projective order), then the three intersection points
+
 \[
 P = AB \cap DE, \quad Q = BC \cap EF, \quad R = CD \cap FA
 \]
@@ -2237,6 +2244,7 @@ are collinear (they lie on the "Pascal line").
 
 <div class="theorem">
 <strong>Brianchon's Theorem (dual).</strong> If six lines \(a, b, c, d, e, f\) are tangent to a conic, then the three lines connecting opposite vertices of the hexagon:
+
 \[
 p = (a \cap b)(d \cap e), \quad q = (b \cap c)(e \cap f), \quad r = (c \cap d)(f \cap a)
 \]
@@ -2317,6 +2325,7 @@ One of the most elegant theorems about equilateral triangles is **Napoleon's The
 
 <div class="proof">
 <strong>Proof sketch (using complex numbers).</strong> Place the vertices of the original triangle at complex numbers \(z_1, z_2, z_3\). The centroid of the equilateral triangle constructed externally on side \(z_1 z_2\) is at
+
 \[
 w_3 = \frac{z_1 + z_2}{2} + \frac{z_2 - z_1}{2} \cdot \frac{i}{\sqrt{3}} \cdot \text{(correction for equilateral)},
 \]
@@ -2706,6 +2715,7 @@ This supplementary section collects additional classical results that illuminate
 
 <div class="theorem">
 <strong>Ceva's Theorem (Giovanni Ceva, 1678).</strong> Let \(\triangle ABC\) be a triangle and \(D, E, F\) be points on sides \(BC, CA, AB\) respectively (or their extensions). The cevians \(AD, BE, CF\) are concurrent (meet at a single point) if and only if
+
 \[
 \frac{BD}{DC} \cdot \frac{CE}{EA} \cdot \frac{AF}{FB} = 1.
 \]
@@ -2749,6 +2759,7 @@ This theorem unifies many classical concurrency results:
 
 <div class="theorem">
 <strong>Menelaus's Theorem (Menelaus of Alexandria, c. 100 CE).</strong> Let \(\triangle ABC\) be a triangle and \(D, E, F\) be points on lines \(BC, CA, AB\) respectively (not all interior to the triangle). Then \(D, E, F\) are collinear if and only if
+
 \[
 \frac{BD}{DC} \cdot \frac{CE}{EA} \cdot \frac{AF}{FB} = -1,
 \]
@@ -2811,6 +2822,7 @@ The Simson line has a beautiful characterization in terms of the orthocenter: th
 
 <div class="theorem">
 <strong>Ptolemy's Theorem (Claudius Ptolemy, c. 150 CE).</strong> For a cyclic quadrilateral \(ABCD\) (inscribed in a circle), the product of the diagonals equals the sum of the products of opposite sides:
+
 \[
 AC \cdot BD = AB \cdot CD + AD \cdot BC.
 \]
@@ -2824,6 +2836,7 @@ Ptolemy's theorem has a powerful corollary: setting the quadrilateral to be a re
 
 <div class="example">
 <strong>Example (Ptolemy gives the sine addition formula).</strong> Inscribe a quadrilateral in the unit circle with \(A = 1, B = e^{i\alpha}, C = e^{i(\alpha+\beta)}, D = -1\). Computing chord lengths using the unit circle and applying Ptolemy's theorem yields
+
 \[
 \sin(\alpha + \beta) = \sin\alpha \cos\beta + \cos\alpha \sin\beta,
 \]
@@ -2968,6 +2981,7 @@ This polynomial is irreducible over \(\mathbb{Q}\) (it has no rational roots: te
 <strong>Problem 4.</strong> A comet follows a parabolic orbit with the Sun at the focus. At its closest approach (perihelion), it is at distance 1 AU from the Sun. Write the polar equation of the orbit and find the distance when the comet is moving perpendicular to the major axis (i.e., at \(\theta = 90°\)).
 
 <em>Solution.</em> A parabola with focus at origin and axis along the positive \(x\)-axis has polar equation \(r = p/(1 + \cos\theta)\) where \(p\) is the semi-latus rectum. At perihelion (\(\theta = 0\)): \(r = p/2 = 1\) AU, so \(p = 2\) AU. The orbit is:
+
 \[
 r = \frac{2}{1 + \cos\theta}.
 \]
@@ -3031,6 +3045,7 @@ However, without the symmetry assumption, a two-parameter family of conics passe
 <strong>Problem 6.</strong> Prove that every convex polyhedron has at least one face with 5 or fewer edges.
 
 <em>Solution.</em> Let the polyhedron have \(F_k\) faces with \(k\) sides (\(k \geq 3\)). Then:
+
 \[
 F = \sum_{k \geq 3} F_k, \quad 2E = \sum_{k \geq 3} k F_k \geq 3F.
 \]
@@ -3056,6 +3071,7 @@ This result explains why hexagons are the "largest" face type in the Platonic an
 <strong>Problem 7.</strong> For the icosahedron, verify the formula \(E = 4pq/(2p + 2q - pq)\) from Section 4.2.
 
 <em>Solution.</em> The icosahedron has Schläfli symbol \(\{3, 5\}\), so \(p = 3, q = 5\):
+
 \[
 E = \frac{4 \cdot 3 \cdot 5}{2 \cdot 3 + 2 \cdot 5 - 3 \cdot 5} = \frac{60}{6 + 10 - 15} = \frac{60}{1} = 60.
 \]
@@ -3517,6 +3533,7 @@ Geometry is not only about equalities (like Euler's formula) but also about **ge
 
 <div class="theorem">
 <strong>Isoperimetric Inequality.</strong> Among all closed planar curves of fixed perimeter \(L\), the circle encloses the maximum area. Equivalently, for any region \(\Omega\) in the plane with area \(A\) and boundary length \(L\):
+
 \[
 4\pi A \leq L^2,
 \]
@@ -3547,6 +3564,7 @@ A powerful generalization relates volumes of sets and their "Minkowski sums":
 
 <div class="theorem">
 <strong>Brunn-Minkowski Inequality.</strong> For convex bodies \(K, L \subset \mathbb{R}^n\),
+
 \[
 \text{Vol}(K + L)^{1/n} \geq \text{Vol}(K)^{1/n} + \text{Vol}(L)^{1/n},
 \]
@@ -3580,6 +3598,7 @@ For convenient reference, here are the most important formulas from the course:
 \[
 r = \frac{ed}{1 + e\cos\theta} \quad\text{(polar form of conic, focus at origin)}.
 \]
+
 \[
 \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1, \quad b^2 = a^2 - c^2, \quad e = c/a \quad\text{(ellipse, standard form)}.
 \]

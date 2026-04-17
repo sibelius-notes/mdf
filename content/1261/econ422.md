@@ -39,7 +39,9 @@ Key estimands:
 
 The naive comparison \( E[Y_i \mid D_i = 1] - E[Y_i \mid D_i = 0] \) decomposes as:
 
-\[ E[Y_i \mid D_i = 1] - E[Y_i \mid D_i = 0] = \underbrace{\tau_{ATT}}_{\text{ATT}} + \underbrace{E[Y_i(0)\mid D_i=1] - E[Y_i(0)\mid D_i=0]}_{\text{selection bias}} \]
+\[
+E[Y_i \mid D_i = 1] - E[Y_i \mid D_i = 0] = \underbrace{\tau_{ATT}}_{\text{ATT}} + \underbrace{E[Y_i(0)\mid D_i=1] - E[Y_i(0)\mid D_i=0]}_{\text{selection bias}}
+\]
 
 Selection bias arises because treated and untreated units have different counterfactual outcomes even absent treatment.
 
@@ -69,11 +71,15 @@ SUTVA is required for the potential outcomes notation to be well-defined. Violat
 
 In a randomized experiment, random assignment ensures \( E[Y_i(0)\mid D_i=1] = E[Y_i(0)\mid D_i=0] \), so:
 
-\[ \hat{\tau}_{ATE} = \bar{Y}_1 - \bar{Y}_0 = \frac{1}{n_1}\sum_{D_i=1}Y_i - \frac{1}{n_0}\sum_{D_i=0}Y_i \]
+\[
+\hat{\tau}_{ATE} = \bar{Y}_1 - \bar{Y}_0 = \frac{1}{n_1}\sum_{D_i=1}Y_i - \frac{1}{n_0}\sum_{D_i=0}Y_i
+\]
 
 This is the **Neyman estimator**. Its variance is:
 
-\[ \text{Var}(\hat{\tau}) = \frac{\sigma_1^2}{n_1} + \frac{\sigma_0^2}{n_0} \]
+\[
+\text{Var}(\hat{\tau}) = \frac{\sigma_1^2}{n_1} + \frac{\sigma_0^2}{n_0}
+\]
 
 where \( \sigma_j^2 = \text{Var}(Y_i(j)) \). Under the **sharp null hypothesis** \( H_0: Y_i(1) = Y_i(0) \) for all \( i \), **randomization inference** (Fisher's exact p-value) is exact and requires no distributional assumptions.
 
@@ -81,11 +87,15 @@ where \( \sigma_j^2 = \text{Var}(Y_i(j)) \). Under the **sharp null hypothesis**
 
 Even in a randomized experiment, including pre-treatment covariates \( \mathbf{X}_i \) in a regression:
 
-\[ Y_i = \alpha + \tau D_i + \mathbf{X}_i^{\top}\boldsymbol{\gamma} + \varepsilon_i \]
+\[
+Y_i = \alpha + \tau D_i + \mathbf{X}_i^{\top}\boldsymbol{\gamma} + \varepsilon_i
+\]
 
 can improve **precision** by reducing residual variance, without affecting consistency of \( \hat{\tau} \). This is the Lin (2013) estimator with saturated interactions:
 
-\[ Y_i = \alpha + \tau D_i + (\mathbf{X}_i - \bar{\mathbf{X}})^{\top}\boldsymbol{\gamma} + D_i(\mathbf{X}_i - \bar{\mathbf{X}})^{\top}\boldsymbol{\delta} + \varepsilon_i \]
+\[
+Y_i = \alpha + \tau D_i + (\mathbf{X}_i - \bar{\mathbf{X}})^{\top}\boldsymbol{\gamma} + D_i(\mathbf{X}_i - \bar{\mathbf{X}})^{\top}\boldsymbol{\delta} + \varepsilon_i
+\]
 
 The coefficient \( \hat{\tau} \) estimates the ATE without any bias even if the regression model is misspecified.
 
@@ -97,7 +107,10 @@ The coefficient \( \hat{\tau} \) estimates the ATE without any bias even if the 
 
 <div class="definition">
 <strong>Propensity Score (Rosenbaum & Rubin 1983):</strong> The propensity score is the conditional probability of treatment given observed covariates:
-\[ p(\mathbf{X}_i) = P(D_i = 1 \mid \mathbf{X}_i) \]
+
+\[
+p(\mathbf{X}_i) = P(D_i = 1 \mid \mathbf{X}_i)
+\]
 If unconfoundedness holds given \( \mathbf{X}_i \), it also holds given \( p(\mathbf{X}_i) \) alone (the balancing property). This dramatically reduces the dimensionality of the adjustment problem.
 </div>
 
@@ -109,7 +122,9 @@ The propensity score is typically estimated by logit or probit. The overlap (com
 
 For **nearest-neighbor matching** (1-to-1, without replacement):
 
-\[ \hat{\tau}_{ATT} = \frac{1}{n_1}\sum_{D_i=1}\left[Y_i - Y_{\mathcal{M}(i)}\right] \]
+\[
+\hat{\tau}_{ATT} = \frac{1}{n_1}\sum_{D_i=1}\left[Y_i - Y_{\mathcal{M}(i)}\right]
+\]
 
 where \( \mathcal{M}(i) \) is the matched control unit. Matching bias arises from imperfect covariate balance; **bias correction** (Abadie-Imbens 2006) adds a regression adjustment to the match.
 
@@ -119,11 +134,15 @@ where \( \mathcal{M}(i) \) is the matched control unit. Matching bias arises fro
 
 **IPW estimators** reweight the sample to balance covariate distributions across treatment groups. The **Horvitz-Thompson estimator** for the ATE:
 
-\[ \hat{\tau}_{IPW} = \frac{1}{n}\sum_{i=1}^n \left[\frac{D_i Y_i}{p(\mathbf{X}_i)} - \frac{(1-D_i)Y_i}{1 - p(\mathbf{X}_i)}\right] \]
+\[
+\hat{\tau}_{IPW} = \frac{1}{n}\sum_{i=1}^n \left[\frac{D_i Y_i}{p(\mathbf{X}_i)} - \frac{(1-D_i)Y_i}{1 - p(\mathbf{X}_i)}\right]
+\]
 
 The **augmented IPW (AIPW)** or **doubly-robust** estimator combines a regression model \( \mu_j(\mathbf{x}) = E[Y_i(j)\mid\mathbf{X}_i = \mathbf{x}] \) with IPW weighting:
 
-\[ \hat{\tau}_{AIPW} = \frac{1}{n}\sum_{i=1}^n \left[\hat{\mu}_1(\mathbf{X}_i) - \hat{\mu}_0(\mathbf{X}_i) + \frac{D_i(Y_i - \hat{\mu}_1(\mathbf{X}_i))}{p(\mathbf{X}_i)} - \frac{(1-D_i)(Y_i - \hat{\mu}_0(\mathbf{X}_i))}{1-p(\mathbf{X}_i)}\right] \]
+\[
+\hat{\tau}_{AIPW} = \frac{1}{n}\sum_{i=1}^n \left[\hat{\mu}_1(\mathbf{X}_i) - \hat{\mu}_0(\mathbf{X}_i) + \frac{D_i(Y_i - \hat{\mu}_1(\mathbf{X}_i))}{p(\mathbf{X}_i)} - \frac{(1-D_i)(Y_i - \hat{\mu}_0(\mathbf{X}_i))}{1-p(\mathbf{X}_i)}\right]
+\]
 
 AIPW is **doubly robust**: consistent if either the propensity score model or the outcome model is correctly specified (but not necessarily both).
 
@@ -135,7 +154,9 @@ AIPW is **doubly robust**: consistent if either the propensity score model or th
 
 In the IV framework with binary treatment and binary instrument, the Wald estimator identifies the **Local Average Treatment Effect (LATE)**:
 
-\[ \hat{\tau}_{LATE} = \frac{E[Y_i \mid Z_i=1] - E[Y_i \mid Z_i=0]}{E[D_i \mid Z_i=1] - E[D_i \mid Z_i=0]} \]
+\[
+\hat{\tau}_{LATE} = \frac{E[Y_i \mid Z_i=1] - E[Y_i \mid Z_i=0]}{E[D_i \mid Z_i=1] - E[D_i \mid Z_i=0]}
+\]
 
 Under the potential outcomes IV assumptions (exclusion, relevance, monotonicity), this equals the ATE for **compliers** — units whose treatment status changes when the instrument changes (\( D_i(1) > D_i(0) \)).
 
@@ -175,12 +196,17 @@ Valid instruments must satisfy:
 
 <div class="definition">
 <strong>DiD Estimator:</strong>
-\[ \hat{\tau}_{DiD} = \underbrace{(\bar{Y}_{treated,post} - \bar{Y}_{treated,pre})}_{\text{change in treated group}} - \underbrace{(\bar{Y}_{control,post} - \bar{Y}_{control,pre})}_{\text{change in control group}} \]
+
+\[
+\hat{\tau}_{DiD} = \underbrace{(\bar{Y}_{treated,post} - \bar{Y}_{treated,pre})}_{\text{change in treated group}} - \underbrace{(\bar{Y}_{control,post} - \bar{Y}_{control,pre})}_{\text{change in control group}}
+\]
 </div>
 
 This can be estimated by OLS:
 
-\[ Y_{it} = \alpha + \beta\,\text{Post}_t + \gamma\,\text{Treated}_i + \tau\,(\text{Post}_t \times \text{Treated}_i) + \varepsilon_{it} \]
+\[
+Y_{it} = \alpha + \beta\,\text{Post}_t + \gamma\,\text{Treated}_i + \tau\,(\text{Post}_t \times \text{Treated}_i) + \varepsilon_{it}
+\]
 
 The coefficient \( \tau \) on the interaction term is the DiD estimate.
 
@@ -188,8 +214,13 @@ The coefficient \( \tau \) on the interaction term is the DiD estimate.
 
 DiD identifies \( \tau_{ATT} \) under the **parallel trends assumption**: absent treatment, the average outcome of the treated group would have evolved in parallel with the control group:
 
-\[ E[Y_{it}(0) \mid \text{Treated}_i = 1, t = \text{post}] - E[Y_{it}(0) \mid \text{Treated}_i = 1, t = \text{pre}] \]
-\[ = E[Y_{it}(0) \mid \text{Treated}_i = 0, t = \text{post}] - E[Y_{it}(0) \mid \text{Treated}_i = 0, t = \text{pre}] \]
+\[
+E[Y_{it}(0) \mid \text{Treated}_i = 1, t = \text{post}] - E[Y_{it}(0) \mid \text{Treated}_i = 1, t = \text{pre}]
+\]
+
+\[
+= E[Y_{it}(0) \mid \text{Treated}_i = 0, t = \text{post}] - E[Y_{it}(0) \mid \text{Treated}_i = 0, t = \text{pre}]
+\]
 
 This assumption is untestable for the post-treatment period but can be assessed with **pre-treatment placebo tests**: testing whether the treated and control groups have parallel trends in periods before treatment.
 
@@ -201,7 +232,9 @@ This assumption is untestable for the post-treatment period but can be assessed 
 
 An **event study** regression tests pre-trends and traces out treatment effects over time:
 
-\[ Y_{it} = \sum_{k \neq -1} \beta_k\, \mathbf{1}(t - T_i^* = k) \cdot \text{Treated}_i + \alpha_i + \lambda_t + \varepsilon_{it} \]
+\[
+Y_{it} = \sum_{k \neq -1} \beta_k\, \mathbf{1}(t - T_i^* = k) \cdot \text{Treated}_i + \alpha_i + \lambda_t + \varepsilon_{it}
+\]
 
 where \( T_i^* \) is the treatment timing, \( \alpha_i \) are unit fixed effects, \( \lambda_t \) are time fixed effects, and \( k = -1 \) is the omitted period (normalization). Coefficients for \( k < 0 \) are pre-treatment betas — if they are jointly zero, parallel pre-trends is supported.
 
@@ -209,7 +242,9 @@ where \( T_i^* \) is the treatment timing, \( \alpha_i \) are unit fixed effects
 
 When treatment is adopted at different times by different units (**staggered adoption**), the two-way fixed effects (TWFE) regression with a single binary treatment indicator \( D_{it} \):
 
-\[ Y_{it} = \alpha_i + \lambda_t + \tau D_{it} + \varepsilon_{it} \]
+\[
+Y_{it} = \alpha_i + \lambda_t + \tau D_{it} + \varepsilon_{it}
+\]
 
 estimates a weighted average of unit-time treatment effects, but the weights can be negative when treatment effects are heterogeneous across cohorts. This is the **Goodman-Bacon (2021) decomposition** problem. Modern estimators (Callaway-Sant'Anna, Sun-Abraham, de Chaisemartin-D'Haultfoeuille) construct valid ATT estimates by comparing each treated cohort only to clean control units not yet treated.
 
@@ -221,7 +256,9 @@ estimates a weighted average of unit-time treatment effects, but the weights can
 
 As developed in ECON 323, the fixed effects estimator:
 
-\[ \hat{\boldsymbol{\beta}}_{FE} = \argmin_{\boldsymbol{\beta}} \sum_{i=1}^N \sum_{t=1}^T (Y_{it} - \bar{Y}_i - (\mathbf{X}_{it} - \bar{\mathbf{X}}_i)^{\top}\boldsymbol{\beta})^2 \]
+\[
+\hat{\boldsymbol{\beta}}_{FE} = \argmin_{\boldsymbol{\beta}} \sum_{i=1}^N \sum_{t=1}^T (Y_{it} - \bar{Y}_i - (\mathbf{X}_{it} - \bar{\mathbf{X}}_i)^{\top}\boldsymbol{\beta})^2
+\]
 
 exploits within-unit variation while absorbing time-invariant unobservables. The ATT interpretation of \( \hat{\beta}_{FE} \) (in the DiD sense) relies on:
 
@@ -230,7 +267,9 @@ exploits within-unit variation while absorbing time-invariant unobservables. The
 
 The workhorse causal panel model combines unit and time fixed effects (TWFE):
 
-\[ Y_{it} = \alpha_i + \lambda_t + \mathbf{X}_{it}^{\top}\boldsymbol{\beta} + \varepsilon_{it} \]
+\[
+Y_{it} = \alpha_i + \lambda_t + \mathbf{X}_{it}^{\top}\boldsymbol{\beta} + \varepsilon_{it}
+\]
 
 Unit FE control for any time-invariant confounders; time FE control for any unit-invariant shocks (e.g., aggregate business cycle, policy changes affecting all units simultaneously).
 
@@ -242,11 +281,15 @@ Unit FE control for any time-invariant confounders; time FE control for any unit
 
 **Regression Discontinuity (RD)** exploits a **cutoff rule**: treatment is assigned based on whether a running variable \( X_i \) exceeds a threshold \( c \):
 
-\[ D_i = \mathbf{1}(X_i \geq c) \]
+\[
+D_i = \mathbf{1}(X_i \geq c)
+\]
 
 The identifying assumption is that potential outcomes \( E[Y_i(0) \mid X_i = x] \) and \( E[Y_i(1) \mid X_i = x] \) are **continuous at the cutoff** \( c \). Under this assumption, the discontinuous jump in observed outcomes at \( c \) identifies the treatment effect at the cutoff:
 
-\[ \tau_{RD} = \lim_{x \downarrow c} E[Y_i \mid X_i = x] - \lim_{x \uparrow c} E[Y_i \mid X_i = x] \]
+\[
+\tau_{RD} = \lim_{x \downarrow c} E[Y_i \mid X_i = x] - \lim_{x \uparrow c} E[Y_i \mid X_i = x]
+\]
 
 <div class="remark">
 <strong>Local Randomization Interpretation:</strong> Near the cutoff, units are approximately randomly assigned to treatment because precise control over the running variable is difficult. RD estimates an ATE for the subpopulation near the cutoff — a <em>local</em> effect.
@@ -256,7 +299,9 @@ The identifying assumption is that potential outcomes \( E[Y_i(0) \mid X_i = x] 
 
 The standard estimator fits separate polynomial regressions on each side of the cutoff, evaluated at \( X_i = c \). Local linear regression (order 1):
 
-\[ \hat{\tau}_{RD} = \hat{\alpha}_R - \hat{\alpha}_L \]
+\[
+\hat{\tau}_{RD} = \hat{\alpha}_R - \hat{\alpha}_L
+\]
 
 where \( \hat{\alpha}_R \) and \( \hat{\alpha}_L \) are intercepts from local linear regressions within a bandwidth \( h \) on each side. The **optimal bandwidth** trades off bias (wider bandwidth picks up curvature in the regression function) and variance (narrower bandwidth uses fewer observations). The Imbens-Kalyanaraman (2012) and Calonico-Cattaneo-Titiunik (CCT 2014) data-driven bandwidth selectors are standard.
 
@@ -270,7 +315,9 @@ where \( \hat{\alpha}_R \) and \( \hat{\alpha}_L \) are intercepts from local li
 
 When the cutoff only changes the **probability** of treatment (rather than determining it deterministically), the design is **fuzzy**. The Wald estimate for the fuzzy RD is:
 
-\[ \tau_{FRD} = \frac{\lim_{x\downarrow c}E[Y_i\mid X_i=x] - \lim_{x\uparrow c}E[Y_i\mid X_i=x]}{\lim_{x\downarrow c}E[D_i\mid X_i=x] - \lim_{x\uparrow c}E[D_i\mid X_i=x]} \]
+\[
+\tau_{FRD} = \frac{\lim_{x\downarrow c}E[Y_i\mid X_i=x] - \lim_{x\uparrow c}E[Y_i\mid X_i=x]}{\lim_{x\downarrow c}E[D_i\mid X_i=x] - \lim_{x\uparrow c}E[D_i\mid X_i=x]}
+\]
 
 This is a LATE for compliers at the cutoff, analogous to the IV LATE.
 
@@ -286,13 +333,17 @@ When the treated unit is a single region, country, or firm — and there is no n
 
 Let unit 1 be treated at time \( T_0 \) and units \( 2, \ldots, J+1 \) be potential controls. Find weights \( \mathbf{w} = (w_2, \ldots, w_{J+1}) \) with \( w_j \geq 0 \) and \( \sum w_j = 1 \) solving:
 
-\[ \min_{\mathbf{w}} \left\| \mathbf{X}_1 - \sum_{j=2}^{J+1} w_j \mathbf{X}_j \right\|_V^2 \]
+\[
+\min_{\mathbf{w}} \left\| \mathbf{X}_1 - \sum_{j=2}^{J+1} w_j \mathbf{X}_j \right\|_V^2
+\]
 
 where \( \mathbf{X}_j \) is a vector of pre-treatment predictors (lagged outcomes and covariates) for unit \( j \), and \( \|\cdot\|_V \) is a weighted norm with \( V \) chosen to minimize pre-treatment fit.
 
 The synthetic control estimate is:
 
-\[ \hat{\tau}_{1t} = Y_{1t} - \sum_{j=2}^{J+1} w_j^* Y_{jt}, \qquad t > T_0 \]
+\[
+\hat{\tau}_{1t} = Y_{1t} - \sum_{j=2}^{J+1} w_j^* Y_{jt}, \qquad t > T_0
+\]
 
 ## 8.3 Inference via Placebo Tests
 

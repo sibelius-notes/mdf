@@ -61,7 +61,9 @@ The Ricardian model attributes comparative advantage to differences in labor pro
 
 Home has a comparative advantage in good \( j \) relative to good \( k \) if:
 
-\[ \frac{a_j}{a_k} < \frac{a^*_j}{a^*_k} \]
+\[
+\frac{a_j}{a_k} < \frac{a^*_j}{a^*_k}
+\]
 
 With two goods and two countries, this determines complete specialization: Home produces the good with the lower relative unit labor requirement. The gains from trade are positive whenever the two autarky relative prices differ.
 
@@ -73,7 +75,9 @@ The seminal contribution of Dornbusch, Fischer and Samuelson (DFS 1977) extended
 
 **Specialization:** Home produces good \( z \) if its unit labor cost is lower:
 
-\[ w \cdot a(z) < w^* \cdot a^*(z) \implies \omega < A(z) \]
+\[
+w \cdot a(z) < w^* \cdot a^*(z) \implies \omega < A(z)
+\]
 
 Since \( A(z) \) is decreasing, there exists a cutoff \( \tilde{z} \) such that:
 - Home produces \( z \in [0, \tilde{z}] \) (low-\( z \) goods, comparative advantage goods)
@@ -83,7 +87,9 @@ The cutoff is defined by \( \omega = A(\tilde{z}) \), the indifference condition
 
 **Wage determination:** A second relationship links wages to the share of world income spent on Home goods. If \( b(z) \) is the expenditure share on good \( z \) (summing to 1), and \( L, L^* \) are labor endowments:
 
-\[ \omega = \frac{wL}{w^*L^*} \cdot \frac{\int_{\tilde{z}}^1 b(z)dz}{\int_0^{\tilde{z}} b(z)dz} \]
+\[
+\omega = \frac{wL}{w^*L^*} \cdot \frac{\int_{\tilde{z}}^1 b(z)dz}{\int_0^{\tilde{z}} b(z)dz}
+\]
 
 This second relationship (the trade balance condition, or BB schedule) is increasing in \( \tilde{z} \): more Home goods in the production basket → higher Home wages needed to balance trade.
 
@@ -107,15 +113,21 @@ Empirically testing the gains from trade is difficult because we never observe t
 
 **The revealed-preference test:** Bernhofen and Brown (2004) use the classical revealed-preference inequality. Let \( p^a \) be autarky prices and \( p^t \) be free-trade prices (world prices). Let \( q^a \) be the autarky consumption bundle and \( q^t \) be the free-trade bundle. By revealed preference:
 
-\[ p^a \cdot q^a \geq p^a \cdot q^t \]
+\[
+p^a \cdot q^a \geq p^a \cdot q^t
+\]
 
 (The autarky bundle was affordable at autarky prices but the trade bundle was preferred under trade.) This implies:
 
-\[ p^a \cdot q^a \geq p^a \cdot q^t \]
+\[
+p^a \cdot q^a \geq p^a \cdot q^t
+\]
 
 Now, under trade with no tariffs, the trade budget constraint at world prices is:
 
-\[ p^t \cdot q^t = p^t \cdot y^t \]
+\[
+p^t \cdot q^t = p^t \cdot y^t
+\]
 
 Using the identity that the trade balance is zero and manipulating, the *gains from trade* can be expressed without observing the trade equilibrium consumption bundle, only Japan's autarky prices and the vector of net imports under trade.
 
@@ -131,7 +143,9 @@ Costinot and Donaldson (2012) revisit Ricardian comparative advantage in a moder
 
 **The Eaton-Kortum (2002) framework:** Rather than specifying deterministic productivity differences, Eaton and Kortum (2002) assume that each country \( i \)'s efficiency at producing good \( j \) is drawn from a Fréchet distribution with mean \( T_i \) (overall technological capability) and shape parameter \( \theta \) (the degree of heterogeneity — higher \( \theta \) implies less heterogeneity). The probability that country \( i \) is the lowest-cost supplier to country \( n \) for good \( j \) yields:
 
-\[ \frac{X_{ni}}{X_n} = \frac{T_i (d_{ni} w_i)^{-\theta}}{\sum_k T_k (d_{nk} w_k)^{-\theta}} \]
+\[
+\frac{X_{ni}}{X_n} = \frac{T_i (d_{ni} w_i)^{-\theta}}{\sum_k T_k (d_{nk} w_k)^{-\theta}}
+\]
 
 where \( X_{ni} \) is country \( n \)'s imports from \( i \), \( X_n \) is total spending, \( d_{ni} \) is the bilateral trade cost, and \( w_i \) is country \( i \)'s wage. This is the *gravity equation* derived from Ricardian foundations.
 
@@ -151,11 +165,15 @@ The specific factors model (Jones 1971, Samuelson 1971) bridges the Ricardian mo
 
 **Setup:** Two sectors \( M \) (manufacturing) and \( A \) (agriculture). Three factors: labor \( L \) (mobile), capital \( K \) (specific to \( M \)), land \( T \) (specific to \( A \)). Production functions:
 
-\[ Q_M = F(K, L_M), \quad Q_A = G(T, L_A), \quad L_M + L_A = \bar{L} \]
+\[
+Q_M = F(K, L_M), \quad Q_A = G(T, L_A), \quad L_M + L_A = \bar{L}
+\]
 
 Labor market clearing:
 
-\[ P_M \cdot F_{L_M}(K, L_M) = w = P_A \cdot G_{L_A}(T, L_A) \]
+\[
+P_M \cdot F_{L_M}(K, L_M) = w = P_A \cdot G_{L_A}(T, L_A)
+\]
 
 This condition equates the value of marginal product of labor across sectors.
 
@@ -286,7 +304,9 @@ Paul Krugman's 1979 model launched the "New Trade Theory" and eventually contrib
 
 **Preferences:** Consumers love variety. Utility over a continuum of differentiated goods with elasticity of substitution \( \sigma \):
 
-\[ U = \left[\int_0^n c(i)^{(\sigma-1)/\sigma} di\right]^{\sigma/(\sigma-1)}, \quad \sigma > 1 \]
+\[
+U = \left[\int_0^n c(i)^{(\sigma-1)/\sigma} di\right]^{\sigma/(\sigma-1)}, \quad \sigma > 1
+\]
 
 More varieties \( n \) directly raises utility (love of variety). This is the Dixit-Stiglitz aggregator.
 
@@ -294,11 +314,15 @@ More varieties \( n \) directly raises utility (love of variety). This is the Di
 
 **Equilibrium:** Each firm faces demand with elasticity \( \sigma \), sets price as a markup over marginal cost:
 
-\[ p = \frac{\sigma}{\sigma - 1} \cdot wc \]
+\[
+p = \frac{\sigma}{\sigma - 1} \cdot wc
+\]
 
 Free entry drives profits to zero, determining the equilibrium firm size:
 
-\[ \pi = (p - wc)x - wF = 0 \implies x^* = \frac{F(\sigma-1)}{c} \cdot \frac{1}{\sigma - 1} \cdot \frac{\sigma}{1} \]
+\[
+\pi = (p - wc)x - wF = 0 \implies x^* = \frac{F(\sigma-1)}{c} \cdot \frac{1}{\sigma - 1} \cdot \frac{\sigma}{1}
+\]
 
 More precisely, zero profits require: \( \frac{wF}{(\sigma-1)/\sigma} = \frac{wF \sigma}{\sigma - 1} \), which pins down \( x^* = F(\sigma-1)/c \).
 
@@ -345,13 +369,17 @@ Recall from introductory trade theory:
 
 **Small country tariff:** For a price-taking economy, a specific tariff \( t \) raises the domestic price from \( P^* \) to \( P^* + t \), generating producer surplus gains, consumer surplus losses, and government tariff revenue. The net welfare effect is negative:
 
-\[ \Delta W = \underbrace{\frac{1}{2} t^2 \cdot S'(P^*)}_{\text{production distortion}} - \underbrace{\frac{1}{2} t^2 \cdot |D'(P^*)|}_{\text{consumption distortion}} < 0 \]
+\[
+\Delta W = \underbrace{\frac{1}{2} t^2 \cdot S'(P^*)}_{\text{production distortion}} - \underbrace{\frac{1}{2} t^2 \cdot |D'(P^*)|}_{\text{consumption distortion}} < 0
+\]
 
 (both triangles are losses from the same tariff wedge, so the sum is unambiguously negative)
 
 **Optimal tariff (large country):** The terms-of-trade argument. A large country can improve its terms of trade (lower world price of its import) by restricting trade:
 
-\[ t^* = \frac{1}{\epsilon^*} \]
+\[
+t^* = \frac{1}{\epsilon^*}
+\]
 
 where \( \epsilon^* \) is the foreign export supply elasticity. This is a terms-of-trade argument for the optimal tariff — but it only applies to countries with market power in world markets, and retaliatory tariffs erase the gain.
 
@@ -424,13 +452,17 @@ The most influential political economy model of trade policy. Grossman and Helpm
 
 **Setup:** Sectors are indexed \( i = 1, \ldots, N \). Each sector may be politically organized (\( I_i = 1 \)) or not (\( I_i = 0 \)). Organized sectors offer a *contribution schedule* \( C_i(\tau_i) \) — the contribution is contingent on the trade policy chosen. The government takes the contribution schedules as given and maximizes:
 
-\[ V_G = \sum_{i \in \text{organized}} C_i(\tau_i) + a \cdot W(\tau) \]
+\[
+V_G = \sum_{i \in \text{organized}} C_i(\tau_i) + a \cdot W(\tau)
+\]
 
 where \( W(\tau) \) is aggregate social welfare and \( a \) is the weight on social welfare (relative to contributions).
 
 **Equilibrium tariff formula:** The equilibrium tariff in sector \( i \) is:
 
-\[ \frac{\tau_i - 1}{\tau_i} = -\frac{I_i - a_L}{a_L + a} \cdot \frac{z_i}{e_i} \]
+\[
+\frac{\tau_i - 1}{\tau_i} = -\frac{I_i - a_L}{a_L + a} \cdot \frac{z_i}{e_i}
+\]
 
 where \( a_L \) is the fraction of voters organized into lobbying groups, \( z_i = M_i/(D_i - S_i) \) is import penetration (inverse), and \( e_i \) is the import demand elasticity.
 
@@ -473,33 +505,47 @@ Marc Melitz's 2003 paper is one of the most-cited in economics. It provides a ge
 
 *Preferences:* Dixit-Stiglitz CES utility over a continuum of differentiated varieties:
 
-\[ U = \left[\int c(\omega)^{(\sigma-1)/\sigma} d\omega\right]^{\sigma/(\sigma-1)} \]
+\[
+U = \left[\int c(\omega)^{(\sigma-1)/\sigma} d\omega\right]^{\sigma/(\sigma-1)}
+\]
 
 *Technology:* Firms differ in productivity \( \varphi \), which is drawn upon entry from distribution \( g(\varphi) \) (Pareto is the natural parametric choice). A firm with productivity \( \varphi \) and labor input \( l \) produces:
 
-\[ q = \varphi \cdot l - f \]
+\[
+q = \varphi \cdot l - f
+\]
 
 where \( f \) is a fixed production cost (per period). Variable costs are lower for high-\( \varphi \) firms, giving them a natural advantage.
 
 *Market structure:* Monopolistic competition — each firm produces a unique variety, faces a downward-sloping demand, and sets prices as a markup over marginal cost. The markup is identical across firms (a feature of Dixit-Stiglitz):
 
-\[ p(\varphi) = \frac{w}{\rho \varphi}, \quad \rho = \frac{\sigma-1}{\sigma} \]
+\[
+p(\varphi) = \frac{w}{\rho \varphi}, \quad \rho = \frac{\sigma-1}{\sigma}
+\]
 
 Higher-\( \varphi \) firms charge lower prices, sell more, and earn higher revenues. Revenue and profit for a domestic-only firm:
 
-\[ r(\varphi) = R P^{\sigma-1} (p(\varphi))^{1-\sigma}, \quad \pi(\varphi) = \frac{r(\varphi)}{\sigma} - w f \]
+\[
+r(\varphi) = R P^{\sigma-1} (p(\varphi))^{1-\sigma}, \quad \pi(\varphi) = \frac{r(\varphi)}{\sigma} - w f
+\]
 
 **Zero-cutoff profit condition:** There is a productivity cutoff \( \varphi^* \) below which firms cannot cover their fixed costs and exit. Only firms with \( \varphi \geq \varphi^* \) survive:
 
-\[ \pi(\varphi^*) = 0 \implies \varphi^* = \varphi^*(w, R, P) \]
+\[
+\pi(\varphi^*) = 0 \implies \varphi^* = \varphi^*(w, R, P)
+\]
 
 **Exporting:** Serving a foreign market requires paying both a variable trade cost (iceberg cost \( \tau > 1 \): ship \( \tau \) units to deliver 1) and a fixed export cost \( f_x > f \). Export profits:
 
-\[ \pi_x(\varphi) = \frac{r_x(\varphi)}{\sigma} - w f_x \]
+\[
+\pi_x(\varphi) = \frac{r_x(\varphi)}{\sigma} - w f_x
+\]
 
 An exporting cutoff \( \varphi^*_x > \varphi^* \) exists such that only the most productive firms find exporting profitable:
 
-\[ \pi_x(\varphi^*_x) = 0 \]
+\[
+\pi_x(\varphi^*_x) = 0
+\]
 
 This generates the prediction that exporters are a selected subset of large, productive firms.
 
@@ -519,7 +565,9 @@ This generates the prediction that exporters are a selected subset of large, pro
 
 **Welfare and gains from trade:** Arkolakis, Costinot and Rodriguez-Clare (2012) show that in a broad class of models — including Melitz — the welfare gains from trade can be summarized by just two statistics: the share of expenditure on domestic goods \( \lambda \) and the trade elasticity \( \theta \):
 
-\[ \frac{dW}{W} = -\frac{1}{\theta} d\ln\lambda \]
+\[
+\frac{dW}{W} = -\frac{1}{\theta} d\ln\lambda
+\]
 
 This "sufficient statistics" result shows that despite the rich within-model dynamics, the same formula for welfare gains applies across many different micro structures.
 
@@ -533,7 +581,9 @@ Bernard, Redding and Schott (2007) extend the Melitz model to incorporate compar
 
 The gravity equation is the most successful empirical regularity in international economics:
 
-\[ X_{ij} = A \cdot \frac{Y_i Y_j}{d_{ij}^\delta} \]
+\[
+X_{ij} = A \cdot \frac{Y_i Y_j}{d_{ij}^\delta}
+\]
 
 where \( X_{ij} \) is exports from \( i \) to \( j \), \( Y_i, Y_j \) are GDPs, \( d_{ij} \) is distance, and \( A, \delta \) are parameters. Anderson (1979) and Anderson and van Wincoop (2003, 2004) provide theoretical foundations and a crucial correction.
 
@@ -541,11 +591,15 @@ where \( X_{ij} \) is exports from \( i \) to \( j \), \( Y_i, Y_j \) are GDPs, 
 
 **Multilateral Resistance:** Anderson and van Wincoop show that the standard gravity equation was misspecified. Trade between two countries depends not just on their bilateral trade costs but on those costs *relative to their trade costs with all other partners* — called *multilateral resistance*:
 
-\[ X_{ij} = \frac{Y_i Y_j}{Y^W} \left(\frac{t_{ij}}{\Pi_i P_j}\right)^{1-\sigma} \]
+\[
+X_{ij} = \frac{Y_i Y_j}{Y^W} \left(\frac{t_{ij}}{\Pi_i P_j}\right)^{1-\sigma}
+\]
 
 where \( \Pi_i \) and \( P_j \) are *outward* and *inward* multilateral resistance terms:
 
-\[ \Pi_i^{1-\sigma} = \sum_j \left(\frac{t_{ij}}{P_j}\right)^{1-\sigma} \theta_j, \quad P_j^{1-\sigma} = \sum_i \left(\frac{t_{ij}}{\Pi_i}\right)^{1-\sigma} \theta_i \]
+\[
+\Pi_i^{1-\sigma} = \sum_j \left(\frac{t_{ij}}{P_j}\right)^{1-\sigma} \theta_j, \quad P_j^{1-\sigma} = \sum_i \left(\frac{t_{ij}}{\Pi_i}\right)^{1-\sigma} \theta_i
+\]
 
 **Border puzzle resolution:** Once multilateral resistance is properly accounted for (using country fixed effects in estimation), the border effect falls from 22x to a more reasonable 1.5–2x. The border reduces trade by roughly 30%, reflecting real trade costs beyond just distance.
 
@@ -596,7 +650,9 @@ David Autor, David Dorn and Gordon Hanson (ADH 2013) provide compelling evidence
 
 **Empirical strategy:** The United States contains hundreds of *commuting zones* (local labor markets) that differ in their exposure to Chinese import competition, depending on their pre-existing industry composition. ADH construct a *China shock exposure* measure:
 
-\[ \Delta IPW_{uit} = \sum_j \frac{L_{ijt}}{L_{ujt}} \cdot \frac{\Delta M_{ucjt}}{L_{it}} \]
+\[
+\Delta IPW_{uit} = \sum_j \frac{L_{ijt}}{L_{ujt}} \cdot \frac{\Delta M_{ucjt}}{L_{it}}
+\]
 
 where \( \Delta M_{ucjt} \) is the change in US imports from China in industry \( j \), \( L_{ijt}/L_{ujt} \) is the local labor market's employment share in industry \( j \), and \( L_{it} \) is total local employment. The instrument uses other high-income countries' imports from China (which respond to Chinese supply-side shocks rather than US demand shocks) as an instrument for the US exposure measure.
 
@@ -714,7 +770,9 @@ The frontier of trade research uses *quantitative trade models* — general equi
 
 Key results: Arkolakis, Costinot and Rodriguez-Clare (2012) show that across a wide class of models (Armington, Eaton-Kortum, Krugman, Melitz), welfare gains from trade can be expressed as:
 
-\[ \hat{W} = \hat{\lambda}_{ii}^{-1/\theta} \]
+\[
+\hat{W} = \hat{\lambda}_{ii}^{-1/\theta}
+\]
 
 where \( \hat{\lambda}_{ii} \) is the change in the domestic expenditure share and \( \theta \) is the trade elasticity. This elegant result unifies many apparently different models and shows that their aggregate welfare implications are identical conditional on the domestic trade share.
 

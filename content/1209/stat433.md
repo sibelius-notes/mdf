@@ -74,7 +74,7 @@ This decays to 0 but the sum \(\sum u_{2n}\) diverges (like \(\sum 1/\sqrt{n}\))
 
 The key idea: a path from \((0, a)\) to \((n, b)\) with \(a, b > 0\) that **touches the axis** must cross it at some first time \(\tau\). Reflecting the portion of the path before \(\tau\) about the \(x\)-axis gives a bijection between:
 - paths from \((0, a)\) to \((n, b)\) that touch 0, and
-- all unrestricted paths from \((0, -a)\) (n, b)\).
+- all unrestricted paths from \((0, -a)\) to \((n, b)\).
 
 Therefore:
 
@@ -221,6 +221,7 @@ In generating functions: \(U(s) = 1 + F(s)U(s)\), hence \(U(s) = \frac{1}{1-F(s)
 
 <div class="theorem">
 <strong>Renewal Theorem.</strong> If the renewal event is aperiodic and positive recurrent with mean inter-renewal time \(\mu = \sum_{n=1}^\infty n f_n < \infty\), then
+
 \[
 u_n \to \frac{1}{\mu} \quad \text{as } n \to \infty.
 \]
@@ -308,6 +309,7 @@ This means: given a sunny day, the next day is sunny with probability 0.8; given
 \[
 p_{00}^{(2)} = (0.8)(0.8) + (0.2)(0.4) = 0.64 + 0.08 = 0.72.
 \]
+
 \[
 p_{01}^{(2)} = (0.8)(0.2) + (0.2)(0.6) = 0.16 + 0.12 = 0.28.
 \]
@@ -436,6 +438,7 @@ Let \(h_i = E[T_0 \mid X_0 = i]\) for \(i \neq 0\). First-step analysis: \(h_1 =
 
 <div class="theorem">
 <strong>Theorem (Convergence to Stationarity).</strong> For an irreducible, aperiodic, positive recurrent DTMC:
+
 \[
 p_{ij}^{(n)} \to \pi_j \quad \text{as } n \to \infty, \quad \text{for all } i, j.
 \]
@@ -532,9 +535,11 @@ where \(Q\) is \(m \times m\) sub-stochastic (transitions among transient states
 \[
 P(T = k) = \alpha_0' Q^{k-1} \tilde{q}, \quad k = 1, 2, \ldots
 \]
+
 \[
 P(T > k) = \alpha_0' Q^k \mathbf{1}, \quad F_T(k) = 1 - \alpha_0' Q^k \mathbf{1}
 \]
+
 \[
 E[T] = \alpha_0'(I-Q)^{-1}\mathbf{1}
 \]
@@ -563,6 +568,7 @@ Q = \begin{pmatrix} 0 & 0.7 \\ 0.5 & 0 \end{pmatrix}, \quad \tilde{q} = \begin{p
 \[
 I - Q = \begin{pmatrix}1 & -0.7 \\ -0.5 & 1\end{pmatrix}, \quad (I-Q)^{-1} = \frac{1}{1 - 0.35}\begin{pmatrix}1 & 0.7 \\ 0.5 & 1\end{pmatrix} = \frac{1}{0.65}\begin{pmatrix}1 & 0.7 \\ 0.5 & 1\end{pmatrix}.
 \]
+
 \[
 E[T] = \alpha_0'(I-Q)^{-1}\mathbf{1} = (1,0)\frac{1}{0.65}\begin{pmatrix}1 & 0.7\\ 0.5 & 1\end{pmatrix}\begin{pmatrix}1\\1\end{pmatrix} = \frac{1}{0.65}(1,0)\begin{pmatrix}1.7\\1.5\end{pmatrix} = \frac{1.7}{0.65} \approx 2.615.
 \]
@@ -844,6 +850,7 @@ The M/M/1 queue has \(\lambda_n = \lambda\) and \(\mu_n = \mu\) for \(n \geq 1\)
 
 - **Server utilization**: \(P(N \geq 1) = \rho\). Makes sense: rate in = rate out in steady state, so \(\lambda = \mu \cdot P(\text{server busy})\), giving \(P(\text{busy}) = \rho\).
 - **Mean waiting time** (total time in system, by Little's Law \(E[N] = \lambda E[W]\)):
+
 \[
 E[W] = \frac{E[N]}{\lambda} = \frac{\rho}{\lambda(1-\rho)} = \frac{1}{\mu - \lambda}.
 \]
@@ -960,6 +967,7 @@ So \(W \sim \text{Exp}(\mu-\lambda)\), consistent with \(E[W] = 1/(\mu-\lambda)\
 \[
 \pi_0 = \left[\sum_{n=0}^{c-1}\frac{(c\rho)^n}{n!} + \frac{(c\rho)^c}{c!(1-\rho)}\right]^{-1},
 \]
+
 \[
 \pi_n = \pi_0 \cdot \begin{cases}\dfrac{(c\rho)^n}{n!} & n \leq c \\ \dfrac{(c\rho)^c \rho^{n-c}}{c!} & n > c.\end{cases}
 \]
@@ -1360,6 +1368,7 @@ The zeros of BM form a **Cantor-like closed set** of Lebesgue measure zero but u
 
 <div class="theorem">
 <strong>Arcsine Law.</strong> Let \(L_t = \sup\{s \leq t : B(s) = 0\}\). Then \(L_t/t\) has the arcsine distribution:
+
 \[
 P(L_t/t \leq x) = \frac{2}{\pi}\arcsin\sqrt{x}, \quad x \in [0,1].
 \]

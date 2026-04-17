@@ -28,7 +28,10 @@ Using the standard dot product on \(\mathbb{R}^n\):
 <div class="theorem">
 
 <strong>Theorem 1.2 (Fundamental Theorem of Linear Algebra).</strong> Let \(A\) be \(m \times n\) with \(\operatorname{rank}(A) = r\). Then:
-\[\mathbb{R}^n = \operatorname{Row}(A) \oplus \operatorname{Null}(A), \qquad \mathbb{R}^m = \operatorname{Col}(A) \oplus \operatorname{Null}(A^T)\]
+
+\[
+\mathbb{R}^n = \operatorname{Row}(A) \oplus \operatorname{Null}(A), \qquad \mathbb{R}^m = \operatorname{Col}(A) \oplus \operatorname{Null}(A^T)
+\]
 with \(\dim \operatorname{Row}(A) = \dim \operatorname{Col}(A) = r\), \(\dim \operatorname{Null}(A) = n - r\), and \(\dim \operatorname{Null}(A^T) = m - r\).
 
 </div>
@@ -42,7 +45,10 @@ The dimension count above generalizes immediately to abstract linear maps.
 <div class="theorem">
 
 <strong>Theorem 1.3 (Rank-Nullity Theorem).</strong> Let \(V\) be a finite-dimensional vector space and \(T : V \to W\) a linear map. Then
-\[\dim \operatorname{Range}(T) + \dim \ker(T) = \dim V.\]
+
+\[
+\dim \operatorname{Range}(T) + \dim \ker(T) = \dim V.
+\]
 
 </div>
 
@@ -87,7 +93,10 @@ The first isomorphism theorem gives a canonical decomposition: every linear map 
 <div class="theorem">
 
 <strong>Theorem 2.4 (First Isomorphism Theorem).</strong> Let \(T : V \to W\) be a linear map. The induced map \(\tilde{T} : V/\ker T \to \operatorname{Range}(T)\) defined by \(\tilde{T}(\mathbf{v} + \ker T) = T\mathbf{v}\) is an isomorphism. In particular,
-\[V / \ker T \cong \operatorname{Range}(T).\]
+
+\[
+V / \ker T \cong \operatorname{Range}(T).
+\]
 
 </div>
 
@@ -106,7 +115,10 @@ A choice of bases converts an abstract linear map into a concrete matrix. Let \(
 <div class="definition">
 
 <strong>Definition 2.6 (Matrix of a Linear Map).</strong> The matrix of \(T : V \to W\) with respect to bases \(B\) and \(C\) is the \(m \times n\) matrix
-\[{}_C[T]_B = \begin{bmatrix} [T\mathbf{v}_1]_C & \cdots & [T\mathbf{v}_n]_C \end{bmatrix},\]
+
+\[
+{}_C[T]_B = \begin{bmatrix} [T\mathbf{v}_1]_C & \cdots & [T\mathbf{v}_n]_C \end{bmatrix},
+\]
 characterized by \([T\mathbf{v}]_C = {}_C[T]_B \, [\mathbf{v}]_B\) for all \(\mathbf{v} \in V\).
 
 </div>
@@ -156,7 +168,10 @@ The Cauchy-Schwarz inequality is one of the most useful inequalities in mathemat
 <div class="theorem">
 
 <strong>Theorem 3.3 (Cauchy-Schwarz Inequality).</strong> For any \(\mathbf{u}, \mathbf{v}\) in an inner product space,
-\[|\langle \mathbf{u}, \mathbf{v} \rangle| \leq \|\mathbf{u}\| \, \|\mathbf{v}\|,\]
+
+\[
+|\langle \mathbf{u}, \mathbf{v} \rangle| \leq \|\mathbf{u}\| \, \|\mathbf{v}\|,
+\]
 with equality if and only if \(\mathbf{u}\) and \(\mathbf{v}\) are linearly dependent.
 
 </div>
@@ -176,15 +191,24 @@ Starting from any basis, we can systematically replace it with an orthonormal on
 <div class="theorem">
 
 <strong>Theorem 3.5 (Gram-Schmidt).</strong> Let \(\{\mathbf{w}_1, \ldots, \mathbf{w}_k\}\) be a linearly independent set in an inner product space \(V\). Define vectors \(\mathbf{e}_1, \ldots, \mathbf{e}_k\) inductively by
-\[\mathbf{e}_1 = \frac{\mathbf{w}_1}{\|\mathbf{w}_1\|},\]
+
+\[
+\mathbf{e}_1 = \frac{\mathbf{w}_1}{\|\mathbf{w}_1\|},
+\]
 and for \(j \geq 2\),
-\[\tilde{\mathbf{e}}_j = \mathbf{w}_j - \sum_{i=1}^{j-1} \langle \mathbf{w}_j, \mathbf{e}_i \rangle \mathbf{e}_i, \qquad \mathbf{e}_j = \frac{\tilde{\mathbf{e}}_j}{\|\tilde{\mathbf{e}}_j\|}.\]
+
+\[
+\tilde{\mathbf{e}}_j = \mathbf{w}_j - \sum_{i=1}^{j-1} \langle \mathbf{w}_j, \mathbf{e}_i \rangle \mathbf{e}_i, \qquad \mathbf{e}_j = \frac{\tilde{\mathbf{e}}_j}{\|\tilde{\mathbf{e}}_j\|}.
+\]
 Then \(\{\mathbf{e}_1, \ldots, \mathbf{e}_k\}\) is an orthonormal set and \(\operatorname{span}\{\mathbf{e}_1, \ldots, \mathbf{e}_j\} = \operatorname{span}\{\mathbf{w}_1, \ldots, \mathbf{w}_j\}\) for each \(j\).
 
 </div>
 
 *Proof.* We proceed by induction. Clearly \(\operatorname{span}\{\mathbf{e}_1\} = \operatorname{span}\{\mathbf{w}_1\}\) and \(\|\mathbf{e}_1\| = 1\). Suppose the claim holds for indices up to \(j-1\). Since \(\mathbf{w}_j \notin \operatorname{span}\{\mathbf{w}_1,\ldots,\mathbf{w}_{j-1}\} = \operatorname{span}\{\mathbf{e}_1,\ldots,\mathbf{e}_{j-1}\}\), the vector \(\tilde{\mathbf{e}}_j \neq \mathbf{0}\). For any \(1 \leq \ell \leq j-1\),
-\[\langle \tilde{\mathbf{e}}_j, \mathbf{e}_\ell \rangle = \langle \mathbf{w}_j, \mathbf{e}_\ell \rangle - \langle \mathbf{w}_j, \mathbf{e}_\ell \rangle \|\mathbf{e}_\ell\|^2 = 0,\]
+
+\[
+\langle \tilde{\mathbf{e}}_j, \mathbf{e}_\ell \rangle = \langle \mathbf{w}_j, \mathbf{e}_\ell \rangle - \langle \mathbf{w}_j, \mathbf{e}_\ell \rangle \|\mathbf{e}_\ell\|^2 = 0,
+\]
 using \(\|\mathbf{e}_\ell\| = 1\) and the orthonormality of \(\{\mathbf{e}_1, \ldots, \mathbf{e}_{j-1}\}\). So \(\mathbf{e}_j \perp \mathbf{e}_\ell\) for all \(\ell < j\), and normalizing gives \(\|\mathbf{e}_j\| = 1\). The span identity is clear since \(\tilde{\mathbf{e}}_j = \mathbf{w}_j - (\text{element of } \operatorname{span}\{\mathbf{e}_1,\ldots,\mathbf{e}_{j-1}\})\). \(\square\)
 
 The key idea is that at each step we subtract the component of \(\mathbf{w}_j\) that lies in the already-constructed orthonormal space, leaving a residual that is perpendicular to everything already processed.
@@ -194,7 +218,10 @@ The key idea is that at each step we subtract the component of \(\mathbf{w}_j\) 
 <div class="definition">
 
 <strong>Definition 3.6 (Orthogonal Complement).</strong> Let \(W\) be a subspace of an inner product space \(V\). The <em>orthogonal complement</em> of \(W\) is
-\[W^\perp = \{\mathbf{v} \in V \mid \langle \mathbf{v}, \mathbf{w} \rangle = 0 \text{ for all } \mathbf{w} \in W\}.\]
+
+\[
+W^\perp = \{\mathbf{v} \in V \mid \langle \mathbf{v}, \mathbf{w} \rangle = 0 \text{ for all } \mathbf{w} \in W\}.
+\]
 
 </div>
 
@@ -221,7 +248,10 @@ The adjoint is the linear-algebraic analogue of the complex conjugate. It is ind
 <div class="definition">
 
 <strong>Definition 3.9 (Adjoint).</strong> Let \(V\) and \(W\) be finite-dimensional inner product spaces over \(\mathbb{F}\) and let \(T : V \to W\) be linear. The <em>adjoint</em> of \(T\) is the unique linear map \(T^* : W \to V\) satisfying
-\[\langle T\mathbf{v}, \mathbf{w} \rangle_W = \langle \mathbf{v}, T^*\mathbf{w} \rangle_V \quad \text{for all } \mathbf{v} \in V, \mathbf{w} \in W.\]
+
+\[
+\langle T\mathbf{v}, \mathbf{w} \rangle_W = \langle \mathbf{v}, T^*\mathbf{w} \rangle_V \quad \text{for all } \mathbf{v} \in V, \mathbf{w} \in W.
+\]
 
 </div>
 
@@ -393,7 +423,10 @@ A quadratic form is a homogeneous degree-2 polynomial, and the spectral theorem 
 <div class="theorem">
 
 <strong>Theorem 4.8 (Principal Axis Theorem).</strong> Let \(Q(\mathbf{x}) = \mathbf{x}^T A \mathbf{x}\) be a quadratic form with symmetric matrix \(A\). There exists an orthogonal matrix \(P\) (a rotation/reflection) such that the change of variables \(\mathbf{x} = P\mathbf{y}\) transforms \(Q\) into the diagonal form
-\[Q = \lambda_1 y_1^2 + \lambda_2 y_2^2 + \cdots + \lambda_n y_n^2,\]
+
+\[
+Q = \lambda_1 y_1^2 + \lambda_2 y_2^2 + \cdots + \lambda_n y_n^2,
+\]
 where \(\lambda_1, \ldots, \lambda_n\) are the eigenvalues of \(A\). The columns of \(P\) (the eigenvectors of \(A\)) are the <em>principal axes</em>.
 
 </div>
@@ -435,7 +468,10 @@ The key observation: even if \(A\) is not diagonalizable, the matrix \(A^T A\) i
 <div class="theorem">
 
 <strong>Theorem 5.3 (Singular Value Decomposition).</strong> Let \(A\) be an \(m \times n\) real matrix of rank \(r\). There exist an \(m \times m\) orthogonal matrix \(U\), an \(n \times n\) orthogonal matrix \(V\), and an \(m \times n\) matrix \(\Sigma\) of the form
-\[\Sigma = \begin{pmatrix} D & 0 \\ 0 & 0 \end{pmatrix}, \qquad D = \operatorname{diag}(\sigma_1, \ldots, \sigma_r), \quad \sigma_1 \geq \cdots \geq \sigma_r > 0,\]
+
+\[
+\Sigma = \begin{pmatrix} D & 0 \\ 0 & 0 \end{pmatrix}, \qquad D = \operatorname{diag}(\sigma_1, \ldots, \sigma_r), \quad \sigma_1 \geq \cdots \geq \sigma_r > 0,
+\]
 such that \(A = U \Sigma V^T\).
 
 </div>
@@ -443,7 +479,10 @@ such that \(A = U \Sigma V^T\).
 *Proof.* Let \(\{\mathbf{v}_1, \ldots, \mathbf{v}_n\}\) be an orthonormal basis of eigenvectors of \(A^T A\) with \(A^T A \mathbf{v}_i = \sigma_i^2 \mathbf{v}_i\), ordered so \(\sigma_1 \geq \cdots \geq \sigma_r > 0 = \sigma_{r+1} = \cdots = \sigma_n\). Form \(V = [\mathbf{v}_1 \mid \cdots \mid \mathbf{v}_n]\).
 
 For \(1 \leq i \leq r\), define \(\mathbf{u}_i = \frac{1}{\sigma_i} A \mathbf{v}_i \in \mathbb{R}^m\). We verify orthonormality:
-\[\langle \mathbf{u}_i, \mathbf{u}_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle A\mathbf{v}_i, A\mathbf{v}_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle \mathbf{v}_i, A^T A \mathbf{v}_j \rangle = \frac{\sigma_j^2}{\sigma_i \sigma_j} \langle \mathbf{v}_i, \mathbf{v}_j \rangle = \delta_{ij}.\]
+
+\[
+\langle \mathbf{u}_i, \mathbf{u}_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle A\mathbf{v}_i, A\mathbf{v}_j \rangle = \frac{1}{\sigma_i \sigma_j} \langle \mathbf{v}_i, A^T A \mathbf{v}_j \rangle = \frac{\sigma_j^2}{\sigma_i \sigma_j} \langle \mathbf{v}_i, \mathbf{v}_j \rangle = \delta_{ij}.
+\]
 Extend \(\{\mathbf{u}_1, \ldots, \mathbf{u}_r\}\) to an orthonormal basis \(\{\mathbf{u}_1, \ldots, \mathbf{u}_m\}\) for \(\mathbb{R}^m\) (via Gram-Schmidt). Form \(U = [\mathbf{u}_1 \mid \cdots \mid \mathbf{u}_m]\).
 
 Now check: \(A V = A[\mathbf{v}_1 \mid \cdots \mid \mathbf{v}_n] = [\sigma_1 \mathbf{u}_1 \mid \cdots \mid \sigma_r \mathbf{u}_r \mid \mathbf{0} \mid \cdots \mid \mathbf{0}] = U\Sigma\). Since \(V\) is orthogonal, \(A = U\Sigma V^T\). \(\square\)
@@ -457,7 +496,10 @@ The geometric meaning: \(V^T\) rotates the domain, \(\Sigma\) scales each coordi
 **Low-rank approximation.** Write \(A = \sum_{i=1}^r \sigma_i \mathbf{u}_i \mathbf{v}_i^T\). The rank-\(k\) truncation \(A_k = \sum_{i=1}^k \sigma_i \mathbf{u}_i \mathbf{v}_i^T\) is the best rank-\(k\) approximation to \(A\) in the Frobenius norm (Eckart-Young Theorem). This underlies image compression and dimensionality reduction.
 
 **Pseudoinverse.** Define \(\Sigma^+ = \operatorname{diag}(\sigma_1^{-1}, \ldots, \sigma_r^{-1}, 0, \ldots)\) (transposed). The <em>Moore-Penrose pseudoinverse</em> is
-\[A^+ = V \Sigma^+ U^T.\]
+
+\[
+A^+ = V \Sigma^+ U^T.
+\]
 It gives the minimum-norm least-squares solution \(\hat{\mathbf{x}} = A^+ \mathbf{b}\) to any linear system \(A\mathbf{x} = \mathbf{b}\), consistent or not.
 
 **Condition number.** The ratio \(\kappa(A) = \sigma_1 / \sigma_r\) measures numerical sensitivity: when \(\kappa(A)\) is large, small perturbations in \(\mathbf{b}\) cause large changes in solutions to \(A\mathbf{x} = \mathbf{b}\).
@@ -473,7 +515,10 @@ Not every operator is diagonalizable. When eigenspaces are too small — when \(
 <div class="definition">
 
 <strong>Definition 6.1 (Generalized Eigenvector).</strong> Let \(T : V \to V\) be a linear operator and \(\lambda\) an eigenvalue of \(T\). A nonzero vector \(\mathbf{v}\) is a <em>generalized eigenvector</em> of rank \(k\) for \(\lambda\) if
-\[(T - \lambda I)^k \mathbf{v} = \mathbf{0} \quad \text{but} \quad (T - \lambda I)^{k-1} \mathbf{v} \neq \mathbf{0}.\]
+
+\[
+(T - \lambda I)^k \mathbf{v} = \mathbf{0} \quad \text{but} \quad (T - \lambda I)^{k-1} \mathbf{v} \neq \mathbf{0}.
+\]
 The <em>generalized eigenspace} for \(\lambda\)</em> is \(G(\lambda, T) = \ker(T - \lambda I)^n = \bigcup_{k \geq 1} \ker(T - \lambda I)^k\).
 
 </div>
@@ -485,14 +530,20 @@ A chain of generalized eigenvectors \(\mathbf{v}_k, \mathbf{v}_{k-1} = (T-\lambd
 <div class="definition">
 
 <strong>Definition 6.2 (Jordan Block).</strong> The \(k \times k\) <em>Jordan block</em> for eigenvalue \(\lambda\) is
-\[J_k(\lambda) = \begin{pmatrix} \lambda & 1 & & 0 \\ & \lambda & \ddots & \\ & & \ddots & 1 \\ 0 & & & \lambda \end{pmatrix}.\]
+
+\[
+J_k(\lambda) = \begin{pmatrix} \lambda & 1 & & 0 \\ & \lambda & \ddots & \\ & & \ddots & 1 \\ 0 & & & \lambda \end{pmatrix}.
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Theorem 6.3 (Jordan Normal Form).</strong> Let \(V\) be a finite-dimensional vector space over \(\mathbb{C}\) and \(T : V \to V\) a linear operator. There exists a basis for \(V\) with respect to which the matrix of \(T\) is block diagonal,
-\[[T] = \operatorname{diag}(J_{k_1}(\lambda_1), J_{k_2}(\lambda_2), \ldots, J_{k_s}(\lambda_s)),\]
+
+\[
+[T] = \operatorname{diag}(J_{k_1}(\lambda_1), J_{k_2}(\lambda_2), \ldots, J_{k_s}(\lambda_s)),
+\]
 where each \(J_{k_i}(\lambda_i)\) is a Jordan block. This form is unique up to permutation of blocks.
 
 </div>
@@ -550,7 +601,10 @@ The classification of symmetric bilinear forms over \(\mathbb{R}\) is complete: 
 <div class="theorem">
 
 <strong>Theorem 7.4 (Sylvester's Law of Inertia).</strong> Let \(B\) be a symmetric bilinear form on a real vector space \(V\) of dimension \(n\). There exists a basis for \(V\) with respect to which the Gram matrix of \(B\) is
-\[\operatorname{diag}(\underbrace{1, \ldots, 1}_{p}, \underbrace{-1, \ldots, -1}_{q}, \underbrace{0, \ldots, 0}_{n-p-q}).\]
+
+\[
+\operatorname{diag}(\underbrace{1, \ldots, 1}_{p}, \underbrace{-1, \ldots, -1}_{q}, \underbrace{0, \ldots, 0}_{n-p-q}).
+\]
 The integers \(p\), \(q\), and \(n-p-q\) are independent of the choice of diagonalizing basis. The pair \((p, q)\) is called the <em>signature</em> of \(B\).
 
 </div>

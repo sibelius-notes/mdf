@@ -24,12 +24,14 @@ A number field is a finite extension of \(\mathbb{Q}\). Equivalently, it is a fi
 </div>
 
 The ring of integers \(\mathcal{O}_K\) is a free \(\mathbb{Z}\)-module of rank \([K:\mathbb{Q}]\), and \(K\) is its field of fractions. When \(K = \mathbb{Q}\), we recover \(\mathcal{O}_K = \mathbb{Z}\). For \(K = \mathbb{Q}(\sqrt{d})\) with \(d\) squarefree, we have
+
 \[
 \mathcal{O}_K = \begin{cases} \mathbb{Z}[\sqrt{d}] & \text{if } d \equiv 2, 3 \pmod{4}, \\ \mathbb{Z}\!\left[\frac{1+\sqrt{d}}{2}\right] & \text{if } d \equiv 1 \pmod{4}. \end{cases}
 \]
 
 <div class="example">
 <strong>Example 1.3.</strong> Consider \(K = \mathbb{Q}(\sqrt{-5})\). Since \(-5 \equiv 3 \pmod{4}\), the ring of integers is \(\mathcal{O}_K = \mathbb{Z}[\sqrt{-5}]\). This ring is not a unique factorization domain: we have
+
 \[
 6 = 2 \cdot 3 = (1+\sqrt{-5})(1-\sqrt{-5}),
 \]
@@ -55,6 +57,7 @@ The algebraic structure that makes the ideal theory of number fields work so bea
 
 <div class="theorem">
 <strong>Theorem 1.6 (Unique Factorization of Ideals).</strong> Let \(R\) be a Dedekind domain. Every nonzero ideal \(\mathfrak{a}\) of \(R\) factors uniquely (up to order) as a product of prime ideals:
+
 \[
 \mathfrak{a} = \mathfrak{p}_1^{e_1} \mathfrak{p}_2^{e_2} \cdots \mathfrak{p}_r^{e_r}.
 \]
@@ -62,6 +65,7 @@ The algebraic structure that makes the ideal theory of number fields work so bea
 
 <div class="proof">
 <strong>Proof.</strong> We sketch the argument. First, one shows that every nonzero ideal of a Dedekind domain contains a product of nonzero prime ideals (using the Noetherian property). Then, using the fact that every nonzero prime ideal is maximal and \(R\) is integrally closed, one constructs the inverse of a prime ideal: for a nonzero prime \(\mathfrak{p}\), define
+
 \[
 \mathfrak{p}^{-1} = \{ x \in K : x\mathfrak{p} \subseteq R \},
 \]
@@ -81,6 +85,7 @@ The set of nonzero fractional ideals forms a group under multiplication, with id
 One of the most important constructions in algebraic number theory is the analysis of how prime ideals in a base field decompose in extensions. This "splitting behavior" is the arithmetic backbone of class field theory: the main theorems will tell us that the splitting of primes in abelian extensions is governed by congruence conditions.
 
 Let \(K \subseteq L\) be an extension of number fields, and let \(\mathfrak{p}\) be a nonzero prime ideal of \(\mathcal{O}_K\). The extended ideal \(\mathfrak{p}\mathcal{O}_L\) factors in \(\mathcal{O}_L\):
+
 \[
 \mathfrak{p}\mathcal{O}_L = \mathfrak{P}_1^{e_1} \mathfrak{P}_2^{e_2} \cdots \mathfrak{P}_g^{e_g},
 \]
@@ -96,6 +101,7 @@ where the \(\mathfrak{P}_i\) are distinct prime ideals of \(\mathcal{O}_L\) lyin
 
 <div class="theorem">
 <strong>Theorem 1.9 (Fundamental Identity).</strong> With notation as above,
+
 \[
 \sum_{i=1}^{g} e_i f_i = [L:K].
 \]
@@ -127,10 +133,12 @@ When \(L/K\) is Galois and \(\mathfrak{P}\) is a prime of \(\mathcal{O}_L\) lyin
 
 <div class="definition">
 <strong>Definition 1.12 (Decomposition and Inertia Groups).</strong> Let \(L/K\) be Galois with group \(G\), and let \(\mathfrak{P}\) lie over \(\mathfrak{p}\). The <em>decomposition group</em> is
+
 \[
 D(\mathfrak{P}|\mathfrak{p}) = \{\sigma \in G : \sigma(\mathfrak{P}) = \mathfrak{P}\},
 \]
 and the <em>inertia group</em> is
+
 \[
 I(\mathfrak{P}|\mathfrak{p}) = \{\sigma \in G : \sigma(x) \equiv x \pmod{\mathfrak{P}} \text{ for all } x \in \mathcal{O}_L\}.
 \]
@@ -140,6 +148,7 @@ The inertia group \(I(\mathfrak{P}|\mathfrak{p})\) is a normal subgroup of \(D(\
 
 <div class="definition">
 <strong>Definition 1.13 (Frobenius Element).</strong> If \(\mathfrak{p}\) is unramified in \(L/K\), then \(I(\mathfrak{P}|\mathfrak{p}) = 1\), and there is a unique element \(\mathrm{Frob}_{\mathfrak{P}} \in D(\mathfrak{P}|\mathfrak{p})\) such that
+
 \[
 \mathrm{Frob}_{\mathfrak{P}}(x) \equiv x^{N\mathfrak{p}} \pmod{\mathfrak{P}}
 \]
@@ -158,6 +167,7 @@ The failure of unique factorization of elements in \(\mathcal{O}_K\) is measured
 
 <div class="definition">
 <strong>Definition 1.15 (Ideal Class Group).</strong> The <em>ideal class group</em> of \(K\) is the quotient
+
 \[
 \mathrm{Cl}(K) = \frac{\{\text{nonzero fractional ideals of } \mathcal{O}_K\}}{\{\text{principal fractional ideals}\}}.
 \]
@@ -172,6 +182,7 @@ The proof uses the geometry of numbers (Minkowski's theorem): every ideal class 
 
 <div class="definition">
 <strong>Definition 1.17 (Minkowski Bound).</strong> For a number field \(K\) of degree \(n = [K:\mathbb{Q}]\) with \(r_2\) pairs of complex embeddings and discriminant \(\Delta_K\), the <em>Minkowski bound</em> is
+
 \[
 M_K = \frac{n!}{n^n} \left(\frac{4}{\pi}\right)^{r_2} |\Delta_K|^{1/2}.
 \]
@@ -180,6 +191,7 @@ Every ideal class in \(\mathrm{Cl}(K)\) contains an integral ideal of norm at mo
 
 <div class="example">
 <strong>Example 1.18.</strong> For \(K = \mathbb{Q}(\sqrt{-5})\), the discriminant is \(\Delta_K = -20\), and we have \(n = 2\), \(r_2 = 1\). The Minkowski bound is
+
 \[
 M_K = \frac{2!}{4} \cdot \frac{4}{\pi} \cdot \sqrt{20} = \frac{2\sqrt{20}}{\pi} \approx 2.85.
 \]
@@ -192,6 +204,7 @@ The group of units \(\mathcal{O}_K^\times\) in the ring of integers is another f
 
 <div class="theorem">
 <strong>Theorem 1.19 (Dirichlet's Unit Theorem).</strong> Let \(K\) be a number field of degree \(n = r_1 + 2r_2\), where \(r_1\) is the number of real embeddings and \(r_2\) is the number of pairs of complex conjugate embeddings. Then
+
 \[
 \mathcal{O}_K^\times \cong \mu_K \times \mathbb{Z}^{r_1 + r_2 - 1},
 \]
@@ -200,6 +213,7 @@ where \(\mu_K\) is the finite cyclic group of roots of unity in \(K\).
 
 <div class="proof">
 <strong>Proof (sketch).</strong> Consider the logarithmic embedding \(\ell: \mathcal{O}_K^\times \to \mathbb{R}^{r_1 + r_2}\) defined by
+
 \[
 \ell(u) = (\log|\sigma_1(u)|, \ldots, \log|\sigma_{r_1}(u)|, 2\log|\sigma_{r_1+1}(u)|, \ldots, 2\log|\sigma_{r_1+r_2}(u)|).
 \]
@@ -216,6 +230,7 @@ The discriminant and different measure ramification and will be essential for un
 
 <div class="definition">
 <strong>Definition 1.21 (Different).</strong> Let \(L/K\) be an extension of number fields. The <em>different</em> of \(L/K\) is the ideal
+
 \[
 \mathfrak{d}_{L/K} = \left(\{x \in L : \mathrm{Tr}_{L/K}(x \mathcal{O}_L) \subseteq \mathcal{O}_K\}\right)^{-1}.
 \]
@@ -260,6 +275,7 @@ For a number field \(K\), the places are classified as follows: the <em>archimed
 
 <div class="definition">
 <strong>Definition 2.3 (\(\mathfrak{p}\)-adic Absolute Value).</strong> For a nonzero prime ideal \(\mathfrak{p}\) of \(\mathcal{O}_K\), the <em>\(\mathfrak{p}\)-adic absolute value</em> is defined by
+
 \[
 |x|_\mathfrak{p} = (N\mathfrak{p})^{-v_\mathfrak{p}(x)}
 \]
@@ -268,6 +284,7 @@ for \(x \in K^\times\), where \(v_\mathfrak{p}(x)\) is the exponent of \(\mathfr
 
 <div class="theorem">
 <strong>Theorem 2.4 (Product Formula).</strong> For any \(x \in K^\times\),
+
 \[
 \prod_{v} |x|_v = 1,
 \]
@@ -285,6 +302,7 @@ The completion of \(\mathbb{Q}\) with respect to \(|\cdot|_p\) gives the field \
 </div>
 
 Every element of \(\mathbb{Q}_p\) can be written uniquely as a "Laurent series in \(p\)":
+
 \[
 x = \sum_{i=n}^{\infty} a_i p^i, \quad a_i \in \{0, 1, \ldots, p-1\}, \quad a_n \neq 0,
 \]
@@ -300,6 +318,7 @@ Hensel's lemma is the local analogue of Newton's method: it allows us to "lift" 
 
 <div class="theorem">
 <strong>Theorem 2.7 (Hensel's Lemma).</strong> Let \(K\) be a complete non-archimedean field with valuation ring \(\mathcal{O}\) and maximal ideal \(\mathfrak{m}\). Let \(f(x) \in \mathcal{O}[x]\) and suppose \(a \in \mathcal{O}\) satisfies
+
 \[
 |f(a)| < |f'(a)|^2.
 \]
@@ -330,10 +349,12 @@ If \(K_v\) is the completion of \(K\) at a finite place \(v\) corresponding to a
 
 <div class="proposition">
 <strong>Proposition 2.11 (Structure of \(K_v^\times\)).</strong> For a non-archimedean local field \(K_v\) with uniformizer \(\pi\), residue field \(\mathbb{F}_q\), and ring of integers \(\mathcal{O}_v\),
+
 \[
 K_v^\times \cong \mathbb{Z} \times \mathcal{O}_v^\times, \quad x = \pi^{v(x)} \cdot u,
 \]
 and
+
 \[
 \mathcal{O}_v^\times \cong \mu_{q-1} \times (1 + \mathfrak{m}_v),
 \]
@@ -362,6 +383,7 @@ The structure of the principal units \(1 + \mathfrak{m}_v\) is more subtle: as a
 
 <div class="proposition">
 <strong>Proposition 2.15 (Eisenstein Polynomials).</strong> A totally ramified extension of degree \(n\) of a local field \(K\) is generated by a root of an Eisenstein polynomial
+
 \[
 f(x) = x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0 \in \mathcal{O}_K[x],
 \]
@@ -374,6 +396,7 @@ The decomposition and inertia groups from the global theory have local counterpa
 
 <div class="definition">
 <strong>Definition 2.16 (Higher Ramification Groups, Lower Numbering).</strong> Let \(L/K\) be a finite Galois extension of local fields with group \(G\). For \(i \geq -1\), the <em>\(i\)-th ramification group</em> (in the lower numbering) is
+
 \[
 G_i = \{\sigma \in G : v_L(\sigma(x) - x) \geq i+1 \text{ for all } x \in \mathcal{O}_L\}.
 \]
@@ -391,6 +414,7 @@ Krasner's lemma is a remarkable rigidity result for non-archimedean fields: it s
 
 <div class="theorem">
 <strong>Theorem 2.18 (Krasner's Lemma).</strong> Let \(K\) be a complete non-archimedean field, \(\alpha\) separable over \(K\), and let \(\alpha_1 = \alpha, \alpha_2, \ldots, \alpha_n\) be the conjugates of \(\alpha\) over \(K\). If \(\beta \in \bar{K}\) satisfies
+
 \[
 |\beta - \alpha| < |\alpha_i - \alpha| \quad \text{for all } i \geq 2,
 \]
@@ -399,6 +423,7 @@ then \(K(\alpha) \subseteq K(\beta)\).
 
 <div class="proof">
 <strong>Proof.</strong> Let \(\sigma \in \mathrm{Gal}(\bar{K}/K(\beta))\). Then \(\sigma(\beta) = \beta\), so
+
 \[
 |\sigma(\alpha) - \alpha| = |(\sigma(\alpha) - \beta) - (\alpha - \beta)| = |\sigma(\alpha - \beta) - (\alpha - \beta)|.
 \]
@@ -421,6 +446,7 @@ Having studied local fields individually, we now combine all completions of a nu
 
 <div class="definition">
 <strong>Definition 3.1 (Places).</strong> A <em>place</em> of a number field \(K\) is an equivalence class of nontrivial absolute values on \(K\). The set of all places is denoted \(\Sigma_K\) (or \(M_K\)). It decomposes as
+
 \[
 \Sigma_K = \Sigma_K^\infty \cup \Sigma_K^f,
 \]
@@ -435,6 +461,7 @@ The adele ring is not a direct product of all completions (which would be too la
 
 <div class="definition">
 <strong>Definition 3.2 (Restricted Direct Product).</strong> Let \(\{G_v\}_{v \in S}\) be a family of locally compact groups, and for all but finitely many \(v\), let \(H_v \subseteq G_v\) be a compact open subgroup. The <em>restricted direct product</em> \(\prod'_v G_v\) (with respect to the \(H_v\)) is the set of elements \((x_v) \in \prod_v G_v\) such that \(x_v \in H_v\) for all but finitely many \(v\). It is given the topology generated by sets of the form
+
 \[
 \prod_{v \in T} U_v \times \prod_{v \notin T} H_v,
 \]
@@ -447,6 +474,7 @@ The restricted direct product is again a locally compact group — this is the k
 
 <div class="definition">
 <strong>Definition 3.3 (Adele Ring).</strong> The <em>adele ring</em> of a number field \(K\) is the restricted direct product
+
 \[
 \mathbb{A}_K = \prod_{v \in \Sigma_K}' K_v
 \]
@@ -473,6 +501,7 @@ Compactness of \(\mathbb{A}_K/K\): this can be deduced from Minkowski's theorem 
 
 <div class="definition">
 <strong>Definition 3.6 (Idele Group).</strong> The <em>idele group</em> of \(K\) is the restricted direct product of the multiplicative groups:
+
 \[
 \mathbb{A}_K^\times = \prod_{v}' K_v^\times,
 \]
@@ -485,6 +514,7 @@ The diagonal embedding \(K^\times \hookrightarrow \mathbb{A}_K^\times\) maps \(\
 
 <div class="definition">
 <strong>Definition 3.7 (Content/Idele Norm).</strong> The <em>content</em> (or <em>idele norm</em>) is the continuous homomorphism
+
 \[
 \|\cdot\|: \mathbb{A}_K^\times \to \mathbb{R}_{>0}, \quad \|a\| = \prod_v |a_v|_v.
 \]
@@ -497,6 +527,7 @@ The idele class group is the central object of global class field theory: the gl
 
 <div class="definition">
 <strong>Definition 3.8 (Idele Class Group).</strong> The <em>idele class group</em> of \(K\) is
+
 \[
 C_K = \mathbb{A}_K^\times / K^\times.
 \]
@@ -505,6 +536,7 @@ The <em>norm-one idele class group</em> is \(C_K^1 = \ker(\|\cdot\|: C_K \to \ma
 
 <div class="theorem">
 <strong>Theorem 3.9 (Compactness of \(C_K^1\)).</strong> The norm-one idele class group \(C_K^1\) is compact. The full idele class group fits into an exact sequence
+
 \[
 1 \to C_K^1 \to C_K \xrightarrow{\|\cdot\|} \mathbb{R}_{>0} \to 1,
 \]
@@ -521,10 +553,12 @@ The power of the adelic formalism is that it unifies and subsumes the classical 
 
 <div class="theorem">
 <strong>Theorem 3.10.</strong> There is an exact sequence
+
 \[
 1 \to \mathcal{O}_K^\times \to K^\times \to \mathbb{A}_{K,f}^\times / \prod_v \mathcal{O}_v^\times \to \mathrm{Cl}(K) \to 1,
 \]
 where \(\mathbb{A}_{K,f}^\times = \prod_v' K_v^\times\) (product over finite places). In particular, the class group is isomorphic to
+
 \[
 \mathrm{Cl}(K) \cong \mathbb{A}_{K,f}^\times / (K^\times \cdot \prod_v \mathcal{O}_v^\times).
 \]
@@ -564,6 +598,7 @@ The answer is a resounding yes, and the correspondence is remarkably clean. The 
 
 <div class="theorem">
 <strong>Theorem 4.1 (Local Reciprocity Law).</strong> Let \(K\) be a non-archimedean local field. There exists a unique continuous homomorphism
+
 \[
 \mathrm{Art}_K: K^\times \to \mathrm{Gal}(K^{\mathrm{ab}}/K),
 \]
@@ -573,6 +608,7 @@ called the <em>local Artin map</em> (or <em>local reciprocity map</em>), satisfy
 <li>(Norm compatibility) For any finite abelian extension \(L/K\), the kernel of the composition \(K^\times \xrightarrow{\mathrm{Art}_K} \mathrm{Gal}(K^{\mathrm{ab}}/K) \twoheadrightarrow \mathrm{Gal}(L/K)\) is exactly the norm group \(N_{L/K}(L^\times)\).</li>
 </ol>
 In particular, for each finite abelian extension \(L/K\), there is an isomorphism
+
 \[
 \mathrm{Art}_{L/K}: K^\times / N_{L/K}(L^\times) \xrightarrow{\;\sim\;} \mathrm{Gal}(L/K).
 \]
@@ -606,6 +642,7 @@ The correspondence sends \(L\) to \(N_{L/K}(L^\times)\), and it reverses inclusi
 
 <div class="proposition">
 <strong>Proposition 4.5 (Unramified Case).</strong> The unique unramified extension of \(K\) of degree \(n\) corresponds under local class field theory to the norm group \(\langle \pi^n \rangle \cdot \mathcal{O}_K^\times\), where \(\pi\) is any uniformizer. In other words,
+
 \[
 N_{K_n^{\mathrm{ur}}/K}(K_n^{{\mathrm{ur}}\times}) = \langle \pi^n \rangle \cdot \mathcal{O}_K^\times,
 \]
@@ -649,6 +686,7 @@ The key construction is as follows. Let \(\bar{K}\) be an algebraic closure of \
 
 <div class="definition">
 <strong>Definition 4.10 (Torsion Points).</strong> For \(n \geq 1\), the \(\pi^n\)-torsion of the Lubin-Tate formal group is
+
 \[
 F_f[\pi^n] = \{x \in \mathfrak{m}_{\bar{K}} : [\pi^n]_f(x) = 0\}.
 \]
@@ -681,6 +719,7 @@ Part (5): This is the deepest part. One uses the formal group to construct the l
 <strong>Example 4.12 (Local Class Field Theory for \(\mathbb{Q}_p\)).</strong> Take \(K = \mathbb{Q}_p\) with \(\pi = p\). We use the Lubin-Tate series \(f(x) = (1+x)^p - 1\), which corresponds to the formal multiplicative group \(\hat{\mathbb{G}}_m\). The \(p^n\)-torsion points are the elements \(\zeta - 1\) where \(\zeta\) is a \(p^n\)-th root of unity. Thus \(K_{p,n} = \mathbb{Q}_p(\zeta_{p^n})\), and the maximal totally ramified abelian extension is \(\mathbb{Q}_p(\mu_{p^\infty})\), where \(\mu_{p^\infty}\) denotes all \(p\)-power roots of unity.
 
 The maximal abelian extension of \(\mathbb{Q}_p\) is
+
 \[
 \mathbb{Q}_p^{\mathrm{ab}} = \mathbb{Q}_p(\mu_{p^\infty}) \cdot \mathbb{Q}_p^{\mathrm{ur}} = \mathbb{Q}_p(\mu_{p^\infty}, \mu_{(p)'}),
 \]
@@ -698,6 +737,7 @@ The local Artin map \(\mathrm{Art}_{\mathbb{Q}_p}: \mathbb{Q}_p^\times \to \math
 
 <div class="definition">
 <strong>Definition 4.13 (Hilbert Symbol).</strong> For a non-archimedean local field \(K\) containing the \(n\)-th roots of unity, the <em>Hilbert symbol</em> is the pairing
+
 \[
 (\cdot, \cdot)_n: K^\times \times K^\times \to \mu_n
 \]
@@ -738,10 +778,12 @@ The global Artin map is constructed by gluing together the local Artin maps. For
 
 <div class="definition">
 <strong>Definition 5.1 (Global Artin Map).</strong> The <em>global Artin map</em> is the continuous homomorphism
+
 \[
 \mathrm{Art}_K: \mathbb{A}_K^\times \to \mathrm{Gal}(K^{\mathrm{ab}}/K)
 \]
 defined by
+
 \[
 \mathrm{Art}_K(a) = \prod_v \mathrm{Art}_{K_v}(a_v)
 \]
@@ -750,6 +792,7 @@ for an idele \(a = (a_v)_v\). This product is well-defined because for any finit
 
 <div class="remark">
 <strong>Remark 5.2.</strong> When restricted to finite abelian extensions \(L/K\) that are unramified outside a finite set \(S\), and applied to an idele supported only at finite places outside \(S\), the global Artin map recovers the classical Artin map defined on ideals coprime to the ramification. Explicitly, if \(\mathfrak{a} = \prod \mathfrak{p}^{a_\mathfrak{p}}\) is an ideal coprime to the conductor, the classical Artin symbol is
+
 \[
 \left(\frac{L/K}{\mathfrak{a}}\right) = \prod_\mathfrak{p} \left(\frac{L/K}{\mathfrak{p}}\right)^{a_\mathfrak{p}} = \prod_\mathfrak{p} \mathrm{Frob}_\mathfrak{p}^{a_\mathfrak{p}}.
 \]
@@ -762,11 +805,13 @@ for an idele \(a = (a_v)_v\). This product is well-defined because for any finit
 <ol>
 <li>\(\mathrm{Art}_K\) is surjective.</li>
 <li>\(\mathrm{Art}_K\) is trivial on \(K^\times\) (embedded diagonally in \(\mathbb{A}_K^\times\)). That is, for any \(\alpha \in K^\times\),
+
 \[
 \prod_v \mathrm{Art}_{K_v}(\alpha) = 1 \in \mathrm{Gal}(K^{\mathrm{ab}}/K).
 \]
 </li>
 <li>Consequently, \(\mathrm{Art}_K\) factors through the idele class group: there is a surjective homomorphism
+
 \[
 \mathrm{Art}_K: C_K = \mathbb{A}_K^\times / K^\times \twoheadrightarrow \mathrm{Gal}(K^{\mathrm{ab}}/K).
 \]
@@ -784,12 +829,14 @@ for an idele \(a = (a_v)_v\). This product is well-defined because for any finit
 <em>Step 2: Reduction to the cyclic case.</em> By the theory of group extensions, it suffices to prove the reciprocity law for cyclic extensions. (One uses the fact that every abelian extension is a compositum of cyclic extensions.)
 
 <em>Step 3: The First Inequality.</em> For a cyclic extension \(L/K\) of degree \(n\), one proves
+
 \[
 [C_K : N_{L/K}(C_L)] \geq n = [L:K].
 \]
 This is proved using analytic methods (the behavior of \(L\)-functions at \(s = 1\)).
 
 <em>Step 4: The Second Inequality.</em> One proves the reverse inequality
+
 \[
 [C_K : N_{L/K}(C_L)] \leq [L:K].
 \]
@@ -806,6 +853,7 @@ This is harder and uses cohomological methods (the Herbrand quotient of the idel
 
 <div class="theorem">
 <strong>Theorem 5.5 (Global Existence Theorem).</strong> There is an inclusion-reversing bijection
+
 \[
 \left\{\begin{array}{c}\text{finite abelian extensions} \\ L/K\end{array}\right\} \xleftrightarrow{\;1:1\;} \left\{\begin{array}{c}\text{open subgroups of} \\ \text{finite index in } C_K\end{array}\right\}
 \]
@@ -829,6 +877,7 @@ To make the existence theorem explicit, we introduce the notion of a modulus and
 
 <div class="definition">
 <strong>Definition 5.6 (Modulus).</strong> A <em>modulus</em> of \(K\) is a formal product
+
 \[
 \mathfrak{m} = \prod_{v} v^{n_v}
 \]
@@ -843,6 +892,7 @@ We write \(\mathfrak{m} = \mathfrak{m}_0 \mathfrak{m}_\infty\) where \(\mathfrak
 
 <div class="definition">
 <strong>Definition 5.7 (Ray Class Group).</strong> For a modulus \(\mathfrak{m}\), the <em>ray class group modulo \(\mathfrak{m}\)</em> is
+
 \[
 \mathrm{Cl}_\mathfrak{m}(K) = I^\mathfrak{m}(K) / P_\mathfrak{m}(K),
 \]
@@ -851,12 +901,14 @@ where \(I^\mathfrak{m}(K)\) is the group of fractional ideals coprime to \(\math
 
 <div class="proposition">
 <strong>Proposition 5.8.</strong> The ray class group \(\mathrm{Cl}_\mathfrak{m}(K)\) is a finite abelian group. When \(\mathfrak{m} = 1\) (the trivial modulus), it is the ordinary class group \(\mathrm{Cl}(K)\). The ray class group fits into an exact sequence
+
 \[
 (\mathcal{O}_K/\mathfrak{m}_0)^\times \times \{\pm 1\}^{|\mathfrak{m}_\infty|} \to \mathrm{Cl}_\mathfrak{m}(K) \to \mathrm{Cl}(K) \to 1.
 \]
 </div>
 
 The adelic description is cleaner: define the subgroup \(U_\mathfrak{m} \subseteq \mathbb{A}_K^\times\) by
+
 \[
 U_\mathfrak{m} = \prod_{v | \mathfrak{m}_\infty} \mathbb{R}_{>0} \times \prod_{v | \mathfrak{m}_0} (1 + \mathfrak{p}_v^{n_v}) \times \prod_{v \nmid \mathfrak{m}} \mathcal{O}_v^\times.
 \]
@@ -864,6 +916,7 @@ Then \(\mathrm{Cl}_\mathfrak{m}(K) \cong \mathbb{A}_K^\times / (K^\times \cdot U
 
 <div class="definition">
 <strong>Definition 5.9 (Ray Class Field).</strong> The <em>ray class field</em> modulo \(\mathfrak{m}\), denoted \(K(\mathfrak{m})\), is the finite abelian extension of \(K\) corresponding to the open subgroup \(K^\times \cdot U_\mathfrak{m}\) of \(\mathbb{A}_K^\times\) (equivalently, to the image of \(U_\mathfrak{m}\) in \(C_K\)) under the Artin map. It satisfies:
+
 \[
 \mathrm{Gal}(K(\mathfrak{m})/K) \cong \mathrm{Cl}_\mathfrak{m}(K).
 \]
@@ -915,6 +968,7 @@ For part (3), a prime \(\mathfrak{p}\) splits completely in an abelian extension
 
 <div class="theorem">
 <strong>Theorem 5.15 (Conductor-Discriminant Formula).</strong> Let \(L/K\) be a finite abelian extension with Galois group \(G\). Then the discriminant of \(L/K\) satisfies
+
 \[
 \mathfrak{D}_{L/K} = \prod_{\chi \in \hat{G}} \mathfrak{f}(\chi),
 \]
@@ -925,6 +979,7 @@ This formula is a deep connection between ramification data (the discriminant), 
 
 <div class="example">
 <strong>Example 5.16.</strong> For the cyclotomic extension \(\mathbb{Q}(\zeta_p)/\mathbb{Q}\) (with \(p\) an odd prime), the Galois group is \(G \cong (\mathbb{Z}/p\mathbb{Z})^\times\), which has \(p-1\) characters. Each nontrivial character has conductor \(p\), and the trivial character has conductor 1. So the conductor-discriminant formula gives
+
 \[
 \mathfrak{D}_{\mathbb{Q}(\zeta_p)/\mathbb{Q}} = (p)^{p-2}.
 \]
@@ -962,6 +1017,7 @@ Analytic methods have been inseparable from algebraic number theory since Dirich
 
 <div class="definition">
 <strong>Definition 6.1 (Dedekind Zeta Function).</strong> For a number field \(K\), the <em>Dedekind zeta function</em> is
+
 \[
 \zeta_K(s) = \sum_{\mathfrak{a} \subseteq \mathcal{O}_K} \frac{1}{(N\mathfrak{a})^s} = \prod_{\mathfrak{p}} \frac{1}{1 - (N\mathfrak{p})^{-s}},
 \]
@@ -985,10 +1041,12 @@ One of the most beautiful results in analytic number theory is the formula for t
 
 <div class="theorem">
 <strong>Theorem 6.3 (Analytic Class Number Formula).</strong> The Dedekind zeta function has the Laurent expansion at \(s = 1\):
+
 \[
 \zeta_K(s) = \frac{\kappa}{s - 1} + O(1) \quad \text{as } s \to 1,
 \]
 where the residue is
+
 \[
 \kappa = \lim_{s \to 1^+} (s-1)\zeta_K(s) = \frac{2^{r_1}(2\pi)^{r_2} h_K R_K}{w_K \sqrt{|\Delta_K|}}.
 \]
@@ -1001,6 +1059,7 @@ Here \(r_1\) is the number of real places, \(r_2\) the number of complex places,
 
 <div class="example">
 <strong>Example 6.4.</strong> For \(K = \mathbb{Q}(\sqrt{-5})\), we have \(r_1 = 0\), \(r_2 = 1\), \(h_K = 2\), \(w_K = 2\), \(R_K = 1\) (since the unit rank is 0), and \(|\Delta_K| = 20\). The class number formula gives
+
 \[
 \kappa = \frac{2^0 \cdot (2\pi)^1 \cdot 2 \cdot 1}{2 \cdot \sqrt{20}} = \frac{2\pi}{\sqrt{20}} = \frac{\pi}{\sqrt{5}}.
 \]
@@ -1013,6 +1072,7 @@ To study the distribution of primes in extensions and to prove the main theorems
 
 <div class="definition">
 <strong>Definition 6.5 (Hecke L-function).</strong> Let \(\chi: C_K \to \mathbb{C}^\times\) be a continuous character of the idele class group (a <em>Hecke character</em> or <em>Grössencharakter</em>). The <em>Hecke \(L\)-function</em> is
+
 \[
 L(s, \chi) = \prod_{\mathfrak{p} \text{ unramified}} \frac{1}{1 - \chi(\mathfrak{p})(N\mathfrak{p})^{-s}},
 \]
@@ -1034,6 +1094,7 @@ The non-vanishing \(L(1, \chi) \neq 0\) is the analytic heart of class field the
 
 <div class="remark">
 <strong>Remark 6.7.</strong> The adelic approach to \(L\)-functions, pioneered by Tate in his 1950 thesis, reproves the analytic continuation and functional equation using Fourier analysis on the adele ring \(\mathbb{A}_K\). One defines a zeta integral
+
 \[
 Z(f, \chi, s) = \int_{\mathbb{A}_K^\times} f(x) \chi(x) \|x\|^s \, d^\times x
 \]
@@ -1046,6 +1107,7 @@ A crucial tool is the factorization of the Dedekind zeta function of an abelian 
 
 <div class="theorem">
 <strong>Theorem 6.8.</strong> Let \(L/K\) be a finite abelian extension with Galois group \(G\). Then
+
 \[
 \zeta_L(s) = \prod_{\chi \in \hat{G}} L(s, \chi),
 \]
@@ -1054,6 +1116,7 @@ where the product runs over all characters \(\chi: G \to \mathbb{C}^\times\), vi
 
 <div class="proof">
 <strong>Proof.</strong> This is a formal consequence of character theory. At an unramified prime \(\mathfrak{p}\) of \(K\), the Euler factor of \(\zeta_L(s)\) is
+
 \[
 \prod_{\mathfrak{P} | \mathfrak{p}} \frac{1}{1 - (N\mathfrak{P})^{-s}} = \left(\frac{1}{1 - (N\mathfrak{p})^{-fs}}\right)^g,
 \]
@@ -1066,10 +1129,12 @@ The Chebotarev density theorem is one of the most important results in algebraic
 
 <div class="theorem">
 <strong>Theorem 6.9 (Chebotarev Density Theorem).</strong> Let \(L/K\) be a finite Galois extension with group \(G\). For each conjugacy class \(C\) of \(G\), define
+
 \[
 \pi_C(x) = \#\{\mathfrak{p} \text{ prime of } K : N\mathfrak{p} \leq x, \, \mathfrak{p} \text{ unramified in } L/K, \, \mathrm{Frob}_\mathfrak{p} \in C\}.
 \]
 Then
+
 \[
 \pi_C(x) \sim \frac{|C|}{|G|} \cdot \frac{x}{\log x} \quad \text{as } x \to \infty.
 \]
@@ -1086,6 +1151,7 @@ Equivalently, the set of primes with Frobenius in \(C\) has Dirichlet density \(
 (3) Non-vanishing: \(L(1, \chi) \neq 0\) for \(\chi \neq 1\), so \(\log L(s, \chi)\) is bounded as \(s \to 1^+\) for nontrivial \(\chi\), while \(\log L(s, 1) = \log \zeta_K(s) \sim \log \frac{1}{s-1}\) has a logarithmic singularity.
 
 Combining these with character orthogonality, we get
+
 \[
 \sum_{\substack{\mathfrak{p}: \mathrm{Frob}_\mathfrak{p} \in C}} (N\mathfrak{p})^{-s} = \frac{|C|}{|G|} \log \frac{1}{s-1} + O(1) \quad \text{as } s \to 1^+,
 \]
@@ -1118,6 +1184,7 @@ The \(L\)-functions we have considered so far are associated to one-dimensional 
 
 <div class="definition">
 <strong>Definition 6.13 (Artin L-function).</strong> Let \(L/K\) be a Galois extension with group \(G\), and let \(\rho: G \to \mathrm{GL}(V)\) be a finite-dimensional complex representation. The <em>Artin \(L\)-function</em> is
+
 \[
 L(s, \rho, L/K) = \prod_{\mathfrak{p}} \det\left(I - \rho(\mathrm{Frob}_\mathfrak{p}) (N\mathfrak{p})^{-s} \mid V^{I_\mathfrak{p}}\right)^{-1},
 \]
@@ -1150,6 +1217,7 @@ We begin the applications by showing that the grand theorem of class field theor
 
 <div class="theorem">
 <strong>Theorem 7.1 (Quadratic Reciprocity, Classical Form).</strong> For distinct odd primes \(p\) and \(q\),
+
 \[
 \left(\frac{p}{q}\right)\left(\frac{q}{p}\right) = (-1)^{\frac{p-1}{2} \cdot \frac{q-1}{2}}.
 \]
@@ -1159,14 +1227,17 @@ We begin the applications by showing that the grand theorem of class field theor
 <strong>Proof (via Artin reciprocity).</strong> Consider the quadratic extension \(L = \mathbb{Q}(\sqrt{p^*})\) where \(p^* = (-1)^{(p-1)/2} p\), so that \(p^* \equiv 1 \pmod{4}\) and the discriminant of \(L\) is \(p^*\). The Artin map gives an isomorphism \(\mathrm{Gal}(L/\mathbb{Q}) \cong (\mathbb{Z}/|p^*|\mathbb{Z})^\times / \{\pm 1\}\).
 
 For an odd prime \(q \neq p\), the Frobenius \(\mathrm{Frob}_q \in \mathrm{Gal}(L/\mathbb{Q}) \cong \{1, -1\}\) is determined by:
+
 \[
 \mathrm{Frob}_q = \left(\frac{p^*}{q}\right) = \left(\frac{(-1)^{(p-1)/2} p}{q}\right) = (-1)^{\frac{p-1}{2} \cdot \frac{q-1}{2}} \left(\frac{p}{q}\right).
 \]
 On the other hand, by the Artin reciprocity law applied to the map on ideals, the Frobenius at \(q\) is determined by the class of \(q\) modulo \(|p^*|\):
+
 \[
 \mathrm{Frob}_q = \left(\frac{q}{|p^*|}\right) = \left(\frac{q}{p}\right)
 \]
 (the second equality uses the fact that the conductor of \(L\) is \(|p^*|\) and the Artin map corresponds to the Legendre symbol). Comparing the two expressions:
+
 \[
 (-1)^{\frac{p-1}{2} \cdot \frac{q-1}{2}} \left(\frac{p}{q}\right) = \left(\frac{q}{p}\right),
 \]
@@ -1187,6 +1258,7 @@ which is quadratic reciprocity. \(\square\)
 <strong>Proof (via class field theory).</strong> By the global existence theorem, every finite abelian extension \(L/\mathbb{Q}\) corresponds to an open subgroup \(N \subseteq C_\mathbb{Q} = \mathbb{A}_\mathbb{Q}^\times / \mathbb{Q}^\times\) of finite index. We need to show that every such \(N\) contains the norm group of some cyclotomic field \(\mathbb{Q}(\zeta_n)\).
 
 The idele class group of \(\mathbb{Q}\) has a simple structure. By the strong approximation theorem and the fact that \(\mathrm{Cl}(\mathbb{Q})\) is trivial, we have
+
 \[
 C_\mathbb{Q} \cong \mathbb{R}_{>0} \times \prod_p \mathbb{Z}_p^\times / \{\pm 1\} \cong \mathbb{R}_{>0} \times \hat{\mathbb{Z}}^\times.
 \]
@@ -1222,6 +1294,7 @@ For other number fields, Hilbert's 12th problem remains wide open. There are par
 <ol>
 <li>The \(j\)-invariant \(j(E)\) is an algebraic integer, and \(K(j(E))\) is the Hilbert class field \(H_K\) of \(K\).</li>
 <li>For each ideal \(\mathfrak{a}\) of \(\mathcal{O}_K\), the value \(j(\mathfrak{a})\) (the \(j\)-invariant of the elliptic curve \(\mathbb{C}/\mathfrak{a}\)) is a conjugate of \(j(E)\) under \(\mathrm{Gal}(H_K/K)\), and the action of the Galois group is given by the Artin map:
+
 \[
 \left(\frac{H_K/K}{\mathfrak{p}}\right)(j(\mathfrak{a})) = j(\mathfrak{p}^{-1}\mathfrak{a}).
 \]
@@ -1273,6 +1346,7 @@ Another important perspective on class field theory comes through the Brauer gro
 
 <div class="theorem">
 <strong>Theorem 7.12 (Local Brauer Group).</strong> For a non-archimedean local field \(K\),
+
 \[
 \mathrm{Br}(K) \cong \mathbb{Q}/\mathbb{Z},
 \]
@@ -1281,6 +1355,7 @@ via the invariant map \(\mathrm{inv}_K\). For \(K = \mathbb{R}\), \(\mathrm{Br}(
 
 <div class="theorem">
 <strong>Theorem 7.13 (Brauer Group Exact Sequence).</strong> For a number field \(K\), there is an exact sequence
+
 \[
 0 \to \mathrm{Br}(K) \to \bigoplus_v \mathrm{Br}(K_v) \xrightarrow{\sum \mathrm{inv}_v} \mathbb{Q}/\mathbb{Z} \to 0.
 \]
@@ -1296,6 +1371,7 @@ This exact sequence says that a central simple algebra over \(K\) is determined 
 
 <div class="theorem">
 <strong>Theorem 7.15 (Eisenstein Reciprocity).</strong> Let \(p\) be an odd prime and \(K = \mathbb{Q}(\zeta_p)\). For \(\alpha \in \mathcal{O}_K\) with \(\alpha \equiv a \pmod{(1-\zeta_p)^2}\) for some \(a \in \mathbb{Z}\), \(\gcd((\alpha), (p)) = 1\), and a rational integer \(m\) with \(\gcd(m, p) = 1\),
+
 \[
 \left(\frac{\alpha}{m}\right)_p = \left(\frac{m}{\alpha}\right)_p,
 \]

@@ -32,7 +32,10 @@ In this course, we will be working over the complex numbers, and all the algebra
 
 <div class="definition">
 <strong>Definition 2.2.</strong> Let \(S\) be a subset of the polynomial ring \(\mathbb{C}[x_1, \ldots, x_n]\). The <strong>algebraic set</strong> corresponding to \(S\) is:
-\[ V(S) = \{ x \in \mathbb{A}^n \mid f(x) = 0 \text{ for all } f \in S \} \]
+
+\[
+V(S) = \{ x \in \mathbb{A}^n \mid f(x) = 0 \text{ for all } f \in S \}
+\]
 In other words, \(V(S)\) is the set of points where all functions in \(S\) vanish.
 </div>
 
@@ -46,7 +49,10 @@ This lets us make a Geometric Thing out of an Algebra Thing. Next step: go the o
 
 <div class="definition">
 <strong>Definition 2.3.</strong> Let \(X \subset \mathbb{A}^n\) be a subset of affine space. The <strong>ideal</strong> of \(X\) is:
-\[ I(X) = \{ f \in \mathbb{C}[x_1, \ldots, x_n] \mid f(P) = 0 \text{ for all } P \in X \} \]
+
+\[
+I(X) = \{ f \in \mathbb{C}[x_1, \ldots, x_n] \mid f(P) = 0 \text{ for all } P \in X \}
+\]
 </div>
 
 The ideal of the \(x\)-axis is \((y)\), since the vanishing polynomials are exactly those you can factor a \(y\) out of. The ideal of the origin is \((x, y)\).
@@ -81,7 +87,10 @@ Since \(\mathbb{C}\) is a field (hence Noetherian), repeated application gives t
 
 <div class="definition">
 <strong>Definition 2.5.</strong> An ideal \(I\) of a ring \(R\) is called <strong>radical</strong> if every \(r \in R\) with \(r^n \in I\) for some positive integer \(n\) satisfies \(r \in I\). For an arbitrary ideal \(I\), define the <strong>radical</strong> of \(I\) to be:
-\[ \text{rad}(I) = \{ r \in R \mid r^n \in I \text{ for some integer } n > 0 \} \]
+
+\[
+\text{rad}(I) = \{ r \in R \mid r^n \in I \text{ for some integer } n > 0 \}
+\]
 </div>
 
 <div class="theorem">
@@ -104,13 +113,19 @@ We are now ready for the big correspondence — the theorem that makes the entir
 
 <div class="theorem">
 <strong>Theorem 2.7a (Hilbert's Strong Nullstellensatz).</strong> Let \(A\) be an ideal in \(\mathbb{C}[x_1, \ldots, x_n]\). Then \(I(V(A)) = \sqrt{A}\). In particular, there is a bijection:
-\[ \{\text{algebraic subsets of } \mathbb{A}^n\} \longleftrightarrow \{\text{radical ideals of } \mathbb{C}[x_1, \ldots, x_n]\} \]
+
+\[
+\{\text{algebraic subsets of } \mathbb{A}^n\} \longleftrightarrow \{\text{radical ideals of } \mathbb{C}[x_1, \ldots, x_n]\}
+\]
 given by \(X \mapsto I(X)\) and \(I \mapsto V(I)\).
 </div>
 
 <div class="proof">
 <em>Proof (Rabinowitsch trick).</em> We always have \(\sqrt{A} \subseteq I(V(A))\), so take \(f \in I(V(A))\). Introduce a new variable \(y\) and let \(B = (A, yf - 1) \subseteq \mathbb{C}[x_1, \ldots, x_n, y]\). If \((a, b) \in V(B)\), then \(a \in V(A)\), so \(f(a) = 0\), but also \(bf(a) = 1\) — a contradiction. So \(V(B) = \varnothing\), and by the Weak Nullstellensatz, \(B = \mathbb{C}[x_1, \ldots, x_n, y]\). In particular, \(1 \in B\):
-\[ 1 = \sum_{i=1}^{k} f_i(x,y) g_i(x,y) + (yf(x) - 1) g_{k+1}(x,y) \]
+
+\[
+1 = \sum_{i=1}^{k} f_i(x,y) g_i(x,y) + (yf(x) - 1) g_{k+1}(x,y)
+\]
 with \(f_i \in A\). Setting \(y = 1/f(x)\) in the fraction field \(\mathbb{C}(x_1, \ldots, x_n)\) and clearing denominators by multiplying by \(f^N\) (where \(N\) is the highest power of \(y\) appearing), we obtain \(f^N \in A\). Hence \(f \in \sqrt{A}\). ∎
 </div>
 
@@ -224,7 +239,10 @@ The ideal of an algebraic set is not invariant under isomorphism. For example, t
 
 <div class="definition">
 <strong>Definition 1.3.</strong> Let \(X \subset \mathbb{A}^n\) be an algebraic set with ideal \(I(X)\). The <strong>coordinate ring</strong> of \(X\) is the ring:
-\[ \Gamma(X) = \mathbb{C}[x_1, \ldots, x_n] / I(X) \]
+
+\[
+\Gamma(X) = \mathbb{C}[x_1, \ldots, x_n] / I(X)
+\]
 which is the ring of polynomial maps from \(X\) to \(\mathbb{A}^1\).
 </div>
 
@@ -246,7 +264,10 @@ Given a polynomial map \(\phi : X \to Y\), we can turn it into a homomorphism go
 
 <div class="definition">
 <strong>Definition 1.6.</strong> Let \(\phi : X \to Y\) be a polynomial map of algebraic sets. The <strong>pullback</strong> of \(\phi\) is the \(\mathbb{C}\)-algebra homomorphism:
-\[ \phi^<em> : \Gamma(Y) \to \Gamma(X) \quad \text{given by} \quad \phi^</em>(f) = f \circ \phi \]
+
+\[
+\phi^<em> : \Gamma(Y) \to \Gamma(X) \quad \text{given by} \quad \phi^</em>(f) = f \circ \phi
+\]
 </div>
 
 <div class="theorem">
@@ -329,7 +350,10 @@ A subtlety: even if one representation has a zero denominator, another might not
 
 <div class="definition">
 <strong>Definition 1.6.</strong> Let \(X\) be a variety, \(P \in X\). The <strong>local ring at \(P\)</strong> is:
-\[ \mathcal{O}_P(X) = \{ f \in K(X) \mid f \text{ is defined at } P \} \]
+
+\[
+\mathcal{O}_P(X) = \{ f \in K(X) \mid f \text{ is defined at } P \}
+\]
 Its maximal ideal is \(\mathfrak{m}_P(X) = \{ f \in \mathcal{O}_P(X) \mid f(P) = 0 \}\), and we have \(\mathfrak{m}_P(X) = I(P) \cdot \mathcal{O}_P(X)\).
 </div>
 
@@ -378,12 +402,18 @@ A rational map is a <strong>morphism</strong> on \(V' \subset V\) if it is defin
 
 <div class="definition">
 <strong>Definition 0.3.</strong> Let \(U \subset V\) be a Zariski open subset. The <strong>ring of functions</strong> on \(U\) is:
-\[ \Gamma(U) = \{ f \in K(V) \mid f \text{ has no poles in } U \} \]
+
+\[
+\Gamma(U) = \{ f \in K(V) \mid f \text{ has no poles in } U \}
+\]
 </div>
 
 <div class="theorem">
 <strong>Theorem 0.5.</strong> Let \(V\) be an affine variety, \(U \subset V\) a nonempty Zariski open subset. If \(U = V - V(f)\) for some \(f \in \Gamma(V)\), then:
-\[ \Gamma(U) = \Gamma(V)[1/f] = \{ p/f^r \mid r \in \mathbb{Z},\, p \in \Gamma(V) \} \]
+
+\[
+\Gamma(U) = \Gamma(V)[1/f] = \{ p/f^r \mid r \in \mathbb{Z},\, p \in \Gamma(V) \}
+\]
 </div>
 
 An interesting consequence: for \(U = \mathbb{A}^2 - \{(0,0)\}\), we have \(\Gamma(U) = \mathbb{C}[x,y]\)! This is because any function with a pole only at the origin would need a pole set of dimension 1 (a curve), by Krull's theorem, but there's no such curve vanishing only at \((0,0)\).
@@ -432,7 +462,10 @@ One of the most beautiful constructions in algebraic geometry is the **blow-up**
 
 <div class="definition">
 <strong>Definition 0.8.</strong> Let \(a \in \mathbb{A}^n\). The <strong>blow-up of \(\mathbb{A}^n\) at \(a\)</strong> is the graph of the projection from \(a\) to a hyperplane. Concretely, for \(a = (0,0)\) in \(\mathbb{A}^2\), the projection to the line \(x = 1\) is \(g(x,y) = y/x\), and the blow-up is the closure of its graph:
-\[ \widetilde{\mathbb{A}^2} = V(y - xz) \subseteq \mathbb{A}^3 \]
+
+\[
+\widetilde{\mathbb{A}^2} = V(y - xz) \subseteq \mathbb{A}^3
+\]
 The natural projection \(p : \widetilde{\mathbb{A}^2} \to \mathbb{A}^2\) given by \(p(x,y,z) = (x,y)\) and the lift \(\ell(x,y) = (x, y, y/x)\) are rational inverses.
 </div>
 
@@ -597,7 +630,10 @@ For example, the node \(P = (0,0)\) on \(V(y^2 - x^3 - x^2)\) is singular becaus
 
 <div class="theorem">
 <strong>Theorem 2.4.</strong> Let \(P\) be a point on \(V \subset \mathbb{A}^n\), and \(\mathfrak{m} = \mathfrak{m}(P) \subset \Gamma(V)\) the maximal ideal at \(P\). Then:
-\[ \dim_{\mathbb{C}} \mathfrak{m}/\mathfrak{m}^2 + \text{rank}(J_V(P)) = n \]
+
+\[
+\dim_{\mathbb{C}} \mathfrak{m}/\mathfrak{m}^2 + \text{rank}(J_V(P)) = n
+\]
 In particular, the rank of the Jacobian matrix is independent of the choice of generators for \(I(V)\).
 </div>
 
@@ -609,16 +645,25 @@ The row space of the Jacobian matrix is the span of the gradient vectors \(\nabl
 
 <div class="definition">
 <strong>Definition 1.1.</strong> Let \(V \subset \mathbb{A}^n\) be a variety, \(P \in V\). Let \(\mathcal{O}_P(V)\) be the local ring at \(P\) with maximal ideal \(\mathfrak{m} = \mathfrak{m}_P(V)\). The <strong>Zariski tangent space</strong> to \(V\) at \(P\) is:
-\[ T_P(V) = (\mathfrak{m}/\mathfrak{m}^2)^* \]
+
+\[
+T_P(V) = (\mathfrak{m}/\mathfrak{m}^2)^*
+\]
 (the dual \(\mathbb{C}\)-vector space to \(\mathfrak{m}_P(V)/\mathfrak{m}_P(V)^2\). The <strong>tangent space</strong> to \(V\) at \(P\) is:
-\[ T_P(V) = P + \ker J_P(V) \subset \mathbb{A}^n \]
+
+\[
+T_P(V) = P + \ker J_P(V) \subset \mathbb{A}^n
+\]
 </div>
 
 The reason we use the local ring \(\mathcal{O}_P(V)\) rather than \(\Gamma(V)\) is justified by the following theorem, which shows that the two definitions of \(\mathfrak{m}/\mathfrak{m}^2\) agree:
 
 <div class="theorem">
 <strong>Theorem 1.2.</strong> Let \(D\) be a domain, \(D_{\mathfrak{m}}\) the localization at a maximal ideal \(\mathfrak{m}\). For any positive integer \(n\), there is a natural isomorphism:
-\[ \mathfrak{m}^{n-1}/\mathfrak{m}^n \cong \mathfrak{M}^{n-1}/\mathfrak{M}^n \]
+
+\[
+\mathfrak{m}^{n-1}/\mathfrak{m}^n \cong \mathfrak{M}^{n-1}/\mathfrak{M}^n
+\]
 where \(\mathfrak{M}\) denotes the ideal of \(D_{\mathfrak{m}}\) generated by \(\mathfrak{m}\). In particular, \(\mathfrak{m}/\mathfrak{m}^2 \cong \mathfrak{M}/\mathfrak{M}^2\).
 </div>
 
@@ -702,7 +747,10 @@ Note that homogeneous polynomials are not functions on projective space (rescali
 
 <div class="theorem">
 <strong>Theorem 1.6 (Projective Nullstellensatz).</strong> There is a bijection:
-\[ \{\text{algebraic subsets of } \mathbb{P}^n\} \longleftrightarrow \{\text{RRH ideals of } \mathbb{C}[x_0,\ldots,x_n]\} \]
+
+\[
+\{\text{algebraic subsets of } \mathbb{P}^n\} \longleftrightarrow \{\text{RRH ideals of } \mathbb{C}[x_0,\ldots,x_n]\}
+\]
 where "RRH" stands for "relevant radical homogeneous". (The irrelevant ideal is excluded because its zero set is empty despite not being the unit ideal.)
 </div>
 
@@ -728,7 +776,10 @@ The operations of homogenization and dehomogenization formalize the passage betw
 
 <div class="definition">
 <strong>Definition 1.11.</strong> Given a polynomial \(g \in \mathbb{C}[x_1, \ldots, x_n]\) of degree \(d\), the <strong>homogenization</strong> of \(g\) with respect to the variable \(x_0\) is:
-\[ g^h(x_0, x_1, \ldots, x_n) = x_0^d \cdot g\!\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right) \]
+
+\[
+g^h(x_0, x_1, \ldots, x_n) = x_0^d \cdot g\!\left(\frac{x_1}{x_0}, \ldots, \frac{x_n}{x_0}\right)
+\]
 Conversely, given a homogeneous polynomial \(f \in \mathbb{C}[x_0, x_1, \ldots, x_n]\), its <strong>dehomogenization</strong> with respect to \(x_0\) is \(f^a(x_1, \ldots, x_n) = f(1, x_1, \ldots, x_n)\).
 </div>
 
@@ -822,7 +873,10 @@ The prime geometric example is \(\mathbb{C}[t]_{(t)} = \{f(t)/g(t) \mid g(0) \ne
 
 <div class="theorem">
 <strong>Theorem 1.7 (Degree Formula).</strong> Let \(f : C_1 \to C_2\) be a non-constant morphism of smooth projective curves. For every point \(Q \in C_2\):
-\[ \sum_{P \in f^{-1}(Q)} e_P = \deg f \]
+
+\[
+\sum_{P \in f^{-1}(Q)} e_P = \deg f
+\]
 where \(e_P\) denotes the ramification degree at \(P\).
 </div>
 
@@ -842,7 +896,10 @@ Let \(C\) be a smooth projective curve.
 
 <div class="definition">
 <strong>Definition 1.2.</strong> Let \(C \subset \mathbb{P}^n\) be a smooth curve, \(H \subset \mathbb{P}^n\) a hypersurface not containing \(C\). Define the <strong>divisor of \(H\)</strong>:
-\[ \text{div}(H) = \sum_{P \in C} \text{ord}_P(H) \cdot P \]
+
+\[
+\text{div}(H) = \sum_{P \in C} \text{ord}_P(H) \cdot P
+\]
 (a finite sum). For a rational function \(\zeta \in K(C)\), define \(\text{div}(\zeta) = \sum_{P \in C} \text{ord}_P(\zeta) \cdot P\).
 </div>
 
@@ -858,17 +915,26 @@ Let \(C\) be a smooth projective curve.
 
 <div class="definition">
 <strong>Definition 1.4.</strong> Let \(f\) and \(g\) be two polynomials in \(\mathbb{C}[x,y]\) with no common irreducible component. The <strong>intersection multiplicity</strong> of \(f\) and \(g\) at a point \(P \in \mathbb{A}^2\) is:
-\[ I_P(f,g) = \dim_{\mathbb{C}} \mathcal{O}_P(\mathbb{A}^2)/(f,g) \]
+
+\[
+I_P(f,g) = \dim_{\mathbb{C}} \mathcal{O}_P(\mathbb{A}^2)/(f,g)
+\]
 </div>
 
 <div class="theorem">
 <strong>Theorem 1.5 (Bézout's Theorem).</strong> Let \(F\) and \(G\) be two homogeneous polynomials in \(\mathbb{C}[x,y,z]\) with no common factor, of degrees \(d\) and \(e\) respectively. Then:
-\[ \sum_{P \in V(F,G)} I_P(F,G) = de \]
+
+\[
+\sum_{P \in V(F,G)} I_P(F,G) = de
+\]
 </div>
 
 <div class="proof">
 <em>Proof for \(V(F)\) smooth.</em> One shows \(I_P(F,G) = \text{ord}_P^F(G)\) (the order of vanishing of \(G\) on \(V(F)\) at \(P\), using the fact that \(\mathcal{O}_P(\mathbb{A}^2)/(f) \cong \mathcal{O}_P(V(f))\). Then:
-\[ \sum_P I_P(F,G) = \sum_P \text{ord}_P^F(G) = \deg \text{div}^F(G) \]
+
+\[
+\sum_P I_P(F,G) = \sum_P \text{ord}_P^F(G) = \deg \text{div}^F(G)
+\]
 and since \(\deg \text{div}^F(G)\) only depends on the degree of \(G\), we may take \(G = L^e\) for a generic line \(L\), giving \(e \cdot \sum_P \text{ord}_P^F(L) = e \cdot d\) (since two distinct lines in \(\mathbb{P}^2\) always meet in exactly one point). ∎
 </div>
 
@@ -910,7 +976,10 @@ If \(H\) and \(H'\) are hyperplanes in \(\mathbb{P}^n\), then \(\text{div}(H) - 
 
 <div class="definition">
 <strong>Definition 1.10.</strong> For a divisor \(D\) on a smooth curve \(C\), define:
-\[ L(D) = \{ f \in K(C) \mid D + \text{div}(f) \text{ is effective} \} \cup \{0\} \]
+
+\[
+L(D) = \{ f \in K(C) \mid D + \text{div}(f) \text{ is effective} \} \cup \{0\}
+\]
 This is a complex vector space (since \(\text{ord}_P(f+g) \geq \min\{\text{ord}_P f, \text{ord}_P g\}\).
 </div>
 
@@ -925,7 +994,10 @@ The key result about projective embeddings is that *any* embedding of \(C\) in p
 </div>
 
 **Application: Veronese embedding.** For \(\mathbb{P}^1\), any two divisors of the same degree are linearly equivalent (since \(P - Q = \text{div}((bx - ay)/(dx - cy))\). So all embeddings of \(\mathbb{P}^1\) in \(\mathbb{P}^n\) factor through the **\(d\)th Veronese embedding**:
-\[ [x:y] \mapsto [x^d : x^{d-1}y : \cdots : y^d] \in \mathbb{P}^d \]
+
+\[
+[x:y] \mapsto [x^d : x^{d-1}y : \cdots : y^d] \in \mathbb{P}^d
+\]
 whose image is the **rational normal curve** of degree \(d\).
 
 ---
@@ -935,7 +1007,10 @@ whose image is the **rational normal curve** of degree \(d\).
 ## 1. Playing with Pic⁰(C)
 
 Let \(C\) be a smooth curve and \(O \in C\) a chosen basepoint. Define a map:
-\[ \phi_C : C \to \text{Pic}^0(C), \quad P \mapsto |P - O| \]
+
+\[
+\phi_C : C \to \text{Pic}^0(C), \quad P \mapsto |P - O|
+\]
 We would like to define addition on \(C\) by \(P + Q = R\) where \(\phi_C(R) = \phi_C(P) + \phi_C(Q)\).
 
 For this to work, \(\phi_C\) must be bijective.
@@ -949,7 +1024,10 @@ For this to work, \(\phi_C\) must be bijective.
 ## 2. Smooth Plane Cubics
 
 For degree 3, things get interesting. We put \(C\) into **Weierstrass form**: by coordinate changes (using a chosen point \(O\), the tangent line to \(O\), and the flex structure), any smooth plane cubic can be written as:
-\[ y^2 z + a_1 xyz + a_3 yz^2 = x^3 + a_2 x^2 z + a_4 xz^2 + a_6 z^3 \]
+
+\[
+y^2 z + a_1 xyz + a_3 yz^2 = x^3 + a_2 x^2 z + a_4 xz^2 + a_6 z^3
+\]
 or in the affine chart \(z = 1\): \(y^2 + a_1 xy + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6\). By further completing the square and cube (over \(\mathbb{C}\), this simplifies to the **reduced Weierstrass form**: \(y^2 z = x^3 + axz^2 + bz^3\).
 
 In this form, the point \(O = [0:1:0]\) is on \(C\), with tangent line \(z = 0\), and \(\text{div}(z) = 3O\) (so \(O\) is a flex).

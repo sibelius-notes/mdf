@@ -308,9 +308,11 @@ The **induced marginal covariance** between two observations on the same subject
 \[
 \text{Cov}(Y_{ij}, Y_{ij'}) = \text{Var}(b_i) = \sigma_b^2, \quad j \neq j'
 \]
+
 \[
 \text{Var}(Y_{ij}) = \sigma_b^2 + \sigma^2
 \]
+
 \[
 \text{Corr}(Y_{ij}, Y_{ij'}) = \frac{\sigma_b^2}{\sigma_b^2 + \sigma^2} \equiv \rho
 \]
@@ -388,7 +390,10 @@ In `nlme`, these are specified via `corAR1()`, `corCompSymm()`, `corSymm()` etc.
 
 <div class="definition">
 <strong>BLUP</strong>: The <em>best linear unbiased predictor</em> of <em><strong>b</strong><sub>i</sub></em> is the conditional mean:
-\[ \hat{\mathbf{b}}_i = \mathbf{D} \mathbf{Z}_i^T \boldsymbol{\Omega}_i^{-1}(\mathbf{Y}_i - \mathbf{X}_i \hat{\boldsymbol{\beta}}) \]
+
+\[
+\hat{\mathbf{b}}_i = \mathbf{D} \mathbf{Z}_i^T \boldsymbol{\Omega}_i^{-1}(\mathbf{Y}_i - \mathbf{X}_i \hat{\boldsymbol{\beta}})
+\]
 evaluated at the ML/REML estimates. It is "best" in the sense of minimizing mean squared error among all linear predictors that are unbiased for the realized <em><strong>b</strong><sub>i</sub></em>.
 </div>
 

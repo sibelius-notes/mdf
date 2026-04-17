@@ -51,7 +51,9 @@ We begin with two **undefined notions**: the notion of a **set**, and the binary
 
 With these notions in hand we can already sketch the construction. We define
 
-\[0 := \emptyset, \quad 1 := \{0\}, \quad 2 := \{0, 1\}, \quad 3 := \{0, 1, 2\}, \quad \ldots\]
+\[
+0 := \emptyset, \quad 1 := \{0\}, \quad 2 := \{0, 1\}, \quad 3 := \{0, 1, 2\}, \quad \ldots
+\]
 
 The pattern is clear: we go from \(n\) to its **successor** \(S(n) := n \cup \{n\}\), whose members are precisely the members of \(n\) together with \(n\) itself. Each natural number is thus the set of all the natural numbers before it.
 
@@ -68,12 +70,18 @@ Without this axiom there is no justification at all for the existence of \(0\). 
 Formally, \(t \in \{x, y\}\) if and only if \(t = x\) or \(t = y\). When \(x = y\) this gives the singleton \(\{x\}\), since both disjuncts reduce to \(t = x\).
 
 **Axiom 3 (Extensionality).** Two sets are equal if and only if they have the same members: for all sets \(x, y\),
-\[x = y \iff \forall t(t \in x \leftrightarrow t \in y).\]
+
+\[
+x = y \iff \forall t(t \in x \leftrightarrow t \in y).
+\]
 
 This is not an existence axiom like the first two. It is instead an **equality axiom**: it tells us when two sets are the same. Without it we could not identify the singleton \(\{x,x\}\) obtained from the pair set axiom with \(\{x\}\). Both sets have exactly one member (namely \(x\), so extensionality forces them to be equal.
 
 **Axiom 4 (Union Set).** For any set \(x\) there exists a set \(\bigcup x\) whose members are the members of the members of \(x\):
-\[t \in \bigcup x \iff \exists y(y \in x \wedge t \in y).\]
+
+\[
+t \in \bigcup x \iff \exists y(y \in x \wedge t \in y).
+\]
 
 Note the notation: we write \(\bigcup x\) with the union symbol *in front of* a single set, not between two sets. The union of \(x\) collects all the members of all members of \(x\). This is precisely what we need to pass from \(n\) to \(S(n)\): given that \(n\) and \(\{n\}\) both exist (the latter from the pair set axiom), we form the pair \(\{n, \{n\}\}\) and then take its union, obtaining \(n \cup \{n\} = S(n)\).
 
@@ -104,7 +112,10 @@ The four axioms so far can produce each individual natural number, but they cann
 Call a set \(I\) **inductive** if \(0 \in I\) and for all \(x\), if \(x \in I\) then \(S(x) \in I\). The condition of being inductive is definite: saying that \(S(x) \in I\) is a definite condition on \(x\) and \(I\), because one can spell out that there exists a \(y \in I\) such that \(\forall t(t \in y \leftrightarrow t \in x \vee t = x)\).
 
 **Axiom 5 (Infinity).** There exists an inductive set \(I\), i.e., a set satisfying:
-\[0 \in I \quad \text{and} \quad \forall x(x \in I \Rightarrow S(x) \in I).\]
+
+\[
+0 \in I \quad \text{and} \quad \forall x(x \in I \Rightarrow S(x) \in I).
+\]
 
 This is the first existence axiom that does not uniquely determine its set. The empty set was unique by extensionality; the pair set and union set were each uniquely determined by their defining membership condition. But the infinity axiom merely says *some* inductive set exists — there may be many. An inductive set might contain many "extra" elements beyond the natural numbers. We want the *smallest* inductive set.
 
@@ -113,12 +124,18 @@ This is the first existence axiom that does not uniquely determine its set. The 
 To extract the minimal inductive set from a given inductive set \(I\), we need two further axioms. First, we need to talk about the *subsets* of \(I\); then we need to isolate among them the *inductive* subsets.
 
 **Axiom 6 (Power Set).** For any set \(A\) there exists a set \(\mathcal{P}(A)\) whose members are exactly the subsets of \(A\):
-\[t \in \mathcal{P}(A) \iff \forall y(y \in t \Rightarrow y \in A).\]
+
+\[
+t \in \mathcal{P}(A) \iff \forall y(y \in t \Rightarrow y \in A).
+\]
 
 This is again a definite membership condition, so the set it produces is uniquely determined by extensionality.
 
 **Axiom 7 (Bounded Separation).** For any set \(A\) and definite condition \(P\), there exists a set
-\[B = \{t \in A : P(t)\}\]
+
+\[
+B = \{t \in A : P(t)\}
+\]
 whose members are exactly those elements of \(A\) satisfying \(P\).
 
 Two aspects of this axiom are essential. First, \(P\) must be definite — the axiom cannot be used with an infinitary or otherwise ill-formed condition. Second, the axiom is *bounded*: it does not assert the existence of all objects satisfying \(P\) in the universe, only those within the given set \(A\). This boundedness is not a mere technicality; it is what prevents **Russell's Paradox**.
@@ -126,17 +143,26 @@ Two aspects of this axiom are essential. First, \(P\) must be definite — the a
 ### Russell's Paradox
 
 If we allowed **unbounded** separation — if we could take any definite condition \(P\) and form the collection of *all* sets satisfying \(P\) — we could define:
-\[R := \{t : t \notin t\}.\]
+
+\[
+R := \{t : t \notin t\}.
+\]
 This is the **Russell class**: the collection of all sets that are not members of themselves. The condition \(t \notin t\) is definite (a negation of a basic membership condition), so unbounded separation would make \(R\) a set. But then: is \(R \in R\)? If yes, then \(R\) does not satisfy \(t \notin t\), so \(R \notin R\) — a contradiction. If no, then \(R\) does satisfy the condition, so \(R \in R\) — also a contradiction. The boundedness of our Separation Axiom avoids this: \(R\) simply does not exist as a set, because no axiom asserts it. (It will reappear as a proper *class* in Lecture 3.)
 
 ### Constructing \(\omega\)
 
 With axioms 1–7 we can now construct the set of natural numbers. Note first that intersections do not require a new axiom: given a *non-empty* set \(x\), we can form
-\[\bigcap x := \{t \in \bigcup x : \forall y(y \in x \Rightarrow t \in y)\}\]
+
+\[
+\bigcap x := \{t \in \bigcup x : \forall y(y \in x \Rightarrow t \in y)\}
+\]
 using only bounded separation (the bound being \(\bigcup x\) — so intersections are free. (The empty intersection does not exist as a set, for good reason: it would have to contain every set in the universe.)
 
 **Definition 1.9.** Fix an inductive set \(I\) (which exists by Axiom 5). Define
-\[\omega := \bigcap \{J \in \mathcal{P}(I) : 0 \in J \text{ and } \forall x(x \in J \Rightarrow S(x) \in J)\}.\]
+
+\[
+\omega := \bigcap \{J \in \mathcal{P}(I) : 0 \in J \text{ and } \forall x(x \in J \Rightarrow S(x) \in J)\}.
+\]
 
 This is the intersection of all *inductive* subsets of \(I\). The set \(\mathcal{P}(I)\) exists by Axiom 6, and the collection of inductive subsets of \(I\) is obtained from it by bounded separation (Axiom 7) using the definite condition of being inductive. The intersection is non-empty (it contains \(I\) itself) and exists as shown above.
 
@@ -155,7 +181,10 @@ The **induction principle** follows immediately from the definition: if \(J \sub
 There is one more axiom that did not arise in the construction of \(\omega\) but is essential for later work with ordinals and cardinals.
 
 **Axiom 8 (Replacement).** Suppose \(P(x, y)\) is a definite binary condition that is **functional**: for every set \(x\) there is a unique set \(y\) such that \(P(x, y)\). Then for any set \(A\), there exists a set
-\[B = \{y : \exists x \in A,\, P(x, y)\}.\]
+
+\[
+B = \{y : \exists x \in A,\, P(x, y)\}.
+\]
 
 In other words, the **image** of any set under any definite operation is again a set. The name is apt: we start with a set \(A\) and *replace* each element \(x \in A\) with \(f(x)\); the resulting collection forms a set. This will be used, for instance, to form the set of ordinals \(\{f(\alpha) : \alpha \in A\}\) when \(f\) is a definite operation on ordinals.
 
@@ -170,13 +199,19 @@ These eight axioms together constitute **Zermelo-Fraenkel set theory**, denoted 
 Now that we have the Zermelo-Fraenkel axioms in place, we can step back and think more carefully about the collections we are implicitly dealing with. When we proved Russell's Paradox showed that \(R = \{t : t \notin t\}\) is not a set, we did not mean that such a collection is meaningless — only that it is not a *set* in the sense of our axioms. Collections that may be too large to be sets deserve their own name.
 
 A **class** is, informally, a collection of sets satisfying some definite property. More precisely: if \(P\) is a definite condition, then the class
-\[\llbracket z : P(z) \rrbracket\]
+
+\[
+\llbracket z : P(z) \rrbracket
+\]
 is the collection of all sets satisfying \(P\). A class is really just another way of talking about the definite condition itself. We use the double-bracket notation (rather than curly braces) to emphasize that this need not be a set.
 
 Several basic observations follow. First, **every set is a class**: given a set \(X\), we can view it as the class \(\llbracket z : z \in X \rrbracket\), using the membership condition \(z \in X\) which is definite. Second, some classes are sets and some are not. The class \(\llbracket z : z \in \omega \rrbracket\) is just \(\omega\) itself — a set. But the **Russell class** \(R = \llbracket z : z \notin z \rrbracket\) is not a set (as we proved), and is called a **proper class**.
 
 The **universal class**
-\[U := \llbracket z : z = z \rrbracket\]
+
+\[
+U := \llbracket z : z = z \rrbracket
+\]
 — the collection of all sets — is also a proper class. Why? If \(U\) were a set, then \(R = \{t \in U : t \notin t\}\) would exist by bounded separation, contradicting Russell's Paradox. In fact, if \(U\) were a set, every class would be a set (by bounding each class with \(U\), so the existence of even one proper class forces \(U\) to be proper.
 
 Two classes are equal if and only if they have the same members — this is the extension principle for classes, analogous to the extensionality axiom for sets. **Membership** for classes is a binary relation between a *set* and a *class*: we write \(x \in C\) when \(x\) is a set and \(C\) is a class. It makes no sense to ask whether a class is a member of another class — this is not ill-formed by accident; it is precisely what prevents a class-level version of Russell's Paradox. Since membership does not relate classes to classes, one cannot even formulate the question "is the class \(C\) a member of itself?"
@@ -184,10 +219,16 @@ Two classes are equal if and only if they have the same members — this is the 
 ### Ordered Pairs and Cartesian Products
 
 Before restating the Replacement Axiom in its cleanest form, we need the machinery of ordered pairs and functions. Given sets \(x\) and \(y\), the **ordered pair** is defined as
-\[(x, y) := \{\{x\}, \{x, y\}\}.\]
+
+\[
+(x, y) := \{\{x\}, \{x, y\}\}.
+\]
 
 This set exists by the pair set axiom applied twice. The crucial property is:
-\[(x, y) = (x', y') \iff x = x' \text{ and } y = y'.\]
+
+\[
+(x, y) = (x', y') \iff x = x' \text{ and } y = y'.
+\]
 This distinguishes ordered pairs from unordered pairs: \(\{1, 2\} = \{2, 1\}\) as sets, but \((1, 2) \neq (2, 1)\) as ordered pairs (assuming \(1 \neq 2\).
 
 Given classes \(X\) and \(Y\), the **Cartesian product** \(X \times Y\) is the class of all ordered pairs \((x, y)\) with \(x \in X\) and \(y \in Y\). This is a class because the condition of being an ordered pair of elements from definite classes is itself definite. When \(X\) and \(Y\) happen to be sets, \(X \times Y\) is also a set: every ordered pair \((x, y)\) is an element of \(\mathcal{P}(\mathcal{P}(X \cup Y))\), so one can bound the separation and apply Axiom 7.
@@ -286,7 +327,10 @@ Linear ordering alone is not enough — what we really want, and what enables tr
 **Proposition 1.13 (continued).** *\((\omega, \in)\) is a strict well-ordering.*
 
 *Proof.* We must show that every non-empty \(X \subseteq \omega\) has a membership-least element. Suppose for contradiction that \(X\) has no membership-least element. Define
-\[J = \{n \in \omega : S(n) \cap X = \emptyset\}\]
+
+\[
+J = \{n \in \omega : S(n) \cap X = \emptyset\}
+\]
 by bounded separation. We show \(J\) is inductive, hence \(J = \omega\), and then derive that \(X = \emptyset\).
 
 *Base case*: \(0 \in J\). If not, then \(S(0) \cap X \neq \emptyset\). But \(S(0) = 1 = \{0\}\), so \(0 \in X\). By Lemma 1.12(d), every natural number either is \(0\) or contains \(0\), so \(0\) is membership-least in all of \(\omega\), and hence membership-least in \(X\) — contradicting our assumption.
@@ -449,7 +493,10 @@ Today we prove the **Transfinite Recursion Theorem**, the companion to transfini
 Let \(\mathcal{X}\) denote the class of all functions whose domain is an ordinal — that is, all sets of the form \(\gamma \subseteq \alpha \times Y\) that are graphs of functions, where \(\alpha\) is an ordinal and \(Y\) is any set. This is a definite class.
 
 **Theorem 1.25 (Transfinite Recursion).** *Let \(G : \mathcal{X} \to \mathrm{Set}\) be a definite operation. Then there is a unique definite operation \(F : \mathrm{Ord} \to \mathrm{Set}\) satisfying*
-\[ F(\alpha) = G(F \upharpoonright \alpha) \quad \text{for all } \alpha \in \mathrm{Ord}. \]
+
+\[
+F(\alpha) = G(F \upharpoonright \alpha) \quad \text{for all } \alpha \in \mathrm{Ord}.
+\]
 
 Here \(F \upharpoonright \alpha\) denotes the restriction of \(F\) to \(\alpha\), which is a function with domain the ordinal \(\alpha\) and hence an element of \(\mathcal{X}\). The rule says: the value of \(F\) at \(\alpha\) is determined by the values of \(F\) on all ordinals *less than* \(\alpha\). This is the recursive character: each value is computed from previous values, with \(G\) encoding the rule.
 
@@ -528,12 +575,18 @@ Last time we established transfinite recursion; today we put it to work.
 Fix an ordinal \(\beta\). We define the function \(\alpha \mapsto \beta + \alpha\) by Corollary 1.28 with \(G_1 = \beta\), \(G_2 = S\) (the successor operation), and \(G_3(f) = \sup(\mathrm{im}(f))\).
 
 **Definition 1.30 (Ordinal Addition).** For ordinals \(\alpha, \beta\):
-\[ \beta + 0 = \beta, \qquad \beta + S(\alpha) = S(\beta + \alpha), \qquad \beta + \alpha = \sup\{\beta + \gamma : \gamma < \alpha\} \text{ (limit } \alpha > 0). \]
+
+\[
+\beta + 0 = \beta, \qquad \beta + S(\alpha) = S(\beta + \alpha), \qquad \beta + \alpha = \sup\{\beta + \gamma : \gamma < \alpha\} \text{ (limit } \alpha > 0).
+\]
 
 At limit ordinals the set \(\{\beta + \gamma : \gamma < \alpha\}\) is the image of the already-constructed function \(\gamma \mapsto \beta + \gamma\) (for \(\gamma < \alpha\) under the Replacement axiom, so it is indeed a set. A first observation: \(\beta + 1 = \beta + S(0) = S(\beta + 0) = S(\beta)\), so *adding 1 is the same as taking the successor*. This perfectly extends the familiar fact that the successor of a natural number \(n\) is \(n + 1\).
 
 A critical warning: ordinal addition is **not commutative**. Consider \(\omega + 1 = S(\omega)\), the successor of \(\omega\), versus
-\[ 1 + \omega = \sup\{1 + n : n < \omega\} = \sup\{1, 2, 3, \ldots\} = \omega. \]
+
+\[
+1 + \omega = \sup\{1 + n : n < \omega\} = \sup\{1, 2, 3, \ldots\} = \omega.
+\]
 Since \(S(\omega) \neq \omega\), we have \(1 + \omega = \omega \neq \omega + 1\). This is not a mere technicality. Think of ordinals as order types of well-orderings: \(\beta + \alpha\) corresponds to *concatenating* the well-ordering of type \(\beta\) before the well-ordering of type \(\alpha\). So \(\omega + 1\) is a copy of \(\omega\) followed by a single element on top — a well-ordering with a greatest element — while \(1 + \omega\) is a single element followed by a copy of \(\omega\), which is just isomorphic to \(\omega\) itself. Placing a finite piece at the beginning of an infinite chain does not change the order type; placing it at the end does.
 
 Using addition one builds the ordinal hierarchy by alternating successors and suprema: \(\omega, \omega+1, \omega+2, \ldots\) terminate at \(\omega + \omega = \omega \cdot 2\), then \(\omega \cdot 2 + 1, \omega \cdot 2 + 2, \ldots\), and so on.
@@ -543,14 +596,20 @@ Using addition one builds the ordinal hierarchy by alternating successors and su
 Fix \(\beta\). Set \(G_1 = 0\), \(G_2(x) = x + \beta\), and \(G_3 = \sup \circ\, \mathrm{im}\).
 
 **Definition 1.32 (Ordinal Multiplication).** For ordinals \(\alpha, \beta\):
-\[ \beta \cdot 0 = 0, \qquad \beta \cdot S(\alpha) = \beta \cdot \alpha + \beta, \qquad \beta \cdot \alpha = \sup\{\beta \cdot \gamma : \gamma < \alpha\} \text{ (limit } \alpha > 0). \]
+
+\[
+\beta \cdot 0 = 0, \qquad \beta \cdot S(\alpha) = \beta \cdot \alpha + \beta, \qquad \beta \cdot \alpha = \sup\{\beta \cdot \gamma : \gamma < \alpha\} \text{ (limit } \alpha > 0).
+\]
 
 One verifies: \(\beta \cdot 1 = \beta \cdot S(0) = \beta \cdot 0 + \beta = 0 + \beta = \beta\), and \(\beta \cdot 2 = \beta + \beta\). Multiplication is also non-commutative: \(\omega \cdot 2 = \omega + \omega\), but \(2 \cdot \omega = \sup\{2 \cdot n : n < \omega\} = \sup\{0, 2, 4, \ldots\} = \omega\). Informally, \(\beta \cdot \alpha\) corresponds to the well-ordering obtained by replacing each element of \(\alpha\) with a copy of \(\beta\).
 
 ### Ordinal Exponentiation
 
 **Definition 1.33 (Ordinal Exponentiation).** For ordinals \(\alpha, \beta\):
-\[ \beta^0 = 1, \qquad \beta^{S(\alpha)} = \beta^\alpha \cdot \beta, \qquad \beta^\alpha = \sup\{\beta^\gamma : \gamma < \alpha\} \text{ (limit } \alpha > 0). \]
+
+\[
+\beta^0 = 1, \qquad \beta^{S(\alpha)} = \beta^\alpha \cdot \beta, \qquad \beta^\alpha = \sup\{\beta^\gamma : \gamma < \alpha\} \text{ (limit } \alpha > 0).
+\]
 
 These recursion schemes allow the hierarchy to be extended far beyond \(\omega \cdot 2\): we reach \(\omega^2, \omega^3, \ldots, \omega^\omega, \omega^{\omega^\omega}, \ldots\)
 
@@ -593,7 +652,10 @@ This rigidity is a feature of well-orderings that fails for denser orders: the i
 *Proof of uniqueness.* Suppose \(f : (E, \prec) \to (\alpha, \in)\) and \(g : (E, \prec) \to (\beta, \in)\) are isomorphisms. If \(\alpha \neq \beta\), say \(\alpha \in \beta\) (so \(\alpha\) is an initial segment of \(\beta\) by the properties of ordinals), then \(g^{-1} \circ f : (\beta, \in) \to (\beta, \in)|_\alpha\) would be an isomorphism between \(\beta\) and one of its initial segments, contradicting Lemma 1.5(b). So \(\alpha = \beta\). Uniqueness of the isomorphism then follows from rigidity (Lemma 1.5(a)): \(g^{-1} \circ f\) would be an automorphism of \((\alpha, \in)\), hence the identity, giving \(f = g\).
 
 *Proof of existence.* We may assume \(E \neq \emptyset\), since the empty well-ordering is isomorphic to \(0 = \emptyset\). For each \(x \in E\) let \(E_{\prec x} = \{e \in E : e \prec x\}\) be the initial segment below \(x\). Let
-\[ A = \{x \in E : (E_{\prec x}, \prec) \cong \text{some ordinal}\}. \]
+
+\[
+A = \{x \in E : (E_{\prec x}, \prec) \cong \text{some ordinal}\}.
+\]
 The condition is definite (it involves the existence of a bijection satisfying a set-theoretic condition), so \(A\) is a set by Bounded Separation. The least element of \(E\) lies in \(A\) (its initial segment is empty, isomorphic to \(0\), so \(A \neq \emptyset\).
 
 By the uniqueness part already proved, for each \(x \in A\) there is a *unique* ordinal \(f(x)\) such that \((E_{\prec x}, \prec) \cong (f(x), \in)\). This defines a definite operation \(f : A \to \mathrm{Ord}\). By the Axiom of Replacement, the image \(\mathrm{im}(f)\) is a set of ordinals. Let \(\alpha\) be the least ordinal not in \(\mathrm{im}(f)\) (which exists by Lemma 1.19(c)). One then establishes the following in sequence: (i) \(A\) is downward closed (if \(x \in A\) and \(y \prec x\) then \(y \in A\); (ii) \(f\) is order-preserving on \(A\); (iii) \(\mathrm{im}(f) = \alpha\) as a set; (iv) \(f\) is injective; (v) \(A = E\). Steps (i)–(v) together show that \(f : (E, \prec) \to (\alpha, \in)\) is the desired isomorphism. \(\square\)
@@ -634,7 +696,10 @@ The professor called this "a kind of combinatorial proof — writing it out prop
 *Proof sketch.* Given injections \(i : A \to B\) and \(j : B \to A\), set \(f = j \circ i : A \to A\). It suffices to prove the following claim: if \(f : X \to X\) is injective and \(f(X) \subseteq Y \subseteq X\), then \(X \sim Y\). One then applies this with \(X = A\) and \(Y = j(B)\).
 
 To prove the claim, build the chain
-\[X \supseteq Y \supseteq f(X) \supseteq f(Y) \supseteq f^2(X) \supseteq f^2(Y) \supseteq \cdots\]
+
+\[
+X \supseteq Y \supseteq f(X) \supseteq f(Y) \supseteq f^2(X) \supseteq f^2(Y) \supseteq \cdots
+\]
 Let \(Z = \bigcup_{n \geq 0}(f^n(X) \setminus f^n(Y))\) and \(W = X \setminus Z\). Then \(X = Z \sqcup W\) (disjoint). Moreover \(Y = f(Z) \sqcup W\): the action of \(f\) on \(Z\) simply shifts each "gap" \(f^n(X) \setminus f^n(Y)\) one step to the right, to \(f^{n+1}(X) \setminus f^{n+1}(Y)\), so you lose the first gap but add nothing new to \(W\). Define \(g : X \to Y\) by \(g(x) = f(x)\) for \(x \in Z\) and \(g(x) = x\) for \(x \in W\). This is a bijection: \(f\) is a bijection from \(Z\) onto \(f(Z)\), and the identity is a bijection from \(W\) to itself, and since the decompositions are disjoint the union is a bijection from \(X\) to \(f(Z) \cup W = Y\). \(\square\)
 
 As the professor put it: "Basically, by applying \(f\) on \(Z\) and on \(W\) doing nothing — that is my bijection. To find a bijection, it suffices to find injections in each direction. It is often much easier."
@@ -646,7 +711,10 @@ The following lemma is both simple and catastrophic for the idea that ordinals m
 **Lemma 2.4.** *For every infinite ordinal \(\alpha\), \(\alpha\) and \(\alpha + 1\) are equinumerous.*
 
 *Proof.* Since \(\alpha\) is infinite, \(\omega \leq \alpha\) as ordinals, so \(\omega \subseteq \alpha\). Define \(f : \alpha + 1 \to \alpha\) by:
-\[f(x) = \begin{cases} x + 1 & \text{if } x \in \omega, \\ 0 & \text{if } x = \alpha, \\ x & \text{otherwise.}\end{cases}\]
+
+\[
+f(x) = \begin{cases} x + 1 & \text{if } x \in \omega, \\ 0 & \text{if } x = \alpha, \\ x & \text{otherwise.}\end{cases}
+\]
 Because \(\alpha\) is infinite (in particular, \(\alpha \notin \omega\), these three cases cover disjoint parts of \(\alpha + 1\), and the definition is well-posed. On \(\omega\), \(f\) shifts by one, freeing up the element \(0\); the new top element \(\alpha\) is sent to \(0\); everything else is fixed. This is a bijection from \(\alpha + 1\) onto \(\alpha\). \(\square\)
 
 The professor drew the lesson starkly: "Ordinals are not good at measuring size. Alpha and alpha-plus-one are definitely distinct ordinals — this is strictly bigger than this — but they have the same size. We need to do something else." Note that the bijection cannot be order-preserving, since every initial segment of a well-ordering is strictly shorter. We had to deliberately violate the ordering to produce the bijection.
@@ -672,7 +740,10 @@ To prove that uncountable cardinals exist, we need a systematic construction.
 **Proposition 2.6.** *For every set \(E\), there exists a unique cardinal \(h(E)\), namely the least ordinal not equinumerous with any subset of \(E\).*
 
 The proof is a careful application of Bounded Separation and Replacement. Consider the set
-\[W = \{(A, {\prec}) : A \subseteq E \text{ and } {\prec} \text{ is a strict well-ordering of } A\}.\]
+
+\[
+W = \{(A, {\prec}) : A \subseteq E \text{ and } {\prec} \text{ is a strict well-ordering of } A\}.
+\]
 This is a set (not merely a class) because: any such pair has first coordinate in \(\mathcal{P}(E)\) and second coordinate in \(\mathcal{P}(E \times E)\), giving a bound for Separation. By the main theorem of Chapter 1, each element of \(W\) is canonically isomorphic to a unique ordinal; let \(F : W \to \mathrm{Ord}\) send each well-ordering to its ordinal type. By Replacement, the image \(X = F(W)\) is a set. One verifies that \(X\) is exactly the class of ordinals equinumerous with some subset of \(E\): on one hand, every element of \(F(W)\) is in bijection with some subset of \(E\); on the other, if \(\alpha \sim A \subseteq E\), one can transport the membership ordering on \(\alpha\) to make \(A\) a well-ordered subset of \(E\), landing in \(W\).
 
 Since \(X\) is a set of ordinals, it has a least ordinal not in it; call it \(h(E)\). That \(h(E)\) is a cardinal follows from minimality: if some \(\alpha < h(E)\) were equinumerous to \(h(E)\), composing bijections would place \(h(E)\) in \(X\), a contradiction.
@@ -717,7 +788,10 @@ The payoff of introducing AC is a fundamental theorem:
 The full proof is given in the notes. The professor worked through the main direction in lecture and gave sketches of the others.
 
 *Proof that AC implies Well-ordering.* Let \(A\) be any set. By AC, there is a choice function \(c\) on the collection of all nonempty subsets of \(A\). (This is a genuine use of AC: we know nothing about \(A\), so we cannot construct \(c\) from other information.) Fix an ordinal \(\zeta \notin A\). By transfinite recursion, define \(F : \mathrm{Ord} \to A \cup \{\zeta\}\):
-\[F(\alpha) = \begin{cases} c(A \setminus \mathrm{Im}(F \upharpoonright \alpha)) & \text{if } A \setminus \mathrm{Im}(F \upharpoonright \alpha) \neq \emptyset, \\ \zeta & \text{otherwise.}\end{cases}\]
+
+\[
+F(\alpha) = \begin{cases} c(A \setminus \mathrm{Im}(F \upharpoonright \alpha)) & \text{if } A \setminus \mathrm{Im}(F \upharpoonright \alpha) \neq \emptyset, \\ \zeta & \text{otherwise.}\end{cases}
+\]
 Intuitively: at each stage, if there are still elements of \(A\) not yet enumerated, choose one; otherwise output the dummy value \(\zeta\) to signal that the process has halted. The function \(F\) must eventually take the value \(\zeta\): if it never did, then \(F\) restricted to \(h(A)\) would be injective (each \(F(\alpha)\) is chosen outside the image of all previous values) with image in \(A\), contradicting the definition of \(h(A)\) as the least ordinal not embeddable into any subset of \(A\). Let \(\alpha_0\) be the least ordinal with \(F(\alpha_0) = \zeta\). Then \(F \upharpoonright \alpha_0 : \alpha_0 \xrightarrow{\,\sim\,} A\) is a bijection, and transporting the membership ordering on \(\alpha_0\) back to \(A\) gives a well-ordering of \(A\). \(\square\)
 
 *Sketch that Well-ordering implies Zorn's Lemma.* Suppose \((E, \prec)\) satisfies the chain-upper-bound condition (call it \(\star\) but has no maximal element. Well-order \(E\) (using the Well-ordering Principle), thereby obtaining a choice function on all nonempty subsets of \(E\) by taking least elements. By transfinite recursion, build \(F : h(E) \to E\) as a strictly \(\prec\)-increasing function: at successor stages, use the fact that the current element is not maximal to pick something strictly bigger; at limit stages, use \(\star\) to pick an upper bound for the chain built so far. This embeds \(h(E)\) injectively into \(E\), contradicting the definition of \(h(E)\).
@@ -770,7 +844,10 @@ The claim is that \(\kappa^+\) is the *least* cardinal strictly greater than \(\
 The cardinal successor operation allows us to enumerate all infinite cardinals systematically.
 
 **Definition 3.2.** The **aleph hierarchy** is defined by transfinite recursion:
-\[\aleph_0 = \omega, \quad \aleph_{\alpha+1} = \aleph_\alpha^+, \quad \aleph_\alpha = \sup\{\aleph_\beta : \beta < \alpha\} \text{ (for limit } \alpha).\]
+
+\[
+\aleph_0 = \omega, \quad \aleph_{\alpha+1} = \aleph_\alpha^+, \quad \aleph_\alpha = \sup\{\aleph_\beta : \beta < \alpha\} \text{ (for limit } \alpha).
+\]
 
 At successor stages, we take the next cardinal. At limit stages, we take the supremum — recalling that the supremum of a set of ordinals is itself an ordinal. The definition is an instance of transfinite recursion and is a definite operation from \(\mathrm{Ord}\) to \(\mathrm{Card}\).
 
@@ -808,9 +885,15 @@ A cardinal of the form \(\aleph_{\alpha+1}\) is called a **successor cardinal**;
 The professor called this "a beautiful bit of mathematics from the turn of the century that really got set theory going." It has an immediate consequence: \(|\mathcal{P}(\aleph_0)| > \aleph_0\), so \(\mathcal{P}(\aleph_0)\) is uncountable and its cardinality is some \(\aleph_\alpha\) with \(\alpha \geq 1\). But *which* aleph?
 
 The **Continuum Hypothesis (CH)** asserts:
-\[|\mathcal{P}(\aleph_0)| = \aleph_1.\]
+
+\[
+|\mathcal{P}(\aleph_0)| = \aleph_1.
+\]
 It says that the power set of the naturals is as small as it could possibly be — the very next cardinal after \(\aleph_0\). The **Generalised Continuum Hypothesis (GCH)** extends this to all infinite cardinals:
-\[|\mathcal{P}(\kappa)| = \kappa^+ \quad \text{for all infinite cardinals } \kappa.\]
+
+\[
+|\mathcal{P}(\kappa)| = \kappa^+ \quad \text{for all infinite cardinals } \kappa.
+\]
 
 Both are **independent of ZFC** — as the professor put it:
 
@@ -831,7 +914,10 @@ We do not assume CH or GCH in this course.
 The purpose of cardinal arithmetic is practical: when working in mathematics, one constantly needs to compute the sizes of unions, products, and function spaces. The definitions are grounded in these geometric intuitions.
 
 **Definition 3.10.** For cardinals \(\kappa_1, \kappa_2\), choose disjoint sets \(X_1, X_2\) with \(|X_i| = \kappa_i\). Define:
-\[\kappa_1 + \kappa_2 = |X_1 \cup X_2|, \qquad \kappa_1 \cdot \kappa_2 = |X_1 \times X_2|.\]
+
+\[
+\kappa_1 + \kappa_2 = |X_1 \cup X_2|, \qquad \kappa_1 \cdot \kappa_2 = |X_1 \times X_2|.
+\]
 
 These are well-defined: any two sets of cardinality \(\kappa_i\) are equinumerous, so the bijections compose to show independence of the choice of \(X_i\). For addition, we need disjointness to avoid double-counting; for multiplication, the Cartesian product definition has no such requirement and one may as well take \(X_i = \kappa_i\) directly.
 
@@ -853,7 +939,10 @@ In other words, for infinite cardinals: \(\aleph_\alpha + \aleph_\beta = \aleph_
 For many applications — for instance, sizing a product of infinitely many spaces — we need infinite cardinal arithmetic.
 
 **Definition 3.16.** Let \((\kappa_i : i \in I)\) be an \(I\)-indexed sequence of cardinals (formally, a function \(f : I \to \mathrm{Card}\) with \(f(i) = \kappa_i\). Choose pairwise disjoint sets \((X_i : i \in I)\) with \(|X_i| = \kappa_i\). Define:
-\[\sum_{i \in I} \kappa_i = \left|\bigcup_{i \in I} X_i\right|, \qquad \prod_{i \in I} \kappa_i = \left|\bigtimes_{i \in I} X_i\right|\]
+
+\[
+\sum_{i \in I} \kappa_i = \left|\bigcup_{i \in I} X_i\right|, \qquad \prod_{i \in I} \kappa_i = \left|\bigtimes_{i \in I} X_i\right|
+\]
 where \(\bigtimes_{i \in I} X_i = \{f : I \to \bigcup_i X_i : f(i) \in X_i \text{ for all } i\}\) is the generalised Cartesian product. The union of the sequence is the union of the image of \(f\), in set-theoretic terms. Both definitions are well-defined (independent of the choice of the \(X_i\). Note that by AC, as long as each \(X_i \neq \emptyset\), the generalised Cartesian product is nonempty.
 
 **Proposition 3.20.** *If \(I\) is an infinite index set and each \(\kappa_i > 0\), then:*
@@ -863,11 +952,17 @@ where \(\bigtimes_{i \in I} X_i = \{f : I \to \bigcup_i X_i : f(i) \in X_i \text
 The sum trivialises again: you need to account for how many terms you are adding (the size of the index set), but once you do, the answer is just the larger of the index size and the supremum of the terms. The professor gave the intuition: "If all the \(\kappa_i\) are one, and you add them up over an infinite index set, you should not expect the answer to be one — you are adding infinitely many of them. The index set size must enter. But that is all that enters, beyond the supremum."
 
 **Definition 3.21 (Cardinal Exponentiation).** For cardinals \(\kappa, \lambda\), define:
-\[\kappa^\lambda = |\{f : \lambda \to \kappa\}|\]
+
+\[
+\kappa^\lambda = |\{f : \lambda \to \kappa\}|
+\]
 the cardinality of the set of all functions from \(\lambda\) to \(\kappa\). This is precisely the generalised product of a constant sequence: \(\kappa^\lambda = \prod_{i \in \lambda} \kappa\).
 
 The key example: what is \(2^\lambda\)? A function \(f : \lambda \to 2 = \{0,1\}\) is a characteristic function, and it corresponds bijectively to the subset \(\{i \in \lambda : f(i) = 1\} \subseteq \lambda\). Hence:
-\[2^\lambda = |\mathcal{P}(\lambda)|.\]
+
+\[
+2^\lambda = |\mathcal{P}(\lambda)|.
+\]
 By Cantor's theorem, this is strictly greater than \(\lambda\). The generalised product does *not* trivialise in general — a stark contrast to sums. The professor noted: "Here for the first time we get something new and interesting, even at the infinite level. The sum trivialises. The product does not. It gives you something strictly bigger."
 
 **Lemma 3.22 (Properties of Cardinal Exponentiation).** *The following hold for all cardinals:*
@@ -883,7 +978,10 @@ These match the familiar identities for exponentiation and hold for this definit
 The following theorem is the central non-trivial inequality of infinite cardinal arithmetic. It is a vast generalisation of Cantor's diagonalisation.
 
 **Theorem 3.25 (König's Theorem).** *Suppose \(\kappa_i < \lambda_i\) for all \(i \in I\). Then:*
-\[\sum_{i \in I} \kappa_i < \prod_{i \in I} \lambda_i.\]
+
+\[
+\sum_{i \in I} \kappa_i < \prod_{i \in I} \lambda_i.
+\]
 
 The professor described this as "Cantor's diagonalisation squeezed for all it's worth."
 
@@ -910,7 +1008,10 @@ The cofinality is the key to understanding the constraints on cardinal exponenti
 **Proposition 3.33.** *For all infinite cardinals \(\kappa\), \(\mathrm{cof}(2^\kappa) > \kappa\).*
 
 *Proof.* Suppose \(f : \lambda \to 2^\kappa\) is a strictly increasing unbounded function with \(\lambda \leq \kappa\). Then:
-\[2^\kappa = \left|\bigcup_{\alpha < \lambda} f(\alpha)\right| \leq \sum_{\alpha < \lambda} |f(\alpha)| < \prod_{\alpha < \lambda} 2^\kappa = (2^\kappa)^\lambda = 2^{\kappa \cdot \lambda} = 2^\kappa,\]
+
+\[
+2^\kappa = \left|\bigcup_{\alpha < \lambda} f(\alpha)\right| \leq \sum_{\alpha < \lambda} |f(\alpha)| < \prod_{\alpha < \lambda} 2^\kappa = (2^\kappa)^\lambda = 2^{\kappa \cdot \lambda} = 2^\kappa,
+\]
 where König's Theorem is used for the strict inequality (since each \(|f(\alpha)| < 2^\kappa\) and the identities use cardinal exponentiation laws. The resulting \(2^\kappa < 2^\kappa\) is a contradiction. Hence no such \(\lambda \leq \kappa\) can be the cofinality of \(2^\kappa\). \(\square\)
 
 **Corollary 3.34.** \(2^{\aleph_0} \neq \aleph_\omega\).
@@ -1086,7 +1187,10 @@ A term by itself has no meaning. To give it meaning, we need to fix a structure 
 1. If \(t = x_i\), then \(t^\mathcal{M}(a_1, \ldots, a_n) = a_i\) (projection onto the \(i\)-th coordinate).
 2. If \(t = c\) is a constant symbol, then \(t^\mathcal{M}(a_1, \ldots, a_n) = c^\mathcal{M}\) (constant function with value the interpretation of \(c\).
 3. If \(t = f(t_1, \ldots, t_l)\) where \(f\) is an \(l\)-ary function symbol, then
-\[t^\mathcal{M}(a_1, \ldots, a_n) = f^\mathcal{M}\bigl(t_1^\mathcal{M}(a_1,\ldots,a_n),\; \ldots,\; t_l^\mathcal{M}(a_1,\ldots,a_n)\bigr).\]
+
+\[
+t^\mathcal{M}(a_1, \ldots, a_n) = f^\mathcal{M}\bigl(t_1^\mathcal{M}(a_1,\ldots,a_n),\; \ldots,\; t_l^\mathcal{M}(a_1,\ldots,a_n)\bigr).
+\]
 
 A subtle point: the interpretation \(t^\mathcal{M}\) depends not only on the term \(t\) and the structure \(\mathcal{M}\), but also on the *presentation* of \(t\) — on which variables are listed and in which order. Consider the single-variable term \(t = x\). Presented as \(t(x)\), its interpretation is the identity map \(M \to M\). Presented as \(t(x, y)\), its interpretation is \(M^2 \to M\), \((a,b) \mapsto a\). Presented as \(t(y, x)\), it is \((a,b) \mapsto b\). This is the same phenomenon as viewing a polynomial in one variable as a polynomial in two or three variables: the underlying expression is the same, but the "type" of the function it represents changes.
 
@@ -1114,7 +1218,10 @@ So atomic formulas express either that two terms are equal, or that a tuple of t
 With terms and atomic formulas in hand, we can now define the full class of \(L\)-formulas. As with terms, the definition is inductive.
 
 **Definition 4.19 (Formula).** The set of **\(L\)-formulas** is the smallest collection of finite strings of symbols from
-\[\mathrm{Var} \cup L_{\mathrm{con}} \cup L_{\mathrm{fun}} \cup L_{\mathrm{rel}} \cup \{=,\; (,\; ),\; ,\; \neg,\; \wedge,\; \vee,\; \forall,\; \exists\}\]
+
+\[
+\mathrm{Var} \cup L_{\mathrm{con}} \cup L_{\mathrm{fun}} \cup L_{\mathrm{rel}} \cup \{=,\; (,\; ),\; ,\; \neg,\; \wedge,\; \vee,\; \forall,\; \exists\}
+\]
 satisfying:
 
 1. Every atomic \(L\)-formula is an \(L\)-formula.
@@ -1126,7 +1233,10 @@ We introduce standard abbreviations: \((\varphi \to \psi)\) for \((\neg \varphi 
 As always, these are strings of symbols — they have no meaning until we fix a structure and a tuple in which to interpret them.
 
 **Example 4.20 (Set theory).** In the **language of set theory** \(L = \{\in\}\) — a single binary relation symbol — the terms are just the variables (since there are no constant or function symbols). The atomic formulas are of the form \(x = y\) or \(x \in y\), where \(x, y\) are variables. The full class of \(L\)-formulas in this language is exactly the **definite conditions** introduced in the set theory part of the course. In particular, every axiom of ZFC is an \(L\)-sentence in this language (a formula with no free variables). For instance, the Axiom of Empty Set can be written \(\exists x\, \forall y\, (\neg(y \in x))\), and the formula
-\[(x \in y) \wedge \forall z\bigl((z \in x) \to (z \in y)\bigr) \wedge \forall z\bigl((z \in y) \to \bigl((z \in x) \vee (z = x)\bigr)\bigr)\]
+
+\[
+(x \in y) \wedge \forall z\bigl((z \in x) \to (z \in y)\bigr) \wedge \forall z\bigl((z \in y) \to \bigl((z \in x) \vee (z = x)\bigr)\bigr)
+\]
 expresses "y is the successor of x" and has free variables x and y.
 
 This connection is not a coincidence: the definition of "definite condition" in ZFC was precisely the definition of a formula in the language of set theory. We have now generalized it to arbitrary languages.
@@ -1164,7 +1274,7 @@ Thinking about it concretely: suppose I have the formula \(\varphi(x)\) that say
 
 **Atomic cases:**
 - If \(\varphi\) is \((t_1 = t_2)\): \(\mathcal{M} \models \varphi(\mathbf{a})\) iff \(t_1^\mathcal{M}(\mathbf{a}) = t_2^\mathcal{M}(\mathbf{a})\) (the two interpretations agree as elements of \(M\).
-- If \(\varphi\) is \(R(t_1, \ldots, t_k)\): \(\mathcal{M} \models \varphi(\mathbf{a})\) iff \bigl(t_1^\mathcal{M}(\mathbf{a}), \ldots, t_k^\mathcal{M}(\mathbf{a})\bigr) \in R^\mathcal{M}\).
+- If \(\varphi\) is \(R(t_1, \ldots, t_k)\): \(\mathcal{M} \models \varphi(\mathbf{a})\) iff \(\bigl(t_1^\mathcal{M}(\mathbf{a}), \ldots, t_k^\mathcal{M}(\mathbf{a})\bigr) \in R^\mathcal{M}\).
 
 **Boolean cases:** (assuming the statement is already defined for simpler formulas \(\psi, \theta\)
 - \(\mathcal{M} \models (\neg \psi)(\mathbf{a})\) iff \(\mathcal{M} \not\models \psi(\mathbf{a})\).
@@ -1178,7 +1288,10 @@ Thinking about it concretely: suppose I have the formula \(\varphi(x)\) that say
 Each case takes the connective or quantifier at face value: the conjunction symbol means "and", the existential quantifier means "there exists an element in the universe." This is the natural definition — the structure gives meaning to the symbols.
 
 **Definition 4.24 (Definable sets and sentences).** Given \(\mathcal{M}\) and \(\varphi(x_1, \ldots, x_n)\), define
-\[\varphi^\mathcal{M} = \{(a_1, \ldots, a_n) \in M^n : \mathcal{M} \models \varphi(\mathbf{a})\}\]
+
+\[
+\varphi^\mathcal{M} = \{(a_1, \ldots, a_n) \in M^n : \mathcal{M} \models \varphi(\mathbf{a})\}
+\]
 to be the **set defined by \(\varphi\) in \(\mathcal{M}\)**, also called the **set of realizations** of \(\varphi\). This is a subset of \(M^n\), and it depends on the presentation of the free variables.
 
 When \(n = 0\), \(\varphi\) is a sentence and there are no variables to plug in. Then \(\mathcal{M} \models \varphi\) is simply true or false — a **truth value**. We say \(\varphi\) is **true in \(\mathcal{M}\)** and write \(\mathcal{M} \models \varphi\). By the definition of negation, for any sentence \(\varphi\), exactly one of \(\mathcal{M} \models \varphi\) and \(\mathcal{M} \models \neg \varphi\) holds. There is no middle ground.
@@ -1212,7 +1325,10 @@ In summary: quantifier-free formulas are preserved in both directions between a 
 *Proof.* The argument has two layers of induction: first on terms, then on formulas.
 
 **Claim (Term invariance).** For every \(L\)-term \(t(x_1, \ldots, x_n)\) and every \(\mathbf{a} \in M^n\),
-\[t^\mathcal{N}(\mathbf{a}) = t^\mathcal{M}(\mathbf{a}).\]
+
+\[
+t^\mathcal{N}(\mathbf{a}) = t^\mathcal{M}(\mathbf{a}).
+\]
 That is, the interpretation of a term in the extension, evaluated at elements from the substructure, agrees with its interpretation in the substructure.
 
 *Proof of Claim.* By induction on the complexity of \(t\).
@@ -1222,16 +1338,22 @@ That is, the interpretation of a term in the extension, evaluated at elements fr
 **Base case \(t = c\) a constant symbol.** Then \(t^\mathcal{N}(\mathbf{a}) = c^\mathcal{N}\) and \(t^\mathcal{M}(\mathbf{a}) = c^\mathcal{M}\). Since \(\mathcal{M} \subseteq \mathcal{N}\), condition 1 of the substructure definition gives \(c^\mathcal{M} = c^\mathcal{N}\). So both sides agree.
 
 **Inductive case \(t = f(t_1, \ldots, t_l)\).** The terms \(t_1, \ldots, t_l\) have strictly lower complexity, so the claim holds for each of them by induction hypothesis. Evaluating at \(\mathbf{a} \in M^n\):
-\[t^\mathcal{N}(\mathbf{a}) = f^\mathcal{N}\bigl(t_1^\mathcal{N}(\mathbf{a}), \ldots, t_l^\mathcal{N}(\mathbf{a})\bigr) = f^\mathcal{N}\bigl(t_1^\mathcal{M}(\mathbf{a}), \ldots, t_l^\mathcal{M}(\mathbf{a})\bigr),\]
+
+\[
+t^\mathcal{N}(\mathbf{a}) = f^\mathcal{N}\bigl(t_1^\mathcal{N}(\mathbf{a}), \ldots, t_l^\mathcal{N}(\mathbf{a})\bigr) = f^\mathcal{N}\bigl(t_1^\mathcal{M}(\mathbf{a}), \ldots, t_l^\mathcal{M}(\mathbf{a})\bigr),
+\]
 using the induction hypothesis in the second step. Now each \(t_i^\mathcal{M}(\mathbf{a}) \in M\), since the substructure is closed under interpretations of terms (Exercise 4.17). Since \(\mathcal{M} \subseteq \mathcal{N}\), condition 2 of the substructure definition says \(f^\mathcal{N} \upharpoonright M^l = f^\mathcal{M}\). Applying this:
-\[f^\mathcal{N}\bigl(t_1^\mathcal{M}(\mathbf{a}), \ldots, t_l^\mathcal{M}(\mathbf{a})\bigr) = f^\mathcal{M}\bigl(t_1^\mathcal{M}(\mathbf{a}), \ldots, t_l^\mathcal{M}(\mathbf{a})\bigr) = t^\mathcal{M}(\mathbf{a}).\]
+
+\[
+f^\mathcal{N}\bigl(t_1^\mathcal{M}(\mathbf{a}), \ldots, t_l^\mathcal{M}(\mathbf{a})\bigr) = f^\mathcal{M}\bigl(t_1^\mathcal{M}(\mathbf{a}), \ldots, t_l^\mathcal{M}(\mathbf{a})\bigr) = t^\mathcal{M}(\mathbf{a}).
+\]
 This completes the proof of the claim. \(\square\) (claim)
 
 **Part (a): Quantifier-free formulas.** By induction on the complexity of \(\varphi\).
 
 *Atomic case \(\varphi = (t_1 = t_2)\).* \(\mathcal{M} \models \varphi(\mathbf{a})\) iff \(t_1^\mathcal{M}(\mathbf{a}) = t_2^\mathcal{M}(\mathbf{a})\); by the claim, this is iff \(t_1^\mathcal{N}(\mathbf{a}) = t_2^\mathcal{N}(\mathbf{a})\), which is iff \(\mathcal{N} \models \varphi(\mathbf{a})\).
 
-*Atomic case \(\varphi = R(t_1, \ldots, t_k)\).* By the claim, \(t_i^\mathcal{M}(\mathbf{a}) = t_i^\mathcal{N}(\mathbf{a})\) for all \(i\). The substructure condition 3 gives \(R^\mathcal{N} \cap M^k = R^\mathcal{M}\), and the \(k\)-tuple \bigl(t_1^\mathcal{M}(\mathbf{a}), \ldots, t_k^\mathcal{M}(\mathbf{a})\bigr) \in M^k\). So membership in \(R^\mathcal{M}\) and in \(R^\mathcal{N}\) are equivalent, giving the biconditional.
+*Atomic case \(\varphi = R(t_1, \ldots, t_k)\).* By the claim, \(t_i^\mathcal{M}(\mathbf{a}) = t_i^\mathcal{N}(\mathbf{a})\) for all \(i\). The substructure condition 3 gives \(R^\mathcal{N} \cap M^k = R^\mathcal{M}\), and the \(k\)-tuple \(\bigl(t_1^\mathcal{M}(\mathbf{a}), \ldots, t_k^\mathcal{M}(\mathbf{a})\bigr) \in M^k\). So membership in \(R^\mathcal{M}\) and in \(R^\mathcal{N}\) are equivalent, giving the biconditional.
 
 *Boolean cases.* These are immediate from the definitions: \(\mathcal{M} \models (\neg \psi)(\mathbf{a})\) iff \(\mathcal{M} \not\models \psi(\mathbf{a})\), which by induction is iff \(\mathcal{N} \not\models \psi(\mathbf{a})\), which is iff \(\mathcal{N} \models (\neg\psi)(\mathbf{a})\). And and or are handled symmetrically.
 
@@ -1261,7 +1383,10 @@ These observations apply equally to any \(L\)-embedding \(j : \mathcal{M} \to \m
 This motivates the central definition of the unit.
 
 **Definition 4.23.** An \(L\)-embedding \(j : \mathcal{M} \to \mathcal{N}\) is an **elementary embedding** if for all \(L\)-formulas \(\varphi(\mathbf{x})\) and all \(\mathbf{a} \in M^n\):
-\[\mathcal{M} \models \varphi(\mathbf{a}) \iff \mathcal{N} \models \varphi(j(\mathbf{a})).\]
+
+\[
+\mathcal{M} \models \varphi(\mathbf{a}) \iff \mathcal{N} \models \varphi(j(\mathbf{a})).
+\]
 If \(\mathcal{M} \subseteq \mathcal{N}\) and the inclusion map is an elementary embedding, we say \(\mathcal{M}\) is an **elementary substructure** of \(\mathcal{N}\), written \(\mathcal{M} \prec \mathcal{N}\).
 
 The notation \(\prec\) is chosen to echo \(\subseteq\) but to signal that something much stronger is at work. A substructure is an algebraic notion — it is exactly what a group theorist or ring theorist would call a subobject. An elementary substructure is something coming out of model theory itself: not only must the basic algebra be compatible, but every first-order truth about elements of \(M\) must be the same whether computed in \(\mathcal{M}\) or in \(\mathcal{N}\).
@@ -1277,7 +1402,10 @@ It is surjectivity that makes the existential step work in both directions. For 
 ### The Example: \(\mathbb{Z} \subseteq \mathbb{Q}\) but \(\mathbb{Z} \not\prec \mathbb{Q}\)
 
 The cleanest illustration of the gap between substructures and elementary substructures is the additive groups \((\mathbb{Z}, 0, +, -)\) and \((\mathbb{Q}, 0, +, -)\). The integers are certainly a subgroup of the rationals — a substructure in the language of groups. But they fail to be an elementary substructure. The witnessing formula is simple:
-\[\varphi(x) :\equiv \exists y\,(y + y = x).\]
+
+\[
+\varphi(x) :\equiv \exists y\,(y + y = x).
+\]
 This says "x is twice some y," or equivalently, "x is even" in the group-theoretic sense. Take \(x = 1\). Then \(\mathbb{Q} \models \varphi(1)\), since \(y = \tfrac{1}{2}\) is a witness. But \(\mathbb{Z} \not\models \varphi(1)\), since no integer when added to itself gives 1. Here \(1\) is an element of the smaller structure, and the two structures disagree on what \(\varphi\) says about it. This is precisely what the definition forbids.
 
 This single counterexample settles the question. But the professor pushed further in Lecture 21b, proving the following striking theorem:
@@ -1334,7 +1462,7 @@ The Tarski-Vaught criterion leads immediately to a fundamental theorem of model 
 
 In particular, if \(L\) is countable and \(A = \emptyset\), then \(\kappa = \aleph_0\) and every \(L\)-structure has a countable elementary substructure.
 
-The cardinality bound \(\kappa\) is sharp: one cannot do better than \|A|\) (the substructure must contain the seed set), nor better than \|L|\) (it must contain all interpretations of constant symbols and be closed under function symbols), nor make it finite (a finite elementary substructure would force the whole structure to be finite). Adding \(\aleph_0\) ensures the bound is infinite even when the language and seed are finite.
+The cardinality bound \(\kappa\) is sharp: one cannot do better than \(|A|\) (the substructure must contain the seed set), nor better than \(|L|\) (it must contain all interpretations of constant symbols and be closed under function symbols), nor make it finite (a finite elementary substructure would force the whole structure to be finite). Adding \(\aleph_0\) ensures the bound is infinite even when the language and seed are finite.
 
 *Proof sketch.* The construction is a "Skolem closure." Set \(A_0 = A\). Given \(A_i\), let \(A_{i+1}\) be \(A_i\) together with, for each formula \(\varphi(\mathbf{x}, y)\) and each \(\mathbf{a} \in A_i^n\) with \(\mathcal{M} \models \exists y\, \varphi(\mathbf{a}, y)\), a chosen witness. The number of pairs \((\varphi, \mathbf{a})\) at stage \(i\) is bounded by \(\kappa\) (there are at most \(\kappa\)-many formulas, since they are finite strings from a set of symbols of size \(\kappa\), and at most \(\kappa\)-many tuples from \(A_i\) which by induction has size \(\leq \kappa\), so \(|A_{i+1}| \leq \kappa\). Put \(B = \bigcup_{i < \omega} A_i\). Then \(|B| \leq \kappa \cdot \aleph_0 = \kappa\). By construction, \(B\) satisfies the Tarski-Vaught criterion: any finite tuple from \(B\) lies in some \(A_i\), and witnesses are added at stage \(A_{i+1} \subseteq B\). By the corollary to the Tarski-Vaught Test, \(B\) is the universe of an elementary substructure \(\mathcal{N} \prec \mathcal{M}\) with \(A \subseteq B = N\). \(\square\)
 
@@ -1355,7 +1483,10 @@ The Tarski-Vaught Test can be rephrased neatly: \(\mathcal{M} \prec \mathcal{N}\
 ### Definable Sets
 
 **Definition 4.29 (Definable set).** Let \(\mathcal{M}\) be an \(L\)-structure and \(B \subseteq M\). A set \(X \subseteq M^n\) is **\(B\)-definable** in \(\mathcal{M}\) if there exists an \(L_B\)-formula \(\varphi(\mathbf{x})\) such that
-\[X = \varphi^{\mathcal{M}} = \{\mathbf{a} \in M^n : \mathcal{M}_B \models \varphi(\mathbf{a})\}.\]
+
+\[
+X = \varphi^{\mathcal{M}} = \{\mathbf{a} \in M^n : \mathcal{M}_B \models \varphi(\mathbf{a})\}.
+\]
 Equivalently, in terms of the original language \(L\): there exist an \(L\)-formula \(\psi(\mathbf{x}, \mathbf{y})\) and parameters \(\mathbf{b} \in B^m\) such that \(X = \{\mathbf{a} \in M^n : \mathcal{M} \models \psi(\mathbf{a}, \mathbf{b})\}\). We say \(X\) is **definable** (in \(\mathcal{M}\) if it is \(M\)-definable, and **0-definable** or **parameter-free** if it is \(\emptyset\)-definable.
 
 Every definable set is \(B\)-definable for some finite \(B\), since formulas are finite objects and can only involve finitely many parameter symbols.
@@ -1367,7 +1498,10 @@ The motivating example with which the professor opened Lecture 23 is the ordered
 The broader picture of definable sets in rings is laid out in Examples 4.31–4.34 of the notes:
 
 *Example 4.31 (Algebraic sets).* In any commutative unitary ring \(\mathcal{R}\), the common zero set of polynomials \(p_1, \ldots, p_\ell \in R[X_1, \ldots, X_n]\),
-\[V(p_1, \ldots, p_\ell) = \{\mathbf{a} \in R^n : p_1(\mathbf{a}) = \cdots = p_\ell(\mathbf{a}) = 0\},\]
+
+\[
+V(p_1, \ldots, p_\ell) = \{\mathbf{a} \in R^n : p_1(\mathbf{a}) = \cdots = p_\ell(\mathbf{a}) = 0\},
+\]
 is quantifier-free definable by the conjunction \(\bigwedge_i (p_i(x_1, \ldots, x_n) = 0)\). These are called **algebraic sets** or Zariski-closed sets, and their finite Boolean combinations are the **Zariski-constructible sets** — which are exactly the quantifier-free definable sets in any commutative unitary ring.
 
 *Example 4.32 (Ordering in \(\mathbb{R}\) is existentially definable).* In \((\mathbb{R}, 0, 1, +, -, \times)\), the non-negative reals are defined by \(\exists z(z^2 = x)\) — a real number has a square root iff it is non-negative. Consequently, the ordering is recovered by \(x < y \iff \exists z ((z \neq 0) \wedge (y - x = z^2))\). This is a quantifier-bearing formula, and it cannot be replaced by one without: the positive reals are not Zariski-constructible in one variable (they are infinite and co-infinite).
@@ -1405,7 +1539,10 @@ Finally, we record the general characterisation of definable sets in terms of cl
 In Lectures 24a and 24b the professor stepped back to survey the landscape of definable sets in rings, asking a natural and far-reaching question: given a commutative unitary ring \(\mathcal{R} = (R, 0, 1, +, -, \times)\), what are all its definable sets?
 
 We have already identified the quantifier-free definable sets. An **algebraic set** is the common zero set of finitely many polynomials \(p_1, \ldots, p_\ell \in R[X_1, \ldots, X_n]\):
-\[V(p_1, \ldots, p_\ell) = \{\mathbf{a} \in R^n : p_1(\mathbf{a}) = \cdots = p_\ell(\mathbf{a}) = 0\}.\]
+
+\[
+V(p_1, \ldots, p_\ell) = \{\mathbf{a} \in R^n : p_1(\mathbf{a}) = \cdots = p_\ell(\mathbf{a}) = 0\}.
+\]
 These form the closed sets of the **Zariski topology** on \(R^n\). Their finite Boolean combinations are the **Zariski-constructible sets**. The key point (which uses the fact that \(L_R\)-terms in \(n\) variables agree precisely with polynomials in \(n\) variables over \(R\), generalising the homework exercise on integer-coefficient terms) is:
 
 **Fact.** *In any commutative unitary ring, the quantifier-free definable sets are exactly the Zariski-constructible sets.*
@@ -1483,7 +1620,10 @@ Not every class is elementary. The class of torsion groups (every element has fi
 ### The Theory of a Structure and Elementary Equivalence
 
 **Definition.** Given an \(L\)-structure \(\mathcal{M}\), its **theory** is:
-\[\mathrm{Th}(\mathcal{M}) = \{\sigma : \sigma \text{ an } L\text{-sentence}, \mathcal{M} \models \sigma\}.\]
+
+\[
+\mathrm{Th}(\mathcal{M}) = \{\sigma : \sigma \text{ an } L\text{-sentence}, \mathcal{M} \models \sigma\}.
+\]
 
 This is the complete first-order description of \(\mathcal{M}\) — all sentences that are true in it. It is always infinite (one can always find new sentences), and it always includes the axioms of any class \(\mathcal{M}\) belongs to. For instance, \(\mathrm{Th}(\mathbb{Q}, 0, +, -)\) includes all the divisibility sentences \(\sigma_n\), not just the group axioms.
 
@@ -1515,7 +1655,10 @@ The proof shows how the two directions are inverse operations. Given \(j\), expa
 ### Partial Elementary Maps
 
 **Definition 4.47.** A **partial elementary map** (p.e.m.) from \(\mathcal{M}\) to \(\mathcal{N}\) is a function \(f : A \to N\) (with \(A \subseteq M\), possibly empty) such that for all \(L\)-formulas \(\varphi(\mathbf{x})\) and \(\mathbf{a} \in A\):
-\[\mathcal{M} \models \varphi(\mathbf{a}) \iff \mathcal{N} \models \varphi(f(\mathbf{a})).\]
+
+\[
+\mathcal{M} \models \varphi(\mathbf{a}) \iff \mathcal{N} \models \varphi(f(\mathbf{a})).
+\]
 The empty function is a p.e.m. iff \(\mathcal{M} \equiv \mathcal{N}\); a total p.e.m. is precisely an elementary embedding.
 
 ### Finite Structures Are Determined by Their Theory

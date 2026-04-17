@@ -5,226 +5,525 @@ prof: "Andrea Brookfield"
 ---
 
 ## Sources and References
-**Online resources** — USGS Water Resources (usgs.gov/water); Environment and Climate Change Canada Hydrometric data (wateroffice.ec.gc.ca); NRCAN Water Survey of Canada; Ontario Integrated Groundwater Monitoring Network; R Project for Statistical Computing (r-project.org); Jupyter Project (jupyter.org)
 
-# Chapter 1: Compiling Environmental Data for Water Decisions
+**Primary textbook** — Helsel, D.R. and Hirsch, R.M. (2002). *Statistical Methods in Water Resources*. USGS Techniques of Water-Resources Investigations, Book 4, Chapter A3. Available freely from the USGS. The definitive reference for applied environmental statistics.
 
-## The Data-to-Decisions Framework
+**Supplementary texts** — Devore, J.L. (2015). *Probability and Statistics for Engineering and the Sciences* (9th ed.). Cengage Learning. Dingman, S.L. (2015). *Physical Hydrology* (3rd ed.). Waveland Press. Isaaks, E.H. and Srivastava, R.M. (1989). *An Introduction to Applied Geostatistics*. Oxford University Press.
 
-Water management is fundamentally a decision-making enterprise. Whether the decision involves allocating water among competing users, issuing a drinking water advisory, designing a floodplain ordinance, or selecting a remediation strategy for a contaminated aquifer, that decision should be grounded in systematic analysis of relevant data. The field of environmental data science — combining hydrology, statistics, and computational tools — provides the methodological bridge between raw observations and defensible, transparent decisions.
+**Online resources** — USGS National Water Information System (waterdata.usgs.gov); Environment and Climate Change Canada Water Survey (ec.gc.ca/rhc-wsc); Ontario Ministry of the Environment drinking water advisories database; NOAA Climate Data Online; R Project for Statistical Computing (r-project.org); Project Jupyter (jupyter.org).
 
-The first and most consequential step in any water management analysis is framing the decision precisely. A poorly posed question leads to data collection that is incomplete, inappropriately designed, or analytically intractable. A well-posed decision question specifies: who the **stakeholder** is (the person or institution for whom the decision is made), what the **decision variable** is (the specific quantity or condition to be determined), what the **decision alternatives** are (the options among which a choice must be made), and what **objectives** the decision must satisfy. This framing exercise, often conducted in consultation with stakeholders, directly determines what data are needed, at what temporal and spatial resolution, and over what period.
+---
 
-<div class="definition">
-<strong>Stakeholder involvement</strong> in water data analysis acknowledges that environmental decisions are rarely purely technical — they involve trade-offs among competing values, interests, and knowledge systems. Indigenous communities, municipalities, agricultural users, conservation authorities, and environmental organizations may each hold legitimate perspectives on water use and quality decisions. Meaningful stakeholder engagement from the outset of a study — including consultation on the framing of the decision question and the selection of decision criteria — produces more socially robust and durable outcomes than technical analyses conducted in isolation.
-</div>
+# Chapter 1: Compiling Environmental Water Data
 
-A stark illustration is provided by the long-standing pattern of drinking water advisories in First Nations communities across Ontario and Canada. As of the early 2020s, many First Nations reserves were under long-term drinking water advisories, some lasting more than a decade, despite Canada's stated commitment to clean water access for all. The technical dimensions of these advisories — infrastructure deficiencies, source water contamination, inadequate treatment capacity, insufficient operator training and funding — are well documented. But the persistence of the crisis also reflects governance structures and resource allocation decisions rooted in colonial history, illustrating that water decisions are inseparable from questions of equity, political will, and institutional capacity.
+## The Role of Data in Water Resource Decisions
 
-## Data Requirements and Database Construction
+Every significant decision in water resource management — whether to approve a new groundwater well, whether to issue a drinking water advisory, whether to release water from a reservoir during a drought, whether to declare a flood emergency — is ultimately a data-driven decision. Yet the data available to decision-makers are always incomplete, imperfect, and uncertain, reflecting the limitations of measurement technology, monitoring network density, temporal coverage, and financial resources. The central challenge of applied environmental statistics — and the core intellectual mission of EARTH 355 — is to extract the maximum useful information from imperfect datasets while honestly characterizing and communicating the uncertainty that remains.
 
-Identifying the data needed to address a decision requires systematic thinking about the system being studied. For hydrological decisions, this typically involves assembling time series of streamflow, water levels, precipitation, temperature, water quality parameters (pH, conductivity, nutrients, metals, pathogens), land use, soil properties, and catchment morphology. Each of these data streams comes with its own characteristics: measurement precision, sampling frequency, spatial density of monitoring stations, period of record, and degree of quality control.
+Water resource data are generated by a diverse array of monitoring networks operated by federal agencies (Environment and Climate Change Canada, the USGS in the United States, provincial Ministries of the Environment), municipalities, utilities, universities, and private companies. The Canadian government's Water Survey of Canada operates approximately 2,500 stream gauging stations across the country, measuring water levels and discharge continuously. Provincial groundwater monitoring networks track water table levels and water quality in tens of thousands of wells. Atmospheric monitoring networks measure precipitation, temperature, evaporation, and other meteorological variables that drive the hydrological cycle. Remote sensing platforms (satellites equipped with radar altimeters, optical sensors, and synthetic aperture radar) provide spatially continuous observations of flood extent, snowpack, soil moisture, evapotranspiration, and other hydrological variables.
 
-<div class="definition">
-<strong>Quality assurance (QA)</strong> and <strong>quality control (QC)</strong> are systematic processes for ensuring that data are fit for their intended purpose. QA refers to the planned system of activities — calibration protocols, standard operating procedures, training of field personnel, documentation — that prevent errors from entering the dataset. QC refers to the post-collection examination of data for errors, including range checks (are values physically plausible?), internal consistency checks (are values consistent with related measurements?), temporal consistency checks (are abrupt changes real or artefactual?), and spatial consistency checks (are values consistent with nearby stations?). Data that fail QC checks are flagged or removed, and the reasons are documented in metadata.
-</div>
+The raw data from all of these sources must be assembled, checked for quality, and organized into databases before analysis can begin. This data compilation step — often underappreciated by students focused on the statistical methods themselves — is frequently the most time-consuming part of an environmental data analysis project. Errors introduced at the data compilation stage can propagate through all subsequent analyses, producing misleading results no matter how sophisticated the statistical methods applied. The principle of "garbage in, garbage out" is particularly relevant in environmental data analysis.
 
-The construction of a database for environmental analysis requires careful attention to **metadata** — information about the data themselves: measurement units, coordinate reference system, instrument type, detection limits, sampling method, and any known issues or interventions (instrument changes, station relocations, periods of missing record). Without metadata, data cannot be properly interpreted or compared across sources. Modern best practice calls for **FAIR data principles** — data should be Findable, Accessible, Interoperable, and Reusable — which are increasingly mandated by funding agencies and journals for environmental datasets.
+## Data Quality Assurance and Quality Control
 
-## Introduction to Computational Tools: R and Python in Jupyter
-
-Modern environmental data analysis is invariably computational: datasets are too large to work with by hand, standard statistical procedures must be applied systematically across multiple variables and time periods, and results must be reproducible. Two programming languages dominate contemporary environmental science: **R** (a language and environment designed specifically for statistical computing and graphics) and **Python** (a general-purpose language with powerful scientific computing libraries including NumPy, pandas, SciPy, and matplotlib). Both are open-source, free, and available on all major operating platforms.
-
-**Jupyter Notebook** is an interactive computational environment that allows users to combine executable code, richly formatted text (using Markdown), mathematical equations (using LaTeX), and visualizations in a single document. This integration of code and narrative makes analyses transparent, reproducible, and communicable — a notebook can serve simultaneously as analysis tool and report. For environmental applications, typical Jupyter workflows involve reading data from CSV or NetCDF files, performing quality control checks, computing descriptive statistics, visualizing distributions and time series, running inferential tests, and producing publication-quality figures.
-
-# Chapter 2: Descriptive Statistics for Hydrological Data
-
-## Central Tendency and Dispersion
-
-Descriptive statistics summarize the distributional properties of a dataset — its central value, its spread, and its shape — before any inferential analysis is attempted. These summaries are essential both for understanding the data and for selecting appropriate inferential methods (which often assume specific distributional forms).
-
-The three common measures of **central tendency** are the mean (arithmetic average), the median (middle value when data are sorted), and the mode (most frequently occurring value). For environmental data, the choice among these measures is consequential: the **arithmetic mean** \( \bar{x} = \frac{1}{n} \sum_{i=1}^n x_i \) is appropriate for normally distributed data but is sensitive to extreme values (outliers). The **median** (50th percentile) is robust to outliers and is preferable for skewed distributions such as those of flood peaks, pollutant concentrations, and suspended sediment loads, which frequently follow log-normal or Pareto distributions. The **geometric mean** — the \( n \)-th root of the product of \( n \) values, equivalently the antilog of the mean of log-transformed values — is appropriate for data spanning orders of magnitude and is commonly used for bacterial counts and trace metal concentrations:
-
-\[ \bar{x}_g = \exp\left(\frac{1}{n} \sum_{i=1}^n \ln x_i\right) \]
+Quality assurance (QA) refers to the planned and systematic activities implemented before data collection to ensure that the monitoring program will produce data of sufficient quality for the intended use. Quality control (QC) refers to the specific technical activities undertaken during and after data collection to verify that the data meet the defined quality standards.
 
 <div class="definition">
-A <strong>log-normal distribution</strong> describes a variable whose natural logarithm is normally distributed. It is characterized by right-skewness (a long upper tail), non-negativity, and a geometric mean less than the arithmetic mean. Many environmental variables — stream discharge, suspended sediment concentration, trace metal concentrations in groundwater, rainfall intensity — are approximately log-normally distributed, reflecting multiplicative (rather than additive) generating processes. For log-normal data, central tendency should be reported as the geometric mean and spread as the geometric standard deviation.
+<strong>Data Quality Objectives (DQOs)</strong>: specifications established before data collection that define the intended use of the data, the required accuracy and precision of measurements, the acceptable rates of false positives and false negatives in decision-making, and the acceptable decision error rates. DQOs translate qualitative information needs (e.g., "we need to know whether this groundwater exceeds the drinking water standard for arsenic") into quantitative measurement requirements (e.g., "we need arsenic measurements with a detection limit of 1 μg/L and a measurement uncertainty of ±2 μg/L at the 95% confidence level").
 </div>
 
-**Measures of dispersion** quantify the spread of data around the central value. The **variance** \( s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2 \) and **standard deviation** \( s = \sqrt{s^2} \) measure spread in the same units as the data (standard deviation) or the square of those units (variance). The **coefficient of variation** CV = \( s/\bar{x} \times 100\% \) expresses variability relative to the mean and is useful for comparing variability across datasets with different units or magnitudes. The **interquartile range (IQR)** = Q3 − Q1 (the range containing the middle 50% of observations) is a robust measure of spread less sensitive to outliers than the standard deviation.
+QC procedures for environmental water data include: (1) field blanks — measurements of distilled water or certified blank water passed through the sampling equipment to detect contamination introduced during sampling; (2) field duplicates — collection of paired samples from the same location to assess the reproducibility (precision) of field sampling; (3) laboratory duplicates — repeated analysis of the same sample to assess laboratory analytical precision; (4) matrix spikes — addition of a known quantity of the analyte to the sample to check for matrix interference effects that may cause the analytical method to over- or under-report the concentration; (5) certified reference materials (CRMs) — analysis of water standards with certified concentrations to verify analytical accuracy; and (6) laboratory blanks — to detect contamination introduced during laboratory processing.
 
-## The z-Score and Standardization
+Time series of continuously-monitored parameters (water level, specific conductance, turbidity, temperature) require additional QC procedures to identify sensor drift, fouling, malfunction, and data gaps. Automated quality control algorithms flag suspicious data points based on rate-of-change criteria (a physically implausible change in water level of several metres in one hour is likely a sensor error), range criteria (a temperature of 90°C in a Canadian stream is not physically possible), and comparison with nearby sensors. Human review of flagged data and regular field calibration visits are essential components of a robust QC program for continuous monitoring.
 
-The **z-score** (or standard score) of an observation \( x_i \) in a dataset with mean \( \bar{x} \) and standard deviation \( s \) is:
+## Stakeholder Involvement and Drinking Water Advisories
 
-\[ z_i = \frac{x_i - \bar{x}}{s} \]
+A case study that illuminates both the technical and social dimensions of water data collection and use is the history of long-term drinking water advisories (LT-DWAs) on First Nations reserves in Canada. As of 2015, more than 100 First Nations communities in Canada were under long-term drinking water advisories — warnings that tap water should not be consumed without prior boiling, filtration, or other treatment. This situation, which had persisted in some communities for more than a decade, reflected a combination of geochemical, infrastructure, operational, and governance factors.
 
-It expresses the value in units of standard deviations from the mean. Positive z-scores indicate values above the mean; negative z-scores indicate values below. A z-score of 2.0 means the observation is two standard deviations above the mean — an event that, under a normal distribution, would occur about 2.3% of the time. Standardization (transforming all values to z-scores) allows comparison of variables measured on different scales and is a prerequisite for some multivariate analyses.
+The geochemical factors contributing to elevated contaminant concentrations in some First Nations water sources include: elevated iron, manganese, and arsenic in groundwaters derived from specific rock types or reducing aquifer conditions (discussed in EARTH 221); naturally occurring uranium from granitic bedrock; high turbidity from suspended sediment in surface water sources; and in some coastal communities, saltwater intrusion. These are not unique to First Nations communities — many small communities across Canada face similar geochemical challenges. What distinguishes the First Nations situation is the intersection of these physical challenges with chronic underfunding of water infrastructure and water operations, inadequate monitoring and reporting requirements, and complex jurisdictional arrangements between federal and provincial governments that have historically left responsibility unclear.
 
-# Chapter 3: Probability and Statistical Inference
+The data-to-decisions framework requires that water quality data be not just collected but also effectively communicated to decision-makers and affected communities. The Ontario First Nations Technical Services Corporation has developed community-specific water quality monitoring programs and capacity-building initiatives designed to ensure that communities can operate their own monitoring programs and make informed decisions about their water supplies. This stakeholder-centered approach to data use — in which the community members whose health depends on water quality are directly involved in monitoring, data interpretation, and decision-making — represents the most effective model for sustainable water quality management in remote communities.
 
-## Probability Fundamentals
+---
 
-Probability is the mathematical language of uncertainty. In the context of water management, probability allows questions like: "What is the probability that streamflow will exceed the bank-full discharge at least once in the next 10 years?" or "Given that phosphorus concentrations in the lake exceeded the eutrophication threshold last summer, what is the probability that algal blooms will occur this summer?" to be answered rigorously.
+# Chapter 2: Descriptive Statistics — Summarizing Water Data
 
-The **probability** of an event \( A \) is a number between 0 and 1 representing the long-run relative frequency of that event in a large number of identical trials. For discrete events, probabilities sum to 1 across all mutually exclusive outcomes. **Conditional probability** — the probability of event \( A \) given that event \( B \) has occurred — is written \( P(A \mid B) = P(A \cap B) / P(B) \), and is fundamental to Bayesian updating of beliefs in light of evidence.
+## Central Tendency: Mean, Median, and Geometric Mean
 
-Two events \( A \) and \( B \) are **statistically independent** if \( P(A \cap B) = P(A) \cdot P(B) \), equivalently if \( P(A \mid B) = P(A) \). Independence is a key assumption in many statistical models (e.g., that successive annual maximum streamflows are independent draws from the same distribution), and violating this assumption (e.g., due to persistence or trends in a time series) leads to invalid inferences.
+Descriptive statistics provide the tools for summarizing a dataset's properties in a compact and informative way. For environmental water data, the most important descriptive statistics are those characterizing central tendency (the typical value in the dataset) and variability (how spread out the values are). Choosing the appropriate measure of central tendency requires understanding the distribution of the data and the purpose of the summary.
 
-## Probability Distributions for Environmental Variables
+The arithmetic mean is the most familiar measure of central tendency:
 
-The **normal (Gaussian) distribution** is the most commonly used probability model in statistics, characterized by its bell-shaped, symmetric probability density function:
+\[
+\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
+\]
 
-\[ f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right) \]
+The arithmetic mean is the optimal estimator of the population mean when the data are normally distributed (symmetrically distributed around the mean) and when the objective is to estimate the total or average mass load of a contaminant. For stream discharge data or contaminant concentrations in a well-mixed water body, the arithmetic mean is appropriate. However, it is highly sensitive to outliers: a single very high contaminant concentration can dramatically inflate the arithmetic mean, giving a misleading impression of typical conditions.
 
-where \( \mu \) is the population mean and \( \sigma^2 \) is the population variance. The normal distribution is appropriate for variables that are the result of many additive random processes (by the Central Limit Theorem). Many water quality variables — dissolved oxygen, temperature, pH in buffered systems — are approximately normally distributed.
+The median — the value that divides the dataset in half, with 50% of observations above and 50% below — is a more robust measure of central tendency that is insensitive to outliers. It is the preferred measure of central tendency for environmental data that are not normally distributed (which describes most environmental datasets), particularly when the objective is to characterize "typical" conditions rather than total mass loads. When data are severely skewed (as is common for contaminant concentrations, which are bounded at zero and may have occasional very high values), the median may be more informative than the mean.
 
-The **Student's t distribution** is used when the population standard deviation is unknown (which is nearly always the case in practice) and the sample size is finite. With \( \nu = n - 1 \) degrees of freedom, the t distribution has heavier tails than the normal distribution, reflecting additional uncertainty from estimating \( \sigma \) from the data; as \( n \to \infty \), the t distribution approaches the normal. The t distribution is central to hypothesis testing and confidence interval construction for means.
+The geometric mean is the exponential of the arithmetic mean of the logarithms of the data:
 
-## Confidence Intervals
+\[
+\bar{x}_g = \exp\left(\frac{1}{n}\sum_{i=1}^{n} \ln x_i\right) = \left(\prod_{i=1}^{n} x_i\right)^{1/n}
+\]
 
-A **confidence interval (CI)** for a population parameter (such as the mean annual streamflow or mean nitrate concentration) is a range of values that, under repeated sampling, would contain the true parameter value with a specified long-run probability (the confidence level, typically 90%, 95%, or 99%). The 95% CI for a population mean, using a t distribution, is:
+The geometric mean is appropriate when the data follow a lognormal distribution — a distribution in which the logarithms of the values are normally distributed. Many environmental datasets, including contaminant concentrations in water and air, stream discharges, particle size distributions, and bacterial counts, are approximately lognormally distributed. For a lognormal dataset, the geometric mean is the optimal estimator of the median (which equals the geometric mean for a perfect lognormal distribution) and is generally preferred over the arithmetic mean for characterizing typical concentrations. Regulatory standards for bacterial contamination in water (e.g., the geometric mean standard for *Escherichia coli*) are expressed as geometric means precisely because bacterial concentration data are lognormally distributed.
 
-\[ \bar{x} \pm t_{\alpha/2, n-1} \cdot \frac{s}{\sqrt{n}} \]
+<div class="example">
+<strong>Worked Example: Selecting the Appropriate Measure of Central Tendency</strong>
 
-where \( t_{\alpha/2, n-1} \) is the critical t value with \( n-1 \) degrees of freedom at significance level \( \alpha \). The width of the CI is inversely proportional to \( \sqrt{n} \): quadrupling the sample size halves the interval width. Confidence intervals convey the precision of an estimate and should always accompany reported means in environmental reports.
+A monitoring program measures total arsenic in a drinking water well over twelve months, obtaining the following values (in μg/L): 3.2, 4.1, 3.8, 15.7, 4.5, 3.9, 4.2, 4.0, 3.7, 4.3, 4.1, 3.6.
 
-<div class="remark">
-The confidence interval is frequently misinterpreted. A 95% CI does <em>not</em> mean "there is a 95% probability that the true parameter lies in this particular interval" — once computed from a specific dataset, the interval either contains the true value or it does not. The correct interpretation is frequentist: if we were to repeat the sampling procedure and compute a CI many times, approximately 95% of those intervals would contain the true parameter value. The practical implication is the same — when reporting a CI, we communicate the range of parameter values consistent with the data at the specified confidence level.
+Arithmetic mean: \(\bar{x} = (3.2 + 4.1 + 3.8 + 15.7 + 4.5 + 3.9 + 4.2 + 4.0 + 3.7 + 4.3 + 4.1 + 3.6)/12 = 59.1/12 = 4.925\) μg/L.
+
+Median: sorted values: 3.2, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.1, 4.2, 4.3, 4.5, 15.7. Median = (4.0 + 4.1)/2 = 4.05 μg/L.
+
+Geometric mean: \(\bar{x}_g = \exp(\text{mean of } \ln x_i) = \exp((1.163 + 1.411 + 1.335 + 2.754 + 1.504 + 1.361 + 1.435 + 1.386 + 1.308 + 1.459 + 1.411 + 1.281)/12) = \exp(17.808/12) = \exp(1.484) = 4.41\) μg/L.
+
+The value of 15.7 μg/L (which exceeds the Health Canada drinking water guideline of 10 μg/L) is clearly an outlier — possibly reflecting a sampling event during a period of elevated groundwater uranium/arsenic mobilisation. The arithmetic mean (4.93 μg/L) is substantially inflated by this outlier, giving an impression that average conditions are worse than they typically are. The median (4.05 μg/L) and geometric mean (4.41 μg/L) are both below the guideline and provide a more representative picture of typical conditions. However, the outlier itself is critically important from a health protection standpoint — the decision-maker needs to know both the typical concentration and the maximum observed concentration, not just a single summary statistic.
 </div>
+
+## Measures of Variability: Variance, Standard Deviation, and Percentiles
+
+Characterizing variability is as important as characterizing central tendency for water resource decisions. A water supply that averages 5 μg/L arsenic but occasionally spikes to 80 μg/L presents a very different risk profile than one that consistently measures 5 μg/L, even though their means are identical. Standard measures of variability include:
+
+The variance is the average squared deviation of the observations from their mean:
+
+\[
+s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2
+\]
+
+(The divisor \( n-1 \) rather than \( n \) makes the sample variance an unbiased estimator of the population variance.) The standard deviation \( s = \sqrt{s^2} \) has the same units as the original data and is more interpretable than the variance.
+
+The coefficient of variation (CV) is the ratio of the standard deviation to the mean, expressed as a percentage: \( CV = (s/\bar{x}) \times 100\% \). It provides a dimensionless measure of relative variability that allows comparison of variability across datasets with different units or magnitudes. Environmental datasets with CV > 100% are highly variable and are often lognormally distributed; applying arithmetic statistics to such datasets without log-transformation can produce seriously misleading results.
+
+Percentiles divide the ranked dataset into specified fractions. The 10th percentile (P10) is the value below which 10% of the observations fall; the 90th percentile (P90) is below which 90% fall. The interquartile range (IQR = P75 − P25) measures the spread of the central half of the data and is a robust measure of variability that is insensitive to outliers. Box-and-whisker plots display the median, quartiles (P25 and P75), and outliers simultaneously, providing a compact visual summary of a distribution that reveals both central tendency and variability, skewness, and the presence of outliers.
+
+The z-score transforms an individual observation to the number of standard deviations it lies above or below the mean:
+
+\[
+z = \frac{x - \bar{x}}{s}
+\]
+
+Z-scores are useful for identifying potential outliers (values with |z| > 3 are generally considered extreme) and for standardizing data from different variables to a common scale before multivariate analysis.
+
+---
+
+# Chapter 3: Probability Theory — The Foundation of Statistical Inference
+
+## Basic Probability Concepts
+
+Probability theory provides the mathematical framework for quantifying uncertainty — the degree to which we cannot predict whether a particular event will occur or what value a variable will take. In water resource applications, probability appears in questions such as: what is the probability that this well will exceed the drinking water standard for arsenic in any given year? What is the probability that stream flow will fall below the minimum required to maintain aquatic habitat in the summer? What is the probability that a flood of a given magnitude will occur in the next 25 years?
+
+<div class="definition">
+<strong>Probability</strong>: a number between 0 and 1 (inclusive) that represents the long-run frequency of an event's occurrence if the underlying random process were repeated many times under identical conditions. A probability of 0 means the event is impossible; a probability of 1 means it is certain; a probability of 0.5 means it would occur approximately half the time if repeated many times.
+</div>
+
+The three fundamental rules of probability are:
+
+**Complement rule:** \( P(\text{not } A) = 1 - P(A) \). The probability that event A does not occur equals 1 minus the probability that it does.
+
+**Addition rule:** For mutually exclusive events A and B (events that cannot both occur simultaneously): \( P(A \text{ or } B) = P(A) + P(B) \). For non-mutually exclusive events: \( P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B) \).
+
+**Multiplication rule:** For independent events A and B: \( P(A \text{ and } B) = P(A) \times P(B) \). For dependent events: \( P(A \text{ and } B) = P(A) \times P(B|A) \), where \( P(B|A) \) is the conditional probability of B given that A has occurred.
+
+The concept of statistical independence is fundamental to many statistical methods: two events are independent if the occurrence of one provides no information about the probability of the other. Whether stream flows on consecutive days are independent (they generally are not — high flow today predicts high flow tomorrow due to the persistence of wet conditions) has direct implications for the validity of statistical tests that assume independence.
+
+## Probability Distributions in Hydrology
+
+Environmental data rarely follow a perfectly normal (Gaussian) distribution, and one of the essential skills in applied statistics is identifying which probability distribution best describes a particular dataset. Several distributions are commonly used in hydrology.
+
+The **normal distribution** is characterized by a symmetric, bell-shaped probability density function (PDF) defined by two parameters: the mean \( \mu \) and standard deviation \( \sigma \):
+
+\[
+f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+\]
+
+Many natural phenomena approximate normality, particularly when they result from the sum of many independent random influences (by the Central Limit Theorem). Temperature, elevation, and measurement errors often follow approximately normal distributions.
+
+The **lognormal distribution** applies when \( \ln(x) \) is normally distributed. It is appropriate for quantities that are products of many independent random factors, that are bounded below by zero, and that are positively skewed (long right tail). Contaminant concentrations, stream discharges, permeability, and particle sizes commonly follow lognormal distributions. If \( x \sim \text{Lognormal}(\mu_{\ln}, \sigma_{\ln}) \), then:
+
+\[
+E[x] = \exp\left(\mu_{\ln} + \frac{\sigma_{\ln}^2}{2}\right) \quad \text{(arithmetic mean)}
+\]
+
+\[
+\text{Median}(x) = \exp(\mu_{\ln}) \quad \text{(geometric mean = median)}
+\]
+
+The **log-Pearson Type III distribution** is mandated by US federal guidelines for flood frequency analysis. It fits a Pearson Type III distribution (a three-parameter gamma distribution) to the logarithms of the annual maximum flows, accounting for skewness in the log-transformed data. The fitted distribution is then used to estimate the magnitudes of floods with specified return periods (the 100-year flood, 500-year flood, etc.).
+
+## Confidence Intervals and Hypothesis Testing
+
+A confidence interval provides a range of plausible values for a population parameter (such as the mean concentration) based on sample data. A 95% confidence interval for the mean, when the population standard deviation is known, is:
+
+\[
+\bar{x} \pm z_{0.025} \frac{\sigma}{\sqrt{n}}
+\]
+
+where \( z_{0.025} = 1.96 \) is the critical value of the standard normal distribution for 95% confidence (the value below which 97.5% of the distribution falls). When the population standard deviation is unknown (the usual case in practice), the population standard deviation is replaced by the sample standard deviation \( s \) and the normal distribution is replaced by Student's t-distribution with \( n-1 \) degrees of freedom:
+
+\[
+\bar{x} \pm t_{n-1, 0.025} \frac{s}{\sqrt{n}}
+\]
+
+The t-distribution has heavier tails than the normal distribution, reflecting the additional uncertainty from estimating \( \sigma \) from the data. For large samples (\( n > 30 \)), the t-distribution approximates the normal distribution and the distinction becomes unimportant.
+
+<div class="definition">
+<strong>Student's t-Distribution</strong>: a probability distribution developed by W.S. Gosset (writing under the pseudonym "Student") in 1908 for situations where the population variance is unknown and must be estimated from the sample. It is parameterized by the degrees of freedom \( \nu = n - 1 \), approaching the standard normal distribution as \( \nu \rightarrow \infty \). The t-distribution is used for inference about means from small samples and for comparing two sample means.
+</div>
+
+<div class="example">
+<strong>Worked Example: 95% Confidence Interval for Mean Streamflow</strong>
+
+A hydrologist measures mean daily discharge on 25 randomly selected days in July at a gauge station, obtaining: \(\bar{x} = 3.42\) m<sup>3</sup>/s and \(s = 0.87\) m<sup>3</sup>/s. Calculate the 95% confidence interval for the true mean July discharge.
+
+With \(n = 25\), degrees of freedom \(\nu = 24\), and the critical value \(t_{24, 0.025} = 2.064\) (from t-tables or R: `qt(0.975, 24)`):
+
+\[
+CI = \bar{x} \pm t_{24, 0.025} \frac{s}{\sqrt{n}} = 3.42 \pm 2.064 \times \frac{0.87}{\sqrt{25}} = 3.42 \pm 2.064 \times 0.174 = 3.42 \pm 0.359
+\]
+
+The 95% confidence interval is (3.06, 3.78) m<sup>3</sup>/s. This means we are 95% confident that the true mean July discharge lies between 3.06 and 3.78 m<sup>3</sup>/s. Note carefully: the confidence interval does NOT mean "there is a 95% probability that the true mean lies in this interval" — once computed, the interval either contains the true mean or it doesn't. The 95% refers to the procedure: if we repeated this sampling and CI computation many times, approximately 95% of the resulting intervals would contain the true mean.
+</div>
+
+---
 
 # Chapter 4: Hypothesis Testing
 
 ## The Logic of Hypothesis Testing
 
-Hypothesis testing is a formal decision procedure for evaluating, on the basis of sample data, whether the evidence is sufficient to reject a default assumption (the **null hypothesis**, \( H_0 \)) in favour of an alternative explanation (the **alternative hypothesis**, \( H_a \)). In environmental science, common null hypotheses include: "Mean nitrate concentrations are the same in agricultural and forested catchments" (\( H_0: \mu_1 = \mu_2 \)), "Streamflow has not changed significantly over the past 50 years," or "The presence of contaminant X is independent of proximity to the industrial site."
+Hypothesis testing is a formal statistical procedure for deciding, on the basis of data, whether to reject a specific claim about a population parameter. It is used throughout water resource management: to decide whether contaminant concentrations have changed over time, whether upstream and downstream samples differ significantly, whether flow has decreased in response to groundwater pumping, or whether a treatment system is achieving its target removal efficiency.
 
-The **p-value** is the probability, under the assumption that \( H_0 \) is true, of obtaining test statistics at least as extreme as those observed in the sample. A small p-value indicates that the observed data would be unlikely if \( H_0 \) were true, providing evidence against \( H_0 \). The conventional significance threshold \( \alpha = 0.05 \) means we reject \( H_0 \) when \( p < 0.05 \) — accepting a 5% risk of incorrectly rejecting a true null hypothesis (**Type I error**). The complementary risk — failing to reject a false null hypothesis (**Type II error**) — has probability \( \beta \), and the **statistical power** of a test is \( 1 - \beta \).
+The structure of a hypothesis test begins with the null hypothesis (\( H_0 \)) — a specific, testable claim about the population (typically the "no change" or "no difference" position) — and the alternative hypothesis (\( H_1 \)) — the claim that would be accepted if \( H_0 \) is rejected. The null hypothesis is always the one we test statistically; we never directly test the alternative. We collect data, compute a test statistic (a function of the data designed to be sensitive to deviations from \( H_0 \)), and compute the p-value — the probability of observing a test statistic as extreme as, or more extreme than, the one computed, if \( H_0 \) were true. If the p-value is below a pre-specified significance level \( \alpha \) (typically 0.05), we reject \( H_0 \) in favour of \( H_1 \).
 
-<div class="definition">
-A <strong>one-sample t-test</strong> evaluates whether the sample mean differs significantly from a specified hypothesized value \( \mu_0 \). The test statistic is:
+Two types of error are possible. A Type I error occurs when \( H_0 \) is rejected even though it is true (a "false positive"). The probability of a Type I error is \( \alpha \), the significance level — a researcher who sets \( \alpha = 0.05 \) accepts a 5% risk of incorrectly declaring a statistically significant result. A Type II error occurs when \( H_0 \) is not rejected even though it is false (a "false negative"). The probability of a Type II error is \( \beta \), and the power of a test is \( 1 - \beta \) — the probability of correctly detecting a true effect when it exists. Power depends on \( \alpha \), the sample size, and the magnitude of the true effect.
 
-\[ t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}} \]
+The one-sample t-test tests whether the population mean equals a specified value \( \mu_0 \):
 
-which follows a t distribution with \( n - 1 \) degrees of freedom under \( H_0 \). The <strong>two-sample t-test</strong> compares the means of two independent groups, using the test statistic \( t = (\bar{x}_1 - \bar{x}_2) / SE \) where SE is the standard error of the difference. When group variances cannot be assumed equal, Welch's modification uses adjusted degrees of freedom.
-</div>
+\[
+t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}
+\]
 
-## Case Study: Methylmercury Exposure and Risk
-
-The application of hypothesis testing to environmental health questions is illustrated by the assessment of methylmercury exposure in human populations consuming fish from mercury-contaminated lakes. Methylmercury (MeHg) is a potent neurotoxin produced by the methylation of inorganic mercury by anaerobic bacteria in lake sediments; it bioaccumulates through food webs so that predatory fish (walleye, pike, largemouth bass) may contain MeHg concentrations orders of magnitude higher than the surrounding water. Health agencies establish guideline values (e.g., 0.3 µg/g wet weight in Canada for commercial fish species) based on tolerable daily intake estimates.
-
-Testing whether mean MeHg concentrations in walleye from a lake exceed the guideline value (\( H_0: \mu \leq 0.3 \) µg/g vs. \( H_a: \mu > 0.3 \) µg/g) is a one-sided hypothesis test. If a random sample of 25 fish yields \( \bar{x} = 0.41 \) µg/g with \( s = 0.15 \) µg/g, the t-statistic is \( t = (0.41 - 0.30)/(0.15/5) = 3.67 \), with a p-value of approximately 0.0006 — strong evidence that mean concentrations exceed the guideline, warranting a fish consumption advisory.
-
-# Chapter 5: Analysis of Frequency Data and Chi-Square Tests
-
-## The Chi-Square Test of Association
-
-Many environmental data are categorical: land use (agricultural, urban, forested), flood event occurrence (yes/no in a given year), pollution source type (point vs. non-point), or exceedance of a regulatory standard (compliant/non-compliant). The **chi-square test** (χ² test) is the standard procedure for evaluating whether two categorical variables are statistically associated (dependent) or independent.
-
-For a contingency table with \( r \) rows and \( c \) columns, the chi-square test statistic is:
-
-\[ \chi^2 = \sum_{i=1}^r \sum_{j=1}^c \frac{(O_{ij} - E_{ij})^2}{E_{ij}} \]
-
-where \( O_{ij} \) is the observed count in cell \( (i,j) \) and \( E_{ij} = (\text{row}_i \text{ total}) \times (\text{col}_j \text{ total}) / n \) is the expected count under the null hypothesis of independence. Under \( H_0 \), this statistic follows a chi-square distribution with \( (r-1)(c-1) \) degrees of freedom. Large values of \( \chi^2 \) indicate departure from independence.
+Under \( H_0: \mu = \mu_0 \), this statistic follows a t-distribution with \( n-1 \) degrees of freedom. The two-sample t-test (for independent samples) compares the means of two groups; the paired t-test is used when observations are naturally paired (e.g., upstream vs. downstream measurements at the same location on the same date).
 
 <div class="example">
-<strong>Flooding Frequency Analysis.</strong> Annual maximum streamflow data from a long-gauge record can be used to fit a frequency distribution (commonly the Gumbel or GEV distribution) and estimate the discharge associated with specified return periods. The 2019 flooding of Offutt Air Force Base (Nebraska, USA) — where the Missouri River inundated approximately 40% of the base — was later attributed in part to a compound event: the combination of an above-average snowpack, rapid warm-season melt, heavy rainfall, and frozen ground (inhibiting infiltration) coinciding. Attribution of such compound events requires moving beyond single-variable frequency analysis to joint probability methods that account for dependence among multiple flood drivers.
+<strong>Case Study: Estimating Risks from Methylmercury Exposure</strong>
+
+Methylmercury (MeHg) is a potent neurotoxin that bioaccumulates and biomagnifies in aquatic food chains, reaching highest concentrations in large, long-lived predatory fish (pike, walleye, tuna). Health Canada's guideline for methylmercury in fish consumed by the general population is 0.5 mg/kg (ppm) wet weight. A monitoring program measures MeHg in walleye from a lake receiving inputs from a chlor-alkali plant: n = 18 fish, \(\bar{x} = 0.64\) mg/kg, s = 0.21 mg/kg.
+
+Test \(H_0: \mu = 0.5\) (fish are not significantly above the guideline) vs. \(H_1: \mu > 0.5\) (fish exceed the guideline) at \(\alpha = 0.05\):
+
+\[
+t = \frac{0.64 - 0.5}{0.21/\sqrt{18}} = \frac{0.14}{0.0495} = 2.83
+\]
+
+The critical value for a one-tailed test at \(\alpha = 0.05\) with 17 degrees of freedom is \(t_{17, 0.05} = 1.740\). Since \(2.83 > 1.740\), we reject \(H_0\). The p-value (from R: `pt(2.83, 17, lower.tail = FALSE)`) is approximately 0.006. There is strong statistical evidence (p = 0.006) that mean MeHg in walleye from this lake exceeds the Health Canada guideline of 0.5 mg/kg, supporting the issuance of a fish consumption advisory.
 </div>
+
+---
+
+# Chapter 5: Frequency Analysis — The Chi-Square Test and Flood Return Periods
+
+## Chi-Square Test for Association
+
+The chi-square (\( \chi^2 \)) test is used to assess whether two categorical variables are statistically associated. In water resources, it is commonly used to test: whether the occurrence of flood events is associated with specific weather patterns (El Niño/La Niña years vs. neutral years); whether the presence of contamination is associated with proximity to a pollution source; or whether observed frequency distributions match a theoretical distribution.
+
+For a contingency table with \( r \) rows and \( c \) columns, the chi-square statistic is:
+
+\[
+\chi^2 = \sum_{i=1}^{r}\sum_{j=1}^{c} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}
+\]
+
+where \( O_{ij} \) is the observed count in cell \( (i, j) \) and \( E_{ij} = (\text{row total}_i \times \text{column total}_j)/n \) is the expected count under the null hypothesis of independence. Under \( H_0 \) (no association), the statistic follows a \( \chi^2 \) distribution with \( (r-1)(c-1) \) degrees of freedom.
+
+<div class="example">
+<strong>Case Study: 2019 Flooding of Offutt Air Force Base</strong>
+
+In a broader study of flood events in the Missouri River basin (2000–2024), analysts categorize 25 major flood events (those exceeding the 10-year discharge threshold) by whether they occurred during La Niña years (above-average precipitation tendency in the Northern Plains) or neutral/El Niño years, and by whether they caused significant infrastructure damage (>$1 million). The observed counts in a 2×2 contingency table are:
+
+|  | Infrastructure Damage | No Significant Damage | Row Total |
+|--|--|--|--|
+| La Niña | 9 | 4 | 13 |
+| Neutral/El Niño | 3 | 9 | 12 |
+| Column Total | 12 | 13 | 25 |
+
+Expected counts: \(E_{11} = (13 \times 12)/25 = 6.24\); \(E_{12} = (13 \times 13)/25 = 6.76\); \(E_{21} = (12 \times 12)/25 = 5.76\); \(E_{22} = (12 \times 13)/25 = 6.24\).
+
+\[
+\chi^2 = \frac{(9-6.24)^2}{6.24} + \frac{(4-6.76)^2}{6.76} + \frac{(3-5.76)^2}{5.76} + \frac{(9-6.24)^2}{6.24} = 1.22 + 1.13 + 1.32 + 1.22 = 4.89
+\]
+
+With 1 degree of freedom, the critical value at \(\alpha = 0.05\) is 3.84. Since \(4.89 > 3.84\), we reject \(H_0\) (p ≈ 0.027). There is statistically significant evidence that major flood events causing significant infrastructure damage are more likely during La Niña years — a finding with direct implications for flood insurance pricing and infrastructure resilience planning.
+</div>
+
+---
 
 # Chapter 6: Time Series Analysis
 
-## Temporal Structure in Hydrological Data
+## Identifying Temporal Patterns in Hydrological Data
 
-Environmental data collected through time — streamflow records, water temperature series, nutrient concentration time series — often exhibit systematic temporal structure: trends, seasonal cycles, multi-year oscillations (teleconnections to ENSO, NAO, PDO), and autocorrelation (correlation between successive observations). Ignoring this structure when applying standard statistical methods (which assume independence of observations) leads to inflated false positive rates and incorrect conclusions.
+Time series data — measurements made at successive, equally spaced points in time — are ubiquitous in hydrology and water quality monitoring. Daily streamflow records, monthly groundwater levels, annual maximum flood peaks, and continuous water quality monitoring all generate time series data. Extracting meaningful information from time series requires identifying and separately characterizing three types of temporal pattern: trend (a systematic increase or decrease over time), seasonality (regular periodic variation, typically at annual or sub-annual periods), and random noise (unpredictable, apparently random fluctuations).
 
-A **time series** is a sequence of measurements taken at successive, equally spaced time intervals. The decomposition of a time series into components is conceptually useful: a long-term **trend** (monotonic increase or decrease), a **seasonal cycle** (predictable annual variation), a **cyclical component** (longer-period non-seasonal oscillations), and an **irregular residual** (unpredictable fluctuations). Hydrological time series are typically dominated by the seasonal cycle (snowmelt spring flood, summer low flow, autumn storm response), which must be removed or accounted for before analysing trends or anomalies.
+The simplest graphical tool for time series analysis is the time series plot itself: a graph of the measured variable against time. Visual inspection of a well-constructed time series plot can reveal obvious trends (a long-term declining trend in groundwater level), seasonality (regular summer lows and spring highs in stream discharge), and anomalies (the sudden jump in specific conductance that might indicate a sensor change or a contamination event). Seasonal decomposition separates the time series into its trend, seasonal, and residual (noise) components, and is a standard first step in time series analysis.
 
-<div class="definition">
-<strong>Autocorrelation</strong> is the correlation between values in a time series and lagged versions of the same series. The autocorrelation function (ACF) plots the autocorrelation coefficient \( r_k \) at each lag \( k \) against the lag number. Positive autocorrelation at lag 1 (r₁ > 0) is common in streamflow series because high flows tend to persist for days or weeks due to basin storage; this persistence means that successive daily streamflow values are not independent. The presence of significant autocorrelation violates the independence assumption of many statistical tests and must be accounted for in trend analysis and hypothesis testing.
+Autocorrelation — the correlation of a time series with a lagged version of itself — measures the degree of temporal persistence in the data. A lag-1 autocorrelation of 0.8 (for example, in daily streamflow data) means that tomorrow's flow is strongly correlated with today's flow, reflecting the persistence of wet and dry weather conditions. High autocorrelation violates the independence assumption of many classical statistical tests; tests applied to autocorrelated data require either data aggregation to a timescale where autocorrelation is negligible or the use of specialized methods that explicitly account for autocorrelation.
+
+The runs test (Wald-Wolfowitz test) is a nonparametric test for randomness that examines whether a time series of residuals (after removing trend and seasonality) is random or shows systematic patterns such as autocorrelation or alternating high-low sequences. A "run" is a consecutive sequence of values above or below the median. Too few runs indicate positive autocorrelation (clumping of similar values); too many runs indicate negative autocorrelation (regular alternation).
+
+## The Mann-Kendall Test for Monotonic Trends
+
+The Mann-Kendall test is a nonparametric statistical test for detecting monotonic (consistently increasing or consistently decreasing) trends in a time series. It is widely used in hydrology because it does not require the data to follow a particular distribution (unlike the parametric t-test for trends), is robust to outliers and missing values, and can be applied to data with seasonal patterns using the seasonal Mann-Kendall variant.
+
+The Mann-Kendall statistic S is calculated as:
+
+\[
+S = \sum_{i=1}^{n-1}\sum_{j=i+1}^{n} \text{sign}(x_j - x_i)
+\]
+
+where \( \text{sign}(x_j - x_i) = +1 \) if \( x_j > x_i \), \( -1 \) if \( x_j < x_i \), and \( 0 \) if \( x_j = x_i \). S is positive when later values tend to be larger than earlier ones (upward trend), negative when later values tend to be smaller (downward trend), and near zero when there is no trend. The variance of S under the null hypothesis of no trend is:
+
+\[
+\text{Var}(S) = \frac{n(n-1)(2n+5)}{18}
+\]
+
+The standardized test statistic \( Z = S / \sqrt{\text{Var}(S)} \) is approximately standard normal for large n, and the null hypothesis of no trend is rejected at significance level \( \alpha \) when \( |Z| > z_{\alpha/2} \).
+
+Sen's slope estimator provides a robust estimate of the magnitude of the trend, defined as:
+
+\[
+\hat{\beta} = \text{median}\left(\frac{x_j - x_i}{j - i}\right) \text{ for all } i < j
+\]
+
+Unlike ordinary least squares regression, Sen's slope is not influenced by outliers, making it the preferred trend estimator for environmental time series.
+
+<div class="example">
+<strong>Case Study: Intensification of Algal Blooms — Trend Analysis in Lake Erie</strong>
+
+Annual maximum cyanobacterial bloom indices for western Lake Erie from 1994 to 2024 show a time series with high year-to-year variability but an apparent upward trend following a period of reduced blooms in the 1990s. Applying the Mann-Kendall test to 30 annual observations yields S = 187, n = 30, Var(S) = (30 × 29 × 65)/18 = 3141.7, Z = 187/√3141.7 = 3.34. With |Z| = 3.34 > 1.96 (the critical value at α = 0.05, two-tailed), we reject H₀ and conclude there is a statistically significant upward trend (p < 0.001) in bloom intensity over the period 1994–2024. Sen's slope estimate of 0.8 bloom index units per year indicates the rate of increase. This trend corresponds to increasing phosphorus loading from agricultural runoff, warming water temperatures, and changing wind patterns, all of which have accelerated over the study period.
 </div>
 
-## Detecting Temporal Trends
+---
 
-The **Mann-Kendall test** is the most widely used non-parametric test for detecting monotonic trends in time series. It is based on the sign of the differences between all pairs of observations: the test statistic \( S = \sum_{i < j} \text{sgn}(x_j - x_i) \) is the excess of concordant over discordant pairs. Under the null hypothesis of no trend (random temporal ordering), \( S \) is approximately normally distributed for large \( n \), allowing a z-test. The Mann-Kendall test is preferred over linear regression for trend detection because it is distribution-free, robust to non-normality and outliers, and unaffected by the magnitude of the trend.
+# Chapter 7: Correlation Analysis and Linear Regression
 
-**Sen's slope** — the median of all pairwise slopes \( (x_j - x_i)/(j - i) \) for \( j > i \) — provides a robust estimate of the trend magnitude. It is paired with the Mann-Kendall test to characterize both the statistical significance and the practical magnitude of a trend. The combination of Mann-Kendall significance test and Sen's slope estimator is the standard in hydrology for assessing long-term changes in streamflow, groundwater levels, and water quality. For example, analyses of long-term streamflow records across Canadian watersheds have documented statistically significant increasing trends in winter baseflows in many regions, consistent with increased groundwater recharge from altered snowmelt and precipitation regimes under a warming climate.
+## Pearson Product-Moment Correlation
 
-# Chapter 7: Correlation and Regression Analysis
+Correlation analysis quantifies the strength and direction of the linear relationship between two continuous variables. The Pearson product-moment correlation coefficient \( r \) is:
 
-## Pearson Correlation Coefficient
+\[
+r = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2} \cdot \sqrt{\sum_{i=1}^{n}(y_i - \bar{y})^2}}
+\]
 
-The **Pearson product-moment correlation coefficient** \( R \) measures the strength and direction of the linear association between two continuous variables \( x \) and \( y \):
+The value of \( r \) ranges from -1 (perfect negative linear relationship) through 0 (no linear relationship) to +1 (perfect positive linear relationship). Values between 0.7 and 1.0 (or -0.7 to -1.0) are generally considered strong correlations; 0.4–0.7 moderate; below 0.4 weak — though these thresholds are context-dependent. Crucially, correlation measures only linear association: two variables can have a strong nonlinear relationship (e.g., a parabolic one) while having \( r \approx 0 \).
 
-\[ R = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^n (x_i - \bar{x})^2 \sum_{i=1}^n (y_i - \bar{y})^2}} \]
+The statistical significance of a correlation coefficient is tested using the t-statistic:
 
-\( R \) ranges from −1 (perfect negative linear relationship) through 0 (no linear relationship) to +1 (perfect positive linear relationship). The square of the correlation coefficient, \( R^2 \), gives the proportion of variance in \( y \) explained by linear association with \( x \). Hypothesis testing for whether \( R \) is significantly different from zero uses the test statistic \( t = R\sqrt{(n-2)/(1-R^2)} \), which follows a t distribution with \( n-2 \) degrees of freedom under \( H_0: \rho = 0 \).
+\[
+t = \frac{r\sqrt{n-2}}{\sqrt{1-r^2}}
+\]
 
-A fundamental caution: **correlation does not imply causation**. The observation that two variables are correlated may reflect a direct causal relationship, a reverse causal relationship (y causes x), a common cause (a third variable drives both x and y), or pure coincidence. The history of environmental science contains many cautionary tales of spurious correlations mistaken for causal mechanisms. The Flint, Michigan water crisis — in which the switch to the Flint River as a water source in 2014 coincided with dramatic increases in blood lead levels in children — provides a context for examining correlation between infrastructure decisions, water chemistry (corrosive, low-pH water leaching lead from pipes), and public health outcomes, while underscoring the importance of mechanistic understanding alongside statistical correlation.
+which follows a t-distribution with \( n-2 \) degrees of freedom under the null hypothesis \( H_0: \rho = 0 \) (no linear correlation in the population). For n = 30 and r = 0.60, the test statistic is \( t = 0.60\sqrt{28}/\sqrt{1-0.36} = 0.60 \times 5.292/0.8 = 3.97 \), which has p < 0.001 — strongly significant.
+
+A critical distinction in environmental data analysis is that correlation does not imply causation. Two variables may be correlated because one causes the other, because both are caused by a third variable (confounding), or purely by chance (spurious correlation). The classic environmental example is the correlation between the presence of power lines and the incidence of childhood leukemia in some epidemiological studies — initially alarming, but subsequent research established that the correlation reflected confounding by socioeconomic factors (families living near power lines tended to have lower incomes and poorer health care access), not a causal effect of electromagnetic fields.
+
+<div class="example">
+<strong>Case Study: Flint, Michigan — Lead in Drinking Water and Correlations</strong>
+
+The Flint water crisis (2014–2019) resulted from the decision to switch Flint's water supply from Detroit's treated Lake Huron water to the Flint River without applying corrosion control. The Flint River water was more corrosive (lower pH, higher chloride, different chemistry) than the Lake Huron water, causing lead to leach from the city's aging lead service lines and household plumbing. Blood lead levels in Flint children increased significantly after the switch.
+
+A key analytical challenge was demonstrating the correlation between water lead levels and blood lead levels across Flint neighbourhoods. Researchers computed the Pearson correlation between neighbourhood-average water lead concentrations (from tap water samples collected in 2015) and the prevalence of elevated blood lead levels (≥5 μg/dL) in children 0–5 years old in each neighbourhood (from public health records). They obtained r = 0.72 with n = 23 neighbourhoods (p < 0.001), providing strong statistical evidence of a positive linear relationship. This correlation supported the causal interpretation (corroborated by temporal analysis showing the increase in blood lead levels coincided precisely with the switch to Flint River water) and was central to the public health emergency declaration and the eventual return to Detroit's water system.
+
+The Flint case also illustrates a critical lesson about data quality: for many months, city officials dismissed concerns about water quality by citing official monitoring data that appeared to show acceptable lead levels. Investigation revealed that the sampling protocol had been gamed — samplers had been instructed to pre-flush taps before sampling, which reduced measured lead levels by removing the standing water that had the highest lead concentration. This illustrates why QA/QC protocol design and independent data verification are not merely bureaucratic exercises but have direct public health consequences.
+</div>
 
 ## Simple and Multiple Linear Regression
 
-**Simple linear regression** models the relationship between a response variable \( y \) and a single predictor \( x \) as:
+Linear regression extends correlation to establish a predictive mathematical relationship between a dependent variable (the response, typically denoted Y) and one or more independent variables (predictors, X). Simple linear regression models the relationship as a straight line:
 
-\[ y_i = \beta_0 + \beta_1 x_i + \varepsilon_i \]
+\[
+Y_i = \beta_0 + \beta_1 X_i + \varepsilon_i
+\]
 
-where \( \beta_0 \) (intercept) and \( \beta_1 \) (slope) are population parameters estimated from the data by the **ordinary least squares (OLS)** criterion — minimizing the sum of squared residuals \( \sum (y_i - \hat{y}_i)^2 \). The OLS estimates are:
+where \( \beta_0 \) is the intercept, \( \beta_1 \) is the slope, and \( \varepsilon_i \) are the residuals (deviations of the observed values from the fitted line). The residuals are assumed to be independently and identically distributed as \( \varepsilon_i \sim N(0, \sigma^2) \).
 
-\[ \hat{\beta}_1 = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}, \quad \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x} \]
+The ordinary least squares (OLS) estimators minimize the sum of squared residuals:
 
-The **coefficient of determination** \( R^2 = 1 - SS_{\text{res}}/SS_{\text{tot}} \) quantifies the proportion of total variance in \( y \) explained by the regression model. In hydrology, simple regression is used for rating curves (relating stream stage to discharge), load calculations (relating concentration to discharge), and climate-hydrology relationships (relating temperature to snowmelt timing). **Multiple linear regression** extends the model to several predictors \( \mathbf{x} = (x_1, x_2, \ldots, x_p) \), allowing more complex relationships and control for confounding variables.
+\[
+\hat{\beta}_1 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^{n}(x_i - \bar{x})^2} = r\frac{s_y}{s_x}
+\]
 
-# Chapter 8: Trends and Model Fit Metrics
+\[
+\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}
+\]
 
-## Evaluating Model Performance
+The coefficient of determination \( R^2 = r^2 \) (for simple linear regression) measures the proportion of variance in Y explained by the regression on X. \( R^2 = 0.75 \) means the regression model explains 75% of the total variance in Y; the remaining 25% is unexplained variance captured by the residuals.
 
-Whether assessing a regression model, a hydrological simulation model, or a machine-learning algorithm applied to water data, the evaluation of model performance is essential before using model outputs for decision-making. A suite of **fit metrics** allows quantitative comparison of model predictions \( \hat{y}_i \) against observations \( y_i \).
+Before trusting regression results, the assumptions must be checked: (1) linearity (the relationship between X and Y is actually linear — check with a scatter plot and residual vs. fitted-value plot); (2) independence of residuals (check with autocorrelation function of residuals); (3) constant variance (homoscedasticity — check with residual vs. fitted-value plot, looking for a "funnel" pattern suggesting heteroscedasticity); and (4) normality of residuals (check with a normal Q-Q plot). Violation of these assumptions can lead to incorrect confidence intervals and hypothesis tests even when the fitted line looks reasonable.
 
-The **Nash-Sutcliffe efficiency (NSE)** is the most widely used performance metric in hydrology:
+Multiple linear regression extends the model to include several predictors:
 
-\[ \text{NSE} = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i - \bar{y})^2} \]
+\[
+Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \cdots + \beta_p X_{pi} + \varepsilon_i
+\]
 
-NSE ranges from \( -\infty \) to 1. A value of 1 indicates a perfect model; NSE = 0 means the model performs no better than simply predicting the observed mean for every time step; NSE < 0 means the mean is a better predictor than the model. NSE > 0.75 is generally considered satisfactory for streamflow simulation. NSE is sensitive to high-flow peaks (squared differences weight large errors heavily), so **log-transformed NSE** (applying NSE to log-transformed values) is often used to evaluate model performance during low-flow periods.
+In water resources, multiple regression is used to model discharge as a function of precipitation, antecedent soil moisture, and catchment area; to predict contaminant concentrations from multiple geochemical variables; or to identify the most important predictors of water quality from a large set of potential explanatory variables. Model selection — choosing which predictors to include — is guided by a combination of prior scientific knowledge, statistical criteria (AIC, BIC, adjusted R²), and cross-validation.
 
-The **root mean squared error (RMSE)** \( = \sqrt{\sum (y_i - \hat{y}_i)^2 / n} \) and **mean absolute error (MAE)** \( = \sum |y_i - \hat{y}_i| / n \) are absolute error metrics that quantify prediction error in the units of the variable. **Percent bias (PBIAS)** \( = 100 \times \sum (y_i - \hat{y}_i) / \sum y_i \) measures the systematic tendency of the model to over- or under-predict.
+---
 
-# Chapter 9: Spatial Analysis and Point Patterns
+# Chapter 8: Trend Detection and Model Fit Metrics
 
-## Spatial Data in Water Science
+## Non-parametric Trend Tests and Seasonal Decomposition
 
-Water management decisions are inherently spatial: contamination plumes spread through groundwater in three dimensions; non-point-source pollutant loads depend on land use patterns across watersheds; flood inundation extents are determined by topography. Spatial analysis — the set of methods for identifying, quantifying, and testing patterns in spatially distributed data — is therefore indispensable in environmental hydrology.
+Environmental time series frequently exhibit seasonality — systematic patterns that repeat at regular intervals (typically annual cycles) — that must be removed before testing for long-term trends. Seasonal decomposition separates the observed signal into trend (T), seasonal (S), and residual (R) components, using methods such as STL (Seasonal Trend decomposition using Loess). Once the seasonal component is removed, trend tests can be applied to the deseasoned data.
 
-<div class="definition">
-A <strong>point pattern</strong> is a spatial dataset in which the observations are individual events or measurements located at specific geographic coordinates. Point pattern analysis asks whether events are distributed randomly, clustered (occurring close together more often than expected by chance), or regularly (more evenly spaced than random). The distinction has practical importance: a clustered pattern of cancer cases near a contaminated well suggests a spatial causal relationship; a random pattern suggests the cases are not associated with proximity to the well.
+The seasonal Mann-Kendall test (also called the Hirsch-Slack test) is the standard method for detecting trends in seasonal data. Rather than applying the Mann-Kendall test to the entire time series, it computes the S statistic separately for each season (e.g., separately for each calendar month) and then combines the seasonal statistics:
+
+\[
+S_{seasonal} = \sum_{s=1}^{p} S_s
+\]
+
+where \( S_s \) is the Mann-Kendall statistic for season \( s \) and \( p \) is the number of seasons. The combined statistic is approximately normally distributed under \( H_0 \) (no trend in any season), and the variance is computed accounting for inter-season correlations. The seasonal Mann-Kendall test is preferred over applying the ordinary Mann-Kendall test to monthly data because it is robust to within-year seasonal patterns that would otherwise cause spurious results.
+
+Fit metrics quantify how well a predictive model (whether a regression model, a hydrological simulation model, or a machine learning model) reproduces the observed data. Key fit metrics used in hydrology include:
+
+The Nash-Sutcliffe Efficiency (NSE):
+
+\[
+NSE = 1 - \frac{\sum_{i=1}^{n}(Q_{obs,i} - Q_{sim,i})^2}{\sum_{i=1}^{n}(Q_{obs,i} - \bar{Q}_{obs})^2}
+\]
+
+NSE = 1 indicates a perfect fit; NSE = 0 indicates that the model is no better than predicting the observed mean; NSE < 0 indicates that the model is worse than predicting the mean. Values above 0.5 are generally considered acceptable for streamflow modelling; above 0.75, good.
+
+The Root Mean Square Error (RMSE) is the square root of the mean squared deviation between observed and simulated values, expressed in the same units as the original data. Unlike NSE, it does not have a meaningful scale-independent interpretation, but it is useful for comparing competing models applied to the same dataset.
+
+The Kling-Gupta Efficiency (KGE) combines three components: correlation (r), bias ratio, and variability ratio:
+
+\[
+KGE = 1 - \sqrt{(r-1)^2 + (\alpha - 1)^2 + (\beta - 1)^2}
+\]
+
+where \( \alpha = \sigma_{sim}/\sigma_{obs} \) is the variability ratio (ratio of standard deviations) and \( \beta = \mu_{sim}/\mu_{obs} \) is the bias ratio. KGE = 1 is perfect; KGE > -0.41 indicates the model is better than the mean benchmark. The KGE is increasingly preferred over NSE because NSE tends to weight large errors (during high flows) more heavily than small errors (during low flows), which may not be appropriate for all water management applications.
+
+<div class="example">
+<strong>Case Study: Trends in Baseflow Across Canada</strong>
+
+A national study of baseflow (the groundwater-sustained fraction of streamflow) trends in 152 Canadian rivers over the period 1970–2015 uses the seasonal Mann-Kendall test to identify statistically significant trends. Results show that approximately 45% of stations show significant increasing trends in baseflow (p < 0.05), concentrated in western Canada; 15% show significant decreasing trends, concentrated in southeastern Canada and the Prairie provinces; and the remaining 40% show no significant trend. Increasing baseflow in western Canada is attributed to permafrost thaw (releasing previously frozen water to rivers as soil active layers deepen with warming) and increased glacier melt. Decreasing baseflow in the Prairies reflects groundwater depletion from agricultural irrigation and reduced recharge from decreased snow water equivalent. These trends have significant implications for water management: increasing baseflow in some regions may support higher ecological flows for fish habitat, while decreasing baseflow elsewhere threatens minimum flow requirements for aquatic ecosystems and municipal intakes.
 </div>
 
-The **variance-mean ratio (VMR)**, also called the **index of dispersion**, tests for spatial pattern in count data by comparing the observed variance of counts per quadrat to the mean count:
+---
 
-\[ \text{VMR} = \frac{s^2}{\bar{x}} \]
+# Chapter 9: Spatial Data Analysis — Point Patterns and Interpolation
 
-For a random (Poisson) point process, the variance equals the mean, so VMR ≈ 1. VMR > 1 indicates clustering (overdispersion); VMR < 1 indicates regularity (underdispersion). The statistical significance of departure from VMR = 1 is assessed with a chi-square test with \( n-1 \) degrees of freedom.
+## Point Pattern Analysis
+
+Many important water resource questions have a spatial dimension: are contaminated wells clustered or randomly distributed? Is the source of a waterborne disease outbreak clustered near a specific water supply? Are rainfall events spatially correlated across a watershed? Point pattern analysis provides statistical methods for answering questions about the spatial arrangement of discrete events or observations.
+
+A point pattern is a collection of locations (points) in a defined study area. The key question is whether the pattern is random (the locations are independently and uniformly distributed across the study area), clustered (points tend to occur near other points), or uniform/hyperdispersed (points tend to repel each other, resulting in a more regular spacing than random). The distinction has important practical implications: a clustered pattern of contaminated wells suggests a local, point source of contamination; a random pattern suggests diffuse, area-source contamination.
+
+The variance-to-mean ratio (VMR), also called the index of dispersion, is a simple nonparametric measure of clustering based on dividing the study area into a grid of quadrats and counting the number of points in each quadrat:
+
+\[
+VMR = \frac{s^2}{\bar{x}}
+\]
+
+where \( \bar{x} \) and \( s^2 \) are the mean and variance of quadrat counts. For a random (Poisson) point process, VMR = 1; VMR > 1 indicates clustering; VMR < 1 indicates uniformity. The significance of the deviation from randomness is tested with a chi-square test: under the null hypothesis of a Poisson process, the statistic \( \chi^2 = (n-1)VMR \) follows a chi-square distribution with \( n-1 \) degrees of freedom (where n is the number of quadrats).
+
+The nearest-neighbour analysis provides an alternative measure of spatial pattern that does not depend on quadrat size selection. The average nearest-neighbour distance \( \bar{d} \) in the observed pattern is compared to the expected nearest-neighbour distance for a random process:
+
+\[
+\bar{d}_{expected} = \frac{1}{2\sqrt{\lambda}}
+\]
+
+where \( \lambda = n/A \) is the density of points (number of points n divided by study area A). The nearest-neighbour ratio R:
+
+\[
+R = \frac{\bar{d}_{observed}}{\bar{d}_{expected}}
+\]
+
+R < 1 indicates clustering (observed distances are smaller than expected for random); R > 1 indicates uniformity (observed distances are larger than expected); R = 1 indicates randomness. Statistical significance is assessed using a z-test.
 
 ## Spatial Interpolation Methods
 
-When point measurements of a water variable (groundwater level, nitrate concentration, rainfall amount) exist at a set of monitoring stations, **spatial interpolation** is used to estimate the variable at unmonitored locations across the study area, producing continuous spatial surfaces (maps).
+Spatial interpolation estimates the value of a variable at unsampled locations based on values measured at nearby sampled locations. This is a fundamental task in environmental science: we sample water quality at a limited number of monitoring stations but need to know conditions everywhere in a watershed or aquifer. Several methods are available, each with different assumptions and appropriate applications.
 
-**Nearest-neighbour interpolation** assigns to each unsampled point the value of the closest observation. It is simple but produces a discontinuous (step-function) surface with abrupt transitions at boundaries equidistant from two observation points. **Local averaging** estimates the value at a prediction point as the mean of observations within a specified neighbourhood radius. **Inverse distance weighting (IDW)** assigns weights to observation points proportional to \( 1/d^p \) (where \( d \) is distance and \( p \) is a power parameter, typically 2), so that nearby observations receive higher weights than distant ones:
+Nearest-neighbour interpolation assigns to each unsampled location the value of the nearest sampled point. It produces an exact interpolator (the estimated value at a sampled location equals the measured value) but creates a "patchwork quilt" pattern of abrupt transitions that is physically unrealistic for continuously varying environmental variables.
 
-\[ \hat{z}(\mathbf{s}_0) = \frac{\sum_{i=1}^n w_i z(\mathbf{s}_i)}{\sum_{i=1}^n w_i}, \quad w_i = d(\mathbf{s}_0, \mathbf{s}_i)^{-p} \]
+Local averaging computes the estimated value at an unsampled location as the average of all sampled values within a specified search radius. The choice of search radius strongly influences the result: a small radius captures local variation but may leave many locations without any nearby samples; a large radius smooths the surface excessively.
 
-**Kriging** is a geostatistical interpolation technique that provides optimal (minimum variance) linear unbiased predictions by explicitly modelling the spatial autocorrelation structure of the variable through a **variogram** — a function describing how the variance between paired observations increases with separation distance. Kriging produces not only interpolated values but also maps of prediction uncertainty (kriging variance), which are invaluable for communicating the reliability of interpolated surfaces and for informing decisions about where additional monitoring stations would most reduce uncertainty. The application of kriging to interpolate nitrate concentrations or groundwater head surfaces across monitoring networks is standard practice in groundwater quality assessment.
+Inverse distance weighting (IDW) is a more sophisticated interpolation method that weights the contribution of each sampled point inversely to its distance from the unsampled location:
 
-## Nearest-Neighbour Analysis
+\[
+\hat{z}(x_0) = \frac{\sum_{i=1}^{n} w_i z(x_i)}{\sum_{i=1}^{n} w_i}, \quad w_i = \frac{1}{d(x_0, x_i)^p}
+\]
 
-The **nearest-neighbour statistic** \( \bar{d}_{\text{obs}} \) is the mean distance from each event point to its nearest neighbour. Under complete spatial randomness (a Poisson process with intensity \( \lambda \) events per unit area), the expected nearest-neighbour distance is \( \bar{d}_E = 1/(2\sqrt{\lambda}) \), and the ratio \( R = \bar{d}_{\text{obs}} / \bar{d}_E \) tests for pattern: \( R < 1 \) suggests clustering, \( R > 1 \) suggests regularity. A z-test with known variance provides formal significance assessment. The nearest-neighbour analysis has been applied to investigate whether cancer cluster locations are spatially random relative to contaminated well locations — a case study that vividly illustrates the societal stakes of spatial analysis in environmental science, as exemplified by communities like Woburn, Massachusetts (the basis for the book and film *A Civil Action*) where childhood leukemia clusters were investigated in relation to groundwater contamination.
+where \( d(x_0, x_i) \) is the distance from the unsampled location \( x_0 \) to sample point \( x_i \), and \( p \) is the power parameter (commonly 2). Higher p values give greater weight to nearby samples and produce more detailed, "spiky" surfaces; lower p values produce smoother surfaces.
 
-# Chapter 10: Integrating Analyses — The Final Project Framework
+Kriging is the optimal (minimum variance, unbiased) linear spatial interpolator when the spatial covariance structure of the variable is known. Unlike IDW, kriging accounts for the spatial autocorrelation structure of the data through the semivariogram — a model of how the variance between pairs of data points changes as a function of the separation distance. The semivariogram \( \gamma(h) \) is:
 
-## From Dataset to Decision: The Poster Framework
+\[
+\gamma(h) = \frac{1}{2N(h)}\sum_{(i,j): |x_i - x_j| \approx h}(z_i - z_j)^2
+\]
 
-The culminating product of this course is a scientific poster that demonstrates the complete data-to-decisions arc: from a clearly articulated decision question and hypothesis through systematic data compilation and quality control, descriptive characterization, inferential analysis, spatial or temporal pattern identification, and finally a concrete, evidence-based recommendation to a named stakeholder.
+where the sum is over all pairs of data points separated by approximately distance h, and N(h) is the number of such pairs. Fitting a parametric model (spherical, exponential, Gaussian) to the experimental semivariogram provides the kriging system weights, which produce a smooth, optimal interpolated surface and, crucially, an associated estimate of interpolation uncertainty (the kriging variance) at each unsampled location. Kriging has been extensively applied to the interpolation of groundwater levels, soil contamination, precipitation fields, and geochemical variables.
 
-A well-constructed environmental decision poster is organized around a clear narrative: first establishing the **context** (why is this decision important? who is the stakeholder? what are the consequences of a bad decision?), then stating the **hypothesis or objective** (what specific claim is being tested or what quantity is being estimated?), presenting the **data and methods** (what data were used, how were they collected or accessed, what statistical methods were applied and why?), reporting the **results** (what did the analyses find?), discussing the **implications** (what do the results mean for the decision? what uncertainties remain?), and closing with **conclusions and recommendations** (what should the stakeholder do, and why?).
+<div class="example">
+<strong>Case Study: Water Contamination and Cancer Clusters</strong>
 
-The poster format enforces conciseness and visual clarity that long-form reports can obscure. Every figure must earn its place: its purpose must be clear from context, its axes must be labelled with units, and its interpretation must be stated explicitly. Tables summarizing key parameter estimates should include measures of uncertainty (confidence intervals or standard errors). The use of appropriate statistical terminology — distinguishing, for example, between correlation and causation, between statistical and practical significance, between model calibration and validation — signals the analytical rigour that distinguishes scientific from anecdotal environmental decision support.
+The town of Woburn, Massachusetts provides a historically important case study in spatial analysis of water contamination and disease. Two municipal wells (G and H) drawing from a contaminated aquifer were found to contain elevated concentrations of trichloroethylene (TCE, a industrial solvent and probable carcinogen) and tetrachloroethylene. A cluster of childhood leukemia cases had been identified in Woburn in the 1970s and early 1980s. The case (which inspired the book and film "A Civil Action") raised the question: was the leukemia cluster statistically associated with exposure to the contaminated water supply?
 
-The complete journey from raw data to a defensible recommendation to a stakeholder exemplifies the core mission of environmental data science: to render the Earth's complex water systems legible, quantifiable, and ultimately governable in the service of human and ecological wellbeing.
+Spatial analysis of the leukemia cases showed significant clustering using the nearest-neighbour test (R = 0.68, p = 0.006). More importantly, statistical modelling by Lagakos et al. (1986, published in NEJM) showed a statistically significant association between childhood leukemia incidence and the probability of each household receiving water from the contaminated wells (estimated from a hydrological model of water distribution in the system), after controlling for potential confounders. Although the causal relationship between TCE exposure and leukemia remains the subject of scientific debate, the Woburn case established the use of spatial epidemiology and hydrological modelling to assess contamination-disease associations and has influenced environmental law and public health practice. The case also demonstrated how point pattern analysis, spatial interpolation of contaminant plumes, and hypothesis testing must work together to address complex environmental health questions.
+</div>
+
+---
+
+# Chapter 10: Final Project Integration — From Data to Decisions
+
+## The Scientific Hypothesis and Decision Framework
+
+Translating data analysis into actionable decisions requires a structured framework that connects the scientific question to the appropriate statistical methods and then to the decision context. This framework begins with a clearly stated hypothesis — a testable, falsifiable statement about the state of the water system — and ends with a recommendation to a specific decision-maker (a stakeholder) based on the results of the analysis.
+
+The scientific hypothesis in water resource management typically takes one of several forms: a null hypothesis about the level of a contaminant relative to a regulatory standard (tested with a one-sample t-test or sign test); a hypothesis about the difference between two groups or time periods (tested with a two-sample t-test or Mann-Whitney U-test); a hypothesis about temporal trends (tested with Mann-Kendall or seasonal Mann-Kendall); a hypothesis about spatial pattern (tested with VMR or nearest-neighbour analysis); or a hypothesis about the relationship between two variables (tested with correlation or regression). The choice among these approaches must be guided by the scientific question, not by which method gives the desired answer.
+
+The relationship between statistical significance and practical significance is crucial to communicate clearly in decision contexts. A statistically significant trend (p < 0.05 in a Mann-Kendall test) does not necessarily imply a practically significant trend: with a large sample, even a tiny trend may be statistically detectable. Conversely, with a small sample, a practically important difference may not reach statistical significance. The magnitude of the effect (estimated from Sen's slope, the confidence interval for the mean, or the regression coefficient) must always be presented alongside the p-value, and the decision-maker must be helped to understand what the magnitude means in practical terms.
+
+The concept of Type I and Type II errors takes on concrete meaning in regulatory contexts. Setting a very stringent significance level (α = 0.01 rather than 0.05) reduces the rate of false alarms (issuing a drinking water advisory when the water is actually safe) but increases the rate of missed detections (failing to issue an advisory when the water actually exceeds standards). The appropriate balance between these error types depends on the consequences: when health risks from consuming contaminated water are severe (lead exposure in children, carcinogenic compounds), erring on the side of false alarms (higher α, more sensitive test) may be justified. When economic consequences of a false alarm are large (shutting down an irrigation system unnecessarily, for example), a more stringent threshold may be appropriate.
+
+## Implementation in R and Jupyter Notebooks
+
+EARTH 355 requires implementation of all statistical analyses in R (or Python), accessed through Jupyter Notebook on the University of Waterloo's Jupyter server. This computational component transforms the statistical methods from abstract formulas into practical tools, and the reproducible notebook format ensures that the entire analysis — from data import through final results — is documented and can be verified by others.
+
+In R, the core packages used throughout the course include:
+
+`stats` (base R): provides `t.test()`, `chisq.test()`, `cor()`, `lm()`, `aov()`, and many other standard statistical functions. Understanding the output of `lm()` — particularly the coefficients, standard errors, t-values, and R² — is a fundamental skill for environmental data analysis.
+
+`trend` package: provides `mk.test()` (Mann-Kendall test), `smk.test()` (seasonal Mann-Kendall), and `sens.slope()` (Sen's slope estimator). These are the primary tools for trend detection in hydrological time series.
+
+`sp` and `sf` packages: provide spatial data classes and operations for point, line, and polygon geometries. `gstat` provides kriging and variogram estimation functions. `spatstat` provides point pattern analysis including nearest-neighbour tests and the K-function.
+
+`ggplot2`: the standard R visualization package, based on the Grammar of Graphics framework. Producing clear, professional-quality figures is as important as performing the analyses: a compelling visualization of the Mann-Kendall trend or the kriged surface is essential for communicating results to stakeholders who may not have a statistical background.
+
+The workflow for each weekly assignment follows a consistent structure: import and clean the data (using `readr`, `dplyr`, and `tidyr`); produce exploratory visualizations (time series plots, histograms, scatter plots, maps); apply the appropriate statistical test(s); check assumptions; interpret results in the context of the scientific question; and formulate a recommendation to the relevant stakeholder. This workflow mirrors professional practice in environmental consulting and government agencies, providing students with directly transferable skills.
+
+---
+
+# Chapter 11: Case Studies in Environmental Decision-Making
+
+## Source Water Protection: Probability and Independence
+
+Source water protection (SWP) programs aim to prevent contamination of drinking water sources (surface water intakes and groundwater wellfields) before it occurs, thereby reducing treatment costs and health risks. They require assessment of the probability of contamination events — the probability that a pathogen, chemical contaminant, or physical disturbance will reach the drinking water intake — and evaluation of whether different contamination pathways are independent.
+
+A key application of probability theory in SWP is the assessment of whether multiple barriers to contamination are functioning independently. The "multiple barriers" concept underlies most drinking water regulation: pathogens must overcome source water quality (the first barrier), treatment (the second barrier), and distribution system integrity (the third barrier) to reach a consumer. If the barriers are truly independent, the probability of a pathogen surviving all three barriers is the product of the individual probabilities. If the barriers are correlated (e.g., both source quality and treatment efficacy are compromised by the same extreme precipitation event), the combined probability of failure may be much higher than the product of the individual failure probabilities.
+
+The assessment of stochastic independence is not merely a statistical exercise in SWP — it has direct regulatory implications. Ontario's Clean Water Act requires Source Protection Plans for all municipal drinking water systems, based on vulnerability assessment of the watershed. The statistical methods used to assess vulnerability — including Bayesian networks, Monte Carlo simulation, and event tree analysis — all rest on explicit assumptions about the independence or dependence of contamination pathways. Errors in these assumptions can lead to systematic under- or over-estimation of risk.
+
+## Aggregate Resource Development and Environmental Assessment
+
+The extraction of aggregate resources (sand and gravel for construction) from river floodplains and valley fills can affect groundwater quantity and quality through several pathways: direct exposure of groundwater to the surface (removal of the protective overburden), alteration of groundwater flow paths, and changes to the hydraulic connection between the aquifer and adjacent streams. Environmental assessments of aggregate applications must quantify these impacts using statistical analysis of hydrogeological data.
+
+A typical hydrogeological assessment involves: (1) mapping the water table using monitoring wells installed across the proposed extraction area and surrounding area; (2) measuring hydraulic conductivity through pump tests or slug tests; (3) analysing historical water level data to characterize seasonal fluctuations and trends; (4) modelling the groundwater flow field using numerical simulation; and (5) assessing the probability that extraction activities will result in groundwater contamination reaching nearby water supply wells. The spatial interpolation methods discussed in Chapter 9 — particularly kriging — are essential for mapping water table elevation and hydraulic conductivity across the site, while the statistical methods for trend analysis and hypothesis testing are used to assess whether extraction activities have produced measurable changes in groundwater levels or quality at monitoring wells.
+
+The decision framework for aggregate approval requires balancing the economic value of the resource against the risk of environmental impact, with explicit consideration of data uncertainty. A robust decision analysis will quantify not just the best estimate of impact but the full uncertainty range, and will identify what additional data collection would most effectively reduce uncertainty and improve decision quality. This adaptive management approach — designing monitoring programs specifically to answer the key questions remaining after initial assessment — is the standard of practice in environmental consulting.
+
+The integration of all the statistical methods covered in EARTH 355 — from descriptive statistics through hypothesis testing, frequency analysis, time series analysis, correlation and regression, trend detection, and spatial analysis — provides the analytical toolkit needed to support evidence-based water resource decisions. No single method is universally applicable; the practitioner must understand the assumptions, limitations, and appropriate applications of each method and must be able to communicate the results and their uncertainties clearly to decision-makers and the public. Water is the most essential of natural resources, and the decisions made about its allocation, protection, and quality have profound consequences for human health, ecological integrity, and economic prosperity. EARTH 355 equips students with the quantitative foundation to participate meaningfully in these decisions.

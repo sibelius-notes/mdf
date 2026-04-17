@@ -167,6 +167,7 @@ The geometry of Hilbert spaces is remarkably close to that of finite-dimensional
 
 <div class="theorem">
 <strong>Theorem (Projection Theorem).</strong> Let \(H\) be a Hilbert space and \(M \subseteq H\) a closed subspace. For every \(f \in H\), there exists a unique element \(P_M f \in M\) such that
+
 \[
 \|f - P_M f\| = \min_{g \in M} \|f - g\|.
 \]
@@ -193,6 +194,7 @@ Parseval's identity is a generalization of the Pythagorean theorem to infinite d
 
 <div class="definition">
 <strong>Definition (Best Approximation from a Finite Subspace).</strong> Let \(\{e_1, \ldots, e_N\}\) be an orthonormal set in a Hilbert space \(H\). For any \(f \in H\), the best approximation of \(f\) in \(V_N = \operatorname{span}\{e_1, \ldots, e_N\}\) is
+
 \[
 P_{V_N} f = \sum_{k=1}^N \langle f, e_k \rangle e_k.
 \]
@@ -475,6 +477,7 @@ A function \(f \in L^2(\mathbb{R})\) is **bandlimited with bandwidth \(\Omega\)*
 
 <div class="theorem">
 <strong>Theorem (Whittaker-Shannon Sampling Theorem).</strong> Let \(f\) be a bandlimited function with bandwidth \(\Omega\). If \(f\) is sampled at the <em>Nyquist rate</em> \(f_s = 2\Omega\) samples per second (or at the equivalent Nyquist interval \(\Delta t = 1/(2\Omega)\)), then \(f\) can be recovered exactly from its samples via the <em>cardinal series</em>:
+
 \[
 f(t) = \sum_{n=-\infty}^{\infty} f\!\left(\frac{n}{2\Omega}\right) \operatorname{sinc}\!\left(2\Omega t - n\right),
 \]
@@ -506,6 +509,7 @@ measuring the second moment of the energy distribution in time and frequency, re
 
 <div class="theorem">
 <strong>Theorem (Heisenberg Uncertainty Principle).</strong> For any \(f \in L^2(\mathbb{R})\) with \(f, \hat{f} \in L^2\) and \(tf(t), \xi\hat{f}(\xi) \in L^2\):
+
 \[
 \Delta_t \cdot \Delta_\xi \geq \frac{1}{4\pi}.
 \]

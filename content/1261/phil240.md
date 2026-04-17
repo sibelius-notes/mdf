@@ -926,6 +926,7 @@ When quantifiers of the same type are used, order does not matter:
 \[
 \forall x \forall y\, Rxy \quad \Leftrightarrow \quad \forall y \forall x\, Rxy
 \]
+
 \[
 \exists x \exists y\, Rxy \quad \Leftrightarrow \quad \exists y \exists x\, Rxy
 \]

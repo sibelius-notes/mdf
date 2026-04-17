@@ -30,25 +30,33 @@ Before asking *why*, epidemiology asks *how much*. Counts alone are not enough �
 
 *Prevalence* is the proportion of a population that has the disease at a particular moment (or over a specified short interval). It is a snapshot: of everyone alive today, how many are currently living with diabetes, depression, or HIV? Formally,
 
-\[ \text{Prevalence} = \frac{\text{Number of existing cases}}{\text{Total population}} \]
+\[
+\text{Prevalence} = \frac{\text{Number of existing cases}}{\text{Total population}}
+\]
 
 Because prevalence counts both new and long-standing cases, it mingles disease occurrence with disease duration. Anything that keeps people alive with a condition — better treatment, longer survival — pushes prevalence up even if no new cases are appearing. Prevalence is therefore the right measure for planning services (how many hospital beds, how many dialysis chairs, how many insulin prescriptions) but a misleading measure for studying causes.
 
 *Incidence* captures new events. Cumulative incidence, sometimes called the incidence proportion or risk, is the proportion of an initially disease-free group that develops the disease over a defined follow-up period:
 
-\[ \text{Cumulative Incidence} = \frac{\text{Number of new cases during the period}}{\text{Number at risk at the start of the period}} \]
+\[
+\text{Cumulative Incidence} = \frac{\text{Number of new cases during the period}}{\text{Number at risk at the start of the period}}
+\]
 
 A cumulative incidence of 0.05 over five years means five per cent of the cohort developed the disease in that window. Cumulative incidence is intuitive but assumes everyone is followed for the same length of time, which rarely holds. People drop out, die of other causes, or enter the study late.
 
 To handle variable follow-up, epidemiologists turn to the *incidence rate* (or incidence density), where the denominator is not persons but person-time — the sum of time each individual spent at risk:
 
-\[ \text{Incidence Rate} = \frac{\text{Number of new cases}}{\text{Total person-time at risk}} \]
+\[
+\text{Incidence Rate} = \frac{\text{Number of new cases}}{\text{Total person-time at risk}}
+\]
 
 If 50 new cases of a disease occur during 10,000 person-years of follow-up, the incidence rate is 50/10,000 = 0.005 per person-year, or 5 per 1,000 person-years. Person-time is accumulated individually — someone contributing three years before developing disease contributes three person-years and then leaves the denominator. Rates have units of 1/time; they can exceed 1 in theory (though rarely in practice) and they are the natural currency for comparing disease speeds across groups.
 
 Incidence and prevalence are linked by a simple approximation. In a stable population where neither disease nor population size is changing rapidly, prevalence is roughly the product of incidence rate and average disease duration:
 
-\[ P \approx I \times \bar{D} \]
+\[
+P \approx I \times \bar{D}
+\]
 
 This captures why a disease with low incidence and long duration (for example, multiple sclerosis) can have much higher prevalence than a disease with high incidence and short duration (for example, a typical cold).
 
@@ -62,13 +70,17 @@ When you compare crude disease rates between two populations, differences in age
 
 *Standardization* fixes the problem by removing the effect of a differing age distribution. Two approaches exist. *Direct standardization* applies each population's age-specific rates to a common standard population, producing a weighted average that answers the question: what would the overall rate be if each population had the same age structure? The age-standardized rate is
 
-\[ \text{ASR} = \frac{\sum_i w_i \cdot r_i}{\sum_i w_i} \]
+\[
+\text{ASR} = \frac{\sum_i w_i \cdot r_i}{\sum_i w_i}
+\]
 
 where \( r_i \) is the age-specific rate in age stratum \( i \) and \( w_i \) is the weight — the number of people in stratum \( i \) — from the chosen standard population. Commonly used standards include the WHO World Standard, the European Standard Population, and the US 2000 Standard. As long as both populations are compared to the same standard, their age-standardized rates can legitimately be set side by side.
 
 *Indirect standardization* goes the other way. It takes age-specific rates from the standard population and applies them to the age structure of the study population, producing an expected number of cases. The ratio of observed to expected events is the *standardized mortality ratio* (SMR):
 
-\[ \text{SMR} = \frac{\text{Observed deaths}}{\text{Expected deaths}} \times 100 \]
+\[
+\text{SMR} = \frac{\text{Observed deaths}}{\text{Expected deaths}} \times 100
+\]
 
 An SMR of 150 says the population experienced 50 per cent more deaths than expected given its age structure and the standard rates; an SMR of 80 says 20 per cent fewer. Indirect standardization is especially useful when age-specific rates in the study population are unstable — small numbers within strata — but the total event count is reliable. It is the usual choice for occupational cohort studies, where a group of workers is compared to the general population.
 
@@ -102,7 +114,9 @@ Matching is often used: each case is paired with one or more controls who share 
 
 Because participants are sampled conditional on disease status rather than exposure status, case-control studies cannot directly estimate incidence or relative risk. They yield the *odds ratio*, which under the rare-disease assumption approximates the risk ratio. In a standard two-by-two table with cases/controls in rows and exposed/unexposed in columns, the odds ratio is
 
-\[ \text{OR} = \frac{a \cdot d}{b \cdot c} \]
+\[
+\text{OR} = \frac{a \cdot d}{b \cdot c}
+\]
 
 where \( a \) is exposed cases, \( b \) is unexposed cases, \( c \) is exposed controls, and \( d \) is unexposed controls. An OR of 2.0 means the odds of exposure among cases is twice the odds among controls — and, approximately, that exposure is associated with a doubling of disease risk.
 
@@ -155,29 +169,39 @@ Consider a two-by-two table:
 
 The *risk* (cumulative incidence) in the exposed is \( a/(a+b) \); in the unexposed it is \( c/(c+d) \). The *risk ratio* (relative risk) is
 
-\[ \text{RR} = \frac{a/(a+b)}{c/(c+d)} \]
+\[
+\text{RR} = \frac{a/(a+b)}{c/(c+d)}
+\]
 
 A risk ratio of 2.0 means exposed individuals are twice as likely to develop the outcome as unexposed individuals during the observation period. An RR of 1.0 means no association; less than 1.0 indicates a protective effect.
 
 When person-time is the denominator, the analogous measure is the *rate ratio* (incidence density ratio), computed as exposed incidence rate divided by unexposed incidence rate. In case-control studies the odds ratio stands in for the risk ratio:
 
-\[ \text{OR} = \frac{a \cdot d}{b \cdot c} \]
+\[
+\text{OR} = \frac{a \cdot d}{b \cdot c}
+\]
 
 When the outcome is rare, the OR closely approximates the RR. When the outcome is common, the OR overstates the RR and should be interpreted accordingly.
 
 Absolute measures tell you the extra burden of disease associated with exposure. The *risk difference* (attributable risk in the exposed) is
 
-\[ \text{RD} = R_{\text{exposed}} - R_{\text{unexposed}} \]
+\[
+\text{RD} = R_{\text{exposed}} - R_{\text{unexposed}}
+\]
 
 If smokers have a five-year lung cancer risk of 0.02 and non-smokers a five-year risk of 0.002, the risk difference is 0.018 — eighteen extra cases per thousand smokers over five years. A small relative risk can produce a large risk difference if the baseline risk is high, and a huge relative risk can produce a negligible difference if the baseline risk is vanishingly small. Both relative and absolute measures are therefore needed to judge public health significance.
 
 The *population attributable risk* (PAR) extends the logic to whole populations. It estimates how much of the total disease burden in the population would disappear if the exposure were eliminated, and depends on both the strength of association and the prevalence of exposure:
 
-\[ \text{PAR} = R_{\text{population}} - R_{\text{unexposed}} \]
+\[
+\text{PAR} = R_{\text{population}} - R_{\text{unexposed}}
+\]
 
 The *population attributable fraction* (PAF) expresses this as a proportion of total disease:
 
-\[ \text{PAF} = \frac{P_e (\text{RR} - 1)}{1 + P_e (\text{RR} - 1)} \]
+\[
+\text{PAF} = \frac{P_e (\text{RR} - 1)}{1 + P_e (\text{RR} - 1)}
+\]
 
 where \( P_e \) is the prevalence of exposure in the population. If 25 per cent of a population smokes and smokers have a tenfold lung cancer risk, roughly 69 per cent of lung cancer cases in that population are attributable to smoking. PAFs guide priority setting: a modestly elevated risk ratio from a very common exposure may matter more for public health than a huge risk ratio from a rare one.
 
@@ -217,11 +241,15 @@ Test accuracy is summarized with a two-by-two table that compares test results a
 
 *Sensitivity* is the probability that a diseased person tests positive:
 
-\[ \text{Sensitivity} = \frac{a}{a + c} \]
+\[
+\text{Sensitivity} = \frac{a}{a + c}
+\]
 
 *Specificity* is the probability that a non-diseased person tests negative:
 
-\[ \text{Specificity} = \frac{d}{b + d} \]
+\[
+\text{Specificity} = \frac{d}{b + d}
+\]
 
 Sensitivity and specificity are properties of the test and (in a fixed population) do not depend on prevalence. Highly sensitive tests rule disease *out* when negative (SnNOut); highly specific tests rule disease *in* when positive (SpPIn).
 
@@ -229,11 +257,15 @@ The predictive values tell you what a test result *means* for an individual.
 
 *Positive predictive value* is the probability that a test-positive person actually has the disease:
 
-\[ \text{PPV} = \frac{a}{a + b} \]
+\[
+\text{PPV} = \frac{a}{a + b}
+\]
 
 *Negative predictive value* is the probability that a test-negative person actually does not have the disease:
 
-\[ \text{NPV} = \frac{d}{c + d} \]
+\[
+\text{NPV} = \frac{d}{c + d}
+\]
 
 Unlike sensitivity and specificity, PPV and NPV depend critically on prevalence. In a population where the disease is rare, even a highly specific test will generate many false positives relative to true positives, and PPV will be low. This is why screening tests for rare conditions in unselected populations often lead to high rates of false alarms, unnecessary follow-up tests, anxiety, and harms.
 
@@ -273,7 +305,9 @@ Key concepts. The *basic reproduction number* \( R_0 \) is the expected number o
 
 Transmission routes include airborne, droplet, contact, fecal-oral, vector-borne, bloodborne, and vertical. Control strategies are tailored to route: vaccination, isolation and quarantine, case finding and contact tracing, vector control, sanitation, prophylactic medications, and public education. *Vaccine efficacy* is estimated from trials as
 
-\[ \text{VE} = 1 - \text{RR} \]
+\[
+\text{VE} = 1 - \text{RR}
+\]
 
 where RR is the risk ratio comparing vaccinated to unvaccinated. A VE of 0.80 means an 80 per cent reduction in outcome relative to unvaccinated.
 

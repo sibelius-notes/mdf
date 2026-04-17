@@ -20,17 +20,24 @@ subjects: "ECON"
 
 The starting point of consumer theory is a precise description of what a consumer *can* afford. A consumer has **income** \( I \) (or wealth \( w \)) and faces prices \( p_x \) and \( p_y \) for two goods \( x \) and \( y \). The **budget constraint** is the inequality
 
-\[ p_x x + p_y y \leq I. \]
+\[
+p_x x + p_y y \leq I.
+\]
 
 The set of all bundles satisfying this constraint is the **budget set**. Its upper boundary is the **budget line**
 
-\[ p_x x + p_y y = I, \]
+\[
+p_x x + p_y y = I,
+\]
 
 which can be written as \( y = \frac{I}{p_y} - \frac{p_x}{p_y} x \). The slope of the budget line is \( -p_x/p_y \), the **price ratio**, which measures the market's rate of substitution between the two goods.
 
 <div class="definition">
 <strong>Budget Set:</strong> Given income <em>I</em> and prices <em>p<sub>x</sub></em>, <em>p<sub>y</sub></em> &gt; 0, the budget set is
-\[ B(p_x, p_y, I) = \left\{ (x,y) \in \mathbb{R}^2_+ : p_x x + p_y y \leq I \right\}. \]
+
+\[
+B(p_x, p_y, I) = \left\{ (x,y) \in \mathbb{R}^2_+ : p_x x + p_y y \leq I \right\}.
+\]
 The budget line is the boundary where the constraint holds with equality.
 </div>
 
@@ -64,7 +71,9 @@ A **preference relation** \( \succcurlyeq \) on a consumption set \( X \subseteq
 
 If preferences satisfy completeness, transitivity, and continuity, then by the **utility representation theorem** (Debreu 1954) there exists a continuous **utility function** \( U: \mathbb{R}^n_+ \to \mathbb{R} \) such that
 
-\[ A \succcurlyeq B \iff U(A) \geq U(B). \]
+\[
+A \succcurlyeq B \iff U(A) \geq U(B).
+\]
 
 An **indifference curve** is the level set \( \{(x,y) : U(x,y) = \bar{u}\} \). Under monotonicity, higher indifference curves represent higher utility. Under strict convexity, each indifference curve bows toward the origin.
 
@@ -72,7 +81,10 @@ An **indifference curve** is the level set \( \{(x,y) : U(x,y) = \bar{u}\} \). U
 
 <div class="definition">
 <strong>Marginal Rate of Substitution (MRS):</strong> At any bundle, the MRS of <em>x</em> for <em>y</em> is the magnitude of the slope of the indifference curve:
-\[ MRS_{xy} = -\frac{dy}{dx}\bigg|_{U=\bar{u}} = \frac{MU_x}{MU_y} = \frac{\partial U/\partial x}{\partial U/\partial y}. \]
+
+\[
+MRS_{xy} = -\frac{dy}{dx}\bigg|_{U=\bar{u}} = \frac{MU_x}{MU_y} = \frac{\partial U/\partial x}{\partial U/\partial y}.
+\]
 It measures the rate at which the consumer is <em>willing</em> to trade <em>y</em> for one additional unit of <em>x</em>.
 </div>
 
@@ -90,7 +102,9 @@ Under convexity the MRS is **diminishing** as \( x \) increases along an indiffe
 
 For **Cobb-Douglas** preferences \( U(x,y) = x^\alpha y^\beta \), the MRS is
 
-\[ MRS_{xy} = \frac{\alpha y}{\beta x}. \]
+\[
+MRS_{xy} = \frac{\alpha y}{\beta x}.
+\]
 
 ---
 
@@ -100,21 +114,35 @@ For **Cobb-Douglas** preferences \( U(x,y) = x^\alpha y^\beta \), the MRS is
 
 The consumer chooses the bundle in the budget set that maximizes utility. The **utility maximization problem (UMP)** is
 
-\[ \max_{x,y} \; U(x,y) \quad \text{subject to} \quad p_x x + p_y y = I. \]
+\[
+\max_{x,y} \; U(x,y) \quad \text{subject to} \quad p_x x + p_y y = I.
+\]
 
 Using the **Lagrangian method**, define
 
-\[ \mathcal{L}(x, y, \lambda) = U(x,y) - \lambda(p_x x + p_y y - I). \]
+\[
+\mathcal{L}(x, y, \lambda) = U(x,y) - \lambda(p_x x + p_y y - I).
+\]
 
 The first-order conditions (assuming an interior solution) are
 
-\[ \frac{\partial \mathcal{L}}{\partial x} = \frac{\partial U}{\partial x} - \lambda p_x = 0, \]
-\[ \frac{\partial \mathcal{L}}{\partial y} = \frac{\partial U}{\partial y} - \lambda p_y = 0, \]
-\[ \frac{\partial \mathcal{L}}{\partial \lambda} = p_x x + p_y y - I = 0. \]
+\[
+\frac{\partial \mathcal{L}}{\partial x} = \frac{\partial U}{\partial x} - \lambda p_x = 0,
+\]
+
+\[
+\frac{\partial \mathcal{L}}{\partial y} = \frac{\partial U}{\partial y} - \lambda p_y = 0,
+\]
+
+\[
+\frac{\partial \mathcal{L}}{\partial \lambda} = p_x x + p_y y - I = 0.
+\]
 
 Dividing the first two conditions gives the key **optimality condition**:
 
-\[ \frac{MU_x}{MU_y} = \frac{p_x}{p_y}, \quad \text{i.e.,} \quad MRS_{xy} = \frac{p_x}{p_y}. \]
+\[
+\frac{MU_x}{MU_y} = \frac{p_x}{p_y}, \quad \text{i.e.,} \quad MRS_{xy} = \frac{p_x}{p_y}.
+\]
 
 <div class="theorem">
 <strong>Optimality Condition:</strong> At an interior optimum, the consumer equates the marginal rate of substitution to the price ratio. Intuitively, the rate at which the consumer is <em>willing</em> to trade <em>y</em> for <em>x</em> (the MRS) equals the rate at which the market <em>allows</em> the trade (the price ratio). If MRS &gt; p<sub>x</sub>/p<sub>y</sub>, the consumer would gain utility by consuming more <em>x</em> and less <em>y</em>.
@@ -124,11 +152,15 @@ Dividing the first two conditions gives the key **optimality condition**:
 
 Let \( U(x,y) = x^\alpha y^{1-\alpha} \), \( p_x = p \), \( p_y = q \), income \( I \). The MRS condition gives
 
-\[ \frac{\alpha y}{(1-\alpha) x} = \frac{p}{q} \implies y = \frac{(1-\alpha) p x}{q \alpha}. \]
+\[
+\frac{\alpha y}{(1-\alpha) x} = \frac{p}{q} \implies y = \frac{(1-\alpha) p x}{q \alpha}.
+\]
 
 Substituting into the budget constraint:
 
-\[ px + q \cdot \frac{(1-\alpha) p x}{q \alpha} = I \implies px \cdot \frac{1}{\alpha} = I \implies x^* = \frac{\alpha I}{p}. \]
+\[
+px + q \cdot \frac{(1-\alpha) p x}{q \alpha} = I \implies px \cdot \frac{1}{\alpha} = I \implies x^* = \frac{\alpha I}{p}.
+\]
 
 Similarly, \( y^* = \frac{(1-\alpha) I}{q} \). The consumer spends share \( \alpha \) of income on \( x \) and share \( 1-\alpha \) on \( y \) — the classic **constant expenditure share** property of Cobb-Douglas preferences.
 
@@ -151,7 +183,9 @@ Solving the UMP for every income and price combination yields **Marshallian dema
 
 Demand functions are **homogeneous of degree zero** in \( (p_x, p_y, I) \): doubling all prices and income leaves the budget set unchanged, so the demand bundle is unchanged. Formally:
 
-\[ x^*(\lambda p_x, \lambda p_y, \lambda I) = x^*(p_x, p_y, I) \quad \forall \lambda > 0. \]
+\[
+x^*(\lambda p_x, \lambda p_y, \lambda I) = x^*(p_x, p_y, I) \quad \forall \lambda > 0.
+\]
 
 This reflects the absence of **money illusion**.
 
@@ -165,7 +199,10 @@ A price change has two separable effects on demand:
 
 <div class="theorem">
 <strong>Slutsky Equation:</strong> For good <em>x</em> and a change in price <em>p<sub>x</sub></em>:
-\[ \frac{\partial x^*}{\partial p_x} = \underbrace{\frac{\partial h_x}{\partial p_x}}_{\text{substitution effect}} - \underbrace{x^* \frac{\partial x^*}{\partial I}}_{\text{income effect}}, \]
+
+\[
+\frac{\partial x^*}{\partial p_x} = \underbrace{\frac{\partial h_x}{\partial p_x}}_{\text{substitution effect}} - \underbrace{x^* \frac{\partial x^*}{\partial I}}_{\text{income effect}},
+\]
 where <em>h<sub>x</sub></em>(p<sub>x</sub>, p<sub>y</sub>, ū) is the Hicksian (compensated) demand.
 </div>
 
@@ -196,7 +233,9 @@ The **cross-price elasticity** \( \varepsilon_{xy} = \frac{\partial x^*}{\partia
 
 Consider a consumer who lives for two periods, earning income \( I_1 \) in period 1 and \( I_2 \) in period 2. Denote consumption in each period by \( c_1 \) and \( c_2 \). If the real interest rate is \( r \), a dollar saved in period 1 becomes \( 1+r \) dollars in period 2. The **intertemporal budget constraint** is
 
-\[ c_1 + \frac{c_2}{1+r} = I_1 + \frac{I_2}{1+r} \equiv W, \]
+\[
+c_1 + \frac{c_2}{1+r} = I_1 + \frac{I_2}{1+r} \equiv W,
+\]
 
 where \( W \) is **lifetime wealth** (the present value of lifetime income). The price of period-2 consumption in terms of period-1 consumption is \( 1/(1+r) \).
 
@@ -208,11 +247,15 @@ where \( W \) is **lifetime wealth** (the present value of lifetime income). The
 
 With utility \( U(c_1, c_2) \), the first-order condition is
 
-\[ \frac{MU_{c_1}}{MU_{c_2}} = 1 + r. \]
+\[
+\frac{MU_{c_1}}{MU_{c_2}} = 1 + r.
+\]
 
 For the common specification \( U(c_1, c_2) = u(c_1) + \delta \, u(c_2) \), where \( \delta \in (0,1) \) is the **discount factor** (reflecting impatience), the condition becomes
 
-\[ \frac{u'(c_1)}{\delta \, u'(c_2)} = 1 + r \implies u'(c_1) = \delta(1+r) \, u'(c_2). \]
+\[
+\frac{u'(c_1)}{\delta \, u'(c_2)} = 1 + r \implies u'(c_1) = \delta(1+r) \, u'(c_2).
+\]
 
 When \( \delta(1+r) = 1 \), the consumer chooses **consumption smoothing**: \( c_1 = c_2 \). When the interest rate is high relative to impatience, future consumption is cheap and the consumer saves more.
 
@@ -237,7 +280,9 @@ A **production function** \( q = f(K, L) \) describes the maximum output \( q \)
 
 The **marginal rate of technical substitution (MRTS)** along an isoquant is
 
-\[ MRTS_{LK} = -\frac{dK}{dL}\bigg|_{q=\bar{q}} = \frac{MP_L}{MP_K}. \]
+\[
+MRTS_{LK} = -\frac{dK}{dL}\bigg|_{q=\bar{q}} = \frac{MP_L}{MP_K}.
+\]
 
 It measures the rate at which capital can be substituted for labor while keeping output constant.
 
@@ -258,11 +303,15 @@ The **Cobb-Douglas production function** \( q = K^\alpha L^\beta \) exhibits CRS
 
 A cost-minimizing firm chooses inputs to produce output \( \bar{q} \) at minimum cost. With input prices \( r \) (rental rate of capital) and \( w \) (wage), the problem is
 
-\[ \min_{K,L} \; rK + wL \quad \text{subject to} \quad f(K,L) \geq \bar{q}. \]
+\[
+\min_{K,L} \; rK + wL \quad \text{subject to} \quad f(K,L) \geq \bar{q}.
+\]
 
 The Lagrangian approach yields the optimality condition
 
-\[ \frac{MP_L}{MP_K} = \frac{w}{r}, \quad \text{i.e.,} \quad MRTS_{LK} = \frac{w}{r}. \]
+\[
+\frac{MP_L}{MP_K} = \frac{w}{r}, \quad \text{i.e.,} \quad MRTS_{LK} = \frac{w}{r}.
+\]
 
 This is the **cost-minimization condition**: the firm equates the rate at which technology allows substitution between inputs to the price ratio of those inputs. Solving gives the **conditional factor demands** \( K^c(\bar{q}, r, w) \) and \( L^c(\bar{q}, r, w) \), and substituting back yields the **long-run total cost function** \( C(\bar{q}) = r K^c + w L^c \).
 
@@ -276,11 +325,15 @@ In the **short run**, at least one input (typically capital) is fixed. The firm 
 
 **Short-run costs** decompose as:
 
-\[ C^{SR}(q) = \underbrace{r\bar{K}}_{\text{fixed cost (FC)}} + \underbrace{w L(q, \bar{K})}_{\text{variable cost (VC)}}. \]
+\[
+C^{SR}(q) = \underbrace{r\bar{K}}_{\text{fixed cost (FC)}} + \underbrace{w L(q, \bar{K})}_{\text{variable cost (VC)}}.
+\]
 
 The **short-run marginal cost** is
 
-\[ MC^{SR}(q) = \frac{d \, VC}{dq} = \frac{w}{MP_L}. \]
+\[
+MC^{SR}(q) = \frac{d \, VC}{dq} = \frac{w}{MP_L}.
+\]
 
 As \( L \) increases with diminishing marginal product, \( MP_L \) falls and \( MC^{SR} \) rises — hence the U-shaped cost curves familiar from introductory economics.
 
@@ -288,11 +341,15 @@ As \( L \) increases with diminishing marginal product, \( MP_L \) falls and \( 
 
 A price-taking firm maximizes profit
 
-\[ \pi(q) = P \cdot q - C(q). \]
+\[
+\pi(q) = P \cdot q - C(q).
+\]
 
 The first-order condition is
 
-\[ P = MC(q), \]
+\[
+P = MC(q),
+\]
 
 interpreted as: produce up to the point where the price received equals the marginal cost of the last unit. This is the firm's **supply condition**.
 
@@ -316,7 +373,9 @@ Uncertainty can be modeled as a set of **states of the world** \( S = \{s_1, s_2
 
 The **von Neumann-Morgenstern expected utility (EU) framework** represents preferences over lotteries by
 
-\[ EU(L) = \pi \, u(c_1) + (1-\pi) \, u(c_2), \]
+\[
+EU(L) = \pi \, u(c_1) + (1-\pi) \, u(c_2),
+\]
 
 where \( u(\cdot) \) is the **Bernoulli (cardinal) utility function** and EU is a weighted average of utilities.
 
@@ -333,7 +392,9 @@ where \( u(\cdot) \) is the **Bernoulli (cardinal) utility function** and EU is 
 
 A risk-averse individual with initial wealth \( W \), facing a loss \( L \) with probability \( \pi \), will willingly purchase **actuarially fair insurance** that pays \( L \) in the bad state in exchange for a premium \( \pi L \). The optimal choice is **full insurance** — equalizing consumption across states — because:
 
-\[ EU'(c_{bad}) = EU'(c_{good}) \implies c_{bad} = c_{good}. \]
+\[
+EU'(c_{bad}) = EU'(c_{good}) \implies c_{bad} = c_{good}.
+\]
 
 If insurance is actuarially unfair (the premium exceeds \( \pi L \)), the consumer may partially insure or self-insure. The **Arrow-Pratt measure of risk aversion** \( \rho(c) = -u''(c)/u'(c) \) quantifies how intensely a consumer dislikes risk.
 
@@ -353,7 +414,9 @@ In two-state models, the state-contingent budget constraint maps insurance choic
 
 Adding up individual demand curves across all consumers yields **market demand** \( Q^D(P) = \sum_i x_i^*(P, I_i) \). Adding up individual supply curves across all firms yields **market supply** \( Q^S(P) = \sum_j q_j^*(P) \). A **competitive (Walrasian) equilibrium** price \( P^* \) clears the market:
 
-\[ Q^D(P^*) = Q^S(P^*). \]
+\[
+Q^D(P^*) = Q^S(P^*).
+\]
 
 ## 9.2 Welfare Analysis
 

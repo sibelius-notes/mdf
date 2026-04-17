@@ -436,7 +436,7 @@ where \(d\Phi_f\) is the Lorentz-invariant phase space measure for the final sta
 d\Phi_f = \left(\prod_j \frac{d^3 p_j}{(2\pi)^3 2E_j}\right) (2\pi)^4 \delta^{(4)}\!\left(P - \sum_j p_j\right).
 \]
 
-The <strong>total decay rate</strong> \(\Gamma = \sum_f \Gamma_f\) is related to the particle's <strong>lifetime</strong> by \(\tau = 1/\Gamma\). The <strong>branching ratio</strong> for a particular decay mode is \(\text{BR}(f) = \Gamma_f / \Gamma$.
+The <strong>total decay rate</strong> \(\Gamma = \sum_f \Gamma_f\) is related to the particle's <strong>lifetime</strong> by \(\tau = 1/\Gamma\). The <strong>branching ratio</strong> for a particular decay mode is \(\text{BR}(f) = \Gamma_f / \Gamma\).
 
 For a two-body decay in the rest frame of the parent, the phase space simplifies considerably. With \(M \to 1 + 2\), integrating over the delta function leaves
 
@@ -1044,16 +1044,19 @@ This choice preserves \(U(1)_{\text{em}}\) (which acts on the neutral component 
 Expanding the Higgs field around the vacuum: \(\Phi = (1/\sqrt{2})(0, v + h)^T\), where \(h\) is the physical Higgs field. Substituting into the kinetic term of the Higgs Lagrangian generates mass terms for the gauge bosons. The mass eigenstates and their masses are:
 
 <strong>Charged \(W\) bosons</strong>:
+
 \[
 W^\pm_\mu = \frac{1}{\sqrt{2}}(W^1_\mu \mp i W^2_\mu), \qquad m_W = \frac{gv}{2}.
 \]
 
 <strong>Neutral \(Z\) boson</strong> (orthogonal combination of \(W^3\) and \(B\)):
+
 \[
 Z_\mu = \cos\theta_W W^3_\mu - \sin\theta_W B_\mu, \qquad m_Z = \frac{v}{2}\sqrt{g^2 + g'^2} = \frac{m_W}{\cos\theta_W}.
 \]
 
 <strong>Photon</strong> (orthogonal combination, remains massless):
+
 \[
 A_\mu = \sin\theta_W W^3_\mu + \cos\theta_W B_\mu, \qquad m_A = 0.
 \]

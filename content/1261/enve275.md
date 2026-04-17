@@ -25,11 +25,15 @@ Concentrations are reported in several conventions. Molarity and molality refer 
 
 Electroneutrality requires that the sum of positive charges equal the sum of negative charges in any bulk solution:
 
-\[ \sum_i z_i [M_i^{z_i+}] = \sum_j |z_j| [A_j^{z_j-}] \]
+\[
+\sum_i z_i [M_i^{z_i+}] = \sum_j |z_j| [A_j^{z_j-}]
+\]
 
 This condition, together with mass balances on each dissolved element and the relevant equilibrium expressions, generates the closed system of equations that governs speciation. A failure of electroneutrality in a reported analysis is diagnostic of measurement error or of a missed constituent such as organic acidity. Ionic strength,
 
-\[ I = \tfrac{1}{2} \sum_i c_i z_i^2, \]
+\[
+I = \tfrac{1}{2} \sum_i c_i z_i^2,
+\]
 
 weights each ion by the square of its charge and sets the stage for all non-ideality corrections that follow.
 
@@ -37,33 +41,47 @@ weights each ion by the square of its charge and sets the stage for all non-idea
 
 Equilibrium in aquatic chemistry is grounded in the Gibbs free energy. For a reaction \( aA + bB \rightleftharpoons cC + dD \), the change in Gibbs energy under arbitrary conditions is
 
-\[ \Delta G = \Delta G^{\circ} + RT \ln Q, \]
+\[
+\Delta G = \Delta G^{\circ} + RT \ln Q,
+\]
 
 where \( Q \) is the reaction quotient built from the activities of products and reactants. At equilibrium \( \Delta G = 0 \) and \( Q \) equals the equilibrium constant \( K \), yielding
 
-\[ \Delta G^{\circ} = -RT \ln K. \]
+\[
+\Delta G^{\circ} = -RT \ln K.
+\]
 
 Standard Gibbs energies of formation tabulated for aqueous species, solids, and gases allow any equilibrium constant of interest to be computed from
 
-\[ \Delta G^{\circ}_{\mathrm{rxn}} = \sum \nu_i \Delta G^{\circ}_{f,i}. \]
+\[
+\Delta G^{\circ}_{\mathrm{rxn}} = \sum \nu_i \Delta G^{\circ}_{f,i}.
+\]
 
 The temperature dependence of \( K \) follows the van't Hoff relation,
 
-\[ \frac{d \ln K}{dT} = \frac{\Delta H^{\circ}}{RT^2}, \]
+\[
+\frac{d \ln K}{dT} = \frac{\Delta H^{\circ}}{RT^2},
+\]
 
 which integrates, under the assumption of a temperature-independent enthalpy, to
 
-\[ \ln \frac{K_2}{K_1} = -\frac{\Delta H^{\circ}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right). \]
+\[
+\ln \frac{K_2}{K_1} = -\frac{\Delta H^{\circ}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right).
+\]
 
 Exothermic reactions therefore shift backward as temperature rises. The dissolution of calcium carbonate and of oxygen in water are both classic examples of reactions whose equilibrium constants decrease with warming, an effect that couples aquatic chemistry directly to thermal pollution and climate.
 
 Activities replace concentrations in all equilibrium expressions written for non-ideal solutions. The activity of a dissolved species is \( a_i = \gamma_i [i] \), where \( \gamma_i \) is the single-ion activity coefficient and \( [i] \) is the molar concentration. At infinite dilution \( \gamma_i = 1 \); as ionic strength increases, long-range electrostatic interactions depress activity coefficients below unity. The Debye-Huckel limiting law,
 
-\[ \log \gamma_i = -A z_i^2 \sqrt{I}, \]
+\[
+\log \gamma_i = -A z_i^2 \sqrt{I},
+\]
 
 applies for \( I < 0.005\ \mathrm{mol/L} \), where \( A \approx 0.509 \) at 25 degrees Celsius. The extended Debye-Huckel and Davies equations, the latter written as
 
-\[ \log \gamma_i = -A z_i^2 \left( \frac{\sqrt{I}}{1+\sqrt{I}} - 0.3\, I \right), \]
+\[
+\log \gamma_i = -A z_i^2 \left( \frac{\sqrt{I}}{1+\sqrt{I}} - 0.3\, I \right),
+\]
 
 extend the range to roughly 0.1 and 0.5 mol/L respectively and suffice for most fresh-water problems. For brines and seawater, specific-interaction theory or Pitzer equations are required. Neutral species are often assigned activity coefficients close to unity, though the Setchenow effect does salt them out slightly at high ionic strength.
 
@@ -71,11 +89,15 @@ extend the range to roughly 0.1 and 0.5 mol/L respectively and suffice for most 
 
 The central equilibrium of every aquatic system is the self-ionization of water, \( K_w = [\mathrm{H}^+][\mathrm{OH}^-] \), with \( pK_w = 14.00 \) at 25 degrees Celsius. Protic species are classified by the acid dissociation constant \( K_a \). A monoprotic acid \( HA \) satisfies
 
-\[ K_a = \frac{[\mathrm{H}^+][A^-]}{[HA]}. \]
+\[
+K_a = \frac{[\mathrm{H}^+][A^-]}{[HA]}.
+\]
 
 Diprotic and triprotic systems generate a cascade of constants \( K_{a1}, K_{a2}, K_{a3} \), and the fractional distribution of the conjugate forms is governed by the alpha functions. For a monoprotic system,
 
-\[ \alpha_0 = \frac{[\mathrm{H}^+]}{[\mathrm{H}^+] + K_a}, \qquad \alpha_1 = \frac{K_a}{[\mathrm{H}^+] + K_a}, \]
+\[
+\alpha_0 = \frac{[\mathrm{H}^+]}{[\mathrm{H}^+] + K_a}, \qquad \alpha_1 = \frac{K_a}{[\mathrm{H}^+] + K_a},
+\]
 
 with analogous expressions for polyprotic acids. These functions cross at \( \mathrm{pH} = pK_a \) and collapse into the familiar Henderson-Hasselbalch relation when the ratio of conjugate base to acid is specified.
 
@@ -85,13 +107,17 @@ The pC-pH diagram is the graphical counterpart. Plotting the logarithm of each s
 
 A buffer resists changes in pH when strong acid or base is added. The buffering intensity, defined as
 
-\[ \beta = \frac{dC_B}{d\mathrm{pH}} = -\frac{dC_A}{d\mathrm{pH}}, \]
+\[
+\beta = \frac{dC_B}{d\mathrm{pH}} = -\frac{dC_A}{d\mathrm{pH}},
+\]
 
 quantifies how many moles of strong base must be added per litre to raise the pH by one unit. For a monoprotic weak acid at total concentration \( C_T \), the dominant contribution near \( \mathrm{pH} = pK_a \) is \( \beta \approx 2.303\, C_T\, \alpha_0 \alpha_1 \), which reaches a maximum of \( 0.576\, C_T \) exactly at the half-equivalence point. Natural-water buffering is overwhelmingly supplied by the carbonate system, and engineered treatment steps such as lime softening, remineralization, and corrosion control all manipulate this buffer deliberately.
 
 Alkalinity is the operational quantity measured by titrating to a chosen endpoint, usually near pH 4.5. In carbonate-dominated fresh water it reduces to
 
-\[ \mathrm{Alk} \approx [\mathrm{HCO_3^-}] + 2[\mathrm{CO_3^{2-}}] + [\mathrm{OH^-}] - [\mathrm{H^+}], \]
+\[
+\mathrm{Alk} \approx [\mathrm{HCO_3^-}] + 2[\mathrm{CO_3^{2-}}] + [\mathrm{OH^-}] - [\mathrm{H^+}],
+\]
 
 with contributions from borate, silicate, ammonia, phosphate, and organic acids added when relevant. Alkalinity is a conservative quantity with respect to the addition or removal of carbon dioxide, which makes it a powerful tracer. Acidity is its mirror image, measured by titrating to the phenolphthalein endpoint.
 
@@ -99,7 +125,9 @@ with contributions from borate, silicate, ammonia, phosphate, and organic acids 
 
 The carbonate system links the atmosphere, surface waters, sediments, and the biosphere. In an open system in equilibrium with atmospheric carbon dioxide, Henry's law fixes the activity of dissolved carbon dioxide:
 
-\[ [\mathrm{H_2CO_3^*}] = K_H\, p_{\mathrm{CO_2}}, \]
+\[
+[\mathrm{H_2CO_3^*}] = K_H\, p_{\mathrm{CO_2}},
+\]
 
 with \( K_H \approx 3.3 \times 10^{-2}\ \mathrm{mol/(L\cdot atm)} \) at 25 degrees Celsius. Successive protolyses give \( pK_{a1} \approx 6.35 \) and \( pK_{a2} \approx 10.33 \). A pure water sample in equilibrium with pre-industrial atmospheric carbon dioxide settles at about pH 5.6; with present-day mixing ratios the value is slightly lower, a reminder that rainfall is mildly acidic even in the absence of sulfuric and nitric pollution.
 
@@ -107,7 +135,9 @@ Closed and open systems differ in whether the total dissolved inorganic carbon \
 
 Calcite and other carbonate minerals establish a further set of heterogeneous equilibria. The dissolution of calcite,
 
-\[ \mathrm{CaCO_3(s)} \rightleftharpoons \mathrm{Ca^{2+}} + \mathrm{CO_3^{2-}}, \]
+\[
+\mathrm{CaCO_3(s)} \rightleftharpoons \mathrm{Ca^{2+}} + \mathrm{CO_3^{2-}},
+\]
 
 has a solubility product \( K_{sp} \approx 10^{-8.48} \). A saturation index, defined as the logarithm of the ratio of the ion activity product to \( K_{sp} \), signals whether a water is aggressive toward concrete pipe or prone to scaling heat exchangers. The Langelier index, widely used in drinking water practice, is a convenient reparameterization of this idea.
 
@@ -117,7 +147,9 @@ Hardness is the sum of multivalent cation concentrations expressed as \( \mathrm
 
 Dissolved metals rarely exist as bare aquo ions. They are complexed by inorganic ligands such as hydroxide, chloride, carbonate, and sulfate, and by organic ligands ranging from simple carboxylates to natural humic substances and synthetic chelators. Each complex is described by a stability constant; the overall formation constant for \( M + nL \rightleftharpoons ML_n \) is
 
-\[ \beta_n = \frac{[ML_n]}{[M][L]^n}. \]
+\[
+\beta_n = \frac{[ML_n]}{[M][L]^n}.
+\]
 
 Hydroxide complexation is ubiquitous and makes the fractional concentration of free metal ion a sensitive function of pH. Aluminum at circumneutral pH, for instance, speciates through a series of hydrolysis products \( \mathrm{Al(OH)^{2+}}, \mathrm{Al(OH)_2^+}, \mathrm{Al(OH)_3^0}, \mathrm{Al(OH)_4^-} \), with a solubility minimum near pH 6 that governs the dose and pH of alum coagulation. Iron, copper, lead, zinc, and cadmium follow analogous patterns with species-specific constants.
 
@@ -125,7 +157,9 @@ Natural organic matter further complicates the picture by donating multiple bind
 
 Solid-phase equilibria are written as conditional solubility products. For \( \mathrm{Fe(OH)_3(s)} \),
 
-\[ K_{sp} = [\mathrm{Fe^{3+}}][\mathrm{OH^-}]^3, \]
+\[
+K_{sp} = [\mathrm{Fe^{3+}}][\mathrm{OH^-}]^3,
+\]
 
 the total dissolved iron is the sum of all hydrolysis species, each linked to \( [\mathrm{Fe^{3+}}] \) through its formation constant. The resulting solubility curve has a pronounced minimum in the near-neutral range, which is why iron is scavenged from most surface waters by hydroxide precipitation yet remobilized under acidic mine-drainage conditions. Phosphate removal in wastewater treatment exploits the same principle in reverse, titrating iron or aluminum to precipitate \( \mathrm{FePO_4} \) or \( \mathrm{AlPO_4} \).
 
@@ -133,11 +167,15 @@ the total dissolved iron is the sum of all hydrolysis species, each linked to \(
 
 Redox chemistry controls the fate of nitrogen, sulfur, carbon, iron, manganese, and many contaminants. A balanced half-reaction is written as a reduction, for example
 
-\[ \mathrm{O_2(g)} + 4\mathrm{H^+} + 4e^- \rightleftharpoons 2\mathrm{H_2O}, \qquad E^{\circ} = 1.229\ \mathrm{V}. \]
+\[
+\mathrm{O_2(g)} + 4\mathrm{H^+} + 4e^- \rightleftharpoons 2\mathrm{H_2O}, \qquad E^{\circ} = 1.229\ \mathrm{V}.
+\]
 
 The Nernst equation relates the actual electrode potential to the activities of reactants and products:
 
-\[ E = E^{\circ} - \frac{RT}{nF} \ln Q. \]
+\[
+E = E^{\circ} - \frac{RT}{nF} \ln Q.
+\]
 
 At 25 degrees Celsius and base-ten logarithms this collapses to \( E = E^{\circ} - (0.0592/n) \log Q \). Environmental chemists frequently substitute the dimensionless electron activity \( pE = -\log\{e^-\} \), related to \( E \) by \( pE = E / (2.303\, RT/F) \), approximately \( E/0.0592 \) at 25 degrees. The advantage of \( pE \) is that it places redox on the same conceptual footing as pH, and allows the simultaneous use of both master variables in speciation diagrams.
 

@@ -46,7 +46,10 @@ Two sets are purely *extensional* objects — they are determined entirely by wh
 
 <div class="axiom">
 <strong>Axiom of Extensionality.</strong> Two sets are equal if and only if they have the same elements:
-\[ \forall x \, \forall y \, \bigl( x = y \leftrightarrow \forall z\,(z \in x \leftrightarrow z \in y) \bigr). \]
+
+\[
+\forall x \, \forall y \, \bigl( x = y \leftrightarrow \forall z\,(z \in x \leftrightarrow z \in y) \bigr).
+\]
 </div>
 
 This axiom makes sets purely extensional objects: a set is determined entirely by its members, not by how it is described or constructed.
@@ -57,14 +60,20 @@ We need a starting point — a set that exists without requiring any prior set t
 
 <div class="axiom">
 <strong>Axiom of Empty Set.</strong> There exists a set with no elements:
-\[ \exists x \, \forall y \, (y \notin x). \]
+
+\[
+\exists x \, \forall y \, (y \notin x).
+\]
 </div>
 
 By Extensionality, this set is unique; we denote it \(\emptyset\).
 
 <div class="axiom">
 <strong>Axiom of Pairing.</strong> For any sets \(a\) and \(b\), there exists a set \(\{a, b\}\) whose elements are exactly \(a\) and \(b\):
-\[ \forall a \, \forall b \, \exists c \, \forall x \, (x \in c \leftrightarrow x = a \lor x = b). \]
+
+\[
+\forall a \, \forall b \, \exists c \, \forall x \, (x \in c \leftrightarrow x = a \lor x = b).
+\]
 </div>
 
 Taking \(a = b\) yields the singleton \(\{a\}\).
@@ -75,12 +84,18 @@ Union lets us "flatten" a collection of sets: from the family \(\{\{1,2\}, \{2,3
 
 <div class="axiom">
 <strong>Axiom of Union.</strong> For any set \(F\), there exists a set \(\bigcup F\) consisting of all elements of elements of \(F\):
-\[ \forall F \, \exists A \, \forall x \, \bigl(x \in A \leftrightarrow \exists y\,(x \in y \land y \in F)\bigr). \]
+
+\[
+\forall F \, \exists A \, \forall x \, \bigl(x \in A \leftrightarrow \exists y\,(x \in y \land y \in F)\bigr).
+\]
 </div>
 
 <div class="axiom">
 <strong>Axiom of Power Set.</strong> For any set \(X\), there exists the set \(\mathcal{P}(X)\) of all subsets of \(X\):
-\[ \forall X \, \exists P \, \forall u \, \bigl(u \in P \leftrightarrow u \subseteq X\bigr). \]
+
+\[
+\forall X \, \exists P \, \forall u \, \bigl(u \in P \leftrightarrow u \subseteq X\bigr).
+\]
 </div>
 
 <div class="remark">
@@ -93,7 +108,10 @@ Separation is Zermelo's direct response to Russell's paradox. Rather than allowi
 
 <div class="axiom">
 <strong>Axiom Schema of Separation.</strong> For any set \(X\) and any formula \(\varphi(x)\) (with parameters), there exists the set of all elements of \(X\) satisfying \(\varphi\):
-\[ \forall X \, \exists Y \, \forall x \, \bigl(x \in Y \leftrightarrow x \in X \land \varphi(x)\bigr). \]
+
+\[
+\forall X \, \exists Y \, \forall x \, \bigl(x \in Y \leftrightarrow x \in X \land \varphi(x)\bigr).
+\]
 </div>
 
 This is a schema — one axiom for each formula \(\varphi\). It avoids Russell's paradox: we cannot form \(\{x : x \notin x\}\) without already having a set \(X\) to draw elements from.
@@ -104,7 +122,10 @@ This is a schema — one axiom for each formula \(\varphi\). It avoids Russell's
 
 <div class="example">
 <strong>Separation in action: the even natural numbers.</strong> We want to form the set \(E = \{n \in \omega : n \text{ is even}\}\). The formula \(\varphi(n)\) is \(\exists m \in \omega \, (n = m + m)\), which asserts \(n\) is twice some natural number. By Separation applied to the set \(\omega\) and the formula \(\varphi\):
-\[ E = \{n \in \omega : \exists m \in \omega \, (n = m + m)\} = \{0, 2, 4, 6, \ldots\}. \]
+
+\[
+E = \{n \in \omega : \exists m \in \omega \, (n = m + m)\} = \{0, 2, 4, 6, \ldots\}.
+\]
 This is a perfectly legitimate set in ZFC. Notice that we never tried to form a set of "all even numbers" out of nothing — we always worked *inside* the pre-existing set \(\omega\). The Russell paradox would require us to form \(R = \{x : x \notin x\}\) where \(x\) ranges over all sets — but no such universal set exists in ZFC. The moment we restrict to \(\{x \in X : x \notin x\}\) for any fixed set \(X\), we merely get a subset of \(X\), and the argument \(R \in R \leftrightarrow R \notin R\) no longer fires: the resulting set is simply \(X \setminus \{x \in X : x \in x\}\), a perfectly harmless set.
 </div>
 
@@ -114,7 +135,10 @@ Fraenkel observed that Zermelo's original axioms could not form the set \(\{\ome
 
 <div class="axiom">
 <strong>Axiom Schema of Replacement.</strong> If \(\varphi(x, y)\) defines a class-function (i.e., for every \(x\) there is at most one \(y\) with \(\varphi(x,y)\)), then the image of any set under this function is a set:
-\[ \forall A \, \bigl[\forall x \in A \, \exists! y \, \varphi(x,y)\bigr] \to \exists B \, \forall x \in A \, \exists y \in B \, \varphi(x,y). \]
+
+\[
+\forall A \, \bigl[\forall x \in A \, \exists! y \, \varphi(x,y)\bigr] \to \exists B \, \forall x \in A \, \exists y \in B \, \varphi(x,y).
+\]
 </div>
 
 Replacement is strictly stronger than Separation and is needed to construct, for example, the set \(\{\omega, \mathcal{P}(\omega), \mathcal{P}(\mathcal{P}(\omega)), \ldots\}\).
@@ -127,7 +151,10 @@ Replacement is strictly stronger than Separation and is needed to construct, for
 
 <div class="axiom">
 <strong>Axiom of Infinity.</strong> There exists an inductive set:
-\[ \exists X \, \bigl(\emptyset \in X \land \forall y \in X \, (y \cup \{y\} \in X)\bigr). \]
+
+\[
+\exists X \, \bigl(\emptyset \in X \land \forall y \in X \, (y \cup \{y\} \in X)\bigr).
+\]
 </div>
 
 The smallest inductive set is \(\omega = \{0, 1, 2, \ldots\}\) where \(0 = \emptyset\), \(1 = \{\emptyset\}\), \(2 = \{\emptyset, \{\emptyset\}\}\), etc. — the von Neumann natural numbers.
@@ -136,7 +163,10 @@ The smallest inductive set is \(\omega = \{0, 1, 2, \ldots\}\) where \(0 = \empt
 
 <div class="axiom">
 <strong>Axiom of Regularity (Foundation).</strong> Every non-empty set has an \(\in\)-minimal element:
-\[ \forall x \, \bigl(x \neq \emptyset \to \exists y \in x \, (y \cap x = \emptyset)\bigr). \]
+
+\[
+\forall x \, \bigl(x \neq \emptyset \to \exists y \in x \, (y \cap x = \emptyset)\bigr).
+\]
 </div>
 
 Regularity forbids infinite descending \(\in\)-chains and, in particular, \(x \in x\). It implies the universe of sets is well-founded and stratified into the **von Neumann hierarchy** \(V = \bigcup_\alpha V_\alpha\).
@@ -145,7 +175,10 @@ Regularity forbids infinite descending \(\in\)-chains and, in particular, \(x \i
 
 <div class="axiom">
 <strong>Axiom of Choice (AC).</strong> For every set \(X\) of non-empty pairwise disjoint sets, there is a set \(C\) (a <em>choice set</em>) that contains exactly one element from each member of \(X\):
-\[ \forall X \, \bigl[\emptyset \notin X \to \exists f : X \to \bigcup X, \, \forall A \in X \, (f(A) \in A)\bigr]. \]
+
+\[
+\forall X \, \bigl[\emptyset \notin X \to \exists f : X \to \bigcup X, \, \forall A \in X \, (f(A) \in A)\bigr].
+\]
 </div>
 
 AC is independent of ZF (Zermelo–Fraenkel without choice), as shown by Cohen. It is equivalent to Zorn's Lemma, the Well-Ordering Theorem, and Tychonoff's Theorem for Hausdorff spaces.
@@ -263,7 +296,10 @@ Intuitively: \(1 + \omega\) means "place a single point before an \(\omega\)-seq
 <strong>Ordinal multiplication: \(\omega^2 = \omega \cdot \omega\) as a limit.</strong>
 
 By definition, \(\omega \cdot \omega = \sup_{n < \omega} \omega \cdot n\). The sequence is:
-\[ \omega \cdot 0 = 0, \quad \omega \cdot 1 = \omega, \quad \omega \cdot 2 = \omega + \omega, \quad \omega \cdot 3 = \omega + \omega + \omega, \quad \ldots \]
+
+\[
+\omega \cdot 0 = 0, \quad \omega \cdot 1 = \omega, \quad \omega \cdot 2 = \omega + \omega, \quad \omega \cdot 3 = \omega + \omega + \omega, \quad \ldots
+\]
 The supremum is \(\omega^2 = \omega \cdot \omega\), whose elements are all ordinals of the form \(\omega \cdot m + k\) for \(m, k < \omega\). This is the order type of \(\omega \times \omega\) under the lexicographic order. Each "row" \(\{m\} \times \omega\) is an \(\omega\)-sequence, and there are \(\omega\) many rows — giving \(\omega^2\) in total.
 </div>
 
@@ -277,7 +313,10 @@ The ordinal \(\omega^\omega = \sup_{n < \omega} \omega^n\) is the order type of 
 
 <div class="theorem">
 <strong>Cantor Normal Form.</strong> Every ordinal \(\alpha > 0\) can be written uniquely as
-\[ \alpha = \omega^{\beta_1} \cdot k_1 + \omega^{\beta_2} \cdot k_2 + \cdots + \omega^{\beta_n} \cdot k_n \]
+
+\[
+\alpha = \omega^{\beta_1} \cdot k_1 + \omega^{\beta_2} \cdot k_2 + \cdots + \omega^{\beta_n} \cdot k_n
+\]
 where \(\beta_1 > \beta_2 > \cdots > \beta_n \geq 0\) are ordinals and \(k_1, \ldots, k_n \geq 1\) are natural numbers.
 </div>
 
@@ -397,7 +436,10 @@ The <strong>cofinality</strong> \(\mathrm{cf}(\alpha)\) of a limit ordinal \(\al
 
 <div class="theorem">
 <strong>König's Theorem.</strong> For any cardinals \(\kappa_i < \lambda_i\) (for \(i \in I\)):
-\[ \sum_{i \in I} \kappa_i < \prod_{i \in I} \lambda_i. \]
+
+\[
+\sum_{i \in I} \kappa_i < \prod_{i \in I} \lambda_i.
+\]
 In particular, \(\kappa < \kappa^{\mathrm{cf}(\kappa)}\) for any infinite cardinal \(\kappa\).
 </div>
 
@@ -453,7 +495,10 @@ Under GCH, all infinite cardinal arithmetic reduces to simple rules:
 
 <div class="theorem">
 Assume GCH. For infinite cardinals \(\kappa \leq \lambda\):
-\[ \kappa^\lambda = \begin{cases} \lambda^+ & \text{if } \kappa \leq \mathrm{cf}(\lambda), \\ \lambda & \text{if } \mathrm{cf}(\lambda) < \kappa \leq \lambda. \end{cases} \]
+
+\[
+\kappa^\lambda = \begin{cases} \lambda^+ & \text{if } \kappa \leq \mathrm{cf}(\lambda), \\ \lambda & \text{if } \mathrm{cf}(\lambda) < \kappa \leq \lambda. \end{cases}
+\]
 </div>
 
 Without GCH, cardinal exponentiation is much harder to determine and is the subject of **Shelah's pcf theory**.
@@ -533,7 +578,10 @@ Given a structure \(M\) and an ultrafilter \(\mathcal{U}\) on a set \(I\), the <
 
 <div class="theorem">
 <strong>Łoś's Theorem.</strong> Let \(M\) be a first-order structure and \(\mathcal{U}\) an ultrafilter on \(I\). For any first-order formula \(\varphi(x_1,\ldots,x_n)\) and functions \(f_1, \ldots, f_n: I \to M\):
-\[ M^I/\mathcal{U} \models \varphi([f_1],\ldots,[f_n]) \iff \{i \in I : M \models \varphi(f_1(i),\ldots,f_n(i))\} \in \mathcal{U}. \]
+
+\[
+M^I/\mathcal{U} \models \varphi([f_1],\ldots,[f_n]) \iff \{i \in I : M \models \varphi(f_1(i),\ldots,f_n(i))\} \in \mathcal{U}.
+\]
 </div>
 
 This theorem is fundamental: the ultrapower satisfies the same first-order sentences as \(M\), and is used to construct elementary extensions and measurable cardinals.
@@ -582,7 +630,10 @@ Let \(C_1, C_2\) be clubs. Their intersection \(C_1 \cap C_2\) is unbounded: giv
 
 <div class="definition">
 The <strong>club filter</strong> on a regular uncountable cardinal \(\kappa\) is the filter \(\mathcal{F}_\kappa\) generated by all club subsets of \(\kappa\):
-\[ \mathcal{F}_\kappa = \{A \subseteq \kappa : C \subseteq A \text{ for some club } C \subseteq \kappa\}. \]
+
+\[
+\mathcal{F}_\kappa = \{A \subseteq \kappa : C \subseteq A \text{ for some club } C \subseteq \kappa\}.
+\]
 </div>
 
 <div class="theorem">
@@ -630,7 +681,10 @@ Fodor's Lemma has numerous applications:
 
 <div class="definition">
 A filter \(\mathcal{F}\) on \(\kappa\) is <strong>normal</strong> if it is \(\kappa\)-complete and closed under diagonal intersections: if \(A_\alpha \in \mathcal{F}\) for each \(\alpha < \kappa\), then
-\[ \Delta_{\alpha < \kappa} A_\alpha = \{\xi < \kappa : \xi \in A_\alpha \text{ for all } \alpha < \xi\} \in \mathcal{F}. \]
+
+\[
+\Delta_{\alpha < \kappa} A_\alpha = \{\xi < \kappa : \xi \in A_\alpha \text{ for all } \alpha < \xi\} \in \mathcal{F}.
+\]
 </div>
 
 <div class="theorem">
@@ -848,7 +902,10 @@ The Reflection Principle is a fundamental metatheorem of ZFC, showing that any f
 
 <div class="theorem">
 <strong>Reflection Principle.</strong> For any formula \(\varphi(x_1, \ldots, x_n)\) and any ordinal \(\alpha\), there exists an ordinal \(\beta > \alpha\) such that for all \(a_1, \ldots, a_n \in V_\beta\):
-\[ V \models \varphi(a_1, \ldots, a_n) \iff V_\beta \models \varphi(a_1, \ldots, a_n). \]
+
+\[
+V \models \varphi(a_1, \ldots, a_n) \iff V_\beta \models \varphi(a_1, \ldots, a_n).
+\]
 </div>
 
 <div class="proof">
@@ -874,7 +931,10 @@ Gödel's constructible universe \(L\) is the smallest inner model of ZFC. Workin
 
 <div class="definition">
 The <strong>definable power set</strong> of a set \(M\) is:
-\[ \mathrm{Def}(M) = \{A \subseteq M : A = \{x \in M : M \models \varphi(x, a_1, \ldots, a_n)\} \text{ for some formula } \varphi \text{ and parameters } a_1, \ldots, a_n \in M\}. \]
+
+\[
+\mathrm{Def}(M) = \{A \subseteq M : A = \{x \in M : M \models \varphi(x, a_1, \ldots, a_n)\} \text{ for some formula } \varphi \text{ and parameters } a_1, \ldots, a_n \in M\}.
+\]
 The <strong>constructible hierarchy</strong> \(L\) is defined by:
 <ul>
   <li>\(L_0 = \emptyset\)</li>
@@ -922,7 +982,10 @@ A set \(x\) is <strong>ordinal definable</strong> (written \(x \in \mathbf{OD}\)
 
 <div class="definition">
 The class \(\mathbf{HOD}\) (hereditarily ordinal definable sets) consists of all sets \(x\) such that every element of the transitive closure of \(x\) is ordinal definable:
-\[ \mathbf{HOD} = \{x \in \mathbf{OD} : \mathrm{tc}(\{x\}) \subseteq \mathbf{OD}\}. \]
+
+\[
+\mathbf{HOD} = \{x \in \mathbf{OD} : \mathrm{tc}(\{x\}) \subseteq \mathbf{OD}\}.
+\]
 </div>
 
 <div class="theorem">
@@ -968,7 +1031,10 @@ The key insight is: \(G\) need not exist in \(M\). If \(M\) is countable, then \
 
 <div class="example">
 <strong>Adding a Cohen real.</strong> The simplest forcing is Cohen forcing to add a single new real. The forcing poset is:
-\[ \mathbb{P} = (2^{<\omega}, \supseteq) \]
+
+\[
+\mathbb{P} = (2^{<\omega}, \supseteq)
+\]
 consisting of all finite binary strings \(s: n \to 2\) (for \(n \in \omega\)), ordered by reverse extension: \(s \leq t\) (i.e., \(s\) is stronger) if and only if \(s \supseteq t\) as functions. Intuitively, longer strings provide more information.
 
 A generic filter \(G\) picks one finite string from each dense set. The *dense* sets ensure that:
@@ -1027,7 +1093,10 @@ The <strong>forcing relation</strong> \(p \Vdash \varphi\) (read "\(p\) forces \
 
 <div class="theorem">
 <strong>Truth Lemma (Forcing Theorem).</strong> For any formula \(\varphi\) with \(\mathbb{P}\)-names as parameters and any \(M\)-generic \(G\):
-\[ M[G] \models \varphi(\tau^G_1, \ldots, \tau^G_n) \iff \exists p \in G, \, p \Vdash \varphi(\tau_1, \ldots, \tau_n). \]
+
+\[
+M[G] \models \varphi(\tau^G_1, \ldots, \tau^G_n) \iff \exists p \in G, \, p \Vdash \varphi(\tau_1, \ldots, \tau_n).
+\]
 Moreover, the forcing relation \(\Vdash\) is definable in \(M\).
 </div>
 
@@ -1153,7 +1222,10 @@ The "weakly compact" name comes from logic: a cardinal \(\kappa\) is weakly comp
 
 <div class="theorem">
 Every measurable cardinal is weakly compact, hence Mahlo, hence inaccessible. The hierarchy is:
-\[ \text{inaccessible} \subset \text{Mahlo} \subset \text{weakly compact} \subset \text{measurable}. \]
+
+\[
+\text{inaccessible} \subset \text{Mahlo} \subset \text{weakly compact} \subset \text{measurable}.
+\]
 </div>
 
 <div class="theorem">
@@ -1193,7 +1265,9 @@ The existence of infinitely many Woodin cardinals implies the consistency of all
 <div class="remark">
 <strong>The large cardinal hierarchy as a spectrum.</strong> The following diagram places the major large cardinal notions in order of consistency strength, from weakest to strongest:
 
-\[ \text{inaccessible} \prec \text{Mahlo} \prec \text{weakly compact} \prec \text{measurable} \prec \text{Woodin} \prec \text{supercompact} \]
+\[
+\text{inaccessible} \prec \text{Mahlo} \prec \text{weakly compact} \prec \text{measurable} \prec \text{Woodin} \prec \text{supercompact}
+\]
 
 Each "\(\prec\)" means "strictly weaker in consistency strength." Woodin cardinals sit between measurable and supercompact in a deep sense: they are strong enough to imply projective determinacy (which requires infinitely many Woodin cardinals) but not strong enough to imply the existence of a supercompact. Above supercompact in the hierarchy come extendible, huge, and rank-into-rank cardinals — with Kunen's Inconsistency placing an absolute upper bound by showing there is no elementary embedding \(j: V \to V\) in ZFC.
 </div>
@@ -1569,11 +1643,17 @@ Let \(A = \{\aleph_1, \aleph_2, \aleph_3\}\). We want to determine the possible 
 Since \(A\) is a finite set of three elements, the ultrafilters on \(A\) are exactly the three principal ultrafilters \(D_1, D_2, D_3\) concentrated on \(\aleph_1, \aleph_2, \aleph_3\) respectively. (There are no non-principal ultrafilters on a finite set.)
 
 For a principal ultrafilter \(D_i\) concentrated on \(\aleph_i\):
-\[ \prod A / D_i \cong \aleph_i \]
+
+\[
+\prod A / D_i \cong \aleph_i
+\]
 since every function \(f \in \prod A\) is identified with its value \(f(\aleph_i)\), giving a structure of order type \(\aleph_i\).
 
 Therefore \(\mathrm{cf}(\prod A / D_i) = \mathrm{cf}(\aleph_i)\). Under GCH, all \(\aleph_i\) for \(i \geq 1\) are regular (since \(\aleph_i = \omega_i\) and successor cardinals are regular), so:
-\[ \mathrm{pcf}(\{\aleph_1, \aleph_2, \aleph_3\}) = \{\aleph_1, \aleph_2, \aleph_3\} \subseteq [\aleph_1, \aleph_3] \subseteq [\aleph_1, \aleph_4]. \]
+
+\[
+\mathrm{pcf}(\{\aleph_1, \aleph_2, \aleph_3\}) = \{\aleph_1, \aleph_2, \aleph_3\} \subseteq [\aleph_1, \aleph_3] \subseteq [\aleph_1, \aleph_4].
+\]
 
 In the general infinite case, for \(A = \{\aleph_1, \aleph_2, \ldots, \aleph_n, \ldots\}_{n < \omega}\) (the first \(\omega\) uncountable cardinals), the ultrafilters on this countable set include non-principal ones, and the pcf can extend up to \(\aleph_{\omega_4}\) — this is the content of Shelah's theorem. The pcf generators for this larger set are the subsets \(B_\lambda \subseteq A\) that "generate" each possible cofinality \(\lambda\), and their existence is guaranteed by the pcf structure theorem.
 </div>
@@ -1598,6 +1678,7 @@ Let \(A\) be a set of regular cardinals with \(|A| < \min(A)\). The key object i
 
 <div class="definition">
 <strong>Definition (\(\text{pcf}(A)\)).</strong> The <em>PCF</em> (possible cofinalities) of \(A\) is
+
 \[
 \text{pcf}(A) = \left\{ \text{cf}\!\left(\prod A / D\right) : D \text{ is an ultrafilter on } A \right\}.
 \]
@@ -2509,7 +2590,10 @@ Set theory and model theory are deeply intertwined. The tools of model theory �
 
 <div class="definition">
 Let \((M, \in)\) and \((N, \in)\) be structures for the language of set theory. A function \(j: M \to N\) is an <strong>elementary embedding</strong> if for every formula \(\varphi(x_1, \ldots, x_n)\) and every \(a_1, \ldots, a_n \in M\):
-\[ M \models \varphi(a_1, \ldots, a_n) \iff N \models \varphi(j(a_1), \ldots, j(a_n)). \]
+
+\[
+M \models \varphi(a_1, \ldots, a_n) \iff N \models \varphi(j(a_1), \ldots, j(a_n)).
+\]
 We write \(j: M \prec N\) to indicate that \(j\) is an elementary embedding.
 </div>
 
@@ -2563,7 +2647,10 @@ This is the foundational insight behind forcing: a Cohen generic real \(g\) is "
 
 <div class="definition">
 Let \(M\) be a structure and \(I \subseteq M\) an ordered set. A sequence \((a_i)_{i \in I}\) of elements of \(M\) is a <strong>set of indiscernibles</strong> for \(M\) if for any formula \(\varphi(x_1, \ldots, x_n)\) and any two increasing sequences \(i_1 < \cdots < i_n\) and \(j_1 < \cdots < j_n\) from \(I\):
-\[ M \models \varphi(a_{i_1}, \ldots, a_{i_n}) \iff M \models \varphi(a_{j_1}, \ldots, a_{j_n}). \]
+
+\[
+M \models \varphi(a_{i_1}, \ldots, a_{i_n}) \iff M \models \varphi(a_{j_1}, \ldots, a_{j_n}).
+\]
 </div>
 
 <div class="theorem">
@@ -2687,6 +2774,7 @@ The <strong>Cichoń maximum</strong> is the model in which all four characterist
 
 <div class="theorem">
 <strong>Goldstern–Kellner–Mejía–Shelah (2017).</strong> It is consistent that all ten characteristics in the Cichoń diagram are pairwise distinct:
+
 \[
 \aleph_1 < \text{add}(\mathcal{N}) < \text{cov}(\mathcal{N}) < \mathfrak{b} < \text{non}(\mathcal{M}) < \text{cov}(\mathcal{M}) < \mathfrak{d} < \text{non}(\mathcal{N}) < \text{cof}(\mathcal{N}) < 2^{\aleph_0}.
 \]
@@ -2740,7 +2828,9 @@ The deep conjecture of Woodin's Ultimate-\(L\) program is that these two extreme
 
 This course has given you the tools to understand — and perhaps contribute to — this profound inquiry into the nature of mathematical infinity.
 
-\[ \star \quad \star \quad \star \]
+\[
+\star \quad \star \quad \star
+\]
 
 ---
 

@@ -1282,6 +1282,7 @@ from, say, \(f_c = 200\) Hz (which passes only bass frequencies) to \(f_c = 20{,
 timbral brightening that listeners associate with anticipation and impending release.
 
 The amplitude response of a second-order Butterworth LPF at frequency \(f\) is:
+
 \[
 |H(f)| = \frac{1}{\sqrt{1 + (f/f_c)^4}},
 \]
@@ -1348,6 +1349,7 @@ the \(\mathcal{O}(N^2)\) operations required by the naïve DFT computation.
 For a digital audio signal sampled at rate \(f_s\) (typically \(44{,}100\) Hz for CD audio or
 \(48{,}000\) Hz for broadcast audio) with \(N\) samples, the FFT produces \(N/2\) frequency bins
 of width
+
 \[
 \Delta f = \frac{f_s}{N},
 \]

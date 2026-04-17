@@ -20,23 +20,33 @@ By the end of PHYS 242 and its companion course PHYS 342, you should be able to 
 
 The fastest path to intuition is through analogy. An LC resonator turns out to be mathematically identical to a mass attached to a spring — one of the oldest problems in physics, familiar since Newton. Place a mass \(m\) on a frictionless floor, attached to a wall by a spring of stiffness \(k\). Apply a sinusoidal force:
 
-\[ F(t) = F_0 \cos(\omega t + \phi) \]
+\[
+F(t) = F_0 \cos(\omega t + \phi)
+\]
 
 Newton's second law gives the **ordinary differential equation (ODE)**:
 
-\[ m\ddot{x} + kx = F(t) \]
+\[
+m\ddot{x} + kx = F(t)
+\]
 
 To solve it, we employ a powerful trick: move to the **complex plane**. Since \(\cos(\omega t + \phi) = \text{Re}\left(\hat{F} e^{i\omega t}\right)\) where \(\hat{F} = F_0 e^{i\phi}\), we map
 
-\[ x(t) \mapsto \hat{x}\, e^{i\omega t} \]
+\[
+x(t) \mapsto \hat{x}\, e^{i\omega t}
+\]
 
 Substituting and cancelling the common factor \(e^{i\omega t}\), the ODE collapses to an algebraic equation:
 
-\[ \hat{x} = \frac{\hat{F}/m}{\omega_0^2 - \omega^2}, \qquad \omega_0 = \sqrt{\frac{k}{m}} \]
+\[
+\hat{x} = \frac{\hat{F}/m}{\omega_0^2 - \omega^2}, \qquad \omega_0 = \sqrt{\frac{k}{m}}
+\]
 
 The frequency \(\omega_0\) is the **resonance frequency**. At \(\omega = \omega_0\), the amplitude diverges — the system responds catastrophically to a driving force at its natural frequency. The shape of \(|\hat{x}(\omega)|\) is a **Lorentzian**. Adding friction (coefficient \(\gamma\)) modifies the denominator:
 
-\[ \hat{x} = \frac{\hat{F}/m}{\omega_0^2 - \omega^2 + i\gamma\omega/m} \]
+\[
+\hat{x} = \frac{\hat{F}/m}{\omega_0^2 - \omega^2 + i\gamma\omega/m}
+\]
 
 This smooths the resonance peak: the system can no longer reach infinite amplitude because friction dissipates energy. The width of the Lorentzian peak is governed by \(\gamma\): small friction gives a narrow, tall peak (high-Q resonator), while large friction gives a broad, short peak.
 
@@ -81,6 +91,7 @@ At the close of the 18th century, **Charles-Augustin de Coulomb** performed a se
 
 <div class="theorem">
 <strong>Coulomb's Law.</strong> The force on point-like charge \(q_2\) due to point-like charge \(q_1\) is
+
 \[
 \mathbf{F}_{12} = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{r_{12}^2}\, \mathbf{u}_{12}
 \]
@@ -99,6 +110,7 @@ Coulomb's law tells us the force between two isolated charges. Nature provides a
 
 <div class="theorem">
 <strong>Superposition Principle.</strong> The total force on a test charge \(q_0\) due to a collection of source charges \(q_1, q_2, \ldots, q_N\) is the vector sum of the individual Coulomb forces:
+
 \[
 \mathbf{F}_\text{total} = \sum_{k=1}^{N} \mathbf{F}_{0k} = \sum_{k=1}^{N} \frac{1}{4\pi\epsilon_0} \frac{q_0 q_k}{r_{0k}^2}\, \mathbf{u}_{0k}
 \]
@@ -118,6 +130,7 @@ When confronted with a source charge \(q\) at position \(\mathbf{r}'\), we could
 
 <div class="definition">
 <strong>Electrostatic Field.</strong> The electrostatic field \(\mathbf{E}\) at a point \(P\) is defined as the force per unit positive test charge that would be experienced by a test charge \(q_0\) placed at \(P\), in the limit that \(q_0 \to 0\):
+
 \[
 \mathbf{E}(P) = \lim_{q_0 \to 0} \frac{\mathbf{F}}{q_0}
 \]
@@ -125,7 +138,9 @@ When confronted with a source charge \(q\) at position \(\mathbf{r}'\), we could
 
 The limiting procedure ensures that the test charge does not perturb the source distribution. For a single point charge \(q\) at the origin, combining with Coulomb's law gives:
 
-\[ \mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}\, \mathbf{u}_r \]
+\[
+\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}\, \mathbf{u}_r
+\]
 
 where \(\mathbf{u}_r\) is the radial unit vector pointing away from the source. This is a **central field** with spherical symmetry: it points radially outward (for \(q > 0\)) and falls off as the square of the distance.
 
@@ -185,7 +200,9 @@ The field concept is more than a notational convenience. It is ontologically fun
 
 By the superposition principle, the field due to a continuous charge distribution with volume density \(\rho(\mathbf{r}')\) in a region \(\Omega\) is:
 
-\[ \mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \int_\Omega \rho(\mathbf{r}')\, \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, dV' \]
+\[
+\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \int_\Omega \rho(\mathbf{r}')\, \frac{\mathbf{r} - \mathbf{r}'}{|\mathbf{r} - \mathbf{r}'|^3}\, dV'
+\]
 
 This integral, while conceptually straightforward, is in practice a vector integral that is hard to compute directly. The strategy is to break the source into infinitesimal pieces \(dq = \rho\, dV\), treat each piece as a point charge, compute its infinitesimal field contribution \(d\mathbf{E}\), and integrate.
 
@@ -195,13 +212,17 @@ A crucial step is the **physics of the infinitesimal**: we must convince ourselv
 
 **Infinite line of charge.** Consider an infinite straight wire carrying uniform linear charge density \(\lambda\). By symmetry, the field must point radially away from the wire (for \(\lambda > 0\)) and its magnitude depends only on the perpendicular distance \(s\) from the wire. Setting up a cylindrical coordinate system with the \(z\)-axis along the wire and the field point at distance \(s\) in the \(xy\)-plane, each infinitesimal segment \(dz'\) at position \(z'\) contributes a field pointing from \((0, 0, z')\) toward \((s, 0, 0)\). By symmetry, the \(z\)-components from symmetric pairs cancel. Integrating the radial component:
 
-\[ E = \frac{\lambda}{2\pi\epsilon_0 s}, \qquad \mathbf{E} = \frac{\lambda}{2\pi\epsilon_0 s}\, \mathbf{u}_s \]
+\[
+E = \frac{\lambda}{2\pi\epsilon_0 s}, \qquad \mathbf{E} = \frac{\lambda}{2\pi\epsilon_0 s}\, \mathbf{u}_s
+\]
 
 The irrotational and Gauss properties of \(\mathbf{E}\) provide a more elegant derivation, as we shall see.
 
 **Infinite plane of charge.** An infinite plane carrying uniform surface charge density \(\sigma\) has, by symmetry, a field that points perpendicularly away from the plane and depends only on which side you are on. Using either direct integration or Gauss's theorem:
 
-\[ \mathbf{E} = \frac{\sigma}{2\epsilon_0}\, \mathbf{n} \]
+\[
+\mathbf{E} = \frac{\sigma}{2\epsilon_0}\, \mathbf{n}
+\]
 
 where \(\mathbf{n}\) is the outward unit normal. Remarkably, this is **independent of distance** from the plane — the field is uniform. Two parallel planes of opposite charge density, like a parallel-plate capacitor, produce a uniform field \(\sigma/\epsilon_0\) between them and (nearly) zero field outside.
 
@@ -236,7 +257,9 @@ where \(\mathbf{n}\) is the outward unit normal. Remarkably, this is **independe
 
 **Charged circular loop.** For a loop of radius \(R\) carrying charge \(Q\), the field at a point on the axis at distance \(z\) from the centre has only a \(z\)-component (by symmetry, all transverse contributions cancel):
 
-\[ E_z = \frac{1}{4\pi\epsilon_0} \frac{Qz}{(z^2 + R^2)^{3/2}} \]
+\[
+E_z = \frac{1}{4\pi\epsilon_0} \frac{Qz}{(z^2 + R^2)^{3/2}}
+\]
 
 This goes to zero at \(z = 0\) (the centre, where everything cancels) and at \(z \to \infty\), with a maximum at \(z = R/\sqrt{2}\).
 
@@ -250,7 +273,9 @@ The brute-force integration of Coulomb's law is unwieldy for all but the simples
 
 The key insight is that the **flux** of \(\mathbf{E}\) through any closed surface depends only on the total charge enclosed, not on the shape of the surface. To prove this, consider first a single point charge \(q\) at the centre of a sphere of radius \(R\). The flux through the sphere is:
 
-\[ \Phi = \oint_\Sigma \mathbf{E} \cdot \mathbf{n}\, dA = \frac{1}{4\pi\epsilon_0} \frac{q}{R^2} \cdot 4\pi R^2 = \frac{q}{\epsilon_0} \]
+\[
+\Phi = \oint_\Sigma \mathbf{E} \cdot \mathbf{n}\, dA = \frac{1}{4\pi\epsilon_0} \frac{q}{R^2} \cdot 4\pi R^2 = \frac{q}{\epsilon_0}
+\]
 
 The factors of \(R^2\) cancel exactly — this is no accident but a direct consequence of the inverse-square law.
 
@@ -260,6 +285,7 @@ By the superposition principle, for \(N\) point charges:
 
 <div class="theorem">
 <strong>Gauss's Theorem (Integral Form).</strong> For any closed surface \(\tilde\Sigma\) enclosing a charge distribution,
+
 \[
 \oint_{\tilde\Sigma} \mathbf{E} \cdot \mathbf{n}\, dA = \frac{Q_\text{enc}}{\epsilon_0} = \frac{1}{\epsilon_0} \int_{\tilde\Omega} \rho\, dV
 \]
@@ -308,6 +334,7 @@ The second Maxwell equation for the electrostatic field is the **irrotational pr
 
 <div class="theorem">
 <strong>Irrotational Property.</strong> For any closed oriented curve \(\Gamma\) in space,
+
 \[
 \oint_\Gamma \mathbf{E} \cdot \mathbf{t}\, dl = 0
 \]
@@ -326,6 +353,7 @@ The integral forms are most general, but for regions where \(\rho\) is continuou
 
 <div class="theorem">
 <strong>Maxwell's Equations for E — Differential Form (Case 1).</strong> When \(\rho\) is continuous and bounded throughout a region \(\Omega\):
+
 \[
 \nabla \times \mathbf{E} = \mathbf{0}, \qquad \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}
 \]
@@ -344,9 +372,11 @@ Label the two sides as region 1 (above \(\Sigma\)) and region 2 (below), with th
 
 <div class="theorem">
 <strong>Maxwell's Equations — Case 2 (Surface Charges).</strong>
+
 \[
 \bigl(\mathbf{E}_1 - \mathbf{E}_2\bigr) \cdot \mathbf{n}_{21} = \frac{\sigma}{\epsilon_0} \qquad \text{(normal component, Gauss)}
 \]
+
 \[
 \bigl(\mathbf{E}_1 - \mathbf{E}_2\bigr) \times \mathbf{n}_{21} = \mathbf{0} \qquad \text{(tangential component, irrotational)}
 \]
@@ -404,6 +434,7 @@ The irrotational property \(\nabla \times \mathbf{E} = \mathbf{0}\) has a deep c
 
 <div class="theorem">
 <strong>Existence of the Electrostatic Potential.</strong> The electrostatic field \(\mathbf{E}\) is conservative if and only if \(\nabla \times \mathbf{E} = \mathbf{0}\) (in a simply connected domain). Under this condition,
+
 \[
 \mathbf{E} = -\nabla V
 \]
@@ -418,11 +449,15 @@ The mountain analogy is instructive. The gradient of a surface's height function
 
 For a single point charge \(q\) at the origin, the field is radial: \(\mathbf{E} = (q/4\pi\epsilon_0 r^2)\,\mathbf{u}_r\). In spherical coordinates, the gradient of a function that depends only on \(r\) is \(\nabla V = (dV/dr)\,\mathbf{u}_r\). Setting \(-dV/dr = q/(4\pi\epsilon_0 r^2)\) and integrating:
 
-\[ V(r) = \frac{1}{4\pi\epsilon_0} \frac{q}{r} + C \]
+\[
+V(r) = \frac{1}{4\pi\epsilon_0} \frac{q}{r} + C
+\]
 
 The constant of integration \(C\) is arbitrary and represents our freedom to choose a reference point for potential. The standard convention — **zero potential at infinity** — sets \(C = 0\):
 
-\[ V(r) = \frac{1}{4\pi\epsilon_0} \frac{q}{r} \]
+\[
+V(r) = \frac{1}{4\pi\epsilon_0} \frac{q}{r}
+\]
 
 This is the **Green's function** for the Laplace/Poisson operator in free space. With zero potential at infinity, the potential of any bounded charge distribution also vanishes at infinity. The convention fails only for unbounded distributions (infinite line, infinite plane), which require a finite reference point.
 
@@ -430,7 +465,9 @@ This is the **Green's function** for the Laplace/Poisson operator in free space.
 
 By superposition:
 
-\[ V(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \int_\Omega \frac{\rho(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|}\, dV' \]
+\[
+V(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \int_\Omega \frac{\rho(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|}\, dV'
+\]
 
 This scalar integral is considerably easier to compute than the vector integral for \(\mathbf{E}\). One first computes \(V\), then recovers \(\mathbf{E} = -\nabla V\). The strategy is particularly effective for problems with moderate symmetry where the direct evaluation of \(\nabla V\) is still manageable.
 
@@ -442,7 +479,9 @@ The potential of a spherical shell of charge \(Q\) and radius \(R\) is, outside 
 
 For the infinite charged line (charge density \(\lambda\)), the potential cannot be taken to zero at infinity (since the distribution is unbounded). Choosing the reference point at a finite distance \(s_0\):
 
-\[ V(s) = -\frac{\lambda}{2\pi\epsilon_0} \ln\!\left(\frac{s}{s_0}\right) \]
+\[
+V(s) = -\frac{\lambda}{2\pi\epsilon_0} \ln\!\left(\frac{s}{s_0}\right)
+\]
 
 Differentiating: \(E_s = -\partial V/\partial s = \lambda/(2\pi\epsilon_0 s)\), recovering the known result.
 
@@ -456,12 +495,15 @@ The interior potential is determined by integrating \(\mathbf{E} = -\nabla V\) i
 
 Combining \(\mathbf{E} = -\nabla V\) with the Gauss equation \(\nabla \cdot \mathbf{E} = \rho/\epsilon_0\), we obtain:
 
-\[ \nabla \cdot (-\nabla V) = \frac{\rho}{\epsilon_0} \]
+\[
+\nabla \cdot (-\nabla V) = \frac{\rho}{\epsilon_0}
+\]
 
 The operator \(\nabla \cdot \nabla = \nabla^2\) is the **scalar Laplacian**, yielding the **Poisson equation**:
 
 <div class="definition">
 <strong>Poisson Equation.</strong>
+
 \[
 \nabla^2 V = -\frac{\rho}{\epsilon_0}
 \]
@@ -472,6 +514,7 @@ When \(\rho = 0\) (charge-free region), it reduces to the **Laplace equation**:
 
 <div class="definition">
 <strong>Laplace Equation.</strong>
+
 \[
 \nabla^2 V = 0
 \]
@@ -480,7 +523,9 @@ Solutions of the Laplace equation are called <strong>harmonic functions</strong>
 
 In a Cartesian coordinate system:
 
-\[ \nabla^2 V = \frac{\partial^2 V}{\partial x^2} + \frac{\partial^2 V}{\partial y^2} + \frac{\partial^2 V}{\partial z^2} = 0 \]
+\[
+\nabla^2 V = \frac{\partial^2 V}{\partial x^2} + \frac{\partial^2 V}{\partial y^2} + \frac{\partial^2 V}{\partial z^2} = 0
+\]
 
 Laplace's equation is indispensable: it governs the electrostatic potential everywhere outside a charge distribution. To find \(V\) in a conductor-bounded region, we solve Laplace's equation in the vacuum subject to boundary conditions on the conducting surfaces. This is the **Dirichlet problem** — finding a harmonic function with specified boundary values. The solution is unique, guaranteeing that specifying the potentials of all conductors in a system completely determines the field.
 
@@ -492,13 +537,17 @@ Laplace's equation is indispensable: it governs the electrostatic potential ever
 
 The electrostatic energy of a charge configuration is the total work required to assemble it by bringing charges in from infinity one by one. For two point charges \(q_1\) and \(q_2\) separated by distance \(r_{12}\):
 
-\[ U = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{r_{12}} \]
+\[
+U = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{r_{12}}
+\]
 
 The interpretation: this is the work done by an external agent (or the work done against the electrostatic force) to bring \(q_2\) from infinity to its current position in the field of \(q_1\). When \(q_1 q_2 > 0\) (like charges), \(U > 0\): we must do positive work against repulsion. When \(q_1 q_2 < 0\), \(U < 0\): the particles attract and release energy as they approach.
 
 For \(N\) point charges, the total energy is:
 
-\[ U_E = \frac{1}{2} \sum_{i=1}^N q_i V_i \]
+\[
+U_E = \frac{1}{2} \sum_{i=1}^N q_i V_i
+\]
 
 where \(V_i\) is the potential at the location of charge \(i\) due to all other charges. The factor of \(1/2\) corrects for double-counting: each pair \((i, j)\) would otherwise appear twice in the sum (once as the work to bring \(q_j\) into the field of \(q_i\), and once for the reverse).
 
@@ -506,7 +555,9 @@ where \(V_i\) is the potential at the location of charge \(i\) due to all other 
 
 For a continuous charge distribution \(\rho\) in a region \(\Omega\), the sum becomes an integral. The conceptual procedure mirrors the discrete case: partition \(\Omega\) into infinitesimal volume elements, each carrying charge \(dq = \rho\, dV\) and each behaving as a point charge. Spread all these charges to infinity, then reassemble them in their original positions:
 
-\[ U_E = \frac{1}{2} \int_\Omega \rho(\mathbf{r})\, V(\mathbf{r})\, dV \]
+\[
+U_E = \frac{1}{2} \int_\Omega \rho(\mathbf{r})\, V(\mathbf{r})\, dV
+\]
 
 The integral can be extended to all space (since \(\rho = 0\) outside \(\Omega\), those regions contribute nothing). This electrostatic energy is the "glue" holding the charge distribution together — it is the energy stored in the electric field configuration.
 
@@ -514,11 +565,15 @@ The integral can be extended to all space (since \(\rho = 0\) outside \(\Omega\)
 
 There is an alternative, and deeply illuminating, expression for the electrostatic energy entirely in terms of \(\mathbf{E}\) rather than \(\rho\) and \(V\). Substituting \(\rho = \epsilon_0 \nabla \cdot \mathbf{E}\) and integrating by parts:
 
-\[ U_E = \frac{\epsilon_0}{2} \int_{\text{all space}} |\mathbf{E}|^2\, dV \]
+\[
+U_E = \frac{\epsilon_0}{2} \int_{\text{all space}} |\mathbf{E}|^2\, dV
+\]
 
 This result says the energy is stored in the field itself, not in the charges. The **energy density** of the electric field is:
 
-\[ u_E = \frac{\epsilon_0}{2} E^2 \]
+\[
+u_E = \frac{\epsilon_0}{2} E^2
+\]
 
 This perspective — energy residing in fields rather than in particles — becomes essential in electromagnetic radiation, where energy propagates through empty space as oscillating electric and magnetic fields long after the source charges have been turned off.
 
@@ -528,7 +583,9 @@ The expression \(U_E = \frac{1}{2}\int \rho V\, dV\) contains a subtlety when ap
 
 For extended charge distributions — spheres, shells, plates — the self-energy is finite and physically meaningful. For example, the energy stored in a uniformly charged sphere of radius \(R\) and total charge \(Q\) is:
 
-\[ U_E = \frac{3}{5} \frac{Q^2}{4\pi\epsilon_0 R} \]
+\[
+U_E = \frac{3}{5} \frac{Q^2}{4\pi\epsilon_0 R}
+\]
 
 This can be computed using \(\int \rho V\, dV\), integrating over the sphere. Alternatively, assembling the sphere shell by shell and computing the work against the field already present reproduces the same result.
 
@@ -536,11 +593,15 @@ This can be computed using \(\int \rho V\, dV\), integrating over the sphere. Al
 
 The **Dirac delta function** \(\delta(\mathbf{r} - \mathbf{r}')\) is an indispensable tool for bridging discrete and continuous descriptions. Informally, it is the limit of an infinitely tall, infinitely narrow peak of unit area centred at \(\mathbf{r}'\):
 
-\[ \delta(\mathbf{r} - \mathbf{r}') = 0 \quad (\mathbf{r} \neq \mathbf{r}'), \qquad \int \delta(\mathbf{r} - \mathbf{r}')\, dV = 1 \]
+\[
+\delta(\mathbf{r} - \mathbf{r}') = 0 \quad (\mathbf{r} \neq \mathbf{r}'), \qquad \int \delta(\mathbf{r} - \mathbf{r}')\, dV = 1
+\]
 
 Its key property is the sifting property: \(\int f(\mathbf{r})\, \delta(\mathbf{r} - \mathbf{r}')\, dV = f(\mathbf{r}')\). A point charge \(q\) at \(\mathbf{r}'\) is represented as the continuous density \(\rho(\mathbf{r}) = q\, \delta(\mathbf{r} - \mathbf{r}')\). The Laplacian of the Coulomb potential is:
 
-\[ \nabla^2 \!\left(\frac{1}{r}\right) = -4\pi\, \delta(\mathbf{r}) \]
+\[
+\nabla^2 \!\left(\frac{1}{r}\right) = -4\pi\, \delta(\mathbf{r})
+\]
 
 a central identity used throughout field theory. It resolves the apparent paradox that \(\nabla^2 (1/r) = 0\) everywhere except the origin, while the total flux from a unit charge must equal \(1/\epsilon_0\) — the delta function supplies the missing source at the origin.
 
@@ -562,6 +623,7 @@ After the transient, the conductor reaches **macroscopic electrostatic equilibri
 
 <div class="theorem">
 <strong>Macroscopic Electrostatic Equilibrium.</strong> In a conductor in MEE, the electrostatic field at every interior point vanishes:
+
 \[
 \mathbf{E}(\mathbf{r}) = \mathbf{0} \quad \text{for all } \mathbf{r} \in \Omega_\text{bulk}
 \]
@@ -585,6 +647,7 @@ The condition \(\mathbf{E} = 0\) inside a conductor, combined with the boundary 
 
 <div class="theorem">
 <strong>Coulomb's Theorem.</strong> At the surface of a conductor in MEE, the electrostatic field just outside is:
+
 \[
 \mathbf{E} = \frac{\sigma}{\epsilon_0}\, \mathbf{n}
 \]
@@ -595,7 +658,9 @@ The derivation uses the boundary condition for the normal component: \(E_{1,n} -
 
 Coulomb's theorem also provides a computational tool: given the electrostatic potential \(V\) outside the conductor (a solution to Laplace's equation satisfying the boundary conditions), the surface charge density is:
 
-\[ \sigma = -\epsilon_0 \left.\frac{\partial V}{\partial n}\right|_{\Sigma^+} \]
+\[
+\sigma = -\epsilon_0 \left.\frac{\partial V}{\partial n}\right|_{\Sigma^+}
+\]
 
 where the derivative is taken just outside the surface \(\Sigma\), approaching from the vacuum side.
 
@@ -621,12 +686,15 @@ For a **conducting sphere** of radius \(R\) carrying charge \(Q\), the potential
 
 The concept of **capacitance** emerges naturally from the harmonic properties of the electrostatic potential. Consider a single isolated conductor \(\Gamma\) with outer surface \(\Sigma\). If we apply charge \(Q_1\) to it, Laplace's equation in the exterior vacuum (with appropriate boundary conditions) gives a potential \(V_1(P)\) at any exterior point \(P\). If instead we apply charge \(Q_2\), we get \(V_2(P)\). Since Laplace's equation is linear, \(V_2 \propto Q_2\) and \(V_1 \propto Q_1\), and hence \(V_2/V_1\) is the constant ratio \(Q_2/Q_1\) independent of position. Equivalently:
 
-\[ \frac{Q_1}{V_1} = \frac{Q_2}{V_2} = \cdots = C \]
+\[
+\frac{Q_1}{V_1} = \frac{Q_2}{V_2} = \cdots = C
+\]
 
 This universal constant, the ratio of charge to potential, is the **capacitance**:
 
 <div class="definition">
 <strong>Capacitance.</strong> For a single conductor in MEE, the capacitance is
+
 \[
 C = \frac{Q}{V}
 \]
@@ -637,7 +705,9 @@ The capacitance is an intrinsic geometric property of the conductor — it depen
 
 For a conducting sphere of radius \(R\):
 
-\[ C_\text{sphere} = 4\pi\epsilon_0 R \]
+\[
+C_\text{sphere} = 4\pi\epsilon_0 R
+\]
 
 Setting \(R = 1\,\text{m}\) gives \(C \approx 111\,\text{pF}\) — consistent with the size of the Earth.
 
@@ -645,19 +715,29 @@ Setting \(R = 1\,\text{m}\) gives \(C \approx 111\,\text{pF}\) — consistent wi
 
 In most practical applications, a capacitor consists of two conductors. The parallel-plate capacitor is the archetype: two large flat conducting plates of area \(A\) separated by a gap \(d\). By the boundary conditions and Gauss's theorem, the field between the plates is uniform: \(E = \sigma/\epsilon_0 = Q/(\epsilon_0 A)\). The potential difference across the gap is:
 
-\[ \Delta V = E \cdot d = \frac{Qd}{\epsilon_0 A} \]
+\[
+\Delta V = E \cdot d = \frac{Qd}{\epsilon_0 A}
+\]
 
 The capacitance is:
 
-\[ C = \frac{Q}{\Delta V} = \frac{\epsilon_0 A}{d} \]
+\[
+C = \frac{Q}{\Delta V} = \frac{\epsilon_0 A}{d}
+\]
 
 This result reveals the three geometric levers: increasing plate area or decreasing separation increases \(C\), while an interposed dielectric (not covered in PHYS 242, but treated in 342) multiplies \(C\) by the dielectric constant.
 
 For two capacitors in series (same charge \(Q\), potentials add):
-\[ \frac{1}{C_\text{tot}} = \frac{1}{C_1} + \frac{1}{C_2} \]
+
+\[
+\frac{1}{C_\text{tot}} = \frac{1}{C_1} + \frac{1}{C_2}
+\]
 
 For two in parallel (same potential, charges add):
-\[ C_\text{tot} = C_1 + C_2 \]
+
+\[
+C_\text{tot} = C_1 + C_2
+\]
 
 ### 8.3 Grounding and Dynamic Charge
 
@@ -677,6 +757,7 @@ Everything done in Part I assumed the source charges to be at rest in an inertia
 
 <div class="theorem">
 <strong>Lorentz Force.</strong> A charge \(q_0\) moving with velocity \(\mathbf{v}_P\) in fields \(\mathbf{E}(\mathbf{r}, t)\) and \(\mathbf{B}(\mathbf{r}, t)\) experiences the force:
+
 \[
 \mathbf{F} = q_0\bigl(\mathbf{E} + \mathbf{v}_P \times \mathbf{B}\bigr)
 \]
@@ -708,7 +789,9 @@ The magnitude and direction of \(\mathbf{B}\) at a point can be determined exper
 
 An **electric current** is a flow of charge. The **current intensity** \(I\) through a surface \(\Sigma\) is the net charge crossing \(\Sigma\) per unit time:
 
-\[ I = \frac{dQ}{dt} \]
+\[
+I = \frac{dQ}{dt}
+\]
 
 More precisely, since charge carriers can cross in either direction, \(I\) is the net rate: positive charge flowing in one direction minus negative charge (electrons) flowing in the opposite direction contribute additively. In a conductor, the relevant charge carriers are the conduction electrons; \(I > 0\) by convention corresponds to net positive charge flow.
 
@@ -726,6 +809,7 @@ The **current density vector** \(\mathbf{J}\) is the microscopic, local version 
 
 <div class="definition">
 <strong>Current Density.</strong> \(\mathbf{J}(\mathbf{r}, t)\) is the current per unit area perpendicular to the flow direction. If charge carriers with number density \(n\) move with drift velocity \(\mathbf{v}_d\):
+
 \[
 \mathbf{J} = nq\mathbf{v}_d = \rho_c \mathbf{v}_d
 \]
@@ -734,7 +818,9 @@ where \(\rho_c\) is the volume charge density of mobile carriers. The units are 
 
 The current intensity through a surface \(\Sigma\) is recovered as the flux of \(\mathbf{J}\):
 
-\[ I = \int_\Sigma \mathbf{J} \cdot \mathbf{n}\, dA \]
+\[
+I = \int_\Sigma \mathbf{J} \cdot \mathbf{n}\, dA
+\]
 
 For a quasi-filiform (thin) conductor aligned with direction \(\mathbf{t}\), \(\mathbf{J} = J\, \mathbf{t}\) and \(I = J \Delta A\), where \(\Delta A\) is the cross-sectional area.
 
@@ -742,16 +828,21 @@ For a quasi-filiform (thin) conductor aligned with direction \(\mathbf{t}\), \(\
 
 Charge conservation — the most fundamental law in electromagnetism — takes the form of the **continuity equation**. Consider a conductor \(\Omega\) bounded by surface \(\Sigma\). Charge conservation states that any increase in charge within \(\Omega\) must be due to a net inflow through \(\Sigma\):
 
-\[ \frac{dQ}{dt} = -\oint_\Sigma \mathbf{J} \cdot \mathbf{n}\, dA \]
+\[
+\frac{dQ}{dt} = -\oint_\Sigma \mathbf{J} \cdot \mathbf{n}\, dA
+\]
 
 (The minus sign: outward \(\mathbf{n}\) means positive flux corresponds to charge leaving.) Applying the divergence theorem to the right side:
 
-\[ \frac{d}{dt}\int_\Omega \rho_c\, dV = -\int_\Omega \nabla \cdot \mathbf{J}\, dV \]
+\[
+\frac{d}{dt}\int_\Omega \rho_c\, dV = -\int_\Omega \nabla \cdot \mathbf{J}\, dV
+\]
 
 Since \(\Omega\) is fixed (not moving), the time derivative can enter under the integral:
 
 <div class="theorem">
 <strong>Continuity Equation.</strong>
+
 \[
 \nabla \cdot \mathbf{J} = -\frac{\partial \rho_c}{\partial t}
 \]
@@ -770,6 +861,7 @@ A **stationary current** satisfies \(\nabla \cdot \mathbf{J} = 0\), \(\nabla \ti
 
 <div class="definition">
 <strong>Ohm's Law (Local Form).</strong>
+
 \[
 \mathbf{J} = \sigma_c \mathbf{E}
 \]
@@ -784,6 +876,7 @@ The resistance of a wire of length \(L\) and cross-section \(A\) is \(R = \eta L
 
 <div class="definition">
 <strong>Joule's Law (Local Form).</strong>
+
 \[
 p_J = \mathbf{J} \cdot \mathbf{E} = \sigma_c E^2 = \frac{J^2}{\sigma_c}
 \]
@@ -800,7 +893,9 @@ Joule heating is irreversible — it converts ordered electrical energy into the
 
 A seemingly natural question: can a static electric field drive a permanent current? The answer is no. For a steady current, the current density \(\mathbf{J}\) must be solenoidal — its field lines must be closed loops. But the work done by \(\mathbf{E}\) around any closed loop is:
 
-\[ W = q_0 \oint_\Gamma \mathbf{E} \cdot \mathbf{t}\, dl = 0 \]
+\[
+W = q_0 \oint_\Gamma \mathbf{E} \cdot \mathbf{t}\, dl = 0
+\]
 
 by the irrotational property of \(\mathbf{E}\) (in steady conditions, even with moving charges creating a dynamic \(\mathbf{E}\), the irrotational property holds for conservative fields in simply connected domains). Zero work, zero net force around the loop — the charges would simply stop after any transient has dissipated.
 
@@ -812,12 +907,15 @@ What is needed is a **non-conservative** force — a force whose circulation aro
 
 A **battery** (or any source) provides this non-conservative force. At the microscopic level, electrochemical reactions push charge carriers from the negative terminal to the positive terminal against the electrostatic field. Macroscopically, we model this as a **motional force** \(\mathbf{F}_m\) confined within the battery region. The associated field inside the battery is:
 
-\[ \mathbf{E}_m = \frac{\mathbf{F}_m}{q_0} \]
+\[
+\mathbf{E}_m = \frac{\mathbf{F}_m}{q_0}
+\]
 
 This field is non-zero only inside the battery — it is confined, unlike \(\mathbf{E}\) which extends everywhere. The **electromotive force (EMF)** is defined as the work done by \(\mathbf{E}_m\) on a unit positive charge traversing the battery from negative to positive terminal:
 
 <div class="definition">
 <strong>Electromotive Force.</strong>
+
 \[
 \mathcal{E} = \int_{\text{battery}} \mathbf{E}_m \cdot \mathbf{t}\, dl
 \]
@@ -830,7 +928,9 @@ The EMF is non-zero precisely because \(\mathbf{E}_m\) is non-conservative: \(\o
 
 For a closed circuit consisting of a battery with EMF \(\mathcal{E}\) and internal resistance \(r\) connected to an external resistance \(R\), the integral form of Ohm's law gives:
 
-\[ \mathcal{E} = I(R + r) \]
+\[
+\mathcal{E} = I(R + r)
+\]
 
 This is the macroscopic Kirchhoff voltage law. The current \(I = \mathcal{E}/(R + r)\). Special cases:
 - **Open circuit** (\(R \to \infty\)): \(I = 0\), the terminal voltage equals \(\mathcal{E}\).
@@ -841,11 +941,15 @@ This is the macroscopic Kirchhoff voltage law. The current \(I = \mathcal{E}/(R 
 
 For a straight wire of length \(L\), cross-section \(A\), and resistivity \(\eta\):
 
-\[ R = \frac{\eta L}{A} \]
+\[
+R = \frac{\eta L}{A}
+\]
 
 For a **coaxial cable** — a central conductor of radius \(a\) inside an outer cylindrical shell of radius \(b\) — the resistance per unit length of the coaxial geometry must be computed by integrating over the annular cross-section if the current flows radially, or the simple \(\eta L/A\) formula applies if it flows longitudinally. In the transverse (leakage) direction, the resistance is:
 
-\[ R_\perp = \frac{\eta}{2\pi L} \ln\!\left(\frac{b}{a}\right) \]
+\[
+R_\perp = \frac{\eta}{2\pi L} \ln\!\left(\frac{b}{a}\right)
+\]
 
 This dependence on \(\ln(b/a)\) is characteristic of cylindrical geometry, just as the potential of an infinite line charge depends on \(\ln r\).
 
@@ -853,7 +957,9 @@ This dependence on \(\ln(b/a)\) is characteristic of cylindrical geometry, just 
 
 When a current-carrying conductor is placed in an external magnetic field, the conduction electrons experience the magnetic component of the Lorentz force \(\mathbf{J} \times \mathbf{B}\). This manifests as a macroscopic **ponderomotive (or Ampere) force** on the conductor:
 
-\[ d\mathbf{F} = I\, d\mathbf{l} \times \mathbf{B} \]
+\[
+d\mathbf{F} = I\, d\mathbf{l} \times \mathbf{B}
+\]
 
 for a filiform conductor segment \(d\mathbf{l}\) carrying current \(I\). Integrating over the length of the conductor gives the total force. This is the principle behind electric motors and actuators.
 
@@ -869,6 +975,7 @@ The magnetic field has no sources (no magnetic monopoles have ever been observed
 
 <div class="theorem">
 <strong>Solenoidal Property of B (Integral Form).</strong> For any closed surface \(\Sigma\):
+
 \[
 \oint_\Sigma \mathbf{B} \cdot \mathbf{n}\, dA = 0
 \]
@@ -877,6 +984,7 @@ The magnetic flux through any closed surface is zero.
 
 <div class="theorem">
 <strong>Solenoidal Property of B (Differential Form).</strong>
+
 \[
 \nabla \cdot \mathbf{B} = 0
 \]
@@ -890,6 +998,7 @@ The analogue of the irrotational property for \(\mathbf{E}\) is, for \(\mathbf{B
 
 <div class="theorem">
 <strong>Ampere's Law (Magnetostatics).</strong> For any closed oriented curve \(\Gamma\):
+
 \[
 \oint_\Gamma \mathbf{B} \cdot \mathbf{t}\, dl = \mu_0 I_\Gamma
 \]
@@ -902,7 +1011,9 @@ The concept of **linkage** is topological: a current \(I\) carried by a wire is 
 
 The differential form follows from Stokes' theorem:
 
-\[ \nabla \times \mathbf{B} = \mu_0 \mathbf{J} \]
+\[
+\nabla \times \mathbf{B} = \mu_0 \mathbf{J}
+\]
 
 Compare this with \(\nabla \times \mathbf{E} = \mathbf{0}\) — the current density \(\mathbf{J}\) acts as the "source" of the curl of \(\mathbf{B}\), just as \(\rho\) acts as the source of the divergence of \(\mathbf{E}\).
 
@@ -912,9 +1023,13 @@ Ampere's law requires a simply connected domain for the equivalence between inte
 
 For an infinite straight wire carrying current \(I\), the symmetry of the problem demands that \(\mathbf{B}\) circles the wire in the azimuthal direction \(\mathbf{u}_\phi\) and depends only on the radial distance \(s\) from the wire. Choosing \(\Gamma\) to be a circle of radius \(s\) coaxial with the wire:
 
-\[ \oint_\Gamma \mathbf{B} \cdot \mathbf{t}\, dl = B \cdot 2\pi s = \mu_0 I \]
+\[
+\oint_\Gamma \mathbf{B} \cdot \mathbf{t}\, dl = B \cdot 2\pi s = \mu_0 I
+\]
 
-\[ \mathbf{B} = \frac{\mu_0 I}{2\pi s}\, \mathbf{u}_\phi \]
+\[
+\mathbf{B} = \frac{\mu_0 I}{2\pi s}\, \mathbf{u}_\phi
+\]
 
 The field decreases as \(1/s\) — identical in form to the electric field of an infinite line charge \(\lambda/(2\pi\epsilon_0 s)\), with the replacement \(\lambda/\epsilon_0 \leftrightarrow \mu_0 I\). The field lines are concentric circles around the wire, following the right-hand rule.
 
@@ -922,8 +1037,13 @@ The field decreases as \(1/s\) — identical in form to the electric field of an
 
 Analogously to the electric case, the Maxwell equations for \(\mathbf{B}\) impose boundary conditions at a surface carrying a surface current density \(\mathbf{K}\) (A/m):
 
-\[ (\mathbf{B}_1 - \mathbf{B}_2) \cdot \mathbf{n}_{21} = 0 \qquad \text{(normal component, continuous)} \]
-\[ (\mathbf{B}_1 - \mathbf{B}_2) \times \mathbf{n}_{21} = \mu_0 \mathbf{K} \qquad \text{(tangential component, discontinuous)} \]
+\[
+(\mathbf{B}_1 - \mathbf{B}_2) \cdot \mathbf{n}_{21} = 0 \qquad \text{(normal component, continuous)}
+\]
+
+\[
+(\mathbf{B}_1 - \mathbf{B}_2) \times \mathbf{n}_{21} = \mu_0 \mathbf{K} \qquad \text{(tangential component, discontinuous)}
+\]
 
 The normal component of \(\mathbf{B}\) is always continuous (reflecting \(\nabla \cdot \mathbf{B} = 0\)); the tangential component is discontinuous by \(\mu_0 \mathbf{K}\).
 
@@ -937,6 +1057,7 @@ Since \(\nabla \cdot \mathbf{B} = 0\), the magnetic field is solenoidal. By the 
 
 <div class="definition">
 <strong>Vector Potential.</strong> The magnetic field can be written as
+
 \[
 \mathbf{B} = \nabla \times \mathbf{A}
 \]
@@ -949,11 +1070,15 @@ The vector potential is not unique: if \(\mathbf{B} = \nabla \times \mathbf{A}\)
 
 In the Coulomb gauge, the combination of \(\mathbf{B} = \nabla \times \mathbf{A}\) with \(\nabla \times \mathbf{B} = \mu_0 \mathbf{J}\) gives:
 
-\[ \nabla^2 \mathbf{A} = -\mu_0 \mathbf{J} \]
+\[
+\nabla^2 \mathbf{A} = -\mu_0 \mathbf{J}
+\]
 
 This is the **vector Poisson equation** — three separate scalar Poisson equations, one for each component of \(\mathbf{A}\). By analogy with the scalar case, the solution is:
 
-\[ \mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_\Omega \frac{\mathbf{J}(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|}\, dV' \]
+\[
+\mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4\pi} \int_\Omega \frac{\mathbf{J}(\mathbf{r}')}{|\mathbf{r} - \mathbf{r}'|}\, dV'
+\]
 
 The vector potential decays as \(1/r\) at large distances, just like the scalar potential.
 
@@ -961,11 +1086,15 @@ The vector potential decays as \(1/r\) at large distances, just like the scalar 
 
 The magnetic flux through an open surface \(\Sigma_\Gamma\) bounded by a closed curve \(\Gamma\) is:
 
-\[ \Phi = \int_{\Sigma_\Gamma} \mathbf{B} \cdot \mathbf{n}\, dA = \int_{\Sigma_\Gamma} (\nabla \times \mathbf{A}) \cdot \mathbf{n}\, dA \]
+\[
+\Phi = \int_{\Sigma_\Gamma} \mathbf{B} \cdot \mathbf{n}\, dA = \int_{\Sigma_\Gamma} (\nabla \times \mathbf{A}) \cdot \mathbf{n}\, dA
+\]
 
 By Stokes' theorem, this transforms to a line integral around the boundary:
 
-\[ \Phi = \oint_\Gamma \mathbf{A} \cdot \mathbf{t}\, dl \]
+\[
+\Phi = \oint_\Gamma \mathbf{A} \cdot \mathbf{t}\, dl
+\]
 
 This is a remarkable result: the magnetic flux through any surface bounded by \(\Gamma\) is independent of which surface we choose — it depends only on the bounding curve \(\Gamma\). This topological invariance underlies the concept of gauge invariance and has deep consequences in quantum mechanics (the Aharonov-Bohm effect) and in superconductivity, where the gauge-invariant phase of the Cooper pair condensate is related to the vector potential integral around a loop.
 
@@ -975,6 +1104,7 @@ Taking the curl of \(\mathbf{A}\) and exploiting the Coulomb-gauge solution, one
 
 <div class="theorem">
 <strong>Ampere-Laplace-Biot-Savart Law.</strong> For a volume current distribution \(\mathbf{J}\) confined to a region \(\Omega\):
+
 \[
 \mathbf{B}(P) = \frac{\mu_0}{4\pi} \int_\Omega \mathbf{J}(Q) \times \frac{\mathbf{r}_{QP}}{r_{QP}^3}\, dV
 \]
@@ -985,7 +1115,9 @@ This law is the magnetic analogue of the Coulomb/superposition integral for \(\m
 
 For a **filiform conductor** (a thin wire carrying current \(I\) along a curve \(\Gamma\)), the volume current density \(\mathbf{J}\, dV\) reduces to \(I\, d\boldsymbol{\ell}\):
 
-\[ \mathbf{B}(P) = \frac{\mu_0 I}{4\pi} \oint_\Gamma \frac{d\boldsymbol{\ell} \times \mathbf{r}_{QP}}{r_{QP}^3} \]
+\[
+\mathbf{B}(P) = \frac{\mu_0 I}{4\pi} \oint_\Gamma \frac{d\boldsymbol{\ell} \times \mathbf{r}_{QP}}{r_{QP}^3}
+\]
 
 This is the form most commonly used in practice.
 
@@ -1007,6 +1139,7 @@ For a single conductor (or solenoid) carrying current \(I\), its own current gen
 
 <div class="definition">
 <strong>Self-Inductance.</strong>
+
 \[
 L = \frac{\Phi}{I}
 \]
@@ -1019,11 +1152,15 @@ The positivity of \(L\) follows from the right-hand rule: with current \(I > 0\)
 
 When two circuits are in proximity, the magnetic field of one threads through the other, creating **mutual inductance**. Let circuit 1 carry current \(I_1\) and circuit 2 carry \(I_2\). The flux through circuit 1 due to circuit 2 alone is proportional to \(I_2\):
 
-\[ \Phi_{12} = M I_2 \]
+\[
+\Phi_{12} = M I_2
+\]
 
 By the Neumann formula (derived in PHYS 342), the mutual inductance is:
 
-\[ M = \frac{\mu_0}{4\pi} \oint_{\Gamma_1} \oint_{\Gamma_2} \frac{d\boldsymbol{\ell}_1 \cdot d\boldsymbol{\ell}_2}{r_{12}} \]
+\[
+M = \frac{\mu_0}{4\pi} \oint_{\Gamma_1} \oint_{\Gamma_2} \frac{d\boldsymbol{\ell}_1 \cdot d\boldsymbol{\ell}_2}{r_{12}}
+\]
 
 This formula reveals the symmetry: \(M_{12} = M_{21}\). The mutual inductance from circuit 1 to circuit 2 equals that from 2 to 1. This is a non-trivial reciprocity theorem.
 
@@ -1033,13 +1170,19 @@ The total inductance matrix determines the energy stored in the system of curren
 
 A **toroidal solenoid** consists of \(N\) loops wound around a torus of mean radius \(R\) (the radius from the axis of the torus to the centre of the coil cross-section), with each loop having a cross-sectional area \(A_c\). By Ampere's law applied to a circular path of radius \(r\) inside the toroid (for \(R - d < r < R + d\) where \(d\) is the minor radius):
 
-\[ \oint_\Gamma \mathbf{B} \cdot \mathbf{t}\, dl = B \cdot 2\pi r = \mu_0 N I \]
+\[
+\oint_\Gamma \mathbf{B} \cdot \mathbf{t}\, dl = B \cdot 2\pi r = \mu_0 N I
+\]
 
-\[ B = \frac{\mu_0 N I}{2\pi r} \]
+\[
+B = \frac{\mu_0 N I}{2\pi r}
+\]
 
 The field is azimuthal, confined to the interior of the toroid, and falls off as \(1/r\). Outside the toroid, \(\mathbf{B} = 0\) — the toroid is self-shielding. The self-inductance is:
 
-\[ L = \frac{\mu_0 N^2 A_c}{2\pi R} \]
+\[
+L = \frac{\mu_0 N^2 A_c}{2\pi R}
+\]
 
 The \(N^2\) dependence is characteristic of all inductors: doubling the number of turns quadruples the inductance, since each turn both generates twice the field and links twice the flux.
 
@@ -1047,7 +1190,9 @@ The \(N^2\) dependence is characteristic of all inductors: doubling the number o
 
 An **infinite solenoid** is the limit of a toroidal solenoid as \(R \to \infty\). With \(n = N/(2\pi R)\) turns per unit length (for fixed \(R\), this is \(N/(2\pi R)\), which approaches \(N/L_\text{length}\) as \(R \to \infty\)), the toroidal field simplifies:
 
-\[ B = \frac{\mu_0 N I}{2\pi r} = \frac{\mu_0 \cdot n \cdot 2\pi R \cdot I}{2\pi r} \xrightarrow{R \to \infty,\, r \sim R} \mu_0 n I \]
+\[
+B = \frac{\mu_0 N I}{2\pi r} = \frac{\mu_0 \cdot n \cdot 2\pi R \cdot I}{2\pi r} \xrightarrow{R \to \infty,\, r \sim R} \mu_0 n I
+\]
 
 The field inside the infinite solenoid is **uniform**:
 
@@ -1059,11 +1204,15 @@ where \(\hat{\mathbf{z}}\) is the axis direction. Outside the solenoid, \(\mathb
 
 The self-inductance per unit length is:
 
-\[ \frac{L}{\ell} = \mu_0 n^2 A \]
+\[
+\frac{L}{\ell} = \mu_0 n^2 A
+\]
 
 where \(A\) is the solenoid's cross-sectional area. The total inductance of a solenoid of length \(\ell\) is:
 
-\[ L = \mu_0 n^2 \ell A \]
+\[
+L = \mu_0 n^2 \ell A
+\]
 
 Again, the \(n^2\) dependence: increasing the turn density quadruples the inductance. This formula directly determines the inductance of the coil in the AM radio — the same calculation that Mariantoni performed to choose the coil parameters in the first lecture.
 
@@ -1071,7 +1220,9 @@ Again, the \(n^2\) dependence: increasing the turn density quadruples the induct
 
 We are now equipped to understand the full physics of the AM radio's LC tuner. The solenoid (inductance \(L = \mu_0 n^2 \ell A\)) is connected in parallel with the tunable capacitor (\(C = \epsilon_0 A_\text{plate}/d\)). The resonance frequency is:
 
-\[ \omega_0 = \frac{1}{\sqrt{LC}}, \qquad f_0 = \frac{\omega_0}{2\pi} \]
+\[
+\omega_0 = \frac{1}{\sqrt{LC}}, \qquad f_0 = \frac{\omega_0}{2\pi}
+\]
 
 By varying \(C\) (moving the aluminium foil plates closer or further apart), the resonance frequency shifts. When \(f_0\) matches the carrier frequency of a broadcast station (say, 570 kHz), the LC circuit rings in sympathy, selecting that signal from the sea of frequencies. The Lorentzian response function — derived in Chapter 1 by analogy with a damped harmonic oscillator — is the amplitude at frequency \(f\) relative to the resonance peak at \(f_0\). The sharper the Lorentzian (higher quality factor \(Q = \omega_0 L / R_\text{losses}\)), the better the frequency selectivity and the less interference from neighbouring stations.
 
@@ -1085,16 +1236,33 @@ Every step of this chain — from Coulomb's law to Gauss's theorem to the potent
 
 The following identities are used throughout the course. Let \(\phi\) be a scalar field and \(\mathbf{F}, \mathbf{G}\) be vector fields:
 
-\[ \nabla \times (\nabla \phi) = \mathbf{0} \]
-\[ \nabla \cdot (\nabla \times \mathbf{F}) = 0 \]
-\[ \nabla \times (\nabla \times \mathbf{F}) = \nabla(\nabla \cdot \mathbf{F}) - \nabla^2 \mathbf{F} \]
-\[ \nabla \cdot (\phi \mathbf{F}) = \phi\, \nabla \cdot \mathbf{F} + \mathbf{F} \cdot \nabla\phi \]
+\[
+\nabla \times (\nabla \phi) = \mathbf{0}
+\]
+
+\[
+\nabla \cdot (\nabla \times \mathbf{F}) = 0
+\]
+
+\[
+\nabla \times (\nabla \times \mathbf{F}) = \nabla(\nabla \cdot \mathbf{F}) - \nabla^2 \mathbf{F}
+\]
+
+\[
+\nabla \cdot (\phi \mathbf{F}) = \phi\, \nabla \cdot \mathbf{F} + \mathbf{F} \cdot \nabla\phi
+\]
 
 The **divergence theorem** (Gauss's theorem in mathematics):
-\[ \oint_{\partial\Omega} \mathbf{F} \cdot \mathbf{n}\, dA = \int_\Omega \nabla \cdot \mathbf{F}\, dV \]
+
+\[
+\oint_{\partial\Omega} \mathbf{F} \cdot \mathbf{n}\, dA = \int_\Omega \nabla \cdot \mathbf{F}\, dV
+\]
 
 **Stokes' theorem**:
-\[ \oint_{\partial\Sigma} \mathbf{F} \cdot \mathbf{t}\, dl = \int_\Sigma (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dA \]
+
+\[
+\oint_{\partial\Sigma} \mathbf{F} \cdot \mathbf{t}\, dl = \int_\Sigma (\nabla \times \mathbf{F}) \cdot \mathbf{n}\, dA
+\]
 
 ## Key Constants
 

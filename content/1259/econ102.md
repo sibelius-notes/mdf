@@ -54,7 +54,9 @@ An alternative way to avoid double counting is the **value-added approach**: at 
 
 The **expenditure approach** measures GDP by summing spending on final goods and services across four categories:
 
-\[ Y = C + I + G + (X - M) \]
+\[
+Y = C + I + G + (X - M)
+\]
 
 Here \( C \) is **personal consumption expenditure** (household spending on durable goods, non-durable goods, and services), \( I \) is **gross private domestic investment** (business fixed investment in plant and equipment, residential construction, and changes in inventories), \( G \) is **government purchases** of goods and services (excluding transfer payments such as Employment Insurance and Old Age Security, which are not purchases of current output), and \( X - M \) is **net exports** (exports minus imports). In Canada, consumption typically accounts for about 55–60 percent of GDP, making it the largest expenditure component. Investment is the most volatile component, swinging sharply with business confidence and interest rates.
 
@@ -70,7 +72,9 @@ Because every dollar spent on output becomes someone's income, GDP can equivalen
 
 Statistics Canada uses a **chain-weighted** (Fisher ideal) index that updates the base continuously, avoiding the substitution bias inherent in a fixed-base approach. The ratio of nominal to real GDP defines the **GDP deflator**, a broad price index covering all domestically produced goods and services:
 
-\[ \text{GDP deflator} = \frac{\text{Nominal GDP}}{\text{Real GDP}} \times 100 \]
+\[
+\text{GDP deflator} = \frac{\text{Nominal GDP}}{\text{Real GDP}} \times 100
+\]
 
 Unlike the Consumer Price Index, the GDP deflator includes prices of investment goods, government purchases, and exports but excludes imports. The two indices often move together but can diverge, particularly when import prices change sharply (as during an oil-price shock).
 
@@ -92,9 +96,13 @@ In applied macroeconomics, analysts routinely download GDP and its components fr
 
 Statistics Canada's monthly **Labour Force Survey (LFS)** classifies the working-age population (aged 15 and over) into three mutually exclusive categories. The **employed** are people who have a job — whether full-time or part-time, paid or self-employed. The **unemployed** are people without a job who are actively seeking work and available to start. Together, the employed and unemployed form the **labour force**. Everyone else — retirees, full-time students not seeking work, stay-at-home parents, discouraged workers who have stopped looking — is classified as **not in the labour force**. Two headline ratios summarize labour-market conditions:
 
-\[ \text{Unemployment rate} = \frac{\text{Number unemployed}}{\text{Labour force}} \times 100 \]
+\[
+\text{Unemployment rate} = \frac{\text{Number unemployed}}{\text{Labour force}} \times 100
+\]
 
-\[ \text{Participation rate} = \frac{\text{Labour force}}{\text{Working-age population}} \times 100 \]
+\[
+\text{Participation rate} = \frac{\text{Labour force}}{\text{Working-age population}} \times 100
+\]
 
 Canada's unemployment rate typically fluctuates between 5 and 8 percent, rising during recessions and falling during expansions. The participation rate captures broader trends in demographics and social norms, including the long-run increase in female labour-force participation from roughly 40 percent in the 1960s to over 60 percent today. The **employment-to-population ratio** — the fraction of the working-age population that is employed — is sometimes preferred because it is not affected by discouraged workers entering or leaving the measured labour force.
 
@@ -110,11 +118,15 @@ Not all unemployment is alike, and the distinction matters for policy. **Frictio
 
 The **Consumer Price Index (CPI)** tracks the cost of a fixed **basket of goods and services** representative of the purchases of a typical Canadian urban household. Statistics Canada surveys retail prices monthly across thousands of outlets and computes the index as:
 
-\[ \text{CPI} = \frac{\text{Cost of basket in current period}}{\text{Cost of basket in base period}} \times 100 \]
+\[
+\text{CPI} = \frac{\text{Cost of basket in current period}}{\text{Cost of basket in base period}} \times 100
+\]
 
 The **inflation rate** is the percentage change in the CPI from one period to the next:
 
-\[ \pi = \frac{\text{CPI}_t - \text{CPI}_{t-1}}{\text{CPI}_{t-1}} \times 100 \]
+\[
+\pi = \frac{\text{CPI}_t - \text{CPI}_{t-1}}{\text{CPI}_{t-1}} \times 100
+\]
 
 The Bank of Canada targets an inflation rate of 2 percent, the midpoint of a 1–3 percent control range. **Core inflation** measures — such as CPI-trim, CPI-median, and CPI-common — strip out volatile components or statistical outliers to reveal the underlying trend that monetary policy can most reliably influence.
 
@@ -128,7 +140,9 @@ Statistics Canada periodically updates the basket and applies hedonic quality ad
 
 Distinguishing **nominal** from **real** magnitudes is among the most important skills in macroeconomics. A nominal variable is measured in current dollars; a real variable is adjusted for changes in the price level. A worker whose nominal wage rises by 5 percent while prices rise by 3 percent has gained approximately 2 percent in **real wages** — actual purchasing power. The relationship between nominal and real interest rates is captured by the **Fisher equation**:
 
-\[ r \approx i - \pi \]
+\[
+r \approx i - \pi
+\]
 
 where \( r \) is the real interest rate, \( i \) is the nominal interest rate, and \( \pi \) is the inflation rate. More precisely, the exact Fisher equation is \( 1 + r = (1 + i)/(1 + \pi) \), but the approximation is adequate when rates are small. When inflation is 3 percent and the nominal interest rate on a savings account is 5 percent, the real return is approximately 2 percent. The Fisher equation is essential for understanding how inflation erodes the purchasing power of financial assets and influences saving and investment decisions. In an **ex ante** sense, the relevant inflation rate is expected inflation, because decisions are made before actual inflation is known.
 
@@ -146,15 +160,21 @@ To appreciate the power of compounding, consider two countries that begin with i
 
 Growth accounting decomposes the expansion of output into contributions from increases in inputs and improvements in how efficiently those inputs are used. The starting point is the **aggregate production function**:
 
-\[ Y = A \cdot F(K, L) \]
+\[
+Y = A \cdot F(K, L)
+\]
 
 where \( Y \) is real GDP, \( K \) is the stock of physical capital, \( L \) is the quantity of labour (adjusted for quality — human capital), and \( A \) is **total factor productivity (TFP)**, a catch-all measure of the efficiency with which inputs are combined. In a commonly used Cobb-Douglas specification:
 
-\[ Y = A \cdot K^{\alpha} \cdot L^{1-\alpha} \]
+\[
+Y = A \cdot K^{\alpha} \cdot L^{1-\alpha}
+\]
 
 where \( \alpha \approx 1/3 \) for most advanced economies. Taking growth rates and using logarithmic differentiation yields the **growth accounting equation**:
 
-\[ g_Y = g_A + \alpha \cdot g_K + (1-\alpha) \cdot g_L \]
+\[
+g_Y = g_A + \alpha \cdot g_K + (1-\alpha) \cdot g_L
+\]
 
 The residual \( g_A \) — TFP growth — is computed as the portion of output growth not explained by input growth. Empirically, TFP growth typically accounts for half or more of long-run growth in advanced economies, reflecting the central role of innovation and organizational improvement.
 
@@ -166,7 +186,9 @@ The residual \( g_A \) — TFP growth — is computed as the portion of output g
 
 **Neoclassical growth theory**, formalized by Robert Solow in 1956, places capital accumulation at centre stage. In the Solow model, saving finances investment, which increases the capital stock. However, each additional unit of capital yields progressively less additional output — **diminishing returns to capital** — so capital deepening alone cannot sustain growth indefinitely. In per-worker terms, the production function \( y = A \cdot f(k) \) (where \( y = Y/L \) and \( k = K/L \)) exhibits diminishing returns: as \( k \) rises, \( f(k) \) rises but at a decreasing rate. In the **steady state**, investment just offsets depreciation and the dilution of capital from labour-force growth:
 
-\[ s \cdot f(k^*) = (\delta + n) \cdot k^* \]
+\[
+s \cdot f(k^*) = (\delta + n) \cdot k^*
+\]
 
 where \( s \) is the saving rate, \( \delta \) is the depreciation rate, and \( n \) is the population growth rate. At the steady state, output per worker grows only at the rate of exogenous technological progress. A higher saving rate raises the *level* of steady-state output per worker but not the *growth rate* — a crucial and counterintuitive implication. The model predicts **conditional convergence**: poorer countries with similar saving rates and institutions should grow faster than richer ones because they are further from their steady state.
 
@@ -218,7 +240,9 @@ In Canada, the Bank of Canada defines two principal monetary aggregates. **M1+**
 
 Chartered banks create money through the process of **fractional-reserve banking**. When a bank receives a \$1,000 deposit, it holds a fraction as reserves — say 10 percent, or \$100 — and lends out the remaining \$900. The borrower spends the \$900, which eventually becomes another bank's deposit. That second bank holds \$90 in reserves and lends out \$810. The process continues, with each round creating new deposits that are a fraction of the previous round. The total increase in deposits from an initial deposit of \( D \) with a reserve ratio \( r \) is:
 
-\[ \text{Total deposits} = \frac{D}{r} \]
+\[
+\text{Total deposits} = \frac{D}{r}
+\]
 
 The **simple deposit multiplier** is \( 1/r \). With a 10 percent reserve ratio, an initial \$1,000 deposit can expand into \$10,000 of total deposits. In practice, the multiplier is smaller because some funds leak into currency holdings (people withdraw cash) and because banks may hold **excess reserves** above the required minimum, particularly during periods of uncertainty.
 
@@ -230,15 +254,21 @@ The Bank also has extraordinary tools available in times of crisis, including **
 
 The **quantity theory of money** provides a long-run framework linking the money supply to the price level. The **equation of exchange** is an identity:
 
-\[ M \times V = P \times Y \]
+\[
+M \times V = P \times Y
+\]
 
 where \( M \) is the money supply, \( V \) is the **velocity of money** (the average number of times a dollar is spent on final goods and services per year), \( P \) is the price level, and \( Y \) is real GDP. Rewriting in growth rates:
 
-\[ g_M + g_V = \pi + g_Y \]
+\[
+g_M + g_V = \pi + g_Y
+\]
 
 If velocity is stable (\( g_V \approx 0 \)) and real GDP growth is determined by real factors (labour, capital, technology), then the inflation rate approximately equals the money growth rate minus the real GDP growth rate:
 
-\[ \pi \approx g_M - g_Y \]
+\[
+\pi \approx g_M - g_Y
+\]
 
 The quantity theory implies that persistent inflation is ultimately a **monetary phenomenon** — a conclusion Milton Friedman famously stated and that is supported by cross-country evidence showing a strong correlation between money growth and inflation over long horizons. Hyperinflations — Zimbabwe in 2008, Venezuela in the late 2010s — invariably stem from governments printing money to finance fiscal deficits.
 
@@ -271,7 +301,9 @@ Factors that shift demand and supply include: **relative interest rates** (highe
 
 The **real exchange rate** adjusts the nominal rate for differences in price levels between countries. It measures the rate at which domestic goods trade for foreign goods:
 
-\[ \text{Real exchange rate} = \frac{e \times P^*}{P} \]
+\[
+\text{Real exchange rate} = \frac{e \times P^*}{P}
+\]
 
 where \( e \) is the nominal exchange rate (domestic currency per unit of foreign currency), \( P^* \) is the foreign price level, and \( P \) is the domestic price level. A real depreciation makes domestic goods cheaper relative to foreign goods, improving the trade balance.
 
@@ -279,7 +311,9 @@ where \( e \) is the nominal exchange rate (domestic currency per unit of foreig
 
 The theory of **purchasing power parity (PPP)** holds that exchange rates adjust so that identical baskets of goods cost the same in different countries when expressed in a common currency. In its absolute form, PPP implies that the exchange rate equals the ratio of domestic to foreign price levels. In its relative form, it predicts that the rate of depreciation of a currency equals the difference between domestic and foreign inflation rates:
 
-\[ \% \Delta e \approx \pi - \pi^* \]
+\[
+\% \Delta e \approx \pi - \pi^*
+\]
 
 PPP holds reasonably well over very long horizons and across countries with large inflation differentials, but substantial and persistent deviations occur in the medium run due to transportation costs, trade barriers, non-traded goods (haircuts, housing), and differences in productivity growth across sectors (the **Balassa-Samuelson effect** — countries with faster productivity growth in tradable goods tend to have higher prices for non-tradable goods and thus higher overall price levels).
 
@@ -297,7 +331,9 @@ Canada has operated a floating exchange rate since 1970, allowing the dollar to 
 
 Income inequality describes how unevenly the total income of an economy is distributed among its members. The **Lorenz curve** plots the cumulative percentage of total income received by the bottom \( x \) percent of households. Perfect equality would be a 45-degree line; the further the Lorenz curve bows below this line, the greater the inequality. The **Gini coefficient** summarizes the Lorenz curve in a single number between 0 (perfect equality) and 1 (all income accruing to one household):
 
-\[ G = \frac{A}{A + B} \]
+\[
+G = \frac{A}{A + B}
+\]
 
 where \( A \) is the area between the 45-degree line and the Lorenz curve, and \( A + B \) is the total area under the 45-degree line. Canada's Gini coefficient for after-tax income has hovered around 0.30–0.32 in recent decades, lower than the United States (around 0.39) but higher than the Scandinavian countries (around 0.25–0.27), reflecting Canada's moderately redistributive tax-and-transfer system.
 
@@ -365,7 +401,9 @@ The modern **New Keynesian synthesis** accepts that the long run is largely clas
 
 The **Keynesian cross** model (also called the 45-degree-line model) determines equilibrium real GDP from the expenditure side, holding the price level fixed — a useful simplification that isolates the role of aggregate demand. **Aggregate planned expenditure (AE)** is the sum of planned consumption, planned investment, government purchases, and net exports:
 
-\[ AE = C + I + G + (X - M) \]
+\[
+AE = C + I + G + (X - M)
+\]
 
 Equilibrium occurs where planned expenditure equals actual output — graphically, where the AE line crosses the 45-degree line (along which \( AE = Y \)). If output exceeds planned expenditure, firms accumulate unplanned inventories and respond by cutting production. If output falls short, unplanned inventory depletion signals firms to expand. The economy converges to the equilibrium where the unplanned inventory change is zero.
 
@@ -373,7 +411,9 @@ Equilibrium occurs where planned expenditure equals actual output — graphicall
 
 The **consumption function** relates planned consumption to disposable income:
 
-\[ C = a + b(Y - T) \]
+\[
+C = a + b(Y - T)
+\]
 
 where \( a \) is **autonomous consumption** (the level of consumption when disposable income is zero — financed by dissaving or borrowing), \( b \) is the **marginal propensity to consume (MPC)** — the fraction of each additional dollar of disposable income that households spend — and \( (Y - T) \) is disposable income. The **marginal propensity to save (MPS)** equals \( 1 - b \), since each additional dollar of disposable income is either consumed or saved. Empirically, the MPC in Canada is estimated to be around 0.6–0.8, implying that households spend 60–80 cents of each additional dollar of income and save the rest.
 
@@ -383,15 +423,21 @@ The consumption function can be enriched. The **permanent income hypothesis** (M
 
 A change in any autonomous component of expenditure — investment, government purchases, exports — triggers a chain of successive rounds of spending. An initial injection \( \Delta A \) becomes income for its recipients, who spend a fraction \( b \) of it, generating new income for others, who in turn spend a fraction \( b \), and so on. The total change in equilibrium GDP is:
 
-\[ \Delta Y = \Delta A + b \cdot \Delta A + b^2 \cdot \Delta A + \cdots = \frac{\Delta A}{1 - b} \]
+\[
+\Delta Y = \Delta A + b \cdot \Delta A + b^2 \cdot \Delta A + \cdots = \frac{\Delta A}{1 - b}
+\]
 
 The **simple multiplier** in a closed economy with no income tax is:
 
-\[ k = \frac{1}{1 - b} \]
+\[
+k = \frac{1}{1 - b}
+\]
 
 With an MPC of 0.8, the multiplier is \( 1/(1-0.8) = 5 \): each dollar of autonomous spending raises GDP by five dollars. When we introduce a proportional income tax rate \( t \) and a marginal propensity to import \( m \), leakages increase and the multiplier shrinks:
 
-\[ k = \frac{1}{1 - b(1 - t) + m} \]
+\[
+k = \frac{1}{1 - b(1 - t) + m}
+\]
 
 With \( b = 0.8 \), \( t = 0.25 \), and \( m = 0.15 \), the multiplier falls to \( 1/(1 - 0.8 \times 0.75 + 0.15) = 1/(1 - 0.6 + 0.15) = 1/0.55 \approx 1.82 \). For Canada, realistic estimates of the government-spending multiplier range from about 0.5 to 1.5, depending on the state of the economy, the monetary-policy response, and the time horizon.
 
@@ -399,7 +445,9 @@ With \( b = 0.8 \), \( t = 0.25 \), and \( m = 0.15 \), the multiplier falls to 
 
 An increase in government purchases \( \Delta G \) raises equilibrium GDP by the full multiplier times \( \Delta G \), because government spending is a direct injection into the expenditure stream. A tax cut of \( \Delta T \), however, first increases disposable income by \( \Delta T \), of which only a fraction \( b \) is spent in the first round. The **tax multiplier** is therefore:
 
-\[ k_T = \frac{-b}{1 - b} \]
+\[
+k_T = \frac{-b}{1 - b}
+\]
 
 In absolute value, this is smaller than the spending multiplier \( 1/(1-b) \). With \( b = 0.8 \), the spending multiplier is 5 while the tax multiplier is 4. This asymmetry has important policy implications: a dollar of government spending has a larger impact on GDP than a dollar of tax cuts, because some of the tax cut is saved rather than spent. However, tax cuts may have stronger incentive effects on labour supply and investment in the longer run — a consideration the simple Keynesian model does not capture.
 
@@ -407,7 +455,9 @@ In absolute value, this is smaller than the spending multiplier \( 1/(1-b) \). W
 
 A simultaneous and equal increase in government spending and taxes (\( \Delta G = \Delta T \)) leaves the budget balance unchanged but still raises GDP. The net effect is:
 
-\[ \Delta Y = \frac{1}{1-b} \cdot \Delta G - \frac{b}{1-b} \cdot \Delta T = \frac{1-b}{1-b} \cdot \Delta G = 1 \cdot \Delta G \]
+\[
+\Delta Y = \frac{1}{1-b} \cdot \Delta G - \frac{b}{1-b} \cdot \Delta T = \frac{1-b}{1-b} \cdot \Delta G = 1 \cdot \Delta G
+\]
 
 In the simplest model (no income taxes, no imports), the **balanced-budget multiplier** is exactly 1: a one-dollar increase in both \( G \) and \( T \) raises GDP by exactly one dollar. The intuition is that the government spends the entire dollar (multiplier effect of \( 1/(1-b) \)) but the tax withdraws only \( b/(1-b) \) dollars of spending (because taxpayers would have saved a fraction \( 1-b \) of that dollar). The net multiplier is the difference: \( 1/(1-b) - b/(1-b) = 1 \). In more realistic models with proportional taxes and imports, the balanced-budget multiplier is positive but less than 1.
 

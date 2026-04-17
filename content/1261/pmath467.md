@@ -193,6 +193,7 @@ A second subtlety is the parametrisation: we always parametrise paths on \( [0,1
 <strong>Well-definedness:</strong> If \( \gamma_0 \simeq_p \gamma_1 \) via \( H \) and \( \delta_0 \simeq_p \delta_1 \) via \( K \), define \( L(s,t) = H(2s,t) \) for \( s \leq \tfrac{1}{2} \) and \( K(2s-1,t) \) for \( s \geq \tfrac{1}{2} \). This is continuous by the gluing lemma and shows \( \gamma_0 \cdot \delta_0 \simeq_p \gamma_1 \cdot \delta_1 \).
 
 <strong>Associativity:</strong> We need \( (\gamma \cdot \delta) \cdot \varepsilon \simeq_p \gamma \cdot (\delta \cdot \varepsilon) \). These are the same path traversed at different speeds. Define the homotopy \( H : [0,1]^2 \to X \) by:
+
 \[
 H(s,t) = \begin{cases} \gamma\!\left(\dfrac{4s}{t+1}\right) & 0 \leq s \leq \dfrac{t+1}{4}, \\[4pt] \delta(4s - t - 1) & \dfrac{t+1}{4} \leq s \leq \dfrac{t+2}{4}, \\[4pt] \varepsilon\!\left(\dfrac{4s - t - 2}{2-t}\right) & \dfrac{t+2}{4} \leq s \leq 1. \end{cases}
 \]
@@ -201,6 +202,7 @@ At \( t=0 \), the breakpoints are \( \tfrac{1}{4}, \tfrac{1}{2} \), giving \( (\
 <strong>Identity:</strong> For the right identity, define \( H(s,t) = \gamma\!\left(\dfrac{2s}{1+t}\right) \) for \( s \leq \dfrac{1+t}{2} \) and \( H(s,t) = x_1 \) for \( s \geq \dfrac{1+t}{2} \), where \( x_1 = \gamma(1) \). This is a homotopy from \( \gamma \cdot c_{x_1} \) (at \( t=0 \)) to \( \gamma \) (at \( t=1 \), where the formula gives \( \gamma(s) \) for \( s \leq 1 \)).
 
 <strong>Inverses:</strong> For any loop \( \gamma \) based at \( x_0 \), the homotopy
+
 \[
 H(s,t) = \begin{cases} \gamma(2s) & 0 \leq s \leq \dfrac{1-t}{2}, \\ \gamma(1-t) & \dfrac{1-t}{2} \leq s \leq \dfrac{1+t}{2}, \\ \gamma(2-2s) & \dfrac{1+t}{2} \leq s \leq 1 \end{cases}
 \]
@@ -247,6 +249,7 @@ Consider the covering map \( p : \mathbb{R} \to S^1 \) defined by \( p(t) = e^{2
 <strong>Well-defined:</strong> If \( \gamma_0 \simeq_p \gamma_1 \) via a homotopy \( H \), the homotopy lifting property gives a lifted homotopy \( \tilde H \) fixing the starting value \( 0 \). Since \( \tilde H(1,t) \in \mathbb{Z} \) is continuous in \( t \) and \( \mathbb{Z} \) is discrete, \( \tilde H(1,t) \) is constant, so \( \tilde\gamma_0(1) = \tilde H(1,0) = \tilde H(1,1) = \tilde\gamma_1(1) \). Thus \( \Phi \) is well-defined.
 
 <strong>Homomorphism:</strong> If \( \gamma \) lifts to \( \tilde\gamma \) with \( \tilde\gamma(0)=0 \) and \( \tilde\gamma(1)=m \), and \( \delta \) lifts to \( \tilde\delta \) with \( \tilde\delta(0)=0 \) and \( \tilde\delta(1)=n \), then the lift of \( \gamma \cdot \delta \) starting at 0 is:
+
 \[
 \widetilde{\gamma \cdot \delta}(s) = \begin{cases} \tilde\gamma(2s) & s \leq \tfrac{1}{2}, \\ m + \tilde\delta(2s-1) & s \geq \tfrac{1}{2}. \end{cases}
 \]
@@ -383,6 +386,7 @@ The universal property of the free product states that the free product is the "
 
 <div class="definition">
 <strong>Definition (Amalgamated Free Product):</strong> Given group homomorphisms \( i : A 	o G \) and \( j : A 	o H \), the <em>amalgamated free product</em> is:
+
 \[
 G *_A H = (G * H) ig/ \langle i(a) j(a)^{-1} : a \in A 
 angle^{\mathrm{normal}}.
@@ -417,6 +421,7 @@ The hypotheses of van Kampen require both \( U \) and \( V \) to be path-connect
 
 <div class="theorem">
 <strong>Theorem (Seifert–van Kampen):</strong> Let \( X = U \cup V \) where \( U, V \) are open and path-connected, and \( U \cap V \) is path-connected and non-empty. Fix a basepoint \( x_0 \in U \cap V \). Let \( i_U : U \cap V \hookrightarrow U \), \( i_V : U \cap V \hookrightarrow V \) be the inclusions. Then the map:
+
 \[
 \Phi : \pi_1(U, x_0) *_{\pi_1(U \cap V, x_0)} \pi_1(V, x_0) \to \pi_1(X, x_0)
 \]
@@ -431,6 +436,7 @@ induced by the inclusions \( U \hookrightarrow X \) and \( V \hookrightarrow X \
 <em>Proof.</em> Denote the amalgamated product \( G = \pi_1(U) *_{\pi_1(U \cap V)} \pi_1(V) \) and let \( \Phi : G \to \pi_1(X) \) be the map induced by inclusions.
 
 <strong>Surjectivity.</strong> Let \( \gamma : [0,1] \to X \) be a loop based at \( x_0 \). Since \( U \) and \( V \) are open and cover \( X \), by compactness of \( [0,1] \), there exists a subdivision \( 0 = t_0 < t_1 < \cdots < t_k = 1 \) such that each restriction \( \gamma|_{[t_{i-1},t_i]} \) maps entirely into \( U \) or entirely into \( V \). Since \( U \cap V \) is path-connected and each \( \gamma(t_i) \in U \cap V \) (adjusting the subdivision if necessary to land at points in \( U \cap V \)), choose paths \( \alpha_i \) in \( U \cap V \) from \( x_0 \) to \( \gamma(t_i) \). Then:
+
 \[
 [\gamma] = [\alpha_0 \cdot \gamma|_{[t_0,t_1]} \cdot \bar\alpha_1] \cdot [\alpha_1 \cdot \gamma|_{[t_1,t_2]} \cdot \bar\alpha_2] \cdots
 \]
@@ -441,6 +447,7 @@ Each factor is a loop in \( U \) or \( V \), hence lies in the image of \( \Phi 
 
 <div class="example">
 <strong>Example (\( \pi_1(S^1 \vee S^1) = F_2 \)):</strong> Write \( S^1 \vee S^1 \) as \( U \cup V \) where \( U \) is \( S^1 \vee S^1 \) minus a short open arc on the second circle, \( V \) is \( S^1 \vee S^1 \) minus a short open arc on the first circle, and \( U \cap V \simeq \{*\} \) is contractible. Then \( U \simeq S^1 \), \( V \simeq S^1 \), and van Kampen gives:
+
 \[
 \pi_1(S^1 \vee S^1) \cong \pi_1(U) *_{\pi_1(U \cap V)} \pi_1(V) \cong \mathbb{Z} *_{\{1\}} \mathbb{Z} = \mathbb{Z} * \mathbb{Z} = F_2 = \langle a, b \rangle.
 \]
@@ -448,6 +455,7 @@ Each factor is a loop in \( U \) or \( V \), hence lies in the image of \( \Phi 
 
 <div class="example">
 <strong>Example (Genus-\( g \) Surface):</strong> Decompose \( \Sigma_g \) as \( U = \Sigma_g \setminus \{p\} \simeq \bigvee^{2g} S^1 \) (the complement of a point deformation retracts onto the 1-skeleton) and \( V = D^2 \) (small open disk around \( p \)), with \( U \cap V \simeq S^1 \). The attaching map of the single 2-cell sends the generator of \( \pi_1(U \cap V) \cong \mathbb{Z} \) to the commutator word \( c = \prod_{i=1}^g [a_i, b_i] \in \pi_1(U) \cong F_{2g} \). Van Kampen gives:
+
 \[
 \pi_1(\Sigma_g) \cong F_{2g} *_{\mathbb{Z}} \{1\} \cong \langle a_1, b_1, \ldots, a_g, b_g \mid \prod_{i=1}^g a_i b_i a_i^{-1} b_i^{-1} = 1 \rangle.
 \]
@@ -455,6 +463,7 @@ Each factor is a loop in \( U \) or \( V \), hence lies in the image of \( \Phi 
 
 <div class="example">
 <strong>Example (Klein Bottle):</strong> The Klein bottle \( K \) has a CW structure with one 0-cell, two 1-cells \( a, b \), and one 2-cell attached via the word \( abab^{-1} \). The same van Kampen argument as above gives:
+
 \[
 \pi_1(K) \cong \langle a, b \mid abab^{-1} = 1 \rangle.
 \]
@@ -485,6 +494,7 @@ This dictionary has both theoretical and computational uses. Theoretically, it r
 
 <div class="theorem">
 <strong>Theorem (Lifting Criterion):</strong> Let \( p : (\tilde X, \tilde x_0) \to (X, x_0) \) be a covering map, and let \( f : (Y, y_0) \to (X, x_0) \) be a continuous map with \( Y \) path-connected and locally path-connected. Then a lift \( \tilde f : (Y, y_0) \to (\tilde X, \tilde x_0) \) exists if and only if:
+
 \[
 f_*(\pi_1(Y, y_0)) \subseteq p_*(\pi_1(\tilde X, \tilde x_0)).
 \]
@@ -534,6 +544,7 @@ There are no other covering spaces of \( S^1 \) (up to isomorphism).
 
 <div class="example">
 <strong>Example (\( F_3 \leq F_2 \) via Double Cover):</strong> The free group \( F_3 \) embeds as an index-2 subgroup of \( F_2 = \langle a, b \rangle \). Consider the homomorphism \( \phi : F_2 \to \mathbb{Z}/2 \) defined by \( \phi(a) = 1 \) and \( \phi(b) = 0 \). The kernel \( H = \ker\phi \) has index 2 in \( F_2 \). By Nielsen–Schreier, \( H \cong F_{2(2-1)+1} = F_3 \). Concretely, the Schreier coset graph has two vertices \( v_0, v_1 \) (cosets \( H, aH \)), with the \( a \)-edge going \( v_0 \to v_1 \to v_0 \) and the \( b \)-edges forming loops at each vertex. This graph has 2 vertices, 4 edges, \( \chi = -2 \), so \( \pi_1 \cong F_3 \). The three generators are:
+
 \[
 \text{(1) } a^2 \text{ (loop via } a\text{-edges)}, \quad \text{(2) } b \text{ (loop at } v_0 \text{)}, \quad \text{(3) } aba^{-1} \text{ (}b\text{-loop at } v_1\text{, conjugated)}.
 \]
@@ -571,6 +582,7 @@ eq (0,0)} \) (suitably chosen to avoid redundancy). The Schreier coset graph for
 
 <div class="example">
 <strong>Example (Wirtinger Presentation of the Trefoil):</strong> The trefoil knot has a diagram with three crossings and three arcs \( a, b, c \). At each crossing, the Wirtinger relation says the overarc conjugates one underarc to the other. For the trefoil, the three crossings give three relations:
+
 \[
 r_1 : a = cbc^{-1}, \quad r_2 : b = aca^{-1}, \quad r_3 : c = bab^{-1}.
 \]
@@ -601,6 +613,7 @@ The \( \Delta \)-complex generalises the classical notion of a simplicial comple
 
 <div class="definition">
 <strong>Definition (Standard \( n \)-Simplex):</strong> The <em>standard \( n \)-simplex</em> is:
+
 \[
 \Delta^n = \{(t_0, \ldots, t_n) \in \mathbb{R}^{n+1} : t_i \geq 0,\ \sum_{i=0}^n t_i = 1\}.
 \]
@@ -613,6 +626,7 @@ Its vertices are the standard basis vectors \( e_0, \ldots, e_n \). The <em>face
 
 <div class="definition">
 <strong>Definition (Chain Groups and Boundary Operator):</strong> For a \( \Delta \)-complex \( X \), the <em>\( n \)-th chain group</em> \( C_n(X) \) is the free abelian group generated by the \( n \)-simplices of \( X \). The <em>boundary operator</em> \( \partial_n : C_n(X) \to C_{n-1}(X) \) is defined on generators by:
+
 \[
 \partial_n(\sigma_\alpha) = \sum_{i=0}^n (-1)^i \sigma_\alpha \circ \delta_i,
 \]
@@ -625,6 +639,7 @@ where \( [v_0,\ldots,\hat v_i,\ldots,v_n] \) denotes the face opposite to the \(
 
 <div class="remark">
 <strong>Remark (Geometric Intuition for \( \partial^2 = 0 \)):</strong> The identity \( \partial^2 = 0 \) has a beautiful geometric interpretation: "the boundary of a boundary is empty." Consider a triangle (2-simplex) \( \sigma \) with vertices \( v_0, v_1, v_2 \). Its boundary \( \partial_2 \sigma = [v_1,v_2] - [v_0,v_2] + [v_0,v_1] \) is the alternating sum of the three edges. The boundary of each edge is its two endpoints with signs: \( \partial_1[v_i,v_j] = v_j - v_i \). Then:
+
 \[
 \partial_1(\partial_2 \sigma) = (v_2 - v_1) - (v_2 - v_0) + (v_1 - v_0) = v_2 - v_1 - v_2 + v_0 + v_1 - v_0 = 0.
 \]
@@ -633,6 +648,7 @@ Each vertex appears twice with opposite signs, so all terms cancel. The algebrai
 
 <div class="proof">
 <em>Proof.</em> It suffices to check on a single generator \( \sigma \):
+
 \[
 \partial_{n-1}(\partial_n \sigma) = \partial_{n-1}\!\left(\sum_{i=0}^n (-1)^i \sigma \circ \delta_i\right) = \sum_{i=0}^n (-1)^i \sum_{j=0}^{n-1} (-1)^j \sigma \circ \delta_i \circ \delta_j.
 \]
@@ -641,6 +657,7 @@ The face \( \sigma \circ \delta_i \circ \delta_j \) is the face of \( \sigma \) 
 
 <div class="definition">
 <strong>Definition (Homology Groups):</strong> Given the chain complex \( \cdots \xrightarrow{\partial_{n+1}} C_n \xrightarrow{\partial_n} C_{n-1} \xrightarrow{\partial_{n-1}} \cdots \), the <em>\( n \)-th homology group</em> is:
+
 \[
 H_n(X) = \ker \partial_n \big/ \mathrm{im}\, \partial_{n+1}.
 \]
@@ -659,12 +676,15 @@ Elements of \( \ker \partial_n \) are <em>\( n \)-cycles</em>; elements of \( \m
 
 <div class="example">
 <strong>Example (Circle \( S^1 \), minimal structure):</strong> Give \( S^1 \) the \( \Delta \)-complex structure with one 0-simplex \( v \) and one 1-simplex \( e \) (with both endpoints identified to \( v \)). Then \( C_0 = \mathbb{Z}\langle v \rangle \) and \( C_1 = \mathbb{Z}\langle e \rangle \). The boundary map is \( \partial_1(e) = v - v = 0 \). So:
+
 \[
 H_0(S^1) = \ker \partial_0 / \mathrm{im}\, \partial_1 = \mathbb{Z}/0 = \mathbb{Z},
 \]
+
 \[
 H_1(S^1) = \ker \partial_1 / \mathrm{im}\, \partial_2 = \mathbb{Z}/0 = \mathbb{Z},
 \]
+
 \[
 H_n(S^1) = 0 \text{ for } n \geq 2.
 \]
@@ -676,6 +696,7 @@ H_n(S^1) = 0 \text{ for } n \geq 2.
 
 <div class="example">
 <strong>Example (Torus \( T^2 \)):</strong> The torus has one 0-cell \( v \), two 1-cells \( a, b \), and one 2-cell \( U \). The boundary word is \( aba^{-1}b^{-1} \), so \( \partial_2(U) = a + b + (-a) + (-b) = 0 \). The boundary map \( \partial_1(a) = v - v = 0 = \partial_1(b) \). Thus all boundary maps are zero, giving:
+
 \[
 H_0(T^2) \cong \mathbb{Z}, \quad H_1(T^2) \cong \mathbb{Z}^2, \quad H_2(T^2) \cong \mathbb{Z}, \quad H_n(T^2) = 0 \text{ for } n \geq 3.
 \]
@@ -697,6 +718,7 @@ Thus \( H_*(K) : \mathbb{Z}, \mathbb{Z} \oplus \mathbb{Z}/2, 0, 0, \ldots \). Th
 
 <div class="example">
 <strong>Example (Genus-\( g \) Surface \( \Sigma_g \)):</strong> For the orientable surface of genus \( g \), the CW structure has one 0-cell, \( 2g \) 1-cells \( a_1,b_1,\ldots,a_g,b_g \), and one 2-cell attached by \( \prod [a_i,b_i] \). The boundary of the 2-cell is:
+
 \[
 \partial_2(U) = \sum_{i=1}^g (a_i + b_i - a_i - b_i) = 0.
 \]
@@ -718,6 +740,7 @@ The key formula — \( d_n(e^n_\alpha) = \sum_\beta \deg(\phi_{\alpha\beta}) \cd
 
 <div class="definition">
 <strong>Definition (Cellular Chain Complex):</strong> For a CW complex \( X \), the <em>cellular chain group</em> \( C_n^{CW}(X) \) is the free abelian group generated by the \( n \)-cells. The <em>cellular boundary map</em> \( d_n : C_n^{CW} \to C_{n-1}^{CW} \) is given by:
+
 \[
 d_n(e^n_\alpha) = \sum_\beta \deg(\phi_{\alpha\beta}) \cdot e^{n-1}_\beta,
 \]
@@ -744,9 +767,11 @@ Reading off:
 \[
 H_0(\mathbb{RP}^2) = \mathbb{Z}/\mathrm{im}(d_1) = \mathbb{Z}/0 = \mathbb{Z},
 \]
+
 \[
 H_1(\mathbb{RP}^2) = \ker(d_1)/\mathrm{im}(d_2) = \mathbb{Z}/2\mathbb{Z},
 \]
+
 \[
 H_2(\mathbb{RP}^2) = \ker(d_2)/0 = 0 \quad \text{(since } d_2 = 2 \text{ is injective)}.
 \]
@@ -795,6 +820,7 @@ H_0 = \mathbb{Z}, \quad H_1 = \ker(d_1)/\mathrm{im}(d_2) = \mathbb{Z}/2\mathbb{Z
 
 <div class="remark">
 <strong>Remark (Künneth Formula):</strong> The homology of a product \( X \times Y \) is computed by the Künneth formula: when \( H_*(X;\mathbb{Z}) \) is torsion-free,
+
 \[
 H_n(X \times Y;\mathbb{Z}) \cong \bigoplus_{k=0}^n H_k(X;\mathbb{Z}) \otimes H_{n-k}(Y;\mathbb{Z}).
 \]
@@ -837,6 +863,7 @@ The key technical lemma underlying all of singular homology is the existence of 
 
 <div class="definition">
 <strong>Definition (Singular Chain Group):</strong> A <em>singular \( n \)-simplex</em> in \( X \) is any continuous map \( \sigma : \Delta^n \to X \). The <em>singular \( n \)-chain group</em> \( C_n(X) \) is the free abelian group generated by all singular \( n \)-simplices (for \( n \geq 0 \); \( C_n(X) = 0 \) for \( n < 0 \)). The boundary operator is defined on generators by the same alternating face formula:
+
 \[
 \partial_n(\sigma) = \sum_{i=0}^n (-1)^i \sigma \circ \delta_i,
 \]
@@ -849,6 +876,7 @@ where \( \delta_i : \Delta^{n-1} \to \Delta^n \) is the \( i \)-th face inclusio
 
 <div class="remark">
 <strong>Remark (Standard Simplex and Face Maps):</strong> The standard \( n \)-simplex is
+
 \[
 \Delta^n = \{(t_0, t_1, \ldots, t_n) \in \mathbb{R}^{n+1} : t_i \geq 0,\ t_0 + t_1 + \cdots + t_n = 1\},
 \]
@@ -862,6 +890,7 @@ For example, \( \delta_0 : \Delta^1 	o \Delta^2 \) maps the edge \( [e_0, e_1] \
 
 <div class="example">
 <strong>Example (\( \partial^2 = 0 \): Explicit Alternating Sign Cancellation):</strong> We verify \( \partial_1 \circ \partial_2 = 0 \) for a singular 2-simplex \( \sigma : \Delta^2 	o X \). By definition:
+
 \[
 \partial_2(\sigma) = \sigma \circ \delta_0 - \sigma \circ \delta_1 + \sigma \circ \delta_2,
 \]
@@ -905,6 +934,7 @@ where \( \iota_i : \Delta^{n+1} \to \Delta^n \times [0,1] \) is the affine map s
 
 <div class="remark">
 <strong>Remark (Geometric Meaning of Chain Homotopies):</strong> A chain homotopy \( P_n : C_n(X) 	o C_{n+1}(Y) \) should be thought of geometrically as a "prism" construction. Given a singular \( n \)-simplex \( \sigma : \Delta^n 	o X \) and a homotopy \( H : X 	imes [0,1] 	o Y \), the map \( H \circ (\sigma 	imes \mathrm{id}) : \Delta^n 	imes [0,1] 	o Y \) sweeps out a "prism" over \( \sigma \). The prism \( \Delta^n 	imes [0,1] \) is triangulated as a union of \( (n+1) \) simplices of dimension \( n+1 \):
+
 \[
 \Delta^n 	imes [0,1] = igcup_{i=0}^n \left[ v_0, \ldots, v_i, w_i, \ldots, w_n 
 ight],
@@ -934,6 +964,7 @@ The connecting homomorphism \( \partial_* : H_n(X,A) \to H_{n-1}(A) \) is the ke
 
 <div class="theorem">
 <strong>Theorem (Long Exact Sequence of a Pair):</strong> For any pair \( (X, A) \), there is a natural long exact sequence:
+
 \[
 \cdots \to H_n(A) \xrightarrow{i_*} H_n(X) \xrightarrow{j_*} H_n(X,A) \xrightarrow{\partial_*} H_{n-1}(A) \to \cdots
 \]
@@ -954,6 +985,7 @@ where \( i : A \hookrightarrow X \) and \( j : (X, \emptyset) \hookrightarrow (X
 
 <div class="example">
 <strong>Example (Computing \( H_*(S^n) \) via the Pair \( (D^n, S^{n-1}) \)):</strong> Since \( (D^n, S^{n-1}) \) is a good pair (any collar neighbourhood of \( S^{n-1} \) in \( D^n \) serves), the good pair isomorphism gives \( H_k(D^n, S^{n-1}) \cong \tilde H_k(S^n) \). The long exact sequence of the pair (for \( k \geq 1 \), using \( H_k(D^n) = 0 \)) gives:
+
 \[
 0 = H_k(D^n) \to H_k(D^n, S^{n-1}) \xrightarrow{\partial_*} H_{k-1}(S^{n-1}) \to H_{k-1}(D^n) = 0,
 \]
@@ -972,6 +1004,7 @@ The derivation is a direct application of the Snake Lemma. The subchain complex 
 
 <div class="theorem">
 <strong>Theorem (Mayer–Vietoris):</strong> Let \( X = A \cup B \) with \( A, B \) open (or both subcomplexes of a CW complex). There is a natural long exact sequence:
+
 \[
 \cdots \to H_n(A \cap B) \xrightarrow{\Phi} H_n(A) \oplus H_n(B) \xrightarrow{\Psi} H_n(X) \xrightarrow{\partial} H_{n-1}(A \cap B) \to \cdots
 \]
@@ -980,6 +1013,7 @@ where \( \Phi(\alpha) = (i_*\alpha, -j_*\alpha) \) (with \( i : A \cap B \hookri
 
 <div class="example">
 <strong>Example (Homology of \( S^n \) by Mayer–Vietoris):</strong> Write \( S^n = A \cup B \) where \( A = S^n \setminus \{N\} \simeq \mathbb{R}^n \simeq \{*\} \) and \( B = S^n \setminus \{S\} \simeq \{*\} \), with \( A \cap B \simeq S^{n-1} \). The Mayer–Vietoris sequence for \( k \geq 2 \):
+
 \[
 \underbrace{H_k(A) \oplus H_k(B)}_{= 0} \to H_k(S^n) \to H_{k-1}(A \cap B) \to \underbrace{H_{k-1}(A) \oplus H_{k-1}(B)}_{= 0}.
 \]
@@ -988,6 +1022,7 @@ By exactness, \( H_k(S^n) \cong H_{k-1}(S^{n-1}) \) for \( k \geq 2 \). By induc
 
 <div class="example">
 <strong>Example (Homology of \( T^2 \) by Mayer–Vietoris):</strong> Let \( A = T^2 \setminus \{p\} \) and \( B \) an open disk neighbourhood of \( p \in T^2 \). Then \( A \simeq S^1 \vee S^1 \) (the torus minus a point deformation retracts onto the 1-skeleton), \( B \simeq \{*\} \), and \( A \cap B \simeq S^1 \) (a small circle around \( p \)). The Mayer–Vietoris sequence in degree 2 reads:
+
 \[
 \underbrace{H_2(A \cap B)}_{=0} \to \underbrace{H_2(A)}_{=0} \oplus \underbrace{H_2(B)}_{=0} \to H_2(T^2) \xrightarrow{\partial} H_1(A \cap B) \xrightarrow{\Phi} H_1(A) \oplus H_1(B).
 \]
@@ -1003,6 +1038,7 @@ Since \( A \) and \( B \) are connected, the last map \( \mathbb{Z} \to \mathbb{
 
 <div class="example">
 <strong>Example (Homology of \( S^1 \vee S^2 \)):</strong> Let \( X = S^1 \vee S^2 \). Write \( X = A \cup B \) where \( A \simeq S^1 \) (the circle part plus a small arc of the sphere), \( B \simeq S^2 \) (the sphere part plus a small arc of the circle), and \( A \cap B \simeq \{*\} \) (contractible). Mayer–Vietoris gives:
+
 \[
 H_n(A \cap B) \to H_n(A) \oplus H_n(B) \to H_n(X) \to H_{n-1}(A \cap B).
 \]
@@ -1011,6 +1047,7 @@ Since \( A \cap B \) is contractible, \( H_n(A \cap B) = 0 \) for \( n \geq 1 \)
 \[
 H_1(S^1 \vee S^2) \cong H_1(S^1) \oplus H_1(S^2) = \mathbb{Z} \oplus 0 = \mathbb{Z},
 \]
+
 \[
 H_2(S^1 \vee S^2) \cong H_2(S^1) \oplus H_2(S^2) = 0 \oplus \mathbb{Z} = \mathbb{Z}.
 \]
@@ -1019,6 +1056,7 @@ More generally, for a wedge \( X \vee Y \) of path-connected spaces, \( \tilde H
 
 <div class="example">
 <strong>Example (Homology of the Mapping Torus):</strong> The mapping torus of a map \( f : X \to X \) is \( T_f = X \times [0,1] / (x,0) \sim (f(x),1) \). For \( f = \mathrm{id} \), \( T_{\mathrm{id}} = X \times S^1 \). For a map \( f : S^1 \to S^1 \) of degree \( d \), the mapping torus \( T_f \) has a fibration structure \( S^1 \to T_f \to S^1 \). The Mayer–Vietoris sequence for \( T_f = A \cup B \) (where \( A \) and \( B \) are two copies of \( S^1 \times [0,1] \) glued along \( S^1 \times \{0\} \) and \( S^1 \times \{1\} \)) gives:
+
 \[
 H_2(A \cap B) \to H_2(A) \oplus H_2(B) \to H_2(T_f) \to H_1(A \cap B) \xrightarrow{\Phi} H_1(A) \oplus H_1(B).
 \]
@@ -1027,6 +1065,7 @@ With \( A \simeq B \simeq S^1 \), \( A \cap B \simeq S^1 \sqcup S^1 \), the map 
 
 <div class="example">
 <strong>Example (Homology of \( \mathbb{RP}^2 \) via Mayer–Vietoris):</strong> Decompose \( \mathbb{RP}^2 \) as the union of a Möbius band \( M \) and a disk \( D \). Specifically, \( \mathbb{RP}^2 \) is formed from a Möbius band (which deformation retracts to its core circle \( S^1 \)) and a disk \( D^2 \) (contractible), glued along their boundaries \( S^1 \). So \( A = M \simeq S^1 \), \( B = D^2 \simeq * \), and \( A \cap B \simeq S^1 \) (the boundary circle). The Mayer–Vietoris sequence in degree 2:
+
 \[
 0 = H_2(S^1) \to H_2(M) \oplus H_2(D^2) \to H_2(\mathbb{RP}^2) \to H_1(S^1) \xrightarrow{\Phi} H_1(M) \oplus H_1(D^2).
 \]
@@ -1040,6 +1079,7 @@ Reading off: \( H_2(\mathbb{RP}^2) = \ker(\times 2) = 0 \) and \( H_1(\mathbb{RP
 
 <div class="example">
 <strong>Example (Homology of the Klein Bottle via Mayer–Vietoris):</strong> The Klein bottle \( K \) can be decomposed as the union of two Möbius bands glued along their boundary circles. Let \( A \simeq S^1 \) and \( B \simeq S^1 \) (two Möbius bands, each homotopy equivalent to their core circle), with \( A \cap B \simeq S^1 \) (their common boundary). The Mayer–Vietoris sequence in degree 1:
+
 \[
 H_1(S^1) \xrightarrow{\Phi} H_1(S^1) \oplus H_1(S^1) \to H_1(K) \to H_0(S^1) \xrightarrow{\Psi} H_0(S^1) \oplus H_0(S^1).
 \]
@@ -1054,6 +1094,7 @@ The map \( \Phi : \mathbb{Z} \to \mathbb{Z}^2 \) sends the boundary generator to
 
 <div class="example">
 <strong>Example (Reduced Homology and Spheres):</strong> For \( X = S^n \), the reduced homology groups are:
+
 \[
 \tilde H_k(S^n) = \begin{cases} \mathbb{Z} & k = n \\ 0 & k \neq n. \end{cases}
 \]
@@ -1062,6 +1103,7 @@ This can be proved by Mayer–Vietoris induction (as above) or by the long exact
 
 <div class="example">
 <strong>Example (Relative Homology of \( (D^n, S^{n-1}) \)):</strong> The pair \( (D^n, S^{n-1}) \) has relative homology:
+
 \[
 H_k(D^n, S^{n-1}) \cong \begin{cases} \mathbb{Z} & k = n \\ 0 & k \neq n. \end{cases}
 \]
@@ -1070,6 +1112,7 @@ This follows from the long exact sequence: for \( k \geq 2 \), \( H_k(D^n) = 0 \
 
 <div class="theorem">
 <strong>Theorem (Universal Coefficient Theorem):</strong> For any space \( X \) and abelian group \( G \), there is a natural short exact sequence (which splits, but not naturally):
+
 \[
 0 \to H_n(X) \otimes G \to H_n(X; G) \to \mathrm{Tor}(H_{n-1}(X), G) \to 0.
 \]
@@ -1136,6 +1179,7 @@ Surjectivity: every element of \( H_1(X) \) is represented by a sum of loops (an
 
 <div class="proof">
 <em>Proof.</em> Suppose \( f(x) \neq x \) for all \( x \in D^n \). Define \( r : D^n \to S^{n-1} \) by: let \( r(x) \) be the unique point on \( S^{n-1} \) on the ray from \( f(x) \) through \( x \), i.e.:
+
 \[
 r(x) = x + t(x)(x - f(x))
 \]
@@ -1174,6 +1218,7 @@ The local degree formula is the most computable: for a smooth map, one picks a g
 
 <div class="proof">
 <em>Proof.</em> Suppose \( v : S^n \to S^n \) is continuous with \( v(x) \perp x \) for all \( x \). Since \( x \perp v(x) \) and \( |x| = |v(x)| = 1 \), the vectors \( x, v(x) \) form an orthonormal pair. Define \( H : S^n \times [0,1] \to S^n \) by:
+
 \[
 H(x,t) = \cos(\pi t)\, x + \sin(\pi t)\, v(x).
 \]
@@ -1194,6 +1239,7 @@ Since \( |H(x,t)|^2 = \cos^2(\pi t) + \sin^2(\pi t) = 1 \), we have \( H(x,t) \i
 
 <div class="example">
 <strong>Example (Degree of \( z \mapsto z^n \) on \( S^1 \)):</strong> Consider the map \( f_n : S^1 \to S^1 \) given by \( f_n(z) = z^n \) (viewing \( S^1 \subset \mathbb{C} \)). For any regular value \( w \in S^1 \) (all values are regular), the preimage \( f_n^{-1}(w) \) consists of exactly \( n \) points \( \{w^{1/n} e^{2\pi i k/n} : k = 0, \ldots, n-1\} \). At each preimage point, the local orientation is preserved (the map \( z \mapsto z^n \) is orientation-preserving near each \( n \)-th root for \( n > 0 \)), so each preimage contributes \( +1 \) to the degree. By the local degree formula:
+
 \[
 \deg(f_n) = \sum_{k=0}^{n-1} (+1) = n.
 \]
@@ -1220,11 +1266,13 @@ For \( n < 0 \), the map \( z \mapsto z^n = \bar z^{|n|} \) reverses orientation
 <strong>Step 1:</strong> By excision, \( H_k(S^n, S^n \setminus S) \cong H_k(\mathbb{R}^n, \mathbb{R}^n \setminus \{0\}) \) locally near any point of \( S \cong S^{n-1} \). The local homology \( H_k(\mathbb{R}^n, \mathbb{R}^n \setminus \{0\}) \cong \tilde H_{k-1}(S^{n-1}) \cong \begin{cases} \mathbb{Z} & k = n \\ 0 & k \neq n \end{cases} \).
 
 <strong>Step 2:</strong> Since \( S \cong S^{n-1} \) is compact, a Mayer–Vietoris argument using the two hemispheres of \( S^{n-1} \) gives:
+
 \[
 H_k(S^n, S^n \setminus S) \cong \begin{cases} \mathbb{Z} & k = n \\ 0 & k \neq n. \end{cases}
 \]
 
 <strong>Step 3:</strong> The long exact sequence of the pair \( (S^n, S^n \setminus S) \):
+
 \[
 H_1(S^n) = 0 \to H_1(S^n, S^n \setminus S) = 0 \to \tilde H_0(S^n \setminus S) \to \tilde H_0(S^n) = 0.
 \]
@@ -1279,6 +1327,7 @@ The Lefschetz number satisfies a striking identity: \( L(f) = \chi(X) \) when \(
 
 <div class="definition">
 <strong>Definition (Lefschetz Number):</strong> For a continuous map \( f : X \to X \) on a finite CW complex, the <em>Lefschetz number</em> is:
+
 \[
 L(f) = \sum_{n \geq 0} (-1)^n \mathrm{tr}(f_* : H_n(X; \mathbb{Q}) \to H_n(X;\mathbb{Q})).
 \]
@@ -1290,6 +1339,7 @@ L(f) = \sum_{n \geq 0} (-1)^n \mathrm{tr}(f_* : H_n(X; \mathbb{Q}) \to H_n(X;\ma
 
 <div class="example">
 <strong>Example (Identity Map):</strong> For \( f = \mathrm{id}_X \), \( f_* = \mathrm{id} \) on each \( H_n(X;\mathbb{Q}) \), so \( \mathrm{tr}(f_*|_{H_n}) = \dim_{\mathbb{Q}} H_n(X;\mathbb{Q}) = \beta_n \). Thus:
+
 \[
 L(\mathrm{id}) = \sum_n (-1)^n \beta_n = \chi(X).
 \]
@@ -1298,6 +1348,7 @@ If \( \chi(X) \neq 0 \) (e.g., \( \chi(S^{2k}) = 2 \), \( \chi(\mathbb{CP}^n) = 
 
 <div class="example">
 <strong>Example (Antipodal Map on \( S^2 \)):</strong> Let \( A : S^2 \to S^2 \) be the antipodal map. We have \( H_0(S^2;\mathbb{Q}) \cong \mathbb{Q} \) (one component), \( H_1(S^2;\mathbb{Q}) = 0 \), \( H_2(S^2;\mathbb{Q}) \cong \mathbb{Q} \) (generated by the fundamental class). The induced maps: on \( H_0 \), any continuous map of a connected space induces the identity (\( \mathrm{tr} = 1 \)); on \( H_2 \), the antipodal map has \( \deg(A) = (-1)^{2+1} = -1 \) on \( S^2 \) (since it is a composition of 3 reflections), so \( A_* = -1 \) on \( H_2 \) (\( \mathrm{tr} = -1 \)). Therefore:
+
 \[
 L(A) = (-1)^0 \cdot 1 + (-1)^1 \cdot 0 + (-1)^2 \cdot (-1) = 1 + 0 - 1 = 0.
 \]
@@ -1320,6 +1371,7 @@ Since \( L(A) = 0 \), the theorem does not guarantee a fixed point — and indee
 
 <div class="remark">
 <strong>Remark (Local Homology Groups):</strong> The key tool in invariance of domain is the <em>local homology group</em> of a point \( x \in M \) in an \( n \)-manifold:
+
 \[
 H_k(M, M \setminus \{x\}) \cong H_k(\mathbb{R}^n, \mathbb{R}^n \setminus \{0\}) \cong \tilde H_{k-1}(S^{n-1}) \cong \begin{cases} \mathbb{Z} & k = n \\ 0 & k \neq n, \end{cases}
 \]
@@ -1357,6 +1409,7 @@ The Euler characteristics are \( \chi(\Sigma_g) = 2 - 2g \) and \( \chi(N_k) = 2
 
 <div class="example">
 <strong>Example (Lefschetz Number for Maps on Surfaces):</strong> Let \( f : T^2 \to T^2 \) be a continuous map. Since \( H_0(T^2;\mathbb{Q}) \cong \mathbb{Q} \), \( H_1(T^2;\mathbb{Q}) \cong \mathbb{Q}^2 \), \( H_2(T^2;\mathbb{Q}) \cong \mathbb{Q} \), we have:
+
 \[
 L(f) = \mathrm{tr}(f_*|_{H_0}) - \mathrm{tr}(f_*|_{H_1}) + \mathrm{tr}(f_*|_{H_2}).
 \]
@@ -1389,6 +1442,7 @@ The main computational tools for \( \pi_n \) are: (1) the long exact sequence of
 
 <div class="definition">
 <strong>Definition (Higher Homotopy Groups):</strong> For \( n \geq 1 \), the <em>\( n \)-th homotopy group</em> \( \pi_n(X, x_0) \) is the set of homotopy classes of based maps \( f : (S^n, s_0) \to (X, x_0) \), with group structure given by first-coordinate concatenation. Represent \( S^n \cong [0,1]^n / \partial [0,1]^n \) (cube with boundary identified to the basepoint), and define:
+
 \[
 (f \cdot g)(t_1, \ldots, t_n) = \begin{cases} f(2t_1, t_2, \ldots, t_n) & t_1 \leq \tfrac{1}{2}, \\ g(2t_1 - 1, t_2, \ldots, t_n) & t_1 \geq \tfrac{1}{2}. \end{cases}
 \]
@@ -1443,17 +1497,20 @@ This result means that the "homotopical complexity" of \( S^1 \) is entirely cap
 
 <div class="proof">
 <em>Proof.</em> Consider the fibration (covering map) \( p : \mathbb{R} \to S^1 \) with fibre \( p^{-1}(1) = \mathbb{Z} \). The long exact sequence of homotopy groups for this fibration reads:
+
 \[
 \cdots \to \pi_n(\mathbb{Z}) \to \pi_n(\mathbb{R}) \to \pi_n(S^1) \xrightarrow{\partial} \pi_{n-1}(\mathbb{Z}) \to \pi_{n-1}(\mathbb{R}) \to \cdots
 \]
 
 <strong>For \( n \geq 2 \):</strong> The fibre \( \mathbb{Z} \) is a discrete space, so \( \pi_k(\mathbb{Z}) = 0 \) for all \( k \geq 1 \) (any map \( S^k \to \mathbb{Z} \) from a connected space is constant). Also, \( \mathbb{R} \) is contractible, so \( \pi_n(\mathbb{R}) = 0 \) for all \( n \geq 1 \). The relevant segment for \( n \geq 2 \) is:
+
 \[
 0 = \pi_n(\mathbb{R}) \to \pi_n(S^1) \to \pi_{n-1}(\mathbb{Z}) = 0.
 \]
 By exactness, \( \pi_n(S^1) = 0 \).
 
 <strong>For \( n = 1 \):</strong> The sequence gives:
+
 \[
 0 = \pi_1(\mathbb{R}) \to \pi_1(S^1) \xrightarrow{\partial} \pi_0(\mathbb{Z}) \to \pi_0(\mathbb{R}) = 0.
 \]
@@ -1462,6 +1519,7 @@ Here \( \pi_0(\mathbb{Z}) = \mathbb{Z} \) (the path components of \( \mathbb{Z} 
 
 <div class="theorem">
 <strong>Theorem (Lifting Criterion for Covering Spaces):</strong> Let \( p : (\tilde X, \tilde x_0) \to (X, x_0) \) be a covering map, and let \( f : (Y, y_0) \to (X, x_0) \) be a continuous map with \( Y \) path-connected and locally path-connected. A lift \( \tilde f : (Y, y_0) \to (\tilde X, \tilde x_0) \) exists if and only if:
+
 \[
 f_*(\pi_1(Y, y_0)) \subseteq p_*(\pi_1(\tilde X, \tilde x_0)).
 \]
@@ -1483,6 +1541,7 @@ The geometric picture of the Hopf fibration is beautiful. The fibres are great c
 
 <div class="definition">
 <strong>Definition (Hopf Fibration):</strong> Identify \( S^3 \subset \mathbb{C}^2 \) with \( \{(z_0, z_1) : |z_0|^2 + |z_1|^2 = 1\} \) and \( S^2 \cong \mathbb{CP}^1 \). The <em>Hopf fibration</em> is the map \( \eta : S^3 \to S^2 \) defined by:
+
 \[
 \eta(z_0, z_1) = [z_0 : z_1] \in \mathbb{CP}^1 \cong S^2.
 \]
@@ -1495,6 +1554,7 @@ The fibre over any point is a circle \( S^1 = \{e^{i\theta}(z_0,z_1) : \theta \i
 
 <div class="theorem">
 <strong>Theorem (Long Exact Sequence of a Fibration):</strong> For a fibration \( p : E \to B \) with fibre \( F = p^{-1}(b_0) \) and basepoint \( e_0 \in F \), there is a long exact sequence:
+
 \[
 \cdots \to \pi_n(F, e_0) \xrightarrow{i_*} \pi_n(E, e_0) \xrightarrow{p_*} \pi_n(B, b_0) \xrightarrow{\partial} \pi_{n-1}(F, e_0) \to \cdots \to \pi_0(E) \to \pi_0(B).
 \]
@@ -1503,6 +1563,7 @@ The connecting homomorphism \( \partial \) is defined by lifting paths in \( B \
 
 <div class="example">
 <strong>Example (\( \pi_3(S^2) \cong \mathbb{Z} \)):</strong> Apply the long exact sequence of the Hopf fibration \( S^1 \hookrightarrow S^3 \xrightarrow{\eta} S^2 \):
+
 \[
 \pi_3(S^1) \to \pi_3(S^3) \to \pi_3(S^2) \to \pi_2(S^1) \to \pi_2(S^3) \to \pi_2(S^2) \to \pi_1(S^1) \to \pi_1(S^3).
 \]
@@ -1593,6 +1654,7 @@ The distinction between a <em>weak homotopy equivalence</em> (isomorphism on all
 
 <div class="definition">
 <strong>Definition (Eilenberg–MacLane Space):</strong> A topological space \( K(\pi, n) \) is an <em>Eilenberg–MacLane space</em> if:
+
 \[
 \pi_k(K(\pi,n)) = \begin{cases} \pi & k = n \\ 0 & k \neq n. \end{cases}
 \]
@@ -1611,6 +1673,7 @@ Such spaces exist and are unique up to homotopy equivalence for any abelian grou
 
 <div class="theorem">
 <strong>Theorem (Cohomology as Homotopy Classes):</strong> For a CW complex \( X \) and abelian group \( G \), there is a natural bijection:
+
 \[
 H^n(X; G) \cong [X, K(G,n)],
 \]
@@ -1658,6 +1721,7 @@ This theorem implies that the groups \( \pi_{n+k}(S^k) \) stabilise as \( k \to 
 
 <div class="example">
 <strong>Example (Long Exact Sequence for the Hopf Fibration, Higher Degrees):</strong> The full long exact sequence of the Hopf fibration \( S^1 \hookrightarrow S^3 \to S^2 \) gives more information:
+
 \[
 \cdots \to \pi_n(S^1) \to \pi_n(S^3) \to \pi_n(S^2) \to \pi_{n-1}(S^1) \to \cdots
 \]
@@ -1699,6 +1763,7 @@ The chapter is organised around three key ideas. First, Section 7.1 introduces c
 
 <div class="definition">
 <strong>Definition (Cochain Complex):</strong> For a chain complex \( \cdots \to C_n \xrightarrow{\partial} C_{n-1} \to \cdots \) and an abelian group \( G \), the <em>cochain complex</em> \( C^*(X;G) \) is defined by \( C^n(X;G) = \mathrm{Hom}(C_n(X), G) \) with the <em>coboundary map</em> \( \delta^n : C^n \to C^{n+1} \) defined by \( (\delta^n \phi)(\sigma) = \phi(\partial_{n+1} \sigma) \) for \( \phi \in C^n \) and a singular \( (n+1) \)-chain \( \sigma \). The condition \( \delta^{n+1} \circ \delta^n = 0 \) follows from \( \partial^2 = 0 \). The <em>cohomology groups</em> are:
+
 \[
 H^n(X; G) = \ker \delta^n / \mathrm{im}\, \delta^{n-1}.
 \]
@@ -1707,6 +1772,7 @@ Elements of \( \ker \delta^n \) are called <em>cocycles</em>; elements of \( \ma
 
 <div class="remark">
 <strong>Remark (Relationship to Homology):</strong> By the Universal Coefficient Theorem for cohomology, there is a (non-naturally split) short exact sequence:
+
 \[
 0 \to \mathrm{Ext}^1(H_{n-1}(X), G) \to H^n(X;G) \to \mathrm{Hom}(H_n(X), G) \to 0.
 \]
@@ -1734,6 +1800,7 @@ Note that \( H^1(\mathbb{RP}^2;\mathbb{Z}) = 0 \) while \( H_1(\mathbb{RP}^2;\ma
 
 <div class="remark">
 <strong>Remark (Kronecker Pairing):</strong> The natural pairing between cohomology and homology is the <em>Kronecker pairing</em>:
+
 \[
 \langle \cdot, \cdot \rangle : H^n(X; G) \otimes H_n(X; \mathbb{Z}) \to G, \quad \langle [\phi], [\sigma] \rangle = \phi(\sigma),
 \]
@@ -1748,6 +1815,7 @@ where \( \phi \in C^n(X; G) \) is a cocycle and \( \sigma \in C_n(X) \) is a cyc
 
 <div class="definition">
 <strong>Definition (Cup Product):</strong> For cohomology classes \( \alpha \in H^p(X;R) \) and \( \beta \in H^q(X;R) \) with coefficients in a ring \( R \), the <em>cup product</em> \( \alpha \cup \beta \in H^{p+q}(X;R) \) is defined at the cochain level by:
+
 \[
 (\phi \cup \psi)(\sigma) = \phi(\sigma|_{[v_0,\ldots,v_p]}) \cdot \psi(\sigma|_{[v_p,\ldots,v_{p+q}]})
 \]
@@ -1766,6 +1834,7 @@ for a singular \( (p+q) \)-simplex \( \sigma : \Delta^{p+q} \to X \), where \( \
 
 <div class="example">
 <strong>Example (Cohomology Ring of \( T^2 \)):</strong> The torus \( T^2 \) has \( H^0 = \mathbb{Z} \), \( H^1 = \mathbb{Z}^2 \) with generators \( \alpha \) (the class dual to the loop \( a \)) and \( \beta \) (dual to \( b \)), and \( H^2 = \mathbb{Z} \) with generator the fundamental class \( [T^2]^* \). The cup products are:
+
 \[
 \alpha \cup \alpha = 0, \quad \beta \cup \beta = 0, \quad \alpha \cup \beta = [T^2]^*, \quad \beta \cup \alpha = -[T^2]^*.
 \]
@@ -1774,6 +1843,7 @@ So \( \alpha \cup \beta = -\beta \cup \alpha \) (graded-commutativity with sign 
 
 <div class="example">
 <strong>Example (Cohomology Ring of \( \mathbb{CP}^n \)):</strong> The cohomology ring of \( \mathbb{CP}^n \) with \( \mathbb{Z} \) coefficients is:
+
 \[
 H^*(\mathbb{CP}^n;\mathbb{Z}) \cong \mathbb{Z}[\alpha]/(\alpha^{n+1})
 \]
@@ -1791,6 +1861,7 @@ The de Rham theorem (proved using integration of forms over singular chains) sta
 
 <div class="example">
 <strong>Example (De Rham Cohomology of \( S^1 \)):</strong> On \( S^1 \), the 0-forms are smooth functions \( f : S^1 \to \mathbb{R} \). The 1-forms are expressions \( f(x)dx \) (for \( x \) the angle coordinate). The differential \( d : C^\infty(S^1) \to \Omega^1(S^1) \) maps \( f \mapsto f'dx \). A 1-form \( \omega = f(x)dx \) is closed automatically (since there are no 2-forms). It is exact iff \( f = g' \) for some smooth \( g \), which happens iff \( \int_{S^1} f\, dx = 0 \) (the "period" of \( \omega \) around the circle). Thus:
+
 \[
 H^0_{\mathrm{dR}}(S^1) \cong \mathbb{R} \quad \text{(constants)}, \quad H^1_{\mathrm{dR}}(S^1) \cong \mathbb{R} \quad \text{(periods)}.
 \]
@@ -1807,6 +1878,7 @@ The generator of \( H^1_{\mathrm{dR}}(S^1) \) is the form \( d\theta / (2\pi) \)
 
 <div class="proof">
 <em>Proof.</em> The key is that \( \mathbb{R}^n \) is contractible. The homotopy \( H : \mathbb{R}^n \times [0,1] \to \mathbb{R}^n \), \( H(x,t) = tx \), from the identity to the constant map at 0, induces a chain homotopy \( K : \Omega^k(\mathbb{R}^n) \to \Omega^{k-1}(\mathbb{R}^n) \) at the level of differential forms, given by the formula:
+
 \[
 (K\omega)(x) = \int_0^1 t^{k-1} i_{\partial/\partial t} \omega(tx) \, dt,
 \]
@@ -1815,6 +1887,7 @@ where \( i_{\partial/\partial t} \) denotes interior multiplication (contraction
 
 <div class="example">
 <strong>Example (De Rham Cohomology of \( T^2 \)):</strong> The torus \( T^2 = \mathbb{R}^2 / \mathbb{Z}^2 \) has coordinates \( (\theta_1, \theta_2) \in [0,1]^2 / \partial \). Its de Rham cohomology, computed by the de Rham theorem and the known cohomology of \( T^2 \), is:
+
 \[
 H^0_{\mathrm{dR}}(T^2) = \mathbb{R}, \quad H^1_{\mathrm{dR}}(T^2) = \mathbb{R}^2, \quad H^2_{\mathrm{dR}}(T^2) = \mathbb{R}.
 \]
@@ -1839,6 +1912,7 @@ One of the most beautiful theorems in algebraic topology, Poincaré duality esta
 
 <div class="definition">
 <strong>Definition (Cap Product):</strong> For cohomology class \( \alpha \in H^k(X;R) \) and homology class \( \sigma \in H_n(X;R) \), the <em>cap product</em> \( \alpha \cap \sigma \in H_{n-k}(X;R) \) is defined by:
+
 \[
 \phi \cap \sigma = \sigma(\phi \otimes \mathrm{id}) \text{ (using the coproduct structure)}.
 \]
@@ -1847,6 +1921,7 @@ Concretely, for \( \sigma \) represented by a singular \( n \)-simplex and \( \p
 
 <div class="theorem">
 <strong>Theorem (Poincaré Duality):</strong> Let \( M \) be a closed oriented \( n \)-manifold with fundamental class \( [M] \in H_n(M;\mathbb{Z}) \). Then for all \( k \), the map:
+
 \[
 D : H^k(M;\mathbb{Z}) \to H_{n-k}(M;\mathbb{Z}), \quad D(\alpha) = \alpha \cap [M],
 \]
@@ -1865,6 +1940,7 @@ is an isomorphism. Equivalently, \( H^k(M;\mathbb{Z}) \cong H_{n-k}(M;\mathbb{Z}
 
 <div class="example">
 <strong>Example (Poincaré Duality for \( \Sigma_g \)):</strong> For the genus-\( g \) surface \( \Sigma_g \) (a closed oriented 2-manifold), Poincaré duality gives:
+
 \[
 H^0(\Sigma_g) \cong H_2(\Sigma_g) \cong \mathbb{Z}, \quad H^1(\Sigma_g) \cong H_1(\Sigma_g) \cong \mathbb{Z}^{2g}, \quad H^2(\Sigma_g) \cong H_0(\Sigma_g) \cong \mathbb{Z}.
 \]

@@ -518,7 +518,9 @@ DTMs are *long and sparse*: vocabularies may contain tens of thousands of terms,
 
 <strong>TF-IDF (Term Frequency–Inverse Document Frequency)</strong> weights words to emphasize those that are informative about a particular document relative to the rest of the corpus. Words that appear frequently across *all* documents (like "the") get down-weighted; words that appear frequently in *one* document but rarely elsewhere get up-weighted.
 
-\[ \text{TF-IDF}(w, d) = \text{TF}(w, d) \times \log\left(\frac{N}{\text{DF}(w)}\right) \]
+\[
+\text{TF-IDF}(w, d) = \text{TF}(w, d) \times \log\left(\frac{N}{\text{DF}(w)}\right)
+\]
 
 where *N* is the total number of documents and DF(*w*) is the number of documents containing word *w*.
 
@@ -549,7 +551,9 @@ X_lsa = svd.fit_transform(dtm)
 
 <strong>Cosine similarity</strong> measures the similarity between two document vectors regardless of document length:
 
-\[ \text{cosine}(A, B) = \frac{A \cdot B}{\|A\| \|B\|} \]
+\[
+\text{cosine}(A, B) = \frac{A \cdot B}{\|A\| \|B\|}
+\]
 
 Values near 1 indicate high similarity; values near 0 indicate near-orthogonality (very different content).
 
@@ -626,7 +630,9 @@ partition = community_louvain.best_partition(G)
 
 <strong>Betweenness centrality</strong> counts how often a node lies on the shortest path between all other pairs of nodes. High betweenness = broker position = ability to control information flow.
 
-\[ C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}} \]
+\[
+C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}
+\]
 
 <strong>Eigenvector centrality</strong> gives higher scores to nodes connected to other high-scoring nodes. Being connected to important nodes matters, not just having many connections. Google's PageRank is a variant of eigenvector centrality.
 
@@ -761,13 +767,17 @@ A very high R² on training data (e.g., 0.80) may indicate overfitting. The cros
 
 <strong>Ridge regression</strong> adds an L2 regularization penalty that shrinks coefficient magnitudes, reducing overfitting:
 
-\[ J(\theta) = \text{MSE}(\theta) + \alpha \sum_{j=1}^{n} \theta_j^2 \]
+\[
+J(\theta) = \text{MSE}(\theta) + \alpha \sum_{j=1}^{n} \theta_j^2
+\]
 
 <strong>Lasso regression</strong> uses an L1 penalty that forces some coefficients to exactly zero, performing automatic feature selection.
 
 <strong>Logistic regression</strong> predicts binary outcomes. Instead of a continuous prediction, it models the log-odds of the positive class as a linear function of the features. The output is a probability between 0 and 1:
 
-\[ P(y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n)}} \]
+\[
+P(y = 1) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n)}}
+\]
 
 ### Tree-Based Methods
 
@@ -822,7 +832,9 @@ Training adjusts the network's *weights* to minimize a <strong>loss function</st
 
 <strong>Gradient descent</strong> updates weights in the direction that reduces loss:
 
-\[ w \leftarrow w - \eta \frac{\partial L}{\partial w} \]
+\[
+w \leftarrow w - \eta \frac{\partial L}{\partial w}
+\]
 
 where *η* is the <strong>learning rate</strong>. Too large: training is unstable. Too small: training is slow.
 
@@ -906,7 +918,9 @@ These goals are not mutually exclusive — the best work in computational social
 
 <strong>Bayesian statistics</strong> treats probability as a degree of belief, updated in light of evidence. *Parameters* are random variables with probability distributions; data is fixed. This is formalized in <strong>Bayes' theorem</strong>:
 
-\[ P(\theta \mid D) = \frac{P(D \mid \theta) \cdot P(\theta)}{P(D)} \]
+\[
+P(\theta \mid D) = \frac{P(D \mid \theta) \cdot P(\theta)}{P(D)}
+\]
 
 - \(P(\theta)\) — <strong>prior:</strong> belief about parameters *before* seeing data
 - \(P(D \mid \theta)\) — <strong>likelihood:</strong> probability of data given parameters
@@ -939,7 +953,9 @@ Bayesian inference replaces point estimates with full <strong>posterior distribu
 <strong>Joint probability</strong> P(A, B): probability of both A and B occurring.
 <strong>Conditional probability</strong> P(A | B): probability of A, given that B has occurred.
 
-\[ P(A \mid B) = \frac{P(A, B)}{P(B)} \]
+\[
+P(A \mid B) = \frac{P(A, B)}{P(B)}
+\]
 
 ### Approximate Posterior Inference: MCMC
 
@@ -966,15 +982,19 @@ Bayesian regression embeds a familiar linear model inside a probabilistic framew
 \[
 \text{Wealth}_i \sim \text{Normal}(\mu_i, \sigma)
 \]
+
 \[
 \mu_i = \alpha + \beta \cdot \text{Latitude}_i
 \]
+
 \[
 \alpha \sim \text{Normal}(0, 10)
 \]
+
 \[
 \beta \sim \text{Normal}(0, 10)
 \]
+
 \[
 \sigma \sim \text{Exponential}(1)
 \]
@@ -1036,12 +1056,15 @@ Standard linear regression assumes all observations come from the same underlyin
 \[
 \text{VotingRate}_{i,s} \sim \text{Normal}(\mu_{i,s}, \sigma)
 \]
+
 \[
 \mu_{i,s} = \alpha_s + \beta \cdot \text{Spending}_{i,s}
 \]
+
 \[
 \alpha_s \sim \text{Normal}(\bar{\alpha}, \tau_\alpha)
 \]
+
 \[
 \bar{\alpha} \sim \text{Normal}(0, 10), \quad \tau_\alpha \sim \text{Exponential}(1)
 \]

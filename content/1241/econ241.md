@@ -32,7 +32,9 @@ Before asking *when* government should intervene in markets, we need a common un
 
 The welfare loss from a price ceiling set below equilibrium \( P^* \) equals
 
-\[ DWL = \frac{1}{2} \left( P^* - P_{ceil} \right) \left( Q^* - Q_{ceil} \right) \]
+\[
+DWL = \frac{1}{2} \left( P^* - P_{ceil} \right) \left( Q^* - Q_{ceil} \right)
+\]
 
 This provides the baseline for evaluating taxes and subsidies: any policy that drives a wedge between buyer price and seller price generates a deadweight loss whose size depends on the elasticities of supply and demand.
 
@@ -42,7 +44,9 @@ Public economics relies on a well-specified model of individual choice. A consum
 
 The optimum satisfies the tangency condition
 
-\[ \frac{MU_1}{MU_2} = \frac{p_1}{p_2} \]
+\[
+\frac{MU_1}{MU_2} = \frac{p_1}{p_2}
+\]
 
 which equates the marginal rate of substitution (MRS) to the price ratio.
 
@@ -131,7 +135,9 @@ Classic examples: national defence, lighthouses, public health surveillance, fir
 
 The efficient provision of a public good requires that the sum of marginal benefits across all consumers equal the marginal cost of provision:
 
-\[ \sum_{i=1}^{n} MRS_i^{G,x} = MRT^{G,x} \]
+\[
+\sum_{i=1}^{n} MRS_i^{G,x} = MRT^{G,x}
+\]
 
 where \( MRS_i^{G,x} \) is the rate at which consumer \( i \) is willing to substitute the public good \( G \) for the private numeraire \( x \), and \( MRT \) is the economy's transformation rate. This contrasts with the private-good condition, which requires each individual's MRS to equal MRT.
 
@@ -141,7 +147,9 @@ The intuition: because all consumers simultaneously consume the same unit of the
 
 If \( n \) consumers each have utility \( U_i = u_i(x_i, G) \) where \( G = \sum_j g_j \) is total provision, the Nash equilibrium has consumer \( i \) choose \( g_i \) to maximise utility taking others' contributions as given. At the Nash equilibrium,
 
-\[ \frac{\partial u_i / \partial G}{\partial u_i / \partial x_i} = p_G \]
+\[
+\frac{\partial u_i / \partial G}{\partial u_i / \partial x_i} = p_G
+\]
 
 Each consumer sets their own MRS equal to the price, ignoring others' valuations. The equilibrium level of \( G \) is inefficiently low. The degree of underprovision rises with the size of the population and the degree of non-rivalry.
 
@@ -153,7 +161,9 @@ Each consumer sets their own MRS equal to the price, ignoring others' valuations
 
 The welfare loss from a negative production externality is shown by the divergence between the marginal private cost (MPC) and marginal social cost (MSC):
 
-\[ MSC = MPC + MEC \]
+\[
+MSC = MPC + MEC
+\]
 
 where MEC is the marginal external cost. The competitive equilibrium output \( Q_m \) exceeds the socially optimal output \( Q^* \), generating a deadweight loss.
 
@@ -161,7 +171,9 @@ where MEC is the marginal external cost. The competitive equilibrium output \( Q
 
 A Pigouvian tax equal to the marginal external damage at the optimum corrects the externality by internalising the social cost:
 
-\[ t^* = MEC(Q^*) \]
+\[
+t^* = MEC(Q^*)
+\]
 
 The tax drives the market price up by \( t^* \), reducing output to \( Q^* \). Unlike a quantity standard (regulation), the Pigouvian tax is cost-effective: abatement occurs among those with the lowest abatement cost.
 
@@ -209,9 +221,13 @@ The distinction is crucial for policy: a payroll tax levied on employers may be 
 
 For a per-unit tax \( t \) on a good with demand elasticity \( \varepsilon_D < 0 \) and supply elasticity \( \varepsilon_S > 0 \):
 
-\[ \frac{dP_B}{dt} = \frac{\varepsilon_S}{\varepsilon_S - \varepsilon_D} \]
+\[
+\frac{dP_B}{dt} = \frac{\varepsilon_S}{\varepsilon_S - \varepsilon_D}
+\]
 
-\[ \frac{dP_S}{dt} = \frac{\varepsilon_D}{\varepsilon_S - \varepsilon_D} \]
+\[
+\frac{dP_S}{dt} = \frac{\varepsilon_D}{\varepsilon_S - \varepsilon_D}
+\]
 
 where \( P_B \) is the buyer price and \( P_S \) is the seller price. When demand is perfectly inelastic (\( \varepsilon_D = 0 \)), the buyer bears the entire tax. When supply is perfectly inelastic (\( \varepsilon_S = 0 \)), the seller bears it fully.
 
@@ -219,7 +235,9 @@ where \( P_B \) is the buyer price and \( P_S \) is the seller price. When deman
 
 The excess burden (deadweight loss) of a small tax \( t \) is approximately
 
-\[ DWL \approx \frac{1}{2} t^2 \frac{\varepsilon_D \varepsilon_S}{\varepsilon_S - \varepsilon_D} \cdot \frac{Q}{P} \]
+\[
+DWL \approx \frac{1}{2} t^2 \frac{\varepsilon_D \varepsilon_S}{\varepsilon_S - \varepsilon_D} \cdot \frac{Q}{P}
+\]
 
 Two key implications: (1) DWL rises with the *square* of the tax rate, so doubling a tax quadruples the excess burden; (2) DWL is larger when supply and demand are more elastic. This motivates the inverse elasticity rule for optimal commodity taxes (Ramsey 1927): to raise a given revenue with minimum total DWL, tax goods with low demand elasticities more heavily.
 
@@ -307,7 +325,9 @@ Employment Insurance (EI) replaces a fraction of insured earnings for workers wh
 
 **Optimal EI design (Baily-Chetty framework):**
 
-\[ \frac{b}{w-b} = \frac{\Delta c / c}{\varepsilon_{1-e,b}} \]
+\[
+\frac{b}{w-b} = \frac{\Delta c / c}{\varepsilon_{1-e,b}}
+\]
 
 where \( b \) is the benefit, \( w \) is the wage, \( \Delta c / c \) is the consumption drop upon unemployment (insurance value), and \( \varepsilon_{1-e,b} \) is the elasticity of employment with respect to the benefit (moral hazard cost). High consumption drops and low behavioural responses call for generous benefits; high moral hazard calls for restraint.
 
@@ -366,7 +386,9 @@ Different ethical frameworks lead to different redistribution policies:
 
 **Sen poverty index** combines incidence, intensity (gap), and inequality among the poor:
 
-\[ P = H \left[ I + (1-I) G_p \right] \]
+\[
+P = H \left[ I + (1-I) G_p \right]
+\]
 
 where \( H \) is the headcount ratio, \( I \) is the income gap ratio, and \( G_p \) is the Gini coefficient among the poor.
 

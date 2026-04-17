@@ -102,11 +102,15 @@ The QPDAC cycle — Question → Plan → Data → Analysis → Conclusion — i
 
 Experiments are analyzed using linear regression. For a single-factor experiment with \( m \) conditions and \( N \) total observations, define indicator variables:
 
-\[ x_{ij} = \begin{cases} 1 & \text{if unit } i \text{ is in condition } j \\ 0 & \text{otherwise} \end{cases} \quad j = 1, \ldots, m-1 \]
+\[
+x_{ij} = \begin{cases} 1 & \text{if unit } i \text{ is in condition } j \\ 0 & \text{otherwise} \end{cases} \quad j = 1, \ldots, m-1
+\]
 
 The model is:
 
-\[ Y_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_{m-1} x_{i,m-1} + \varepsilon_i, \quad \varepsilon_i \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2) \]
+\[
+Y_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_{m-1} x_{i,m-1} + \varepsilon_i, \quad \varepsilon_i \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2)
+\]
 
 Interpretations:
 - \( \beta_0 = \mu_m \): expected response in condition \( m \) (reference).
@@ -120,7 +124,10 @@ Testing \( H_0: \beta_1 = \cdots = \beta_{m-1} = 0 \) is equivalent to testing \
 
 <div class="definition">
 <strong>Sum of Squares Decomposition</strong>:
-\[ \text{SST} = \text{SSC} + \text{SSE} \]
+
+\[
+\text{SST} = \text{SSC} + \text{SSE}
+\]
 where:
 <ul>
 <li><em>SST</em> = total sum of squares = \(\sum_j \sum_i (y_{ij} - \bar{y})^2\)</li>
@@ -147,11 +154,17 @@ Under \( H_0: \mu_1 = \cdots = \mu_m \), \( F \sim F(m-1, N-m) \). The p-value i
 
 <div class="definition">
 <strong>Completely Randomized Design (CRD)</strong>: In a CRD, experimental units are randomly assigned to treatment conditions with no blocking structure. With <em>m</em> conditions and <em>n<sub>j</sub></em> units in condition <em>j</em>, the model is:
-\[ Y_{ij} = \mu_j + \varepsilon_{ij}, \quad \varepsilon_{ij} \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2), \quad i = 1,\ldots,n_j,\ j = 1,\ldots,m \]
+
+\[
+Y_{ij} = \mu_j + \varepsilon_{ij}, \quad \varepsilon_{ij} \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2), \quad i = 1,\ldots,n_j,\ j = 1,\ldots,m
+\]
 </div>
 
 This is equivalent to the cell-means model. Alternatively, using effects coding:
-\[ Y_{ij} = \mu + \tau_j + \varepsilon_{ij} \]
+
+\[
+Y_{ij} = \mu + \tau_j + \varepsilon_{ij}
+\]
 where \( \mu \) is the overall mean and \( \tau_j \) is the \( j \)-th treatment effect with constraint \( \sum_j \tau_j = 0 \) or \( \tau_m = 0 \).
 
 **Least-squares estimates**: \( \hat{\mu}_j = \bar{y}_{\cdot j} \), \( \hat{\sigma}^2 = \text{MSE} \).
@@ -160,13 +173,21 @@ where \( \mu \) is the overall mean and \( \tau_j \) is the \( j \)-th treatment
 
 **Theorem (ANOVA Decomposition for CRD)**: Under the model above,
 
-\[ \text{SST} = \text{SSC} + \text{SSE} \]
+\[
+\text{SST} = \text{SSC} + \text{SSE}
+\]
 
 where:
-\[ \text{SSC} = \sum_{j=1}^{m} n_j (\bar{y}_{\cdot j} - \bar{y}_{\cdot\cdot})^2, \quad \text{SSE} = \sum_{j=1}^{m} \sum_{i=1}^{n_j} (y_{ij} - \bar{y}_{\cdot j})^2 \]
+
+\[
+\text{SSC} = \sum_{j=1}^{m} n_j (\bar{y}_{\cdot j} - \bar{y}_{\cdot\cdot})^2, \quad \text{SSE} = \sum_{j=1}^{m} \sum_{i=1}^{n_j} (y_{ij} - \bar{y}_{\cdot j})^2
+\]
 
 Under \( H_0: \mu_1 = \cdots = \mu_m \):
-\[ F = \frac{\text{SSC}/(m-1)}{\text{SSE}/(N-m)} \sim F(m-1, N-m) \]
+
+\[
+F = \frac{\text{SSC}/(m-1)}{\text{SSE}/(N-m)} \sim F(m-1, N-m)
+\]
 
 **Worked Example — Candy Crush Boosters**: Three booster conditions (lollipop hammer, jellyfish, colour bomb) with \( n_1 = 121, n_2 = 135, n_3 = 117 \) users. Testing \( H_0: \mu_1 = \mu_2 = \mu_3 \) yielded \( F = 851.895 \) with \( T \sim F(2, 370) \), giving p-value \( = 3.280 \times 10^{-139} \). Strong evidence the average game play duration differs across booster types.
 
@@ -176,7 +197,9 @@ The **minimum detectable effect (MDE)** \( \delta \) is the smallest difference 
 
 For a two-sample comparison testing \( H_0: \theta_1 = \theta_2 \) vs. \( H_A: \theta_1 \neq \theta_2 \) at level \( \alpha \) with power \( 1 - \beta \):
 
-\[ n = \frac{(z_{\alpha/2} - z_{1-\beta})^2 [\mathbb{V}(Y_1) + \mathbb{V}(Y_2)]}{\delta^2} \]
+\[
+n = \frac{(z_{\alpha/2} - z_{1-\beta})^2 [\mathbb{V}(Y_1) + \mathbb{V}(Y_2)]}{\delta^2}
+\]
 
 where \( \delta = \theta_1 - \theta_2 \) and \( z_\alpha \) denotes the \( \alpha \)-quantile of \( \mathcal{N}(0,1) \).
 
@@ -192,7 +215,10 @@ When testing all pairwise comparisons among \( m \) conditions (\( M = \binom{m}
 
 <div class="definition">
 <strong>Family-Wise Error Rate (FWER)</strong>: The probability of committing at least one Type I Error across all \( M \) hypothesis tests:
-\[ \text{FWER} = P(V \geq 1) \]
+
+\[
+\text{FWER} = P(V \geq 1)
+\]
 where <em>V</em> is the number of true null hypotheses that were incorrectly rejected.
 </div>
 
@@ -237,11 +263,17 @@ Adjusted p-values: \( p_{(k)}^* = \min_{j \geq k}\{M p_{(j)}/j\} \). In R: `p.ad
 </div>
 
 **Tukey HSD** provides simultaneous confidence intervals for all pairwise differences with familywise coverage \( 1 - \alpha \). The Tukey interval for \( \mu_j - \mu_k \) is:
-\[ (\bar{y}_{\cdot j} - \bar{y}_{\cdot k}) \pm \frac{q_{\alpha,m,N-m}}{\sqrt{2}} \cdot \hat{\sigma} \sqrt{\frac{1}{n_j} + \frac{1}{n_k}} \]
+
+\[
+(\bar{y}_{\cdot j} - \bar{y}_{\cdot k}) \pm \frac{q_{\alpha,m,N-m}}{\sqrt{2}} \cdot \hat{\sigma} \sqrt{\frac{1}{n_j} + \frac{1}{n_k}}
+\]
 where \( q_{\alpha,m,N-m} \) is the upper \(\alpha\) critical value of the studentized range distribution.
 
 **Scheffé's method** provides protection for *all possible* contrasts:
-\[ \hat{\psi} \pm \sqrt{(m-1) F_{\alpha,m-1,N-m}} \cdot \hat{\sigma} \sqrt{\sum_j c_j^2/n_j} \]
+
+\[
+\hat{\psi} \pm \sqrt{(m-1) F_{\alpha,m-1,N-m}} \cdot \hat{\sigma} \sqrt{\sum_j c_j^2/n_j}
+\]
 
 ---
 
@@ -254,12 +286,18 @@ where \( q_{\alpha,m,N-m} \) is the upper \(\alpha\) critical value of the stude
 </div>
 
 **Model**:
-\[ Y_{ijk} = \mu + \tau_j + \beta_k + \varepsilon_{ijk}, \quad \varepsilon_{ijk} \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2) \]
+
+\[
+Y_{ijk} = \mu + \tau_j + \beta_k + \varepsilon_{ijk}, \quad \varepsilon_{ijk} \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2)
+\]
 
 where \( \tau_j \) is the \( j \)-th treatment effect and \( \beta_k \) is the \( k \)-th block effect, with \( \sum_j \tau_j = 0 \) and \( \sum_k \beta_k = 0 \).
 
 Equivalently, in regression form:
-\[ Y_i = \alpha + \sum_{j=1}^{m-1} \beta_j x_{ij} + \sum_{k=1}^{b-1} \gamma_k z_{ik} + \varepsilon_i \]
+
+\[
+Y_i = \alpha + \sum_{j=1}^{m-1} \beta_j x_{ij} + \sum_{k=1}^{b-1} \gamma_k z_{ik} + \varepsilon_i
+\]
 
 **Two-Way ANOVA Table for RCBD** (balanced, \( n_{jk} = n \), \( N = nbm \)):
 
@@ -271,8 +309,14 @@ Equivalently, in regression form:
 | Total | SST | \(N-1\) | | |
 
 Sum-of-squares formulas (balanced, one obs per cell, \( N = mb \)):
-\[ \text{SSC} = b\sum_{j=1}^m (\bar{y}_{\cdot j \cdot} - \bar{y}_{\cdot\cdot\cdot})^2, \quad \text{SSB} = m\sum_{k=1}^b (\bar{y}_{\cdot\cdot k} - \bar{y}_{\cdot\cdot\cdot})^2 \]
-\[ \text{SSE} = \sum_{j,k} (y_{jk} - \bar{y}_{\cdot j\cdot} - \bar{y}_{\cdot\cdot k} + \bar{y}_{\cdot\cdot\cdot})^2 \]
+
+\[
+\text{SSC} = b\sum_{j=1}^m (\bar{y}_{\cdot j \cdot} - \bar{y}_{\cdot\cdot\cdot})^2, \quad \text{SSB} = m\sum_{k=1}^b (\bar{y}_{\cdot\cdot k} - \bar{y}_{\cdot\cdot\cdot})^2
+\]
+
+\[
+\text{SSE} = \sum_{j,k} (y_{jk} - \bar{y}_{\cdot j\cdot} - \bar{y}_{\cdot\cdot k} + \bar{y}_{\cdot\cdot\cdot})^2
+\]
 
 **Hypothesis tests**:
 - Design factor: \( H_0: \tau_1 = \cdots = \tau_m = 0 \), \( F = \text{MSC}/\text{MSE} \sim F(m-1, N-m-b+1) \).
@@ -293,7 +337,9 @@ For condition: p-value \( = P(T \geq 2165.39) = 1.10 \times 10^{-310} \), \( T \
 
 The **relative efficiency** of the RCBD relative to the CRD measures how much replication the CRD would need to achieve the same precision:
 
-\[ \text{RE} = \frac{(b-1)\text{MSB} + b(m-1)\text{MSE}}{(bm-1)\text{MSE}} \]
+\[
+\text{RE} = \frac{(b-1)\text{MSB} + b(m-1)\text{MSE}}{(bm-1)\text{MSE}}
+\]
 
 If \( \text{RE} > 1 \), blocking was beneficial; the CRD would need \( \text{RE} \times n \) observations per treatment to match precision.
 
@@ -311,7 +357,10 @@ A **Latin square of order \( p \)** is a \( p \times p \) grid containing \( p \
 | **NF1=4** | B | C | D | A |
 
 **Model** (\( N = np^2 \), \( n \) units per block):
-\[ Y_i = \alpha + \sum_{j=1}^{p-1}\beta_j x_{ij} + \sum_{k=1}^{p-1}\gamma_k z_{ik} + \sum_{\ell=1}^{p-1}\delta_\ell w_{i\ell} + \varepsilon_i \]
+
+\[
+Y_i = \alpha + \sum_{j=1}^{p-1}\beta_j x_{ij} + \sum_{k=1}^{p-1}\gamma_k z_{ik} + \sum_{\ell=1}^{p-1}\delta_\ell w_{i\ell} + \varepsilon_i
+\]
 
 **Three-Way ANOVA Table for Latin Square Design:**
 
@@ -324,7 +373,10 @@ A **Latin square of order \( p \)** is a \( p \times p \) grid containing \( p \
 | Total | SST | \(N-1\) | | |
 
 Sums of squares:
-\[ \text{SSC} = np\sum_{j=1}^p (\bar{y}_{\cdot j\cdot\cdot} - \bar{y}_{\cdot\cdot\cdot\cdot})^2, \quad \text{SSB1} = np\sum_{k=1}^p (\bar{y}_{\cdot\cdot k\cdot} - \bar{y}_{\cdot\cdot\cdot\cdot})^2, \quad \text{SSB2} = np\sum_{\ell=1}^p (\bar{y}_{\cdot\cdot\cdot\ell} - \bar{y}_{\cdot\cdot\cdot\cdot})^2 \]
+
+\[
+\text{SSC} = np\sum_{j=1}^p (\bar{y}_{\cdot j\cdot\cdot} - \bar{y}_{\cdot\cdot\cdot\cdot})^2, \quad \text{SSB1} = np\sum_{k=1}^p (\bar{y}_{\cdot\cdot k\cdot} - \bar{y}_{\cdot\cdot\cdot\cdot})^2, \quad \text{SSB2} = np\sum_{\ell=1}^p (\bar{y}_{\cdot\cdot\cdot\ell} - \bar{y}_{\cdot\cdot\cdot\cdot})^2
+\]
 
 **Worked Example — Netflix Latency**: \( p = 4 \) conditions (A, B, C, D), blocked by browser (Chrome, Edge, Firefox, Safari) and time of day (4 periods), \( n = 500 \) users per block, \( N = 8000 \). ANOVA:
 
@@ -357,7 +409,10 @@ When practical constraints prevent running every condition in every block (\( m^
 </div>
 
 **Design constraints**:
-\[ mr = bm^*, \quad r(m^*-1) = \lambda(m-1) \]
+
+\[
+mr = bm^*, \quad r(m^*-1) = \lambda(m-1)
+\]
 
 **Design procedure** (specify \( m, m^*, \lambda \)):
 1. Compute \( r = \lambda(m-1)/(m^*-1) \) — must be integer.
@@ -389,7 +444,9 @@ When practical constraints prevent running every condition in every block (\( m^
 
 Each factor is represented by \( x_j \in \{-1, +1\} \) (coded units). The coding for a quantitative factor with natural-unit levels \( U_L \) (low) and \( U_H \) (high) is:
 
-\[ x = \frac{U - (U_H + U_L)/2}{(U_H - U_L)/2} \]
+\[
+x = \frac{U - (U_H + U_L)/2}{(U_H - U_L)/2}
+\]
 
 The **design matrix** has \( 2^K \) rows (conditions) and \( K \) columns (factors), with entries \( \pm 1 \). Example — \( 2^3 \) design matrix:
 
@@ -408,9 +465,13 @@ The **design matrix** has \( 2^K \) rows (conditions) and \( K \) columns (facto
 
 **Intuitive formulas** (balanced, \( n \) reps per condition):
 
-\[ \widehat{\text{ME}}_A = \bar{y}_{A+} - \bar{y}_{A-} = \frac{\bar{y}_{A+\cap B+} + \bar{y}_{A+\cap B-}}{2} - \frac{\bar{y}_{A-\cap B+} + \bar{y}_{A-\cap B-}}{2} \]
+\[
+\widehat{\text{ME}}_A = \bar{y}_{A+} - \bar{y}_{A-} = \frac{\bar{y}_{A+\cap B+} + \bar{y}_{A+\cap B-}}{2} - \frac{\bar{y}_{A-\cap B+} + \bar{y}_{A-\cap B-}}{2}
+\]
 
-\[ \widehat{\text{IE}}_{AB} = \frac{\widehat{\text{ME}}_{A|B+} - \widehat{\text{ME}}_{A|B-}}{2} = \frac{\bar{y}_{A+\cap B+} + \bar{y}_{A-\cap B-} - \bar{y}_{A+\cap B-} - \bar{y}_{A-\cap B+}}{2} \]
+\[
+\widehat{\text{IE}}_{AB} = \frac{\widehat{\text{ME}}_{A|B+} - \widehat{\text{ME}}_{A|B-}}{2} = \frac{\bar{y}_{A+\cap B+} + \bar{y}_{A-\cap B-} - \bar{y}_{A+\cap B-} - \bar{y}_{A-\cap B+}}{2}
+\]
 
 **Toy Example** (\( 2^2 \) design, \( n=3 \)):
 
@@ -421,22 +482,37 @@ The **design matrix** has \( 2^K \) rows (conditions) and \( K \) columns (facto
 | 3 | −1 | +1 | {2,1,3} | 6/3 |
 | 4 | +1 | +1 | {1,2,5} | 8/3 |
 
-\[ \widehat{\text{ME}}_A = \frac{12/3 + 8/3}{2} - \frac{4/3 + 6/3}{2} = \frac{20/3}{2} - \frac{10/3}{2} = \frac{10}{6} \approx 1.667 \]
+\[
+\widehat{\text{ME}}_A = \frac{12/3 + 8/3}{2} - \frac{4/3 + 6/3}{2} = \frac{20/3}{2} - \frac{10/3}{2} = \frac{10}{6} \approx 1.667
+\]
 
-\[ \widehat{\text{ME}}_B = \frac{6/3 + 8/3}{2} - \frac{4/3 + 12/3}{2} = \frac{14/3}{2} - \frac{16/3}{2} = -\frac{1}{3} \]
+\[
+\widehat{\text{ME}}_B = \frac{6/3 + 8/3}{2} - \frac{4/3 + 12/3}{2} = \frac{14/3}{2} - \frac{16/3}{2} = -\frac{1}{3}
+\]
 
-\[ \widehat{\text{IE}}_{AB} = \frac{8/3 + 4/3}{2} - \frac{12/3 + 6/3}{2} = \frac{12/3}{2} - \frac{18/3}{2} = -1 \]
+\[
+\widehat{\text{IE}}_{AB} = \frac{8/3 + 4/3}{2} - \frac{12/3 + 6/3}{2} = \frac{12/3}{2} - \frac{18/3}{2} = -1
+\]
 
 ## 4.3 Regression-Based Analysis of 2^k Experiments
 
 The full model for a \( 2^K \) experiment has \( 2^K \) terms in the linear predictor:
-\[ \eta = \beta_0 + \sum_{j}\beta_j x_j + \sum_{j<\ell}\beta_{j\ell} x_j x_\ell + \sum_{j<\ell<r}\beta_{j\ell r} x_j x_\ell x_r + \cdots + \beta_{12\cdots K} x_1 x_2 \cdots x_K \]
+
+\[
+\eta = \beta_0 + \sum_{j}\beta_j x_j + \sum_{j<\ell}\beta_{j\ell} x_j x_\ell + \sum_{j<\ell<r}\beta_{j\ell r} x_j x_\ell x_r + \cdots + \beta_{12\cdots K} x_1 x_2 \cdots x_K
+\]
 
 **Key property**: With \( \pm 1 \) coding, the model matrix \( \mathbf{X} \) has orthogonal columns:
-\[ \mathbf{X}^\top \mathbf{X} = N \mathbf{I}_{2^K} \implies \hat{\boldsymbol{\beta}} = \frac{1}{N}\mathbf{X}^\top \mathbf{y} \]
+
+\[
+\mathbf{X}^\top \mathbf{X} = N \mathbf{I}_{2^K} \implies \hat{\boldsymbol{\beta}} = \frac{1}{N}\mathbf{X}^\top \mathbf{y}
+\]
 
 **Connection to intuitive estimates** (continuous response):
-\[ \widehat{\text{Effect}} = 2\hat{\beta} = \frac{\mathbf{x}^\top \mathbf{y}}{n \cdot 2^{K-1}} \]
+
+\[
+\widehat{\text{Effect}} = 2\hat{\beta} = \frac{\mathbf{x}^\top \mathbf{y}}{n \cdot 2^{K-1}}
+\]
 
 where \( \mathbf{x} \) is the column of \( \mathbf{X} \) corresponding to the effect. For binary response: \( \widehat{\text{Effect}} = e^{2\hat{\beta}} \).
 
@@ -456,10 +532,16 @@ Augment a \( 2^K \) factorial with \( n_c \) **center point** observations at \(
 2. Test for quadratic curvature (see Chapter 6).
 
 The **pure quadratic effect** is:
-\[ \beta_{PQ} = \sum_{j=1}^K \beta_{jj} \]
+
+\[
+\beta_{PQ} = \sum_{j=1}^K \beta_{jj}
+\]
 
 estimated by:
-\[ \hat{\beta}_{PQ} = \bar{\hat{\eta}}_F - \hat{\eta}_C \]
+
+\[
+\hat{\beta}_{PQ} = \bar{\hat{\eta}}_F - \hat{\eta}_C
+\]
 
 where \( \bar{\hat{\eta}}_F \) = average fitted value at factorial conditions and \( \hat{\eta}_C \) = fitted value at center point. A \( t \)-test of \( H_0: \beta_{PQ} = 0 \) tests for overall quadratic curvature.
 
@@ -499,21 +581,36 @@ Therefore, higher-order interaction columns in the model matrix can be "borrowed
 **Aliasing**: Associate the main effect of a new factor with an existing interaction column. This confounds the two effects — they cannot be separately estimated.
 
 **Example — \( 2^{3-1} \) design**: Use the AB interaction column of a \( 2^2 \) design to assign levels of a third factor C:
-\[ C = AB \implies I = ABC \quad (\text{defining relation}) \]
+
+\[
+C = AB \implies I = ABC \quad (\text{defining relation})
+\]
 
 The **defining relation** \( I = ABC \) generates all aliases by multiplication:
-\[ A = BC, \quad B = AC, \quad C = AB \]
+
+\[
+A = BC, \quad B = AC, \quad C = AB
+\]
 
 Every main effect is aliased with a two-factor interaction — a Resolution III design.
 
 **Example — \( 2^{4-1} \) design**: Choose \( D = ABC \):
-\[ I = ABCD \]
+
+\[
+I = ABCD
+\]
 Aliases:
-\[ A = BCD, \quad B = ACD, \quad C = ABD, \quad D = ABC, \quad AB = CD, \quad AC = BD, \quad BC = AD \]
+
+\[
+A = BCD, \quad B = ACD, \quad C = ABD, \quad D = ABC, \quad AB = CD, \quad AC = BD, \quad BC = AD
+\]
 Resolution IV: main effects aliased with three-factor interactions (not two-factor interactions).
 
 **Example — \( 2^{5-2} \) design**: Choose \( D = ABC, E = BC \):
-\[ I = ABCD = BCE = ADE \]
+
+\[
+I = ABCD = BCE = ADE
+\]
 Every effect is aliased with 3 other effects (\( 2^p - 1 = 3 \)).
 
 **General rule**: In a \( 2^{K-p} \) design, each estimated quantity jointly represents \( 2^p \) aliased effects.
@@ -596,7 +693,10 @@ Response Surface Methodology (RSM) is a sequential strategy for optimization:
 - **Phase 4**: Confirmation experiment.
 
 **Natural to coded units transformation**: For factor with low level \( U_L \) and high level \( U_H \):
-\[ x = \frac{U - (U_H + U_L)/2}{(U_H - U_L)/2}, \quad U = x \cdot \frac{U_H - U_L}{2} + \frac{U_H + U_L}{2} \]
+
+\[
+x = \frac{U - (U_H + U_L)/2}{(U_H - U_L)/2}, \quad U = x \cdot \frac{U_H - U_L}{2} + \frac{U_H + U_L}{2}
+\]
 
 **Response surface models** (Taylor approximations):
 - *First-order*: \( \eta = \beta_0 + \sum_j \beta_j x_j \) (plane).
@@ -608,7 +708,10 @@ Only the second-order model can identify an optimum (maximum or minimum). It req
 ## 6.2 Method of Steepest Ascent/Descent
 
 Fit a first-order model \( \hat{\eta} = \hat{\beta}_0 + \hat{\beta}_1 x_1 + \cdots + \hat{\beta}_{K'} x_{K'} \) from a \( 2^{K'} \) factorial. The gradient is:
-\[ \mathbf{g} = \nabla\hat{\eta} = (\hat{\beta}_1, \hat{\beta}_2, \ldots, \hat{\beta}_{K'})^\top \]
+
+\[
+\mathbf{g} = \nabla\hat{\eta} = (\hat{\beta}_1, \hat{\beta}_2, \ldots, \hat{\beta}_{K'})^\top
+\]
 
 **Path of steepest ascent** (maximize): \( \mathbf{x}' = \mathbf{x} + \lambda\mathbf{g} \)
 
@@ -628,7 +731,10 @@ Step size \( \lambda = \Delta x_j / |\hat{\beta}_j| \) where factor \( j \) is c
 ### Checking for Curvature
 
 Augment the \( 2^{K'} \) factorial with center-point observations. The **pure quadratic effect** \( \beta_{PQ} = \sum_j \beta_{jj} \) is estimated as:
-\[ \hat{\beta}_{PQ} = \bar{\hat{\eta}}_F - \hat{\eta}_C \]
+
+\[
+\hat{\beta}_{PQ} = \bar{\hat{\eta}}_F - \hat{\eta}_C
+\]
 
 Test \( H_0: \beta_{PQ} = 0 \) using a \( t \)-test in the model with linear predictor \( \beta_0 + \sum_j \beta_j x_j + \sum_{j<\ell}\beta_{j\ell}x_jx_\ell + \beta_{PQ} x_{PQ} \), where \( x_{PQ}=1 \) for factorial conditions and \( x_{PQ}=0 \) for center points.
 
@@ -690,18 +796,30 @@ Total distinct conditions: \(2^{K'} + 2K' + 1\).
 ### Second-Order Model and Canonical Analysis
 
 The fitted second-order model in matrix notation:
-\[ \hat{\eta} = \hat{\beta}_0 + \mathbf{x}^\top \mathbf{b} + \mathbf{x}^\top \mathbf{B}\mathbf{x} \]
+
+\[
+\hat{\eta} = \hat{\beta}_0 + \mathbf{x}^\top \mathbf{b} + \mathbf{x}^\top \mathbf{B}\mathbf{x}
+\]
 
 where \( \mathbf{b} = (\hat{\beta}_1, \ldots, \hat{\beta}_{K'})^\top \) and \( \mathbf{B} \) is the symmetric matrix with diagonal entries \( \hat{\beta}_{jj} \) and off-diagonal entries \( \hat{\beta}_{j\ell}/2 \).
 
 **Stationary point**:
-\[ \mathbf{x}_s = -\frac{1}{2}\mathbf{B}^{-1}\mathbf{b} \]
+
+\[
+\mathbf{x}_s = -\frac{1}{2}\mathbf{B}^{-1}\mathbf{b}
+\]
 
 found by solving \( \partial\hat{\eta}/\partial\mathbf{x} = \mathbf{b} + 2\mathbf{B}\mathbf{x} = \mathbf{0} \). Optimal predicted response:
-\[ \hat{\eta}_s = \hat{\beta}_0 + \frac{1}{2}\mathbf{x}_s^\top \mathbf{b} \]
+
+\[
+\hat{\eta}_s = \hat{\beta}_0 + \frac{1}{2}\mathbf{x}_s^\top \mathbf{b}
+\]
 
 **Canonical form** (eigendecomposition of \( \mathbf{B} \)): Let \( \mathbf{B} = \mathbf{M}\boldsymbol{\Lambda}\mathbf{M}^\top \) with eigenvalues \( \lambda_1, \ldots, \lambda_{K'} \). Substituting \( \mathbf{w} = \mathbf{M}^\top(\mathbf{x} - \mathbf{x}_s) \):
-\[ \hat{\eta} = \hat{\eta}_s + \lambda_1 w_1^2 + \lambda_2 w_2^2 + \cdots + \lambda_{K'} w_{K'}^2 \]
+
+\[
+\hat{\eta} = \hat{\eta}_s + \lambda_1 w_1^2 + \lambda_2 w_2^2 + \cdots + \lambda_{K'} w_{K'}^2
+\]
 
 - All \( \lambda_i < 0 \): stationary point is a maximum (response surface).
 - All \( \lambda_i > 0 \): stationary point is a minimum.
@@ -767,7 +885,9 @@ Two error terms result: whole-plot error and subplot error.
 
 The split-plot model with whole-plot factor A and subplot factor B in a RCBD arrangement:
 
-\[ Y_{ijk} = \mu + \alpha_i + \delta_{ij} + \beta_k + (\alpha\beta)_{ik} + \varepsilon_{ijk} \]
+\[
+Y_{ijk} = \mu + \alpha_i + \delta_{ij} + \beta_k + (\alpha\beta)_{ik} + \varepsilon_{ijk}
+\]
 
 where:
 - \( \alpha_i \): effect of whole-plot factor level \( i \), \( i = 1,\ldots,a \).
@@ -805,7 +925,10 @@ where \( \phi_\alpha = \sum_i \alpha_i^2/(a-1) \), etc.
 
 <div class="definition">
 <strong>Variance components</strong>: In a random or mixed-effects model, the total variance in the response is decomposed into contributions from different random effects. For example, in a one-way random-effects model:
-\[ Y_{ij} = \mu + \alpha_i + \varepsilon_{ij}, \quad \alpha_i \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2_\alpha), \quad \varepsilon_{ij} \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2) \]
+
+\[
+Y_{ij} = \mu + \alpha_i + \varepsilon_{ij}, \quad \alpha_i \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2_\alpha), \quad \varepsilon_{ij} \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2)
+\]
 The variance components are \(\sigma^2_\alpha\) (between-group) and \(\sigma^2\) (within-group).
 </div>
 
@@ -815,10 +938,15 @@ Set observed mean squares equal to their expected values and solve for variance 
 
 For a balanced one-way random-effects model with \( a \) groups and \( n \) observations per group:
 
-\[ \text{MS}_\text{between} = \sigma^2 + n\sigma^2_\alpha, \quad \text{MS}_\text{within} = \sigma^2 \]
+\[
+\text{MS}_\text{between} = \sigma^2 + n\sigma^2_\alpha, \quad \text{MS}_\text{within} = \sigma^2
+\]
 
 Equating observed to expected:
-\[ \hat{\sigma}^2 = \text{MS}_\text{within}, \quad \hat{\sigma}^2_\alpha = \frac{\text{MS}_\text{between} - \text{MS}_\text{within}}{n} \]
+
+\[
+\hat{\sigma}^2 = \text{MS}_\text{within}, \quad \hat{\sigma}^2_\alpha = \frac{\text{MS}_\text{between} - \text{MS}_\text{within}}{n}
+\]
 
 **Limitation**: ANOVA estimates can be negative (since \( \hat{\sigma}^2_\alpha \) could be \( < 0 \) if \( \text{MS}_\text{between} < \text{MS}_\text{within} \)), which is not meaningful. Convention: truncate negative estimates to 0.
 
@@ -832,7 +960,10 @@ Equating observed to expected:
 For the split-plot model with whole-plot factor A (fixed), subplot factor B (fixed), and random whole-plot error, REML estimates both \( \sigma^2_\delta \) and \( \sigma^2 \) while properly accounting for fixed effects.
 
 **Intraclass correlation coefficient (ICC)**:
-\[ \rho = \frac{\sigma^2_\alpha}{\sigma^2_\alpha + \sigma^2} \in [0,1] \]
+
+\[
+\rho = \frac{\sigma^2_\alpha}{\sigma^2_\alpha + \sigma^2} \in [0,1]
+\]
 
 measures the proportion of total variance attributable to between-group differences. High ICC means observations within the same group are highly correlated.
 
@@ -841,14 +972,20 @@ measures the proportion of total variance attributable to between-group differen
 The split-plot model is a **mixed model**: fixed effects (treatment factors A and B, their interaction) plus random effects (whole-plot error).
 
 In matrix notation:
-\[ \mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \mathbf{Z}\mathbf{u} + \boldsymbol{\varepsilon} \]
+
+\[
+\mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \mathbf{Z}\mathbf{u} + \boldsymbol{\varepsilon}
+\]
 
 where \( \mathbf{X}\boldsymbol{\beta} \) contains fixed treatment effects, \( \mathbf{Z}\mathbf{u} \) contains the random whole-plot effects (\( \mathbf{u} \sim \mathcal{N}(\mathbf{0}, \sigma^2_\delta \mathbf{I}) \)), and \( \boldsymbol{\varepsilon} \sim \mathcal{N}(\mathbf{0}, \sigma^2\mathbf{I}) \).
 
 Marginal distribution: \( \mathbf{Y} \sim \mathcal{N}(\mathbf{X}\boldsymbol{\beta}, \sigma^2_\delta\mathbf{Z}\mathbf{Z}^\top + \sigma^2\mathbf{I}) \).
 
 Fixed-effect estimates are obtained via **generalized least squares**:
-\[ \hat{\boldsymbol{\beta}} = (\mathbf{X}^\top\mathbf{V}^{-1}\mathbf{X})^{-1}\mathbf{X}^\top\mathbf{V}^{-1}\mathbf{Y} \]
+
+\[
+\hat{\boldsymbol{\beta}} = (\mathbf{X}^\top\mathbf{V}^{-1}\mathbf{X})^{-1}\mathbf{X}^\top\mathbf{V}^{-1}\mathbf{Y}
+\]
 
 where \( \mathbf{V} = \sigma^2_\delta\mathbf{Z}\mathbf{Z}^\top + \sigma^2\mathbf{I} \).
 
@@ -859,7 +996,10 @@ where \( \mathbf{V} = \sigma^2_\delta\mathbf{Z}\mathbf{Z}^\top + \sigma^2\mathbf
 </div>
 
 **Two-stage nested model**:
-\[ Y_{ijk} = \mu + \alpha_i + \beta_{j(i)} + \varepsilon_{ijk} \]
+
+\[
+Y_{ijk} = \mu + \alpha_i + \beta_{j(i)} + \varepsilon_{ijk}
+\]
 
 where \( \beta_{j(i)} \) is the effect of level \( j \) of B nested within level \( i \) of A.
 
@@ -879,7 +1019,10 @@ where \( \beta_{j(i)} \) is the effect of level \( j \) of B nested within level
 - Within-subject factor = time/condition (equivalent to subplot factor).
 
 **Compound symmetry assumption**: The variance-covariance matrix of the repeated measures for each subject is:
-\[ \boldsymbol{\Sigma} = \begin{pmatrix} \sigma^2 & \rho\sigma^2 & \cdots & \rho\sigma^2 \\ \rho\sigma^2 & \sigma^2 & \cdots & \rho\sigma^2 \\ \vdots & & \ddots & \vdots \\ \rho\sigma^2 & \cdots & \rho\sigma^2 & \sigma^2 \end{pmatrix} \]
+
+\[
+\boldsymbol{\Sigma} = \begin{pmatrix} \sigma^2 & \rho\sigma^2 & \cdots & \rho\sigma^2 \\ \rho\sigma^2 & \sigma^2 & \cdots & \rho\sigma^2 \\ \vdots & & \ddots & \vdots \\ \rho\sigma^2 & \cdots & \rho\sigma^2 & \sigma^2 \end{pmatrix}
+\]
 
 where \( \rho \) is the correlation between any two measurements on the same subject. The Mauchly sphericity test checks whether this assumption holds; if violated, Greenhouse-Geisser or Huynh-Feldt corrections to the degrees of freedom are applied.
 
@@ -943,7 +1086,9 @@ This principle, combined with **effect sparsity** (few effects are truly active)
 
 The overall RSM workflow:
 
-\[ \underbrace{2^K \text{ or } 2^{K-p} \text{ screening}}_{\text{Phase 1: identify active factors}} \longrightarrow \underbrace{\text{steepest ascent/descent}}_{\text{Phase 2: locate optimum vicinity}} \longrightarrow \underbrace{\text{CCD + second-order model}}_{\text{Phase 3: optimize}} \longrightarrow \underbrace{\text{confirmation run}}_{\text{Phase 4: verify}} \]
+\[
+\underbrace{2^K \text{ or } 2^{K-p} \text{ screening}}_{\text{Phase 1: identify active factors}} \longrightarrow \underbrace{\text{steepest ascent/descent}}_{\text{Phase 2: locate optimum vicinity}} \longrightarrow \underbrace{\text{CCD + second-order model}}_{\text{Phase 3: optimize}} \longrightarrow \underbrace{\text{confirmation run}}_{\text{Phase 4: verify}}
+\]
 
 Each phase informs the next, making efficient use of experimental resources by not committing all runs to a single large experiment at the outset.
 
@@ -958,7 +1103,10 @@ Each phase informs the next, making efficient use of experimental resources by n
 </div>
 
 **ANCOVA model** for a CRD with one covariate \( z \):
-\[ Y_{ij} = \mu + \tau_j + \gamma(z_{ij} - \bar{z}) + \varepsilon_{ij} \]
+
+\[
+Y_{ij} = \mu + \tau_j + \gamma(z_{ij} - \bar{z}) + \varepsilon_{ij}
+\]
 
 where \( \gamma \) is the common within-group regression coefficient (slope) for the covariate. The ANCOVA F-test for treatments adjusts for the covariate effect.
 
@@ -1015,7 +1163,10 @@ The most influential factors are A (effect = 2.5) and C (effect = 2.0). The thre
 - PB designs are more economical for large \( K \), but they have **complex, non-structured alias patterns** — main effects are partially aliased with two-factor interactions, not fully confounded.
 
 **Construction**: For \( N=12 \), the generating row is:
-\[ (+1, +1, −1, +1, +1, +1, −1, −1, −1, +1, −1) \]
+
+\[
+(+1, +1, −1, +1, +1, +1, −1, −1, −1, +1, −1)
+\]
 
 Subsequent rows are obtained by cyclic shifts; the final row is all \( -1 \).
 
@@ -1055,12 +1206,17 @@ When optimizing several response variables simultaneously (multiple responses \(
 
 **Individual desirability** for maximization (target \( T \), lower limit \( L \), upper limit \( U \)):
 
-\[ d_i = \begin{cases} 0 & y_i < L \\ \left(\frac{y_i - L}{T - L}\right)^s & L \leq y_i \leq T \\ \left(\frac{U - y_i}{U - T}\right)^t & T < y_i \leq U \\ 0 & y_i > U \end{cases} \]
+\[
+d_i = \begin{cases} 0 & y_i < L \\ \left(\frac{y_i - L}{T - L}\right)^s & L \leq y_i \leq T \\ \left(\frac{U - y_i}{U - T}\right)^t & T < y_i \leq U \\ 0 & y_i > U \end{cases}
+\]
 
 where \( s, t > 0 \) are shape parameters (s=t=1 gives linear ramps; s,t > 1 penalizes deviations more sharply).
 
 **Overall desirability** (geometric mean):
-\[ D = \left(\prod_{i=1}^r d_i^{w_i}\right)^{1/\sum w_i} \]
+
+\[
+D = \left(\prod_{i=1}^r d_i^{w_i}\right)^{1/\sum w_i}
+\]
 
 where \( w_i > 0 \) are importance weights. The factor settings that maximize \( D \) represent the compromise optimum across all responses.
 
@@ -1141,28 +1297,49 @@ Consider a \( 2^3 \) factorial experiment studying factors A (temperature), B (p
 
 Grand total \( T = 280 \), \( N = 16 \), correction factor \( \text{CF} = T^2/N = 280^2/16 = 4900 \).
 
-\[ \text{SST} = \sum_{all} y^2 - \text{CF} = (14^2 + 14^2 + 18^2 + \cdots) - 4900 \]
+\[
+\text{SST} = \sum_{all} y^2 - \text{CF} = (14^2 + 14^2 + 18^2 + \cdots) - 4900
+\]
 
 Effect estimates (using contrast coefficients, divided by \( n \cdot 2^{K-1} = 2 \times 4 = 8 \)):
 
-\[ A = \frac{-28 + 36 - 22 + 32 - 34 + 50 - 30 + 48}{8} = \frac{52}{8} = 6.5 \]
+\[
+A = \frac{-28 + 36 - 22 + 32 - 34 + 50 - 30 + 48}{8} = \frac{52}{8} = 6.5
+\]
 
-\[ B = \frac{-28 - 36 + 22 + 32 - 34 - 50 + 30 + 48}{8} = \frac{-16}{8} = -2 \]
+\[
+B = \frac{-28 - 36 + 22 + 32 - 34 - 50 + 30 + 48}{8} = \frac{-16}{8} = -2
+\]
 
-\[ C = \frac{-28 - 36 - 22 - 32 + 34 + 50 + 30 + 48}{8} = \frac{44}{8} = 5.5 \]
+\[
+C = \frac{-28 - 36 - 22 - 32 + 34 + 50 + 30 + 48}{8} = \frac{44}{8} = 5.5
+\]
 
-\[ AB = \frac{28 - 36 - 22 + 32 + 34 - 50 - 30 + 48}{8} = \frac{4}{8} = 0.5 \]
+\[
+AB = \frac{28 - 36 - 22 + 32 + 34 - 50 - 30 + 48}{8} = \frac{4}{8} = 0.5
+\]
 
-\[ AC = \frac{28 - 36 + 22 - 32 - 34 + 50 - 30 + 48}{8} \approx 2 \]
+\[
+AC = \frac{28 - 36 + 22 - 32 - 34 + 50 - 30 + 48}{8} \approx 2
+\]
 
-\[ BC = \frac{28 + 36 - 22 - 32 - 34 - 50 + 30 + 48}{8} = \frac{4}{8} = 0.5 \]
+\[
+BC = \frac{28 + 36 - 22 - 32 - 34 - 50 + 30 + 48}{8} = \frac{4}{8} = 0.5
+\]
 
-\[ ABC = \frac{-28 + 36 + 22 - 32 + 34 - 50 - 30 + 48}{8} = \frac{0}{8} = 0 \]
+\[
+ABC = \frac{-28 + 36 + 22 - 32 + 34 - 50 - 30 + 48}{8} = \frac{0}{8} = 0
+\]
 
 Each SS = \( n \cdot 2^{K-1} \cdot (\text{Effect}/2)^2 = 8 \cdot (\text{Effect}/2)^2 \) = \( 2 \cdot \text{Effect}^2 \):
 
-\[ \text{SS}_A = 2(6.5)^2 = 84.5, \quad \text{SS}_B = 2(2)^2 = 8, \quad \text{SS}_C = 2(5.5)^2 = 60.5 \]
-\[ \text{SS}_{AB} = 2(0.5)^2 = 0.5, \quad \text{SS}_{AC} = 2(2)^2 = 8, \quad \text{SS}_{BC} = 0.5, \quad \text{SS}_{ABC} = 0 \]
+\[
+\text{SS}_A = 2(6.5)^2 = 84.5, \quad \text{SS}_B = 2(2)^2 = 8, \quad \text{SS}_C = 2(5.5)^2 = 60.5
+\]
+
+\[
+\text{SS}_{AB} = 2(0.5)^2 = 0.5, \quad \text{SS}_{AC} = 2(2)^2 = 8, \quad \text{SS}_{BC} = 0.5, \quad \text{SS}_{ABC} = 0
+\]
 
 **ANOVA table** (assuming \( \text{SSE} = 22 \) from replication error, df = 8):
 
@@ -1207,7 +1384,10 @@ This is Resolution IV: main effects are aliased only with three-factor interacti
 **Steepest Ascent Calculation Example**
 
 Suppose after running the \( 2^{4-1} \) design, the first-order model fit to factors A and D (the two significant main effects) is:
-\[ \hat{\eta} = 45.2 + 3.1 x_A - 2.4 x_D \]
+
+\[
+\hat{\eta} = 45.2 + 3.1 x_A - 2.4 x_D
+\]
 
 To minimize the response, use steepest descent. Choose step size anchored to factor D (harder to change): \( \Delta x_D = 0.5 \), so \( \lambda = 0.5/|{-2.4}| = 0.208 \).
 
@@ -1229,7 +1409,10 @@ Each step reduces the predicted response by approximately 4 units. Continue unti
 ## 9.1 The General Linear Model Framework
 
 All of the experimental designs studied in this course are analyzed through the **general linear model**:
-\[ \mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\varepsilon}, \quad \boldsymbol{\varepsilon} \sim \mathcal{N}(\mathbf{0}, \sigma^2\mathbf{I}) \]
+
+\[
+\mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\varepsilon}, \quad \boldsymbol{\varepsilon} \sim \mathcal{N}(\mathbf{0}, \sigma^2\mathbf{I})
+\]
 
 where:
 - \( \mathbf{Y} \) is the \( N \times 1 \) vector of responses.
@@ -1238,10 +1421,16 @@ where:
 - \( \boldsymbol{\varepsilon} \) is the \( N \times 1 \) vector of random errors.
 
 **Ordinary Least Squares (OLS) estimator**:
-\[ \hat{\boldsymbol{\beta}} = (\mathbf{X}^\top\mathbf{X})^{-1}\mathbf{X}^\top\mathbf{Y} \]
+
+\[
+\hat{\boldsymbol{\beta}} = (\mathbf{X}^\top\mathbf{X})^{-1}\mathbf{X}^\top\mathbf{Y}
+\]
 
 **Properties** (Gauss-Markov Theorem): \( \hat{\boldsymbol{\beta}} \) is the Best Linear Unbiased Estimator (BLUE) of \( \boldsymbol{\beta} \):
-\[ \mathbb{E}[\hat{\boldsymbol{\beta}}] = \boldsymbol{\beta}, \quad \mathbb{V}(\hat{\boldsymbol{\beta}}) = \sigma^2(\mathbf{X}^\top\mathbf{X})^{-1} \]
+
+\[
+\mathbb{E}[\hat{\boldsymbol{\beta}}] = \boldsymbol{\beta}, \quad \mathbb{V}(\hat{\boldsymbol{\beta}}) = \sigma^2(\mathbf{X}^\top\mathbf{X})^{-1}
+\]
 
 **Residual sum of squares**: \( \text{SSE} = \mathbf{Y}^\top(\mathbf{I} - \mathbf{H})\mathbf{Y} \) where \( \mathbf{H} = \mathbf{X}(\mathbf{X}^\top\mathbf{X})^{-1}\mathbf{X}^\top \) is the hat (projection) matrix. Unbiased estimator: \( \hat{\sigma}^2 = \text{SSE}/(N-p) = \text{MSE} \).
 
@@ -1249,7 +1438,9 @@ where:
 
 The **partial F-test** compares a full model to a reduced model obtained by setting a subset of \( q \) parameters to zero.
 
-\[ F = \frac{(\text{SSE}_\text{red} - \text{SSE}_\text{full})/q}{\text{SSE}_\text{full}/(N-p)} \sim F(q, N-p) \quad \text{under } H_0 \]
+\[
+F = \frac{(\text{SSE}_\text{red} - \text{SSE}_\text{full})/q}{\text{SSE}_\text{full}/(N-p)} \sim F(q, N-p) \quad \text{under } H_0
+\]
 
 This is the workhorse test for:
 - Testing significance of a factor in ANOVA (\( q = \) number of levels \( - 1 \)).
@@ -1257,7 +1448,10 @@ This is the workhorse test for:
 - Testing a group of regression coefficients simultaneously.
 
 **Equivalently**, via the coefficient of determination:
-\[ F = \frac{(R^2_\text{full} - R^2_\text{red})/q}{(1 - R^2_\text{full})/(N-p)} \]
+
+\[
+F = \frac{(R^2_\text{full} - R^2_\text{red})/q}{(1 - R^2_\text{full})/(N-p)}
+\]
 
 ## 9.3 Model Diagnostics
 
@@ -1282,23 +1476,37 @@ If normality fails: consider transformations (Box-Cox \( \lambda \)-family: \( y
 
 For a \( 2^{K-p} \) design with model matrix \( \mathbf{X} \) (columns = estimable effects), the relationship between the OLS estimate and the true effect is:
 
-\[ \hat{\boldsymbol{\beta}}_\text{estimable} = \boldsymbol{\beta}_\text{estimable} + \mathbf{A}\boldsymbol{\beta}_\text{aliased} \]
+\[
+\hat{\boldsymbol{\beta}}_\text{estimable} = \boldsymbol{\beta}_\text{estimable} + \mathbf{A}\boldsymbol{\beta}_\text{aliased}
+\]
 
 where \( \mathbf{A} \) is the **alias matrix**:
-\[ \mathbf{A} = (\mathbf{X}_1^\top\mathbf{X}_1)^{-1}\mathbf{X}_1^\top\mathbf{X}_2 \]
+
+\[
+\mathbf{A} = (\mathbf{X}_1^\top\mathbf{X}_1)^{-1}\mathbf{X}_1^\top\mathbf{X}_2
+\]
 
 Here \( \mathbf{X}_1 \) = columns for estimable effects, \( \mathbf{X}_2 \) = columns for non-estimable (aliased) effects. For \( \pm 1 \) orthogonal designs, entries of \( \mathbf{A} \) are \( \pm 1/2^p \in \{0, \pm 1\} \), reflecting full confounding. When \( A_{ij} = 1 \), effect \( i \) is completely aliased with effect \( j \).
 
 ## 9.5 Confidence Intervals and Multiple Comparison Adjustments
 
 **Individual 95% CI** for \( \beta_j \):
-\[ \hat{\beta}_j \pm t_{\alpha/2, N-p} \cdot \text{SE}(\hat{\beta}_j) \]
+
+\[
+\hat{\beta}_j \pm t_{\alpha/2, N-p} \cdot \text{SE}(\hat{\beta}_j)
+\]
 
 **Simultaneous CIs** (Scheffé method, for all linear combinations \( \mathbf{c}^\top\boldsymbol{\beta} \)):
-\[ \mathbf{c}^\top\hat{\boldsymbol{\beta}} \pm \sqrt{p \cdot F_{\alpha, p, N-p}} \cdot \hat{\sigma}\sqrt{\mathbf{c}^\top(\mathbf{X}^\top\mathbf{X})^{-1}\mathbf{c}} \]
+
+\[
+\mathbf{c}^\top\hat{\boldsymbol{\beta}} \pm \sqrt{p \cdot F_{\alpha, p, N-p}} \cdot \hat{\sigma}\sqrt{\mathbf{c}^\top(\mathbf{X}^\top\mathbf{X})^{-1}\mathbf{c}}
+\]
 
 **Tukey-Kramer CIs** (all pairwise means, possibly unequal \( n_j \)):
-\[ (\bar{y}_{\cdot j} - \bar{y}_{\cdot k}) \pm \frac{q_{\alpha,m,N-m}}{\sqrt{2}} \cdot \hat{\sigma}\sqrt{\frac{1}{n_j} + \frac{1}{n_k}} \]
+
+\[
+(\bar{y}_{\cdot j} - \bar{y}_{\cdot k}) \pm \frac{q_{\alpha,m,N-m}}{\sqrt{2}} \cdot \hat{\sigma}\sqrt{\frac{1}{n_j} + \frac{1}{n_k}}
+\]
 
 These simultaneous methods maintain the familywise confidence level at \( 1-\alpha \) over all comparisons, ensuring that conclusions from the full set of intervals are jointly reliable.
 
@@ -1319,7 +1527,10 @@ These simultaneous methods maintain the familywise confidence level at \( 1-\alp
 **One-way random-effects ANOVA test** (testing \( H_0: \sigma^2_\tau = 0 \)): Same F-statistic as fixed effects (\( F = \text{MSC}/\text{MSE} \)), but the interpretation differs — rejection means between-group variance exceeds within-group variance, not that specific group means differ.
 
 **Expected mean squares for random effects** (one-way, balanced):
-\[ \mathbb{E}[\text{MSC}] = \sigma^2 + n\sigma^2_\tau, \quad \mathbb{E}[\text{MSE}] = \sigma^2 \]
+
+\[
+\mathbb{E}[\text{MSC}] = \sigma^2 + n\sigma^2_\tau, \quad \mathbb{E}[\text{MSE}] = \sigma^2
+\]
 
 Under \( H_0: \sigma^2_\tau = 0 \), both equal \( \sigma^2 \), giving \( F \sim F(m-1, N-m) \).
 
@@ -1327,15 +1538,23 @@ Under \( H_0: \sigma^2_\tau = 0 \), both equal \( \sigma^2 \), giving \( F \sim 
 
 For a \( 2^K \) experiment with \( n \) replicates per condition (\( N = n \cdot 2^K \)), the test for a single effect (one \( \beta \)) is a \( t \)-test:
 
-\[ T = \frac{\hat{\beta} - 0}{\text{SE}(\hat{\beta})} = \frac{\hat{\beta}}{\hat{\sigma}/\sqrt{n \cdot 2^{K-1}}} \sim t(N - 2^K) \]
+\[
+T = \frac{\hat{\beta} - 0}{\text{SE}(\hat{\beta})} = \frac{\hat{\beta}}{\hat{\sigma}/\sqrt{n \cdot 2^{K-1}}} \sim t(N - 2^K)
+\]
 
 Power for detecting a true effect size \( \delta = 2|\beta| \):
-\[ \text{Power} = P\left(|T| > t_{\alpha/2, N-2^K} \mid \beta \neq 0\right) \]
+
+\[
+\text{Power} = P\left(|T| > t_{\alpha/2, N-2^K} \mid \beta \neq 0\right)
+\]
 
 using the non-central \( t \)-distribution with non-centrality parameter \( \phi = |\beta|/(\sigma/\sqrt{n \cdot 2^{K-1}}) \).
 
 Required replication \( n \) to achieve power \( 1-\beta' \) at level \( \alpha \):
-\[ n = \frac{(z_{\alpha/2} + z_{1-\beta'})^2 \sigma^2}{\beta^2 \cdot 2^{K-1}} \]
+
+\[
+n = \frac{(z_{\alpha/2} + z_{1-\beta'})^2 \sigma^2}{\beta^2 \cdot 2^{K-1}}
+\]
 
 (approximately, using normal approximation). **Insight**: For the same power and effect size, a \( 2^K \) design is more efficient than \( 2^K \) separate one-factor experiments because all \( N = n \cdot 2^K \) observations contribute to each main-effect estimate through orthogonality.
 

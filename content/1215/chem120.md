@@ -14,7 +14,9 @@ The **limiting reagent** is the reactant that is completely consumed first and t
 
 **Percent yield** relates the actual experimental result to the theoretical maximum:
 
-\[\text{percent yield} = \frac{\text{actual yield}}{\text{theoretical yield}} \times 100\%\]
+\[
+\text{percent yield} = \frac{\text{actual yield}}{\text{theoretical yield}} \times 100\%
+\]
 
 A worked example: suppose 14.0 g of CO reacts with 8.0 g of H₂ to form methanol (CH₃OH). Moles of CO = 14.0/28.01 = 0.4998 mol; moles of H₂ = 8.0/2.016 = 3.97 mol. The reaction is CO + 2 H₂ → CH₃OH, so dividing by stoichiometric coefficients gives 0.4998/1 = 0.50 for CO and 3.97/2 = 1.98 for H₂. CO is limiting. Theoretical yield of CH₃OH = 0.4998 mol × 32.04 g/mol = 16.0 g. If only 9.5 g is recovered, percent yield = (9.5/16.0) × 100% = 59%.
 
@@ -24,8 +26,13 @@ When two reactions occur simultaneously, or when a mixture of compounds reacts, 
 
 **Example — mixture problem:** A mixture of NaCl and KCl has total mass 3.595 g. When dissolved and treated with excess AgNO₃, 8.640 g of AgCl precipitate forms. Let \(x\) = moles of NaCl and \(y\) = moles of KCl. Two equations arise:
 
-\[58.44x + 74.55y = 3.595\]
-\[143.32(x + y) = 8.640\]
+\[
+58.44x + 74.55y = 3.595
+\]
+
+\[
+143.32(x + y) = 8.640
+\]
 
 From the second equation, \(x + y = 0.06027\) mol. Substituting into the first gives a linear system solvable for \(x\) and \(y\), and hence the mass percent of each component.
 
@@ -33,7 +40,9 @@ From the second equation, \(x + y = 0.06027\) mol. Substituting into the first g
 
 **Molarity** (\(c\) or \(M\)) is defined as moles of solute per litre of solution:
 
-\[c = \frac{n}{V}\]
+\[
+c = \frac{n}{V}
+\]
 
 To prepare a solution from a liquid reagent, the following chain is used: density (g/mL) × volume (mL) → mass → moles → molarity.
 
@@ -41,7 +50,9 @@ To prepare a solution from a liquid reagent, the following chain is used: densit
 
 For dilution problems, the amount of solute is conserved:
 
-\[c_1 V_1 = c_2 V_2\]
+\[
+c_1 V_1 = c_2 V_2
+\]
 
 ### Precipitation Reactions: Molecular, Complete Ionic, and Net Ionic Equations
 
@@ -92,13 +103,17 @@ In a **redox** reaction, the species that is oxidised loses electrons (oxidation
 
 Elements exist as mixtures of isotopes — atoms with the same atomic number (protons) but different mass numbers (protons + neutrons). The **average atomic mass** listed on the periodic table is the weighted mean of all stable isotope masses:
 
-\[\bar{m} = \sum_i f_i \, m_i\]
+\[
+\bar{m} = \sum_i f_i \, m_i
+\]
 
 where \(f_i\) is the natural fractional abundance of isotope \(i\) and \(m_i\) is its mass.
 
 **Example — bromine:** Bromine has two naturally occurring isotopes: ⁷⁹Br (mass 78.918 u) and ⁸¹Br (mass 80.916 u). The average atomic mass of 79.904 u implies:
 
-\[78.918\,f + 80.916\,(1-f) = 79.904\]
+\[
+78.918\,f + 80.916\,(1-f) = 79.904
+\]
 
 Solving: \(f = 0.506\), so ⁷⁹Br accounts for about 50.6% of natural bromine and ⁸¹Br about 49.4%. This near-equal split explains why bromine's mass spectrum shows a characteristic pair of peaks of roughly equal intensity separated by two mass units.
 
@@ -112,13 +127,17 @@ Traditional chemistry metrics (yield, purity) do not capture how much of the sta
 
 **Atom economy** measures the fraction of reactant atoms incorporated into the desired product:
 
-\[\text{atom economy} = \frac{M_\text{product}}{M_\text{all reactants}} \times 100\%\]
+\[
+\text{atom economy} = \frac{M_\text{product}}{M_\text{all reactants}} \times 100\%
+\]
 
 A reaction with 100% atom economy produces no by-products at all (e.g., addition reactions). Substitution and elimination reactions typically have lower atom economy because they generate by-products.
 
 **E-factor** (environmental factor) measures waste generated per unit of product:
 
-\[E = \frac{\text{mass of waste (kg)}}{\text{mass of product (kg)}}\]
+\[
+E = \frac{\text{mass of waste (kg)}}{\text{mass of product (kg)}}
+\]
 
 Low E-factors are desirable. The pharmaceutical industry historically has very high E-factors (25–100+) compared to bulk chemical production (~1–5), motivating redesign of synthesis routes to reduce waste, use benign solvents, and incorporate renewable feedstocks.
 
@@ -130,7 +149,9 @@ Low E-factors are desirable. The pharmaceutical industry historically has very h
 
 Light is an electromagnetic wave characterised by its **wavelength** \(\lambda\) (metres), **frequency** \(\nu\) (hertz, s⁻¹), and **amplitude**. All electromagnetic radiation travels through vacuum at the speed of light:
 
-\[c = \lambda \nu, \qquad c = 2.998 \times 10^8\,\text{m s}^{-1}\]
+\[
+c = \lambda \nu, \qquad c = 2.998 \times 10^8\,\text{m s}^{-1}
+\]
 
 The electromagnetic spectrum spans from radio waves (long \(\lambda\), low \(\nu\)) through microwaves, infrared, visible light (approximately 400–700 nm), ultraviolet, X-rays, to gamma rays (short \(\lambda\), high \(\nu\)).
 
@@ -138,7 +159,9 @@ The electromagnetic spectrum spans from radio waves (long \(\lambda\), low \(\nu
 
 Classical physics predicted that a hot object (a "blackbody") should emit infinite energy at short wavelengths — the **ultraviolet catastrophe**. In 1900 Max Planck resolved this by proposing that electromagnetic energy is quantised: it can only be emitted or absorbed in discrete packets called **quanta** (photons). The energy of a single photon is:
 
-\[E = h\nu = \frac{hc}{\lambda}\]
+\[
+E = h\nu = \frac{hc}{\lambda}
+\]
 
 where \(h = 6.626 \times 10^{-34}\,\text{J s}\) is **Planck's constant**. This seemingly small adjustment — energy comes in chunks rather than a continuum — was revolutionary and marks the birth of quantum mechanics.
 
@@ -151,7 +174,9 @@ In the photoelectric effect, light shining on a metal surface ejects electrons. 
 
 Einstein (1905) explained this by treating light as a stream of photons. Each photon carries energy \(h\nu\). To eject an electron, the photon must supply at least the **work function** \(\Phi\) (the binding energy of an electron in that metal). Excess energy becomes kinetic energy of the ejected electron:
 
-\[E_k = h\nu - \Phi\]
+\[
+E_k = h\nu - \Phi
+\]
 
 If \(h\nu < \Phi\), the electron cannot be freed. This established the **particle nature of light**.
 
@@ -167,7 +192,9 @@ When gaseous hydrogen is excited (by electrical discharge or heat), it emits lig
 
 The wavelengths are given exactly by the **Rydberg formula**:
 
-\[\frac{1}{\lambda} = R_H \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right), \quad n_2 > n_1\]
+\[
+\frac{1}{\lambda} = R_H \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right), \quad n_2 > n_1
+\]
 
 where \(R_H = 1.097 \times 10^7\,\text{m}^{-1}\) is the Rydberg constant and \(n_1, n_2\) are positive integers.
 
@@ -175,11 +202,15 @@ where \(R_H = 1.097 \times 10^7\,\text{m}^{-1}\) is the Rydberg constant and \(n
 
 Niels Bohr (1913) proposed that electrons in hydrogen orbit the nucleus in fixed circular orbits of quantised radii. Each orbit has a definite energy:
 
-\[E_n = -\frac{R_H h c}{n^2} = -\frac{13.6\,\text{eV}}{n^2}, \quad n = 1, 2, 3, \ldots\]
+\[
+E_n = -\frac{R_H h c}{n^2} = -\frac{13.6\,\text{eV}}{n^2}, \quad n = 1, 2, 3, \ldots
+\]
 
 The negative sign indicates a bound state; \(n = 1\) is the **ground state** (most stable). Emission occurs when an electron falls from \(n_2\) to \(n_1\):
 
-\[\Delta E = E_{n_2} - E_{n_1} = hc R_H \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)\]
+\[
+\Delta E = E_{n_2} - E_{n_1} = hc R_H \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)
+\]
 
 The Bohr model successfully predicts hydrogen's spectrum but fails for multi-electron atoms and offers no physical justification for why orbits are quantised. It was superseded by quantum mechanics.
 
@@ -187,7 +218,9 @@ The Bohr model successfully predicts hydrogen's spectrum but fails for multi-ele
 
 If light can behave as a particle (photoelectric effect), perhaps particles can behave as waves. Louis de Broglie (1924) proposed that any particle with momentum \(p = mv\) has an associated **de Broglie wavelength**:
 
-\[\lambda = \frac{h}{mv}\]
+\[
+\lambda = \frac{h}{mv}
+\]
 
 This is significant only for very light particles (electrons, atoms) at the quantum scale; macroscopic objects have wavelengths far too small to observe. The hypothesis was confirmed by the **Davisson–Germer experiment** (1927): a beam of electrons directed at a nickel crystal produced a diffraction pattern — unmistakable wave behaviour.
 
@@ -195,7 +228,9 @@ This is significant only for very light particles (electrons, atoms) at the quan
 
 Classical physics assumed position and momentum could both be measured exactly. In quantum mechanics this is impossible. Heisenberg showed that the uncertainties in position (\(\Delta x\)) and momentum (\(\Delta p\)) are fundamentally linked:
 
-\[\Delta x \cdot \Delta p \geq \frac{\hbar}{2}, \qquad \hbar = \frac{h}{2\pi}\]
+\[
+\Delta x \cdot \Delta p \geq \frac{\hbar}{2}, \qquad \hbar = \frac{h}{2\pi}
+\]
 
 A smaller uncertainty in position requires a larger uncertainty in momentum, and vice versa. This is not a limitation of measurement instruments — it is a fundamental feature of nature. Electrons do not have definite trajectories; they have probability distributions.
 
@@ -203,7 +238,9 @@ A smaller uncertainty in position requires a larger uncertainty in momentum, and
 
 Erwin Schrödinger (1926) formulated the full quantum mechanical description of the atom. The **time-independent Schrödinger equation** is:
 
-\[\hat{H}\psi = E\psi\]
+\[
+\hat{H}\psi = E\psi
+\]
 
 where \(\hat{H}\) is the **Hamiltonian operator** (representing the total energy), \(\psi\) is the **wave function**, and \(E\) is the energy of the state.
 
@@ -254,7 +291,10 @@ In hydrogen, orbitals with the same \(n\) but different \(l\) are **degenerate**
 **Penetration:** s orbitals have appreciable electron density near the nucleus (they penetrate the inner shells), so they experience less shielding and are lower in energy than p orbitals with the same \(n\). Similarly, p orbitals are lower in energy than d orbitals of the same \(n\).
 
 Energy ordering for multi-electron atoms:
-\[1s < 2s < 2p < 3s < 3p < 3d \approx 4s < 4p < \ldots\]
+
+\[
+1s < 2s < 2p < 3s < 3p < 3d \approx 4s < 4p < \ldots
+\]
 
 (The exact ordering of 3d and 4s depends on \(Z\).)
 
@@ -303,7 +343,9 @@ Atomic radius is defined as half the distance between adjacent nuclei in a homon
 
 **First ionization energy (IE₁)** is the energy required to remove the outermost electron from a gaseous atom:
 
-\[\text{M}(g) \to \text{M}^+(g) + e^-, \quad \Delta H = IE_1\]
+\[
+\text{M}(g) \to \text{M}^+(g) + e^-, \quad \Delta H = IE_1
+\]
 
 - **Across a period:** IE₁ generally **increases** (higher \(Z_\text{eff}\), smaller radius, stronger hold on electrons).
 - **Down a group:** IE₁ **decreases** (outer electrons are further from the nucleus and more shielded).
@@ -318,7 +360,9 @@ Successive ionisation energies (IE₂, IE₃, …) increase sharply when a core 
 
 **Electron affinity (EA)** is the energy change when a gaseous atom gains an electron:
 
-\[\text{M}(g) + e^- \to \text{M}^-(g), \quad \Delta H = EA\]
+\[
+\text{M}(g) + e^- \to \text{M}^-(g), \quad \Delta H = EA
+\]
 
 More negative EA means the anion is more stable (the element accepts an electron more readily). Halogens have the most negative EA values (F and Cl particularly). Noble gases have positive EA (the anion would be unstable). Exceptions arise for the same reasons as in IE trends (N has less negative EA than O due to half-filled 2p stability).
 
@@ -346,7 +390,9 @@ Rules for drawing Lewis structures:
 
 **Formal charge** is the charge an atom would carry if all bonding electrons were shared equally:
 
-\[FC = (\text{valence electrons}) - (\text{lone pair electrons}) - \frac{1}{2}(\text{bonding electrons})\]
+\[
+FC = (\text{valence electrons}) - (\text{lone pair electrons}) - \frac{1}{2}(\text{bonding electrons})
+\]
 
 The best Lewis structure minimises formal charges and places any negative formal charge on the more electronegative atom.
 
@@ -465,8 +511,13 @@ Pure atomic orbitals (s, p, d) do not have the correct shapes or directional pro
 
 MOs are constructed by the **Linear Combination of Atomic Orbitals (LCAO)** approximation: when two atomic orbitals \(\phi_a\) and \(\phi_b\) combine, two MOs result:
 
-\[\psi_\text{bonding} = \phi_a + \phi_b\]
-\[\psi_\text{antibonding} = \phi_a - \phi_b\]
+\[
+\psi_\text{bonding} = \phi_a + \phi_b
+\]
+
+\[
+\psi_\text{antibonding} = \phi_a - \phi_b
+\]
 
 The bonding MO has electron density **between** the nuclei, lowering the energy relative to the isolated atoms. The antibonding MO has a **node between the nuclei** (zero electron density), raising the energy above the isolated atoms. Antibonding orbitals are labelled with a star (e.g., σ*).
 
@@ -481,7 +532,9 @@ For H₂ and He₂, only 1s orbitals combine:
 
 **Bond order formula:**
 
-\[\text{Bond order} = \frac{(\text{bonding electrons}) - (\text{antibonding electrons})}{2}\]
+\[
+\text{Bond order} = \frac{(\text{bonding electrons}) - (\text{antibonding electrons})}{2}
+\]
 
 A bond order > 0 indicates a stable molecule. Higher bond order = shorter, stronger bond.
 
@@ -495,10 +548,16 @@ From 2p: σ(2p), two degenerate π(2p), σ*(2p), two degenerate π*(2p)
 **Critically**, for Li₂ through N₂, sp mixing (interaction between the σ(2s) and σ(2p) MOs) raises the energy of σ(2p) above the two degenerate π(2p) MOs. For O₂ and F₂, this sp mixing is weaker and the standard ordering [σ(2p) below π(2p)] is restored.
 
 Filling order for Li₂ through N₂:
-\[\sigma(2s) < \sigma^*(2s) < \pi(2p) = \pi(2p) < \sigma(2p) < \pi^*(2p) = \pi^*(2p) < \sigma^*(2p)\]
+
+\[
+\sigma(2s) < \sigma^*(2s) < \pi(2p) = \pi(2p) < \sigma(2p) < \pi^*(2p) = \pi^*(2p) < \sigma^*(2p)
+\]
 
 Filling order for O₂ through Ne₂:
-\[\sigma(2s) < \sigma^*(2s) < \sigma(2p) < \pi(2p) = \pi(2p) < \pi^*(2p) = \pi^*(2p) < \sigma^*(2p)\]
+
+\[
+\sigma(2s) < \sigma^*(2s) < \sigma(2p) < \pi(2p) = \pi(2p) < \pi^*(2p) = \pi^*(2p) < \sigma^*(2p)
+\]
 
 | Molecule | Valence electrons | Bond order | Magnetic behaviour |
 |----------|-------------------|------------|-------------------|
@@ -526,11 +585,15 @@ An **ideal gas** is a theoretical model in which:
 
 The **ideal gas law** combines Boyle's Law (\(P \propto 1/V\) at constant \(T, n\)), Charles' Law (\(V \propto T\) at constant \(P, n\)), and Avogadro's Law (\(V \propto n\) at constant \(P, T\)):
 
-\[PV = nRT\]
+\[
+PV = nRT
+\]
 
 where \(P\) is pressure, \(V\) is volume, \(n\) is moles of gas, \(T\) is absolute temperature (Kelvin), and \(R\) is the **universal gas constant**:
 
-\[R = 8.314\,\text{J mol}^{-1}\text{K}^{-1} = 0.08314\,\text{L bar mol}^{-1}\text{K}^{-1} = 0.08206\,\text{L atm mol}^{-1}\text{K}^{-1}\]
+\[
+R = 8.314\,\text{J mol}^{-1}\text{K}^{-1} = 0.08314\,\text{L bar mol}^{-1}\text{K}^{-1} = 0.08206\,\text{L atm mol}^{-1}\text{K}^{-1}
+\]
 
 **Standard conditions:**
 - STP (IUPAC, current definition): 0°C (273.15 K), 1 bar. Molar volume = 22.71 L/mol.
@@ -560,15 +623,21 @@ For mixed gas/solid/liquid problems, convert to moles using appropriate formulas
 
 In a mixture of ideal gases, each component exerts its own **partial pressure** independently of the others. The total pressure is the sum of all partial pressures:
 
-\[P_\text{total} = P_1 + P_2 + P_3 + \cdots\]
+\[
+P_\text{total} = P_1 + P_2 + P_3 + \cdots
+\]
 
 The partial pressure of component \(i\) is related to its **mole fraction** \(\chi_i\):
 
-\[P_i = \chi_i \, P_\text{total}, \qquad \chi_i = \frac{n_i}{n_\text{total}}\]
+\[
+P_i = \chi_i \, P_\text{total}, \qquad \chi_i = \frac{n_i}{n_\text{total}}
+\]
 
 **Collecting gas over water:** When a gas is collected by displacement of water, the total pressure measured is the sum of the gas pressure and the **vapour pressure of water** at that temperature:
 
-\[P_\text{gas} = P_\text{total} - P_\text{H_2O}(T)\]
+\[
+P_\text{gas} = P_\text{total} - P_\text{H_2O}(T)
+\]
 
 ### Kinetic Molecular Theory
 
@@ -580,15 +649,21 @@ The kinetic molecular theory (KMT) provides the microscopic justification for th
 
 From KMT, the **Maxwell–Boltzmann speed distribution** describes the probability of finding a molecule with a given speed \(v\):
 
-\[f(v) = 4\pi \left(\frac{m}{2\pi k_B T}\right)^{3/2} v^2 \exp\!\left(-\frac{mv^2}{2k_B T}\right)\]
+\[
+f(v) = 4\pi \left(\frac{m}{2\pi k_B T}\right)^{3/2} v^2 \exp\!\left(-\frac{mv^2}{2k_B T}\right)
+\]
 
 This distribution gives three characteristic speeds:
 
-\[v_\text{mp} = \sqrt{\frac{2RT}{M}}, \qquad v_\text{avg} = \sqrt{\frac{8RT}{\pi M}}, \qquad v_\text{rms} = \sqrt{\frac{3RT}{M}}\]
+\[
+v_\text{mp} = \sqrt{\frac{2RT}{M}}, \qquad v_\text{avg} = \sqrt{\frac{8RT}{\pi M}}, \qquad v_\text{rms} = \sqrt{\frac{3RT}{M}}
+\]
 
 where \(M\) is the molar mass in kg/mol. The root-mean-square speed \(v_\text{rms}\) is largest; the most probable speed \(v_\text{mp}\) is smallest:
 
-\[v_\text{mp} < v_\text{avg} < v_\text{rms}\]
+\[
+v_\text{mp} < v_\text{avg} < v_\text{rms}
+\]
 
 As temperature increases, the distribution broadens and shifts to higher speeds. As molar mass increases, the distribution narrows and shifts to lower speeds.
 
@@ -598,7 +673,9 @@ As temperature increases, the distribution broadens and shifts to higher speeds.
 
 **Graham's Law** states that effusion rate (and approximately diffusion rate) is inversely proportional to the square root of molar mass:
 
-\[\frac{r_1}{r_2} = \sqrt{\frac{M_2}{M_1}}\]
+\[
+\frac{r_1}{r_2} = \sqrt{\frac{M_2}{M_1}}
+\]
 
 This follows directly from KMT: lighter gases move faster and therefore effuse more rapidly. Graham's Law is used to separate isotopes (e.g., ²³⁵UF₆ from ²³⁸UF₆ in uranium enrichment) and to identify unknown gases by comparing effusion times.
 
@@ -608,7 +685,9 @@ Real gases deviate from ideal behaviour at **high pressure** (molecules are forc
 
 The **compressibility factor** \(Z\) quantifies deviation from ideality:
 
-\[Z = \frac{PV}{nRT}\]
+\[
+Z = \frac{PV}{nRT}
+\]
 
 For an ideal gas, \(Z = 1\) always. For real gases, \(Z < 1\) when attractive forces dominate (e.g., CO₂ at moderate pressure) and \(Z > 1\) when repulsive forces (finite molecular volume) dominate (e.g., H₂ and He at high pressure).
 
@@ -616,11 +695,15 @@ For an ideal gas, \(Z = 1\) always. For real gases, \(Z < 1\) when attractive fo
 
 The **van der Waals equation** corrects the ideal gas law for both molecular volume (\(b\)) and intermolecular attractions (\(a\)):
 
-\[\left(P + \frac{an^2}{V^2}\right)(V - nb) = nRT\]
+\[
+\left(P + \frac{an^2}{V^2}\right)(V - nb) = nRT
+\]
 
 In terms of molar volume \(\bar{V} = V/n\):
 
-\[\left(P + \frac{a}{\bar{V}^2}\right)(\bar{V} - b) = RT\]
+\[
+\left(P + \frac{a}{\bar{V}^2}\right)(\bar{V} - b) = RT
+\]
 
 - The \(a/\bar{V}^2\) term corrects pressure upward because intermolecular attractions reduce the force of collisions with the walls.
 - The \(b\) term corrects volume downward because molecules have finite size and the free volume available is \(V - nb\).
@@ -637,7 +720,9 @@ Van der Waals: \(P = \frac{RT}{\bar{V}-b} - \frac{a}{\bar{V}^2} = \frac{(0.08314
 
 An alternative to van der Waals is the **virial equation**, which expands \(Z\) as a power series in \(1/\bar{V}\):
 
-\[Z = 1 + \frac{B}{\bar{V}} + \frac{C}{\bar{V}^2} + \cdots\]
+\[
+Z = 1 + \frac{B}{\bar{V}} + \frac{C}{\bar{V}^2} + \cdots
+\]
 
 The coefficients \(B\), \(C\), … (virial coefficients) are temperature-dependent and account for pairwise, three-body, etc., interactions. Truncating at the second term gives a good approximation at moderate pressures.
 
@@ -740,13 +825,19 @@ One mole of CO₂ is confined to a 0.500 L container at 300 K. Compare the press
 
 **Ideal gas:**
 
-\[P = \frac{nRT}{V} = \frac{(1\,\text{mol})(0.08206\,\text{L atm mol}^{-1}\text{K}^{-1})(300\,\text{K})}{0.500\,\text{L}} = 49.2\,\text{atm}\]
+\[
+P = \frac{nRT}{V} = \frac{(1\,\text{mol})(0.08206\,\text{L atm mol}^{-1}\text{K}^{-1})(300\,\text{K})}{0.500\,\text{L}} = 49.2\,\text{atm}
+\]
 
 **Van der Waals:**
 
-\[P = \frac{nRT}{V - nb} - \frac{an^2}{V^2} = \frac{(1)(0.08206)(300)}{0.500 - (1)(0.04267)} - \frac{(3.640)(1)^2}{(0.500)^2}\]
+\[
+P = \frac{nRT}{V - nb} - \frac{an^2}{V^2} = \frac{(1)(0.08206)(300)}{0.500 - (1)(0.04267)} - \frac{(3.640)(1)^2}{(0.500)^2}
+\]
 
-\[P = \frac{24.618}{0.45733} - \frac{3.640}{0.250} = 53.82 - 14.56 = 39.3\,\text{atm}\]
+\[
+P = \frac{24.618}{0.45733} - \frac{3.640}{0.250} = 53.82 - 14.56 = 39.3\,\text{atm}
+\]
 
 The van der Waals pressure (39.3 atm) is lower than ideal (49.2 atm) because CO₂ molecules exert attractive forces on each other, reducing the pressure exerted on the container walls. This means \(Z < 1\) for CO₂ under these conditions.
 
@@ -754,7 +845,9 @@ The van der Waals pressure (39.3 atm) is lower than ideal (49.2 atm) because CO�
 
 How much faster does ⁴He effuse compared to ²³⁸UF₆?
 
-\[\frac{r_\text{He}}{r_\text{UF_6}} = \sqrt{\frac{M_\text{UF_6}}{M_\text{He}}} = \sqrt{\frac{352.0\,\text{g/mol}}{4.003\,\text{g/mol}}} = \sqrt{87.9} \approx 9.38\]
+\[
+\frac{r_\text{He}}{r_\text{UF_6}} = \sqrt{\frac{M_\text{UF_6}}{M_\text{He}}} = \sqrt{\frac{352.0\,\text{g/mol}}{4.003\,\text{g/mol}}} = \sqrt{87.9} \approx 9.38
+\]
 
 Helium effuses about 9.4 times faster than UF₆. This large ratio makes gas diffusion a viable — if slow — method for isotope separation (e.g., uranium enrichment uses ²³⁵UF₆ vs. ²³⁸UF₆ with a ratio of only 1.004 per stage, requiring thousands of stages).
 
@@ -762,11 +855,17 @@ Helium effuses about 9.4 times faster than UF₆. This large ratio makes gas dif
 
 A 3.00 L flask at 25°C contains 0.100 mol N₂ and 0.200 mol O₂. What is the partial pressure of each gas and the total pressure?
 
-\[P_{\text{N}_2} = \frac{n_{\text{N}_2}RT}{V} = \frac{(0.100)(0.08206)(298)}{3.00} = 0.815\,\text{atm}\]
+\[
+P_{\text{N}_2} = \frac{n_{\text{N}_2}RT}{V} = \frac{(0.100)(0.08206)(298)}{3.00} = 0.815\,\text{atm}
+\]
 
-\[P_{\text{O}_2} = \frac{(0.200)(0.08206)(298)}{3.00} = 1.630\,\text{atm}\]
+\[
+P_{\text{O}_2} = \frac{(0.200)(0.08206)(298)}{3.00} = 1.630\,\text{atm}
+\]
 
-\[P_\text{total} = 0.815 + 1.630 = 2.445\,\text{atm}\]
+\[
+P_\text{total} = 0.815 + 1.630 = 2.445\,\text{atm}
+\]
 
 Mole fraction of N₂: \(\chi_{\text{N}_2} = 0.100/0.300 = 0.333\). Check: \(0.333 \times 2.445 = 0.815\,\text{atm}\). ✓
 
@@ -780,19 +879,27 @@ Light of wavelength 200 nm strikes a metal with work function \(\Phi = 4.61\,\te
 
 First, find the photon energy:
 
-\[E = \frac{hc}{\lambda} = \frac{(6.626 \times 10^{-34})(2.998 \times 10^8)}{200 \times 10^{-9}} = 9.93 \times 10^{-19}\,\text{J}\]
+\[
+E = \frac{hc}{\lambda} = \frac{(6.626 \times 10^{-34})(2.998 \times 10^8)}{200 \times 10^{-9}} = 9.93 \times 10^{-19}\,\text{J}
+\]
 
 Convert work function: \(\Phi = 4.61\,\text{eV} \times 1.602 \times 10^{-19}\,\text{J/eV} = 7.39 \times 10^{-19}\,\text{J}\)
 
-\[E_k = E - \Phi = 9.93 \times 10^{-19} - 7.39 \times 10^{-19} = 2.54 \times 10^{-19}\,\text{J} = 1.59\,\text{eV}\]
+\[
+E_k = E - \Phi = 9.93 \times 10^{-19} - 7.39 \times 10^{-19} = 2.54 \times 10^{-19}\,\text{J} = 1.59\,\text{eV}
+\]
 
 ### Problem 2 — Hydrogen Energy Levels
 
 What is the wavelength of light emitted when hydrogen's electron drops from \(n = 4\) to \(n = 2\) (the Hα line of the Balmer series)?
 
-\[\frac{1}{\lambda} = R_H \left(\frac{1}{2^2} - \frac{1}{4^2}\right) = (1.097 \times 10^7)\left(\frac{1}{4} - \frac{1}{16}\right) = (1.097 \times 10^7)(0.1875) = 2.057 \times 10^6\,\text{m}^{-1}\]
+\[
+\frac{1}{\lambda} = R_H \left(\frac{1}{2^2} - \frac{1}{4^2}\right) = (1.097 \times 10^7)\left(\frac{1}{4} - \frac{1}{16}\right) = (1.097 \times 10^7)(0.1875) = 2.057 \times 10^6\,\text{m}^{-1}
+\]
 
-\[\lambda = \frac{1}{2.057 \times 10^6} = 4.86 \times 10^{-7}\,\text{m} = 486\,\text{nm}\]
+\[
+\lambda = \frac{1}{2.057 \times 10^6} = 4.86 \times 10^{-7}\,\text{m} = 486\,\text{nm}
+\]
 
 This falls in the blue-green region of the visible spectrum.
 
@@ -800,7 +907,9 @@ This falls in the blue-green region of the visible spectrum.
 
 What is the de Broglie wavelength of an electron moving at \(1.00 \times 10^6\,\text{m/s}\)?
 
-\[\lambda = \frac{h}{mv} = \frac{6.626 \times 10^{-34}}{(9.109 \times 10^{-31})(1.00 \times 10^6)} = \frac{6.626 \times 10^{-34}}{9.109 \times 10^{-25}} = 7.28 \times 10^{-10}\,\text{m} = 0.728\,\text{nm}\]
+\[
+\lambda = \frac{h}{mv} = \frac{6.626 \times 10^{-34}}{(9.109 \times 10^{-31})(1.00 \times 10^6)} = \frac{6.626 \times 10^{-34}}{9.109 \times 10^{-25}} = 7.28 \times 10^{-10}\,\text{m} = 0.728\,\text{nm}
+\]
 
 This is on the order of atomic bond lengths (~0.1–0.3 nm), which is why electron diffraction by crystal lattices is observable and why electrons exhibit wave behaviour in atomic-scale experiments.
 
@@ -812,7 +921,9 @@ This is on the order of atomic bond lengths (~0.1–0.3 nm), which is why electr
 
 **Lattice energy** (\(U\)) is the energy released when gaseous cations and anions combine to form one mole of the ionic solid. It cannot be measured directly but is calculated via a **Born–Haber cycle** — a thermodynamic cycle applying Hess's Law to the formation of an ionic solid from its constituent elements:
 
-\[\Delta H^\circ_f = \Delta H_\text{sub}(\text{metal}) + IE_1(\text{metal}) + \tfrac{1}{2}D(\text{bond}) + EA(\text{nonmetal}) + U\]
+\[
+\Delta H^\circ_f = \Delta H_\text{sub}(\text{metal}) + IE_1(\text{metal}) + \tfrac{1}{2}D(\text{bond}) + EA(\text{nonmetal}) + U
+\]
 
 For NaCl, the large lattice energy (~787 kJ/mol) makes the overall formation process exothermic even though several individual steps are endothermic.
 

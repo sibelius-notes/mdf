@@ -36,13 +36,18 @@ We write a simple two-outcome lottery as \(L = (p, x_1; 1-p, x_2)\) — receive 
 
 <div class="theorem">
 <strong>Expected Utility Theorem (von Neumann and Morgenstern 1944):</strong> If a preference relation over lotteries satisfies the axioms of completeness, transitivity, continuity, and independence, then there exists a utility function <em>u</em> over outcomes such that lotteries are ranked by expected utility:
-\[ L \succeq L' \iff E[u(L)] \geq E[u(L')] \]
+
+\[
+L \succeq L' \iff E[u(L)] \geq E[u(L')]
+\]
 That is, \(\sum_i p_i u(x_i) \geq \sum_j q_j u(x_j)\). The function <em>u</em> is unique up to positive affine transformations.
 </div>
 
 The **Independence Axiom** is the most restrictive (and most debated): if \(L \succeq L'\), then for any lottery \(M\) and \(\alpha \in (0,1)\):
 
-\[ \alpha L + (1-\alpha)M \succeq \alpha L' + (1-\alpha)M \]
+\[
+\alpha L + (1-\alpha)M \succeq \alpha L' + (1-\alpha)M
+\]
 
 Mixing both lotteries with the same third lottery \(M\) should not reverse the preference ranking. This is the key axiom that generates the expected utility form.
 
@@ -50,7 +55,9 @@ Mixing both lotteries with the same third lottery \(M\) should not reverse the p
 
 An agent is **risk averse** if they prefer the certain outcome \(E[X]\) to the lottery \(X\) with the same expected value:
 
-\[ u(E[X]) \geq E[u(X)] \]
+\[
+u(E[X]) \geq E[u(X)]
+\]
 
 This is equivalent (by Jensen's inequality) to \(u\) being concave. Risk aversion implies that agents will pay to reduce risk (will purchase insurance at an actuarially fair price or better).
 
@@ -62,28 +69,40 @@ This is equivalent (by Jensen's inequality) to \(u\) being concave. Risk aversio
 
 **Arrow-Pratt absolute risk aversion (ARA):**
 
-\[ A(w) = -\frac{u''(w)}{u'(w)} \]
+\[
+A(w) = -\frac{u''(w)}{u'(w)}
+\]
 
 A higher \(A(w)\) means greater risk aversion at wealth level \(w\).
 
 **Arrow-Pratt relative risk aversion (RRA):**
 
-\[ R(w) = -\frac{w \cdot u''(w)}{u'(w)} = w \cdot A(w) \]
+\[
+R(w) = -\frac{w \cdot u''(w)}{u'(w)} = w \cdot A(w)
+\]
 
 For small, actuarially fair gambles, the risk premium is approximately:
 
-\[ \text{Risk premium} \approx \frac{1}{2} A(w) \text{Var}(X) \]
+\[
+\text{Risk premium} \approx \frac{1}{2} A(w) \text{Var}(X)
+\]
 
 **Common utility function families:**
 
 - **Constant Absolute Risk Aversion (CARA):** \(u(w) = -e^{-\alpha w}\), \(A(w) = \alpha\) (constant). Agent's optimal holdings of risky assets do not depend on wealth level.
 
 - **Constant Relative Risk Aversion (CRRA):**
-\[ u(w) = \frac{w^{1-\gamma}}{1-\gamma}, \quad \gamma \neq 1 \qquad u(w) = \ln(w), \quad \gamma = 1 \]
+
+\[
+u(w) = \frac{w^{1-\gamma}}{1-\gamma}, \quad \gamma \neq 1 \qquad u(w) = \ln(w), \quad \gamma = 1
+\]
 \(R(w) = \gamma\) (constant). The fraction of wealth held in risky assets is constant — consistent with observed portfolio behavior and commonly used in macro-finance models.
 
 - **Mean-Variance preferences:** If outcomes are jointly normal (or utility is quadratic), expected utility can be written as a function of mean and variance only:
-\[ E[u(w)] = f(\mu_w, \sigma^2_w) \]
+
+\[
+E[u(w)] = f(\mu_w, \sigma^2_w)
+\]
 This is the foundation of mean-variance portfolio theory.
 
 ## 1.5 Precautionary Savings
@@ -92,15 +111,21 @@ This is the foundation of mean-variance portfolio theory.
 
 Consider a two-period model. An agent earns income \(y_1\) today and uncertain income \(\tilde{y}_2\) tomorrow. They choose first-period consumption \(c_1\) and save \(s = y_1 - c_1\). The first-order condition (Euler equation) is:
 
-\[ u'(c_1) = \beta(1+r) E[u'(c_2)] \]
+\[
+u'(c_1) = \beta(1+r) E[u'(c_2)]
+\]
 
 If \(u''' > 0\) (utility is convex in marginal utility — equivalently, \(u\) exhibits **prudence** in Kimball's 1990 sense), then by Jensen's inequality:
 
-\[ E[u'(c_2)] > u'(E[c_2]) \]
+\[
+E[u'(c_2)] > u'(E[c_2])
+\]
 
 This means that uncertainty about \(c_2\) raises expected marginal utility, requiring a lower \(u'(c_1)\) in equilibrium — that is, higher \(c_1\) (wait, rather: lower \(c_1\) and higher saving). Precautionary saving is captured by the third derivative of \(u\):
 
-\[ P(w) = -\frac{u'''(w)}{u''(w)} \]
+\[
+P(w) = -\frac{u'''(w)}{u''(w)}
+\]
 
 (the coefficient of absolute prudence). A higher \(u'''\) generates more precautionary saving.
 
@@ -110,13 +135,17 @@ When comparing entire distributions (rather than single numbers), stochastic dom
 
 **First-Order Stochastic Dominance (FOSD):** Lottery \(F\) first-order stochastically dominates lottery \(G\) if every risk-averse (and risk-loving) agent prefers \(F\):
 
-\[ F(x) \leq G(x) \quad \forall x \]
+\[
+F(x) \leq G(x) \quad \forall x
+\]
 
 That is, \(F\) places no more probability on outcomes below any threshold \(x\) than \(G\). Equivalently, \(F\) is "shifted right" relative to \(G\).
 
 **Second-Order Stochastic Dominance (SOSD):** \(F\) second-order stochastically dominates \(G\) if all risk-averse agents prefer \(F\):
 
-\[ \int_{-\infty}^{x} F(t) dt \leq \int_{-\infty}^{x} G(t) dt \quad \forall x \]
+\[
+\int_{-\infty}^{x} F(t) dt \leq \int_{-\infty}^{x} G(t) dt \quad \forall x
+\]
 
 SOSD holds when \(F\) is obtained from \(G\) by a **mean-preserving spread** — shifting probability mass from the center to the tails without changing the mean. Risk-averse agents always prefer lower variance (for the same mean), so they prefer \(F\) over \(G\) whenever \(G\) is a mean-preserving spread of \(F\).
 
@@ -142,20 +171,31 @@ Let there be \(n\) risky assets with expected returns \(\boldsymbol{\mu} = (\mu_
 
 **Portfolio expected return and variance:**
 
-\[ \mu_p = \mathbf{w}'\boldsymbol{\mu} \]
-\[ \sigma^2_p = \mathbf{w}'\boldsymbol{\Sigma}\mathbf{w} \]
+\[
+\mu_p = \mathbf{w}'\boldsymbol{\mu}
+\]
+
+\[
+\sigma^2_p = \mathbf{w}'\boldsymbol{\Sigma}\mathbf{w}
+\]
 
 **The minimum-variance frontier** is the set of portfolios achieving minimum variance for each level of expected return. Solving the constrained optimization:
 
-\[ \min_{\mathbf{w}} \frac{1}{2} \mathbf{w}'\boldsymbol{\Sigma}\mathbf{w} \quad \text{s.t.} \quad \mathbf{w}'\boldsymbol{\mu} = \mu_p, \quad \mathbf{1}'\mathbf{w} = 1 \]
+\[
+\min_{\mathbf{w}} \frac{1}{2} \mathbf{w}'\boldsymbol{\Sigma}\mathbf{w} \quad \text{s.t.} \quad \mathbf{w}'\boldsymbol{\mu} = \mu_p, \quad \mathbf{1}'\mathbf{w} = 1
+\]
 
 Using Lagrange multipliers:
 
-\[ \mathcal{L} = \frac{1}{2}\mathbf{w}'\boldsymbol{\Sigma}\mathbf{w} - \lambda(\mathbf{w}'\boldsymbol{\mu} - \mu_p) - \gamma(\mathbf{1}'\mathbf{w} - 1) \]
+\[
+\mathcal{L} = \frac{1}{2}\mathbf{w}'\boldsymbol{\Sigma}\mathbf{w} - \lambda(\mathbf{w}'\boldsymbol{\mu} - \mu_p) - \gamma(\mathbf{1}'\mathbf{w} - 1)
+\]
 
 FOC: \(\boldsymbol{\Sigma}\mathbf{w}^* = \lambda\boldsymbol{\mu} + \gamma\mathbf{1}\), giving:
 
-\[ \mathbf{w}^* = \lambda\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu} + \gamma\boldsymbol{\Sigma}^{-1}\mathbf{1} \]
+\[
+\mathbf{w}^* = \lambda\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu} + \gamma\boldsymbol{\Sigma}^{-1}\mathbf{1}
+\]
 
 The frontier is a parabola in \((\sigma^2_p, \mu_p)\) space (a hyperbola in \((\sigma_p, \mu_p)\) space). The portion above the global minimum-variance portfolio is the **efficient frontier**.
 
@@ -167,11 +207,15 @@ The frontier is a parabola in \((\sigma^2_p, \mu_p)\) space (a hyperbola in \((\
 
 With a risk-free asset earning \(r_f\), the **Capital Market Line (CML)** describes the efficient frontier for the entire set of assets (risky and risk-free):
 
-\[ \mu_p = r_f + \frac{\mu_T - r_f}{\sigma_T} \sigma_p \]
+\[
+\mu_p = r_f + \frac{\mu_T - r_f}{\sigma_T} \sigma_p
+\]
 
 where \(T\) is the **tangency portfolio** — the risky portfolio with the highest Sharpe ratio (the slope of the CML):
 
-\[ SR_T = \frac{\mu_T - r_f}{\sigma_T} = \max_\mathbf{w} \frac{\mathbf{w}'\boldsymbol{\mu} - r_f}{\sqrt{\mathbf{w}'\boldsymbol{\Sigma}\mathbf{w}}} \]
+\[
+SR_T = \frac{\mu_T - r_f}{\sigma_T} = \max_\mathbf{w} \frac{\mathbf{w}'\boldsymbol{\mu} - r_f}{\sqrt{\mathbf{w}'\boldsymbol{\Sigma}\mathbf{w}}}
+\]
 
 In equilibrium (under the CAPM assumptions), the tangency portfolio equals the **market portfolio** — the value-weighted portfolio of all risky assets.
 
@@ -189,7 +233,9 @@ The **no-arbitrage** condition requires that all Arrow-Debreu prices be strictly
 
 Define **risk-neutral probabilities** by normalizing Arrow-Debreu prices:
 
-\[ \pi^Q_s = \frac{q_s}{\sum_{s'} q_{s'}} = \frac{q_s}{P^B} \]
+\[
+\pi^Q_s = \frac{q_s}{\sum_{s'} q_{s'}} = \frac{q_s}{P^B}
+\]
 
 where \(P^B = \sum_s q_s\) is the price of the risk-free bond (paying 1 in every state). The risk-free rate satisfies \(1 + r_f = 1/P^B\).
 
@@ -197,7 +243,11 @@ where \(P^B = \sum_s q_s\) is the price of the risk-free bond (paying 1 in every
 <strong>Fundamental Theorem of Asset Pricing (Harrison and Kreps 1979; Harrison and Pliska 1981):</strong> In a finite state, finite period economy:
 <ol>
 <li><em>No Arbitrage</em> \(\Longleftrightarrow\) there exist strictly positive risk-neutral probabilities (an equivalent martingale measure \(\mathbb{Q}\)) such that every asset price equals its discounted expected payoff under \(\mathbb{Q}\):
-\[ P_i = \frac{1}{1+r_f} E^{\mathbb{Q}}[X_i] \]</li>
+
+\[
+P_i = \frac{1}{1+r_f} E^{\mathbb{Q}}[X_i]
+\]
+</li>
 <li><em>Market Completeness</em> \(\Longleftrightarrow\) the equivalent martingale measure is unique.</li>
 </ol>
 </div>
@@ -209,28 +259,38 @@ The fundamental theorem decouples asset pricing from preference parameters: to p
 
 Risk-neutral probabilities: \(S_0 = P^B(\pi^Q S_u + (1-\pi^Q) S_d)\)
 
-\[ 100 = \frac{1}{1.05}(120\pi^Q + 80(1-\pi^Q)) \Rightarrow 105 = 40\pi^Q + 80 \Rightarrow \pi^Q = 0.625 \]
+\[
+100 = \frac{1}{1.05}(120\pi^Q + 80(1-\pi^Q)) \Rightarrow 105 = 40\pi^Q + 80 \Rightarrow \pi^Q = 0.625
+\]
 
 Price of a call option with strike \(K = 100\):
 
-\[ C_0 = \frac{1}{1.05}(\pi^Q \cdot \max(120-100, 0) + (1-\pi^Q)\cdot\max(80-100,0)) = \frac{0.625 \times 20}{1.05} \approx 11.90 \]
+\[
+C_0 = \frac{1}{1.05}(\pi^Q \cdot \max(120-100, 0) + (1-\pi^Q)\cdot\max(80-100,0)) = \frac{0.625 \times 20}{1.05} \approx 11.90
+\]
 </div>
 
 ## 3.3 The Stochastic Discount Factor (SDF)
 
 A **stochastic discount factor** (SDF), also called a **pricing kernel** or **state-price deflator**, is a random variable \(m\) such that for any asset with payoff \(X\):
 
-\[ P = E[m \cdot X] \]
+\[
+P = E[m \cdot X]
+\]
 
 From the Arrow-Debreu framework, \(m_s = q_s / \text{prob}_s\) — the Arrow-Debreu price divided by the objective probability of state \(s\).
 
 From the consumer's first-order conditions in an endowment economy (from MIU or CRRA preferences), the equilibrium SDF is:
 
-\[ m_{t+1} = \beta \frac{u'(c_{t+1})}{u'(c_t)} \]
+\[
+m_{t+1} = \beta \frac{u'(c_{t+1})}{u'(c_t)}
+\]
 
 For CRRA utility \(u(c) = c^{1-\gamma}/(1-\gamma)\):
 
-\[ m_{t+1} = \beta \left(\frac{c_{t+1}}{c_t}\right)^{-\gamma} \]
+\[
+m_{t+1} = \beta \left(\frac{c_{t+1}}{c_t}\right)^{-\gamma}
+\]
 
 The SDF declines in aggregate consumption growth: states where aggregate consumption is high (good states) have low SDF values (assets that pay off in good states are less valuable — "insurance" in bad states commands a premium).
 
@@ -240,17 +300,24 @@ The **Capital Asset Pricing Model** (Sharpe 1964; Lintner 1965; Mossin 1966) is 
 
 <div class="theorem">
 <strong>CAPM:</strong> Under the assumptions of (1) mean-variance preferences, (2) homogeneous expectations, (3) a risk-free asset, and (4) no frictions, the expected excess return of any asset <em>i</em> satisfies:
-\[ E[R_i] - r_f = \beta_i (E[R_m] - r_f) \]
+
+\[
+E[R_i] - r_f = \beta_i (E[R_m] - r_f)
+\]
 where \(\beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}\) is the asset's <em>systematic risk</em> (beta), and \(E[R_m] - r_f\) is the <em>equity risk premium</em>.
 </div>
 
 **Derivation sketch.** In equilibrium, the market portfolio \(m\) is mean-variance efficient. For any asset \(i\), the Lagrange condition on the efficient frontier gives:
 
-\[ E[R_i] - r_f = \lambda \text{Cov}(R_i, R_m) \]
+\[
+E[R_i] - r_f = \lambda \text{Cov}(R_i, R_m)
+\]
 
 Setting \(i = m\): \(E[R_m] - r_f = \lambda \text{Var}(R_m)\), so \(\lambda = (E[R_m]-r_f)/\text{Var}(R_m)\). Substituting:
 
-\[ E[R_i] - r_f = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}(E[R_m] - r_f) = \beta_i(E[R_m]-r_f) \]
+\[
+E[R_i] - r_f = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}(E[R_m] - r_f) = \beta_i(E[R_m]-r_f)
+\]
 
 **Economic interpretation.** Only **systematic risk** (co-movement with the market) is priced. **Idiosyncratic risk** is diversifiable and earns no premium. An asset with \(\beta_i > 1\) amplifies market movements — it is aggressive and earns a premium above the market. An asset with \(\beta_i < 0\) is a hedge — it earns less than the risk-free rate.
 
@@ -265,8 +332,13 @@ Assets plotting above the SML have positive **alpha** (abnormal return): \(\alph
 <div class="example">
 <strong>Example — CAPM Calculation:</strong> Risk-free rate \(r_f = 3\%\). Expected market return \(E[R_m] = 9\%\). Asset A has \(\beta_A = 1.5\). Asset B has \(\beta_B = 0.6\).
 
-\[ E[R_A] = 3 + 1.5(9-3) = 3 + 9 = 12\% \]
-\[ E[R_B] = 3 + 0.6(9-3) = 3 + 3.6 = 6.6\% \]
+\[
+E[R_A] = 3 + 1.5(9-3) = 3 + 9 = 12\%
+\]
+
+\[
+E[R_B] = 3 + 0.6(9-3) = 3 + 3.6 = 6.6\%
+\]
 
 If Asset A's actual expected return is observed to be 14%, its alpha is \(\alpha_A = 14 - 12 = 2\%\) — it plots above the SML and represents an abnormal profit opportunity that would be competed away under strong-form efficiency.
 </div>
@@ -277,7 +349,9 @@ If Asset A's actual expected return is observed to be 14%, its alpha is \(\alpha
 
 To match a 6% ERP using the CRRA SDF formula:
 
-\[ E[R_m] - r_f \approx \gamma \text{Cov}\left(\frac{\Delta c}{c}, R_m\right) \]
+\[
+E[R_m] - r_f \approx \gamma \text{Cov}\left(\frac{\Delta c}{c}, R_m\right)
+\]
 
 US consumption growth has variance around 0.1% per year; matching the ERP requires \(\gamma \approx 50\) — an implausibly high risk aversion coefficient (most estimates suggest \(\gamma \in [1, 5]\)).
 
@@ -320,13 +394,17 @@ Three types of agents:
 
 The insider submits a **linear demand schedule**:
 
-\[ x = \beta(v - \mu) \]
+\[
+x = \beta(v - \mu)
+\]
 
 where \(\mu = E[v]\) is the market maker's prior mean and \(\beta > 0\) measures the aggressiveness of insider trading.
 
 The market maker sets price using **Bayesian updating** on order flow:
 
-\[ p = \mu + \lambda y \]
+\[
+p = \mu + \lambda y
+\]
 
 where \(\lambda\) is the **price impact coefficient** — how much the price moves per unit of net order flow.
 
@@ -334,45 +412,74 @@ where \(\lambda\) is the **price impact coefficient** — how much the price mov
 
 In a linear equilibrium, the market maker's pricing rule and the insider's strategy are mutually consistent. Total order flow is:
 
-\[ y = x + u = \beta(v - \mu) + u \]
+\[
+y = x + u = \beta(v - \mu) + u
+\]
 
 The market maker observes \(y\) and infers:
 
-\[ p = E[v | y] = \mu + \frac{\text{Cov}(v, y)}{\text{Var}(y)} y \]
+\[
+p = E[v | y] = \mu + \frac{\text{Cov}(v, y)}{\text{Var}(y)} y
+\]
 
 Computing covariances:
-\[ \text{Cov}(v, y) = \text{Cov}(v, \beta(v-\mu) + u) = \beta \sigma_v^2 \]
-\[ \text{Var}(y) = \beta^2 \sigma_v^2 + \sigma_u^2 \]
+
+\[
+\text{Cov}(v, y) = \text{Cov}(v, \beta(v-\mu) + u) = \beta \sigma_v^2
+\]
+
+\[
+\text{Var}(y) = \beta^2 \sigma_v^2 + \sigma_u^2
+\]
 
 Therefore:
 
-\[ \lambda = \frac{\beta \sigma_v^2}{\beta^2 \sigma_v^2 + \sigma_u^2} \]
+\[
+\lambda = \frac{\beta \sigma_v^2}{\beta^2 \sigma_v^2 + \sigma_u^2}
+\]
 
 The insider maximizes expected profit:
 
-\[ E[\pi | v] = E[(v - p)x | v] = (v - \mu - \lambda x)\beta(v-\mu) - \lambda\beta^2(v-\mu)^2 + \ldots \]
+\[
+E[\pi | v] = E[(v - p)x | v] = (v - \mu - \lambda x)\beta(v-\mu) - \lambda\beta^2(v-\mu)^2 + \ldots
+\]
 
 Taking the first-order condition with respect to \(x = \beta(v-\mu)\):
 
-\[ x^* = \frac{v - \mu}{2\lambda} \implies \beta = \frac{1}{2\lambda} \]
+\[
+x^* = \frac{v - \mu}{2\lambda} \implies \beta = \frac{1}{2\lambda}
+\]
 
 Substituting \(\beta = 1/(2\lambda)\) into the expression for \(\lambda\):
 
-\[ \lambda = \frac{\frac{1}{2\lambda} \sigma_v^2}{\frac{\sigma_v^2}{4\lambda^2} + \sigma_u^2} = \frac{\sigma_v^2}{2\lambda} \cdot \frac{1}{\frac{\sigma_v^2}{4\lambda^2} + \sigma_u^2} \]
+\[
+\lambda = \frac{\frac{1}{2\lambda} \sigma_v^2}{\frac{\sigma_v^2}{4\lambda^2} + \sigma_u^2} = \frac{\sigma_v^2}{2\lambda} \cdot \frac{1}{\frac{\sigma_v^2}{4\lambda^2} + \sigma_u^2}
+\]
 
 Solving this equation for \(\lambda\):
 
-\[ \lambda^2 \left(\frac{\sigma_v^2}{4\lambda^2} + \sigma_u^2\right) = \frac{\sigma_v^2}{2} \]
+\[
+\lambda^2 \left(\frac{\sigma_v^2}{4\lambda^2} + \sigma_u^2\right) = \frac{\sigma_v^2}{2}
+\]
 
-\[ \frac{\sigma_v^2}{4} + \lambda^2 \sigma_u^2 = \frac{\sigma_v^2}{2} \]
+\[
+\frac{\sigma_v^2}{4} + \lambda^2 \sigma_u^2 = \frac{\sigma_v^2}{2}
+\]
 
-\[ \lambda^2 \sigma_u^2 = \frac{\sigma_v^2}{4} \]
+\[
+\lambda^2 \sigma_u^2 = \frac{\sigma_v^2}{4}
+\]
 
-\[ \boxed{\lambda = \frac{\sigma_v}{2\sigma_u}} \]
+\[
+\boxed{\lambda = \frac{\sigma_v}{2\sigma_u}}
+\]
 
 <div class="theorem">
 <strong>Kyle (1985) Equilibrium:</strong> The unique linear equilibrium has:
-\[ \lambda = \frac{\sigma_v}{2\sigma_u}, \qquad \beta = \frac{\sigma_u}{\sigma_v} \]
+
+\[
+\lambda = \frac{\sigma_v}{2\sigma_u}, \qquad \beta = \frac{\sigma_u}{\sigma_v}
+\]
 The price impact coefficient \(\lambda\) is increasing in the dispersion of the asset's fundamental value \(\sigma_v\) (more uncertainty about value means more information advantage) and decreasing in the volume of noise trading \(\sigma_u\) (more noise trading allows the insider to hide more). The insider's optimal quantity \(\beta\) is the inverse of \(\lambda\) — more noise trading induces more aggressive insider trading.
 </div>
 
@@ -380,7 +487,9 @@ The price impact coefficient \(\lambda\) is increasing in the dispersion of the 
 
 **Price informativeness.** After trading, the posterior variance of the asset value is:
 
-\[ \text{Var}(v | y) = \frac{\sigma_v^2}{2} \]
+\[
+\text{Var}(v | y) = \frac{\sigma_v^2}{2}
+\]
 
 The market maker learns exactly half the insider's information each period — a striking result. Prices become more informative over time as the insider trades (their private information is gradually revealed through order flow).
 
@@ -390,7 +499,9 @@ The market maker learns exactly half the insider's information each period — a
 
 **Profit.** Expected insider profit is:
 
-\[ E[\pi] = \frac{\sigma_v \sigma_u}{2} = \frac{\text{total information} \times \text{noise depth}}{2} \]
+\[
+E[\pi] = \frac{\sigma_v \sigma_u}{2} = \frac{\text{total information} \times \text{noise depth}}{2}
+\]
 
 Larger information advantage (\(\sigma_v\)) and more noise trading (\(\sigma_u\)) both increase insider profit.
 
@@ -411,11 +522,15 @@ In the continuous-time version of the model, trading occurs in a Brownian motion
 
 The market maker breaks even on each trade in expectation. An ask price must satisfy:
 
-\[ a = E[v | \text{buyer}] \]
+\[
+a = E[v | \text{buyer}]
+\]
 
 because buyers are more likely to be informed when the value is high:
 
-\[ a = V_H \cdot \frac{\mu \cdot 1 + \frac{1-\mu}{2}}{\mu + \frac{1-\mu}{2}} \cdot \text{Pr}(V_H | \text{buy}) + V_L \cdot \text{Pr}(V_L | \text{buy}) \]
+\[
+a = V_H \cdot \frac{\mu \cdot 1 + \frac{1-\mu}{2}}{\mu + \frac{1-\mu}{2}} \cdot \text{Pr}(V_H | \text{buy}) + V_L \cdot \text{Pr}(V_L | \text{buy})
+\]
 
 where the numerator accounts for the fact that informed buyers only appear when \(v = V_H\).
 
@@ -423,7 +538,10 @@ The key insight of GM: **the bid-ask spread is entirely driven by adverse select
 
 <div class="definition">
 <strong>Bid-Ask Spread (Adverse Selection Component):</strong> In the Glosten-Milgrom model, the equilibrium spread equals:
-\[ a - b = 2\mu \cdot \frac{(V_H - V_L)^2}{V_H + V_L} \cdot [\text{adjustment for beliefs}] \]
+
+\[
+a - b = 2\mu \cdot \frac{(V_H - V_L)^2}{V_H + V_L} \cdot [\text{adjustment for beliefs}]
+\]
 More precisely, the spread is proportional to the fraction of informed traders \(\mu\) and the asset value uncertainty \(V_H - V_L\). As information asymmetry falls (e.g., more public disclosure), the spread narrows.
 </div>
 
@@ -436,11 +554,15 @@ More precisely, the spread is proportional to the fraction of informed traders \
 - Agents also observe a public signal \(y = \theta + \eta\) with precision \(\beta\).
 - Each agent chooses an action \(a_i\) to minimize a loss function that penalizes both distance from the fundamental and distance from the average action (coordination motive):
 
-\[ L_i = (1-r)(a_i - \theta)^2 + r(a_i - \bar{a})^2 \]
+\[
+L_i = (1-r)(a_i - \theta)^2 + r(a_i - \bar{a})^2
+\]
 
 **Key result:** The equilibrium action overweights the public signal relative to its precision:
 
-\[ a_i = (1-\kappa)E_i[\theta] + \kappa y \]
+\[
+a_i = (1-\kappa)E_i[\theta] + \kappa y
+\]
 
 where \(\kappa\) increases with the coordination motive \(r\) and the public signal precision \(\beta\).
 
@@ -479,11 +601,15 @@ where \(\kappa\) increases with the coordination motive \(r\) and the public sig
 
 **Price dynamics:**
 
-\[ p_t = v - \lambda \sum_{\tau \leq t} y_\tau \]
+\[
+p_t = v - \lambda \sum_{\tau \leq t} y_\tau
+\]
 
 where \(y_t\) is net order flow at time \(t\). Strategic traders maximize:
 
-\[ \Pi^s = \sum_{t} (p_t - p_{T+1}) \cdot x^s_t \]
+\[
+\Pi^s = \sum_{t} (p_t - p_{T+1}) \cdot x^s_t
+\]
 
 The predatory equilibrium features **overshooting**: the price falls below fundamental value during the liquidation and then recovers, generating profits for strategic traders at the expense of the distressed trader (and indirectly, whoever caused the distress).
 
@@ -515,39 +641,75 @@ The resolution: **noisy rational expectations equilibrium** where noise (random 
 # Summary: Key Formulas and Results
 
 **Expected utility:**
-\[ E[u(X)] = \sum_s \pi_s u(x_s) \]
+
+\[
+E[u(X)] = \sum_s \pi_s u(x_s)
+\]
 
 **Arrow-Pratt ARA:**
-\[ A(w) = -\frac{u''(w)}{u'(w)} \]
+
+\[
+A(w) = -\frac{u''(w)}{u'(w)}
+\]
 
 **CAPM:**
-\[ E[R_i] - r_f = \beta_i(E[R_m] - r_f), \quad \beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)} \]
+
+\[
+E[R_i] - r_f = \beta_i(E[R_m] - r_f), \quad \beta_i = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}
+\]
 
 **Stochastic Discount Factor pricing:**
-\[ P_i = E[m \cdot X_i], \quad m_{t+1} = \beta\left(\frac{c_{t+1}}{c_t}\right)^{-\gamma} \]
+
+\[
+P_i = E[m \cdot X_i], \quad m_{t+1} = \beta\left(\frac{c_{t+1}}{c_t}\right)^{-\gamma}
+\]
 
 **Fundamental Theorem (risk-neutral pricing):**
-\[ P_i = \frac{E^{\mathbb{Q}}[X_i]}{1 + r_f} \]
+
+\[
+P_i = \frac{E^{\mathbb{Q}}[X_i]}{1 + r_f}
+\]
 
 **Kyle (1985) price impact:**
-\[ \lambda = \frac{\sigma_v}{2\sigma_u} \]
+
+\[
+\lambda = \frac{\sigma_v}{2\sigma_u}
+\]
 
 **Kyle (1985) insider aggressiveness:**
-\[ \beta = \frac{\sigma_u}{\sigma_v} = \frac{1}{2\lambda} \]
+
+\[
+\beta = \frac{\sigma_u}{\sigma_v} = \frac{1}{2\lambda}
+\]
 
 **Kyle (1985) insider expected profit:**
-\[ E[\pi] = \frac{\sigma_v \sigma_u}{2} \]
+
+\[
+E[\pi] = \frac{\sigma_v \sigma_u}{2}
+\]
 
 **Markowitz portfolio variance:**
-\[ \sigma^2_p = \mathbf{w}'\boldsymbol{\Sigma}\mathbf{w} \]
+
+\[
+\sigma^2_p = \mathbf{w}'\boldsymbol{\Sigma}\mathbf{w}
+\]
 
 **Capital Market Line:**
-\[ \mu_p = r_f + \frac{\mu_T - r_f}{\sigma_T}\sigma_p \]
+
+\[
+\mu_p = r_f + \frac{\mu_T - r_f}{\sigma_T}\sigma_p
+\]
 
 **Second-order stochastic dominance condition:**
-\[ \int_{-\infty}^x [G(t) - F(t)]\, dt \geq 0 \quad \forall x \quad (F \text{ SOSD } G) \]
+
+\[
+\int_{-\infty}^x [G(t) - F(t)]\, dt \geq 0 \quad \forall x \quad (F \text{ SOSD } G)
+\]
 
 **Morris-Shin overweighting of public signal:**
-\[ a_i^* = (1-\kappa)E_i[\theta] + \kappa y, \quad \kappa = \frac{r\beta}{(1-r)\alpha + r\beta + r\alpha} \]
+
+\[
+a_i^* = (1-\kappa)E_i[\theta] + \kappa y, \quad \kappa = \frac{r\beta}{(1-r)\alpha + r\beta + r\alpha}
+\]
 
 (where \(\alpha\) is private signal precision, \(\beta\) is public signal precision, \(r\) is coordination weight)

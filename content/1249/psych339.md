@@ -87,7 +87,9 @@ Personnel psychology is fundamentally a science of **prediction**. We want to pr
 <div class="definition">
 <strong>Variance</strong> is a measure of the spread or dispersion of scores around the mean. It is defined as the average of the squared deviations from the mean:
 
-\[ s^2 = \frac{\sum_{i=1}^{N}(X_i - \bar{X})^2}{N - 1} \]
+\[
+s^2 = \frac{\sum_{i=1}^{N}(X_i - \bar{X})^2}{N - 1}
+\]
 
 where \( X_i \) is each individual score, \( \bar{X} \) is the sample mean, and \( N \) is the number of observations. The <strong>standard deviation</strong> \( s \) is the square root of the variance.
 </div>
@@ -101,7 +103,9 @@ Variance is important in personnel psychology because it tells us how much indiv
 <div class="definition">
 <strong>Correlation</strong> (specifically, the Pearson product-moment correlation coefficient, \( r \)) quantifies the linear relationship between two variables. It ranges from \( -1 \) to \( +1 \):
 
-\[ r = \frac{\sum_{i=1}^{N}(X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum(X_i - \bar{X})^2 \cdot \sum(Y_i - \bar{Y})^2}} \]
+\[
+r = \frac{\sum_{i=1}^{N}(X_i - \bar{X})(Y_i - \bar{Y})}{\sqrt{\sum(X_i - \bar{X})^2 \cdot \sum(Y_i - \bar{Y})^2}}
+\]
 
 A value of \( r = 0 \) indicates no linear relationship; \( r = +1 \) indicates a perfect positive relationship; \( r = -1 \) indicates a perfect negative relationship.
 </div>
@@ -119,11 +123,15 @@ In personnel selection, validity coefficients rarely exceed \( r = .50 \). Cohen
 <div class="definition">
 <strong>Simple linear regression</strong> models the relationship between a predictor \( X \) and a criterion \( Y \) as a linear function:
 
-\[ \hat{Y} = a + bX \]
+\[
+\hat{Y} = a + bX
+\]
 
 where \( b = r \cdot \frac{s_Y}{s_X} \) is the regression slope and \( a = \bar{Y} - b\bar{X} \) is the intercept. <strong>Multiple regression</strong> extends this to multiple predictors:
 
-\[ \hat{Y} = a + b_1X_1 + b_2X_2 + \cdots + b_kX_k \]
+\[
+\hat{Y} = a + b_1X_1 + b_2X_2 + \cdots + b_kX_k
+\]
 </div>
 
 Multiple regression is the statistical foundation for **compensatory selection models**, in which a high score on one predictor can compensate for a low score on another. The **multiple correlation coefficient** \( R \) indicates how well the set of predictors jointly predicts the criterion.
@@ -378,7 +386,9 @@ In practice, the best approaches often combine elements of traditional job analy
 <div class="definition">
 <strong>Classical test theory (CTT)</strong> provides the foundational framework for understanding psychological measurement. Its core equation is:
 
-\[ X = T + E \]
+\[
+X = T + E
+\]
 
 where \( X \) is the observed score, \( T \) is the true score (the hypothetical score that would be obtained if measurement were perfect), and \( E \) is measurement error (random fluctuations that cause observed scores to deviate from true scores).
 </div>
@@ -391,11 +401,15 @@ Key assumptions of CTT include:
 
 From these assumptions, it follows that the variance of observed scores equals the variance of true scores plus the variance of error:
 
-\[ \sigma_X^2 = \sigma_T^2 + \sigma_E^2 \]
+\[
+\sigma_X^2 = \sigma_T^2 + \sigma_E^2
+\]
 
 **Reliability** is defined as the proportion of observed score variance that is true score variance:
 
-\[ \text{Reliability} = \frac{\sigma_T^2}{\sigma_X^2} = 1 - \frac{\sigma_E^2}{\sigma_X^2} \]
+\[
+\text{Reliability} = \frac{\sigma_T^2}{\sigma_X^2} = 1 - \frac{\sigma_E^2}{\sigma_X^2}
+\]
 
 ## Scales of Measurement
 
@@ -415,7 +429,9 @@ Most psychological tests produce scores that are treated as interval-level data,
 <div class="definition">
 <strong>Standardization</strong> refers to the process of transforming raw scores into a common metric to allow meaningful comparison. The most common standardized score is the <strong>z-score</strong>:
 
-\[ z = \frac{X - \bar{X}}{s} \]
+\[
+z = \frac{X - \bar{X}}{s}
+\]
 
 which expresses each score in terms of how many standard deviations it falls above or below the mean. Other standardized scores (T-scores, stanines, percentile ranks) are derived from z-scores.
 </div>
@@ -460,7 +476,9 @@ Considerations:
 
 **Internal consistency** reliability estimates the degree to which items within a test measure the same construct. The most common index is **Cronbach's alpha** (\( \alpha \)):
 
-\[ \alpha = \frac{k}{k-1}\left(1 - \frac{\sum s_i^2}{s_X^2}\right) \]
+\[
+\alpha = \frac{k}{k-1}\left(1 - \frac{\sum s_i^2}{s_X^2}\right)
+\]
 
 where \( k \) is the number of items, \( s_i^2 \) is the variance of item \( i \), and \( s_X^2 \) is the variance of total scores.
 
@@ -468,7 +486,9 @@ Alpha ranges from 0 to 1, with values above .70 generally considered acceptable 
 
 **Split-half reliability** is a related approach: the test is divided into two halves (e.g., odd and even items), scores on the two halves are correlated, and the **Spearman-Brown formula** is applied to estimate the reliability of the full-length test:
 
-\[ r_{XX'} = \frac{2r_{hh}}{1 + r_{hh}} \]
+\[
+r_{XX'} = \frac{2r_{hh}}{1 + r_{hh}}
+\]
 
 where \( r_{hh} \) is the correlation between the two halves.
 
@@ -495,11 +515,15 @@ The practical implication is that organizations should collect and combine ratin
 <div class="definition">
 The <strong>standard error of measurement (SEM)</strong> estimates the standard deviation of errors around an individual's true score:
 
-\[ SEM = s_X\sqrt{1 - r_{XX'}} \]
+\[
+SEM = s_X\sqrt{1 - r_{XX'}}
+\]
 
 where \( s_X \) is the standard deviation of observed scores and \( r_{XX'} \) is the reliability coefficient. The SEM allows us to construct <strong>confidence intervals</strong> around observed scores:
 
-\[ T \approx X \pm z_{\alpha/2} \cdot SEM \]
+\[
+T \approx X \pm z_{\alpha/2} \cdot SEM
+\]
 </div>
 
 The SEM has important practical implications in personnel selection. When two candidates' scores differ by less than one or two SEMs, the difference may not reflect a true difference in the underlying construct. This reasoning underlies the practice of **banding** in selection decision-making (discussed in Chapter 11).
@@ -762,7 +786,9 @@ When multiple predictors are used in selection, organizations must decide how to
 
 In a **compensatory model** (typically implemented through multiple regression), a high score on one predictor can compensate for a low score on another. Predictor scores are weighted (by their regression weights) and summed to produce a composite score, and candidates are ranked by their composite.
 
-\[ \hat{Y} = b_1X_1 + b_2X_2 + \cdots + b_kX_k \]
+\[
+\hat{Y} = b_1X_1 + b_2X_2 + \cdots + b_kX_k
+\]
 
 Advantages: maximizes predicted performance. Disadvantages: may allow candidates with dangerously low scores on a critical predictor to be selected.
 
@@ -973,7 +999,9 @@ Limitations: the model requires a dichotomous criterion (success/failure) and do
 
 The **Brogden-Cronbach-Gleser (BCG) model** estimates the dollar value of a selection system using the following equation:
 
-\[ \Delta U = N_s \cdot T \cdot r_{xy} \cdot SD_y \cdot \bar{z}_x - \frac{C}{p} \]
+\[
+\Delta U = N_s \cdot T \cdot r_{xy} \cdot SD_y \cdot \bar{z}_x - \frac{C}{p}
+\]
 
 where:
 
@@ -997,7 +1025,9 @@ The critical and most controversial parameter is \( SD_y \) — the standard dev
 <div class="example">
 <strong>Example:</strong> Suppose an organization selects 100 employees per year (\( N_s = 100 \)), with average tenure of 5 years (\( T = 5 \)), using a test with validity \( r_{xy} = .40 \), and the standard deviation of performance is \$15,000 (\( SD_y = 15{,}000 \)). If the average standardized predictor score of those selected is \( \bar{z}_x = 1.00 \) and testing costs are \$50 per applicant with a selection ratio of .20, then:
 
-\[ \Delta U = 100 \times 5 \times .40 \times 15{,}000 \times 1.00 - \frac{50}{.20} = 30{,}000{,}000 - 250 = \$29{,}999{,}750 \]
+\[
+\Delta U = 100 \times 5 \times .40 \times 15{,}000 \times 1.00 - \frac{50}{.20} = 30{,}000{,}000 - 250 = \$29{,}999{,}750
+\]
 
 This simplified calculation illustrates the potentially enormous economic value of valid selection, though the estimate depends heavily on assumptions about \( SD_y \).
 </div>

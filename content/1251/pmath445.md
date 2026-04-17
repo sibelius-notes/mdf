@@ -88,7 +88,10 @@ This is a meaningful problem: for a finite group \(G\) over \(\mathbb{C}\), ther
 
 <div class="example">
 <strong>Example (One-dimensional representations of \(C_n\): fully worked).</strong> Let \(C_n = \langle a \mid a^n = e \rangle\) be the cyclic group of order \(n\). A one-dimensional representation \(\rho : C_n \to \mathbb{C}^\times\) is completely determined by the single value \(\rho(a) \in \mathbb{C}^\times\), since \(\rho(a^j) = \rho(a)^j\). The homomorphism condition forces \(\rho(e) = \rho(a^n) = \rho(a)^n = 1\), so \(\rho(a)\) must be an \(n\)th root of unity. Over \(\mathbb{C}\), the \(n\)th roots of unity are \(\{1, \zeta, \zeta^2, \ldots, \zeta^{n-1}\}\) where \(\zeta = e^{2\pi i/n}\). This gives exactly \(n\) one-dimensional representations:
-\[\rho_k : C_n \to \mathbb{C}^\times, \quad \rho_k(a^j) = \zeta^{jk}, \quad k = 0, 1, \ldots, n-1.\]
+
+\[
+\rho_k : C_n \to \mathbb{C}^\times, \quad \rho_k(a^j) = \zeta^{jk}, \quad k = 0, 1, \ldots, n-1.
+\]
 Let us be concrete for \(C_4 = \{0, 1, 2, 3\}\) (written additively). The generator is \(a = 1\), and \(\zeta = i\) (the imaginary unit). The four representations are:
 \begin{align*}
 \rho_0 &: \rho_0(j) = 1 \quad\text{(trivial)},\\
@@ -111,17 +114,29 @@ The key point: whether or not \(\rho\) is faithful, the representation is still 
 
 <div class="example">
 <strong>Example (Standard representation of \(S_3\)).</strong> The symmetric group \(S_3\) is the symmetry group of an equilateral triangle. Placing the triangle in the plane gives a two-dimensional representation \(\rho : S_3 \to \mathrm{GL}_2(\mathbb{R})\). With generator \(a = (1\,2\,3)\) acting as a \(2\pi/3\)-rotation and \(b = (1\,2)\) as a reflection, the matrices are
-\[A = \begin{pmatrix} 0 & -1 \\ 1 & -1 \end{pmatrix}, \quad B = \begin{pmatrix} 1 & -1 \\ 0 & -1 \end{pmatrix}.\]
+
+\[
+A = \begin{pmatrix} 0 & -1 \\ 1 & -1 \end{pmatrix}, \quad B = \begin{pmatrix} 1 & -1 \\ 0 & -1 \end{pmatrix}.
+\]
 One checks \(A^3 = B^2 = I\) and \(BAB = A^2\), confirming \(\rho\) is a valid representation. This two-dimensional irreducible representation is called the <strong>standard representation</strong> of \(S_3\).
 </div>
 
 <div class="example">
 <strong>Example (The 2-dimensional representations of \(D_4\): explicit matrices).</strong> The dihedral group \(D_4 = \langle r, s \mid r^4 = s^2 = e, srs^{-1} = r^{-1} \rangle\) is the symmetry group of a square. It has order 8. The most natural representation is the geometric one: \(D_4\) acts on \(\mathbb{R}^2\) by symmetries of the unit square with vertices at \((\pm 1, \pm 1)\). The generator \(r\) acts as counterclockwise rotation by \(90°\), and \(s\) acts as reflection across the \(x\)-axis. The corresponding matrices are:
-\[\rho(r) = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}, \quad \rho(s) = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.\]
+
+\[
+\rho(r) = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}, \quad \rho(s) = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+\]
 Let us verify the relations. First, \(\rho(r)^4\): we compute
-\[\rho(r)^2 = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}^2 = \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} = -I, \quad \rho(r)^4 = (-I)^2 = I. \checkmark\]
+
+\[
+\rho(r)^2 = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}^2 = \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} = -I, \quad \rho(r)^4 = (-I)^2 = I. \checkmark
+\]
 Next, \(\rho(s)^2 = \bigl(\begin{smallmatrix}1&0\\0&-1\end{smallmatrix}\bigr)^2 = I\). \(\checkmark\) Finally, \(\rho(s)\rho(r)\rho(s)^{-1} = \rho(s)\rho(r)\rho(s)\):
-\[\begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}0&-1\\1&0\end{pmatrix}\begin{pmatrix}1&0\\0&-1\end{pmatrix} = \begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix} = \begin{pmatrix}0&1\\-1&0\end{pmatrix} = \rho(r)^{-1}. \checkmark\]
+
+\[
+\begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}0&-1\\1&0\end{pmatrix}\begin{pmatrix}1&0\\0&-1\end{pmatrix} = \begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix} = \begin{pmatrix}0&1\\-1&0\end{pmatrix} = \rho(r)^{-1}. \checkmark
+\]
 The eight matrices of \(D_4\) under this representation are:
 \begin{align*}
 \rho(e) &= \begin{pmatrix}1&0\\0&1\end{pmatrix}, & \rho(r) &= \begin{pmatrix}0&-1\\1&0\end{pmatrix}, & \rho(r^2) &= \begin{pmatrix}-1&0\\0&-1\end{pmatrix}, & \rho(r^3) &= \begin{pmatrix}0&1\\-1&0\end{pmatrix},\\
@@ -134,7 +149,10 @@ This example also illustrates the key conceptual point: to define a representati
 
 <div class="example">
 <strong>Example (The defining representation of \(S_n\) and its decomposition).</strong> The group \(S_n\) acts naturally on \(\mathbb{C}^n\) by permuting coordinates: \(\sigma \cdot e_i = e_{\sigma(i)}\). This is the <em>defining</em> or <em>permutation representation</em> \(V_\mathrm{def}\) of degree \(n\). It contains the trivial representation as a subrepresentation: the line \(\mathbb{C}(e_1 + e_2 + \cdots + e_n)\) is fixed by all permutations. The orthogonal complement (with respect to the standard inner product, which is \(G\)-invariant) is
-\[V_\mathrm{std} = \{(z_1, \ldots, z_n) \in \mathbb{C}^n : z_1 + z_2 + \cdots + z_n = 0\},\]
+
+\[
+V_\mathrm{std} = \{(z_1, \ldots, z_n) \in \mathbb{C}^n : z_1 + z_2 + \cdots + z_n = 0\},
+\]
 a \(G\)-invariant subspace of dimension \(n-1\). We therefore have \(V_\mathrm{def} \cong V_\mathrm{triv} \oplus V_\mathrm{std}\). For \(n = 3\), \(V_\mathrm{std}\) is exactly the two-dimensional standard representation.
 </div>
 
@@ -161,7 +179,10 @@ One-dimensional representations \(\rho : G \to F^\times\) are the simplest and m
 ## Permutation Representations
 
 Given a finite \(G\)-set \(X = \{x_1, \ldots, x_n\}\), we can **linearize** the action of \(G\) by forming the free vector space \(F\langle X \rangle\) with basis \(X\) and extending the action by linearity:
-\[g(a_1 x_1 + \cdots + a_n x_n) = a_1(gx_1) + \cdots + a_n(gx_n).\]
+
+\[
+g(a_1 x_1 + \cdots + a_n x_n) = a_1(gx_1) + \cdots + a_n(gx_n).
+\]
 This is the **permutation representation** induced by \(X\). The associated matrix representation consists of permutation matrices (matrices obtained by permuting columns of the identity).
 
 The central example is the **regular representation**: let \(G\) act on itself by left multiplication. The resulting representation \(V_\mathrm{reg} = F\langle G \rangle\) has degree \(|G|\), and its decomposition into irreducible pieces encodes the entire representation theory of \(G\). We will return to it repeatedly.
@@ -170,14 +191,20 @@ A useful complementary model replaces \(F\langle X \rangle\) with the function s
 
 <div class="example">
 <strong>Example (Regular representation of \(S_3\)).</strong> The regular representation of \(S_3\) has degree \(|S_3| = 6\). Its basis consists of the six group elements: \(\{e, (12), (13), (23), (123), (132)\}\). The element \((12)\) acts by sending each basis vector \(g\) to \((12)g\). In matrix form (using the ordering above), the matrix of \((12)\) is the \(6 \times 6\) permutation matrix:
-\[\rho_\mathrm{reg}((12)) = \begin{pmatrix} 0&1&0&0&0&0\\ 1&0&0&0&0&0\\ 0&0&0&1&0&0\\ 0&0&1&0&0&0\\ 0&0&0&0&0&1\\ 0&0&0&0&1&0 \end{pmatrix}.\]
+
+\[
+\rho_\mathrm{reg}((12)) = \begin{pmatrix} 0&1&0&0&0&0\\ 1&0&0&0&0&0\\ 0&0&0&1&0&0\\ 0&0&1&0&0&0\\ 0&0&0&0&0&1\\ 0&0&0&0&1&0 \end{pmatrix}.
+\]
 We will show later that this 6-dimensional representation decomposes as \(V_\mathrm{triv} \oplus V_\mathrm{sgn} \oplus V_\mathrm{std}^{\oplus 2}\), consistent with the formula \(6 = 1^2 + 1^2 + 2^2\).
 </div>
 
 ## The Character of the Regular Representation
 
 Even before developing the full theory, we can compute the character of the regular representation. The character of a permutation representation at \(g\) counts the number of fixed points of \(g\). In the regular representation, \(g\) fixes the basis vector \(h\) if and only if \(gh = h\), i.e., \(g = e\). Therefore:
-\[\chi_\mathrm{reg}(e) = |G|, \qquad \chi_\mathrm{reg}(g) = 0 \text{ for all } g \neq e.\]
+
+\[
+\chi_\mathrm{reg}(e) = |G|, \qquad \chi_\mathrm{reg}(g) = 0 \text{ for all } g \neq e.
+\]
 This single formula will later give us enormous leverage: by decomposing the regular representation into irreducibles and using the character formula, we will prove that every irreducible representation of \(G\) appears in the regular representation with multiplicity equal to its dimension. This yields the fundamental dimension formula \(|G| = \sum_i (\dim V_i)^2\).
 
 <div class="remark">
@@ -207,7 +234,10 @@ Given \(G\)-modules \(V\) and \(W\), we can build new ones:
 The tensor product construction is central to representation theory. The idea is to define a "product" \(V \otimes W\) that mimics bilinear operations.
 
 Given \(F\)-vector spaces \(V\) and \(W\), the tensor product \(V \otimes_F W\) is the quotient of the free vector space \(F\langle V \times W \rangle\) by the subspace generated by all vectors of the form
-\[(v, w_1+w_2) - (v,w_1) - (v,w_2), \quad (v_1+v_2,w) - (v_1,w) - (v_2,w), \quad (cv,w) - c(v,w), \quad (v,cw) - c(v,w).\]
+
+\[
+(v, w_1+w_2) - (v,w_1) - (v,w_2), \quad (v_1+v_2,w) - (v_1,w) - (v_2,w), \quad (cv,w) - c(v,w), \quad (v,cw) - c(v,w).
+\]
 The coset of \((v,w)\) is denoted \(v \otimes w\) and called a **pure tensor**. By construction, \(\otimes\) is bilinear, and *every element of \(V \otimes W\) is a finite sum of pure tensors* — though not every element is itself a pure tensor.
 
 <div class="theorem">
@@ -220,7 +250,10 @@ If \(\{e_i\}\) is a basis for \(V\) and \(\{f_j\}\) is a basis for \(W\), then \
 
 <div class="example">
 <strong>Example (Tensor product for \(S_3\)).</strong> Let us compute \(V_\mathrm{std} \otimes V_\mathrm{sgn}\) for \(S_3\). Since \(\chi_{V \otimes W} = \chi_V \cdot \chi_W\) (pointwise product), the character values are:
-\[\chi_\mathrm{std}(e) \cdot \chi_\mathrm{sgn}(e) = 2 \cdot 1 = 2, \quad \chi_\mathrm{std}((12)) \cdot \chi_\mathrm{sgn}((12)) = 0 \cdot (-1) = 0, \quad \chi_\mathrm{std}((123)) \cdot \chi_\mathrm{sgn}((123)) = (-1) \cdot 1 = -1.\]
+
+\[
+\chi_\mathrm{std}(e) \cdot \chi_\mathrm{sgn}(e) = 2 \cdot 1 = 2, \quad \chi_\mathrm{std}((12)) \cdot \chi_\mathrm{sgn}((12)) = 0 \cdot (-1) = 0, \quad \chi_\mathrm{std}((123)) \cdot \chi_\mathrm{sgn}((123)) = (-1) \cdot 1 = -1.
+\]
 This is exactly the character of \(V_\mathrm{std}\)! Hence \(V_\mathrm{std} \otimes V_\mathrm{sgn} \cong V_\mathrm{std}\). This makes geometric sense: twisting by a sign doesn't change the geometry of the 2D rotation/reflection representation.
 </div>
 
@@ -238,7 +271,10 @@ There is a beautiful interplay between \(\mathrm{Hom}\) spaces and tensor produc
 
 <div class="theorem">
 <strong>Theorem.</strong> There is a \(G\)-linear isomorphism \(V^* \otimes W \xrightarrow{\sim} \mathrm{Hom}(V,W)\), sending \(f \otimes w\) to the map \(v \mapsto f(v)w\). In particular,
-\[\mathrm{Hom}_G(V,W) = \mathrm{Hom}(V,W)^G.\]
+
+\[
+\mathrm{Hom}_G(V,W) = \mathrm{Hom}(V,W)^G.
+\]
 </div>
 
 This perspective makes the **trace** of a linear operator more conceptual. The evaluation map \(\tau : V^* \otimes V \to F\) defined by \(\tau(f \otimes v) = f(v)\) corresponds, under the isomorphism \(V^* \otimes V \cong \mathrm{Hom}(V,V)\), precisely to the trace functional. This is the "natural" linear functional on \(\mathrm{Hom}(V,V)\).
@@ -271,7 +307,10 @@ These are all the irreducible complex representations of \(S_3\). One can verify
 
 <div class="example">
 <strong>Example (\(\mathrm{Irr}_\mathbb{C}(\mathbb{Z}/n\mathbb{Z})\)).</strong> The cyclic group \(C_n = \mathbb{Z}/n\mathbb{Z}\) is abelian with \(n\) elements and \(n\) conjugacy classes. All irreducible complex representations are one-dimensional (by Schur's Lemma for abelian groups, proved in Chapter 5). They are \(\rho_k : m \mapsto e^{2\pi i mk/n}\) for \(k = 0, 1, \ldots, n-1\). The character table is the \(n \times n\) **DFT matrix**:
-\[\chi_{V_k}(m) = e^{2\pi i mk/n} = \omega^{mk}, \quad \omega = e^{2\pi i/n}.\]
+
+\[
+\chi_{V_k}(m) = e^{2\pi i mk/n} = \omega^{mk}, \quad \omega = e^{2\pi i/n}.
+\]
 The orthogonality of rows in the character table is just the orthogonality of rows in the DFT matrix — the mathematical basis of the discrete Fourier transform.
 </div>
 
@@ -289,17 +328,26 @@ Before proving Maschke's theorem, let us understand precisely why the characteri
 
 <div class="example">
 <strong>Example (The failure of Maschke in characteristic \(p\): fully worked).</strong> Let \(p\) be prime, \(G = C_p = \mathbb{Z}/p\mathbb{Z} = \langle a \rangle\), and \(F = \mathbb{F}_p\) (the field with \(p\) elements, also known as \(\mathbb{Z}/p\mathbb{Z}\) as a field). Consider the 2-dimensional representation:
-\[\rho : G \to \mathrm{GL}_2(\mathbb{F}_p), \quad \rho(a) = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}.\]
+
+\[
+\rho : G \to \mathrm{GL}_2(\mathbb{F}_p), \quad \rho(a) = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}.
+\]
 First, this is a valid representation: \(\rho(a)^p = \bigl(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\bigr)^p\). By the binomial theorem for upper triangular unipotent matrices, \(\bigl(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\bigr)^n = \bigl(\begin{smallmatrix}1&n\\0&1\end{smallmatrix}\bigr)\), so \(\rho(a)^p = \bigl(\begin{smallmatrix}1&p\\0&1\end{smallmatrix}\bigr) = \bigl(\begin{smallmatrix}1&0\\0&1\end{smallmatrix}\bigr) = I\) in \(\mathbb{F}_p\) (since \(p \equiv 0 \pmod{p}\)). So \(\rho(a)^p = I = \rho(e)\). Good.
 
 Now, the subspace \(U = \{(x, 0) : x \in \mathbb{F}_p\} = \mathrm{span}\{e_1\}\) is \(G\)-invariant: \(\rho(a)(x, 0)^T = (x, 0)^T\). So \(U \cong V_\mathrm{triv}\) is a \(G\)-submodule of \(V = \mathbb{F}_p^2\).
 
 If \(V\) were completely reducible, there would be a \(G\)-invariant complement \(W\) to \(U\) in \(V\), with \(V = U \oplus W\). Since \(\dim V = 2\) and \(\dim U = 1\), we'd need \(\dim W = 1\), i.e., \(W = \mathrm{span}\{v\}\) for some vector \(v = (b, c)\) with \(c \neq 0\) (since \(W \cap U = 0\)). For \(W\) to be \(G\)-invariant, we'd need \(\rho(a)v \in W\), i.e., \(\rho(a)v = \lambda v\) for some \(\lambda \in \mathbb{F}_p^\times\). Computing:
-\[\rho(a)\begin{pmatrix}b\\c\end{pmatrix} = \begin{pmatrix}1&1\\0&1\end{pmatrix}\begin{pmatrix}b\\c\end{pmatrix} = \begin{pmatrix}b+c\\c\end{pmatrix}.\]
+
+\[
+\rho(a)\begin{pmatrix}b\\c\end{pmatrix} = \begin{pmatrix}1&1\\0&1\end{pmatrix}\begin{pmatrix}b\\c\end{pmatrix} = \begin{pmatrix}b+c\\c\end{pmatrix}.
+\]
 For this to equal \(\lambda(b, c)^T\), we need \(b + c = \lambda b\) and \(c = \lambda c\). The second equation gives \(\lambda = 1\) (since \(c \neq 0\)), and then the first gives \(b + c = b\), i.e., \(c = 0\) — contradiction. So no such complement exists, and \(V\) is indecomposable but not irreducible.
 
 The root cause: the "averaging trick" would require dividing by \(|G| = p\), but \(p = 0\) in \(\mathbb{F}_p\). Concretely, the averaged projection onto \(U\) would be
-\[\widetilde{P} = \frac{1}{p}\sum_{k=0}^{p-1} \rho(a^k) P_0 \rho(a^k)^{-1},\]
+
+\[
+\widetilde{P} = \frac{1}{p}\sum_{k=0}^{p-1} \rho(a^k) P_0 \rho(a^k)^{-1},
+\]
 but \(1/p\) does not exist in \(\mathbb{F}_p\). The averaging trick literally cannot be performed.
 </div>
 
@@ -313,7 +361,10 @@ The key ingredient in the proof of Maschke's theorem is the **averaging trick** 
 <strong>Proof of Maschke's Theorem (detailed).</strong> We prove: every submodule \(U \subseteq V\) has a \(G\)-invariant complement.
 
 **Step 1 (Choose any complement, then average it).** Since \(U\) is a subspace of the vector space \(V\), there exists a linear projection \(P_0 : V \to V\) with image \(U\) (i.e., \(P_0^2 = P_0\) and \(\mathrm{im}(P_0) = U\)). Such a projection exists because any subspace of a vector space is a direct summand as a vector space. However, \(P_0\) need not be \(G\)-equivariant. We fix this by averaging:
-\[\widetilde{P} = \frac{1}{|G|} \sum_{g \in G} \rho(g) \circ P_0 \circ \rho(g)^{-1}.\]
+
+\[
+\widetilde{P} = \frac{1}{|G|} \sum_{g \in G} \rho(g) \circ P_0 \circ \rho(g)^{-1}.
+\]
 The factor \(1/|G|\) requires \(|G| \neq 0\) in \(F\), which is our hypothesis.
 
 **Step 2 (\(\widetilde{P}\) is a projection onto \(U\)).** For any \(v \in V\), \(\widetilde{P}(v)\) is in \(U\): each term \(\rho(g)P_0\rho(g)^{-1}v\) lies in \(\rho(g)(U)\), and since \(U\) is \(G\)-invariant, \(\rho(g)(U) \subseteq U\). So \(\widetilde{P}(v) \in U\) for all \(v\).
@@ -321,16 +372,25 @@ The factor \(1/|G|\) requires \(|G| \neq 0\) in \(F\), which is our hypothesis.
 For \(u \in U\): \(\rho(g)^{-1}u \in U\) (by \(G\)-invariance of \(U\)), then \(P_0(\rho(g)^{-1}u) = \rho(g)^{-1}u\) (since \(P_0\) is the identity on \(U\)), then \(\rho(g)(\rho(g)^{-1}u) = u\). So each term in the sum equals \(u\), giving \(\widetilde{P}(u) = \frac{1}{|G|} \cdot |G| \cdot u = u\). Thus \(\widetilde{P}\) fixes \(U\) pointwise and maps \(V\) into \(U\), confirming it is a projection.
 
 **Step 3 (\(\widetilde{P}\) is \(G\)-equivariant).** For any \(h \in G\):
-\[\rho(h) \circ \widetilde{P} = \frac{1}{|G|}\sum_{g \in G} \rho(h)\rho(g) P_0 \rho(g)^{-1} = \frac{1}{|G|}\sum_{g \in G} \rho(hg) P_0 \rho(hg)^{-1} \cdot \rho(h).\]
+
+\[
+\rho(h) \circ \widetilde{P} = \frac{1}{|G|}\sum_{g \in G} \rho(h)\rho(g) P_0 \rho(g)^{-1} = \frac{1}{|G|}\sum_{g \in G} \rho(hg) P_0 \rho(hg)^{-1} \cdot \rho(h).
+\]
 Substituting \(g' = hg\) (a bijection on \(G\)) gives \(\rho(h)\circ\widetilde{P} = \widetilde{P} \circ \rho(h)\).
 
 **Step 4 (\(W = \ker\widetilde{P}\) is a \(G\)-invariant complement).** Since \(\widetilde{P}^2 = \widetilde{P}\) (it is a projection), \(V = \mathrm{im}(\widetilde{P}) \oplus \ker(\widetilde{P}) = U \oplus W\). Since \(\widetilde{P}\) is \(G\)-equivariant and \(W = \ker(\widetilde{P})\), for \(w \in W\) and \(g \in G\):
-\[\widetilde{P}(\rho(g)w) = \rho(g)(\widetilde{P}(w)) = \rho(g)(0) = 0.\]
+
+\[
+\widetilde{P}(\rho(g)w) = \rho(g)(\widetilde{P}(w)) = \rho(g)(0) = 0.
+\]
 So \(\rho(g)w \in \ker\widetilde{P} = W\). Thus \(W\) is \(G\)-invariant. \(\square\)
 </div>
 
 Let us verify the \(G\)-invariance claim once more from a slightly different angle: for any \(h \in G\),
-\[\rho(h) \widetilde{P} \rho(h)^{-1} = \frac{1}{|G|} \sum_{g \in G} \rho(h)\rho(g) P_0 \rho(g)^{-1} \rho(h)^{-1} = \frac{1}{|G|} \sum_{g \in G} \rho(hg) P_0 \rho(hg)^{-1} = \frac{1}{|G|} \sum_{g' \in G} \rho(g') P_0 \rho(g')^{-1} = \widetilde{P},\]
+
+\[
+\rho(h) \widetilde{P} \rho(h)^{-1} = \frac{1}{|G|} \sum_{g \in G} \rho(h)\rho(g) P_0 \rho(g)^{-1} \rho(h)^{-1} = \frac{1}{|G|} \sum_{g \in G} \rho(hg) P_0 \rho(hg)^{-1} = \frac{1}{|G|} \sum_{g' \in G} \rho(g') P_0 \rho(g')^{-1} = \widetilde{P},
+\]
 where we substituted \(g' = hg\) and used that the sum over \(G\) is invariant under left translation. So \(\widetilde{P}\) commutes with all \(\rho(h)\), meaning \(\ker \widetilde{P}\) is \(G\)-invariant.
 
 The factor \(1/|G|\) requires that \(|G|\) is invertible in \(F\), hence the characteristic hypothesis. As a corollary:
@@ -340,7 +400,10 @@ The factor \(1/|G|\) requires that \(|G|\) is invertible in \(F\), hence the cha
 </div>
 
 Maschke's theorem also implies that every finite-dimensional unitary representation of a finite group is completely reducible (using the complement \(W = U^\perp\)). The inner product needed to make a representation unitary can always be constructed by averaging: given any inner product \(\langle \cdot, \cdot \rangle_0\) on \(V\), define
-\[\langle v, w \rangle = \frac{1}{|G|} \sum_{g \in G} \langle \rho(g)v, \rho(g)w \rangle_0.\]
+
+\[
+\langle v, w \rangle = \frac{1}{|G|} \sum_{g \in G} \langle \rho(g)v, \rho(g)w \rangle_0.
+\]
 This averaged inner product is \(G\)-invariant, making \(\rho\) unitary with respect to it.
 
 <div class="remark">
@@ -405,7 +468,10 @@ Maschke's theorem guarantees that every finite-dimensional \(FG\)-module (over a
 
 <div class="definition">
 <strong>Definition.</strong> Let \(\mathrm{Irr}_F(G) = \{V_1, \ldots, V_r\}\) be the set of isomorphism classes of irreducible \(FG\)-modules. For a completely reducible module \(V\), the <strong>isotypic decomposition</strong> of \(V\) is the decomposition
-\[V \cong V_1^{\oplus m_1} \oplus \cdots \oplus V_r^{\oplus m_r},\]
+
+\[
+V \cong V_1^{\oplus m_1} \oplus \cdots \oplus V_r^{\oplus m_r},
+\]
 where \(m_i = \dim_F \mathrm{Hom}_G(V_i, V)\) is the <strong>multiplicity</strong> of \(V_i\) in \(V\). The summand \(V_i^{\oplus m_i}\) is the <strong>\(V_i\)-isotypic component</strong> of \(V\).
 </div>
 
@@ -449,9 +515,15 @@ The classical Fourier analysis on \(\mathbb{R}/2\pi\mathbb{Z}\) is the limiting 
 
 <div class="example">
 <strong>Example (Fourier analysis on \(C_4\)).</strong> The group \(C_4 = \{0, 1, 2, 3\}\) (with addition mod 4) has four irreducible characters:
-\[\chi_k(m) = i^{km}, \quad k = 0, 1, 2, 3, \quad i = e^{2\pi i / 4}.\]
+
+\[
+\chi_k(m) = i^{km}, \quad k = 0, 1, 2, 3, \quad i = e^{2\pi i / 4}.
+\]
 For any function \(f : C_4 \to \mathbb{C}\), say \(f = (f_0, f_1, f_2, f_3)\) (the values at \(0, 1, 2, 3\)), the Fourier coefficients are
-\[\hat f(k) = \langle f, \chi_k \rangle = \frac{1}{4}(f_0 + f_1 i^{-k} + f_2 i^{-2k} + f_3 i^{-3k}).\]
+
+\[
+\hat f(k) = \langle f, \chi_k \rangle = \frac{1}{4}(f_0 + f_1 i^{-k} + f_2 i^{-2k} + f_3 i^{-3k}).
+\]
 This is exactly the discrete Fourier transform, and the Fourier inversion formula \(f(m) = \sum_{k=0}^3 \hat f(k) \chi_k(m)\) is the familiar DFT inverse. The representation-theoretic perspective gives a clean proof: since the four characters are an orthonormal basis for the four-dimensional space \(\ell^2(C_4)\), Fourier inversion is just basis expansion.
 </div>
 
@@ -472,11 +544,17 @@ The key step is Lemma: the map \(\mathrm{Hom}_G(F\langle G \rangle, U) \to U\) g
 
 <div class="example">
 <strong>Example (Decomposition of the regular representation of \(S_3\)).</strong> We have \(\mathrm{Irr}_\mathbb{C}(S_3) = \{V_\mathrm{triv}, V_\mathrm{sgn}, V_\mathrm{std}\}\) with dimensions \(1, 1, 2\). The theorem predicts:
-\[\mathbb{C}\langle S_3 \rangle \cong V_\mathrm{triv}^{\oplus 1} \oplus V_\mathrm{sgn}^{\oplus 1} \oplus V_\mathrm{std}^{\oplus 2}.\]
+
+\[
+\mathbb{C}\langle S_3 \rangle \cong V_\mathrm{triv}^{\oplus 1} \oplus V_\mathrm{sgn}^{\oplus 1} \oplus V_\mathrm{std}^{\oplus 2}.
+\]
 Dimension check: \(1 \cdot 1 + 1 \cdot 1 + 2 \cdot 2 = 6 = |S_3|\). ✓
 
 We can verify this concretely. The character of the regular representation is \(\chi_\mathrm{reg}(e) = 6\), \(\chi_\mathrm{reg}(g) = 0\) for \(g \neq e\). The multiplicity of \(V_\mathrm{std}\) is
-\[\langle \chi_\mathrm{std}, \chi_\mathrm{reg} \rangle = \frac{1}{6}\big(\chi_\mathrm{std}(e)\overline{\chi_\mathrm{reg}(e)} + \cdots\big) = \frac{1}{6}(2 \cdot 6 + 0 + 0) = 2.\]
+
+\[
+\langle \chi_\mathrm{std}, \chi_\mathrm{reg} \rangle = \frac{1}{6}\big(\chi_\mathrm{std}(e)\overline{\chi_\mathrm{reg}(e)} + \cdots\big) = \frac{1}{6}(2 \cdot 6 + 0 + 0) = 2.
+\]
 Similarly, the multiplicity of each one-dimensional representation is 1. ✓
 </div>
 
@@ -498,9 +576,15 @@ This will be proved using character theory in the next chapter. For now, the dim
 
 <div class="example">
 <strong>Example (Full character table of \(D_8\)).</strong> Let us work this out completely. Label the conjugacy classes:
-\[C_1 = \{e\}, \quad C_2 = \{a^2\}, \quad C_3 = \{a, a^3\}, \quad C_4 = \{b, a^2b\}, \quad C_5 = \{ab, a^3b\}.\]
+
+\[
+C_1 = \{e\}, \quad C_2 = \{a^2\}, \quad C_3 = \{a, a^3\}, \quad C_4 = \{b, a^2b\}, \quad C_5 = \{ab, a^3b\}.
+\]
 The four one-dimensional characters correspond to group homomorphisms \(D_8 \to \{\pm 1\}\), determined by the pair \((\rho(a), \rho(b)) \in \{\pm 1\}^2\) satisfying \(\rho(a)^4 = \rho(b)^2 = 1\) and \(\rho(b)\rho(a)\rho(b) = \rho(a)^{-1} = \rho(a)^{-1}\), which gives no constraint since \(\rho(a) = \pm 1\) implies \(\rho(a)^{-1} = \rho(a)\). So the four choices are:
-\[\chi_1: (1,1), \quad \chi_2: (1,-1), \quad \chi_3: (-1,1), \quad \chi_4: (-1,-1).\]
+
+\[
+\chi_1: (1,1), \quad \chi_2: (1,-1), \quad \chi_3: (-1,1), \quad \chi_4: (-1,-1).
+\]
 For the two-dimensional representation \(\chi_5\), we use \(\rho(a) = \bigl(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\bigr)\) and \(\rho(b) = \bigl(\begin{smallmatrix}1&0\\0&-1\end{smallmatrix}\bigr)\). Computing traces: \(\chi_5(e) = 2\), \(\chi_5(a^2) = \mathrm{tr}(-I) = -2\), \(\chi_5(a) = 0\), \(\chi_5(b) = 0\), \(\chi_5(ab) = 0\). The complete character table of \(D_8\) is:
 
 | | \(\{e\}\) | \(\{a^2\}\) | \(\{a,a^3\}\) | \(\{b,a^2b\}\) | \(\{ab,a^3b\}\) |
@@ -545,7 +629,10 @@ Let us prove the key properties (5) and (6) in detail.
 
 <div class="proof">
 <strong>Proof of (5).</strong> Let \(\{e_i\}\) be a basis for \(V\) with \(\rho(g)e_i = \sum_j a_{ji}(g) e_j\) and \(\{f_k\}\) a basis for \(W\) with \(\sigma(g)f_k = \sum_l b_{lk}(g) f_l\). The basis for \(V \otimes W\) is \(\{e_i \otimes f_k\}\), and \(g \cdot (e_i \otimes f_k) = (ge_i) \otimes (gf_k) = \sum_j a_{ji} e_j \otimes \sum_l b_{lk} f_l\). The diagonal entry for \((e_i \otimes f_k)\) in this matrix is \(a_{ii}(g) b_{kk}(g)\). Summing:
-\[\chi_{V \otimes W}(g) = \sum_{i,k} a_{ii}(g) b_{kk}(g) = \left(\sum_i a_{ii}(g)\right)\left(\sum_k b_{kk}(g)\right) = \chi_V(g)\chi_W(g). \quad \square\]
+
+\[
+\chi_{V \otimes W}(g) = \sum_{i,k} a_{ii}(g) b_{kk}(g) = \left(\sum_i a_{ii}(g)\right)\left(\sum_k b_{kk}(g)\right) = \chi_V(g)\chi_W(g). \quad \square
+\]
 </div>
 
 <div class="proof">
@@ -556,13 +643,19 @@ Property (4) says the character "linearizes" direct sums into ordinary addition.
 
 <div class="example">
 <strong>Example (Permutation characters).</strong> If \((V, \rho)\) is the permutation representation induced by the action of \(G\) on a finite set \(X\), then
-\[\chi_\rho(g) = |\{x \in X : gx = x\}| = |\mathrm{Fix}(g)|.\]
+
+\[
+\chi_\rho(g) = |\{x \in X : gx = x\}| = |\mathrm{Fix}(g)|.
+\]
 This follows because in the standard basis of \(F\langle X \rangle\), the matrix of \(\rho(g)\) has a 1 in position \((x,x)\) if and only if \(gx = x\). For the regular representation specifically: \(\chi_\mathrm{reg}(e) = |G|\) and \(\chi_\mathrm{reg}(g) = 0\) for all \(g \neq e\).
 </div>
 
 <div class="example">
 <strong>Example (Standard representation of \(S_3\)).</strong> The defining representation of \(S_3\) on \(\mathbb{C}^3\) decomposes as \(V_\mathrm{def} = V_\mathrm{triv} \oplus V_\mathrm{std}\), where \(V_\mathrm{std} = \{(a,b,c) : a+b+c=0\}\). The character values are:
-\[\chi_\mathrm{std}(e) = 2, \quad \chi_\mathrm{std}(\text{2-cycle}) = 0, \quad \chi_\mathrm{std}(\text{3-cycle}) = -1.\]
+
+\[
+\chi_\mathrm{std}(e) = 2, \quad \chi_\mathrm{std}(\text{2-cycle}) = 0, \quad \chi_\mathrm{std}(\text{3-cycle}) = -1.
+\]
 These can be computed directly: the 2-cycle \((12)\) acts on \(V_\mathrm{std} \subset \mathbb{C}^3\) by swapping coordinates 1 and 2. The basis \(\{e_1 - e_2, e_1 + e_2 - 2e_3\}\) of \(V_\mathrm{std}\) transforms as \(e_1 - e_2 \mapsto -(e_1-e_2)\) and \(e_1+e_2-2e_3 \mapsto e_1+e_2-2e_3\), so the matrix is \(\bigl(\begin{smallmatrix}-1&0\\0&1\end{smallmatrix}\bigr)\) with trace 0. The 3-cycle \((123)\) sends \(e_1 \mapsto e_2 \mapsto e_3 \mapsto e_1\); on \(V_\mathrm{std}\), the matrix (in the same basis) is \(\bigl(\begin{smallmatrix}-1&-1\\1&0\end{smallmatrix}\bigr)\) with trace \(-1\).
 </div>
 
@@ -571,17 +664,26 @@ These can be computed directly: the 2-cycle \((12)\) acts on \(V_\mathrm{std} \s
 A **class function** on \(G\) is a function \(f : G \to \mathbb{C}\) that is constant on conjugacy classes. Every character is a class function. The space \(\mathcal{C}(G)\) of class functions has dimension equal to \(h(G)\), the number of conjugacy classes.
 
 We equip \(\mathcal{C}(G)\) with the Hermitian inner product:
-\[\langle f, g \rangle = \frac{1}{|G|} \sum_{x \in G} f(x)\overline{g(x)}.\]
+
+\[
+\langle f, g \rangle = \frac{1}{|G|} \sum_{x \in G} f(x)\overline{g(x)}.
+\]
 This inner product encodes deep information about representations via:
 
 <div class="proposition">
 <strong>Proposition.</strong> For \(\mathbb{C}G\)-modules \(V\) and \(W\):
-\[\langle \chi_V, \chi_W \rangle = \dim \mathrm{Hom}_G(W, V) = \dim \mathrm{Hom}_G(V, W).\]
+
+\[
+\langle \chi_V, \chi_W \rangle = \dim \mathrm{Hom}_G(W, V) = \dim \mathrm{Hom}_G(V, W).
+\]
 </div>
 
 <div class="proof">
 <strong>Proof.</strong> We use the earlier identification \(\mathrm{Hom}_G(V, W) = (V^* \otimes W)^G\) and the dimension formula for fixed points: \(\dim U^G = \frac{1}{|G|}\sum_{g \in G} \chi_U(g)\). With \(U = V^* \otimes W\), and using \(\chi_{V^*}(g) = \overline{\chi_V(g)}\) and \(\chi_{V^* \otimes W}(g) = \chi_{V^*}(g)\chi_W(g) = \overline{\chi_V(g)}\chi_W(g)\):
-\[\dim \mathrm{Hom}_G(V,W) = \frac{1}{|G|}\sum_{g \in G}\overline{\chi_V(g)}\chi_W(g) = \langle \chi_V, \chi_W \rangle. \quad \square\]
+
+\[
+\dim \mathrm{Hom}_G(V,W) = \frac{1}{|G|}\sum_{g \in G}\overline{\chi_V(g)}\chi_W(g) = \langle \chi_V, \chi_W \rangle. \quad \square
+\]
 </div>
 
 The proof reveals why the inner product has its particular form: it is literally counting \(G\)-equivariant maps.
@@ -592,7 +694,10 @@ The proof reveals why the inner product has its particular form: it is literally
 
 <div class="theorem">
 <strong>Theorem (Orthogonality of Irreducible Characters).</strong> Let \(\chi_V\) and \(\chi_W\) be irreducible characters of \(G\). Then:
-\[\langle \chi_V, \chi_W \rangle = \begin{cases} 1 & \text{if } V \cong W \\ 0 & \text{if } V \not\cong W. \end{cases}\]
+
+\[
+\langle \chi_V, \chi_W \rangle = \begin{cases} 1 & \text{if } V \cong W \\ 0 & \text{if } V \not\cong W. \end{cases}
+\]
 </div>
 
 This is the nonabelian generalization of the orthogonality of Fourier characters of abelian groups. It follows immediately from the proposition in the previous chapter combined with Schur's Lemma (which says \(\dim \mathrm{Hom}_G(V,W) = 1\) if \(V \cong W\) and \(= 0\) otherwise).
@@ -603,7 +708,10 @@ The orthogonality relations have immediate and powerful consequences:
 
 <div class="corollary">
 <strong>Corollary (Multiplicity Formula).</strong> For an irreducible \(W\) and any \(V\):
-\[\mathrm{mult}(W, V) = \langle \chi_W, \chi_V \rangle.\]
+
+\[
+\mathrm{mult}(W, V) = \langle \chi_W, \chi_V \rangle.
+\]
 </div>
 
 <div class="corollary">
@@ -618,9 +726,18 @@ These are the tools that make character theory computationally powerful. To dete
 
 <div class="example">
 <strong>Example (Decomposing a representation of \(S_3\) using characters).</strong> Suppose we are given the representation \(V\) of \(S_3\) with character values \(\chi_V(e) = 4\), \(\chi_V((12)) = 0\), \(\chi_V((123)) = 1\). Let us find the isotypic decomposition. Using the character table (below):
-\[m_\mathrm{triv} = \langle \chi_V, \chi_\mathrm{triv} \rangle = \tfrac{1}{6}(1 \cdot 4 + 3 \cdot 0 \cdot 1 + 2 \cdot 1 \cdot 1) = \tfrac{6}{6} = 1.\]
-\[m_\mathrm{sgn} = \langle \chi_V, \chi_\mathrm{sgn} \rangle = \tfrac{1}{6}(1 \cdot 4 + 3 \cdot 0 \cdot (-1) + 2 \cdot 1 \cdot 1) = \tfrac{6}{6} = 1.\]
-\[m_\mathrm{std} = \langle \chi_V, \chi_\mathrm{std} \rangle = \tfrac{1}{6}(1 \cdot 8 + 3 \cdot 0 \cdot 0 + 2 \cdot 1 \cdot (-1)) = \tfrac{6}{6} = 1.\]
+
+\[
+m_\mathrm{triv} = \langle \chi_V, \chi_\mathrm{triv} \rangle = \tfrac{1}{6}(1 \cdot 4 + 3 \cdot 0 \cdot 1 + 2 \cdot 1 \cdot 1) = \tfrac{6}{6} = 1.
+\]
+
+\[
+m_\mathrm{sgn} = \langle \chi_V, \chi_\mathrm{sgn} \rangle = \tfrac{1}{6}(1 \cdot 4 + 3 \cdot 0 \cdot (-1) + 2 \cdot 1 \cdot 1) = \tfrac{6}{6} = 1.
+\]
+
+\[
+m_\mathrm{std} = \langle \chi_V, \chi_\mathrm{std} \rangle = \tfrac{1}{6}(1 \cdot 8 + 3 \cdot 0 \cdot 0 + 2 \cdot 1 \cdot (-1)) = \tfrac{6}{6} = 1.
+\]
 Check: \(1 \cdot 1 + 1 \cdot 1 + 1 \cdot 2 = 4 = \chi_V(e) = \dim V\). ✓ So \(V \cong V_\mathrm{triv} \oplus V_\mathrm{sgn} \oplus V_\mathrm{std}\).
 </div>
 
@@ -638,7 +755,10 @@ This theorem completes the "Fourier analysis" picture for nonabelian groups: jus
 Suppose \(f \in \mathcal{C}(G)\) satisfies \(\langle f, \chi_V \rangle = 0\) for all \(V \in \mathrm{Irr}(G)\). Define the operator \(T_f = \sum_{g \in G} f(g)\rho(g)\) on a \(G\)-module \(V\). One checks that \(T_f\) is \(G\)-linear. If \(V\) is irreducible, Schur's lemma implies \(T_f = \lambda \cdot \mathrm{id}_V\). Taking traces: \(\lambda \dim V = \mathrm{tr}(T_f) = \sum_{g} f(g) \chi_V(g) = |G| \langle f, \chi_V \rangle = 0\). So \(T_f = 0\) on every irreducible \(V\).
 
 Applied to the regular representation (which contains every irreducible): \(T_f = 0\) on \(\mathbb{C}\langle G \rangle\). Evaluating on the basis vector \(e\):
-\[T_f(e) = \sum_{g \in G} f(g) \rho_\mathrm{reg}(g)(e) = \sum_{g \in G} f(g) \cdot g = 0.\]
+
+\[
+T_f(e) = \sum_{g \in G} f(g) \rho_\mathrm{reg}(g)(e) = \sum_{g \in G} f(g) \cdot g = 0.
+\]
 Since \(\{g : g \in G\}\) is a basis for \(\mathbb{C}\langle G \rangle\), this implies \(f(g) = 0\) for all \(g\). So \(f = 0\). \(\square\)
 </div>
 
@@ -663,7 +783,10 @@ The column orthogonality deserves its own statement:
 
 <div class="theorem">
 <strong>Theorem (Second Orthogonality / Column Orthogonality).</strong> Let \(C\) and \(C'\) be conjugacy classes of \(G\) with representatives \(g\) and \(g'\). Then:
-\[\sum_{i=1}^r \chi_i(g)\overline{\chi_i(g')} = \begin{cases} |G|/|C| & \text{if } g \text{ and } g' \text{ are conjugate} \\ 0 & \text{otherwise.} \end{cases}\]
+
+\[
+\sum_{i=1}^r \chi_i(g)\overline{\chi_i(g')} = \begin{cases} |G|/|C| & \text{if } g \text{ and } g' \text{ are conjugate} \\ 0 & \text{otherwise.} \end{cases}
+\]
 Equivalently, if we define the matrix \(X\) by \(X_{ij} = \chi_i(C_j)\), then the matrix \(D X^* D'\) is the identity (up to scaling), where \(D\) and \(D'\) are diagonal matrices encoding the conjugacy class sizes.
 </div>
 
@@ -687,9 +810,15 @@ Let us work out the character table of \(C_4 = \{0, 1, 2, 3\}\) (addition mod 4)
 | \(\chi_3\) | \(1\) | \(-i\) | \(-1\) | \(i\) |
 
 **Verification of row orthogonality** (checking \(\langle \chi_1, \chi_1 \rangle = 1\)):
-\[\frac{1}{4}(1 \cdot 1 + i \cdot \bar i + (-1)(-1) + (-i)\overline{(-i)}) = \frac{1}{4}(1 + 1 + 1 + 1) = 1. \checkmark\]
+
+\[
+\frac{1}{4}(1 \cdot 1 + i \cdot \bar i + (-1)(-1) + (-i)\overline{(-i)}) = \frac{1}{4}(1 + 1 + 1 + 1) = 1. \checkmark
+\]
 **Verification of orthogonality of \(\chi_1\) and \(\chi_2\)**:
-\[\frac{1}{4}(1 + i(-1) + (-1)(1) + (-i)(-1)) = \frac{1}{4}(1 - i - 1 + i) = 0. \checkmark\]
+
+\[
+\frac{1}{4}(1 + i(-1) + (-1)(1) + (-i)(-1)) = \frac{1}{4}(1 - i - 1 + i) = 0. \checkmark
+\]
 **Dimension formula**: \(1^2 + 1^2 + 1^2 + 1^2 = 4 = |C_4|\). \(\checkmark\)
 
 **Connection to DFT.** The character table of \(C_n\) is precisely the discrete Fourier transform (DFT) matrix \(F_n\) with entries \((F_n)_{jk} = \zeta^{jk}\) where \(\zeta = e^{2\pi i/n}\). The orthogonality of rows is the statement that \(\frac{1}{n}F_n^* F_n = I_n\), which is the unitarity of the DFT. For \(C_4\) this gives us the 4-point DFT, the simplest nontrivial instance.
@@ -727,7 +856,10 @@ Column orthogonality for columns 1 and 2: \(1 \cdot 1 + 1 \cdot (-1) + 2 \cdot 0
 The complete character table for \(\mathbb{Z}/4\mathbb{Z}\) was given above. Let us now use it to see orthogonality of columns in action.
 
 **Column orthogonality for columns \(\{1\}\) and \(\{3\}\):**
-\[\sum_k \chi_k(1)\overline{\chi_k(3)} = 1 \cdot 1 + i \cdot \overline{(-i)} + (-1)\cdot \overline{(-1)} + (-i)\cdot \overline{i} = 1 \cdot 1 + i \cdot i + (-1)(-1) + (-i)(-i) = 1 - 1 + 1 - 1 = 0. \checkmark\]
+
+\[
+\sum_k \chi_k(1)\overline{\chi_k(3)} = 1 \cdot 1 + i \cdot \overline{(-i)} + (-1)\cdot \overline{(-1)} + (-i)\cdot \overline{i} = 1 \cdot 1 + i \cdot i + (-1)(-1) + (-i)(-i) = 1 - 1 + 1 - 1 = 0. \checkmark
+\]
 (Note: since \(C_4\) is abelian, column \(\{j\}\) corresponds to the element \(j\), and \(\overline{\chi_k(j)} = \overline{i^{jk}} = i^{-jk} = \chi_k(-j)\). So the column orthogonality amounts to \(\sum_k i^{(j_1 - j_2)k} = 0\) for \(j_1 \neq j_2\) — the standard fact about geometric sums of roots of unity.)
 
 ## Constructing the Character Table Systematically
@@ -795,7 +927,10 @@ The **symmetric power** \(\mathrm{Sym}^n(V)\) is the quotient of \(V^{\otimes n}
 For a two-dimensional representation \(V\), one has \(\dim \mathrm{Sym}^n(V) = n+1\) and \(\dim \mathrm{Alt}^n(V) = \binom{2}{n}\) (so \(\mathrm{Alt}^n(V) = 0\) for \(n > 2\) and \(\mathrm{Alt}^2(V)\) is one-dimensional). The standard representation of \(S_n\) satisfies \(\mathrm{Alt}^{n-1}(V_\mathrm{std}) \cong V_\mathrm{sgn}\).
 
 The characters of symmetric and alternating powers are given by the Newton power sum formulas. If \(\chi_V(g) = \lambda_1 + \cdots + \lambda_d\) (sum of eigenvalues), then:
-\[\chi_{\mathrm{Sym}^2 V}(g) = \frac{\chi_V(g)^2 + \chi_V(g^2)}{2}, \qquad \chi_{\mathrm{Alt}^2 V}(g) = \frac{\chi_V(g)^2 - \chi_V(g^2)}{2}.\]
+
+\[
+\chi_{\mathrm{Sym}^2 V}(g) = \frac{\chi_V(g)^2 + \chi_V(g^2)}{2}, \qquad \chi_{\mathrm{Alt}^2 V}(g) = \frac{\chi_V(g)^2 - \chi_V(g^2)}{2}.
+\]
 These formulas are useful for computing character tables and for determining the Frobenius-Schur indicator.
 
 <div class="example">
@@ -806,7 +941,10 @@ These formulas are useful for computing character tables and for determining the
 \chi_{\mathrm{Sym}^2 V_\mathrm{std}}((123)) &= \frac{1 + (-1)}{2} = 0.
 \end{align*}
 The character \((3, 1, 0)\) can be decomposed using the \(S_3\) character table:
-\[m_\mathrm{triv} = \tfrac{1}{6}(3 \cdot 1 + 3 \cdot 1 + 2 \cdot 0) = 1, \quad m_\mathrm{sgn} = \tfrac{1}{6}(3 - 3 + 0) = 0, \quad m_\mathrm{std} = \tfrac{1}{6}(6 + 0 + 0) = 1.\]
+
+\[
+m_\mathrm{triv} = \tfrac{1}{6}(3 \cdot 1 + 3 \cdot 1 + 2 \cdot 0) = 1, \quad m_\mathrm{sgn} = \tfrac{1}{6}(3 - 3 + 0) = 0, \quad m_\mathrm{std} = \tfrac{1}{6}(6 + 0 + 0) = 1.
+\]
 So \(\mathrm{Sym}^2(V_\mathrm{std}) \cong V_\mathrm{triv} \oplus V_\mathrm{std}\). Dimension check: \(1 + 2 = 3\). ✓
 
 Similarly, \(\chi_{\mathrm{Alt}^2 V_\mathrm{std}}(e) = \frac{4-2}{2} = 1\), \(\chi_{\mathrm{Alt}^2 V_\mathrm{std}}((12)) = \frac{0-2}{2} = -1\), \(\chi_{\mathrm{Alt}^2 V_\mathrm{std}}((123)) = \frac{1+1}{2} = 1\). This is the character of \(V_\mathrm{sgn}\)! So \(\mathrm{Alt}^2(V_\mathrm{std}) \cong V_\mathrm{sgn}\), consistent with \(V_\mathrm{std} \cong V_\mathrm{std}^*\) (since \(V_\mathrm{std} \otimes V_\mathrm{sgn} \cong V_\mathrm{std}\)) and \(\mathrm{Alt}^2 V \cong \det V\).
@@ -819,7 +957,10 @@ Similarly, \(\chi_{\mathrm{Alt}^2 V_\mathrm{std}}(e) = \frac{4-2}{2} = 1\), \(\c
 The representation theory of the symmetric group is one of the most beautiful chapters in all of mathematics. It establishes a remarkable bijection between the set of irreducible complex representations of \(S_n\) and the combinatorial objects called Young diagrams.
 
 There are natural bijections:
-\[\mathrm{Irr}_\mathbb{C}(S_n) \longleftrightarrow \{\text{conjugacy classes in } S_n\} \longleftrightarrow \{\text{partitions of } n\}.\]
+
+\[
+\mathrm{Irr}_\mathbb{C}(S_n) \longleftrightarrow \{\text{conjugacy classes in } S_n\} \longleftrightarrow \{\text{partitions of } n\}.
+\]
 The conjugacy class of a permutation is determined by its cycle type, and cycle types correspond to ways of writing \(n\) as an ordered sum of positive integers. A **partition** of \(n\) is a tuple \(\lambda = (\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_k > 0)\) with \(\sum \lambda_i = n\), written \(\lambda \vdash n\).
 
 A partition \(\lambda\) is displayed as a **Young diagram**: a left-justified array of boxes with \(\lambda_i\) boxes in row \(i\). For example, the Young diagram of \(\lambda = (3,2,2,1)\) consists of 8 boxes arranged in rows of lengths 3, 2, 2, 1 from top to bottom.
@@ -843,7 +984,10 @@ Check: \(1 + 9 + 4 + 9 + 1 = 24 = |S_4|\). ✓
 A **Young tableau** of shape \(\lambda\) is a filling of the Young diagram of \(\lambda\) with the numbers \(1, \ldots, n\), each appearing exactly once. The **row group** \(R(T)\) is the subgroup of \(S_n\) that permutes entries within each row; the **column group** \(C(T)\) permutes entries within each column.
 
 Associated to each tableau \(T\) are two elements of the group algebra \(\mathbb{C}S_n\):
-\[a_T = \sum_{\sigma \in R(T)} \sigma, \quad b_T = \sum_{\tau \in C(T)} \mathrm{sgn}(\tau) \tau, \quad c_T = b_T a_T \quad \text{(the \textbf{Young symmetrizer})}.\]
+
+\[
+a_T = \sum_{\sigma \in R(T)} \sigma, \quad b_T = \sum_{\tau \in C(T)} \mathrm{sgn}(\tau) \tau, \quad c_T = b_T a_T \quad \text{(the \textbf{Young symmetrizer})}.
+\]
 
 <div class="definition">
 <strong>Definition.</strong> Let \(\lambda \vdash n\) and let \(T\) be a standard Young tableau of shape \(\lambda\). The <strong>Specht module</strong> \(S^\lambda\) is the \(\mathbb{C}S_n\)-submodule of \(\mathbb{C}S_n\) generated by \(c_T\).
@@ -851,7 +995,10 @@ Associated to each tableau \(T\) are two elements of the group algebra \(\mathbb
 
 <div class="theorem">
 <strong>Theorem.</strong> For each \(\lambda \vdash n\), the Specht module \(S^\lambda\) is an irreducible \(\mathbb{C}S_n\)-module, and the assignment \(\lambda \mapsto S^\lambda\) gives a bijection between partitions of \(n\) and \(\mathrm{Irr}_\mathbb{C}(S_n)\). The dimension of \(S^\lambda\) is given by the <strong>hook length formula</strong>:
-\[\dim S^\lambda = \frac{n!}{\prod_{(i,j) \in \lambda} h(i,j)},\]
+
+\[
+\dim S^\lambda = \frac{n!}{\prod_{(i,j) \in \lambda} h(i,j)},
+\]
 where \(h(i,j)\) is the hook length at cell \((i,j)\) — the number of cells directly below or directly to the right of \((i,j)\), plus one.
 </div>
 
@@ -865,9 +1012,13 @@ The hook length formula is a beautiful combinatorial result: despite the intrica
 \hline
 \phantom{0} & \phantom{0} \\
 \cline{1-2}
-\end{array}\]
+\end{array}
+\]
 The hook lengths are: top-left cell has 4 cells in its hook (itself + 2 to the right + 1 below), so \(h(1,1) = 4\). Working out all hook lengths: \(h(1,1) = 4\), \(h(1,2) = 2\), \(h(1,3) = 1\), \(h(2,1) = 2\), \(h(2,2) = 1\). The hook length formula gives:
-\[\dim S^{(3,2)} = \frac{5!}{4 \cdot 2 \cdot 1 \cdot 2 \cdot 1} = \frac{120}{16} = \ldots\]
+
+\[
+\dim S^{(3,2)} = \frac{5!}{4 \cdot 2 \cdot 1 \cdot 2 \cdot 1} = \frac{120}{16} = \ldots
+\]
 Wait, let us recompute: \(4 \cdot 2 \cdot 1 \cdot 2 \cdot 1 = 16\) does not divide 120 evenly. Let me recheck: \(h(1,1) = 3 + 1 = 4\), \(h(1,2) = 1 + 1 = 2\), \(h(1,3) = 0 + 1 = 1\), \(h(2,1) = 1 + 1 = 2\) (one cell to the right + zero below + 1), \(h(2,2) = 0 + 1 = 1\). Product: \(4 \cdot 2 \cdot 1 \cdot 2 \cdot 1 = 16\). But \(5! = 120\) and \(120/16\) is not an integer — there must be an error. Recalculating more carefully: \(h(1,1)\) = (2 cells to right) + (1 cell below) + 1 = 4. \(h(1,2)\) = (1 cell to right) + (1 cell below) + 1 = 3. Oh, I need to count cells directly below in the same column: for \((1,2)\), there is one cell below in column 2, row 2. So \(h(1,2) = 1 + 1 + 1 = 3\). \(h(2,1) = (1 \text{ right}) + 0 + 1 = 2\). \(h(2,2) = 0 + 0 + 1 = 1\). \(h(1,3) = 0 + 0 + 1 = 1\). Product: \(4 \cdot 3 \cdot 1 \cdot 2 \cdot 1 = 24\). So \(\dim S^{(3,2)} = 120/24 = 5\). And \(\dim S^{(2,1^3)}\) (the conjugate shape) is also 5 by symmetry. Check: \(1 + 5 + 4 + 5 + 1 + \ldots\) — for \(S_5\), the dimension formula gives \(\sum d_i^2 = 120\), and the irreducibles have dimensions \(1, 4, 5, 5, 4, 1\) (from the partitions of 5), and \(1 + 16 + 25 + 25 + 16 + \ldots\) — there are 7 partitions of 5, giving 7 irreducibles, so we need \(1+4+5+6+5+4+1\) type numbers. Actually for \(S_5\): partitions are \((5),(4,1),(3,2),(3,1^2),(2^2,1),(2,1^3),(1^5)\) with dimensions \(1,4,5,6,5,4,1\) and \(1+16+25+36+25+16+1 = 120\). ✓
 </div>
 
@@ -882,7 +1033,10 @@ One of the most striking combinatorial results connecting the representation the
 </div>
 
 As a consequence, summing over all shapes:
-\[n! = \sum_{\lambda \vdash n} (f^\lambda)^2,\]
+
+\[
+n! = \sum_{\lambda \vdash n} (f^\lambda)^2,
+\]
 where \(f^\lambda = \dim S^\lambda\) is the number of standard Young tableaux of shape \(\lambda\) (equal to the dimension of the Specht module). This is yet another proof of the dimension formula \(|S_n| = \sum_\lambda (\dim S^\lambda)^2\), but now with a combinatorial flavour.
 
 # Chapter 11: Module Theory and the Artin-Wedderburn Theorem
@@ -914,7 +1068,10 @@ The center \(Z(FG)\) of the group algebra has a beautiful explicit description t
 
 <div class="proposition">
 <strong>Proposition.</strong> The center \(Z(FG)\) of the group algebra has as a basis the conjugacy class sums
-\[C_j^+ = \sum_{g \in C_j} g,\]
+
+\[
+C_j^+ = \sum_{g \in C_j} g,
+\]
 one for each conjugacy class \(C_j\) of \(G\). In particular, \(\dim Z(FG) = h(G)\) = number of conjugacy classes.
 </div>
 
@@ -958,7 +1115,10 @@ The theorem that \(F^n\) is the unique simple \(M_n(F)\)-module shows how matrix
 
 <div class="theorem">
 <strong>Theorem (Artin-Wedderburn).</strong> Let \(R\) be a semisimple ring. Then
-\[R \cong M_{n_1}(D_1) \times M_{n_2}(D_2) \times \cdots \times M_{n_k}(D_k)\]
+
+\[
+R \cong M_{n_1}(D_1) \times M_{n_2}(D_2) \times \cdots \times M_{n_k}(D_k)
+\]
 where \(D_1, \ldots, D_k\) are division rings. This decomposition is unique up to reordering and isomorphism. The number \(k\) equals the number of isomorphism classes of simple \(R\)-modules.
 </div>
 
@@ -976,14 +1136,20 @@ The proof strategy is:
 
 <div class="corollary">
 <strong>Corollary.</strong> Let \(F\) be algebraically closed with \(\mathrm{char}\, F \nmid |G|\) and let \(\mathrm{Irr}_F(G) = \{V_1, \ldots, V_r\}\) with \(\dim V_i = n_i\). Then:
-\[FG \cong M_{n_1}(F) \times M_{n_2}(F) \times \cdots \times M_{n_r}(F).\]
+
+\[
+FG \cong M_{n_1}(F) \times M_{n_2}(F) \times \cdots \times M_{n_r}(F).
+\]
 </div>
 
 The dimension formula \(|G| = \sum n_i^2\) follows immediately: \(\dim FG = |G|\) and \(\dim M_{n_i}(F) = n_i^2\). The character table theorem (number of irreducibles = number of conjugacy classes) follows from the theory of the center: \(\dim Z(FG) = h(G)\) (center of the group algebra has basis the conjugacy class sums), and \(Z(M_{n_i}(F)) \cong F\), so \(\dim Z(FG) = r\).
 
 <div class="example">
 <strong>Example (Artin-Wedderburn for \(S_3\)).</strong> We have
-\[\mathbb{C}S_3 \cong M_1(\mathbb{C}) \times M_1(\mathbb{C}) \times M_2(\mathbb{C}) \cong \mathbb{C} \times \mathbb{C} \times M_2(\mathbb{C}).\]
+
+\[
+\mathbb{C}S_3 \cong M_1(\mathbb{C}) \times M_1(\mathbb{C}) \times M_2(\mathbb{C}) \cong \mathbb{C} \times \mathbb{C} \times M_2(\mathbb{C}).
+\]
 Dimension check: \(1 + 1 + 4 = 6 = |S_3|\). ✓ The center of \(\mathbb{C}S_3\) (spanned by the 3 conjugacy class sums) is isomorphic to \(\mathbb{C} \times \mathbb{C} \times \mathbb{C}\) (the centers of the three blocks). ✓
 </div>
 
@@ -1001,7 +1167,10 @@ The Artin-Wedderburn decomposition is not just an abstract isomorphism — it ca
 
 <div class="theorem">
 <strong>Theorem.</strong> Let \(F\) be algebraically closed with \(\mathrm{char}\, F \nmid |G|\). The primitive central idempotents of \(FG\) are:
-\[e_i = \frac{\dim V_i}{|G|} \sum_{g \in G} \chi_{V_i}(g^{-1}) g = \frac{\dim V_i}{|G|} \sum_{g \in G} \overline{\chi_{V_i}(g)} g,\]
+
+\[
+e_i = \frac{\dim V_i}{|G|} \sum_{g \in G} \chi_{V_i}(g^{-1}) g = \frac{\dim V_i}{|G|} \sum_{g \in G} \overline{\chi_{V_i}(g)} g,
+\]
 one for each irreducible representation \(V_i\). They satisfy \(e_i e_j = \delta_{ij} e_i\) and \(\sum_i e_i = 1\). The projection \(FG \to M_{n_i}(F)\) of the Artin-Wedderburn decomposition is right multiplication by \(e_i\).
 </div>
 
@@ -1009,9 +1178,15 @@ The formula \(e_i = \frac{n_i}{|G|}\sum_g \overline{\chi_i(g)} g\) is the repres
 
 <div class="example">
 <strong>Example (Idempotents for \(S_3\)).</strong> For the trivial representation (\(n_1 = 1\), \(\chi_1 \equiv 1\)):
-\[e_1 = \frac{1}{6}\sum_{g \in S_3} g = \frac{1}{6}(e + (12) + (13) + (23) + (123) + (132)).\]
+
+\[
+e_1 = \frac{1}{6}\sum_{g \in S_3} g = \frac{1}{6}(e + (12) + (13) + (23) + (123) + (132)).
+\]
 This is the "symmetrizer" — it projects onto the trivial isotypic component. For the sign representation (\(n_2 = 1\), \(\chi_2 = \mathrm{sgn}\)):
-\[e_2 = \frac{1}{6}\sum_{g \in S_3} \mathrm{sgn}(g) \cdot g = \frac{1}{6}(e - (12) - (13) - (23) + (123) + (132)).\]
+
+\[
+e_2 = \frac{1}{6}\sum_{g \in S_3} \mathrm{sgn}(g) \cdot g = \frac{1}{6}(e - (12) - (13) - (23) + (123) + (132)).
+\]
 This is the "antisymmetrizer." One can verify \(e_1 + e_2 + e_3 = 1\) (as elements of \(\mathbb{C}S_3\), where \(e_3\) is the idempotent for the standard representation) and \(e_i e_j = 0\) for \(i \neq j\).
 </div>
 
@@ -1025,12 +1200,18 @@ Over \(\mathbb{C}\), every representation decomposes into complex irreducibles. 
 
 <div class="definition">
 <strong>Definition (Frobenius-Schur indicator).</strong> For an irreducible character \(\chi_V\) of a finite group \(G\), the <strong>Frobenius-Schur indicator</strong> is:
-\[\iota(\chi_V) = \frac{1}{|G|} \sum_{g \in G} \chi_V(g^2).\]
+
+\[
+\iota(\chi_V) = \frac{1}{|G|} \sum_{g \in G} \chi_V(g^2).
+\]
 </div>
 
 <div class="theorem">
 <strong>Theorem.</strong> For an irreducible \(\mathbb{C}G\)-module \(V\):
-\[\iota(\chi_V) = \begin{cases} 1 & \text{if } V \text{ is the complexification of a real irreducible (real type)} \\ -1 & \text{if } V \text{ has a quaternionic structure (quaternionic type)} \\ 0 & \text{if } V \not\cong V^* \text{ (complex type, i.e., } V \text{ and } \bar{V} \text{ are non-isomorphic)} \end{cases}\]
+
+\[
+\iota(\chi_V) = \begin{cases} 1 & \text{if } V \text{ is the complexification of a real irreducible (real type)} \\ -1 & \text{if } V \text{ has a quaternionic structure (quaternionic type)} \\ 0 & \text{if } V \not\cong V^* \text{ (complex type, i.e., } V \text{ and } \bar{V} \text{ are non-isomorphic)} \end{cases}
+\]
 </div>
 
 In terms of bilinear forms: \(\iota(\chi_V) = 1\) if and only if \(V\) has a nonzero \(G\)-invariant symmetric bilinear form; \(\iota(\chi_V) = -1\) if and only if \(V\) has a nonzero \(G\)-invariant skew-symmetric bilinear form.
@@ -1064,9 +1245,15 @@ The character table of \(Q_8\):
 | \(\chi_4\) | 2 | \(-2\) | 0 | 0 | 0 |
 
 The 2-dimensional irreducible \(\chi_4\) has Frobenius-Schur indicator:
-\[\iota(\chi_4) = \frac{1}{8}\left(\chi_4(1^2) + \chi_4((-1)^2) + 2\chi_4(i^2) + 2\chi_4(j^2) + 2\chi_4(k^2)\right).\]
+
+\[
+\iota(\chi_4) = \frac{1}{8}\left(\chi_4(1^2) + \chi_4((-1)^2) + 2\chi_4(i^2) + 2\chi_4(j^2) + 2\chi_4(k^2)\right).
+\]
 Now \(1^2 = 1\), \((-1)^2 = 1\), \(i^2 = -1\), \(j^2 = -1\), \(k^2 = -1\). So:
-\[\iota(\chi_4) = \frac{1}{8}(2 + (-2) \cdot 1 + 2 \cdot (-2) + 2 \cdot (-2) + 2 \cdot (-2)) \cdot \ldots\]
+
+\[
+\iota(\chi_4) = \frac{1}{8}(2 + (-2) \cdot 1 + 2 \cdot (-2) + 2 \cdot (-2) + 2 \cdot (-2)) \cdot \ldots
+\]
 Wait, more carefully: \(g^2\) for each of the 8 elements: \(1^2 = 1, (-1)^2 = 1, i^2 = -1, (-i)^2 = -1, j^2 = -1, (-j)^2 = -1, k^2 = -1, (-k)^2 = -1\). So \(\iota(\chi_4) = \frac{1}{8}(\chi_4(1) + \chi_4(1) + \chi_4(-1) + \chi_4(-1) + \chi_4(-1) + \chi_4(-1) + \chi_4(-1) + \chi_4(-1)) = \frac{1}{8}(2 + 2 + (-2) \cdot 6) = \frac{1}{8}(4 - 12) = \frac{-8}{8} = -1\). So \(\chi_4\) is of quaternionic type. This means that while \(\chi_4\) is a 2-dimensional complex irreducible, it does *not* come from a real representation; instead, it comes from the natural 1-dimensional representation of \(Q_8\) over the quaternions \(\mathbb{H}\).
 
 # Chapter 13: Applications to Group Theory
@@ -1139,17 +1326,26 @@ If \(H \leq G\) and \(W\) is an \(H\)-module, we want to build a \(G\)-module "f
 
 <div class="definition">
 <strong>Definition.</strong> Let \(H \leq G\) and let \(W\) be a \(\mathbb{C}H\)-module. The <strong>induced representation</strong> of \(W\) from \(H\) to \(G\) is the \(\mathbb{C}G\)-module:
-\[\mathrm{Ind}_H^G(W) = \mathbb{C}G \otimes_{\mathbb{C}H} W,\]
+
+\[
+\mathrm{Ind}_H^G(W) = \mathbb{C}G \otimes_{\mathbb{C}H} W,
+\]
 where \(\mathbb{C}G\) is viewed as a \((\mathbb{C}G, \mathbb{C}H)\)-bimodule. We write \(W \uparrow_H^G\) or \(W \uparrow\).
 </div>
 
 **Concrete construction.** Let \(\{t_1, \ldots, t_k\}\) be a set of left coset representatives for \(G/H\), so \(G = \bigsqcup_{i=1}^k t_i H\). Then as a vector space,
-\[\mathrm{Ind}_H^G(W) = t_1 \otimes W \oplus \cdots \oplus t_k \otimes W \cong W^k\]
+
+\[
+\mathrm{Ind}_H^G(W) = t_1 \otimes W \oplus \cdots \oplus t_k \otimes W \cong W^k
+\]
 (with \(k = [G:H]\) summands), and the action of \(g \in G\) sends \(t_i \otimes w\) to \(t_j \otimes h \cdot w\), where \(gt_i = t_j h\) for the unique \(t_j\) and \(h \in H\). In particular, \(\dim \mathrm{Ind}_H^G(W) = [G:H] \cdot \dim W\).
 
 <div class="remark">
 <strong>Remark (Restriction and induction as adjoints).</strong> The restriction functor \(\mathrm{Res}_H^G\) takes a \(G\)-module and restricts the action to \(H\). The induction functor \(\mathrm{Ind}_H^G\) goes the other direction: it takes an \(H\)-module and builds a \(G\)-module. Frobenius reciprocity says these functors are adjoint:
-\[\mathrm{Hom}_G(\mathrm{Ind}_H^G W, V) \cong \mathrm{Hom}_H(W, \mathrm{Res}_H^G V).\]
+
+\[
+\mathrm{Hom}_G(\mathrm{Ind}_H^G W, V) \cong \mathrm{Hom}_H(W, \mathrm{Res}_H^G V).
+\]
 This adjunction is the categorical origin of Frobenius reciprocity.
 </div>
 
@@ -1161,11 +1357,14 @@ This adjunction is the categorical origin of Frobenius reciprocity.
 <strong>Example (Induced representation of \(C_2\) in \(S_3\)).</strong> Let \(H = \langle (12) \rangle \cong C_2 \leq S_3\). The group \(H\) has two irreducible representations: trivial \(\chi_+\) and sign \(\chi_-\). The index \([S_3 : H] = 3\). Let us compute \(\mathrm{Ind}_H^{S_3}(\chi_-)\) using the character formula.
 
 Choose coset representatives \(t_1 = e\), \(t_2 = (13)\), \(t_3 = (23)\). For \(g = (12) \in S_3\):
-\[\chi_{\mathrm{Ind} \chi_-}((12)) = \sum_{\{i : t_i^{-1}(12)t_i \in H\}} \chi_-(t_i^{-1}(12)t_i).\]
+
+\[
+\chi_{\mathrm{Ind} \chi_-}((12)) = \sum_{\{i : t_i^{-1}(12)t_i \in H\}} \chi_-(t_i^{-1}(12)t_i).
+\]
 We need \(t_i^{-1}(12)t_i \in H = \{e, (12)\}\). Check: \(e^{-1}(12)e = (12) \in H\), contributing \(\chi_-((12)) = -1\); \((13)^{-1}(12)(13) = (23) \notin H\); \((23)^{-1}(12)(23) = (13) \notin H\). So \(\chi_{\mathrm{Ind}\chi_-}((12)) = -1\).
 
 Similarly: \(\chi_{\mathrm{Ind}\chi_-}(e) = 3 \cdot \chi_-(e) = 3 \cdot 1 = 3\); for \((123)\): \(e^{-1}(123)e = (123) \notin H\), and the other coset representatives also give conjugates not in \(H\), so \(\chi_{\mathrm{Ind}\chi_-}((123)) = 0\). The character values are \((3, -1, 0)\) on the three conjugacy classes — this is the character of \(V_\mathrm{triv} \oplus V_\mathrm{std}\)! (Indeed \(1 + 2 = 3\), \(1 + 0 = 1\), \(1 + (-1) = 0\) — wait, \(1 \cdot 1 + (-1) \cdot 1 = 0 \neq -1\). Let me recalculate: \(\chi_\mathrm{triv}((12)) + \chi_\mathrm{std}((12)) = 1 + 0 = 1 \neq -1\). So \(\mathrm{Ind}_H^{S_3}(\chi_-) \ncong V_\mathrm{triv} \oplus V_\mathrm{std}\). By character inner products: \(\langle (3,-1,0), \chi_\mathrm{triv} \rangle = \frac{1}{6}(3 \cdot 1 + 3 \cdot (-1) \cdot 1 + 2 \cdot 0) = 0\); \(\langle (3,-1,0), \chi_\mathrm{sgn} \rangle = \frac{1}{6}(3 - 3(-1)(-1) + 0) = \frac{1}{6}(3-3) = 0\). That gives multiplicity 0 for both one-dimensional irreducibles, but \(\langle (3,-1,0), \chi_\mathrm{std} \rangle = \frac{1}{6}(3\cdot 2 + 3\cdot(-1)(0) + 2\cdot 0\cdot(-1)) = \frac{6}{6} = 1\)... but \(\dim = 3 \neq 2\). Something is wrong. Rechecking: for \(g = e\), \(\chi_{\uparrow}(e) = \sum_i \chi_-(t_i^{-1} e t_i) = 3 \cdot \chi_-(e) = 3\). For \(g = (12)\), only \(i = 1\) contributes (as computed), giving \(-1\). For \(g = (123)\), \(t_1^{-1}(123)t_1 = (123) \notin H\); \((13)(123)(13) = (132) \cdot\)... actually \((13)^{-1}(123)(13)\): let us compute directly. \((13)(123) = (23)\) (as permutations), then \((23)(13) = (123)\). So \((13)^{-1}(123)(13) = (123) \notin H\). Similarly for \(t_3\). So \(\chi_\uparrow((123)) = 0\). Character values: \((3, -1, 0)\) on classes of sizes \(1, 3, 2\). Inner products: \(\langle \chi_\uparrow, \chi_\mathrm{triv} \rangle = \frac{1}{6}(3 - 3 + 0) = 0\), \(\langle \chi_\uparrow, \chi_\mathrm{sgn} \rangle = \frac{1}{6}(3 + 3 + 0) = 1\), \(\langle \chi_\uparrow, \chi_\mathrm{std} \rangle = \frac{1}{6}(6 + 0 + 0) = 1\). So \(\mathrm{Ind}_H^{S_3}(\chi_-) \cong V_\mathrm{sgn} \oplus V_\mathrm{std}\). ✓ Dimension: \(1 + 2 = 3 = [S_3:H] \cdot \dim \chi_- = 3 \cdot 1\). ✓
-</example>
+</div>
 
 ## Frobenius Reciprocity
 
@@ -1173,18 +1372,30 @@ The most fundamental property of induction is its adjointness to restriction:
 
 <div class="theorem">
 <strong>Theorem (Frobenius Reciprocity).</strong> Let \(W\) be a \(\mathbb{C}H\)-module and \(V\) a \(\mathbb{C}G\)-module. Then there is a natural isomorphism of vector spaces:
-\[\mathrm{Hom}_{\mathbb{C}H}(W, \mathrm{Res}_H^G(V)) \cong \mathrm{Hom}_{\mathbb{C}G}(\mathrm{Ind}_H^G(W), V).\]
+
+\[
+\mathrm{Hom}_{\mathbb{C}H}(W, \mathrm{Res}_H^G(V)) \cong \mathrm{Hom}_{\mathbb{C}G}(\mathrm{Ind}_H^G(W), V).
+\]
 In terms of characters:
-\[\langle \chi_W, \chi_V \!\!\downarrow \rangle_H = \langle \chi_W\!\!\uparrow, \chi_V \rangle_G.\]
+
+\[
+\langle \chi_W, \chi_V \!\!\downarrow \rangle_H = \langle \chi_W\!\!\uparrow, \chi_V \rangle_G.
+\]
 </div>
 
 This says: the multiplicity of \(W\) in the restriction of \(V\) equals the multiplicity of \(V\) in the induction of \(W\). Frobenius reciprocity is an extremely efficient computational tool: to determine the decomposition of induced representations, one can instead analyze restrictions, which are often easier.
 
 <div class="proof">
 <strong>Proof of the character formula.</strong> We compute directly. Let \(\{t_1, \ldots, t_k\}\) be coset representatives for \(G/H\). Then:
-\[\langle \chi_W \uparrow, \chi_V \rangle_G = \frac{1}{|G|}\sum_{g \in G} \chi_W\uparrow(g) \overline{\chi_V(g)} = \frac{1}{|G|} \sum_{g \in G} \left(\frac{1}{|H|}\sum_{x \in G, x^{-1}gx \in H} \chi_W(x^{-1}gx)\right) \overline{\chi_V(g)}.\]
+
+\[
+\langle \chi_W \uparrow, \chi_V \rangle_G = \frac{1}{|G|}\sum_{g \in G} \chi_W\uparrow(g) \overline{\chi_V(g)} = \frac{1}{|G|} \sum_{g \in G} \left(\frac{1}{|H|}\sum_{x \in G, x^{-1}gx \in H} \chi_W(x^{-1}gx)\right) \overline{\chi_V(g)}.
+\]
 Switching the order of summation and substituting \(h = x^{-1}gx \in H\):
-\[= \frac{1}{|G||H|} \sum_{x \in G} \sum_{h \in H} \chi_W(h) \overline{\chi_V(xhx^{-1})} = \frac{1}{|H|}\sum_{h \in H} \chi_W(h) \left(\frac{1}{|G|}\sum_{x \in G}\overline{\chi_V(xhx^{-1})}\right) = \frac{1}{|H|}\sum_{h \in H}\chi_W(h)\overline{\chi_V(h)} = \langle \chi_W, \chi_V\downarrow\rangle_H,\]
+
+\[
+= \frac{1}{|G||H|} \sum_{x \in G} \sum_{h \in H} \chi_W(h) \overline{\chi_V(xhx^{-1})} = \frac{1}{|H|}\sum_{h \in H} \chi_W(h) \left(\frac{1}{|G|}\sum_{x \in G}\overline{\chi_V(xhx^{-1})}\right) = \frac{1}{|H|}\sum_{h \in H}\chi_W(h)\overline{\chi_V(h)} = \langle \chi_W, \chi_V\downarrow\rangle_H,
+\]
 using that \(\chi_V\) is a class function (so \(\chi_V(xhx^{-1}) = \chi_V(h)\)) and \(\frac{1}{|G|}\sum_{x \in G} = 1\). \(\square\)
 </div>
 
@@ -1198,7 +1409,10 @@ This corollary provides a strategy for determining \(\mathrm{Irr}(G)\): start fr
 
 <div class="proposition">
 <strong>Proposition.</strong> Let \(W\) be a \(\mathbb{C}H\)-module with character \(\chi_W\), and let \(\{t_1, \ldots, t_k\}\) be coset representatives for \(G/H\). Then:
-\[\chi_{W\uparrow}(g) = \sum_{\substack{i=1 \\ t_i^{-1}gt_i \in H}}^k \chi_W(t_i^{-1}gt_i) = \frac{1}{|H|} \sum_{\substack{x \in G \\ x^{-1}gx \in H}} \chi_W(x^{-1}gx).\]
+
+\[
+\chi_{W\uparrow}(g) = \sum_{\substack{i=1 \\ t_i^{-1}gt_i \in H}}^k \chi_W(t_i^{-1}gt_i) = \frac{1}{|H|} \sum_{\substack{x \in G \\ x^{-1}gx \in H}} \chi_W(x^{-1}gx).
+\]
 In particular, \(\chi_{W\uparrow}(g) = 0\) if the conjugacy class of \(g\) in \(G\) does not intersect \(H\).
 </div>
 
@@ -1214,7 +1428,10 @@ A natural question is when an induced representation is irreducible. The answer 
 
 <div class="theorem">
 <strong>Theorem (Mackey's Restriction Formula).</strong>
-\[\mathrm{Res}_K^G(\mathrm{Ind}_H^G(W)) \cong \bigoplus_{s \in H\backslash G/K} \mathrm{Ind}_{K \cap s^{-1}Hs}^K({}^s W),\]
+
+\[
+\mathrm{Res}_K^G(\mathrm{Ind}_H^G(W)) \cong \bigoplus_{s \in H\backslash G/K} \mathrm{Ind}_{K \cap s^{-1}Hs}^K({}^s W),
+\]
 where \({}^s W\) is the \((s^{-1}Hs \cap K)\)-module defined by \({}^s W(k) = W(sks^{-1})\).
 </div>
 
@@ -1253,16 +1470,28 @@ The two 3-dimensional irreducibles \(\chi_1, \chi_2\) arise from the two 3-dimen
 ## Conjugacy Class Sums and the Multiplication of Blocks
 
 The conjugacy class sums \(C_j^+ = \sum_{g \in C_j} g\) span the center \(Z(\mathbb{C}G)\). As noted, they form a basis, so the center is an \(r\)-dimensional commutative algebra. One can compute the structure constants of this algebra — the coefficients in
-\[C_i^+ \cdot C_j^+ = \sum_k a_{ij}^k C_k^+\]
+
+\[
+C_i^+ \cdot C_j^+ = \sum_k a_{ij}^k C_k^+
+\]
 — directly in terms of group theory:
-\[a_{ij}^k = \frac{|C_i||C_j|}{|G|}\sum_{\ell=1}^r \frac{\chi_\ell(C_i)\chi_\ell(C_j)\overline{\chi_\ell(C_k)}}{\chi_\ell(e)}.\]
+
+\[
+a_{ij}^k = \frac{|C_i||C_j|}{|G|}\sum_{\ell=1}^r \frac{\chi_\ell(C_i)\chi_\ell(C_j)\overline{\chi_\ell(C_k)}}{\chi_\ell(e)}.
+\]
 These structure constants are always non-negative integers (since \(a_{ij}^k\) counts the number of ways to write a fixed element of \(C_k\) as a product of an element from \(C_i\) and an element from \(C_j\)). The formula above is a consequence of the character theory developed earlier and provides another "check" on character tables.
 
 <div class="example">
 <strong>Example (Structure constants for \(S_3\)).</strong> Consider the product \(C_\mathrm{trans}^+ \cdot C_\mathrm{trans}^+\) where \(C_\mathrm{trans} = \{(12),(13),(23)\}\). Each product of two transpositions is either the identity (if they are equal) or a 3-cycle. Specifically, in \(S_3\):
-\[(12)(12) = e, \quad (12)(13) = (132), \quad (12)(23) = (123),\]
+
+\[
+(12)(12) = e, \quad (12)(13) = (132), \quad (12)(23) = (123),
+\]
 and similarly for other pairs. Each element of \(C_\mathrm{trans}\) squares to \(e\), giving 3 contributions to the identity; each ordered pair of distinct elements of \(C_\mathrm{trans}\) gives a 3-cycle, with \(3 \cdot 2 = 6\) contributions to \(C_\mathrm{cycle}^+ = \{(123),(132)\}\). So
-\[(C_\mathrm{trans}^+)^2 = 3 \cdot e + 3 \cdot C_\mathrm{cycle}^+ = 3 C_1^+ + 3 C_\mathrm{cycle}^+\]
+
+\[
+(C_\mathrm{trans}^+)^2 = 3 \cdot e + 3 \cdot C_\mathrm{cycle}^+ = 3 C_1^+ + 3 C_\mathrm{cycle}^+
+\]
 (where \(C_1^+ = e\)), giving structure constants \(a_{\mathrm{trans},\mathrm{trans}}^e = 3\), \(a_{\mathrm{trans},\mathrm{trans}}^\mathrm{cycle} = 3\), and \(a_{\mathrm{trans},\mathrm{trans}}^\mathrm{trans} = 0\). One can verify these using the character formula.
 </div>
 
@@ -1277,7 +1506,10 @@ The group \(GL_2(\mathbb{F}_q)\) has order \((q^2-1)(q^2-q) = q(q-1)^2(q+1)\). I
 3. **Cuspidal representations** (\(q(q-1)/2\) of them): "new" representations that do not appear in the principal series; they are harder to construct and require working with characters of non-split tori.
 
 The total number of conjugacy classes of \(GL_2(\mathbb{F}_q)\) is \(q^2 - 1\) (this requires a calculation involving the classification of conjugacy classes of matrices over finite fields). One can verify:
-\[|GL_2(\mathbb{F}_q)| = \sum_i (\dim V_i)^2\]
+
+\[
+|GL_2(\mathbb{F}_q)| = \sum_i (\dim V_i)^2
+\]
 using the dimensions of the irreducibles above, providing a non-trivial check.
 
 This example illustrates how the representation theory of "groups of Lie type" — finite groups arising as points of algebraic groups over finite fields — is an active and deep area of current mathematics, with connections to the Langlands program, modular forms, and automorphic representations.
@@ -1330,13 +1562,25 @@ The dihedral group of order 8 is \(D_4 = \langle r, s \mid r^4 = s^2 = e,\ srs^{
 - For the reflections: \(r s r^{-1} = r s r^3 = r (r^3 s) \cdot \text{(using } rs = sr^{-1}) \). Alternatively: \(r \cdot s \cdot r^{-1} = r s r^3\). Using \(rs = sr^{-1} = sr^3\): \(r(sr^3) = (rs)r^3 = sr^{-1}r^3 = sr^2 = r^2s \cdot \text{?}\) Let me be more careful. In \(D_4\), the rule is \(sr = r^{-1}s = r^3 s\). So \(r s r^{-1} = r s r^3\). First, \(sr^3 = r^{-3}s = rs\). So \(r(sr^3) = r \cdot rs \cdot\)... Actually let me use a direct computation: \(r s r^{-1}\). We have \(rs = sr^{-1}\), so \(r = sr^{-1}s^{-1}\)... this is getting complicated. Let me just tabulate:
 
 Using the standard relation \(sr = r^{-1}s\), we can compute:
-\[r s r^{-1} = r s r^3.\]
+
+\[
+r s r^{-1} = r s r^3.
+\]
 Now \(rs = sr^{-1} = sr^3\) (since \(sr = r^{-1}s \Rightarrow rs = s^{-1}r^{-1} \cdot s^2 = ...\)). Let us use the presentation directly: conjugating \(s\) by \(r\):
-\[r s r^{-1}: \text{ need to express as a word in }r, s.\]
+
+\[
+r s r^{-1}: \text{ need to express as a word in }r, s.
+\]
 From \(srs^{-1} = r^{-1}\), we get \(sr = r^{-1}s\), so \(rs = sr\) ... no. From \(srs = r^{-1}\) (since \(s^2 = e\)):
-\[rs = s r^{-1} \cdot s^2 \cdot s^{-1} = \ldots\]
+
+\[
+rs = s r^{-1} \cdot s^2 \cdot s^{-1} = \ldots
+\]
 Let me use the explicit matrix representation instead. With \(\rho(r) = \bigl(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\bigr)\) and \(\rho(s) = \bigl(\begin{smallmatrix}1&0\\0&-1\end{smallmatrix}\bigr)\):
-\[\rho(r)\rho(s)\rho(r)^{-1} = \begin{pmatrix}0&-1\\1&0\end{pmatrix}\begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}0&1\\-1&0\end{pmatrix} = \begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}0&1\\-1&0\end{pmatrix} = \begin{pmatrix}-1&0\\0&1\end{pmatrix} = \rho(r^2 s).\]
+
+\[
+\rho(r)\rho(s)\rho(r)^{-1} = \begin{pmatrix}0&-1\\1&0\end{pmatrix}\begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}0&1\\-1&0\end{pmatrix} = \begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}0&1\\-1&0\end{pmatrix} = \begin{pmatrix}-1&0\\0&1\end{pmatrix} = \rho(r^2 s).
+\]
 So \(r s r^{-1} = r^2 s\). Similarly, \(r^2 s r^{-2} = s\) (can be verified). And \(r^3 s r^{-3} = r^2 s\) by similar computation. Wait: \(r(r^2 s)r^{-1} = r^3 s r^{-1} = r^3 s r^3 = \ldots\). Actually one can check that the four reflections \(\{s, rs, r^2s, r^3s\}\) split into two conjugacy classes:
 - \(C_4 = \{s, r^2 s\}\): since \(r s r^{-1} = r^2 s\) (computed above), and \(r^2 s (r^2)^{-1} = r^2 s r^2 = s\) (since \(r^2\) is central), so \(s\) and \(r^2 s\) are conjugate.
 - \(C_5 = \{rs, r^3 s\}\): since \(r(rs)r^{-1} = r^2 s r^3 = r^{-1}s = r^3 s\).
@@ -1363,18 +1607,30 @@ The one-dimensional representations factor through \(D_4^{\mathrm{ab}} \cong C_2
 Let \(\chi_5 = (a, b, c, d, e_5)\) be the unknown row. We know \(a = \chi_5(e) = 2\).
 
 Row orthogonality with \(\chi_1\) (trivial rep):
-\[\frac{1}{8}(1 \cdot 2 + 1 \cdot b + 2 \cdot c + 2 \cdot d + 2 \cdot e_5) = 0 \implies 2 + b + 2c + 2d + 2e_5 = 0.\]
+
+\[
+\frac{1}{8}(1 \cdot 2 + 1 \cdot b + 2 \cdot c + 2 \cdot d + 2 \cdot e_5) = 0 \implies 2 + b + 2c + 2d + 2e_5 = 0.
+\]
 
 Row orthogonality with \(\chi_2\):
-\[\frac{1}{8}(2 + b + 2c - 2d - 2e_5) = 0 \implies 2 + b + 2c - 2d - 2e_5 = 0.\]
+
+\[
+\frac{1}{8}(2 + b + 2c - 2d - 2e_5) = 0 \implies 2 + b + 2c - 2d - 2e_5 = 0.
+\]
 
 Subtracting: \(4d + 4e_5 = 0 \implies d = -e_5\).
 
 Row orthogonality with \(\chi_3\):
-\[\frac{1}{8}(2 + b - 2c + 2d - 2e_5) = 0 \implies 2 + b - 2c + 2d - 2e_5 = 0.\]
+
+\[
+\frac{1}{8}(2 + b - 2c + 2d - 2e_5) = 0 \implies 2 + b - 2c + 2d - 2e_5 = 0.
+\]
 
 Row orthogonality with \(\chi_4\):
-\[\frac{1}{8}(2 + b - 2c - 2d + 2e_5) = 0 \implies 2 + b - 2c - 2d + 2e_5 = 0.\]
+
+\[
+\frac{1}{8}(2 + b - 2c - 2d + 2e_5) = 0 \implies 2 + b - 2c - 2d + 2e_5 = 0.
+\]
 
 From the \(\chi_3\) and \(\chi_4\) equations, adding: \(4 + 2b - 4c = 0 \implies b = 2c - 2\). Subtracting: \(4d - 4e_5 = 0 \implies d = e_5\). Combined with \(d = -e_5\): \(d = e_5 = 0\).
 
@@ -1395,7 +1651,10 @@ The full character table of \(D_4\):
 Verification: \(1 + 1 + 1 + 1 + 4 = 8 = |D_4|\). ✓
 
 Column orthogonality (columns \(C_2\) and \(C_3\)):
-\[1 \cdot 1 + 1 \cdot 1 + 1 \cdot (-1) + 1 \cdot (-1) + (-2) \cdot 0 = 1 + 1 - 1 - 1 + 0 = 0. \checkmark\]
+
+\[
+1 \cdot 1 + 1 \cdot 1 + 1 \cdot (-1) + 1 \cdot (-1) + (-2) \cdot 0 = 1 + 1 - 1 - 1 + 0 = 0. \checkmark
+\]
 
 ### The 2-Dimensional Representation Explicitly
 
@@ -1404,13 +1663,22 @@ We already wrote down the 2-dimensional representation via matrices. Let us veri
 ### Tensor Products of \(D_4\) Representations
 
 Let us use the character table to compute some tensor products. The character of \(\chi_2 \otimes \chi_3\) is the pointwise product of the two rows:
-\[(1 \cdot 1, 1 \cdot 1, 1 \cdot (-1), (-1) \cdot 1, (-1)(-1)) = (1, 1, -1, -1, 1) = \chi_4.\]
+
+\[
+(1 \cdot 1, 1 \cdot 1, 1 \cdot (-1), (-1) \cdot 1, (-1)(-1)) = (1, 1, -1, -1, 1) = \chi_4.
+\]
 So \(\chi_2 \otimes \chi_3 \cong \chi_4\). More interestingly:
-\[\chi_5 \otimes \chi_2: (2 \cdot 1, (-2) \cdot 1, 0 \cdot 1, 0 \cdot (-1), 0 \cdot (-1)) = (2, -2, 0, 0, 0) = \chi_5.\]
+
+\[
+\chi_5 \otimes \chi_2: (2 \cdot 1, (-2) \cdot 1, 0 \cdot 1, 0 \cdot (-1), 0 \cdot (-1)) = (2, -2, 0, 0, 0) = \chi_5.
+\]
 So \(\chi_5 \otimes \chi_2 \cong \chi_5\): tensoring the 2-dimensional irreducible with \(\chi_2\) leaves it unchanged! This is the \(D_4\) analogue of the \(S_3\) result \(V_\mathrm{std} \otimes V_\mathrm{sgn} \cong V_\mathrm{std}\).
 
 And \(\chi_5 \otimes \chi_5\):
-\[(4, 4, 0, 0, 0).\]
+
+\[
+(4, 4, 0, 0, 0).
+\]
 Decomposing: \(\langle (4,4,0,0,0), \chi_i \rangle\) for each \(i\). The sizes are 1, 1, 2, 2, 2, so the inner product is \(\frac{1}{8}\) times the weighted sum. For \(\chi_1\): \(\frac{1}{8}(4 + 4) = 1\). For \(\chi_2\): \(\frac{1}{8}(4 + 4) = 1\). For \(\chi_3\): \(\frac{1}{8}(4 + 4) = 1\). For \(\chi_4\): \(\frac{1}{8}(4 + 4) = 1\). For \(\chi_5\): \(\frac{1}{8}(8 - 8) = 0\). So \(\chi_5 \otimes \chi_5 \cong \chi_1 \oplus \chi_2 \oplus \chi_3 \oplus \chi_4\). Dimension check: \(4 = 1 + 1 + 1 + 1\). ✓
 
 ## Restriction and Induction: Detailed Examples
@@ -1424,7 +1692,10 @@ What are the restrictions of \(D_4\)-irreducibles to \(C_4\)?
 For the one-dimensional reps: \(\mathrm{Res}_{C_4}^{D_4}(\chi_j)\) is a 1-dimensional rep of \(C_4\) determined by \(\chi_j(r)\). From the table: \(\chi_1(r) = 1\), \(\chi_2(r) = 1\), \(\chi_3(r) = -1\), \(\chi_4(r) = -1\). So \(\chi_1\!\downarrow = \chi_2\!\downarrow = \psi_0\) (trivial) and \(\chi_3\!\downarrow = \chi_4\!\downarrow = \psi_2\) (the order-2 character, since \(\psi_2(r) = -1\)).
 
 For the 2-dimensional rep: \(\chi_5\!\downarrow\) has character values at \(e, r, r^2, r^3\) given by \(2, 0, -2, 0\) (from columns \(C_1, C_3, C_2, C_3\) of the \(D_4\) table). The character of \(\psi_k\) at these elements is \(1, i^k, -1, i^{3k}\). By inner product:
-\[\langle \chi_5\!\downarrow, \psi_1 \rangle_{C_4} = \tfrac{1}{4}(2 \cdot 1 + 0 \cdot \bar i + (-2)(-1) + 0 \cdot \bar{i}^3) = \tfrac{1}{4}(2 + 2) = 1.\]
+
+\[
+\langle \chi_5\!\downarrow, \psi_1 \rangle_{C_4} = \tfrac{1}{4}(2 \cdot 1 + 0 \cdot \bar i + (-2)(-1) + 0 \cdot \bar{i}^3) = \tfrac{1}{4}(2 + 2) = 1.
+\]
 Similarly \(\langle \chi_5\!\downarrow, \psi_3 \rangle_{C_4} = 1\). And \(\langle \chi_5\!\downarrow, \psi_0\rangle = \frac{1}{4}(2+0-2+0) = 0\), \(\langle \chi_5\!\downarrow, \psi_2\rangle = \frac{1}{4}(2+0-2+0) = 0\). So \(\chi_5\!\downarrow \cong \psi_1 \oplus \psi_3\).
 
 By Frobenius reciprocity, \(\mathrm{mult}(\chi_5, \psi_1\!\uparrow) = \mathrm{mult}(\psi_1, \chi_5\!\downarrow) = 1\). So \(\chi_5\) appears in \(\psi_1\!\uparrow\). Since \(\dim(\psi_1\!\uparrow) = [D_4:C_4] \cdot 1 = 2 = \dim\chi_5\), we have \(\psi_1\!\uparrow \cong \chi_5\)! The 2-dimensional irreducible of \(D_4\) is the induced representation of the primitive 4th-root-of-unity character of \(C_4\).
@@ -1432,13 +1703,19 @@ By Frobenius reciprocity, \(\mathrm{mult}(\chi_5, \psi_1\!\uparrow) = \mathrm{mu
 ### The Regular Representation of \(D_4\) Decomposed
 
 By the isotypic decomposition theorem:
-\[\mathbb{C}D_4 \cong \chi_1^{\oplus 1} \oplus \chi_2^{\oplus 1} \oplus \chi_3^{\oplus 1} \oplus \chi_4^{\oplus 1} \oplus \chi_5^{\oplus 2}.\]
+
+\[
+\mathbb{C}D_4 \cong \chi_1^{\oplus 1} \oplus \chi_2^{\oplus 1} \oplus \chi_3^{\oplus 1} \oplus \chi_4^{\oplus 1} \oplus \chi_5^{\oplus 2}.
+\]
 Dimension check: \(1 + 1 + 1 + 1 + 4 = 8 = |D_4|\). ✓
 
 This can be verified using the character of the regular representation: \(\chi_\mathrm{reg}(e) = 8\), \(\chi_\mathrm{reg}(g) = 0\) for \(g \neq e\). The multiplicity of \(\chi_5\) is \(\langle \chi_5, \chi_\mathrm{reg}\rangle = \frac{1}{8}(2 \cdot 8) = 2\). ✓
 
 The Artin-Wedderburn decomposition is:
-\[\mathbb{C}D_4 \cong \mathbb{C} \times \mathbb{C} \times \mathbb{C} \times \mathbb{C} \times M_2(\mathbb{C}).\]
+
+\[
+\mathbb{C}D_4 \cong \mathbb{C} \times \mathbb{C} \times \mathbb{C} \times \mathbb{C} \times M_2(\mathbb{C}).
+\]
 Dimension check: \(1 + 1 + 1 + 1 + 4 = 8\). ✓
 
 ## Character Theory Applied to Group Structure: More Examples
@@ -1458,14 +1735,23 @@ This argument does not use any structural properties of \(A_5\) — just the num
 ### The Class Equation via Characters
 
 The **class equation** \(|G| = |Z(G)| + \sum_{[g] : |[g]| > 1} |G|/|C_G(g)|\) can be reformulated using character theory. The size of the centralizer \(|C_G(g)|\) is recoverable from the character table via the second orthogonality relation:
-\[|C_G(g)| = \sum_{i=1}^r |\chi_i(g)|^2.\]
+
+\[
+|C_G(g)| = \sum_{i=1}^r |\chi_i(g)|^2.
+\]
 This is because the second orthogonality relation gives \(\sum_i |\chi_i(g)|^2 = |G|/|C_G(g)| \cdot |C_G(g)| = |C_G(g)|\)... wait, let me be careful. The second orthogonality says \(\sum_i \chi_i(g)\overline{\chi_i(h)} = |C_G(g)| \delta_{[g],[h]}\). Setting \(g = h\): \(\sum_i |\chi_i(g)|^2 = |C_G(g)|\). So the centralizer size is the sum of squares of character values in a column of the character table!
 
 <div class="example">
 <strong>Example (Centralizer sizes in \(S_3\)).</strong> For \(g = (12) \in S_3\):
-\[\sum_i |\chi_i((12))|^2 = 1^2 + (-1)^2 + 0^2 = 2 = |C_{S_3}((12))|.\]
+
+\[
+\sum_i |\chi_i((12))|^2 = 1^2 + (-1)^2 + 0^2 = 2 = |C_{S_3}((12))|.
+\]
 Indeed, \(C_{S_3}((12)) = \{e, (12)\}\) has order 2. ✓ For \(g = (123)\):
-\[\sum_i |\chi_i((123))|^2 = 1^2 + 1^2 + (-1)^2 = 3 = |C_{S_3}((123))|.\]
+
+\[
+\sum_i |\chi_i((123))|^2 = 1^2 + 1^2 + (-1)^2 = 3 = |C_{S_3}((123))|.
+\]
 Indeed \(C_{S_3}((123)) = \langle (123) \rangle = \{e, (123), (132)\}\) has order 3. ✓
 </div>
 
@@ -1475,18 +1761,30 @@ We state and carefully prove the formula for the character of an induced represe
 
 <div class="theorem">
 <strong>Theorem (Induced Character Formula).</strong> Let \(H \leq G\), \(W\) an \(\mathbb{C}H\)-module. For \(g \in G\):
-\[\chi_{\mathrm{Ind}_H^G W}(g) = \frac{1}{|H|} \sum_{\substack{x \in G \\ x^{-1}gx \in H}} \chi_W(x^{-1}gx).\]
+
+\[
+\chi_{\mathrm{Ind}_H^G W}(g) = \frac{1}{|H|} \sum_{\substack{x \in G \\ x^{-1}gx \in H}} \chi_W(x^{-1}gx).
+\]
 </div>
 
 <div class="proof">
 <strong>Proof.</strong> Choose coset representatives \(\{t_1, \ldots, t_k\}\) for \(H \backslash G\). As a vector space, \(\mathrm{Ind}_H^G(W) = \bigoplus_{i=1}^k t_i \otimes W\). Fix \(g \in G\). The element \(g\) acts on \(\mathrm{Ind}_H^G(W)\) by:
-\[g \cdot (t_i \otimes w) = t_j \otimes (h_i w), \quad \text{where } g t_i = t_j h_i, \text{ i.e., } h_i = t_j^{-1} g t_i \in H.\]
+
+\[
+g \cdot (t_i \otimes w) = t_j \otimes (h_i w), \quad \text{where } g t_i = t_j h_i, \text{ i.e., } h_i = t_j^{-1} g t_i \in H.
+\]
 This action permutes the "coset slots" (the index \(i \to j\)) and acts by \(h_i\) within the \(j\)-th slot. To compute the trace, we need to sum over the diagonal contributions, i.e., the coset slots that are fixed by the permutation \(i \mapsto j\): this happens when \(j = i\), i.e., when \(g t_i = t_i h_i\), i.e., when \(t_i^{-1} g t_i = h_i \in H\).
 
 For such \(i\), the contribution to the trace from the \(i\)-th slot is \(\mathrm{tr}(\rho_W(h_i)) = \chi_W(t_i^{-1} g t_i)\). Thus:
-\[\chi_{\mathrm{Ind}_H^G W}(g) = \sum_{\substack{i=1 \\ t_i^{-1} g t_i \in H}}^k \chi_W(t_i^{-1} g t_i).\]
+
+\[
+\chi_{\mathrm{Ind}_H^G W}(g) = \sum_{\substack{i=1 \\ t_i^{-1} g t_i \in H}}^k \chi_W(t_i^{-1} g t_i).
+\]
 This is the coset-representative version of the formula. To obtain the sum-over-\(G\) version, note that for each coset representative \(t_i\), all elements \(t_i h\) (for \(h \in H\)) are in the same coset, and \((t_i h)^{-1} g (t_i h) = h^{-1}(t_i^{-1} g t_i) h\). Since \(\chi_W\) is a class function on \(H\), \(\chi_W(h^{-1}(t_i^{-1}g t_i)h) = \chi_W(t_i^{-1}g t_i)\) whenever \(t_i^{-1}g t_i \in H\). So we can replace the sum over coset representatives by a sum over all of \(G\), dividing by \(|H|\):
-\[\chi_{\mathrm{Ind}_H^G W}(g) = \frac{1}{|H|}\sum_{\substack{x \in G \\ x^{-1}gx \in H}} \chi_W(x^{-1}gx). \qquad \square\]
+
+\[
+\chi_{\mathrm{Ind}_H^G W}(g) = \frac{1}{|H|}\sum_{\substack{x \in G \\ x^{-1}gx \in H}} \chi_W(x^{-1}gx). \qquad \square
+\]
 </div>
 
 <div class="remark">
@@ -1499,15 +1797,27 @@ Here is a worked example that uses both the tensor product of characters and Fro
 
 <div class="example">
 <strong>Example (Decomposing \(\mathrm{Ind}_{C_3}^{S_3}(\phi_1) \otimes V_\mathrm{sgn}\)).</strong> We know \(\mathrm{Ind}_{C_3}^{S_3}(\phi_1) \cong V_\mathrm{std}\) (proved in Chapter 14). So:
-\[\mathrm{Ind}_{C_3}^{S_3}(\phi_1) \otimes V_\mathrm{sgn} \cong V_\mathrm{std} \otimes V_\mathrm{sgn} \cong V_\mathrm{std},\]
+
+\[
+\mathrm{Ind}_{C_3}^{S_3}(\phi_1) \otimes V_\mathrm{sgn} \cong V_\mathrm{std} \otimes V_\mathrm{sgn} \cong V_\mathrm{std},
+\]
 since we computed earlier that \(V_\mathrm{std} \otimes V_\mathrm{sgn} \cong V_\mathrm{std}\) for \(S_3\).
 
 Now let us verify this via the "induction and twisting" formula. There is a general identity:
-\[\mathrm{Ind}_H^G(W) \otimes V \cong \mathrm{Ind}_H^G(W \otimes \mathrm{Res}_H^G(V)).\]
+
+\[
+\mathrm{Ind}_H^G(W) \otimes V \cong \mathrm{Ind}_H^G(W \otimes \mathrm{Res}_H^G(V)).
+\]
 This is called the **projection formula** (or tensor identity). Applying it:
-\[\mathrm{Ind}_{C_3}^{S_3}(\phi_1) \otimes V_\mathrm{sgn} \cong \mathrm{Ind}_{C_3}^{S_3}(\phi_1 \otimes \mathrm{Res}_{C_3}^{S_3}(V_\mathrm{sgn})).\]
+
+\[
+\mathrm{Ind}_{C_3}^{S_3}(\phi_1) \otimes V_\mathrm{sgn} \cong \mathrm{Ind}_{C_3}^{S_3}(\phi_1 \otimes \mathrm{Res}_{C_3}^{S_3}(V_\mathrm{sgn})).
+\]
 The restriction \(\mathrm{Res}_{C_3}^{S_3}(V_\mathrm{sgn})\): since all elements of \(C_3 = A_3 \leq A_3\) are even permutations, \(V_\mathrm{sgn}\) restricts to the trivial representation on \(C_3\). So \(\phi_1 \otimes \mathrm{Res}_{C_3}^{S_3}(V_\mathrm{sgn}) = \phi_1 \otimes \mathbf{1} = \phi_1\). Therefore:
-\[\mathrm{Ind}_{C_3}^{S_3}(\phi_1) \otimes V_\mathrm{sgn} \cong \mathrm{Ind}_{C_3}^{S_3}(\phi_1) \cong V_\mathrm{std}. \checkmark\]
+
+\[
+\mathrm{Ind}_{C_3}^{S_3}(\phi_1) \otimes V_\mathrm{sgn} \cong \mathrm{Ind}_{C_3}^{S_3}(\phi_1) \cong V_\mathrm{std}. \checkmark
+\]
 The projection formula is a very efficient computational tool when combined with Frobenius reciprocity.
 </div>
 
@@ -1522,11 +1832,17 @@ One of the most beautiful applications of representation theory is the proof of 
 The proof uses **Dirichlet characters**: group homomorphisms \(\chi : (\mathbb{Z}/n\mathbb{Z})^\times \to \mathbb{C}^\times\). These are exactly the one-dimensional complex representations of the group \((\mathbb{Z}/n\mathbb{Z})^\times\).
 
 By the structure theorem, \((\mathbb{Z}/n\mathbb{Z})^\times\) is a finite abelian group of order \(\phi(n)\), and by the theory we have developed, it has exactly \(\phi(n)\) irreducible representations, all one-dimensional. The corresponding **Dirichlet \(L\)-functions** are defined by:
-\[L(s, \chi) = \sum_{n=1}^\infty \frac{\chi(n)}{n^s} = \prod_p \frac{1}{1 - \chi(p)p^{-s}},\]
+
+\[
+L(s, \chi) = \sum_{n=1}^\infty \frac{\chi(n)}{n^s} = \prod_p \frac{1}{1 - \chi(p)p^{-s}},
+\]
 where the product is over primes and \(\chi(n)\) is extended to all positive integers by setting \(\chi(n) = 0\) if \(\gcd(n, N) > 1\).
 
 The key orthogonality relation for characters of \((\mathbb{Z}/n\mathbb{Z})^\times\):
-\[\frac{1}{\phi(n)} \sum_{\chi} \chi(a^{-1})\chi(p) = \begin{cases} 1 & \text{if } p \equiv a \pmod{n} \\ 0 & \text{otherwise} \end{cases}\]
+
+\[
+\frac{1}{\phi(n)} \sum_{\chi} \chi(a^{-1})\chi(p) = \begin{cases} 1 & \text{if } p \equiv a \pmod{n} \\ 0 & \text{otherwise} \end{cases}
+\]
 is precisely the character orthogonality for abelian groups, applied to detect the arithmetic progression \(p \equiv a \pmod{n}\). The proof of Dirichlet's theorem then reduces to showing that each \(L(1, \chi) \neq 0\) for non-trivial \(\chi\) — a non-vanishing result at the boundary of the region of convergence.
 
 Thus Dirichlet's theorem is, at its heart, a result about the representation theory of the abelian group \((\mathbb{Z}/n\mathbb{Z})^\times\). The "Fourier analysis" on this group (decomposing functions into irreducible components indexed by characters) is the mechanism by which the arithmetic information is extracted.
@@ -1534,21 +1850,33 @@ Thus Dirichlet's theorem is, at its heart, a result about the representation the
 ## Gauss Sums and Character Theory
 
 A **Gauss sum** associated to a Dirichlet character \(\chi \pmod{n}\) is:
-\[\tau(\chi) = \sum_{a=0}^{n-1} \chi(a) e^{2\pi i a/n}.\]
+
+\[
+\tau(\chi) = \sum_{a=0}^{n-1} \chi(a) e^{2\pi i a/n}.
+\]
 These sums are fundamental in analytic number theory and appear in the functional equation for \(L(s, \chi)\).
 
 From the representation-theoretic viewpoint, the Gauss sum is an intertwining operator. The key identity:
-\[|\tau(\chi)|^2 = \begin{cases} n & \text{if } \chi \text{ is primitive} \\ 0 & \text{if } \chi \text{ is imprimitive} \end{cases}\]
+
+\[
+|\tau(\chi)|^2 = \begin{cases} n & \text{if } \chi \text{ is primitive} \\ 0 & \text{if } \chi \text{ is imprimitive} \end{cases}
+\]
 is a consequence of the character orthogonality relations for the group \(\mathbb{Z}/n\mathbb{Z}\).
 
 More explicitly, for the quadratic character \(\chi = \left(\frac{\cdot}{p}\right)\) (the Legendre symbol) modulo a prime \(p\):
-\[\tau(\chi)^2 = (-1)^{(p-1)/2} p = \begin{cases} p & \text{if } p \equiv 1 \pmod{4} \\ -p & \text{if } p \equiv 3 \pmod{4}. \end{cases}\]
+
+\[
+\tau(\chi)^2 = (-1)^{(p-1)/2} p = \begin{cases} p & \text{if } p \equiv 1 \pmod{4} \\ -p & \text{if } p \equiv 3 \pmod{4}. \end{cases}
+\]
 This is Gauss's famous theorem on quadratic Gauss sums, and the proof is essentially an exercise in character orthogonality.
 
 ## Artin \(L\)-functions and the Nonabelian Case
 
 The abelian case (Dirichlet characters = 1-dim reps of \((\mathbb{Z}/n\mathbb{Z})^\times\)) generalizes beautifully to the nonabelian case. Given a finite Galois extension \(K/\mathbb{Q}\) with group \(G = \mathrm{Gal}(K/\mathbb{Q})\) and an irreducible representation \(\rho : G \to \mathrm{GL}(V)\), E. Artin (1923) defined the **Artin \(L\)-function**:
-\[L(s, \rho) = \prod_p \det\left(I - \rho(\mathrm{Frob}_p) p^{-s}\right)^{-1},\]
+
+\[
+L(s, \rho) = \prod_p \det\left(I - \rho(\mathrm{Frob}_p) p^{-s}\right)^{-1},
+\]
 where \(\mathrm{Frob}_p\) is the Frobenius element at a prime \(p\). The key properties:
 - If \(\rho = \mathbf{1}\) is trivial, \(L(s, \mathbf{1}) = \zeta(s)\) is the Riemann zeta function.
 - If \(G\) is abelian and \(\rho\) is one-dimensional, \(L(s, \rho)\) is a Dirichlet \(L\)-function.
@@ -1556,7 +1884,10 @@ where \(\mathrm{Frob}_p\) is the Frobenius element at a prime \(p\). The key pro
 - **Artin's conjecture** (largely open): \(L(s, \rho)\) extends to an entire function for any nontrivial irreducible \(\rho\).
 
 The character theory of finite groups is thus literally built into the theory of Artin \(L\)-functions: the way representations decompose (additivity of \(L\)-functions under direct sums) is the \(L\)-function manifestation of character additivity. The Frobenius reciprocity of induced representations corresponds to an identity for induced Artin \(L\)-functions:
-\[L(s, \mathrm{Ind}_H^G \rho) = L(s, \rho|_{G_K}),\]
+
+\[
+L(s, \mathrm{Ind}_H^G \rho) = L(s, \rho|_{G_K}),
+\]
 which is Artin's induction theorem. This connects the representation theory of \(G\) to the arithmetic of the field extension.
 
 # Chapter 18: Schur-Weyl Duality
@@ -1575,7 +1906,10 @@ These two actions commute: \(g \sigma v = \sigma g v\) for \(g \in GL_n\), \(\si
 
 <div class="theorem">
 <strong>Theorem (Schur-Weyl Duality).</strong> The images \(A\) and \(B\) are each other's centralizers in \(\mathrm{End}(V^{\otimes d})\): \(A = \mathrm{End}_{S_d}(V^{\otimes d})\) and \(B = \mathrm{End}_{GL_n}(V^{\otimes d})\). As a consequence, there is a multiplicity-free decomposition:
-\[V^{\otimes d} \cong \bigoplus_{\lambda} S^\lambda \otimes W^\lambda,\]
+
+\[
+V^{\otimes d} \cong \bigoplus_{\lambda} S^\lambda \otimes W^\lambda,
+\]
 where the sum is over all partitions \(\lambda \vdash d\) with at most \(n\) parts, \(S^\lambda\) is the Specht module (irreducible \(S_d\)-module), and \(W^\lambda\) is the corresponding irreducible \(GL_n\)-module (called a **Weyl module** or **Schur functor**).
 </div>
 
@@ -1591,7 +1925,10 @@ The key word is "multiplicity-free": each irreducible of \(S_d\) (occurring at a
 
 <div class="example">
 <strong>Example (\(V^{\otimes 2}\) for \(GL_n\)).</strong> For \(d = 2\), the partitions are \((2)\) and \((1,1)\). We have:
-\[V^{\otimes 2} \cong \mathrm{Sym}^2(V) \oplus \mathrm{Alt}^2(V),\]
+
+\[
+V^{\otimes 2} \cong \mathrm{Sym}^2(V) \oplus \mathrm{Alt}^2(V),
+\]
 with \(\mathrm{Sym}^2(V) \cong S^{(2)} \otimes W^{(2)}\) and \(\mathrm{Alt}^2(V) \cong S^{(1,1)} \otimes W^{(1,1)}\). Here \(S^{(2)}\) is the trivial \(S_2\)-rep (dimension 1) and \(S^{(1,1)}\) is the sign \(S_2\)-rep (dimension 1). The \(GL_n\)-modules are the symmetric square \(W^{(2)} = \mathrm{Sym}^2(V)\) and the exterior square \(W^{(1,1)} = \wedge^2(V)\). Dimensions: \(\dim \mathrm{Sym}^2(V) = \binom{n+1}{2}\) and \(\dim \wedge^2(V) = \binom{n}{2}\). Check: \(\binom{n+1}{2} + \binom{n}{2} = n^2 = \dim V^{\otimes 2}\). ✓
 </div>
 

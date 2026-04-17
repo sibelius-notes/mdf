@@ -21,6 +21,7 @@ An <strong>outer measure</strong> on \(\mathbb{R}^n\) is a function \(\mu^* : \m
 <li>\(\mu^*(\varnothing) = 0\),</li>
 <li>(Monotonicity) If \(A \subseteq B\), then \(\mu^*(A) \leq \mu^*(B)\),</li>
 <li>(Countable subadditivity) For any sequence \(\{A_j\}_{j=1}^\infty\) of subsets of \(\mathbb{R}^n\),
+
 \[
 \mu^*\!\left(\bigcup_{j=1}^\infty A_j\right) \leq \sum_{j=1}^\infty \mu^*(A_j).
 \]
@@ -32,6 +33,7 @@ Not every subset of \(\mathbb{R}^n\) need be "well-behaved" with respect to an o
 
 <div class="definition">
 Let \(\mu^*\) be an outer measure on \(\mathbb{R}^n\). A set \(A \subseteq \mathbb{R}^n\) is said to be <strong>\(\mu^*\)-measurable</strong> (in the sense of Carathéodory) if for every set \(E \subseteq \mathbb{R}^n\),
+
 \[
 \mu^*(E) = \mu^*(E \cap A) + \mu^*(E \setminus A).
 \]
@@ -45,6 +47,7 @@ A crucial refinement is that outer measures constructed from metric notions auto
 
 <div class="definition">
 An outer measure \(\mu^*\) on a metric space \((X, d)\) is called a <strong>metric outer measure</strong> (or a <strong>Borel regular outer measure</strong>) if
+
 \[
 \mu^*(A \cup B) = \mu^*(A) + \mu^*(B)
 \]
@@ -57,10 +60,12 @@ whenever \(\operatorname{dist}(A, B) > 0\).
 
 <div class="proof">
 It suffices to show that every closed set \(C\) is \(\mu^*\)-measurable. Let \(E \subseteq X\) be arbitrary. Define \(C_k = \{x \in E \setminus C : \operatorname{dist}(x, C) > 1/k\}\). Since \(C\) is closed, \(E \setminus C = \bigcup_{k=1}^\infty C_k\). Moreover, \(\operatorname{dist}(E \cap C, C_k) \geq 1/k > 0\), so by the metric property,
+
 \[
 \mu^*(E \cap C) + \mu^*(C_k) = \mu^*((E \cap C) \cup C_k) \leq \mu^*(E).
 \]
 We set \(D_k = C_{k+1} \setminus C_k\). Then \(E \setminus C = C_1 \cup \bigcup_{k=1}^\infty D_k\), and since \(\operatorname{dist}(D_j, D_k) > 0\) when \(|j - k| \geq 2\), the metric property gives
+
 \[
 \mu^*(C_{2m}) \geq \sum_{k=1}^{m} \mu^*(D_{2k}), \quad \mu^*(C_{2m+1}) \geq \sum_{k=0}^{m} \mu^*(D_{2k+1}).
 \]
@@ -73,10 +78,12 @@ With the framework of outer measures in hand, we now define the central object o
 
 <div class="definition">
 Let \(s \geq 0\) and \(\delta > 0\). For any subset \(A \subseteq \mathbb{R}^n\), define the <strong>\(\delta\)-approximate \(s\)-dimensional Hausdorff measure</strong> by
+
 \[
 \mathcal{H}^s_\delta(A) = \inf\left\{\sum_{j=1}^\infty \omega_s \left(\frac{\operatorname{diam}(C_j)}{2}\right)^s : A \subseteq \bigcup_{j=1}^\infty C_j,\; \operatorname{diam}(C_j) \leq \delta\right\},
 \]
 where \(\omega_s = \frac{\pi^{s/2}}{\Gamma(s/2 + 1)}\) is the volume of the unit ball in \(\mathbb{R}^s\) when \(s\) is a positive integer, and is defined by the same formula for all \(s \geq 0\). The <strong>\(s\)-dimensional Hausdorff measure</strong> is
+
 \[
 \mathcal{H}^s(A) = \lim_{\delta \to 0^+} \mathcal{H}^s_\delta(A) = \sup_{\delta > 0} \mathcal{H}^s_\delta(A).
 \]
@@ -98,6 +105,7 @@ The properties \(\mathcal{H}^s(\varnothing) = 0\), monotonicity, and countable s
 
 <div class="proposition">
 <strong>Scaling.</strong> For any \(A \subseteq \mathbb{R}^n\) and any \(\lambda > 0\),
+
 \[
 \mathcal{H}^s(\lambda A) = \lambda^s \mathcal{H}^s(A).
 \]
@@ -105,6 +113,7 @@ The properties \(\mathcal{H}^s(\varnothing) = 0\), monotonicity, and countable s
 
 <div class="proposition">
 <strong>Translation invariance.</strong> For any \(A \subseteq \mathbb{R}^n\) and any \(x \in \mathbb{R}^n\),
+
 \[
 \mathcal{H}^s(A + x) = \mathcal{H}^s(A).
 \]
@@ -118,6 +127,7 @@ The agreement of Hausdorff measure with Lebesgue measure hinges on the isodiamet
 
 <div class="theorem">
 <strong>Isodiametric Inequality.</strong> For any bounded set \(A \subseteq \mathbb{R}^n\),
+
 \[
 \mathcal{L}^n(A) \leq \omega_n \left(\frac{\operatorname{diam}(A)}{2}\right)^n.
 \]
@@ -146,6 +156,7 @@ Let \(A \subseteq \mathbb{R}^n\). If \(\mathcal{H}^s(A) < \infty\) for some \(s 
 
 <div class="proof">
 Suppose \(\mathcal{H}^s(A) < \infty\). For \(t > s\) and any \(\delta\)-covering \(\{C_j\}\) of \(A\), we have
+
 \[
 \sum_j \left(\frac{\operatorname{diam}(C_j)}{2}\right)^t \leq \delta^{t-s} \sum_j \left(\frac{\operatorname{diam}(C_j)}{2}\right)^s.
 \]
@@ -154,6 +165,7 @@ Taking the infimum and then \(\delta \to 0\) gives \(\mathcal{H}^t(A) \leq \lim_
 
 <div class="definition">
 The <strong>Hausdorff dimension</strong> of a set \(A \subseteq \mathbb{R}^n\) is
+
 \[
 \dim_H(A) = \inf\{s \geq 0 : \mathcal{H}^s(A) = 0\} = \sup\{s \geq 0 : \mathcal{H}^s(A) = \infty\}.
 \]
@@ -181,6 +193,7 @@ The power of Hausdorff dimension is most vividly illustrated by computing it for
 We claim \(\dim_H(C) = \frac{\log 2}{\log 3}\). Let \(s = \frac{\log 2}{\log 3}\), so that \(2 = 3^s\), i.e., \(2 \cdot 3^{-s} = 1\).
 
 <em>Upper bound.</em> The \(2^k\) intervals of \(C_k\) form a \(\delta\)-covering with \(\delta = 3^{-k}\). Thus
+
 \[
 \mathcal{H}^s_{3^{-k}}(C) \leq 2^k \cdot \omega_s \left(\frac{3^{-k}}{2}\right)^s = \omega_s \cdot 2^{-s} \cdot (2 \cdot 3^{-s})^k = \omega_s \cdot 2^{-s},
 \]
@@ -195,10 +208,12 @@ The computation above generalizes to a broad class of self-similar fractals via 
 
 <div class="theorem">
 <strong>Moran-Hutchinson Theorem.</strong> Let \(f_1, \ldots, f_N : \mathbb{R}^n \to \mathbb{R}^n\) be contracting similitudes with ratios \(r_1, \ldots, r_N \in (0,1)\), and let \(K\) be the unique nonempty compact set (the <strong>attractor</strong> or <strong>self-similar set</strong>) satisfying
+
 \[
 K = \bigcup_{i=1}^N f_i(K).
 \]
 If the <strong>open set condition</strong> holds (there exists a nonempty bounded open set \(U\) with \(f_i(U) \subseteq U\) and \(f_i(U) \cap f_j(U) = \varnothing\) for \(i \neq j\)), then \(\dim_H(K) = s\), where \(s\) is the unique solution to the <strong>Moran equation</strong>
+
 \[
 \sum_{i=1}^N r_i^s = 1.
 \]
@@ -207,6 +222,7 @@ Moreover, \(0 < \mathcal{H}^s(K) < \infty\).
 
 <div class="example">
 <strong>The Koch Snowflake Curve.</strong> The Koch curve is the attractor of four similitudes, each with ratio \(r = 1/3\). The Moran equation gives \(4 \cdot (1/3)^s = 1\), hence
+
 \[
 \dim_H(\text{Koch curve}) = \frac{\log 4}{\log 3} \approx 1.2619.
 \]
@@ -215,6 +231,7 @@ The Koch snowflake (the boundary of the region enclosed by three Koch curves) ha
 
 <div class="example">
 <strong>The Sierpiński Triangle.</strong> This is the attractor of three similitudes with ratio \(1/2\). The Moran equation gives \(3 \cdot (1/2)^s = 1\), so
+
 \[
 \dim_H(\text{Sierpiński triangle}) = \frac{\log 3}{\log 2} \approx 1.585.
 \]
@@ -226,6 +243,7 @@ Density results relate the local behavior of a measure to its global structure. 
 
 <div class="definition">
 Let \(\mu\) be a Radon measure on \(\mathbb{R}^n\) and let \(s \geq 0\). The <strong>upper</strong> and <strong>lower \(s\)-dimensional densities</strong> of \(\mu\) at a point \(x \in \mathbb{R}^n\) are
+
 \[
 \Theta^{*s}(\mu, x) = \limsup_{r \to 0^+} \frac{\mu(B(x,r))}{\omega_s r^s}, \qquad \Theta_*^s(\mu, x) = \liminf_{r \to 0^+} \frac{\mu(B(x,r))}{\omega_s r^s}.
 \]
@@ -234,10 +252,12 @@ If these are equal, we write \(\Theta^s(\mu, x)\) for the common value and call 
 
 <div class="theorem">
 <strong>Upper Density Estimate.</strong> Let \(A \subseteq \mathbb{R}^n\) be \(\mathcal{H}^s\)-measurable with \(\mathcal{H}^s(A) < \infty\). Then
+
 \[
 \Theta^{*s}(\mathcal{H}^s \mathbin{\vrule height 6pt depth 0pt\relax\vrule height 0.5pt depth 0pt width 4pt} A, x) \leq 1 \quad \text{for } \mathcal{H}^s\text{-a.e. } x \in A,
 \]
 and
+
 \[
 2^{-s} \leq \Theta^{*s}(\mathcal{H}^s \mathbin{\vrule height 6pt depth 0pt\relax\vrule height 0.5pt depth 0pt width 4pt} A, x) \quad \text{for } \mathcal{H}^s\text{-a.e. } x \in A.
 \]
@@ -253,6 +273,7 @@ John Marstrand proved in 1954 a fundamental result about how Hausdorff dimension
 
 <div class="definition">
 For \(\theta \in [0, \pi)\), let \(\pi_\theta : \mathbb{R}^2 \to \mathbb{R}\) denote the orthogonal projection onto the line through the origin making angle \(\theta\) with the horizontal axis:
+
 \[
 \pi_\theta(x_1, x_2) = x_1 \cos\theta + x_2 \sin\theta.
 \]
@@ -273,6 +294,7 @@ Marstrand's result was generalized to higher dimensions by Mattila (1975): if \(
 
 <div class="proof">
 <strong>Proof sketch (case \(\dim_H(A) \leq 1\)).</strong> The upper bound \(\dim_H(\pi_\theta(A)) \leq \dim_H(A)\) holds for all \(\theta\), since projections are Lipschitz with constant 1 and Lipschitz maps cannot increase Hausdorff dimension. For the lower bound, one uses the <strong>energy method</strong>: define the \(s\)-energy of a measure \(\mu\) by
+
 \[
 I_s(\mu) = \int\!\!\int \frac{d\mu(x)\, d\mu(y)}{|x - y|^s}.
 \]
@@ -289,6 +311,7 @@ Lipschitz functions occupy a central position in geometric measure theory: they 
 
 <div class="definition">
 A map \(f : A \to \mathbb{R}^m\), where \(A \subseteq \mathbb{R}^n\), is <strong>Lipschitz</strong> if there exists a constant \(L \geq 0\) such that
+
 \[
 |f(x) - f(y)| \leq L|x - y| \quad \text{for all } x, y \in A.
 \]
@@ -311,6 +334,7 @@ Let \(f : \mathbb{R}^n \to \mathbb{R}^m\) be Lipschitz with constant \(L\). Then
 
 <div class="remark">
 Kirszbraun's theorem is remarkable in that it preserves the exact Lipschitz constant. For real-valued functions (i.e., \(m = 1\)), the classical McShane-Whitney extension
+
 \[
 \tilde{f}(x) = \inf_{a \in A}\{f(a) + L|x - a|\}
 \]
@@ -323,6 +347,7 @@ The following theorem, proved by Hans Rademacher in 1919, is one of the most imp
 
 <div class="theorem">
 <strong>Rademacher's Theorem (1919).</strong> Let \(f : \mathbb{R}^n \to \mathbb{R}^m\) be Lipschitz. Then \(f\) is differentiable \(\mathcal{L}^n\)-almost everywhere. That is, for \(\mathcal{L}^n\)-a.e. \(x \in \mathbb{R}^n\), there exists a linear map \(Df(x) : \mathbb{R}^n \to \mathbb{R}^m\) such that
+
 \[
 \lim_{y \to x} \frac{|f(y) - f(x) - Df(x)(y - x)|}{|y - x|} = 0.
 \]
@@ -346,6 +371,7 @@ The area formula is the natural generalization of the change-of-variables formul
 
 <div class="definition">
 For a linear map \(L : \mathbb{R}^n \to \mathbb{R}^m\) with \(n \leq m\), the <strong>Jacobian</strong> is
+
 \[
 J_n L = \sqrt{\det(L^* L)},
 \]
@@ -354,10 +380,12 @@ where \(L^* : \mathbb{R}^m \to \mathbb{R}^n\) is the adjoint. Equivalently, \(J_
 
 <div class="theorem">
 <strong>Area Formula.</strong> Let \(f : \mathbb{R}^n \to \mathbb{R}^m\) be Lipschitz, with \(n \leq m\). Then for every \(\mathcal{L}^n\)-measurable set \(A \subseteq \mathbb{R}^n\),
+
 \[
 \int_A J_n Df(x)\, d\mathcal{L}^n(x) = \int_{\mathbb{R}^m} \mathcal{H}^0(A \cap f^{-1}(\{y\}))\, d\mathcal{H}^n(y).
 \]
 In particular, if \(f\) is injective on \(A\),
+
 \[
 \int_A J_n Df(x)\, d\mathcal{L}^n(x) = \mathcal{H}^n(f(A)).
 \]
@@ -377,10 +405,12 @@ In particular, if \(f\) is injective on \(A\),
 
 <div class="example">
 <strong>Surface area of a graph.</strong> Let \(g : U \to \mathbb{R}\) be Lipschitz, where \(U \subseteq \mathbb{R}^n\) is open. The graph map \(f : U \to \mathbb{R}^{n+1}\) defined by \(f(x) = (x, g(x))\) is Lipschitz and injective. One computes \(Df(x) = \begin{pmatrix} I_n \\ \nabla g(x)^T \end{pmatrix}\), so
+
 \[
 J_n Df(x) = \sqrt{\det(I_n + \nabla g(x) \otimes \nabla g(x))} = \sqrt{1 + |\nabla g(x)|^2}.
 \]
 The area formula gives
+
 \[
 \mathcal{H}^n(\operatorname{graph}(g)) = \int_U \sqrt{1 + |\nabla g(x)|^2}\, dx,
 \]
@@ -393,6 +423,7 @@ The coarea formula is a far-reaching generalization of Fubini's theorem that rel
 
 <div class="definition">
 For a linear map \(L : \mathbb{R}^n \to \mathbb{R}^m\) with \(n \geq m\), the <strong>coarea factor</strong> is
+
 \[
 J_m L = \sqrt{\det(L L^*)},
 \]
@@ -401,6 +432,7 @@ which equals the product of the \(m\) largest singular values of \(L\), or equiv
 
 <div class="theorem">
 <strong>Coarea Formula.</strong> Let \(f : \mathbb{R}^n \to \mathbb{R}^m\) be Lipschitz with \(n \geq m\). Then for every \(\mathcal{L}^n\)-measurable function \(g : \mathbb{R}^n \to [0, \infty]\),
+
 \[
 \int_{\mathbb{R}^n} g(x) J_m Df(x)\, d\mathcal{L}^n(x) = \int_{\mathbb{R}^m}\left(\int_{f^{-1}(\{y\})} g(x)\, d\mathcal{H}^{n-m}(x)\right) d\mathcal{L}^m(y).
 \]
@@ -408,10 +440,12 @@ which equals the product of the \(m\) largest singular values of \(L\), or equiv
 
 <div class="example">
 <strong>The classical coarea formula.</strong> When \(m = 1\) and \(f : \mathbb{R}^n \to \mathbb{R}\) is Lipschitz, we have \(J_1 Df(x) = |\nabla f(x)|\), and the coarea formula becomes
+
 \[
 \int_{\mathbb{R}^n} g(x) |\nabla f(x)|\, dx = \int_{-\infty}^{\infty} \left(\int_{\{f = t\}} g\, d\mathcal{H}^{n-1}\right) dt.
 \]
 Taking \(g = |\nabla f|^{-1} \chi_A\) (where \(|\nabla f| > 0\)), this gives
+
 \[
 \mathcal{L}^n(A) = \int_{-\infty}^{\infty} \int_{\{f = t\} \cap A} \frac{1}{|\nabla f|}\, d\mathcal{H}^{n-1}\, dt,
 \]
@@ -432,6 +466,7 @@ The notion of rectifiability provides a measure-theoretic generalization of smoo
 
 <div class="definition">
 A set \(E \subseteq \mathbb{R}^n\) is <strong>countably \(m\)-rectifiable</strong> (or simply <strong>\(m\)-rectifiable</strong>) if there exist Lipschitz maps \(f_j : \mathbb{R}^m \to \mathbb{R}^n\), \(j = 1, 2, \ldots\), such that
+
 \[
 \mathcal{H}^m\!\left(E \setminus \bigcup_{j=1}^\infty f_j(\mathbb{R}^m)\right) = 0.
 \]
@@ -465,6 +500,7 @@ For smooth submanifolds, the tangent space at a point is defined via the derivat
 
 <div class="definition">
 Let \(E \subseteq \mathbb{R}^n\) be \(\mathcal{H}^m\)-measurable with \(\mathcal{H}^m(E) < \infty\). An \(m\)-dimensional plane \(V + a\) (where \(V \in G(n,m)\) and \(a \in \mathbb{R}^n\)) is an <strong>approximate tangent plane</strong> to \(E\) at \(a \in E\) if
+
 \[
 \lim_{r \to 0^+} r^{-m} \mathcal{H}^m(E \cap B(a, r) \cap \{x : |(x-a) - \pi_V(x-a)| > \epsilon |x-a|\}) = 0
 \]
@@ -503,6 +539,7 @@ The following theorem, conjectured by Besicovitch and proved by Federer (1947), 
 
 <div class="theorem">
 <strong>Besicovitch-Federer Projection Theorem.</strong> Let \(E \subseteq \mathbb{R}^n\) be \(\mathcal{H}^m\)-measurable with \(\mathcal{H}^m(E) < \infty\). Then \(E\) is purely \(m\)-unrectifiable if and only if
+
 \[
 \mathcal{H}^m(\pi_V(E)) = 0 \quad \text{for } \gamma_{n,m}\text{-a.e. } V \in G(n,m).
 \]
@@ -547,10 +584,12 @@ We begin by recalling the algebraic preliminaries.
 
 <div class="definition">
 Let \(V = \mathbb{R}^n\). The space of <strong>\(k\)-vectors</strong> is the exterior power \(\Lambda_k(\mathbb{R}^n) = \Lambda^k V\), the vector space spanned by elements of the form
+
 \[
 v_1 \wedge v_2 \wedge \cdots \wedge v_k, \quad v_i \in \mathbb{R}^n.
 \]
 Its dimension is \(\binom{n}{k}\). Elements of \(\Lambda_k(\mathbb{R}^n)\) are called <strong>\(k\)-vectors</strong>; those of the form \(v_1 \wedge \cdots \wedge v_k\) are called <strong>simple</strong> (or <strong>decomposable</strong>) \(k\)-vectors. The inner product on \(\Lambda_k(\mathbb{R}^n)\) is defined by
+
 \[
 \langle v_1 \wedge \cdots \wedge v_k, w_1 \wedge \cdots \wedge w_k \rangle = \det(\langle v_i, w_j \rangle)_{i,j}.
 \]
@@ -559,6 +598,7 @@ The induced norm is \(|\xi| = \sqrt{\langle \xi, \xi \rangle}\).
 
 <div class="definition">
 The space of <strong>\(k\)-covectors</strong> (or <strong>exterior \(k\)-forms</strong>) is \(\Lambda^k(\mathbb{R}^n) = (\Lambda_k(\mathbb{R}^n))^*\). A <strong>differential \(k\)-form</strong> on an open set \(U \subseteq \mathbb{R}^n\) is a map \(\omega : U \to \Lambda^k(\mathbb{R}^n)\). In coordinates with basis \(\{e^{i_1} \wedge \cdots \wedge e^{i_k}\}\),
+
 \[
 \omega(x) = \sum_{I} \omega_I(x)\, dx^{i_1} \wedge \cdots \wedge dx^{i_k},
 \]
@@ -579,6 +619,7 @@ The definition of continuity here means: \(T(\omega_j) \to T(\omega)\) whenever 
 
 <div class="definition">
 The <strong>boundary</strong> of a \(k\)-current \(T \in \mathcal{D}_k(U)\) is the \((k-1)\)-current \(\partial T\) defined by
+
 \[
 \partial T(\omega) = T(d\omega), \quad \omega \in \mathcal{D}^{k-1}(U),
 \]
@@ -587,6 +628,7 @@ where \(d\omega\) is the exterior derivative. Since \(d^2 = 0\), we have \(\part
 
 <div class="example">
 <strong>Current of integration.</strong> Let \(M \subseteq \mathbb{R}^n\) be a smooth oriented \(k\)-dimensional submanifold (possibly with boundary). Then \(M\) defines a \(k\)-current \(\llbracket M \rrbracket\) by
+
 \[
 \llbracket M \rrbracket(\omega) = \int_M \omega, \quad \omega \in \mathcal{D}^k(U).
 \]
@@ -597,6 +639,7 @@ By Stokes' theorem, \(\partial \llbracket M \rrbracket = \llbracket \partial M \
 
 <div class="definition">
 The <strong>mass</strong> of a \(k\)-current \(T \in \mathcal{D}_k(U)\) is
+
 \[
 \mathbf{M}(T) = \sup\{T(\omega) : \omega \in \mathcal{D}^k(U),\; |\omega(x)| \leq 1 \text{ for all } x\}.
 \]
@@ -609,6 +652,7 @@ For the current of integration over a smooth submanifold \(M\), the mass equals 
 
 <div class="definition">
 A \(k\)-current \(T\) is a <strong>normal current</strong> if both \(T\) and \(\partial T\) have finite mass:
+
 \[
 \mathbf{N}(T) := \mathbf{M}(T) + \mathbf{M}(\partial T) < \infty.
 \]
@@ -616,6 +660,7 @@ The space of normal \(k\)-currents is denoted \(\mathbf{N}_k(U)\).
 </div>
 
 By the Riesz representation theorem, a current of finite mass can be represented as
+
 \[
 T(\omega) = \int \langle \omega(x), \vec{T}(x) \rangle\, d\|T\|(x),
 \]
@@ -625,6 +670,7 @@ where \(\|T\|\) is a Radon measure (the <strong>total variation measure</strong>
 
 <div class="definition">
 A \(k\)-current \(T\) is called <strong>integer-multiplicity rectifiable</strong> (or simply <strong>rectifiable</strong>) if it can be written as
+
 \[
 T(\omega) = \int_E \langle \omega(x), \vec{T}(x) \rangle \theta(x)\, d\mathcal{H}^k(x),
 \]
@@ -645,6 +691,7 @@ The following theorem is the cornerstone of the entire theory. It provides the c
 
 <div class="theorem">
 <strong>Federer-Fleming Compactness Theorem (1960).</strong> Let \(\{T_j\} \subseteq \mathbf{I}_k(\mathbb{R}^n)\) be a sequence of integral \(k\)-currents with
+
 \[
 \sup_j \left(\mathbf{M}(T_j) + \mathbf{M}(\partial T_j)\right) < \infty
 \]
@@ -659,6 +706,7 @@ The compactness theorem is the main reason for working with integral currents ra
 
 <div class="definition">
 The <strong>flat norm</strong> of a \(k\)-current \(T \in \mathcal{D}_k(U)\) is
+
 \[
 \mathbf{F}(T) = \inf\{\mathbf{M}(R) + \mathbf{M}(S) : T = R + \partial S,\; R \in \mathcal{D}_k(U),\; S \in \mathcal{D}_{k+1}(U)\}.
 \]
@@ -670,10 +718,12 @@ The flat norm measures "distance" between currents in a way that allows for smal
 
 <div class="theorem">
 <strong>Deformation Theorem (Federer-Fleming).</strong> Let \(T \in \mathbf{I}_k(\mathbb{R}^n)\) be an integral current and let \(\epsilon > 0\). Then there exist an integral polyhedral chain \(P\), an integral current \(R\) with \(\mathbf{M}(R) < \epsilon\), and an integral current \(S\) with
+
 \[
 T = P + R + \partial S,
 \]
 where \(P\) is supported on a \(k\)-dimensional polyhedral complex with mesh at most \(\epsilon\), and
+
 \[
 \mathbf{M}(P) \leq C(\mathbf{M}(T) + \epsilon), \quad \mathbf{M}(S) \leq C\epsilon \cdot \mathbf{M}(T),
 \]
@@ -696,6 +746,7 @@ Slicing provides a way to "restrict" a current to level sets of a Lipschitz func
 <li>(Boundary formula) \(\partial \langle T, f, y \rangle = (-1)^m \langle \partial T, f, y \rangle\) for a.e. \(y\).</li>
 </ol>
 Moreover, if \(m = 1\) and \(f\) is a coordinate function, then the slicing satisfies the coarea-type identity
+
 \[
 T \mathbin{\vrule height 6pt depth 0pt\relax\vrule height 0.5pt depth 0pt width 4pt} f^{-1}((a, b)) = \int_a^b \langle T, f, t \rangle\, dt + (\text{boundary terms}).
 \]
@@ -711,6 +762,7 @@ While currents carry orientation information and allow for a boundary operator, 
 
 <div class="definition">
 The <strong>Grassmann bundle</strong> over an open set \(U \subseteq \mathbb{R}^n\) is
+
 \[
 G_m(U) = U \times G(n, m),
 \]
@@ -721,6 +773,7 @@ where \(G(n,m)\) is the Grassmannian of (unoriented) \(m\)-dimensional linear su
 A <strong>general \(m\)-varifold</strong> in \(U\) is a Radon measure on \(G_m(U)\). The space of general \(m\)-varifolds is denoted \(\mathbf{V}_m(U)\).
 
 The <strong>weight measure</strong> (or <strong>mass measure</strong>) of a varifold \(V \in \mathbf{V}_m(U)\) is the Radon measure \(\|V\|\) on \(U\) defined by
+
 \[
 \|V\|(A) = V(\pi^{-1}(A)) = V(A \times G(n,m))
 \]
@@ -729,6 +782,7 @@ for every Borel set \(A \subseteq U\), where \(\pi : G_m(U) \to U\) is the proje
 
 <div class="definition">
 A varifold \(V \in \mathbf{V}_m(U)\) is <strong>rectifiable</strong> if there exist a countably \(m\)-rectifiable set \(E \subseteq U\) and a locally \(\mathcal{H}^m\)-integrable function \(\theta : E \to (0, \infty)\) such that
+
 \[
 V(\phi) = \int_E \phi(x, \operatorname{Tan}^m(E, x))\, \theta(x)\, d\mathcal{H}^m(x)
 \]
@@ -745,6 +799,7 @@ The first variation of a varifold captures how its mass changes under smooth def
 
 <div class="definition">
 Let \(V \in \mathbf{V}_m(U)\). The <strong>first variation</strong> of \(V\) is the linear functional \(\delta V : C^1_c(U; \mathbb{R}^n) \to \mathbb{R}\) defined by
+
 \[
 \delta V(X) = \int_{G_m(U)} \operatorname{div}_S X(x)\, dV(x, S),
 \]
@@ -753,6 +808,7 @@ where \(\operatorname{div}_S X(x) = \sum_{i=1}^m \langle D_{e_i} X(x), e_i \rang
 
 <div class="remark">
 For a smooth submanifold \(M\) without boundary, the first variation formula from differential geometry gives
+
 \[
 \delta \mathbf{v}(M, 1)(X) = -\int_M \langle H_M, X \rangle\, d\mathcal{H}^m,
 \]
@@ -761,6 +817,7 @@ where \(H_M\) is the mean curvature vector of \(M\). Thus \(\delta V = 0\) corre
 
 <div class="definition">
 A varifold \(V\) is <strong>stationary</strong> if \(\delta V(X) = 0\) for all \(X \in C^1_c(U; \mathbb{R}^n)\). More generally, \(V\) has <strong>locally bounded first variation</strong> if the total variation \(|\delta V|\) is a Radon measure. In this case, by the Riesz representation theorem, there exists a \(\|V\|\)-measurable vector field \(H\) such that
+
 \[
 \delta V(X) = -\int \langle H(x), X(x) \rangle\, d\|V\|(x)
 \]
@@ -773,10 +830,12 @@ The monotonicity formula is a key quantitative tool that controls the local beha
 
 <div class="theorem">
 <strong>Monotonicity Formula.</strong> Let \(V \in \mathbf{V}_m(U)\) be a stationary varifold (i.e., \(\delta V = 0\)). Then for every \(a \in U\), the function
+
 \[
 r \mapsto \frac{\|V\|(B(a, r))}{\omega_m r^m}
 \]
 is non-decreasing for \(0 < r < \operatorname{dist}(a, \partial U)\). In particular, the density
+
 \[
 \Theta^m(\|V\|, a) = \lim_{r \to 0^+} \frac{\|V\|(B(a, r))}{\omega_m r^m}
 \]
@@ -785,6 +844,7 @@ exists and is a non-negative real number for every \(a \in \operatorname{spt}\|V
 
 <div class="proof">
 <strong>Proof sketch.</strong> Choose a radial test vector field \(X(x) = \eta(|x - a|)(x - a)\), where \(\eta\) is a suitable cutoff function. Substituting into the first variation formula \(\delta V(X) = 0\) and using the coarea formula, one derives the identity
+
 \[
 \frac{d}{dr}\left(\frac{\|V\|(B(a,r))}{\omega_m r^m}\right) = \frac{1}{\omega_m r^m} \int_{B(a,r)} \frac{|(x-a)^\perp|^2}{|x-a|^{m+2}}\, d\|V\|(x) \geq 0,
 \]
@@ -817,6 +877,7 @@ Allard's theorem says that the only obstruction to regularity of a varifold is t
 
 <div class="theorem">
 <strong>Allard's Compactness Theorem.</strong> Let \(\{V_j\} \subseteq \mathbf{V}_m(U)\) be a sequence of integral varifolds with locally bounded first variation and
+
 \[
 \sup_j \left(\|V_j\|(K) + |\delta V_j|(K)\right) < \infty
 \]
@@ -837,6 +898,7 @@ Joseph Plateau (1801–1883), a Belgian physicist who was blinded by an experime
 
 <div class="definition">
 <strong>Plateau's Problem (in the language of currents).</strong> Let \(\Gamma \in \mathbf{I}_{k-1}(\mathbb{R}^n)\) be an integral \((k-1)\)-current with \(\partial \Gamma = 0\) (i.e., \(\Gamma\) is a cycle). Find an integral \(k\)-current \(T \in \mathbf{I}_k(\mathbb{R}^n)\) with \(\partial T = \Gamma\) that minimizes the mass:
+
 \[
 \mathbf{M}(T) = \inf\{\mathbf{M}(S) : S \in \mathbf{I}_k(\mathbb{R}^n),\; \partial S = \Gamma\}.
 \]
@@ -857,6 +919,7 @@ The history of Plateau's problem is rich and spans more than a century:
 
 <div class="theorem">
 <strong>Existence of Mass-Minimizing Currents (Federer-Fleming, 1960).</strong> Let \(\Gamma \in \mathbf{I}_{k-1}(\mathbb{R}^n)\) be a compactly supported integral \((k-1)\)-cycle. Then there exists \(T \in \mathbf{I}_k(\mathbb{R}^n)\) with \(\partial T = \Gamma\) achieving
+
 \[
 \mathbf{M}(T) = \inf\{\mathbf{M}(S) : S \in \mathbf{I}_k(\mathbb{R}^n),\; \partial S = \Gamma\}.
 \]
@@ -908,6 +971,7 @@ The regularity program proceeds through a series of deep results:
 <strong>Simons' Inequality and Dimension Bound (1968).</strong> Let \(\Sigma^k \subseteq \mathbb{R}^{k+1}\) be a smooth, complete, stable minimal hypersurface (without boundary). James Simons proved:
 <ol>
 <li>The second fundamental form \(A\) satisfies the differential inequality
+
 \[
 \Delta |A|^2 \geq -2|A|^4 + 2\left(1 + \frac{2}{k}\right)|\nabla A|^2,
 \]
@@ -921,6 +985,7 @@ Together with the dimension-reduction argument of Federer, this implies \(\dim_H
 
 <div class="theorem">
 <strong>Bernstein's Theorem (generalized).</strong> Let \(u : \mathbb{R}^k \to \mathbb{R}\) be an entire solution to the minimal surface equation
+
 \[
 \operatorname{div}\left(\frac{\nabla u}{\sqrt{1 + |\nabla u|^2}}\right) = 0.
 \]
@@ -941,10 +1006,12 @@ The sharpness of the dimension bound \(k - 7\) for the singular set is demonstra
 
 <div class="definition">
 The <strong>Simons cone</strong> is the \(7\)-dimensional cone in \(\mathbb{R}^8\) defined by
+
 \[
 \mathbf{C} = \left\{(x, y) \in \mathbb{R}^4 \times \mathbb{R}^4 : |x|^2 = |y|^2\right\}.
 \]
 More generally, for any \(p, q \geq 1\), the <strong>Clifford cone</strong> is
+
 \[
 \mathbf{C}_{p,q} = \left\{(x, y) \in \mathbb{R}^{p+1} \times \mathbb{R}^{q+1} : \frac{|x|^2}{p} = \frac{|y|^2}{q}\right\}.
 \]
@@ -969,6 +1036,7 @@ Simons (1968) had shown that \(\mathbf{C}_{3,3}\) is <em>stable</em> (i.e., the 
 
 <div class="theorem">
 <strong>Almgren's Regularity Theorem (completed 2000, published posthumously).</strong> Let \(T \in \mathbf{I}_m(\mathbb{R}^n)\) be a mass-minimizing integral \(m\)-current in \(\mathbb{R}^n\) for arbitrary codimension \(n - m \geq 2\). Then the singular set satisfies
+
 \[
 \dim_H(\operatorname{sing}(T)) \leq m - 2.
 \]
@@ -982,10 +1050,12 @@ Almgren's proof is contained in a 1728-page manuscript (the "Big Regularity Pape
 
 <div class="definition">
 A minimal surface (or more precisely, a stationary integral varifold \(V\)) is <strong>stable</strong> if the second variation of area is non-negative:
+
 \[
 \delta^2 V(\phi) = \int_M \left(|\nabla^\perp \phi|^2 - |A|^2 |\phi|^2 - \operatorname{Ric}^\perp(\phi, \phi)\right) d\mathcal{H}^m \geq 0
 \]
 for all smooth compactly supported normal variations \(\phi\). In Euclidean space, the Ricci term vanishes and stability becomes
+
 \[
 \int_M |\nabla^\perp \phi|^2\, d\mathcal{H}^m \geq \int_M |A|^2 |\phi|^2\, d\mathcal{H}^m.
 \]
@@ -1009,6 +1079,7 @@ The theory of sets of finite perimeter (Caccioppoli sets) provides a measure-the
 
 <div class="definition">
 Let \(U \subseteq \mathbb{R}^n\) be open. A function \(u \in L^1(U)\) has <strong>bounded variation</strong> in \(U\) if the distributional gradient \(Du\) is a vector-valued Radon measure on \(U\), i.e.,
+
 \[
 |Du|(U) = \sup\left\{\int_U u\, \operatorname{div}\phi\, dx : \phi \in C^1_c(U; \mathbb{R}^n),\; |\phi| \leq 1\right\} < \infty.
 \]
@@ -1025,6 +1096,7 @@ The space \(BV(U)\) is a Banach space under the norm \(\|u\|_{BV} = \|u\|_{L^1} 
 
 <div class="theorem">
 <strong>Structure Theorem for BV Functions.</strong> Let \(u \in BV(U)\). The distributional derivative \(Du\) admits the decomposition
+
 \[
 Du = D^a u + D^s u = \nabla u\, \mathcal{L}^n + D^c u + D^j u,
 \]
@@ -1040,6 +1112,7 @@ where:
 
 <div class="definition">
 A \(\mathcal{L}^n\)-measurable set \(E \subseteq \mathbb{R}^n\) has <strong>finite perimeter</strong> in an open set \(U\) if its characteristic function \(\chi_E\) belongs to \(BV(U)\). The <strong>perimeter</strong> of \(E\) in \(U\) is
+
 \[
 P(E; U) = |D\chi_E|(U) = \sup\left\{\int_E \operatorname{div}\phi\, dx : \phi \in C^1_c(U; \mathbb{R}^n),\; |\phi| \leq 1\right\}.
 \]
@@ -1066,10 +1139,12 @@ The central idea of De Giorgi's theory is to identify a canonical "measure-theor
 
 <div class="definition">
 Let \(E\) be a set of finite perimeter in \(U\). The <strong>measure-theoretic exterior normal</strong> is the Radon-Nikodým derivative
+
 \[
 \nu_E(x) = -\frac{dD\chi_E}{d|D\chi_E|}(x),
 \]
 which exists \(|D\chi_E|\)-a.e. and satisfies \(|\nu_E(x)| = 1\). The <strong>reduced boundary</strong> (or <strong>essential boundary</strong>) of \(E\) is the set
+
 \[
 \partial^* E = \left\{x \in \operatorname{spt}|D\chi_E| : \nu_E(x) \text{ exists and } |\nu_E(x)| = 1\right\}.
 \]
@@ -1089,6 +1164,7 @@ The following theorem, due to Ennio De Giorgi (1954-1955), is one of the foundat
 <li>(Rectifiability) The reduced boundary \(\partial^* E\) is countably \((n-1)\)-rectifiable.</li>
 <li>(Density) \(\Theta^{n-1}(|D\chi_E|, x) = 1\) for \(\mathcal{H}^{n-1}\)-a.e. \(x \in \partial^* E\).</li>
 <li>(Measure representation) \(|D\chi_E| = \mathcal{H}^{n-1} \mathbin{\vrule height 6pt depth 0pt\relax\vrule height 0.5pt depth 0pt width 4pt} \partial^* E\), i.e.,
+
 \[
 P(E; U) = \mathcal{H}^{n-1}(\partial^* E \cap U)
 \]
@@ -1113,6 +1189,7 @@ De Giorgi's structure theorem yields a far-reaching generalization of the classi
 
 <div class="theorem">
 <strong>Generalized Gauss-Green Formula.</strong> Let \(E\) be a set of finite perimeter in \(\mathbb{R}^n\). Then for every \(\phi \in C^1_c(\mathbb{R}^n; \mathbb{R}^n)\),
+
 \[
 \int_E \operatorname{div}\phi\, dx = -\int_{\partial^* E} \langle \phi, \nu_E \rangle\, d\mathcal{H}^{n-1},
 \]
@@ -1129,6 +1206,7 @@ The isoperimetric inequality is one of the oldest and most beautiful results in 
 
 <div class="theorem">
 <strong>Isoperimetric Inequality.</strong> For every set \(E \subseteq \mathbb{R}^n\) of finite perimeter,
+
 \[
 \min\{\mathcal{L}^n(E), \mathcal{L}^n(\mathbb{R}^n \setminus E)\}^{(n-1)/n} \leq C_n\, P(E),
 \]
@@ -1141,14 +1219,17 @@ We present the elegant proof via the Sobolev inequality and a symmetrization arg
 <em>Step 1: Reduction to smooth sets.</em> By approximation (smooth sets are dense among sets of finite perimeter in the appropriate topology), it suffices to prove the inequality for bounded open sets with smooth boundary.
 
 <em>Step 2: The Sobolev inequality.</em> For \(u \in BV(\mathbb{R}^n)\),
+
 \[
 \|u\|_{L^{n/(n-1)}} \leq C_n |Du|(\mathbb{R}^n).
 \]
 This is the BV-Sobolev inequality (or isoperimetric Sobolev inequality), proved by Gagliardo (1958) and Nirenberg (1959). Applying it to \(u = \chi_E\), we get
+
 \[
 \mathcal{L}^n(E)^{(n-1)/n} = \|\chi_E\|_{L^{n/(n-1)}}^{n/(n-1)} \cdots
 \]
 Wait — more precisely, \(\|\chi_E\|_{L^{n/(n-1)}} = \mathcal{L}^n(E)^{(n-1)/n}\) and \(|D\chi_E|(\mathbb{R}^n) = P(E)\), so the Sobolev inequality gives
+
 \[
 \mathcal{L}^n(E)^{(n-1)/n} \leq C_n P(E).
 \]
@@ -1172,6 +1253,7 @@ The isoperimetric inequality can also be established by solving the associated v
 
 <div class="theorem">
 <strong>Existence of Isoperimetric Sets.</strong> For every \(v > 0\), there exists a set \(E_v \subseteq \mathbb{R}^n\) of finite perimeter with \(\mathcal{L}^n(E_v) = v\) that minimizes the perimeter:
+
 \[
 P(E_v) = \inf\{P(F) : F \text{ has finite perimeter},\; \mathcal{L}^n(F) = v\}.
 \]
@@ -1192,6 +1274,7 @@ The theory of sets of finite perimeter provides a natural framework for studying
 
 <div class="definition">
 A <strong>perimeter-penalized variational problem</strong> seeks to minimize functionals of the form
+
 \[
 \mathcal{F}(E) = P(E; U) + \int_E g(x)\, dx,
 \]
@@ -1208,10 +1291,12 @@ This follows immediately from the direct method: take a minimizing sequence \(\{
 
 <div class="remark">
 <strong>Connection to optimal transport.</strong> A beautiful link between isoperimetric problems and optimal transport was discovered by Gromov. The idea is as follows. Let \(T : \mathbb{R}^n \to \mathbb{R}^n\) be the Brenier map pushing forward the uniform measure on a set \(E\) to the uniform measure on a ball \(B\) of the same volume (normalized). By the Monge-Ampère equation, \(\det DT = 1\) a.e. in \(E\). By the arithmetic-geometric mean inequality applied to the eigenvalues of \(DT\),
+
 \[
 \frac{\operatorname{tr}(DT)}{n} \geq (\det DT)^{1/n} = 1.
 \]
 Integrating \(\operatorname{div} T = \operatorname{tr}(DT) \geq n\) over \(E\) and using the divergence theorem (in the form of the Gauss-Green formula for sets of finite perimeter) yields
+
 \[
 n \mathcal{L}^n(E) \leq \int_E \operatorname{div} T\, dx = \int_{\partial^* E} \langle T, \nu_E \rangle\, d\mathcal{H}^{n-1} \leq R \cdot P(E),
 \]

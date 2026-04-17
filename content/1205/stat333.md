@@ -130,11 +130,13 @@ Common continuous distributions include the **Uniform**\((a,b)\), **Beta**\((m,n
 <strong>Uniform \(U(a,b)\):</strong> PDF \(f(x) = \frac{1}{b-a}\) for \(a < x < b\).
 
 <strong>Beta \(\text{Beta}(m,n)\)</strong> with \(m, n \in \mathbb{Z}^+\): PDF
+
 \[
 f(x) = \frac{(m+n-1)!}{(m-1)!(n-1)!}\, x^{m-1}(1-x)^{n-1}, \quad 0 < x < 1.
 \]
 
 <strong>Erlang \(\text{Erlang}(n,\lambda)\)</strong> with \(n \in \mathbb{Z}^+\), \(\lambda > 0\): PDF
+
 \[
 f(x) = \frac{\lambda^n x^{n-1} e^{-\lambda x}}{(n-1)!}, \quad x > 0,
 \]
@@ -162,6 +164,7 @@ Special cases:
 - Setting \(g(x) = (x - \mu)^2\) gives the **variance**: \(\text{Var}(X) = E[X^2] - (E[X])^2\).
 - For a **linear function** \(aX + b\): \(E[aX+b] = aE[X]+b\) and \(\text{Var}(aX+b) = a^2\text{Var}(X)\).
 - For a **linear combination** \(aX + bY\): \(E[aX+bY] = aE[X] + bE[Y]\) and
+
 \[
 \text{Var}(aX + bY) = a^2\text{Var}(X) + b^2\text{Var}(Y) + 2ab\,\text{Cov}(X,Y).
 \]
@@ -183,6 +186,7 @@ Key properties of the MGF:
 1. **Moment extraction**: \(E[X^n] = \phi_X^{(n)}(0)\), the \(n\)-th derivative of \(\phi_X\) evaluated at \(t=0\).
 2. **Uniqueness**: If two RVs have the same MGF, they have the same distribution.
 3. **Taylor series representation**: Expanding \(e^{tX}\) in a Taylor series and taking expectations gives
+
 \[
 \phi_X(t) = \sum_{n=0}^{\infty} \frac{E[X^n]}{n!}\, t^n.
 \]
@@ -212,6 +216,7 @@ P(X_1 = x_1, \ldots, X_k = x_k) = \frac{n!}{x_1!\cdots x_k!}\, p_1^{x_1}\cdots p
 
 <div class="definition">
 <strong>Formal definition of independence.</strong> Random variables \(X\) and \(Y\) are <strong>independent</strong> if and only if
+
 \[
 F(a,b) = F_X(a)\,F_Y(b) \quad \forall\, a, b \in \mathbb{R},
 \]
@@ -231,6 +236,7 @@ and joint moments are recovered via \(E[X^m Y^n] = \frac{\partial^{m+n}}{\partia
 
 <div class="definition">
 <strong>Theorem 1.1.</strong> If \(X_1, X_2, \ldots, X_n\) are independent RVs with respective MGFs \(\phi_{X_i}(t)\), and \(T = X_1 + X_2 + \cdots + X_n\), then
+
 \[
 \phi_T(t) = \prod_{i=1}^{n} \phi_{X_i}(t).
 \]
@@ -250,6 +256,7 @@ and joint moments are recovered via \(E[X^m Y^n] = \frac{\partial^{m+n}}{\partia
 
 <div class="definition">
 <strong>Strong Law of Large Numbers.</strong> If \(X_1, X_2, \ldots\) are iid with common (finite) mean \(\mu\), then
+
 \[
 \bar{X}_n = \frac{X_1 + X_2 + \cdots + X_n}{n} \;\xrightarrow{\text{a.s.}}\; \mu \quad \text{as } n \to \infty.
 \]
@@ -279,6 +286,7 @@ p_{X_1 \mid X_2}(x_1 \mid x_2) = \frac{p(x_1, x_2)}{p_{X_2}(x_2)}, \qquad p_{X_2
 
 <div class="definition">
 <strong>Linearity of conditional expectation.</strong> For constants \(a_1, \ldots, a_n \in \mathbb{R}\),
+
 \[
 E\!\left[\sum_{i=1}^n a_i X_i \,\Big|\, Y = y\right] = \sum_{i=1}^n a_i\, E[X_i \mid Y = y].
 \]
@@ -336,6 +344,7 @@ This formula is derived by forming the ratio \(P(x \leq X \leq x+dx \mid Y=y)/dx
 
 <div class="example">
 <strong>Example 2.7 (Uniform–Bernoulli mixed case).</strong> Suppose \(X \sim U(0,1)\) and \(Y \mid (X = x) \sim \text{Bern}(x)\). The marginal PMF of \(Y\) is
+
 \[
 P(Y = y) = \int_0^1 x^y(1-x)^{1-y}\,dx = \frac{1}{2}, \quad y \in \{0, 1\}.
 \]
@@ -378,6 +387,7 @@ A crucial insight is that \(E[g(X_1) \mid X_2 = x_2]\), which is a function of \
 
 <div class="definition">
 <strong>Theorem 2.2 (Law of Total Expectation).</strong> For any two RVs \(X\) and \(Y\),
+
 \[
 E[g(X)] = E\!\bigl[E[g(X) \mid Y]\bigr].
 \]
@@ -425,6 +435,7 @@ This elegant result will reappear prominently in Chapter 4.
 
 <div class="definition">
 <strong>Theorem 2.3 (Conditional Variance Formula).</strong> For any RVs \(X\) and \(Y\),
+
 \[
 \text{Var}(X) = E[\text{Var}(X \mid Y)] + \text{Var}(E[X \mid Y]).
 \]
@@ -462,6 +473,7 @@ The law of total expectation can be extended to a conditional setting. For any t
 
 <div class="definition">
 <strong>Iterated conditioning.</strong> Conditional expectation satisfies the same properties as unconditional expectation, with all distributions replaced by their conditional counterparts. In particular,
+
 \[
 E[g(X) \mid Y = y] = \begin{cases}
 \displaystyle\sum_w E[g(X) \mid W=w, Y=y]\, p_{W\mid Y}(w \mid y) & (W \text{ discrete}),\\[6pt]
@@ -507,6 +519,7 @@ A <strong>stochastic process</strong> is a family of random variables \(\{X_t : 
 A discrete-time stochastic process \(\{X_n\}_{n \geq 0}\) is a <strong>discrete-time Markov chain</strong> (DTMC) if:
 1. Each \(X_n\) is a discrete RV taking values in the state space \(S \subseteq \{0, 1, 2, \ldots\}\).
 2. The <strong>Markov property</strong> holds: for all \(n \geq 0\) and states \(x_0, \ldots, x_{n+1} \in S\),
+
 \[
 P(X_{n+1} = x_{n+1} \mid X_n = x_n, X_{n-1} = x_{n-1}, \ldots, X_0 = x_0)
 = P(X_{n+1} = x_{n+1} \mid X_n = x_n).
@@ -771,6 +784,7 @@ The central question of this section: does \(p_{ij}^{(n)}\) converge to a limit 
 
 <div class="theorem">
 <strong>Theorem 3.6 (Limiting behaviour of transient states).</strong> For any state \(i\) and any transient state \(j\),
+
 \[
 \lim_{n \to \infty} p_{ij}^{(n)} = 0.
 \]
@@ -831,6 +845,7 @@ The system \(\boldsymbol{\pi} P = \boldsymbol{\pi}\), together with the normaliz
 
 <div class="theorem">
 <strong>Basic Limit Theorem (BLT).</strong> For an irreducible, recurrent, and aperiodic DTMC,
+
 \[
 \lim_{n \to \infty} p_{ij}^{(n)} = \pi_j = \frac{1}{m_j} \quad \text{for all } i, j,
 \]
@@ -840,6 +855,7 @@ where \(m_j\) is the mean recurrent time of state \(j\). If the chain is also po
 The BLT derivation follows by taking \(n \to \infty\) in the Chapman–Kolmogorov equations \(p_{ij}^{(n)} = \sum_k p_{ik}^{(n-1)} P_{k,j}\) (assuming the limit may pass through the sum), which immediately gives the balance equations for \(\pi_j\).
 
 <strong>Alternative interpretation (long-run time fraction).</strong> Under the conditions of the BLT, \(\pi_j\) also equals the long-run fraction of time the chain spends in state \(j\): if \(A_k = \mathbf{1}[X_k = j]\), then
+
 \[
 \frac{1}{n}\sum_{k=1}^n A_k \to \pi_j \quad \text{as } n \to \infty
 \]
@@ -847,6 +863,7 @@ in the sense that the expected fraction converges to \(\pi_j\). This follows bec
 
 <div class="theorem">
 <strong>Theorem 3.7 (Doubly stochastic TPM).</strong> Suppose a finite-state DTMC with \(N\) states is irreducible and aperiodic. If its TPM \(P\) is <em>doubly stochastic</em> (i.e., all column sums also equal 1: \(\sum_{i} P_{i,j} = 1\) for all \(j\)), then the unique stationary distribution is the uniform distribution:
+
 \[
 \pi_j = \frac{1}{N}, \quad j = 0, 1, \ldots, N-1.
 \]
@@ -921,9 +938,11 @@ Let \(\mu = E[\text{offspring per individual}]\) and \(\sigma^2 = \text{Var}(\te
 
 <div class="theorem">
 <strong>Mean and variance of the branching process.</strong> For \(n \geq 1\),
+
 \[
 E[X_n] = \mu^n,
 \]
+
 \[
 \text{Var}(X_n) = \begin{cases} n\sigma^2 & \text{if } \mu = 1, \\[4pt] \sigma^2 \mu^{n-1} \dfrac{1 - \mu^n}{1 - \mu} & \text{if } \mu \neq 1. \end{cases}
 \]
@@ -1093,6 +1112,7 @@ This property means the past waiting time provides no information about the rema
 
 <div class="theorem">
 <strong>Generalized memoryless property.</strong> If \(X \sim \text{Exp}(\lambda)\) and \(Y, Z\) are independent non-negative random variables (also independent of \(X\)), then
+
 \[
 P(X > Y + Z \mid X > Y) = P(X > Z).
 \]
@@ -1155,6 +1175,7 @@ mean \(n/\lambda\), variance \(n/\lambda^2\), and MGF \(\phi_X(t) = \bigl(\frac{
 
 <div class="definition">
 <strong>Probability of an ordered sequence of independent exponentials.</strong> Let \(X_1, \ldots, X_n\) be independent with \(X_i \sim \text{Exp}(\lambda_i)\). Then
+
 \[
 P(X_1 < X_2 < \cdots < X_n) = \prod_{i=1}^{n-1} \frac{\lambda_i}{\lambda_i + \lambda_{i+1} + \cdots + \lambda_n}.
 \]
@@ -1231,6 +1252,7 @@ Using the Poisson PMFs and the independent increments property, after simplifica
 
 <div class="theorem">
 <strong>Theorem 4.6.</strong> Let \(\{N(t)\}_{t \geq 0}\) be a Poisson process with rate \(\lambda\). Given \(N(t) = 1\), the first arrival time satisfies
+
 \[
 S_1 \mid N(t) = 1 \;\sim\; \text{Uniform}(0, t).
 \]
@@ -1283,6 +1305,7 @@ which is a scaled Beta distribution.
 
 <div class="theorem">
 <strong>Theorem 4.7 (Arrival times as uniform order statistics).</strong> For a Poisson process with rate \(\lambda\), given \(N(t) = n\), the conditional joint distribution of the \(n\) arrival times \((S_1, S_2, \ldots, S_n)\) equals the joint distribution of the \(n\) order statistics from \(n\) i.i.d. \(\text{Uniform}(0,t)\) random variables. In particular, the conditional joint PDF is
+
 \[
 f(s_1, \ldots, s_n \mid N(t) = n) = \frac{n!}{t^n}, \qquad 0 < s_1 < s_2 < \cdots < s_n < t.
 \]

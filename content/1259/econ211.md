@@ -95,15 +95,21 @@ Key properties economists care about:
 
 The formal \( \varepsilon \)-\( \delta \) definition captures the intuition that \( f(x) \) can be made arbitrarily close to \( L \) by taking \( x \) sufficiently close to \( a \). In practice, limits are computed using algebraic simplification, factoring, and the standard limit rules:
 
-\[ \lim_{x \to a} \left[ f(x) \pm g(x) \right] = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) \]
+\[
+\lim_{x \to a} \left[ f(x) \pm g(x) \right] = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x)
+\]
 
-\[ \lim_{x \to a} \left[ f(x) \cdot g(x) \right] = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \]
+\[
+\lim_{x \to a} \left[ f(x) \cdot g(x) \right] = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x)
+\]
 
 provided the individual limits exist. Division is valid when the limit of the denominator is non-zero.
 
 **L'Hôpital's Rule:** If \( \lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0 \) (or both \( \pm\infty \)), and \( g'(x) \neq 0 \) near \( a \), then:
 
-\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} \]
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}
+\]
 
 ## 3.2 One-Sided Limits and Limits at Infinity
 
@@ -111,7 +117,9 @@ The **right-hand limit** \( \lim_{x \to a^+} f(x) = L \) requires \( x \) to app
 
 Limits at infinity describe the long-run behavior of a function:
 
-\[ \lim_{x \to \infty} \frac{1}{x} = 0, \quad \lim_{x \to \infty} e^{-x} = 0, \quad \lim_{x \to \infty} \ln x = \infty \]
+\[
+\lim_{x \to \infty} \frac{1}{x} = 0, \quad \lim_{x \to \infty} e^{-x} = 0, \quad \lim_{x \to \infty} \ln x = \infty
+\]
 
 These appear in growth theory when studying the behavior of capital-to-labor ratios as the economy matures.
 
@@ -140,7 +148,10 @@ Continuous functions enjoy powerful properties used throughout economics:
 
 <div class="definition">
 <strong>Derivative:</strong> The derivative of \( f \) at \( x \) is:
-\[ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \]
+
+\[
+f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\]
 provided this limit exists. If the limit exists, \( f \) is called <em>differentiable</em> at \( x \). Alternative notations: \( \frac{df}{dx} \), \( \frac{d}{dx}f(x) \), \( Df(x) \).
 </div>
 
@@ -162,32 +173,50 @@ The following rules are the workhorses of calculus in economics. Let \( f \) and
 
 <div class="theorem">
 <strong>Product Rule:</strong> If \( f \) and \( g \) are differentiable, then:
-\[ (fg)' = f'g + fg' \]
+
+\[
+(fg)' = f'g + fg'
+\]
 </div>
 
 <div class="theorem">
 <strong>Quotient Rule:</strong> If \( g(x) \neq 0 \), then:
-\[ \left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2} \]
+
+\[
+\left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}
+\]
 </div>
 
 <div class="theorem">
 <strong>Chain Rule:</strong> If \( g \) is differentiable at \( x \) and \( f \) is differentiable at \( g(x) \), then the composite function \( h(x) = f(g(x)) \) is differentiable at \( x \), with:
-\[ h'(x) = f'(g(x)) \cdot g'(x) \]
+
+\[
+h'(x) = f'(g(x)) \cdot g'(x)
+\]
 In Leibniz notation, if \( y = f(u) \) and \( u = g(x) \), then \( \frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} \).
 </div>
 
 <div class="example">
 <strong>Worked example — chain rule:</strong> Let \( f(x) = (3x^2 + 5)^4 \). Set \( u = 3x^2 + 5 \), so \( f = u^4 \).
-\[ f'(x) = 4u^3 \cdot \frac{du}{dx} = 4(3x^2+5)^3 \cdot 6x = 24x(3x^2+5)^3 \]
+
+\[
+f'(x) = 4u^3 \cdot \frac{du}{dx} = 4(3x^2+5)^3 \cdot 6x = 24x(3x^2+5)^3
+\]
 </div>
 
 **Standard derivatives:**
 
-\[ \frac{d}{dx} e^x = e^x, \quad \frac{d}{dx} e^{ax} = a e^{ax} \]
+\[
+\frac{d}{dx} e^x = e^x, \quad \frac{d}{dx} e^{ax} = a e^{ax}
+\]
 
-\[ \frac{d}{dx} \ln x = \frac{1}{x} \quad (x > 0) \]
+\[
+\frac{d}{dx} \ln x = \frac{1}{x} \quad (x > 0)
+\]
 
-\[ \frac{d}{dx} \ln f(x) = \frac{f'(x)}{f(x)} \quad \text{(logarithmic derivative)} \]
+\[
+\frac{d}{dx} \ln f(x) = \frac{f'(x)}{f(x)} \quad \text{(logarithmic derivative)}
+\]
 
 The logarithmic derivative \( \frac{d \ln f}{dx} = \frac{f'}{f} \) gives the proportional rate of change of \( f \) — the foundation of elasticity analysis.
 
@@ -195,15 +224,26 @@ The logarithmic derivative \( \frac{d \ln f}{dx} = \frac{f'}{f} \) gives the pro
 
 The second derivative is obtained by differentiating \( f'(x) \):
 
-\[ f''(x) = \frac{d^2 f}{dx^2} = \frac{d}{dx} f'(x) \]
+\[
+f''(x) = \frac{d^2 f}{dx^2} = \frac{d}{dx} f'(x)
+\]
 
 Higher-order derivatives: \( f^{(n)}(x) = \frac{d^n f}{dx^n} \). The second derivative measures the rate of change of the slope — it captures curvature.
 
 <div class="example">
 <strong>Example:</strong> For \( f(x) = x^5 - 3x^3 + 2x \):
-\[ f'(x) = 5x^4 - 9x^2 + 2 \]
-\[ f''(x) = 20x^3 - 18x \]
-\[ f'''(x) = 60x^2 - 18 \]
+
+\[
+f'(x) = 5x^4 - 9x^2 + 2
+\]
+
+\[
+f''(x) = 20x^3 - 18x
+\]
+
+\[
+f'''(x) = 60x^2 - 18
+\]
 </div>
 
 ---
@@ -223,7 +263,9 @@ Higher-order derivatives: \( f^{(n)}(x) = \frac{d^n f}{dx^n} \). The second deri
 
 An equivalent characterization using the definition of concavity: \( f \) is concave if for all \( x_1, x_2 \) in the domain and all \( \lambda \in [0,1] \):
 
-\[ f(\lambda x_1 + (1-\lambda) x_2) \geq \lambda f(x_1) + (1-\lambda) f(x_2) \]
+\[
+f(\lambda x_1 + (1-\lambda) x_2) \geq \lambda f(x_1) + (1-\lambda) f(x_2)
+\]
 
 This is the **Jensen's inequality** for concave functions — the function value at a weighted average exceeds (or equals) the weighted average of function values.
 
@@ -241,7 +283,9 @@ This is the **Jensen's inequality** for concave functions — the function value
 
 The **elasticity** of \( y = f(x) \) with respect to \( x \) is:
 
-\[ \varepsilon = \frac{dy/y}{dx/x} = \frac{x}{y} \cdot \frac{dy}{dx} = \frac{d \ln y}{d \ln x} \]
+\[
+\varepsilon = \frac{dy/y}{dx/x} = \frac{x}{y} \cdot \frac{dy}{dx} = \frac{d \ln y}{d \ln x}
+\]
 
 Elasticity measures the proportional responsiveness: a 1% change in \( x \) leads to an \( \varepsilon \)% change in \( y \). Price elasticity of demand \( \varepsilon_D = \frac{\partial Q}{\partial P} \cdot \frac{P}{Q} \) is typically negative; when \( |\varepsilon_D| > 1 \), demand is elastic; when \( |\varepsilon_D| < 1 \), inelastic.
 
@@ -255,7 +299,10 @@ A point \( x^* \) is a **critical point** (or stationary point) of \( f \) if \(
 
 <div class="theorem">
 <strong>First-Order Necessary Condition (FOC):</strong> If \( f \) is differentiable and \( x^* \) is a local extremum, then:
-\[ f'(x^*) = 0 \]
+
+\[
+f'(x^*) = 0
+\]
 </div>
 
 The FOC is necessary but not sufficient. A critical point may be a maximum, minimum, or neither.
@@ -271,17 +318,31 @@ The FOC is necessary but not sufficient. A critical point may be a maximum, mini
 </ul>
 </div>
 
-\[ \text{FOC: } f'(x^*) = 0 \]
-\[ \text{SOC for max: } f''(x^*) < 0 \]
-\[ \text{SOC for min: } f''(x^*) > 0 \]
+\[
+\text{FOC: } f'(x^*) = 0
+\]
+
+\[
+\text{SOC for max: } f''(x^*) < 0
+\]
+
+\[
+\text{SOC for min: } f''(x^*) > 0
+\]
 
 For a **global maximum** on an open unbounded domain, it suffices to find a unique critical point and verify that \( f \) is globally concave (\( f'' < 0 \) everywhere).
 
 <div class="example">
 <strong>Worked example — profit maximization:</strong> A competitive firm has revenue \( R(q) = pq \) and cost \( C(q) = q^3/3 - 2q^2 + 5q + 10 \). Profit is:
-\[ \pi(q) = pq - q^3/3 + 2q^2 - 5q - 10 \]
+
+\[
+\pi(q) = pq - q^3/3 + 2q^2 - 5q - 10
+\]
 FOC: \( \pi'(q) = p - q^2 + 4q - 5 = 0 \). With \( p = 4 \):
-\[ q^2 - 4q + 1 = 0 \implies q = 2 \pm \sqrt{3} \]
+
+\[
+q^2 - 4q + 1 = 0 \implies q = 2 \pm \sqrt{3}
+\]
 SOC: \( \pi''(q) = -2q + 4 \). At \( q = 2 + \sqrt{3} \approx 3.73 \): \( \pi'' = -2(3.73)+4 = -3.46 < 0 \). Confirmed maximum. At \( q = 2 - \sqrt{3} \approx 0.27 \): \( \pi'' > 0 \), a minimum.
 </div>
 
@@ -302,7 +363,9 @@ On unbounded domains, check behavior as \( x \to \pm\infty \) to rule out the ob
 
 Many economic optimization problems involve constraints. The canonical form is:
 
-\[ \max_{x, y} \; f(x, y) \quad \text{subject to} \quad g(x, y) = c \]
+\[
+\max_{x, y} \; f(x, y) \quad \text{subject to} \quad g(x, y) = c
+\]
 
 Direct substitution (solving the constraint for one variable and substituting into the objective) works for simple cases but becomes algebraically intractable for more complex problems. The **Lagrangian method** provides a systematic approach.
 
@@ -310,21 +373,32 @@ Direct substitution (solving the constraint for one variable and substituting in
 
 <div class="definition">
 <strong>Lagrangian:</strong> Form the Lagrangian function:
-\[ \mathcal{L}(x, y, \lambda) = f(x, y) - \lambda \left[ g(x, y) - c \right] \]
+
+\[
+\mathcal{L}(x, y, \lambda) = f(x, y) - \lambda \left[ g(x, y) - c \right]
+\]
 where \( \lambda \) is the <strong>Lagrange multiplier</strong>, an additional variable introduced for each constraint.
 </div>
 
 The first-order conditions for an interior optimum are:
 
-\[ \frac{\partial \mathcal{L}}{\partial x} = \frac{\partial f}{\partial x} - \lambda \frac{\partial g}{\partial x} = 0 \]
+\[
+\frac{\partial \mathcal{L}}{\partial x} = \frac{\partial f}{\partial x} - \lambda \frac{\partial g}{\partial x} = 0
+\]
 
-\[ \frac{\partial \mathcal{L}}{\partial y} = \frac{\partial f}{\partial y} - \lambda \frac{\partial g}{\partial y} = 0 \]
+\[
+\frac{\partial \mathcal{L}}{\partial y} = \frac{\partial f}{\partial y} - \lambda \frac{\partial g}{\partial y} = 0
+\]
 
-\[ \frac{\partial \mathcal{L}}{\partial \lambda} = -(g(x, y) - c) = 0 \]
+\[
+\frac{\partial \mathcal{L}}{\partial \lambda} = -(g(x, y) - c) = 0
+\]
 
 The third condition simply restates the constraint. From the first two:
 
-\[ \frac{\partial f / \partial x}{\partial f / \partial y} = \frac{\partial g / \partial x}{\partial g / \partial y} \]
+\[
+\frac{\partial f / \partial x}{\partial f / \partial y} = \frac{\partial g / \partial x}{\partial g / \partial y}
+\]
 
 This says that at the optimum, the ratio of marginal contributions to the objective (the **marginal rate of substitution** in consumer theory) equals the ratio of marginal contributions to the constraint (the **marginal rate of transformation** for a production frontier).
 
@@ -332,13 +406,18 @@ This says that at the optimum, the ratio of marginal contributions to the object
 
 The multiplier \( \lambda^* \) at the optimum has a precise economic meaning:
 
-\[ \lambda^* = \frac{df^*}{dc} \]
+\[
+\lambda^* = \frac{df^*}{dc}
+\]
 
 where \( f^* \) is the optimized value of the objective. Thus \( \lambda^* \) measures the marginal value of relaxing the constraint by one unit — the **shadow price** of the constraint.
 
 <div class="remark">
 <strong>Consumer theory example:</strong> Maximize utility \( U(x_1, x_2) \) subject to the budget constraint \( p_1 x_1 + p_2 x_2 = m \). The Lagrangian is:
-\[ \mathcal{L} = U(x_1, x_2) - \lambda(p_1 x_1 + p_2 x_2 - m) \]
+
+\[
+\mathcal{L} = U(x_1, x_2) - \lambda(p_1 x_1 + p_2 x_2 - m)
+\]
 FOC: \( U_1 = \lambda p_1 \) and \( U_2 = \lambda p_2 \), giving the tangency condition \( MRS = U_1/U_2 = p_1/p_2 \). The multiplier \( \lambda^* \) is the marginal utility of income.
 </div>
 
@@ -346,7 +425,9 @@ FOC: \( U_1 = \lambda p_1 \) and \( U_2 = \lambda p_2 \), giving the tangency co
 
 For a constrained problem, the SOC involves the **bordered Hessian**. For the two-variable case with one constraint:
 
-\[ \bar{H} = \begin{vmatrix} 0 & g_x & g_y \\ g_x & \mathcal{L}_{xx} & \mathcal{L}_{xy} \\ g_y & \mathcal{L}_{yx} & \mathcal{L}_{yy} \end{vmatrix} \]
+\[
+\bar{H} = \begin{vmatrix} 0 & g_x & g_y \\ g_x & \mathcal{L}_{xx} & \mathcal{L}_{xy} \\ g_y & \mathcal{L}_{yx} & \mathcal{L}_{yy} \end{vmatrix}
+\]
 
 where subscripts denote partial derivatives. If \( |\bar{H}| > 0 \) at the critical point, we have a local maximum (for a maximization problem); if \( |\bar{H}| < 0 \), a local minimum.
 
@@ -366,7 +447,9 @@ where subscripts denote partial derivatives. If \( |\bar{H}| > 0 \) at the criti
 
 **Matrix multiplication:** \( C = AB \) where \( A \) is \( m \times n \) and \( B \) is \( n \times p \); the result is \( m \times p \). The \( (i,j) \) entry of \( C \) is:
 
-\[ c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj} \]
+\[
+c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj}
+\]
 
 Matrix multiplication is generally **not commutative**: \( AB \neq BA \) in general.
 
@@ -378,12 +461,17 @@ Matrix multiplication is generally **not commutative**: \( AB \neq BA \) in gene
 
 <div class="definition">
 <strong>Determinant:</strong> The determinant of a square matrix \( A \), written \( \det(A) \) or \( |A| \), is a scalar that encodes important structural information. For a \( 2 \times 2 \) matrix:
-\[ \det \begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - bc \]
+
+\[
+\det \begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - bc
+\]
 </div>
 
 For a \( 3 \times 3 \) matrix, expand along the first row using **cofactor expansion**:
 
-\[ \det(A) = a_{11} C_{11} + a_{12} C_{12} + a_{13} C_{13} \]
+\[
+\det(A) = a_{11} C_{11} + a_{12} C_{12} + a_{13} C_{13}
+\]
 
 where the **cofactor** \( C_{ij} = (-1)^{i+j} M_{ij} \) and \( M_{ij} \) is the \( (n-1) \times (n-1) \) minor obtained by deleting row \( i \) and column \( j \).
 
@@ -395,7 +483,9 @@ A square matrix \( A \) is **invertible** (non-singular) if and only if \( \det(
 
 If \( \det(A) \neq 0 \), the inverse \( A^{-1} \) satisfies \( A A^{-1} = A^{-1} A = I \). For a \( 2 \times 2 \) matrix:
 
-\[ \begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix} \]
+\[
+\begin{pmatrix} a & b \\ c & d \end{pmatrix}^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+\]
 
 For larger matrices, the inverse is computed via the adjugate (matrix of cofactors, transposed) divided by the determinant, or by Gaussian elimination.
 
@@ -407,7 +497,9 @@ For larger matrices, the inverse is computed via the adjugate (matrix of cofacto
 
 A system of \( n \) linear equations in \( n \) unknowns can be written in matrix form as:
 
-\[ A \mathbf{x} = \mathbf{b} \]
+\[
+A \mathbf{x} = \mathbf{b}
+\]
 
 where \( A \) is an \( n \times n \) matrix of coefficients, \( \mathbf{x} \) is the vector of unknowns, and \( \mathbf{b} \) is the vector of constants. If \( \det(A) \neq 0 \), the system has a **unique solution**: \( \mathbf{x} = A^{-1} \mathbf{b} \).
 
@@ -415,17 +507,29 @@ where \( A \) is an \( n \times n \) matrix of coefficients, \( \mathbf{x} \) is
 
 <div class="theorem">
 <strong>Cramer's Rule:</strong> If \( \det(A) \neq 0 \), the unique solution to \( A\mathbf{x} = \mathbf{b} \) is given by:
-\[ x_i = \frac{\det(A_i)}{\det(A)} \]
+
+\[
+x_i = \frac{\det(A_i)}{\det(A)}
+\]
 where \( A_i \) is the matrix \( A \) with the \( i \)-th column replaced by the vector \( \mathbf{b} \).
 </div>
 
 <div class="example">
 <strong>Worked example:</strong> Solve the system:
-\[ 2x + y = 5, \quad x - 3y = -4 \]
+
+\[
+2x + y = 5, \quad x - 3y = -4
+\]
 In matrix form: \( A = \begin{pmatrix} 2 & 1 \\ 1 & -3 \end{pmatrix} \), \( \mathbf{b} = \begin{pmatrix} 5 \\ -4 \end{pmatrix} \).
 \( \det(A) = 2(-3) - 1(1) = -7 \).
-\[ x = \frac{\det\begin{pmatrix} 5 & 1 \\ -4 & -3 \end{pmatrix}}{-7} = \frac{(5)(-3)-(1)(-4)}{-7} = \frac{-11}{-7} = \frac{11}{7} \]
-\[ y = \frac{\det\begin{pmatrix} 2 & 5 \\ 1 & -4 \end{pmatrix}}{-7} = \frac{(2)(-4)-(5)(1)}{-7} = \frac{-13}{-7} = \frac{13}{7} \]
+
+\[
+x = \frac{\det\begin{pmatrix} 5 & 1 \\ -4 & -3 \end{pmatrix}}{-7} = \frac{(5)(-3)-(1)(-4)}{-7} = \frac{-11}{-7} = \frac{11}{7}
+\]
+
+\[
+y = \frac{\det\begin{pmatrix} 2 & 5 \\ 1 & -4 \end{pmatrix}}{-7} = \frac{(2)(-4)-(5)(1)}{-7} = \frac{-13}{-7} = \frac{13}{7}
+\]
 </div>
 
 Cramer's Rule is theoretically elegant but computationally expensive for large systems. In economics, it is most useful for deriving **comparative statics** analytically in small models.
@@ -440,7 +544,10 @@ Many economic relationships are implicitly defined. A supply curve, for instance
 
 <div class="theorem">
 <strong>Implicit Function Theorem (single equation):</strong> Let \( F(x, y) \) be a continuously differentiable function in a neighborhood of \( (x_0, y_0) \) with \( F(x_0, y_0) = 0 \). If \( \frac{\partial F}{\partial y}(x_0, y_0) \neq 0 \), then there exists a differentiable function \( y = \phi(x) \) defined in a neighborhood of \( x_0 \) such that \( \phi(x_0) = y_0 \) and \( F(x, \phi(x)) = 0 \). Moreover:
-\[ \frac{dy}{dx} = -\frac{\partial F / \partial x}{\partial F / \partial y} \]
+
+\[
+\frac{dy}{dx} = -\frac{\partial F / \partial x}{\partial F / \partial y}
+\]
 </div>
 
 ## 10.2 Application to Comparative Statics
@@ -449,7 +556,10 @@ The IFT is the theoretical foundation of **comparative statics analysis** — ex
 
 <div class="example">
 <strong>Market equilibrium comparative statics:</strong> Supply and demand equilibrium satisfies \( F(P, t) = Q^D(P) - Q^S(P, t) = 0 \), where \( t \) is a tax on suppliers. By the IFT:
-\[ \frac{dP^*}{dt} = -\frac{\partial F / \partial t}{\partial F / \partial P} = -\frac{-\partial Q^S / \partial t}{Q^{D'} - Q^{S'}_P} = \frac{\partial Q^S / \partial t}{Q^{D'} - Q^{S'}_P} \]
+
+\[
+\frac{dP^*}{dt} = -\frac{\partial F / \partial t}{\partial F / \partial P} = -\frac{-\partial Q^S / \partial t}{Q^{D'} - Q^{S'}_P} = \frac{\partial Q^S / \partial t}{Q^{D'} - Q^{S'}_P}
+\]
 Since \( Q^{D'} < 0 \), \( Q^{S'}_P > 0 \), and \( \partial Q^S/\partial t < 0 \) (a tax shifts supply left), we get \( dP^*/dt > 0 \): a tax raises the equilibrium price.
 </div>
 
@@ -457,7 +567,9 @@ Since \( Q^{D'} < 0 \), \( Q^{S'}_P > 0 \), and \( \partial Q^S/\partial t < 0 \
 
 For a system of two equations \( F(x_1, x_2, \alpha) = 0 \) and \( G(x_1, x_2, \alpha) = 0 \) where \( \alpha \) is a parameter, the comparative statics are:
 
-\[ \begin{pmatrix} F_{x_1} & F_{x_2} \\ G_{x_1} & G_{x_2} \end{pmatrix} \begin{pmatrix} dx_1/d\alpha \\ dx_2/d\alpha \end{pmatrix} = - \begin{pmatrix} F_\alpha \\ G_\alpha \end{pmatrix} \]
+\[
+\begin{pmatrix} F_{x_1} & F_{x_2} \\ G_{x_1} & G_{x_2} \end{pmatrix} \begin{pmatrix} dx_1/d\alpha \\ dx_2/d\alpha \end{pmatrix} = - \begin{pmatrix} F_\alpha \\ G_\alpha \end{pmatrix}
+\]
 
 Applying Cramer's Rule to this system yields the comparative static derivatives \( dx_1/d\alpha \) and \( dx_2/d\alpha \) in terms of the partial derivatives of \( F \) and \( G \). The system is solvable when the Jacobian determinant \( |J| = F_{x_1} G_{x_2} - F_{x_2} G_{x_1} \neq 0 \).
 
@@ -469,7 +581,10 @@ Applying Cramer's Rule to this system yields the comparative static derivatives 
 
 <div class="definition">
 <strong>Homogeneous Function of Degree \( k \):</strong> A function \( f(x_1, x_2, \ldots, x_n) \) is homogeneous of degree \( k \) if for all \( t > 0 \):
-\[ f(tx_1, tx_2, \ldots, tx_n) = t^k f(x_1, x_2, \ldots, x_n) \]
+
+\[
+f(tx_1, tx_2, \ldots, tx_n) = t^k f(x_1, x_2, \ldots, x_n)
+\]
 </div>
 
 **Economic examples:**
@@ -482,22 +597,32 @@ Applying Cramer's Rule to this system yields the comparative static derivatives 
 
 <div class="theorem">
 <strong>Euler's Theorem:</strong> If \( f \) is homogeneous of degree \( k \) and differentiable, then:
-\[ x_1 \frac{\partial f}{\partial x_1} + x_2 \frac{\partial f}{\partial x_2} + \cdots + x_n \frac{\partial f}{\partial x_n} = k \cdot f(x_1, x_2, \ldots, x_n) \]
+
+\[
+x_1 \frac{\partial f}{\partial x_1} + x_2 \frac{\partial f}{\partial x_2} + \cdots + x_n \frac{\partial f}{\partial x_n} = k \cdot f(x_1, x_2, \ldots, x_n)
+\]
 </div>
 
 In a two-input production context with \( k = 1 \) (CRS):
 
-\[ K \frac{\partial F}{\partial K} + L \frac{\partial F}{\partial L} = F(K, L) \]
+\[
+K \frac{\partial F}{\partial K} + L \frac{\partial F}{\partial L} = F(K, L)
+\]
 
 Since \( \partial F/\partial K = MP_K \) and \( \partial F/\partial L = MP_L \), this says:
 
-\[ K \cdot MP_K + L \cdot MP_L = Q \]
+\[
+K \cdot MP_K + L \cdot MP_L = Q
+\]
 
 **Economic interpretation:** Under perfect competition, factors are paid their marginal products. With CRS, Euler's theorem guarantees that paying each factor its marginal product exactly exhausts the total output — there is no surplus or deficit. This is the **adding-up theorem** (or product exhaustion theorem) in distribution theory.
 
 <div class="proof">
 <strong>Proof of Euler's Theorem.</strong> Differentiate both sides of \( f(tx_1, \ldots, tx_n) = t^k f(x_1, \ldots, x_n) \) with respect to \( t \):
-\[ \sum_{i=1}^{n} x_i \frac{\partial f}{\partial (tx_i)} = k t^{k-1} f(x_1, \ldots, x_n) \]
+
+\[
+\sum_{i=1}^{n} x_i \frac{\partial f}{\partial (tx_i)} = k t^{k-1} f(x_1, \ldots, x_n)
+\]
 Setting \( t = 1 \): \( \sum_{i=1}^{n} x_i \frac{\partial f}{\partial x_i} = k f(x_1, \ldots, x_n) \). \( \square \)
 </div>
 
@@ -513,7 +638,9 @@ If \( f \) is homogeneous of degree \( k \), then each partial derivative \( \pa
 
 Comparative statics asks: when an exogenous parameter \( \alpha \) changes, how does the equilibrium endogenous variable \( x^*(\alpha) \) respond? The equilibrium condition is \( F(x^*, \alpha) = 0 \) (which could be an FOC from an optimization problem). By the IFT:
 
-\[ \frac{dx^*}{d\alpha} = -\frac{\partial F / \partial \alpha}{\partial F / \partial x} \]
+\[
+\frac{dx^*}{d\alpha} = -\frac{\partial F / \partial \alpha}{\partial F / \partial x}
+\]
 
 The sign of this expression gives the **qualitative** prediction; the magnitude gives the **quantitative** prediction.
 
@@ -523,13 +650,18 @@ The **Envelope Theorem** describes how the optimized value of an objective funct
 
 <div class="theorem">
 <strong>Envelope Theorem (unconstrained):</strong> Let \( V(\alpha) = \max_x f(x, \alpha) \) be the value function, where \( x^*(\alpha) \) is the optimal choice. Then:
-\[ \frac{dV}{d\alpha} = \frac{\partial f}{\partial \alpha} \bigg|_{x = x^*(\alpha)} \]
+
+\[
+\frac{dV}{d\alpha} = \frac{\partial f}{\partial \alpha} \bigg|_{x = x^*(\alpha)}
+\]
 The total derivative of the value function with respect to \( \alpha \) equals the partial derivative of the objective with respect to \( \alpha \), evaluated at the optimum.
 </div>
 
 For constrained optimization with Lagrangian \( \mathcal{L} = f(x,y,\alpha) - \lambda g(x,y,\alpha) \):
 
-\[ \frac{dV}{d\alpha} = \frac{\partial \mathcal{L}}{\partial \alpha} \bigg|_{\text{optimum}} \]
+\[
+\frac{dV}{d\alpha} = \frac{\partial \mathcal{L}}{\partial \alpha} \bigg|_{\text{optimum}}
+\]
 
 **Application — Hotelling's Lemma:** For a profit-maximizing firm with profit function \( \pi^*(p, w) \), the output supply and input demand functions are obtained by differentiating with respect to output price and input prices respectively.
 
@@ -549,13 +681,17 @@ The optimal hours worked is \( T/2 \), independent of the wage. The income and s
 
 For \( f(x_1, x_2) \), the partial derivative with respect to \( x_1 \) is:
 
-\[ \frac{\partial f}{\partial x_1} = \lim_{h \to 0} \frac{f(x_1 + h, x_2) - f(x_1, x_2)}{h} \]
+\[
+\frac{\partial f}{\partial x_1} = \lim_{h \to 0} \frac{f(x_1 + h, x_2) - f(x_1, x_2)}{h}
+\]
 
 holding \( x_2 \) fixed. All rules of single-variable differentiation apply when the other variables are treated as constants.
 
 **Second-order partial derivatives:**
 
-\[ \frac{\partial^2 f}{\partial x_1^2} = f_{11}, \quad \frac{\partial^2 f}{\partial x_2^2} = f_{22}, \quad \frac{\partial^2 f}{\partial x_1 \partial x_2} = f_{12}, \quad \frac{\partial^2 f}{\partial x_2 \partial x_1} = f_{21} \]
+\[
+\frac{\partial^2 f}{\partial x_1^2} = f_{11}, \quad \frac{\partial^2 f}{\partial x_2^2} = f_{22}, \quad \frac{\partial^2 f}{\partial x_1 \partial x_2} = f_{12}, \quad \frac{\partial^2 f}{\partial x_2 \partial x_1} = f_{21}
+\]
 
 **Young's Theorem:** If \( f \) is twice continuously differentiable, then mixed partials are equal: \( f_{12} = f_{21} \).
 
@@ -563,7 +699,10 @@ holding \( x_2 \) fixed. All rules of single-variable differentiation apply when
 
 <div class="definition">
 <strong>Hessian Matrix:</strong> The Hessian of \( f(x_1, x_2) \) is:
-\[ H = \begin{pmatrix} f_{11} & f_{12} \\ f_{21} & f_{22} \end{pmatrix} \]
+
+\[
+H = \begin{pmatrix} f_{11} & f_{12} \\ f_{21} & f_{22} \end{pmatrix}
+\]
 </div>
 
 The Hessian generalizes the second derivative to multiple dimensions. The sign of the Hessian (via its eigenvalues or leading principal minors) determines concavity/convexity:
@@ -576,7 +715,9 @@ The Hessian generalizes the second derivative to multiple dimensions. The sign o
 
 FOC for an interior critical point: all partial derivatives equal zero:
 
-\[ \frac{\partial f}{\partial x_1} = 0, \quad \frac{\partial f}{\partial x_2} = 0 \]
+\[
+\frac{\partial f}{\partial x_1} = 0, \quad \frac{\partial f}{\partial x_2} = 0
+\]
 
 SOC: If the Hessian evaluated at the critical point is negative definite, the point is a local maximum; if positive definite, a local minimum.
 

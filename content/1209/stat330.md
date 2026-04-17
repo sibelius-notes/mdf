@@ -42,6 +42,7 @@ From these axioms, several useful properties follow immediately:
 
 <div class="definition">
 <strong>Conditional Probability.</strong> For events \( A \) and \( B \) with \( P(B) > 0 \), the <strong>conditional probability</strong> of \( A \) given \( B \) is
+
 \[
 P(A \mid B) = \frac{P(A \cap B)}{P(B)}.
 \]
@@ -49,6 +50,7 @@ P(A \mid B) = \frac{P(A \cap B)}{P(B)}.
 
 <div class="definition">
 <strong>Independence of Events.</strong> Two events \( A \) and \( B \) are <strong>independent</strong> if and only if
+
 \[
 P(A \cap B) = P(A)\,P(B).
 \]
@@ -65,6 +67,7 @@ The main purpose of a random variable is to quantify outcomes of a random experi
 
 <div class="definition">
 <strong>Cumulative Distribution Function (CDF).</strong> The <strong>cumulative distribution function</strong> of a random variable \( X \) is defined by
+
 \[
 F(x) = P(X \leq x), \quad x \in \mathbb{R}.
 \]
@@ -88,6 +91,7 @@ F(x) = P(X \leq x), \quad x \in \mathbb{R}.
 
 <div class="definition">
 <strong>Probability Mass Function (PMF).</strong> The <strong>probability mass function</strong> (also called the probability function) of a discrete random variable \( X \) is
+
 \[
 f(x) = P(X = x).
 \]
@@ -112,6 +116,7 @@ The <strong>Geometric</strong> distribution (in the "number of failures before t
 
 <div class="example">
 <strong>Poisson as a Binomial Limit.</strong> If \( X \sim \text{Binomial}(n,p) \) with \( n \to \infty \) and \( np = \lambda \) held fixed (so \( p = \lambda/n \to 0 \)), then
+
 \[
 P(X = x) = \binom{n}{x}\left(\frac{\lambda}{n}\right)^x\!\left(1 - \frac{\lambda}{n}\right)^{n-x} \;\xrightarrow{n \to \infty}\; \frac{e^{-\lambda}\lambda^x}{x!},
 \]
@@ -126,6 +131,7 @@ which is the Poisson PMF. The key step uses \( \lim_{n \to \infty}(1 + z/n)^n = 
 
 <div class="definition">
 <strong>Probability Density Function (PDF).</strong> The <strong>probability density function</strong> of a continuous random variable \( X \) is
+
 \[
 f(x) = F'(x)
 \]
@@ -145,6 +151,7 @@ For continuous random variables, \( f(x) \neq P(X = x) \). Rather, \( f(x)\,\del
 
 <div class="definition">
 <strong>Gamma Function.</strong> For \( \alpha > 0 \), the <strong>gamma function</strong> is defined by
+
 \[
 \Gamma(\alpha) = \int_0^{\infty} x^{\alpha - 1} e^{-x}\,dx.
 \]
@@ -166,6 +173,7 @@ Key properties:
 
 <div class="example">
 <strong>Verifying the Normal PDF integrates to 1.</strong> For the standard normal \( Z \sim N(0,1) \), we need to show
+
 \[
 \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi}} \exp\!\left\{-\frac{x^2}{2}\right\} dx = 1.
 \]
@@ -204,6 +212,7 @@ The absolute convergence requirement is essential. For example, the Cauchy distr
 
 <div class="definition">
 <strong>Expectation of a Function.</strong> For a function \( g \) applied to a random variable \( X \):
+
 \[
 E[g(X)] = \begin{cases} \sum_{x \in A} g(x)\,f(x) & \text{if } X \text{ is discrete}, \\[4pt] \int_{-\infty}^{\infty} g(x)\,f(x)\,dx & \text{if } X \text{ is continuous}, \end{cases}
 \]
@@ -212,6 +221,7 @@ provided the sum or integral converges absolutely.
 
 <div class="theorem">
 <strong>Linearity of Expectation.</strong> For real constants \( a, b \) and functions \( g, h \):
+
 \[
 E[ag(X) + bh(X) + c] = a\,E[g(X)] + b\,E[h(X)] + c.
 \]
@@ -219,6 +229,7 @@ E[ag(X) + bh(X) + c] = a\,E[g(X)] + b\,E[h(X)] + c.
 
 <div class="definition">
 <strong>Variance.</strong> The <strong>variance</strong> of a random variable \( X \) is
+
 \[
 \text{Var}(X) = E[(X - \mu)^2] = E[X^2] - (E[X])^2,
 \]
@@ -227,6 +238,7 @@ where \( \mu = E[X] \).
 
 <div class="proof">
 <strong>Proof of the shortcut formula.</strong>
+
 \[
 \text{Var}(X) = E[(X - \mu)^2] = E[X^2 - 2\mu X + \mu^2] = E[X^2] - 2\mu\,E[X] + \mu^2 = E[X^2] - \mu^2.
 \]
@@ -254,6 +266,7 @@ In particular, the first moment is the mean and the second central moment is the
 
 <div class="example">
 <strong>Moments of the Gamma distribution.</strong> If \( X \sim \text{Gamma}(\alpha, \beta) \), then for \( p > -\alpha \):
+
 \[
 E[X^p] = \frac{\beta^p\,\Gamma(\alpha + p)}{\Gamma(\alpha)}.
 \]
@@ -262,6 +275,7 @@ Setting \( p = 1 \): \( E[X] = \alpha\beta \). Setting \( p = 2 \): \( E[X^2] = 
 
 <div class="example">
 <strong>Moments of the Poisson distribution.</strong> If \( X \sim \text{Poisson}(\theta) \), then
+
 \[
 E[X] = \sum_{x=0}^{\infty} x\,\frac{\theta^x}{x!}\,e^{-\theta} = \theta \sum_{y=0}^{\infty} \frac{\theta^y}{y!}\,e^{-\theta} = \theta.
 \]
@@ -272,6 +286,7 @@ A similar calculation yields \( E[X^2] = \theta^2 + \theta \), so \( \text{Var}(
 
 <div class="definition">
 <strong>Moment Generating Function (MGF).</strong> The <strong>moment generating function</strong> of a random variable \( X \) is
+
 \[
 M_X(t) = E[e^{tX}],
 \]
@@ -280,6 +295,7 @@ provided this expectation exists (is finite) for all \( t \) in some open interv
 
 <div class="theorem">
 <strong>Moment Extraction.</strong> If \( X \) has MGF \( M_X(t) \) defined on \( (-h, h) \), then for \( k = 1, 2, \ldots \):
+
 \[
 E[X^k] = M_X^{(k)}(0),
 \]
@@ -301,6 +317,7 @@ Setting \( t = 0 \) yields \( M_X^{(k)}(0) = E[X^k \cdot 1] = E[X^k] \).
 
 <div class="theorem">
 <strong>MGF of a Linear Function.</strong> If \( Y = aX + b \), then
+
 \[
 M_Y(t) = e^{bt}\,M_X(at).
 \]
@@ -312,6 +329,7 @@ M_Y(t) = e^{bt}\,M_X(at).
 
 <div class="example">
 <strong>MGF of the Normal distribution.</strong> For \( Z \sim N(0,1) \):
+
 \[
 M_Z(t) = \int_{-\infty}^{\infty} e^{tx}\,\frac{1}{\sqrt{2\pi}}\,e^{-x^2/2}\,dx = \exp\!\left\{\frac{t^2}{2}\right\}.
 \]
@@ -334,6 +352,7 @@ M_X(t) = e^{\mu t}\,M_Z(\sigma t) = \exp\!\left\{\mu t + \frac{\sigma^2 t^2}{2}\
 
 <div class="definition">
 <strong>Joint CDF.</strong> The <strong>joint cumulative distribution function</strong> of random variables \( X \) and \( Y \) is
+
 \[
 F(x, y) = P(X \leq x, Y \leq y), \quad (x, y) \in \mathbb{R}^2.
 \]
@@ -347,6 +366,7 @@ Properties of the joint CDF:
 
 <div class="definition">
 <strong>Marginal CDFs.</strong> The <strong>marginal CDF</strong> of \( X \) is obtained by letting \( y \to \infty \):
+
 \[
 F_X(x) = \lim_{y \to \infty} F(x, y) = P(X \leq x).
 \]
@@ -361,6 +381,7 @@ Given the joint CDF, we can always recover the marginal CDFs. However, marginal 
 
 <div class="definition">
 <strong>Joint PMF.</strong> If \( X \) and \( Y \) are jointly discrete, their <strong>joint probability mass function</strong> is
+
 \[
 f(x, y) = P(X = x, Y = y), \quad (x, y) \in \mathbb{R}^2.
 \]
@@ -369,6 +390,7 @@ The <strong>joint support</strong> is \( A = \{(x, y) : f(x, y) > 0\} \). It sat
 
 <div class="definition">
 <strong>Marginal PMFs.</strong> The marginal PMFs are obtained by summing out the other variable:
+
 \[
 f_X(x) = \sum_y f(x, y), \qquad f_Y(y) = \sum_x f(x, y).
 \]
@@ -390,6 +412,7 @@ P(X \leq Y) = \sum_{x=0}^{\infty} \sum_{y=x}^{\infty} (1-p)^2 p^{x+y} = (1-p) \s
 
 <div class="definition">
 <strong>Joint PDF.</strong> If the joint CDF can be written as
+
 \[
 F(x, y) = \int_{-\infty}^{x} \int_{-\infty}^{y} f(s, t)\,dt\,ds,
 \]
@@ -409,6 +432,7 @@ P((X, Y) \in R) = \iint_R f(x, y)\,dx\,dy.
 
 <div class="definition">
 <strong>Marginal PDFs.</strong> The marginal density of \( X \) is
+
 \[
 f_X(x) = \int_{-\infty}^{\infty} f(x, y)\,dy,
 \]
@@ -429,6 +453,7 @@ Marginal of \( X \): \( f_X(x) = \int_0^1 (x+y)\,dy = x + 1/2 \) for \( 0 \leq x
 
 <div class="definition">
 <strong>Independence of Random Variables.</strong> Random variables \( X \) and \( Y \) are <strong>independent</strong> if and only if for all sets \( A, B \subseteq \mathbb{R} \):
+
 \[
 P(X \in A, Y \in B) = P(X \in A)\,P(Y \in B).
 \]
@@ -468,6 +493,7 @@ Continuous case: \( E[h(X, Y)] = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} 
 
 <div class="theorem">
 <strong>Linearity of Expectation (general).</strong> For any random variables \( X_1, \ldots, X_n \) and constants \( a_1, \ldots, a_n \):
+
 \[
 E\!\left[\sum_{i=1}^n a_i X_i\right] = \sum_{i=1}^n a_i\,E[X_i].
 \]
@@ -476,6 +502,7 @@ This holds regardless of whether the variables are independent.
 
 <div class="theorem">
 <strong>Independence and Expectation.</strong> If \( X \) and \( Y \) are independent and \( g(x), h(y) \) are real-valued functions, then
+
 \[
 E[g(X)\,h(Y)] = E[g(X)]\,E[h(Y)].
 \]
@@ -484,6 +511,7 @@ More generally, if \( X_1, \ldots, X_n \) are independent: \( E\!\left[\prod_{i=
 
 <div class="definition">
 <strong>Covariance.</strong> The <strong>covariance</strong> of \( X \) and \( Y \) is
+
 \[
 \text{Cov}(X, Y) = E[(X - \mu_X)(Y - \mu_Y)] = E[XY] - E[X]\,E[Y].
 \]
@@ -492,6 +520,7 @@ If \( X \) and \( Y \) are independent, then \( \text{Cov}(X, Y) = 0 \). The con
 
 <div class="definition">
 <strong>Correlation Coefficient.</strong> The <strong>correlation coefficient</strong> is the standardized covariance:
+
 \[
 \rho(X, Y) = \frac{\text{Cov}(X, Y)}{\sqrt{\text{Var}(X)}\,\sqrt{\text{Var}(Y)}}.
 \]
@@ -524,6 +553,7 @@ These conditional functions are themselves valid probability distributions (they
 
 <div class="theorem">
 <strong>Product Rule.</strong> The joint density factors as
+
 \[
 f(x, y) = f_X(x \mid y)\,f_Y(y) = f_Y(y \mid x)\,f_X(x).
 \]
@@ -537,6 +567,7 @@ f(x, y) = f_X(x \mid y)\,f_Y(y) = f_Y(y \mid x)\,f_X(x).
 
 <div class="definition">
 <strong>Conditional Expectation.</strong> The <strong>conditional expectation</strong> of \( g(Y) \) given \( X = x \) is
+
 \[
 E[g(Y) \mid X = x] = \begin{cases} \sum_y g(y)\,f_Y(y \mid x) & \text{if } Y \text{ is discrete}, \\[4pt] \int_{-\infty}^{\infty} g(y)\,f_Y(y \mid x)\,dy & \text{if } Y \text{ is continuous}. \end{cases}
 \]
@@ -553,6 +584,7 @@ The conditional expectation \( E[g(Y) \mid X] \) (without fixing \( X = x \)) is
 
 <div class="theorem">
 <strong>Law of Total Expectation (Double Expectation Theorem).</strong> For any random variables \( X \) and \( Y \):
+
 \[
 E[g(Y)] = E[E[g(Y) \mid X]].
 \]
@@ -569,6 +601,7 @@ E[E[g(X) \mid Y]] = \int_{-\infty}^{\infty}\!\left[\int_{-\infty}^{\infty} g(x)\
 
 <div class="theorem">
 <strong>Law of Total Variance.</strong> For any random variables \( X \) and \( Y \):
+
 \[
 \text{Var}(Y) = E[\text{Var}(Y \mid X)] + \text{Var}(E[Y \mid X]).
 \]
@@ -592,6 +625,7 @@ This confirms \( X \sim \text{Poisson}(p\theta) \).
 
 <div class="definition">
 <strong>Joint MGF.</strong> The <strong>joint moment generating function</strong> of \( X \) and \( Y \) is
+
 \[
 M(t_1, t_2) = E[e^{t_1 X + t_2 Y}],
 \]
@@ -607,6 +641,7 @@ Key applications:
 
 <div class="example">
 <strong>Additivity of independent Poissons.</strong> If \( X \sim \text{Poisson}(\theta_1) \) and \( Y \sim \text{Poisson}(\theta_2) \) are independent, then
+
 \[
 M_{X+Y}(t) = E[e^{tX}]\,E[e^{tY}] = \exp\{\theta_1(e^t - 1)\}\,\exp\{\theta_2(e^t - 1)\} = \exp\{(\theta_1 + \theta_2)(e^t - 1)\},
 \]
@@ -617,6 +652,7 @@ which is the MGF of \( \text{Poisson}(\theta_1 + \theta_2) \). By uniqueness, \(
 
 <div class="definition">
 <strong>Multinomial Distribution.</strong> Suppose \( n \) independent trials are performed, each resulting in one of \( k \) categories with probabilities \( p_1, \ldots, p_k \) (\( \sum p_i = 1 \)). Let \( X_i \) count the number of outcomes in category \( i \). Then \( (X_1, \ldots, X_k) \sim \text{Multinomial}(n; p_1, \ldots, p_k) \) with joint PMF
+
 \[
 f(x_1, \ldots, x_k) = \frac{n!}{x_1!\,x_2!\cdots x_k!}\,p_1^{x_1}\cdots p_k^{x_k},
 \]
@@ -635,6 +671,7 @@ Properties of the Multinomial distribution:
 
 <div class="definition">
 <strong>Bivariate Normal Distribution.</strong> Random variables \( X_1 \) and \( X_2 \) follow a <strong>bivariate normal distribution</strong>, written \( \mathbf{X} = (X_1, X_2)^\top \sim \text{BVN}(\boldsymbol{\mu}, \Sigma) \), if their joint PDF is
+
 \[
 f(x_1, x_2) = \frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}} \exp\!\left\{-\frac{1}{2(1-\rho^2)}\left[\left(\frac{x_1-\mu_1}{\sigma_1}\right)^2 + \left(\frac{x_2-\mu_2}{\sigma_2}\right)^2 - \frac{2\rho(x_1-\mu_1)(x_2-\mu_2)}{\sigma_1\sigma_2}\right]\right\},
 \]
@@ -646,6 +683,7 @@ Properties of the bivariate normal:
 1. **Joint MGF:** \( M(t_1, t_2) = \exp\!\left\{\mathbf{t}^\top\boldsymbol{\mu} + \frac{1}{2}\mathbf{t}^\top\Sigma\mathbf{t}\right\} \).
 2. **Marginals:** \( X_1 \sim N(\mu_1, \sigma_1^2) \) and \( X_2 \sim N(\mu_2, \sigma_2^2) \).
 3. **Conditional distributions:**
+
 \[
 X_2 \mid X_1 = x_1 \sim N\!\left(\mu_2 + \rho\frac{\sigma_2}{\sigma_1}(x_1 - \mu_1),\; \sigma_2^2(1-\rho^2)\right).
 \]
@@ -720,6 +758,7 @@ which is the CDF of \( \text{Uniform}(0,1) \).
 
 <div class="theorem">
 <strong>Univariate Transformation Theorem.</strong> Let \( X \) be a continuous random variable with PDF \( f_X(x) \) and support \( A \). If \( h \) is a one-to-one (monotone) function on \( A \), and \( Y = h(X) \), then the PDF of \( Y \) is
+
 \[
 f_Y(y) = f_X(x) \left|\frac{dx}{dy}\right|,
 \]
@@ -745,6 +784,7 @@ Thus \( Y \sim \text{Exponential}(1/\theta) \).
 
 <div class="theorem">
 <strong>Bivariate Transformation Theorem.</strong> Let \( (X, Y) \) have joint PDF \( f(x, y) \). Define \( U = h_1(X, Y) \) and \( V = h_2(X, Y) \), where the transformation is one-to-one with inverse \( x = w_1(u, v) \), \( y = w_2(u, v) \). The joint PDF of \( (U, V) \) is
+
 \[
 g(u, v) = f(w_1(u,v),\, w_2(u,v))\,\left|\frac{\partial(x, y)}{\partial(u, v)}\right|,
 \]
@@ -787,6 +827,7 @@ Marginalizing: \( g_U(u) = \int_0^u e^{-u}\,dv = u\,e^{-u} \) for \( u > 0 \), w
 
 <div class="theorem">
 <strong>MGF of a Sum of Independents.</strong> If \( X_1, \ldots, X_n \) are independent random variables, then \( T = \sum_{i=1}^n X_i \) has MGF
+
 \[
 M_T(t) = \prod_{i=1}^n M_{X_i}(t).
 \]
@@ -797,6 +838,7 @@ If additionally the \( X_i \) are identically distributed with common MGF \( M(t
 
 <div class="definition">
 <strong>Chi-Squared Distribution.</strong> If \( Z_1, \ldots, Z_k \stackrel{\text{iid}}{\sim} N(0, 1) \), then
+
 \[
 Q = \sum_{i=1}^k Z_i^2 \sim \chi^2(k).
 \]
@@ -807,6 +849,7 @@ If \( Y_i \sim \chi^2(k_i) \) are independent, then \( \sum Y_i \sim \chi^2(\sum
 
 <div class="theorem">
 <strong>Linear Combinations of Independent Normals.</strong> If \( X_i \sim N(\mu_i, \sigma_i^2) \) independently for \( i = 1, \ldots, n \), then
+
 \[
 \sum_{i=1}^n a_i X_i \sim N\!\left(\sum_{i=1}^n a_i\mu_i,\; \sum_{i=1}^n a_i^2\sigma_i^2\right).
 \]
@@ -815,6 +858,7 @@ In particular, if \( X_1, \ldots, X_n \stackrel{\text{iid}}{\sim} N(\mu, \sigma^
 
 <div class="definition">
 <strong>Student's t-Distribution.</strong> If \( Z \sim N(0, 1) \) and \( Q \sim \chi^2(\nu) \) are independent, then
+
 \[
 T = \frac{Z}{\sqrt{Q/\nu}} \sim t(\nu),
 \]
@@ -823,6 +867,7 @@ the <strong>Student's t-distribution</strong> with \( \nu \) degrees of freedom.
 
 <div class="definition">
 <strong>F-Distribution.</strong> If \( X \sim \chi^2(n) \) and \( Y \sim \chi^2(m) \) are independent, then
+
 \[
 \frac{X/n}{Y/m} \sim F(n, m).
 \]
@@ -850,6 +895,7 @@ For (4), since \( \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim N(0,1) \) and \( \fra
 
 <div class="definition">
 <strong>Convergence in Distribution.</strong> Let \( X_1, X_2, \ldots \) be a sequence of random variables with CDFs \( F_1, F_2, \ldots \), and let \( X \) be a random variable with CDF \( F \). We say \( X_n \) <strong>converges in distribution</strong> to \( X \), written \( X_n \xrightarrow{d} X \), if
+
 \[
 \lim_{n \to \infty} F_n(x) = F(x)
 \]
@@ -877,6 +923,7 @@ For \( X_{(n)} \): The CDF \( F_n(x) = x^n \) on \( (0,1) \) converges to the de
 
 <div class="definition">
 <strong>Convergence in Probability.</strong> A sequence \( X_1, X_2, \ldots \) <strong>converges in probability</strong> to a random variable \( X \), written \( X_n \xrightarrow{P} X \), if for every \( \varepsilon > 0 \):
+
 \[
 \lim_{n \to \infty} P(|X_n - X| \geq \varepsilon) = 0.
 \]
@@ -897,6 +944,7 @@ X_n \xrightarrow{d} b \iff X_n \xrightarrow{P} b.
 
 <div class="theorem">
 <strong>Markov's Inequality.</strong> For any random variable \( X \) and constants \( k > 0 \), \( c > 0 \):
+
 \[
 P(|X| \geq c) \leq \frac{E[|X|^k]}{c^k}.
 \]
@@ -905,6 +953,7 @@ The most common case is \( k = 2 \) (Chebyshev's inequality): \( P(|X| \geq c) \
 
 <div class="theorem">
 <strong>Weak Law of Large Numbers (WLLN).</strong> Let \( X_1, X_2, \ldots \) be iid random variables with \( E[X_i] = \mu \) and \( \text{Var}(X_i) = \sigma^2 < \infty \). Then the sample mean
+
 \[
 \bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{P} \mu.
 \]
@@ -927,6 +976,7 @@ The WLLN also holds under weaker conditions, for instance when the \( X_i \) are
 
 <div class="theorem">
 <strong>Central Limit Theorem (CLT).</strong> Let \( X_1, X_2, \ldots \) be iid random variables with \( E[X_i] = \mu \) and \( \text{Var}(X_i) = \sigma^2 \in (0, \infty) \). Then
+
 \[
 \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} \xrightarrow{d} N(0, 1).
 \]
@@ -935,6 +985,7 @@ Equivalently, \( \sqrt{n}(\bar{X}_n - \mu) \xrightarrow{d} N(0, \sigma^2) \).
 
 <div class="proof">
 <strong>Proof via MGFs.</strong> Let \( Y_i = (X_i - \mu)/\sigma \), so the \( Y_i \) are iid with \( E[Y_i] = 0 \), \( \text{Var}(Y_i) = 1 \), and MGF \( M_Y(t) \). The MGF of \( \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sigma} = \frac{1}{\sqrt{n}}\sum Y_i \) is
+
 \[
 M_n(t) = \left[M_Y\!\left(\frac{t}{\sqrt{n}}\right)\right]^n.
 \]
@@ -969,6 +1020,7 @@ which is the MGF of \( N(0,1) \). By the MGF convergence theorem, the result fol
 
 <div class="example">
 <strong>Standardizing with estimated variance.</strong> Let \( X_1, \ldots, X_n \stackrel{\text{iid}}{\sim} \text{Poisson}(\mu) \). By the CLT,
+
 \[
 \frac{\sqrt{n}(\bar{X}_n - \mu)}{\sqrt{\mu}} \xrightarrow{d} N(0, 1).
 \]
@@ -983,6 +1035,7 @@ Since \( \bar{X}_n \xrightarrow{P} \mu \) by the WLLN, the continuous mapping th
 
 <div class="theorem">
 <strong>Delta Method.</strong> Suppose \( \sqrt{n}(X_n - \theta) \xrightarrow{d} N(0, \sigma^2) \) and \( g \) is differentiable at \( \theta \) with \( g'(\theta) \neq 0 \). Then
+
 \[
 \sqrt{n}\left[g(X_n) - g(\theta)\right] \xrightarrow{d} N\!\left(0,\, [g'(\theta)]^2\,\sigma^2\right).
 \]
@@ -1083,6 +1136,7 @@ Setting \( \hat{\mu}_1 = \bar{X}_n \) and \( \hat{\mu}_2 = \frac{1}{n}\sum X_i^2
 
 <div class="definition">
 <strong>Likelihood Function.</strong> Given iid observations from \( f(x; \theta) \), the <strong>likelihood function</strong> is
+
 \[
 L(\theta) = L(\theta;\, x_1, \ldots, x_n) = \prod_{i=1}^n f(x_i; \theta).
 \]
@@ -1091,6 +1145,7 @@ The <strong>log-likelihood</strong> is \( \ell(\theta) = \ln L(\theta) = \sum_{i
 
 <div class="definition">
 <strong>Maximum Likelihood Estimator (MLE).</strong> The <strong>MLE</strong> is the value \( \hat{\theta} \) that maximizes \( L(\theta) \) (equivalently, \( \ell(\theta) \)):
+
 \[
 \hat{\theta} = \arg\max_{\theta \in \Theta}\, L(\theta) = \arg\max_{\theta \in \Theta}\, \ell(\theta).
 \]
@@ -1102,6 +1157,7 @@ The <strong>log-likelihood</strong> is \( \ell(\theta) = \ln L(\theta) = \sum_{i
 
 <div class="example">
 <strong>MLE for the Poisson.</strong> If \( X_i \stackrel{\text{iid}}{\sim} \text{Poisson}(\theta) \):
+
 \[
 \ell(\theta) = \left(\sum x_i\right)\ln\theta - n\theta - \sum\ln(x_i!).
 \]
@@ -1112,6 +1168,7 @@ By invariance, the MLE of \( P(X_1 = 0) = e^{-\theta} \) is \( e^{-\bar{X}_n} \)
 
 <div class="example">
 <strong>MLE for the Normal.</strong> If \( X_i \stackrel{\text{iid}}{\sim} N(\mu, \sigma^2) \):
+
 \[
 \ell(\mu, \sigma^2) = -\frac{n}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^n (x_i - \mu)^2.
 \]
@@ -1125,6 +1182,7 @@ Note that \( \hat{\sigma}^2_{\text{ML}} \) is biased (its expectation is \( \fra
 
 <div class="example">
 <strong>MLE for the Uniform (boundary case).</strong> If \( X_i \stackrel{\text{iid}}{\sim} \text{Uniform}(0, \theta) \), the likelihood is
+
 \[
 L(\theta) = \begin{cases} \theta^{-n} & \text{if } 0 \leq x_{(1)} \leq x_{(n)} \leq \theta, \\ 0 & \text{otherwise}. \end{cases}
 \]
@@ -1135,6 +1193,7 @@ This differs from \( \hat{\theta}_{\text{MM}} = 2\bar{X}_n \). The calculus-base
 
 <div class="example">
 <strong>MLE for a power-law density.</strong> If \( f(x; \theta) = \theta x^{\theta-1} \) for \( 0 < x < 1 \) and \( \theta > 0 \):
+
 \[
 \ell(\theta) = n\ln\theta + (\theta - 1)\sum_{i=1}^n \ln x_i.
 \]
@@ -1151,6 +1210,7 @@ Setting \( \ell'(\theta) = n/\theta + \sum\ln x_i = 0 \) gives:
 
 <div class="definition">
 <strong>Score Function.</strong> The <strong>score function</strong> is
+
 \[
 S(\theta) = \frac{d}{d\theta}\ell(\theta) = \frac{d}{d\theta}\ln L(\theta).
 \]
@@ -1159,6 +1219,7 @@ When the support does not depend on \( \theta \), the MLE satisfies \( S(\hat{\t
 
 <div class="definition">
 <strong>Observed Information.</strong> The <strong>observed information</strong> is
+
 \[
 I(\theta) = -\frac{d^2}{d\theta^2}\ell(\theta).
 \]
@@ -1166,6 +1227,7 @@ I(\theta) = -\frac{d^2}{d\theta^2}\ell(\theta).
 
 <div class="definition">
 <strong>Fisher Information.</strong> The <strong>Fisher information</strong> (or expected information) is
+
 \[
 J(\theta) = E[I(\theta; \mathbf{X})] = -E\!\left[\frac{d^2}{d\theta^2}\ln f(X_1; \theta)\right] \cdot n = n\,J_1(\theta),
 \]
@@ -1176,6 +1238,7 @@ where \( J_1(\theta) = -E\!\left[\frac{d^2}{d\theta^2}\ln f(X_1; \theta)\right] 
 
 <div class="theorem">
 <strong>Cramer-Rao Lower Bound.</strong> If \( \hat{\theta} \) is any unbiased estimator of \( \theta \), then under regularity conditions:
+
 \[
 \text{Var}(\hat{\theta}) \geq \frac{1}{J(\theta)} = \frac{1}{n\,J_1(\theta)}.
 \]
@@ -1183,6 +1246,7 @@ where \( J_1(\theta) = -E\!\left[\frac{d^2}{d\theta^2}\ln f(X_1; \theta)\right] 
 
 <div class="theorem">
 <strong>Cramer-Rao Bound for Functions.</strong> If \( T \) is an unbiased estimator of \( g(\theta) \), then
+
 \[
 \text{Var}(T) \geq \frac{[g'(\theta)]^2}{J(\theta)}.
 \]
@@ -1192,6 +1256,7 @@ An estimator achieving the Cramer-Rao lower bound is called **efficient** (or a 
 
 <div class="example">
 <strong>Fisher information for Poisson.</strong> If \( X_i \stackrel{\text{iid}}{\sim} \text{Poisson}(\theta) \):
+
 \[
 \ln f(x; \theta) = x\ln\theta - \theta - \ln(x!), \quad \frac{d^2}{d\theta^2}\ln f(x;\theta) = -\frac{x}{\theta^2}.
 \]
@@ -1248,6 +1313,7 @@ A pivotal quantity is the basis for constructing confidence intervals. The gener
 
 <div class="example">
 <strong>CI for a normal mean (known variance).</strong> If \( X_i \stackrel{\text{iid}}{\sim} N(\mu, \sigma^2) \) with \( \sigma^2 \) known, then
+
 \[
 Z = \frac{\bar{X}_n - \mu}{\sigma/\sqrt{n}} \sim N(0, 1)
 \]
@@ -1261,6 +1327,7 @@ where \( z_{\alpha/2} \) is the upper \( \alpha/2 \) quantile of \( N(0,1) \).
 
 <div class="example">
 <strong>CI for a normal mean (unknown variance).</strong> If \( X_i \stackrel{\text{iid}}{\sim} N(\mu, \sigma^2) \) with \( \sigma^2 \) unknown, the pivot is
+
 \[
 T = \frac{\bar{X}_n - \mu}{S/\sqrt{n}} \sim t(n-1),
 \]
@@ -1269,6 +1336,7 @@ giving the CI: \( \bar{X}_n \pm t_{\alpha/2, n-1}\,\frac{S}{\sqrt{n}} \).
 
 <div class="example">
 <strong>CI for a normal variance.</strong> The pivot \( \frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1) \) yields
+
 \[
 \left(\frac{(n-1)S^2}{\chi^2_{\alpha/2, n-1}},\; \frac{(n-1)S^2}{\chi^2_{1-\alpha/2, n-1}}\right)
 \]
@@ -1311,6 +1379,7 @@ The <strong>significance level</strong> is \( \alpha \). The <strong>power</stro
 
 <div class="theorem">
 <strong>Neyman-Pearson Lemma.</strong> For testing the simple null \( H_0: \theta = \theta_0 \) against the simple alternative \( H_1: \theta = \theta_1 \) at significance level \( \alpha \), the most powerful test rejects \( H_0 \) when the <strong>likelihood ratio</strong>
+
 \[
 \Lambda = \frac{L(\theta_1)}{L(\theta_0)} = \frac{\prod_{i=1}^n f(x_i; \theta_1)}{\prod_{i=1}^n f(x_i; \theta_0)}
 \]
@@ -1327,6 +1396,7 @@ For testing composite hypotheses, the **generalized likelihood ratio** is common
 
 <div class="definition">
 <strong>Likelihood Ratio Test Statistic.</strong> For testing \( H_0: \theta \in \Theta_0 \) versus \( H_1: \theta \in \Theta_0^c \), the <strong>likelihood ratio statistic</strong> is
+
 \[
 \lambda = \frac{\sup_{\theta \in \Theta_0} L(\theta)}{\sup_{\theta \in \Theta} L(\theta)} = \frac{L(\hat{\theta}_0)}{L(\hat{\theta})},
 \]
@@ -1335,6 +1405,7 @@ where \( \hat{\theta}_0 \) is the MLE under \( H_0 \) and \( \hat{\theta} \) is 
 
 <div class="theorem">
 <strong>Wilks' Theorem (asymptotic distribution).</strong> Under regularity conditions and under \( H_0 \), as \( n \to \infty \):
+
 \[
 -2\ln\lambda \xrightarrow{d} \chi^2(r),
 \]

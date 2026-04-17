@@ -16,7 +16,9 @@ These notes follow the course structure laid out by Dr. Eduardo Martín-Martíne
 
 Quantum mechanics lives in a **Hilbert space** \(\mathcal{H}\) — a complex vector space equipped with an inner product and complete in the metric that inner product induces. Every physical state of a quantum system is represented (up to an overall phase) by a unit vector in \(\mathcal{H}\). Dirac's notation captures the algebraic structure of this space elegantly. A **ket** \(|\alpha\rangle\) is a vector in \(\mathcal{H}\); its dual, a **bra** \(\langle\alpha|\), lives in the dual space \(\mathcal{H}^*\). The inner product of \(|\beta\rangle\) with \(|\alpha\rangle\) is the complex number \(\langle\beta|\alpha\rangle\), satisfying
 
-\[\langle\alpha|\beta\rangle = \langle\beta|\alpha\rangle^*,\]
+\[
+\langle\alpha|\beta\rangle = \langle\beta|\alpha\rangle^*,
+\]
 
 so that \(\langle\alpha|\alpha\rangle \geq 0\), with equality only when \(|\alpha\rangle = 0\).
 
@@ -34,7 +36,9 @@ To prove the first claim, suppose \(A|a'\rangle = a'|a'\rangle\). Acting on the 
 
 For operators with a **discrete spectrum**, the eigenstates \(|a'\rangle\) (normalised so that \(\langle a'|a'\rangle = 1\)) form a complete orthonormal set, and the **spectral decomposition** reads
 
-\[A = \sum_{a'} a' |a'\rangle\langle a'|, \qquad \mathbf{1} = \sum_{a'} |a'\rangle\langle a'|.\]
+\[
+A = \sum_{a'} a' |a'\rangle\langle a'|, \qquad \mathbf{1} = \sum_{a'} |a'\rangle\langle a'|.
+\]
 
 The second equation is the **completeness relation** or **resolution of identity**. Any ket can be expanded as \(|\alpha\rangle = \sum_{a'} |a'\rangle\langle a'|\alpha\rangle\), where the complex number \(\langle a'|\alpha\rangle\) is the **probability amplitude** for finding the eigenvalue \(a'\) in a measurement of \(A\). The probability itself is \(|\langle a'|\alpha\rangle|^2\), and the normalisation \(\langle\alpha|\alpha\rangle = 1\) ensures these probabilities sum to one.
 
@@ -64,11 +68,15 @@ These postulates apply directly when the spectrum of \(A\) is discrete. The cont
 
 For position \(X\) (or momentum \(P\)), the "eigenvalues" form a continuum. One introduces generalised eigenstates \(|x'\rangle\) satisfying \(X|x'\rangle = x'|x'\rangle\), but these cannot be normalised in the ordinary sense. Instead they satisfy the **Dirac delta normalisation**
 
-\[\langle x''|x'\rangle = \delta(x'' - x'),\]
+\[
+\langle x''|x'\rangle = \delta(x'' - x'),
+\]
 
 and the **continuous completeness relation**
 
-\[\int_{-\infty}^{\infty} dx'\, |x'\rangle\langle x'| = \mathbf{1}.\]
+\[
+\int_{-\infty}^{\infty} dx'\, |x'\rangle\langle x'| = \mathbf{1}.
+\]
 
 The **wavefunction** of a state \(|\alpha\rangle\) in the position basis is \(\psi_\alpha(x') = \langle x'|\alpha\rangle\), and the probability of finding the particle in \([x', x'+dx']\) is \(|\psi_\alpha(x')|^2\,dx'\). These formulae parallel the discrete case exactly — the sum becomes an integral and the Kronecker delta becomes a Dirac delta.
 
@@ -76,29 +84,41 @@ The **wavefunction** of a state \(|\alpha\rangle\) in the position basis is \(\p
 
 The canonical commutation relation \([X, P] = i\hbar\) is not an independent postulate but a consequence of the structure of translations. Define the **infinitesimal translation operator**
 
-\[\mathcal{T}(\delta x') = \mathbf{1} - \frac{i}{\hbar} P \,\delta x',\]
+\[
+\mathcal{T}(\delta x') = \mathbf{1} - \frac{i}{\hbar} P \,\delta x',
+\]
 
 where \(P\) is the Hermitian generator of translations. The action on position eigenstates is \(\mathcal{T}(\delta x')|x'\rangle = |x' + \delta x'\rangle\). Act with the commutator \([X, \mathcal{T}(\delta x')]\) on \(|x'\rangle\):
 
-\[[X, \mathcal{T}(\delta x')]|x'\rangle = X|x'+\delta x'\rangle - \mathcal{T}(\delta x') x'|x'\rangle = (x'+\delta x')|x'+\delta x'\rangle - x'|x'+\delta x'\rangle = \delta x'\,|x'+\delta x'\rangle.\]
+\[
+[X, \mathcal{T}(\delta x')]|x'\rangle = X|x'+\delta x'\rangle - \mathcal{T}(\delta x') x'|x'\rangle = (x'+\delta x')|x'+\delta x'\rangle - x'|x'+\delta x'\rangle = \delta x'\,|x'+\delta x'\rangle.
+\]
 
 On the other hand, inserting \(\mathcal{T}(\delta x') = \mathbf{1} - (i/\hbar) P \,\delta x'\),
 
-\[[X, \mathcal{T}(\delta x')] = -\frac{i\,\delta x'}{\hbar}[X, P].\]
+\[
+[X, \mathcal{T}(\delta x')] = -\frac{i\,\delta x'}{\hbar}[X, P].
+\]
 
 Equating both expressions at leading order in \(\delta x'\) gives
 
-\[[X, P] = i\hbar.\]
+\[
+[X, P] = i\hbar.
+\]
 
 ### 2.4 Position and Momentum Representations
 
 The momentum operator in the position basis acts as a differential operator. The translation of a wavefunction by \(\delta x'\) gives \(\langle x'|\mathcal{T}(\delta x')|\alpha\rangle = \psi_\alpha(x' - \delta x') \approx \psi_\alpha(x') - \delta x'\,\partial_{x'}\psi_\alpha\). But also \(\langle x'|\mathcal{T}(\delta x')|\alpha\rangle = \langle x'|(1 - iP\delta x'/\hbar)|\alpha\rangle\), so in the position basis,
 
-\[\langle x'|P|\alpha\rangle = -i\hbar \frac{\partial}{\partial x'}\langle x'|\alpha\rangle = -i\hbar\,\partial_{x'}\psi_\alpha(x').\]
+\[
+\langle x'|P|\alpha\rangle = -i\hbar \frac{\partial}{\partial x'}\langle x'|\alpha\rangle = -i\hbar\,\partial_{x'}\psi_\alpha(x').
+\]
 
 The momentum eigenstates in the position representation are plane waves: \(\langle x'|p'\rangle = \frac{1}{\sqrt{2\pi\hbar}}\,e^{ip'x'/\hbar}\). The relationship between position and momentum wavefunctions is a **Fourier transform**:
 
-\[\langle p'|\alpha\rangle = \frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty} dx'\, e^{-ip'x'/\hbar}\,\langle x'|\alpha\rangle.\]
+\[
+\langle p'|\alpha\rangle = \frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty} dx'\, e^{-ip'x'/\hbar}\,\langle x'|\alpha\rangle.
+\]
 
 This Fourier duality implies the Heisenberg uncertainty principle \(\Delta X\,\Delta P \geq \hbar/2\) as a theorem — a rigorous consequence of the Fourier analysis of square-integrable functions, not a philosophical statement.
 
@@ -110,7 +130,9 @@ This Fourier duality implies the Heisenberg uncertainty principle \(\Delta X\,\D
 
 Rather than working with the Schrödinger equation directly, it is more powerful to define the **time evolution operator** \(U(t, t_0)\) by
 
-\[|\psi, t\rangle = U(t, t_0)\,|\psi, t_0\rangle.\]
+\[
+|\psi, t\rangle = U(t, t_0)\,|\psi, t_0\rangle.
+\]
 
 Three properties follow from physical requirements alone.
 
@@ -122,29 +144,41 @@ Third, **initial condition**: \(U(t_0, t_0) = \mathbf{1}\).
 
 To find the form of \(U\), consider an infinitesimal time step \(dt\). The most general infinitesimal unitary operator satisfying the initial condition is \(U(t_0 + dt, t_0) = \mathbf{1} - i\Omega(t_0)\,dt\) for some Hermitian operator \(\Omega(t_0)\). From the composition law,
 
-\[U(t+dt, t_0) = U(t+dt, t)\,U(t, t_0) = (\mathbf{1} - i\Omega(t)\,dt)\,U(t, t_0),\]
+\[
+U(t+dt, t_0) = U(t+dt, t)\,U(t, t_0) = (\mathbf{1} - i\Omega(t)\,dt)\,U(t, t_0),
+\]
 
 which gives
 
-\[i\frac{\partial U}{\partial t} = \Omega(t)\,U(t, t_0).\]
+\[
+i\frac{\partial U}{\partial t} = \Omega(t)\,U(t, t_0).
+\]
 
 Identifying \(\Omega = H/\hbar\) on dimensional grounds yields the **operator Schrödinger equation**
 
-\[i\hbar\frac{\partial U}{\partial t} = H\,U(t, t_0).\]
+\[
+i\hbar\frac{\partial U}{\partial t} = H\,U(t, t_0).
+\]
 
 For a **time-independent Hamiltonian**, the unique unitary solution is
 
-\[U(t, t_0) = e^{-iH(t-t_0)/\hbar}.\]
+\[
+U(t, t_0) = e^{-iH(t-t_0)/\hbar}.
+\]
 
 ### 3.2 The Heisenberg Picture
 
 The Schrödinger picture places all time dependence in the state ket. The **Heisenberg picture** makes an equivalent choice: states are frozen at their \(t_0\) values, while operators carry the time dependence:
 
-\[A^{(H)}(t) = U^\dagger(t, t_0)\,A^{(S)}\,U(t, t_0).\]
+\[
+A^{(H)}(t) = U^\dagger(t, t_0)\,A^{(S)}\,U(t, t_0).
+\]
 
 Differentiating with respect to \(t\) gives the **Heisenberg equation of motion**:
 
-\[\frac{d A^{(H)}}{dt} = \frac{i}{\hbar}\left[H, A^{(H)}\right] + \left(\frac{\partial A^{(S)}}{\partial t}\right)^{(H)}.\]
+\[
+\frac{d A^{(H)}}{dt} = \frac{i}{\hbar}\left[H, A^{(H)}\right] + \left(\frac{\partial A^{(S)}}{\partial t}\right)^{(H)}.
+\]
 
 For operators with no explicit time dependence in the Schrödinger picture, the second term vanishes.
 
@@ -154,7 +188,9 @@ An observable \(A\) is conserved if and only if \([H, A] = 0\). This follows imm
 
 **Ehrenfest's theorem** takes expectation values of the Heisenberg equations for \(X\) and \(P\):
 
-\[\frac{d\langle X\rangle}{dt} = \frac{\langle P\rangle}{m}, \qquad \frac{d\langle P\rangle}{dt} = -\left\langle \frac{\partial V}{\partial X}\right\rangle.\]
+\[
+\frac{d\langle X\rangle}{dt} = \frac{\langle P\rangle}{m}, \qquad \frac{d\langle P\rangle}{dt} = -\left\langle \frac{\partial V}{\partial X}\right\rangle.
+\]
 
 These are the classical equations of motion with quantum expectation values in place of classical variables. Quantum mechanics reduces to classical mechanics in the limit of slowly varying potentials, where \(\langle \partial V/\partial X\rangle \approx \partial V/\partial\langle X\rangle\).
 
@@ -166,11 +202,15 @@ These are the classical equations of motion with quantum expectation values in p
 
 A rotation by angle \(\phi\) about the \(z\)-axis is represented by the \(3\times 3\) matrix
 
-\[R_z(\phi) = \begin{pmatrix} \cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1 \end{pmatrix},\]
+\[
+R_z(\phi) = \begin{pmatrix} \cos\phi & -\sin\phi & 0 \\ \sin\phi & \cos\phi & 0 \\ 0 & 0 & 1 \end{pmatrix},
+\]
 
 with analogous expressions for \(R_x\) and \(R_y\). These matrices satisfy \(R^T R = \mathbf{1}\) and \(\det R = +1\), forming the group \(\text{SO}(3)\). Crucially, rotations do not commute: rotating first about \(x\) and then about \(y\) yields a different result than the reverse order. For small angles \(\epsilon\),
 
-\[R_x(\epsilon)R_y(\epsilon) - R_y(\epsilon)R_x(\epsilon) \approx R_z(\epsilon^2) - \mathbf{1},\]
+\[
+R_x(\epsilon)R_y(\epsilon) - R_y(\epsilon)R_x(\epsilon) \approx R_z(\epsilon^2) - \mathbf{1},
+\]
 
 showing that the commutator of two small rotations is itself a rotation about the third axis. This non-commutativity is the seed of the angular momentum algebra.
 
@@ -178,11 +218,15 @@ showing that the commutator of two small rotations is itself a rotation about th
 
 In quantum mechanics, a rotation \(R\) acts on state kets via a unitary operator \(\mathcal{D}(R)\). For an infinitesimal rotation by \(d\phi\) about the unit vector \(\hat{n}\),
 
-\[\mathcal{D}(\hat{n}, d\phi) = \mathbf{1} - \frac{i}{\hbar}(\mathbf{J}\cdot\hat{n})\,d\phi,\]
+\[
+\mathcal{D}(\hat{n}, d\phi) = \mathbf{1} - \frac{i}{\hbar}(\mathbf{J}\cdot\hat{n})\,d\phi,
+\]
 
 where \(\mathbf{J} = (J_x, J_y, J_z)\) are the **angular momentum operators**, Hermitian for \(\mathcal{D}\) to be unitary. Consistency with the composition of rotations forces the **commutation relations**
 
-\[[J_i, J_j] = i\hbar\,\varepsilon_{ijk}\,J_k.\]
+\[
+[J_i, J_j] = i\hbar\,\varepsilon_{ijk}\,J_k.
+\]
 
 These define the Lie algebra \(\mathfrak{su}(2)\) and are the central algebraic fact of angular momentum theory.
 
@@ -190,13 +234,17 @@ These define the Lie algebra \(\mathfrak{su}(2)\) and are the central algebraic 
 
 The simplest non-trivial representation has dimension 2. Setting \(\mathbf{J} = \frac{\hbar}{2}\boldsymbol{\sigma}\), the **Pauli matrices** are
 
-\[\sigma_x = \begin{pmatrix}0 & 1\\1 & 0\end{pmatrix}, \quad \sigma_y = \begin{pmatrix}0 & -i\\i & 0\end{pmatrix}, \quad \sigma_z = \begin{pmatrix}1 & 0\\0 & -1\end{pmatrix}.\]
+\[
+\sigma_x = \begin{pmatrix}0 & 1\\1 & 0\end{pmatrix}, \quad \sigma_y = \begin{pmatrix}0 & -i\\i & 0\end{pmatrix}, \quad \sigma_z = \begin{pmatrix}1 & 0\\0 & -1\end{pmatrix}.
+\]
 
 They satisfy \(\sigma_i^2 = \mathbf{1}\), \(\{\sigma_i, \sigma_j\} = 2\delta_{ij}\mathbf{1}\), and \([\sigma_i, \sigma_j] = 2i\varepsilon_{ijk}\sigma_k\). The two eigenstates of \(S_z = \hbar\sigma_z/2\) are \(|+\rangle = \binom{1}{0}\) (spin-up, \(+\hbar/2\)) and \(|-\rangle = \binom{0}{1}\) (spin-down, \(-\hbar/2\)).
 
 A rotation of a spin-1/2 state by angle \(\phi\) about \(\hat{n}\) is
 
-\[\mathcal{D}^{(1/2)}(\hat{n}, \phi) = \cos\frac{\phi}{2}\,\mathbf{1} - i\sin\frac{\phi}{2}\,(\hat{n}\cdot\boldsymbol{\sigma}).\]
+\[
+\mathcal{D}^{(1/2)}(\hat{n}, \phi) = \cos\frac{\phi}{2}\,\mathbf{1} - i\sin\frac{\phi}{2}\,(\hat{n}\cdot\boldsymbol{\sigma}).
+\]
 
 A rotation by \(2\pi\) gives \(\mathcal{D}^{(1/2)} = -\mathbf{1}\): a spinor picks up a sign under a full rotation. The set of all spin states traces out the **Bloch sphere**, with north/south poles as \(|\pm\rangle\) and equatorial points as eigenstates of \(S_x\) and \(S_y\).
 
@@ -246,11 +294,15 @@ A rotation by \(2\pi\) gives \(\mathcal{D}^{(1/2)} = -\mathbf{1}\): a spinor pic
 
 A general rotation is parametrised by **Euler angles** \((\alpha, \beta, \gamma)\):
 
-\[R(\alpha,\beta,\gamma) = R_z(\alpha)\,R_y(\beta)\,R_z(\gamma), \qquad \mathcal{D}^{(j)}(\alpha,\beta,\gamma) = e^{-iJ_z\alpha/\hbar}\,e^{-iJ_y\beta/\hbar}\,e^{-iJ_z\gamma/\hbar}.\]
+\[
+R(\alpha,\beta,\gamma) = R_z(\alpha)\,R_y(\beta)\,R_z(\gamma), \qquad \mathcal{D}^{(j)}(\alpha,\beta,\gamma) = e^{-iJ_z\alpha/\hbar}\,e^{-iJ_y\beta/\hbar}\,e^{-iJ_z\gamma/\hbar}.
+\]
 
 The matrix elements in the \(|j,m\rangle\) basis are the **Wigner D-matrices**:
 
-\[D^{(j)}_{m'm}(\alpha,\beta,\gamma) = e^{-im'\alpha}\,d^{(j)}_{m'm}(\beta)\,e^{-im\gamma},\]
+\[
+D^{(j)}_{m'm}(\alpha,\beta,\gamma) = e^{-im'\alpha}\,d^{(j)}_{m'm}(\beta)\,e^{-im\gamma},
+\]
 
 where \(d^{(j)}_{m'm}(\beta) = \langle j,m'|e^{-iJ_y\beta/\hbar}|j,m\rangle\) is the reduced rotation matrix. These appear in the description of scattering amplitudes and multipole transitions.
 
@@ -292,15 +344,21 @@ where \(d^{(j)}_{m'm}(\beta) = \langle j,m'|e^{-iJ_y\beta/\hbar}|j,m\rangle\) is
 
 The eigenvalue spectrum of \(\mathbf{J}^2\) and \(J_z\) follows from the commutation relations alone. From \([J_i,J_j]=i\hbar\varepsilon_{ijk}J_k\) one derives \([\mathbf{J}^2, J_i] = 0\) for all \(i\), so both operators can be simultaneously diagonalised. Let \(\mathbf{J}^2|j,m\rangle = \lambda\hbar^2|j,m\rangle\) and \(J_z|j,m\rangle = m\hbar|j,m\rangle\). Define **ladder operators** \(J_\pm = J_x \pm iJ_y\) satisfying
 
-\[[J_z, J_\pm] = \pm\hbar J_\pm, \qquad [J_+, J_-] = 2\hbar J_z, \qquad [\mathbf{J}^2, J_\pm] = 0.\]
+\[
+[J_z, J_\pm] = \pm\hbar J_\pm, \qquad [J_+, J_-] = 2\hbar J_z, \qquad [\mathbf{J}^2, J_\pm] = 0.
+\]
 
 The operator \(J_+\) raises \(m\) by one unit; \(J_-\) lowers it. Since \(\langle j,m|J_x^2 + J_y^2|j,m\rangle \geq 0\), we have \(\lambda \geq m^2\). Calling the maximum value \(j\), requiring \(J_+|j,j\rangle = 0\) gives \(\lambda = j(j+1)\). The minimum value is \(-j\), and \(2j\) must be a non-negative integer, so
 
-\[j \in \left\{0, \tfrac{1}{2}, 1, \tfrac{3}{2}, 2, \ldots\right\}, \qquad m \in \{-j, -j+1, \ldots, j\}.\]
+\[
+j \in \left\{0, \tfrac{1}{2}, 1, \tfrac{3}{2}, 2, \ldots\right\}, \qquad m \in \{-j, -j+1, \ldots, j\}.
+\]
 
 The normalised matrix elements of the ladder operators are
 
-\[J_\pm|j,m\rangle = \hbar\sqrt{j(j+1) - m(m\pm 1)}\,|j,m\pm 1\rangle.\]
+\[
+J_\pm|j,m\rangle = \hbar\sqrt{j(j+1) - m(m\pm 1)}\,|j,m\pm 1\rangle.
+\]
 
 <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;display:block;margin:1.5em auto">
   <defs>
@@ -357,7 +415,9 @@ The normalised matrix elements of the ladder operators are
 
 For a particle moving in three dimensions, \(\mathbf{L} = \mathbf{r}\times\mathbf{p}\) with
 
-\[L_z = -i\hbar\frac{\partial}{\partial\phi}, \qquad \mathbf{L}^2 = -\hbar^2\left[\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right) + \frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2}\right].\]
+\[
+L_z = -i\hbar\frac{\partial}{\partial\phi}, \qquad \mathbf{L}^2 = -\hbar^2\left[\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right) + \frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2}\right].
+\]
 
 The simultaneous eigenfunctions are the **spherical harmonics** \(Y_\ell^m(\theta,\phi)\). Since \(Y_\ell^m \propto e^{im\phi}\) must be single-valued under \(\phi\mapsto\phi+2\pi\), we need \(m\in\mathbb{Z}\), forcing \(\ell\in\mathbb{Z}_{\geq 0}\). Half-integer values of angular momentum cannot arise from orbital angular momentum \(\mathbf{r}\times\mathbf{p}\); they require intrinsic spin.
 
@@ -365,7 +425,9 @@ The simultaneous eigenfunctions are the **spherical harmonics** \(Y_\ell^m(\thet
 
 For a system with two angular momenta \(\mathbf{J}_1\) and \(\mathbf{J}_2\), the total \(\mathbf{J} = \mathbf{J}_1 + \mathbf{J}_2\) also satisfies the angular momentum commutation relations. The change of basis between the uncoupled basis \(|j_1,m_1\rangle\otimes|j_2,m_2\rangle\) and the coupled basis \(|j,m\rangle\) involves the **Clebsch-Gordan coefficients** \(\langle j_1,m_1;j_2,m_2|j,m\rangle\):
 
-\[|j,m\rangle = \sum_{m_1+m_2=m} \langle j_1,m_1;j_2,m_2|j,m\rangle\,|j_1,m_1\rangle\otimes|j_2,m_2\rangle.\]
+\[
+|j,m\rangle = \sum_{m_1+m_2=m} \langle j_1,m_1;j_2,m_2|j,m\rangle\,|j_1,m_1\rangle\otimes|j_2,m_2\rangle.
+\]
 
 The total angular momentum quantum number ranges as \(j \in \{|j_1 - j_2|, |j_1-j_2|+1, \ldots, j_1+j_2\}\).
 
@@ -383,13 +445,17 @@ A symmetry of a quantum system is a transformation \(S\) that leaves the Hamilto
 
 **Parity** is the discrete symmetry of spatial inversion. The operator \(\pi\) acts as \(\pi|x'\rangle = |-x'\rangle\), from which one derives
 
-\[\pi^\dagger X\,\pi = -X, \qquad \pi^\dagger P\,\pi = -P, \qquad \pi^\dagger \mathbf{L}\,\pi = +\mathbf{L}.\]
+\[
+\pi^\dagger X\,\pi = -X, \qquad \pi^\dagger P\,\pi = -P, \qquad \pi^\dagger \mathbf{L}\,\pi = +\mathbf{L}.
+\]
 
 Since \(\pi^2 = \mathbf{1}\), the eigenvalues of \(\pi\) are \(\pm 1\). States with eigenvalue \(+1\) have **even parity** (\(\psi(-x) = \psi(x)\)); those with \(-1\) have **odd parity** (\(\psi(-x) = -\psi(x)\)).
 
 When \([\pi, H] = 0\), energy eigenstates can be chosen to have definite parity. This leads to **selection rules**: the matrix element \(\langle\beta|X|\alpha\rangle\) vanishes unless \(\alpha\) and \(\beta\) have opposite parities, since
 
-\[\langle\beta|X|\alpha\rangle = \langle\beta|\pi^\dagger(-X)\pi|\alpha\rangle = -\varepsilon_\beta\,\varepsilon_\alpha\,\langle\beta|X|\alpha\rangle.\]
+\[
+\langle\beta|X|\alpha\rangle = \langle\beta|\pi^\dagger(-X)\pi|\alpha\rangle = -\varepsilon_\beta\,\varepsilon_\alpha\,\langle\beta|X|\alpha\rangle.
+\]
 
 This is non-zero only if \(\varepsilon_\alpha\varepsilon_\beta = -1\).
 
@@ -399,7 +465,9 @@ A crystal lattice with lattice constant \(a\) has \([T_a, H] = 0\), where \(T_a|
 
 The **tight-binding model** with on-site energy \(E_0\) and hopping amplitude \(\Delta\) gives band energies
 
-\[E(\theta) = E_0 - 2\Delta\cos\theta, \qquad \theta = ka \in [-\pi, \pi],\]
+\[
+E(\theta) = E_0 - 2\Delta\cos\theta, \qquad \theta = ka \in [-\pi, \pi],
+\]
 
 the characteristic cosine band structure of condensed matter physics, with bandwidth \(4\Delta\).
 
@@ -417,17 +485,23 @@ The resolution is that **\(\Theta\) is anti-unitary**: \(\Theta(c_1|\alpha\rangl
 
 In the position basis (where \(K\) acts as complex conjugation), \(P = -i\hbar\partial_x\) changes sign under \(K\) (since \(i\to-i\)), while \(X\) does not. Setting \(\Theta = K\) for a spinless particle gives the physically correct behaviour:
 
-\[\Theta^\dagger X\Theta = X, \qquad \Theta^\dagger P\Theta = -P, \qquad \Theta^\dagger J_i\Theta = -J_i.\]
+\[
+\Theta^\dagger X\Theta = X, \qquad \Theta^\dagger P\Theta = -P, \qquad \Theta^\dagger J_i\Theta = -J_i.
+\]
 
 ### 6.3 Time Reversal for Spin-1/2
 
 For spin-1/2, complex conjugation in the \(S_z\) basis maps \(\sigma_y\to-\sigma_y\) (since \(\sigma_y\) is purely imaginary) but leaves \(\sigma_x, \sigma_z\) unchanged. To achieve \(\Theta S_i\Theta^{-1} = -S_i\) for all three components, we need an additional factor to flip \(S_x\) and \(S_z\). The correct choice is
 
-\[\Theta = -i\sigma_y\,K\]
+\[
+\Theta = -i\sigma_y\,K
+\]
 
 (up to a phase convention). One verifies \(\Theta S_i\Theta^{-1} = -S_i\) for all \(i\). Applying \(\Theta\) twice:
 
-\[\Theta^2 = (-i\sigma_y K)(-i\sigma_y K) = (-i\sigma_y)(+i\sigma_y^*) = (-i\sigma_y)(+i\sigma_y) = -(i)^2\sigma_y^2\cdot(-1) = -\mathbf{1}.\]
+\[
+\Theta^2 = (-i\sigma_y K)(-i\sigma_y K) = (-i\sigma_y)(+i\sigma_y^*) = (-i\sigma_y)(+i\sigma_y) = -(i)^2\sigma_y^2\cdot(-1) = -\mathbf{1}.
+\]
 
 So for spin-1/2, \(\Theta^2 = -\mathbf{1}\).
 
@@ -451,13 +525,17 @@ Kramers degeneracy is observable: atoms and molecules with an odd number of elec
 
 The single-ket description assumes complete knowledge of the quantum state. When a system is prepared with probability \(p_i\) in state \(|\psi_i\rangle\), the correct description is the **density operator**
 
-\[\rho = \sum_i p_i\,|\psi_i\rangle\langle\psi_i|, \qquad \sum_i p_i = 1, \quad p_i \geq 0.\]
+\[
+\rho = \sum_i p_i\,|\psi_i\rangle\langle\psi_i|, \qquad \sum_i p_i = 1, \quad p_i \geq 0.
+\]
 
 A **pure state** \(\rho = |\psi\rangle\langle\psi|\) satisfies \(\rho^2 = \rho\). A **mixed state** has \(\rho^2 \neq \rho\). In all cases \(\rho\) is Hermitian, positive semi-definite, and has unit trace. The expectation value of any observable is \(\langle A\rangle = \text{tr}(\rho A)\).
 
 The **von Neumann entropy**
 
-\[S(\rho) = -\text{tr}(\rho\ln\rho) = -\sum_i \lambda_i \ln\lambda_i\]
+\[
+S(\rho) = -\text{tr}(\rho\ln\rho) = -\sum_i \lambda_i \ln\lambda_i
+\]
 
 measures mixedness: \(S=0\) for a pure state, \(S = \ln d\) for the maximally mixed state in dimension \(d\).
 
@@ -465,7 +543,9 @@ measures mixedness: \(S=0\) for a pure state, \(S = \ln d\) for the maximally mi
 
 Under Schrödinger dynamics, \(\rho(t) = U(t)\,\rho(0)\,U^\dagger(t)\). Differentiating gives the **von Neumann equation**:
 
-\[i\hbar\frac{\partial\rho}{\partial t} = [H, \rho].\]
+\[
+i\hbar\frac{\partial\rho}{\partial t} = [H, \rho].
+\]
 
 Note the sign is opposite to the Heisenberg equation for operators.
 
@@ -473,7 +553,9 @@ Note the sign is opposite to the Heisenberg equation for operators.
 
 For a composite system \(\mathcal{H}_{AB} = \mathcal{H}_A\otimes\mathcal{H}_B\) in state \(\rho_{AB}\), the **reduced density operator** of subsystem \(A\) is
 
-\[\rho_A = \text{tr}_B(\rho_{AB}) = \sum_j \langle j_B|\rho_{AB}|j_B\rangle.\]
+\[
+\rho_A = \text{tr}_B(\rho_{AB}) = \sum_j \langle j_B|\rho_{AB}|j_B\rangle.
+\]
 
 All local predictions for measurements on \(A\) alone are correctly reproduced by \(\rho_A\). Crucially, even if the global state \(\rho_{AB}\) is pure, \(\rho_A\) may be mixed — this is the signature of entanglement.
 
@@ -489,7 +571,9 @@ The combined system of subsystems \(A\) and \(B\) lives in the **tensor product*
 
 For any pure bipartite state \(|\Psi\rangle \in \mathcal{H}_A\otimes\mathcal{H}_B\), there exist orthonormal bases \(\{|u_k\rangle\}_A\) and \(\{|v_k\rangle\}_B\) such that
 
-\[|\Psi\rangle = \sum_k \sqrt{p_k}\,|u_k\rangle\otimes|v_k\rangle, \qquad \sum_k p_k = 1, \quad p_k > 0.\]
+\[
+|\Psi\rangle = \sum_k \sqrt{p_k}\,|u_k\rangle\otimes|v_k\rangle, \qquad \sum_k p_k = 1, \quad p_k > 0.
+\]
 
 The \(\sqrt{p_k}\) are the **Schmidt coefficients** (singular values of the coefficient matrix \(c_{ij}\)). A state is a product if and only if there is exactly one Schmidt coefficient. The reduced density operator is \(\rho_A = \sum_k p_k|u_k\rangle\langle u_k|\), so the Schmidt coefficients are the square roots of the eigenvalues of \(\rho_A\).
 
@@ -497,7 +581,9 @@ The \(\sqrt{p_k}\) are the **Schmidt coefficients** (singular values of the coef
 
 The maximally entangled two-qubit states are the **Bell states**:
 
-\[|\Phi^\pm\rangle = \frac{1}{\sqrt{2}}\left(|{++}\rangle \pm |{--}\rangle\right), \qquad |\Psi^\pm\rangle = \frac{1}{\sqrt{2}}\left(|{+-}\rangle \pm |{-+}\rangle\right).\]
+\[
+|\Phi^\pm\rangle = \frac{1}{\sqrt{2}}\left(|{++}\rangle \pm |{--}\rangle\right), \qquad |\Psi^\pm\rangle = \frac{1}{\sqrt{2}}\left(|{+-}\rangle \pm |{-+}\rangle\right).
+\]
 
 Each has Schmidt coefficients \(\sqrt{1/2}, \sqrt{1/2}\), giving \(\rho_A = \mathbf{1}/2\) — the maximally mixed state. These four states form an orthonormal basis for \(\mathbb{C}^2\otimes\mathbb{C}^2\). Entanglement cannot be created by local operations on each qubit separately even with classical communication (LOCC); it is a genuinely nonlocal resource.
 
@@ -513,7 +599,9 @@ In 1935, Einstein, Podolsky, and Rosen argued that quantum mechanics is incomple
 
 In 1964, John Bell proved that no **local hidden variable theory** (LHVT) can reproduce all quantum predictions. For any LHVT, correlations between measurements by Alice (choosing direction \(\hat{a}\) or \(\hat{a}'\)) and Bob (choosing \(\hat{b}\) or \(\hat{b}'\)) with outcomes \(\pm 1\) must satisfy the **CHSH inequality**:
 
-\[|E(\hat{a},\hat{b}) - E(\hat{a},\hat{b}')| + |E(\hat{a}',\hat{b}) + E(\hat{a}',\hat{b}')| \leq 2.\]
+\[
+|E(\hat{a},\hat{b}) - E(\hat{a},\hat{b}')| + |E(\hat{a}',\hat{b}) + E(\hat{a}',\hat{b}')| \leq 2.
+\]
 
 For the singlet state, quantum mechanics predicts \(E(\hat{a},\hat{b}) = -\hat{a}\cdot\hat{b}\). At the optimal angles \(0°, 45°, 90°, 135°\), the left-hand side equals \(2\sqrt{2} \approx 2.83\), violating the inequality. Loophole-free experiments (Aspect 1982, Hensen et al. 2015) confirm the quantum prediction, ruling out local realism.
 
@@ -523,8 +611,13 @@ Quantum teleportation transmits an unknown qubit state from Alice to Bob using a
 
 **Protocol.** Alice has an unknown qubit \(|\phi\rangle = \alpha|+\rangle + \beta|-\rangle\) (qubit 1) and one half of \(|\Phi^+\rangle_{23}\) (qubit 2); Bob holds qubit 3. Expanding the total three-qubit state in the Bell basis for qubits 1–2:
 
-\[|\phi\rangle_1|\Phi^+\rangle_{23} = \frac{1}{2}\Big[|\Phi^+\rangle_{12}(\alpha|+\rangle+\beta|-\rangle)_3 + |\Phi^-\rangle_{12}(\alpha|+\rangle-\beta|-\rangle)_3\]
-\[+\, |\Psi^+\rangle_{12}(\alpha|-\rangle+\beta|+\rangle)_3 + |\Psi^-\rangle_{12}(\alpha|-\rangle-\beta|+\rangle)_3\Big].\]
+\[
+|\phi\rangle_1|\Phi^+\rangle_{23} = \frac{1}{2}\Big[|\Phi^+\rangle_{12}(\alpha|+\rangle+\beta|-\rangle)_3 + |\Phi^-\rangle_{12}(\alpha|+\rangle-\beta|-\rangle)_3
+\]
+
+\[
++\, |\Psi^+\rangle_{12}(\alpha|-\rangle+\beta|+\rangle)_3 + |\Psi^-\rangle_{12}(\alpha|-\rangle-\beta|+\rangle)_3\Big].
+\]
 
 Alice measures qubits 1–2 in the Bell basis (obtaining one of four outcomes, each with probability 1/4) and sends the 2-bit result to Bob. Bob applies the appropriate Pauli correction (\(\mathbf{1},\, \sigma_z,\, \sigma_x,\) or \(\sigma_z\sigma_x\)) to qubit 3, which then carries the original state \(|\phi\rangle\). No faster-than-light signalling occurs; the classical message limits information transfer.
 
@@ -538,21 +631,29 @@ Alice measures qubits 1–2 in the Bell basis (obtaining one of four outcomes, e
 
 Write the Hamiltonian as \(H = H_0 + \lambda V\), where \(H_0|n^{(0)}\rangle = E_n^{(0)}|n^{(0)}\rangle\) is exactly solved and \(\lambda V\) is a small perturbation. Expanding:
 
-\[E_n = E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \cdots, \qquad |n\rangle = |n^{(0)}\rangle + \lambda|n^{(1)}\rangle + \lambda^2|n^{(2)}\rangle + \cdots.\]
+\[
+E_n = E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \cdots, \qquad |n\rangle = |n^{(0)}\rangle + \lambda|n^{(1)}\rangle + \lambda^2|n^{(2)}\rangle + \cdots.
+\]
 
 ### 10.2 First-Order Corrections
 
 At order \(\lambda\), projecting \((H_0 - E_n^{(0)})|n^{(1)}\rangle = (E_n^{(1)} - V)|n^{(0)}\rangle\) onto \(\langle n^{(0)}|\) gives
 
-\[E_n^{(1)} = \langle n^{(0)}|V|n^{(0)}\rangle.\]
+\[
+E_n^{(1)} = \langle n^{(0)}|V|n^{(0)}\rangle.
+\]
 
 The first-order energy shift is the expectation value of the perturbation. Projecting onto \(\langle m^{(0)}|\) with \(m\neq n\):
 
-\[|n^{(1)}\rangle = \sum_{m\neq n} \frac{\langle m^{(0)}|V|n^{(0)}\rangle}{E_n^{(0)} - E_m^{(0)}}\,|m^{(0)}\rangle.\]
+\[
+|n^{(1)}\rangle = \sum_{m\neq n} \frac{\langle m^{(0)}|V|n^{(0)}\rangle}{E_n^{(0)} - E_m^{(0)}}\,|m^{(0)}\rangle.
+\]
 
 ### 10.3 Second-Order Energy Correction
 
-\[E_n^{(2)} = \sum_{m\neq n} \frac{|\langle m^{(0)}|V|n^{(0)}\rangle|^2}{E_n^{(0)} - E_m^{(0)}}.\]
+\[
+E_n^{(2)} = \sum_{m\neq n} \frac{|\langle m^{(0)}|V|n^{(0)}\rangle|^2}{E_n^{(0)} - E_m^{(0)}}.
+\]
 
 For the **ground state**, all denominators are negative: \(E_0^{(2)} \leq 0\). Perturbations always lower the ground state energy to second order — a manifestation of "level repulsion" from higher states. The variational principle gives the same conclusion: any trial state lowers the ground-state energy relative to the true ground state only if there are higher states to mix in, which push the ground state downward.
 
@@ -568,7 +669,9 @@ When \(E_n^{(0)} = E_m^{(0)}\) for some \(m\neq n\), the formula for \(|n^{(1)}\
 
 Within the degenerate subspace \(\mathcal{D}\), diagonalise the perturbation matrix
 
-\[V_{ij} = \langle n_i^{(0)}|V|n_j^{(0)}\rangle.\]
+\[
+V_{ij} = \langle n_i^{(0)}|V|n_j^{(0)}\rangle.
+\]
 
 The eigenstates of \(V_{\mathcal{D}}\) are the **good states** — the correct zeroth-order basis for convergent perturbation theory. Their eigenvalues are the first-order energy corrections. When a symmetry operator \(G\) commutes with both \(H_0\) and \(V\), its eigenvalue provides a **good quantum number** labelling states unambiguously within the degenerate subspace.
 
@@ -584,11 +687,15 @@ For example, in the fine structure of hydrogen, the degeneracy within each \(n\)
 
 When \(H = H_0 + V(t)\) with \(V(t)\) small, the Schrödinger and Heisenberg pictures are both awkward. The **interaction picture** removes the free evolution:
 
-\[|\psi,t\rangle_I = e^{iH_0 t/\hbar}\,|\psi,t\rangle_S.\]
+\[
+|\psi,t\rangle_I = e^{iH_0 t/\hbar}\,|\psi,t\rangle_S.
+\]
 
 Its equation of motion is
 
-\[i\hbar\frac{\partial}{\partial t}|\psi,t\rangle_I = V^{(I)}(t)\,|\psi,t\rangle_I, \qquad V^{(I)}(t) = e^{iH_0t/\hbar}\,V(t)\,e^{-iH_0t/\hbar}.\]
+\[
+i\hbar\frac{\partial}{\partial t}|\psi,t\rangle_I = V^{(I)}(t)\,|\psi,t\rangle_I, \qquad V^{(I)}(t) = e^{iH_0t/\hbar}\,V(t)\,e^{-iH_0t/\hbar}.
+\]
 
 This derivation follows from differentiating and using \(i\hbar\partial_t|\psi\rangle_S = (H_0 + V)|\psi\rangle_S\). When \(V=0\), the interaction-picture states are constant — all the trivial dynamics has been absorbed into the operators.
 
@@ -596,7 +703,9 @@ This derivation follows from differentiating and using \(i\hbar\partial_t|\psi\r
 
 Iterating the integral form of the interaction-picture equation gives the **Dyson series**:
 
-\[|\psi,t\rangle_I = \sum_{n=0}^\infty \left(-\frac{i}{\hbar}\right)^n \int_{t_0}^t dt_1\int_{t_0}^{t_1}dt_2\cdots\int_{t_0}^{t_{n-1}}dt_n\, V^{(I)}(t_1)\cdots V^{(I)}(t_n)\,|\psi,t_0\rangle_I.\]
+\[
+|\psi,t\rangle_I = \sum_{n=0}^\infty \left(-\frac{i}{\hbar}\right)^n \int_{t_0}^t dt_1\int_{t_0}^{t_1}dt_2\cdots\int_{t_0}^{t_{n-1}}dt_n\, V^{(I)}(t_1)\cdots V^{(I)}(t_n)\,|\psi,t_0\rangle_I.
+\]
 
 Truncating at first order in \(V\) gives first-order TDPT.
 
@@ -608,17 +717,23 @@ Truncating at first order in \(V\) gives first-order TDPT.
 
 Take
 
-\[H_0 = E_1|1\rangle\langle 1| + E_2|2\rangle\langle 2|, \qquad V(t) = \hbar\gamma\left(e^{i\omega t}|1\rangle\langle 2| + e^{-i\omega t}|2\rangle\langle 1|\right).\]
+\[
+H_0 = E_1|1\rangle\langle 1| + E_2|2\rangle\langle 2|, \qquad V(t) = \hbar\gamma\left(e^{i\omega t}|1\rangle\langle 2| + e^{-i\omega t}|2\rangle\langle 1|\right).
+\]
 
 In the interaction picture with \(|\psi\rangle_I = c_1(t)|1\rangle + c_2(t)|2\rangle\) and detuning \(\delta = \omega - \omega_{21}\) (\(\omega_{21} = (E_2-E_1)/\hbar\)):
 
-\[\dot{c}_1 = -i\gamma\,e^{i\delta t}\,c_2, \qquad \dot{c}_2 = -i\gamma\,e^{-i\delta t}\,c_1.\]
+\[
+\dot{c}_1 = -i\gamma\,e^{i\delta t}\,c_2, \qquad \dot{c}_2 = -i\gamma\,e^{-i\delta t}\,c_1.
+\]
 
 ### 13.2 Rabi's Formula
 
 Starting in state \(|1\rangle\), the exact solution gives the **Rabi oscillation** formula:
 
-\[P_{1\to 2}(t) = \frac{\gamma^2}{\gamma^2 + \delta^2/4}\,\sin^2\!\left(\sqrt{\gamma^2 + \delta^2/4}\;t\right).\]
+\[
+P_{1\to 2}(t) = \frac{\gamma^2}{\gamma^2 + \delta^2/4}\,\sin^2\!\left(\sqrt{\gamma^2 + \delta^2/4}\;t\right).
+\]
 
 At **resonance** \(\delta = 0\): complete oscillation between the two states with period \(\pi/\gamma\). Off resonance: faster oscillations (larger effective frequency) but incomplete transfer (maximum \(\gamma^2/(\gamma^2 + \delta^2/4) < 1\)).
 
@@ -634,17 +749,23 @@ In **nuclear magnetic resonance**, a spin-1/2 nucleus in static field \(\mathbf{
 
 If \(H(t)\) changes slowly compared to energy gaps, a system starting in the \(m\)-th instantaneous eigenstate \(|m;0\rangle\) remains in \(|m;t\rangle\) throughout. The adiabaticity condition is
 
-\[\left|\frac{\langle n;t|\dot{H}|m;t\rangle}{(E_n - E_m)^2/\hbar}\right| \ll 1 \qquad \text{for all } n\neq m.\]
+\[
+\left|\frac{\langle n;t|\dot{H}|m;t\rangle}{(E_n - E_m)^2/\hbar}\right| \ll 1 \qquad \text{for all } n\neq m.
+\]
 
 ### 14.2 Berry Phase
 
 Writing the phase factor as \(\theta_m = \theta_m^{\text{dyn}} + \gamma_m\) where the **dynamical phase** is \(\theta_m^{\text{dyn}} = -\frac{1}{\hbar}\int_0^t E_m(t')\,dt'\), substituting into the Schrödinger equation gives
 
-\[\dot{\gamma}_m(t) = i\langle m;t|\dot{m};t\rangle.\]
+\[
+\dot{\gamma}_m(t) = i\langle m;t|\dot{m};t\rangle.
+\]
 
 After a closed loop in parameter space \(\mathbf{R}\), the accumulated **Berry phase** is
 
-\[\gamma_m = i\oint \langle m;\mathbf{R}|\nabla_\mathbf{R}|m;\mathbf{R}\rangle\cdot d\mathbf{R} = \iint_S \boldsymbol{\Omega}_m\cdot d\mathbf{S},\]
+\[
+\gamma_m = i\oint \langle m;\mathbf{R}|\nabla_\mathbf{R}|m;\mathbf{R}\rangle\cdot d\mathbf{R} = \iint_S \boldsymbol{\Omega}_m\cdot d\mathbf{S},
+\]
 
 where \(\boldsymbol{\Omega}_m = \nabla_\mathbf{R}\times\mathbf{A}_m\) is the **Berry curvature** and \(\mathbf{A}_m = i\langle m|\nabla_\mathbf{R}|m\rangle\) is the **Berry connection**. The Berry phase is gauge-invariant: it depends only on the path in parameter space, not on how fast it is traversed. Discovered by Berry in 1984, it underlies the quantum Hall effect, topological insulators, and Berry phases in molecular physics.
 
@@ -656,21 +777,29 @@ where \(\boldsymbol{\Omega}_m = \nabla_\mathbf{R}\times\mathbf{A}_m\) is the **B
 
 Starting in state \(|i\rangle\), the first-order amplitude to be in state \(|n\rangle\neq|i\rangle\) at time \(t\) is
 
-\[c_n^{(1)}(t) = -\frac{i}{\hbar}\int_0^t dt'\,e^{i\omega_{ni}t'}\,V_{ni}(t'), \qquad \omega_{ni} = \frac{E_n - E_i}{\hbar}.\]
+\[
+c_n^{(1)}(t) = -\frac{i}{\hbar}\int_0^t dt'\,e^{i\omega_{ni}t'}\,V_{ni}(t'), \qquad \omega_{ni} = \frac{E_n - E_i}{\hbar}.
+\]
 
 For a monochromatic perturbation \(V(t) = V_0 e^{-i\omega t} + V_0^\dagger e^{i\omega t}\), the transition probability is
 
-\[|c_n^{(1)}(t)|^2 = \frac{|V_{ni}|^2}{\hbar^2}\,\frac{\sin^2[(\omega_{ni}-\omega)t/2]}{[(\omega_{ni}-\omega)/2]^2}.\]
+\[
+|c_n^{(1)}(t)|^2 = \frac{|V_{ni}|^2}{\hbar^2}\,\frac{\sin^2[(\omega_{ni}-\omega)t/2]}{[(\omega_{ni}-\omega)/2]^2}.
+\]
 
 ### 15.2 Derivation
 
 For large \(t\), the function \(\sin^2(\Delta\omega\, t/2)/(\Delta\omega/2)^2\) is sharply peaked at \(\Delta\omega=0\) with value \(t^2\) and width \(\sim 1/t\), approximating \(2\pi t\,\delta(\Delta\omega)\). The **transition rate** is
 
-\[W_{i\to n} = \frac{d|c_n|^2}{dt} = \frac{2\pi}{\hbar}\,|V_{ni}|^2\,\delta(E_n - E_i - \hbar\omega).\]
+\[
+W_{i\to n} = \frac{d|c_n|^2}{dt} = \frac{2\pi}{\hbar}\,|V_{ni}|^2\,\delta(E_n - E_i - \hbar\omega).
+\]
 
 This is **Fermi's Golden Rule**. For final states in a continuum with density of states \(\rho(E)\):
 
-\[\Gamma = \frac{2\pi}{\hbar}\,|V_{ni}|^2\,\rho(E_i + \hbar\omega).\]
+\[
+\Gamma = \frac{2\pi}{\hbar}\,|V_{ni}|^2\,\rho(E_i + \hbar\omega).
+\]
 
 The delta function enforces energy conservation. The rule is the workhorse of transition-rate calculations across atomic, nuclear, and particle physics.
 
@@ -686,7 +815,9 @@ The transition probability \(\sum_{n\neq i}|c_n^{(1)}(t)|^2\) increases linearly
 
 The interaction of a charged particle with an electromagnetic field (in Coulomb gauge \(\nabla\cdot\mathbf{A}=0\)) is described by the Hamiltonian
 
-\[H = \frac{1}{2m}\!\left(\mathbf{p} - \frac{e}{c}\mathbf{A}\right)^2 + V(\mathbf{r}) \approx \frac{p^2}{2m} + V(\mathbf{r}) - \frac{e}{mc}\mathbf{A}\cdot\mathbf{p},\]
+\[
+H = \frac{1}{2m}\!\left(\mathbf{p} - \frac{e}{c}\mathbf{A}\right)^2 + V(\mathbf{r}) \approx \frac{p^2}{2m} + V(\mathbf{r}) - \frac{e}{mc}\mathbf{A}\cdot\mathbf{p},
+\]
 
 dropping the \(\mathbf{A}^2\) term in the weak-field limit. The perturbation \(V = -(e/mc)\mathbf{A}\cdot\mathbf{p}\) drives transitions between atomic states.
 
@@ -750,7 +881,9 @@ By the parity argument: \(\mathbf{r}\) is parity-odd, so \(\langle n|\mathbf{r}|
 
 At high photon energies, atoms are ionised. The transition is from a bound state \(|n\ell m\rangle\) to a continuum free-electron state. By Fermi's Golden Rule, the photoelectric cross-section is
 
-\[\sigma \propto \frac{e^2\omega}{mc}\,|\langle\mathbf{p}|\hat{\boldsymbol{\epsilon}}\cdot\mathbf{r}|n\ell m\rangle|^2\,\rho(E_f).\]
+\[
+\sigma \propto \frac{e^2\omega}{mc}\,|\langle\mathbf{p}|\hat{\boldsymbol{\epsilon}}\cdot\mathbf{r}|n\ell m\rangle|^2\,\rho(E_f).
+\]
 
 Einstein's 1905 result — that the ejected electron energy \(E_f = \hbar\omega - E_{\text{bind}}\) depends on frequency, not intensity — follows directly: energy conservation at each photon absorption gives a fixed kinetic energy. The quantum mechanical cross-section further explains the differential distribution in emission angle.
 
@@ -764,11 +897,15 @@ Einstein's 1905 result — that the ejected electron energy \(E_f = \hbar\omega 
 
 Special relativity rests on two postulates: the laws of physics are the same in all inertial frames, and the speed of light \(c\) is universal. The invariant is the spacetime interval
 
-\[ds^2 = c^2\,dt^2 - d\ell^2 = \eta_{\mu\nu}\,dx^\mu\,dx^\nu,\]
+\[
+ds^2 = c^2\,dt^2 - d\ell^2 = \eta_{\mu\nu}\,dx^\mu\,dx^\nu,
+\]
 
 with Minkowski metric \(\eta_{\mu\nu} = \text{diag}(+1,-1,-1,-1)\). Four-vectors: \(x^\mu = (ct,\mathbf{x})\) (contravariant), \(x_\mu = \eta_{\mu\nu}x^\nu = (ct,-\mathbf{x})\) (covariant). Proper time: \(d\tau = dt\sqrt{1-v^2/c^2}\). Four-momentum: \(p^\mu = (E/c, \mathbf{p})\). The Lorentz-invariant dispersion relation is
 
-\[p^\mu p_\mu = m^2c^2 \implies E^2 = (mc^2)^2 + (|\mathbf{p}|c)^2.\]
+\[
+p^\mu p_\mu = m^2c^2 \implies E^2 = (mc^2)^2 + (|\mathbf{p}|c)^2.
+\]
 
 In natural units (\(\hbar = c = 1\)): \(E^2 = m^2 + |\mathbf{p}|^2\).
 
@@ -780,7 +917,9 @@ In natural units (\(\hbar = c = 1\)): \(E^2 = m^2 + |\mathbf{p}|^2\).
 
 Promoting \(E\to i\hbar\partial_t\) and \(\mathbf{p}\to -i\hbar\nabla\) in \(E^2 = m^2 + p^2\) (natural units) gives the **Klein-Gordon equation**
 
-\[(\partial_\mu\partial^\mu + m^2)\psi = (\Box + m^2)\psi = 0.\]
+\[
+(\partial_\mu\partial^\mu + m^2)\psi = (\Box + m^2)\psi = 0.
+\]
 
 It is Lorentz invariant and admits plane-wave solutions \(\psi = e^{-ip\cdot x}\) with \(E = \pm\sqrt{|\mathbf{p}|^2 + m^2}\).
 
@@ -796,11 +935,15 @@ The conserved current is \(j^\mu = i(\psi^*\partial^\mu\psi - \psi\partial^\mu\p
 
 Dirac sought a wave equation **first order in all derivatives**, so that the probability density \(\rho = \psi^\dagger\psi \geq 0\) would be automatically positive definite. He wrote
 
-\[(i\gamma^\mu\partial_\mu - m)\psi = 0.\]
+\[
+(i\gamma^\mu\partial_\mu - m)\psi = 0.
+\]
 
 Squaring the operator to recover Klein-Gordon requires
 
-\[\{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu}\mathbf{1},\]
+\[
+\{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu}\mathbf{1},
+\]
 
 the **Clifford algebra**. These relations cannot be satisfied by ordinary numbers; \(\gamma^\mu\) must be matrices and \(\psi\) must be a multi-component **spinor**.
 
@@ -808,17 +951,23 @@ the **Clifford algebra**. These relations cannot be satisfied by ordinary number
 
 The minimal matrices satisfying the Clifford algebra are \(4\times4\). In the **Dirac representation**:
 
-\[\gamma^0 = \begin{pmatrix}\mathbf{1} & 0 \\ 0 & -\mathbf{1}\end{pmatrix}, \qquad \gamma^i = \begin{pmatrix}0 & \sigma^i \\ -\sigma^i & 0\end{pmatrix}.\]
+\[
+\gamma^0 = \begin{pmatrix}\mathbf{1} & 0 \\ 0 & -\mathbf{1}\end{pmatrix}, \qquad \gamma^i = \begin{pmatrix}0 & \sigma^i \\ -\sigma^i & 0\end{pmatrix}.
+\]
 
 One verifies \((\gamma^0)^2 = \mathbf{1}\), \((\gamma^i)^2 = -\mathbf{1}\), and \(\{\gamma^\mu,\gamma^\nu\} = 2\eta^{\mu\nu}\). The Dirac equation can be written as \(i\partial_t\psi = H_D\psi\) with the **Dirac Hamiltonian**
 
-\[H_D = \boldsymbol{\alpha}\cdot\mathbf{p} + \beta m, \qquad \alpha^i = \begin{pmatrix}0 & \sigma^i \\ \sigma^i & 0\end{pmatrix}, \qquad \beta = \gamma^0.\]
+\[
+H_D = \boldsymbol{\alpha}\cdot\mathbf{p} + \beta m, \qquad \alpha^i = \begin{pmatrix}0 & \sigma^i \\ \sigma^i & 0\end{pmatrix}, \qquad \beta = \gamma^0.
+\]
 
 ### 19.3 Probability Current
 
 From the Dirac equation and its adjoint, one derives the continuity equation \(\partial_\mu j^\mu = 0\) with
 
-\[j^\mu = \bar{\psi}\gamma^\mu\psi, \qquad \bar{\psi} = \psi^\dagger\gamma^0.\]
+\[
+j^\mu = \bar{\psi}\gamma^\mu\psi, \qquad \bar{\psi} = \psi^\dagger\gamma^0.
+\]
 
 The probability density is \(\rho = j^0 = \psi^\dagger\gamma^0\gamma^0\psi = \psi^\dagger\psi \geq 0\) — always non-negative. Dirac has resolved the Klein-Gordon problem.
 
@@ -826,7 +975,9 @@ The probability density is \(\rho = j^0 = \psi^\dagger\gamma^0\gamma^0\psi = \ps
 
 Free-particle positive-energy solutions take the form \(\psi = u(p)\,e^{-ip\cdot x}\) where the bispinor \(u = \binom{\phi}{\chi}\) satisfies
 
-\[\chi = \frac{\boldsymbol{\sigma}\cdot\mathbf{p}}{E+m}\,\phi.\]
+\[
+\chi = \frac{\boldsymbol{\sigma}\cdot\mathbf{p}}{E+m}\,\phi.
+\]
 
 For each choice of the two-component spinor \(\phi\), this gives one of two independent solutions — the two spin states of the particle. The **helicity** operator \(\hat{h} = \boldsymbol{\sigma}\cdot\hat{\mathbf{p}}/2\) measures spin projection along the momentum.
 
@@ -838,7 +989,9 @@ For each choice of the two-component spinor \(\phi\), this gives one of two inde
 
 In the non-relativistic limit \(|\mathbf{p}|\ll m\), the lower two components \(\chi\) are suppressed by \(v/c\) relative to \(\phi\). Coupling to an electromagnetic field via \(\mathbf{p}\to\mathbf{p}-e\mathbf{A}/c\) and eliminating \(\chi\) gives the **Pauli equation** for the large component:
 
-\[i\partial_t\phi = \left[\frac{(\mathbf{p}-e\mathbf{A}/c)^2}{2m} + eA^0 - \frac{e}{mc}\,\mathbf{S}\cdot\mathbf{B}\right]\phi,\]
+\[
+i\partial_t\phi = \left[\frac{(\mathbf{p}-e\mathbf{A}/c)^2}{2m} + eA^0 - \frac{e}{mc}\,\mathbf{S}\cdot\mathbf{B}\right]\phi,
+\]
 
 with \(\mathbf{S} = \frac{\hbar}{2}\boldsymbol{\sigma}\). The gyromagnetic ratio \(g=2\) emerges automatically — a prediction that stunned physicists in 1928. The Bohr magneton is \(\mu_B = e\hbar/2mc\), and the intrinsic magnetic moment is \(\mu_e = g\mu_B/2 = \mu_B\) (before QED corrections).
 
@@ -854,13 +1007,17 @@ Negative-energy solutions (\(E = -\sqrt{|\mathbf{p}|^2+m^2} < 0\)) remain proble
 
 Define the **chirality matrix**
 
-\[\gamma^5 = i\gamma^0\gamma^1\gamma^2\gamma^3.\]
+\[
+\gamma^5 = i\gamma^0\gamma^1\gamma^2\gamma^3.
+\]
 
 It satisfies \((\gamma^5)^2 = \mathbf{1}\), \(\{\gamma^5,\gamma^\mu\} = 0\), and \((\gamma^5)^\dagger = \gamma^5\). The projectors \(P_\pm = (1\pm\gamma^5)/2\) split any Dirac spinor into **right-handed** (\(+1\)) and **left-handed** (\(-1\)) **Weyl spinors**: \(\psi = \psi_R + \psi_L\).
 
 For a **massless** particle, the Dirac equation in the **Weyl representation** (where \(\gamma^5\) is diagonal) decouples into two independent **Weyl equations**:
 
-\[i\partial_t\psi_R = +\boldsymbol{\sigma}\cdot\mathbf{p}\,\psi_R, \qquad i\partial_t\psi_L = -\boldsymbol{\sigma}\cdot\mathbf{p}\,\psi_L.\]
+\[
+i\partial_t\psi_R = +\boldsymbol{\sigma}\cdot\mathbf{p}\,\psi_R, \qquad i\partial_t\psi_L = -\boldsymbol{\sigma}\cdot\mathbf{p}\,\psi_L.
+\]
 
 Right-handed: spin parallel to momentum (\(\boldsymbol{\sigma}\cdot\hat{\mathbf{p}} = +1\)). Left-handed: spin antiparallel (\(\boldsymbol{\sigma}\cdot\hat{\mathbf{p}} = -1\)). For a massive particle, the mass term \(m\bar\psi\psi = m(\psi_R^\dagger\psi_L + \psi_L^\dagger\psi_R)\) mixes the two chiralities; chirality is conserved only in the massless limit.
 
@@ -874,7 +1031,9 @@ Weyl fermions describe massless neutrinos (approximately, for energies above the
 
 Under \(\mathbf{x}\to-\mathbf{x}\), \(\mathbf{p}\to-\mathbf{p}\) and \(H_D(\mathbf{p})\to -\boldsymbol{\alpha}\cdot\mathbf{p}+\beta m\). For parity to be a symmetry, we need a matrix \(P\) with \(P\boldsymbol{\alpha}P^{-1} = -\boldsymbol{\alpha}\) and \(P\beta P^{-1} = \beta\). The solution is \(P = \gamma^0\) (since \(\{\gamma^0,\gamma^i\}=0\) for \(i\neq0\)). The parity-transformed wavefunction is
 
-\[\psi'(t, \mathbf{x}) = \gamma^0\,\psi(t, -\mathbf{x}).\]
+\[
+\psi'(t, \mathbf{x}) = \gamma^0\,\psi(t, -\mathbf{x}).
+\]
 
 The bilinear \(\bar\psi\psi\) is a scalar (even under parity); \(\bar\psi\gamma^5\psi\) is a pseudoscalar (odd); \(\bar\psi\gamma^\mu\psi\) is a four-vector; \(\bar\psi\gamma^\mu\gamma^5\psi\) is an axial four-vector (odd).
 
@@ -915,7 +1074,9 @@ In the **ultra-relativistic limit** \(|\mathbf{p}|\gg m\), the Dirac spinors app
 
 **Proof.** The discrete translation operator \(T_a\) commutes with \(H\) (since \(V\) and the kinetic energy are both periodic). Since \(T_a\) is unitary, its eigenvalues lie on the unit circle: \(T_a\psi = e^{ika}\psi\) for some real \(k\). Define \(u_k(x) = e^{-ikx}\psi_k(x)\). Then
 
-\[u_k(x+a) = e^{-ik(x+a)}\psi_k(x+a) = e^{-ikx-ika}\cdot e^{ika}\psi_k(x) = e^{-ikx}\psi_k(x) = u_k(x),\]
+\[
+u_k(x+a) = e^{-ik(x+a)}\psi_k(x+a) = e^{-ikx-ika}\cdot e^{ika}\psi_k(x) = e^{-ikx}\psi_k(x) = u_k(x),
+\]
 
 so \(u_k\) is periodic and \(\psi_k(x) = e^{ikx}u_k(x)\). \(\square\)
 

@@ -42,6 +42,7 @@ Peter Nelson introduces the generating series through the farm-animal example in
 <div class="definition">
 
 <strong>Definition (Generating Series).</strong> Let \(S\) be a set of objects with a weight function \(w : S \to \mathbb{Z}_{\ge 0}\). The <em>generating series</em> for \(S\) with respect to \(w\) is
+
 \[
 \Phi_S(x) = \sum_{\sigma \in S} x^{w(\sigma)} = \sum_{n \ge 0} a_n x^n,
 \]
@@ -58,6 +59,7 @@ To make this algebraic manipulation precise, we need to define the ring structur
 <div class="definition">
 
 <strong>Definition (Formal Power Series Operations).</strong> Given formal power series \(A(x) = \sum a_n x^n\) and \(B(x) = \sum b_n x^n\), their <em>sum</em> and <em>product</em> are defined by
+
 \[
 A(x) + B(x) = \sum_{n \ge 0}(a_n + b_n)x^n, \qquad A(x)\cdot B(x) = \sum_{n \ge 0}\left(\sum_{k=0}^{n} a_k b_{n-k}\right)x^n.
 \]
@@ -169,6 +171,7 @@ To see why these lemmas are so fundamental, it helps to trace their combinatoria
 <div class="theorem">
 
 <strong>Theorem (Sum Lemma).</strong> If \(S\) is partitioned into disjoint sets \(S_1, S_2, \ldots\) (each inheriting the weight function from \(S\)), then
+
 \[
 \Phi_S(x) = \Phi_{S_1}(x) + \Phi_{S_2}(x) + \cdots
 \]
@@ -178,6 +181,7 @@ To see why these lemmas are so fundamental, it helps to trace their combinatoria
 <div class="theorem">
 
 <strong>Theorem (Product Lemma).</strong> Let \(S = A \times B\) with weight function \(w(a,b) = w_A(a) + w_B(b)\). Then
+
 \[
 \Phi_S(x) = \Phi_A(x) \cdot \Phi_B(x).
 \]
@@ -208,6 +212,7 @@ The generating series for \(S^*\) takes a beautifully compact form:
 <div class="theorem">
 
 <strong>Theorem (String/Kleene-Star Lemma).</strong> Let \(S\) be a set with weight function \(w\) such that no element of \(S\) has weight 0. Then the generating series for \(S^<em>\) with respect to \(w^</em>\) is
+
 \[
 \Phi_{S^*}(x) = \frac{1}{1 - \Phi_S(x)}.
 \]
@@ -273,6 +278,7 @@ To extract the coefficient \([x^n]\) from a rational generating series, we use p
 <div class="theorem">
 
 <strong>Theorem (Partial Fraction Decomposition).</strong> If \(\frac{p(x)}{q(x)}\) is a rational function with \(\deg p < \deg q\), and the denominator factors as
+
 \[
 q(x) = (1-r_1 x)^{m_1}(1-r_2 x)^{m_2}\cdots(1-r_k x)^{m_k}
 \]
@@ -305,6 +311,7 @@ The relationship between recurrences and rational generating series runs deeper 
 <div class="theorem">
 
 <strong>Theorem (Recurrences and Rational Series).</strong> Suppose the sequence \((a_n)_{n \ge 0}\) satisfies a linear recurrence
+
 \[
 a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_d a_{n-d}
 \]
@@ -334,6 +341,7 @@ Before stating the theorem, it is useful to recall where binomial coefficients c
 <div class="theorem">
 
 <strong>Theorem (Binomial Series / Negative Binomial Series).</strong> For any non-negative integer \(k\),
+
 \[
 \frac{1}{(1-x)^k} = \sum_{n \ge 0}\binom{n+k-1}{k-1}x^n.
 \]
@@ -348,6 +356,7 @@ More generally, for a positive integer \(k\),
 <div class="definition">
 
 <strong>Definition (Binomial Coefficient).</strong> For integers \(n \ge 0\) and \(0 \le k \le n\), the binomial coefficient is
+
 \[
 \binom{n}{k} = \frac{n!}{k!(n-k)!}.
 \]
@@ -381,6 +390,7 @@ so the coefficient of \(x^n\) in this derivative is \(\sum_{w(\sigma)=n} \chi(\s
 <div class="definition">
 
 <strong>Definition (Bivariate Generating Series).</strong> Let \(S\) be a set with a weight function \(w\) and a statistic \(\chi\). The <em>bivariate generating series</em> is
+
 \[
 \Phi_S(x,y) = \sum_{\sigma \in S} x^{w(\sigma)} y^{\chi(\sigma)}.
 \]
@@ -445,7 +455,7 @@ It is worth pausing on the two words "finite" and "distinct." Finiteness keeps u
 
 If \(e = \{u,v\}\) then we say \(u\) and \(v\) are **adjacent** vertices, and that edge \(e\) is **incident** with vertices \(u\) and \(v\). Vertices adjacent to \(u\) are called **neighbours** of \(u\), and the set of neighbours is denoted \(N(u)\). A geometric representation or **drawing** of a graph places a small circle for each vertex and a line for each edge. A graph representable with no edges crossing is said to be **planar**.
 
-Notice that two drawings of the same graph can look completely different. Consider the graph \(G\) with \(V(G) = \{a, b, c, d\}\) and \(E(G) = \{\{a,b\},\{b,c\},\{b,d\}\)\): we might draw \(b\) in the centre with three spokes going out, or we might arrange all four vertices in a row. Both drawings represent exactly the same abstract object. As the lectures emphasise, "it is the structure of the graph that matters — namely, what are the vertices and which vertices are paired in the edges. A graph is an abstract structure of sets; a specific drawing is not the graph itself, but merely represents it."
+Notice that two drawings of the same graph can look completely different. Consider the graph \(G\) with \(V(G) = \{a, b, c, d\}\) and \(E(G) = \{\{a,b\},\{b,c\},\{b,d\}\}\): we might draw \(b\) in the centre with three spokes going out, or we might arrange all four vertices in a row. Both drawings represent exactly the same abstract object. As the lectures emphasise, "it is the structure of the graph that matters — namely, what are the vertices and which vertices are paired in the edges. A graph is an abstract structure of sets; a specific drawing is not the graph itself, but merely represents it."
 
 Some important consequences of the definition: edges are *unordered* pairs, so \(\{u,v\} = \{v,u\}\); changing to ordered pairs would give a **directed graph** or **digraph**. No multiple edges are allowed, and no loops are allowed.
 
@@ -480,6 +490,7 @@ One of the first theorems in the subject is the Handshaking Lemma, whose name co
 <div class="theorem">
 
 <strong>Theorem 4.3.1 (Handshaking Lemma / Degree-Sum Formula).</strong> For any graph \(G\),
+
 \[
 \sum_{v \in V(G)} \deg(v) = 2|E(G)|.
 \]
@@ -763,7 +774,7 @@ Bridges represent critical connections: removing a bridge either disconnects a c
 
 <div class="lemma">
 
-<strong>Lemma 4.10.2.</strong> If \(e = \{x,y\}$ is a bridge of a connected graph \(G\), then \(G - e\) has precisely two components; furthermore, \(x\) and \(y\) are in different components.
+<strong>Lemma 4.10.2.</strong> If \(e = \{x,y\}) is a bridge of a connected graph \(G\), then \(G - e\) has precisely two components; furthermore, \(x\) and \(y\) are in different components.
 
 </div>
 
@@ -1280,6 +1291,7 @@ The face-shaking lemma is the planar analogue of the handshaking lemma for verti
 <div class="theorem">
 
 <strong>Theorem 7.1.2 (Faceshaking Lemma).</strong> If we have a planar embedding of a connected graph \(G\) with faces \(f_1, \ldots, f_s\), then
+
 \[
 \sum_{i=1}^{s} \deg(f_i) = 2|E(G)|.
 \]
@@ -1301,6 +1313,7 @@ Euler's formula is one of the most elegant and useful results in mathematics. It
 <div class="theorem">
 
 <strong>Theorem 7.2.1 (Euler's Formula).</strong> Let \(G\) be a connected graph with \(p\) vertices and \(q\) edges. If \(G\) has a planar embedding with \(f\) faces, then
+
 \[
 p - q + f = 2.
 \]
@@ -1350,6 +1363,7 @@ The proof is a beautiful interplay between Euler's formula, the Handshaking Lemm
 <div class="lemma">
 
 <strong>Lemma 7.4.3.</strong> If \(G\) is a platonic graph with \(p\) vertices, \(q\) edges and \(f\) faces, where each vertex has degree \(d\) and each face has degree \(d^*\), then
+
 \[
 q = \frac{2dd^<em>}{2d + 2d^</em> - dd^*}
 \]
@@ -1474,6 +1488,7 @@ To prove the **Five-Colour Theorem**, we need a stronger tool: **edge contractio
 <div class="definition">
 
 <strong>Definition 7.7.5 (Edge Contraction).</strong> Let \(G\) be a graph and let \(e = \{x,y\}\) be an edge of \(G\). The graph \(G/e\) obtained from \(G\) by <em>contracting</em> the edge \(e\) is the graph with vertex set \(V(G) \setminus \{x,y\} \cup \{z\}\), where \(z\) is a new vertex, and edge set
+
 \[
 \{\{u,v\} \in E(G) : \{u,v\} \cap \{x,y\} = \varnothing\} \cup \{\{u,z\} : u \notin \{x,y\},\;\{u,w\} \in E(G) \text{ for some } w \in \{x,y\}\}.
 \]
@@ -1590,6 +1605,7 @@ More precisely, suppose we want a matching saturating all of \(A\). A necessary 
 <div class="theorem">
 
 <strong>Theorem 8.4.1 (Hall's Theorem).</strong> A bipartite graph \(G\) with bipartition \(A, B\) has a matching saturating every vertex in \(A\), if and only if every subset \(D\) of \(A\) satisfies
+
 \[
 |N(D)| \ge |D|.
 \]
@@ -1613,6 +1629,7 @@ Translating to bipartite matching: build a bipartite graph with vertices \(\{1, 
 <div class="corollary">
 
 <strong>Corollary 8.5.1 (Hall's SDR Theorem).</strong> The collection \(Q_1, Q_2, \ldots, Q_n\) of subsets of the finite set \(Q\) has an SDR if and only if, for every subset \(J\) of \(\{1, 2, \ldots, n\}\), we have
+
 \[
 \left|\bigcup_{i \in J} Q_i\right| \ge |J|.
 \]

@@ -143,6 +143,7 @@ Applied in different ways to scalar or vector fields, it generates three fundame
 
 <div class="definition">
 <strong>Definition (Gradient).</strong> Let \(f: \mathbb{R}^n \to \mathbb{R}\) be a differentiable scalar field. The <strong>gradient</strong> of \(f\) is the vector field
+
 \[
 \nabla f = \frac{\partial f}{\partial x}\,\mathbf{i} + \frac{\partial f}{\partial y}\,\mathbf{j} + \frac{\partial f}{\partial z}\,\mathbf{k}.
 \]
@@ -177,6 +178,7 @@ Since this holds for *any* curve in the level surface, \(\nabla f\) is perpendic
 
 <div class="definition">
 <strong>Definition.</strong> The <strong>directional derivative</strong> of \(f\) at \(\mathbf{x}_0\) in the direction of unit vector \(\hat{\mathbf{u}}\) is
+
 \[
 D_{\hat{u}} f(\mathbf{x}_0) = \nabla f(\mathbf{x}_0) \cdot \hat{\mathbf{u}}.
 \]
@@ -226,6 +228,7 @@ The direction of the gradient, \(\theta = \arctan(\partial f/\partial y, \partia
 
 <div class="definition">
 <strong>Definition (Divergence).</strong> Let \(\mathbf{F}: \mathbb{R}^3 \to \mathbb{R}^3\), \(\mathbf{F} = F_1\,\mathbf{i} + F_2\,\mathbf{j} + F_3\,\mathbf{k}\). The <strong>divergence</strong> of \(\mathbf{F}\) is the scalar field
+
 \[
 \nabla \cdot \mathbf{F} = \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}.
 \]
@@ -257,6 +260,7 @@ where \(S_\varepsilon\) is a small sphere of radius \(\varepsilon\) centred at \
 
 <div class="definition">
 <strong>Definition (Curl).</strong> Let \(\mathbf{F} = F_1\,\mathbf{i} + F_2\,\mathbf{j} + F_3\,\mathbf{k}\). The <strong>curl</strong> of \(\mathbf{F}\) is the vector field
+
 \[
 \nabla \times \mathbf{F} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \partial/\partial x & \partial/\partial y & \partial/\partial z \\ F_1 & F_2 & F_3 \end{vmatrix}
 = \left(\frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z}\right)\mathbf{i} + \left(\frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}\right)\mathbf{j} + \left(\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}\right)\mathbf{k}.
@@ -305,6 +309,7 @@ The curl is the *circulation per unit area*.
 
 <div class="definition">
 <strong>Definition (Laplacian).</strong> The <strong>Laplacian</strong> of a scalar field \(f: \mathbb{R}^3 \to \mathbb{R}\) is
+
 \[
 \nabla^2 f = \nabla \cdot \nabla f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}.
 \]
@@ -318,6 +323,7 @@ Two fundamental identities constrain the gradient, divergence, and curl:
 
 <div class="theorem">
 <strong>Theorem (Curl of a Gradient is Zero).</strong> For any \(C^2\) scalar field \(f\):
+
 \[
 \nabla \times (\nabla f) = \mathbf{0}.
 \]
@@ -325,6 +331,7 @@ Two fundamental identities constrain the gradient, divergence, and curl:
 
 <div class="theorem">
 <strong>Theorem (Divergence of a Curl is Zero).</strong> For any \(C^2\) vector field \(\mathbf{F}\):
+
 \[
 \nabla \cdot (\nabla \times \mathbf{F}) = 0.
 \]
@@ -362,6 +369,7 @@ E(t) = \frac{1}{2}mv(t)^2 + V(x(t)).
 
 <div class="proof">
 <strong>Proof.</strong> Differentiate \(E(t)\) with respect to \(t\):
+
 \[
 E'(t) = mv(t)v'(t) + V'(x(t))x'(t) = v(t)[ma(t)] + (-F(x(t)))v(t) = v(t)[ma(t) - F(x(t))] = 0,
 \]
@@ -387,6 +395,7 @@ These are related by \(V = -f\).
 
 <div class="proof">
 <strong>Proof.</strong> Differentiate using the product rule and chain rule:
+
 \[
 E'(t) = m\mathbf{v}\cdot \mathbf{v}' + \nabla V \cdot \mathbf{v} = \mathbf{v} \cdot [m\mathbf{a}] + \nabla V \cdot \mathbf{v} = \mathbf{v}\cdot[m\mathbf{a} + \nabla V] = \mathbf{v}\cdot[m\mathbf{a} - \mathbf{F}] = 0.
 \]
@@ -398,6 +407,7 @@ How do we determine whether a given vector field \(\mathbf{F}\) is conservative?
 
 <div class="theorem">
 <strong>Theorem (Curl Test).</strong> Let \(\mathbf{F}\) be a \(C^1\) vector field on a simply-connected open domain \(D \subseteq \mathbb{R}^3\). Then \(\mathbf{F}\) is conservative if and only if
+
 \[
 \nabla \times \mathbf{F} = \mathbf{0} \quad \text{on } D.
 \]
@@ -475,6 +485,7 @@ The physically central integral is the **work integral** (line integral of a vec
 
 <div class="definition">
 <strong>Definition.</strong> Let \(\mathbf{F}: \mathbb{R}^n \to \mathbb{R}^n\) be a continuous vector field and \(C\) a piecewise \(C^1\) curve parametrized by \(\mathbf{g}(t)\), \(t \in [a,b]\). The <strong>line integral of \(\mathbf{F}\) over \(C\)</strong> is
+
 \[
 \int_C \mathbf{F} \cdot d\mathbf{x} = \int_a^b \mathbf{F}(\mathbf{g}(t)) \cdot \mathbf{g}'(t)\, dt.
 \]
@@ -517,6 +528,7 @@ This is the most important theorem for line integrals, generalising the Fundamen
 
 <div class="theorem">
 <strong>Theorem (FTLI 2 — Second Fundamental Theorem for Line Integrals).</strong> Let \(\mathbf{F} = \nabla f\) be a gradient field defined on an open connected set \(D \subseteq \mathbb{R}^n\), with \(f \in C^1(D)\). Let \(C\) be any piecewise \(C^1\) curve in \(D\) from \(\mathbf{x}_1\) to \(\mathbf{x}_2\). Then
+
 \[
 \int_C \mathbf{F} \cdot d\mathbf{x} = \int_C \nabla f \cdot d\mathbf{x} = f(\mathbf{x}_2) - f(\mathbf{x}_1).
 \]
@@ -678,6 +690,7 @@ The three components measure rotation about the three coordinate axes:
 
 <div class="theorem">
 <strong>Theorem (Curl of a Gradient is Zero).</strong> For any \(C^2\) scalar field \(f\):
+
 \[
 \nabla \times (\nabla f) = \mathbf{0}.
 \]
@@ -691,6 +704,7 @@ This means: **gradient fields (conservative fields) are irrotational.** Equivale
 
 <div class="theorem">
 <strong>Theorem (Divergence of a Curl is Zero).</strong> For any \(C^2\) vector field \(\mathbf{F}\):
+
 \[
 \nabla \cdot (\nabla \times \mathbf{F}) = 0.
 \]
@@ -723,6 +737,7 @@ The domain \(D\) in parameter space maps to the surface \(S\) in \(\mathbb{R}^3\
 **Standard examples:**
 
 - *Sphere* \(x^2 + y^2 + z^2 = R^2\): parametrize by spherical angles \(u = \theta \in [0, 2\pi]\), \(v = \phi \in [0,\pi]\):
+
 \[
 \mathbf{g}(u,v) = (R\cos u\sin v,\; R\sin u\sin v,\; R\cos v).
 \]
@@ -767,6 +782,7 @@ so \(\|\mathbf{N}\| = R^2\sin v\) — the familiar Jacobian from spherical coord
 
 <div class="definition">
 <strong>Definition.</strong> The <strong>surface integral</strong> of a scalar function \(f\) over \(S\) is
+
 \[
 \iint_S f\, dS = \iint_D f(\mathbf{g}(u,v))\,\|\mathbf{N}(u,v)\|\, du\, dv.
 \]
@@ -783,6 +799,7 @@ The most physically important surface integral computes the **flux** of a vector
 
 <div class="definition">
 <strong>Definition.</strong> The <strong>flux</strong> of \(\mathbf{F}\) through an oriented surface \(S\) with unit outward normal \(\hat{\mathbf{n}}\) is
+
 \[
 \iint_S \mathbf{F} \cdot d\mathbf{S} = \iint_S \mathbf{F} \cdot \hat{\mathbf{n}}\, dS = \iint_D \mathbf{F}(\mathbf{g}(u,v)) \cdot \mathbf{N}(u,v)\, du\, dv.
 \]
@@ -816,6 +833,7 @@ On the sphere, \(\hat{\mathbf{n}} = \mathbf{g}/R\) (radially outward). Then \(\m
 
 <div class="theorem">
 <strong>Theorem (Gauss's Divergence Theorem).</strong> Let \(V\) be a bounded region in \(\mathbb{R}^3\) with boundary \(S = \partial V\) that is a piecewise \(C^1\) closed surface. Let \(\hat{\mathbf{n}}\) be the outward unit normal to \(S\). If \(\mathbf{F}: \mathbb{R}^3 \to \mathbb{R}^3\) is \(C^1\) on \(V \cup \partial V\), then
+
 \[
 \iint_S \mathbf{F} \cdot \hat{\mathbf{n}}\, dS = \iiint_V \nabla \cdot \mathbf{F}\, dV.
 \]
@@ -965,6 +983,7 @@ Stokes' Theorem generalises Green's Theorem to surfaces in three dimensions: it 
 
 <div class="theorem">
 <strong>Theorem (Stokes' Theorem).</strong> Let \(S\) be an oriented, piecewise \(C^1\) surface in \(\mathbb{R}^3\) with boundary curve \(C = \partial S\) that is piecewise \(C^1\) and oriented consistently with \(S\) (via the right-hand rule). Let \(\mathbf{F}\) be \(C^1\) on \(S \cup \partial S\). Then
+
 \[
 \oint_C \mathbf{F} \cdot d\mathbf{x} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = \iint_S (\nabla \times \mathbf{F}) \cdot \hat{\mathbf{n}}\, dS.
 \]
@@ -1067,12 +1086,15 @@ Two functions \(f\) and \(g\) are **orthogonal** if \(\langle f, g \rangle = 0\)
 
 <div class="theorem">
 <strong>Theorem (Orthogonality Relations).</strong> For integers \(m, n \geq 0\):
+
 \[
 \int_{-\pi}^{\pi} \cos(mx)\cos(nx)\, dx = \begin{cases} 0, & m \neq n, \\ \pi, & m = n \geq 1, \\ 2\pi, & m = n = 0. \end{cases}
 \]
+
 \[
 \int_{-\pi}^{\pi} \sin(mx)\sin(nx)\, dx = \begin{cases} 0, & m \neq n, \\ \pi, & m = n \geq 1. \end{cases}
 \]
+
 \[
 \int_{-\pi}^{\pi} \cos(mx)\sin(nx)\, dx = 0 \quad \text{for all } m, n.
 \]
@@ -1084,6 +1106,7 @@ These follow from product-to-sum identities and direct integration. The key cons
 
 <div class="definition">
 <strong>Definition.</strong> Given an integrable function \(f: (-\pi, \pi) \to \mathbb{R}\), its <strong>Fourier coefficients</strong> are:
+
 \[
 a_0 = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\, dx, \qquad a_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos(nx)\, dx, \qquad b_n = \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin(nx)\, dx,
 \]
@@ -1105,6 +1128,7 @@ The coefficient formulas are derived exactly as in finite-dimensional linear alg
 <ul>
 <li>At any point \(x\) where \(f\) is continuous: \(S_N(x) \to f(x)\).</li>
 <li>At any point \(x_0\) where \(f\) has a jump discontinuity:
+
 \[
 S_N(x_0) \to \frac{f(x_0^+) + f(x_0^-)}{2},
 \]
@@ -1145,6 +1169,7 @@ Any function can be uniquely decomposed into its even and odd parts: \(f = f_e +
 
 <div class="theorem">
 <strong>Theorem (Parseval's Identity).</strong> If \(f\) has Fourier coefficients \(a_n, b_n\), then
+
 \[
 \frac{1}{\pi}\int_{-\pi}^{\pi} |f(x)|^2\, dx = \frac{a_0^2}{2} + \sum_{n=1}^{\infty} (a_n^2 + b_n^2).
 \]
@@ -1171,6 +1196,7 @@ Substituting into the real Fourier series and collecting terms in \(e^{inx}\):
 
 <div class="definition">
 <strong>Definition (Complex Fourier Series).</strong> The <strong>complex Fourier series</strong> of \(f\) is
+
 \[
 f(x) = \sum_{n=-\infty}^{\infty} c_n\, e^{inx},
 \]

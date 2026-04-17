@@ -163,6 +163,7 @@ Beyond AABA and verse-chorus, the song repertoire includes a range of additional
 
 <div class="definition">
 <strong>Definition 1.4 (Twelve-Bar Blues Form).</strong> The <em>twelve-bar blues</em> is a strophic song form in which each strophe consists of twelve measures organized around the following harmonic schema:
+
 \[
 \underbrace{I \quad I \quad I \quad I}_{4} \; \underbrace{IV \quad IV \quad I \quad I}_{4} \; \underbrace{V \quad IV \quad I \quad I}_{4}
 \]

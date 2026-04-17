@@ -46,25 +46,35 @@ Random variables (rvs) represent the randomness of insurance loss events. This c
 
 A **discrete rv** takes a finite or countable number of values. The **probability mass function (pmf)** of a discrete rv \(X\) taking values \(\{x_i\}_{i \in \mathbb{N}}\) is:
 
-\[ p_i = P(X = x_i), \quad i \in \mathbb{N}. \]
+\[
+p_i = P(X = x_i), \quad i \in \mathbb{N}.
+\]
 
 The **cumulative distribution function (cdf)** is:
 
-\[ F(x) = P(X \leq x) = \sum_{i \in \mathbb{N}} p_i \mathbf{1}(x_i \leq x), \quad x \in \mathbb{R}, \]
+\[
+F(x) = P(X \leq x) = \sum_{i \in \mathbb{N}} p_i \mathbf{1}(x_i \leq x), \quad x \in \mathbb{R},
+\]
 
 and the \(k\)**th raw moment** is \(E[X^k] = \sum_{i \in \mathbb{N}} (x_i)^k p_i\).
 
 For a discrete rv taking only nonnegative integer values, the **probability generating function (pgf)** is:
 
-\[ G(z) := E\left[z^X\right] = \sum_{i \in \mathbb{N}} z^i p_i = p_0 + zp_1 + z^2 p_2 + \cdots \]
+\[
+G(z) := E\left[z^X\right] = \sum_{i \in \mathbb{N}} z^i p_i = p_0 + zp_1 + z^2 p_2 + \cdots
+\]
 
 Differentiating repeatedly yields:
 
-\[ G^{(n)}(z) = E\left[X(X-1)\cdots(X-n+1)z^{X-n}\right] \]
+\[
+G^{(n)}(z) = E\left[X(X-1)\cdots(X-n+1)z^{X-n}\right]
+\]
 
 so the pmf can be recovered from the pgf via \(p_n = G^{(n)}(0)/n!\), and the pgf **uniquely determines** the distribution. The **factorial moments** are:
 
-\[ E[X(X-1)\cdots(X-n+1)] = G^{(n)}(1) \]
+\[
+E[X(X-1)\cdots(X-n+1)] = G^{(n)}(1)
+\]
 
 In particular: \(E[X] = G'(1)\) and \(\text{Var}(X) = G''(1) + G'(1) - G'(1)^2\).
 
@@ -74,19 +84,25 @@ In particular: \(E[X] = G'(1)\) and \(\text{Var}(X) = G''(1) + G'(1) - G'(1)^2\)
 
 A **continuous rv** takes values on a continuum, so \(P(X = x) = 0\) for each \(x\). Its cdf is:
 
-\[ F(x) = P(X \leq x) = \int_{-\infty}^{x} f(y)\, dy \]
+\[
+F(x) = P(X \leq x) = \int_{-\infty}^{x} f(y)\, dy
+\]
 
 where \(f\) is the **probability density function (pdf)**, satisfying \(f(x) = \frac{d}{dx}F(x)\). The \(k\)th raw moment is \(E[X^k] = \int_{-\infty}^{\infty} x^k f(x)\, dx\).
 
 The **moment generating function (mgf)** is:
 
-\[ M(t) := E\left[e^{tX}\right] = \int_{-\infty}^{\infty} e^{tx} f(x)\, dx \]
+\[
+M(t) := E\left[e^{tX}\right] = \int_{-\infty}^{\infty} e^{tx} f(x)\, dx
+\]
 
 and \(E[X^k] = M^{(k)}(0)\). The mgf uniquely characterizes the probability distribution.
 
 **Example 2.** For \(X \sim \text{EXP}(0.1)\) with pdf \(f(x) = 0.1e^{-0.1x}\), \(x > 0\):
 
-\[ F(x) = 1 - e^{-0.1x}, \quad M(t) = \frac{0.1}{0.1 - t}, \quad t < 0.1. \]
+\[
+F(x) = 1 - e^{-0.1x}, \quad M(t) = \frac{0.1}{0.1 - t}, \quad t < 0.1.
+\]
 
 ### 2.3 Mixed Random Variables
 
@@ -94,7 +110,9 @@ A **mixed rv** has both discrete and continuous components. These arise naturall
 
 Let \(\{x_i\}_{i \in \mathbb{N}}\) be discrete mass points with \(P(X = x_i) = p_i\), and let \(f\) be a pdf on each interval between mass points. The cdf is:
 
-\[ F(x) = \sum_{i \in \mathbb{N}} p_i \mathbf{1}_{\{x_i \leq x\}} + \sum_{i \in \mathbb{N}} \int_{x_i}^{x_{i+1}} f(y)\mathbf{1}_{\{y \leq x\}}\, dy \]
+\[
+F(x) = \sum_{i \in \mathbb{N}} p_i \mathbf{1}_{\{x_i \leq x\}} + \sum_{i \in \mathbb{N}} \int_{x_i}^{x_{i+1}} f(y)\mathbf{1}_{\{y \leq x\}}\, dy
+\]
 
 and the \(k\)th moment is \(E[X^k] = \sum_{i} x_i^k p_i + \sum_{i} \int_{x_i}^{x_{i+1}} x^k f(x)\, dx\).
 
@@ -112,13 +130,17 @@ This chapter studies the rv that counts the number of claims arising from a port
 
 A rv \(N \sim \text{POI}(\lambda)\) (with \(\lambda > 0\) has pmf:
 
-\[ p_n = \frac{\lambda^n e^{-\lambda}}{n!}, \quad n = 0, 1, 2, \ldots \]
+\[
+p_n = \frac{\lambda^n e^{-\lambda}}{n!}, \quad n = 0, 1, 2, \ldots
+\]
 
 Its pgf is \(G(z) = e^{\lambda(z-1)}\), giving \(E[N] = \lambda\) and \(\text{Var}(N) = \lambda\). The **equal mean and variance** (\(E[N] = \text{Var}(N)\) is the key diagnostic for the Poisson in model selection.
 
 **Closure under convolution.** If \(N_1, \ldots, N_k\) are independent with \(N_i \sim \text{POI}(\lambda_i)\), then:
 
-\[ N = \sum_{i=1}^k N_i \sim \text{POI}\!\left(\sum_{i=1}^k \lambda_i\right) \]
+\[
+N = \sum_{i=1}^k N_i \sim \text{POI}\!\left(\sum_{i=1}^k \lambda_i\right)
+\]
 
 *Proof.* The pgf of \(N\) is \(\prod_i e^{\lambda_i(z-1)} = e^{(\sum_i \lambda_i)(z-1)}\), which is the pgf of \(\text{POI}(\sum \lambda_i)\). By pgf uniqueness, the result follows.
 
@@ -128,7 +150,9 @@ Its pgf is \(G(z) = e^{\lambda(z-1)}\), giving \(E[N] = \lambda\) and \(\text{Va
 
 A rv \(N \sim \text{BIN}(q, m)\) (with \(m \in \mathbb{Z}_+\), \(q \in (0,1)\) has pmf:
 
-\[ p_n = \binom{m}{n} q^n (1-q)^{m-n}, \quad n = 0, 1, \ldots, m \]
+\[
+p_n = \binom{m}{n} q^n (1-q)^{m-n}, \quad n = 0, 1, \ldots, m
+\]
 
 The finite support implies a maximum possible claim count. Its pgf is \(G(z) = (1 - q + qz)^m\), giving \(E[N] = mq\) and \(\text{Var}(N) = mq(1-q)\). Note \(E[N] > \text{Var}(N)\).
 
@@ -138,7 +162,9 @@ If \(N_i \sim \text{BIN}(q, m_i)\) independently, then \(\sum_i N_i \sim \text{B
 
 A rv \(N \sim \text{NB}(\beta, r)\) (with \(\beta > 0\), \(r > 0\) has pmf:
 
-\[ p_n = \binom{n+r-1}{n} \left(\frac{1}{1+\beta}\right)^r \left(\frac{\beta}{1+\beta}\right)^n, \quad n = 0, 1, \ldots \]
+\[
+p_n = \binom{n+r-1}{n} \left(\frac{1}{1+\beta}\right)^r \left(\frac{\beta}{1+\beta}\right)^n, \quad n = 0, 1, \ldots
+\]
 
 using the generalized binomial coefficient \(\binom{x}{n} = \frac{\Gamma(x+1)}{n!\,\Gamma(x-n+1)}\). Its pgf is \(G(z) = (1 + \beta - \beta z)^{-r}\), giving \(E[N] = r\beta\) and \(\text{Var}(N) = r\beta(1+\beta)\). Note \(E[N] < \text{Var}(N)\).
 
@@ -148,7 +174,9 @@ If \(N_i \sim \text{NB}(\beta, r_i)\) independently, then \(\sum_i N_i \sim \tex
 
 **Definition.** A counting rv \(N\) belongs to the **(a, b, 0) class** if there exist constants \(a, b\) such that:
 
-\[ p_n = \left(a + \frac{b}{n}\right) p_{n-1}, \quad n = 1, 2, \ldots \]
+\[
+p_n = \left(a + \frac{b}{n}\right) p_{n-1}, \quad n = 1, 2, \ldots
+\]
 
 The Poisson, Binomial, and Negative Binomial are the **only** members of this class. Their parameters are:
 
@@ -166,15 +194,21 @@ The Poisson, Binomial, and Negative Binomial are the **only** members of this cl
 
 For two counting rvs \(K\) (primary) and \(M\) (secondary), the **compound rv** is:
 
-\[ N = \begin{cases} \sum_{i=1}^K M_i, & K > 0, \\ 0, & K = 0, \end{cases} \]
+\[
+N = \begin{cases} \sum_{i=1}^K M_i, & K > 0, \\ 0, & K = 0, \end{cases}
+\]
 
 where the \(M_i\) are iid copies of \(M\), independent of \(K\). The pgf of \(N\) is:
 
-\[ G(z) = C(D(z)), \]
+\[
+G(z) = C(D(z)),
+\]
 
 i.e., the pgf of the primary evaluated at the pgf of the secondary. The mean and variance are:
 
-\[ E[N] = E[K]\,E[M], \qquad \text{Var}(N) = E[K]\,\text{Var}(M) + E[M]^2\,\text{Var}(K). \]
+\[
+E[N] = E[K]\,E[M], \qquad \text{Var}(N) = E[K]\,\text{Var}(M) + E[M]^2\,\text{Var}(K).
+\]
 
 *In loss modelling,* \(K\) might represent the number of accidents and \(M_i\) the number of claims from the \(i\)th accident.
 
@@ -188,7 +222,9 @@ Three methods are available:
 
 **3. Panjer's recursion.** If \(K\) is an (a, b, 0) member:
 
-\[ p_n = \frac{1}{1 - a\,d_0} \sum_{j=1}^n \left(a + \frac{b\,j}{n}\right) d_j\, p_{n-1-j+1}, \quad n \geq 1, \]
+\[
+p_n = \frac{1}{1 - a\,d_0} \sum_{j=1}^n \left(a + \frac{b\,j}{n}\right) d_j\, p_{n-1-j+1}, \quad n \geq 1,
+\]
 
 with \(p_0 = C(d_0)\). This avoids the expensive convolution in the pmf method.
 
@@ -212,11 +248,15 @@ All three distributions stay within the same parametric family after thinning, w
 
 Since insurers only observe losses that result in non-zero payments, estimation uses **payment data**. Let \(z_k\) be the number of times \(k\) payments are observed. The **log-likelihood** for the compound payment rv \(M\) with pmf \(\{p_k\}\) is:
 
-\[ \ell = \sum_{k=0}^\infty z_k \ln p_k \]
+\[
+\ell = \sum_{k=0}^\infty z_k \ln p_k
+\]
 
 **Example 20.** If \(N \sim \text{POI}(\lambda)\) and payment probability is \(\alpha\), then \(M \sim \text{POI}(\alpha\lambda)\). The MLE of \(\lambda\) is:
 
-\[ \hat{\lambda} = \frac{1}{\alpha} \cdot \frac{\sum_{k=0}^\infty k\, n_k}{n} = \frac{\bar{k}}{\alpha} \]
+\[
+\hat{\lambda} = \frac{1}{\alpha} \cdot \frac{\sum_{k=0}^\infty k\, n_k}{n} = \frac{\bar{k}}{\alpha}
+\]
 
 where \(n = \sum_k n_k\) is the total number of observations and \(\bar{k}\) is the sample mean of payment counts.
 
@@ -230,7 +270,9 @@ The **severity model** describes the size of each individual claim/payment. The 
 
 The **empirical distribution function (edf)** assigns probability \(1/n\) to each data point in a sample of size \(n\):
 
-\[ \hat{F}_n(x) = \frac{1}{n} \sum_{i=1}^n \mathbf{1}_{\{X_i \leq x\}} \]
+\[
+\hat{F}_n(x) = \frac{1}{n} \sum_{i=1}^n \mathbf{1}_{\{X_i \leq x\}}
+\]
 
 **Example 22.** For losses {30, 80, 80, 150, 150, 150, 200, 300}, the edf assigns \(P(X = 30) = 1/8\), \(P(X = 80) = 1/4\), etc.
 
@@ -246,11 +288,15 @@ Several parametric families are used for ground-up losses:
 
 An important property is the **limited expected value**:
 
-\[ E[X \wedge u] = \int_0^u \bar{F}(x)\, dx \]
+\[
+E[X \wedge u] = \int_0^u \bar{F}(x)\, dx
+\]
 
 where \(X \wedge u = \min(X, u)\). More generally, the \(k\)th moment of the limited rv is:
 
-\[ E\left[(X \wedge u)^k\right] = k\int_0^u x^{k-1}\bar{F}(x)\, dx \]
+\[
+E\left[(X \wedge u)^k\right] = k\int_0^u x^{k-1}\bar{F}(x)\, dx
+\]
 
 ### 4.3 Constructing New Distributions
 
@@ -270,29 +316,41 @@ Three standard adjustments affect the payment amount:
 
 The **amount paid per loss** under all three adjustments is:
 
-\[ Y^L = \alpha\left[(X \wedge u) - d\right]_+ \]
+\[
+Y^L = \alpha\left[(X \wedge u) - d\right]_+
+\]
 
 The **amount paid per payment** (conditional on a non-zero payment) is:
 
-\[ Y^P = Y^L \mid Y^L > 0 \]
+\[
+Y^P = Y^L \mid Y^L > 0
+\]
 
 **Proposition 32.** The cdf of \(Y^P\) is:
 
-\[ F_{Y^P}(y) = \frac{F\!\left(\frac{y}{\alpha} + d\right) - F(d)}{1 - F(d)}, \quad 0 \leq y < \alpha(u-d) \]
+\[
+F_{Y^P}(y) = \frac{F\!\left(\frac{y}{\alpha} + d\right) - F(d)}{1 - F(d)}, \quad 0 \leq y < \alpha(u-d)
+\]
 
 and the expected amount paid per payment satisfies:
 
-\[ E[Y^P] = \frac{E[Y^L]}{1 - F(d)} \]
+\[
+E[Y^P] = \frac{E[Y^L]}{1 - F(d)}
+\]
 
 **Proposition 33.** For a nonnegative rv \(Y\) with survival function \(\bar{F}_Y\):
 
-\[ E[Y] = \int_0^\infty \bar{F}_Y(y)\, dy \]
+\[
+E[Y] = \int_0^\infty \bar{F}_Y(y)\, dy
+\]
 
 #### Loss Elimination Ratio
 
 The **loss elimination ratio (LER)** measures the proportion of expected loss eliminated by policy adjustments:
 
-\[ \text{LER} = 1 - \frac{E[Y^L]}{E[X]} \]
+\[
+\text{LER} = 1 - \frac{E[Y^L]}{E[X]}
+\]
 
 For a policy with only an ordinary deductible \(d\): \(\text{LER} = \frac{E[X \wedge d]}{E[X]}\).
 
@@ -311,7 +369,9 @@ The likelihood contribution for each observation is:
 
 For **grouped data** in payment intervals \((c_{i-1}, c_i]\) with counts \(n_i\):
 
-\[ L = \prod_{i=1}^n \left[\frac{F\!\left(\frac{c_i}{\alpha} + d\right) - F\!\left(\frac{c_{i-1}}{\alpha} + d\right)}{1 - F(d)}\right]^{n_i} \]
+\[
+L = \prod_{i=1}^n \left[\frac{F\!\left(\frac{c_i}{\alpha} + d\right) - F\!\left(\frac{c_{i-1}}{\alpha} + d\right)}{1 - F(d)}\right]^{n_i}
+\]
 
 **Example 39.** Policy limit 1100, deductible 100, coinsurance 80%. Payment intervals (0, 400], (400, 800], and maximum 800. For \(X \sim \text{EXP}(\theta)\), solving \(\frac{d\ell}{d\theta} = 0\) yields \(\hat{\theta} = \frac{500}{-\ln(2/3)} \approx 1233.15\).
 
@@ -323,7 +383,9 @@ For **grouped data** in payment intervals \((c_{i-1}, c_i]\) with counts \(n_i\)
 
 The **aggregate loss** is the compound rv:
 
-\[ S = \begin{cases} \sum_{i=1}^N X_i, & N > 0, \\ 0, & N = 0, \end{cases} \]
+\[
+S = \begin{cases} \sum_{i=1}^N X_i, & N > 0, \\ 0, & N = 0, \end{cases}
+\]
 
 where \(N\) is the frequency rv and \(X_i\) are iid severity rvs. Equivalently, the **aggregate payment** can be expressed as a compound rv using either (N, \(Y^L\) or (M, \(Y^P\) as the (primary, secondary) pair.
 
@@ -332,21 +394,32 @@ where \(N\) is the frequency rv and \(X_i\) are iid severity rvs. Equivalently, 
 Treating \(S\) as a general compound rv with primary \(K\) (pgf \(C(z)\) and secondary \(Z\) (mgf \(\tilde{G}(t)\):
 
 **CDF:**
-\[ P(S \leq x) = c_0 + \sum_{k=1}^\infty c_k G^{*k}(x) \]
+
+\[
+P(S \leq x) = c_0 + \sum_{k=1}^\infty c_k G^{*k}(x)
+\]
 
 where \(G^{*k}(x) = P(Z_1 + \cdots + Z_k \leq x)\) is the \(k\)-fold convolution.
 
 **MGF:**
-\[ E\!\left[e^{tS}\right] = C\!\left(\tilde{G}(t)\right) \]
+
+\[
+E\!\left[e^{tS}\right] = C\!\left(\tilde{G}(t)\right)
+\]
 
 **Mean and variance:**
-\[ E[S] = E[K]\,E[Z], \qquad \text{Var}(S) = E[K]\,\text{Var}(Z) + E[Z]^2\,\text{Var}(K) \]
+
+\[
+E[S] = E[K]\,E[Z], \qquad \text{Var}(S) = E[K]\,\text{Var}(Z) + E[Z]^2\,\text{Var}(K)
+\]
 
 **Example 40.** If \(Z \sim \text{EXP}(\theta)\), then \(G^{*k}\) is the cdf of an Erlang\((k, \theta)\) rv, allowing an explicit closed-form for \(P(S \leq x)\).
 
 **Example 41.** For \(K \sim \text{GEO}(\beta)\) and \(Z \sim \text{EXP}(\theta)\), the mgf of \(S\) simplifies to \(\frac{1 - \theta t}{1 - (1+\beta)\theta t}\), which corresponds to a **mixed rv** with probability mass \(\frac{1}{1+\beta}\) at 0 and exponential density with rate \(\frac{1}{(1+\beta)\theta}\) for \(x > 0\). The cdf is:
 
-\[ P(S \leq s) = 1 - \frac{\beta}{1+\beta} e^{-\frac{s}{(1+\beta)\theta}}, \quad s \geq 0 \]
+\[
+P(S \leq s) = 1 - \frac{\beta}{1+\beta} e^{-\frac{s}{(1+\beta)\theta}}, \quad s \geq 0
+\]
 
 ### 5.3 Approximation Methods
 
@@ -356,7 +429,9 @@ In general, closed-form expressions for \(P(S \leq x)\) are rare. Two approximat
 
 Approximate \(\frac{S - E[S]}{\sqrt{\text{Var}(S)}} \approx N(0,1)\), so:
 
-\[ P(S \leq s) \approx \Phi\!\left(\frac{s - E[S]}{\sqrt{\text{Var}(S)}}\right) \]
+\[
+P(S \leq s) \approx \Phi\!\left(\frac{s - E[S]}{\sqrt{\text{Var}(S)}}\right)
+\]
 
 This approximation is good when \(\lambda\) is large (Poisson), \(m\) is large (Binomial), or \(r\) is large (Negative Binomial). **Caution:** the normal approximation may underestimate the right tail of \(S\), which is dangerous from a risk management standpoint.
 
@@ -366,7 +441,9 @@ This approximation is good when \(\lambda\) is large (Poisson), \(m\) is large (
 
 **Discretize** \(Z\) to a discrete rv \(Z^*\) on multiples of span \(h > 0\):
 
-\[ g_0 = G\!\left(\frac{h}{2}\right), \qquad g_k = G\!\left(kh + \frac{h}{2}\right) - G\!\left(kh - \frac{h}{2}\right), \quad k \geq 1 \]
+\[
+g_0 = G\!\left(\frac{h}{2}\right), \qquad g_k = G\!\left(kh + \frac{h}{2}\right) - G\!\left(kh - \frac{h}{2}\right), \quad k \geq 1
+\]
 
 Then use Panjer's recursion on the discretized distribution to obtain the pmf of \(S^* \approx S\). The approximation improves as \(h \to 0\).
 
@@ -383,17 +460,23 @@ For aggregate **payment** approximation, it is recommended to discretize \(Y^P\)
 
 The **net stop-loss premium** (expected reinsurer payment) is:
 
-\[ E[I_\xi] = E[(S-\xi)_+] = \int_\xi^\infty P(S > x)\, dx \]
+\[
+E[I_\xi] = E[(S-\xi)_+] = \int_\xi^\infty P(S > x)\, dx
+\]
 
 For integer-valued \(S\), the stop-loss premium satisfies the recursion:
 
-\[ E[I_{\xi+1}] = E[I_\xi] - P(S > \xi), \quad \xi \in \mathbb{N} \]
+\[
+E[I_{\xi+1}] = E[I_\xi] - P(S > \xi), \quad \xi \in \mathbb{N}
+\]
 
 with starting point \(E[I_0] = E[S]\).
 
 **Example 45.** \(S\) compound Poisson with \(\lambda = 2.5\), \(g_1 = 0.8\), \(g_2 = 0.2\). Then \(E[S] = 3\), \(P(S = 0) = e^{-2.5}\), \(P(S = 1) = 2.5(0.8)e^{-2.5} \approx 0.1642\). Applying the recursion:
 
-\[ E[I_2] \approx 3 - (1 - e^{-2.5}) - 0.1642 \approx 1.3284 \]
+\[
+E[I_2] \approx 3 - (1 - e^{-2.5}) - 0.1642 \approx 1.3284
+\]
 
 ---
 
@@ -431,7 +514,9 @@ The **chain-ladder method** (also called the **loss development triangle method*
 
 **Step 5.** The **IBNR (Incurred But Not Reported) reserve** for each AY is:
 
-\[ \text{Reserve}_{AY} = \text{Projected Ultimate} - \text{Current Cumulative} \]
+\[
+\text{Reserve}_{AY} = \text{Projected Ultimate} - \text{Current Cumulative}
+\]
 
 **Example 46.** (Numerical example with full development triangle and three averaging methods, leading to projected ultimates and IBNR reserves for each accident year.)
 
@@ -439,7 +524,9 @@ The **chain-ladder method** (also called the **loss development triangle method*
 
 The **expected loss ratio (ELR) method** projects the ultimate loss using an a priori expected loss ratio:
 
-\[ \text{Ultimate Loss}_{AY} = \text{Earned Premium}_{AY} \times \text{ELR} \]
+\[
+\text{Ultimate Loss}_{AY} = \text{Earned Premium}_{AY} \times \text{ELR}
+\]
 
 The reserve for each AY is the projected ultimate minus current cumulative payments. This method is most useful for immature accident years where there is little development history.
 
@@ -449,7 +536,9 @@ The **Bornhuetter-Ferguson (BF) method** blends the chain-ladder and expected lo
 
 For accident year \(i\) currently at development year \(j\):
 
-\[ \text{Ultimate}_{i} = C_{ij} + (1 - 1/f_j) \times \text{Expected Ultimate}_{i} \]
+\[
+\text{Ultimate}_{i} = C_{ij} + (1 - 1/f_j) \times \text{Expected Ultimate}_{i}
+\]
 
 where:
 - \(C_{ij}\) is the current cumulative paid loss
@@ -459,7 +548,9 @@ where:
 
 The BF reserve for AY \(i\) is:
 
-\[ \text{Reserve}_{i} = (1 - 1/f_j) \times \text{Expected Ultimate}_{i} \]
+\[
+\text{Reserve}_{i} = (1 - 1/f_j) \times \text{Expected Ultimate}_{i}
+\]
 
 This interpretation is intuitive: the reserve equals the expected unreported losses, where "unreported" is estimated from the tail factor rather than from actual data.
 

@@ -117,11 +117,17 @@ The payments system has evolved from commodity money (gold, silver) to fiat mone
 
 The Bank of Canada publishes several monetary aggregates that group assets by their degree of moneyness (liquidity and use in transactions):
 
-\[ M1^+ = \text{Currency} + \text{Personal chequing deposits} + \text{Other demand deposits at chartered banks and trust companies} \]
+\[
+M1^+ = \text{Currency} + \text{Personal chequing deposits} + \text{Other demand deposits at chartered banks and trust companies}
+\]
 
-\[ M2 = M1 + \text{Personal savings deposits} + \text{Non-personal notice deposits} \]
+\[
+M2 = M1 + \text{Personal savings deposits} + \text{Non-personal notice deposits}
+\]
 
-\[ M3 = M2 + \text{Non-personal fixed-term deposits} + \text{Foreign-currency deposits} \]
+\[
+M3 = M2 + \text{Non-personal fixed-term deposits} + \text{Foreign-currency deposits}
+\]
 
 The Federal Reserve in the United States uses M1 and M2. The choice of aggregate matters for empirical work: the correlation between money growth and inflation is tighter for broader aggregates over long horizons.
 
@@ -137,11 +143,15 @@ The Federal Reserve in the United States uses M1 and M2. The choice of aggregate
 
 The fundamental principle underlying interest rate theory is that a dollar received today is worth more than a dollar received in the future, because the present dollar can be invested to earn a return. The **present value** (PV) of a future cash flow \(C_t\) received \(t\) periods hence, discounted at interest rate \(i\), is:
 
-\[ PV = \frac{C_t}{(1+i)^t} \]
+\[
+PV = \frac{C_t}{(1+i)^t}
+\]
 
 For a stream of cash flows:
 
-\[ PV = \sum_{t=1}^{T} \frac{C_t}{(1+i)^t} \]
+\[
+PV = \sum_{t=1}^{T} \frac{C_t}{(1+i)^t}
+\]
 
 ## 4.2 Yield to Maturity
 
@@ -149,29 +159,40 @@ The **yield to maturity** (YTM) is the interest rate that equates the present va
 
 **Simple loan.** For a loan of principal \(L\) repaid with interest in one period at rate \(i\):
 
-\[ L = \frac{L(1+i)}{1+i} \]
+\[
+L = \frac{L(1+i)}{1+i}
+\]
 
 The yield to maturity equals the stated interest rate.
 
 **Coupon bond.** A bond with face value \(F\), annual coupon \(C\), and \(n\) years to maturity has yield to maturity \(i\) solving:
 
-\[ P = \sum_{t=1}^{n} \frac{C}{(1+i)^t} + \frac{F}{(1+i)^n} \]
+\[
+P = \sum_{t=1}^{n} \frac{C}{(1+i)^t} + \frac{F}{(1+i)^n}
+\]
 
 When \(P = F\), the YTM equals the coupon rate. When \(P < F\) (bond trades at a discount), the YTM exceeds the coupon rate, and vice versa.
 
 **Consol (perpetuity).** A bond paying coupon \(C\) forever has:
 
-\[ P = \frac{C}{i} \implies i = \frac{C}{P} \]
+\[
+P = \frac{C}{i} \implies i = \frac{C}{P}
+\]
 
 **Discount bond (Treasury bill).** A zero-coupon instrument with face value \(F\) and current price \(P\):
 
-\[ i = \frac{F - P}{P} \]
+\[
+i = \frac{F - P}{P}
+\]
 
 ## 4.3 The Distinction Between Real and Nominal Interest Rates
 
 <div class="definition">
 <strong>Fisher Equation:</strong> The nominal interest rate <em>i</em> equals the real interest rate <em>r</em> plus the expected rate of inflation <em>\(\pi^e\)</em>:
-\[ i = r + \pi^e \]
+
+\[
+i = r + \pi^e
+\]
 More precisely, using the exact Fisher relation: \((1+i) = (1+r)(1+\pi^e)\), which for small rates approximates to the linear form above.
 </div>
 
@@ -179,7 +200,9 @@ The real interest rate measures the purchasing-power return on a loan. If the no
 
 **Ex ante versus ex post real rates.** The ex ante real rate uses expected inflation (known at the time the loan is made). The ex post real rate uses actual realized inflation.
 
-\[ r_{ex\ post} = i - \pi_{actual} \]
+\[
+r_{ex\ post} = i - \pi_{actual}
+\]
 
 If inflation turns out higher than expected, the ex post real rate falls below the ex ante real rate, redistributing wealth from lenders to borrowers.
 
@@ -187,7 +210,9 @@ If inflation turns out higher than expected, the ex post real rate falls below t
 
 The **return** on a bond held for one period differs from the yield to maturity unless the bond is held to maturity. The one-period return is:
 
-\[ R = \frac{C + P_{t+1} - P_t}{P_t} = i_c + g \]
+\[
+R = \frac{C + P_{t+1} - P_t}{P_t} = i_c + g
+\]
 
 where \(i_c = C/P_t\) is the current yield and \(g = (P_{t+1} - P_t)/P_t\) is the capital gain rate. Because bond prices move inversely with interest rates, a rise in market interest rates produces capital losses on existing bonds, so the total return can be negative even when the coupon yield is positive.
 
@@ -243,7 +268,9 @@ Equilibrium interest rate equates money demand and supply. An increase in money 
 
 Bonds that are identical in maturity but differ in issuer quality command different yields. The **default risk premium** (also called the credit spread) compensates investors for the probability that an issuer will fail to make promised payments.
 
-\[ i_{corporate} = i_{government} + \text{default risk premium} + \text{liquidity premium} \]
+\[
+i_{corporate} = i_{government} + \text{default risk premium} + \text{liquidity premium}
+\]
 
 Bond rating agencies (Moody's, Standard & Poor's, DBRS Morningstar in Canada) assign credit ratings from AAA/Aaa (highest quality) to D/C (default). Higher-rated bonds carry lower yields. Credit spreads widen during recessions (when default risk rises) and narrow during expansions.
 
@@ -261,11 +288,15 @@ Three competing theories explain the shape of the yield curve:
 
 The yield on a long-term bond equals the average of expected short-term rates over the bond's life. Formally, for a two-period bond with yield \(i_{2t}\):
 
-\[ (1 + i_{2t})^2 = (1 + i_{1t})(1 + i^e_{1t+1}) \]
+\[
+(1 + i_{2t})^2 = (1 + i_{1t})(1 + i^e_{1t+1})
+\]
 
 Taking logarithms (approximation):
 
-\[ i_{2t} \approx \frac{i_{1t} + i^e_{1t+1}}{2} \]
+\[
+i_{2t} \approx \frac{i_{1t} + i^e_{1t+1}}{2}
+\]
 
 Under this theory, a steeply upward-sloping yield curve signals market expectations that short-term rates will rise in the future. A flat yield curve implies rates are expected to remain unchanged; an inverted yield curve predicts rate declines.
 
@@ -283,7 +314,9 @@ This theory explains the typical upward slope by positing that investors general
 
 This theory combines the two above. Long-term yields include a **liquidity premium** \(l_{nt}\) over the average of expected future short rates:
 
-\[ i_{nt} = \frac{i_{1t} + i^e_{1t+1} + \cdots + i^e_{1t+n-1}}{n} + l_{nt} \]
+\[
+i_{nt} = \frac{i_{1t} + i^e_{1t+1} + \cdots + i^e_{1t+n-1}}{n} + l_{nt}
+\]
 
 where \(l_{nt} > 0\) and typically increases with maturity (investors demand compensation for bearing interest rate risk). This theory is most consistent with empirical evidence:
 
@@ -302,11 +335,15 @@ where \(l_{nt} > 0\) and typically increases with maturity (investors demand com
 
 A share of common stock entitles its holder to the firm's future dividends. The **Dividend Discount Model** prices the stock as the present value of all expected future dividends:
 
-\[ P_0 = \sum_{t=1}^{\infty} \frac{D_t}{(1+k_e)^t} \]
+\[
+P_0 = \sum_{t=1}^{\infty} \frac{D_t}{(1+k_e)^t}
+\]
 
 where \(k_e\) is the required return on equity. For a firm with dividends growing at constant rate \(g\):
 
-\[ P_0 = \frac{D_1}{k_e - g} \]
+\[
+P_0 = \frac{D_1}{k_e - g}
+\]
 
 This is the **Gordon Growth Model** (Gordon 1962). It implies that stock prices rise when dividends are expected to grow faster, when required returns fall (e.g., due to lower interest rates), or when the discount rate for equity risk falls.
 
@@ -332,7 +369,9 @@ The **Efficient Markets Hypothesis** (EMH), developed by Eugene Fama (1970), sta
 
 In an informationally efficient market, the price \(P_t\) of an asset evolves according to:
 
-\[ P_{t+1} = P_t (1 + r_t) + \varepsilon_{t+1} \]
+\[
+P_{t+1} = P_t (1 + r_t) + \varepsilon_{t+1}
+\]
 
 where \(r_t\) is the required return (which may vary with risk) and \(\varepsilon_{t+1}\) is white noise with \(E[\varepsilon_{t+1} | \Omega_t] = 0\), where \(\Omega_t\) is all available information at time \(t\). Equivalently, price changes are unpredictable given current information — the **random walk** hypothesis.
 
@@ -386,7 +425,9 @@ Commercial banks create money through the lending process. When a bank receives 
 
 Starting from an initial deposit \(\Delta D_0\), with required reserve ratio \(rr\):
 
-\[ \Delta \text{Deposits (total)} = \frac{1}{rr} \times \Delta D_0 \]
+\[
+\Delta \text{Deposits (total)} = \frac{1}{rr} \times \Delta D_0
+\]
 
 This is the **simple deposit multiplier**. With a 10% reserve ratio, a $100 initial deposit ultimately supports $1,000 in total deposits.
 
@@ -398,7 +439,9 @@ This is the **simple deposit multiplier**. With a 10% reserve ratio, a $100 init
 
 Let \(c = C/D\) be the currency-to-deposit ratio (determined by public preferences) and \(e = ER/D\) be the excess reserve ratio (determined by banks' liquidity preferences). Total high-powered money (monetary base) \(H = C + R\), where \(R = rr \cdot D + ER\). Then:
 
-\[ M = \frac{1+c}{rr + e + c} \times H \]
+\[
+M = \frac{1+c}{rr + e + c} \times H
+\]
 
 This is the **money multiplier** \(m\), so \(M = m \times H\).
 
@@ -469,7 +512,9 @@ The Bank of Canada deployed a form of QE during the COVID-19 pandemic (2020–21
 
 Irving Fisher formalized the relationship between money and prices in the **equation of exchange**:
 
-\[ M \times V = P \times Y \]
+\[
+M \times V = P \times Y
+\]
 
 where \(M\) is the money supply, \(V\) is the velocity of money (average number of times each dollar changes hands in transactions), \(P\) is the price level, and \(Y\) is real output. This is an accounting identity by definition: total spending \(P \times Y\) must equal money times its velocity.
 
@@ -477,7 +522,9 @@ where \(M\) is the money supply, \(V\) is the velocity of money (average number 
 
 The **quantity theory of money** converts Fisher's identity into a theory by assuming that \(V\) and \(Y\) are determined independently of \(M\) in the long run (velocity by institutional factors and payments technology; output by real factors — labor, capital, technology). Then:
 
-\[ \Delta M \% \approx \Delta P \% \]
+\[
+\Delta M \% \approx \Delta P \%
+\]
 
 That is, proportional changes in the money supply lead to proportional changes in the price level. The quantity theory predicts that money growth drives inflation in the long run.
 
@@ -489,7 +536,9 @@ That is, proportional changes in the money supply lead to proportional changes i
 
 Alfred Marshall and Arthur Cecil Pigou reformulated the quantity theory by focusing on money demand. The Cambridge approach states:
 
-\[ M^d = k \times P \times Y \]
+\[
+M^d = k \times P \times Y
+\]
 
 where \(k = 1/V\) is the Cambridge \(k\) — the fraction of nominal income people wish to hold as money. In equilibrium \(M = M^d\), so \(MV = PY\) as before, but the Cambridge approach emphasizes the behavioral determinants of money demand (portfolio choice, convenience), paving the way for Keynes's liquidity preference theory.
 
@@ -501,13 +550,17 @@ Keynes (1936) argued that money demand depends not only on income but also on th
 2. **Precautionary motive:** Holding money as a buffer against unforeseen expenditures.
 3. **Speculative motive:** Holding money when bond prices are expected to fall (interest rates expected to rise), to avoid capital losses.
 
-\[ L = f(Y, i) \quad \frac{\partial L}{\partial Y} > 0, \quad \frac{\partial L}{\partial i} < 0 \]
+\[
+L = f(Y, i) \quad \frac{\partial L}{\partial Y} > 0, \quad \frac{\partial L}{\partial i} < 0
+\]
 
 ## 11.5 The Baumol-Tobin Transactions Demand Model
 
 Baumol (1952) and Tobin (1956) modeled money demand as an inventory problem. An individual receives income \(Y\) and makes \(T\) trips to the "bank" each period. Each trip costs \(b\) (brokerage or transactions cost). The average money balance held is \(Y/(2T)\). The opportunity cost of holding money is \(i \times Y/(2T)\) and total transactions costs are \(bT\). Minimizing total cost with respect to \(T\):
 
-\[ M^* = \sqrt{\frac{b \cdot Y}{2i}} \]
+\[
+M^* = \sqrt{\frac{b \cdot Y}{2i}}
+\]
 
 This implies that money demand has an income elasticity of 0.5 and an interest rate elasticity of −0.5, both below unity — economies of scale in money holding ("square-root rule").
 
@@ -549,13 +602,18 @@ The channels through which monetary policy affects the economy:
 
 Rather than responding discretionarily, most central banks follow systematic reaction functions. John Taylor (1993) proposed:
 
-\[ i_t = r^* + \pi_t + \frac{1}{2}(\pi_t - \pi^*) + \frac{1}{2}(Y_t - Y^*_t) \]
+\[
+i_t = r^* + \pi_t + \frac{1}{2}(\pi_t - \pi^*) + \frac{1}{2}(Y_t - Y^*_t)
+\]
 
 where \(r^*\) is the neutral real rate, \(\pi^*\) is the inflation target, and \(Y_t - Y^*_t\) is the output gap. The Taylor rule calls for raising the policy rate more than one-for-one with inflation (the **Taylor principle**, ensuring a positive real rate response), stabilizing both inflation and output.
 
 <div class="example">
 <strong>Example — Applying the Taylor Rule:</strong> Suppose the neutral real rate is 2%, the inflation target is 2%, current inflation is 4%, and the output gap is +1%. Then:
-\[ i_t = 2 + 4 + \frac{1}{2}(4-2) + \frac{1}{2}(1) = 2 + 4 + 1 + 0.5 = 7.5\% \]
+
+\[
+i_t = 2 + 4 + \frac{1}{2}(4-2) + \frac{1}{2}(1) = 2 + 4 + 1 + 0.5 = 7.5\%
+\]
 The rule prescribes a policy rate of 7.5%, considerably above the neutral nominal rate of 4% (= 2% real + 2% inflation), reflecting the need to cool both above-target inflation and a positive output gap.
 </div>
 
@@ -575,7 +633,9 @@ Empirical evidence strongly supports the view that explicit inflation targeting 
 
 The **classical dichotomy** asserts that real variables (output, relative prices, employment) are determined by real factors (technology, preferences, endowments) and are unaffected by the nominal money supply. Money affects only the price level. This is the basis for **long-run money neutrality**:
 
-\[ \frac{d\ln Y}{d\ln M} = 0 \quad \text{(long run)} \]
+\[
+\frac{d\ln Y}{d\ln M} = 0 \quad \text{(long run)}
+\]
 
 In the short run, however, prices and wages may be sticky (because of menu costs, wage contracts, imperfect information), allowing monetary policy to affect real output transiently.
 
@@ -589,7 +649,9 @@ In the short run, however, prices and wages may be sticky (because of menu costs
 
 The **Phillips curve** (Phillips 1958) documented an empirical inverse relationship between unemployment and wage (later price) inflation in the UK. In the short run:
 
-\[ \pi_t = \pi^e_t - \alpha(u_t - u^*) + \varepsilon_t \]
+\[
+\pi_t = \pi^e_t - \alpha(u_t - u^*) + \varepsilon_t
+\]
 
 where \(\pi^e_t\) is expected inflation, \(u^*\) is the natural rate of unemployment, and \(\alpha > 0\). A central bank can temporarily reduce unemployment below \(u^*\) by generating surprise inflation, but rational agents adjust expectations upward, shifting the short-run Phillips curve up until unemployment returns to \(u^*\) at a higher inflation rate.
 
@@ -606,31 +668,61 @@ where \(\pi^e_t\) is expected inflation, \(u^*\) is the natural rate of unemploy
 The following equations synthesize the core technical content of the course:
 
 **Present value:**
-\[ PV = \frac{C}{(1+i)^t} \]
+
+\[
+PV = \frac{C}{(1+i)^t}
+\]
 
 **Fisher equation:**
-\[ i \approx r + \pi^e \]
+
+\[
+i \approx r + \pi^e
+\]
 
 **Coupon bond pricing:**
-\[ P = \sum_{t=1}^{n} \frac{C}{(1+i)^t} + \frac{F}{(1+i)^n} \]
+
+\[
+P = \sum_{t=1}^{n} \frac{C}{(1+i)^t} + \frac{F}{(1+i)^n}
+\]
 
 **Gordon Growth Model:**
-\[ P_0 = \frac{D_1}{k_e - g} \]
+
+\[
+P_0 = \frac{D_1}{k_e - g}
+\]
 
 **Liquidity premium term structure:**
-\[ i_{nt} = \frac{1}{n}\sum_{k=0}^{n-1} i^e_{1,t+k} + l_{nt} \]
+
+\[
+i_{nt} = \frac{1}{n}\sum_{k=0}^{n-1} i^e_{1,t+k} + l_{nt}
+\]
 
 **Equation of exchange:**
-\[ MV = PY \]
+
+\[
+MV = PY
+\]
 
 **Money multiplier:**
-\[ M = \frac{1+c}{rr+e+c} \times H \]
+
+\[
+M = \frac{1+c}{rr+e+c} \times H
+\]
 
 **Baumol-Tobin money demand:**
-\[ M^* = \sqrt{\frac{bY}{2i}} \]
+
+\[
+M^* = \sqrt{\frac{bY}{2i}}
+\]
 
 **Taylor Rule:**
-\[ i_t = r^* + \pi_t + \frac{1}{2}(\pi_t - \pi^*) + \frac{1}{2}(Y_t - Y_t^*) \]
+
+\[
+i_t = r^* + \pi_t + \frac{1}{2}(\pi_t - \pi^*) + \frac{1}{2}(Y_t - Y_t^*)
+\]
 
 **Short-run Phillips Curve:**
-\[ \pi_t = \pi^e_t - \alpha(u_t - u^*) + \varepsilon_t \]
+
+\[
+\pi_t = \pi^e_t - \alpha(u_t - u^*) + \varepsilon_t
+\]

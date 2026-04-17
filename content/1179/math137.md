@@ -14,6 +14,7 @@ The absolute value provides the fundamental notion of distance on the real numbe
 <div class="definition">
 
 <strong>Definition (Absolute Value).</strong> For each \(x \in \mathbb{R}\), define the absolute value of \(x\) by
+
 \[
 |x| = \begin{cases} x & \text{if } x \ge 0 \\ -x & \text{if } x < 0. \end{cases}
 \]
@@ -27,6 +28,7 @@ Geometrically, \(|x|\) is the distance from \(x\) to \(0\), and \(|a - b|\) is t
 <div class="theorem">
 
 <strong>Theorem 1 (Triangle Inequality).</strong> Let \(x, y, z\) be any real numbers. Then
+
 \[
 |x - y| \le |x - z| + |z - y|.
 \]
@@ -38,6 +40,7 @@ This says the distance from \(x\) to \(y\) never exceeds the sum of the distance
 <div class="theorem">
 
 <strong>Theorem 2 (Triangle Inequality II).</strong> Let \(x, y \in \mathbb{R}\). Then
+
 \[
 |x + y| \le |x| + |y|.
 \]
@@ -218,6 +221,7 @@ For example, since \(-1/n \le \sin(n)/n \le 1/n\) and both bounds converge to \(
 <div class="theorem">
 
 <strong>Theorem 12 (Geometric Series Test).</strong> The geometric series \(\sum_{n=0}^\infty r^n\) converges if \(|r| < 1\) and diverges otherwise. If \(|r| < 1\), then
+
 \[
 \sum_{n=0}^\infty r^n = \frac{1}{1 - r}.
 \]
@@ -357,6 +361,7 @@ The converse is false: the Harmonic Series \(\sum 1/n\) diverges even though \(1
 <div class="theorem">
 
 <strong>Theorem 8 (Fundamental Trigonometric Limit).</strong>
+
 \[
 \lim_{\theta \to 0} \frac{\sin(\theta)}{\theta} = 1.
 \]
@@ -396,6 +401,7 @@ This is proved by comparing the areas of a triangle, a circular sector, and a la
 <div class="theorem">
 
 <strong>Theorem 10 (Fundamental Log Limit).</strong>
+
 \[
 \lim_{x\to\infty} \frac{\ln(x)}{x} = 0.
 \]
@@ -517,6 +523,7 @@ If \(s(t)\) is the position of an object at time \(t\), then the instantaneous v
 <div class="definition">
 
 <strong>Definition (Derivative at \(t = a\)).</strong> \(f\) is differentiable at \(t = a\) if
+
 \[
 f'(a) = \lim_{h\to 0} \frac{f(a+h) - f(a)}{h}
 \]
@@ -581,6 +588,7 @@ The converse is false: \(f(x) = |x|\) is continuous at \(0\) but not differentia
 <div class="definition">
 
 <strong>Definition (Linear Approximation).</strong> Let \(f\) be differentiable at \(x = a\). The linear approximation to \(f\) at \(x = a\) is
+
 \[
 L_a^f(x) = f(a) + f'(a)(x - a).
 \]
@@ -596,6 +604,7 @@ L_a^f(x) = f(a) + f'(a)(x - a).
 <div class="theorem">
 
 <strong>Theorem 5 (Error in Linear Approximation).</strong> If \(|f''(x)| \le M\) for each \(x\) in an interval \(I\) containing \(a\), then
+
 \[
 |f(x) - L_a(x)| \le \frac{M}{2}(x - a)^2
 \]
@@ -631,6 +640,7 @@ Newton's Method generates a recursive sequence \(x_{n+1} = x_n - \frac{f(x_n)}{f
 <div class="theorem">
 
 <strong>Theorem 8 (Chain Rule).</strong> If \(y = f(x)\) is differentiable at \(x = a\) and \(z = g(y)\) is differentiable at \(y = f(a)\), then \(h(x) = g(f(x))\) is differentiable at \(x = a\) and
+
 \[
 h'(a) = g'(f(a)) \cdot f'(a).
 \]
@@ -645,6 +655,7 @@ From the quotient rule and the derivatives of \(\sin\) and \(\cos\):
 \[
 \frac{d}{dx}\tan(x) = \sec^2(x), \quad \frac{d}{dx}\cot(x) = -\csc^2(x),
 \]
+
 \[
 \frac{d}{dx}\sec(x) = \tan(x)\sec(x), \quad \frac{d}{dx}\csc(x) = -\cot(x)\csc(x).
 \]
@@ -654,6 +665,7 @@ From the quotient rule and the derivatives of \(\sin\) and \(\cos\):
 <div class="theorem">
 
 <strong>Theorem 9 (Inverse Function Theorem).</strong> If \(y = f(x)\) is invertible on \([c,d]\) with inverse \(x = g(y)\), \(f\) is differentiable at \(a \in (c,d)\), and \(f'(a) \ne 0\), then \(g\) is differentiable at \(b = f(a)\) and
+
 \[
 g'(b) = \frac{1}{f'(a)} = \frac{1}{f'(g(b))}.
 \]
@@ -703,6 +715,7 @@ When a relation \(F(x,y) = 0\) implicitly defines \(y\) as a differentiable func
 <div class="theorem">
 
 <strong>Theorem 1 (Mean Value Theorem).</strong> If \(f\) is continuous on \([a,b]\) and differentiable on \((a,b)\), then there exists \(c \in (a,b)\) such that
+
 \[
 f'(c) = \frac{f(b) - f(a)}{b - a}.
 \]
@@ -740,6 +753,7 @@ f'(c) = \frac{f(b) - f(a)}{b - a}.
 <div class="theorem">
 
 <strong>Theorem 5 (Power Rule for Antiderivatives).</strong> If \(\alpha \ne -1\), then
+
 \[
 \int x^\alpha\,dx = \frac{x^{\alpha+1}}{\alpha+1} + C.
 \]
@@ -769,6 +783,7 @@ f'(c) = \frac{f(b) - f(a)}{b - a}.
 <div class="theorem">
 
 <strong>Theorem 7 (Bounded Derivative Theorem).</strong> If \(f\) is continuous on \([a,b]\), differentiable on \((a,b)\), and \(m \le f'(x) \le M\) for each \(x \in (a,b)\), then
+
 \[
 f(a) + m(x-a) \le f(x) \le f(a) + M(x-a)
 \]
@@ -789,6 +804,7 @@ for all \(x \in [a,b]\).
 <div class="theorem">
 
 <strong>Theorem 9.</strong> For any \(\alpha \in \mathbb{R}\),
+
 \[
 e^\alpha = \lim_{n\to\infty}\left(1 + \frac{\alpha}{n}\right)^n.
 \]
@@ -846,6 +862,7 @@ e^\alpha = \lim_{n\to\infty}\left(1 + \frac{\alpha}{n}\right)^n.
 <div class="theorem">
 
 <strong>Theorem 14 (L'Hopital's Rule).</strong> Assume \(f'(x)\) and \(g'(x)\) exist near \(x = a\), \(g'(x) \ne 0\) near \(a\) (except possibly at \(a\)), and that \(\lim_{x\to a}\frac{f(x)}{g(x)}\) is indeterminate of type \(\frac{0}{0}\) or \(\frac{\infty}{\infty}\). Then
+
 \[
 \lim_{x\to a}\frac{f(x)}{g(x)} = \lim_{x\to a}\frac{f'(x)}{g'(x)}
 \]
@@ -866,6 +883,7 @@ Taylor polynomials encode the value of a function and its first \(n\) derivative
 <div class="definition">
 
 <strong>Definition (Taylor Polynomials).</strong> Assume \(f\) is \(n\)-times differentiable at \(x = a\). The \(n\)-th degree Taylor polynomial for \(f\) centered at \(x = a\) is
+
 \[
 T_{n,a}(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k.
 \]
@@ -890,6 +908,7 @@ Key examples centered at \(a = 0\):
 <div class="theorem">
 
 <strong>Theorem 1 (Taylor's Theorem).</strong> Assume \(f\) is \((n+1)\)-times differentiable on an interval \(I\) containing \(a\). For any \(x \in I\), there exists \(c\) between \(x\) and \(a\) such that
+
 \[
 R_{n,a}(x) = f(x) - T_{n,a}(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}.
 \]
@@ -901,6 +920,7 @@ When \(n = 0\), this reduces to the Mean Value Theorem. When \(n = 1\), it gives
 <div class="theorem">
 
 <strong>Theorem 2 (Taylor's Approximation Theorem I).</strong> If \(f^{(k+1)}\) is continuous on \([-1,1]\), then there exists \(M > 0\) such that
+
 \[
 |f(x) - T_{k,0}(x)| \le M|x|^{k+1}
 \]
@@ -925,6 +945,7 @@ for each \(x \in [-1,1]\).
 <div class="theorem">
 
 <strong>Theorem 3 (Taylor's Approximation Theorem II).</strong> If \(f\) is \((n+1)\)-times differentiable on \([-r,r]\) with \(f^{(n+1)}\) continuous, then
+
 \[
 f(x) = T_{n,0}(x) + O(x^{n+1}) \quad \text{as } x \to 0.
 \]

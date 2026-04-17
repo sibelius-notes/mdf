@@ -101,6 +101,7 @@ The geometric content is the **Chevalley–Tarski theorem**: the image of a cons
 
 <div class="example">
 <strong>Worked QE in ACF: eliminating the square-root quantifier.</strong> Consider the formula
+
 \[
 \varphi(x) \;=\; \exists y\,(y \cdot y = x)
 \]
@@ -113,6 +114,7 @@ Compare this with what happens in RCF: in \( \mathbb{R} \), the formula \( \exis
 
 <div class="example">
 <strong>Chevalley's theorem via projection: the parabola.</strong> Consider the algebraic curve \( C = \{(x, y) \in K^2 : y^2 = x\} \) in an algebraically closed field \( K \). The projection to the first coordinate is
+
 \[
 \pi(C) = \{x \in K : \exists y\,(y^2 = x)\}.
 \]
@@ -213,6 +215,7 @@ The Ax–Grothendieck theorem: any injective polynomial map \( f : \mathbb{C}^n 
 
 <div class="example">
 <strong>Worked Lefschetz transfer: every element is a square.</strong> Consider the sentence
+
 \[
 \sigma \;=\; \forall x\, \exists y\, (y^2 = x).
 \]
@@ -328,12 +331,14 @@ Cell decomposition implies that every definable set in an o-minimal structure ha
 
 <div class="example">
 <strong>Worked cell decomposition in \( \mathbb{R}^2 \).</strong> Consider the semialgebraic set
+
 \[
 S = \{(x, y) \in \mathbb{R}^2 : x^2 + y^2 < 1,\; y > 0\}
 \]
 — the open upper semicircle (the upper half of the open unit disk). We produce a cell decomposition of \( \mathbb{R}^2 \) in which \( S \) is a union of cells.
 
 <strong>Step 1: Decompose the \( x \)-axis.</strong> The natural partition of the \( x \)-coordinate is determined by the points where the semicircle has boundary singularities or where the defining polynomials change sign. The relevant \( x \)-values are \( -1 \) and \( 1 \) (where \( x^2 + y^2 = 1 \) meets the \( x \)-axis). So partition \( \mathbb{R} \) into the cells:
+
 \[
 C_1 = (-\infty, -1), \quad C_2 = \{-1\}, \quad C_3 = (-1, 1), \quad C_4 = \{1\}, \quad C_5 = (1, +\infty).
 \]
@@ -345,12 +350,14 @@ C_1 = (-\infty, -1), \quad C_2 = \{-1\}, \quad C_3 = (-1, 1), \quad C_4 = \{1\},
 - <em>Above \( C_2 = \{-1\} \)</em> and \( C_4 = \{1\} \)**: On \( x = \pm 1 \), we have \( x^2 + y^2 < 1 \) only if \( y^2 < 0 \), impossible. So \( S \) contributes nothing above \( x = \pm 1 \). The fibers are decomposed into \( \{y < 0\} \cup \{y = 0\} \cup \{y > 0\} \), none of which are in \( S \).
 
 - <em>Above \( C_3 = (-1, 1) \)</em>: For each \( x \in (-1,1) \), let \( h(x) = \sqrt{1 - x^2} > 0 \). The constraint \( x^2 + y^2 < 1 \) becomes \( -h(x) < y < h(x) \), and we further need \( y > 0 \). So the fiber \( S_x = \{y : (x,y) \in S\} = (0, h(x)) \). We decompose the fiber \( \mathbb{R} \) above \( x \in C_3 \) into the cells:
+
 \[
 (-\infty, -h(x)), \quad \{-h(x)\}, \quad (-h(x), 0), \quad \{0\}, \quad (0, h(x)), \quad \{h(x)\}, \quad (h(x), +\infty).
 \]
 The cell \( \{(x, y) : x \in C_3, 0 < y < h(x)\} \) is exactly the set \( S \). It is a band cell defined by the two continuous definable functions \( f(x) = 0 \) and \( g(x) = \sqrt{1-x^2} \) on the base cell \( C_3 \).
 
 <strong>Conclusion.</strong> The set \( S \) is a single 2-dimensional band cell:
+
 \[
 S = \{(x, y) : x \in (-1, 1),\; 0 < y < \sqrt{1 - x^2}\}.
 \]
@@ -418,6 +425,7 @@ The type \( p = \mathrm{tp}(\sqrt{2}/\mathbb{Q}) \) contains every formula \( \v
    - More precisely, for every \( q \in \mathbb{Q} \), the formula \( x > q \) is in \( p \) iff \( q < \sqrt{2} \), and \( x < q \) is in \( p \) iff \( q > \sqrt{2} \).
 
 3. <em>The type is determined by the cut</em>: Since \( \sqrt{2} \) is algebraic over \( \mathbb{Q} \) with minimal polynomial \( x^2 - 2 \), its type is completely determined by the conjunction:
+
 \[
 p \ni x^2 - 2 = 0 \;\wedge\; x > 0.
 \]
@@ -438,6 +446,7 @@ Work in the theory \( \mathrm{ACF}_0 \), with the monster model \( \mathbb{C} \)
 \]
 
 <em>Proof via automorphism.</em> Complex conjugation \( \sigma : \mathbb{C} \to \mathbb{C} \), defined by \( \sigma(a + bi) = a - bi \), is an automorphism of the field \( \mathbb{C} \) that fixes \( \mathbb{Q} \) pointwise and sends \( i \mapsto -i \). Since \( \sigma \) is an automorphism fixing the parameter set \( \mathbb{Q} \), it preserves the truth of every \( \mathcal{L}_{\mathrm{rings}}(\mathbb{Q}) \)-formula: for any formula \( \varphi(x) \) with coefficients in \( \mathbb{Q} \),
+
 \[
 \mathbb{C} \models \varphi(i) \iff \mathbb{C} \models \varphi(\sigma(i)) = \varphi(-i).
 \]
@@ -567,6 +576,7 @@ Each is realised in \((\mathbb{Q}, <)\) by a suitable rational: \(p_1\) by any \
 Each is isolated by the conjunction of the atomic formulas describing its interval. For example, \(p_3\) is isolated by \(a < x \wedge x < b\). All five types are complete by QE.
 
 <em>Pattern for \(n\) parameters.</em> In general, given an ordered parameter set \(a_1 < a_2 < \cdots < a_n\), the type space \(S_1(\{a_1, \ldots, a_n\})\) has exactly \(2n + 1\) elements:
+
 \[
 x < a_1,\; x = a_1,\; a_1 < x < a_2,\; x = a_2,\; \ldots,\; a_{n-1} < x < a_n,\; x = a_n,\; a_n < x.
 \]
@@ -1016,6 +1026,7 @@ In a strongly minimal theory, the forking independence relation has an especiall
 
 <div class="theorem">
 <strong>Theorem.</strong> Let \( T \) be strongly minimal with monster model \( \mathbb{M} \). Then:
+
 \[
 a \mathop{\smile\!\!\!\!|}_{A} B \iff a \notin \mathrm{acl}(B) \text{ or } a \in \mathrm{acl}(A).
 \]
@@ -1518,6 +1529,7 @@ More generally, every finite definable set in ACF has Morley rank 0, and its Mor
 
 <div class="example">
 <strong>Morley rank of a curve: \(y^2 = x^3 - x\).</strong> Consider the elliptic curve \(E = \{(x,y) \in K^2 : y^2 = x^3 - x\}\) in ACF\(_0\). This is a 2-variable definable set. To compute its Morley rank, we use the projection \(\pi : E \to K\) by \((x,y) \mapsto x\). The fibres \(\pi^{-1}(x_0) = \{y : y^2 = x_0^3 - x_0\}\) have at most 2 elements for each \(x_0\) (they are the roots of a degree-2 polynomial). Since the fibres are finite (Morley rank 0) and the base is the field \(K\) (Morley rank 1), the Morley rank adds:
+
 \[
 \mathrm{RM}(E) = \mathrm{RM}(\text{base}) + \mathrm{RM}(\text{fibre}) = 1 + 0 = 1.
 \]
@@ -1538,6 +1550,7 @@ The following formula is the model-theoretic analogue of the formula \(\dim(X \t
 
 <div class="theorem">
 <strong>Theorem (Morley rank and fibre dimension).</strong> Let \(T\) be \(\omega\)-stable and let \(f : X \to Y\) be a definable function between definable sets. If all fibres \(f^{-1}(y)\) for \(y \in Y\) have Morley rank \(\leq k\) and at least one fibre has Morley rank exactly \(k\), then
+
 \[
 \mathrm{RM}(X) = \mathrm{RM}(Y) + k.
 \]

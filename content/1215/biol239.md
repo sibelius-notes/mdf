@@ -277,7 +277,9 @@ The mechanism underlying the transmission of linked genes was elucidated when it
 
 A test cross of a doubly heterozygous individual with a homozygous recessive individual allows direct observation of the gamete classes, because the test-cross parent contributes only recessive alleles and does not mask the contribution of the heterozygous parent. If two genes are linked, the parental phenotypic classes outnumber the recombinant classes. **Recombination frequency** is calculated as:
 
-\[ RF = \frac{\text{number of recombinant offspring}}{\text{total number of offspring}} \times 100\% \]
+\[
+RF = \frac{\text{number of recombinant offspring}}{\text{total number of offspring}} \times 100\%
+\]
 
 A *Drosophila* example involving gray body (*b<sup>+</sup>*) versus black body (*b*) and long wing (*vg<sup>+</sup>*) versus vestigial wing (*vg*) — two genes on chromosome II — is instructive. When a female heterozygous for both genes (*b<sup>+</sup>b vg<sup>+</sup>vg*, coupling configuration) is test-crossed with a homozygous recessive male (*bb vgvg*), the offspring show approximately 42% gray-long, 42% black-vestigial (parental classes) and about 8% gray-vestigial plus 8% black-long (recombinant classes). The recombination frequency of approximately 17% indicates that the genes are linked; if they were unlinked, each class would be approximately 25%.
 
@@ -295,7 +297,9 @@ When the numbers in a cross are close to equal — neither clearly showing the l
 
 The chi-square statistic measures the overall discrepancy between observed counts (\( O \) and the counts expected under a specific hypothesis (\( E \):
 
-\[ \chi^2 = \sum \frac{(O - E)^2}{E} \]
+\[
+\chi^2 = \sum \frac{(O - E)^2}{E}
+\]
 
 In genetics, the hypothesis tested is always the **null hypothesis** — typically, the hypothesis of no linkage (that the genes assort independently). The null hypothesis is chosen because it generates a specific, calculable set of expected numbers. If we assume no linkage, we expect half the offspring to be parental type and half to be recombinant type in a test cross (because unlinked genes produce all four gamete classes equally). We cannot specify the expected numbers under a linkage hypothesis, because we do not know in advance what the recombination frequency is; therefore, we can only test the null hypothesis.
 
@@ -305,7 +309,9 @@ In genetics, the standard significance threshold is **p = 0.05** (the 5% level).
 
 A worked example: a testcross yields 31 parental and 19 recombinant offspring (total 50). Under the null hypothesis, we expect 25 parental and 25 recombinant.
 
-\[ \chi^2 = \frac{(31-25)^2}{25} + \frac{(19-25)^2}{25} = \frac{36}{25} + \frac{36}{25} = 1.44 + 1.44 = 2.88 \]
+\[
+\chi^2 = \frac{(31-25)^2}{25} + \frac{(19-25)^2}{25} = \frac{36}{25} + \frac{36}{25} = 1.44 + 1.44 = 2.88
+\]
 
 Since 2.88 < 3.84, we fail to reject the null hypothesis — with only 50 flies, the deviation is plausibly due to chance. If the same cross is repeated with 100 flies (62 parental, 38 recombinant; expected 50 each), the chi-square value becomes 5.76, which exceeds 3.84. Now we reject the null hypothesis and conclude that the genes are linked. This demonstrates that sample size profoundly affects the power of the test: the same recombination frequency will be detectable only when enough offspring are counted.
 
@@ -325,37 +331,53 @@ To identify which gene is in the middle — an essential step before calculating
 
 Calculating map distances proceeds as follows for each interval:
 
-\[ \text{Map distance (region 1)} = \frac{SCO_1 + DCO}{\text{total offspring}} \times 100 \text{ map units} \]
+\[
+\text{Map distance (region 1)} = \frac{SCO_1 + DCO}{\text{total offspring}} \times 100 \text{ map units}
+\]
 
-\[ \text{Map distance (region 2)} = \frac{SCO_2 + DCO}{\text{total offspring}} \times 100 \text{ map units} \]
+\[
+\text{Map distance (region 2)} = \frac{SCO_2 + DCO}{\text{total offspring}} \times 100 \text{ map units}
+\]
 
 where *SCO<sub>1</sub>* and *SCO<sub>2</sub>* are the numbers of single-crossover offspring in each region and *DCO* is the number of double-crossover offspring. The double-crossover classes are added to each interval because, in a double crossover, one crossover occurred in each interval; these individuals are recombinants for both intervals but look like parentals when only the flanking genes are considered in a two-point analysis. The total map distance between the two flanking genes is the sum of the two interval distances, which is more accurate than a two-point estimate for the same pair.
 
 A concrete example: in a three-point cross with genes *A*, *B*, *C* yielding totals of 1654 + 1779 parental, 263 + 271 (single crossover region 1), 128 + 140 (single crossover region 2), and 12 + 17 (double crossovers), out of 4264 total:
 
-\[ \text{Map distance A-B} = \frac{(263+271)+(12+17)}{4264} \times 100 = \frac{563}{4264} \times 100 \approx 13.2 \text{ cM} \]
+\[
+\text{Map distance A-B} = \frac{(263+271)+(12+17)}{4264} \times 100 = \frac{563}{4264} \times 100 \approx 13.2 \text{ cM}
+\]
 
-\[ \text{Map distance B-C} = \frac{(128+140)+(12+17)}{4264} \times 100 = \frac{297}{4264} \times 100 \approx 7.0 \text{ cM} \]
+\[
+\text{Map distance B-C} = \frac{(128+140)+(12+17)}{4264} \times 100 = \frac{297}{4264} \times 100 \approx 7.0 \text{ cM}
+\]
 
 **Interference** is the phenomenon whereby a crossover in one interval inhibits the occurrence of a second crossover in an adjacent interval. This is a physical consequence of the mechanics of recombination: once the DNA has been cut and rejoined at one location, the molecular machinery and the physical conformation of the chromosome make it difficult for the same process to occur again nearby. Interference reduces the frequency of double crossovers below the value expected if the two crossover events were independent.
 
 To quantify interference, we first calculate the **coefficient of coincidence** (CoC):
 
-\[ CoC = \frac{\text{observed frequency of double crossovers}}{\text{expected frequency of double crossovers}} \]
+\[
+CoC = \frac{\text{observed frequency of double crossovers}}{\text{expected frequency of double crossovers}}
+\]
 
 The expected frequency is the product of the recombination frequencies in the two intervals (applying the product law, assuming independence):
 
-\[ \text{expected DCO frequency} = RF_1 \times RF_2 \]
+\[
+\text{expected DCO frequency} = RF_1 \times RF_2
+\]
 
 **Interference** is then:
 
-\[ I = 1 - CoC \]
+\[
+I = 1 - CoC
+\]
 
 Interference ranges from 0 (no interference: the two crossover events are independent, CoC = 1) to 1 (complete interference: no double crossovers are observed, CoC = 0). An interference value of 0.25 means that 25% fewer double crossovers are observed than expected — only 75% of the expected double crossovers actually occur.
 
 For example, if region 1 has a recombination frequency of 0.20, region 2 has a frequency of 0.06, and the observed double-crossover frequency is 0.009 (rather than the expected 0.20 × 0.06 = 0.012):
 
-\[ CoC = \frac{0.009}{0.012} = 0.75 \qquad I = 1 - 0.75 = 0.25 \]
+\[
+CoC = \frac{0.009}{0.012} = 0.75 \qquad I = 1 - 0.75 = 0.25
+\]
 
 This indicates 25% interference — a substantial but not complete suppression of double crossovers near the single-crossover site.
 
@@ -647,17 +669,23 @@ The core insight of the Hardy-Weinberg law is that, under a specific set of cond
 
 The algebra is straightforward. Consider a gene with two alleles. Designate the frequency of one allele as \(p\) and the frequency of the other as \(q\). Because these are the only two alleles, their frequencies must sum to one:
 
-\[ p + q = 1 \]
+\[
+p + q = 1
+\]
 
 If mating is random, alleles pair by chance in the next generation. The expected frequencies of the three possible genotypes are determined by the binomial expansion of \((p + q)^2\):
 
-\[ p^2 + 2pq + q^2 = 1 \]
+\[
+p^2 + 2pq + q^2 = 1
+\]
 
 Here \(p^2\) is the frequency of the homozygous dominant genotype, \(2pq\) is the frequency of the heterozygous genotype, and \(q^2\) is the frequency of the homozygous recessive genotype. This equation is not merely a mathematical curiosity; it is a direct translation of a Punnett square into population-level frequencies, obtained by treating the gamete pool as a large random-mating system. As long as Hardy-Weinberg conditions hold, these genotype frequencies will remain the same in every subsequent generation.
 
 Calculating allele frequencies from observed genotype data requires care because diploid individuals carry two alleles at each locus. If a sample contains \(N_{AA}\) homozygous dominant individuals, \(N_{Aa}\) heterozygotes, and \(N_{aa}\) homozygous recessive individuals, the frequency of the dominant allele is:
 
-\[ p = \frac{2N_{AA} + N_{Aa}}{2(N_{AA} + N_{Aa} + N_{aa})} \]
+\[
+p = \frac{2N_{AA} + N_{Aa}}{2(N_{AA} + N_{Aa} + N_{aa})}
+\]
 
 The denominator is the total number of alleles in the sample (twice the number of individuals, because each diploid carries two). Heterozygotes contribute one copy of each allele, so only one of their two alleles is counted when tallying the dominant allele. Once \(p\) is calculated, \(q\)</span &#62; follows immediately from \(q = 1 - p\).
 
@@ -673,11 +701,15 @@ Working through a concrete example of Hardy-Weinberg equilibrium analysis illust
 
 Because individuals are diploid, the total number of alleles in the sample is \(2 \times 2{,}500 = 5{,}000\). To calculate the frequency of the dominant allele \(p\), count all copies of that allele: homozygous dominant individuals contribute two copies each, and heterozygotes contribute one. Thus:
 
-\[ p = \frac{2(2{,}452) + 45}{5{,}000} = \frac{4{,}904 + 45}{5{,}000} = \frac{4{,}949}{5{,}000} \approx 0.99 \]
+\[
+p = \frac{2(2{,}452) + 45}{5{,}000} = \frac{4{,}904 + 45}{5{,}000} = \frac{4{,}949}{5{,}000} \approx 0.99
+\]
 
 Similarly, the frequency of the recessive allele \(q\) is:
 
-\[ q = \frac{2(3) + 45}{5{,}000} = \frac{6 + 45}{5{,}000} = \frac{51}{5{,}000} \approx 0.01 \]
+\[
+q = \frac{2(3) + 45}{5{,}000} = \frac{6 + 45}{5{,}000} = \frac{51}{5{,}000} \approx 0.01
+\]
 
 These sum to 1.00, confirming the arithmetic. Now, under Hardy-Weinberg equilibrium, the expected genotype frequencies in the next generation would be \(p^2 = (0.99)^2 \approx 0.9801\) for AA, \(2pq = 2(0.99)(0.01) \approx 0.0198\) for Aa, and \(q^2 = (0.01)^2 = 0.0001\) for aa. Multiplying by the total population of 2,500 gives expected numbers of approximately 2,450 AA, 49.5 Aa, and 0.25 aa individuals.
 

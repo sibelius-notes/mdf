@@ -34,7 +34,9 @@ The fundamental problem of causal inference is that for any individual, we can o
 
 For causal effects to be identified from observed data, we require that the observed outcome equals the potential outcome under the treatment that was actually received:
 
-\[ Y = Y^A \]
+\[
+Y = Y^A
+\]
 
 More precisely, for individual \( i \): \( Y_i = Y_i^{A_i} \). This is sometimes called the **consistency assumption** or the **no multiple versions of treatment** condition. It requires that:
 
@@ -59,7 +61,10 @@ SUTVA is violated in settings with <em>interference</em> (e.g., vaccine herd imm
 ### 1.3.1 Individual and Average Causal Effects
 
 The **individual causal effect** for unit \( i \) is:
-\[ \text{ICE}_i = Y_i^1 - Y_i^0 \]
+
+\[
+\text{ICE}_i = Y_i^1 - Y_i^0
+\]
 
 Since we can never observe both \( Y_i^1 \) and \( Y_i^0 \) for the same individual, individual causal effects are fundamentally unidentifiable without additional assumptions.
 
@@ -67,20 +72,29 @@ Instead, we target population-level estimands.
 
 <div class="definition">
 <strong>Average Treatment Effect (ATE)</strong>: The expected difference in potential outcomes across the entire population:
-\[ \text{ATE} = E[Y^1 - Y^0] = E[Y^1] - E[Y^0] \]
+
+\[
+\text{ATE} = E[Y^1 - Y^0] = E[Y^1] - E[Y^0]
+\]
 This answers: "What would happen on average if we moved everyone in the population from \( A=0 \) to \( A=1 \)?"
 </div>
 
 <div class="definition">
 <strong>Average Treatment Effect in the Treated (ATT)</strong>: The expected difference in potential outcomes among those who actually received treatment:
-\[ \text{ATT} = E[Y^1 - Y^0 \mid A = 1] = E[Y^1 \mid A = 1] - E[Y^0 \mid A = 1] \]
+
+\[
+\text{ATT} = E[Y^1 - Y^0 \mid A = 1] = E[Y^1 \mid A = 1] - E[Y^0 \mid A = 1]
+\]
 The counterfactual component \( E[Y^0 \mid A = 1] \) — what would have happened to the treated had they not been treated — is unobserved and must be estimated.
 </div>
 
 ### 1.3.2 Causal Effects vs. Associational Parameters
 
 The **associational risk difference** is:
-\[ E[Y \mid A = 1] - E[Y \mid A = 0] \]
+
+\[
+E[Y \mid A = 1] - E[Y \mid A = 0]
+\]
 
 This equals the ATE only when treated and untreated groups are **exchangeable** — i.e., when treatment assignment is independent of potential outcomes.
 
@@ -108,7 +122,10 @@ Conditional exchangeability is also called the **no unmeasured confounders** ass
 
 <div class="definition">
 <strong>Positivity</strong>: For every level \( \ell \) of \( \mathbf{L} \) with positive probability, both treatment levels have positive probability:
-\[ P(A = a \mid \mathbf{L} = \ell) > 0 \quad \text{for all } a, \ell \text{ with } P(\mathbf{L} = \ell) > 0 \]
+
+\[
+P(A = a \mid \mathbf{L} = \ell) > 0 \quad \text{for all } a, \ell \text{ with } P(\mathbf{L} = \ell) > 0
+\]
 </div>
 
 Without positivity, we cannot estimate the effect of \( A = a \) for subgroups where \( A = a \) never occurs. This is called **structural non-positivity** (certain treatments are impossible for some patient types) or **random non-positivity** (finite-sample sparsity). Violations lead to extreme IPW weights and instability.
@@ -121,10 +138,15 @@ As defined in Section 1.2.1: \( Y = Y^A \) (observed outcome equals potential ou
 
 Under consistency, conditional exchangeability, and positivity, the average potential outcome is identified:
 
-\[ E[Y^a] = E_{\mathbf{L}}\left[ E[Y \mid A = a, \mathbf{L}] \right] = \sum_\ell E[Y \mid A = a, \mathbf{L} = \ell] \, P(\mathbf{L} = \ell) \]
+\[
+E[Y^a] = E_{\mathbf{L}}\left[ E[Y \mid A = a, \mathbf{L}] \right] = \sum_\ell E[Y \mid A = a, \mathbf{L} = \ell] \, P(\mathbf{L} = \ell)
+\]
 
 This is the **g-formula** (Robins, 1986). The ATE then follows as:
-\[ \text{ATE} = E[Y^1] - E[Y^0] = \sum_\ell \left\{ E[Y \mid A=1, \mathbf{L}=\ell] - E[Y \mid A=0, \mathbf{L}=\ell] \right\} P(\mathbf{L}=\ell) \]
+
+\[
+\text{ATE} = E[Y^1] - E[Y^0] = \sum_\ell \left\{ E[Y \mid A=1, \mathbf{L}=\ell] - E[Y \mid A=0, \mathbf{L}=\ell] \right\} P(\mathbf{L}=\ell)
+\]
 
 ## 1.5 Randomized Experiments
 
@@ -135,7 +157,10 @@ In a **completely randomized experiment**, treatment is assigned by a known rand
 - Consistency holds if the treatment is well-defined
 
 Under marginal exchangeability:
-\[ E[Y^1] - E[Y^0] = E[Y \mid A=1] - E[Y \mid A=0] \]
+
+\[
+E[Y^1] - E[Y^0] = E[Y \mid A=1] - E[Y \mid A=0]
+\]
 
 The simple difference in means is an unbiased estimator of the ATE.
 
@@ -174,7 +199,10 @@ In a causal DAG:
 
 <div class="definition">
 <strong>Causal Markov Condition</strong>: Each variable in the DAG is independent of its non-descendants given its parents. Formally, for variable \( X \) with parent set \( \text{pa}(X) \):
-\[ X \perp \text{nd}(X) \mid \text{pa}(X) \]
+
+\[
+X \perp \text{nd}(X) \mid \text{pa}(X)
+\]
 where \( \text{nd}(X) \) denotes the non-descendants of \( X \).
 </div>
 
@@ -234,13 +262,19 @@ The backdoor criterion formalizes when a set of variables \( \mathbf{L} \) is su
 <li>\( \mathbf{L} \) blocks every backdoor path from \( A \) to \( Y \) (paths that begin with an arrow into \( A \)).</li>
 </ol>
 If \( \mathbf{L} \) satisfies the backdoor criterion, then:
-\[ P(Y^a = y) = \sum_\ell P(Y = y \mid A = a, \mathbf{L} = \ell)\, P(\mathbf{L} = \ell) \]
+
+\[
+P(Y^a = y) = \sum_\ell P(Y = y \mid A = a, \mathbf{L} = \ell)\, P(\mathbf{L} = \ell)
+\]
 </div>
 
 **Proof sketch**: Under the backdoor criterion, conditioning on \( \mathbf{L} \) blocks all backdoor paths from \( A \) to \( Y \) without opening new paths through descendants of \( A \). By the rules of d-separation and the Markov condition, this induces \( Y^a \perp A \mid \mathbf{L} \), which is conditional exchangeability. The identification formula then follows by iterated expectations.
 
 More precisely, the backdoor criterion guarantees:
-\[ P(Y^a = y \mid \mathbf{L} = \ell) = P(Y = y \mid A = a, \mathbf{L} = \ell) \]
+
+\[
+P(Y^a = y \mid \mathbf{L} = \ell) = P(Y = y \mid A = a, \mathbf{L} = \ell)
+\]
 Marginalizing over \( \mathbf{L} \) gives the g-formula.
 
 ## 2.5 Common Causal Structures
@@ -248,21 +282,30 @@ Marginalizing over \( \mathbf{L} \) gives the g-formula.
 ### 2.5.1 Confounding
 
 The simplest confounding structure:
-\[ L \to A \to Y \quad \text{and} \quad L \to Y \]
+
+\[
+L \to A \to Y \quad \text{and} \quad L \to Y
+\]
 
 Here \( L \) is a common cause of \( A \) and \( Y \), creating a backdoor path \( A \leftarrow L \to Y \). Conditioning on \( L \) blocks this path and satisfies the backdoor criterion.
 
 ### 2.5.2 Mediation
 
 In mediation analysis:
-\[ A \to M \to Y \quad \text{and} \quad A \to Y \]
+
+\[
+A \to M \to Y \quad \text{and} \quad A \to Y
+\]
 
 where \( M \) is a mediator on the causal path from \( A \) to \( Y \). Here conditioning on \( M \) blocks the causal path through \( M \) — a phenomenon called **over-adjustment** or **collider bias** if \( M \) is a collider on another path. The total effect is estimated by the g-formula without conditioning on \( M \); the direct effect requires additional assumptions.
 
 ### 2.5.3 Collider Bias (Selection Bias)
 
 Consider:
-\[ A \to C \leftarrow Y \]
+
+\[
+A \to C \leftarrow Y
+\]
 
 \( C \) is a collider of \( A \) and \( Y \). By default, \( A \) and \( Y \) are d-separated (independent). But conditioning on \( C \) opens this path, inducing spurious association — this is **collider bias** or **Berkson's bias**. In epidemiology, if \( C \) represents study enrollment, conditioning on \( C \) (by studying only enrolled subjects) creates selection bias.
 
@@ -272,7 +315,9 @@ Consider:
 <strong>M-bias</strong>: A scenario where the naive analyst controls for a pre-treatment variable that is actually a collider, thereby <em>introducing</em> confounding. Example:
 </div>
 
-\[ U_1 \to C \leftarrow U_2, \quad U_1 \to A, \quad U_2 \to Y \]
+\[
+U_1 \to C \leftarrow U_2, \quad U_1 \to A, \quad U_2 \to Y
+\]
 
 Here \( C \) is a collider of two unmeasured common causes. Without conditioning on \( C \), the path \( A \leftarrow U_1 \to C \leftarrow U_2 \to Y \) is blocked (the collider \( C \) is not conditioned on). Conditioning on \( C \) opens this path, creating spurious confounding. The "M" shape in the DAG gives the bias its name.
 
@@ -290,7 +335,10 @@ When the backdoor criterion cannot be satisfied (unmeasured confounders between 
 <li>All backdoor paths from \( M \) to \( Y \) are blocked by \( A \).</li>
 </ol>
 The front-door adjustment formula:
-\[ P(Y^a = y) = \sum_m P(M = m \mid A = a) \sum_{a'} P(Y = y \mid A = a', M = m)\, P(A = a') \]
+
+\[
+P(Y^a = y) = \sum_m P(M = m \mid A = a) \sum_{a'} P(Y = y \mid A = a', M = m)\, P(A = a')
+\]
 </div>
 
 **Classic example**: Smoking \( (A) \) → tar deposits \( (M) \) → lung cancer \( (Y) \), with unmeasured genotype \( U \) affecting both smoking and lung cancer. Even though \( U \) confounds \( A \leftrightarrow Y \), the front-door formula identifies the causal effect.
@@ -312,7 +360,9 @@ Key structure: \( A_{t-1} \to L_t \to A_t \to Y \). Here \( L_t \) is simultaneo
 
 **Standardization** (also called the **g-formula** or **g-computation**) estimates \( E[Y^a] \) by averaging the conditional expectation \( E[Y \mid A=a, \mathbf{L}=\ell] \) over the marginal distribution of \( \mathbf{L} \):
 
-\[ \hat{E}[Y^a] = \frac{1}{n} \sum_{i=1}^n \hat{E}[Y \mid A = a, \mathbf{L} = \mathbf{L}_i] \]
+\[
+\hat{E}[Y^a] = \frac{1}{n} \sum_{i=1}^n \hat{E}[Y \mid A = a, \mathbf{L} = \mathbf{L}_i]
+\]
 
 **Algorithm**:
 1. Fit an outcome model: \( \hat{\mu}(a, \ell) = \hat{E}[Y \mid A = a, \mathbf{L} = \ell] \) (e.g., linear regression, logistic regression, or flexible machine learning)
@@ -342,8 +392,14 @@ Step 1. Fit outcome model by group:
 Step 2. Marginal distribution of \( L \): \( P(L=0) = 0.5 \), \( P(L=1) = 0.5 \)
 
 Step 3. Standardize:
-\[ \hat{E}[Y^1] = 8 \times 0.5 + 6 \times 0.5 = 7 \]
-\[ \hat{E}[Y^0] = 5 \times 0.5 + 3 \times 0.5 = 4 \]
+
+\[
+\hat{E}[Y^1] = 8 \times 0.5 + 6 \times 0.5 = 7
+\]
+
+\[
+\hat{E}[Y^0] = 5 \times 0.5 + 3 \times 0.5 = 4
+\]
 
 Step 4. \( \widehat{\text{ATE}} = 7 - 4 = 3 \)
 
@@ -361,13 +417,21 @@ IPW creates a **pseudo-population** in which treatment assignment is independent
 
 The **IPW weights** (Horvitz–Thompson weights) are:
 
-\[ W_i = \frac{1}{P(A_i \mid \mathbf{L}_i)} = \begin{cases} \dfrac{1}{e(\mathbf{L}_i)} & \text{if } A_i = 1 \\[6pt] \dfrac{1}{1 - e(\mathbf{L}_i)} & \text{if } A_i = 0 \end{cases} \]
+\[
+W_i = \frac{1}{P(A_i \mid \mathbf{L}_i)} = \begin{cases} \dfrac{1}{e(\mathbf{L}_i)} & \text{if } A_i = 1 \\[6pt] \dfrac{1}{1 - e(\mathbf{L}_i)} & \text{if } A_i = 0 \end{cases}
+\]
 
 The IPW estimator of \( E[Y^a] \) is:
-\[ \hat{E}^{\text{IPW}}[Y^a] = \frac{\sum_{i: A_i = a} W_i Y_i}{\sum_{i: A_i = a} W_i} \]
+
+\[
+\hat{E}^{\text{IPW}}[Y^a] = \frac{\sum_{i: A_i = a} W_i Y_i}{\sum_{i: A_i = a} W_i}
+\]
 
 or in the Horvitz-Thompson form:
-\[ \hat{E}^{\text{IPW}}[Y^a] = \frac{1}{n} \sum_{i=1}^n \frac{\mathbf{1}(A_i = a)}{P(A_i \mid \mathbf{L}_i)} Y_i \]
+
+\[
+\hat{E}^{\text{IPW}}[Y^a] = \frac{1}{n} \sum_{i=1}^n \frac{\mathbf{1}(A_i = a)}{P(A_i \mid \mathbf{L}_i)} Y_i
+\]
 
 **Consistency proof sketch**: Under conditional exchangeability and positivity,
 
@@ -383,7 +447,9 @@ where the second equality uses \( Y = Y^A \) (consistency) and \( Y^a \perp A \m
 
 Unstabilized weights can have high variance when \( P(A \mid \mathbf{L}) \) is close to 0 or 1. **Stabilized weights** bound the variance:
 
-\[ W_i^s = \frac{P(A_i)}{P(A_i \mid \mathbf{L}_i)} \]
+\[
+W_i^s = \frac{P(A_i)}{P(A_i \mid \mathbf{L}_i)}
+\]
 
 where \( P(A) \) is the marginal probability of receiving treatment \( A_i \). For binary treatment, \( P(A=1) \) is the sample proportion treated. Stabilized weights:
 - Have mean 1 in expectation
@@ -410,11 +476,19 @@ To reduce variance at the cost of introducing bias, weights are sometimes **trun
 
 A **Marginal Structural Model (MSM)** is a model for the marginal potential outcomes \( E[Y^a] \) as a function of \( a \):
 
-\[ E[Y^a] = \beta_0 + \beta_1 a \quad \text{(linear MSM for continuous outcome)} \]
-\[ \text{logit}\, P(Y^a = 1) = \beta_0 + \beta_1 a \quad \text{(logistic MSM for binary outcome)} \]
+\[
+E[Y^a] = \beta_0 + \beta_1 a \quad \text{(linear MSM for continuous outcome)}
+\]
+
+\[
+\text{logit}\, P(Y^a = 1) = \beta_0 + \beta_1 a \quad \text{(logistic MSM for binary outcome)}
+\]
 
 MSMs are fit by **IPTW**: solve the weighted estimating equation
-\[ \sum_{i=1}^n W_i \frac{\partial}{\partial \boldsymbol{\beta}} \ell(Y_i; \boldsymbol{\beta}, A_i) = 0 \]
+
+\[
+\sum_{i=1}^n W_i \frac{\partial}{\partial \boldsymbol{\beta}} \ell(Y_i; \boldsymbol{\beta}, A_i) = 0
+\]
 
 where \( \ell \) is the working likelihood for the outcome model. Because the pseudo-population is marginally exchangeable (the weights balance \( \mathbf{L} \) across treatment groups), fitting the MSM on the weighted sample consistently estimates the marginal structural parameters.
 
@@ -424,7 +498,9 @@ where \( \ell \) is the working likelihood for the outcome model. Because the ps
 
 The **Augmented Inverse Probability Weighted (AIPW)** estimator combines outcome regression and propensity score models:
 
-\[ \hat{\tau}^{\text{AIPW}} = \frac{1}{n}\sum_{i=1}^n \left[ \hat{\mu}(1, \mathbf{L}_i) - \hat{\mu}(0, \mathbf{L}_i) + \frac{A_i(Y_i - \hat{\mu}(1, \mathbf{L}_i))}{\hat{e}(\mathbf{L}_i)} - \frac{(1-A_i)(Y_i - \hat{\mu}(0, \mathbf{L}_i))}{1 - \hat{e}(\mathbf{L}_i)} \right] \]
+\[
+\hat{\tau}^{\text{AIPW}} = \frac{1}{n}\sum_{i=1}^n \left[ \hat{\mu}(1, \mathbf{L}_i) - \hat{\mu}(0, \mathbf{L}_i) + \frac{A_i(Y_i - \hat{\mu}(1, \mathbf{L}_i))}{\hat{e}(\mathbf{L}_i)} - \frac{(1-A_i)(Y_i - \hat{\mu}(0, \mathbf{L}_i))}{1 - \hat{e}(\mathbf{L}_i)} \right]
+\]
 
 <div class="definition">
 <strong>Double robustness</strong>: The AIPW estimator is consistent if <em>either</em> the outcome model \( \hat{\mu}(a, \mathbf{L}) \) or the propensity score model \( \hat{e}(\mathbf{L}) \) is correctly specified (but not necessarily both). This provides protection against misspecification of one of the two models.
@@ -445,7 +521,10 @@ In longitudinal studies, both treatment and confounders vary over time. Let:
 - \( \bar{L}_t = (L_0, L_1, \ldots, L_t) \): covariate history through time \( t \)
 
 The key DAG structure is:
-\[ L_0 \to A_0 \to L_1 \to A_1 \to Y \]
+
+\[
+L_0 \to A_0 \to L_1 \to A_1 \to Y
+\]
 with additional paths \( L_0 \to Y \), \( L_1 \to Y \), and potentially \( A_0 \to L_1 \).
 
 When \( A_0 \) affects \( L_1 \) and \( L_1 \) affects both \( A_1 \) and \( Y \), then \( L_1 \) is simultaneously a **confounder** (of the \( A_1 \to Y \) relationship) and an **intermediate variable** (on the causal path \( A_0 \to L_1 \to Y \)).
@@ -461,7 +540,10 @@ This is the time-varying confounding problem (Robins, 1986). The solution is MSM
 
 <div class="definition">
 <strong>Sequential exchangeability</strong>: For each time point \( t \):
-\[ Y^{\bar{a}} \perp A_t \mid \bar{A}_{t-1} = \bar{a}_{t-1}, \bar{L}_t \]
+
+\[
+Y^{\bar{a}} \perp A_t \mid \bar{A}_{t-1} = \bar{a}_{t-1}, \bar{L}_t
+\]
 for all treatment regimes \( \bar{a} \) and all values of the history. This states that, given the full past history (treatment and covariate history), treatment at time \( t \) is as good as randomly assigned.
 </div>
 
@@ -471,11 +553,15 @@ Sequential exchangeability is the time-varying analogue of conditional exchangea
 
 The **inverse probability of treatment weight** at time \( t \) is:
 
-\[ w_t = \frac{P(A_t \mid \bar{A}_{t-1})}{P(A_t \mid \bar{A}_{t-1}, \bar{L}_t)} \]
+\[
+w_t = \frac{P(A_t \mid \bar{A}_{t-1})}{P(A_t \mid \bar{A}_{t-1}, \bar{L}_t)}
+\]
 
 The **cumulative (product) weight** over the full follow-up is:
 
-\[ \bar{W}_i = \prod_{t=0}^{K} \frac{P(A_t \mid \bar{A}_{t-1})}{P(A_t \mid \bar{A}_{t-1}, \bar{L}_t)} \]
+\[
+\bar{W}_i = \prod_{t=0}^{K} \frac{P(A_t \mid \bar{A}_{t-1})}{P(A_t \mid \bar{A}_{t-1}, \bar{L}_t)}
+\]
 
 The numerator \( P(A_t \mid \bar{A}_{t-1}) \) is the marginal probability of treatment (ignoring time-varying confounders), and the denominator \( P(A_t \mid \bar{A}_{t-1}, \bar{L}_t) \) is the conditional probability given the full history. The ratio is the **stabilized weight** (Hernán et al., 2000).
 
@@ -487,10 +573,16 @@ The numerator \( P(A_t \mid \bar{A}_{t-1}) \) is the marginal probability of tre
 ## 4.4 Fitting MSMs for Time-Varying Treatments
 
 A **Marginal Structural Cox Model** for a survival outcome:
-\[ \lambda(t \mid \bar{A}_t) = \lambda_0(t) \exp\left(\beta_1 \bar{A}_t\right) \]
+
+\[
+\lambda(t \mid \bar{A}_t) = \lambda_0(t) \exp\left(\beta_1 \bar{A}_t\right)
+\]
 
 A **Marginal Structural Linear Model** for cumulative effects:
-\[ E[Y^{\bar{a}}] = \psi_0 + \psi_1 \sum_{t} a_t \]
+
+\[
+E[Y^{\bar{a}}] = \psi_0 + \psi_1 \sum_{t} a_t
+\]
 
 where \( \sum_t a_t \) is the cumulative dose (total treatment exposure). These models are fit via **GEE** or **weighted least squares** on the pseudo-population defined by the IPTW weights \( \bar{W}_i \).
 
@@ -542,7 +634,9 @@ In DAG form: \( Z \to A \to Y \leftarrow U \to A \), with no \( Z \leftrightarro
 
 Under the IV assumptions and assuming a **constant treatment effect** \( \beta_1 \) (i.e., \( Y = \beta_0 + \beta_1 A + \epsilon \)):
 
-\[ \hat{\beta}_1^{\text{IV}} = \frac{\text{Cov}(Z, Y)}{\text{Cov}(Z, A)} = \frac{\hat{E}[Y \mid Z=1] - \hat{E}[Y \mid Z=0]}{\hat{E}[A \mid Z=1] - \hat{E}[A \mid Z=0]} \]
+\[
+\hat{\beta}_1^{\text{IV}} = \frac{\text{Cov}(Z, Y)}{\text{Cov}(Z, A)} = \frac{\hat{E}[Y \mid Z=1] - \hat{E}[Y \mid Z=0]}{\hat{E}[A \mid Z=1] - \hat{E}[A \mid Z=0]}
+\]
 
 The numerator is the reduced-form effect of \( Z \) on \( Y \) (intent-to-treat effect); the denominator is the first-stage effect of \( Z \) on \( A \) (compliance rate). The IV estimator scales the intent-to-treat effect by the degree of compliance.
 
@@ -551,10 +645,16 @@ The numerator is the reduced-form effect of \( Z \) on \( Y \) (intent-to-treat 
 **2SLS** is the standard implementation of IV estimation with covariates:
 
 **Stage 1**: Regress \( A \) on \( Z \) (and covariates \( \mathbf{X} \)):
-\[ \hat{A}_i = \hat{\gamma}_0 + \hat{\gamma}_1 Z_i + \hat{\boldsymbol{\gamma}}_2^\top \mathbf{X}_i \]
+
+\[
+\hat{A}_i = \hat{\gamma}_0 + \hat{\gamma}_1 Z_i + \hat{\boldsymbol{\gamma}}_2^\top \mathbf{X}_i
+\]
 
 **Stage 2**: Regress \( Y \) on \( \hat{A} \) (and covariates \( \mathbf{X} \)):
-\[ Y_i = \beta_0 + \beta_1 \hat{A}_i + \boldsymbol{\beta}_2^\top \mathbf{X}_i + \varepsilon_i \]
+
+\[
+Y_i = \beta_0 + \beta_1 \hat{A}_i + \boldsymbol{\beta}_2^\top \mathbf{X}_i + \varepsilon_i
+\]
 
 The 2SLS estimator of \( \beta_1 \) is consistent for the causal effect under the IV assumptions.
 
@@ -574,7 +674,10 @@ Without the constant treatment effect assumption, the IV estimator identifies th
 
 <div class="definition">
 <strong>LATE</strong>: The average treatment effect among <em>compliers</em> — units whose treatment changes in response to the instrument:
-\[ \text{LATE} = E[Y^1 - Y^0 \mid A^{Z=1} = 1, A^{Z=0} = 0] \]
+
+\[
+\text{LATE} = E[Y^1 - Y^0 \mid A^{Z=1} = 1, A^{Z=0} = 0]
+\]
 where \( A^{Z=z} \) is the potential treatment under instrument level \( z \).
 </div>
 
@@ -596,12 +699,18 @@ Under the IV assumptions plus **monotonicity** (no defiers: \( A^{Z=1} \geq A^{Z
 - \( Y \): systolic blood pressure
 
 **Stage 1**: Regress BMI on polygenic score:
-\[ \widehat{\text{BMI}}_i = \hat{\gamma}_0 + \hat{\gamma}_1 (\text{PGS}_i) \]
+
+\[
+\widehat{\text{BMI}}_i = \hat{\gamma}_0 + \hat{\gamma}_1 (\text{PGS}_i)
+\]
 
 Suppose \( \hat{\gamma}_1 = 0.8 \text{ kg/m}^2 \) per SD of PGS, with \( F = 45 > 10 \) (relevant instrument).
 
 **Stage 2**: Regress blood pressure on fitted BMI:
-\[ \text{SBP}_i = \beta_0 + \beta_1 \widehat{\text{BMI}}_i + \varepsilon_i \]
+
+\[
+\text{SBP}_i = \beta_0 + \beta_1 \widehat{\text{BMI}}_i + \varepsilon_i
+\]
 
 Suppose \( \hat{\beta}_1 = 1.2 \text{ mmHg per kg/m}^2 \) (95% CI: 0.8–1.6), interpreted as the causal effect of a 1 kg/m² increase in BMI on SBP.
 
@@ -617,7 +726,10 @@ Suppose \( \hat{\beta}_1 = 1.2 \text{ mmHg per kg/m}^2 \) (95% CI: 0.8–1.6), i
 In a **regression discontinuity (RD) design**, treatment is assigned based on a continuous **running variable** \( V \) crossing a threshold \( c \): \( A = \mathbf{1}(V \geq c) \). The IV is (approximately) the treatment assignment near the threshold.
 
 **Sharp RD**: All units with \( V \geq c \) are treated. The causal effect at the cutoff is identified:
-\[ \tau_{\text{RD}} = \lim_{v \downarrow c} E[Y \mid V = v] - \lim_{v \uparrow c} E[Y \mid V = v] \]
+
+\[
+\tau_{\text{RD}} = \lim_{v \downarrow c} E[Y \mid V = v] - \lim_{v \uparrow c} E[Y \mid V = v]
+\]
 
 This is the **local** effect at the threshold \( V = c \), estimated by fitting flexible regressions of \( Y \) on \( V \) on each side of \( c \). Bandwidth selection (how much data to use near \( c \)) is the main methodological challenge.
 
@@ -653,7 +765,10 @@ Rubin (1976) and Little & Rubin (2002) classify missing data into three mechanis
 
 <div class="definition">
 <strong>MCAR</strong>: The probability of missingness does not depend on any data (observed or missing):
-\[ P(\mathbf{R} \mid \mathbf{Y}_{\text{obs}}, \mathbf{Y}_{\text{mis}}) = P(\mathbf{R}) \]
+
+\[
+P(\mathbf{R} \mid \mathbf{Y}_{\text{obs}}, \mathbf{Y}_{\text{mis}}) = P(\mathbf{R})
+\]
 The missing data are a simple random sample of the complete data.
 </div>
 
@@ -668,7 +783,10 @@ The missing data are a simple random sample of the complete data.
 
 <div class="definition">
 <strong>MAR</strong>: The probability of missingness depends only on the <em>observed</em> data \( \mathbf{Y}_{\text{obs}} \), not on the missing values \( \mathbf{Y}_{\text{mis}} \):
-\[ P(\mathbf{R} \mid \mathbf{Y}_{\text{obs}}, \mathbf{Y}_{\text{mis}}) = P(\mathbf{R} \mid \mathbf{Y}_{\text{obs}}) \]
+
+\[
+P(\mathbf{R} \mid \mathbf{Y}_{\text{obs}}, \mathbf{Y}_{\text{mis}}) = P(\mathbf{R} \mid \mathbf{Y}_{\text{obs}})
+\]
 </div>
 
 **Example**: Income is missing, and missing income is more likely among older respondents (age is observed). Then income is MAR given age — conditioning on age, missingness does not depend on income itself.
@@ -684,7 +802,10 @@ The missing data are a simple random sample of the complete data.
 
 <div class="definition">
 <strong>MNAR</strong>: The probability of missingness depends on the missing values themselves, even after conditioning on observed data:
-\[ P(\mathbf{R} \mid \mathbf{Y}_{\text{obs}}, \mathbf{Y}_{\text{mis}}) \neq P(\mathbf{R} \mid \mathbf{Y}_{\text{obs}}) \]
+
+\[
+P(\mathbf{R} \mid \mathbf{Y}_{\text{obs}}, \mathbf{Y}_{\text{mis}}) \neq P(\mathbf{R} \mid \mathbf{Y}_{\text{obs}})
+\]
 </div>
 
 **Example**: Patients with the worst mental health outcomes drop out of a psychiatric study because of their poor outcomes (which are therefore unmeasured). Missingness depends directly on the (unobserved) outcome.
@@ -715,7 +836,10 @@ CC analysis is valid under MCAR and under certain MAR scenarios (e.g., outcome i
 ### 6.4.3 Likelihood-Based Methods and FIML
 
 Under MAR, the **observed data likelihood**:
-\[ L(\boldsymbol{\theta} \mid \mathbf{Y}_{\text{obs}}) = \int L(\boldsymbol{\theta} \mid \mathbf{Y}_{\text{obs}}, \mathbf{Y}_{\text{mis}}) \, d\mathbf{Y}_{\text{mis}} \]
+
+\[
+L(\boldsymbol{\theta} \mid \mathbf{Y}_{\text{obs}}) = \int L(\boldsymbol{\theta} \mid \mathbf{Y}_{\text{obs}}, \mathbf{Y}_{\text{mis}}) \, d\mathbf{Y}_{\text{mis}}
+\]
 
 can be maximized to give consistent estimates. **Full Information Maximum Likelihood (FIML)** directly maximizes the observed data likelihood without imputation. FIML is efficient under MAR and is the gold standard for structural equation models and mixed models with missing data.
 
@@ -763,21 +887,36 @@ The analyst then:
 Let \( \hat{Q}_l \) and \( \hat{U}_l \) be the estimate and its variance from imputed dataset \( l = 1, \ldots, m \).
 
 **Combined estimate**:
-\[ \bar{Q} = \frac{1}{m} \sum_{l=1}^m \hat{Q}_l \]
+
+\[
+\bar{Q} = \frac{1}{m} \sum_{l=1}^m \hat{Q}_l
+\]
 
 **Within-imputation variance** (average sampling uncertainty):
-\[ \bar{U} = \frac{1}{m} \sum_{l=1}^m \hat{U}_l \]
+
+\[
+\bar{U} = \frac{1}{m} \sum_{l=1}^m \hat{U}_l
+\]
 
 **Between-imputation variance** (imputation uncertainty):
-\[ B = \frac{1}{m-1} \sum_{l=1}^m (\hat{Q}_l - \bar{Q})^2 \]
+
+\[
+B = \frac{1}{m-1} \sum_{l=1}^m (\hat{Q}_l - \bar{Q})^2
+\]
 
 **Total variance**:
-\[ T = \bar{U} + \left(1 + \frac{1}{m}\right) B \]
+
+\[
+T = \bar{U} + \left(1 + \frac{1}{m}\right) B
+\]
 
 The \( (1 + 1/m) \) factor corrects for the finite number of imputations. The **combined standard error** is \( \sqrt{T} \).
 
 **Degrees of freedom** (Rubin 1987):
-\[ \nu = (m - 1)\left(1 + \frac{\bar{U}}{(1 + m^{-1})B}\right)^2 \]
+
+\[
+\nu = (m - 1)\left(1 + \frac{\bar{U}}{(1 + m^{-1})B}\right)^2
+\]
 
 Inference uses a \( t_\nu \) distribution: \( (\bar{Q} - Q_0)/\sqrt{T} \sim t_\nu \) under \( H_0: Q = Q_0 \).
 
@@ -798,7 +937,10 @@ Step 1. \( \bar{Q} = (2.35 + 2.42 + 2.28 + 2.38 + 2.32)/5 = 2.35 \)
 Step 2. \( \bar{U} = (0.04 + 0.04 + 0.05 + 0.04 + 0.04)/5 = 0.042 \)
 
 Step 3. \( B = \frac{1}{4}\left[(2.35-2.35)^2 + (2.42-2.35)^2 + (2.28-2.35)^2 + (2.38-2.35)^2 + (2.32-2.35)^2\right] \)
-\[ = \frac{1}{4}[0 + 0.0049 + 0.0049 + 0.0009 + 0.0009] = \frac{0.0116}{4} = 0.0029 \]
+
+\[
+= \frac{1}{4}[0 + 0.0049 + 0.0049 + 0.0009 + 0.0009] = \frac{0.0116}{4} = 0.0029
+\]
 
 Step 4. \( T = 0.042 + (1 + 0.2)(0.0029) = 0.042 + 0.00348 = 0.0455 \)
 
@@ -807,13 +949,22 @@ Step 5. \( \text{SE} = \sqrt{0.0455} = 0.213 \), giving 95% CI: \( 2.35 \pm 1.96
 ## 7.4 Efficiency and Number of Imputations
 
 **Fraction of missing information** (FMI):
-\[ \lambda = \frac{(1 + m^{-1}) B}{T} \approx \frac{B}{T} \text{ for large } m \]
+
+\[
+\lambda = \frac{(1 + m^{-1}) B}{T} \approx \frac{B}{T} \text{ for large } m
+\]
 
 **Relative efficiency** of using \( m \) imputations vs. \( m \to \infty \):
-\[ \text{RE} = \left(1 + \frac{\lambda}{m}\right)^{-1} \]
+
+\[
+\text{RE} = \left(1 + \frac{\lambda}{m}\right)^{-1}
+\]
 
 For \( \lambda = 0.3 \) (30% missing information) and \( m = 5 \):
-\[ \text{RE} = (1 + 0.3/5)^{-1} = (1.06)^{-1} = 0.943 \approx 94\% \]
+
+\[
+\text{RE} = (1 + 0.3/5)^{-1} = (1.06)^{-1} = 0.943 \approx 94\%
+\]
 
 **Rule of thumb for number of imputations**: White et al. (2011) recommend \( m \geq 100\lambda \) (i.e., \( m \) should be at least equal to the percentage of missing information). For 30% missing, use at least \( m = 30 \) imputations. Earlier guidance suggested \( m = 5 \) but this is now considered insufficient for stable inference, especially for confidence interval coverage.
 
@@ -875,17 +1026,26 @@ The **E-value** answers: "How strong would the association between an unmeasured
 
 <div class="definition">
 <strong>E-value</strong> (VanderWeele & Ding, 2017): For an observed relative risk \( \text{RR} \) between treatment and outcome (adjusted for measured confounders), the E-value is:
-\[ E = \text{RR} + \sqrt{\text{RR} \times (\text{RR} - 1)} \]
+
+\[
+E = \text{RR} + \sqrt{\text{RR} \times (\text{RR} - 1)}
+\]
 Any unmeasured confounder \( U \) that could fully explain away the observed association must have risk ratio associations with both \( A \) and \( Y \) of at least \( E \), conditional on all measured confounders.
 </div>
 
 For confidence interval sensitivity, the E-value of the confidence limit closer to the null is:
-\[ E_{\text{CI}} = \text{RR}_{\text{limit}} + \sqrt{\text{RR}_{\text{limit}} \times (\text{RR}_{\text{limit}} - 1)} \]
+
+\[
+E_{\text{CI}} = \text{RR}_{\text{limit}} + \sqrt{\text{RR}_{\text{limit}} \times (\text{RR}_{\text{limit}} - 1)}
+\]
 
 ### 8.2.2 Derivation Sketch
 
 Let \( \text{RR}_{AU} = \max_u \frac{P(A=1|U=u)}{P(A=1|U \neq u)} \) and \( \text{RR}_{UY} = \max_u \frac{P(Y=1|U=u)}{P(Y=1|U \neq u)} \) be the maximum risk ratios of \( U \) with \( A \) and \( Y \). The maximum confounding risk ratio is bounded by:
-\[ \text{CR} \leq \frac{\text{RR}_{AU} \times \text{RR}_{UY}}{\text{RR}_{AU} + \text{RR}_{UY} - 1} \]
+
+\[
+\text{CR} \leq \frac{\text{RR}_{AU} \times \text{RR}_{UY}}{\text{RR}_{AU} + \text{RR}_{UY} - 1}
+\]
 
 The E-value is the value of \( \text{RR}_{AU} = \text{RR}_{UY} \) that sets this bound equal to RR, giving \( E = \text{RR} + \sqrt{\text{RR} \times (\text{RR}-1)} \).
 
@@ -896,32 +1056,48 @@ The E-value is the value of \( \text{RR}_{AU} = \text{RR}_{UY} \) that sets this
 The observed RR is 0.60. To compute the E-value for a protective effect:
 - Convert to RR \( > 1 \): use \( 1/0.60 = 1.667 \)
 
-\[ E = 1.667 + \sqrt{1.667 \times (1.667 - 1)} = 1.667 + \sqrt{1.667 \times 0.667} = 1.667 + \sqrt{1.112} = 1.667 + 1.054 = 2.72 \]
+\[
+E = 1.667 + \sqrt{1.667 \times (1.667 - 1)} = 1.667 + \sqrt{1.667 \times 0.667} = 1.667 + \sqrt{1.112} = 1.667 + 1.054 = 2.72
+\]
 
 **Interpretation**: Any unmeasured confounder that could fully explain away this association would need to be associated with both statin use and MI risk by a risk ratio of at least 2.72-fold, conditional on all measured confounders. If the analyst judges that no unmeasured confounder is this strongly associated with both, the result is robust.
 
 For the CI lower bound (\( \text{RR}_\text{limit} = 1/0.72 = 1.39 \)):
-\[ E_{\text{CI}} = 1.39 + \sqrt{1.39 \times 0.39} = 1.39 + \sqrt{0.542} = 1.39 + 0.736 = 2.13 \]
+
+\[
+E_{\text{CI}} = 1.39 + \sqrt{1.39 \times 0.39} = 1.39 + \sqrt{0.542} = 1.39 + 0.736 = 2.13
+\]
 
 **A second worked example** with a harmful exposure: Suppose an observational study finds \( \text{RR} = 2.5 \) for the association between red meat consumption and colorectal cancer.
 
-\[ E = 2.5 + \sqrt{2.5 \times (2.5 - 1)} = 2.5 + \sqrt{2.5 \times 1.5} = 2.5 + \sqrt{3.75} = 2.5 + 1.936 = 4.44 \]
+\[
+E = 2.5 + \sqrt{2.5 \times (2.5 - 1)} = 2.5 + \sqrt{2.5 \times 1.5} = 2.5 + \sqrt{3.75} = 2.5 + 1.936 = 4.44
+\]
 
 For the confidence limit at \( \text{RR}_\text{limit} = 1.8 \):
-\[ E_{\text{CI}} = 1.8 + \sqrt{1.8 \times 0.8} = 1.8 + \sqrt{1.44} = 1.8 + 1.2 = 3.0 \]
+
+\[
+E_{\text{CI}} = 1.8 + \sqrt{1.8 \times 0.8} = 1.8 + \sqrt{1.44} = 1.8 + 1.2 = 3.0
+\]
 
 **Interpretation**: An unmeasured confounder would need \( \text{RR}_{AU} = \text{RR}_{UY} \geq 4.44 \) to fully explain away the point estimate of RR = 2.5. The CI lower bound of 1.8 requires \( \text{RR} \geq 3.0 \) to be explained away.
 
 ## 8.3 Rosenbaum Bounds
 
 Rosenbaum's sensitivity analysis (2002) assumes a logistic model for the probability that unit \( i \) is treated:
-\[ \log \frac{P(A_i = 1 \mid \mathbf{L}_i, U_i)}{P(A_i = 0 \mid \mathbf{L}_i, U_i)} = \kappa(\mathbf{L}_i) + \gamma U_i \]
+
+\[
+\log \frac{P(A_i = 1 \mid \mathbf{L}_i, U_i)}{P(A_i = 0 \mid \mathbf{L}_i, U_i)} = \kappa(\mathbf{L}_i) + \gamma U_i
+\]
 
 where \( U_i \in [0, 1] \) is an unmeasured binary confounder and \( \gamma \geq 0 \) governs its effect on treatment. The **sensitivity parameter** \( \Gamma = e^\gamma \geq 1 \) represents the maximum odds ratio by which two units with the same observed covariates \( \mathbf{L} \) could differ in their odds of treatment due to \( U \).
 
 <div class="definition">
 <strong>Rosenbaum bounds</strong>: For a given \( \Gamma \geq 1 \), two matched units \( i \) and \( j \) with the same \( \mathbf{L} \) have treatment odds satisfying:
-\[ \frac{1}{\Gamma} \leq \frac{P(A_i = 1 \mid \mathbf{L}, U_i) / P(A_i = 0 \mid \mathbf{L}, U_i)}{P(A_j = 1 \mid \mathbf{L}, U_j) / P(A_j = 0 \mid \mathbf{L}, U_j)} \leq \Gamma \]
+
+\[
+\frac{1}{\Gamma} \leq \frac{P(A_i = 1 \mid \mathbf{L}, U_i) / P(A_i = 0 \mid \mathbf{L}, U_i)}{P(A_j = 1 \mid \mathbf{L}, U_j) / P(A_j = 0 \mid \mathbf{L}, U_j)} \leq \Gamma
+\]
 </div>
 
 The analyst computes the range of p-values (or confidence intervals) for the treatment effect as \( \Gamma \) varies from 1 (no unmeasured confounding) upward. If the p-value remains \( < 0.05 \) for \( \Gamma = 2 \), this means that even if unmeasured confounders doubled the odds of treatment for some subjects, the conclusion of significance holds.
@@ -952,7 +1128,10 @@ The **sensitivity value** \( \tilde{\Gamma} \) is the largest \( \Gamma \) for w
 - \( P(U = 1 \mid A = 1) \) and \( P(U = 1 \mid A = 0) \): prevalence of \( U \) in treatment groups
 
 The **bias factor** is:
-\[ \text{BF} = \frac{\text{RR}_{UY} \times P(U=1 \mid A=1) + P(U=0 \mid A=1)}{\text{RR}_{UY} \times P(U=1 \mid A=0) + P(U=0 \mid A=0)} \]
+
+\[
+\text{BF} = \frac{\text{RR}_{UY} \times P(U=1 \mid A=1) + P(U=0 \mid A=1)}{\text{RR}_{UY} \times P(U=1 \mid A=0) + P(U=0 \mid A=0)}
+\]
 
 The **bias-corrected RR** is \( \widehat{\text{RR}}_{\text{corrected}} = \widehat{\text{RR}}_{\text{observed}} / \text{BF} \).
 
@@ -977,7 +1156,9 @@ The simulation interval is typically wider than a standard 95% CI, reflecting ho
 
 In biostatistical applications, variables are rarely measured with perfect accuracy. **Measurement error** refers to discrepancies between the observed value \( X^* \) and the true value \( X \):
 
-\[ X^* = X + \varepsilon \]
+\[
+X^* = X + \varepsilon
+\]
 
 where \( \varepsilon \) is the measurement error.
 
@@ -1011,12 +1192,17 @@ where \( \varepsilon \) is the measurement error.
 
 **Attenuation bias under classical ME**: For simple linear regression \( Y = \beta_0 + \beta_1 X + \varepsilon_Y \) where \( X^* = X + \varepsilon \) with \( \varepsilon \perp X, \varepsilon_Y \):
 
-\[ \text{plim}\, \hat\beta_1^{\text{OLS}} = \beta_1 \times \underbrace{\frac{\text{Var}(X)}{\text{Var}(X) + \text{Var}(\varepsilon)}}_{\text{attenuation factor (reliability ratio)}} = \beta_1 \times \lambda < \beta_1 \]
+\[
+\text{plim}\, \hat\beta_1^{\text{OLS}} = \beta_1 \times \underbrace{\frac{\text{Var}(X)}{\text{Var}(X) + \text{Var}(\varepsilon)}}_{\text{attenuation factor (reliability ratio)}} = \beta_1 \times \lambda < \beta_1
+\]
 
 The attenuation factor \( \lambda \in [0,1] \) equals the **reliability** of the measurement. OLS underestimates the true effect.
 
 **Misclassification correction**: If Se and Sp are known (from a validation substudy), the corrected exposure proportions can be recovered via:
-\[ P(A = 1) = \frac{P(A^* = 1) - (1 - \text{Sp})}{\text{Se} - (1 - \text{Sp})} \]
+
+\[
+P(A = 1) = \frac{P(A^* = 1) - (1 - \text{Sp})}{\text{Se} - (1 - \text{Sp})}
+\]
 
 and cell counts in a 2×2 table can be corrected using the inverse of the misclassification matrix.
 
@@ -1114,7 +1300,10 @@ In practice, \( e(\mathbf{L}) \) is estimated using logistic regression, general
 
 <div class="definition">
 <strong>Standardized mean difference</strong>: For covariate \( L \), the SMD is:
-\[ \text{SMD} = \frac{\bar{L}_{\text{treated}} - \bar{L}_{\text{control}}}{\sqrt{(s^2_{\text{treated}} + s^2_{\text{control}})/2}} \]
+
+\[
+\text{SMD} = \frac{\bar{L}_{\text{treated}} - \bar{L}_{\text{control}}}{\sqrt{(s^2_{\text{treated}} + s^2_{\text{control}})/2}}
+\]
 SMD \( < 0.1 \) is typically considered good balance; SMD \( > 0.2 \) indicates poor balance.
 </div>
 
@@ -1128,7 +1317,9 @@ SMD \( < 0.1 \) is typically considered good balance; SMD \( > 0.2 \) indicates 
 
 In **propensity score adjustment**, the estimated propensity score is included as a covariate in the outcome regression:
 
-\[ E[Y \mid A, \hat{e}(\mathbf{L})] = \beta_0 + \beta_1 A + \beta_2 \hat{e}(\mathbf{L}) \]
+\[
+E[Y \mid A, \hat{e}(\mathbf{L})] = \beta_0 + \beta_1 A + \beta_2 \hat{e}(\mathbf{L})
+\]
 
 This combines outcome modeling with propensity score adjustment and can be more efficient than matching. However, if the outcome model is misspecified, residual confounding may remain.
 

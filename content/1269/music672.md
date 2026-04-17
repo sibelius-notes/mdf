@@ -240,6 +240,7 @@ concluding on \(\hat{1}\). The primary tone must be a member of the tonic triad.
 degree between the primary tone and \(\hat{1}\) must be traversed in order, with no upward leaps.
 The Urlinie is typically represented in the graph with open noteheads carrying caret notation above
 them, connected by a beam:
+
 \[
 \hat{5} \longrightarrow \hat{4} \longrightarrow \hat{3} \longrightarrow \hat{2} \longrightarrow \hat{1}
 \]
@@ -707,6 +708,7 @@ from its primary tone to \(\hat{2}\) but does not continue to \(\hat{1}\). Inste
 suspended at \(\hat{2}\) over the dominant (V), and the structure restarts — the primary tone is
 re-established over a fresh statement of the tonic — before the descent recommences and concludes
 on \(\hat{1}\) over I. An interrupted Ursatz has the schematic form:
+
 \[
 \hat{n} \ \cdots \ \hat{2} \;\Big|\; \hat{n} \ \cdots \ \hat{2} - \hat{1}
 \]

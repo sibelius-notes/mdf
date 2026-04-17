@@ -54,6 +54,7 @@ This is minimised pointwise: for each \(\mathbf{x}\), we should predict the clas
 
 <div class="definition">
 <strong>Bayes Classifier</strong>: The classifier
+
 \[
 g^*(\mathbf{x}) = \arg\max_{k \in \mathcal{Y}} P(Y = k \mid X = \mathbf{x})
 \]
@@ -91,6 +92,7 @@ Since the true risk \(R(g)\) is inaccessible, we substitute the **empirical risk
 
 <div class="definition">
 <strong>Empirical Risk Minimisation (ERM)</strong>: Choose the classifier \(\hat{g}\) that minimises \(\hat{R}(g)\) over some hypothesis class \(\mathcal{G}\):
+
 \[
 \hat{g} = \arg\min_{g \in \mathcal{G}} \hat{R}(g)
 \]
@@ -149,6 +151,7 @@ The simplest nonparametric approach to classification is to estimate the Bayes c
 
 <div class="definition">
 <strong>\(k\)-Nearest Neighbour Classifier</strong>: Given a training set \(\mathcal{D}\) and distance metric \(d\), define \(\mathcal{N}_k(\mathbf{x})\) as the set of \(k\) training points closest to \(\mathbf{x}\). The \(k\)-NN classifier predicts
+
 \[
 \hat{g}(\mathbf{x}) = \arg\max_{k \in \mathcal{Y}} \sum_{(\mathbf{x}_i, y_i) \in \mathcal{N}_k(\mathbf{x})} \mathbf{1}[y_i = k]
 \]
@@ -222,6 +225,7 @@ A celebrated theoretical result by Cover and Hart (1967) establishes that even t
 
 <div class="definition">
 <strong>Cover-Hart Theorem (1967)</strong>: As \(n \to \infty\), the risk of the 1-nearest-neighbour classifier satisfies
+
 \[
 R^* \leq R_{1\text{-NN}} \leq 2R^* - \frac{K}{K-1}(R^*)^2 \leq 2R^*
 \]
@@ -268,6 +272,7 @@ Applying Bayes' rule and taking logarithms, the **MAP classifier** assigns \(\ma
 
 <div class="definition">
 <strong>Linear Discriminant Analysis (LDA)</strong>: Under multivariate Gaussian class conditionals with a common covariance \(\Sigma\), the Bayes classifier reduces to
+
 \[
 g^*(\mathbf{x}) = \arg\max_k \delta_k(\mathbf{x})
 \]
@@ -302,6 +307,7 @@ When the equal-covariance assumption is relaxed, each class has its own covarian
 
 <div class="definition">
 <strong>Quadratic Discriminant Analysis (QDA)</strong>: Under Gaussian class conditionals with class-specific covariances \(\Sigma_k\), the MAP classifier assigns \(\mathbf{x}\) to the class maximising
+
 \[
 \delta_k^Q(\mathbf{x}) = -\frac{1}{2}\log|\Sigma_k| - \frac{1}{2}(\mathbf{x}-\boldsymbol{\mu}_k)^\top \Sigma_k^{-1}(\mathbf{x}-\boldsymbol{\mu}_k) + \log\pi_k
 \]
@@ -403,6 +409,7 @@ The score (gradient) and Hessian of \(\ell\) are:
 \[
 \nabla \ell = \sum_{i=1}^n (y_i - \hat{p}_i) \tilde{\mathbf{x}}_i = \tilde{X}^\top (\mathbf{y} - \hat{\mathbf{p}})
 \]
+
 \[
 \nabla^2 \ell = -\sum_{i=1}^n \hat{p}_i(1 - \hat{p}_i) \tilde{\mathbf{x}}_i \tilde{\mathbf{x}}_i^\top = -\tilde{X}^\top W \tilde{X}
 \]
@@ -471,6 +478,7 @@ The margin \(M\) satisfies \(y_i(\beta_0 + \boldsymbol{\beta}^\top \mathbf{x}_i)
 
 <div class="definition">
 <strong>Hard-Margin SVM (Primal)</strong>: Find \((\beta_0, \boldsymbol{\beta})\) that solves
+
 \[
 \min_{\beta_0, \boldsymbol{\beta}} \frac{1}{2}\|\boldsymbol{\beta}\|_2^2 \quad \text{subject to} \quad y_i(\beta_0 + \boldsymbol{\beta}^\top \mathbf{x}_i) \geq 1 \quad \forall i = 1,\ldots,n
 \]
@@ -808,9 +816,11 @@ The **backpropagation** algorithm computes \(\partial \mathcal{L}/\partial W^{(\
 \[
 \boldsymbol{\delta}^{(L)} = \hat{\mathbf{p}} - \mathbf{y}_{\text{one-hot}}
 \]
+
 \[
 \boldsymbol{\delta}^{(\ell)} = \left(W^{(\ell+1)}\right)^\top \boldsymbol{\delta}^{(\ell+1)} \odot \sigma'(\mathbf{z}^{(\ell)})
 \]
+
 \[
 \frac{\partial \mathcal{L}}{\partial W^{(\ell)}} = \boldsymbol{\delta}^{(\ell)} \left(\mathbf{h}^{(\ell-1)}\right)^\top
 \]
@@ -1138,7 +1148,7 @@ The most robust practical strategy is to try several diverse methods, combine th
 
 ## VC Dimension and Generalisation Bounds
 
-The **Vapnik-Chervonenkis (VC) dimension** provides a combinatorial measure of a classifier's complexity. A classifier \(g\) **shatters** a set \(S = \{\mathbf{x}_1, \ldots, \mathbf{x}_m\}\) if for every labelling \(y \in \{0,1\}^m\, there exists a classifier in the class that produces that labelling. The VC dimension of a hypothesis class \(\mathcal{G}\) is the maximum size of any set it can shatter:
+The **Vapnik-Chervonenkis (VC) dimension** provides a combinatorial measure of a classifier's complexity. A classifier \(g\) **shatters** a set \(S = \{\mathbf{x}_1, \ldots, \mathbf{x}_m\}\) if for every labelling \(y \in \{0,1\}^m\), there exists a classifier in the class that produces that labelling. The VC dimension of a hypothesis class \(\mathcal{G}\) is the maximum size of any set it can shatter:
 
 \[
 \text{VC}(\mathcal{G}) = \max\{m : \exists S \text{ with } |S| = m \text{ shattered by } \mathcal{G}\}
@@ -1214,6 +1224,7 @@ Several factors contribute to good optimisation in practice:
 \[
 m_t = \beta_1 m_{t-1} + (1-\beta_1)g_t, \quad v_t = \beta_2 v_{t-1} + (1-\beta_2)g_t^2
 \]
+
 \[
 W \leftarrow W - \frac{\eta}{\sqrt{v_t/(1-\beta_2^t)} + \epsilon} \cdot \frac{m_t}{1-\beta_1^t}
 \]

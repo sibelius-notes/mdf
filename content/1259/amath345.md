@@ -77,6 +77,7 @@ where \(\ell\) is a loss function, \(f\) is the model, and \(R\) is a regularize
 
 <div class="theorem">
 <strong>Singular Value Decomposition (SVD).</strong> Every matrix \(A \in \mathbb{R}^{m \times n}\) (with \(m \geq n\)) can be factored as
+
 \[
 A = U \Sigma V^T,
 \]
@@ -104,6 +105,7 @@ A = \sum_{i=1}^r \sigma_i \mathbf{u}_i \mathbf{v}_i^T.
 
 <div class="theorem">
 <strong>Eckart-Young Theorem.</strong> The best rank-\(r\) approximation to \(A\) in both the Frobenius norm and the spectral norm is
+
 \[
 A_r = \sum_{i=1}^r \sigma_i \mathbf{u}_i \mathbf{v}_i^T = U_r \Sigma_r V_r^T.
 \]
@@ -173,6 +175,7 @@ Sparsity is ubiquitous: natural images are sparse in the wavelet domain; neural 
 
 <div class="definition">
 <strong>Restricted Isometry Property (RIP).</strong> A matrix \(\Phi\) satisfies the RIP of order \(k\) with constant \(\delta_k \in (0,1)\) if for all \(k\)-sparse vectors \(\mathbf{x}\):
+
 \[
 (1 - \delta_k)\|\mathbf{x}\|_2^2 \leq \|\Phi\mathbf{x}\|_2^2 \leq (1 + \delta_k)\|\mathbf{x}\|_2^2.
 \]
@@ -354,6 +357,7 @@ DMD is widely used in fluid mechanics, climate science, and video processing.
 2. Compute (or estimate) the time derivatives \(\dot{X}\).
 3. Build a **library of candidate functions**: \(\Theta(X) = [1,\ X,\ X^2,\ X \cdot X,\ \sin(X),\ \ldots] \in \mathbb{R}^{m \times p}\).
 4. Solve the sparse regression problem:
+
 \[
 \dot{X} \approx \Theta(X)\, \Xi, \quad \text{minimize } \|\dot{X} - \Theta(X)\Xi\|_F \text{ subject to sparsity on } \Xi.
 \]

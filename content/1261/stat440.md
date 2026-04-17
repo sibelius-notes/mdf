@@ -24,42 +24,64 @@ The Winter 2026 syllabus (Paul Marriott) covers: exponential families, mixture m
 
 <div class="definition">
 <strong>Likelihood function</strong>: Given data <em>x</em> and a parametric model with density or mass function <em>f(x; θ)</em>, the <em>likelihood function</em> is
-\[ L(\theta;\, x) = f(x;\, \theta), \]
+
+\[
+L(\theta;\, x) = f(x;\, \theta),
+\]
 viewed as a function of <em>θ</em> with <em>x</em> fixed. For an i.i.d. sample \( x_1, \ldots, x_n \),
-\[ L(\theta;\, x) = \prod_{i=1}^{n} f(x_i;\, \theta). \]
+
+\[
+L(\theta;\, x) = \prod_{i=1}^{n} f(x_i;\, \theta).
+\]
 </div>
 
 Working with the log-likelihood avoids numerical underflow and turns products into sums:
 
-\[ \ell(\theta;\, x) = \log L(\theta;\, x) = \sum_{i=1}^{n} \log f(x_i;\, \theta). \]
+\[
+\ell(\theta;\, x) = \log L(\theta;\, x) = \sum_{i=1}^{n} \log f(x_i;\, \theta).
+\]
 
 <div class="definition">
 <strong>Maximum likelihood estimator (MLE)</strong>: The value \( \hat{\theta} = \hat{\theta}(x) \) that maximises \( \ell(\theta; x) \) over the parameter space \( \Theta \):
-\[ \hat{\theta} = \underset{\theta \in \Theta}{\arg\max}\; \ell(\theta;\, x). \]
+
+\[
+\hat{\theta} = \underset{\theta \in \Theta}{\arg\max}\; \ell(\theta;\, x).
+\]
 </div>
 
 ### Score Function and Observed Information
 
 <div class="definition">
 <strong>Score function</strong>: The gradient of the log-likelihood with respect to <em>θ</em>,
-\[ s(\theta;\, x) = \frac{\partial \ell(\theta;\, x)}{\partial \theta}. \]
+
+\[
+s(\theta;\, x) = \frac{\partial \ell(\theta;\, x)}{\partial \theta}.
+\]
 Under regularity conditions, \( \mathrm{E}_\theta[s(\theta; X)] = 0 \).
 </div>
 
 <div class="definition">
 <strong>Observed information matrix</strong>: The negative Hessian of the log-likelihood,
-\[ \mathcal{I}(\theta;\, x) = -\frac{\partial^2 \ell(\theta;\, x)}{\partial \theta \,\partial \theta^\top}. \]
+
+\[
+\mathcal{I}(\theta;\, x) = -\frac{\partial^2 \ell(\theta;\, x)}{\partial \theta \,\partial \theta^\top}.
+\]
 Evaluated at \( \hat{\theta} \), this gives the <em>observed Fisher information</em>.
 </div>
 
 <div class="definition">
 <strong>Expected (Fisher) information</strong>:
-\[ I(\theta) = \mathrm{E}_\theta\!\left[\mathcal{I}(\theta;\, X)\right] = \mathrm{E}_\theta\!\left[s(\theta; X)\, s(\theta; X)^\top\right]. \]
+
+\[
+I(\theta) = \mathrm{E}_\theta\!\left[\mathcal{I}(\theta;\, X)\right] = \mathrm{E}_\theta\!\left[s(\theta; X)\, s(\theta; X)^\top\right].
+\]
 </div>
 
 Under standard regularity conditions the MLE satisfies
 
-\[ \sqrt{n}(\hat{\theta} - \theta_0) \xrightarrow{d} \mathcal{N}\!\left(0,\; I(\theta_0)^{-1}\right), \]
+\[
+\sqrt{n}(\hat{\theta} - \theta_0) \xrightarrow{d} \mathcal{N}\!\left(0,\; I(\theta_0)^{-1}\right),
+\]
 
 which justifies the **Wald confidence interval** \( \hat{\theta} \pm z_{\alpha/2} / \sqrt{I(\hat{\theta})} \).
 
@@ -67,12 +89,17 @@ which justifies the **Wald confidence interval** \( \hat{\theta} \pm z_{\alpha/2
 
 <div class="definition">
 <strong>Relative likelihood</strong>:
-\[ R(\theta) = \frac{L(\theta;\, x)}{L(\hat{\theta};\, x)} = \exp\!\bigl[\ell(\theta) - \ell(\hat{\theta})\bigr] \in [0, 1]. \]
+
+\[
+R(\theta) = \frac{L(\theta;\, x)}{L(\hat{\theta};\, x)} = \exp\!\bigl[\ell(\theta) - \ell(\hat{\theta})\bigr] \in [0, 1].
+\]
 </div>
 
 A **likelihood interval** at level \( c \) is \( \{\theta : R(\theta) \geq c\} \). Common choice \( c = \exp(-\chi^2_{1,\alpha}/2) \) gives an approximate \( (1-\alpha) \) confidence set via Wilks' theorem:
 
-\[ W(\theta_0) = 2\bigl[\ell(\hat{\theta}) - \ell(\theta_0)\bigr] \xrightarrow{d} \chi^2_p, \]
+\[
+W(\theta_0) = 2\bigl[\ell(\hat{\theta}) - \ell(\theta_0)\bigr] \xrightarrow{d} \chi^2_p,
+\]
 
 where \( p = \dim(\theta) \).
 
@@ -84,7 +111,10 @@ Partition \( \theta = (\psi, \lambda) \) where \( \psi \) is the scalar of inter
 
 <div class="definition">
 <strong>Profile log-likelihood</strong>:
-\[ \ell_P(\psi) = \max_{\lambda}\, \ell(\psi, \lambda;\, x) = \ell\!\left(\psi,\, \hat{\lambda}_\psi;\, x\right), \]
+
+\[
+\ell_P(\psi) = \max_{\lambda}\, \ell(\psi, \lambda;\, x) = \ell\!\left(\psi,\, \hat{\lambda}_\psi;\, x\right),
+\]
 where \( \hat{\lambda}_\psi \) is the MLE of \( \lambda \) with \( \psi \) fixed.
 </div>
 
@@ -94,11 +124,15 @@ The profile likelihood acts like an ordinary likelihood for \( \psi \): approxim
 
 The **signed root LR statistic** is
 
-\[ r(\psi) = \mathrm{sgn}(\hat{\psi} - \psi)\sqrt{W(\psi)}, \]
+\[
+r(\psi) = \mathrm{sgn}(\hat{\psi} - \psi)\sqrt{W(\psi)},
+\]
 
 where \( W(\psi) = 2[\ell_P(\hat{\psi}) - \ell_P(\psi)] \). Under \( H_0: \psi = \psi_0 \),
 
-\[ r(\psi_0) \xrightarrow{d} \mathcal{N}(0,1). \]
+\[
+r(\psi_0) \xrightarrow{d} \mathcal{N}(0,1).
+\]
 
 This approximation is often more accurate in small samples than the Wald statistic because it uses the full shape of the log-likelihood.
 
@@ -106,7 +140,9 @@ This approximation is often more accurate in small samples than the Wald statist
 
 Barndorff-Nielsen (1983) derived a higher-order adjustment:
 
-\[ r^*(\psi) = r(\psi) + \frac{1}{r(\psi)}\log\frac{u(\psi)}{r(\psi)}, \]
+\[
+r^*(\psi) = r(\psi) + \frac{1}{r(\psi)}\log\frac{u(\psi)}{r(\psi)},
+\]
 
 where \( u(\psi) \) is a sample-space derivative involving the observed information. \( r^*(\psi) \sim \mathcal{N}(0,1) \) to third order — i.e., with error \( O(n^{-3/2}) \) vs \( O(n^{-1/2}) \) for \( r \).
 
@@ -114,13 +150,18 @@ where \( u(\psi) \) is a sample-space derivative involving the observed informat
 
 <div class="definition">
 <strong>Exponential family</strong>: A parametric model is an exponential family if its density can be written
-\[ f(x;\, \theta) = h(x)\exp\!\bigl[\eta(\theta)^\top T(x) - A(\theta)\bigr], \]
+
+\[
+f(x;\, \theta) = h(x)\exp\!\bigl[\eta(\theta)^\top T(x) - A(\theta)\bigr],
+\]
 where <em>T(x)</em> is the sufficient statistic, <em>η(θ)</em> the natural parameter, and <em>A(θ)</em> the log-partition function (cumulant-generating function of <em>T</em>).
 </div>
 
 Key property: \( \ell(\theta) = \eta(\theta)^\top T(x) - n A(\theta) + \text{const} \), so the score equation is
 
-\[ \frac{\partial A(\theta)}{\partial \theta} = \frac{1}{n}\sum_{i=1}^n T(x_i), \]
+\[
+\frac{\partial A(\theta)}{\partial \theta} = \frac{1}{n}\sum_{i=1}^n T(x_i),
+\]
 
 i.e., the MLE sets the expected sufficient statistic equal to the observed sufficient statistic. This makes MLE computation tractable for exponential families.
 
@@ -134,11 +175,15 @@ i.e., the MLE sets the expected sufficient statistic equal to the observed suffi
 
 When \( \ell(\theta) \) has no closed-form maximiser, we use iterative methods. Taylor-expanding the score around the current iterate \( \theta^{(t)} \):
 
-\[ s(\theta) \approx s\!\left(\theta^{(t)}\right) + \mathcal{I}\!\left(\theta^{(t)}\right)\!\left(\theta - \theta^{(t)}\right) = 0, \]
+\[
+s(\theta) \approx s\!\left(\theta^{(t)}\right) + \mathcal{I}\!\left(\theta^{(t)}\right)\!\left(\theta - \theta^{(t)}\right) = 0,
+\]
 
 which gives the **Newton-Raphson** update:
 
-\[ \theta^{(t+1)} = \theta^{(t)} + \left[\mathcal{I}\!\left(\theta^{(t)}\right)\right]^{-1} s\!\left(\theta^{(t)}\right). \]
+\[
+\theta^{(t+1)} = \theta^{(t)} + \left[\mathcal{I}\!\left(\theta^{(t)}\right)\right]^{-1} s\!\left(\theta^{(t)}\right).
+\]
 
 **Convergence rate.** Newton-Raphson converges quadratically near the optimum: \( \|\theta^{(t+1)} - \hat{\theta}\| = O(\|\theta^{(t)} - \hat{\theta}\|^2) \). This means the number of correct decimal digits roughly doubles each iteration.
 
@@ -169,7 +214,9 @@ newton_raphson <- function(par0, loglik, tol = 1e-8, maxit = 200) {
 
 Replace the observed information \( \mathcal{I}(\theta^{(t)}) \) with the expected information \( I(\theta^{(t)}) \):
 
-\[ \theta^{(t+1)} = \theta^{(t)} + \left[I\!\left(\theta^{(t)}\right)\right]^{-1} s\!\left(\theta^{(t)}\right). \]
+\[
+\theta^{(t+1)} = \theta^{(t)} + \left[I\!\left(\theta^{(t)}\right)\right]^{-1} s\!\left(\theta^{(t)}\right).
+\]
 
 Advantages: (1) \( I(\theta) \) can sometimes be computed analytically; (2) the update matrix is guaranteed positive-definite; (3) equivalent to Newton-Raphson for canonical exponential families (where \( I(\theta) = \mathcal{I}(\theta) \) in expectation).
 
@@ -177,7 +224,9 @@ Advantages: (1) \( I(\theta) \) can sometimes be computed analytically; (2) the 
 
 When computing the full Hessian is expensive, **quasi-Newton** methods build an approximation \( B^{(t)} \approx \mathcal{I}(\theta^{(t)}) \) using only gradient evaluations, updated via the **BFGS** formula:
 
-\[ B^{(t+1)} = B^{(t)} - \frac{B^{(t)} s^{(t)} s^{(t)\top} B^{(t)}}{s^{(t)\top} B^{(t)} s^{(t)}} + \frac{y^{(t)} y^{(t)\top}}{y^{(t)\top} s^{(t)}}, \]
+\[
+B^{(t+1)} = B^{(t)} - \frac{B^{(t)} s^{(t)} s^{(t)\top} B^{(t)}}{s^{(t)\top} B^{(t)} s^{(t)}} + \frac{y^{(t)} y^{(t)\top}}{y^{(t)\top} s^{(t)}},
+\]
 
 where \( s^{(t)} = \theta^{(t+1)} - \theta^{(t)} \) and \( y^{(t)} = \nabla\ell(\theta^{(t+1)}) - \nabla\ell(\theta^{(t)}) \). **L-BFGS-B** stores only the last \( m \) updates (typically \( m = 5\text{–}20 \)) and supports box constraints, making it the default for high-dimensional optimisation in R (`optim(..., method = "L-BFGS-B")`).
 
@@ -198,27 +247,47 @@ The **Expectation-Maximisation** algorithm (Dempster, Laird & Rubin 1977) maximi
 **Theorem.** The EM algorithm satisfies \( \ell(\theta^{(t+1)}; y) \geq \ell(\theta^{(t)}; y) \) at each iteration, with equality iff \( Q(\theta^{(t+1)} \mid \theta^{(t)}) = Q(\theta^{(t)} \mid \theta^{(t)}) \).
 
 *Proof.* Write the complete-data factorisation:
-\[ \log L_c(\theta) = \ell(\theta; y) + \log p(z \mid y, \theta). \]
+
+\[
+\log L_c(\theta) = \ell(\theta; y) + \log p(z \mid y, \theta).
+\]
 Taking expectations under \( p(z \mid y, \theta^{(t)}) \):
-\[ Q(\theta \mid \theta^{(t)}) = \ell(\theta; y) + H(\theta \mid \theta^{(t)}), \]
+
+\[
+Q(\theta \mid \theta^{(t)}) = \ell(\theta; y) + H(\theta \mid \theta^{(t)}),
+\]
 where \( H(\theta \mid \theta^{(t)}) = \mathrm{E}[\log p(z \mid y, \theta)] \). By Jensen's inequality (log is concave),
-\[ H(\theta \mid \theta^{(t)}) \leq H(\theta^{(t)} \mid \theta^{(t)}). \]
+
+\[
+H(\theta \mid \theta^{(t)}) \leq H(\theta^{(t)} \mid \theta^{(t)}).
+\]
 Since the M-step gives \( Q(\theta^{(t+1)} \mid \theta^{(t)}) \geq Q(\theta^{(t)} \mid \theta^{(t)}) \):
-\[ \ell(\theta^{(t+1)}) = Q(\theta^{(t+1)} \mid \theta^{(t)}) - H(\theta^{(t+1)} \mid \theta^{(t)}) \geq Q(\theta^{(t)} \mid \theta^{(t)}) - H(\theta^{(t)} \mid \theta^{(t)}) = \ell(\theta^{(t)}). \quad \square \]
+
+\[
+\ell(\theta^{(t+1)}) = Q(\theta^{(t+1)} \mid \theta^{(t)}) - H(\theta^{(t+1)} \mid \theta^{(t)}) \geq Q(\theta^{(t)} \mid \theta^{(t)}) - H(\theta^{(t)} \mid \theta^{(t)}) = \ell(\theta^{(t)}). \quad \square
+\]
 
 ### EM for a Two-Component Gaussian Mixture
 
 **Model.** \( y_1, \ldots, y_n \) i.i.d. from
 
-\[ f(y;\, \theta) = \pi \phi(y;\, \mu_1, \sigma_1^2) + (1-\pi)\phi(y;\, \mu_2, \sigma_2^2), \]
+\[
+f(y;\, \theta) = \pi \phi(y;\, \mu_1, \sigma_1^2) + (1-\pi)\phi(y;\, \mu_2, \sigma_2^2),
+\]
 
 where \( \phi(\cdot;\, \mu, \sigma^2) \) is the Gaussian density. Hidden labels \( z_i \in \{1, 2\} \) with \( P(z_i = 1) = \pi \).
 
 **E-step.** Compute responsibilities (posterior mixture weights):
-\[ r_i^{(t)} = \frac{\pi^{(t)}\phi\!\left(y_i;\, \mu_1^{(t)}, \sigma_1^{2(t)}\right)}{\pi^{(t)}\phi\!\left(y_i;\, \mu_1^{(t)}, \sigma_1^{2(t)}\right) + (1-\pi^{(t)})\phi\!\left(y_i;\, \mu_2^{(t)}, \sigma_2^{2(t)}\right)}. \]
+
+\[
+r_i^{(t)} = \frac{\pi^{(t)}\phi\!\left(y_i;\, \mu_1^{(t)}, \sigma_1^{2(t)}\right)}{\pi^{(t)}\phi\!\left(y_i;\, \mu_1^{(t)}, \sigma_1^{2(t)}\right) + (1-\pi^{(t)})\phi\!\left(y_i;\, \mu_2^{(t)}, \sigma_2^{2(t)}\right)}.
+\]
 
 **M-step.** Let \( n_k = \sum_i r_i \) for \( k=1 \) and \( \sum_i (1-r_i) \) for \( k=2 \):
-\[ \pi^{(t+1)} = \frac{1}{n}\sum_{i=1}^n r_i^{(t)}, \quad \mu_k^{(t+1)} = \frac{\sum_i w_{ki} y_i}{\sum_i w_{ki}}, \quad \sigma_k^{2(t+1)} = \frac{\sum_i w_{ki}(y_i - \mu_k^{(t+1)})^2}{\sum_i w_{ki}}, \]
+
+\[
+\pi^{(t+1)} = \frac{1}{n}\sum_{i=1}^n r_i^{(t)}, \quad \mu_k^{(t+1)} = \frac{\sum_i w_{ki} y_i}{\sum_i w_{ki}}, \quad \sigma_k^{2(t+1)} = \frac{\sum_i w_{ki}(y_i - \mu_k^{(t+1)})^2}{\sum_i w_{ki}},
+\]
 
 where \( w_{1i} = r_i^{(t)} \) and \( w_{2i} = 1 - r_i^{(t)} \).
 
@@ -269,16 +338,23 @@ When the M-step has no closed form, **Expectation-Conditional Maximisation (ECM)
 
 <div class="definition">
 <strong>Monte Carlo estimator</strong>: To estimate \( \mu = \mathrm{E}_p[h(X)] = \int h(x)\,p(x)\,dx \), draw \( X_1, \ldots, X_n \overset{\text{iid}}{\sim} p \) and compute
-\[ \hat{\mu}_n = \frac{1}{n}\sum_{i=1}^{n} h(X_i). \]
+
+\[
+\hat{\mu}_n = \frac{1}{n}\sum_{i=1}^{n} h(X_i).
+\]
 </div>
 
 By the Strong Law of Large Numbers, \( \hat{\mu}_n \to \mu \) almost surely. By the CLT,
 
-\[ \sqrt{n}(\hat{\mu}_n - \mu) \xrightarrow{d} \mathcal{N}(0,\, \mathrm{Var}_p[h(X)]). \]
+\[
+\sqrt{n}(\hat{\mu}_n - \mu) \xrightarrow{d} \mathcal{N}(0,\, \mathrm{Var}_p[h(X)]).
+\]
 
 The **Monte Carlo standard error** is
 
-\[ \widehat{\mathrm{SE}} = \frac{s_h}{\sqrt{n}}, \quad s_h^2 = \frac{1}{n-1}\sum_{i=1}^n (h(X_i) - \hat{\mu}_n)^2. \]
+\[
+\widehat{\mathrm{SE}} = \frac{s_h}{\sqrt{n}}, \quad s_h^2 = \frac{1}{n-1}\sum_{i=1}^n (h(X_i) - \hat{\mu}_n)^2.
+\]
 
 Crucially, this converges at rate \( O(n^{-1/2}) \) regardless of dimension, unlike deterministic quadrature which suffers the curse of dimensionality (\( O(n^{-k/d}) \) for smooth functions in \( d \) dimensions with \( k \) derivatives).
 
@@ -288,13 +364,17 @@ Crucially, this converges at rate \( O(n^{-1/2}) \) regardless of dimension, unl
 
 Generate pairs \( (U_i, 1 - U_i) \) and use both to compute \( h \). If \( h \) is monotone then \( h(F^{-1}(U)) \) and \( h(F^{-1}(1-U)) \) are negatively correlated, so
 
-\[ \mathrm{Var}\!\left[\frac{h(X) + h(X')}{2}\right] = \frac{\mathrm{Var}[h] + \mathrm{Cov}(h(X), h(X'))}{2} < \mathrm{Var}[h]/2. \]
+\[
+\mathrm{Var}\!\left[\frac{h(X) + h(X')}{2}\right] = \frac{\mathrm{Var}[h] + \mathrm{Cov}(h(X), h(X'))}{2} < \mathrm{Var}[h]/2.
+\]
 
 ### Control Variates
 
 Find a function \( g(X) \) with known expectation \( \mathrm{E}[g(X)] = \mu_g \). The estimator
 
-\[ \hat{\mu}_c = \hat{\mu}_n - c(\hat{g}_n - \mu_g) \]
+\[
+\hat{\mu}_c = \hat{\mu}_n - c(\hat{g}_n - \mu_g)
+\]
 
 has variance \( \mathrm{Var}[h] - 2c\,\mathrm{Cov}(h, g) + c^2\mathrm{Var}[g] \), minimised at \( c^* = \mathrm{Cov}(h,g)/\mathrm{Var}[g] \), giving variance reduction of \( \rho^2_{h,g}\,\mathrm{Var}[h] \).
 
@@ -302,7 +382,9 @@ has variance \( \mathrm{Var}[h] - 2c\,\mathrm{Cov}(h, g) + c^2\mathrm{Var}[g] \)
 
 Partition the sample space into strata \( A_1, \ldots, A_K \) with probabilities \( p_k = P(X \in A_k) \). Draw \( n_k \) samples within each stratum and estimate
 
-\[ \hat{\mu}_{\text{strat}} = \sum_{k=1}^K p_k \hat{\mu}_k. \]
+\[
+\hat{\mu}_{\text{strat}} = \sum_{k=1}^K p_k \hat{\mu}_k.
+\]
 
 Variance is always \( \leq \) the unstratified estimator.
 
@@ -310,12 +392,17 @@ Variance is always \( \leq \) the unstratified estimator.
 
 <div class="definition">
 <strong>Importance sampling</strong>: Draw \( X_1, \ldots, X_n \sim q \) (the <em>proposal</em>) and estimate
-\[ \mu = \int h(x)\frac{p(x)}{q(x)}\,q(x)\,dx \approx \frac{1}{n}\sum_{i=1}^n h(X_i)\,w(X_i), \quad w(x) = \frac{p(x)}{q(x)}. \]
+
+\[
+\mu = \int h(x)\frac{p(x)}{q(x)}\,q(x)\,dx \approx \frac{1}{n}\sum_{i=1}^n h(X_i)\,w(X_i), \quad w(x) = \frac{p(x)}{q(x)}.
+\]
 </div>
 
 **Self-normalized IS.** When \( p \) is known only up to a constant \( Z \), use normalised weights \( \tilde{w}_i = w_i / \sum_j w_j \):
 
-\[ \hat{\mu}_{\mathrm{SN}} = \sum_{i=1}^n \tilde{w}_i\, h(X_i). \]
+\[
+\hat{\mu}_{\mathrm{SN}} = \sum_{i=1}^n \tilde{w}_i\, h(X_i).
+\]
 
 This is consistent but slightly biased for finite \( n \).
 
@@ -346,7 +433,10 @@ The posterior distribution \( \pi(\theta \mid y) \propto \pi(\theta)\,L(\theta; 
 
 <div class="definition">
 <strong>Metropolis-Hastings</strong>: Given current state \( \theta^{(t)} \), propose \( \theta^* \sim q(\cdot \mid \theta^{(t)}) \). Accept with probability
-\[ \alpha\!\left(\theta^{(t)}, \theta^*\right) = \min\!\left(1,\; \frac{\pi(\theta^*)\,q\!\left(\theta^{(t)} \mid \theta^*\right)}{\pi\!\left(\theta^{(t)}\right)\,q\!\left(\theta^* \mid \theta^{(t)}\right)}\right). \]
+
+\[
+\alpha\!\left(\theta^{(t)}, \theta^*\right) = \min\!\left(1,\; \frac{\pi(\theta^*)\,q\!\left(\theta^{(t)} \mid \theta^*\right)}{\pi\!\left(\theta^{(t)}\right)\,q\!\left(\theta^* \mid \theta^{(t)}\right)}\right).
+\]
 Set \( \theta^{(t+1)} = \theta^* \) with probability \( \alpha \), else \( \theta^{(t+1)} = \theta^{(t)} \).
 </div>
 
@@ -355,7 +445,10 @@ Set \( \theta^{(t+1)} = \theta^* \) with probability \( \alpha \), else \( \thet
 ### Detailed Balance (Proof)
 
 **Theorem.** The MH algorithm satisfies detailed balance with respect to \( \pi \):
-\[ \pi(\theta)\,P(\theta, \theta') = \pi(\theta')\,P(\theta', \theta) \quad \forall\, \theta \neq \theta', \]
+
+\[
+\pi(\theta)\,P(\theta, \theta') = \pi(\theta')\,P(\theta', \theta) \quad \forall\, \theta \neq \theta',
+\]
 where \( P(\theta, d\theta') \) is the transition kernel.
 
 *Proof.* For \( \theta \neq \theta' \),
@@ -414,7 +507,10 @@ The optimal acceptance rate for a \( d \)-dimensional Gaussian target in the ran
 
 <div class="definition">
 <strong>Gibbs sampler</strong>: When \( \theta = (\theta_1, \ldots, \theta_p) \), the Gibbs sampler cycles through components, drawing each from its <em>full conditional</em>:
-\[ \theta_j^{(t+1)} \sim \pi\!\left(\theta_j \mid \theta_{-j}^{(t)}\right), \quad j = 1, \ldots, p. \]
+
+\[
+\theta_j^{(t+1)} \sim \pi\!\left(\theta_j \mid \theta_{-j}^{(t)}\right), \quad j = 1, \ldots, p.
+\]
 </div>
 
 This is a special case of MH with acceptance rate 1. **Random scan** Gibbs selects \( j \) uniformly at random each iteration. The Gibbs sampler is efficient when full conditionals are conjugate (e.g., in hierarchical models) but mixes poorly when parameters are highly correlated.
@@ -423,13 +519,23 @@ This is a special case of MH with acceptance rate 1. **Random scan** Gibbs selec
 
 HMC augments \( \theta \) with an auxiliary momentum variable \( \rho \sim \mathcal{N}(0, M) \) and simulates Hamiltonian dynamics with Hamiltonian
 
-\[ H(\theta, \rho) = -\log\pi(\theta) + \frac{1}{2}\rho^\top M^{-1}\rho. \]
+\[
+H(\theta, \rho) = -\log\pi(\theta) + \frac{1}{2}\rho^\top M^{-1}\rho.
+\]
 
 The **leapfrog integrator** approximates the dynamics:
 
-\[ \rho_{t + \varepsilon/2} = \rho_t + \frac{\varepsilon}{2}\nabla\log\pi(\theta_t), \]
-\[ \theta_{t+\varepsilon} = \theta_t + \varepsilon M^{-1}\rho_{t+\varepsilon/2}, \]
-\[ \rho_{t+\varepsilon} = \rho_{t+\varepsilon/2} + \frac{\varepsilon}{2}\nabla\log\pi(\theta_{t+\varepsilon}). \]
+\[
+\rho_{t + \varepsilon/2} = \rho_t + \frac{\varepsilon}{2}\nabla\log\pi(\theta_t),
+\]
+
+\[
+\theta_{t+\varepsilon} = \theta_t + \varepsilon M^{-1}\rho_{t+\varepsilon/2},
+\]
+
+\[
+\rho_{t+\varepsilon} = \rho_{t+\varepsilon/2} + \frac{\varepsilon}{2}\nabla\log\pi(\theta_{t+\varepsilon}).
+\]
 
 After \( L \) leapfrog steps the proposal is accepted with the standard MH correction for energy error. HMC explores the parameter space in large, auto-correlated jumps by exploiting gradient information, greatly reducing random-walk behaviour. **NUTS** (No-U-Turn Sampler) automatically tunes \( L \) and \( \varepsilon \) and is the default in Stan.
 
@@ -439,7 +545,9 @@ After \( L \) leapfrog steps the proposal is accepted with the standard MH corre
 
 Run \( m \) parallel chains of length \( n \). Let \( B \) = between-chain variance, \( W \) = within-chain variance. The potential scale reduction factor is
 
-\[ \hat{R} = \sqrt{\frac{(n-1)/n \cdot W + B/n}{W}}. \]
+\[
+\hat{R} = \sqrt{\frac{(n-1)/n \cdot W + B/n}{W}}.
+\]
 
 \( \hat{R} \approx 1 \) (say \( < 1.01 \)) indicates convergence. Values \( > 1.1 \) suggest poor mixing.
 
@@ -447,7 +555,9 @@ Run \( m \) parallel chains of length \( n \). Let \( B \) = between-chain varia
 
 The **effective sample size** (ESS) corrects for autocorrelation:
 
-\[ \text{ESS} = \frac{n}{1 + 2\sum_{k=1}^{\infty} \rho_k}, \]
+\[
+\text{ESS} = \frac{n}{1 + 2\sum_{k=1}^{\infty} \rho_k},
+\]
 
 where \( \rho_k \) is the lag-\( k \) autocorrelation. Aim for \( \text{ESS} \geq 400 \) for stable estimates. For tails/quantiles, aim for \( \geq 1000 \).
 
@@ -505,9 +615,13 @@ The **empirical distribution function** \( \hat{F}_n \) places mass \( 1/n \) at
 
 ### Bootstrap Estimates of Bias and Standard Error
 
-\[ \widehat{\mathrm{bias}} = \bar{\theta}^* - \hat{\theta}, \qquad \bar{\theta}^* = \frac{1}{B}\sum_{b=1}^B \hat{\theta}_b^*, \]
+\[
+\widehat{\mathrm{bias}} = \bar{\theta}^* - \hat{\theta}, \qquad \bar{\theta}^* = \frac{1}{B}\sum_{b=1}^B \hat{\theta}_b^*,
+\]
 
-\[ \widehat{\mathrm{SE}} = \left[\frac{1}{B-1}\sum_{b=1}^B (\hat{\theta}_b^* - \bar{\theta}^*)^2\right]^{1/2}. \]
+\[
+\widehat{\mathrm{SE}} = \left[\frac{1}{B-1}\sum_{b=1}^B (\hat{\theta}_b^* - \bar{\theta}^*)^2\right]^{1/2}.
+\]
 
 **How many bootstrap replicates?** \( B = 200 \) suffices for SE estimation; \( B = 1000\text{–}2000 \) for confidence intervals; \( B = 5000\text{–}10000 \) for BCa or small tail probabilities.
 
@@ -517,13 +631,17 @@ Let \( Q_\alpha^* \) denote the \( \alpha \)-quantile of \( \{\hat{\theta}_b^*\}
 
 ### Basic (Pivotal) Bootstrap CI
 
-\[ \left[2\hat{\theta} - Q_{1-\alpha/2}^*,\; 2\hat{\theta} - Q_{\alpha/2}^*\right]. \]
+\[
+\left[2\hat{\theta} - Q_{1-\alpha/2}^*,\; 2\hat{\theta} - Q_{\alpha/2}^*\right].
+\]
 
 Derived by assuming \( \hat{\theta}^* - \hat{\theta} \approx \hat{\theta} - \theta \), so pivoting the distribution of the bootstrap error.
 
 ### Percentile CI
 
-\[ \left[Q_{\alpha/2}^*,\; Q_{1-\alpha/2}^*\right]. \]
+\[
+\left[Q_{\alpha/2}^*,\; Q_{1-\alpha/2}^*\right].
+\]
 
 Simple but only valid when the sampling distribution of \( \hat{\theta} \) is unbiased and symmetric.
 
@@ -531,7 +649,9 @@ Simple but only valid when the sampling distribution of \( \hat{\theta} \) is un
 
 Standardise each bootstrap replicate: \( t_b^* = (\hat{\theta}_b^* - \hat{\theta})/\widehat{\mathrm{SE}}_b^* \), where \( \widehat{\mathrm{SE}}_b^* \) is a nested bootstrap SE (or analytic SE). The CI is
 
-\[ \left[\hat{\theta} - Q_{1-\alpha/2}^{t^*}\,\widehat{\mathrm{SE}},\; \hat{\theta} - Q_{\alpha/2}^{t^*}\,\widehat{\mathrm{SE}}\right]. \]
+\[
+\left[\hat{\theta} - Q_{1-\alpha/2}^{t^*}\,\widehat{\mathrm{SE}},\; \hat{\theta} - Q_{\alpha/2}^{t^*}\,\widehat{\mathrm{SE}}\right].
+\]
 
 This achieves second-order accuracy.
 
@@ -540,14 +660,26 @@ This achieves second-order accuracy.
 The BCa CI (Efron 1987) corrects for both bias and skewness through two constants:
 
 **Bias-correction constant:**
-\[ z_0 = \Phi^{-1}\!\left(\frac{\#\{\hat{\theta}_b^* < \hat{\theta}\}}{B}\right). \]
+
+\[
+z_0 = \Phi^{-1}\!\left(\frac{\#\{\hat{\theta}_b^* < \hat{\theta}\}}{B}\right).
+\]
 
 **Acceleration constant** (via jackknife influence values):
-\[ \hat{\theta}_{(i)} = T(x_1, \ldots, x_{i-1}, x_{i+1}, \ldots, x_n) \quad \text{(leave-one-out)}, \]
-\[ a = \frac{\sum_{i=1}^n (\bar{\theta}_{(\cdot)} - \hat{\theta}_{(i)})^3}{6\left[\sum_{i=1}^n (\bar{\theta}_{(\cdot)} - \hat{\theta}_{(i)})^2\right]^{3/2}}. \]
+
+\[
+\hat{\theta}_{(i)} = T(x_1, \ldots, x_{i-1}, x_{i+1}, \ldots, x_n) \quad \text{(leave-one-out)},
+\]
+
+\[
+a = \frac{\sum_{i=1}^n (\bar{\theta}_{(\cdot)} - \hat{\theta}_{(i)})^3}{6\left[\sum_{i=1}^n (\bar{\theta}_{(\cdot)} - \hat{\theta}_{(i)})^2\right]^{3/2}}.
+\]
 
 The BCa CI uses adjusted quantile levels:
-\[ \alpha_1 = \Phi\!\left(z_0 + \frac{z_0 + z_{\alpha/2}}{1 - a(z_0 + z_{\alpha/2})}\right), \quad \alpha_2 = \Phi\!\left(z_0 + \frac{z_0 + z_{1-\alpha/2}}{1 - a(z_0 + z_{1-\alpha/2})}\right). \]
+
+\[
+\alpha_1 = \Phi\!\left(z_0 + \frac{z_0 + z_{\alpha/2}}{1 - a(z_0 + z_{\alpha/2})}\right), \quad \alpha_2 = \Phi\!\left(z_0 + \frac{z_0 + z_{1-\alpha/2}}{1 - a(z_0 + z_{1-\alpha/2})}\right).
+\]
 
 The BCa CI is \( [Q_{\alpha_1}^*, Q_{\alpha_2}^*] \).
 
@@ -633,7 +765,10 @@ Standard bootstrap violates the independence assumption for time series. **Block
 
 <div class="definition">
 <strong>Permutation test</strong>: Under the null hypothesis \( H_0 \) of exchangeability, all \( n! \) permutations of the labels are equally likely. The exact permutation <em>p</em>-value is
-\[ p = \frac{\#\{\pi :\; T(\pi(y)) \geq T(y_{\text{obs}})\}}{n!}, \]
+
+\[
+p = \frac{\#\{\pi :\; T(\pi(y)) \geq T(y_{\text{obs}})\}}{n!},
+\]
 where the count is over all \( n! \) permutations.
 </div>
 
@@ -660,7 +795,9 @@ perm_test <- function(x, y, B = 9999, seed = 1) {
 
 When \( n \) is large, enumerating all \( n! \) permutations is infeasible. Draw \( B \) random permutations:
 
-\[ \hat{p} = \frac{1 + \#\{b : T_b^* \geq T_{\text{obs}}\}}{B + 1}. \]
+\[
+\hat{p} = \frac{1 + \#\{b : T_b^* \geq T_{\text{obs}}\}}{B + 1}.
+\]
 
 The \( +1 \) in numerator and denominator counts the observed statistic itself and ensures \( \hat{p} \) is a valid \( p \)-value.
 
@@ -670,7 +807,9 @@ The \( +1 \) in numerator and denominator counts the observed statistic itself a
 
 Pool \( m + n \) observations, rank them 1 through \( m+n \). Let \( W = \sum_{i=1}^{m} R_i \) (sum of ranks from group 1). Under \( H_0 \) (equal distributions):
 
-\[ \mathrm{E}[W] = \frac{m(m+n+1)}{2}, \qquad \mathrm{Var}(W) = \frac{mn(m+n+1)}{12}. \]
+\[
+\mathrm{E}[W] = \frac{m(m+n+1)}{2}, \qquad \mathrm{Var}(W) = \frac{mn(m+n+1)}{12}.
+\]
 
 The **Mann-Whitney U statistic** \( U = W - m(m+1)/2 \) counts the number of pairs \( (X_i, Y_j) \) with \( X_i > Y_j \). Normal approximation: \( Z = (W - \mathrm{E}[W])/\sqrt{\mathrm{Var}(W)} \xrightarrow{d} \mathcal{N}(0,1) \) under \( H_0 \).
 
@@ -678,7 +817,9 @@ The **Mann-Whitney U statistic** \( U = W - m(m+1)/2 \) counts the number of pai
 
 For paired data \( D_i = X_i - Y_i \), rank \( |D_i| \) and compute
 
-\[ W^+ = \sum_{i: D_i > 0} R_i. \]
+\[
+W^+ = \sum_{i: D_i > 0} R_i.
+\]
 
 Under \( H_0: \mathrm{median}(D) = 0 \), \( \mathrm{E}[W^+] = n(n+1)/4 \) and \( \mathrm{Var}(W^+) = n(n+1)(2n+1)/24 \).
 
@@ -686,13 +827,17 @@ Under \( H_0: \mathrm{median}(D) = 0 \), \( \mathrm{E}[W^+] = n(n+1)/4 \) and \(
 
 Generalises Wilcoxon to \( K > 2 \) groups. Let \( R_{ij} \) be the rank of observation \( j \) in group \( i \) within the pooled sample of size \( N = \sum n_i \). Test statistic:
 
-\[ H = \frac{12}{N(N+1)}\sum_{i=1}^K \frac{1}{n_i}\left(\sum_{j=1}^{n_i} R_{ij}\right)^2 - 3(N+1). \]
+\[
+H = \frac{12}{N(N+1)}\sum_{i=1}^K \frac{1}{n_i}\left(\sum_{j=1}^{n_i} R_{ij}\right)^2 - 3(N+1).
+\]
 
 Under \( H_0 \), \( H \xrightarrow{d} \chi^2_{K-1} \).
 
 ### Spearman Rank Correlation
 
-\[ r_s = 1 - \frac{6\sum d_i^2}{n(n^2-1)}, \]
+\[
+r_s = 1 - \frac{6\sum d_i^2}{n(n^2-1)},
+\]
 
 where \( d_i = \mathrm{rank}(x_i) - \mathrm{rank}(y_i) \). Equals Pearson correlation on the ranks. Test: under \( H_0: \rho_s = 0 \), \( t = r_s\sqrt{(n-2)/(1-r_s^2)} \sim t_{n-2} \).
 
@@ -704,7 +849,9 @@ For Gaussian data, the asymptotic relative efficiency (ARE) of the Wilcoxon rank
 
 For \( m \) simultaneous tests with \( p\text{-values} \) \( p_{(1)} \leq \cdots \leq p_{(m)} \), the **Benjamini-Hochberg** (BH) procedure controls FDR at level \( q \):
 
-\[ \text{Reject } H_{(i)} \text{ for all } i \leq \hat{k}, \quad \hat{k} = \max\!\left\{i : p_{(i)} \leq \frac{i\,q}{m}\right\}. \]
+\[
+\text{Reject } H_{(i)} \text{ for all } i \leq \hat{k}, \quad \hat{k} = \max\!\left\{i : p_{(i)} \leq \frac{i\,q}{m}\right\}.
+\]
 
 Under independence, \( \mathrm{FDR} \leq (m_0/m)\,q \leq q \), where \( m_0 \) is the number of true nulls.
 
@@ -718,7 +865,10 @@ Under independence, \( \mathrm{FDR} \leq (m_0/m)\,q \leq q \), where \( m_0 \) i
 
 <div class="definition">
 <strong>Bayes' theorem</strong>: The posterior distribution combines the prior \( \pi(\theta) \) and likelihood \( L(\theta; y) \):
-\[ \pi(\theta \mid y) = \frac{\pi(\theta)\,L(\theta;\, y)}{\int \pi(\theta')\,L(\theta';\, y)\,d\theta'} \propto \pi(\theta)\,L(\theta;\, y). \]
+
+\[
+\pi(\theta \mid y) = \frac{\pi(\theta)\,L(\theta;\, y)}{\int \pi(\theta')\,L(\theta';\, y)\,d\theta'} \propto \pi(\theta)\,L(\theta;\, y).
+\]
 </div>
 
 Posterior inference: \( \mathrm{E}[\theta \mid y] \), \( \mathrm{Var}(\theta \mid y) \), credible intervals, predictive distributions \( p(\tilde{y} \mid y) = \int f(\tilde{y} \mid \theta)\,\pi(\theta \mid y)\,d\theta \).
@@ -741,21 +891,29 @@ For the normal-normal case: \( \mu_n = \sigma_n^2(\mu_0/\tau^2 + n\bar{y}/\sigma
 
 For non-conjugate posteriors, approximate \( \pi(\theta \mid y) \) by a Gaussian centred at the posterior mode \( \hat{\theta}_{\text{MAP}} \):
 
-\[ \log\pi(\theta \mid y) \approx \log\pi(\hat{\theta}_{\text{MAP}} \mid y) - \frac{1}{2}(\theta - \hat{\theta}_{\text{MAP}})^\top \mathcal{H}(\theta - \hat{\theta}_{\text{MAP}}), \]
+\[
+\log\pi(\theta \mid y) \approx \log\pi(\hat{\theta}_{\text{MAP}} \mid y) - \frac{1}{2}(\theta - \hat{\theta}_{\text{MAP}})^\top \mathcal{H}(\theta - \hat{\theta}_{\text{MAP}}),
+\]
 
 where \( \mathcal{H} = -\nabla^2 \log\pi(\theta \mid y)\big|_{\hat{\theta}_{\text{MAP}}} \). Thus
 
-\[ \pi(\theta \mid y) \approx \mathcal{N}\!\left(\hat{\theta}_{\text{MAP}},\, \mathcal{H}^{-1}\right). \]
+\[
+\pi(\theta \mid y) \approx \mathcal{N}\!\left(\hat{\theta}_{\text{MAP}},\, \mathcal{H}^{-1}\right).
+\]
 
 This gives \( O(n^{-1}) \) error in the posterior mean (Tierney & Kadane 1986). The marginal likelihood approximation is
 
-\[ p(y) \approx (2\pi)^{p/2}|\mathcal{H}|^{-1/2}\,\pi(\hat{\theta}_{\text{MAP}})\,L(\hat{\theta}_{\text{MAP}};\,y). \]
+\[
+p(y) \approx (2\pi)^{p/2}|\mathcal{H}|^{-1/2}\,\pi(\hat{\theta}_{\text{MAP}})\,L(\hat{\theta}_{\text{MAP}};\,y).
+\]
 
 ## INLA (Integrated Nested Laplace Approximation)
 
 INLA (Rue, Martino & Chopin 2009) extends the Laplace approximation to latent Gaussian models:
 
-\[ y_i \mid x_i, \psi \sim p(y_i \mid x_i, \psi), \quad x \mid \psi \sim \mathcal{N}(0, Q(\psi)^{-1}), \quad \psi \sim p(\psi). \]
+\[
+y_i \mid x_i, \psi \sim p(y_i \mid x_i, \psi), \quad x \mid \psi \sim \mathcal{N}(0, Q(\psi)^{-1}), \quad \psi \sim p(\psi).
+\]
 
 Key insight: compute marginals \( \pi(x_i \mid y) \) and \( \pi(\psi_j \mid y) \) via nested Laplace approximations on a grid over \( \psi \), avoiding full MCMC. INLA is orders of magnitude faster than MCMC for this model class (spatial models, GLMMs, survival models).
 
@@ -763,15 +921,21 @@ Key insight: compute marginals \( \pi(x_i \mid y) \) and \( \pi(\psi_j \mid y) \
 
 Variational inference (VI) approximates \( \pi(\theta \mid y) \) with a tractable distribution \( q(\theta) \) from a family \( \mathcal{Q} \) by minimising the KL divergence:
 
-\[ q^*(\theta) = \underset{q \in \mathcal{Q}}{\arg\min}\;\mathrm{KL}(q \,\|\, \pi(\cdot \mid y)). \]
+\[
+q^*(\theta) = \underset{q \in \mathcal{Q}}{\arg\min}\;\mathrm{KL}(q \,\|\, \pi(\cdot \mid y)).
+\]
 
 Equivalently, maximise the **Evidence Lower Bound (ELBO)**:
 
-\[ \mathcal{L}(q) = \mathrm{E}_q[\log p(y, \theta)] - \mathrm{E}_q[\log q(\theta)] = \log p(y) - \mathrm{KL}(q \,\|\, \pi). \]
+\[
+\mathcal{L}(q) = \mathrm{E}_q[\log p(y, \theta)] - \mathrm{E}_q[\log q(\theta)] = \log p(y) - \mathrm{KL}(q \,\|\, \pi).
+\]
 
 **Mean-field approximation:** Assume \( q(\theta) = \prod_{j=1}^p q_j(\theta_j) \). Each factor satisfies
 
-\[ \log q_j^*(\theta_j) = \mathrm{E}_{-j}[\log p(y, \theta)] + \text{const}. \]
+\[
+\log q_j^*(\theta_j) = \mathrm{E}_{-j}[\log p(y, \theta)] + \text{const}.
+\]
 
 This gives coordinate ascent VI (CAVI), which updates each factor in turn. VI is faster than MCMC but biases posterior uncertainty downward (underestimates variance) due to the independence assumption.
 
@@ -791,20 +955,27 @@ SMC is exact (unbiased) as \( N \to \infty \) and naturally handles online infer
 
 <div class="definition">
 <strong>Bayes factor</strong>: For models \( M_1 \) and \( M_2 \),
-\[ B_{12} = \frac{p(y \mid M_1)}{p(y \mid M_2)} = \frac{\int L(\theta_1;\, y)\,\pi(\theta_1 \mid M_1)\,d\theta_1}{\int L(\theta_2;\, y)\,\pi(\theta_2 \mid M_2)\,d\theta_2}. \]
+
+\[
+B_{12} = \frac{p(y \mid M_1)}{p(y \mid M_2)} = \frac{\int L(\theta_1;\, y)\,\pi(\theta_1 \mid M_1)\,d\theta_1}{\int L(\theta_2;\, y)\,\pi(\theta_2 \mid M_2)\,d\theta_2}.
+\]
 </div>
 
 Jeffreys' scale: \( B_{12} > 100 \) is "decisive" evidence for \( M_1 \). Bayes factors are sensitive to the prior on parameters (not just the prior over models).
 
 ### DIC (Deviance Information Criterion)
 
-\[ \mathrm{DIC} = D(\bar{\theta}) + 2\,p_D, \]
+\[
+\mathrm{DIC} = D(\bar{\theta}) + 2\,p_D,
+\]
 
 where \( D(\theta) = -2\log L(\theta; y) \) is the deviance, \( \bar{\theta} = \mathrm{E}[\theta \mid y] \), and \( p_D = \bar{D} - D(\bar{\theta}) \) is the effective number of parameters. Lower DIC indicates better out-of-sample predictive fit.
 
 ### WAIC (Widely Applicable Information Criterion)
 
-\[ \mathrm{WAIC} = -2\sum_{i=1}^n \log\mathrm{E}_{\theta \mid y}[p(y_i \mid \theta)] + 2\sum_{i=1}^n \mathrm{Var}_{\theta \mid y}[\log p(y_i \mid \theta)]. \]
+\[
+\mathrm{WAIC} = -2\sum_{i=1}^n \log\mathrm{E}_{\theta \mid y}[p(y_i \mid \theta)] + 2\sum_{i=1}^n \mathrm{Var}_{\theta \mid y}[\log p(y_i \mid \theta)].
+\]
 
 WAIC is fully Bayesian, uses the posterior predictive rather than a point estimate, and is asymptotically equivalent to leave-one-out cross-validation. It is preferred over DIC for hierarchical models.
 
@@ -812,7 +983,9 @@ WAIC is fully Bayesian, uses the posterior predictive rather than a point estima
 
 **Model.** For \( i = 1, \ldots, n \), \( y_i \in \{0,1\} \),
 
-\[ p(y_i = 1 \mid x_i, \beta) = \sigma(x_i^\top \beta), \quad \sigma(z) = \frac{e^z}{1+e^z}. \]
+\[
+p(y_i = 1 \mid x_i, \beta) = \sigma(x_i^\top \beta), \quad \sigma(z) = \frac{e^z}{1+e^z}.
+\]
 
 Prior: \( \beta \sim \mathcal{N}(0, \sigma_0^2 I) \). Posterior not conjugate — use MCMC.
 
@@ -855,11 +1028,15 @@ stan_trace(fit, pars = "beta")
 
 To assess model fit, simulate replicated data from the posterior predictive distribution and compare to observed data:
 
-\[ p(y^{\text{rep}} \mid y) = \int p(y^{\text{rep}} \mid \theta)\,\pi(\theta \mid y)\,d\theta. \]
+\[
+p(y^{\text{rep}} \mid y) = \int p(y^{\text{rep}} \mid \theta)\,\pi(\theta \mid y)\,d\theta.
+\]
 
 **Posterior predictive p-value** for test statistic \( T \):
 
-\[ p_B = P(T(y^{\text{rep}}) \geq T(y) \mid y). \]
+\[
+p_B = P(T(y^{\text{rep}}) \geq T(y) \mid y).
+\]
 
 Values near 0.5 indicate good fit; values near 0 or 1 indicate systematic discrepancy. Common checks: compare histograms, extreme quantiles, mean, standard deviation between \( y^{\text{rep}} \) and \( y_{\text{obs}} \).
 
@@ -871,13 +1048,17 @@ Values near 0.5 indicate good fit; values near 0 or 1 indicate systematic discre
 
 For the density of a sum \( S_n = \sum_{i=1}^n X_i \), the saddlepoint approximation (Lugannani & Rice 1980) gives:
 
-\[ \hat{f}_{S_n}(s) = \left[\frac{n}{2\pi K''(\hat{t})}\right]^{1/2} \exp\!\left[n K(\hat{t}) - \hat{t}\,s\right], \]
+\[
+\hat{f}_{S_n}(s) = \left[\frac{n}{2\pi K''(\hat{t})}\right]^{1/2} \exp\!\left[n K(\hat{t}) - \hat{t}\,s\right],
+\]
 
 where \( K(t) = \log \mathrm{E}[e^{tX}] \) is the cumulant-generating function and \( \hat{t} \) solves \( K'(\hat{t}) = s/n \). This approximation has **relative** error \( O(n^{-1}) \), vs. \( O(n^{-1/2}) \) for the normal approximation — it is far more accurate in the tails.
 
 The **Lugannani-Rice tail probability formula** for the MLE \( \hat{\theta} \):
 
-\[ P(\hat{\theta} \geq \hat{\theta}_{\text{obs}}) \approx 1 - \Phi(r) - \phi(r)\left(\frac{1}{u} - \frac{1}{r}\right), \]
+\[
+P(\hat{\theta} \geq \hat{\theta}_{\text{obs}}) \approx 1 - \Phi(r) - \phi(r)\left(\frac{1}{u} - \frac{1}{r}\right),
+\]
 
 where \( r \) is the signed root LR statistic and \( u \) involves the saddlepoint.
 
@@ -887,7 +1068,9 @@ Profile likelihood overestimates information (treats \( \hat{\lambda}_\psi \) as
 
 **Cox-Reid adjusted profile likelihood** (for orthogonal parameterisations):
 
-\[ \ell_{A}(\psi) = \ell_P(\psi) - \frac{1}{2}\log|j_{\lambda\lambda}(\psi, \hat{\lambda}_\psi)|, \]
+\[
+\ell_{A}(\psi) = \ell_P(\psi) - \frac{1}{2}\log|j_{\lambda\lambda}(\psi, \hat{\lambda}_\psi)|,
+\]
 
 where \( j_{\lambda\lambda} \) is the observed information matrix for \( \lambda \) at fixed \( \psi \). The adjustment accounts for the uncertainty in estimating nuisance parameters and gives third-order accurate inference on \( \psi \).
 
@@ -955,29 +1138,45 @@ Best practice for reproducible computational inference:
 
 ## Likelihood and Information
 
-\[ \ell(\theta) = \sum_{i=1}^n \log f(x_i;\theta), \quad s(\theta) = \frac{\partial\ell}{\partial\theta}, \quad \mathcal{I}(\theta) = -\frac{\partial^2\ell}{\partial\theta\partial\theta^\top}. \]
+\[
+\ell(\theta) = \sum_{i=1}^n \log f(x_i;\theta), \quad s(\theta) = \frac{\partial\ell}{\partial\theta}, \quad \mathcal{I}(\theta) = -\frac{\partial^2\ell}{\partial\theta\partial\theta^\top}.
+\]
 
-\[ \text{Wald CI: } \hat\theta \pm z_{\alpha/2}\,[\mathcal{I}(\hat\theta)]^{-1/2}, \quad \text{LR CI: } \{\theta : 2[\ell(\hat\theta)-\ell(\theta)] \leq \chi^2_{1,\alpha}\}. \]
+\[
+\text{Wald CI: } \hat\theta \pm z_{\alpha/2}\,[\mathcal{I}(\hat\theta)]^{-1/2}, \quad \text{LR CI: } \{\theta : 2[\ell(\hat\theta)-\ell(\theta)] \leq \chi^2_{1,\alpha}\}.
+\]
 
 ## EM Update
 
-\[ Q(\theta|\theta^{(t)}) = \mathrm{E}_{z|y,\theta^{(t)}}[\log L_c(\theta)], \quad \theta^{(t+1)} = \arg\max_\theta Q(\theta|\theta^{(t)}). \]
+\[
+Q(\theta|\theta^{(t)}) = \mathrm{E}_{z|y,\theta^{(t)}}[\log L_c(\theta)], \quad \theta^{(t+1)} = \arg\max_\theta Q(\theta|\theta^{(t)}).
+\]
 
 ## MH Accept-Reject
 
-\[ \alpha(\theta,\theta^*) = \min\!\left(1,\frac{\pi(\theta^*)q(\theta|\theta^*)}{\pi(\theta)q(\theta^*|\theta)}\right). \]
+\[
+\alpha(\theta,\theta^*) = \min\!\left(1,\frac{\pi(\theta^*)q(\theta|\theta^*)}{\pi(\theta)q(\theta^*|\theta)}\right).
+\]
 
 ## Bootstrap CIs
 
-\[ \text{Basic: } [2\hat\theta - Q_{1-\alpha/2}^*,\ 2\hat\theta - Q_{\alpha/2}^*], \quad \text{Percentile: } [Q_{\alpha/2}^*,\ Q_{1-\alpha/2}^*]. \]
+\[
+\text{Basic: } [2\hat\theta - Q_{1-\alpha/2}^*,\ 2\hat\theta - Q_{\alpha/2}^*], \quad \text{Percentile: } [Q_{\alpha/2}^*,\ Q_{1-\alpha/2}^*].
+\]
 
-\[ \text{BCa: use adjusted quantile levels } \alpha_1, \alpha_2 \text{ from } z_0, a. \]
+\[
+\text{BCa: use adjusted quantile levels } \alpha_1, \alpha_2 \text{ from } z_0, a.
+\]
 
 ## Bayesian
 
-\[ \pi(\theta|y) \propto \pi(\theta)L(\theta;y), \quad \text{ELBO: } \mathcal{L}(q) = \mathrm{E}_q[\log p(y,\theta)] - \mathrm{E}_q[\log q(\theta)]. \]
+\[
+\pi(\theta|y) \propto \pi(\theta)L(\theta;y), \quad \text{ELBO: } \mathcal{L}(q) = \mathrm{E}_q[\log p(y,\theta)] - \mathrm{E}_q[\log q(\theta)].
+\]
 
-\[ \text{WAIC} = -2\sum_i \log\mathrm{E}_{\theta|y}[p(y_i|\theta)] + 2\sum_i \mathrm{Var}_{\theta|y}[\log p(y_i|\theta)]. \]
+\[
+\text{WAIC} = -2\sum_i \log\mathrm{E}_{\theta|y}[p(y_i|\theta)] + 2\sum_i \mathrm{Var}_{\theta|y}[\log p(y_i|\theta)].
+\]
 
 ---
 
@@ -987,7 +1186,9 @@ Best practice for reproducible computational inference:
 
 For an exponential family with natural parameter \( \eta \) and log-partition function \( A(\eta) \):
 
-\[ \frac{\partial A(\eta)}{\partial \eta} = \mathrm{E}[T(X)], \qquad \frac{\partial^2 A(\eta)}{\partial \eta^2} = \mathrm{Var}(T(X)). \]
+\[
+\frac{\partial A(\eta)}{\partial \eta} = \mathrm{E}[T(X)], \qquad \frac{\partial^2 A(\eta)}{\partial \eta^2} = \mathrm{Var}(T(X)).
+\]
 
 This identity is fundamental: it says the MLE condition \( \nabla A(\hat\eta) = \bar{T} \) equates the model expectation of the sufficient statistic to the observed value, and the curvature of \( A \) gives the Fisher information.
 
@@ -1001,7 +1202,10 @@ This identity is fundamental: it says the MLE condition \( \nabla A(\hat\eta) = 
 | \( \mathrm{Gamma}(\alpha, \beta) \) | \( (\sum x_i, \sum \log x_i) \) | coupled nonlinear system | Newton-Raphson |
 
 For the Gamma model, the score equations are:
-\[ n\frac{\partial}{\partial\alpha}\log\Gamma(\alpha) - n\log\beta = -\sum\log x_i, \qquad \frac{n\alpha}{\beta} = \sum x_i. \]
+
+\[
+n\frac{\partial}{\partial\alpha}\log\Gamma(\alpha) - n\log\beta = -\sum\log x_i, \qquad \frac{n\alpha}{\beta} = \sum x_i.
+\]
 
 The second gives \( \hat\beta = \hat\alpha/\bar x \); substituting into the first gives an equation in \( \hat\alpha \) alone, solved numerically (Newton's method with initialisation \( \hat\alpha_0 \approx 1/(2(s^2 - \log\bar x + \overline{\log x})) \) via the moment approximation of Choi & Wette 1969).
 
@@ -1009,7 +1213,9 @@ The second gives \( \hat\beta = \hat\alpha/\bar x \); substituting into the firs
 
 With \( \alpha \) as the parameter of interest and \( \beta \) profiled out:
 
-\[ \hat\beta_\alpha = \frac{\alpha}{\bar x}, \qquad \ell_P(\alpha) = n\alpha\log\alpha - n\alpha\log\bar x - n\log\Gamma(\alpha) + (\alpha - 1)\sum\log x_i - n\alpha. \]
+\[
+\hat\beta_\alpha = \frac{\alpha}{\bar x}, \qquad \ell_P(\alpha) = n\alpha\log\alpha - n\alpha\log\bar x - n\log\Gamma(\alpha) + (\alpha - 1)\sum\log x_i - n\alpha.
+\]
 
 The profile likelihood ratio statistic \( W(\alpha_0) = 2[\ell_P(\hat\alpha) - \ell_P(\alpha_0)] \sim \chi^2_1 \) for large \( n \), giving a likelihood interval that is more accurate than the Wald interval especially for small \( n \) or when \( \alpha \) is near zero.
 
@@ -1023,7 +1229,9 @@ Let \( X_1, \ldots, X_n \overset{\text{iid}}{\sim} F \) with mean \( \mu \) and 
 
 Under the bootstrap, \( X_1^*, \ldots, X_n^* \overset{\text{iid}}{\sim} \hat{F}_n \). The bootstrap CLT gives
 
-\[ \sqrt{n}(\bar{X}_n^* - \bar{X}_n) \xrightarrow{d} \mathcal{N}(0, \hat{\sigma}_n^2) \quad \text{almost surely,} \]
+\[
+\sqrt{n}(\bar{X}_n^* - \bar{X}_n) \xrightarrow{d} \mathcal{N}(0, \hat{\sigma}_n^2) \quad \text{almost surely,}
+\]
 
 where \( \hat{\sigma}_n^2 = n^{-1}\sum(x_i - \bar{x})^2 \xrightarrow{a.s.} \sigma^2 \) by the LLN. Since the Gaussian distribution is continuous, convergence of the variance implies convergence of the whole distribution (Slutsky's theorem + continuous mapping). The bootstrap distribution consistently estimates the sampling distribution of \( \sqrt{n}(\bar{X}_n - \mu) \). \( \square \)
 
@@ -1033,11 +1241,15 @@ where \( \hat{\sigma}_n^2 = n^{-1}\sum(x_i - \bar{x})^2 \xrightarrow{a.s.} \sigm
 
 The observed-data log-likelihood and the complete-data log-likelihood satisfy
 
-\[ \ell(\theta; y) = \log L_c(\theta; y, z) - \log p(z \mid y, \theta) \]
+\[
+\ell(\theta; y) = \log L_c(\theta; y, z) - \log p(z \mid y, \theta)
+\]
 
 for any \( z \). Integrating both sides with respect to \( p(z \mid y, \theta^{(t)}) \):
 
-\[ \ell(\theta; y) = Q(\theta \mid \theta^{(t)}) - H(\theta \mid \theta^{(t)}). \]
+\[
+\ell(\theta; y) = Q(\theta \mid \theta^{(t)}) - H(\theta \mid \theta^{(t)}).
+\]
 
 Now compare \( \theta^{(t+1)} \) to \( \theta^{(t)} \):
 
@@ -1059,11 +1271,15 @@ Thus both terms combine to give \( \ell(\theta^{(t+1)}) \geq \ell(\theta^{(t)}) 
 
 The jackknife estimator of variance of \( \hat{\theta} \) is
 
-\[ v_J = \frac{n-1}{n}\sum_{i=1}^n \!\left(\hat{\theta}_{(i)} - \hat{\theta}_{(\cdot)}\right)^2. \]
+\[
+v_J = \frac{n-1}{n}\sum_{i=1}^n \!\left(\hat{\theta}_{(i)} - \hat{\theta}_{(\cdot)}\right)^2.
+\]
 
 For \( \hat{\theta} = \bar{X} \), \( \hat{\theta}_{(i)} = (n\bar{X} - X_i)/(n-1) \), so
 
-\[ v_J = \frac{n-1}{n}\sum_{i=1}^n \left(\frac{X_i - \bar{X}}{n-1}\right)^2 \cdot (n-1)^2 = \frac{1}{n(n-1)}\sum(X_i - \bar{X})^2 = \frac{s^2}{n}. \]
+\[
+v_J = \frac{n-1}{n}\sum_{i=1}^n \left(\frac{X_i - \bar{X}}{n-1}\right)^2 \cdot (n-1)^2 = \frac{1}{n(n-1)}\sum(X_i - \bar{X})^2 = \frac{s^2}{n}.
+\]
 
 This equals the classical variance estimator — the jackknife is consistent for the variance of the sample mean. For nonlinear statistics, the jackknife uses a linear approximation and may underestimate variance for heavy-tailed or highly nonlinear statistics; the bootstrap is preferred.
 

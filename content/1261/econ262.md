@@ -162,7 +162,9 @@ The puzzle Marx set himself was: how does profit arise in a system of commodity 
 
 The answer lies in the unique commodity **labor-power** — the worker's capacity to labor. Labor-power is sold as a commodity at its value (the subsistence wage — the cost of reproducing the worker). But labor-power has a use value to its purchaser that exceeds its exchange value: the worker can be made to labor for longer than the time required to reproduce the wage. The excess is **surplus value** — the source of profit, interest, and rent.
 
-\[ \text{Surplus Value} = \text{Value of Output} - \text{Value of Labor-Power (wage)} \]
+\[
+\text{Surplus Value} = \text{Value of Output} - \text{Value of Labor-Power (wage)}
+\]
 
 The **rate of exploitation** measures the ratio of surplus value to the value of labor-power: \( s' = S/V \), where \( S \) is surplus value and \( V \) is variable capital (wages). Capitalists seek to raise \( s' \) either by lengthening the working day (**absolute surplus value**) or by raising productivity so that the necessary labor time falls even as the working day stays constant (**relative surplus value**).
 
@@ -170,7 +172,9 @@ The **rate of exploitation** measures the ratio of surplus value to the value of
 
 Marx decomposed capital into **constant capital** \( C \) (machinery, raw materials — value is transferred to the product, not created) and **variable capital** \( V \) (labor-power — the source of new value and surplus value). The rate of profit is:
 
-\[ r = \frac{S}{C + V} = \frac{s'}{q + 1} \quad \text{where} \quad q = C/V \text{ is the organic composition of capital} \]
+\[
+r = \frac{S}{C + V} = \frac{s'}{q + 1} \quad \text{where} \quad q = C/V \text{ is the organic composition of capital}
+\]
 
 Capitalist competition drives firms to adopt labor-saving technology, raising the organic composition of capital \( q \). But since only living labor (variable capital) produces surplus value, a rising \( q \) tends to reduce the rate of profit — the **tendency for the rate of profit to fall**. This built-in contradiction drives recurring crises and is, for Marx, a fundamental instability of capitalism.
 
@@ -196,7 +200,9 @@ The classical school had struggled with the diamond-water paradox and the incons
 
 Jevons's *The Theory of Political Economy* (1871) framed economics as a **calculus of pleasure and pain**, drawing explicitly on Benthamite utilitarianism. He defined the goal of economics as the maximization of utility and showed that this required equating the ratio of marginal utilities to the ratio of prices:
 
-\[ \frac{MU_x}{MU_y} = \frac{P_x}{P_y} \]
+\[
+\frac{MU_x}{MU_y} = \frac{P_x}{P_y}
+\]
 
 This is the **equimarginal principle**: resources should be allocated so that the last unit of expenditure on any good yields the same marginal utility as the last unit spent on any other good. This principle generalizes to factor markets, time allocation, and any resource allocation problem.
 
@@ -248,7 +254,9 @@ Marshall introduced **consumer surplus** — the difference between what consume
 
 Marshall also formalized the concept of **price elasticity of demand**:
 
-\[ \varepsilon = -\frac{\partial Q}{\partial P} \cdot \frac{P}{Q} \]
+\[
+\varepsilon = -\frac{\partial Q}{\partial P} \cdot \frac{P}{Q}
+\]
 
 and identified the factors determining it: availability of substitutes (the most important), the share of the good in the consumer's budget, whether the good is a necessity or luxury, and the time available to adjust.
 

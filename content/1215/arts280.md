@@ -17,13 +17,17 @@ Here is the truth that too many textbooks obscure: ARTS 280 is not a math course
 
 Consider the <strong>mean</strong>, or arithmetic average. Everyone knows how to calculate an average — you add up all the scores and divide by how many there are. In statistical notation this is written:
 
-\[ \bar{x} = \frac{\sum x_i}{N} \]
+\[
+\bar{x} = \frac{\sum x_i}{N}
+\]
 
 Breaking this down: \(\bar{x}\) (called "x-bar") is the notation for the sample mean, the bar over any letter indicating an average. The capital Greek letter \(\Sigma\) (sigma) is the summation sign and means simply "add up everything that follows." The \(x_i\) refers to each individual score in the sample. Capital \(N\) is the total sample size. So the whole formula is just saying: add up all the individual scores and divide by the total number of scores. That is all an average is. The formula makes it look imposing, but the underlying instruction is something you have been doing since primary school.
 
 Similarly, the <strong>standard deviation</strong> — the average spread of scores around the mean — is written:
 
-\[ s_x = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n - 1}} \]
+\[
+s_x = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n - 1}}
+\]
 
 Again, this formula provides a set of instructions: for each score, find how far it sits from the mean, square that difference (to get rid of negative signs), add all those squared differences up, divide by \(n-1\), and take the square root to return to the original metric. Tedious? Perhaps. Mathematically sophisticated? Not at all.
 
@@ -121,7 +125,9 @@ Beyond simple frequencies and proportions, descriptive statistics includes sever
 
 <strong>Percentage change</strong> measures how much a quantity has shifted from one time period (or group) to another. It is calculated as:
 
-\[ \%\Delta = \frac{x_{\text{later}} - x_{\text{earlier}}}{x_{\text{earlier}}} \times 100 \]
+\[
+\%\Delta = \frac{x_{\text{later}} - x_{\text{earlier}}}{x_{\text{earlier}}} \times 100
+\]
 
 A <strong>ratio</strong> expresses the relative size of two quantities — for instance, the number of young adult offenders for every older adult offender. Ratios are purely comparative and do not involve population size.
 
@@ -194,16 +200,24 @@ For continuous variables, the most important measures of dispersion are the <str
 The computational path to the variance begins with the concept of a <strong>deviation score</strong>: the distance of each individual observation from the mean, expressed as \((x_i - \bar{x})\). Summing these deviations directly produces zero (because positive and negative deviations cancel), which is why they are squared before summing.
 
 <div class="definition"><strong>Variance (\(s^2\)):</strong> The average of the squared deviation scores:
-\[ s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1} \]
+
+\[
+s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1}
+\]
 The denominator is \(n-1\) rather than \(n\) because this produces an unbiased estimate of the population variance \(\sigma^2\).</div>
 
 <div class="definition"><strong>Standard deviation (\(s\)):</strong> The square root of the variance:
-\[ s = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n-1}} \]
+
+\[
+s = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n-1}}
+\]
 Taking the square root returns the measure to the original units of the variable. The standard deviation can be interpreted as the average distance of observations from the mean.</div>
 
 An alternative computational formula that avoids calculating deviation scores explicitly is:
 
-\[ s^2 = \frac{\sum x_i^2 - \frac{(\sum x_i)^2}{n}}{n-1} \]
+\[
+s^2 = \frac{\sum x_i^2 - \frac{(\sum x_i)^2}{n}}{n-1}
+\]
 
 This is arithmetically equivalent to the definitional formula and often easier to apply to larger data sets using a calculator's memory function.
 
@@ -239,7 +253,9 @@ The application of percentage change, ratios, and rates to real-world data illum
 
 A percentage change calculation comparing total offences committed by young adults (ages 18–24) versus older adults (ages 55 and above) reveals the dramatic decline in criminal activity that accompanies aging — a long-documented criminological phenomenon. To compute this:
 
-\[ \%\Delta = \frac{\text{older adults} - \text{young adults}}{\text{young adults}} \times 100 \]
+\[
+\%\Delta = \frac{\text{older adults} - \text{young adults}}{\text{young adults}} \times 100
+\]
 
 The result is a large negative percentage, confirming that older adults commit substantially fewer crimes than their younger counterparts. But this comparison conflates two things: age effects on criminal propensity and the different sizes of these age groups in the Canadian population. This is precisely where rates become essential. Expressing offences per 100,000 population in each age group removes the size difference and isolates the actual risk by age. The resulting comparison is far more analytically valid and interpretable.
 
@@ -252,7 +268,10 @@ The result is a large negative percentage, confirming that older adults commit s
 One of the most important transformations in all of statistics is the conversion of raw scores into <strong>z-scores</strong>, also called standardized scores.
 
 <div class="definition"><strong>Z-score:</strong> A standardized expression of a raw score indicating how many standard deviations above or below the mean the score falls:
-\[ z = \frac{x_i - \bar{x}}{s} \]
+
+\[
+z = \frac{x_i - \bar{x}}{s}
+\]
 Positive z-scores indicate scores above the mean; negative z-scores indicate scores below the mean. The magnitude indicates distance from the mean in standard deviation units.</div>
 
 The transformative property of z-scores is that any continuous distribution, regardless of its original units, becomes a <strong>z-distribution</strong> with a mean of zero and a standard deviation (and variance) of one. This common metric allows three powerful uses:
@@ -267,7 +286,9 @@ Third, and most importantly for inferential statistics: <strong>estimating exact
 
 The formula for the <strong>skewness coefficient</strong> is:
 
-\[ \text{Skewness} = \frac{N \sum (x_i - \bar{x})^3}{(N-1)(N-2)s^3} \]
+\[
+\text{Skewness} = \frac{N \sum (x_i - \bar{x})^3}{(N-1)(N-2)s^3}
+\]
 
 A skewness of zero indicates a perfectly symmetrical distribution. Positive values indicate a positive (right) skew; negative values indicate a negative (left) skew. In a skewed distribution, the mean, median, and mode will not coincide: in a positively skewed distribution the mode is lowest, then the median, and the mean is pulled highest by the long right tail.
 
@@ -352,11 +373,15 @@ The critical insight is the word "regardless." Even if the original variable is 
 
 The **standard error** (SE) of the mean is:
 
-\[ \text{SE} = \frac{\sigma}{\sqrt{n}} \]
+\[
+\text{SE} = \frac{\sigma}{\sqrt{n}}
+\]
 
 When the population standard deviation \(\sigma\) is unknown (which it almost always is in practice), it is estimated by the sample standard deviation \(s\), and this is permissible when the sample is large:
 
-\[ \hat{\text{SE}} = \frac{s}{\sqrt{n}} \]
+\[
+\hat{\text{SE}} = \frac{s}{\sqrt{n}}
+\]
 
 The standard error decreases as sample size increases — larger samples produce more precise estimates of the population mean, as intuition would suggest.
 
@@ -368,7 +393,9 @@ The standard error decreases as sample size increases — larger samples produce
 
 The CLT provides the justification for using the theoretical normal distribution to answer probability questions about sample means. The logic is as follows. We draw a sample of size \(n\) and compute the sample mean \(\bar{x}\). We want to know how likely we are to observe a mean this far from some hypothesized population mean, if that hypothesis is in fact true. By the CLT, we know the sampling distribution of means is normal with mean \(\mu\) and standard error \(\sigma/\sqrt{n}\). We therefore compute a z-score for our sample mean:
 
-\[ z = \frac{\bar{x} - \mu}{\sigma / \sqrt{n}} \]
+\[
+z = \frac{\bar{x} - \mu}{\sigma / \sqrt{n}}
+\]
 
 And then use Appendix A to find the exact probability corresponding to that z-score. A small probability means an unusual result under the null hypothesis; a large probability means our observed result is quite compatible with the null hypothesis.
 
@@ -440,13 +467,17 @@ A <strong>point estimate</strong> — the sample mean or sample proportion — p
 
 For a large-sample confidence interval for the population mean \(\mu\):
 
-\[ \bar{x} \pm z^* \cdot \frac{s}{\sqrt{n}} \]
+\[
+\bar{x} \pm z^* \cdot \frac{s}{\sqrt{n}}
+\]
 
 where \(z^*\) is the critical value from the standard normal distribution (1.96 for 95% confidence, 2.576 for 99% confidence).
 
 For a small-sample confidence interval for \(\mu\), replace \(z^<em>\) with \(t^</em>\), the critical value from the t-distribution with \(n-1\) degrees of freedom:
 
-\[ \bar{x} \pm t^* \cdot \frac{s}{\sqrt{n}} \]
+\[
+\bar{x} \pm t^* \cdot \frac{s}{\sqrt{n}}
+\]
 
 Confidence intervals are widely reported in survey research and political polling. When a news outlet reports that "47% of Canadians support the policy, plus or minus 3 percentage points, 19 times out of 20," they are reporting a 95% confidence interval for the population proportion.
 
@@ -462,13 +493,17 @@ The Z-significance test asks: what is the probability of observing a sample mean
 
 The test statistic is:
 
-\[ z = \frac{\bar{x} - \mu_0}{s / \sqrt{n}} \]
+\[
+z = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}
+\]
 
 This converts the sample mean into a z-score expressing how many standard errors it sits above or below the hypothesized population mean. If the null hypothesis is true, this z-score should be close to zero. If it falls in the extreme tails, the null hypothesis becomes implausible.
 
 <strong>Example</strong>: Statistics Canada records that before new mortgage restrictions, the average days a home remained on the market across Canada was 42 days. Following the new restrictions, a random sample of 300 home sales shows an average of 49 days with a standard deviation of 60 days. Testing \(H_0: \mu = 42\) against \(H_1: \mu > 42\) (one-tailed):
 
-\[ z = \frac{49 - 42}{60/\sqrt{300}} = \frac{7}{3.46} = 2.02 \]
+\[
+z = \frac{49 - 42}{60/\sqrt{300}} = \frac{7}{3.46} = 2.02
+\]
 
 The critical value for a one-tailed test at \(\alpha = 0.05\) is 1.645. Since 2.02 > 1.645, we reject \(H_0\) and conclude with 95% confidence that homes are staying on the market longer, consistent with the hypothesis that the credit restrictions are cooling the housing market.
 
@@ -476,7 +511,9 @@ The critical value for a one-tailed test at \(\alpha = 0.05\) is 1.645. Since 2.
 
 For a population proportion \(\pi\), the null hypothesis takes the form \(H_0: \pi = \pi_0\) and the test statistic is:
 
-\[ z = \frac{p - \pi_0}{\sqrt{\pi_0(1 - \pi_0)/n}} \]
+\[
+z = \frac{p - \pi_0}{\sqrt{\pi_0(1 - \pi_0)/n}}
+\]
 
 where \(p\) is the sample proportion. The same z-distribution and critical values apply.
 
@@ -490,7 +527,9 @@ Many research questions involve comparing two groups: Are female and male gradua
 
 These are <strong>difference of means</strong> questions. The null hypothesis for such tests is almost invariably:
 
-\[ H_0: \mu_1 = \mu_2 \quad \text{(equivalently, } \mu_1 - \mu_2 = 0\text{)} \]
+\[
+H_0: \mu_1 = \mu_2 \quad \text{(equivalently, } \mu_1 - \mu_2 = 0\text{)}
+\]
 
 The alternative is either \(H_1: \mu_1 \neq \mu_2\) (two-tailed) or directional (one-tailed) if theory predicts which group will be higher.
 
@@ -498,7 +537,9 @@ The alternative is either \(H_1: \mu_1 \neq \mu_2\) (two-tailed) or directional 
 
 When both samples are large (\(n_1 + n_2 \geq 100\)), the test statistic is:
 
-\[ z = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} \]
+\[
+z = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
+\]
 
 The denominator is the combined standard error for the two samples. The same Appendix A critical values apply: \(\pm 1.96\) for a two-tailed test at 95% confidence, etc.
 
@@ -512,11 +553,15 @@ When the combined sample size is below 100, a t-test is required. In addition to
 
 The homoscedasticity assumption is consequential: it means the two sample variances must be <strong>pooled</strong> into a single estimate of the common variance before computing the standard error:
 
-\[ s_p^2 = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2} \]
+\[
+s_p^2 = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}
+\]
 
 The test statistic is then:
 
-\[ t = \frac{\bar{x}_1 - \bar{x}_2}{s_p\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \]
+\[
+t = \frac{\bar{x}_1 - \bar{x}_2}{s_p\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}
+\]
 
 with degrees of freedom \(df = n_1 + n_2 - 2\). Critical values are obtained from Appendix B (the t-table).
 
@@ -526,7 +571,9 @@ When the two samples are not independent — for example, when measuring the sam
 
 The procedure is to compute the <strong>difference score</strong> \(d_i = x_{1i} - x_{2i}\) for each pair, then apply the one-sample t-test to the set of difference scores:
 
-\[ t = \frac{\bar{d}}{s_d / \sqrt{n}} \]
+\[
+t = \frac{\bar{d}}{s_d / \sqrt{n}}
+\]
 
 where \(\bar{d}\) is the mean difference, \(s_d\) is the standard deviation of the differences, and \(n\) is the number of pairs. Degrees of freedom are \(df = n - 1\). The paired design is preferred when pairing can substantially reduce variability, increasing the power of the test.
 
@@ -542,8 +589,13 @@ When the research question involves comparing means across three or more groups 
 
 The ANOVA hypotheses are:
 
-\[ H_0: \mu_1 = \mu_2 = \cdots = \mu_k \]
-\[ H_1: \mu_i \neq \mu_j \text{ for at least one pair } (i, j) \]
+\[
+H_0: \mu_1 = \mu_2 = \cdots = \mu_k
+\]
+
+\[
+H_1: \mu_i \neq \mu_j \text{ for at least one pair } (i, j)
+\]
 
 The alternative hypothesis is always non-directional in ANOVA — we are not predicting which specific group will be highest, only that the groups are not all equal.
 
@@ -552,17 +604,31 @@ The alternative hypothesis is always non-directional in ANOVA — we are not pre
 ANOVA's logic hinges on partitioning the total variability in the dependent variable into two sources.
 
 <div class="definition"><strong>Total Sum of Squares (SST):</strong> The total variability across all observations, measuring how much each observation deviates from the overall (grand) mean:
-\[ SS_T = \sum_{j=1}^{k}\sum_{i=1}^{n_j}(x_{ij} - \bar{x})^2 \]</div>
+
+\[
+SS_T = \sum_{j=1}^{k}\sum_{i=1}^{n_j}(x_{ij} - \bar{x})^2
+\]
+</div>
 
 <div class="definition"><strong>Between-Groups Sum of Squares (SSB):</strong> The variability due to differences between group means, measuring how much each group mean deviates from the grand mean:
-\[ SS_B = \sum_{j=1}^{k} n_j(\bar{x}_j - \bar{x})^2 \]</div>
+
+\[
+SS_B = \sum_{j=1}^{k} n_j(\bar{x}_j - \bar{x})^2
+\]
+</div>
 
 <div class="definition"><strong>Within-Groups Sum of Squares (SSW):</strong> The variability due to differences within groups, measuring how much individual scores deviate from their own group mean:
-\[ SS_W = \sum_{j=1}^{k}\sum_{i=1}^{n_j}(x_{ij} - \bar{x}_j)^2 \]</div>
+
+\[
+SS_W = \sum_{j=1}^{k}\sum_{i=1}^{n_j}(x_{ij} - \bar{x}_j)^2
+\]
+</div>
 
 The fundamental identity: \(SS_T = SS_B + SS_W\). The F-statistic is the ratio of between-groups variance (mean square between) to within-groups variance (mean square within):
 
-\[ F = \frac{SS_B / (k-1)}{SS_W / (N-k)} = \frac{MS_B}{MS_W} \]
+\[
+F = \frac{SS_B / (k-1)}{SS_W / (N-k)} = \frac{MS_B}{MS_W}
+\]
 
 A large F-value indicates that between-group differences are large relative to within-group variability, providing evidence against the null hypothesis. Critical values come from the F-distribution (Appendix B), indexed by degrees of freedom in the numerator (\(k-1\)) and denominator (\(N-k\)).
 
@@ -570,7 +636,9 @@ A large F-value indicates that between-group differences are large relative to w
 
 Statistical significance tells us whether the group differences are real at the population level; it does not tell us how strong or important the relationship is. The <strong>effect size</strong> measure for ANOVA is <strong>eta-squared</strong>:
 
-\[ \eta^2 = \frac{SS_B}{SS_T} \]
+\[
+\eta^2 = \frac{SS_B}{SS_T}
+\]
 
 Eta-squared represents the proportion of total variance in the dependent variable explained by the independent variable. A value of 0.20 means the grouping variable accounts for 20% of the variance in the outcome — quite a substantial effect in most social science contexts.
 
@@ -582,11 +650,15 @@ Eta-squared represents the proportion of total variance in the dependent variabl
 
 <strong>Regression analysis</strong> examines the causal relationship between a continuous-level independent variable (\(x\)) and a continuous-level dependent variable (\(y\)). The <strong>simple regression model</strong> (one independent variable) specifies:
 
-\[ y_i = \alpha + \beta x_i + \varepsilon_i \]
+\[
+y_i = \alpha + \beta x_i + \varepsilon_i
+\]
 
 where \(\alpha\) is the <strong>intercept</strong> (the population value of \(y\) when \(x = 0\)), \(\beta\) is the <strong>slope</strong> (the expected change in \(y\) per unit increase in \(x\)), and \(\varepsilon_i\) is the <strong>error term</strong> (the deviation of the actual observation from the model's prediction). At the sample level, the model is estimated as:
 
-\[ \hat{y}_i = a + b x_i \]
+\[
+\hat{y}_i = a + b x_i
+\]
 
 where \(a\) is the sample intercept and \(b\) is the sample slope. The difference between an observed value and its predicted value, \(e_i = y_i - \hat{y}_i\), is called a <strong>residual</strong>.
 
@@ -594,9 +666,13 @@ where \(a\) is the sample intercept and \(b\) is the sample slope. The differenc
 
 The slope and intercept are calculated using the <strong>method of ordinary least squares (OLS)</strong>, which minimizes the sum of squared residuals. The formulas are:
 
-\[ b = \frac{\sum x_i y_i - \frac{(\sum x_i)(\sum y_i)}{n}}{\sum x_i^2 - \frac{(\sum x_i)^2}{n}} \]
+\[
+b = \frac{\sum x_i y_i - \frac{(\sum x_i)(\sum y_i)}{n}}{\sum x_i^2 - \frac{(\sum x_i)^2}{n}}
+\]
 
-\[ a = \bar{y} - b\bar{x} \]
+\[
+a = \bar{y} - b\bar{x}
+\]
 
 The slope \(b\) is the most substantively interesting result: it tells you by how much \(y\) is predicted to change, on average, for each one-unit increase in \(x\). In the example running through the course notes — predicting student debt from years of education — the slope was found to be approximately \$1,093, meaning each additional year in school predicted about a thousand dollars more in debt. The intercept \(a\) is the predicted value of \(y\) when \(x = 0\); it may or may not be substantively meaningful depending on whether \(x = 0\) is a realistic value.
 
@@ -610,7 +686,9 @@ Three criteria determine whether a regression model is any good:
 
 <strong>Goodness of Fit</strong>: The <strong>coefficient of determination</strong> \(r^2\) quantifies how well the model fits the data:
 
-\[ r^2 = 1 - \frac{SS_{\text{residual}}}{SS_{\text{total}}} = \frac{SS_{\text{regression}}}{SS_{\text{total}}} \]
+\[
+r^2 = 1 - \frac{SS_{\text{residual}}}{SS_{\text{total}}} = \frac{SS_{\text{regression}}}{SS_{\text{total}}}
+\]
 
 \(r^2\) ranges from 0 to 1 and represents the proportion of total variance in \(y\) that is explained by the linear relationship with \(x\). An \(r^2\) of 0.52 means 52% of the variation in debt is accounted for by years of education — a substantial result.
 
@@ -618,7 +696,9 @@ Three criteria determine whether a regression model is any good:
 
 The <strong>Pearson r</strong> is the standardized measure of linear association between two continuous variables:
 
-\[ r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{(n-1)s_x s_y} \]
+\[
+r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{(n-1)s_x s_y}
+\]
 
 Unlike the slope \(b\), the Pearson r ranges from \(-1\) to \(+1\) and is unitless. A value of \(+1\) indicates a perfect positive linear relationship; \(-1\) indicates a perfect negative linear relationship; 0 indicates no linear relationship. The coefficient of determination \(r^2\) is literally the square of the Pearson r, which is one reason \(r^2\) has the appealing variance-explained interpretation.
 
@@ -630,7 +710,9 @@ The regression coefficients derived from a sample (\(a\), \(b\), \(r\), and \(r^
 
 The significance test for \(r^2\) uses an F-statistic:
 
-\[ F = \frac{r^2}{1 - r^2} \cdot (n - 2) \]
+\[
+F = \frac{r^2}{1 - r^2} \cdot (n - 2)
+\]
 
 with degrees of freedom 1 and \(n-2\), compared against the F-distribution (Appendix B). Significance tests for the slope \(\beta\) and intercept \(\alpha\) use t-statistics with \(n-2\) degrees of freedom. The significance test for the population correlation \(\rho\) also uses a t-statistic.
 
@@ -648,11 +730,15 @@ The null hypothesis states that the two variables are <strong>independent</stron
 
 The test compares <strong>observed cell frequencies</strong> (\(f_o\)) from the sample to <strong>expected cell frequencies</strong> (\(f_e\)) — what the cell counts would be if the null hypothesis were exactly true. Expected frequencies are calculated as:
 
-\[ f_e = \frac{(\text{row marginal})(\text{column marginal})}{N} \]
+\[
+f_e = \frac{(\text{row marginal})(\text{column marginal})}{N}
+\]
 
 The test statistic sums the squared discrepancies between observed and expected frequencies, weighted by the expected frequencies:
 
-\[ \chi^2 = \sum \frac{(f_o - f_e)^2}{f_e} \]
+\[
+\chi^2 = \sum \frac{(f_o - f_e)^2}{f_e}
+\]
 
 This statistic follows the chi-square distribution with degrees of freedom \(df = (r-1)(c-1)\), where \(r\) is the number of rows and \(c\) the number of columns in the table. Critical values come from Appendix C (the chi-square table).
 
@@ -660,7 +746,9 @@ This statistic follows the chi-square distribution with degrees of freedom \(df 
 
 The <strong>goodness of fit</strong> test is a variant applied to a single discrete variable rather than a cross-tabular table. It asks whether the observed distribution of a variable in the sample is consistent with some theorized population distribution. For example, if a die is fair, each face should come up one-sixth of the time. Throwing the die 60 times and computing:
 
-\[ \chi^2 = \sum_{i=1}^{k} \frac{(f_{o,i} - f_{e,i})^2}{f_{e,i}} \]
+\[
+\chi^2 = \sum_{i=1}^{k} \frac{(f_{o,i} - f_{e,i})^2}{f_{e,i}}
+\]
 
 where the expected frequency for each of the \(k\) categories is \(N \cdot p_i\) (\(p_i\) being the theorized proportion), tests whether the observed frequencies are consistent with the theoretical distribution. Degrees of freedom are \(k - 1\).
 
@@ -670,13 +758,17 @@ Statistical significance tells us that a relationship exists and generalizes to 
 
 <strong>Phi (\(\phi\))</strong> is appropriate for 2×2 tables and is calculated as:
 
-\[ \phi = \sqrt{\frac{\chi^2}{N}} \]
+\[
+\phi = \sqrt{\frac{\chi^2}{N}}
+\]
 
 It ranges from 0 to 1 (for 2×2 tables with no sign convention) or \(-1\) to \(+1\) in some formulations. <strong>Adjusted phi</strong> corrects for tables larger than 2×2.
 
 <strong>Cramer's V</strong> extends phi to larger tables:
 
-\[ V = \sqrt{\frac{\chi^2}{N \cdot \min(r-1, c-1)}} \]
+\[
+V = \sqrt{\frac{\chi^2}{N \cdot \min(r-1, c-1)}}
+\]
 
 Cramer's V ranges from 0 to 1 and allows comparison across tables of different sizes.
 
@@ -684,7 +776,9 @@ Cramer's V ranges from 0 to 1 and allows comparison across tables of different s
 
 <strong>The Point-Biserial Correlation</strong> is used when one variable is dichotomous (two categories) and the other is continuous, and is equivalent to the Pearson r computed on the two scores. <strong>Spearman's r</strong> (\(r_s\)) is a rank-order correlation appropriate when both variables are ordinal, and is computed by:
 
-\[ r_s = 1 - \frac{6 \sum d_i^2}{n(n^2-1)} \]
+\[
+r_s = 1 - \frac{6 \sum d_i^2}{n(n^2-1)}
+\]
 
 where \(d_i\) is the difference between the ranks of each individual on the two variables.
 
@@ -701,43 +795,85 @@ These two things are not the same. With a very large sample size, even a trivial
 ## Quick Reference: Key Formulas
 
 <strong>Sample Mean:</strong>
-\[ \bar{x} = \frac{\sum x_i}{n} \]
+
+\[
+\bar{x} = \frac{\sum x_i}{n}
+\]
 
 <strong>Sample Variance and Standard Deviation:</strong>
-\[ s^2 = \frac{\sum(x_i - \bar{x})^2}{n-1} \qquad s = \sqrt{s^2} \]
+
+\[
+s^2 = \frac{\sum(x_i - \bar{x})^2}{n-1} \qquad s = \sqrt{s^2}
+\]
 
 <strong>Z-score:</strong>
-\[ z = \frac{x_i - \bar{x}}{s} \]
+
+\[
+z = \frac{x_i - \bar{x}}{s}
+\]
 
 <strong>Standard Error of the Mean:</strong>
-\[ \text{SE} = \frac{s}{\sqrt{n}} \]
+
+\[
+\text{SE} = \frac{s}{\sqrt{n}}
+\]
 
 <strong>One-Sample Z-test for a Mean:</strong>
-\[ z = \frac{\bar{x} - \mu_0}{s/\sqrt{n}} \]
+
+\[
+z = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}
+\]
 
 <strong>Confidence Interval for \(\mu\) (large sample):</strong>
-\[ \bar{x} \pm z^* \cdot \frac{s}{\sqrt{n}} \]
+
+\[
+\bar{x} \pm z^* \cdot \frac{s}{\sqrt{n}}
+\]
 
 <strong>Pooled Variance (two-sample t-test):</strong>
-\[ s_p^2 = \frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2} \]
+
+\[
+s_p^2 = \frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}
+\]
 
 <strong>Paired T-test:</strong>
-\[ t = \frac{\bar{d}}{s_d / \sqrt{n}}, \quad df = n-1 \]
+
+\[
+t = \frac{\bar{d}}{s_d / \sqrt{n}}, \quad df = n-1
+\]
 
 <strong>ANOVA F-statistic:</strong>
-\[ F = \frac{SS_B/(k-1)}{SS_W/(N-k)} \]
+
+\[
+F = \frac{SS_B/(k-1)}{SS_W/(N-k)}
+\]
 
 <strong>Eta-squared:</strong>
-\[ \eta^2 = \frac{SS_B}{SS_T} \]
+
+\[
+\eta^2 = \frac{SS_B}{SS_T}
+\]
 
 <strong>Regression Slope:</strong>
-\[ b = \frac{\sum x_i y_i - \frac{(\sum x_i)(\sum y_i)}{n}}{\sum x_i^2 - \frac{(\sum x_i)^2}{n}} \]
+
+\[
+b = \frac{\sum x_i y_i - \frac{(\sum x_i)(\sum y_i)}{n}}{\sum x_i^2 - \frac{(\sum x_i)^2}{n}}
+\]
 
 <strong>Coefficient of Determination:</strong>
-\[ r^2 = \frac{SS_{\text{regression}}}{SS_{\text{total}}} \]
+
+\[
+r^2 = \frac{SS_{\text{regression}}}{SS_{\text{total}}}
+\]
 
 <strong>Chi-square Test Statistic:</strong>
-\[ \chi^2 = \sum \frac{(f_o - f_e)^2}{f_e} \]
+
+\[
+\chi^2 = \sum \frac{(f_o - f_e)^2}{f_e}
+\]
 
 <strong>Cramer's V:</strong>
-\[ V = \sqrt{\frac{\chi^2}{N \cdot \min(r-1, c-1)}} \]
+
+\[
+V = \sqrt{\frac{\chi^2}{N \cdot \min(r-1, c-1)}}
+\]

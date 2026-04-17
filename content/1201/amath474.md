@@ -32,6 +32,7 @@ The bridge between the Lagrangian and Hamiltonian formulations is the **Legendre
 
 <div class="definition">
 <strong>Legendre transform.</strong> Let \(V\) be a vector space and \(l : V \to \mathbb{R}\) a convex function. Define \(f(\mathsf{p}, \mathsf{v}) := p_a v^a - l(\mathsf{v})\) for \(\mathsf{p} \in V^<em>\). The Legendre transform of \(l\) is the function \(h : V^</em> \to \mathbb{R}\) defined by
+
 \[
 h(\mathsf{p}) := \max_{\mathsf{v} \in V} f(\mathsf{p}, \mathsf{v}).
 \]
@@ -73,6 +74,7 @@ since the first two terms cancel by Hamilton's equations. If \(H\) has no explic
 
 <div class="example">
 <strong>Quadratic Lagrangian.</strong> For \(L = \frac{1}{2} g_{ab}(\mathsf{q},t)\,\dot{q}^a \dot{q}^b - V(\mathsf{q},t)\), the canonical momenta are \(p_a = g_{ab}\dot{q}^b\), and the Hamiltonian is the mechanical energy:
+
 \[
 H = \frac{1}{2}g^{ab}p_a p_b + V(\mathsf{q},t),
 \]
@@ -101,6 +103,7 @@ To unify the dynamics of all dynamical variables under a single algebraic operat
 
 <div class="definition">
 <strong>Poisson bracket.</strong>
+
 \[
 \{f, g\} := \partial_\alpha f\, \tilde\Omega^{\alpha\beta}\, \partial_\beta g,
 \]
@@ -368,6 +371,7 @@ Introducing centre-of-mass and relative coordinates \(q = (q''+q')/2\) and \(x =
 
 <div class="definition">
 <strong>Wigner function.</strong> For a quantum state with density operator \(\hat\rho\),
+
 \[
 W(q,p) := \frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}\mathrm{d}x\; e^{-\frac{\mathrm{i}}{\hbar}px}\left\langle q + \tfrac{1}{2}x\,\Big|\,\hat\rho\,\Big|\,q - \tfrac{1}{2}x\right\rangle.
 \]
@@ -429,6 +433,7 @@ The bound \(|W(q,p)| \leq \frac{1}{\pi\hbar}\) follows from the Cauchy-Schwarz i
 
 <div class="key-box">
 <strong>The Wigner function can be negative.</strong> Taking two orthogonal states \(\hat\rho_1, \hat\rho_2\) (so \(\mathrm{Tr}(\hat\rho_1\hat\rho_2) = 0\)), the inner product formula gives
+
 \[
 2\pi\hbar\iint \mathrm{d}q\,\mathrm{d}p\; W_1(q,p)\,W_2(q,p) = 0.
 \]
@@ -473,6 +478,7 @@ The kinetic term \(\mathcal{T}\) is identical to its classical counterpart in th
 
 <div class="definition">
 <strong>Moyal bracket.</strong> The equation for the Wigner function can be written as
+
 \[
 \frac{\partial W}{\partial t} = \{H, W\}_M,
 \]
@@ -606,6 +612,7 @@ which leads directly to the Wigner function of the \(n\)-th Fock state:
 
 <div class="theorem">
 <strong>Wigner function of a Fock state.</strong>
+
 \[
 W_{|n\rangle}(\alpha,\alpha^*) = \frac{(-1)^n}{\pi\hbar}e^{-2|\alpha|^2}L_n(4|\alpha|^2),
 \]
@@ -664,6 +671,7 @@ This is a maximally entangled state in the continuous-variable setting. The exci
 
 <div class="theorem">
 <strong>Partial state of a two-mode squeezed vacuum is thermal.</strong> Tracing out one mode from the two-mode squeezed vacuum gives
+
 \[
 \hat\rho_A = \mathrm{Tr}_B\!\left(\hat{S}(\xi)|0\rangle\langle 0|\hat{S}^\dagger(\xi)\right) = \frac{1}{\cosh^2 r}\sum_{n=0}^{\infty}\tanh^{2n}r\;|n\rangle\langle n|,
 \]
@@ -729,6 +737,7 @@ Two objects completely characterize a Gaussian state.
 
 <div class="definition">
 <strong>First moments and covariance matrix.</strong> The <em>vector of first moments</em> is
+
 \[
 \xi_0^\mu := \langle\hat\Theta^\mu\rangle_{\hat\rho},
 \]
@@ -819,9 +828,11 @@ The **equations of motion for the covariance matrix** and first-moment vector fo
 
 <div class="theorem">
 <strong>Gaussian state time evolution.</strong>
+
 \[
 \dot{\boldsymbol\xi}_0 = \boldsymbol\Omega^{-1}(\bar{\boldsymbol{F}}\boldsymbol\xi_0 + \boldsymbol\alpha),
 \]
+
 \[
 \dot{\boldsymbol\sigma} = (\boldsymbol\Omega^{-1}\bar{\boldsymbol{F}})\boldsymbol\sigma + \boldsymbol\sigma(\boldsymbol\Omega^{-1}\bar{\boldsymbol{F}})^\mathsf{T}.
 \]
@@ -852,6 +863,7 @@ Every real symmetric positive-definite matrix (hence every valid covariance matr
 
 <div class="theorem">
 <strong>Williamson theorem.</strong> For any real symmetric positive-definite matrix \(\boldsymbol\sigma\) of dimension \(2n \times 2n\), there exists a symplectic matrix \(\boldsymbol{S}_\mathrm{D} \in \mathrm{Sp}(2n, \mathbb{R})\) such that
+
 \[
 \boldsymbol\sigma_\mathrm{D} = \boldsymbol{S}_\mathrm{D}\boldsymbol\sigma\boldsymbol{S}_\mathrm{D}^\mathsf{T} = \bigoplus_{i=1}^n \begin{pmatrix}\nu_i & 0 \\ 0 & \nu_i\end{pmatrix},
 \]
@@ -894,6 +906,7 @@ Rewriting in terms of the symplectic eigenvalue \(\nu_i = 2\bar{n}'_i + 1\):
 
 <div class="theorem">
 <strong>Von Neumann entropy of a Gaussian state.</strong> For a Gaussian state with covariance matrix \(\boldsymbol\sigma\) and symplectic eigenvalues \(\{\nu_1, \ldots, \nu_n\}\),
+
 \[
 S(\hat\rho) = \sum_{i=1}^n \left[\frac{\nu_i+1}{2}\log\frac{\nu_i+1}{2} - \frac{\nu_i-1}{2}\log\frac{\nu_i-1}{2}\right].
 \]
@@ -993,6 +1006,7 @@ Defining the **Kraus operators** \(\hat{K}_k := \langle e_k|\hat{U}|e_0\rangle\)
 
 <div class="theorem">
 <strong>Kraus representation theorem.</strong> Every quantum channel \(\mathcal{E}\) acting on density operators on \(\mathcal{H}_S\) can be written as
+
 \[
 \mathcal{E}(\hat\rho) = \sum_k \hat{K}_k\,\hat\rho\,\hat{K}_k^\dagger,
 \]
@@ -1133,6 +1147,7 @@ Under these two approximations, the reduced dynamics takes the form of a first-o
 
 <div class="theorem">
 <strong>Gorini-Kossakowski-Sudarshan-Lindblad (GKSL) master equation.</strong> The most general Markovian master equation consistent with CPTP dynamics is
+
 \[
 \frac{\mathrm{d}\hat\rho_S}{\mathrm{d}t} = -\frac{\mathrm{i}}{\hbar}[\hat{H}_\mathrm{eff},\hat\rho_S] + \sum_k \gamma_k\!\left(\hat{L}_k\hat\rho_S\hat{L}_k^\dagger - \frac{1}{2}\hat{L}_k^\dagger\hat{L}_k\hat\rho_S - \frac{1}{2}\hat\rho_S\hat{L}_k^\dagger\hat{L}_k\right),
 \]
@@ -1193,6 +1208,7 @@ The simplest particle detector model was proposed by Unruh and further developed
 
 <div class="definition">
 <strong>Unruh-DeWitt detector.</strong> A particle detector following a worldline \(\mathsf{x}(\tau)\) (parametrised by proper time \(\tau\)) couples to a quantum field \(\hat\phi\) through the interaction Hamiltonian (in the interaction picture)
+
 \[
 \hat{H}_\mathrm{int}(\tau) = \lambda\,\chi(\tau)\,\hat\mu(\tau) \otimes \hat\phi(\mathsf{x}(\tau)),
 \]

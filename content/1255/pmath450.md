@@ -43,6 +43,7 @@ Let \( (X, \mathcal{M}) \) be a measurable space. A <strong>signed measure</stro
 <li>\( \nu(\emptyset) = 0 \).</li>
 <li>\( \nu \) assumes at most one of the values \( +\infty \) and \( -\infty \).</li>
 <li>For every sequence \( \{E_k\}_{k=1}^\infty \) of pairwise disjoint sets in \( \mathcal{M} \),
+
 \[
 \nu\!\left(\bigcup_{k=1}^\infty E_k\right) = \sum_{k=1}^\infty \nu(E_k),
 \]
@@ -61,6 +62,7 @@ The abstract definition comes alive through explicit computations. The first fam
 
 <div class="example">
 <strong>Example 1.1 (Sine measure on \([0, 2\pi]\)).</strong> Let \( \mu = m \) be Lebesgue measure on \( [0, 2\pi] \) and define
+
 \[
 \nu(E) = \int_E \sin(x) \, dm(x), \quad E \in \mathcal{B}([0, 2\pi]).
 \]
@@ -69,6 +71,7 @@ Since \( f(x) = \sin(x) \) is integrable (and bounded), \( \nu \) is a well-defi
 \[
 \nu([0, \pi]) = \int_0^{\pi} \sin(x) \, dx = \bigl[-\cos(x)\bigr]_0^{\pi} = -\cos(\pi) + \cos(0) = 1 + 1 = 2.
 \]
+
 \[
 \nu([\pi, 2\pi]) = \int_{\pi}^{2\pi} \sin(x) \, dx = \bigl[-\cos(x)\bigr]_{\pi}^{2\pi} = -\cos(2\pi) + \cos(\pi) = -1 - 1 = -2.
 \]
@@ -86,6 +89,7 @@ In particular, \( \nu^+([0,\pi]) = 2 \), \( \nu^-([\pi,2\pi]) = 2 \), and \( |\n
 
 <div class="example">
 <strong>Example 1.2 (Difference of Dirac measures).</strong> Let \( X = \mathbb{R} \), \( \mathcal{M} = \mathcal{B}(\mathbb{R}) \), \( \mu_1 = \delta_0 \) (the Dirac mass at 0), and \( \mu_2 = \delta_1 \) (the Dirac mass at 1). Define
+
 \[
 \nu = \mu_1 - \mu_2 = \delta_0 - \delta_1.
 \]
@@ -163,6 +167,7 @@ The pair \( (P, N) \) is called a <strong>Hahn decomposition</strong> of \( X \)
 
 <div class="proof">
 <strong>Full proof.</strong> Without loss of generality, assume \( \nu \) does not take the value \( +\infty \) (so \( \nu : \mathcal{M} \to (-\infty, +\infty] \); the other case is symmetric). Define
+
 \[
 \lambda = \sup\{ \nu(E) : E \in \mathcal{M},\, E \text{ is a positive set for } \nu \}.
 \]
@@ -170,12 +175,14 @@ The pair \( (P, N) \) is called a <strong>Hahn decomposition</strong> of \( X \)
 <em>Step 1: \( \lambda \) is finite.</em> Since \( \emptyset \) is a positive set with \( \nu(\emptyset) = 0 \), we have \( \lambda \ge 0 \). Suppose \( P_1, P_2 \) are positive sets. Then \( P_1 \cup P_2 \) is also a positive set: for any measurable \( E \subseteq P_1 \cup P_2 \), write \( E = (E \cap P_1) \cup (E \cap P_2 \setminus P_1) \). Since \( E \cap P_1 \subseteq P_1 \) and \( E \cap P_2 \setminus P_1 \subseteq P_2 \), both have non-negative \( \nu \)-measure, so \( \nu(E) \ge 0 \). Thus countable unions of positive sets are positive. Now, \( \lambda < +\infty \): since \( \nu(X) \le \nu(P) + 0 \) for any positive set \( P \) (the complement contributes \( \le 0 \)), and \( \nu \) does not take \( +\infty \), we have \( \lambda \le \sup_P \nu(P) \le \nu(X) + \text{const} < +\infty \). (A cleaner argument: if \( \lambda = +\infty \), pick positive sets \( P_n \) with \( \nu(P_n) \ge n \); the union \( P = \bigcup P_n \) is positive with \( \nu(P) = +\infty \), contradicting that \( \nu \) does not attain \( +\infty \).)
 
 <em>Step 2: Construct the positive set \( P \) achieving \( \lambda \).</em> Choose positive sets \( P_n \) with \( \nu(P_n) \to \lambda \). Let \( P = \bigcup_{n=1}^\infty P_n \). Since \( P \) is a countable union of positive sets, \( P \) is itself a positive set. Moreover,
+
 \[
 \nu(P) \ge \nu(P_n) \quad \text{for all } n
 \]
 (because \( P_n \subseteq P \) and \( P \) is positive, so \( \nu(P) = \nu(P_n) + \nu(P \setminus P_n) \ge \nu(P_n) \)). Letting \( n \to \infty \), \( \nu(P) \ge \lambda \). But \( \nu(P) \le \lambda \) by definition of \( \lambda \). Thus \( \nu(P) = \lambda \).
 
 <em>Step 3: \( N = X \setminus P \) is a negative set.</em> Suppose for contradiction that \( N \) is not a negative set. Then there exists a measurable \( E \subseteq N \) with \( \nu(E) > 0 \). Since \( \nu(E) \) is finite (because \( \nu \) does not take \( +\infty \) and \( \nu(E) > 0 \)), by the Key Lemma, \( E \) contains a positive set \( Q \) with \( \nu(Q) > 0 \). Since \( Q \subseteq N = X \setminus P \), the set \( P \cup Q \) is a positive set (disjoint union of two positive sets) with
+
 \[
 \nu(P \cup Q) = \nu(P) + \nu(Q) = \lambda + \nu(Q) > \lambda,
 \]
@@ -186,6 +193,7 @@ contradicting the definition of \( \lambda \). Therefore \( N \) is a negative s
 
 <div class="example">
 <strong>Example: Hahn decomposition for the sine measure.</strong> Let \( \nu \) be the signed measure \( d\nu = \sin(x)\,dx \) on \( [0, 2\pi] \) from Example 1.1. We showed that \( P = [0, \pi] \) is a positive set and \( N = [\pi, 2\pi] \) is a negative set. The Jordan decomposition is:
+
 \[
 \nu^+(E) = \int_{E \cap [0,\pi]} \sin(x)\,dx, \qquad \nu^-(E) = \int_{E \cap [\pi, 2\pi]} (-\sin x)\,dx.
 \]
@@ -224,6 +232,7 @@ One checks that \( \nu^+ \) and \( \nu^- \) are genuine (non-negative) measures,
 
 <div class="theorem">
 <strong>Jordan Decomposition Theorem.</strong> Every signed measure \( \nu \) can be written uniquely as
+
 \[
 \nu = \nu^+ - \nu^-,
 \]
@@ -232,6 +241,7 @@ where \( \nu^+ \) and \( \nu^- \) are mutually singular positive measures, at le
 
 <div class="proof">
 <strong>Proof sketch.</strong> Existence follows from the Hahn decomposition: for any \( E \in \mathcal{M} \),
+
 \[
 \nu(E) = \nu(E \cap P) + \nu(E \cap N) = \nu^+(E) - \nu^-(E).
 \]
@@ -271,6 +281,7 @@ If \( f \in L^1(\mu) \) and \( \nu(E) = \int_E f \, d\mu \), then \( \nu \ll \mu
 
 <div class="theorem">
 <strong>Proposition (equivalent characterization).</strong> Let \( \mu \) be a positive finite measure and \( \nu \) a finite signed measure. Then \( \nu \ll \mu \) if and only if for every \( \varepsilon > 0 \) there exists \( \delta > 0 \) such that
+
 \[
 \mu(E) < \delta \implies |\nu(E)| < \varepsilon.
 \]
@@ -298,6 +309,7 @@ Let \( X = \mathbb{R} \), \( \mu = \) Lebesgue measure, and \( \nu = \delta_0 \)
 
 <div class="theorem">
 <strong>Lebesgue Decomposition Theorem.</strong> Let \( \mu \) be a \( \sigma \)-finite positive measure and \( \nu \) a \( \sigma \)-finite signed measure on \( (X, \mathcal{M}) \). Then there exists a unique pair of \( \sigma \)-finite signed measures \( \nu_{ac} \) and \( \nu_s \) such that
+
 \[
 \nu = \nu_{ac} + \nu_s,
 \]
@@ -310,6 +322,7 @@ with \( \nu_{ac} \ll \mu \) and \( \nu_s \perp \mu \). This is the <strong>Lebes
 
 <div class="example">
 <strong>Example: Lebesgue decomposition of \( \delta_0 + m|_{[0,1]} \).</strong> Let \( X = \mathbb{R} \), let \( \mu = m \) be Lebesgue measure, and let
+
 \[
 \nu = \delta_0 + m|_{[0,1]},
 \]
@@ -337,6 +350,7 @@ The Radon-Nikodym theorem is the measure-theoretic version of the fundamental th
 
 <div class="theorem">
 <strong>Radon-Nikodym Theorem.</strong> Let \( (X, \mathcal{M}, \mu) \) be a \( \sigma \)-finite measure space, and let \( \nu \) be a \( \sigma \)-finite signed measure on \( (X, \mathcal{M}) \) with \( \nu \ll \mu \). Then there exists a measurable function \( f : X \to [-\infty, +\infty] \), unique \( \mu \)-almost everywhere, such that
+
 \[
 \nu(E) = \int_E f \, d\mu \quad \text{for all } E \in \mathcal{M}.
 \]
@@ -359,6 +373,7 @@ The hypothesis of \( \sigma \)-finiteness is essential. The theorem fails for no
 
 <div class="example">
 <strong>Example: Polynomial density on \([0,1]\).</strong> Let \( \mu = m \) be Lebesgue measure on \( [0,1] \) and define
+
 \[
 \nu(E) = \int_E 3x^2 \, dm(x), \quad E \in \mathcal{B}([0,1]).
 \]
@@ -366,12 +381,14 @@ The hypothesis of \( \sigma \)-finiteness is essential. The theorem fails for no
 <strong>Step 1: Verify \( \nu \ll \mu \).</strong> If \( m(E) = 0 \), then \( \nu(E) = \int_E 3x^2\,dx = 0 \), since the integral of a bounded measurable function over a null set is zero. So \( \nu \ll m \). \checkmark
 
 <strong>Step 2: Identify the Radon-Nikodym derivative.</strong> By definition, \( f = d\nu/dm \) is the function satisfying \( \nu(E) = \int_E f\,dm \) for all \( E \). Comparing with the definition of \( \nu \), we read off immediately:
+
 \[
 \frac{d\nu}{dm} = 3x^2.
 \]
 We verify: \( \nu([0,1]) = \int_0^1 3x^2\,dx = [x^3]_0^1 = 1 \). Also \( \nu([0, 1/2]) = \int_0^{1/2} 3x^2\,dx = [x^3]_0^{1/2} = 1/8 \).
 
 <strong>Step 3: Change of variables formula.</strong> The Radon-Nikodym theorem implies the following change-of-variables identity: for any \( \nu \)-integrable function \( g \),
+
 \[
 \int_X g \, d\nu = \int_X g \cdot \frac{d\nu}{d\mu} \, d\mu.
 \]
@@ -389,6 +406,7 @@ This elegant proof is due to von Neumann and uses the Riesz representation theor
 
 <div class="proof">
 <strong>Proof (von Neumann / Hilbert space method).</strong> We first handle the case where both \( \mu \) and \( \nu \) are finite positive measures. Let \( \lambda = \mu + \nu \). Since \( \nu \ll \lambda \) and \( \mu \ll \lambda \), consider the Hilbert space \( H = L^2(X, \mathcal{M}, \lambda) \). Define the bounded linear functional
+
 \[
 \Phi(g) = \int_X g \, d\nu, \quad g \in L^2(\lambda).
 \]
@@ -424,6 +442,7 @@ The \( \sigma \)-finite case follows by decomposing \( X \) into countably many 
 
 <div class="theorem">
 <strong>Chain Rule.</strong> Let \( \lambda, \mu, \nu \) be \( \sigma \)-finite measures on \( (X, \mathcal{M}) \) with \( \nu \ll \mu \ll \lambda \). Then \( \nu \ll \lambda \) and
+
 \[
 \frac{d\nu}{d\lambda} = \frac{d\nu}{d\mu} \cdot \frac{d\mu}{d\lambda} \quad \lambda\text{-a.e.}
 \]
@@ -431,6 +450,7 @@ The \( \sigma \)-finite case follows by decomposing \( X \) into countably many 
 
 <div class="proof">
 <strong>Proof.</strong> For any \( E \in \mathcal{M} \),
+
 \[
 \nu(E) = \int_E \frac{d\nu}{d\mu} \, d\mu = \int_E \frac{d\nu}{d\mu} \cdot \frac{d\mu}{d\lambda} \, d\lambda.
 \]
@@ -439,6 +459,7 @@ By uniqueness of the Radon-Nikodym derivative, \( \frac{d\nu}{d\lambda} = \frac{
 
 <div class="example">
 <strong>Chain rule in action.</strong> Let \( \lambda = m \) (Lebesgue measure on \( [0,1] \)), let \( d\mu = 2x\,dm \) (so \( d\mu/dm = 2x \)), and let \( d\nu = 6x^2\,dm \) (so \( d\nu/dm = 6x^2 \)). Since \( \nu \ll \mu \) (both are absolutely continuous with respect to \( m \)), the chain rule gives
+
 \[
 \frac{d\nu}{dm} = \frac{d\nu}{d\mu} \cdot \frac{d\mu}{dm} \implies 6x^2 = \frac{d\nu}{d\mu} \cdot 2x \implies \frac{d\nu}{d\mu} = 3x.
 \]
@@ -447,6 +468,7 @@ Verification: \( \nu(E) = \int_E 6x^2\,dx \) and \( \int_E 3x\,d\mu = \int_E 3x 
 
 <div class="theorem">
 <strong>Reciprocal Rule.</strong> If \( \mu \ll \nu \) and \( \nu \ll \mu \) (i.e., \( \mu \) and \( \nu \) are mutually absolutely continuous), then
+
 \[
 \frac{d\mu}{d\nu} = \left(\frac{d\nu}{d\mu}\right)^{-1} \quad \mu\text{-a.e. (equivalently, } \nu\text{-a.e.)}
 \]
@@ -519,6 +541,7 @@ Let \( 1 \le p < \infty \) and let \( q \) be the conjugate exponent. For \( g \
 
 <div class="theorem">
 <strong>Proposition.</strong> The map \( \Phi_g \) is a bounded linear functional on \( L^p(\mu) \) with
+
 \[
 \|\Phi_g\|_{(L^p)^*} = \|g\|_{L^q(\mu)}.
 \]
@@ -527,6 +550,7 @@ In particular, the map \( \Phi : L^q(\mu) \to (L^p(\mu))^*, \, g \mapsto \Phi_g 
 
 <div class="proof">
 <strong>Proof.</strong> Linearity is clear. By Hölder's inequality,
+
 \[
 |\Phi_g(f)| = \left|\int fg \, d\mu\right| \le \|f\|_p \|g\|_q,
 \]
@@ -556,6 +580,7 @@ For \( p = q = 2 \), the duality is self-duality of the Hilbert space \( L^2 \).
 
 <div class="example">
 <strong>Example: Riesz representation for \( L^2([0,1]) \).</strong> Let \( \ell : L^2([0,1]) \to \mathbb{R} \) be the bounded linear functional defined by
+
 \[
 \ell(f) = \int_0^1 f(x) \cdot 2x \, dx.
 \]
@@ -564,12 +589,14 @@ We claim the representing function is \( g(x) = 2x \), and we verify all propert
 <strong>Finding \( g \):</strong> By the Riesz representation theorem for \( L^2 \), the unique \( g \in L^2([0,1]) \) satisfying \( \ell(f) = \int_0^1 fg\,dx \) for all \( f \in L^2 \) is \( g(x) = 2x \). Indeed, \( \ell(f) = \int_0^1 f(x) \cdot 2x\,dx \), so \( g \) is read off directly.
 
 <strong>Verifying the norm:</strong>
+
 \[
 \|g\|_2^2 = \int_0^1 (2x)^2 \, dx = \int_0^1 4x^2 \, dx = \left[\frac{4x^3}{3}\right]_0^1 = \frac{4}{3}.
 \]
 So \( \|g\|_2 = \sqrt{4/3} = \frac{2}{\sqrt{3}} \).
 
 <strong>Verifying the extremal function:</strong> For \( p = q = 2 \), the extremal function achieving \( \|\ell\| = \|g\|_2 \) is
+
 \[
 f_0(x) = \frac{g(x)}{\|g\|_2} = \frac{2x}{2/\sqrt{3}} = \sqrt{3}\, x.
 \]
@@ -591,6 +618,7 @@ So \( \|\ell\| = \|g\|_2 = \frac{2}{\sqrt{3}} = \sqrt{\frac{4}{3}} \). \checkmar
 
 <div class="theorem">
 <strong>Riesz Representation Theorem for \( L^p \).</strong> Let \( (X, \mathcal{M}, \mu) \) be a \( \sigma \)-finite measure space, and let \( 1 \le p < \infty \). Let \( q \) be the conjugate exponent. Then every bounded linear functional \( \ell \in (L^p(\mu))^* \) is of the form
+
 \[
 \ell(f) = \int_X fg \, d\mu \quad \forall f \in L^p(\mu)
 \]
@@ -607,12 +635,14 @@ for a unique \( g \in L^q(\mu) \), and \( \|\ell\|_{(L^p)^*} = \|g\|_{L^q(\mu)} 
 <strong>Proof sketch (\( 1 < p < \infty \), \( \sigma \)-finite \( \mu \)).</strong>
 
 <strong>Step 1: Construct a signed measure.</strong> Let \( \ell \in (L^p(\mu))^* \). Define a set function \( \nu : \mathcal{M} \to \mathbb{R} \) by
+
 \[
 \nu(E) = \ell(\mathbf{1}_E)
 \]
 for measurable sets \( E \) with \( \mu(E) < \infty \) (so that \( \mathbf{1}_E \in L^p(\mu) \)). One verifies that \( \nu \) extends to a finite signed measure on \( \mathcal{M} \), and that \( \nu \ll \mu \).
 
 <strong>Step 2: Apply Radon-Nikodym.</strong> By the Radon-Nikodym theorem, there exists a measurable function \( g \) with \( \nu(E) = \int_E g \, d\mu \) for all \( E \). Hence
+
 \[
 \ell(\mathbf{1}_E) = \int_E g \, d\mu \quad \text{for all measurable } E \text{ with } \mu(E) < \infty.
 \]
@@ -718,6 +748,7 @@ Since every bounded linear functional on \( L^p \) is of the form \( \Phi_g \) f
 
 <div class="proof">
 <strong>Proof of (1).</strong> Let \( g_0 \in L^q \) be the extremal function for \( f \): choose \( g_0 = |f|^{p-1} \text{sgn}(f) / \|f\|_p^{p-1} \) (when \( f \ne 0 \)), so that \( \|g_0\|_q = 1 \) and \( \int f g_0 \, d\mu = \|f\|_p \). Then
+
 \[
 \|f\|_p = \int f g_0 \, d\mu = \lim_{n \to \infty} \int f_n g_0 \, d\mu \le \liminf_{n \to \infty} \|f_n\|_p \cdot \|g_0\|_q = \liminf_{n \to \infty} \|f_n\|_p.
 \]
@@ -727,6 +758,7 @@ Since every bounded linear functional on \( L^p \) is of the form \( \Phi_g \) f
 
 <div class="example">
 <strong>Example: Riemann-Lebesgue-type oscillation.</strong> Let \( f_n(x) = \sin(nx) \) on \( [0, 2\pi] \) with Lebesgue measure. Then \( \|f_n\|_2 = \sqrt{\pi} \) for all \( n \) (so there is no strong convergence to 0 in \( L^2 \)), but \( f_n \rightharpoonup 0 \) weakly in \( L^2([0,2\pi]) \), because for any \( g \in L^2 \),
+
 \[
 \int_0^{2\pi} g(x) \sin(nx) \, dx \to 0
 \]
@@ -798,6 +830,7 @@ Let \( (X, \mathcal{M}, \mu) \) be a measure space and \( f_n, f : X \to \mathbb
 
 <div class="proof">
 <strong>Proof of (3).</strong> By Markov's inequality applied to \( |f_n - f|^p \):
+
 \[
 \mu(\{|f_n - f| > \varepsilon\}) = \mu(\{|f_n - f|^p > \varepsilon^p\}) \le \frac{1}{\varepsilon^p} \int |f_n - f|^p \, d\mu = \frac{\|f_n - f\|_p^p}{\varepsilon^p} \to 0.
 \]
@@ -824,6 +857,7 @@ Explicitly, the first several terms are:
 The name "typewriter sequence" comes from the image of a cursor scanning left to right across progressively finer subdivisions of the interval.
 
 <strong>Convergence in measure:</strong> For any \( \varepsilon \in (0,1) \),
+
 \[
 m(\{f_n > \varepsilon\}) = m([j/2^k, (j+1)/2^k]) = 1/2^k \to 0
 \]
@@ -850,11 +884,13 @@ The Dominated Convergence Theorem requires a single dominating function. The Vit
 Let \( (X, \mathcal{M}, \mu) \) be a measure space and \( \{f_n\} \subseteq L^1(\mu) \). The sequence \( \{f_n\} \) is called <strong>uniformly integrable</strong> if:
 <ol>
 <li><strong>Tight at infinity:</strong> For every \( \varepsilon > 0 \) there exists \( M > 0 \) such that
+
 \[
 \int_{\{|f_n| > M\}} |f_n| \, d\mu < \varepsilon \quad \text{for all } n.
 \]
 </li>
 <li><strong>Absolutely equicontinuous:</strong> For every \( \varepsilon > 0 \) there exists \( \delta > 0 \) such that
+
 \[
 \mu(E) < \delta \implies \int_E |f_n| \, d\mu < \varepsilon \quad \text{for all } n.
 \]
@@ -881,6 +917,7 @@ On a finite measure space, the Dunford-Pettis theorem characterizes weakly preco
 <strong>Proof (\( p = 1 \), forward direction).</strong> Assume \( \|f_n - f\|_1 \to 0 \). Then \( f_n \to f \) in measure (by Markov). For uniform integrability: given \( \varepsilon > 0 \), choose \( N \) large enough that \( \|f_n - f\|_1 < \varepsilon/2 \) for \( n \ge N \). The finite set \( \{f_1, \ldots, f_N, f\} \) is automatically uniformly integrable (finite sets of \( L^1 \) functions are always uniformly integrable). Using the triangle inequality \( |f_n| \le |f_n - f| + |f| \), one controls \( \int_E |f_n|\,d\mu \le \|f_n - f\|_1 + \int_E |f|\,d\mu < \varepsilon \) for \( n \ge N \) when \( \mu(E) < \delta \) for appropriate \( \delta \). The finitely many remaining terms \( n < N \) are handled by the finite collection.
 
 <strong>Proof (\( p = 1 \), reverse direction).</strong> Assume \( f_n \to f \) in measure and \( \{f_n\} \) is uniformly integrable. Given \( \varepsilon > 0 \), let \( \delta \) be as in the uniform integrability condition. Let \( E_n = \{|f_n - f| > \varepsilon\} \). Since \( f_n \to f \) in measure, \( \mu(E_n) \to 0 \), so \( \mu(E_n) < \delta \) for large \( n \). Then:
+
 \[
 \|f_n - f\|_1 = \int_{E_n} |f_n - f|\,d\mu + \int_{E_n^c} |f_n - f|\,d\mu \le \int_{E_n} |f_n|\,d\mu + \int_{E_n} |f|\,d\mu + \varepsilon \cdot \mu(X).
 \]
@@ -1168,6 +1205,7 @@ where the duality pairing is \( \langle \ell, f \rangle = \int_K f \, d\nu \) fo
 
 <div class="theorem">
 <strong>Riesz-Markov-Kakutani Theorem.</strong> Let \( K \) be a compact Hausdorff space. For every bounded linear functional \( \ell \in C(K)^* \) there exists a unique regular Borel signed measure \( \nu \in M(K) \) such that
+
 \[
 \ell(f) = \int_K f \, d\nu \quad \text{for all } f \in C(K),
 \]

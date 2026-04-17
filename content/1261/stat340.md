@@ -160,6 +160,7 @@ The most classical family of PRNGs is the **linear congruential generator** (LCG
 
 <div class="definition">
 <strong>Linear congruential generator.</strong> Given integers \(a\) (the multiplier), \(c\) (the increment), \(m\) (the modulus), and \(x_0\) (the seed), define
+
 \[
 x_{n+1} = (a\, x_n + c) \bmod m, \qquad n = 0, 1, 2, \ldots
 \]
@@ -179,9 +180,11 @@ These identities allow intermediate computations to be kept within range, preven
 
 <div class="example">
 <strong>Example.</strong> Consider the LCG with \(a = 5\), \(c = 3\), \(m = 16\), and \(x_0 = 0\). The sequence is:
+
 \[
 x_1 = (5 \cdot 0 + 3) \bmod 16 = 3, \quad x_2 = (5 \cdot 3 + 3) \bmod 16 = 18 \bmod 16 = 2
 \]
+
 \[
 x_3 = (5 \cdot 2 + 3) \bmod 16 = 13, \quad x_4 = (5 \cdot 13 + 3) \bmod 16 = 68 \bmod 16 = 4
 \]
@@ -249,6 +252,7 @@ Under the null hypothesis, \(\chi^2 \sim \chi^2_{k-1}\) approximately for large 
 
 <div class="example">
 <strong>Example.</strong> Generate \(n = 1000\) values and partition \([0,1)\) into \(k = 10\) subintervals. Suppose the observed counts are (95, 102, 108, 97, 100, 103, 99, 96, 101, 99). Then \(E_j = 100\) for all \(j\), and
+
 \[
 \chi^2 = \frac{(95-100)^2}{100} + \frac{(102-100)^2}{100} + \cdots + \frac{(99-100)^2}{100} = \frac{25+4+64+9+0+9+1+16+1+1}{100} = 1.30.
 \]
@@ -311,6 +315,7 @@ The inverse transform method is the most fundamental technique for generating ra
 
 <div class="theorem">
 <strong>Inverse Transform Theorem.</strong> Let \(F\) be a cumulative distribution function and define the generalised inverse (quantile function)
+
 \[
 F^{-1}(u) = \inf\{x : F(x) \geq u\}, \qquad 0 < u < 1.
 \]
@@ -319,6 +324,7 @@ If \(U \sim \text{Uniform}(0,1)\), then \(X = F^{-1}(U)\) has CDF \(F\).
 
 <div class="proof">
 <strong>Proof.</strong> We need to show \(P(X \leq x) = F(x)\). Since \(F\) is non-decreasing, the event \(\{F^{-1}(U) \leq x\}\) is equivalent to \(\{U \leq F(x)\}\). (To see this: if \(F^{-1}(U) \leq x\), then by definition of \(F^{-1}\), \(U \leq F(x)\) because \(F\) is non-decreasing. Conversely, if \(U \leq F(x)\), then \(F^{-1}(U) \leq x\) by the definition of the infimum.) Therefore
+
 \[
 P(X \leq x) = P(F^{-1}(U) \leq x) = P(U \leq F(x)) = F(x),
 \]
@@ -334,6 +340,7 @@ To generate a random variate \(X\) with continuous CDF \(F\):
 
 <div class="example">
 <strong>Example (Exponential distribution).</strong> If \(X \sim \text{Exp}(\lambda)\), then \(F(x) = 1 - e^{-\lambda x}\) for \(x \geq 0\). Setting \(u = 1 - e^{-\lambda x}\) and solving for \(x\) gives \(x = -\ln(1-u)/\lambda\). Since \(1-U\) has the same distribution as \(U\) when \(U \sim \text{Uniform}(0,1)\), we can use
+
 \[
 X = -\frac{\ln U}{\lambda}.
 \]
@@ -367,6 +374,7 @@ When the inverse CDF is not available in closed form (or is expensive to compute
 
 <div class="theorem">
 <strong>Acceptance-Rejection Theorem.</strong> Suppose we wish to generate \(X\) with density \(f\). Let \(g\) be another density from which we can easily generate, and suppose there exists a constant \(c \geq 1\) such that
+
 \[
 f(x) \leq c\, g(x) \quad \text{for all } x.
 \]
@@ -381,6 +389,7 @@ The expected number of iterations until acceptance is \(c\).
 
 <div class="proof">
 <strong>Proof of correctness.</strong> We need to show the accepted \(Y\) has density \(f\). The probability of acceptance is
+
 \[
 P(\text{accept}) = P\!\left(U \leq \frac{f(Y)}{c\,g(Y)}\right) = \int_{-\infty}^{\infty} \frac{f(y)}{c\,g(y)}\, g(y)\, dy = \frac{1}{c}\int_{-\infty}^{\infty} f(y)\, dy = \frac{1}{c}.
 \]
@@ -484,6 +493,7 @@ Then \(E[\mathbf{X}] = \boldsymbol{\mu}\) and \(\text{Cov}(\mathbf{X}) = \mathbf
 
 <div class="example">
 <strong>Example.</strong> Generate \((X_1, X_2)^T \sim N\!\left(\binom{0}{0}, \begin{pmatrix} 1 & 0.6 \\ 0.6 & 1 \end{pmatrix}\right)\). The Cholesky factor is
+
 \[
 \mathbf{L} = \begin{pmatrix} 1 & 0 \\ 0.6 & 0.8 \end{pmatrix}.
 \]
@@ -505,6 +515,7 @@ A **copula** provides a way to model the dependence structure between random var
 
 <div class="theorem">
 <strong>Sklar's Theorem.</strong> Let \(F\) be a joint CDF with marginals \(F_1, \ldots, F_d\). Then there exists a copula \(C : [0,1]^d \to [0,1]\) such that
+
 \[
 F(x_1, \ldots, x_d) = C(F_1(x_1), \ldots, F_d(x_d)).
 \]
@@ -570,15 +581,19 @@ For equal spacing \(\Delta t = t_i - t_{i-1}\), this reduces to \(W(t_i) = W(t_{
 
 <div class="example">
 <strong>Example.</strong> Simulate Brownian motion at times \(t = 0, 0.25, 0.50, 0.75, 1.0\). We have \(\Delta t = 0.25\) and \(\sqrt{\Delta t} = 0.5\). Suppose the standard normals are \(Z_1 = 0.31, Z_2 = -1.15, Z_3 = 0.72, Z_4 = 0.44\). Then:
+
 \[
 W(0.25) = 0 + 0.5(0.31) = 0.155
 \]
+
 \[
 W(0.50) = 0.155 + 0.5(-1.15) = -0.420
 \]
+
 \[
 W(0.75) = -0.420 + 0.5(0.72) = -0.060
 \]
+
 \[
 W(1.00) = -0.060 + 0.5(0.44) = 0.160
 \]
@@ -646,6 +661,7 @@ Then \(\hat{\theta}_n = (\text{number of hits})/n\) is an unbiased estimator bec
 
 <div class="theorem">
 <strong>Comparison of estimators.</strong> The sample-mean estimator always has variance no larger than the hit-or-miss estimator. Specifically,
+
 \[
 \text{Var}(\hat{\theta}_{\text{SM}}) = \frac{1}{n}\left(\int_0^1 h(x)^2\, dx - \theta^2\right), \qquad \text{Var}(\hat{\theta}_{\text{HM}}) = \frac{\theta(1-\theta)}{n}.
 \]
@@ -654,6 +670,7 @@ Since \(\int_0^1 h(x)^2\, dx \leq \int_0^1 h(x)\, dx = \theta\) when \(0 \leq h 
 
 <div class="example">
 <strong>Example.</strong> Estimate \(\theta = \int_0^1 e^x\, dx = e - 1 \approx 1.71828\). Using the sample-mean estimator with \(n = 5\) uniform samples, suppose \(U_1 = 0.12, U_2 = 0.47, U_3 = 0.83, U_4 = 0.26, U_5 = 0.65\). Then
+
 \[
 \hat{\theta}_5 = \frac{1}{5}(e^{0.12} + e^{0.47} + e^{0.83} + e^{0.26} + e^{0.65}) = \frac{1.1275 + 1.5999 + 2.2933 + 1.2969 + 1.9155}{5} = \frac{8.2331}{5} = 1.6466.
 \]
@@ -691,6 +708,7 @@ For the unbiased sample-mean estimator, \(\text{MSE}(\hat{\theta}_n) = \text{Var
 
 <div class="theorem">
 <strong>Central Limit Theorem.</strong> If \(\sigma^2 = \text{Var}(g(X)) < \infty\), then as \(n \to \infty\),
+
 \[
 \frac{\hat{\theta}_n - \theta}{\sigma / \sqrt{n}} \xrightarrow{d} N(0,1).
 \]
@@ -714,6 +732,7 @@ where \(z_{\alpha/2}\) is the \((1-\alpha/2)\)-quantile of the standard normal d
 
 <div class="example">
 <strong>Example.</strong> Suppose after \(n = 10{,}000\) replications of a simulation, the sample mean is \(\hat{\theta} = 3.142\) and the sample standard deviation is \(S = 0.85\). A 95% confidence interval is
+
 \[
 3.142 \pm 1.96 \times \frac{0.85}{\sqrt{10000}} = 3.142 \pm 0.0167 = (3.125, 3.159).
 \]
@@ -754,6 +773,7 @@ where \(S(T) = S_0 \exp\!\left((r - \sigma^2/2)T + \sigma\sqrt{T}\, Z\right)\) a
 
 <div class="example">
 <strong>Example.</strong> Let \(S_0 = 100\), \(K = 105\), \(r = 0.05\), \(\sigma = 0.20\), \(T = 1\). For one replication with \(Z = 0.35\):
+
 \[
 S(T) = 100 \exp(0.05 - 0.02 + 0.20 \times 0.35) = 100 \exp(0.10) = 100 \times 1.10517 = 110.52.
 \]
@@ -774,6 +794,7 @@ Standard Monte Carlo uses pseudo-random sequences which, while statistically uni
 
 <div class="definition">
 <strong>Discrepancy.</strong> For a sequence of \(n\) points \(u_1, \ldots, u_n \in [0,1)^s\), the <em>star discrepancy</em> is
+
 \[
 D_n^* = \sup_{A \subseteq [0,1)^s} \left|\frac{\#\{i : u_i \in A\}}{n} - \text{Vol}(A)\right|,
 \]
@@ -827,6 +848,7 @@ The idea of **antithetic variates** is to introduce negative correlation between
 
 <div class="theorem">
 <strong>Antithetic variates principle.</strong> Suppose \(\hat{\theta}_1\) and \(\hat{\theta}_2\) are two estimators of \(\theta\) with \(E[\hat{\theta}_i] = \theta\). Then
+
 \[
 \text{Var}\!\left(\frac{\hat{\theta}_1 + \hat{\theta}_2}{2}\right) = \frac{\text{Var}(\hat{\theta}_1) + \text{Var}(\hat{\theta}_2)}{4} + \frac{\text{Cov}(\hat{\theta}_1, \hat{\theta}_2)}{2}.
 \]
@@ -850,6 +872,7 @@ Since \(1 - U_i \sim \text{Uniform}(0,1)\) whenever \(U_i\) does, both halves ar
 
 <div class="example">
 <strong>Example.</strong> Estimate \(\theta = \int_0^1 e^x\, dx = e - 1\). The crude estimator with \(n\) samples has variance \(\text{Var}(e^U)/n = (e^2 - 1)/2 - (e-1)^2)/n \approx 0.2420/n\). The antithetic estimator has variance
+
 \[
 \text{Var}\!\left(\frac{e^U + e^{1-U}}{2}\right) / n.
 \]
@@ -878,6 +901,7 @@ With **proportional allocation** (\(n_j = n/k\) for all \(j\)), the total number
 
 <div class="theorem">
 <strong>Variance decomposition.</strong> For proportional allocation with one sample per stratum (\(n_j = 1\), \(n = k\)),
+
 \[
 \text{Var}(\hat{\theta}_{\text{str}}) = \frac{1}{k}\sum_{j=1}^{k} \text{Var}\!\left(g\!\left(\frac{j-1+U}{k}\right)\right) \leq \text{Var}\!\left(\hat{\theta}_{\text{crude}}\right) = \frac{\text{Var}(g(U))}{k}.
 \]
@@ -886,6 +910,7 @@ The inequality follows from the law of total variance: \(\text{Var}(g(U)) = E[\t
 
 <div class="example">
 <strong>Example.</strong> Estimate \(\theta = \int_0^1 e^x\, dx\) using \(k = 4\) strata with one sample each. Suppose \(U_1 = 0.72, U_2 = 0.35, U_3 = 0.91, U_4 = 0.58\). The stratified points are \(x_1 = (0 + 0.72)/4 = 0.18\), \(x_2 = (1 + 0.35)/4 = 0.3375\), \(x_3 = (2 + 0.91)/4 = 0.7275\), \(x_4 = (3 + 0.58)/4 = 0.895\). Then
+
 \[
 \hat{\theta}_{\text{str}} = \frac{1}{4}(e^{0.18} + e^{0.3375} + e^{0.7275} + e^{0.895}) = \frac{1.1972 + 1.4013 + 2.0698 + 2.4474}{4} = \frac{7.1157}{4} = 1.7789.
 \]
@@ -912,6 +937,7 @@ The ratio \(w(x) = f(x)/h(x)\) is called the **likelihood ratio** or **importanc
 
 <div class="theorem">
 <strong>Optimal importance sampling density.</strong> The variance of the importance sampling estimator is minimised when
+
 \[
 h^*(x) = \frac{|g(x)| f(x)}{\int |g(x)| f(x)\, dx}.
 \]
@@ -928,6 +954,7 @@ If \(g(x) \geq 0\), this optimal density is \(h^*(x) \propto g(x) f(x)\), and th
 
 <div class="example">
 <strong>Example (rare event estimation).</strong> Estimate \(\theta = P(Z > 4)\) where \(Z \sim N(0,1)\). By crude Monte Carlo, most samples of \(Z\) will be far from 4, and the indicator \(\mathbf{1}(Z > 4)\) will almost always be 0. Using importance sampling with \(h = N(4, 1)\) (a normal centred at 4):
+
 \[
 \hat{\theta}_{\text{IS}} = \frac{1}{n}\sum_{i=1}^{n} \mathbf{1}(X_i > 4)\, \frac{\phi(X_i)}{\phi(X_i - 4)}, \qquad X_i \sim N(4,1),
 \]
@@ -945,6 +972,7 @@ for some constant \(\beta\). Since \(E[Y^{(c)}] = E[Y] = \theta\) regardless of 
 
 <div class="theorem">
 <strong>Optimal coefficient.</strong> The variance of the control variate estimator is
+
 \[
 \text{Var}(Y^{(c)}) = \text{Var}(Y) - 2\beta\,\text{Cov}(Y,C) + \beta^2\,\text{Var}(C).
 \]
@@ -963,6 +991,7 @@ where \(\rho_{Y,C}\) is the correlation between \(Y\) and \(C\).
 
 <div class="proof">
 <strong>Proof.</strong> The variance expression follows from the linearity of variance and covariance. Taking the derivative with respect to \(\beta\) and setting it to zero: \(-2\,\text{Cov}(Y,C) + 2\beta\,\text{Var}(C) = 0\), giving \(\beta^* = \text{Cov}(Y,C)/\text{Var}(C)\). Substituting back:
+
 \[
 \text{Var}(Y^{(c^*)}) = \text{Var}(Y) - \frac{(\text{Cov}(Y,C))^2}{\text{Var}(C)} = \text{Var}(Y)\!\left(1 - \frac{(\text{Cov}(Y,C))^2}{\text{Var}(Y)\,\text{Var}(C)}\right) = \text{Var}(Y)(1 - \rho^2).
 \]
@@ -1026,6 +1055,7 @@ which requires \(n = O(1/\theta)\) samples for a fixed relative error.
 
 <div class="theorem">
 <strong>Rao--Blackwell Theorem (simulation version).</strong> If \(\theta = E[g(X, Y)]\), then \(\tilde{g}(X) = E[g(X, Y) \mid X]\) satisfies \(E[\tilde{g}(X)] = \theta\) and \(\text{Var}(\tilde{g}(X)) \leq \text{Var}(g(X, Y))\). The inequality follows from the law of total variance:
+
 \[
 \text{Var}(g(X,Y)) = E[\text{Var}(g(X,Y) \mid X)] + \text{Var}(E[g(X,Y) \mid X]) \geq \text{Var}(\tilde{g}(X)).
 \]
@@ -1080,6 +1110,7 @@ The acceptance probability is \(1/c\) where \(c = \sup_x f(x)/f_e(x)\). A smalle
 <strong>Theorem (correctness of acceptance-rejection).</strong> Suppose \(X^* \sim f_e\) is proposed and \(U \sim \text{Uniform}(0,1)\) is drawn independently. If the accepted \(X^*\) satisfies \(U \leq f(X^*)/(c\,f_e(X^*))\), then the accepted variates have density \(f\).
 
 <em>Proof.</em> Let \(X\) denote an accepted variate. For any measurable set \(A\):
+
 \[
 P(X \in A) = P\!\left(X^* \in A \;\middle|\; U \leq \frac{f(X^*)}{c\,f_e(X^*)}\right) = \frac{\int_A f(x^*)/(c\,f_e(x^*))\cdot f_e(x^*)\,dx^*}{\int_{-\infty}^{\infty} f(x^*)/(c\,f_e(x^*))\cdot f_e(x^*)\,dx^*} = \frac{\int_A f(x^*)\,dx^*/c}{1/c} = \int_A f(x^*)\,dx^*.
 \]
@@ -1133,6 +1164,7 @@ The **Metropolis--Hastings** (MH) algorithm is the most general MCMC method. Giv
 
 1. Propose \(Y \sim q(y \mid x)\) from a proposal distribution \(q\).
 2. Compute the acceptance ratio
+
 \[
 \alpha(x, y) = \min\!\left(1, \frac{\pi(y)\,q(x \mid y)}{\pi(x)\,q(y \mid x)}\right).
 \]

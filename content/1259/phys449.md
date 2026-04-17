@@ -198,6 +198,7 @@ This is formally the Boltzmann distribution with "energy" \(-\mathbf{w}_k^T \mat
 \[
 m_t = \beta_1 m_{t-1} + (1-\beta_1) g_t, \quad v_t = \beta_2 v_{t-1} + (1-\beta_2) g_t^2,
 \]
+
 \[
 \theta_t = \theta_{t-1} - \frac{\eta}{\sqrt{\hat{v}_t} + \varepsilon} \hat{m}_t.
 \]
@@ -319,7 +320,7 @@ The energy decreases monotonically with updates, so the network converges to a l
 
 ## Section 8.2: Restricted Boltzmann Machines
 
-An **RBM** is a bipartite energy-based model with visible units \(\mathbf{v} \in \{0,1\}^n\) and hidden units \(\mathbf{h} \in \{0,1\}^m$, with energy:
+An **RBM** is a bipartite energy-based model with visible units \(\mathbf{v} \in \{0,1\}^n\) and hidden units \(\mathbf{h} \in \{0,1\}^m\), with energy:
 
 \[
 E(\mathbf{v}, \mathbf{h}) = -\mathbf{a}^T \mathbf{v} - \mathbf{b}^T \mathbf{h} - \mathbf{v}^T W \mathbf{h}.

@@ -68,7 +68,10 @@ Player 1's payoffs are the first entries; Player 2's are the second. Regardless 
 
 <div class="definition">
 <strong>Best Response:</strong> Player <em>i</em>'s best response to opponents' strategy profile a<sub>-i</sub> is the set
-\[ BR_i(a_{-i}) = \arg\max_{a_i \in A_i} u_i(a_i, a_{-i}). \]
+
+\[
+BR_i(a_{-i}) = \arg\max_{a_i \in A_i} u_i(a_i, a_{-i}).
+\]
 </div>
 
 A strategy is a best response if it maximizes payoff given the opponents' strategies. The **best response correspondence** \( BR_i(\cdot) \) maps each opponent strategy profile to the set of player \( i \)'s optimal replies.
@@ -81,7 +84,10 @@ A strategy is a best response if it maximizes payoff given the opponents' strate
 
 <div class="definition">
 <strong>Nash Equilibrium:</strong> A strategy profile a* = (a<sub>1</sub>*, ..., a<sub>n</sub>*) is a <strong>Nash equilibrium</strong> if, for every player <em>i</em>,
-\[ u_i(a_i^*, a_{-i}^*) \geq u_i(a_i, a_{-i}^*) \quad \forall a_i \in A_i. \]
+
+\[
+u_i(a_i^*, a_{-i}^*) \geq u_i(a_i, a_{-i}^*) \quad \forall a_i \in A_i.
+\]
 Equivalently, a* is a Nash equilibrium if and only if a<sub>i</sub>* ∈ BR<sub>i</sub>(a<sub>-i</sub>*) for every player <em>i</em>.
 </div>
 
@@ -112,15 +118,21 @@ With continuous strategy sets, Nash equilibria are found by solving the system o
 
 **Cournot duopoly:** Two firms simultaneously choose quantities \( q_1, q_2 \geq 0 \). The inverse demand is \( P(Q) = a - Q \) where \( Q = q_1 + q_2 \). Firm \( i \)'s profit is
 
-\[ \pi_i(q_i, q_j) = (a - q_i - q_j) q_i - c q_i. \]
+\[
+\pi_i(q_i, q_j) = (a - q_i - q_j) q_i - c q_i.
+\]
 
 Firm 1's best response:
 
-\[ \frac{\partial \pi_1}{\partial q_1} = a - 2q_1 - q_2 - c = 0 \implies q_1 = \frac{a - c - q_2}{2} = BR_1(q_2). \]
+\[
+\frac{\partial \pi_1}{\partial q_1} = a - 2q_1 - q_2 - c = 0 \implies q_1 = \frac{a - c - q_2}{2} = BR_1(q_2).
+\]
 
 By symmetry, \( q_2 = BR_2(q_1) = (a-c-q_1)/2 \). Solving simultaneously:
 
-\[ q_1^* = q_2^* = \frac{a-c}{3}. \]
+\[
+q_1^* = q_2^* = \frac{a-c}{3}.
+\]
 
 The Cournot Nash equilibrium output per firm is \( (a-c)/3 \), total output is \( 2(a-c)/3 \), and price is \( P^* = (a+2c)/3 \). This lies between monopoly and competitive outcomes: Cournot competition is more efficient than monopoly but less efficient than perfect competition.
 
@@ -130,7 +142,10 @@ A **pure strategy** assigns a single action with certainty. A **mixed strategy**
 
 <div class="definition">
 <strong>Mixed Strategy:</strong> A mixed strategy for player <em>i</em> is a probability distribution σ<sub>i</sub> over A<sub>i</sub>. Player <em>i</em>'s expected payoff from strategy profile (σ<sub>1</sub>, ..., σ<sub>n</sub>) is
-\[ U_i(\sigma) = \sum_{a \in A} \left(\prod_{j=1}^n \sigma_j(a_j)\right) u_i(a). \]
+
+\[
+U_i(\sigma) = \sum_{a \in A} \left(\prod_{j=1}^n \sigma_j(a_j)\right) u_i(a).
+\]
 </div>
 
 A **mixed strategy Nash equilibrium** is a profile \( \sigma^* \) such that no player can increase their expected payoff by deviating.
@@ -145,7 +160,9 @@ A **mixed strategy Nash equilibrium** is a profile \( \sigma^* \) such that no p
 
 In the Battle of the Sexes, let Player 1 play Opera with probability \( p \) and Player 2 play Opera with probability \( q \). For Player 1 to be indifferent:
 
-\[ U_1(O) = U_1(F) \implies 2q + 0(1-q) = 0 \cdot q + 1 \cdot (1-q) \implies 2q = 1-q \implies q^* = \frac{1}{3}. \]
+\[
+U_1(O) = U_1(F) \implies 2q + 0(1-q) = 0 \cdot q + 1 \cdot (1-q) \implies 2q = 1-q \implies q^* = \frac{1}{3}.
+\]
 
 Similarly, for Player 2: \( p^* = 2/3 \). The mixed Nash equilibrium is \( (\sigma_1^*, \sigma_2^*) = (2/3, 1/3) \), with expected payoffs of \( 2/3 \) for Player 1 and \( 2/3 \) for Player 2 — lower than either pure strategy equilibrium.
 
@@ -211,13 +228,22 @@ SPE refines Nash equilibrium by requiring sequential rationality — players mus
 Firm 1 (leader) chooses quantity \( q_1 \) first; Firm 2 (follower) observes \( q_1 \) and then chooses \( q_2 \). With linear demand \( P = a - q_1 - q_2 \) and marginal cost \( c \), backward induction proceeds:
 
 **Step 1 — Follower's best response:**
-\[ q_2^*(q_1) = \frac{a - c - q_1}{2}. \]
+
+\[
+q_2^*(q_1) = \frac{a - c - q_1}{2}.
+\]
 
 **Step 2 — Leader's problem:**
-\[ \max_{q_1} \; (a - q_1 - q_2^*(q_1)) q_1 - c q_1 = \max_{q_1} \; \frac{(a-c-q_1)}{2} q_1. \]
+
+\[
+\max_{q_1} \; (a - q_1 - q_2^*(q_1)) q_1 - c q_1 = \max_{q_1} \; \frac{(a-c-q_1)}{2} q_1.
+\]
 
 First-order condition:
-\[ \frac{a-c}{2} - q_1 = 0 \implies q_1^* = \frac{a-c}{2}, \quad q_2^* = \frac{a-c}{4}. \]
+
+\[
+\frac{a-c}{2} - q_1 = 0 \implies q_1^* = \frac{a-c}{2}, \quad q_2^* = \frac{a-c}{4}.
+\]
 
 The Stackelberg leader produces more than the Cournot quantity \( (a-c)/3 \) and earns higher profit; the follower produces less and earns less. The **first-mover advantage** is a general feature of Stackelberg competition.
 
@@ -260,7 +286,10 @@ Cooperation is self-enforcing when \( \delta \) is large enough.
 
 <div class="example">
 <strong>Grim Trigger in Prisoner's Dilemma:</strong> Using payoffs from Section 1.2.1, cooperation gives stream 3 per period; defection yields 4 today and 1 every period after. For cooperation to be an SPE:
-\[ \frac{3}{1-\delta} \geq 4 + \frac{\delta \cdot 1}{1-\delta} \implies 3 \geq 4(1-\delta) + \delta \implies \delta \geq \frac{1}{2}. \]
+
+\[
+\frac{3}{1-\delta} \geq 4 + \frac{\delta \cdot 1}{1-\delta} \implies 3 \geq 4(1-\delta) + \delta \implies \delta \geq \frac{1}{2}.
+\]
 Cooperation is sustained for δ ≥ 1/2.
 </div>
 
@@ -334,7 +363,9 @@ The core may be empty (some games have no stable allocation), a single point, or
 
 The **Shapley value** provides a unique, axiomatically-motivated allocation that assigns each player their expected marginal contribution across all possible coalition formations:
 
-\[ \phi_i(v) = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|!(|N|-|S|-1)!}{|N|!} \left[ v(S \cup \{i\}) - v(S) \right]. \]
+\[
+\phi_i(v) = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|!(|N|-|S|-1)!}{|N|!} \left[ v(S \cup \{i\}) - v(S) \right].
+\]
 
 The Shapley value satisfies efficiency (allocates all of \( v(N) \)), symmetry, linearity, and a null player property.
 

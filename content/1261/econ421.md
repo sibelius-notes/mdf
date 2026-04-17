@@ -29,7 +29,9 @@ Econometric theory makes extensive use of matrix algebra. Let \( \mathbf{A} \) b
 
 The **projection matrix** (hat matrix) and its complement:
 
-\[ \mathbf{P} = \mathbf{X}(\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}, \qquad \mathbf{M} = \mathbf{I}_n - \mathbf{P} \]
+\[
+\mathbf{P} = \mathbf{X}(\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}, \qquad \mathbf{M} = \mathbf{I}_n - \mathbf{P}
+\]
 
 Both are symmetric and idempotent: \( \mathbf{P}^2 = \mathbf{P} \), \( \mathbf{M}^2 = \mathbf{M} \), \( \mathbf{PM} = \mathbf{0} \). \( \mathbf{P} \) projects onto the column space of \( \mathbf{X} \); \( \mathbf{M} \) projects onto the orthogonal complement (residual space).
 
@@ -55,7 +57,9 @@ The hierarchy is: a.s. convergence \( \Rightarrow \) convergence in probability 
 
 The **Weak Law of Large Numbers (WLLN):** For i.i.d. random variables \( \{X_i\}_{i=1}^n \) with \( E[X_i] = \mu < \infty \):
 
-\[ \bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{p} \mu \]
+\[
+\bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{p} \mu
+\]
 
 The **Strong Law (Kolmogorov):** Under the same conditions, \( \bar{X}_n \xrightarrow{a.s.} \mu \).
 
@@ -65,15 +69,21 @@ The WLLN is the foundation of consistency proofs for OLS: under mild regularity 
 
 The **Lindeberg-Lévy CLT:** For i.i.d. \( \{X_i\} \) with \( E[X_i] = \mu \) and \( \text{Var}(X_i) = \sigma^2 < \infty \):
 
-\[ \sqrt{n}(\bar{X}_n - \mu) \xrightarrow{d} N(0, \sigma^2) \]
+\[
+\sqrt{n}(\bar{X}_n - \mu) \xrightarrow{d} N(0, \sigma^2)
+\]
 
 The **multivariate CLT:** For i.i.d. random vectors \( \{\mathbf{X}_i\} \) with mean \( \boldsymbol{\mu} \) and covariance \( \boldsymbol{\Sigma} \):
 
-\[ \sqrt{n}(\bar{\mathbf{X}}_n - \boldsymbol{\mu}) \xrightarrow{d} N(\mathbf{0}, \boldsymbol{\Sigma}) \]
+\[
+\sqrt{n}(\bar{\mathbf{X}}_n - \boldsymbol{\mu}) \xrightarrow{d} N(\mathbf{0}, \boldsymbol{\Sigma})
+\]
 
 The **Delta method:** If \( \sqrt{n}(X_n - \theta) \xrightarrow{d} N(0, \sigma^2) \) and \( g \) is differentiable at \( \theta \):
 
-\[ \sqrt{n}(g(X_n) - g(\theta)) \xrightarrow{d} N\!\left(0,\, [g'(\theta)]^2 \sigma^2\right) \]
+\[
+\sqrt{n}(g(X_n) - g(\theta)) \xrightarrow{d} N\!\left(0,\, [g'(\theta)]^2 \sigma^2\right)
+\]
 
 This is used extensively to derive asymptotic distributions of nonlinear functions of parameter estimates (e.g., elasticities, predicted probabilities).
 
@@ -100,17 +110,24 @@ The model \( \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \mathbf{u} \) with \( n
 
 Minimizing \( S(\boldsymbol{\beta}) = (\mathbf{y} - \mathbf{X}\boldsymbol{\beta})^{\top}(\mathbf{y} - \mathbf{X}\boldsymbol{\beta}) \) with respect to \( \boldsymbol{\beta} \):
 
-\[ \frac{\partial S}{\partial \boldsymbol{\beta}} = -2\mathbf{X}^{\top}(\mathbf{y} - \mathbf{X}\boldsymbol{\beta}) = \mathbf{0} \implies \mathbf{X}^{\top}\mathbf{X}\hat{\boldsymbol{\beta}} = \mathbf{X}^{\top}\mathbf{y} \]
+\[
+\frac{\partial S}{\partial \boldsymbol{\beta}} = -2\mathbf{X}^{\top}(\mathbf{y} - \mathbf{X}\boldsymbol{\beta}) = \mathbf{0} \implies \mathbf{X}^{\top}\mathbf{X}\hat{\boldsymbol{\beta}} = \mathbf{X}^{\top}\mathbf{y}
+\]
 
 The **normal equations** \( \mathbf{X}^{\top}\mathbf{X}\hat{\boldsymbol{\beta}} = \mathbf{X}^{\top}\mathbf{y} \) have unique solution (under A2):
 
-\[ \hat{\boldsymbol{\beta}} = (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{y} \]
+\[
+\hat{\boldsymbol{\beta}} = (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{y}
+\]
 
 Residuals: \( \hat{\mathbf{u}} = \mathbf{M}\mathbf{y} = \mathbf{M}\mathbf{u} \) (since \( \mathbf{M}\mathbf{X} = \mathbf{0} \)). Key properties: \( \mathbf{X}^{\top}\hat{\mathbf{u}} = \mathbf{0} \), \( \mathbf{1}^{\top}\hat{\mathbf{u}} = 0 \) (when intercept included).
 
 <div class="theorem">
 <strong>Gauss-Markov Theorem (Matrix Form):</strong> Under A1–A4, the OLS estimator \( \hat{\boldsymbol{\beta}} \) is the Best Linear Unbiased Estimator (BLUE): for any other linear unbiased estimator \( \tilde{\boldsymbol{\beta}} = \mathbf{C}\mathbf{y} \), we have
-\[ \text{Var}(\tilde{\boldsymbol{\beta}} \mid \mathbf{X}) - \text{Var}(\hat{\boldsymbol{\beta}} \mid \mathbf{X}) \]
+
+\[
+\text{Var}(\tilde{\boldsymbol{\beta}} \mid \mathbf{X}) - \text{Var}(\hat{\boldsymbol{\beta}} \mid \mathbf{X})
+\]
 is positive semidefinite, meaning OLS has the smallest variance in any linear direction.
 </div>
 
@@ -128,15 +145,21 @@ This theorem has deep implications: it shows that adding control variables parti
 
 Under A1–A5:
 
-\[ \hat{\boldsymbol{\beta}} \mid \mathbf{X} \sim N\!\left(\boldsymbol{\beta},\, \sigma^2(\mathbf{X}^{\top}\mathbf{X})^{-1}\right) \]
+\[
+\hat{\boldsymbol{\beta}} \mid \mathbf{X} \sim N\!\left(\boldsymbol{\beta},\, \sigma^2(\mathbf{X}^{\top}\mathbf{X})^{-1}\right)
+\]
 
 For testing \( H_0: \boldsymbol{r}^{\top}\boldsymbol{\beta} = r_0 \):
 
-\[ t = \frac{\boldsymbol{r}^{\top}\hat{\boldsymbol{\beta}} - r_0}{\hat{\sigma}\sqrt{\boldsymbol{r}^{\top}(\mathbf{X}^{\top}\mathbf{X})^{-1}\boldsymbol{r}}} \sim t(n-k-1) \]
+\[
+t = \frac{\boldsymbol{r}^{\top}\hat{\boldsymbol{\beta}} - r_0}{\hat{\sigma}\sqrt{\boldsymbol{r}^{\top}(\mathbf{X}^{\top}\mathbf{X})^{-1}\boldsymbol{r}}} \sim t(n-k-1)
+\]
 
 For \( q \) linear restrictions \( H_0: \mathbf{R}\boldsymbol{\beta} = \mathbf{r} \):
 
-\[ F = \frac{(\mathbf{R}\hat{\boldsymbol{\beta}} - \mathbf{r})^{\top}\left[\mathbf{R}(\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{R}^{\top}\right]^{-1}(\mathbf{R}\hat{\boldsymbol{\beta}} - \mathbf{r})}{q\hat{\sigma}^2} \sim F(q, n-k-1) \]
+\[
+F = \frac{(\mathbf{R}\hat{\boldsymbol{\beta}} - \mathbf{r})^{\top}\left[\mathbf{R}(\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{R}^{\top}\right]^{-1}(\mathbf{R}\hat{\boldsymbol{\beta}} - \mathbf{r})}{q\hat{\sigma}^2} \sim F(q, n-k-1)
+\]
 
 ---
 
@@ -152,7 +175,9 @@ Relax A4 to allow \( E[\mathbf{u}\mathbf{u}^{\top}\mid\mathbf{X}] = \sigma^2\bol
 
 OLS remains unbiased and consistent under A1–A3 alone. Its variance is now:
 
-\[ \text{Var}(\hat{\boldsymbol{\beta}} \mid \mathbf{X}) = \sigma^2 (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\boldsymbol{\Omega}\mathbf{X}(\mathbf{X}^{\top}\mathbf{X})^{-1} \]
+\[
+\text{Var}(\hat{\boldsymbol{\beta}} \mid \mathbf{X}) = \sigma^2 (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\boldsymbol{\Omega}\mathbf{X}(\mathbf{X}^{\top}\mathbf{X})^{-1}
+\]
 
 This is the **sandwich** (Eicker-Huber-White) form.
 
@@ -160,11 +185,15 @@ This is the **sandwich** (Eicker-Huber-White) form.
 
 Since \( \boldsymbol{\Omega} \) is PD symmetric, write \( \boldsymbol{\Omega} = \mathbf{P}\mathbf{P}^{\top} \) (Cholesky) and let \( \boldsymbol{\Omega}^{-1/2} \) be the transformation matrix. Pre-multiply the model by \( \boldsymbol{\Omega}^{-1/2} \):
 
-\[ \boldsymbol{\Omega}^{-1/2}\mathbf{y} = \boldsymbol{\Omega}^{-1/2}\mathbf{X}\boldsymbol{\beta} + \boldsymbol{\Omega}^{-1/2}\mathbf{u} \]
+\[
+\boldsymbol{\Omega}^{-1/2}\mathbf{y} = \boldsymbol{\Omega}^{-1/2}\mathbf{X}\boldsymbol{\beta} + \boldsymbol{\Omega}^{-1/2}\mathbf{u}
+\]
 
 The transformed errors \( \boldsymbol{\Omega}^{-1/2}\mathbf{u} \) have covariance \( \sigma^2\mathbf{I}_n \). OLS on the transformed model is **Generalized Least Squares (GLS)**:
 
-\[ \hat{\boldsymbol{\beta}}_{GLS} = (\mathbf{X}^{\top}\boldsymbol{\Omega}^{-1}\mathbf{X})^{-1}\mathbf{X}^{\top}\boldsymbol{\Omega}^{-1}\mathbf{y} \]
+\[
+\hat{\boldsymbol{\beta}}_{GLS} = (\mathbf{X}^{\top}\boldsymbol{\Omega}^{-1}\mathbf{X})^{-1}\mathbf{X}^{\top}\boldsymbol{\Omega}^{-1}\mathbf{y}
+\]
 
 <div class="theorem">
 <strong>Aitken's Theorem:</strong> Under A1–A3 and \( E[\mathbf{u}\mathbf{u}^{\top} \mid \mathbf{X}] = \sigma^2\boldsymbol{\Omega} \), the GLS estimator \( \hat{\boldsymbol{\beta}}_{GLS} \) is BLUE. Its variance is \( \sigma^2(\mathbf{X}^{\top}\boldsymbol{\Omega}^{-1}\mathbf{X})^{-1} \), which is no larger (in the PSD sense) than the variance of any other linear unbiased estimator.
@@ -172,7 +201,9 @@ The transformed errors \( \boldsymbol{\Omega}^{-1/2}\mathbf{u} \) have covarianc
 
 **Feasible GLS (FGLS):** In practice, \( \boldsymbol{\Omega} \) is unknown and must be estimated. Replace \( \boldsymbol{\Omega} \) with a consistent estimator \( \hat{\boldsymbol{\Omega}} \):
 
-\[ \hat{\boldsymbol{\beta}}_{FGLS} = (\mathbf{X}^{\top}\hat{\boldsymbol{\Omega}}^{-1}\mathbf{X})^{-1}\mathbf{X}^{\top}\hat{\boldsymbol{\Omega}}^{-1}\mathbf{y} \]
+\[
+\hat{\boldsymbol{\beta}}_{FGLS} = (\mathbf{X}^{\top}\hat{\boldsymbol{\Omega}}^{-1}\mathbf{X})^{-1}\mathbf{X}^{\top}\hat{\boldsymbol{\Omega}}^{-1}\mathbf{y}
+\]
 
 FGLS is asymptotically equivalent to GLS but loses the finite-sample BLUE property.
 
@@ -189,11 +220,15 @@ For the model \( \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \mathbf{u} \) with 
 
 The **IV estimator** (exactly identified case, \( m = k+1 \)):
 
-\[ \hat{\boldsymbol{\beta}}_{IV} = (\mathbf{Z}^{\top}\mathbf{X})^{-1}\mathbf{Z}^{\top}\mathbf{y} \]
+\[
+\hat{\boldsymbol{\beta}}_{IV} = (\mathbf{Z}^{\top}\mathbf{X})^{-1}\mathbf{Z}^{\top}\mathbf{y}
+\]
 
 The **2SLS estimator** (overidentified case):
 
-\[ \hat{\boldsymbol{\beta}}_{2SLS} = (\hat{\mathbf{X}}^{\top}\hat{\mathbf{X}})^{-1}\hat{\mathbf{X}}^{\top}\mathbf{y} = (\mathbf{X}^{\top}\mathbf{P}_Z\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{P}_Z\mathbf{y} \]
+\[
+\hat{\boldsymbol{\beta}}_{2SLS} = (\hat{\mathbf{X}}^{\top}\hat{\mathbf{X}})^{-1}\hat{\mathbf{X}}^{\top}\mathbf{y} = (\mathbf{X}^{\top}\mathbf{P}_Z\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{P}_Z\mathbf{y}
+\]
 
 where \( \mathbf{P}_Z = \mathbf{Z}(\mathbf{Z}^{\top}\mathbf{Z})^{-1}\mathbf{Z}^{\top} \) is the projection onto the instrument space.
 
@@ -201,7 +236,9 @@ where \( \mathbf{P}_Z = \mathbf{Z}(\mathbf{Z}^{\top}\mathbf{Z})^{-1}\mathbf{Z}^{
 
 Under instrument relevance and exogeneity, 2SLS is consistent and asymptotically normal:
 
-\[ \sqrt{n}(\hat{\boldsymbol{\beta}}_{2SLS} - \boldsymbol{\beta}) \xrightarrow{d} N\!\left(\mathbf{0},\, \sigma^2\left(E\left[\frac{\mathbf{X}^{\top}\mathbf{P}_Z\mathbf{X}}{n}\right]\right)^{-1}\right) \]
+\[
+\sqrt{n}(\hat{\boldsymbol{\beta}}_{2SLS} - \boldsymbol{\beta}) \xrightarrow{d} N\!\left(\mathbf{0},\, \sigma^2\left(E\left[\frac{\mathbf{X}^{\top}\mathbf{P}_Z\mathbf{X}}{n}\right]\right)^{-1}\right)
+\]
 
 The asymptotic variance of 2SLS exceeds that of OLS (when OLS is consistent) by a factor related to the \( R^2 \) of the first stage. Weak instruments (small first-stage \( R^2 \)) make this loss of efficiency severe and can cause large finite-sample bias.
 
@@ -209,17 +246,24 @@ The asymptotic variance of 2SLS exceeds that of OLS (when OLS is consistent) by 
 
 **Method of Moments (MoM)** matches sample moments to their population counterparts. For the regression model, the OLS moment conditions are:
 
-\[ E[\mathbf{x}_i u_i] = E[\mathbf{x}_i(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})] = \mathbf{0} \]
+\[
+E[\mathbf{x}_i u_i] = E[\mathbf{x}_i(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})] = \mathbf{0}
+\]
 
 Replacing expectations with sample averages gives the normal equations.
 
 The **Generalized Method of Moments (GMM)** generalizes to \( m > k+1 \) moment conditions \( E[\mathbf{g}(\mathbf{w}_i, \boldsymbol{\theta})] = \mathbf{0} \). With overidentification, the sample moment vector \( \bar{\mathbf{g}}_n(\boldsymbol{\theta}) = n^{-1}\sum_i \mathbf{g}(\mathbf{w}_i, \boldsymbol{\theta}) \) cannot be set exactly to zero. GMM minimizes the weighted quadratic form:
 
-\[ \hat{\boldsymbol{\theta}}_{GMM} = \argmin_{\boldsymbol{\theta}}\, \bar{\mathbf{g}}_n(\boldsymbol{\theta})^{\top} \mathbf{W} \, \bar{\mathbf{g}}_n(\boldsymbol{\theta}) \]
+\[
+\hat{\boldsymbol{\theta}}_{GMM} = \argmin_{\boldsymbol{\theta}}\, \bar{\mathbf{g}}_n(\boldsymbol{\theta})^{\top} \mathbf{W} \, \bar{\mathbf{g}}_n(\boldsymbol{\theta})
+\]
 
 <div class="theorem">
 <strong>Efficient GMM:</strong> The asymptotically optimal weighting matrix is \( \mathbf{W}^* = \boldsymbol{\Sigma}^{-1} \) where \( \boldsymbol{\Sigma} = E[\mathbf{g}_i\mathbf{g}_i^{\top}] \) is the variance of the moment conditions. Under i.i.d. sampling:
-\[ \sqrt{n}(\hat{\boldsymbol{\theta}}_{GMM} - \boldsymbol{\theta}_0) \xrightarrow{d} N\!\left(\mathbf{0},\, (\mathbf{G}^{\top}\boldsymbol{\Sigma}^{-1}\mathbf{G})^{-1}\right) \]
+
+\[
+\sqrt{n}(\hat{\boldsymbol{\theta}}_{GMM} - \boldsymbol{\theta}_0) \xrightarrow{d} N\!\left(\mathbf{0},\, (\mathbf{G}^{\top}\boldsymbol{\Sigma}^{-1}\mathbf{G})^{-1}\right)
+\]
 where \( \mathbf{G} = E[\partial \mathbf{g}/\partial\boldsymbol{\theta}^{\top}] \). Efficient GMM achieves the semiparametric efficiency bound when only moment conditions are imposed.
 </div>
 
@@ -233,11 +277,15 @@ In practice, \( \boldsymbol{\Sigma} \) is estimated in a first-stage GMM (using 
 
 Given a parametric model with density \( f(y \mid \mathbf{x}; \boldsymbol{\theta}) \) and i.i.d. sample, the **log-likelihood function** is:
 
-\[ \ell(\boldsymbol{\theta}) = \sum_{i=1}^n \ln f(y_i \mid \mathbf{x}_i; \boldsymbol{\theta}) \]
+\[
+\ell(\boldsymbol{\theta}) = \sum_{i=1}^n \ln f(y_i \mid \mathbf{x}_i; \boldsymbol{\theta})
+\]
 
 The **MLE** is \( \hat{\boldsymbol{\theta}}_{MLE} = \argmax_{\boldsymbol{\theta}} \ell(\boldsymbol{\theta}) \). First-order conditions (**score equations**):
 
-\[ \mathbf{s}(\hat{\boldsymbol{\theta}}) = \frac{\partial \ell}{\partial \boldsymbol{\theta}}\bigg|_{\boldsymbol{\theta} = \hat{\boldsymbol{\theta}}} = \mathbf{0} \]
+\[
+\mathbf{s}(\hat{\boldsymbol{\theta}}) = \frac{\partial \ell}{\partial \boldsymbol{\theta}}\bigg|_{\boldsymbol{\theta} = \hat{\boldsymbol{\theta}}} = \mathbf{0}
+\]
 
 ## 5.2 Asymptotic Properties of MLE
 
@@ -254,7 +302,9 @@ Under standard regularity conditions (correct specification, compact parameter s
 
 The **Fisher information matrix** is:
 
-\[ \mathcal{I}(\boldsymbol{\theta}) = E\!\left[-\frac{\partial^2 \ln f}{\partial\boldsymbol{\theta}\,\partial\boldsymbol{\theta}^{\top}}\right] = E\!\left[\frac{\partial \ln f}{\partial\boldsymbol{\theta}}\frac{\partial \ln f}{\partial\boldsymbol{\theta}^{\top}}\right] \]
+\[
+\mathcal{I}(\boldsymbol{\theta}) = E\!\left[-\frac{\partial^2 \ln f}{\partial\boldsymbol{\theta}\,\partial\boldsymbol{\theta}^{\top}}\right] = E\!\left[\frac{\partial \ln f}{\partial\boldsymbol{\theta}}\frac{\partial \ln f}{\partial\boldsymbol{\theta}^{\top}}\right]
+\]
 
 (These two expressions are equal under standard regularity — the **information matrix equality**.)
 
@@ -262,11 +312,15 @@ The **Fisher information matrix** is:
 
 For the normal linear model \( \mathbf{y} \mid \mathbf{X} \sim N(\mathbf{X}\boldsymbol{\beta}, \sigma^2\mathbf{I}) \):
 
-\[ \ell(\boldsymbol{\beta}, \sigma^2) = -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln\sigma^2 - \frac{1}{2\sigma^2}(\mathbf{y} - \mathbf{X}\boldsymbol{\beta})^{\top}(\mathbf{y} - \mathbf{X}\boldsymbol{\beta}) \]
+\[
+\ell(\boldsymbol{\beta}, \sigma^2) = -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln\sigma^2 - \frac{1}{2\sigma^2}(\mathbf{y} - \mathbf{X}\boldsymbol{\beta})^{\top}(\mathbf{y} - \mathbf{X}\boldsymbol{\beta})
+\]
 
 Maximizing over \( \boldsymbol{\beta} \) gives \( \hat{\boldsymbol{\beta}}_{MLE} = \hat{\boldsymbol{\beta}}_{OLS} \). Maximizing over \( \sigma^2 \):
 
-\[ \hat{\sigma}^2_{MLE} = \frac{1}{n}\sum_{i=1}^n \hat{u}_i^2 \]
+\[
+\hat{\sigma}^2_{MLE} = \frac{1}{n}\sum_{i=1}^n \hat{u}_i^2
+\]
 
 This is biased (divides by \( n \) rather than \( n-k-1 \)). The unbiased OLS estimator \( s^2 = \text{SSR}/(n-k-1) \) differs from MLE.
 
@@ -275,13 +329,22 @@ This is biased (divides by \( n \) rather than \( n-k-1 \)). The unbiased OLS es
 Three asymptotically equivalent tests for \( H_0: \boldsymbol{r}(\boldsymbol{\theta}) = \mathbf{0} \) (\( q \) restrictions):
 
 **Wald test:** Estimated at the unrestricted MLE:
-\[ W = n\,\boldsymbol{r}(\hat{\boldsymbol{\theta}})^{\top}\left[\frac{\partial\boldsymbol{r}}{\partial\boldsymbol{\theta}^{\top}}\mathcal{I}(\hat{\boldsymbol{\theta}})^{-1}\frac{\partial\boldsymbol{r}^{\top}}{\partial\boldsymbol{\theta}}\right]^{-1}\boldsymbol{r}(\hat{\boldsymbol{\theta}}) \xrightarrow{d} \chi^2(q) \]
+
+\[
+W = n\,\boldsymbol{r}(\hat{\boldsymbol{\theta}})^{\top}\left[\frac{\partial\boldsymbol{r}}{\partial\boldsymbol{\theta}^{\top}}\mathcal{I}(\hat{\boldsymbol{\theta}})^{-1}\frac{\partial\boldsymbol{r}^{\top}}{\partial\boldsymbol{\theta}}\right]^{-1}\boldsymbol{r}(\hat{\boldsymbol{\theta}}) \xrightarrow{d} \chi^2(q)
+\]
 
 **Likelihood Ratio (LR) test:** Compare log-likelihoods:
-\[ LR = 2\left[\ell(\hat{\boldsymbol{\theta}}_{ur}) - \ell(\hat{\boldsymbol{\theta}}_r)\right] \xrightarrow{d} \chi^2(q) \]
+
+\[
+LR = 2\left[\ell(\hat{\boldsymbol{\theta}}_{ur}) - \ell(\hat{\boldsymbol{\theta}}_r)\right] \xrightarrow{d} \chi^2(q)
+\]
 
 **Lagrange Multiplier (LM) / Score test:** Evaluated at the restricted MLE (computationally attractive when the unrestricted model is hard to estimate):
-\[ LM = \frac{1}{n}\mathbf{s}(\hat{\boldsymbol{\theta}}_r)^{\top}\mathcal{I}(\hat{\boldsymbol{\theta}}_r)^{-1}\mathbf{s}(\hat{\boldsymbol{\theta}}_r) \xrightarrow{d} \chi^2(q) \]
+
+\[
+LM = \frac{1}{n}\mathbf{s}(\hat{\boldsymbol{\theta}}_r)^{\top}\mathcal{I}(\hat{\boldsymbol{\theta}}_r)^{-1}\mathbf{s}(\hat{\boldsymbol{\theta}}_r) \xrightarrow{d} \chi^2(q)
+\]
 
 All three tests have the same asymptotic distribution but differ in finite samples and computational requirements.
 
@@ -293,21 +356,29 @@ All three tests have the same asymptotic distribution but differ in finite sampl
 
 The **Nonlinear Least Squares (NLS)** model is:
 
-\[ y_i = f(\mathbf{x}_i, \boldsymbol{\theta}) + u_i \]
+\[
+y_i = f(\mathbf{x}_i, \boldsymbol{\theta}) + u_i
+\]
 
 where \( f \) is a known but nonlinear function of the parameter vector \( \boldsymbol{\theta} \). NLS minimizes:
 
-\[ S(\boldsymbol{\theta}) = \sum_{i=1}^n \left[y_i - f(\mathbf{x}_i, \boldsymbol{\theta})\right]^2 \]
+\[
+S(\boldsymbol{\theta}) = \sum_{i=1}^n \left[y_i - f(\mathbf{x}_i, \boldsymbol{\theta})\right]^2
+\]
 
 The first-order condition \( \mathbf{F}(\boldsymbol{\theta})^{\top}[\mathbf{y} - \mathbf{f}(\boldsymbol{\theta})] = \mathbf{0} \) (where \( \mathbf{F} \) is the Jacobian matrix of partial derivatives) is generally nonlinear in \( \boldsymbol{\theta} \) and must be solved numerically, e.g., by the **Gauss-Newton algorithm**:
 
-\[ \boldsymbol{\theta}^{(m+1)} = \boldsymbol{\theta}^{(m)} + \left[\mathbf{F}^{(m)\top}\mathbf{F}^{(m)}\right]^{-1}\mathbf{F}^{(m)\top}\left[\mathbf{y} - \mathbf{f}(\boldsymbol{\theta}^{(m)})\right] \]
+\[
+\boldsymbol{\theta}^{(m+1)} = \boldsymbol{\theta}^{(m)} + \left[\mathbf{F}^{(m)\top}\mathbf{F}^{(m)}\right]^{-1}\mathbf{F}^{(m)\top}\left[\mathbf{y} - \mathbf{f}(\boldsymbol{\theta}^{(m)})\right]
+\]
 
 ## 6.2 Asymptotic Properties of NLS
 
 Under standard regularity conditions and \( E[u_i \mid \mathbf{x}_i] = 0 \):
 
-\[ \sqrt{n}(\hat{\boldsymbol{\theta}}_{NLS} - \boldsymbol{\theta}_0) \xrightarrow{d} N\!\left(\mathbf{0},\, \sigma^2\left(E\left[\mathbf{f}_{\boldsymbol{\theta}}\mathbf{f}_{\boldsymbol{\theta}}^{\top}\right]\right)^{-1}\right) \]
+\[
+\sqrt{n}(\hat{\boldsymbol{\theta}}_{NLS} - \boldsymbol{\theta}_0) \xrightarrow{d} N\!\left(\mathbf{0},\, \sigma^2\left(E\left[\mathbf{f}_{\boldsymbol{\theta}}\mathbf{f}_{\boldsymbol{\theta}}^{\top}\right]\right)^{-1}\right)
+\]
 
 where \( \mathbf{f}_{\boldsymbol{\theta}} = \partial f / \partial \boldsymbol{\theta} \). The structure mirrors OLS asymptotics, with \( \mathbf{X} \) replaced by the Jacobian evaluated at the true parameter.
 
@@ -319,7 +390,9 @@ where \( \mathbf{f}_{\boldsymbol{\theta}} = \partial f / \partial \boldsymbol{\t
 
 Binary and ordered models are most naturally understood via a **latent variable** framework:
 
-\[ y_i^* = \mathbf{x}_i^{\top}\boldsymbol{\beta} + u_i, \qquad y_i = \mathbf{1}(y_i^* > 0) \]
+\[
+y_i^* = \mathbf{x}_i^{\top}\boldsymbol{\beta} + u_i, \qquad y_i = \mathbf{1}(y_i^* > 0)
+\]
 
 - If \( u_i \mid \mathbf{x}_i \sim N(0,1) \): **probit model**, \( P(y_i=1\mid\mathbf{x}_i) = \Phi(\mathbf{x}_i^{\top}\boldsymbol{\beta}) \).
 - If \( u_i \mid \mathbf{x}_i \sim \text{Logistic}(0,1) \): **logit model**, \( P(y_i=1\mid\mathbf{x}_i) = \Lambda(\mathbf{x}_i^{\top}\boldsymbol{\beta}) \).
@@ -330,11 +403,15 @@ Note that only the sign of \( y_i^* \) is observed, so scale is not identified: 
 
 The **Tobit model** (Tobin 1958) is designed for outcomes censored at zero:
 
-\[ y_i^* = \mathbf{x}_i^{\top}\boldsymbol{\beta} + u_i, \quad u_i \sim N(0,\sigma^2); \qquad y_i = \max(0, y_i^*) \]
+\[
+y_i^* = \mathbf{x}_i^{\top}\boldsymbol{\beta} + u_i, \quad u_i \sim N(0,\sigma^2); \qquad y_i = \max(0, y_i^*)
+\]
 
 The log-likelihood combines a probit component (for \( y_i = 0 \)) and a normal density component (for \( y_i > 0 \)):
 
-\[ \ell = \sum_{y_i=0} \ln\!\left[1 - \Phi\!\left(\frac{\mathbf{x}_i^{\top}\boldsymbol{\beta}}{\sigma}\right)\right] + \sum_{y_i>0} \left[-\frac{1}{2}\ln(2\pi\sigma^2) - \frac{(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})^2}{2\sigma^2}\right] \]
+\[
+\ell = \sum_{y_i=0} \ln\!\left[1 - \Phi\!\left(\frac{\mathbf{x}_i^{\top}\boldsymbol{\beta}}{\sigma}\right)\right] + \sum_{y_i>0} \left[-\frac{1}{2}\ln(2\pi\sigma^2) - \frac{(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})^2}{2\sigma^2}\right]
+\]
 
 OLS applied to the observed \( y_i > 0 \) observations (**truncated regression**) gives biased estimates due to sample selection.
 

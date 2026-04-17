@@ -319,11 +319,13 @@ r_1 - r_2 \approx \frac{hx}{l}, \qquad I(P) = \left(\frac{A}{2}\right)^2\left[1 
 The key distinction between classical and quantum probability:
 
 <strong>Classical:</strong> probabilities add directly.
+
 \[
 P_{\mathrm{classical}} = |a_1 e^{i\phi_1}|^2 + |a_2 e^{i\phi_2}|^2 = a_1^2 + a_2^2
 \]
 
 <strong>Quantum:</strong> probability amplitudes add first, then square.
+
 \[
 P_{\mathrm{quantum}} = |a_1 e^{i\phi_1} + a_2 e^{i\phi_2}|^2 = a_1^2 + a_2^2 + 2a_1 a_2\cos(\phi_1 - \phi_2)
 \]
@@ -615,7 +617,11 @@ For the states \(|{\pm}\rangle\): \(\Delta S_z = 0\) (definite outcome), but \(\
 ### Statement
 
 <div class="theorem"><strong>Generalized Uncertainty Principle:</strong> For any two observables \(A\) and \(B\) and any state \(|\psi\rangle\):
-\[\Delta A\,\Delta B \geq \frac{1}{2}|\langle[A,B]\rangle|\]</div>
+
+\[
+\Delta A\,\Delta B \geq \frac{1}{2}|\langle[A,B]\rangle|
+\]
+</div>
 
 ### Derivation Sketch
 
@@ -739,7 +745,10 @@ The density operator is always <strong>Hermitian</strong> (\(\hat{\rho} = \hat{\
 <div class="theorem"><strong>Statement 1 — Unit Trace:</strong> \(\mathrm{Tr}(\hat{\rho}) = 1\) for any pure or mixed ensemble.
 
 <em>Proof (pure case):</em> Let \(\langle\psi|\psi\rangle = 1\) and \(\hat{\rho} = |\psi\rangle\langle\psi|\). Then
-\[\mathrm{Tr}(\hat{\rho}) = \sum_i \langle i|\hat{\rho}|i\rangle = \sum_i \langle i|\psi\rangle\langle\psi|i\rangle = \sum_i \langle\psi|i\rangle\langle i|\psi\rangle = \langle\psi|\psi\rangle = 1.\]
+
+\[
+\mathrm{Tr}(\hat{\rho}) = \sum_i \langle i|\hat{\rho}|i\rangle = \sum_i \langle i|\psi\rangle\langle\psi|i\rangle = \sum_i \langle\psi|i\rangle\langle i|\psi\rangle = \langle\psi|\psi\rangle = 1.
+\]
 The mixed case follows immediately since \(\mathrm{Tr}(\hat{\rho}) = \sum_k p_k \mathrm{Tr}(|\psi_k\rangle\langle\psi_k|) = \sum_k p_k = 1\).</div>
 
 <div class="theorem"><strong>Statement 2 — Idempotent for Pure States:</strong> \(\hat{\rho}^2 = \hat{\rho}\) if and only if \(\hat{\rho}\) is a pure state.
@@ -747,11 +756,17 @@ The mixed case follows immediately since \(\mathrm{Tr}(\hat{\rho}) = \sum_k p_k 
 <em>Proof:</em> \(\hat{\rho}^2 = |\psi\rangle\langle\psi|\psi\rangle\langle\psi| = |\psi\rangle\langle\psi| = \hat{\rho}\). For mixed states, \(\mathrm{Tr}(\hat{\rho}^2) = \sum_k p_k^2 < \sum_k p_k = 1\), so \(\hat{\rho}^2 \neq \hat{\rho}\).</div>
 
 <div class="theorem"><strong>Statement 3 — Born Rule via Trace:</strong> The probability of obtaining outcome \(|\phi\rangle\) when measuring a system in state \(\hat{\rho}\) is
-\[P(\phi) = |\langle\phi|\psi\rangle|^2 = \mathrm{Tr}(\hat{P}_\phi\,\hat{\rho})\]
+
+\[
+P(\phi) = |\langle\phi|\psi\rangle|^2 = \mathrm{Tr}(\hat{P}_\phi\,\hat{\rho})
+\]
 where \(\hat{P}_\phi = |\phi\rangle\langle\phi|\) is the projection operator.</div>
 
 <div class="theorem"><strong>Statement 4 — Expectation Value:</strong> For any observable \(\hat{A}\),
-\[\langle\hat{A}\rangle = \langle\psi|\hat{A}|\psi\rangle = \mathrm{Tr}(\hat{A}\,\hat{\rho}).\]
+
+\[
+\langle\hat{A}\rangle = \langle\psi|\hat{A}|\psi\rangle = \mathrm{Tr}(\hat{A}\,\hat{\rho}).
+\]
 <em>Proof:</em> \(\langle\psi|\hat{A}|\psi\rangle = \sum_i \langle\psi|\hat{A}|i\rangle\langle i|\psi\rangle = \sum_i \langle i|\psi\rangle\langle\psi|\hat{A}|i\rangle = \mathrm{Tr}(\hat{\rho}\,\hat{A})\).</div>
 
 <div class="theorem"><strong>Statement 5 — Mixed State Test:</strong> \(\mathrm{Tr}(\hat{\rho}^2) < 1\) for a mixed ensemble. This is a definitive criterion: given any density matrix, compute \(\mathrm{Tr}(\hat{\rho}^2)\) — if it equals 1 the state is pure; if less than 1 it is mixed.</div>
@@ -759,6 +774,7 @@ where \(\hat{P}_\phi = |\phi\rangle\langle\phi|\) is the projection operator.</d
 ### Worked Examples
 
 <strong>Example 1 — Pure spin-up state.</strong> For \(\hat{\rho}_+ = |{+}\rangle\langle{+}|\):
+
 \[
 \hat{\rho}_+ = \begin{pmatrix}1\\0\end{pmatrix}\begin{pmatrix}1&0\end{pmatrix} = \begin{pmatrix}1&0\\0&0\end{pmatrix}
 \]
@@ -767,12 +783,14 @@ Expectation of \(S_z\): \(\langle S_z\rangle = \mathrm{Tr}\!\left(S_z\,\hat{\rho
 Expectation of \(S_x\): \(\langle S_x\rangle = \mathrm{Tr}(S_x\,\hat{\rho}_+) = 0\). (Verify: off-diagonal \(S_x\) paired with diagonal \(\hat{\rho}_+\) gives zero trace.)
 
 <strong>Example 2 — Maximally mixed ensemble.</strong> Suppose a beam contains equal proportions of \(|{+}\rangle\) and \(|{-}\rangle\) atoms with no phase coherence:
+
 \[
 \hat{\rho}_{\mathrm{mix}} = \frac{1}{2}|{+}\rangle\langle{+}| + \frac{1}{2}|{-}\rangle\langle{-}| = \frac{1}{2}\begin{pmatrix}1&0\\0&1\end{pmatrix} = \frac{\mathbf{1}}{2}
 \]
 Check: \(\mathrm{Tr}(\hat{\rho}^2) = \mathrm{Tr}\!\left(\frac{1}{4}\mathbf{1}\right) = \frac{1}{2} < 1\) — confirming this is mixed. The expectation value \(\langle S_{\hat{n}}\rangle = \mathrm{Tr}(S_{\hat{n}}\,\hat{\rho}_{\mathrm{mix}}) = 0\) for <strong>any</strong> direction \(\hat{n}\). This is the defining property of a maximally mixed ensemble: no measurement in any direction reveals a preferred orientation.
 
 <strong>Example 3 — A partially polarized ensemble.</strong> If \(3/4\) of atoms are spin-up and \(1/4\) spin-down:
+
 \[
 \hat{\rho} = \frac{3}{4}\begin{pmatrix}1&0\\0&0\end{pmatrix} + \frac{1}{4}\begin{pmatrix}0&0\\0&1\end{pmatrix} = \begin{pmatrix}3/4&0\\0&1/4\end{pmatrix}
 \]
@@ -797,7 +815,10 @@ U(t+\delta t, t) = \mathbf{1} - \frac{iH\,\delta t}{\hbar}
 \]
 
 <div class="theorem"><strong>Postulate 6 — The Schrödinger Equation:</strong>
-\[i\hbar\frac{d}{dt}|\psi(t)\rangle = H(t)|\psi(t)\rangle\]
+
+\[
+i\hbar\frac{d}{dt}|\psi(t)\rangle = H(t)|\psi(t)\rangle
+\]
 The time evolution of a quantum system is determined by its Hamiltonian (total energy operator).</div>
 
 ### Time-Independent Hamiltonians
@@ -888,6 +909,7 @@ The two energy levels are split symmetrically around \(E_0\). The corresponding 
 \[
 |I\rangle = \frac{1}{\sqrt{2}}\bigl(|1\rangle + |2\rangle\bigr), \quad E_I = E_0 - A
 \]
+
 \[
 |II\rangle = \frac{1}{\sqrt{2}}\bigl(|1\rangle - |2\rangle\bigr), \quad E_{II} = E_0 + A
 \]
@@ -1677,16 +1699,19 @@ Alain Aspect and colleagues (1982) performed the decisive test, measuring photon
 # Summary of Key Equations
 
 <strong>Spin-\(\frac{1}{2}\) eigenstates:</strong>
+
 \[
 S_z: \quad |{\pm}\rangle; \qquad S_x: \quad |{\pm}\rangle_x = \frac{1}{\sqrt{2}}(|{+}\rangle \pm |{-}\rangle); \qquad S_y: \quad |{\pm}\rangle_y = \frac{1}{\sqrt{2}}(|{+}\rangle \pm i|{-}\rangle)
 \]
 
 <strong>Uncertainty principles:</strong>
+
 \[
 \Delta x\,\Delta p \geq \frac{\hbar}{2}, \qquad \Delta S_x\,\Delta S_y \geq \frac{\hbar}{2}|\langle S_z\rangle|
 \]
 
 <strong>Schrödinger equation in position space:</strong>
+
 \[
 i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2\psi}{\partial x^2} + V(x)\psi
 \]

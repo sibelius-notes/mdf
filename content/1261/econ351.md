@@ -43,11 +43,17 @@ Statistics Canada's **Labour Force Survey (LFS)** classifies all civilians aged 
 
 Key rates:
 
-\[ \text{Unemployment Rate} = \frac{U}{E + U} \]
+\[
+\text{Unemployment Rate} = \frac{U}{E + U}
+\]
 
-\[ \text{Participation Rate} = \frac{E + U}{\text{Working-age population}} \]
+\[
+\text{Participation Rate} = \frac{E + U}{\text{Working-age population}}
+\]
 
-\[ \text{Employment Rate} = \frac{E}{\text{Working-age population}} \]
+\[
+\text{Employment Rate} = \frac{E}{\text{Working-age population}}
+\]
 
 <div class="remark">
 <strong>Discouraged Workers:</strong> Individuals who want to work but have stopped searching because they believe no jobs are available. They are counted as <em>not in the labour force</em> rather than unemployed, causing the official unemployment rate to understate labour market slack during recessions. Statistics Canada's R8 measure of "underutilisation" adds discouraged workers and involuntary part-timers to the numerator.
@@ -61,17 +67,23 @@ Key rates:
 
 Each individual chooses how to allocate their time endowment \( T \) between market work \( H \) and leisure \( L = T - H \). Utility depends on consumption \( C \) and leisure \( L \):
 
-\[ \max_{C, L} \; U(C, L) \quad \text{subject to} \quad C = w(T - L) + V \]
+\[
+\max_{C, L} \; U(C, L) \quad \text{subject to} \quad C = w(T - L) + V
+\]
 
 where \( w \) is the real wage and \( V \) is non-labour income. The budget constraint can be rewritten using the concept of **full income**:
 
-\[ C + wL = wT + V \equiv I^F \]
+\[
+C + wL = wT + V \equiv I^F
+\]
 
 Full income is the value of the time endowment plus non-labour income. The slope of the budget constraint in (L, C) space is \( -w \): an hour of leisure sacrificed raises consumption by \( w \).
 
 At the interior optimum:
 
-\[ MRS_{L,C} = \frac{MU_L}{MU_C} = w \]
+\[
+MRS_{L,C} = \frac{MU_L}{MU_C} = w
+\]
 
 The marginal rate of substitution of leisure for consumption equals the wage — the individual is indifferent at the margin between an extra hour of leisure and the goods \( w \) could buy.
 
@@ -99,7 +111,9 @@ The **backward-bending labour supply curve** (positive slope at low wages, negat
 
 When a worker is not participating (\( H = 0 \)), the optimum is at a corner of the budget set. The individual does not work if and only if:
 
-\[ w < w^* \equiv MRS_{L,C}\big|_{H=0} \]
+\[
+w < w^* \equiv MRS_{L,C}\big|_{H=0}
+\]
 
 The **reservation wage** \( w^* \) is the minimum wage at which the individual is just willing to enter the labour force. An increase in non-labour income \( V \) raises the reservation wage (income effect), reducing participation. This is the mechanism by which social assistance and welfare programs reduce labour force participation.
 
@@ -135,7 +149,9 @@ Employment Insurance (EI) creates two distortions: reduced search intensity whil
 
 The minimum wage is a wage floor below which it is illegal to employ workers. In a competitive labour market, a binding minimum wage (set above \( w^* \)) reduces employment and creates a surplus of labour (unemployment):
 
-\[ \text{Employment loss} = L^S(w_{min}) - L^D(w_{min}) \]
+\[
+\text{Employment loss} = L^S(w_{min}) - L^D(w_{min})
+\]
 
 But the monopsony model (Section 5.2 below) reverses this prediction — in a market where the employer has wage-setting power, a minimum wage can simultaneously raise wages and increase employment up to the competitive level.
 
@@ -153,11 +169,15 @@ Over a lifetime, a worker allocates time between market work and leisure across 
 
 The Euler equation for consumption implies:
 
-\[ \frac{\dot{C}}{C} = r - \rho \]
+\[
+\frac{\dot{C}}{C} = r - \rho
+\]
 
 where \( r \) is the real interest rate and \( \rho \) is the rate of time preference. Consumption grows faster when \( r > \rho \). Analogously, labour supply tilts toward periods of high wages:
 
-\[ \frac{d \ln H_t}{d \ln w_t}\bigg|_{lifetime wealth constant} = \sigma_{LS} > 0 \]
+\[
+\frac{d \ln H_t}{d \ln w_t}\bigg|_{lifetime wealth constant} = \sigma_{LS} > 0
+\]
 
 The **Frisch elasticity** \( \sigma_{LS} \) governs intertemporal substitution, holding lifetime wealth constant. Estimated Frisch elasticities range from 0.5 to 1.5 for women and 0.1 to 0.5 for men in most micro studies.
 
@@ -175,7 +195,9 @@ The **Canada Pension Plan (CPP)** provides benefits at age 65 based on career av
 
 A competitive, profit-maximising firm hires labour up to the point where the **value of the marginal product** equals the wage:
 
-\[ w = P \cdot MP_L = VMP_L \]
+\[
+w = P \cdot MP_L = VMP_L
+\]
 
 The firm's labour demand curve is the downward-sloping \( VMP_L \) schedule (given diminishing marginal returns). A rise in the product price \( P \) or an improvement in technology shifts labour demand outward; a rise in the price of a complementary input (e.g., capital for skilled labour) shifts it inward.
 
@@ -183,7 +205,9 @@ The firm's labour demand curve is the downward-sloping \( VMP_L \) schedule (giv
 
 The own-wage elasticity of labour demand \( \eta_{LL} < 0 \) governs the employment response to a wage change:
 
-\[ \eta_{LL} = \frac{\partial \ln L}{\partial \ln w} \]
+\[
+\eta_{LL} = \frac{\partial \ln L}{\partial \ln w}
+\]
 
 **Hicks-Marshall Rules** describe the determinants of \( |\eta_{LL}| \):
 
@@ -202,11 +226,15 @@ Typical estimates of \( \eta_{LL} \) for the aggregate economy range from −0.3
 
 A monopsonist maximises profit by setting:
 
-\[ VMP_L = MLC > w \]
+\[
+VMP_L = MLC > w
+\]
 
 Employment and wages are both below the competitive level — a double exploitation of workers. The degree of monopsonistic exploitation is measured by the **Pigouvian exploitation index**:
 
-\[ \frac{VMP_L - w}{w} = \frac{1}{\varepsilon_S} \]
+\[
+\frac{VMP_L - w}{w} = \frac{1}{\varepsilon_S}
+\]
 
 where \( \varepsilon_S \) is the elasticity of labour supply to the firm (not the market). When supply to the firm is very elastic (perfect competition), exploitation is zero.
 
@@ -216,7 +244,9 @@ Labour costs include more than the wage. **Non-wage benefits** — pensions, ext
 
 **Quasi-fixed costs** are labour costs that do not vary with hours — hiring and training costs, administrative overhead, fixed statutory benefits. Because quasi-fixed costs are spread over more hours when workers work longer, firms facing high quasi-fixed costs prefer longer hours per worker over more workers:
 
-\[ \frac{W \cdot H + F}{H} = W + \frac{F}{H} \downarrow \text{ as } H \uparrow \]
+\[
+\frac{W \cdot H + F}{H} = W + \frac{F}{H} \downarrow \text{ as } H \uparrow
+\]
 
 This helps explain why overtime hours are common rather than hiring additional part-time workers, and why mandated benefits may reduce employment by raising quasi-fixed costs.
 
@@ -257,7 +287,9 @@ Net welfare effect depends on the distribution of gains and losses and the weigh
 
 In equilibrium, workers are indifferent across jobs with different characteristics after accounting for compensating differentials. The equilibrium **hedonic wage schedule** \( w(x) \) maps job characteristic \( x \) (e.g., fatality risk) to the equilibrium wage:
 
-\[ \frac{dw}{dx} = \text{marginal willingness to accept compensation for characteristic } x \]
+\[
+\frac{dw}{dx} = \text{marginal willingness to accept compensation for characteristic } x
+\]
 
 For a negative characteristic (injury risk \( p \)), the hedonic wage schedule slopes upward in \( p \). Workers with lower risk aversion sort into risky jobs and earn the compensating differential; workers with higher risk aversion sort into safe jobs.
 
@@ -265,7 +297,9 @@ For a negative characteristic (injury risk \( p \)), the hedonic wage schedule s
 
 The compensating differential for fatality risk provides an estimate of the **Value of a Statistical Life (VSL)** — the aggregate willingness to pay for a marginal reduction in fatality risk across many workers:
 
-\[ VSL = \frac{dw/dp}{\Delta p} = \frac{\text{wage premium per unit of risk}}{\text{risk increase}} \]
+\[
+VSL = \frac{dw/dp}{\Delta p} = \frac{\text{wage premium per unit of risk}}{\text{risk increase}}
+\]
 
 If 1,000 workers each accept a $500/year wage premium to bear a 1/1,000 increase in annual fatality risk, the VSL equals $500 × 1,000 = $500,000. More modern studies using panel data and matched worker-firm datasets find VSL estimates in the range of $5–15 million (2020 USD), forming the empirical foundation for cost-benefit analysis of safety regulations.
 
@@ -287,7 +321,9 @@ Becker (1964) formalised human capital as an investment decision: individuals in
 
 **Investment rule:** Invest in schooling as long as
 
-\[ \sum_{t=s}^{R} \frac{w_t(s+1) - w_t(s)}{(1+r)^{t-s}} \geq C(s) \]
+\[
+\sum_{t=s}^{R} \frac{w_t(s+1) - w_t(s)}{(1+r)^{t-s}} \geq C(s)
+\]
 
 where \( s \) is years of schooling, \( R \) is retirement age, \( r \) is the discount rate, and \( C(s) \) is the direct and opportunity cost of an additional year of school.
 
@@ -295,7 +331,9 @@ where \( s \) is years of schooling, \( R \) is retirement age, \( r \) is the d
 
 Jacob Mincer (1974) derived a log-linear wage equation from a simple human capital investment model. The standard Mincer specification is:
 
-\[ \ln w = \alpha + \beta S + \gamma E + \delta E^2 + \varepsilon \]
+\[
+\ln w = \alpha + \beta S + \gamma E + \delta E^2 + \varepsilon
+\]
 
 where \( S \) is years of schooling, \( E \) is years of potential experience, and \( E^2 \) captures the concavity of experience-earnings profiles (earnings grow quickly early in careers, then plateau or decline).
 
@@ -332,7 +370,9 @@ Labour market discrimination refers to unequal treatment of workers with identic
 
 The **Oaxaca-Blinder decomposition** decomposes the wage gap between groups A and B:
 
-\[ \ln \bar{w}_A - \ln \bar{w}_B = \underbrace{(\bar{X}_A - \bar{X}_B)'\hat{\beta}_B}_{\text{endowments}} + \underbrace{\bar{X}_A'(\hat{\beta}_A - \hat{\beta}_B)}_{\text{coefficients (discrimination)}} \]
+\[
+\ln \bar{w}_A - \ln \bar{w}_B = \underbrace{(\bar{X}_A - \bar{X}_B)'\hat{\beta}_B}_{\text{endowments}} + \underbrace{\bar{X}_A'(\hat{\beta}_A - \hat{\beta}_B)}_{\text{coefficients (discrimination)}}
+\]
 
 The first term attributes the gap to differences in observable characteristics; the second attributes it to different returns to those characteristics — a measure of discrimination if the characteristics are truly productivity-relevant.
 
@@ -340,7 +380,9 @@ The first term attributes the gap to differences in observable characteristics; 
 
 Becker (1957) modelled discrimination as a preference. An employer with a **taste for discrimination** against group B behaves as if hiring group B workers costs \( w_B(1 + d) \) rather than \( w_B \), where \( d > 0 \) is the discrimination coefficient. The discriminating employer hires group B only if:
 
-\[ w_B \leq \frac{w_A}{1 + d} \]
+\[
+w_B \leq \frac{w_A}{1 + d}
+\]
 
 In a competitive market, non-discriminating employers earn higher profits by hiring the cheaper group B workers, undercutting discriminating employers and driving them out. Discrimination persists in the long run only if:
 
@@ -378,7 +420,9 @@ A union with monopoly power in the labour market chooses wages to maximise membe
 
 If the union maximises the **rent** accruing to employed workers \( (w - \bar{w}) \cdot L \), the optimal wage satisfies:
 
-\[ \frac{w - \bar{w}}{w} = -\frac{1}{\eta_{LL}} \]
+\[
+\frac{w - \bar{w}}{w} = -\frac{1}{\eta_{LL}}
+\]
 
 This mirrors the Lerner monopoly pricing formula, with \( \bar{w} \) as the "cost" (opportunity wage) and \( \eta_{LL} \) as the demand elasticity.
 
@@ -418,7 +462,9 @@ Job search models (Mortensen, 1970; McCall, 1970) treat unemployment as an optim
 
 The optimal strategy is a **reservation wage rule**: accept any offer with \( w \geq w^R \) and reject otherwise. The reservation wage satisfies the asset-value equation:
 
-\[ r w^R = b + \lambda \int_{w^R}^{\infty} (w - w^R) dF(w) \]
+\[
+r w^R = b + \lambda \int_{w^R}^{\infty} (w - w^R) dF(w)
+\]
 
 where \( r \) is the discount rate, \( b \) is the flow value of unemployment (UI benefits plus home production), and \( \lambda \) is the arrival rate of job offers.
 
@@ -434,7 +480,9 @@ Comparative statics:
 
 In the **shirking model** (Shapiro and Stiglitz, 1984), workers choose between working and shirking. Detected shirkers are fired and must search for another job at the market wage. The no-shirking condition requires:
 
-\[ w \geq \bar{w} + \frac{(r + q)e}{p} \]
+\[
+w \geq \bar{w} + \frac{(r + q)e}{p}
+\]
 
 where \( \bar{w} \) is the market wage, \( q \) is the separation rate, \( e \) is the effort cost, and \( p \) is the detection probability. Firms pay efficiency wages to deter shirking; in equilibrium, all firms pay above-market wages and equilibrium unemployment exists to make firing credible.
 

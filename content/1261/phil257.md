@@ -92,7 +92,9 @@ This position is called **Platonism** (or mathematical realism): mathematical ob
 
 In 1902 Bertrand Russell discovered a contradiction at the heart of Frege's system. Consider the set of all sets that do not contain themselves:
 
-\[ R = \{x : x \notin x\} \]
+\[
+R = \{x : x \notin x\}
+\]
 
 If \(R \in R\), then by definition \(R \notin R\). If \(R \notin R\), then by definition \(R \in R\). Either assumption leads to its negation — a contradiction.
 

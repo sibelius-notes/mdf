@@ -17,6 +17,7 @@ We begin by establishing the basic objects of study. Throughout, we write points
 
 <div class="definition">
 <strong>Definition 1.1 (Holomorphic Function).</strong> Let \(U \subseteq \mathbb{C}^n\) be an open set. A function \(f: U \to \mathbb{C}\) is <em>holomorphic</em> if it is holomorphic in each variable separately, i.e., for each \(j = 1, \dots, n\) and each fixed \((z_1, \dots, z_{j-1}, z_{j+1}, \dots, z_n) \in \mathbb{C}^{n-1}\), the function
+
 \[
 w \mapsto f(z_1, \dots, z_{j-1}, w, z_{j+1}, \dots, z_n)
 \]
@@ -27,10 +28,12 @@ This definition, due to the requirement of separate holomorphicity in each varia
 
 <div class="definition">
 <strong>Definition 1.2 (Polydisc).</strong> For \(a = (a_1, \dots, a_n) \in \mathbb{C}^n\) and \(r = (r_1, \dots, r_n)\) with each \(r_j > 0\), the <em>polydisc</em> centred at \(a\) with polyradius \(r\) is
+
 \[
 \Delta(a, r) = \{ z \in \mathbb{C}^n : |z_j - a_j| < r_j \text{ for all } j = 1, \dots, n \}.
 \]
 Its <em>distinguished boundary</em> (or <em>Shilov boundary</em>) is
+
 \[
 T(a, r) = \{ z \in \mathbb{C}^n : |z_j - a_j| = r_j \text{ for all } j = 1, \dots, n \},
 \]
@@ -47,6 +50,7 @@ The Cauchy integral formula generalises to several variables by iterating the on
 
 <div class="theorem">
 <strong>Theorem 1.4 (Cauchy Integral Formula for Polydiscs).</strong> Let \(f\) be holomorphic on a neighbourhood of the closed polydisc \(\overline{\Delta(a, r)}\). Then for all \(z \in \Delta(a, r)\),
+
 \[
 f(z) = \frac{1}{(2\pi i)^n} \int_{T(a,r)} \frac{f(\zeta_1, \dots, \zeta_n)}{(\zeta_1 - z_1) \cdots (\zeta_n - z_n)} \, d\zeta_1 \cdots d\zeta_n.
 \]
@@ -54,10 +58,12 @@ f(z) = \frac{1}{(2\pi i)^n} \int_{T(a,r)} \frac{f(\zeta_1, \dots, \zeta_n)}{(\ze
 
 <div class="proof">
 <strong>Proof.</strong> We proceed by induction on \(n\). The case \(n = 1\) is the classical Cauchy integral formula. For the inductive step, fix \(z = (z_1, \dots, z_n) \in \Delta(a, r)\). Since \(f\) is holomorphic in \(z_n\) with the other variables fixed, the one-variable Cauchy formula gives
+
 \[
 f(z_1, \dots, z_n) = \frac{1}{2\pi i} \int_{|\zeta_n - a_n| = r_n} \frac{f(z_1, \dots, z_{n-1}, \zeta_n)}{\zeta_n - z_n} \, d\zeta_n.
 \]
 Now for fixed \(\zeta_n\) with \(|\zeta_n - a_n| = r_n\), the function \((z_1, \dots, z_{n-1}) \mapsto f(z_1, \dots, z_{n-1}, \zeta_n)\) is holomorphic in \(n-1\) variables on a neighbourhood of \(\overline{\Delta(a', r')}\) where \(a' = (a_1, \dots, a_{n-1})\) and \(r' = (r_1, \dots, r_{n-1})\). By the inductive hypothesis,
+
 \[
 f(z_1, \dots, z_{n-1}, \zeta_n) = \frac{1}{(2\pi i)^{n-1}} \int_{T(a', r')} \frac{f(\zeta_1, \dots, \zeta_{n-1}, \zeta_n)}{(\zeta_1 - z_1) \cdots (\zeta_{n-1} - z_{n-1})} \, d\zeta_1 \cdots d\zeta_{n-1}.
 \]
@@ -66,6 +72,7 @@ Substituting back and applying Fubini's theorem (justified since the integrand i
 
 <div class="corollary">
 <strong>Corollary 1.5 (Cauchy Inequalities).</strong> Under the hypotheses of Theorem 1.4, for any multi-index \(\alpha = (\alpha_1, \dots, \alpha_n) \in \mathbb{N}_0^n\),
+
 \[
 \left| \frac{\partial^{|\alpha|} f}{\partial z_1^{\alpha_1} \cdots \partial z_n^{\alpha_n}}(a) \right| \leq \frac{\alpha!}{r^\alpha} \sup_{T(a,r)} |f|,
 \]
@@ -78,10 +85,12 @@ As in one variable, holomorphic functions admit convergent power series expansio
 
 <div class="theorem">
 <strong>Theorem 1.6 (Power Series Expansion).</strong> Let \(f \in \mathcal{O}(\Delta(a, r))\). Then \(f\) has a unique power series expansion
+
 \[
 f(z) = \sum_{\alpha \in \mathbb{N}_0^n} c_\alpha (z - a)^\alpha,
 \]
 converging absolutely and uniformly on compact subsets of \(\Delta(a, r)\), where
+
 \[
 c_\alpha = \frac{1}{\alpha!} \frac{\partial^{|\alpha|} f}{\partial z^\alpha}(a) = \frac{1}{(2\pi i)^n} \int_{T(a, r)} \frac{f(\zeta)}{(\zeta - a)^{\alpha + \mathbf{1}}} \, d\zeta,
 \]
@@ -90,6 +99,7 @@ with \(\mathbf{1} = (1, \dots, 1)\) and \((\zeta - a)^{\alpha + \mathbf{1}} = \p
 
 <div class="proof">
 <strong>Proof.</strong> For \(z \in \Delta(a, r)\), the Cauchy kernel admits the expansion
+
 \[
 \frac{1}{(\zeta_j - z_j)} = \frac{1}{(\zeta_j - a_j)} \cdot \frac{1}{1 - \frac{z_j - a_j}{\zeta_j - a_j}} = \sum_{\alpha_j = 0}^\infty \frac{(z_j - a_j)^{\alpha_j}}{(\zeta_j - a_j)^{\alpha_j + 1}},
 \]
@@ -118,6 +128,7 @@ We now come to one of the most striking phenomena in several complex variables. 
 <strong>Proof.</strong> We give the proof for the important special case where \(K\) is a single point, say \(K = \{0\}\) and \(U\) contains the origin. After a translation and scaling, we may assume \(\overline{\Delta(0, r)} \subset U\) for some polyradius \(r\).
 
 Consider the function defined by the Cauchy integral:
+
 \[
 \tilde{f}(z) = \frac{1}{2\pi i} \int_{|\zeta_n| = r_n} \frac{f(z_1, \dots, z_{n-1}, \zeta_n)}{\zeta_n - z_n} \, d\zeta_n,
 \]
@@ -149,6 +160,7 @@ Hartogs' extension theorem raises a fundamental question: given a domain \(\Omeg
 
 <div class="example">
 <strong>Example 1.14.</strong> The polydisc \(\Delta(0, r)\) is a domain of holomorphy. To see this, consider the function
+
 \[
 f(z) = \sum_{\alpha \in \mathbb{N}_0^n} \frac{z^\alpha}{r^\alpha}.
 \]
@@ -157,6 +169,7 @@ This series converges on \(\Delta(0, r)\) but diverges at every point of the dis
 
 <div class="definition">
 <strong>Definition 1.15 (Holomorphic Convexity).</strong> Let \(\Omega \subseteq \mathbb{C}^n\) be open. For a compact subset \(K \subseteq \Omega\), the <em>holomorphically convex hull</em> of \(K\) in \(\Omega\) is
+
 \[
 \hat{K}_\Omega = \left\{ z \in \Omega : |f(z)| \leq \sup_K |f| \text{ for all } f \in \mathcal{O}(\Omega) \right\}.
 \]
@@ -188,6 +201,7 @@ A landmark later development, due to Oka (1942) and independently Bremermann and
 
 <div class="definition">
 <strong>Definition 1.18 (Pseudoconvexity).</strong> A \(C^2\) function \(\rho: U \to \mathbb{R}\) on an open set \(U \subseteq \mathbb{C}^n\) is <em>plurisubharmonic</em> if its complex Hessian (Levi form)
+
 \[
 \sum_{j,k=1}^n \frac{\partial^2 \rho}{\partial z_j \partial \bar{z}_k}(p) \, w_j \bar{w}_k \geq 0
 \]
@@ -210,6 +224,7 @@ Having established the local theory of holomorphic functions in several variable
 
 <div class="definition">
 <strong>Definition 2.1 (Complex Manifold).</strong> A <em>complex manifold</em> of dimension \(n\) is a Hausdorff, second-countable topological space \(X\) equipped with a maximal atlas \(\{(U_\alpha, \varphi_\alpha)\}\) where each \(\varphi_\alpha: U_\alpha \to V_\alpha \subseteq \mathbb{C}^n\) is a homeomorphism onto an open subset of \(\mathbb{C}^n\), and all transition functions
+
 \[
 \varphi_\beta \circ \varphi_\alpha^{-1}: \varphi_\alpha(U_\alpha \cap U_\beta) \to \varphi_\beta(U_\alpha \cap U_\beta)
 \]
@@ -222,10 +237,12 @@ are holomorphic (i.e., biholomorphic maps between open subsets of \(\mathbb{C}^n
 
 <div class="example">
 <strong>Example 2.3 (Complex Projective Space).</strong> The <em>complex projective space</em> \(\mathbb{CP}^n\) is the set of one-dimensional complex subspaces of \(\mathbb{C}^{n+1}\), i.e.,
+
 \[
 \mathbb{CP}^n = (\mathbb{C}^{n+1} \setminus \{0\}) / \sim,
 \]
 where \(z \sim w\) if and only if \(z = \lambda w\) for some \(\lambda \in \mathbb{C}^*\). The equivalence class of \((z_0, \dots, z_n)\) is denoted \([z_0 : \cdots : z_n]\) (homogeneous coordinates). The standard atlas consists of the open sets \(U_j = \{[z_0 : \cdots : z_n] : z_j \neq 0\}\) with charts
+
 \[
 \varphi_j: U_j \to \mathbb{C}^n, \quad [z_0 : \cdots : z_n] \mapsto \left(\frac{z_0}{z_j}, \dots, \widehat{\frac{z_j}{z_j}}, \dots, \frac{z_n}{z_j}\right),
 \]
@@ -261,6 +278,7 @@ Vector bundles are the natural habitat for "multi-valued" or "twisted" holomorph
 
 <div class="example">
 <strong>Example 2.9 (Tautological Line Bundle).</strong> Over \(\mathbb{CP}^n\), the <em>tautological line bundle</em> \(\mathcal{O}(-1)\) has total space
+
 \[
 \mathcal{O}(-1) = \{(\ell, v) \in \mathbb{CP}^n \times \mathbb{C}^{n+1} : v \in \ell\},
 \]
@@ -275,6 +293,7 @@ where we view a point \(\ell \in \mathbb{CP}^n\) as a line through the origin in
 
 <div class="definition">
 <strong>Definition 2.11 (Canonical Bundle).</strong> Let \(X\) be a complex manifold of dimension \(n\). The <em>holomorphic tangent bundle</em> \(T_X^{1,0}\) is the rank-\(n\) holomorphic vector bundle whose sections are holomorphic vector fields of type \((1,0)\). The <em>canonical bundle</em> is the top exterior power of the holomorphic cotangent bundle:
+
 \[
 K_X = \bigwedge^n (T_X^{1,0})^* = \bigwedge^n \Omega_X^1,
 \]
@@ -283,6 +302,7 @@ where \(\Omega_X^1\) denotes the holomorphic cotangent bundle. This is a holomor
 
 <div class="example">
 <strong>Example 2.12.</strong> For \(\mathbb{CP}^n\), the canonical bundle is \(K_{\mathbb{CP}^n} \cong \mathcal{O}(-(n+1))\). This can be computed from the Euler sequence
+
 \[
 0 \to \mathcal{O} \to \mathcal{O}(1)^{\oplus(n+1)} \to T_{\mathbb{CP}^n} \to 0,
 \]
@@ -295,6 +315,7 @@ The correspondence between divisors and line bundles is one of the most importan
 
 <div class="definition">
 <strong>Definition 2.13 (Divisor).</strong> Let \(X\) be a complex manifold. A <em>divisor</em> on \(X\) is a formal, locally finite integer linear combination of irreducible analytic hypersurfaces:
+
 \[
 D = \sum_{i} n_i Y_i, \quad n_i \in \mathbb{Z},
 \]
@@ -313,6 +334,7 @@ where each \(Y_i\) is an irreducible analytic hypersurface in \(X\). The group o
 
 <div class="definition">
 <strong>Definition 2.16 (Blowup at a Point).</strong> Let \(X\) be a complex manifold of dimension \(n\) and \(p \in X\). The <em>blowup</em> of \(X\) at \(p\), denoted \(\mathrm{Bl}_p(X)\), is the complex manifold obtained by replacing \(p\) with the projective space \(\mathbb{CP}^{n-1}\) of complex directions through \(p\). Formally, in local coordinates centred at \(p\), the blowup is
+
 \[
 \mathrm{Bl}_0(\mathbb{C}^n) = \{(z, [\ell]) \in \mathbb{C}^n \times \mathbb{CP}^{n-1} : z \in \ell\},
 \]
@@ -356,6 +378,7 @@ Sheaf theory provides the natural language for passing between local and global 
 
 <div class="definition">
 <strong>Definition 3.4 (Stalks).</strong> The <em>stalk</em> of a sheaf \(\mathcal{F}\) at a point \(x \in X\) is the direct limit
+
 \[
 \mathcal{F}_x = \varinjlim_{U \ni x} \mathcal{F}(U),
 \]
@@ -366,10 +389,12 @@ taken over all open neighbourhoods \(U\) of \(x\). Elements of \(\mathcal{F}_x\)
 
 <div class="definition">
 <strong>Definition 3.5 (Exact Sequence).</strong> A sequence of sheaf morphisms
+
 \[
 \cdots \to \mathcal{F}^{i-1} \xrightarrow{\varphi^{i-1}} \mathcal{F}^i \xrightarrow{\varphi^i} \mathcal{F}^{i+1} \to \cdots
 \]
 is <em>exact</em> if it is exact at the level of stalks: for every point \(x \in X\), the sequence
+
 \[
 \cdots \to \mathcal{F}^{i-1}_x \to \mathcal{F}^i_x \to \mathcal{F}^{i+1}_x \to \cdots
 \]
@@ -386,6 +411,7 @@ The exponential sequence is the most fundamental exact sequence in complex geome
 
 <div class="theorem">
 <strong>Theorem 3.7 (Exponential Sequence).</strong> On any complex manifold \(X\), the sequence of sheaves
+
 \[
 0 \to \underline{\mathbb{Z}}_X \xrightarrow{\iota} \mathcal{O}_X \xrightarrow{\exp} \mathcal{O}_X^* \to 0
 \]
@@ -402,10 +428,12 @@ There are two standard approaches to defining sheaf cohomology: derived functors
 
 <div class="definition">
 <strong>Definition 3.8 (Derived Functor Cohomology).</strong> For a sheaf \(\mathcal{F}\) on \(X\), the <em>sheaf cohomology groups</em> \(H^i(X, \mathcal{F})\) are the right derived functors of the global sections functor \(\Gamma(X, -)\). Concretely, one takes an injective resolution
+
 \[
 0 \to \mathcal{F} \to \mathcal{I}^0 \to \mathcal{I}^1 \to \mathcal{I}^2 \to \cdots
 \]
 (which exists since the category of sheaves of abelian groups on \(X\) has enough injectives), applies \(\Gamma(X, -)\) to obtain a complex of abelian groups, and takes cohomology:
+
 \[
 H^i(X, \mathcal{F}) = H^i(\Gamma(X, \mathcal{I}^\bullet)).
 \]
@@ -413,14 +441,17 @@ H^i(X, \mathcal{F}) = H^i(\Gamma(X, \mathcal{I}^\bullet)).
 
 <div class="definition">
 <strong>Definition 3.9 (Cech Cohomology).</strong> Let \(\mathfrak{U} = \{U_\alpha\}_{\alpha \in I}\) be an open cover of \(X\). The <em>Cech cochain groups</em> are
+
 \[
 \check{C}^p(\mathfrak{U}, \mathcal{F}) = \prod_{\alpha_0 < \cdots < \alpha_p} \mathcal{F}(U_{\alpha_0} \cap \cdots \cap U_{\alpha_p}),
 \]
 with differential \(\delta: \check{C}^p \to \check{C}^{p+1}\) defined by
+
 \[
 (\delta \sigma)_{\alpha_0, \dots, \alpha_{p+1}} = \sum_{j=0}^{p+1} (-1)^j \sigma_{\alpha_0, \dots, \hat{\alpha}_j, \dots, \alpha_{p+1}}|_{U_{\alpha_0} \cap \cdots \cap U_{\alpha_{p+1}}}.
 \]
 The <em>Cech cohomology</em> with respect to \(\mathfrak{U}\) is \(\check{H}^p(\mathfrak{U}, \mathcal{F}) = H^p(\check{C}^\bullet(\mathfrak{U}, \mathcal{F}), \delta)\). The <em>Cech cohomology</em> of \(\mathcal{F}\) is the direct limit over all open covers:
+
 \[
 \check{H}^p(X, \mathcal{F}) = \varinjlim_{\mathfrak{U}} \check{H}^p(\mathfrak{U}, \mathcal{F}).
 \]
@@ -440,6 +471,7 @@ The fundamental property of sheaf cohomology is that a short exact sequence of s
 
 <div class="theorem">
 <strong>Theorem 3.12.</strong> A short exact sequence of sheaves \(0 \to \mathcal{F}' \to \mathcal{F} \to \mathcal{F}'' \to 0\) induces a long exact sequence
+
 \[
 0 \to H^0(X, \mathcal{F}') \to H^0(X, \mathcal{F}) \to H^0(X, \mathcal{F}'') \xrightarrow{\delta} H^1(X, \mathcal{F}') \to H^1(X, \mathcal{F}) \to \cdots
 \]
@@ -449,6 +481,7 @@ Applying this to the exponential sequence yields one of the most important compu
 
 <div class="theorem">
 <strong>Theorem 3.13 (Picard Group via the Exponential Sequence).</strong> The long exact sequence associated to the exponential sequence \(0 \to \underline{\mathbb{Z}} \to \mathcal{O} \to \mathcal{O}^* \to 0\) includes
+
 \[
 \cdots \to H^1(X, \mathcal{O}) \to H^1(X, \mathcal{O}^*) \xrightarrow{c_1} H^2(X, \mathbb{Z}) \to H^2(X, \mathcal{O}) \to \cdots
 \]
@@ -477,10 +510,12 @@ The group \(H^1(X, \mathcal{O}^*)\) is the Picard group \(\mathrm{Pic}(X)\), cla
 
 <div class="theorem">
 <strong>Theorem 3.17 (Serre's GAGA, 1956).</strong> Let \(X\) be a smooth projective variety over \(\mathbb{C}\). Let \(X^{\mathrm{an}}\) denote the associated complex manifold. Then the analytification functor
+
 \[
 \mathcal{F} \mapsto \mathcal{F}^{\mathrm{an}}
 \]
 from the category of coherent algebraic sheaves on \(X\) to the category of coherent analytic sheaves on \(X^{\mathrm{an}}\) is an equivalence of categories. Moreover, it preserves cohomology:
+
 \[
 H^i(X, \mathcal{F}) \cong H^i(X^{\mathrm{an}}, \mathcal{F}^{\mathrm{an}})
 \]
@@ -503,10 +538,12 @@ Let \(X\) be a complex manifold of dimension \(n\). At each point \(x \in X\), t
 
 <div class="definition">
 <strong>Definition 4.1 (Complexified Tangent and Cotangent Spaces).</strong> The <em>complexified tangent space</em> at \(x\) is
+
 \[
 T_x X \otimes_{\mathbb{R}} \mathbb{C} = T_x^{1,0} X \oplus T_x^{0,1} X,
 \]
 where \(T_x^{1,0} X\) is the \(+i\)-eigenspace of \(J\) (spanned by \(\partial/\partial z_j\)) and \(T_x^{0,1} X\) is the \(-i\)-eigenspace (spanned by \(\partial/\partial \bar{z}_j\)). Dually, the complexified cotangent space decomposes as
+
 \[
 T_x^* X \otimes_{\mathbb{R}} \mathbb{C} = (T_x^{1,0} X)^* \oplus (T_x^{0,1} X)^*,
 \]
@@ -517,10 +554,12 @@ where \((T_x^{1,0} X)^*\) is spanned by \(dz_j = dx_j + i \, dy_j\) and \((T_x^{
 
 <div class="definition">
 <strong>Definition 4.2 (Forms of Type (p,q)).</strong> A smooth complex-valued differential form \(\omega\) on \(X\) is of <em>type \((p, q)\)</em> if at each point \(x\), it lies in
+
 \[
 \bigwedge^p (T_x^{1,0} X)^* \otimes \bigwedge^q (T_x^{0,1} X)^*.
 \]
 In local holomorphic coordinates \((z_1, \dots, z_n)\), a \((p, q)\)-form is a sum of terms
+
 \[
 f_{I, J}(z, \bar{z}) \, dz_{i_1} \wedge \cdots \wedge dz_{i_p} \wedge d\bar{z}_{j_1} \wedge \cdots \wedge d\bar{z}_{j_q},
 \]
@@ -529,6 +568,7 @@ with smooth coefficient functions \(f_{I,J}\). We write \(\mathcal{A}^{p,q}(X)\)
 
 <div class="theorem">
 <strong>Theorem 4.3 (Type Decomposition).</strong> The space of smooth \(k\)-forms on \(X\) decomposes as
+
 \[
 \mathcal{A}^k(X) \otimes \mathbb{C} = \bigoplus_{p+q=k} \mathcal{A}^{p,q}(X).
 \]
@@ -543,10 +583,12 @@ This decomposition depends on the complex structure but not on any choice of met
 
 <div class="definition">
 <strong>Definition 4.5 (Dolbeault Operators).</strong> The exterior derivative \(d: \mathcal{A}^k(X) \to \mathcal{A}^{k+1}(X)\) decomposes as \(d = \partial + \bar\partial\), where
+
 \[
 \partial: \mathcal{A}^{p,q}(X) \to \mathcal{A}^{p+1,q}(X), \quad \bar\partial: \mathcal{A}^{p,q}(X) \to \mathcal{A}^{p,q+1}(X).
 \]
 In local coordinates, if \(\omega = \sum_{I,J} f_{I,J} \, dz_I \wedge d\bar{z}_J\), then
+
 \[
 \partial \omega = \sum_{I,J} \sum_{k=1}^n \frac{\partial f_{I,J}}{\partial z_k} dz_k \wedge dz_I \wedge d\bar{z}_J, \quad \bar\partial \omega = \sum_{I,J} \sum_{k=1}^n \frac{\partial f_{I,J}}{\partial \bar{z}_k} d\bar{z}_k \wedge dz_I \wedge d\bar{z}_J.
 \]
@@ -566,6 +608,7 @@ The identity \(\bar\partial^2 = 0\) means that, for each fixed \(p\), the Dolbea
 
 <div class="definition">
 <strong>Definition 4.7 (Dolbeault Complex).</strong> For each \(p = 0, 1, \dots, n\), the <em>Dolbeault complex</em> is the cochain complex
+
 \[
 0 \to \mathcal{A}^{p,0}(X) \xrightarrow{\bar\partial} \mathcal{A}^{p,1}(X) \xrightarrow{\bar\partial} \cdots \xrightarrow{\bar\partial} \mathcal{A}^{p,n}(X) \to 0.
 \]
@@ -573,6 +616,7 @@ The identity \(\bar\partial^2 = 0\) means that, for each fixed \(p\), the Dolbea
 
 <div class="definition">
 <strong>Definition 4.8 (Dolbeault Cohomology).</strong> The <em>Dolbeault cohomology</em> of \(X\) is
+
 \[
 H^{p,q}_{\bar\partial}(X) = \frac{\ker(\bar\partial: \mathcal{A}^{p,q}(X) \to \mathcal{A}^{p,q+1}(X))}{\mathrm{im}(\bar\partial: \mathcal{A}^{p,q-1}(X) \to \mathcal{A}^{p,q}(X))}.
 \]
@@ -593,6 +637,7 @@ The key local result is that the Dolbeault complex is exact, i.e., every \(\bar\
 
 <div class="proof">
 <strong>Proof (Sketch for \(n = 1\), \(p = 0\), \(q = 1\)).</strong> Let \(\omega = g(z, \bar{z}) \, d\bar{z}\) be a smooth \((0,1)\)-form on a disc \(D \subseteq \mathbb{C}\). We seek \(f\) with \(\bar\partial f = \omega\), i.e., \(\partial f / \partial \bar{z} = g\). The solution is given by the Cauchy-Green formula:
+
 \[
 f(z) = \frac{1}{2\pi i} \int_D \frac{g(\zeta, \bar\zeta)}{\zeta - z} \, d\zeta \wedge d\bar\zeta.
 \]
@@ -605,6 +650,7 @@ The \(\bar\partial\)-Poincare lemma says that the Dolbeault complex is a fine re
 
 <div class="theorem">
 <strong>Theorem 4.11 (Dolbeault's Theorem).</strong> For a complex manifold \(X\), there is a canonical isomorphism
+
 \[
 H^{p,q}_{\bar\partial}(X) \cong H^q(X, \Omega_X^p)
 \]
@@ -613,10 +659,12 @@ between Dolbeault cohomology and sheaf cohomology of the sheaf of holomorphic \(
 
 <div class="proof">
 <strong>Proof.</strong> Consider the sequence of sheaves
+
 \[
 0 \to \Omega_X^p \to \mathcal{A}^{p,0} \xrightarrow{\bar\partial} \mathcal{A}^{p,1} \xrightarrow{\bar\partial} \cdots \xrightarrow{\bar\partial} \mathcal{A}^{p,n} \to 0.
 \]
 The \(\bar\partial\)-Poincare lemma (Theorem 4.10) shows this sequence is exact at the level of stalks: the kernel of \(\bar\partial: \mathcal{A}^{p,0} \to \mathcal{A}^{p,1}\) is exactly \(\Omega_X^p\), and every \(\bar\partial\)-closed \((p, q)\)-form is locally \(\bar\partial\)-exact for \(q \geq 1\). The sheaves \(\mathcal{A}^{p,q}\) are fine (they admit partitions of unity), hence acyclic for the global sections functor. By the abstract de Rham theorem (a general result on acyclic resolutions), the cohomology of the complex of global sections computes the sheaf cohomology of the kernel sheaf:
+
 \[
 H^q(\Gamma(X, \mathcal{A}^{p,\bullet}), \bar\partial) \cong H^q(X, \Omega_X^p). \quad \square
 \]
@@ -636,6 +684,7 @@ The introduction of a Hermitian metric on a complex manifold brings the full pow
 
 <div class="definition">
 <strong>Definition 5.1 (Hermitian Metric).</strong> A <em>Hermitian metric</em> on a complex manifold \(X\) of dimension \(n\) is a smooth choice of a Hermitian inner product \(h_x\) on each tangent space \(T_x^{1,0} X\). In local holomorphic coordinates \((z_1, \dots, z_n)\), a Hermitian metric is given by
+
 \[
 h = \sum_{j,k=1}^n h_{j\bar{k}}(z) \, dz_j \otimes d\bar{z}_k,
 \]
@@ -650,6 +699,7 @@ where \((h_{j\bar{k}})\) is a positive definite Hermitian matrix at each point, 
 
 <div class="definition">
 <strong>Definition 5.3 (Fundamental 2-Form).</strong> The <em>fundamental 2-form</em> (or <em>associated \((1,1)\)-form</em>) of a Hermitian metric \(h\) is
+
 \[
 \omega = -\mathrm{Im}(h) = \frac{i}{2} \sum_{j,k} h_{j\bar{k}} \, dz_j \wedge d\bar{z}_k.
 \]
@@ -680,6 +730,7 @@ Condition (iii) is particularly useful: it means that, to first order, a Kahler 
 
 <div class="example">
 <strong>Example 5.7 (Fubini-Study Metric on \(\mathbb{CP}^n\)).</strong> The <em>Fubini-Study metric</em> is the unique (up to scale) \(\mathrm{U}(n+1)\)-invariant Kahler metric on \(\mathbb{CP}^n\). On the chart \(U_0 = \{z_0 \neq 0\}\) with coordinates \(w_j = z_j/z_0\), the Kahler form is
+
 \[
 \omega_{\mathrm{FS}} = \frac{i}{2} \partial\bar\partial \log(1 + |w_1|^2 + \cdots + |w_n|^2).
 \]
@@ -708,10 +759,12 @@ To do analysis (and in particular to apply elliptic PDE theory), we need inner p
 
 <div class="definition">
 <strong>Definition 5.11 (Hodge Star).</strong> Let \((X, g)\) be an oriented Riemannian manifold of dimension \(m\) with volume form \(\mathrm{vol}_g\). The <em>Hodge star operator</em> \(*: \mathcal{A}^k(X) \to \mathcal{A}^{m-k}(X)\) is defined by
+
 \[
 \alpha \wedge *\beta = \langle \alpha, \beta \rangle \, \mathrm{vol}_g
 \]
 for all \(k\)-forms \(\alpha, \beta\), where \(\langle \cdot, \cdot \rangle\) is the pointwise inner product induced by \(g\). On a compact manifold, the \(L^2\) inner product is
+
 \[
 (\alpha, \beta)_{L^2} = \int_X \alpha \wedge *\bar\beta.
 \]
@@ -719,6 +772,7 @@ for all \(k\)-forms \(\alpha, \beta\), where \(\langle \cdot, \cdot \rangle\) is
 
 <div class="definition">
 <strong>Definition 5.12 (Formal Adjoints).</strong> With respect to the \(L^2\) inner product on a compact Hermitian manifold \(X\), the formal adjoints of \(d\), \(\partial\), and \(\bar\partial\) are denoted \(d^*\), \(\partial^*\), and \(\bar\partial^*\) respectively, characterised by
+
 \[
 (d\alpha, \beta)_{L^2} = (\alpha, d^*\beta)_{L^2}, \quad (\partial\alpha, \beta)_{L^2} = (\alpha, \partial^*\beta)_{L^2}, \quad (\bar\partial\alpha, \beta)_{L^2} = (\alpha, \bar\partial^*\beta)_{L^2}.
 \]
@@ -737,9 +791,11 @@ The Kahler identities are remarkable algebraic relations between the operators \
 
 <div class="theorem">
 <strong>Theorem 5.14 (Kahler Identities).</strong> On a Kahler manifold \((X, \omega)\), the following identities hold:
+
 \[
 [\Lambda, \bar\partial] = -i \partial^*, \quad [\Lambda, \partial] = i \bar\partial^*,
 \]
+
 \[
 [L, \partial^*] = i \bar\partial, \quad [L, \bar\partial^*] = -i \partial.
 \]
@@ -748,6 +804,7 @@ Here \([A, B] = AB - BA\) denotes the commutator.
 
 <div class="proof">
 <strong>Proof (Sketch).</strong> The proof proceeds in two stages. First, one verifies the identities pointwise at a given point \(p \in X\) by choosing normal holomorphic coordinates centred at \(p\) — coordinates in which \(h_{j\bar{k}}(p) = \delta_{jk}\) and all first-order derivatives of \(h_{j\bar{k}}\) vanish at \(p\). This is possible because the metric is Kahler (Remark 5.5(iii)). In these coordinates at \(p\), the operators reduce to their flat counterparts, and the identities become an algebraic computation in the exterior algebra of \(\mathbb{C}^n\), which can be checked by direct computation using the formulas
+
 \[
 L = \frac{i}{2} \sum_j e(dz_j) e(d\bar{z}_j), \quad \Lambda = -\frac{i}{2} \sum_j \iota(\partial/\partial z_j) \iota(\partial/\partial \bar{z}_j),
 \]
@@ -758,6 +815,7 @@ where \(e(\alpha)\) denotes exterior multiplication by \(\alpha\) and \(\iota(v)
 
 <div class="definition">
 <strong>Definition 5.15 (Laplacians).</strong> On a compact Hermitian manifold, one defines three Laplacian operators:
+
 \[
 \Delta_d = dd^* + d^*d, \quad \Delta_\partial = \partial\partial^* + \partial^*\partial, \quad \Delta_{\bar\partial} = \bar\partial\bar\partial^* + \bar\partial^*\bar\partial.
 \]
@@ -766,6 +824,7 @@ Each is a second-order elliptic differential operator. In general, these three L
 
 <div class="theorem">
 <strong>Theorem 5.16 (Equality of Laplacians on Kahler Manifolds).</strong> On a Kahler manifold,
+
 \[
 \Delta_d = 2\Delta_\partial = 2\Delta_{\bar\partial}.
 \]
@@ -773,18 +832,22 @@ Each is a second-order elliptic differential operator. In general, these three L
 
 <div class="proof">
 <strong>Proof.</strong> We derive this from the Kahler identities. Since \(d = \partial + \bar\partial\) and \(d^* = \partial^* + \bar\partial^*\),
+
 \[
 \Delta_d = (\partial + \bar\partial)(\partial^* + \bar\partial^*) + (\partial^* + \bar\partial^*)(\partial + \bar\partial).
 \]
 Expanding, using \(\partial^2 = 0\), \(\bar\partial^2 = 0\), and \((\partial^*)^2 = 0\), \((\bar\partial^*)^2 = 0\):
+
 \[
 \Delta_d = \underbrace{(\partial\partial^* + \partial^*\partial)}_{=\,\Delta_\partial} + \underbrace{(\bar\partial\bar\partial^* + \bar\partial^*\bar\partial)}_{=\,\Delta_{\bar\partial}} + (\partial\bar\partial^* + \bar\partial^*\partial) + (\bar\partial\partial^* + \partial^*\bar\partial).
 \]
 From the Kahler identity \([\Lambda, \bar\partial] = -i\partial^*\), i.e., \(\partial^* = i[\bar\partial, \Lambda]\), one computes
+
 \[
 \partial\bar\partial^* + \bar\partial^*\partial = \text{(terms involving } \Lambda\text{)},
 \]
 and after careful computation using both Kahler identities, one shows that the cross terms satisfy
+
 \[
 \partial\bar\partial^* + \bar\partial^*\partial = 0 \quad \text{and} \quad \bar\partial\partial^* + \partial^*\bar\partial = 0.
 \]
@@ -807,6 +870,7 @@ Let \((X, h)\) be a compact Hermitian manifold of complex dimension \(n\). The L
 
 <div class="definition">
 <strong>Definition 6.1 (Harmonic Forms).</strong> A smooth \(k\)-form \(\alpha\) on a compact Hermitian manifold \((X, h)\) is <em>harmonic</em> if \(\Delta_d \alpha = 0\). We write \(\mathcal{H}^k(X)\) for the space of harmonic \(k\)-forms. Since \(\Delta_d\) is self-adjoint and nonnegative,
+
 \[
 (\Delta_d \alpha, \alpha)_{L^2} = (d\alpha, d\alpha)_{L^2} + (d^*\alpha, d^*\alpha)_{L^2} = \|d\alpha\|^2 + \|d^*\alpha\|^2,
 \]
@@ -817,6 +881,7 @@ so \(\alpha\) is harmonic if and only if \(d\alpha = 0\) and \(d^*\alpha = 0\).
 <strong>Theorem 6.2 (Hodge Theorem).</strong> Let \(X\) be a compact oriented Riemannian manifold. Then:
 <br>(i) Each de Rham cohomology class in \(H^k_{\mathrm{dR}}(X, \mathbb{R})\) contains a unique harmonic representative: \(\mathcal{H}^k(X) \cong H^k_{\mathrm{dR}}(X, \mathbb{R})\).
 <br>(ii) There is an orthogonal decomposition (the <em>Hodge decomposition of forms</em>):
+
 \[
 \mathcal{A}^k(X) = \mathcal{H}^k(X) \oplus d\mathcal{A}^{k-1}(X) \oplus d^*\mathcal{A}^{k+1}(X).
 \]
@@ -844,11 +909,13 @@ For (i), note that every harmonic form is closed (\(d\alpha = 0\) since \(\alpha
 <div class="theorem">
 <strong>Theorem 6.4 (Hodge Decomposition for Kahler Manifolds).</strong> Let \(X\) be a compact Kahler manifold of complex dimension \(n\). Then:
 <br>(i) There is a direct sum decomposition
+
 \[
 H^k(X, \mathbb{C}) = \bigoplus_{p+q=k} H^{p,q}(X),
 \]
 where \(H^{p,q}(X)\) denotes the space of cohomology classes represented by closed forms of type \((p,q)\).
 <br>(ii) Each summand \(H^{p,q}(X)\) is canonically isomorphic to the Dolbeault cohomology group \(H^{p,q}_{\bar\partial}(X)\) and to the space of \(\Delta_{\bar\partial}\)-harmonic \((p,q)\)-forms:
+
 \[
 H^{p,q}(X) \cong H^{p,q}_{\bar\partial}(X) \cong \mathcal{H}^{p,q}(X) = \{\alpha \in \mathcal{A}^{p,q}(X) : \Delta_{\bar\partial}\alpha = 0\}.
 \]
@@ -857,6 +924,7 @@ H^{p,q}(X) \cong H^{p,q}_{\bar\partial}(X) \cong \mathcal{H}^{p,q}(X) = \{\alpha
 
 <div class="proof">
 <strong>Proof.</strong> The key input is the equality of Laplacians on Kahler manifolds (Theorem 5.16): \(\Delta_d = 2\Delta_{\bar\partial}\). Since \(\Delta_{\bar\partial}\) preserves the type of a form (\(\Delta_{\bar\partial}\) maps \(\mathcal{A}^{p,q}\) to itself, because both \(\bar\partial\) and \(\bar\partial^*\) do), it follows that \(\Delta_d\) also preserves type. Therefore, a \(k\)-form \(\alpha\) is \(\Delta_d\)-harmonic if and only if its \((p,q)\)-components \(\alpha^{p,q}\) are each \(\Delta_d\)-harmonic (equivalently, \(\Delta_{\bar\partial}\)-harmonic). This gives the decomposition
+
 \[
 \mathcal{H}^k(X) = \bigoplus_{p+q=k} \mathcal{H}^{p,q}(X).
 \]
@@ -869,6 +937,7 @@ For the independence from the Kahler metric (iii), one shows that the subspace \
 
 <div class="definition">
 <strong>Definition 6.5 (Hodge Numbers).</strong> The <em>Hodge numbers</em> of a compact Kahler manifold \(X\) are
+
 \[
 h^{p,q}(X) = \dim_\mathbb{C} H^{p,q}(X) = \dim_\mathbb{C} H^q(X, \Omega^p_X).
 \]
@@ -877,6 +946,7 @@ The \(k\)-th Betti number satisfies \(b_k(X) = \sum_{p+q=k} h^{p,q}(X)\).
 
 <div class="theorem">
 <strong>Theorem 6.6 (Hodge Symmetry).</strong> For a compact Kahler manifold \(X\),
+
 \[
 h^{p,q}(X) = h^{q,p}(X) \quad \text{for all } p, q.
 \]
@@ -902,6 +972,7 @@ h^{p,q}(X) = h^{q,p}(X) \quad \text{for all } p, q.
 
 <div class="definition">
 <strong>Definition 6.9 (Hodge Diamond).</strong> The Hodge numbers of a compact Kahler manifold of dimension \(n\) are traditionally arranged in a diamond pattern:
+
 \[
 \begin{array}{ccccccc}
 & & & h^{0,0} & & & \\
@@ -920,6 +991,7 @@ The diamond enjoys the following symmetries:
 
 <div class="example">
 <strong>Example 6.10 (Hodge Diamond of \(\mathbb{CP}^n\)).</strong> For \(\mathbb{CP}^n\), the Hodge numbers are \(h^{p,p} = 1\) for \(0 \leq p \leq n\) and \(h^{p,q} = 0\) for \(p \neq q\). The Hodge diamond of \(\mathbb{CP}^2\) is:
+
 \[
 \begin{array}{ccccc}
 & & 1 & & \\
@@ -934,6 +1006,7 @@ This reflects the facts that \(b_0 = b_2 = b_4 = 1\) and \(b_1 = b_3 = 0\) for \
 
 <div class="example">
 <strong>Example 6.11 (Hodge Diamond of an Elliptic Curve).</strong> An elliptic curve \(E = \mathbb{C}/\Lambda\) has dimension 1 and Hodge numbers \(h^{0,0} = h^{1,0} = h^{0,1} = h^{1,1} = 1\):
+
 \[
 \begin{array}{ccc}
 & 1 & \\
@@ -946,6 +1019,7 @@ This gives \(b_0 = 1\), \(b_1 = 2\), \(b_2 = 1\), consistent with the topology o
 
 <div class="example">
 <strong>Example 6.12 (Hodge Diamond of a K3 Surface).</strong> A K3 surface is a simply connected compact complex surface with trivial canonical bundle. Its Hodge diamond is:
+
 \[
 \begin{array}{ccccc}
 & & 1 & & \\
@@ -962,10 +1036,12 @@ giving Betti numbers \(b_0 = 1\), \(b_1 = 0\), \(b_2 = 22\), \(b_3 = 0\), \(b_4 
 
 <div class="theorem">
 <strong>Theorem 6.13 (Serre Duality).</strong> Let \(X\) be a compact complex manifold of dimension \(n\) and \(\mathcal{E}\) a holomorphic vector bundle on \(X\). Then there is a natural isomorphism
+
 \[
 H^q(X, \mathcal{E}) \cong H^{n-q}(X, K_X \otimes \mathcal{E}^*)^*,
 \]
 where \(K_X = \Omega_X^n\) is the canonical bundle and \(\mathcal{E}^*\) is the dual bundle. In particular, for the trivial bundle,
+
 \[
 H^q(X, \mathcal{O}_X) \cong H^{n-q}(X, K_X)^*.
 \]
@@ -974,6 +1050,7 @@ For Hodge numbers, this gives \(h^{p,q} = h^{n-p, n-q}\).
 
 <div class="proof">
 <strong>Proof (via Hodge theory on Kahler manifolds).</strong> On a compact Kahler manifold, the Hodge star operator gives a conjugate-linear isomorphism
+
 \[
 *: \mathcal{H}^{p,q}(X) \xrightarrow{\sim} \mathcal{H}^{n-q, n-p}(X).
 \]
@@ -986,6 +1063,7 @@ The Hard Lefschetz theorem is one of the deepest results in Hodge theory. It ass
 
 <div class="theorem">
 <strong>Theorem 6.14 (Hard Lefschetz Theorem).</strong> Let \((X, \omega)\) be a compact Kahler manifold of complex dimension \(n\), and let \([\omega] \in H^2(X, \mathbb{R})\) be the Kahler class. Then for each \(0 \leq k \leq n\), the map
+
 \[
 L^{n-k}: H^k(X, \mathbb{R}) \to H^{2n-k}(X, \mathbb{R}), \quad [\alpha] \mapsto [\omega^{n-k} \wedge \alpha],
 \]
@@ -994,6 +1072,7 @@ is an isomorphism.
 
 <div class="proof">
 <strong>Proof (Sketch).</strong> By the Hodge theorem, it suffices to show that \(L^{n-k}: \mathcal{H}^k(X) \to \mathcal{H}^{2n-k}(X)\) is an isomorphism. Using the Kahler identities, one shows that the operators \(L\), \(\Lambda\), and \(H = \sum_k (k - n) \cdot \mathrm{id}|_{\mathcal{A}^k}\) satisfy the commutation relations of the Lie algebra \(\mathfrak{sl}(2, \mathbb{C})\):
+
 \[
 [H, L] = 2L, \quad [H, \Lambda] = -2\Lambda, \quad [L, \Lambda] = H.
 \]
@@ -1004,6 +1083,7 @@ The Hodge theorem gives a decomposition of the harmonic forms into a finite-dime
 
 <div class="definition">
 <strong>Definition 6.15 (Primitive Cohomology).</strong> The <em>primitive cohomology</em> in degree \(k \leq n\) is
+
 \[
 P^k(X) = \ker(L^{n-k+1}: H^k(X, \mathbb{R}) \to H^{2n-k+2}(X, \mathbb{R})).
 \]
@@ -1012,6 +1092,7 @@ A cohomology class \(\alpha \in H^k(X, \mathbb{R})\) with \(k \leq n\) is <em>pr
 
 <div class="theorem">
 <strong>Theorem 6.16 (Lefschetz Decomposition).</strong> For a compact Kahler manifold \((X, \omega)\) of dimension \(n\), there is a direct sum decomposition
+
 \[
 H^k(X, \mathbb{R}) = \bigoplus_{r \geq \max(0, k-n)} L^r P^{k-2r}(X)
 \]
@@ -1028,6 +1109,7 @@ The Hodge-Riemann bilinear relations refine the Hard Lefschetz theorem by endowi
 
 <div class="definition">
 <strong>Definition 6.18 (Hodge-Riemann Form).</strong> On a compact Kahler manifold \((X, \omega)\) of dimension \(n\), define the bilinear form on \(H^k(X, \mathbb{R})\) by
+
 \[
 Q(\alpha, \beta) = (-1)^{k(k-1)/2} \int_X \alpha \wedge \beta \wedge \omega^{n-k}.
 \]
@@ -1053,6 +1135,7 @@ We conclude this chapter with the statement of one of the most famous open probl
 
 <div class="theorem">
 <strong>Theorem/Conjecture 6.22 (The Hodge Conjecture).</strong> Let \(X\) be a smooth projective variety over \(\mathbb{C}\). Then every Hodge class, i.e., every class in
+
 \[
 H^{2p}(X, \mathbb{Q}) \cap H^{p,p}(X),
 \]
@@ -1081,6 +1164,7 @@ To state the Kodaira vanishing theorem, we need the notion of a positive line bu
 
 <div class="definition">
 <strong>Definition 7.2 (Curvature Form).</strong> The <em>curvature form</em> (or <em>first Chern form</em>) of a Hermitian holomorphic line bundle \((L, h)\) is the real \((1,1)\)-form
+
 \[
 \Theta_h(L) = -\frac{i}{2\pi} \partial\bar\partial \log h = \frac{i}{2\pi} \partial\bar\partial \varphi,
 \]
@@ -1089,6 +1173,7 @@ where \(\varphi\) is the local weight. This is a globally well-defined closed re
 
 <div class="definition">
 <strong>Definition 7.3 (Positive Line Bundle).</strong> A holomorphic line bundle \(L\) on a compact complex manifold \(X\) is <em>positive</em> (in the sense of Kodaira) if it admits a Hermitian metric \(h\) whose curvature form \(\Theta_h(L)\) is a positive \((1,1)\)-form, i.e., in local coordinates,
+
 \[
 \frac{i}{2\pi} \sum_{j,k} \frac{\partial^2 \varphi}{\partial z_j \partial \bar{z}_k} dz_j \wedge d\bar{z}_k
 \]
@@ -1107,10 +1192,12 @@ is positive definite at every point. Equivalently, \(\Theta_h(L)\) is a Kahler f
 
 <div class="theorem">
 <strong>Theorem 7.6 (Kodaira Vanishing Theorem).</strong> Let \(X\) be a compact Kahler manifold of dimension \(n\) and \(L\) a positive line bundle on \(X\). Then
+
 \[
 H^q(X, \Omega_X^p \otimes L) = 0 \quad \text{for } p + q > n.
 \]
 In particular, taking \(p = n\), we obtain the important special case
+
 \[
 H^q(X, K_X \otimes L) = 0 \quad \text{for } q > 0,
 \]
@@ -1123,12 +1210,14 @@ which is sometimes called the <em>Kodaira-Nakano vanishing theorem</em> (the ful
 <strong>Step 1: Twisted Laplacian.</strong> Equip \(L\) with a Hermitian metric \(h\) such that \(\Theta_h(L) > 0\). The metric \(h\) induces a twisted Laplacian \(\Delta''_L = \bar\partial_L \bar\partial_L^* + \bar\partial_L^* \bar\partial_L\) on \(L\)-valued \((p,q)\)-forms, where \(\bar\partial_L\) is the \(\bar\partial\)-operator on \(\mathcal{A}^{p,q}(X, L)\).
 
 <strong>Step 2: Bochner-Kodaira-Nakano identity.</strong> The generalised Kahler identity for twisted operators gives
+
 \[
 \Delta''_L = \Delta'_L + [\sqrt{-1}\Theta_h(L), \Lambda],
 \]
 where \(\Delta'_L = \partial_L \partial_L^* + \partial_L^* \partial_L\) and \([\sqrt{-1}\Theta_h(L), \Lambda]\) is an algebraic (zeroth-order) operator on forms.
 
 <strong>Step 3: Positivity estimate.</strong> For a harmonic \(L\)-valued \((p,q)\)-form \(\alpha\) (i.e., \(\Delta''_L \alpha = 0\)), taking the \(L^2\) inner product with \(\alpha\):
+
 \[
 0 = \|\partial_L^* \alpha\|^2 + \|\partial_L \alpha\|^2 + ([\sqrt{-1}\Theta_h(L), \Lambda]\alpha, \alpha).
 \]
@@ -1141,6 +1230,7 @@ One then computes the algebraic operator \([\sqrt{-1}\Theta_h(L), \Lambda]\) on 
 
 <div class="corollary">
 <strong>Corollary 7.8 (Kodaira Vanishing, Classical Form).</strong> Let \(X\) be a smooth projective variety of dimension \(n\) and \(L\) an ample line bundle on \(X\). Then
+
 \[
 H^q(X, K_X \otimes L) = 0 \quad \text{for all } q \geq 1.
 \]
@@ -1165,10 +1255,12 @@ The "if" direction is the deep content. Given a positive line bundle \(L\) on \(
 (c) <strong>Separation of tangent directions:</strong> For any \(x \in X\) and any tangent direction \(v \in T_x X\), there exists \(s \in H^0(X, L^k)\) vanishing at \(x\) but with \(ds(x)(v) \neq 0\).
 
 Each of these is proved by applying the Kodaira vanishing theorem to an appropriate exact sequence. For instance, to show (a), consider the ideal sheaf \(\mathcal{I}_x\) of a point \(x\) and the exact sequence
+
 \[
 0 \to \mathcal{I}_x \otimes L^k \to L^k \to L^k|_x \to 0.
 \]
 Taking cohomology, surjectivity of \(H^0(X, L^k) \to H^0(\{x\}, L^k|_x) = \mathbb{C}\) follows from \(H^1(X, \mathcal{I}_x \otimes L^k) = 0\), which is a consequence of Kodaira vanishing for \(k\) large. Similarly for (b) and (c), using the ideal sheaf of two points or of a first-order neighbourhood. Given these three properties, the map
+
 \[
 \Phi_{L^k}: X \to \mathbb{CP}^N, \quad x \mapsto [s_0(x) : \cdots : s_N(x)],
 \]
@@ -1185,6 +1277,7 @@ The Lefschetz hyperplane theorem relates the topology of a smooth projective var
 
 <div class="theorem">
 <strong>Theorem 7.11 (Lefschetz Hyperplane Theorem).</strong> Let \(X\) be a smooth projective variety of dimension \(n\) and let \(Y = X \cap H\) be a smooth hyperplane section (i.e., the intersection of \(X\) with a hyperplane in the ambient projective space). Then the restriction map
+
 \[
 H^k(X, \mathbb{Z}) \to H^k(Y, \mathbb{Z})
 \]
@@ -1195,6 +1288,7 @@ is an isomorphism for \(k < n - 1\) and injective for \(k = n - 1\).
 <strong>Proof (Sketch).</strong> There are several approaches. The original topological proof, due to Lefschetz and made rigorous by Andreotti-Frankel, uses Morse theory: if \(f\) is a Morse function on \(X\) with \(Y = f^{-1}(0)\), one shows that \(X\) is obtained from a tubular neighbourhood of \(Y\) by attaching cells of dimension \(\geq n\). This gives the result by cellular homology.
 
 The Hodge-theoretic proof uses the Kodaira vanishing theorem applied to the line bundle \(\mathcal{O}_X(Y)\) and the exact sequence
+
 \[
 0 \to \mathcal{O}_X(-Y) \to \mathcal{O}_X \to \mathcal{O}_Y \to 0.
 \]
@@ -1227,6 +1321,7 @@ We briefly indicate how Hodge theory interacts with central questions in algebra
 
 <div class="definition">
 <strong>Definition 7.16 (Hodge Filtration).</strong> The Hodge decomposition \(H^k(X, \mathbb{C}) = \bigoplus_{p+q=k} H^{p,q}(X)\) defines a decreasing filtration
+
 \[
 F^p H^k(X, \mathbb{C}) = \bigoplus_{j \geq p} H^{j, k-j}(X).
 \]
@@ -1239,6 +1334,7 @@ This is the <em>Hodge filtration</em>. It satisfies \(F^p \oplus \overline{F^{k-
 
 <div class="theorem">
 <strong>Theorem 7.18 (Lefschetz (1,1)-Theorem).</strong> Let \(X\) be a compact Kahler manifold. A class \(\alpha \in H^2(X, \mathbb{Z})\) is the first Chern class of a holomorphic line bundle on \(X\) if and only if its image in \(H^2(X, \mathbb{C})\) under the natural map lies in \(H^{1,1}(X)\). That is,
+
 \[
 c_1: \mathrm{Pic}(X) \to H^2(X, \mathbb{Z}) \cap H^{1,1}(X)
 \]
@@ -1259,6 +1355,7 @@ We conclude with an introduction to the theory that extends Hodge theory from in
 
 <div class="definition">
 <strong>Definition 7.20 (Period Domain).</strong> Fix integers \(k, n\) and a lattice \(H_\mathbb{Z} \cong \mathbb{Z}^m\) with a bilinear form \(Q\) (symmetric if \(k\) is even, skew-symmetric if \(k\) is odd). A <em>Hodge structure of weight \(k\)</em> on \(H_\mathbb{Z}\) is a decomposition
+
 \[
 H = H_\mathbb{Z} \otimes \mathbb{C} = \bigoplus_{p+q=k} H^{p,q}
 \]
@@ -1278,6 +1375,7 @@ with \(H^{q,p} = \overline{H^{p,q}}\) and satisfying the Hodge-Riemann bilinear 
 
 <div class="theorem">
 <strong>Theorem 7.23 (Griffiths Transversality).</strong> The Hodge filtration subbundles satisfy the <em>transversality condition</em>:
+
 \[
 \nabla(\mathcal{F}^p) \subseteq \mathcal{F}^{p-1} \otimes \Omega^1_S.
 \]

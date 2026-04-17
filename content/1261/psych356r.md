@@ -645,7 +645,9 @@ Environmental variance is further partitioned into:
 
 **Monozygotic (MZ)** twins share ~100% of segregating genetic variants; **dizygotic (DZ)** twins share ~50% on average (like ordinary siblings). Comparing MZ and DZ correlations on a trait estimates heritability:
 
-\[ h^2 \approx 2(r_{MZ} - r_{DZ}) \]
+\[
+h^2 \approx 2(r_{MZ} - r_{DZ})
+\]
 
 If MZ twins are far more similar than DZ twins, a large portion of variance is genetic.
 

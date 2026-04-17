@@ -50,7 +50,9 @@ Johann Heinrich von Thünen's (1826) model of agricultural land use is the found
 
 For a crop with market price \( p \), yield per unit land \( y \), production cost \( c \), and transport cost \( k \) per unit per unit distance, the bid rent at distance \( d \) is:
 
-\[ R(d) = (p - c)y - k \cdot y \cdot d = R_0 - t \cdot d \]
+\[
+R(d) = (p - c)y - k \cdot y \cdot d = R_0 - t \cdot d
+\]
 
 where \( R_0 = (p - c)y \) is the bid rent at the city and \( t = k \cdot y \) is the bid rent gradient. Land users with steep gradients (high transport costs or high-value products) locate closer to the city; those with flat gradients locate further out.
 
@@ -60,7 +62,9 @@ In equilibrium, each ring of land is occupied by the highest bidder. Products wi
 
 Alfred Weber (1909) analysed the optimal location of a manufacturing plant trading off transport costs for raw materials and output versus agglomeration benefits. The **Weber triangle** problem: given raw material sources \( R_1, R_2 \) and a market \( M \), find the plant location \( P \) that minimises total transport costs:
 
-\[ \min_P \; w_1 d(P, R_1) + w_2 d(P, R_2) + w_3 d(P, M) \]
+\[
+\min_P \; w_1 d(P, R_1) + w_2 d(P, R_2) + w_3 d(P, M)
+\]
 
 where \( w_i \) are the transport weights. The solution (Varignon point) depends on the weight-to-value ratios of inputs and outputs.
 
@@ -190,7 +194,9 @@ The Alonso-Muth-Mills (AMM) model is the workhorse of urban economics. It extend
 
 A household maximises utility over housing \( h \) and a composite consumption good \( c \), given income \( y \), rent \( R(d) \), and commuting cost \( t \cdot d \):
 
-\[ \max_{h, c} \; U(h, c) \quad \text{subject to} \quad c + R(d) \cdot h = y - t \cdot d \]
+\[
+\max_{h, c} \; U(h, c) \quad \text{subject to} \quad c + R(d) \cdot h = y - t \cdot d
+\]
 
 Budget constraint: \( c + R(d) h = y - td \equiv I(d) \) — income net of commuting costs declines with distance.
 
@@ -198,11 +204,15 @@ Budget constraint: \( c + R(d) h = y - td \equiv I(d) \) — income net of commu
 
 The bid rent function gives the maximum rent per unit of housing that a household at distance \( d \) can afford while achieving utility level \( \bar{U} \):
 
-\[ R(d) = R_0 - \frac{t}{h} \cdot d \]
+\[
+R(d) = R_0 - \frac{t}{h} \cdot d
+\]
 
 For a simple case with inelastic housing demand \( h = \bar{h} \), the bid-rent gradient equals \( -t/\bar{h} \): rents fall linearly with distance at a rate determined by commuting costs and housing consumption. More generally, the **gradient condition** is:
 
-\[ \frac{dR}{dd} = -\frac{t}{h(d)} < 0 \]
+\[
+\frac{dR}{dd} = -\frac{t}{h(d)} < 0
+\]
 
 Rents necessarily decline with distance to compensate residents for higher commuting costs. If rents did not decline, no one would choose to live further out.
 

@@ -89,7 +89,9 @@ A **strategic game** is a model of a situation with multiple interacting decisio
 
 We write the game as \( \langle N, \{A_i\}_{i \in N}, \{u_i\}_{i \in N} \rangle \). The **outcome space** is the Cartesian product of all action sets:
 
-\[ A = \times_{i \in N} A_i = \{(a_1, \ldots, a_n) : a_i \in A_i,\ i = 1, \ldots, n\} \]
+\[
+A = \times_{i \in N} A_i = \{(a_1, \ldots, a_n) : a_i \in A_i,\ i = 1, \ldots, n\}
+\]
 
 An outcome \( a = (a_1, \ldots, a_n) \) is an **action profile**.
 
@@ -173,11 +175,15 @@ Fix a game with outcome space \( A = \times_{j \in N} A_j \). For player \( i \)
 
 Action \( a_i \in A_i \) **weakly dominates** \( b_i \in A_i \) for player \( i \) if:
 
-\[ u_i(a_i, a_{-i}) \geq u_i(b_i, a_{-i}) \text{ for all } a_{-i} \in A_{-i} \]
+\[
+u_i(a_i, a_{-i}) \geq u_i(b_i, a_{-i}) \text{ for all } a_{-i} \in A_{-i}
+\]
 
 with strict inequality for at least one \( a_{-i} \). Action \( a_i \) **strictly dominates** \( b_i \) if:
 
-\[ u_i(a_i, a_{-i}) > u_i(b_i, a_{-i}) \text{ for all } a_{-i} \in A_{-i} \]
+\[
+u_i(a_i, a_{-i}) > u_i(b_i, a_{-i}) \text{ for all } a_{-i} \in A_{-i}
+\]
 
 A **dominant strategy** is an action that is optimal for a player no matter what the opponents do. If a player has a dominant action, they need not think at all about what others will choose.
 
@@ -244,7 +250,9 @@ Dominant strategy equilibria are powerful because they require minimal assumptio
 
 A **Nash equilibrium** of a strategic game \( G \) is any action profile \( (a_1^*, \ldots, a_n^*) \) such that for each player \( i \):
 
-\[ u_i(a_i^*, a_{-i}^*) \geq u_i(a_i, a_{-i}^*) \text{ for all } a_i \in A_i \]
+\[
+u_i(a_i^*, a_{-i}^*) \geq u_i(a_i, a_{-i}^*) \text{ for all } a_i \in A_i
+\]
 
 In words: no player can improve their payoff by **unilaterally deviating** from the equilibrium action, given that everyone else plays their equilibrium action. The set of all Nash equilibria of \( G \) is denoted \( N(G) \).
 
@@ -254,11 +262,15 @@ A Nash equilibrium may be interpreted as a **steady state** of a strategic inter
 
 The **best response function** of player \( i \) assigns, to each profile of opponents' actions, the set of actions that maximize player \( i \)'s payoff:
 
-\[ B_i(a_{-i}) = \{a_i \in A_i : u_i(a_i, a_{-i}) \geq u_i(a_i', a_{-i}) \text{ for all } a_i' \in A_i\} \]
+\[
+B_i(a_{-i}) = \{a_i \in A_i : u_i(a_i, a_{-i}) \geq u_i(a_i', a_{-i}) \text{ for all } a_i' \in A_i\}
+\]
 
 An action profile \( (a_1^*, a_2^*) \) is a Nash equilibrium if and only if each player's action is a best response to the others':
 
-\[ a_1^* \in B_1(a_2^*) \quad \text{and} \quad a_2^* \in B_2(a_1^*) \]
+\[
+a_1^* \in B_1(a_2^*) \quad \text{and} \quad a_2^* \in B_2(a_1^*)
+\]
 
 ## Finding Nash Equilibria: The Star Method
 
@@ -282,7 +294,9 @@ Nash equilibria: **(M, L)** and **(B, R)**.
 
 **Prisoner's Dilemma.** Best responses:
 
-\[ B_i(\text{Quiet}) = B_i(\text{Confess}) = \text{Confess}, \quad i = 1, 2 \]
+\[
+B_i(\text{Quiet}) = B_i(\text{Confess}) = \text{Confess}, \quad i = 1, 2
+\]
 
 The unique Nash equilibrium is **(Confess, Confess)**, confirming what we found using dominance.
 
@@ -306,8 +320,13 @@ A **mixed strategy** for player \( i \) is a probability distribution over their
 
 Consider Matching Pennies. If player 2 plays H and T each with probability 1/2, then player 1's expected payoffs are:
 
-\[ u_1(H, \alpha_2) = \frac{1}{2}(1) + \frac{1}{2}(-1) = 0 \]
-\[ u_1(T, \alpha_2) = \frac{1}{2}(-1) + \frac{1}{2}(1) = 0 \]
+\[
+u_1(H, \alpha_2) = \frac{1}{2}(1) + \frac{1}{2}(-1) = 0
+\]
+
+\[
+u_1(T, \alpha_2) = \frac{1}{2}(-1) + \frac{1}{2}(1) = 0
+\]
 
 Player 1 is **indifferent** between H and T — and therefore willing to randomize as well. This mutual willingness to randomize constitutes a mixed strategy Nash equilibrium. It is a steady state in the sense that neither player has reason to deviate: whatever mixing probability player 1 uses, its expected payoff equals zero.
 
@@ -315,7 +334,9 @@ Player 1 is **indifferent** between H and T — and therefore willing to randomi
 
 Once we allow mixed strategies, outcomes become lotteries rather than certain payoffs. We need to specify preferences over lotteries. We assume that each player's preferences satisfy the **von Neumann–Morgenstern (vNM)** axioms, which implies that a player's payoff to a lottery equals the **expected value** of the underlying payoff function:
 
-\[ u_i(p) = \sum_{a \in A} p(a) \cdot u_i(a) \]
+\[
+u_i(p) = \sum_{a \in A} p(a) \cdot u_i(a)
+\]
 
 where \( p(a) \) is the probability of action profile \( a \) under the mixed strategy profile.
 
@@ -346,8 +367,13 @@ In Battle of the Sexes (let player 1 be the opera-preferring player):
 
 Expected payoffs:
 
-\[ u_1(p, q) = 2pq + (1-p)(1-q) \]
-\[ u_2(p, q) = pq + 2(1-p)(1-q) \]
+\[
+u_1(p, q) = 2pq + (1-p)(1-q)
+\]
+
+\[
+u_2(p, q) = pq + 2(1-p)(1-q)
+\]
 
 These expressions capture the idea that payoffs depend multiplicatively on both players' mixing probabilities — the cross-product structure reflects independence of randomization.
 
@@ -359,7 +385,9 @@ These expressions capture the idea that payoffs depend multiplicatively on both 
 
 For a strategic game with vNM preferences, the **best response correspondence** of player \( i \) to a mixed strategy profile \( \alpha_{-i} \) is:
 
-\[ B_i(\alpha_{-i}) = \arg\max_{\alpha_i \in \Delta(A_i)} u_i(\alpha_i, \alpha_{-i}) \]
+\[
+B_i(\alpha_{-i}) = \arg\max_{\alpha_i \in \Delta(A_i)} u_i(\alpha_i, \alpha_{-i})
+\]
 
 where \( \Delta(A_i) \) denotes the set of all probability distributions over \( A_i \).
 
@@ -377,18 +405,27 @@ Let \( p \) be the probability player 1 places on Heads, and \( q \) the probabi
 
 Player 1's expected payoffs:
 
-\[ u_1(H, q) = q(1) + (1-q)(-1) = 2q - 1 \]
-\[ u_1(T, q) = q(-1) + (1-q)(1) = 1 - 2q \]
+\[
+u_1(H, q) = q(1) + (1-q)(-1) = 2q - 1
+\]
+
+\[
+u_1(T, q) = q(-1) + (1-q)(1) = 1 - 2q
+\]
 
 Player 1 is indifferent when \( 2q - 1 = 1 - 2q \), i.e., \( q = 1/2 \).
 
 Best response of player 1:
 
-\[ B_1(q) = \begin{cases} \{0\} & \text{if } q < 1/2 \\ [0,1] & \text{if } q = 1/2 \\ \{1\} & \text{if } q > 1/2 \end{cases} \]
+\[
+B_1(q) = \begin{cases} \{0\} & \text{if } q < 1/2 \\ [0,1] & \text{if } q = 1/2 \\ \{1\} & \text{if } q > 1/2 \end{cases}
+\]
 
 By symmetry (recall player 2 wants to *mismatch*):
 
-\[ B_2(p) = \begin{cases} \{0\} & \text{if } p > 1/2 \\ [0,1] & \text{if } p = 1/2 \\ \{1\} & \text{if } p < 1/2 \end{cases} \]
+\[
+B_2(p) = \begin{cases} \{0\} & \text{if } p > 1/2 \\ [0,1] & \text{if } p = 1/2 \\ \{1\} & \text{if } p < 1/2 \end{cases}
+\]
 
 The unique mixed strategy Nash equilibrium is \( p^* = q^* = 1/2 \), i.e., both players randomize 50-50.
 
@@ -418,19 +455,25 @@ When players have finitely many actions, we can find Nash equilibria by inspecti
 
 Two individuals are involved in a synergistic relationship. If both devote more effort, both are better off. For any given effort \( a_j \) of the other, individual \( i \)'s payoff first increases then decreases with own effort. Specifically, individual \( i \)'s payoff is:
 
-\[ u_i(a_1, a_2) = a_i(c + a_j - a_i) \]
+\[
+u_i(a_1, a_2) = a_i(c + a_j - a_i)
+\]
 
 where \( a_i, a_j \geq 0 \) are effort levels and \( c > 0 \) is a constant.
 
 Taking the first-order condition with respect to \( a_i \):
 
-\[ c + a_j - 2a_i = 0 \implies a_i = \frac{1}{2}(c + a_j) \]
+\[
+c + a_j - 2a_i = 0 \implies a_i = \frac{1}{2}(c + a_j)
+\]
 
 So each individual's best response function is \( b_i(a_j) = \frac{1}{2}(c + a_j) \). This is upward sloping — if the other works harder, you want to work harder too (strategic complements).
 
 To find the Nash equilibrium, solve the two-equation system simultaneously:
 
-\[ a_1 = \frac{1}{2}(c + a_2) \quad \text{and} \quad a_2 = \frac{1}{2}(c + a_1) \]
+\[
+a_1 = \frac{1}{2}(c + a_2) \quad \text{and} \quad a_2 = \frac{1}{2}(c + a_1)
+\]
 
 Substituting: \( a_1 = \frac{1}{2}(c + \frac{1}{2}(c + a_1)) = \frac{3c}{4} + \frac{a_1}{4} \), which gives \( a_1^* = c \) and by symmetry \( a_2^* = c \).
 
@@ -442,13 +485,17 @@ Two geographically distinct firms compete by setting prices. Consumers are unifo
 
 A consumer at location \( x \) gets utility \( k - cx - p_1 \) from firm 1 or \( k - c(1-x) - p_2 \) from firm 2, where \( c \) is a travel cost constant. The **marginal consumer** \( x^*(p_1, p_2) \) who is indifferent satisfies:
 
-\[ k - cx^* - p_1 = k - c(1 - x^*) - p_2 \implies x^* = \frac{p_2 - p_1 + c}{2c} \]
+\[
+k - cx^* - p_1 = k - c(1 - x^*) - p_2 \implies x^* = \frac{p_2 - p_1 + c}{2c}
+\]
 
 Firm profits: \( \pi_1 = \frac{1}{2c}(p_1 p_2 - p_1^2 + p_1 c) - \alpha \) and symmetrically for firm 2.
 
 First-order conditions yield best response functions:
 
-\[ BR_1(p_2) = \frac{p_2 + c}{2}, \qquad BR_2(p_1) = \frac{p_1 + c}{2} \]
+\[
+BR_1(p_2) = \frac{p_2 + c}{2}, \qquad BR_2(p_1) = \frac{p_1 + c}{2}
+\]
 
 Solving the system: \( p_1^* = p_2^* = c \), and profits are \( \pi_1^* = \pi_2^* = \frac{c}{2} - \alpha \).
 
@@ -464,7 +511,9 @@ Industrial organization asks: how does competition among firms depend on demand 
 
 A single good is produced by \( n \) firms. Each firm \( i \) chooses a quantity \( q_i \in [0, \infty) \) to produce. The cost to firm \( i \) is \( C_i(q_i) \), where \( C_i'(q_i) > 0 \) and \( C_i''(q_i) \geq 0 \). The market price is given by the inverse demand function \( P(\sum_{i=1}^N q_i) \) with \( \partial P/\partial q_i \leq 0 \). Each firm's profit is:
 
-\[ \pi_i(q_1, \ldots, q_N) = q_i P(q_1 + \cdots + q_N) - C_i(q_i) \]
+\[
+\pi_i(q_1, \ldots, q_N) = q_i P(q_1 + \cdots + q_N) - C_i(q_i)
+\]
 
 The game is: players = the firms; actions = quantities chosen; preferences = profit functions.
 
@@ -472,25 +521,35 @@ The game is: players = the firms; actions = quantities chosen; preferences = pro
 
 Suppose \( n = 2 \), with linear costs \( C_i(q_i) = cq_i \) and linear inverse demand \( P(Q) = \alpha - Q \) for \( Q \leq \alpha \), where \( \alpha > c \). Each firm's profit:
 
-\[ \pi_i(q_1, q_2) = q_i(\alpha - c - q_1 - q_2), \quad \text{when } q_1 + q_2 \leq \alpha \]
+\[
+\pi_i(q_1, q_2) = q_i(\alpha - c - q_1 - q_2), \quad \text{when } q_1 + q_2 \leq \alpha
+\]
 
 First-order conditions:
 
-\[ \frac{\partial \pi_1}{\partial q_1} = \alpha - c - 2q_1 - q_2 = 0, \qquad \frac{\partial \pi_2}{\partial q_2} = \alpha - c - q_1 - 2q_2 = 0 \]
+\[
+\frac{\partial \pi_1}{\partial q_1} = \alpha - c - 2q_1 - q_2 = 0, \qquad \frac{\partial \pi_2}{\partial q_2} = \alpha - c - q_1 - 2q_2 = 0
+\]
 
 Best response functions:
 
-\[ b_1(q_2) = \frac{1}{2}(\alpha - c - q_2), \qquad b_2(q_1) = \frac{1}{2}(\alpha - c - q_1) \]
+\[
+b_1(q_2) = \frac{1}{2}(\alpha - c - q_2), \qquad b_2(q_1) = \frac{1}{2}(\alpha - c - q_1)
+\]
 
 (with \( b_i = 0 \) if the other firm produces more than \( \alpha - c \). These are downward sloping — if the rival produces more, it is optimal to produce less (**strategic substitutes**).
 
 Solving simultaneously:
 
-\[ q_1^* = q_2^* = \frac{1}{3}(\alpha - c) \]
+\[
+q_1^* = q_2^* = \frac{1}{3}(\alpha - c)
+\]
 
 **Equilibrium outcomes:**
 
-\[ Q^* = \frac{2}{3}(\alpha - c), \quad P^* = \frac{1}{3}(\alpha + 2c), \quad \pi_1^* = \pi_2^* = \frac{1}{9}(\alpha - c)^2 \]
+\[
+Q^* = \frac{2}{3}(\alpha - c), \quad P^* = \frac{1}{3}(\alpha + 2c), \quad \pi_1^* = \pi_2^* = \frac{1}{9}(\alpha - c)^2
+\]
 
 ## Comparison: Cartel, Cournot, and Perfect Competition
 
@@ -500,11 +559,15 @@ From \( MR = MC \): \( Q^M = \frac{1}{2}(\alpha - c) \), \( P^M = \frac{1}{2}(\a
 
 **Perfect competition** (\( P = MC \):
 
-\[ Q^{PC} = \alpha - c, \quad P^{PC} = c, \quad \pi^{PC} = 0 \]
+\[
+Q^{PC} = \alpha - c, \quad P^{PC} = c, \quad \pi^{PC} = 0
+\]
 
 **Ranking:**
 
-\[ Q^{PC} > Q^* > Q^M \qquad \text{and} \qquad P^M > P^* > P^{PC} \qquad \text{and} \qquad \pi^M_i > \pi^*_i > \pi^{PC}_i \]
+\[
+Q^{PC} > Q^* > Q^M \qquad \text{and} \qquad P^M > P^* > P^{PC} \qquad \text{and} \qquad \pi^M_i > \pi^*_i > \pi^{PC}_i
+\]
 
 Cournot competition lies between monopoly and perfect competition in terms of output, price, and profit. Consumers benefit from Cournot competition relative to monopoly, but less so than under perfect competition.
 
@@ -512,11 +575,15 @@ Cournot competition lies between monopoly and perfect competition in terms of ou
 
 With \( n \) firms, all with cost \( C_i(q_i) = cq_i \) and linear inverse demand \( P(Q) = a - bQ \), symmetric equilibrium gives:
 
-\[ q^* = \frac{a - c}{(n+1)b}, \quad Q^* = \frac{a-c}{b} \cdot \frac{n}{n+1}, \quad p^* = \frac{a + nc}{n+1}, \quad \pi_i^* = \frac{(a-c)^2}{(n+1)^2 b} \]
+\[
+q^* = \frac{a - c}{(n+1)b}, \quad Q^* = \frac{a-c}{b} \cdot \frac{n}{n+1}, \quad p^* = \frac{a + nc}{n+1}, \quad \pi_i^* = \frac{(a-c)^2}{(n+1)^2 b}
+\]
 
 As \( n \to \infty \):
 
-\[ \lim_{n \to \infty} Q^* = \frac{a-c}{b}, \quad \lim_{n \to \infty} p^* = c \]
+\[
+\lim_{n \to \infty} Q^* = \frac{a-c}{b}, \quad \lim_{n \to \infty} p^* = c
+\]
 
 As the number of Cournot competitors tends to infinity, the market converges to perfect competition. This result is known as the **Cournot convergence theorem** and formalizes the intuition that more competition benefits consumers.
 
@@ -534,7 +601,9 @@ The game: players = firms; actions = prices (non-negative numbers); preferences 
 
 With two firms, linear demand \( D(p) = \alpha - p \), and constant marginal cost \( c \):
 
-\[ \pi_i(p_1, p_2) = \begin{cases} (p_i - c)(\alpha - p_i) & \text{if } p_i < p_j \\ \frac{1}{2}(p_i - c)(\alpha - p_i) & \text{if } p_i = p_j \\ 0 & \text{if } p_i > p_j \end{cases} \]
+\[
+\pi_i(p_1, p_2) = \begin{cases} (p_i - c)(\alpha - p_i) & \text{if } p_i < p_j \\ \frac{1}{2}(p_i - c)(\alpha - p_i) & \text{if } p_i = p_j \\ 0 & \text{if } p_i > p_j \end{cases}
+\]
 
 The monopoly price is \( p^M = \frac{\alpha + c}{2} \).
 
@@ -611,7 +680,9 @@ Every extensive form game can be represented as a strategic form game by listing
 
 **Example.** Consider a game where player 1 has one information set with actions {T, B} and player 2 has two information sets, each with two actions {L, R} and {ℓ, r}:
 
-\[ S_1 = \{T, B\} \qquad S_2 = \{L\ell, Lr, R\ell, Rr\} \]
+\[
+S_1 = \{T, B\} \qquad S_2 = \{L\ell, Lr, R\ell, Rr\}
+\]
 
 The strategic form is:
 
@@ -699,17 +770,23 @@ Firm 1 (leader) chooses \( q_1 \) first. Firm 2 (follower) observes \( q_1 \) an
 
 **Step 1: Firm 2's optimization.** For any \( q_1 \), firm 2 maximizes \( q_2[\alpha - \beta(q_1 + q_2)] - cq_2 \):
 
-\[ b_2(q_1) = \frac{\alpha - c - \beta q_1}{2\beta} \]
+\[
+b_2(q_1) = \frac{\alpha - c - \beta q_1}{2\beta}
+\]
 
 This is exactly the same best response function as in the Cournot game — the follower behaves like a Cournot competitor taking the leader's quantity as given.
 
 **Step 2: Firm 1's optimization.** Knowing firm 2 will respond with \( b_2(q_1) \), firm 1 maximizes:
 
-\[ q_1 \left[\alpha - \beta\left(q_1 + \frac{\alpha - c - \beta q_1}{2\beta}\right)\right] - cq_1 \]
+\[
+q_1 \left[\alpha - \beta\left(q_1 + \frac{\alpha - c - \beta q_1}{2\beta}\right)\right] - cq_1
+\]
 
 First-order condition yields:
 
-\[ q_1^* = \frac{\alpha - c}{2\beta} \]
+\[
+q_1^* = \frac{\alpha - c}{2\beta}
+\]
 
 Substituting back: \( q_2^* = \frac{\alpha - c}{4\beta} \).
 
@@ -746,19 +823,25 @@ The **utility possibility set** \( \Omega \) is the set of utility pairs achieva
 
 The **Nash bargaining solution (NBS)** is the unique pair \( (u_A^N, u_B^N) \) that maximizes the **Nash product**:
 
-\[ \max_{(u_A, u_B) \in \Theta} (u_A - d_A)(u_B - d_B) \]
+\[
+\max_{(u_A, u_B) \in \Theta} (u_A - d_A)(u_B - d_B)
+\]
 
 where \( \Theta = \{(u_A, u_B) \in \Omega : u_A \geq d_A, u_B \geq d_B\} \).
 
 The NBS has a geometric interpretation: it is the point on the Pareto frontier where the **slope of the frontier equals the ratio of the players' "gains from agreement"**:
 
-\[ -g'(u_A^N) = \frac{u_B^N - d_B}{u_A^N - d_A} \]
+\[
+-g'(u_A^N) = \frac{u_B^N - d_B}{u_A^N - d_A}
+\]
 
 ## The Split-the-Difference Rule
 
 When players have linear utility and bargain over \( \pi \) with disagreement point \( (d_A, d_B) \), the Nash bargaining solution is:
 
-\[ x_A^N = d_A + \frac{1}{2}(\pi - d_A - d_B), \qquad x_B^N = d_B + \frac{1}{2}(\pi - d_A - d_B) \]
+\[
+x_A^N = d_A + \frac{1}{2}(\pi - d_A - d_B), \qquad x_B^N = d_B + \frac{1}{2}(\pi - d_A - d_B)
+\]
 
 The interpretation: each player first receives their disagreement payoff, and then the **remaining surplus** \( \pi - d_A - d_B \) is split **equally**. Player \( i \)'s share is strictly increasing in \( d_i \) and strictly decreasing in \( d_j \) — having a better outside option (higher disagreement payoff) strengthens one's bargaining position.
 
@@ -768,13 +851,17 @@ Special case: if \( d_A = d_B = 0 \), the cake is split equally: \( x_A^N = x_B^
 
 Suppose the utility frontier is \( u_1^2 + u_2^2 = 50 \) with disagreement point \( (0, 0) \). Maximize \( u_1 u_2 \) subject to \( u_1^2 + u_2^2 = 50 \) using a Lagrangian:
 
-\[ \mathcal{L} = u_1 u_2 + \lambda(50 - u_1^2 - u_2^2) \]
+\[
+\mathcal{L} = u_1 u_2 + \lambda(50 - u_1^2 - u_2^2)
+\]
 
 FOCs: \( u_2 = 2\lambda u_1 \), \( u_1 = 2\lambda u_2 \), \( u_1^2 + u_2^2 = 50 \). These give \( u_1 = u_2 \) and \( 2u_1^2 = 50 \), so \( u_1^* = u_2^* = 5 \).
 
 With disagreement point \( (1, 3) \) and linear frontier \( u_1 + u_2 = 10 \):
 
-\[ \max_{u_1}\ (u_1 - 1)(7 - u_1) \]
+\[
+\max_{u_1}\ (u_1 - 1)(7 - u_1)
+\]
 
 FOC: \( (7 - u_1) - (u_1 - 1) = 0 \implies u_1^* = 4 \), and \( u_2^* = 6 \).
 
@@ -842,14 +929,27 @@ Let \( V_B \) be player B's **continuation value** — the undiscounted payoff B
 
 **Stationarity.** If the game is stationary, \( V_B \) (what B gets upon rejecting in an odd period) must equal what B gets in an even period when B proposes:
 
-\[ V_B = 1 - \delta_A(1 - \delta_B V_B) = 1 - \delta_A + \delta_A \delta_B V_B \]
-\[ V_B(1 - \delta_A \delta_B) = 1 - \delta_A \]
-\[ V_B = \frac{1 - \delta_A}{1 - \delta_A \delta_B} \]
+\[
+V_B = 1 - \delta_A(1 - \delta_B V_B) = 1 - \delta_A + \delta_A \delta_B V_B
+\]
+
+\[
+V_B(1 - \delta_A \delta_B) = 1 - \delta_A
+\]
+
+\[
+V_B = \frac{1 - \delta_A}{1 - \delta_A \delta_B}
+\]
 
 **The unique SPNE** (Rubinstein's Proposition):
 
-\[ x_A^* = 1 - \delta_B V_B = 1 - \frac{\delta_B(1 - \delta_A)}{1 - \delta_A \delta_B} = \frac{1 - \delta_B}{1 - \delta_A \delta_B} \]
-\[ x_B^* = \frac{\delta_B(1 - \delta_A)}{1 - \delta_A \delta_B} \]
+\[
+x_A^* = 1 - \delta_B V_B = 1 - \frac{\delta_B(1 - \delta_A)}{1 - \delta_A \delta_B} = \frac{1 - \delta_B}{1 - \delta_A \delta_B}
+\]
+
+\[
+x_B^* = \frac{\delta_B(1 - \delta_A)}{1 - \delta_A \delta_B}
+\]
 
 Player A proposes this split in period 1, and player B accepts immediately.
 

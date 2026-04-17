@@ -81,6 +81,7 @@ We now develop in detail the most fundamental model of mathematical epidemiology
 
 <div class="definition">
 <strong>Definition 2.1 (SIR Model).</strong> The <em>SIR model without demography</em> is the system of ordinary differential equations
+
 \[
 \frac{dS}{dt} = -\beta S I, \qquad \frac{dI}{dt} = \beta S I - \gamma I, \qquad \frac{dR}{dt} = \gamma I,
 \]
@@ -90,6 +91,7 @@ where \(\beta > 0\) is the transmission rate, \(\gamma > 0\) is the recovery rat
 The assumptions underlying this model are worth stating explicitly. First, the population is closed: \(S + I + R = N\) is constant (adding the three equations gives \(d(S+I+R)/dt = 0\)). Second, transmission follows mass-action kinetics with rate \(\beta\). Third, recovery occurs at a constant per-capita rate \(\gamma\), so the infectious period is exponentially distributed with mean \(1/\gamma\). Fourth, recovered individuals are permanently immune.
 
 The third equation for \(R\) is decoupled from the first two: once \(S(t)\) and \(I(t)\) are known, \(R(t) = N - S(t) - I(t)\) is determined. This is a common feature of "removed" compartments in epidemiological models — they serve as a bookkeeping device but do not influence the transmission dynamics. Since \(R\) does not appear in the first two equations, the dynamics are fully determined by the \((S, I)\) subsystem:
+
 \[
 \frac{dS}{dt} = -\beta S I, \qquad \frac{dI}{dt} = (\beta S - \gamma) I.
 \]
@@ -102,6 +104,7 @@ The quantity \(\gamma/\beta\) arising from the threshold condition can be repack
 
 <div class="definition">
 <strong>Definition 2.2 (Basic Reproduction Number).</strong> The <em>basic reproduction number</em> \(\mathcal{R}_0\) is the expected number of secondary infections produced by a single infected individual introduced into a fully susceptible population. For the SIR model,
+
 \[
 \mathcal{R}_0 = \frac{\beta N}{\gamma}.
 \]
@@ -154,10 +157,12 @@ A remarkable feature of the SIR model is that the total number of individuals ul
 
 <div class="theorem">
 <strong>Theorem 2.5 (Final Size Relation).</strong> Let \(S_\infty = \lim_{t \to \infty} S(t)\). Then \(S_\infty\) is the unique solution in \((0, S_0)\) (when \(\mathcal{R}_0 > 1\)) or in \((0, S_0]\) of the transcendental equation
+
 \[
 \ln \frac{S_0}{S_\infty} = \frac{\beta}{\gamma}(S_0 - S_\infty + I_0).
 \]
 Equivalently, if \(I_0\) is small relative to \(N\),
+
 \[
 \ln \frac{S_0}{S_\infty} \approx \mathcal{R}_0 \left(1 - \frac{S_\infty}{N}\right).
 \]
@@ -166,6 +171,7 @@ The total number infected during the epidemic is \(S_0 - S_\infty\).
 
 <div class="proof">
 <strong>Proof.</strong> From the conserved quantity \(V(S, I) = S + I - (\gamma/\beta)\ln S\), we have \(V(S_0, I_0) = V(S_\infty, 0)\) since \(I(\infty) = 0\). Therefore
+
 \[
 S_0 + I_0 - \frac{\gamma}{\beta}\ln S_0 = S_\infty - \frac{\gamma}{\beta}\ln S_\infty.
 \]
@@ -188,10 +194,12 @@ Not all diseases confer lasting immunity. For diseases such as gonorrhea, chlamy
 
 <div class="definition">
 <strong>Definition 2.6 (SIS Model).</strong> The <em>SIS model without demography</em> is
+
 \[
 \frac{dS}{dt} = -\beta S I + \gamma I, \qquad \frac{dI}{dt} = \beta S I - \gamma I,
 \]
 with \(S + I = N\) constant. Substituting \(S = N - I\):
+
 \[
 \frac{dI}{dt} = (\beta(N-I) - \gamma)I = (\beta N - \gamma)I - \beta I^2.
 \]
@@ -233,6 +241,7 @@ Many infectious diseases have a latent period: after becoming infected, an indiv
 
 <div class="definition">
 <strong>Definition 3.1 (SEIR Model).</strong> The <em>SEIR model</em> introduces an Exposed compartment between S and I:
+
 \[
 \frac{dS}{dt} = -\beta SI, \qquad \frac{dE}{dt} = \beta SI - \sigma E, \qquad \frac{dI}{dt} = \sigma E - \gamma I, \qquad \frac{dR}{dt} = \gamma I,
 \]
@@ -240,6 +249,7 @@ where \(\sigma > 0\) is the rate at which exposed individuals become infectious 
 </div>
 
 The total population \(N = S + E + I + R\) is again constant. The basic reproduction number remains \(\mathcal{R}_0 = \beta N / \gamma\), because \(\sigma\) affects the timing but not the total number of secondary infections produced by one infected individual. However, the latent period does affect the speed at which an epidemic grows: the initial exponential growth rate is no longer simply \((\mathcal{R}_0 - 1)\gamma\) but is the positive root of the characteristic equation
+
 \[
 (\lambda + \sigma)(\lambda + \gamma) = \beta N \sigma,
 \]
@@ -255,6 +265,7 @@ For some diseases, immunity wanes over time, so that recovered individuals event
 
 <div class="definition">
 <strong>Definition 3.3 (SIRS Model).</strong> The <em>SIRS model</em> is
+
 \[
 \frac{dS}{dt} = -\beta SI + \delta R, \qquad \frac{dI}{dt} = \beta SI - \gamma I, \qquad \frac{dR}{dt} = \gamma I - \delta R,
 \]
@@ -277,6 +288,7 @@ Vaccination is the most powerful tool available for disease control. To model va
 
 <div class="definition">
 <strong>Definition 3.4 (SIR with Vaccination at Birth).</strong> In a model with demographics (birth rate \(\mu N\), death rate \(\mu\) in each compartment), vaccination of a fraction \(p\) of newborns gives:
+
 \[
 \frac{dS}{dt} = \mu N(1-p) - \beta SI - \mu S, \qquad \frac{dI}{dt} = \beta SI - (\gamma + \mu)I, \qquad \frac{dR}{dt} = \gamma I + \mu N p - \mu R.
 \]
@@ -286,6 +298,7 @@ The effect of vaccination is to reduce the effective reproduction number. If a f
 
 <div class="theorem">
 <strong>Theorem 3.5 (Critical Vaccination Threshold).</strong> For a vaccine with efficacy \(\varepsilon\) (where \(0 < \varepsilon \leq 1\)), disease eradication requires the vaccination coverage \(p\) to satisfy
+
 \[
 p > p_c = \frac{1}{\varepsilon}\left(1 - \frac{1}{\mathcal{R}_0}\right).
 \]
@@ -304,6 +317,7 @@ When studying diseases that persist over long time periods, demographic processe
 
 <div class="definition">
 <strong>Definition 3.7 (SIR with Demographics).</strong> The <em>SIR model with vital dynamics</em> is
+
 \[
 \frac{dS}{dt} = \mu N - \beta SI - \mu S, \qquad \frac{dI}{dt} = \beta SI - \gamma I - \mu I, \qquad \frac{dR}{dt} = \gamma I - \mu R,
 \]
@@ -321,6 +335,7 @@ The introduction of demographics qualitatively changes the long-term behavior. U
 <ol>
 <li>A disease-free equilibrium \((S^*, I^*, R^*) = (N, 0, 0)\), which is locally asymptotically stable if \(\mathcal{R}_0 < 1\) and unstable if \(\mathcal{R}_0 > 1\).</li>
 <li>A unique endemic equilibrium
+
 \[
 S^* = \frac{\gamma + \mu}{\beta} = \frac{N}{\mathcal{R}_0}, \qquad I^* = \frac{\mu N}{\gamma + \mu}\left(1 - \frac{1}{\mathcal{R}_0}\right), \qquad R^* = \frac{\gamma}{\mu}I^*,
 \]
@@ -334,6 +349,7 @@ Many important infectious diseases — malaria, dengue, Zika, West Nile virus �
 
 <div class="definition">
 <strong>Definition 3.10 (Ross-Macdonald Model).</strong> Let \(S_H, I_H\) be susceptible and infected humans, and \(S_V, I_V\) be susceptible and infected vectors (mosquitoes). The <em>Ross-Macdonald model</em> is:
+
 \[
 \frac{dI_H}{dt} = a b \frac{I_V}{N_H}(N_H - I_H) - r I_H, \qquad \frac{dI_V}{dt} = a c \frac{I_H}{N_H}(N_V - I_V) - \mu_V I_V,
 \]
@@ -398,6 +414,7 @@ For higher-dimensional systems, computing eigenvalues explicitly may be impracti
 
 <div class="theorem">
 <strong>Theorem 4.4 (Routh-Hurwitz Criteria).</strong> Consider the characteristic polynomial \(p(\lambda) = \lambda^n + a_1\lambda^{n-1} + \cdots + a_n\). All roots have strictly negative real part if and only if the Hurwitz determinants are all positive:
+
 \[
 \Delta_1 = a_1 > 0, \quad \Delta_2 = \begin{vmatrix} a_1 & 1 \\ a_3 & a_2 \end{vmatrix} > 0, \quad \Delta_3 = \begin{vmatrix} a_1 & 1 & 0 \\ a_3 & a_2 & a_1 \\ a_5 & a_4 & a_3 \end{vmatrix} > 0, \quad \ldots
 \]
@@ -425,6 +442,7 @@ The challenge, of course, is constructing an appropriate Lyapunov function. For 
 
 <div class="theorem">
 <strong>Theorem 4.7 (Korobeinikov, 2004).</strong> For the SIR model with demographics and \(\mathcal{R}_0 > 1\), the function
+
 \[
 V(S, I) = \left(S - S^* - S^* \ln \frac{S}{S^*}\right) + \left(I - I^* - I^* \ln \frac{I}{I^*}\right)
 \]
@@ -433,10 +451,12 @@ is a Lyapunov function establishing global asymptotic stability of the endemic e
 
 <div class="proof">
 <strong>Proof.</strong> We verify that \(\dot{V} \leq 0\) along trajectories. Computing:
+
 \[
 \dot{V} = \left(1 - \frac{S^*}{S}\right)\dot{S} + \left(1 - \frac{I^*}{I}\right)\dot{I}.
 \]
 Substituting the SIR equations with demographics and using the equilibrium relations \(\mu N = \beta S^* I^* + \mu S^*\) and \(\beta S^* I^* = (\gamma + \mu)I^*\), we obtain after careful algebra:
+
 \[
 \dot{V} = \mu S^*\left(2 - \frac{S^*}{S} - \frac{S}{S^*}\right) + \beta S^* I^*\left(3 - \frac{S^*}{S} - \frac{SI}{S^* I^*} \cdot \frac{I^*}{I} - \frac{I}{I^*} \cdot \frac{S^*}{S}\right).
 \]
@@ -506,10 +526,12 @@ The compartmental ODE models of the preceding chapters treat all individuals wit
 
 <div class="definition">
 <strong>Definition 5.1 (McKendrick-von Foerster Equation).</strong> Let \(n(a, t)\) denote the density of individuals of age \(a\) at time \(t\). The <em>McKendrick-von Foerster equation</em> is the first-order hyperbolic PDE
+
 \[
 \frac{\partial n}{\partial t} + \frac{\partial n}{\partial a} = -\mu(a) n(a, t),
 \]
 with boundary condition
+
 \[
 n(0, t) = \int_0^\infty \beta_b(a) n(a, t) \, da,
 \]
@@ -519,10 +541,12 @@ where \(\mu(a)\) is the age-specific death rate and \(\beta_b(a)\) is the age-sp
 The McKendrick-von Foerster equation is the fundamental equation of age-structured population dynamics. The left-hand side represents the aging process: both \(t\) and \(a\) increase together along characteristics. The right-hand side represents mortality, and the boundary condition represents the influx of newborns.
 
 The McKendrick-von Foerster equation has a beautiful geometric interpretation. The operator \(\partial/\partial t + \partial/\partial a\) is the directional derivative along the lines \(a = t + \text{const}\) in the \((t, a)\)-plane. These are the characteristic curves of the PDE, and they represent the aging trajectories of individuals: an individual born at time \(t_0\) has age \(a = t - t_0\) at time \(t\), so the point \((t, a)\) moves along the line \(a - t = -t_0\). Along a characteristic, the equation reduces to
+
 \[
 \frac{dn}{dt} = -\mu(a) n,
 \]
 giving the survival law: an individual born at time \(t_0\) and alive at age \(a\) has survived with probability
+
 \[
 \ell(a) = \exp\left(-\int_0^a \mu(s)\, ds\right),
 \]
@@ -534,6 +558,7 @@ the survivorship function.
 
 <div class="theorem">
 <strong>Theorem 5.3 (Euler-Lotka Equation).</strong> The intrinsic growth rate \(r\) of a population governed by the McKendrick-von Foerster equation satisfies
+
 \[
 1 = \int_0^\infty \beta_b(a) \ell(a) e^{-ra} \, da.
 \]
@@ -552,16 +577,20 @@ To incorporate age into epidemic models, we introduce age-specific compartments.
 
 <div class="definition">
 <strong>Definition 5.4 (Age-Structured SIR Model).</strong> The <em>age-structured SIR model</em> is
+
 \[
 \left(\frac{\partial}{\partial t} + \frac{\partial}{\partial a}\right) s(a,t) = -\lambda(a,t) s(a,t) - \mu(a) s(a,t),
 \]
+
 \[
 \left(\frac{\partial}{\partial t} + \frac{\partial}{\partial a}\right) i(a,t) = \lambda(a,t) s(a,t) - \gamma(a) i(a,t) - \mu(a) i(a,t),
 \]
+
 \[
 \left(\frac{\partial}{\partial t} + \frac{\partial}{\partial a}\right) r(a,t) = \gamma(a) i(a,t) - \mu(a) r(a,t),
 \]
 where the <em>force of infection</em> is
+
 \[
 \lambda(a, t) = \int_0^\infty \beta(a, a') i(a', t) \, da'.
 \]
@@ -580,10 +609,12 @@ For age-structured models, the basic reproduction number can no longer be comput
 
 <div class="definition">
 <strong>Definition 5.5 (Next-Generation Operator).</strong> The <em>next-generation operator</em> \(K\) is the linear operator on \(L^1[0,\infty)\) defined by
+
 \[
 (K\phi)(a) = \int_0^\infty K(a, a') \phi(a') \, da',
 \]
 where the kernel is
+
 \[
 K(a, a') = \frac{s^*(a')}{\ell(a')} \int_0^\infty \beta(a, a'+\tau) \frac{\ell(a'+\tau)}{\ell(a')} e^{-\int_0^\tau \gamma(a'+\sigma)\,d\sigma} \, d\tau.
 \]
@@ -592,6 +623,7 @@ Here \(s^*(a)\) is the susceptible density at the disease-free steady state, and
 
 <div class="theorem">
 <strong>Theorem 5.6 (Diekmann-Heesterbeek-Metz, 1990).</strong> The basic reproduction number of the age-structured epidemic model is
+
 \[
 \mathcal{R}_0 = \rho(K),
 \]
@@ -610,6 +642,7 @@ For the age-structured SIR model at the disease-free equilibrium, the linearized
 
 <div class="theorem">
 <strong>Theorem 5.8 (Characteristic Equation).</strong> The growth rate \(\lambda\) of perturbations from the DFE satisfies the characteristic equation
+
 \[
 1 = \int_0^\infty \int_0^\infty \beta(a, a') s^*(a') \frac{\ell(a'+\tau)}{\ell(a')} e^{-\lambda \tau} e^{-\int_0^\tau \gamma(a'+\sigma)\,d\sigma} \, d\tau \, da.
 \]
@@ -622,6 +655,7 @@ The DFE is stable if and only if all solutions \(\lambda\) have negative real pa
 
 <div class="example">
 <strong>Example 5.10.</strong> Suppose the population has two age groups: children (ages 0-15) and adults (ages 15+), with a WAIFW (Who Acquires Infection From Whom) matrix
+
 \[
 \beta = \begin{pmatrix} \beta_{cc} & \beta_{ca} \\ \beta_{ac} & \beta_{aa} \end{pmatrix},
 \]
@@ -640,6 +674,7 @@ The models studied so far assume spatial homogeneity: all individuals interact i
 
 <div class="definition">
 <strong>Definition 6.1 (Reaction-Diffusion SIR Model).</strong> The <em>reaction-diffusion SIR model</em> is
+
 \[
 \frac{\partial S}{\partial t} = D_S \nabla^2 S - \beta SI, \qquad \frac{\partial I}{\partial t} = D_I \nabla^2 I + \beta SI - \gamma I, \qquad \frac{\partial R}{\partial t} = D_R \nabla^2 R + \gamma I,
 \]
@@ -660,6 +695,7 @@ Before analyzing the full spatial SIR model, we study a simpler equation that ca
 
 <div class="definition">
 <strong>Definition 6.2 (Fisher-KPP Equation).</strong> The <em>Fisher-KPP equation</em> is
+
 \[
 \frac{\partial u}{\partial t} = D \frac{\partial^2 u}{\partial x^2} + f(u),
 \]
@@ -670,6 +706,7 @@ This equation models the spatial spread of a population (or a trait, or an infec
 
 <div class="definition">
 <strong>Definition 6.3 (Traveling Wave).</strong> A <em>traveling wave solution</em> is a solution of the form \(u(x,t) = U(\xi)\) where \(\xi = x - ct\) is the traveling wave coordinate and \(c\) is the wave speed. The profile \(U\) satisfies the ODE
+
 \[
 D U'' + c U' + f(U) = 0,
 \]
@@ -688,6 +725,7 @@ The minimum wave speed \(c^* = 2\sqrt{Dr}\) is determined by the linearization a
 
 <div class="proof">
 <strong>Proof.</strong> (Sketch of the existence argument.) The traveling wave ODE \(DU'' + cU' + rU(1-U) = 0\) can be written as the planar system
+
 \[
 U' = V, \qquad V' = -\frac{c}{D}V - \frac{r}{D}U(1-U).
 \]
@@ -708,6 +746,7 @@ The full reaction-diffusion SIR model admits traveling wave solutions representi
 
 <div class="theorem">
 <strong>Theorem 6.5.</strong> Consider the one-dimensional reaction-diffusion SIR model with equal diffusion coefficients \(D_S = D_I = D\) and \(S \to N\) ahead of the wave. Traveling wave solutions connecting the disease-free state ahead of the wave to a post-epidemic state behind the wave exist for wave speeds \(c \geq c^*\), where
+
 \[
 c^* = 2\sqrt{D(\beta N - \gamma)} = 2\sqrt{D\gamma(\mathcal{R}_0 - 1)},
 \]
@@ -728,6 +767,7 @@ In human populations, disease transmission occurs through social contact network
 
 <div class="definition">
 <strong>Definition 6.7 (SIR on a Network).</strong> Let \(G = (V, E)\) be a graph with \(|V| = N\) nodes. Each node is in state S, I, or R. An infected node transmits to each susceptible neighbor independently at rate \(\beta\), and recovers at rate \(\gamma\). The pair approximation for the proportion infected in a configuration-model random graph with degree distribution \(p_k\) gives, in the early phase:
+
 \[
 \mathcal{R}_0 = \frac{\beta}{\gamma} \cdot \frac{\langle k^2 \rangle - \langle k \rangle}{\langle k \rangle},
 \]
@@ -746,9 +786,11 @@ Between the extremes of well-mixed ODE models and fully spatial PDE models lie m
 
 <div class="definition">
 <strong>Definition 6.8 (Metapopulation SIR Model).</strong> Consider \(n\) patches, each with its own SIR dynamics. The <em>metapopulation model</em> is
+
 \[
 \frac{dS_i}{dt} = -\beta_i S_i I_i + \sum_{j=1}^n m_{ij} S_j - \left(\sum_{j=1}^n m_{ji}\right) S_i,
 \]
+
 \[
 \frac{dI_i}{dt} = \beta_i S_i I_i - \gamma_i I_i + \sum_{j=1}^n m_{ij} I_j - \left(\sum_{j=1}^n m_{ji}\right) I_i,
 \]
@@ -856,6 +898,7 @@ In the stochastic SIR model with demographics (births replenishing susceptibles)
 
 <div class="definition">
 <strong>Definition 7.8 (Quasi-Stationary Distribution).</strong> The <em>quasi-stationary distribution</em> (QSD) of a Markov chain with absorbing state is the limiting conditional distribution
+
 \[
 \pi_j = \lim_{t \to \infty} \Pr(X(t) = j \mid X(t) \neq 0),
 \]
@@ -884,6 +927,7 @@ We now turn from the dynamics of disease to the broader field of population dyna
 
 <div class="definition">
 <strong>Definition 8.1 (Logistic Equation).</strong> The <em>logistic equation</em>, introduced by Verhulst (1838), is
+
 \[
 \frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right),
 \]
@@ -902,6 +946,7 @@ While the logistic equation is a useful starting point, many populations exhibit
 
 <div class="definition">
 <strong>Definition 8.2 (Allee Effect).</strong> An <em>Allee effect</em> is a positive relationship between population density and per-capita growth rate at low densities. A <em>strong Allee effect</em> occurs when the per-capita growth rate is negative below a threshold density \(A > 0\), leading to a critical population size below which the population goes extinct. A model exhibiting a strong Allee effect is
+
 \[
 \frac{dN}{dt} = rN\left(\frac{N}{A} - 1\right)\left(1 - \frac{N}{K}\right),
 \]
@@ -922,6 +967,7 @@ The interaction between predators and their prey is one of the most fundamental 
 
 <div class="definition">
 <strong>Definition 8.4 (Lotka-Volterra Predator-Prey Model).</strong> The classical <em>Lotka-Volterra predator-prey model</em> is
+
 \[
 \frac{dN}{dt} = rN - aNP, \qquad \frac{dP}{dt} = baNP - dP,
 \]
@@ -969,6 +1015,7 @@ Replacing the linear functional response in the Lotka-Volterra model with a Type
 
 <div class="definition">
 <strong>Definition 8.10 (Rosenzweig-MacArthur Model).</strong> The <em>Rosenzweig-MacArthur model</em> is
+
 \[
 \frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) - \frac{aNP}{1 + ahN}, \qquad \frac{dP}{dt} = \frac{baNP}{1 + ahN} - dP.
 \]
@@ -995,6 +1042,7 @@ The stability of the coexistence equilibrium depends critically on the carrying 
 
 <div class="proof">
 <strong>Proof.</strong> The Jacobian at the coexistence equilibrium \((N^*, P^*)\) has trace
+
 \[
 \text{tr}(J) = r\left(1 - \frac{2N^*}{K}\right) - \frac{ahP^*}{(1+ahN^*)^2}
 \]
@@ -1013,6 +1061,7 @@ When two species compete for the same resource, a fundamental question is whethe
 
 <div class="definition">
 <strong>Definition 8.13 (Lotka-Volterra Competition Model).</strong> The <em>two-species Lotka-Volterra competition model</em> is
+
 \[
 \frac{dN_1}{dt} = r_1 N_1\left(1 - \frac{N_1 + \alpha_{12} N_2}{K_1}\right), \qquad \frac{dN_2}{dt} = r_2 N_2\left(1 - \frac{N_2 + \alpha_{21} N_1}{K_2}\right),
 \]
@@ -1043,6 +1092,7 @@ The interactions studied above — predator-prey and competition — involve two
 
 <div class="definition">
 <strong>Definition 8.16 (Three-Level Food Chain).</strong> A <em>three-level food chain model</em> (resource-consumer-predator) is
+
 \[
 \frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) - f_1(N)C, \qquad \frac{dC}{dt} = b_1 f_1(N)C - f_2(C)P - d_1 C, \qquad \frac{dP}{dt} = b_2 f_2(C)P - d_2 P,
 \]
@@ -1068,6 +1118,7 @@ This elegant prediction has been broadly confirmed empirically: in systems with 
 
 <div class="example">
 <strong>Example 8.19.</strong> Consider a simple three-level chain with Lotka-Volterra interactions:
+
 \[
 \frac{dN}{dt} = rN(1 - N/K) - a_1NP_1, \quad \frac{dP_1}{dt} = b_1a_1NP_1 - a_2P_1P_2 - d_1P_1, \quad \frac{dP_2}{dt} = b_2a_2P_1P_2 - d_2P_2.
 \]

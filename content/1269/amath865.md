@@ -23,6 +23,7 @@ where \(\frac{D}{Dt} = \frac{\partial}{\partial t} + \mathbf{u}\cdot\nabla\) is 
 
 <div class="definition">
 <strong>Definition 1.1 (Geopotential).</strong> The <em>geopotential</em> \(\Phi\) is defined by
+
 \[
 \Phi = \Phi_g - \frac{1}{2}|\boldsymbol{\Omega}\times\mathbf{r}|^2,
 \]
@@ -47,6 +48,7 @@ The Coriolis acceleration \(-2\boldsymbol{\Omega}\times\mathbf{u}\) acts perpend
 
 <div class="definition">
 <strong>Definition 1.2 (Coriolis Parameter).</strong> The <em>Coriolis parameter</em> is defined as
+
 \[
 f = 2\Omega\sin\phi,
 \]
@@ -61,6 +63,7 @@ When the horizontal scale \(L\) of a flow is small compared to the Earth's radiu
 
 <div class="definition">
 <strong>Definition 1.3 (f-Plane Approximation).</strong> On the <em>f-plane</em>, the Coriolis parameter is treated as a constant:
+
 \[
 f = f_0 = 2\Omega\sin\phi_0.
 \]
@@ -71,6 +74,7 @@ The f-plane is adequate for studying phenomena whose meridional extent is much s
 
 <div class="definition">
 <strong>Definition 1.4 (Beta-Plane Approximation).</strong> On the <em>beta-plane</em>, the Coriolis parameter is linearised about a reference latitude:
+
 \[
 f = f_0 + \beta y, \quad \beta = \frac{df}{dy}\bigg|_{\phi_0} = \frac{2\Omega\cos\phi_0}{a},
 \]
@@ -85,9 +89,11 @@ In the ocean and in much of the atmosphere, density variations are small compare
 
 <div class="definition">
 <strong>Definition 1.5 (Boussinesq Approximation).</strong> Write \(\rho = \rho_0 + \rho'(x,y,z,t)\) with \(|\rho'| \ll \rho_0\). The <em>Boussinesq equations</em> are
+
 \[
 \frac{D\mathbf{u}}{Dt} + f\hat{\mathbf{z}}\times\mathbf{u} = -\frac{1}{\rho_0}\nabla p' + b\hat{\mathbf{z}} + \nu\nabla^2\mathbf{u},
 \]
+
 \[
 \nabla\cdot\mathbf{u} = 0,
 \]
@@ -106,6 +112,7 @@ The stability of a stratified fluid to vertical displacements is measured by the
 
 <div class="definition">
 <strong>Definition 1.6 (Buoyancy Frequency).</strong> The <em>buoyancy frequency</em> (or Brunt-Vaisala frequency) is
+
 \[
 N^2 = \frac{\partial b}{\partial z} = -\frac{g}{\rho_0}\frac{\partial\rho}{\partial z},
 \]
@@ -124,10 +131,12 @@ For motions whose horizontal scale \(L\) is much larger than their vertical scal
 
 <div class="definition">
 <strong>Definition 1.7 (Hydrostatic Balance).</strong> The <em>hydrostatic balance</em> is
+
 \[
 \frac{\partial p}{\partial z} = -\rho g,
 \]
 or equivalently in the Boussinesq system,
+
 \[
 \frac{\partial p'}{\partial z} = \rho_0 b.
 \]
@@ -143,9 +152,11 @@ The set of Boussinesq, hydrostatic equations on the beta-plane, together with th
 
 <div class="definition">
 <strong>Definition 1.8 (Primitive Equations).</strong> The <em>primitive equations</em> in the Boussinesq, hydrostatic approximation on the beta-plane are:
+
 \[
 \frac{Du}{Dt} - fv = -\frac{1}{\rho_0}\frac{\partial p'}{\partial x} + \mathcal{F}_x, \qquad \frac{Dv}{Dt} + fu = -\frac{1}{\rho_0}\frac{\partial p'}{\partial y} + \mathcal{F}_y,
 \]
+
 \[
 \frac{\partial p'}{\partial z} = \rho_0 b, \qquad \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z} = 0, \qquad \frac{Db}{Dt} + N^2 w = \mathcal{Q},
 \]
@@ -170,6 +181,7 @@ The relative importance of advective acceleration to the Coriolis acceleration i
 
 <div class="definition">
 <strong>Definition 2.1 (Rossby Number).</strong> The <em>Rossby number</em> is
+
 \[
 \text{Ro} = \frac{U}{fL},
 \]
@@ -184,6 +196,7 @@ Setting \(\text{Ro} = 0\) in the horizontal momentum equations — equivalently,
 
 <div class="definition">
 <strong>Definition 2.2 (Geostrophic Balance).</strong> The <em>geostrophic equations</em> are
+
 \[
 fv_g = \frac{1}{\rho_0}\frac{\partial p}{\partial x}, \qquad fu_g = -\frac{1}{\rho_0}\frac{\partial p}{\partial y},
 \]
@@ -212,10 +225,12 @@ Combining geostrophic balance with hydrostatic balance produces a fundamental re
 
 <div class="theorem">
 <strong>Theorem 2.1 (Thermal Wind Relation).</strong> Under geostrophic and hydrostatic balance in a Boussinesq fluid,
+
 \[
 f\frac{\partial u_g}{\partial z} = -\frac{\partial b}{\partial y}, \qquad f\frac{\partial v_g}{\partial z} = \frac{\partial b}{\partial x},
 \]
 or in vector form,
+
 \[
 f\frac{\partial\mathbf{u}_g}{\partial z} = \hat{\mathbf{z}}\times\nabla_H b.
 \]
@@ -237,6 +252,7 @@ In the limit of rapid rotation (Ro \(\to 0\)) with a homogeneous (unstratified) 
 
 <div class="theorem">
 <strong>Theorem 2.2 (Taylor-Proudman Theorem).</strong> In a homogeneous, incompressible, inviscid fluid in geostrophic and hydrostatic balance,
+
 \[
 \frac{\partial\mathbf{u}}{\partial z} = 0 \quad \text{and} \quad \frac{\partial w}{\partial z} = 0.
 \]
@@ -265,6 +281,7 @@ The resolution of geostrophic degeneracy is one of the great achievements of geo
 
 <div class="definition">
 <strong>Definition 2.3 (Ekman Number).</strong> The <em>Ekman number</em> measures the ratio of viscous forces to Coriolis forces:
+
 \[
 \text{Ek} = \frac{\nu}{fL^2},
 \]
@@ -285,12 +302,15 @@ Consider a layer of fluid with a free surface at \(z = h(x,y,t)\) over a flat bo
 
 <div class="definition">
 <strong>Definition 3.1 (Shallow Water Equations).</strong> The <em>rotating shallow water equations</em> on the f-plane are
+
 \[
 \frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y} - fv = -g\frac{\partial h}{\partial x},
 \]
+
 \[
 \frac{\partial v}{\partial t} + u\frac{\partial v}{\partial x} + v\frac{\partial v}{\partial y} + fu = -g\frac{\partial h}{\partial y},
 \]
+
 \[
 \frac{\partial h}{\partial t} + \frac{\partial(hu)}{\partial x} + \frac{\partial(hv)}{\partial y} = 0.
 \]
@@ -315,6 +335,7 @@ E = \frac{1}{2}\rho_0 h|\mathbf{u}|^2 + \frac{1}{2}\rho_0 g h^2.
 
 <div class="theorem">
 <strong>Theorem 3.1 (Energy Conservation).</strong> For the rotating shallow water equations with no forcing or dissipation,
+
 \[
 \frac{\partial E}{\partial t} + \nabla_H\cdot\left[\mathbf{u}\left(E + \frac{1}{2}\rho_0 g h^2\right)\right] = 0.
 \]
@@ -329,6 +350,7 @@ Perhaps the most important conservation law in geophysical fluid dynamics is the
 
 <div class="definition">
 <strong>Definition 3.2 (Shallow Water Potential Vorticity).</strong> The <em>potential vorticity</em> (PV) of the shallow water system is
+
 \[
 q = \frac{\zeta + f}{h},
 \]
@@ -339,6 +361,7 @@ The numerator \(\zeta + f\) is the absolute vorticity — the total vertical com
 
 <div class="theorem">
 <strong>Theorem 3.2 (Potential Vorticity Conservation, Rossby 1936).</strong> For inviscid, unforced shallow water flow (with \(f\) possibly varying with \(y\)),
+
 \[
 \frac{Dq}{Dt} = 0.
 \]
@@ -347,14 +370,17 @@ Each fluid parcel preserves its potential vorticity as it moves.
 
 <div class="proof">
 <strong>Proof.</strong> Take the curl of the momentum equations to obtain the vorticity equation:
+
 \[
 \frac{D(\zeta + f)}{Dt} = -(\zeta + f)\nabla_H\cdot\mathbf{u}.
 \]
 The continuity equation gives \(\nabla_H\cdot\mathbf{u} = -\frac{1}{h}\frac{Dh}{Dt}\). Substituting:
+
 \[
 \frac{D(\zeta + f)}{Dt} = \frac{(\zeta + f)}{h}\frac{Dh}{Dt}.
 \]
 Dividing both sides by \(h\):
+
 \[
 \frac{1}{h}\frac{D(\zeta + f)}{Dt} - \frac{(\zeta + f)}{h^2}\frac{Dh}{Dt} = \frac{D}{Dt}\left(\frac{\zeta + f}{h}\right) = 0. \quad \square
 \]
@@ -372,6 +398,7 @@ One of the most illuminating problems in rotating fluid dynamics asks: given an 
 
 <div class="example">
 <strong>Example 3.2 (Rossby Adjustment Problem).</strong> Consider an infinite channel on the f-plane, initially at rest, with a step discontinuity in surface height:
+
 \[
 h(x, 0) = \begin{cases} H + \eta_0 & x < 0, \\ H - \eta_0 & x > 0, \end{cases} \quad u = v = 0.
 \]
@@ -380,6 +407,7 @@ This state is not in geostrophic balance. The fluid adjusts by radiating inertia
 
 <div class="definition">
 <strong>Definition 3.3 (Rossby Deformation Radius).</strong> The <em>barotropic Rossby deformation radius</em> is
+
 \[
 L_R = \frac{\sqrt{gH}}{|f|} = \frac{c}{|f|},
 \]
@@ -414,6 +442,7 @@ Linearising the shallow water equations about a state of rest with uniform depth
 
 <div class="theorem">
 <strong>Theorem 3.3 (Poincare Wave Dispersion Relation).</strong> The dispersion relation for linear waves in the rotating shallow water system is
+
 \[
 \omega^2 = f^2 + gH(k^2 + l^2),
 \]
@@ -452,6 +481,7 @@ Carl-Gustaf Rossby first identified these waves in the late 1930s, and his dispe
 
 <div class="definition">
 <strong>Definition 4.1 (Absolute Vorticity Gradient).</strong> On the beta-plane, the meridional gradient of absolute vorticity for a zonal mean flow \(\bar{u}(y)\) is
+
 \[
 \bar{q}_y = \beta - \frac{\partial^2\bar{u}}{\partial y^2}.
 \]
@@ -464,10 +494,12 @@ We derive the Rossby wave dispersion relation from the linearised barotropic vor
 
 <div class="theorem">
 <strong>Theorem 4.1 (Barotropic Rossby Wave Dispersion Relation).</strong> The dispersion relation for barotropic Rossby waves on the beta-plane is
+
 \[
 \omega = -\frac{\beta k}{k^2 + l^2 + L_R^{-2}},
 \]
 where \(L_R\) is the Rossby deformation radius. In the purely barotropic limit (\(L_R \to \infty\)),
+
 \[
 \omega = -\frac{\beta k}{k^2 + l^2}.
 \]
@@ -475,10 +507,12 @@ where \(L_R\) is the Rossby deformation radius. In the purely barotropic limit (
 
 <div class="proof">
 <strong>Proof.</strong> The linearised quasi-geostrophic potential vorticity equation about a state of rest is
+
 \[
 \frac{\partial}{\partial t}\left(\nabla^2\psi - L_R^{-2}\psi\right) + \beta\frac{\partial\psi}{\partial x} = 0.
 \]
 Substituting the plane wave ansatz \(\psi = \hat{\psi}\,e^{i(kx+ly-\omega t)}\), we obtain
+
 \[
 -i\omega\left(-(k^2+l^2) - L_R^{-2}\right)\hat{\psi} + i\beta k\hat{\psi} = 0.
 \]
@@ -493,10 +527,12 @@ The physical mechanism of Rossby wave propagation can be understood through PV c
 
 <div class="definition">
 <strong>Definition 4.2 (Phase and Group Velocity).</strong> The <em>zonal phase velocity</em> is
+
 \[
 c_{px} = \frac{\omega}{k} = -\frac{\beta}{k^2 + l^2 + L_R^{-2}} < 0.
 \]
 The <em>group velocity</em> components (for the barotropic case \(L_R^{-2} = 0\)) are
+
 \[
 c_{gx} = \frac{\partial\omega}{\partial k} = \frac{\beta(k^2 - l^2)}{(k^2 + l^2)^2}, \qquad c_{gy} = \frac{\partial\omega}{\partial l} = \frac{2\beta k l}{(k^2 + l^2)^2}.
 \]
@@ -528,6 +564,7 @@ A wave is stationary (\(\omega = 0\)) when the mean flow Doppler-shifts the intr
 
 <div class="theorem">
 <strong>Theorem 4.2 (Stationary Rossby Wave Condition).</strong> Rossby waves are stationary relative to the ground when
+
 \[
 k^2 + l^2 = K_s^2 \equiv \frac{\beta}{\bar{u}} - L_R^{-2}.
 \]
@@ -546,6 +583,7 @@ Rossby waves can also arise from gradients in the background PV due to variation
 
 <div class="definition">
 <strong>Definition 4.3 (Topographic Rossby Waves).</strong> Over a bottom slope \(\partial h_B/\partial y \neq 0\), the background PV gradient is
+
 \[
 \frac{\partial\bar{q}}{\partial y} = \frac{\beta}{H} + \frac{f_0}{H^2}\frac{\partial h_B}{\partial y}.
 \]
@@ -582,6 +620,7 @@ Under these scalings, the flow is nearly geostrophic at leading order, and the d
 
 <div class="definition">
 <strong>Definition 5.1 (QG Scaling Regime).</strong> The <em>quasi-geostrophic scaling</em> is the asymptotic regime in which \(\text{Ro} \to 0\) and \(\text{Bu} = O(1)\). The flow is expanded as
+
 \[
 \mathbf{u} = \mathbf{u}_g + \text{Ro}\,\mathbf{u}_a + \cdots, \quad p = p_g + \text{Ro}\,p_a + \cdots,
 \]
@@ -594,10 +633,12 @@ The derivation proceeds by expanding the vorticity equation and using the thermo
 
 <div class="theorem">
 <strong>Theorem 5.1 (QG Potential Vorticity Equation).</strong> In the quasi-geostrophic approximation, the flow evolution is governed by
+
 \[
 \frac{D_g q}{Dt} \equiv \left(\frac{\partial}{\partial t} + u_g\frac{\partial}{\partial x} + v_g\frac{\partial}{\partial y}\right)q = 0,
 \]
 where the QG potential vorticity is
+
 \[
 q = \nabla_H^2\psi + \frac{\partial}{\partial z}\left(\frac{f_0^2}{N^2}\frac{\partial\psi}{\partial z}\right) + \beta y,
 \]
@@ -606,14 +647,17 @@ and \(\psi = p'/(f_0\rho_0)\) is the geostrophic streamfunction. The advection i
 
 <div class="proof">
 <strong>Proof.</strong> Starting from the Boussinesq vorticity equation linearised about the beta-plane, the leading-order balance is geostrophic. At the next order in Ro, the vorticity equation becomes
+
 \[
 \frac{D_g\zeta_g}{Dt} + \beta v_g = f_0\frac{\partial w}{\partial z},
 \]
 where \(\zeta_g = \nabla_H^2\psi\) is the geostrophic relative vorticity and \(w\) is the ageostrophic vertical velocity. The thermodynamic equation at leading order is
+
 \[
 \frac{D_g b}{Dt} + N^2 w = 0,
 \]
 where \(b = f_0\frac{\partial\psi}{\partial z}\) from thermal wind and hydrostatic balance. Solving for \(w\) and substituting:
+
 \[
 f_0\frac{\partial w}{\partial z} = -f_0\frac{\partial}{\partial z}\left(\frac{1}{N^2}\frac{D_g b}{Dt}\right) = -\frac{D_g}{Dt}\frac{\partial}{\partial z}\left(\frac{f_0^2}{N^2}\frac{\partial\psi}{\partial z}\right).
 \]
@@ -634,6 +678,7 @@ In the shallow water context, the QG PV equation takes a particularly clean form
 
 <div class="definition">
 <strong>Definition 5.2 (QG Shallow Water PV).</strong> The <em>QG potential vorticity in shallow water</em> is
+
 \[
 q = \nabla_H^2\psi - \frac{\psi}{L_R^2} + \beta y,
 \]
@@ -648,6 +693,7 @@ The material conservation of QG PV implies a host of integral conservation laws 
 
 <div class="theorem">
 <strong>Theorem 5.2 (Casimir Conservation).</strong> For any function \(F(q)\), the integral
+
 \[
 \mathcal{C}[F] = \iint F(q)\,dx\,dy
 \]
@@ -682,10 +728,12 @@ Before computing specific growth rates, we establish general conditions under wh
 
 <div class="theorem">
 <strong>Theorem 6.1 (Charney-Stern Theorem, 1962).</strong> A necessary condition for instability of a zonal flow \(\bar{u}(y, z)\) in the QG framework is that the meridional gradient of QG potential vorticity,
+
 \[
 \bar{q}_y = \beta - \frac{\partial^2\bar{u}}{\partial y^2} - \frac{\partial}{\partial z}\left(\frac{f_0^2}{N^2}\frac{\partial\bar{u}}{\partial z}\right),
 \]
 must change sign somewhere in the interior of the domain, or the boundary temperature gradient must have the appropriate sign relative to the interior PV gradient. More precisely, instability requires that
+
 \[
 \iint \frac{\bar{q}_y\,|\hat{\psi}|^2}{\bar{u} - c}\,dy\,dz
 \]
@@ -694,10 +742,12 @@ has a vanishing imaginary part, where \(c\) is the complex phase speed and \(\ha
 
 <div class="proof">
 <strong>Proof.</strong> Linearise the QG PV equation about the zonal flow \(\bar{u}(y,z)\). For perturbations of the form \(\psi' = \text{Re}[\hat{\psi}(y,z)\,e^{ik(x - ct)}]\), we obtain the eigenvalue problem
+
 \[
 (\bar{u} - c)\left[\frac{\partial^2\hat{\psi}}{\partial y^2} - k^2\hat{\psi} + \frac{\partial}{\partial z}\left(\frac{f_0^2}{N^2}\frac{\partial\hat{\psi}}{\partial z}\right)\right] + \bar{q}_y\hat{\psi} = 0.
 \]
 Multiply by \(\hat{\psi}^*/(\bar{u} - c)\), integrate over the domain, and take the imaginary part. The imaginary part of \(c\) must satisfy
+
 \[
 c_i\iint\frac{\bar{q}_y\,|\hat{\psi}|^2}{|\bar{u} - c|^2}\,dy\,dz = 0.
 \]
@@ -726,6 +776,7 @@ Since \(\bar{q}_y = 0\) in the interior, the perturbation satisfies \((\nabla^2 
 
 <div class="theorem">
 <strong>Theorem 6.2 (Eady Growth Rate).</strong> The Eady problem yields a dispersion relation whose most unstable mode has growth rate
+
 \[
 \sigma_{\max} = 0.3098\,\frac{f_0\Lambda}{N} = 0.3098\,\frac{f_0 U_0}{NH},
 \]
@@ -742,9 +793,11 @@ The Phillips (1954) model discretises the vertical structure into two layers, ma
 
 <div class="definition">
 <strong>Definition 6.2 (Phillips Two-Layer Model).</strong> The domain consists of two QG layers of equal depth \(H/2\), with streamfunctions \(\psi_1\) (upper) and \(\psi_2\) (lower). The mean flow is \(\bar{u}_1 = U_1\) and \(\bar{u}_2 = U_2\) (constants). The linearised QG PV equations for perturbations \(\psi_n' \propto e^{ik(x-ct)}\) are
+
 \[
 (U_1 - c)\left[-k^2\hat{\psi}_1 - \frac{1}{2}L_R^{-2}(\hat{\psi}_1 - \hat{\psi}_2)\right] + \left(\beta + \frac{1}{2}L_R^{-2}(U_1 - U_2)\right)\hat{\psi}_1 = 0,
 \]
+
 \[
 (U_2 - c)\left[-k^2\hat{\psi}_2 + \frac{1}{2}L_R^{-2}(\hat{\psi}_1 - \hat{\psi}_2)\right] + \left(\beta - \frac{1}{2}L_R^{-2}(U_1 - U_2)\right)\hat{\psi}_2 = 0,
 \]
@@ -755,6 +808,7 @@ This model admits both barotropic (in-phase) and baroclinic (out-of-phase) modes
 
 <div class="theorem">
 <strong>Theorem 6.3 (Phillips Model Instability Criterion).</strong> The baroclinic mode in the Phillips two-layer model is unstable when the shear satisfies
+
 \[
 U_s = U_1 - U_2 > \frac{2\beta L_R^2}{1} = \frac{\beta}{k_d^2/2},
 \]
@@ -767,6 +821,7 @@ Barotropic instability extracts kinetic energy from the horizontal shear of the 
 
 <div class="theorem">
 <strong>Theorem 6.4 (Rayleigh-Kuo Criterion).</strong> A necessary condition for barotropic instability of a zonal flow \(\bar{u}(y)\) on the beta-plane is that
+
 \[
 \bar{q}_y = \beta - \frac{\partial^2\bar{u}}{\partial y^2}
 \]
@@ -775,10 +830,12 @@ must change sign somewhere in the domain.
 
 <div class="proof">
 <strong>Proof.</strong> This is the barotropic (depth-independent) case of the Charney-Stern theorem. The linearised barotropic vorticity equation for perturbations \(\psi' = \text{Re}[\hat{\psi}(y)\,e^{ik(x-ct)}]\) is
+
 \[
 (\bar{u} - c)\left(\frac{d^2\hat{\psi}}{dy^2} - k^2\hat{\psi}\right) + \bar{q}_y\hat{\psi} = 0.
 \]
 Multiplying by \(\hat{\psi}^*/(\bar{u} - c)\), integrating over \(y\), and taking the imaginary part gives
+
 \[
 c_i\int\frac{\bar{q}_y\,|\hat{\psi}|^2}{|\bar{u} - c|^2}\,dy = 0.
 \]
@@ -797,9 +854,11 @@ The energetics of baroclinic and barotropic instability provide physical insight
 
 <div class="definition">
 <strong>Definition 6.3 (Energy Conversion Terms).</strong> In the QG framework, the eddy kinetic energy (EKE) and eddy available potential energy (EAPE) budgets involve the conversion terms:
+
 \[
 C_{BT} = -\overline{u'v'}\frac{\partial\bar{u}}{\partial y} \quad (\text{barotropic conversion: mean KE} \to \text{EKE}),
 \]
+
 \[
 C_{BC} = -\frac{f_0^2}{N^2}\overline{v'\frac{\partial\psi'}{\partial z}}\frac{\partial\bar{u}}{\partial z} \quad (\text{baroclinic conversion: mean APE} \to \text{EAPE}).
 \]
@@ -824,6 +883,7 @@ The large-scale circulation of the upper ocean is primarily driven by the wind. 
 
 <div class="definition">
 <strong>Definition 7.1 (Ekman Layer).</strong> The <em>Ekman layer</em> is the thin frictional boundary layer at the ocean surface (or bottom) in which the Coriolis force, pressure gradient, and turbulent stress are all important. Its characteristic depth scale is
+
 \[
 \delta_E = \sqrt{\frac{2\nu_e}{|f|}},
 \]
@@ -840,6 +900,7 @@ where \((u_E, v_E)\) is the ageostrophic Ekman velocity. With boundary condition
 
 <div class="theorem">
 <strong>Theorem 7.1 (Ekman Spiral).</strong> The Ekman velocity components for a surface wind stress in the \(x\)-direction, \(\boldsymbol{\tau} = \tau_0\hat{\mathbf{x}}\), with \(f > 0\), are
+
 \[
 u_E = V_0\,e^{z/\delta_E}\cos\left(\frac{z}{\delta_E} - \frac{\pi}{4}\right), \qquad v_E = V_0\,e^{z/\delta_E}\sin\left(\frac{z}{\delta_E} - \frac{\pi}{4}\right),
 \]
@@ -854,6 +915,7 @@ The vertically integrated Ekman transport is perhaps more important than the det
 
 <div class="definition">
 <strong>Definition 7.2 (Ekman Transport).</strong> The <em>Ekman transport</em> per unit length is
+
 \[
 \mathbf{M}_E = \int_{-\infty}^{0}\rho_0\mathbf{u}_E\,dz = \frac{\hat{\mathbf{z}}\times\boldsymbol{\tau}}{f}.
 \]
@@ -866,6 +928,7 @@ The convergence or divergence of the Ekman transport drives vertical motion at t
 
 <div class="definition">
 <strong>Definition 7.3 (Ekman Pumping).</strong> The <em>Ekman pumping velocity</em> at the base of the surface Ekman layer is
+
 \[
 w_E = \frac{1}{\rho_0}\text{curl}\left(\frac{\boldsymbol{\tau}}{f}\right) = \frac{1}{\rho_0}\left[\frac{\partial}{\partial x}\left(\frac{\tau_y}{f}\right) - \frac{\partial}{\partial y}\left(\frac{\tau_x}{f}\right)\right].
 \]
@@ -883,6 +946,7 @@ The Sverdrup balance relates the meridional transport of the interior ocean to t
 
 <div class="theorem">
 <strong>Theorem 7.2 (Sverdrup Balance, 1947).</strong> In the interior of a wind-driven ocean basin, the vertically integrated meridional transport is given by
+
 \[
 \beta V = \frac{1}{\rho_0}\text{curl}\,\boldsymbol{\tau} = \frac{1}{\rho_0}\left(\frac{\partial\tau_y}{\partial x} - \frac{\partial\tau_x}{\partial y}\right),
 \]
@@ -891,10 +955,12 @@ where \(V = \int_{-H}^{0}v\,dz\) is the total meridional transport per unit zona
 
 <div class="proof">
 <strong>Proof.</strong> In the steady-state vorticity equation, the leading-order balance for the interior (away from boundaries and the Ekman layer) is between the beta-effect and the vortex stretching driven by Ekman pumping:
+
 \[
 \beta v = f\frac{\partial w}{\partial z}.
 \]
 Integrating vertically from the bottom (\(w = 0\)) to the base of the Ekman layer (\(w = w_E\)):
+
 \[
 \beta V = fw_E = \frac{f}{\rho_0}\,\text{curl}\left(\frac{\boldsymbol{\tau}}{f}\right) \approx \frac{1}{\rho_0}\,\text{curl}\,\boldsymbol{\tau},
 \]
@@ -909,6 +975,7 @@ The Sverdrup interior flow is equatorward in the subtropical gyres, so to close 
 
 <div class="definition">
 <strong>Definition 7.4 (Stommel Model).</strong> The <em>Stommel model</em> (1948) adds bottom friction to the barotropic vorticity equation:
+
 \[
 \beta v = \frac{1}{\rho_0}\,\text{curl}\,\boldsymbol{\tau} - r\zeta,
 \]
@@ -923,6 +990,7 @@ The key insight is that friction alone does not explain western intensification.
 
 <div class="definition">
 <strong>Definition 7.5 (Munk Model).</strong> The <em>Munk model</em> (1950) replaces bottom friction with lateral viscosity:
+
 \[
 \beta v = \frac{1}{\rho_0}\,\text{curl}\,\boldsymbol{\tau} + A_H\nabla^4\psi,
 \]
@@ -939,6 +1007,7 @@ The deep ocean circulation, driven by deep water formation at high latitudes and
 
 <div class="definition">
 <strong>Definition 7.6 (Stommel-Arons Model).</strong> The <em>Stommel-Arons model</em> assumes a uniform upwelling \(w_0\) from the abyss into the upper ocean, balanced by localised deep water formation (sinking) at high latitudes. The abyssal flow satisfies the Sverdrup-like balance
+
 \[
 \beta v = f\frac{\partial w}{\partial z} \approx \frac{fw_0}{D},
 \]
@@ -967,6 +1036,7 @@ Near the equator, \(f \approx \beta_0 y\) where \(\beta_0 = 2\Omega/a \approx 2.
 
 <div class="definition">
 <strong>Definition 8.1 (Equatorial Deformation Radius).</strong> The <em>equatorial Rossby radius of deformation</em> is
+
 \[
 L_{eq} = \left(\frac{c}{\beta_0}\right)^{1/2},
 \]
@@ -989,6 +1059,7 @@ The structure of the equatorial wave equation is mathematically identical to the
 
 <div class="definition">
 <strong>Definition 8.2 (Equatorial Kelvin Wave).</strong> The <em>equatorial Kelvin wave</em> is a solution with \(v = 0\) identically, trapped to the equator with Gaussian meridional structure:
+
 \[
 u = u_0\,\exp\left(-\frac{\beta_0 y^2}{2c}\right)\cos(kx - \omega t), \qquad \eta = \frac{c}{g}u,
 \]
@@ -1005,6 +1076,7 @@ The equatorial Kelvin wave is the equatorial analogue of the coastal Kelvin wave
 
 <div class="definition">
 <strong>Definition 8.3 (Yanai Wave).</strong> The <em>mixed Rossby-gravity wave</em> (or Yanai wave) corresponds to the \(n = 0\) meridional mode of the equatorial wave equation. Its dispersion relation is
+
 \[
 \omega = \frac{k c}{2}\left(1 + \sqrt{1 + \frac{4\beta_0}{k^2 c}}\right).
 \]
@@ -1021,6 +1093,7 @@ The Yanai wave is a hybrid mode that connects the gravity wave and Rossby wave b
 
 <div class="theorem">
 <strong>Theorem 8.1 (Equatorial Rossby Wave Dispersion).</strong> For meridional mode number \(n \ge 1\), the equatorial Rossby wave dispersion relation in the long-wave limit (\(k^2 c/\beta_0 \ll 2n+1\)) is
+
 \[
 \omega \approx -\frac{\beta_0 k}{k^2 + (2n+1)\beta_0/c}.
 \]
@@ -1039,6 +1112,7 @@ The Matsuno-Gill model describes the steady-state equatorial response to a local
 
 <div class="definition">
 <strong>Definition 8.4 (Matsuno-Gill Model).</strong> The <em>Matsuno-Gill model</em> (Matsuno 1966, Gill 1980) solves the linearised equatorial shallow water equations with a prescribed mass sink \(Q(x, y)\) (representing diabatic heating) and linear Rayleigh damping \(\epsilon\):
+
 \[
 -\beta_0 yv + \epsilon u = -g\frac{\partial\eta}{\partial x}, \qquad \beta_0 yu + \epsilon v = -g\frac{\partial\eta}{\partial y}, \qquad \epsilon\eta + H\left(\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}\right) = -Q.
 \]

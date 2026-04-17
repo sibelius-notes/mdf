@@ -50,36 +50,57 @@ The simplest climate model treats Earth as a sphere in radiative equilibrium wit
 
 <div class="definition">
 A <strong>blackbody</strong> is an idealized object that absorbs all incident electromagnetic radiation and emits radiation according to the <strong>Stefan-Boltzmann law</strong>:
-\[ F = \sigma T^4 \]
+
+\[
+F = \sigma T^4
+\]
 where \( F \) (W m\(^{-2}\)) is the emitted power per unit area, \( \sigma = 5.67 \times 10^{-8} \, \text{W m}^{-2}\text{K}^{-4} \) is the Stefan-Boltzmann constant, and \( T \) (K) is the absolute temperature.
 </div>
 
 **Solar constant**: the solar flux at Earth's mean orbital distance is \( S_0 \approx 1361 \, \text{W m}^{-2} \).
 
 **Energy input**: the Earth intercepts solar radiation over a cross-sectional area \( \pi R_E^2 \) (disk area). Averaged over the spherical surface area \( 4\pi R_E^2 \), the average insolation is \( S_0/4 \approx 340 \, \text{W m}^{-2} \). Accounting for planetary albedo \( \alpha \approx 0.30 \) (fraction of sunlight reflected):
-\[ Q_{in} = \frac{S_0(1-\alpha)}{4} \approx 238 \, \text{W m}^{-2} \]
+
+\[
+Q_{in} = \frac{S_0(1-\alpha)}{4} \approx 238 \, \text{W m}^{-2}
+\]
 
 **Energy output** (longwave/OLR): the Earth emits as a greybody:
-\[ Q_{out} = \epsilon\sigma T_s^4 \]
+
+\[
+Q_{out} = \epsilon\sigma T_s^4
+\]
 where \( \epsilon \approx 1 \) for the surface but greenhouse gases reduce the effective emissivity to space.
 
 ## 2.2 Zero-Dimensional Energy Balance Model (EBM)
 
 **Equilibrium**: set absorbed solar = outgoing longwave:
-\[ \frac{S_0(1-\alpha)}{4} = \sigma T_e^4 \]
+
+\[
+\frac{S_0(1-\alpha)}{4} = \sigma T_e^4
+\]
 
 Solving for the **effective radiating temperature**:
-\[ T_e = \left(\frac{S_0(1-\alpha)}{4\sigma}\right)^{1/4} \approx 255 \, \text{K} = -18°\text{C} \]
+
+\[
+T_e = \left(\frac{S_0(1-\alpha)}{4\sigma}\right)^{1/4} \approx 255 \, \text{K} = -18°\text{C}
+\]
 
 The observed mean surface temperature is ~288 K = +15°C. The difference (~33 K) is the **greenhouse effect**: greenhouse gases (CO₂, H₂O, CH₄, N₂O) absorb outgoing longwave radiation and re-emit it, warming the surface.
 
 ## 2.3 The Greenhouse Effect and Forcing
 
 **Radiative forcing** \( \Delta F \): the change in net radiative flux at the tropopause due to a perturbation (e.g., doubling CO₂). For CO₂:
-\[ \Delta F_{2\times CO_2} \approx 3.7 \, \text{W m}^{-2} \]
+
+\[
+\Delta F_{2\times CO_2} \approx 3.7 \, \text{W m}^{-2}
+\]
 
 **No-feedback temperature response**: if the climate responded linearly and the only change was the CO₂ forcing:
-\[ \Delta T_0 = \frac{\Delta F}{4\sigma T_e^3} \approx \frac{3.7}{3.3} \approx 1.1 \, \text{K} \]
+
+\[
+\Delta T_0 = \frac{\Delta F}{4\sigma T_e^3} \approx \frac{3.7}{3.3} \approx 1.1 \, \text{K}
+\]
 
 ## 2.4 Climate Feedbacks
 
@@ -90,7 +111,10 @@ A <strong>climate feedback</strong> is a process in which a change in climate (e
 **Feedback parameter** \( \lambda \) (W m\(^{-2}\) K\(^{-1}\)): total feedback is \( \lambda = \lambda_0 + \sum \lambda_i \), where \( \lambda_0 = -4\sigma T_e^3 \approx -3.3 \, \text{W m}^{-2}\text{K}^{-1} \) is the Planck (blackbody) feedback (stabilizing).
 
 **Equilibrium Climate Sensitivity (ECS)**:
-\[ \text{ECS} = -\frac{\Delta F_{2\times CO_2}}{\lambda} = \frac{3.7}{3.3 - \sum \lambda_i^{pos}} \]
+
+\[
+\text{ECS} = -\frac{\Delta F_{2\times CO_2}}{\lambda} = \frac{3.7}{3.3 - \sum \lambda_i^{pos}}
+\]
 
 | Feedback | \( \lambda_i \) (W m\(^{-2}\)K\(^{-1}\)) | Sign | Mechanism |
 |---------|----------------------------------------|------|-----------|
@@ -105,7 +129,10 @@ Net feedback is positive (amplifying), giving ECS ~2.5–4.0 K (IPCC likely rang
 ## 2.5 Ice-Albedo Feedback and Bifurcations
 
 Including the ice-albedo feedback, the albedo becomes a function of temperature \( \alpha(T) \). The EBM becomes:
-\[ C\frac{dT}{dt} = \frac{S_0(1-\alpha(T))}{4} - \sigma T^4 \]
+
+\[
+C\frac{dT}{dt} = \frac{S_0(1-\alpha(T))}{4} - \sigma T^4
+\]
 
 where \( C \) is the ocean heat capacity.
 
@@ -129,9 +156,15 @@ Climate datasets (temperature, precipitation, sea level, CO₂) are time series:
 
 <div class="definition">
 The <strong>Discrete Fourier Transform (DFT)</strong> of a time series \( \{x_n\}_{n=0}^{N-1} \) is:
-\[ X_k = \sum_{n=0}^{N-1} x_n e^{-2\pi i kn/N}, \quad k = 0, 1, \ldots, N-1 \]
+
+\[
+X_k = \sum_{n=0}^{N-1} x_n e^{-2\pi i kn/N}, \quad k = 0, 1, \ldots, N-1
+\]
 The inverse DFT recovers the original series:
-\[ x_n = \frac{1}{N}\sum_{k=0}^{N-1} X_k e^{2\pi i kn/N} \]
+
+\[
+x_n = \frac{1}{N}\sum_{k=0}^{N-1} X_k e^{2\pi i kn/N}
+\]
 </div>
 
 **Physical interpretation**: \( |X_k|^2 \) is proportional to the **power spectral density** at frequency \( f_k = k/(N\Delta t) \) (Hz), where \( \Delta t \) is the sampling interval. The Fourier transform decomposes the signal into sinusoidal components at different frequencies.
@@ -168,7 +201,10 @@ A **high-pass filter** retains variability; a **band-pass filter** selects a ran
 ## 4.1 Climate Fields as Matrices
 
 Climate observations often have both **spatial** and **temporal** dimensions. For example, monthly sea surface temperature (SST) observations at \( M \) spatial grid points over \( N \) months form a data matrix:
-\[ \mathbf{X} \in \mathbb{R}^{M\times N} \]
+
+\[
+\mathbf{X} \in \mathbb{R}^{M\times N}
+\]
 
 Each row is a spatial location's time series; each column is a global spatial snapshot.
 
@@ -189,7 +225,10 @@ Each row is a spatial location's time series; each column is a global spatial sn
 ## 4.3 SVD Connection
 
 Equivalently, the EOF analysis is the **Singular Value Decomposition (SVD)** of the anomaly matrix:
-\[ \mathbf{X}' = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^T \]
+
+\[
+\mathbf{X}' = \mathbf{U}\mathbf{\Sigma}\mathbf{V}^T
+\]
 
 The columns of \( \mathbf{U} \) are the EOFs; the columns of \( \mathbf{V} \) are the normalized PCs; the diagonal of \( \mathbf{\Sigma} \) contains the singular values (related to the square roots of eigenvalues). The SVD is computationally more efficient and numerically stable than eigendecomposition of the covariance matrix.
 
@@ -226,8 +265,14 @@ Under normal (non-ENSO) conditions, **trade winds** blow westward across the tro
 - Self-reinforcing loop creates El Niño.
 
 **Recharge oscillator model** (Jin, 1997): simple mathematical model capturing ENSO as an oscillator. Two variables: eastern Pacific SST anomaly \( T \) and equatorial Pacific warm water volume (thermocline depth) \( h \):
-\[ \frac{dT}{dt} = \mu_a b T - \alpha T + \mu_a h \]
-\[ \frac{dh}{dt} = -r h - \mu_b T \]
+
+\[
+\frac{dT}{dt} = \mu_a b T - \alpha T + \mu_a h
+\]
+
+\[
+\frac{dh}{dt} = -r h - \mu_b T
+\]
 
 This linear system oscillates with a period of ~3–4 years for physically realistic parameters. ENSO arises from the interaction between fast SST dynamics and slow thermocline recharge/discharge.
 
@@ -253,7 +298,10 @@ The <strong>Coriolis effect</strong> is an apparent force in a rotating referenc
 </div>
 
 For a parcel moving at velocity \( \mathbf{v} \) on a rotating Earth (angular velocity \( \mathbf{\Omega} \)):
-\[ \mathbf{F}_{Cor} = -2m\mathbf{\Omega}\times\mathbf{v} \]
+
+\[
+\mathbf{F}_{Cor} = -2m\mathbf{\Omega}\times\mathbf{v}
+\]
 
 The **Coriolis parameter** \( f = 2\Omega\sin\phi \) (s\(^{-1}\)), where \( \phi \) is latitude.
 
@@ -302,17 +350,26 @@ The Sun's luminosity varies by ~0.1% over the ~11-year sunspot cycle — a small
 ## 8.1 Malthus and Logistic Growth
 
 **Malthusian (exponential) growth**: unlimited resources → population grows exponentially:
-\[ \frac{dN}{dt} = rN \implies N(t) = N_0 e^{rt} \]
+
+\[
+\frac{dN}{dt} = rN \implies N(t) = N_0 e^{rt}
+\]
 
 where \( r \) is the intrinsic growth rate.
 
 **Logistic equation** (Verhulst, 1838): incorporates carrying capacity \( K \):
-\[ \frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) \]
+
+\[
+\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)
+\]
 
 **Equilibria**: \( N^* = 0 \) (unstable) and \( N^* = K \) (stable).
 
 **Solution**:
-\[ N(t) = \frac{K}{1 + \left(\frac{K}{N_0} - 1\right)e^{-rt}} \]
+
+\[
+N(t) = \frac{K}{1 + \left(\frac{K}{N_0} - 1\right)e^{-rt}}
+\]
 
 S-shaped (sigmoidal) growth; approaches \( K \) asymptotically.
 
@@ -325,14 +382,23 @@ Climate change affects the carrying capacity \( K(t) \) through:
 - **Ecosystem services**: biodiversity loss, ocean acidification (reduced fisheries), deforestation.
 
 **Modified logistic model with climate-dependent K**:
-\[ \frac{dN}{dt} = rN\left(1 - \frac{N}{K(T(t))}\right) \]
+
+\[
+\frac{dN}{dt} = rN\left(1 - \frac{N}{K(T(t))}\right)
+\]
 where \( T(t) \) is the time-evolving global mean temperature and \( K(T) \) is a decreasing function of temperature above an optimum.
 
 ## 8.3 Multi-Species Models (Lotka-Volterra)
 
 The Lotka-Volterra equations describe predator-prey dynamics:
-\[ \frac{dN}{dt} = \alpha N - \beta NP \quad \text{(prey)} \]
-\[ \frac{dP}{dt} = \delta NP - \gamma P \quad \text{(predator)} \]
+
+\[
+\frac{dN}{dt} = \alpha N - \beta NP \quad \text{(prey)}
+\]
+
+\[
+\frac{dP}{dt} = \delta NP - \gamma P \quad \text{(predator)}
+\]
 
 Climate change affects prey and predator parameters differently, potentially desynchronizing oscillations (**phenological mismatch**) and causing species collapse.
 
@@ -360,8 +426,14 @@ Estimating the SCC requires:
 - **DICE model** (Nordhaus): a single-region, aggregate model. Economy emits CO₂; CO₂ warms climate; damage function reduces GDP; optimal policy minimizes total cost (mitigation + damages) over time.
 
 Simple DICE-like model:
-\[ Y(t) = A(t) K(t)^\gamma L(t)^{1-\gamma} \quad \text{(production)} \]
-\[ C(t) = Y(t)\left[1 - \Omega(T)\right] - I(t) \quad \text{(consumption, net of climate damage)} \]
+
+\[
+Y(t) = A(t) K(t)^\gamma L(t)^{1-\gamma} \quad \text{(production)}
+\]
+
+\[
+C(t) = Y(t)\left[1 - \Omega(T)\right] - I(t) \quad \text{(consumption, net of climate damage)}
+\]
 where \( \Omega(T) = 1 - (1 + \psi_1 T + \psi_2 T^2)^{-1} \) is the damage function.
 
 ## 9.3 Policy Instruments

@@ -34,13 +34,17 @@ Incorporating money into general equilibrium models is non-trivial because money
 
 **Money-in-the-Utility Function (MIU) model (Sidrauski 1967).** Households derive utility directly from real money balances, capturing the convenience services money provides:
 
-\[ U = \sum_{t=0}^{\infty} \beta^t u(c_t, m_t) \]
+\[
+U = \sum_{t=0}^{\infty} \beta^t u(c_t, m_t)
+\]
 
 where \(c_t\) is consumption, \(m_t = M_t/P_t\) is real money balances, and \(\beta \in (0,1)\) is the discount factor. The first-order condition for money demand yields a money demand function relating \(m_t\) to consumption and the nominal interest rate (the opportunity cost of holding money).
 
 **Cash-in-Advance (CIA) model (Clower 1967; Lucas & Stokey 1987).** Goods purchases require prior cash holdings — a constraint on transactions:
 
-\[ P_t c_t \leq M_t \]
+\[
+P_t c_t \leq M_t
+\]
 
 This constraint binds when the nominal interest rate is positive (money's opportunity cost), generating money demand linked directly to consumption. The CIA model yields a cleaner foundation for the Fisher equation and the real effects of inflation.
 
@@ -98,7 +102,9 @@ The **monetary transmission mechanism** describes how changes in the central ban
 
 The textbook channel: a reduction in the nominal short-term rate reduces real short-term rates (under sticky prices in the short run); long-term real rates fall via the expectations hypothesis of the term structure; investment spending and durable goods consumption become cheaper, stimulating aggregate demand.
 
-\[ i_s \downarrow \Rightarrow r_s \downarrow \Rightarrow r_L \downarrow \Rightarrow I \uparrow, C \uparrow \Rightarrow Y \uparrow \]
+\[
+i_s \downarrow \Rightarrow r_s \downarrow \Rightarrow r_L \downarrow \Rightarrow I \uparrow, C \uparrow \Rightarrow Y \uparrow
+\]
 
 The channel's effectiveness depends on:
 - **The slope of the IS curve:** Inelastic investment weakens the channel.
@@ -111,7 +117,9 @@ Lower domestic interest rates reduce the return on domestic currency assets rela
 
 **Uncovered Interest Parity (UIP):**
 
-\[ i_t = i^*_t + E_t[\Delta e_{t+1}] \]
+\[
+i_t = i^*_t + E_t[\Delta e_{t+1}]
+\]
 
 where \(e_t\) is the log nominal exchange rate (units of domestic currency per unit of foreign) and \(i^*_t\) is the foreign interest rate. UIP says the domestic rate exceeds the foreign rate by the expected currency depreciation. Under UIP, a domestic rate cut is associated with an expected future appreciation (after an initial depreciation).
 
@@ -121,7 +129,9 @@ For Canada, with approximately 60–70% of exports going to the US, the exchange
 
 **Tobin's q** (Tobin 1969) is the ratio of the market value of installed capital to its replacement cost:
 
-\[ q = \frac{\text{Market value of firm}}{\text{Replacement cost of capital}} \]
+\[
+q = \frac{\text{Market value of firm}}{\text{Replacement cost of capital}}
+\]
 
 When the policy rate is cut, equity prices rise (future earnings are discounted at a lower rate), raising \(q\) above 1. Firms find it profitable to invest in new capital by issuing equity (selling shares at a premium to replacement cost). This stimulates investment without direct reliance on the interest rate.
 
@@ -151,7 +161,9 @@ The **balance sheet channel** (Bernanke & Gertler 1989; Bernanke, Gertler & Gilc
 
 The **external finance premium** (EFP) is the wedge between the cost of external finance (debt) and the opportunity cost of internal finance:
 
-\[ \text{Borrowing rate} = r_f + \text{EFP}(\text{net worth}, \text{collateral}) \]
+\[
+\text{Borrowing rate} = r_f + \text{EFP}(\text{net worth}, \text{collateral})
+\]
 
 \(\text{EFP}\) is a decreasing function of net worth and collateral. Because asset prices are procyclical, the EFP is countercyclical — it widens in recessions, amplifying the initial shock (the **financial accelerator**).
 
@@ -184,17 +196,23 @@ Modern central banks have invested heavily in communication strategies (forward 
 
 The **Sidrauski (1967) model** is the canonical money-in-the-utility-function framework. A representative household maximizes:
 
-\[ \sum_{t=0}^{\infty} \beta^t u(c_t, m_t) \]
+\[
+\sum_{t=0}^{\infty} \beta^t u(c_t, m_t)
+\]
 
 subject to the budget constraint. In steady state, the **Euler equation** for consumption is:
 
-\[ u_c(c, m) = \beta(1+r) u_c(c', m') \]
+\[
+u_c(c, m) = \beta(1+r) u_c(c', m')
+\]
 
 In steady state with constant inflation \(\pi\), the real interest rate equals \(r = 1/\beta - 1\) regardless of the inflation rate (determined by preferences alone). This is **superneutrality**: the inflation rate does not affect the steady-state capital stock or real variables.
 
 The steady-state money demand condition equates the marginal utility of real balances to the opportunity cost of holding money:
 
-\[ \frac{u_m(c, m)}{u_c(c, m)} = \frac{i}{1+i} = \frac{R-1}{R} \]
+\[
+\frac{u_m(c, m)}{u_c(c, m)} = \frac{i}{1+i} = \frac{R-1}{R}
+\]
 
 where \(R = (1+r)(1+\pi) = 1+i\) is the gross nominal interest rate.
 
@@ -271,19 +289,25 @@ The **New Keynesian (NK) model** is the dominant framework for monetary policy a
 
 **1. The New Keynesian IS (NKIS) curve** — a forward-looking Euler equation for output:
 
-\[ \tilde{y}_t = E_t \tilde{y}_{t+1} - \frac{1}{\sigma}(i_t - E_t \pi_{t+1} - r^n_t) + \varepsilon^{IS}_t \]
+\[
+\tilde{y}_t = E_t \tilde{y}_{t+1} - \frac{1}{\sigma}(i_t - E_t \pi_{t+1} - r^n_t) + \varepsilon^{IS}_t
+\]
 
 where \(\tilde{y}_t = y_t - y^*_t\) is the output gap, \(\sigma > 0\) is the intertemporal elasticity of substitution (inverse), \(i_t\) is the nominal interest rate, \(E_t \pi_{t+1}\) is expected inflation, \(r^n_t\) is the natural (Wicksellian) real rate of interest, and \(\varepsilon^{IS}_t\) is a demand shock.
 
 **2. The New Keynesian Phillips Curve (NKPC)** — from Calvo (1983) pricing:
 
-\[ \pi_t = \beta E_t \pi_{t+1} + \kappa \tilde{y}_t + \varepsilon^{CP}_t \]
+\[
+\pi_t = \beta E_t \pi_{t+1} + \kappa \tilde{y}_t + \varepsilon^{CP}_t
+\]
 
 where \(\kappa > 0\) is the slope coefficient (function of the Calvo parameter \(\theta\) — the probability of not adjusting, the elasticity of substitution \(\varepsilon\), and the labor supply elasticity) and \(\varepsilon^{CP}_t\) is a cost-push shock. Unlike the backward-looking Phillips curve, the NKPC is forward-looking: firms set prices based on current marginal cost and expected future marginal costs.
 
 **3. A monetary policy rule (Taylor Rule):**
 
-\[ i_t = r^n + \phi_\pi \pi_t + \phi_y \tilde{y}_t + \varepsilon^{MP}_t \]
+\[
+i_t = r^n + \phi_\pi \pi_t + \phi_y \tilde{y}_t + \varepsilon^{MP}_t
+\]
 
 with \(\phi_\pi > 1\) (Taylor principle) for a determinate rational expectations equilibrium.
 
@@ -295,11 +319,15 @@ with \(\phi_\pi > 1\) (Taylor principle) for a determinate rational expectations
 
 With Calvo pricing, a measure \((1-\theta)\) of firms adjusts each period. An adjusting firm sets its price \(p^*_t\) to minimize the expected present value of future price deviations from the frictionless optimum, subject to the constraint that it may not adjust next period with probability \(\theta\):
 
-\[ p^*_t = (1-\beta\theta) \sum_{k=0}^{\infty} (\beta\theta)^k E_t \left[ p^*_{t+k} + \mu + mc_{t+k} \right] \]
+\[
+p^*_t = (1-\beta\theta) \sum_{k=0}^{\infty} (\beta\theta)^k E_t \left[ p^*_{t+k} + \mu + mc_{t+k} \right]
+\]
 
 where \(mc_t\) is real marginal cost (proportional to the output gap in the linearized model) and \(\mu\) is the desired markup. Aggregating across firms and log-linearizing:
 
-\[ \pi_t = \beta E_t \pi_{t+1} + \lambda mc_t \]
+\[
+\pi_t = \beta E_t \pi_{t+1} + \lambda mc_t
+\]
 
 where \(\lambda = \frac{(1-\theta)(1-\beta\theta)}{\theta}\). Since marginal cost is proportional to the output gap, this yields the standard NKPC.
 
@@ -307,7 +335,9 @@ where \(\lambda = \frac{(1-\theta)(1-\beta\theta)}{\theta}\). Since marginal cos
 
 The central bank minimizes a welfare loss function. Under the standard quadratic approximation to household welfare:
 
-\[ \mathcal{L} = \frac{1}{2} E_0 \sum_{t=0}^{\infty} \beta^t \left[ \pi_t^2 + \frac{\kappa}{\varepsilon} \tilde{y}_t^2 \right] \]
+\[
+\mathcal{L} = \frac{1}{2} E_0 \sum_{t=0}^{\infty} \beta^t \left[ \pi_t^2 + \frac{\kappa}{\varepsilon} \tilde{y}_t^2 \right]
+\]
 
 **Policy under commitment:** The central bank commits to a future policy path at time 0 and maintains it even if it would be tempting to deviate later. The optimal commitment policy features **history dependence** — past conditions affect current policy (e.g., if inflation was high in the past, the central bank commits to keeping rates low longer, anchoring expectations).
 
@@ -335,7 +365,9 @@ When the nominal policy rate reaches its **effective lower bound** (ELB ≈ 0, o
 
 Formally, at the ELB the IS equation becomes:
 
-\[ \tilde{y}_t = E_t \tilde{y}_{t+1} - \frac{1}{\sigma}(0 - E_t \pi_{t+1} - r^n_t) \]
+\[
+\tilde{y}_t = E_t \tilde{y}_{t+1} - \frac{1}{\sigma}(0 - E_t \pi_{t+1} - r^n_t)
+\]
 
 If \(r^n_t < 0\) (negative natural rate, as in a balance-sheet recession), the real rate exceeds \(r^n\) even at \(i=0\), keeping output below potential.
 
@@ -405,30 +437,44 @@ Gertler and Gilchrist (2018) provide a post-mortem of the 2007–09 Great Recess
 
 **Three-equation NK system:**
 
-\[ \tilde{y}_t = E_t \tilde{y}_{t+1} - \frac{1}{\sigma}(i_t - E_t\pi_{t+1} - r^n_t) \]
+\[
+\tilde{y}_t = E_t \tilde{y}_{t+1} - \frac{1}{\sigma}(i_t - E_t\pi_{t+1} - r^n_t)
+\]
 
-\[ \pi_t = \beta E_t\pi_{t+1} + \kappa\tilde{y}_t + u_t \]
+\[
+\pi_t = \beta E_t\pi_{t+1} + \kappa\tilde{y}_t + u_t
+\]
 
-\[ i_t = r^n + \phi_\pi \pi_t + \phi_y \tilde{y}_t \]
+\[
+i_t = r^n + \phi_\pi \pi_t + \phi_y \tilde{y}_t
+\]
 
 **Taylor principle:** \(\phi_\pi > 1\) (necessary for determinacy).
 
 **Welfare loss function:**
 
-\[ \mathcal{L} = \frac{1}{2}\sum_{t=0}^{\infty} \beta^t \left(\pi_t^2 + \frac{\kappa}{\varepsilon}\tilde{y}_t^2\right) \]
+\[
+\mathcal{L} = \frac{1}{2}\sum_{t=0}^{\infty} \beta^t \left(\pi_t^2 + \frac{\kappa}{\varepsilon}\tilde{y}_t^2\right)
+\]
 
 **Calvo NKPC slope:**
 
-\[ \kappa = \frac{(1-\theta)(1-\beta\theta)}{\theta} \]
+\[
+\kappa = \frac{(1-\theta)(1-\beta\theta)}{\theta}
+\]
 
 **UIP condition:**
 
-\[ i_t = i^*_t + E_t[e_{t+1} - e_t] \]
+\[
+i_t = i^*_t + E_t[e_{t+1} - e_t]
+\]
 
 **Friedman Rule:** \(i^* = 0 \Rightarrow \pi^* = -r\) (deflation at real rate).
 
 **Optimal commitment policy (Woodford 2003):**
 
-\[ \pi_t = -\frac{\kappa}{\varepsilon}(\tilde{y}_t - \tilde{y}_{t-1}) \]
+\[
+\pi_t = -\frac{\kappa}{\varepsilon}(\tilde{y}_t - \tilde{y}_{t-1})
+\]
 
 History-dependent: current inflation depends on the change in the output gap (leaning against momentum), not just current slack.

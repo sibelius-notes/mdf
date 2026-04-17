@@ -115,14 +115,18 @@ Many neural models are expressed as differential equations. A **differential equ
 
 An **ordinary differential equation** (ODE) involves a function of one independent variable (usually time) and its derivatives. The general first-order ODE has the form:
 
-\[ \frac{dx}{dt} = f(x, t) \]
+\[
+\frac{dx}{dt} = f(x, t)
+\]
 
 where \( x(t) \) is the unknown function and \( f \) specifies how \( x \) changes with time. The order of a differential equation refers to the highest derivative that appears.
 
 <div class="example">
 <strong>Example: Exponential decay.</strong> The simplest ODE relevant to neuroscience describes exponential decay:
 
-\[ \frac{dx}{dt} = -\frac{x}{\tau} \]
+\[
+\frac{dx}{dt} = -\frac{x}{\tau}
+\]
 
 where \( \tau \) is the <em>time constant</em>. The solution is \( x(t) = x_0 \, e^{-t/\tau} \), where \( x_0 = x(0) \) is the initial value. This equation describes how a neuron's membrane potential returns to rest after a perturbation.
 </div>
@@ -144,7 +148,9 @@ The stability of an equilibrium can be determined by examining the derivative of
 
 Most neural models cannot be solved analytically; we must resort to numerical integration. The simplest method is **Euler's method**:
 
-\[ x(t + \Delta t) \approx x(t) + \Delta t \cdot f(x(t), t) \]
+\[
+x(t + \Delta t) \approx x(t) + \Delta t \cdot f(x(t), t)
+\]
 
 Euler's method approximates the continuous dynamics by taking small discrete time steps of size \( \Delta t \). While simple, it can be inaccurate or unstable for stiff systems. More sophisticated methods include:
 
@@ -189,7 +195,9 @@ A **matrix** is a rectangular array of numbers. An \( m \times n \) matrix \( A 
 
 Given a matrix \( A \) of size \( m \times n \) and a vector \( \mathbf{x} \) of size \( n \times 1 \), the product \( A\mathbf{x} \) is a vector of size \( m \times 1 \) whose \( i \)-th component is:
 
-\[ (A\mathbf{x})_i = \sum_{j=1}^{n} A_{ij} x_j \]
+\[
+(A\mathbf{x})_i = \sum_{j=1}^{n} A_{ij} x_j
+\]
 
 This operation is fundamental in neural networks, where the activity of one layer is computed as a matrix-vector product of weights and inputs, followed by a nonlinear activation function.
 
@@ -197,7 +205,9 @@ This operation is fundamental in neural networks, where the activity of one laye
 
 An **eigenvector** of a square matrix \( A \) is a nonzero vector \( \mathbf{v} \) such that:
 
-\[ A\mathbf{v} = \lambda \mathbf{v} \]
+\[
+A\mathbf{v} = \lambda \mathbf{v}
+\]
 
 where \( \lambda \) is the corresponding **eigenvalue**. Eigenvalues and eigenvectors are crucial for stability analysis: the eigenvalues of the Jacobian matrix at an equilibrium determine whether the equilibrium is stable, unstable, or oscillatory.
 
@@ -214,7 +224,9 @@ where \( \lambda \) is the corresponding **eigenvalue**. Eigenvalues and eigenve
 
 The **dot product** (or inner product) of two vectors \( \mathbf{u} \) and \( \mathbf{v} \) in \( \mathbb{R}^n \) is:
 
-\[ \mathbf{u} \cdot \mathbf{v} = \sum_{i=1}^{n} u_i v_i \]
+\[
+\mathbf{u} \cdot \mathbf{v} = \sum_{i=1}^{n} u_i v_i
+\]
 
 The dot product measures the extent to which two vectors point in the same direction. It appears in neural models as the weighted sum of inputs to a neuron.
 
@@ -228,7 +240,9 @@ The **phase space** (or state space) of a dynamical system is the set of all pos
 
 For a two-dimensional system:
 
-\[ \frac{dx}{dt} = f(x, y), \quad \frac{dy}{dt} = g(x, y) \]
+\[
+\frac{dx}{dt} = f(x, y), \quad \frac{dy}{dt} = g(x, y)
+\]
 
 the phase space is the \( xy \)-plane, and trajectories are curves in this plane. The direction and speed of motion at each point are given by the vector field \( (f(x,y), g(x,y)) \).
 
@@ -271,23 +285,31 @@ The **membrane potential** \( V_m \) is the voltage difference between the insid
 
 The equilibrium potential for a single ion species is given by the **Nernst equation**:
 
-\[ E_{\text{ion}} = \frac{RT}{zF} \ln \frac{\left[\text{ion}\right]_{\text{out}}}{\left[\text{ion}\right]_{\text{in}}} \]
+\[
+E_{\text{ion}} = \frac{RT}{zF} \ln \frac{\left[\text{ion}\right]_{\text{out}}}{\left[\text{ion}\right]_{\text{in}}}
+\]
 
 where \( R \) is the gas constant, \( T \) is temperature in Kelvin, \( z \) is the valence of the ion, and \( F \) is Faraday's constant. At body temperature, this simplifies to approximately:
 
-\[ E_{\text{ion}} \approx \frac{61.5 \text{ mV}}{z} \log_{10} \frac{\left[\text{ion}\right]_{\text{out}}}{\left[\text{ion}\right]_{\text{in}}} \]
+\[
+E_{\text{ion}} \approx \frac{61.5 \text{ mV}}{z} \log_{10} \frac{\left[\text{ion}\right]_{\text{out}}}{\left[\text{ion}\right]_{\text{in}}}
+\]
 
 <div class="example">
 <strong>Example: Potassium equilibrium potential.</strong> For potassium (\( K^+ \)), with typical concentrations \( \left[K^+\right]_{\text{in}} = 140 \) mM and \( \left[K^+\right]_{\text{out}} = 5 \) mM, and \( z = +1 \):
 
-\[ E_K \approx 61.5 \, \text{mV} \cdot \log_{10} \frac{5}{140} \approx -89 \, \text{mV} \]
+\[
+E_K \approx 61.5 \, \text{mV} \cdot \log_{10} \frac{5}{140} \approx -89 \, \text{mV}
+\]
 </div>
 
 ### The Goldman-Hodgkin-Katz Equation
 
 When multiple ion species contribute to the membrane potential, the resting potential is approximated by the **Goldman-Hodgkin-Katz (GHK) voltage equation**:
 
-\[ V_m = \frac{RT}{F} \ln \frac{P_K \left[K^+\right]_{\text{out}} + P_{Na} \left[Na^+\right]_{\text{out}} + P_{Cl} \left[Cl^-\right]_{\text{in}}}{P_K \left[K^+\right]_{\text{in}} + P_{Na} \left[Na^+\right]_{\text{in}} + P_{Cl} \left[Cl^-\right]_{\text{out}}} \]
+\[
+V_m = \frac{RT}{F} \ln \frac{P_K \left[K^+\right]_{\text{out}} + P_{Na} \left[Na^+\right]_{\text{out}} + P_{Cl} \left[Cl^-\right]_{\text{in}}}{P_K \left[K^+\right]_{\text{in}} + P_{Na} \left[Na^+\right]_{\text{in}} + P_{Cl} \left[Cl^-\right]_{\text{out}}}
+\]
 
 where \( P_K \), \( P_{Na} \), and \( P_{Cl} \) are the membrane permeabilities to potassium, sodium, and chloride, respectively.
 
@@ -308,7 +330,9 @@ where \( P_K \), \( P_{Na} \), and \( P_{Cl} \) are the membrane permeabilities 
 
 Ion channels are modeled as variable conductances. The current through a population of channels carrying ion \( X \) is:
 
-\[ I_X = g_X (V_m - E_X) \]
+\[
+I_X = g_X (V_m - E_X)
+\]
 
 where \( g_X \) is the conductance (which may depend on voltage and time) and \( E_X \) is the reversal potential. This is simply Ohm's law applied to the ionic current.
 
@@ -344,13 +368,17 @@ The **integrate-and-fire (IF)** model is the simplest spiking neuron model. It c
 
 The most common variant is the **leaky integrate-and-fire** model:
 
-\[ \tau_m \frac{dV}{dt} = -(V - V_{\text{rest}}) + R_m I(t) \]
+\[
+\tau_m \frac{dV}{dt} = -(V - V_{\text{rest}}) + R_m I(t)
+\]
 
 where \( \tau_m = R_m C_m \) is the membrane time constant, \( V_{\text{rest}} \) is the resting potential, \( R_m \) is the membrane resistance, \( C_m \) is the membrane capacitance, and \( I(t) \) is the input current.
 
 The firing rule is:
 
-\[ \text{If } V(t) \geq V_{\text{th}}, \text{ then } V \to V_{\text{reset}} \text{ and a spike is recorded.} \]
+\[
+\text{If } V(t) \geq V_{\text{th}}, \text{ then } V \to V_{\text{reset}} \text{ and a spike is recorded.}
+\]
 
 <div class="remark">
 The LIF model has the circuit interpretation of a parallel RC circuit driven by a current source. The "leaky" in the name refers to the fact that the membrane potential decays back to rest in the absence of input, with time constant \( \tau_m \).
@@ -360,7 +388,9 @@ The LIF model has the circuit interpretation of a parallel RC circuit driven by 
 
 The LIF model is computationally efficient and analytically tractable. For a constant input current \( I \), the firing rate can be computed analytically:
 
-\[ r = \left[\tau_m \ln \frac{R_m I - (V_{\text{th}} - V_{\text{rest}})}{R_m I - (V_{\text{reset}} - V_{\text{rest}})} + \tau_{\text{ref}} \right]^{-1} \]
+\[
+r = \left[\tau_m \ln \frac{R_m I - (V_{\text{th}} - V_{\text{rest}})}{R_m I - (V_{\text{reset}} - V_{\text{rest}})} + \tau_{\text{ref}} \right]^{-1}
+\]
 
 where \( \tau_{\text{ref}} \) is the absolute refractory period (if included). This is the **f-I curve** (firing rate as a function of input current).
 
@@ -374,13 +404,21 @@ The **Hodgkin-Huxley (HH) model** (1952) is the gold standard of biophysical neu
 
 The HH model consists of four coupled ODEs:
 
-\[ C_m \frac{dV}{dt} = -g_{Na} m^3 h (V - E_{Na}) - g_K n^4 (V - E_K) - g_L (V - E_L) + I(t) \]
+\[
+C_m \frac{dV}{dt} = -g_{Na} m^3 h (V - E_{Na}) - g_K n^4 (V - E_K) - g_L (V - E_L) + I(t)
+\]
 
-\[ \frac{dm}{dt} = \alpha_m(V)(1 - m) - \beta_m(V)m \]
+\[
+\frac{dm}{dt} = \alpha_m(V)(1 - m) - \beta_m(V)m
+\]
 
-\[ \frac{dh}{dt} = \alpha_h(V)(1 - h) - \beta_h(V)h \]
+\[
+\frac{dh}{dt} = \alpha_h(V)(1 - h) - \beta_h(V)h
+\]
 
-\[ \frac{dn}{dt} = \alpha_n(V)(1 - n) - \beta_n(V)n \]
+\[
+\frac{dn}{dt} = \alpha_n(V)(1 - n) - \beta_n(V)n
+\]
 
 Here:
 - \( V \) is the membrane potential
@@ -396,7 +434,9 @@ The gating variables \( m \), \( h \), and \( n \) range between 0 and 1 and rep
 <div class="definition">
 <strong>Gating kinetics.</strong> Each gating variable \( x \in \{m, h, n\} \) satisfies first-order kinetics that can equivalently be written as:
 
-\[ \tau_x(V) \frac{dx}{dt} = x_\infty(V) - x \]
+\[
+\tau_x(V) \frac{dx}{dt} = x_\infty(V) - x
+\]
 
 where \( x_\infty(V) = \frac{\alpha_x(V)}{\alpha_x(V) + \beta_x(V)} \) is the steady-state value and \( \tau_x(V) = \frac{1}{\alpha_x(V) + \beta_x(V)} \) is the time constant at voltage \( V \).
 </div>
@@ -443,9 +483,13 @@ A time step of \( \Delta t = 0.01 \) ms is typically sufficient for Euler's meth
 
 The **FitzHugh-Nagumo (FHN) model** is a two-dimensional reduction of the Hodgkin-Huxley model that retains the essential qualitative dynamics while being much easier to analyze.
 
-\[ \frac{dv}{dt} = v - \frac{v^3}{3} - w + I \]
+\[
+\frac{dv}{dt} = v - \frac{v^3}{3} - w + I
+\]
 
-\[ \frac{dw}{dt} = \epsilon(v + a - bw) \]
+\[
+\frac{dw}{dt} = \epsilon(v + a - bw)
+\]
 
 where \( v \) is a voltage-like variable, \( w \) is a recovery variable (analogous to the slow potassium and sodium inactivation dynamics), \( I \) is external current, and \( \epsilon \ll 1 \) ensures that \( w \) changes much more slowly than \( v \).
 
@@ -467,13 +511,19 @@ For small \( I \), the system is **excitable**: it rests at a stable equilibrium
 
 Eugene Izhikevich (2003) proposed a model that is nearly as computationally efficient as the LIF model but can reproduce the firing patterns of virtually all known cortical neuron types.
 
-\[ \frac{dv}{dt} = 0.04v^2 + 5v + 140 - u + I \]
+\[
+\frac{dv}{dt} = 0.04v^2 + 5v + 140 - u + I
+\]
 
-\[ \frac{du}{dt} = a(bv - u) \]
+\[
+\frac{du}{dt} = a(bv - u)
+\]
 
 with the reset rule:
 
-\[ \text{If } v \geq 30 \text{ mV, then } v \to c, \; u \to u + d \]
+\[
+\text{If } v \geq 30 \text{ mV, then } v \to c, \; u \to u + d
+\]
 
 The four parameters \( (a, b, c, d) \) control different aspects of the dynamics:
 
@@ -515,7 +565,9 @@ For two-dimensional systems of ODEs, the **phase plane** is a powerful visual to
 
 Given a system:
 
-\[ \frac{dx}{dt} = f(x, y), \quad \frac{dy}{dt} = g(x, y) \]
+\[
+\frac{dx}{dt} = f(x, y), \quad \frac{dy}{dt} = g(x, y)
+\]
 
 the phase portrait consists of:
 
@@ -545,7 +597,9 @@ For a linear system \( \frac{d\mathbf{x}}{dt} = A\mathbf{x} \) with \( \mathbf{x
 
 For a nonlinear system, we can study local stability by **linearizing** around an equilibrium \( (x^*, y^*) \). The **Jacobian matrix** at the equilibrium is:
 
-\[ J = \begin{pmatrix} \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} \\ \frac{\partial g}{\partial x} & \frac{\partial g}{\partial y} \end{pmatrix} \Bigg|_{(x^*, y^*)} \]
+\[
+J = \begin{pmatrix} \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} \\ \frac{\partial g}{\partial x} & \frac{\partial g}{\partial y} \end{pmatrix} \Bigg|_{(x^*, y^*)}
+\]
 
 The eigenvalues of \( J \) determine the local behavior, just as for linear systems. This is the **Hartman-Grobman theorem**: near a hyperbolic equilibrium (one with no eigenvalues on the imaginary axis), the nonlinear system behaves qualitatively like its linearization.
 
@@ -557,7 +611,9 @@ Bifurcations explain how neurons transition between quiescence and repetitive fi
 
 In a **saddle-node bifurcation**, a stable and an unstable equilibrium collide and disappear. In the context of neural models, this transition often corresponds to the onset of firing. The canonical form is:
 
-\[ \frac{dx}{dt} = r + x^2 \]
+\[
+\frac{dx}{dt} = r + x^2
+\]
 
 For \( r < 0 \), there are two equilibria: \( x^* = \pm \sqrt{-r} \). At \( r = 0 \), they merge. For \( r > 0 \), there are no equilibria. Neurons that begin firing through a saddle-node bifurcation are called **Type I neurons** and can fire at arbitrarily low rates near onset.
 
@@ -565,7 +621,9 @@ For \( r < 0 \), there are two equilibria: \( x^* = \pm \sqrt{-r} \). At \( r = 
 
 In a **Hopf bifurcation**, a stable equilibrium loses stability and gives birth to a limit cycle (periodic orbit). The canonical form in polar coordinates is:
 
-\[ \frac{dr}{dt} = \mu r - r^3, \quad \frac{d\theta}{dt} = \omega \]
+\[
+\frac{dr}{dt} = \mu r - r^3, \quad \frac{d\theta}{dt} = \omega
+\]
 
 For \( \mu < 0 \), the origin is a stable spiral. At \( \mu = 0 \), it becomes a center. For \( \mu > 0 \), a stable limit cycle of radius \( r = \sqrt{\mu} \) surrounds the now-unstable origin. Neurons that begin firing through a Hopf bifurcation are called **Type II neurons** and begin firing at a nonzero minimum frequency.
 
@@ -604,7 +662,9 @@ The study of artificial neural networks (ANNs) was inspired by the brain, though
 
 The simplest model of a neuron as a computational element is the **McCulloch-Pitts (MCP) neuron**. It takes binary inputs, computes a weighted sum, and outputs 1 if the sum exceeds a threshold, 0 otherwise:
 
-\[ y = \begin{cases} 1 & \text{if } \sum_{i} w_i x_i \geq \theta \\ 0 & \text{otherwise} \end{cases} \]
+\[
+y = \begin{cases} 1 & \text{if } \sum_{i} w_i x_i \geq \theta \\ 0 & \text{otherwise} \end{cases}
+\]
 
 McCulloch and Pitts showed that networks of such neurons can compute any logical function, establishing a foundational connection between neural computation and logic.
 
@@ -614,14 +674,18 @@ McCulloch and Pitts showed that networks of such neurons can compute any logical
 
 Frank Rosenblatt's **perceptron** (1958) extended the MCP neuron by adding a learning rule. The perceptron computes:
 
-\[ y = \sigma\left(\sum_{i=1}^{n} w_i x_i + b\right) = \sigma(\mathbf{w} \cdot \mathbf{x} + b) \]
+\[
+y = \sigma\left(\sum_{i=1}^{n} w_i x_i + b\right) = \sigma(\mathbf{w} \cdot \mathbf{x} + b)
+\]
 
 where \( \sigma \) is a step function (or, in modern networks, a differentiable activation function), \( \mathbf{w} \) is the weight vector, and \( b \) is the bias.
 
 <div class="definition">
 <strong>Perceptron learning rule.</strong> Given a training example \( (\mathbf{x}, t) \) where \( t \) is the target output, the perceptron updates its weights:
 
-\[ w_i \leftarrow w_i + \eta (t - y) x_i \]
+\[
+w_i \leftarrow w_i + \eta (t - y) x_i
+\]
 
 where \( \eta > 0 \) is the <em>learning rate</em> and \( y \) is the current output. This rule increases weights for inputs that should contribute to firing and decreases weights for inputs that should not.
 </div>
@@ -651,7 +715,9 @@ No single hyperplane can separate the 0 outputs from the 1 outputs. This limitat
 
 Mathematically, the simplest Hebbian rule is:
 
-\[ \Delta w_{ij} = \eta \, x_i \, y_j \]
+\[
+\Delta w_{ij} = \eta \, x_i \, y_j
+\]
 
 where \( x_i \) is the presynaptic activity, \( y_j \) is the postsynaptic activity, and \( \eta \) is the learning rate.
 
@@ -661,7 +727,9 @@ Pure Hebbian learning is unstable: weights grow without bound because correlated
 
 **Oja's rule** adds a decay term to stabilize learning:
 
-\[ \Delta w_i = \eta \, y(x_i - y \, w_i) \]
+\[
+\Delta w_i = \eta \, y(x_i - y \, w_i)
+\]
 
 This rule causes the weight vector to converge to the first principal component of the input data, providing a neural implementation of PCA.
 
@@ -669,7 +737,9 @@ This rule causes the weight vector to converge to the first principal component 
 
 A more biologically realistic form of Hebbian learning is **spike-timing-dependent plasticity (STDP)**. The sign and magnitude of the synaptic change depend on the relative timing of pre- and postsynaptic spikes:
 
-\[ \Delta w = \begin{cases} A_+ \exp\left(-\frac{\Delta t}{\tau_+}\right) & \text{if } \Delta t > 0 \text{ (pre before post: potentiation)} \\ -A_- \exp\left(\frac{\Delta t}{\tau_-}\right) & \text{if } \Delta t < 0 \text{ (post before pre: depression)} \end{cases} \]
+\[
+\Delta w = \begin{cases} A_+ \exp\left(-\frac{\Delta t}{\tau_+}\right) & \text{if } \Delta t > 0 \text{ (pre before post: potentiation)} \\ -A_- \exp\left(\frac{\Delta t}{\tau_-}\right) & \text{if } \Delta t < 0 \text{ (post before pre: depression)} \end{cases}
+\]
 
 where \( \Delta t = t_{\text{post}} - t_{\text{pre}} \). This temporal asymmetry provides a mechanism for learning causal relationships.
 
@@ -679,7 +749,9 @@ where \( \Delta t = t_{\text{post}} - t_{\text{pre}} \). This temporal asymmetry
 
 A **multilayer perceptron** (MLP) consists of an input layer, one or more hidden layers, and an output layer. Each layer applies a linear transformation followed by a nonlinear activation function:
 
-\[ \mathbf{h}^{(l)} = \sigma\left(W^{(l)} \mathbf{h}^{(l-1)} + \mathbf{b}^{(l)}\right) \]
+\[
+\mathbf{h}^{(l)} = \sigma\left(W^{(l)} \mathbf{h}^{(l-1)} + \mathbf{b}^{(l)}\right)
+\]
 
 where \( W^{(l)} \) is the weight matrix for layer \( l \), \( \mathbf{b}^{(l)} \) is the bias vector, and \( \sigma \) is the activation function applied element-wise.
 
@@ -689,11 +761,15 @@ where \( W^{(l)} \) is the weight matrix for layer \( l \), \( \mathbf{b}^{(l)} 
 
 Given a loss function \( L \) (e.g., mean squared error or cross-entropy), the gradient with respect to a weight in layer \( l \) is:
 
-\[ \frac{\partial L}{\partial W^{(l)}} = \frac{\partial L}{\partial \mathbf{h}^{(l)}} \cdot \frac{\partial \mathbf{h}^{(l)}}{\partial W^{(l)}} \]
+\[
+\frac{\partial L}{\partial W^{(l)}} = \frac{\partial L}{\partial \mathbf{h}^{(l)}} \cdot \frac{\partial \mathbf{h}^{(l)}}{\partial W^{(l)}}
+\]
 
 The key insight is that the error signal \( \frac{\partial L}{\partial \mathbf{h}^{(l)}} \) at layer \( l \) can be computed from the error signal at layer \( l+1 \) using the chain rule:
 
-\[ \delta^{(l)} = \left((W^{(l+1)})^T \delta^{(l+1)}\right) \odot \sigma'\left(W^{(l)} \mathbf{h}^{(l-1)} + \mathbf{b}^{(l)}\right) \]
+\[
+\delta^{(l)} = \left((W^{(l+1)})^T \delta^{(l+1)}\right) \odot \sigma'\left(W^{(l)} \mathbf{h}^{(l-1)} + \mathbf{b}^{(l)}\right)
+\]
 
 where \( \odot \) denotes element-wise multiplication and \( \sigma' \) is the derivative of the activation function.
 
@@ -770,7 +846,9 @@ In practice, **deep networks** (those with many hidden layers) have been found t
 
 The simplest RNN updates its hidden state according to:
 
-\[ \mathbf{h}(t) = \sigma\left(W_h \mathbf{h}(t-1) + W_x \mathbf{x}(t) + \mathbf{b}\right) \]
+\[
+\mathbf{h}(t) = \sigma\left(W_h \mathbf{h}(t-1) + W_x \mathbf{x}(t) + \mathbf{b}\right)
+\]
 
 where \( \mathbf{h}(t) \) is the hidden state at time \( t \), \( \mathbf{x}(t) \) is the input, \( W_h \) is the recurrent weight matrix, \( W_x \) is the input weight matrix, and \( \mathbf{b} \) is a bias.
 
@@ -782,17 +860,29 @@ Training RNNs with backpropagation through time (BPTT) is difficult because grad
 
 The **LSTM** architecture (Hochreiter and Schmidhuber, 1997) addresses the vanishing gradient problem by introducing gating mechanisms:
 
-\[ \mathbf{f}(t) = \sigma(W_f \left[\mathbf{h}(t-1), \mathbf{x}(t)\right] + \mathbf{b}_f) \quad \text{(forget gate)} \]
+\[
+\mathbf{f}(t) = \sigma(W_f \left[\mathbf{h}(t-1), \mathbf{x}(t)\right] + \mathbf{b}_f) \quad \text{(forget gate)}
+\]
 
-\[ \mathbf{i}(t) = \sigma(W_i \left[\mathbf{h}(t-1), \mathbf{x}(t)\right] + \mathbf{b}_i) \quad \text{(input gate)} \]
+\[
+\mathbf{i}(t) = \sigma(W_i \left[\mathbf{h}(t-1), \mathbf{x}(t)\right] + \mathbf{b}_i) \quad \text{(input gate)}
+\]
 
-\[ \mathbf{o}(t) = \sigma(W_o \left[\mathbf{h}(t-1), \mathbf{x}(t)\right] + \mathbf{b}_o) \quad \text{(output gate)} \]
+\[
+\mathbf{o}(t) = \sigma(W_o \left[\mathbf{h}(t-1), \mathbf{x}(t)\right] + \mathbf{b}_o) \quad \text{(output gate)}
+\]
 
-\[ \tilde{\mathbf{c}}(t) = \tanh(W_c \left[\mathbf{h}(t-1), \mathbf{x}(t)\right] + \mathbf{b}_c) \quad \text{(candidate cell state)} \]
+\[
+\tilde{\mathbf{c}}(t) = \tanh(W_c \left[\mathbf{h}(t-1), \mathbf{x}(t)\right] + \mathbf{b}_c) \quad \text{(candidate cell state)}
+\]
 
-\[ \mathbf{c}(t) = \mathbf{f}(t) \odot \mathbf{c}(t-1) + \mathbf{i}(t) \odot \tilde{\mathbf{c}}(t) \quad \text{(cell state update)} \]
+\[
+\mathbf{c}(t) = \mathbf{f}(t) \odot \mathbf{c}(t-1) + \mathbf{i}(t) \odot \tilde{\mathbf{c}}(t) \quad \text{(cell state update)}
+\]
 
-\[ \mathbf{h}(t) = \mathbf{o}(t) \odot \tanh(\mathbf{c}(t)) \quad \text{(hidden state)} \]
+\[
+\mathbf{h}(t) = \mathbf{o}(t) \odot \tanh(\mathbf{c}(t)) \quad \text{(hidden state)}
+\]
 
 The cell state \( \mathbf{c}(t) \) acts as a memory that can be selectively written, read, and erased through the gates.
 
@@ -812,7 +902,9 @@ RNNs are increasingly used as models of biological neural circuits. By training 
 
 The operation of a convolutional layer is:
 
-\[ h_{ij}^{(k)} = \sigma\left(\sum_{m,n} W_{mn}^{(k)} x_{i+m, j+n} + b^{(k)}\right) \]
+\[
+h_{ij}^{(k)} = \sigma\left(\sum_{m,n} W_{mn}^{(k)} x_{i+m, j+n} + b^{(k)}\right)
+\]
 
 where \( W^{(k)} \) is the \( k \)-th filter and the sum runs over the spatial extent of the filter.
 
@@ -824,11 +916,15 @@ Hubel and Wiesel's (1962) discovery of simple and complex cells in cat visual co
 
 An **autoencoder** is a neural network trained to reconstruct its input from a compressed internal representation. The network consists of an **encoder** that maps the input to a lower-dimensional **latent representation** and a **decoder** that reconstructs the input from the latent code.
 
-\[ \text{Encoder: } \mathbf{z} = f_{\text{enc}}(\mathbf{x}), \quad \text{Decoder: } \hat{\mathbf{x}} = f_{\text{dec}}(\mathbf{z}) \]
+\[
+\text{Encoder: } \mathbf{z} = f_{\text{enc}}(\mathbf{x}), \quad \text{Decoder: } \hat{\mathbf{x}} = f_{\text{dec}}(\mathbf{z})
+\]
 
 The training objective minimizes the reconstruction error:
 
-\[ L = \|\mathbf{x} - \hat{\mathbf{x}}\|^2 \]
+\[
+L = \|\mathbf{x} - \hat{\mathbf{x}}\|^2
+\]
 
 Autoencoders learn efficient data representations and are related to dimensionality reduction techniques like PCA. **Variational autoencoders (VAEs)** add a probabilistic framework, learning a distribution over latent codes.
 
@@ -842,22 +938,30 @@ Autoencoders learn efficient data representations and are related to dimensional
 
 The eigenvalues of an \( n \times n \) matrix \( A \) are the roots of the **characteristic polynomial**:
 
-\[ \det(A - \lambda I) = 0 \]
+\[
+\det(A - \lambda I) = 0
+\]
 
 For a \( 2 \times 2 \) matrix:
 
-\[ A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \]
+\[
+A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}
+\]
 
 the characteristic equation is:
 
-\[ \lambda^2 - (a+d)\lambda + (ad - bc) = 0 \]
+\[
+\lambda^2 - (a+d)\lambda + (ad - bc) = 0
+\]
 
 or equivalently \( \lambda^2 - \text{tr}(A)\lambda + \det(A) = 0 \), where \( \text{tr}(A) = a + d \) is the trace and \( \det(A) = ad - bc \) is the determinant. This directly connects to the stability analysis of two-dimensional systems.
 
 <div class="example">
 <strong>Example: Stability of a neural circuit.</strong> Consider a two-neuron circuit with dynamics:
 
-\[ \frac{d\mathbf{x}}{dt} = A\mathbf{x}, \quad A = \begin{pmatrix} -2 & 1 \\ 1 & -2 \end{pmatrix} \]
+\[
+\frac{d\mathbf{x}}{dt} = A\mathbf{x}, \quad A = \begin{pmatrix} -2 & 1 \\ 1 & -2 \end{pmatrix}
+\]
 
 The eigenvalues are \( \lambda = -2 \pm 1 \), i.e., \( \lambda_1 = -1 \) and \( \lambda_2 = -3 \). Both are negative, so the origin is a stable node. The eigenvectors are \( \mathbf{v}_1 = (1, 1)^T \) (slow mode) and \( \mathbf{v}_2 = (1, -1)^T \) (fast mode). The system decays most slowly along the symmetric mode where both neurons have equal activity.
 </div>
@@ -866,11 +970,15 @@ The eigenvalues are \( \lambda = -2 \pm 1 \), i.e., \( \lambda_1 = -1 \) and \( 
 
 If \( A \) has a complete set of eigenvectors, it can be decomposed as:
 
-\[ A = V \Lambda V^{-1} \]
+\[
+A = V \Lambda V^{-1}
+\]
 
 where \( V \) is the matrix of eigenvectors and \( \Lambda \) is the diagonal matrix of eigenvalues. The solution to \( \frac{d\mathbf{x}}{dt} = A\mathbf{x} \) is then:
 
-\[ \mathbf{x}(t) = e^{At} \mathbf{x}(0) = V e^{\Lambda t} V^{-1} \mathbf{x}(0) \]
+\[
+\mathbf{x}(t) = e^{At} \mathbf{x}(0) = V e^{\Lambda t} V^{-1} \mathbf{x}(0)
+\]
 
 Each eigenvector component evolves independently as \( e^{\lambda_i t} \), growing or decaying according to the sign of the real part of \( \lambda_i \).
 
@@ -886,17 +994,23 @@ Given a dataset of \( N \) observations in \( d \) dimensions (e.g., the firing 
 
 Let \( X \) be the \( N \times d \) data matrix (mean-centered). The **covariance matrix** is:
 
-\[ C = \frac{1}{N-1} X^T X \]
+\[
+C = \frac{1}{N-1} X^T X
+\]
 
 PCA computes the eigendecomposition of \( C \):
 
-\[ C \mathbf{v}_i = \lambda_i \mathbf{v}_i \]
+\[
+C \mathbf{v}_i = \lambda_i \mathbf{v}_i
+\]
 
 The eigenvectors \( \mathbf{v}_1, \mathbf{v}_2, \ldots \) are the principal components, ordered by decreasing eigenvalue. The eigenvalue \( \lambda_i \) gives the variance explained by the \( i \)-th component.
 
 The projection of the data onto the first \( k \) principal components is:
 
-\[ Z = X V_k \]
+\[
+Z = X V_k
+\]
 
 where \( V_k = \left[\mathbf{v}_1, \ldots, \mathbf{v}_k\right] \) is the \( d \times k \) matrix of the top \( k \) eigenvectors.
 
@@ -918,7 +1032,9 @@ The connection between Hebbian learning and PCA is deep. As noted in Chapter 6, 
 
 Many neural models, especially those describing network dynamics, involve systems of coupled linear ODEs:
 
-\[ \frac{d\mathbf{x}}{dt} = A\mathbf{x} + \mathbf{b} \]
+\[
+\frac{d\mathbf{x}}{dt} = A\mathbf{x} + \mathbf{b}
+\]
 
 where \( \mathbf{x} \) is a vector of state variables (e.g., firing rates) and \( A \) encodes the connectivity. The homogeneous solution \( (\mathbf{b} = 0) \) is determined by the eigenvalues and eigenvectors of \( A \), as discussed above.
 
@@ -926,11 +1042,15 @@ where \( \mathbf{x} \) is a vector of state variables (e.g., firing rates) and \
 
 A common model for neural population dynamics is the **linear firing rate model**:
 
-\[ \tau \frac{d\mathbf{r}}{dt} = -\mathbf{r} + W\mathbf{r} + \mathbf{h} \]
+\[
+\tau \frac{d\mathbf{r}}{dt} = -\mathbf{r} + W\mathbf{r} + \mathbf{h}
+\]
 
 where \( \mathbf{r} \) is the vector of firing rates, \( W \) is the connectivity matrix, and \( \mathbf{h} \) is external input. This can be rewritten as:
 
-\[ \tau \frac{d\mathbf{r}}{dt} = (W - I)\mathbf{r} + \mathbf{h} \]
+\[
+\tau \frac{d\mathbf{r}}{dt} = (W - I)\mathbf{r} + \mathbf{h}
+\]
 
 The stability of the network depends on the eigenvalues of \( W - I \): the network is stable if all eigenvalues of \( W \) have real parts less than 1.
 
@@ -1209,7 +1329,9 @@ One of the most successful applications of computational modeling in psychology 
 
 The evidence variable \( x(t) \) evolves according to:
 
-\[ dx = v \, dt + s \, dW \]
+\[
+dx = v \, dt + s \, dW
+\]
 
 where \( v \) is the **drift rate** (reflecting the strength and direction of the evidence), \( s \) is the noise intensity, and \( dW \) is a Wiener process (Brownian noise). The decision is made when \( x(t) \) first reaches either the upper boundary \( a \) (choose option A) or the lower boundary \( 0 \) (choose option B).
 
@@ -1243,7 +1365,9 @@ The DDM has been linked to neural data in several brain regions:
 
 The **Rescorla-Wagner model** (1972) is the foundational model of associative learning. It describes how the associative strength \( V \) of a conditioned stimulus (CS) changes with experience:
 
-\[ \Delta V = \alpha \beta (\lambda - V) \]
+\[
+\Delta V = \alpha \beta (\lambda - V)
+\]
 
 where \( \alpha \) is the salience of the CS, \( \beta \) is the learning rate associated with the unconditioned stimulus (US), and \( \lambda \) is the maximum associative strength supported by the US. The term \( (\lambda - V) \) is the **prediction error**: the discrepancy between what was expected and what occurred.
 
@@ -1255,7 +1379,9 @@ The Rescorla-Wagner model is mathematically equivalent to the delta rule (Widrow
 
 **Temporal difference (TD) learning** extends the Rescorla-Wagner model to sequential tasks. The key innovation is that predictions are updated based on the difference between successive predictions, not just the final outcome:
 
-\[ V(s_t) \leftarrow V(s_t) + \alpha \left[r_{t+1} + \gamma V(s_{t+1}) - V(s_t)\right] \]
+\[
+V(s_t) \leftarrow V(s_t) + \alpha \left[r_{t+1} + \gamma V(s_{t+1}) - V(s_t)\right]
+\]
 
 where \( V(s_t) \) is the predicted value of state \( s_t \), \( r_{t+1} \) is the reward received, \( \gamma \) is a discount factor, and the bracketed expression is the **TD error**.
 
@@ -1265,7 +1391,9 @@ The TD error has been identified with the phasic activity of **dopamine neurons*
 
 **Q-learning** (Watkins, 1989) learns action values rather than state values:
 
-\[ Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left[r_{t+1} + \gamma \max_a Q(s_{t+1}, a) - Q(s_t, a_t)\right] \]
+\[
+Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left[r_{t+1} + \gamma \max_a Q(s_{t+1}, a) - Q(s_t, a_t)\right]
+\]
 
 The agent selects actions based on the Q-values, typically using an \( \epsilon \)-greedy policy: with probability \( 1 - \epsilon \), choose the action with the highest Q-value; with probability \( \epsilon \), choose randomly (exploration).
 
@@ -1277,17 +1405,23 @@ The **Hopfield network** (1982) is a recurrent neural network that functions as 
 
 The network consists of \( N \) binary units with symmetric weights:
 
-\[ w_{ij} = \frac{1}{N} \sum_{\mu=1}^{p} \xi_i^{\mu} \xi_j^{\mu} \]
+\[
+w_{ij} = \frac{1}{N} \sum_{\mu=1}^{p} \xi_i^{\mu} \xi_j^{\mu}
+\]
 
 where \( \xi^{\mu} \) is the \( \mu \)-th stored pattern and \( p \) is the number of patterns. This is a Hebbian learning rule applied to all patterns.
 
 The update rule is:
 
-\[ s_i \leftarrow \text{sgn}\left(\sum_j w_{ij} s_j\right) \]
+\[
+s_i \leftarrow \text{sgn}\left(\sum_j w_{ij} s_j\right)
+\]
 
 The network has an associated **energy function**:
 
-\[ E = -\frac{1}{2} \sum_{i \neq j} w_{ij} s_i s_j \]
+\[
+E = -\frac{1}{2} \sum_{i \neq j} w_{ij} s_i s_j
+\]
 
 Each update decreases or preserves the energy, so the dynamics converge to a local minimum. The stored patterns are (ideally) the local minima of the energy landscape.
 
@@ -1323,7 +1457,9 @@ This can be modeled as a recurrent neural network with mutual inhibition between
 
 Mathematically, a simplified version can be expressed as:
 
-\[ \tau \frac{dr_i}{dt} = -r_i + f\left(w_{\text{ext}} s_i + w_{\text{td}} a_i - w_{\text{inh}} \sum_{j \neq i} r_j\right) \]
+\[
+\tau \frac{dr_i}{dt} = -r_i + f\left(w_{\text{ext}} s_i + w_{\text{td}} a_i - w_{\text{inh}} \sum_{j \neq i} r_j\right)
+\]
 
 where \( r_i \) is the activity of the \( i \)-th object representation, \( s_i \) is the bottom-up sensory input, \( a_i \) is the top-down attentional signal, \( w_{\text{inh}} \) controls mutual inhibition, and \( f \) is a nonlinear activation function.
 
@@ -1331,7 +1467,9 @@ where \( r_i \) is the activity of the \( i \)-th object representation, \( s_i 
 
 More recent models describe attention as operating through **divisive normalization**, a canonical neural computation:
 
-\[ r_i = \frac{\alpha_i \cdot s_i^n}{\sigma^n + \sum_j \alpha_j \cdot s_j^n} \]
+\[
+r_i = \frac{\alpha_i \cdot s_i^n}{\sigma^n + \sum_j \alpha_j \cdot s_j^n}
+\]
 
 where \( \alpha_i \) is an attentional gain factor, \( s_i \) is the stimulus drive, \( n \) is an exponent, and \( \sigma \) is a semi-saturation constant. Attention increases the gain for the attended stimulus, which naturally suppresses unattended stimuli through the normalization denominator. This model unifies a wide range of attentional phenomena within a single computational framework.
 

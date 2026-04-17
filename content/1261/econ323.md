@@ -22,7 +22,9 @@ ECON 323 extends the OLS framework of ECON 322 to settings where the standard as
 
 The population model is \( y = \beta_0 + \beta_1 x_1 + \cdots + \beta_k x_k + u \), with OLS estimator:
 
-\[ \hat{\boldsymbol{\beta}} = (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{y} \]
+\[
+\hat{\boldsymbol{\beta}} = (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{y}
+\]
 
 Key properties: unbiasedness under MLR.1–MLR.4, efficiency (BLUE) under MLR.1–MLR.5, and asymptotic normality in large samples.
 
@@ -54,11 +56,15 @@ Under the time-series Gauss-Markov assumptions (TS.1–TS.5), OLS is unbiased an
 
 A **finite distributed lag (FDL)** model relates \( y_t \) to current and lagged values of \( x_t \):
 
-\[ y_t = \alpha + \delta_0 x_t + \delta_1 x_{t-1} + \delta_2 x_{t-2} + \cdots + \delta_q x_{t-q} + u_t \]
+\[
+y_t = \alpha + \delta_0 x_t + \delta_1 x_{t-1} + \delta_2 x_{t-2} + \cdots + \delta_q x_{t-q} + u_t
+\]
 
 The **impact propensity** is \( \delta_0 \) (immediate effect of a unit change in \( x \)). The **long-run propensity (LRP)** is the cumulative effect once all dynamics have played out:
 
-\[ \text{LRP} = \sum_{j=0}^{q} \delta_j \]
+\[
+\text{LRP} = \sum_{j=0}^{q} \delta_j
+\]
 
 <div class="example">
 <strong>Fertility Rate and Tax Exemptions:</strong> A classic Wooldridge example regresses the general fertility rate on the tax exemption for children and several lags. The LRP captures how fertility responds over multiple years to a permanent policy change.
@@ -68,13 +74,17 @@ The **impact propensity** is \( \delta_0 \) (immediate effect of a unit change i
 
 **Serial correlation (autocorrelation)** is the violation of the time-series assumption that errors are uncorrelated across periods: \( \text{Cov}(u_t, u_s) \neq 0 \) for \( t \neq s \). The most common form is first-order autocorrelation:
 
-\[ u_t = \rho u_{t-1} + e_t, \quad e_t \sim \text{i.i.d.}(0, \sigma_e^2), \quad |\rho| < 1 \]
+\[
+u_t = \rho u_{t-1} + e_t, \quad e_t \sim \text{i.i.d.}(0, \sigma_e^2), \quad |\rho| < 1
+\]
 
 Consequences for OLS parallel heteroskedasticity: estimates remain unbiased and consistent (under strict exogeneity), but OLS is no longer efficient and conventional standard errors are invalid.
 
 The **Durbin-Watson statistic** tests \( H_0: \rho = 0 \) against \( H_1: \rho > 0 \):
 
-\[ DW = \frac{\sum_{t=2}^T (\hat{u}_t - \hat{u}_{t-1})^2}{\sum_{t=1}^T \hat{u}_t^2} \approx 2(1 - \hat{\rho}) \]
+\[
+DW = \frac{\sum_{t=2}^T (\hat{u}_t - \hat{u}_{t-1})^2}{\sum_{t=1}^T \hat{u}_t^2} \approx 2(1 - \hat{\rho})
+\]
 
 Values near 2 indicate no serial correlation; values near 0 (or 4) indicate positive (or negative) autocorrelation. The **Breusch-Godfrey LM test** is more general and allows for testing higher-order autocorrelation.
 
@@ -82,7 +92,9 @@ Values near 2 indicate no serial correlation; values near 0 (or 4) indicate posi
 
 The **Newey-West HAC (Heteroskedasticity and Autocorrelation Consistent)** estimator corrects OLS standard errors for both heteroskedasticity and serial correlation:
 
-\[ \widehat{\text{Var}}_{NW}(\hat{\boldsymbol{\beta}}) = (\mathbf{X}^{\top}\mathbf{X})^{-1} \hat{\boldsymbol{\Omega}}_{NW} (\mathbf{X}^{\top}\mathbf{X})^{-1} \]
+\[
+\widehat{\text{Var}}_{NW}(\hat{\boldsymbol{\beta}}) = (\mathbf{X}^{\top}\mathbf{X})^{-1} \hat{\boldsymbol{\Omega}}_{NW} (\mathbf{X}^{\top}\mathbf{X})^{-1}
+\]
 
 where \( \hat{\boldsymbol{\Omega}}_{NW} \) is the Newey-West kernel estimator with bandwidth \( M \) (often chosen as \( \lfloor 4(T/100)^{2/9} \rfloor \)). HAC standard errors are the time-series analog of Eicker-Huber-White robust standard errors.
 
@@ -102,7 +114,9 @@ More seriously, **stochastic trends** (unit roots) can generate spurious regress
 
 The general panel regression model is:
 
-\[ y_{it} = \mathbf{x}_{it}^{\top}\boldsymbol{\beta} + a_i + u_{it} \]
+\[
+y_{it} = \mathbf{x}_{it}^{\top}\boldsymbol{\beta} + a_i + u_{it}
+\]
 
 where \( a_i \) is a unit-specific **unobserved effect** (or fixed effect), constant over time.
 
@@ -114,13 +128,18 @@ Simply stacking all \( NT \) observations and running OLS (ignoring \( a_i \)) i
 
 When \( a_i \) is arbitrarily correlated with \( \mathbf{x}_{it} \) (the usual concern in economics), the **Fixed Effects (FE)** or **within estimator** eliminates \( a_i \) by demeaning:
 
-\[ y_{it} - \bar{y}_i = (\mathbf{x}_{it} - \bar{\mathbf{x}}_i)^{\top}\boldsymbol{\beta} + (u_{it} - \bar{u}_i) \]
+\[
+y_{it} - \bar{y}_i = (\mathbf{x}_{it} - \bar{\mathbf{x}}_i)^{\top}\boldsymbol{\beta} + (u_{it} - \bar{u}_i)
+\]
 
 where \( \bar{y}_i = T^{-1}\sum_t y_{it} \). OLS on this demeaned equation is the FE estimator. Because \( a_i \) has been differenced out, FE is consistent even when \( \text{Cov}(a_i, \mathbf{x}_{it}) \neq 0 \).
 
 <div class="theorem">
 <strong>Fixed Effects Estimator:</strong> Let \( \ddot{y}_{it} = y_{it} - \bar{y}_i \) and \( \ddot{\mathbf{x}}_{it} = \mathbf{x}_{it} - \bar{\mathbf{x}}_i \). The FE estimator is:
-\[ \hat{\boldsymbol{\beta}}_{FE} = \left(\sum_{i=1}^N \sum_{t=1}^T \ddot{\mathbf{x}}_{it}\ddot{\mathbf{x}}_{it}^{\top}\right)^{-1} \sum_{i=1}^N \sum_{t=1}^T \ddot{\mathbf{x}}_{it}\ddot{y}_{it} \]
+
+\[
+\hat{\boldsymbol{\beta}}_{FE} = \left(\sum_{i=1}^N \sum_{t=1}^T \ddot{\mathbf{x}}_{it}\ddot{\mathbf{x}}_{it}^{\top}\right)^{-1} \sum_{i=1}^N \sum_{t=1}^T \ddot{\mathbf{x}}_{it}\ddot{y}_{it}
+\]
 This is numerically equivalent to OLS with unit (entity) dummies.
 </div>
 
@@ -130,7 +149,9 @@ This is numerically equivalent to OLS with unit (entity) dummies.
 
 An alternative elimination strategy is **first differencing**: subtract the previous period from the current period:
 
-\[ \Delta y_{it} = \Delta \mathbf{x}_{it}^{\top}\boldsymbol{\beta} + \Delta u_{it}, \quad \Delta y_{it} = y_{it} - y_{i,t-1} \]
+\[
+\Delta y_{it} = \Delta \mathbf{x}_{it}^{\top}\boldsymbol{\beta} + \Delta u_{it}, \quad \Delta y_{it} = y_{it} - y_{i,t-1}
+\]
 
 With \( T = 2 \), FE and FD are identical. With \( T > 2 \), FD is more efficient when \( \Delta u_{it} \) is serially uncorrelated (i.e., \( u_{it} \) follows a random walk), while FE is more efficient when \( u_{it} \) is serially uncorrelated.
 
@@ -140,7 +161,9 @@ If \( \text{Cov}(a_i, \mathbf{x}_{it}) = 0 \), the **Random Effects (RE) estimat
 
 **Hausman test:** Tests \( H_0: \text{Cov}(a_i, \mathbf{x}_{it}) = 0 \) by comparing RE and FE:
 
-\[ H = (\hat{\boldsymbol{\beta}}_{FE} - \hat{\boldsymbol{\beta}}_{RE})^{\top}\left[\widehat{\text{Var}}(\hat{\boldsymbol{\beta}}_{FE}) - \widehat{\text{Var}}(\hat{\boldsymbol{\beta}}_{RE})\right]^{-1}(\hat{\boldsymbol{\beta}}_{FE} - \hat{\boldsymbol{\beta}}_{RE}) \xrightarrow{d} \chi^2(k) \]
+\[
+H = (\hat{\boldsymbol{\beta}}_{FE} - \hat{\boldsymbol{\beta}}_{RE})^{\top}\left[\widehat{\text{Var}}(\hat{\boldsymbol{\beta}}_{FE}) - \widehat{\text{Var}}(\hat{\boldsymbol{\beta}}_{RE})\right]^{-1}(\hat{\boldsymbol{\beta}}_{FE} - \hat{\boldsymbol{\beta}}_{RE}) \xrightarrow{d} \chi^2(k)
+\]
 
 Rejection of \( H_0 \) favors FE.
 
@@ -164,7 +187,9 @@ The exclusion restriction is an identifying assumption that cannot be directly t
 
 For the simple model \( y = \beta_0 + \beta_1 x_1 + u \) with one instrument \( z \):
 
-\[ \hat{\beta}_1^{IV} = \frac{\text{Cov}(z, y)}{\text{Cov}(z, x_1)} = \frac{\sum_i (z_i - \bar{z})(y_i - \bar{y})}{\sum_i (z_i - \bar{z})(x_i - \bar{x})} \]
+\[
+\hat{\beta}_1^{IV} = \frac{\text{Cov}(z, y)}{\text{Cov}(z, x_1)} = \frac{\sum_i (z_i - \bar{z})(y_i - \bar{y})}{\sum_i (z_i - \bar{z})(x_i - \bar{x})}
+\]
 
 Consistency: \( \text{plim}(\hat{\beta}_1^{IV}) = \beta_1 + \text{Cov}(z,u)/\text{Cov}(z,x_1) = \beta_1 \) when \( \text{Cov}(z,u) = 0 \).
 
@@ -179,14 +204,19 @@ Under instrument relevance and exogeneity, the IV estimator is consistent and as
 With multiple endogenous regressors and multiple instruments, **Two-Stage Least Squares (2SLS)** is the standard approach.
 
 **Stage 1:** Regress each endogenous variable \( x_j \) on all exogenous variables (including instruments):
-\[ x_{j} = \pi_{j0} + \pi_{j1} z_1 + \cdots + \pi_{jm} z_m + \pi_{j,m+1} w_1 + \cdots + v_j \]
+
+\[
+x_{j} = \pi_{j0} + \pi_{j1} z_1 + \cdots + \pi_{jm} z_m + \pi_{j,m+1} w_1 + \cdots + v_j
+\]
 Obtain fitted values \( \hat{x}_j \).
 
 **Stage 2:** Replace endogenous \( x_j \) with \( \hat{x}_j \) in the structural equation and run OLS.
 
 The 2SLS estimator has the closed-form:
 
-\[ \hat{\boldsymbol{\beta}}_{2SLS} = \left(\hat{\mathbf{X}}^{\top}\mathbf{X}\right)^{-1}\hat{\mathbf{X}}^{\top}\mathbf{y} \]
+\[
+\hat{\boldsymbol{\beta}}_{2SLS} = \left(\hat{\mathbf{X}}^{\top}\mathbf{X}\right)^{-1}\hat{\mathbf{X}}^{\top}\mathbf{y}
+\]
 
 where \( \hat{\mathbf{X}} \) contains the first-stage fitted values. Standard errors must be computed using the original \( \mathbf{X} \), not \( \hat{\mathbf{X}} \), to be valid.
 
@@ -198,7 +228,9 @@ where \( \hat{\mathbf{X}} \) contains the first-stage fitted values. Standard er
 
 **Overidentification Test (Sargan-Hansen J-test):** When there are more instruments than endogenous variables, the excess moment conditions can be tested. Under the joint null that all instruments are exogenous:
 
-\[ J = n \cdot R^2_{\hat{u}, \mathbf{Z}} \xrightarrow{d} \chi^2(m - k_{endog}) \]
+\[
+J = n \cdot R^2_{\hat{u}, \mathbf{Z}} \xrightarrow{d} \chi^2(m - k_{endog})
+\]
 
 where the \( R^2 \) is from regressing 2SLS residuals on all instruments and exogenous regressors. Rejection casts doubt on at least one instrument's exogeneity.
 
@@ -212,33 +244,47 @@ When the dependent variable is binary (\( y \in \{0,1\} \)), the **linear probab
 
 **Maximum Likelihood Estimation (MLE)** finds the parameter vector that maximizes the likelihood of observing the data. For a binary model with \( P(y_i=1\mid\mathbf{x}_i) = G(\mathbf{x}_i^{\top}\boldsymbol{\beta}) \):
 
-\[ \mathcal{L}(\boldsymbol{\beta}) = \sum_{i=1}^n \left[y_i \ln G(\mathbf{x}_i^{\top}\boldsymbol{\beta}) + (1-y_i)\ln\!\left(1 - G(\mathbf{x}_i^{\top}\boldsymbol{\beta})\right)\right] \]
+\[
+\mathcal{L}(\boldsymbol{\beta}) = \sum_{i=1}^n \left[y_i \ln G(\mathbf{x}_i^{\top}\boldsymbol{\beta}) + (1-y_i)\ln\!\left(1 - G(\mathbf{x}_i^{\top}\boldsymbol{\beta})\right)\right]
+\]
 
 MLE is found by maximizing \( \mathcal{L}(\boldsymbol{\beta}) \) numerically (no closed form).
 
 <div class="definition">
 <strong>Probit Model:</strong> \( G(z) = \Phi(z) \), the standard normal CDF. The probit model is:
-\[ P(y = 1 \mid \mathbf{x}) = \Phi(\mathbf{x}^{\top}\boldsymbol{\beta}) \]
+
+\[
+P(y = 1 \mid \mathbf{x}) = \Phi(\mathbf{x}^{\top}\boldsymbol{\beta})
+\]
 
 <strong>Logit Model:</strong> \( G(z) = \Lambda(z) = e^z/(1 + e^z) \), the logistic function:
-\[ P(y = 1 \mid \mathbf{x}) = \frac{\exp(\mathbf{x}^{\top}\boldsymbol{\beta})}{1 + \exp(\mathbf{x}^{\top}\boldsymbol{\beta})} \]
+
+\[
+P(y = 1 \mid \mathbf{x}) = \frac{\exp(\mathbf{x}^{\top}\boldsymbol{\beta})}{1 + \exp(\mathbf{x}^{\top}\boldsymbol{\beta})}
+\]
 </div>
 
 ## 5.2 Interpreting Probit and Logit Coefficients
 
 Unlike OLS, probit/logit coefficients do not directly measure marginal effects. The **marginal effect at the mean (MEM)** for a continuous regressor \( x_j \) is:
 
-\[ \frac{\partial P(y=1 \mid \mathbf{x})}{\partial x_j} = g(\mathbf{x}^{\top}\boldsymbol{\beta})\,\beta_j \]
+\[
+\frac{\partial P(y=1 \mid \mathbf{x})}{\partial x_j} = g(\mathbf{x}^{\top}\boldsymbol{\beta})\,\beta_j
+\]
 
 where \( g = G' \) is the density of the link function (standard normal density for probit; \( \Lambda(1-\Lambda) \) for logit). This must be evaluated at specific values of \( \mathbf{x} \) (e.g., sample means). The **average marginal effect (AME)** averages across all observations:
 
-\[ \text{AME}_j = \frac{1}{n}\sum_{i=1}^n g(\mathbf{x}_i^{\top}\hat{\boldsymbol{\beta}})\,\hat{\beta}_j \]
+\[
+\text{AME}_j = \frac{1}{n}\sum_{i=1}^n g(\mathbf{x}_i^{\top}\hat{\boldsymbol{\beta}})\,\hat{\beta}_j
+\]
 
 The AME is generally preferred over the MEM as it better represents the population average.
 
 For a **dummy variable** \( x_j \in \{0,1\} \), the discrete change in probability is:
 
-\[ \Delta P = G(\hat{\boldsymbol{\beta}}_{-j}^{\top}\mathbf{x} + \hat{\beta}_j) - G(\hat{\boldsymbol{\beta}}_{-j}^{\top}\mathbf{x}) \]
+\[
+\Delta P = G(\hat{\boldsymbol{\beta}}_{-j}^{\top}\mathbf{x} + \hat{\beta}_j) - G(\hat{\boldsymbol{\beta}}_{-j}^{\top}\mathbf{x})
+\]
 
 ## 5.3 Model Fit for Binary Models
 
@@ -252,7 +298,9 @@ Standard \( R^2 \) is not meaningful for binary models. Alternative measures:
 
 When \( y \) has more than two unordered categories (e.g., transportation mode: car/bus/train), the **multinomial logit** specifies:
 
-\[ P(y = j \mid \mathbf{x}) = \frac{\exp(\mathbf{x}^{\top}\boldsymbol{\beta}_j)}{\sum_{m=0}^{J} \exp(\mathbf{x}^{\top}\boldsymbol{\beta}_m)}, \quad j = 0, 1, \ldots, J \]
+\[
+P(y = j \mid \mathbf{x}) = \frac{\exp(\mathbf{x}^{\top}\boldsymbol{\beta}_j)}{\sum_{m=0}^{J} \exp(\mathbf{x}^{\top}\boldsymbol{\beta}_m)}, \quad j = 0, 1, \ldots, J
+\]
 
 with \( \boldsymbol{\beta}_0 = \mathbf{0} \) (base category normalization).
 
@@ -262,11 +310,15 @@ When \( y \) is **ordered** (e.g., satisfaction scores 1–5), the **ordered pro
 
 For non-negative integer outcomes (number of patents, doctor visits, etc.), the **Poisson regression** model specifies:
 
-\[ P(y = k \mid \mathbf{x}) = \frac{e^{-\lambda}\lambda^k}{k!}, \quad \lambda = E[y \mid \mathbf{x}] = \exp(\mathbf{x}^{\top}\boldsymbol{\beta}) \]
+\[
+P(y = k \mid \mathbf{x}) = \frac{e^{-\lambda}\lambda^k}{k!}, \quad \lambda = E[y \mid \mathbf{x}] = \exp(\mathbf{x}^{\top}\boldsymbol{\beta})
+\]
 
 The log-link ensures \( \lambda > 0 \). The coefficient \( \beta_j \) is the **log incidence rate ratio**: a unit increase in \( x_j \) multiplies the expected count by \( e^{\beta_j} \). The log-likelihood is:
 
-\[ \mathcal{L}(\boldsymbol{\beta}) = \sum_{i=1}^n \left[y_i \mathbf{x}_i^{\top}\boldsymbol{\beta} - \exp(\mathbf{x}_i^{\top}\boldsymbol{\beta}) - \ln(y_i!)\right] \]
+\[
+\mathcal{L}(\boldsymbol{\beta}) = \sum_{i=1}^n \left[y_i \mathbf{x}_i^{\top}\boldsymbol{\beta} - \exp(\mathbf{x}_i^{\top}\boldsymbol{\beta}) - \ln(y_i!)\right]
+\]
 
 **Overdispersion** (\( \text{Var}(y) > E[y] \)) is common in count data and violates the Poisson assumption. The **negative binomial** model addresses this by adding a gamma-distributed individual heterogeneity term.
 

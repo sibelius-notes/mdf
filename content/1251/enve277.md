@@ -100,6 +100,7 @@ Ground-level ozone forms via a photochemical cycle driven by solar UV radiation,
 \[
 \text{NO}_2 + h\nu \;\longrightarrow\; \text{NO} + \text{O}(^3P)
 \]
+
 \[
 \text{O}(^3P) + \text{O}_2 + M \;\longrightarrow\; \text{O}_3 + M
 \]
@@ -121,6 +122,7 @@ Stratospheric ozone is maintained by a balance of photochemical production and c
 \[
 \text{Cl} + \text{O}_3 \;\longrightarrow\; \text{ClO} + \text{O}_2
 \]
+
 \[
 \text{ClO} + \text{O} \;\longrightarrow\; \text{Cl} + \text{O}_2
 \]
@@ -142,6 +144,7 @@ Fossil fuel combustion is the dominant anthropogenic source of SO\(_2\), NO\(_x\
 \[
 \text{N}_2 + \text{O} \;\rightleftharpoons\; \text{NO} + \text{N}
 \]
+
 \[
 \text{N} + \text{O}_2 \;\rightleftharpoons\; \text{NO} + \text{O}
 \]

@@ -300,6 +300,7 @@ The prototype elliptic equations are:
 \[
 \Delta u = 0 \quad \text{in } \Omega \subset \mathbb{R}^n \tag{1}
 \]
+
 \[
 \Delta u = f \quad \text{in } \Omega \subset \mathbb{R}^n \tag{2}
 \]
@@ -363,6 +364,7 @@ the average of \(u\) over the sphere of radius \(r\) centered at \(\xi\) (here \
 
 <div class="theorem">
 <strong>Theorem (Mean Value Property).</strong> If \(u \in C^2(\Omega)\) is harmonic in a connected domain \(\Omega\), then for any \(\xi \in \Omega\) and \(r > 0\) with \(B(\xi;r) \subset \Omega\),
+
 \[
 u(\xi) = M_u(\xi; r) = \frac{1}{|\partial B(\xi,r)|} \int_{|\xi' - \xi| = r} u(\xi')\,dS.
 \]
@@ -441,6 +443,7 @@ where \(S_n\) is the surface area of the unit sphere in \(\mathbb{R}^n\). Choosi
 
 <div class="definition">
 <strong>Definition (Fundamental Solution).</strong> The fundamental solution of the Laplace operator \(\Delta\) is:
+
 \[
 K(x) = \begin{cases} \dfrac{1}{2\pi} \ln|x| & n = 2, \\[6pt] \dfrac{1}{(2-n)S_n} |x|^{2-n} & n \geq 3, \end{cases}
 \]
@@ -732,6 +735,7 @@ imposing initial conditions on \(u = F(x) + G(x)\) and \(u_t = cF'(x) - cG'(x)\)
 
 <div class="theorem">
 <strong>Theorem (D'Alembert's Formula).</strong> If \(g \in C^2(\mathbb{R})\) and \(h \in C^1(\mathbb{R})\), the unique \(C^2\) solution of the Cauchy problem is
+
 \[
 u(x,t) = \frac{1}{2}\bigl[g(x+ct) + g(x-ct)\bigr] + \frac{1}{2c}\int_{x-ct}^{x+ct} h(\xi)\,d\xi.
 \]
@@ -910,6 +914,7 @@ the bottom and lateral sides of the space-time cylinder — the boundary *except
 
 <div class="theorem">
 <strong>Weak Maximum Principle (Parabolic).</strong> Let \(u \in C^{2,1}(\Omega_T) \cap C(\overline{\Omega_T})\) satisfy \(\Delta u \geq u_t\) in \(\Omega_T\). Then
+
 \[
 \max_{\overline{\Omega_T}} u = \max_{C_T} u.
 \]
@@ -947,6 +952,7 @@ The **Schwartz class** \(\mathcal{S} = \{u \in C^\infty(\mathbb{R}^n) : |x|^k|D^
 
 <div class="theorem">
 <strong>Theorem (Fourier Inversion).</strong> If \(f \in \mathcal{S}\), then
+
 \[
 f(x) = \frac{1}{(2\pi)^n}\int_{\mathbb{R}^n} e^{-ix\cdot\omega}\,\hat{f}(\omega)\,d\omega.
 \]

@@ -66,19 +66,25 @@ Suppose two countries, Home and Foreign, can each produce two goods: cloth (C) a
 
 Home's opportunity cost of cloth in terms of wheat is \( a_{LC}/a_{LW} \). Foreign's opportunity cost is \( a^*_{LC}/a^*_{LW} \). Home has a comparative advantage in cloth if:
 
-\[ \frac{a_{LC}}{a_{LW}} < \frac{a^*_{LC}}{a^*_{LW}} \]
+\[
+\frac{a_{LC}}{a_{LW}} < \frac{a^*_{LC}}{a^*_{LW}}
+\]
 
 ## 2.3 Production Possibilities and Wages
 
 With \( L \) units of labor at Home, the production possibility frontier (PPF) is a straight line:
 
-\[ \frac{Q_C}{1/a_{LC}} + \frac{Q_W}{1/a_{LW}} = L \implies a_{LC} Q_C + a_{LW} Q_W = L \]
+\[
+\frac{Q_C}{1/a_{LC}} + \frac{Q_W}{1/a_{LW}} = L \implies a_{LC} Q_C + a_{LW} Q_W = L
+\]
 
 Under free trade, Home completely specializes in cloth (its comparative advantage good) if the world relative price of cloth \( (P_C/P_W) \) exceeds Home's autarky relative price \( (a_{LC}/a_{LW}) \).
 
 Wages in the Ricardian model are determined by productivity. If Home specializes in cloth:
 
-\[ w = \frac{P_C}{a_{LC}} \]
+\[
+w = \frac{P_C}{a_{LC}}
+\]
 
 The ratio of wages across countries depends on the ratio of productivities in the exported goods.
 
@@ -119,7 +125,9 @@ Production functions: \( Q_M = Q_M(K, L_M) \) and \( Q_A = Q_A(T, L_A) \) where 
 
 Firms hire labor up to the point where the value of the marginal product equals the wage:
 
-\[ P_M \cdot MPL_M = w = P_A \cdot MPL_A \]
+\[
+P_M \cdot MPL_M = w = P_A \cdot MPL_A
+\]
 
 ## 3.3 Effects of a Change in Relative Prices
 
@@ -215,7 +223,9 @@ The standard trade model generalizes both the Ricardian and H-O models by workin
 
 At any relative price of exports to imports (the *terms of trade*, denoted \( P_X/P_M \)), the economy produces at the point on the PPF where the slope equals the relative price:
 
-\[ \frac{P_X}{P_M} = \left|\text{slope of PPF at production point}\right| \]
+\[
+\frac{P_X}{P_M} = \left|\text{slope of PPF at production point}\right|
+\]
 
 Consumption occurs where the budget constraint (passing through the production point with slope equal to the relative price) is tangent to the highest attainable indifference curve.
 
@@ -273,7 +283,9 @@ Under autarky, each country produces a limited set of varieties. Under free trad
 
 The *Grubel-Lloyd index* measures the share of trade in a sector that is intra-industry:
 
-\[ GL_i = 1 - \frac{|X_i - M_i|}{X_i + M_i} \]
+\[
+GL_i = 1 - \frac{|X_i - M_i|}{X_i + M_i}
+\]
 
 A value close to 1 indicates predominantly intra-industry trade; a value close to 0 indicates net trade (consistent with comparative advantage). Empirically, intra-industry trade is high in manufacturing between similar countries and lower in resource-based sectors between dissimilar countries.
 
@@ -321,7 +333,9 @@ A *tariff* is a tax on imports. Consider a small country (a price-taker in world
 
 Let \( S(P) \) be domestic supply and \( D(P) \) demand. Imports \( M = D(P) - S(P) \). The welfare decomposition is:
 
-\[ \Delta W = \underbrace{-\frac{1}{2}(P-P^*)(S(P)-S(P^*))}_{\text{production loss}} - \underbrace{\frac{1}{2}(P-P^*)(D(P^*)-D(P))}_{\text{consumption loss}} + \underbrace{t \cdot M}_{\text{tariff revenue}} \]
+\[
+\Delta W = \underbrace{-\frac{1}{2}(P-P^*)(S(P)-S(P^*))}_{\text{production loss}} - \underbrace{\frac{1}{2}(P-P^*)(D(P^*)-D(P))}_{\text{consumption loss}} + \underbrace{t \cdot M}_{\text{tariff revenue}}
+\]
 
 For a small country, the net effect is the sum of the two welfare triangles (losses), which is negative.
 
@@ -329,7 +343,9 @@ For a small country, the net effect is the sum of the two welfare triangles (los
 
 A *large country* can affect world prices. By restricting imports, it can lower the world price of the imported good, improving its terms of trade. The optimal tariff that maximizes national welfare is:
 
-\[ t^* = \frac{1}{\epsilon^*_X} \]
+\[
+t^* = \frac{1}{\epsilon^*_X}
+\]
 
 where \( \epsilon^*_X \) is the foreign supply elasticity of exports. The gain from terms-of-trade improvement can outweigh the efficiency losses, making a positive tariff welfare-enhancing for a large country — but only at the expense of the exporting country. If all countries try to impose optimal tariffs, everyone ends up worse off (a prisoners' dilemma / terms-of-trade war).
 
@@ -368,7 +384,9 @@ In a simple democracy, trade policy reflects the preferences of the median voter
 
 Grossman and Helpman (1994) developed a model in which organized industries lobby the government with campaign contributions in exchange for trade protection. The equilibrium tariff in industry \( i \) satisfies:
 
-\[ t_i = \frac{I_i - \alpha_L}{a_L + \alpha_L} \cdot \frac{z_i}{e_i} \]
+\[
+t_i = \frac{I_i - \alpha_L}{a_L + \alpha_L} \cdot \frac{z_i}{e_i}
+\]
 
 where \( I_i \) indicates whether the industry is politically organized, \( a_L \) is the fraction of the population represented by lobbies, \( z_i \) is the import penetration ratio, and \( e_i \) is the import demand elasticity. Industries with organized lobbies and lower import penetration receive higher protection.
 
@@ -412,13 +430,17 @@ Modern exchange rate theory treats currencies as assets. The exchange rate is de
 
 **Interest parity condition (uncovered interest parity, UIP):**
 
-\[ i = i^* + \frac{E^e - E}{E} \]
+\[
+i = i^* + \frac{E^e - E}{E}
+\]
 
 where \( i \) is the domestic interest rate, \( i^* \) is the foreign interest rate, and \( (E^e - E)/E \) is the expected rate of depreciation of the domestic currency.
 
 Rearranging, the spot exchange rate is:
 
-\[ E = \frac{E^e}{1 + i - i^*} \approx E^e - (i - i^*) \cdot E \]
+\[
+E = \frac{E^e}{1 + i - i^*} \approx E^e - (i - i^*) \cdot E
+\]
 
 <div class="remark">
 <strong>Intuition for UIP:</strong> If domestic interest rates rise above foreign rates, investors want to hold domestic currency assets. The spot exchange rate appreciates (domestic currency becomes more valuable) until the expected future depreciation exactly offsets the interest rate differential.
@@ -437,11 +459,15 @@ Rearranging, the spot exchange rate is:
 
 The domestic money market determines the domestic interest rate. Money demand depends on real income \( Y \) and the interest rate \( i \):
 
-\[ \frac{M^s}{P} = L(i, Y), \quad L_i < 0, \quad L_Y > 0 \]
+\[
+\frac{M^s}{P} = L(i, Y), \quad L_i < 0, \quad L_Y > 0
+\]
 
 Equilibrium: money supply equals money demand:
 
-\[ \frac{M}{P} = L(i, Y) \]
+\[
+\frac{M}{P} = L(i, Y)
+\]
 
 An increase in the money supply lowers the interest rate, which (via UIP) depreciates the exchange rate. An increase in real income raises money demand, raises the interest rate, and appreciates the exchange rate.
 
@@ -463,7 +489,9 @@ PPP holds better as a long-run proposition than in the short run. Short-run devi
 
 Combining money market equilibrium with long-run PPP yields the monetary approach:
 
-\[ E = \frac{M}{M^*} \cdot \frac{L(i^*, Y^*)}{L(i, Y)} \]
+\[
+E = \frac{M}{M^*} \cdot \frac{L(i^*, Y^*)}{L(i, Y)}
+\]
 
 An increase in the domestic money supply relative to the foreign money supply causes proportional depreciation of the domestic currency in the long run. This is consistent with the Quantity Theory: more money chases the same real output, raising prices and depreciating the exchange rate.
 

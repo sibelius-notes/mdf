@@ -88,6 +88,7 @@ Two points \( x, y \in X \) capture qualitatively different behaviors under the 
 
 <div class="definition">
 <strong>Definition (Proximal and Distal Points)</strong>: In a compact \( G \)-flow \( (X, G) \), two points \( x, y \in X \) are <strong>proximal</strong> (written \( x \sim_P y \)) if
+
 \[
 \inf_{g \in G} d(gx, gy) = 0,
 \]
@@ -255,6 +256,7 @@ For \( G \) a discrete group, \( \beta G \) inherits a semigroup structure exten
 
 <div class="definition">
 <strong>Definition (Semigroup Operation on \(\beta G\))</strong>: For \( \mathcal{U}, \mathcal{V} \in \beta G \) and \( G \) a discrete semigroup, define the product \( \mathcal{U} \cdot \mathcal{V} \) by
+
 \[
 A \in \mathcal{U} \cdot \mathcal{V} \iff \{ g \in G : g^{-1}A \in \mathcal{V} \} \in \mathcal{U},
 \]
@@ -297,6 +299,7 @@ The idempotent structure on \( \beta\mathbb{N} \) yields spectacular combinatori
 
 <div class="definition">
 <strong>Definition (IP Set and Finite Sum Set)</strong>: Given a sequence \( (x_n)_{n=1}^\infty \) in \( \mathbb{N} \), the set of <strong>finite sums</strong> (FS-set) is
+
 \[
 FS((x_n)_{n=1}^\infty) = \left\{ \sum_{n \in F} x_n : F \subseteq \mathbb{N},\, F \text{ finite and nonempty} \right\}.
 \]
@@ -356,6 +359,7 @@ Central sets can be characterized dynamically. A set \( A \subseteq \mathbb{N} \
 
 <div class="theorem">
 <strong>Theorem (Furstenberg's Characterization of Central Sets)</strong>: \( A \subseteq \mathbb{N} \) is central if and only if there is a minimal compact dynamical system \( (X, T) \), a uniformly recurrent point \( x_0 \in X \), and a neighborhood \( U \ni x_0 \) such that
+
 \[
 A \supseteq \{ n \geq 1 : T^n x_0 \in U \}.
 \]
@@ -369,6 +373,7 @@ A \supseteq \{ n \geq 1 : T^n x_0 \in U \}.
 
 <div class="theorem">
 <strong>Theorem (Central Sets Theorem, Furstenberg–Hindman)</strong>: Let \( A \subseteq \mathbb{N} \) be a central set. Then for any finite family \( (y_n^{(i)})_{n=1}^\infty \) (\( 1 \leq i \leq r \)) of sequences in \( \mathbb{N} \), there exist a sequence \( (a_k)_{k=1}^\infty \) in \( \mathbb{N} \) and a sequence \( (H_k)_{k=1}^\infty \) of finite nonempty subsets of \( \mathbb{N} \) with \( \max H_k < \min H_{k+1} \) such that for each \( 1 \leq i \leq r \),
+
 \[
 FS\!\left(\left(a_k + \sum_{n \in H_k} y_n^{(i)}\right)_{k=1}^\infty\right) \subseteq A.
 \]
@@ -404,6 +409,7 @@ One of the deepest results in topological dynamics is Furstenberg's structure th
 
 <div class="theorem">
 <strong>Theorem (Furstenberg Structure Theorem for Minimal Distal Flows)</strong>: Every minimal distal compact \( G \)-flow \( (X, G) \) can be obtained from the trivial one-point flow by a (possibly transfinite) tower of equicontinuous extensions. More precisely, there exists an ordinal \( \eta \) and a tower of minimal flows
+
 \[
 \{*\} = X_0 \leftarrow X_1 \leftarrow \cdots \leftarrow X_\alpha \leftarrow \cdots \leftarrow X_\eta = X
 \]
@@ -440,6 +446,7 @@ The action of \( \mathbb{Z} \) on \( b\mathbb{Z} \) is by translation: the gener
 
 <div class="example">
 <strong>Example (Almost-Periodic Functions on \( \mathbb{Z} \) via Fourier Series).</strong> A function \( f : \mathbb{Z} \to \mathbb{C} \) is almost periodic if and only if it can be uniformly approximated by trigonometric polynomials — finite sums of the form \( \sum_{k=1}^{N} c_k e^{2\pi i \alpha_k n} \) where \( \alpha_k \in \mathbb{R} \). Equivalently, \( f \) has a "generalized Fourier series"
+
 \[
 f(n) \sim \sum_{k=1}^{\infty} c_k e^{2\pi i \alpha_k n},
 \]
@@ -669,6 +676,7 @@ Szemerédi's theorem says: if \( d^*(A) > 0 \), then \( A \) contains arithmetic
 
 <div class="theorem">
 <strong>Theorem (Furstenberg Correspondence Principle, 1977)</strong>: Let \( A \subseteq \mathbb{Z} \) with \( d^*(A) > 0 \). Then there exists a probability-measure-preserving system \( (X, \mathcal{B}, \mu, T) \) and a measurable set \( B \subseteq X \) with \( \mu(B) = d^*(A) > 0 \), such that for every \( k \geq 1 \) and every \( n_1, n_2, \ldots, n_k \in \mathbb{Z} \):
+
 \[
 d^*(A \cap (A - n_1) \cap (A - n_2) \cap \cdots \cap (A - n_k)) \geq \mu(B \cap T^{-n_1}B \cap T^{-n_2}B \cap \cdots \cap T^{-n_k}B).
 \]
@@ -694,6 +702,7 @@ since \( (T^n x^{(A)})_0 = x^{(A)}_n = \mathbf{1}_A(n) \) and \( (T^n x^{(A)})_{
 
 <div class="theorem">
 <strong>Theorem (Furstenberg Multiple Recurrence, 1977)</strong>: Let \( (X, \mathcal{B}, \mu, T) \) be a probability-measure-preserving system and \( B \in \mathcal{B} \) with \( \mu(B) > 0 \). Then for every \( k \geq 1 \),
+
 \[
 \liminf_{N \to \infty} \frac{1}{N} \sum_{n=1}^{N} \mu(B \cap T^{-n}B \cap T^{-2n}B \cap \cdots \cap T^{-kn}B) > 0.
 \]
@@ -739,6 +748,7 @@ The map \( T \mapsto U_T \) is a group homomorphism from \( \mathrm{Aut}(X, \mu)
 
 <div class="theorem">
 <strong>Theorem (Mean Ergodic Theorem, von Neumann, 1932)</strong>: Let \( U \) be a unitary operator on a Hilbert space \( H \). Then for every \( f \in H \),
+
 \[
 \frac{1}{N} \sum_{n=0}^{N-1} U^n f \xrightarrow{H} P f,
 \]
@@ -761,6 +771,7 @@ The Birkhoff ergodic theorem is the rigorous mathematical version of Boltzmann's
 
 <div class="theorem">
 <strong>Theorem (Birkhoff Ergodic Theorem, 1931)</strong>: Let \( (X, \mathcal{B}, \mu) \) be a probability space, \( T : X \to X \) a measure-preserving transformation, and \( f \in L^1(X, \mu) \). Then
+
 \[
 \frac{1}{N} \sum_{n=0}^{N-1} f(T^n x) \xrightarrow{N \to \infty} \tilde{f}(x) \quad \mu\text{-a.e.},
 \]
@@ -771,6 +782,7 @@ If \( T \) is ergodic, then \( \tilde{f} = \int f \, d\mu \) a.e. — the time a
 
 <div class="proof">
 <em>Proof sketch.</em> The key estimate is the <em>maximal ergodic lemma</em>: for \( f \in L^1 \), define \( f^*(x) = \sup_{N \geq 1} \frac{1}{N}\sum_{n=0}^{N-1} f(T^n x) \). Then
+
 \[
 \mu(\{ x : f^*(x) > \lambda \}) \leq \frac{1}{\lambda} \int_{\{f^* > \lambda\}} f \, d\mu.
 \]
@@ -779,6 +791,7 @@ This is the Hopf maximal inequality. Given this, the pointwise convergence follo
 
 <div class="example">
 <strong>Example (Equidistribution).</strong> For an irrational rotation \( T(x) = x + \alpha \) on \( \mathbb{T} \), the Birkhoff ergodic theorem applied to \( f = \mathbf{1}_{[a,b]} \) gives: for Lebesgue-a.e. \( x \in \mathbb{T} \),
+
 \[
 \frac{1}{N} \#\{0 \leq n < N : T^n x \in [a, b]\} \to b - a.
 \]
@@ -789,6 +802,7 @@ In fact, by Weyl's equidistribution theorem, this holds for <em>every</em> \( x 
 
 <div class="example">
 <strong>Example (Birkhoff Applied to Irrational Rotation — Unique Ergodicity).</strong> Let \( T : \mathbb{T} \to \mathbb{T} \) be the irrational rotation \( T(x) = x + \alpha \pmod{1} \) with \( \alpha \notin \mathbb{Q} \), and let \( f = \mathbf{1}_{[0, 1/2)} \) (the indicator function of the left half of the circle). We claim that for <em>every</em> \( x \in \mathbb{T} \):
+
 \[
 \frac{1}{N} \sum_{n=0}^{N-1} f(T^n x) \to \int_{\mathbb{T}} f \, d\lambda = \frac{1}{2},
 \]
@@ -806,6 +820,7 @@ The punchline: the orbit of *any* point \( x \) under the irrational rotation eq
 
 <div class="example">
 <strong>Example (Non-Ergodic System — Identity Map).</strong> Let \( T = \mathrm{id} : [0,1] \to [0,1] \) be the identity map, with Lebesgue measure \( \lambda \). Clearly \( T \) is measure-preserving: \( \lambda(T^{-1}A) = \lambda(A) \) for all Borel \( A \). Consider \( f(x) = x \). The time average is
+
 \[
 \frac{1}{N} \sum_{n=0}^{N-1} f(T^n x) = \frac{1}{N} \sum_{n=0}^{N-1} f(x) = f(x) = x,
 \]
@@ -816,6 +831,7 @@ which converges to \( x \), not to \( \int_0^1 x \, d\lambda(x) = 1/2 \). So the
 
 <div class="theorem">
 <strong>Theorem (Spectral Characterization of Ergodicity)</strong>: Let \( T : (X, \mu) \to (X, \mu) \) be a measure-preserving transformation with Koopman operator \( U_T f = f \circ T \) on \( L^2(X, \mu) \). Then:
+
 \[
 T \text{ is ergodic} \iff \text{the eigenvalue } 1 \text{ of } U_T \text{ is simple} \iff \{ f \in L^2 : U_T f = f \} = \mathbb{C} \cdot \mathbf{1}.
 \]
@@ -887,6 +903,7 @@ This is the complete classification of ergodic systems with pure point spectrum:
 
 <div class="theorem">
 <strong>Theorem (Multiple Recurrence, Furstenberg 1977)</strong>: Let \( (X, \mu) \) be a probability space, \( T \) a measure-preserving transformation, and \( A \subseteq X \) measurable with \( \mu(A) > 0 \). Then for any \( k \geq 1 \),
+
 \[
 \liminf_{N \to \infty} \frac{1}{N} \sum_{n=1}^N \mu(A \cap T^{-n}A \cap T^{-2n}A \cap \cdots \cap T^{-kn}A) > 0.
 \]
@@ -903,6 +920,7 @@ This is Furstenberg's ergodic-theoretic proof of Szemerédi's theorem (every sub
 
 <div class="definition">
 <strong>Definition (Orbit Equivalence)</strong>: Two pmp actions \( \Gamma \curvearrowright (X, \mu) \) and \( \Lambda \curvearrowright (Y, \nu) \) are <strong>orbit equivalent</strong> (OE) if there is a measure space isomorphism \( \phi : X \to Y \) (a measure-preserving bijection, defined a.e.) such that for a.e. \( x \in X \),
+
 \[
 \phi(\Gamma \cdot x) = \Lambda \cdot \phi(x).
 \]
@@ -931,6 +949,7 @@ This is a remarkable theorem: it says that for measure-preserving \( \mathbb{Z} 
 
 <div class="theorem">
 <strong>Theorem (Rokhlin Lemma)</strong>: Let \( T : (X, \mu) \to (X, \mu) \) be an aperiodic measure-preserving transformation. For any \( n \in \mathbb{N} \) and \( \varepsilon > 0 \), there exists a measurable set \( F \subseteq X \) (a <strong>Rokhlin tower base</strong>) such that \( F, TF, T^2 F, \ldots, T^{n-1}F \) are pairwise disjoint and
+
 \[
 \mu\!\left(\bigcup_{k=0}^{n-1} T^k F\right) > 1 - \varepsilon.
 \]
@@ -956,6 +975,7 @@ Two aperiodic transformations are orbit equivalent if and only if their full gro
 
 <div class="definition">
 <strong>Definition (Shannon Entropy of a Partition)</strong>: Let \( (X, \mathcal{B}, \mu) \) be a probability space and \( \xi = \{ A_1, \ldots, A_k \} \) a finite measurable partition. The <strong>Shannon entropy</strong> of \( \xi \) is
+
 \[
 H(\xi) = -\sum_{i=1}^k \mu(A_i) \log \mu(A_i),
 \]
@@ -964,6 +984,7 @@ with the convention \( 0 \log 0 = 0 \). (Logarithm to base 2 gives bits; natural
 
 <div class="definition">
 <strong>Definition (Entropy of a Transformation with Respect to a Partition)</strong>: For a pmp transformation \( T \) and finite partition \( \xi \), define the <strong>join} \( \xi \vee T^{-1}\xi \vee \cdots \vee T^{-(n-1)}\xi \) as the partition into atoms \( A_{i_0} \cap T^{-1}A_{i_1} \cap \cdots \cap T^{-(n-1)}A_{i_{n-1}} \). The entropy of \( T \) with respect to \( \xi \) is
+
 \[
 h(T, \xi) = \lim_{n \to \infty} \frac{1}{n} H\!\left(\bigvee_{k=0}^{n-1} T^{-k}\xi\right).
 \]
@@ -972,6 +993,7 @@ The limit exists by subadditivity of \( n \mapsto H(\bigvee_{k=0}^{n-1} T^{-k}\x
 
 <div class="definition">
 <strong>Definition (Kolmogorov–Sinai Entropy)</strong>: The <strong>metric entropy</strong> (or <strong>KS entropy</strong>) of \( T \) is
+
 \[
 h(T) = \sup_\xi h(T, \xi),
 \]
@@ -988,6 +1010,7 @@ This makes entropy computable: instead of taking the supremum over all partition
 
 <div class="example">
 <strong>Example (Entropy of Bernoulli Shifts).</strong> Let \( (Y, \nu) = (\{0, 1, \ldots, k-1\}, (p_0, \ldots, p_{k-1})) \) be a probability distribution on \( k \) symbols, and let \( T \) be the Bernoulli shift on \( Y^{\mathbb{Z}} \) with product measure \( \nu^{\mathbb{Z}} \). The partition \( \xi = \{ [i] : 0 \leq i \leq k-1 \} \) (where \( [i] = \{ x \in Y^{\mathbb{Z}} : x_0 = i \} \)) is a generating partition, and
+
 \[
 H\!\left(\bigvee_{j=0}^{n-1} T^{-j}\xi\right) = H(\xi \vee T^{-1}\xi \vee \cdots) = n \cdot H(\nu) = -n \sum_{i=0}^{k-1} p_i \log p_i.
 \]
@@ -1020,6 +1043,7 @@ There is a parallel notion of entropy for topological dynamical systems.
 
 <div class="definition">
 <strong>Definition (Topological Entropy, Adler–Konheim–McAndrew)</strong>: For a continuous map \( T : X \to X \) on a compact topological space, and an open cover \( \mathcal{U} \), let \( N(\mathcal{U}) \) be the minimum number of sets needed to cover \( X \) from \( \mathcal{U} \), and \( \mathcal{U}^n = \mathcal{U} \vee T^{-1}\mathcal{U} \vee \cdots \vee T^{-(n-1)}\mathcal{U} \) the join cover. Define
+
 \[
 h(T, \mathcal{U}) = \lim_{n \to \infty} \frac{1}{n} \log N(\mathcal{U}^n).
 \]
@@ -1035,6 +1059,7 @@ This definition (due to Bowen and Dinaburg) is equivalent to the open-cover defi
 
 <div class="example">
 <strong>Example (Irrational Rotation has Zero Entropy).</strong> Let \( T(x) = x + \alpha \pmod 1 \) on \( \mathbb{T} \). Fix \( \varepsilon > 0 \). Because \( T \) is an isometry (\( d(T^n x, T^n y) = d(x, y) \) for all \( n \)), two points \( x, y \) are \( (n, \varepsilon) \)-separated if and only if \( d(x, y) > \varepsilon \). So any \( (n, \varepsilon) \)-separated set is just an \( \varepsilon \)-separated set in the original metric on \( \mathbb{T} \), and \( \mathrm{sep}(n, \varepsilon, T) \leq \lceil 1/\varepsilon \rceil \) for all \( n \). Thus
+
 \[
 \limsup_{n \to \infty} \frac{1}{n} \log \mathrm{sep}(n, \varepsilon, T) \leq \lim_{n \to \infty} \frac{\log \lceil 1/\varepsilon \rceil}{n} = 0.
 \]
@@ -1043,6 +1068,7 @@ So \( h_{top}(T) = 0 \). More generally, any equicontinuous system has zero topo
 
 <div class="example">
 <strong>Example (Doubling Map has Entropy \( \log 2 \)).</strong> Let \( T(x) = 2x \pmod 1 \) on \( [0, 1) \). Consider the partition \( \xi = \{[0, 1/2), [1/2, 1)\} \) into two intervals. The \( n \)-fold join \( \bigvee_{k=0}^{n-1} T^{-k}\xi \) partitions \( [0,1) \) into \( 2^n \) intervals of length \( 1/2^n \) each, namely \( [j/2^n, (j+1)/2^n) \) for \( j = 0, 1, \ldots, 2^n - 1 \). Two points \( x, y \) in the same atom of this partition have \( |T^k x - T^k y| < 1/2^{n-k} \) for all \( k < n \), while points in different atoms are separated at some step. So \( \mathrm{sep}(n, \varepsilon, T) = 2^n \) for \( \varepsilon < 1/2 \), giving
+
 \[
 \frac{1}{n} \log \mathrm{sep}(n, \varepsilon, T) = \frac{n \log 2}{n} = \log 2.
 \]
@@ -1051,6 +1077,7 @@ Hence \( h_{top}(T) = \log 2 \). The partition \( \xi \) is generating: the \(\s
 
 <div class="example">
 <strong>Example (Full Shift on \( k \) Symbols has Entropy \( \log k \)).</strong> Let \( \sigma : A^{\mathbb{Z}} \to A^{\mathbb{Z}} \) be the shift on \( k \) symbols (\( |A| = k \)). Consider two distinct words \( w, w' \in A^n \) (distinct finite sequences of length \( n \) over \( A \)). The cylinder sets \( [w] = \{ x : x_0 x_1 \cdots x_{n-1} = w \} \) and \( [w'] \) are disjoint, and any two points \( x \in [w] \), \( y \in [w'] \) are \( (n, \varepsilon) \)-separated for \( \varepsilon \) smaller than the diameter of a cylinder (since they differ in at least one coordinate among \( 0, 1, \ldots, n-1 \), and in the product metric the separation is detected at the corresponding time step). There are exactly \( k^n \) distinct words of length \( n \), so we can pick one point from each cylinder to get a \( (n, \varepsilon) \)-separated set of cardinality \( k^n \). Thus \( \mathrm{sep}(n, \varepsilon, \sigma) \geq k^n \) and
+
 \[
 h_{top}(\sigma) \geq \limsup_{n \to \infty} \frac{1}{n} \log k^n = \log k.
 \]
@@ -1059,6 +1086,7 @@ For the upper bound: any \( (n, \varepsilon) \)-separated set has at most \( k^n
 
 <div class="theorem">
 <strong>Theorem (Variational Principle)</strong>: For a continuous map \( T : X \to X \) on a compact metrizable space,
+
 \[
 h_{top}(T) = \sup_\mu h_\mu(T),
 \]
@@ -1075,6 +1103,7 @@ For smooth dynamical systems on compact manifolds, topological entropy has a bea
 
 <div class="definition">
 <strong>Definition (Lyapunov Exponents)</strong>: Let \( T : M \to M \) be a \( C^1 \) diffeomorphism of a compact Riemannian manifold \( M \), and \( \mu \) a \( T \)-invariant ergodic probability measure. By the Oseledets multiplicative ergodic theorem, for \( \mu \)-almost every \( x \in M \), the tangent space \( T_x M \) decomposes into subspaces \( E_1(x), \ldots, E_k(x) \) (the *Oseledets subspaces*) with corresponding *Lyapunov exponents* \( \lambda_1 > \lambda_2 > \cdots > \lambda_k \) such that
+
 \[
 \lim_{n \to \infty} \frac{1}{n} \log \|DT^n_x v\| = \lambda_i \quad \text{for } v \in E_i(x) \setminus \{0\}.
 \]
@@ -1082,6 +1111,7 @@ For smooth dynamical systems on compact manifolds, topological entropy has a bea
 
 <div class="theorem">
 <strong>Theorem (Margulis–Ruelle Inequality)</strong>: For a \( C^1 \) diffeomorphism \( T : M \to M \) and any \( T \)-invariant ergodic probability measure \( \mu \):
+
 \[
 h_\mu(T) \leq \sum_{\lambda_i > 0} \lambda_i \cdot \dim E_i,
 \]
@@ -1090,6 +1120,7 @@ where the sum is over positive Lyapunov exponents (the "expanding directions"). 
 
 <div class="theorem">
 <strong>Theorem (Pesin Entropy Formula)</strong>: If \( T : M \to M \) is a \( C^2 \) diffeomorphism and \( \mu \) is an ergodic invariant measure that is absolutely continuous with respect to Lebesgue measure, then equality holds in the Ruelle inequality:
+
 \[
 h_\mu(T) = \sum_{\lambda_i > 0} \lambda_i \cdot \dim E_i.
 \]
@@ -1097,6 +1128,7 @@ h_\mu(T) = \sum_{\lambda_i > 0} \lambda_i \cdot \dim E_i.
 
 <div class="example">
 <strong>Example (Entropy of the Arnold Cat Map via Lyapunov Exponents).</strong> The Arnold cat map \( A = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix} \) on \( \mathbb{T}^2 \) has constant derivative \( DA = A \) (it is a linear map). Its eigenvalues are \( \lambda_\pm = \frac{3 \pm \sqrt{5}}{2} \). Since \( \lambda_+ = \frac{3+\sqrt{5}}{2} > 1 \) and \( \lambda_- = \frac{3-\sqrt{5}}{2} \in (0,1) \), the Lyapunov exponents are \( \log \lambda_+ > 0 \) and \( \log \lambda_- < 0 \). The Lebesgue measure on \( \mathbb{T}^2 \) is the unique measure of maximal entropy (by the variational principle and the fact that the system is ergodic with respect to Lebesgue measure). By the Pesin formula:
+
 \[
 h_{Leb}(A) = \log \lambda_+ = \log\!\left(\frac{3+\sqrt{5}}{2}\right).
 \]
@@ -1109,6 +1141,7 @@ For *algebraic* dynamical systems (group automorphisms, algebraic actions of abe
 
 <div class="theorem">
 <strong>Theorem (Entropy of Toral Automorphisms)</strong>: Let \( A \in GL(n, \mathbb{Z}) \) act on \( \mathbb{T}^n = \mathbb{R}^n/\mathbb{Z}^n \) as a toral automorphism. Then
+
 \[
 h_{top}(A) = h_{Leb}(A) = \log |\mathrm{Mahler}(p_A)| = \sum_{|\lambda_i| > 1} \log |\lambda_i|,
 \]
@@ -1153,6 +1186,7 @@ where \( d_H \) is a normalized Hamming distance.
 
 <div class="theorem">
 <strong>Theorem (Ornstein, 1970)</strong>: Two Bernoulli shifts \( (Y_1^{\mathbb{Z}}, \sigma, \nu_1^{\mathbb{Z}}) \) and \( (Y_2^{\mathbb{Z}}, \sigma, \nu_2^{\mathbb{Z}}) \) are isomorphic as measure-preserving systems if and only if they have the same entropy:
+
 \[
 h(\sigma_1) = h(\sigma_2) \iff \nu_1^{\mathbb{Z}} \text{ and } \nu_2^{\mathbb{Z}} \text{ are isomorphic}.
 \]
@@ -1259,6 +1293,7 @@ Let \( (X, \mathcal{B}, \mu) \) be a measure space.
 
 <div class="definition">
 <strong>Definition (Conditional Expectation)</strong>: Let \( (X, \mathcal{B}, \mu) \) be a probability space and \( \mathcal{A} \subseteq \mathcal{B} \) a sub-\(\sigma\)-algebra. For \( f \in L^1(X, \mu) \), the <strong>conditional expectation} \( \mathbb{E}[f | \mathcal{A}] \) is the unique \( \mathcal{A}\)-measurable function (up to a.e. equality) such that
+
 \[
 \int_A \mathbb{E}[f | \mathcal{A}] \, d\mu = \int_A f \, d\mu \quad \text{for all } A \in \mathcal{A}.
 \]
@@ -1386,6 +1421,7 @@ The ergodic theorem guarantees that for a measure-preserving transformation \( T
 
 <div class="theorem">
 <strong>Theorem (Oxtoby, 1952)</strong>: A compact topological dynamical system \( (X, T) \) is uniquely ergodic if and only if for every continuous function \( f \in C(X) \), the Birkhoff averages
+
 \[
 A_N f(x) = \frac{1}{N} \sum_{n=0}^{N-1} f(T^n x)
 \]
@@ -1404,12 +1440,14 @@ converge <em>uniformly</em> in \( x \in X \) to a constant \( c_f = \int_X f \, 
 <em>Step 1: Lebesgue measure is invariant.</em> \( \lambda(T^{-1}[a,b]) = \lambda([a - \alpha, b - \alpha]) = b - a = \lambda([a,b]) \). So \( \lambda \) is \( T \)-invariant.
 
 <em>Step 2: Uniqueness via Fourier analysis.</em> Let \( \nu \) be any \( T \)-invariant Borel probability measure. We compute its Fourier coefficients \( \hat{\nu}(k) = \int_{\mathbb{T}} e^{2\pi i k x} \, d\nu(x) \) for \( k \in \mathbb{Z} \). Invariance of \( \nu \) under \( T \) gives
+
 \[
 \hat{\nu}(k) = \int e^{2\pi i k x} \, d\nu(x) = \int e^{2\pi i k T(x)} \, d\nu(x) = \int e^{2\pi i k(x + \alpha)} \, d\nu(x) = e^{2\pi i k \alpha} \hat{\nu}(k).
 \]
 So \( \hat{\nu}(k)(1 - e^{2\pi i k \alpha}) = 0 \). Since \( \alpha \notin \mathbb{Q} \), we have \( e^{2\pi i k \alpha} \neq 1 \) for all \( k \neq 0 \), so \( \hat{\nu}(k) = 0 \) for all \( k \neq 0 \). The Fourier coefficients determine the measure: a measure on \( \mathbb{T} \) with all Fourier coefficients 0 except at \( k = 0 \) (where \( \hat{\nu}(0) = 1 \)) must be Lebesgue measure. Hence \( \nu = \lambda \). \( \square \)
 
 <em>Consequence:</em> By Oxtoby's theorem, for every continuous \( f : \mathbb{T} \to \mathbb{R} \) and every \( x \in \mathbb{T} \),
+
 \[
 \frac{1}{N}\sum_{n=0}^{N-1} f(x + n\alpha) \xrightarrow{N \to \infty} \int_0^1 f(t) \, dt
 \]
@@ -1429,6 +1467,7 @@ The existence of multiple ergodic measures shows the doubling map is not uniquel
 
 <div class="example">
 <strong>Example (Furstenberg Skew Product — Uniquely Ergodic but Not Rotation).</strong> Consider the skew product on \( \mathbb{T}^2 \):
+
 \[
 T(x, y) = (x + \alpha, y + x) \pmod{1}
 \]
@@ -1467,6 +1506,7 @@ The Furstenberg–Zimmer structure theory is the measure-theoretic analog of the
 
 <div class="theorem">
 <strong>Theorem (Furstenberg–Zimmer Structure Theorem, 1976–1978)</strong>: Every ergodic pmp \( \mathbb{Z} \)-system \( (X, \mu, T) \) has a canonical tower of factors
+
 \[
 X = X_\infty \to \cdots \to X_{\alpha+1} \to X_\alpha \to \cdots \to X_1 \to X_0 = \{*\}
 \]
@@ -1504,6 +1544,7 @@ with \( \Gamma \) the subgroup of integer entries. The nilmanifold \( G/\Gamma \
 
 <div class="theorem">
 <strong>Theorem (Host–Kra, 2005)</strong>: Let \( (X, \mu, T) \) be an ergodic pmp system and \( f_1, \ldots, f_k \in L^\infty(X, \mu) \). Then
+
 \[
 \frac{1}{N}\sum_{n=0}^{N-1} f_1(T^n x) \cdots f_k(T^{kn} x)
 \]
@@ -1540,6 +1581,7 @@ The open cover definition of topological entropy (Adler–Konheim–McAndrew, 19
 <em>Step 2: Compute the join \( \mathcal{U}^n = \mathcal{U} \vee \sigma^{-1}\mathcal{U} \vee \cdots \vee \sigma^{-(n-1)}\mathcal{U} \).</em> The sets in \( \mathcal{U} \) are the cylinders \( [i]_0 \) (determined by coordinate 0). The sets in \( \sigma^{-k}\mathcal{U} \) are \( \sigma^{-k}[i] = [i]_k \) (determined by coordinate \( k \)). The join consists of all intersections \( [i_0]_0 \cap [i_1]_1 \cap \cdots \cap [i_{n-1}]_{n-1} = [i_0 i_1 \cdots i_{n-1}] \) — the length-\( n \) cylinder sets. There are exactly \( 2^n \) such cylinders (one for each binary word of length \( n \)), and each is non-empty and open, and they cover \( X \). So \( N(\mathcal{U}^n) = 2^n \).
 
 <em>Step 3: Compute \( h(\sigma, \mathcal{U}) \).</em>
+
 \[
 h(\sigma, \mathcal{U}) = \lim_{n \to \infty} \frac{1}{n} \log N(\mathcal{U}^n) = \lim_{n \to \infty} \frac{1}{n} \log 2^n = \log 2.
 \]
@@ -1557,6 +1599,7 @@ h(\sigma, \mathcal{U}) = \lim_{n \to \infty} \frac{1}{n} \log N(\mathcal{U}^n) =
 <em>Step 3: Bounding \( N(\mathcal{U}^n) \).</em> Each set in \( \mathcal{U}^n \) is a connected arc (intersection of arcs on \( \mathbb{T} \)). The \( n \) arcs \( U_1, T^{-1}U_1, \ldots, T^{-(n-1)}U_1 \) have at most \( 2n \) endpoints total, which divide \( \mathbb{T} \) into at most \( 2n \) arcs. The atoms of \( \mathcal{U}^n \) are unions of these arcs, so \( N(\mathcal{U}^n) \leq 2n \).
 
 <em>Step 4: Compute \( h(T, \mathcal{U}) \).</em>
+
 \[
 h(T, \mathcal{U}) = \lim_{n \to \infty} \frac{1}{n} \log N(\mathcal{U}^n) \leq \lim_{n \to \infty} \frac{1}{n} \log 2n = \lim_{n \to \infty} \frac{\log 2n}{n} = 0.
 \]
@@ -1576,6 +1619,7 @@ A subshift of finite type (SFT) is defined by a finite alphabet and a set of for
 
 <div class="example">
 <strong>Example (Golden Mean Shift).</strong> The *golden mean shift* is the subshift of \( \{0,1\}^{\mathbb{Z}} \) defined by forbidding the word \( 11 \) (no two consecutive 1s). Its transition matrix is
+
 \[
 A = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}
 \]
@@ -1601,6 +1645,7 @@ The spectral theory of the Koopman operator \( U_T \) on \( L^2(X, \mu) \) is on
 <strong>Example (Complete Spectral Analysis of the Irrational Rotation).</strong> Let \( T(x) = x + \alpha \pmod{1} \) on \( \mathbb{T} = [0,1) \) with \( \alpha \notin \mathbb{Q} \), and \( \mu = \lambda \) (Lebesgue). The Koopman operator is \( U_T f(x) = f(T(x)) = f(x + \alpha) \).
 
 <em>Step 1: Identify the eigenfunctions.</em> We look for \( f \in L^2(\mathbb{T}) \) with \( U_T f = \lambda f \) for some \( \lambda \in \mathbb{C} \). The characters \( e_k(x) = e^{2\pi i k x} \) for \( k \in \mathbb{Z} \) form an orthonormal basis of \( L^2(\mathbb{T}) \). Compute:
+
 \[
 U_T e_k(x) = e_k(x + \alpha) = e^{2\pi i k(x + \alpha)} = e^{2\pi i k \alpha} e^{2\pi i kx} = e^{2\pi i k \alpha} \cdot e_k(x).
 \]
@@ -1634,9 +1679,11 @@ We say \( T \) has:
 
 <div class="theorem">
 <strong>Theorem (Spectral Hierarchy)</strong>: For ergodic pmp \( T \):
+
 \[
 \text{Lebesgue spectrum} \Rightarrow \text{absolutely continuous spectrum} \Rightarrow \text{weakly mixing} \Rightarrow \text{ergodic}.
 \]
+
 \[
 \text{pure point spectrum} + \text{ergodic} \Leftrightarrow \text{rotation on compact abelian group}.
 \]
@@ -1722,6 +1769,7 @@ The van der Corput lemma is a key analytic tool used in the proof of multiple re
 
 <div class="theorem">
 <strong>Lemma (Van der Corput)</strong>: Let \( (a_n)_{n \geq 1} \) be a bounded sequence in a Hilbert space \( H \). If for every \( h \geq 1 \),
+
 \[
 \limsup_{N \to \infty} \left\| \frac{1}{N}\sum_{n=1}^N a_{n+h} \cdot \overline{a_n} \right\|_H \to 0 \quad \text{as } h \to \infty
 \]
@@ -1734,6 +1782,7 @@ The van der Corput lemma is a key analytic tool used in the proof of multiple re
 
 <div class="example">
 <strong>Example (Applying Van der Corput to Weakly Mixing Systems).</strong> Let \( (X, \mu, T) \) be weakly mixing and \( f, g \in L^2_0 = L^2 \ominus \mathbb{C}\mathbf{1} \). We want to show
+
 \[
 \frac{1}{N}\sum_{n=0}^{N-1} \langle U_T^n f, g \rangle \to 0.
 \]
@@ -1777,6 +1826,7 @@ For a subshift \( (X, \sigma) \subseteq A^{\mathbb{Z}} \), the *complexity funct
 
 <div class="theorem">
 <strong>Theorem (Entropy via Complexity)</strong>: For a subshift \( (X, \sigma) \),
+
 \[
 h_{\mathrm{top}}(\sigma) = \lim_{n \to \infty} \frac{1}{n} \log p(n) = \inf_{n \geq 1} \frac{1}{n} \log p(n).
 \]
@@ -1859,7 +1909,9 @@ The following reference compiles the most important formulas and computational r
 
 For a pmp system \( (X, \mu, T) \) and \( f \in L^1(X, \mu) \):
 
-\[ \frac{1}{N}\sum_{n=0}^{N-1} f(T^n x) \xrightarrow{\text{a.e. and }L^1} \mathbb{E}[f \mid \mathcal{I}](x), \]
+\[
+\frac{1}{N}\sum_{n=0}^{N-1} f(T^n x) \xrightarrow{\text{a.e. and }L^1} \mathbb{E}[f \mid \mathcal{I}](x),
+\]
 
 where \( \mathcal{I} = \{A : T^{-1}A = A \text{ a.e.}\} \) is the invariant \( \sigma \)-algebra. Special cases:
 
@@ -1924,7 +1976,10 @@ where \( \mathcal{I} = \{A : T^{-1}A = A \text{ a.e.}\} \) is the invariant \( \
 **Unique ergodicity:** A topological system \( (X, T) \) with exactly one \( T \)-invariant Borel probability measure. Equivalent (by Oxtoby) to uniform convergence of Birkhoff averages for all continuous functions.
 
 **Variational principle:** For a compact metrizable dynamical system \( (X, T) \):
-\[ h_{\mathrm{top}}(T) = \sup\{ h_\mu(T) : \mu \text{ is } T\text{-invariant Borel probability}\}. \]
+
+\[
+h_{\mathrm{top}}(T) = \sup\{ h_\mu(T) : \mu \text{ is } T\text{-invariant Borel probability}\}.
+\]
 
 **Weakly mixing:** \( \frac{1}{N}\sum_{n=0}^{N-1}|\mu(T^{-n}A \cap B) - \mu(A)\mu(B)| \to 0 \) for all measurable \( A, B \). Equivalent to \( U_T \) having no eigenvalues on \( L^2_0 \) (pure continuous spectrum).
 
@@ -1940,6 +1995,7 @@ We give a self-contained proof of von Neumann's mean ergodic theorem, including 
 
 <div class="theorem">
 <strong>Theorem (von Neumann Mean Ergodic Theorem, 1932).</strong> Let \( U \) be a unitary operator on a Hilbert space \( H \). For every \( f \in H \),
+
 \[
 \frac{1}{N}\sum_{n=0}^{N-1} U^n f \to Pf \quad \text{in } H \text{ norm},
 \]
@@ -1966,6 +2022,7 @@ where \( P \) is the orthogonal projection onto \( \mathrm{Fix}(U) = \{h \in H :
 
 <div class="theorem">
 <strong>Theorem (Quantitative Poincaré Recurrence).</strong> Let \( (X, \mu, T) \) be a pmp system and \( B \in \mathcal{B} \) with \( \mu(B) > 0 \). Then:
+
 \[
 \limsup_{N \to \infty} \frac{1}{N}\sum_{n=1}^{N} \mu(B \cap T^{-n}B) \geq \mu(B)^2.
 \]
@@ -2002,6 +2059,7 @@ This means the Cesàro average of \( \mu(B \cap T^{-n}B) \) converges to a posit
 <em>Proof (ergodicity).</em> Proved in Section 16.1: the Koopman operator \( U_T \) has eigenfunctions \( e_k(x) = e^{2\pi ikx} \) with eigenvalues \( e^{2\pi ik\alpha} \), all distinct for \( k \neq 0 \), so the eigenvalue 1 has multiplicity 1.
 
 <em>Proof (not weakly mixing).</em> The function \( f = e_1(x) = e^{2\pi ix} \in L^2_0 \) (zero integral) satisfies \( U_T e_1 = e^{2\pi i\alpha} e_1 \). So \( U_T^n e_1 = e^{2\pi i n\alpha} e_1 \), which is an eigenfunction with eigenvalue \( \lambda = e^{2\pi i\alpha} \). Since \( \lambda \in \mathbb{T} \) and \( |\lambda^n| = 1 \) for all \( n \), the sequence \( (U_T^n e_1)_{n \geq 1} \) never converges weakly to 0 in \( L^2 \). Specifically:
+
 \[
 \langle U_T^n e_1, e_1 \rangle = e^{2\pi in\alpha},
 \]
@@ -2027,7 +2085,10 @@ which is impossible. Therefore \( T \) is not weakly mixing.
 <em>Step 3: \( T \) is weakly mixing.</em> Since \( U_T|_{L^2_0} \) has no eigenvalues, \( T \) is weakly mixing (by the spectral characterization).
 
 <em>Step 4: \( T \) is strongly mixing.</em> For any two characters \( e_k, e_j \in L^2 \):
-\[ \langle U_T^n e_k, e_j \rangle = \langle e_{2^n k}, e_j \rangle = \begin{cases} 1 & \text{if } 2^n k = j \\ 0 & \text{otherwise}\end{cases}. \]
+
+\[
+\langle U_T^n e_k, e_j \rangle = \langle e_{2^n k}, e_j \rangle = \begin{cases} 1 & \text{if } 2^n k = j \\ 0 & \text{otherwise}\end{cases}.
+\]
 For \( k \neq 0 \) and any fixed \( j \), \( 2^n k = j \) can hold for at most one value of \( n \) (since \( 2^n k \) is injective in \( n \)). So \( \langle U_T^n e_k, e_j \rangle = 0 \) for all but at most one \( n \), hence \( \langle U_T^n e_k, e_j \rangle \to 0 \) as \( n \to \infty \). By linearity and density of trigonometric polynomials, \( \langle U_T^n f, g \rangle \to 0 \) for all \( f, g \in L^2_0 \), confirming strong mixing.
 </div>
 

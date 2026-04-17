@@ -41,6 +41,7 @@ The practical consequence: throughout this course, definitions and theorems will
 
 <div class="definition">
 <strong>Affine combination.</strong> A point \(x \in \mathbb{R}^n\) is an <em>affine combination</em> of points \(x_1, \ldots, x_k \in \mathbb{R}^n\) if there exist real scalars \(\lambda_1, \ldots, \lambda_k\) satisfying \(\sum_{i=1}^k \lambda_i = 1\) such that
+
 \[
 x = \sum_{i=1}^k \lambda_i x_i.
 \]
@@ -206,6 +207,7 @@ The extreme points are the "irreducible" building blocks of a convex set — the
 
 <div class="theorem">
 <strong>Krein–Milman Theorem (statement).</strong> Every nonempty compact convex set \(C \subseteq \mathbb{R}^n\) is the closed convex hull of its extreme points:
+
 \[
 C = \overline{\mathrm{conv}}(\mathrm{ext}(C)).
 \]
@@ -245,6 +247,7 @@ This characterization is important for the simplex method: the vertices of the f
 
 <div class="definition">
 <strong>Polyhedron and polytope.</strong> A <em>polyhedron</em> in \(\mathbb{R}^n\) is the intersection of finitely many closed half-spaces:
+
 \[
 P = \{x \in \mathbb{R}^n : Ax \leq b\}
 \]
@@ -259,6 +262,7 @@ The equivalence between the "vertex description" \(P = \mathrm{conv}(V)\) and th
 
 <div class="definition">
 <strong>Minkowski sum.</strong> For sets \(A, B \subseteq \mathbb{R}^n\), their <em>Minkowski sum</em> is
+
 \[
 A + B = \{a + b : a \in A, b \in B\}.
 \]
@@ -349,6 +353,7 @@ Radon's theorem is the foundation of Helly's theorem. It can also be stated as: 
 
 <div class="theorem">
 <strong>Helly's Theorem.</strong> Let \(C_1, C_2, \ldots, C_m\) be a finite collection of convex sets in \(\mathbb{R}^n\) with \(m > n\). If every \(n+1\) of these sets have a common point, then all \(m\) sets have a common point:
+
 \[
 \bigcap_{i=1}^m C_i \neq \emptyset.
 \]
@@ -443,6 +448,7 @@ The face structure of a polytope is extremely rigid: every face of a face of \(P
 
 <div class="theorem">
 <strong>Euler's Formula.</strong> For any convex polytope \(P\) in \(\mathbb{R}^3\) (equivalently any convex polyhedron homeomorphic to the sphere \(\mathbb{S}^2\)):
+
 \[
 V - E + F = 2,
 \]
@@ -482,6 +488,7 @@ The classical Gauss–Bonnet theorem for smooth surfaces has a discrete analogue
 
 <div class="definition">
 <strong>Angle defect.</strong> At a vertex \(v\) of a 3-dimensional convex polytope, the <em>angle defect</em> \(\delta(v)\) is
+
 \[
 \delta(v) = 2\pi - \sum_{\text{faces } F \ni v} \angle_F(v),
 \]
@@ -490,6 +497,7 @@ where \(\angle_F(v)\) is the interior angle of the face \(F\) at vertex \(v\).
 
 <div class="theorem">
 <strong>Descartes–Euler (Polyhedral Gauss–Bonnet).</strong> For any convex polytope \(P\) in \(\mathbb{R}^3\),
+
 \[
 \sum_{v \in \mathrm{vert}(P)} \delta(v) = 4\pi.
 \]
@@ -521,6 +529,7 @@ The combinatorial structure of a polytope is encoded in its normal fan — a par
 
 <div class="definition">
 <strong>Normal cone and normal fan.</strong> For a polytope \(P\) and a face \(F \leq P\), the <em>normal cone</em> of \(F\) is:
+
 \[
 N_P(F) = \{u \in \mathbb{R}^n : \langle u, x\rangle = h_P(u) \text{ for all } x \in F\} = \{u : F \subseteq \arg\max_{P} \langle u, \cdot\rangle\}.
 \]
@@ -547,6 +556,7 @@ A central question in polytope theory: given facet normals and areas, does a con
 
 <div class="theorem">
 <strong>Minkowski's Existence and Uniqueness Theorem.</strong> Let \(u_1, \ldots, u_m \in \mathbb{S}^{n-1}\) be unit vectors not all contained in any open hemisphere, and let \(\alpha_1, \ldots, \alpha_m > 0\) be positive numbers satisfying the balance condition
+
 \[
 \sum_{i=1}^m \alpha_i u_i = 0.
 \]
@@ -579,6 +589,7 @@ Let \(K \subset \mathbb{R}^n\) be a convex body (compact convex set with nonempt
 
 <div class="theorem">
 <strong>Steiner Formula.</strong> For a convex body \(K \subseteq \mathbb{R}^n\) and \(\varepsilon \geq 0\):
+
 \[
 \mathrm{Vol}_n(K + \varepsilon \mathbb{B}^n) = \sum_{k=0}^n \binom{n}{k} W_k(K) \varepsilon^k,
 \]
@@ -623,6 +634,7 @@ Mixed volumes thus form a multilinear algebra for convex bodies: they assign to 
 
 <div class="definition">
 <strong>Mixed volume.</strong> The <em>mixed volume</em> \(V(K_1, \ldots, K_n)\) of \(n\) convex bodies is the unique symmetric multilinear coefficient in the polynomial expansion:
+
 \[
 \mathrm{Vol}_n(t_1 K_1 + \cdots + t_m K_m) = \sum_{i_1, \ldots, i_n = 1}^m t_{i_1} \cdots t_{i_n} V(K_{i_1}, \ldots, K_{i_n}).
 \]
@@ -654,6 +666,7 @@ Here \(V(K_1, K_1) = \mathrm{Area}(K_1) = 4\), \(V(K_2, K_2) = \mathrm{Area}(\ma
 
 <div class="theorem">
 <strong>Alexandrov–Fenchel Inequalities.</strong> For convex bodies \(K_1, \ldots, K_n\) in \(\mathbb{R}^n\),
+
 \[
 V(K_1, K_2, K_3, \ldots, K_n)^2 \geq V(K_1, K_1, K_3, \ldots, K_n) \cdot V(K_2, K_2, K_3, \ldots, K_n).
 \]
@@ -671,6 +684,7 @@ For polytopes, mixed volumes have an explicit combinatorial formula. Let \(P\) a
 
 <div class="example">
 <strong>Mixed volumes in the plane (\(n=2\)).</strong> For two convex polygons \(P\) and \(Q\) in \(\mathbb{R}^2\):
+
 \[
 \mathrm{Area}(tP + sQ) = t^2 \mathrm{Area}(P) + 2ts \cdot V(P,Q) + s^2 \mathrm{Area}(Q).
 \]
@@ -688,6 +702,7 @@ For \(P\) a rectangle \([0,a] \times [0,b]\) and \(Q = \mathbb{B}^2\): the recta
 
 <div class="example">
 <strong>Mixed volumes in \(\mathbb{R}^3\): the Steiner formula revisited.</strong> For a convex body \(K\) in \(\mathbb{R}^3\) and the unit ball \(B = \mathbb{B}^3\):
+
 \[
 \mathrm{Vol}_3(K + \varepsilon B) = V(K,K,K) + 3\varepsilon V(K,K,B) + 3\varepsilon^2 V(K,B,B) + \varepsilon^3 V(B,B,B).
 \]
@@ -707,6 +722,7 @@ A symmetrization is a procedure that replaces a convex body by a more symmetric 
 
 <div class="definition">
 <strong>Steiner symmetrization.</strong> Given a convex body \(K \subset \mathbb{R}^n\) and a unit vector \(u\), the <em>Steiner symmetrization</em> \(S_u(K)\) of \(K\) with respect to the hyperplane \(u^\perp\) is obtained by replacing each chord of \(K\) parallel to \(u\) with the chord of the same length centered on \(u^\perp\). Formally, for each \(x \in u^\perp\),
+
 \[
 S_u(K) \cap (x + \mathbb{R}u) = \text{segment centered at } x \text{ of length } \ell(x),
 \]
@@ -758,6 +774,7 @@ The Brunn–Minkowski inequality is the central inequality of convex geometry. I
 
 <div class="theorem">
 <strong>Brunn–Minkowski Inequality.</strong> For nonempty compact sets \(A, B \subseteq \mathbb{R}^n\):
+
 \[
 \mathrm{Vol}_n(A + B)^{1/n} \geq \mathrm{Vol}_n(A)^{1/n} + \mathrm{Vol}_n(B)^{1/n}.
 \]
@@ -781,6 +798,7 @@ We sketch the classical proof via the one-dimensional Brunn–Minkowski inequali
 <em>Step 1.</em> In dimension 1, for non-empty intervals \(A = \left[a_1, a_2\right]\) and \(B = \left[b_1, b_2\right]\), the Minkowski sum is \(A + B = \left[a_1 + b_1, a_2 + b_2\right]\), so \(|A + B| = |A| + |B|\), confirming equality.
 
 <em>Step 2.</em> For boxes (rectangular parallelepipeds) \(A\) and \(B\) in \(\mathbb{R}^n\), write \(A = \prod_{i=1}^n \left[0, a_i\right]\) and \(B = \prod_{i=1}^n \left[0, b_i\right]\). Then
+
 \[
 \mathrm{Vol}(A + B) = \prod_i (a_i + b_i).
 \]
@@ -814,6 +832,7 @@ Applying the inductive hypothesis (dimension \(n-1\) applied to the cross-sectio
 
 <div class="example">
 <strong>Worked Example: Brunn–Minkowski for a triangle and a square.</strong> Let \(A\) be the unit equilateral triangle in \(\mathbb{R}^2\) (area \(\frac{\sqrt{3}}{4}\)) and \(B = [-0.5, 0.5]^2\) be the unit square (area 1). By Brunn–Minkowski:
+
 \[
 \mathrm{Area}(A + B)^{1/2} \geq \mathrm{Area}(A)^{1/2} + \mathrm{Area}(B)^{1/2} = \left(\frac{\sqrt{3}}{4}\right)^{1/2} + 1 \approx 0.659 + 1 = 1.659.
 \]
@@ -822,6 +841,7 @@ So \(\mathrm{Area}(A + B) \geq 2.75\). The Minkowski sum \(A + B\) is a hexagon 
 
 <div class="remark">
 <strong>Connections to entropy.</strong> The Brunn–Minkowski inequality has an information-theoretic analogue: Shannon's entropy power inequality states that for independent random vectors \(X\) and \(Y\) in \(\mathbb{R}^n\),
+
 \[
 e^{2h(X+Y)/n} \geq e^{2h(X)/n} + e^{2h(Y)/n},
 \]
@@ -834,6 +854,7 @@ The equality conditions in the Brunn–Minkowski inequality are as important as 
 
 <div class="theorem">
 <strong>Equality in Brunn–Minkowski.</strong> For compact sets \(A, B \subset \mathbb{R}^n\) with \(\mathrm{Vol}(A), \mathrm{Vol}(B) > 0\):
+
 \[
 \mathrm{Vol}(A+B)^{1/n} = \mathrm{Vol}(A)^{1/n} + \mathrm{Vol}(B)^{1/n}
 \]
@@ -862,6 +883,7 @@ Now take \(A = \{0\} \cup \{1\} = \{0,1\}\) (two points, a non-convex set) and \
 
 <div class="theorem">
 <strong>Isoperimetric Inequality.</strong> Among all compact sets in \(\mathbb{R}^n\) with given volume, the ball has the least surface area. Equivalently, if \(K \subset \mathbb{R}^n\) is a convex body and \(\mathbb{B}^n\) is the unit ball with \(\omega_n = \mathrm{Vol}_n(\mathbb{B}^n)\) and \(\sigma_{n-1} = \mathrm{Vol}_{n-1}(\partial \mathbb{B}^n) = n \omega_n\), then:
+
 \[
 \frac{\mathrm{Vol}_{n-1}(\partial K)^n}{\mathrm{Vol}_n(K)^{n-1}} \geq \frac{\sigma_{n-1}^n}{\omega_n^{n-1}} = n^n \omega_n.
 \]
@@ -909,6 +931,7 @@ Equality holds iff equality holds in Brunn–Minkowski, which requires \(K\) and
 
 <div class="theorem">
 <strong>Isodiametric Inequality.</strong> Among all compact sets in \(\mathbb{R}^n\) with diameter at most \(d\), the ball of diameter \(d\) has the greatest volume:
+
 \[
 \mathrm{Vol}_n(K) \leq \omega_n \left(\frac{\mathrm{diam}(K)}{2}\right)^n.
 \]
@@ -940,6 +963,7 @@ This is the content of Prékopa's theorem (Section 5.2). Its significance: the G
 
 <div class="definition">
 <strong>Log-concave function.</strong> A non-negative measurable function \(f : \mathbb{R}^n \to \left[0, \infty\right)\) is <em>log-concave</em> if for all \(x, y\) and \(t \in \left[0, 1\right]\):
+
 \[
 f((1-t)x + ty) \geq f(x)^{1-t} f(y)^t.
 \]
@@ -969,6 +993,7 @@ The class of log-concave measures is the natural class for proving concentration
 
 <div class="theorem">
 <strong>Prékopa's Theorem.</strong> If \(f : \mathbb{R}^{n+m} \to \left[0, \infty\right)\) is log-concave, then its marginal
+
 \[
 g(x) = \int_{\mathbb{R}^m} f(x, y) \, dy
 \]
@@ -985,6 +1010,7 @@ The Prékopa–Leindler inequality is a functional version of the Brunn–Minkow
 
 <div class="theorem">
 <strong>Prékopa–Leindler Inequality.</strong> Let \(t \in (0, 1)\) and let \(f, g, h : \mathbb{R}^n \to \left[0, \infty\right)\) be measurable functions satisfying
+
 \[
 h((1-t)x + ty) \geq f(x)^{1-t} g(y)^t \quad \text{for all } x, y \in \mathbb{R}^n.
 \]
@@ -1003,6 +1029,7 @@ Then:
 We prove the one-dimensional case; the general case follows by induction using Fubini.
 
 <em>One-dimensional case.</em> For \(n = 1\), let \(F(s) = |\{x : f(x) > s\}|\) and \(G(s) = |\{y : g(y) > s\}|\) denote the distribution functions (here \(|\cdot|\) is Lebesgue measure). For any level \(s\), set \(A_s = \{x : f(x) > s\}\) and \(B_s = \{y : g(y) > s\}\). By hypothesis on \(h\), if \(f(x) > s\) and \(g(y) > s\), then \(h((1-t)x + ty) > s\) (since \(f(x)^{1-t} g(y)^t > s\)). Thus \((1-t)A_s + tB_s \subseteq \{z : h(z) > s\}\), and the one-dimensional Brunn–Minkowski inequality gives:
+
 \[
 |\{z : h(z) > s\}| \geq (1-t)|A_s| + t|B_s| \geq (1-t)F(s) + tG(s).
 \]
@@ -1085,6 +1112,7 @@ The higher-dimensional setting introduces new phenomena not present in 1D: conve
 
 <div class="definition">
 <strong>Convex function.</strong> A function \(f : C \to \mathbb{R}\) defined on a convex set \(C \subseteq \mathbb{R}^n\) is <em>convex</em> if for all \(x, y \in C\) and \(t \in \left[0, 1\right]\):
+
 \[
 f((1-t)x + ty) \leq (1-t)f(x) + tf(y).
 \]
@@ -1093,6 +1121,7 @@ The function is <em>strictly convex</em> if the inequality is strict whenever \(
 
 <div class="definition">
 <strong>Epigraph characterization.</strong> The <em>epigraph</em> of \(f : C \to \mathbb{R} \cup \{+\infty\}\) is
+
 \[
 \mathrm{epi}(f) = \{(x, r) \in C \times \mathbb{R} : f(x) \leq r\}.
 \]
@@ -1153,6 +1182,7 @@ The following lists all fundamental operations that preserve convexity of functi
 
 <div class="theorem">
 <strong>Jensen's Inequality.</strong> Let \(f : C \to \mathbb{R}\) be convex and \(X\) a random vector taking values in \(C\) with finite expectation. Then:
+
 \[
 f(\mathbb{E}\left[X\right]) \leq \mathbb{E}\left[f(X)\right].
 \]
@@ -1177,6 +1207,7 @@ Jensen's inequality has profound applications in probability theory (e.g., the c
 
 <div class="example">
 <strong>Worked Example: Jensen and information theory.</strong> Fix a discrete probability distribution \(p = (p_1, \ldots, p_n)\) with \(p_i > 0\) and \(\sum p_i = 1\). The Shannon entropy is \(H(p) = -\sum_i p_i \log p_i\). Applying Jensen's inequality to the concave function \(f(x) = -x \log x\) (or equivalently to \(\log x\) with weights \(p_i\)):
+
 \[
 H(p) = \sum_i p_i \cdot (-\log p_i) = \mathbb{E}[-\log p_i] \leq -\log \mathbb{E}[p_i] = -\log\!\left(\frac{1}{n} \cdot \sum_i p_i \cdot \frac{1}{p_i} \cdot p_i\right),
 \]
@@ -1190,6 +1221,7 @@ with equality iff all \(p_i = 1/n\) (the uniform distribution). This gives the m
 
 <div class="example">
 <strong>Worked Example: AM-GM via Jensen.</strong> The function \(f(x) = -\log x\) is strictly convex on \((0,\infty)\) (since \(f''(x) = 1/x^2 > 0\)). By Jensen applied to the equal-weight discrete distribution on \(\{x_1, \ldots, x_n\}\):
+
 \[
 -\log\!\left(\frac{x_1 + \cdots + x_n}{n}\right) = f\!\left(\frac{1}{n}\sum x_i\right) \leq \frac{1}{n}\sum f(x_i) = \frac{1}{n}\sum(-\log x_i) = -\log(x_1 \cdots x_n)^{1/n}.
 \]
@@ -1198,6 +1230,7 @@ Negating: \(\log\!\left(\frac{x_1 + \cdots + x_n}{n}\right) \geq \log(x_1 \cdots
 
 <div class="example">
 <strong>Worked Example: Jensen and the exponential — \(e^{\mathbb{E}[X]} \leq \mathbb{E}[e^X]\).</strong> The function \(f(x) = e^x\) is convex (its second derivative is \(e^x > 0\)). By Jensen:
+
 \[
 e^{\mathbb{E}[X]} = e^{f^{-1}(\mathbb{E}[e^X])} \leq \mathbb{E}[e^X],
 \]
@@ -1212,6 +1245,7 @@ For convex functions that need not be differentiable, the subdifferential genera
 
 <div class="definition">
 <strong>Subgradient and subdifferential.</strong> Let \(f : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}\) be convex. A vector \(v \in \mathbb{R}^n\) is a <em>subgradient</em> of \(f\) at a point \(x_0\) in the domain of \(f\) if
+
 \[
 f(x) \geq f(x_0) + \langle v, x - x_0 \rangle \quad \text{for all } x \in \mathbb{R}^n.
 \]
@@ -1306,6 +1340,7 @@ The positive semidefiniteness of the Hessian is often the quickest way to verify
 
 <div class="example">
 <strong>Worked Example: Convexity of the log-sum-exp.</strong> Let \(f(x) = \log(\sum_{i=1}^n e^{x_i})\). We compute the Hessian. Let \(p_i = e^{x_i} / \sum_j e^{x_j}\) (the softmax). Then:
+
 \[
 \frac{\partial f}{\partial x_i} = p_i, \qquad \frac{\partial^2 f}{\partial x_i \partial x_j} = p_i(\delta_{ij} - p_j).
 \]
@@ -1334,6 +1369,7 @@ This is exactly the classical Legendre transform from mechanics and thermodynami
 
 <div class="example">
 <strong>Legendre transform of \(f(x) = x^p/p\).</strong> For \(p > 1\) and \(x \geq 0\):
+
 \[
 f^*(y) = \sup_{x \geq 0}(xy - x^p/p).
 \]
@@ -1347,6 +1383,7 @@ So \((x^p/p)^* = y^q/q\). This is the Hölder duality: the conjugate of \(x^p/p\
 
 <div class="example">
 <strong>Legendre transform and the entropy function.</strong> Consider \(f(p) = \sum_{i=1}^n p_i \log p_i\) on the probability simplex \(\Delta = \{p : p_i \geq 0, \sum p_i = 1\}\). This is the negative entropy (or KL divergence from the uniform measure). Its Legendre conjugate on \(\mathbb{R}^n\):
+
 \[
 f^*(\theta) = \sup_{p \in \Delta} \left(\sum_i \theta_i p_i - \sum_i p_i \log p_i\right) = \log \sum_i e^{\theta_i}.
 \]
@@ -1398,6 +1435,7 @@ One of the most important applications of the symmetric decreasing rearrangement
 
 <div class="theorem">
 <strong>Rearrangement decreases the Dirichlet energy.</strong> For a non-negative function \(f \in H^1(\mathbb{R}^n)\) (Sobolev space with one derivative in \(L^2\)):
+
 \[
 \int |\nabla f^*(x)|^2\,dx \leq \int |\nabla f(x)|^2\,dx.
 \]
@@ -1414,6 +1452,7 @@ This pattern — reduce to a symmetric case by rearrangement, then solve — app
 
 <div class="theorem">
 <strong>Hardy–Littlewood Rearrangement Inequality.</strong> For non-negative measurable functions \(f\) and \(g\) on \(\mathbb{R}^n\) vanishing at infinity:
+
 \[
 \int_{\mathbb{R}^n} f(x) g(x) \, dx \leq \int_{\mathbb{R}^n} f^*(x) g^*(x) \, dx.
 \]
@@ -1435,6 +1474,7 @@ For each \(s, t > 0\), the sets \(A_s = \{f > s\}\) and \(B_t = \{g > t\}\) are 
 
 <div class="example">
 <strong>Application: The Riesz rearrangement inequality.</strong> For non-negative functions \(f, g, h\) on \(\mathbb{R}^n\):
+
 \[
 \int \int f(x) g(x-y) h(y) \, dx\, dy \leq \int \int f^*(x) g^*(x-y) h^*(y)\, dx\, dy.
 \]
@@ -1445,6 +1485,7 @@ This says: the convolution integral is maximized when all three functions are re
 
 <div class="definition">
 <strong>Majorization.</strong> For vectors \(x, y \in \mathbb{R}^n\), write \(x_{[1]} \geq x_{[2]} \geq \cdots \geq x_{[n]}\) for the decreasing rearrangement of coordinates. We say \(x\) is <em>majorized</em> by \(y\) (written \(x \prec y\)) if
+
 \[
 \sum_{i=1}^k x_{[i]} \leq \sum_{i=1}^k y_{[i]} \quad \text{for all } k = 1, \ldots, n-1, \quad \text{and} \quad \sum_{i=1}^n x_i = \sum_{i=1}^n y_i.
 \]
@@ -1513,6 +1554,7 @@ By Hardy–Littlewood–Pólya, \(p = Dq\) for some doubly stochastic matrix \(D
 
 <div class="theorem">
 <strong>Krein–Milman Theorem.</strong> Let \(V\) be a locally convex topological vector space and \(C \subseteq V\) a nonempty compact convex set. Then \(C\) is the closed convex hull of its extreme points:
+
 \[
 C = \overline{\mathrm{conv}}(\mathrm{ext}(C)).
 \]
@@ -1545,6 +1587,7 @@ The proximal operator is the key tool bridging convex analysis and algorithms. I
 
 <div class="definition">
 <strong>Proximal operator.</strong> For a convex function \(f : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}\) and parameter \(\lambda > 0\), the <em>proximal operator</em> is:
+
 \[
 \mathrm{prox}_{\lambda f}(x) = \arg\min_{z} \left(f(z) + \frac{1}{2\lambda}\|z - x\|^2\right).
 \]
@@ -1568,6 +1611,7 @@ Moreover, \(M_\lambda f(x) \nearrow f(x)\) as \(\lambda \searrow 0\) (the Moreau
 
 <div class="example">
 <strong>Proximal operator of the \(\ell^1\) norm: soft thresholding.</strong> For \(f(x) = \|x\|_1 = \sum_i |x_i|\):
+
 \[
 \mathrm{prox}_{\lambda f}(x) = S_\lambda(x),
 \]
@@ -1578,6 +1622,7 @@ Soft thresholding is the core operation in the LASSO, compressed sensing, and wa
 
 <div class="example">
 <strong>Moreau identity.</strong> For any convex function \(f\) and its Fenchel conjugate \(f^*\):
+
 \[
 \mathrm{prox}_{\lambda f}(x) + \lambda \mathrm{prox}_{f^*/\lambda}(x/\lambda) = x.
 \]
@@ -1590,6 +1635,7 @@ Strong convexity is a quantitative strengthening of convexity that gives faster 
 
 <div class="definition">
 <strong>Strong convexity.</strong> A function \(f : \mathbb{R}^n \to \mathbb{R}\) is <em>\(\mu\)-strongly convex</em> (for \(\mu > 0\)) if \(f(x) - \frac{\mu}{2}\|x\|^2\) is convex, equivalently if for all \(x, y\) and \(t \in [0,1]\):
+
 \[
 f((1-t)x + ty) \leq (1-t)f(x) + tf(y) - \frac{\mu}{2}t(1-t)\|x-y\|^2.
 \]
@@ -1612,6 +1658,7 @@ Duality is a recurring theme in mathematics: a geometric object has a "dual" obj
 
 <div class="definition">
 <strong>Polar set.</strong> For a set \(K \subseteq \mathbb{R}^n\) containing the origin, the <em>polar set</em> (or polar body) is
+
 \[
 K^\circ = \{y \in \mathbb{R}^n : \langle x, y \rangle \leq 1 \text{ for all } x \in K\}.
 \]
@@ -1654,6 +1701,7 @@ In \(\mathbb{R}^2\): the square \([-1,1]^2\) (4 vertices, 4 edges) is polar dual
 
 <div class="definition">
 <strong>Support function.</strong> For a nonempty compact convex set \(K \subset \mathbb{R}^n\), the <em>support function</em> is
+
 \[
 h_K(u) = \max_{x \in K} \langle u, x \rangle, \quad u \in \mathbb{R}^n.
 \]
@@ -1697,6 +1745,7 @@ This is a piecewise linear function. For \(u = (1, 0, \ldots, 0)\): \(h = 1\) (a
 
 <div class="theorem">
 <strong>Minkowski sum ↔ sum of support functions.</strong> For convex bodies \(K\) and \(L\):
+
 \[
 h_{K+L}(u) = h_K(u) + h_L(u), \quad h_{\lambda K}(u) = \lambda h_K(u) \text{ for } \lambda \geq 0.
 \]
@@ -1733,6 +1782,7 @@ We now prove the bipolar theorem and work through additional examples of polar d
 
 <div class="theorem">
 <strong>Bipolar Theorem.</strong> Let \(K \subset \mathbb{R}^n\) be a closed convex set containing the origin. Then:
+
 \[
 (K^\circ)^\circ = K.
 \]
@@ -1770,6 +1820,7 @@ This inversive relationship is central to John's theorem: the John ellipsoid of 
 
 <div class="definition">
 <strong>Convex conjugate (Legendre–Fenchel transform).</strong> For a function \(f : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}\), the <em>convex conjugate</em> (or <em>Fenchel conjugate</em>) is
+
 \[
 f^*(y) = \sup_{x \in \mathbb{R}^n} \left(\langle x, y \rangle - f(x)\right), \quad y \in \mathbb{R}^n.
 \]
@@ -1793,6 +1844,7 @@ f^*(y) = \sup_{x \in \mathbb{R}^n} \left(\langle x, y \rangle - f(x)\right), \qu
 
 <div class="remark">
 <strong>The table of dual pairs.</strong> The following standard correspondences are worth memorizing:
+
 \[
 \begin{array}{lll}
 \hline
@@ -1844,6 +1896,7 @@ We collect several more computations of the Legendre transform that are importan
 
 <div class="example">
 <strong>Conjugate of the log-sum-exp function.</strong> Let \(f(x) = \log\sum_{i=1}^n e^{x_i}\) (the log-sum-exp or soft maximum). We computed in Section 6.4 that this is convex. Its conjugate:
+
 \[
 f^*(y) = \sup_x \left(\langle x, y\rangle - \log\sum_i e^{x_i}\right).
 \]
@@ -1854,6 +1907,7 @@ Summary: \(\text{(log-sum-exp)}^* = \text{(negative entropy on simplex)}\). This
 
 <div class="example">
 <strong>Conjugate of the indicator of a polytope.</strong> Let \(P = \{x : Ax \leq b\}\) be a polytope and \(f = \mathbf{1}_P\) (zero on \(P\), \(+\infty\) off). Then:
+
 \[
 f^*(y) = h_P(y) = \sup_{x \in P} \langle x, y\rangle.
 \]
@@ -1864,6 +1918,7 @@ For a polytope \(P = \{x : Ax \leq b\}\), the support function can be computed b
 
 <div class="example">
 <strong>Conjugate of a sum.</strong> Suppose \(f(x) = g(x) + h(x)\) where \(g\) and \(h\) are convex. Then:
+
 \[
 f^*(y) = \sup_x (\langle y,x\rangle - g(x) - h(x)).
 \]
@@ -1881,6 +1936,7 @@ This formula is dual to the fact that the support function of \(K + L\) is \(h_K
 
 <div class="theorem">
 <strong>Fenchel Duality Theorem.</strong> Let \(f : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}\) and \(g : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}\) be convex functions with \(\mathrm{dom}(f) \cap \mathrm{dom}(g) \neq \emptyset\) (and a suitable constraint qualification). Then:
+
 \[
 \inf_{x \in \mathbb{R}^n} \left(f(x) + g(x)\right) = \sup_{y \in \mathbb{R}^n} \left(-f^*(-y) - g^*(y)\right),
 \]
@@ -1889,6 +1945,7 @@ and the supremum on the right is attained.
 
 <div class="remark">
 <strong>Fenchel duality and LP duality.</strong> When \(f = \mathbf{1}_P\) (indicator of a polyhedron \(P = \{Ax \leq b\}\)) and \(g(x) = c^T x\) (a linear function), the Fenchel dual reduces to the LP dual. The primal problem \(\min_{Ax \leq b} c^T x\) and its dual are obtained by computing \(f^*\) and \(g^*\):
+
 \[
 f^*(y) = b^T \lambda,\, g^*(y) = \mathbf{1}_{c}(y),
 \]
@@ -1897,6 +1954,7 @@ and the Fenchel duality theorem gives \(\min_P c^T x = \max_{A^T \lambda = c,\, 
 
 <div class="theorem">
 <strong>Young's Inequality.</strong> For conjugate exponents \(p, q > 1\) with \(1/p + 1/q = 1\) and for \(a, b \geq 0\):
+
 \[
 ab \leq \frac{a^p}{p} + \frac{b^q}{q}.
 \]
@@ -1908,6 +1966,7 @@ This follows immediately from the Fenchel inequality applied to \(f(x) = x^p/p\)
 
 <div class="example">
 <strong>Worked Example: Young's inequality implies Hölder's inequality.</strong> For functions \(f \in L^p\) and \(g \in L^q\) (with \(1/p + 1/q = 1\)):
+
 \[
 \int |f(x) g(x)|\, dx \leq \int \frac{|f(x)|^p}{p} + \frac{|g(x)|^q}{q}\, dx = \frac{\|f\|_p^p}{p} + \frac{\|g\|_q^q}{q}.
 \]
@@ -1935,6 +1994,7 @@ This is the practical implementation of the abstract duality theory: the "coordi
 
 <div class="example">
 <strong>Primal-dual algorithm for total variation denoising.</strong> The total variation denoising problem is: given noisy image \(b\), find:
+
 \[
 \min_x \frac{1}{2}\|x - b\|_2^2 + \lambda \|\nabla x\|_1,
 \]
@@ -1952,6 +2012,7 @@ The Legendre–Fenchel duality framework unifies many inequalities. We record tw
 
 <div class="theorem">
 <strong>Dual representation of norms.</strong> For any norm \(\|\cdot\|\) on \(\mathbb{R}^n\), the dual norm is defined by
+
 \[
 \|y\|_* = \sup_{\|x\| \leq 1} \langle x, y \rangle.
 \]
@@ -1960,6 +2021,7 @@ The original norm is recovered as the dual of the dual: \(\|x\| = \sup_{\|y\|_* 
 
 <div class="example">
 <strong>Worked Example: The \(\ell^1\)–\(\ell^\infty\) duality.</strong> The unit ball of \(\|\cdot\|_1\) is the cross-polytope \(\mathcal{C}_n\). Its polar is the hypercube \([-1,1]^n\), which is the unit ball of \(\|\cdot\|_\infty\). So \((\ell^1)^* = \ell^\infty\) — the dual norm of \(\ell^1\) is \(\ell^\infty\). Concretely, \(\|y\|_{(\ell^1)^*} = \sup_{\|x\|_1 \leq 1} \sum_i x_i y_i = \max_i |y_i| = \|y\|_\infty\). This is the Cauchy–Schwarz inequality for \(\ell^1\)/\(\ell^\infty\) pairs:
+
 \[
 |\langle x, y\rangle| = \left|\sum_i x_i y_i\right| \leq \sum_i |x_i| \cdot \max_j |y_j| = \|x\|_1 \|y\|_\infty.
 \]
@@ -1971,6 +2033,7 @@ The original norm is recovered as the dual of the dual: \(\|x\| = \sup_{\|y\|_* 
 
 <div class="remark">
 <strong>The AM-GM proof of the isoperimetric inequality via transport.</strong> Here is a sketch of the optimal transport approach to Brunn–Minkowski. Let \(A\) and \(B\) be compact sets. By Brenier's theorem, there exists a convex function \(\phi : \mathbb{R}^n \to \mathbb{R}\) and a map \(T = \nabla \phi\) such that \(T\) pushes the uniform measure on \(A\) to the uniform measure on \(B\). The Jacobian determinant \(\det D^2\phi\) encodes the "local volume change." Since \(T\) maps \(A\) to \(B\) and \(\nabla \phi(x)\) lies in \(B\) for a.e. \(x \in A\), the midpoint map \(x \mapsto \frac{x + T(x)}{2}\) maps \(A\) into \(\frac{A+B}{2}\). By the AM-GM inequality for the Jacobian determinant:
+
 \[
 \mathrm{Vol}\!\left(\frac{A+B}{2}\right)^{1/n} \geq \frac{1}{2}\left[\det D\left(\frac{I + \nabla^2\phi}{2}\right)^{1/n}\right] \cdot \mathrm{Vol}(A)^{1/n} + \cdots \geq \frac{\mathrm{Vol}(A)^{1/n} + \mathrm{Vol}(B)^{1/n}}{2},
 \]
@@ -1991,6 +2054,7 @@ The concentration of measure phenomenon is one of the most striking discoveries 
 
 <div class="remark">
 <strong>The paradox of high dimensions.</strong> In low dimensions, a function on the sphere can vary wildly — think of the coordinate function \(f(x_1, \ldots, x_n) = x_1\), which varies from \(-1\) to \(1\). But on the high-dimensional sphere \(\mathbb{S}^{n-1}\), the measure of the set where \(|x_1| > \varepsilon\) is approximately \(e^{-n\varepsilon^2/2}\) — exponentially small. This means that a "typical" point on the sphere has first coordinate essentially zero. More precisely, for a 1-Lipschitz function \(f : \mathbb{S}^{n-1} \to \mathbb{R}\):
+
 \[
 \sigma\!\left(|f - M_f| \geq t\right) \leq 2e^{-(n-2)t^2/2},
 \]
@@ -2001,6 +2065,7 @@ The geometric explanation: on the high-dimensional sphere, almost all the measur
 
 <div class="example">
 <strong>Concentration for the cube.</strong> Let \(f : \{-1,1\}^n \to \mathbb{R}\) be any function on the discrete hypercube that is 1-Lipschitz in the Hamming distance. Then by the "bounded differences" method (McDiarmid's inequality, which is a discrete Brunn–Minkowski):
+
 \[
 \mathbb{P}(|f - \mathbb{E}[f]| \geq t) \leq 2e^{-2t^2/n}.
 \]
@@ -2034,6 +2099,7 @@ The Hessian of \(A(\theta)\) is the covariance matrix \(\mathrm{Cov}_\theta[T(X)
 
 <div class="remark">
 <strong>SVM and the support vector machine as a convex program.</strong> The support vector machine (SVM) for binary classification solves:
+
 \[
 \min_{w, b, \xi} \frac{1}{2}\|w\|^2 + C\sum_i \xi_i \quad \text{s.t.} \quad y_i(\langle w, x_i\rangle + b) \geq 1 - \xi_i, \quad \xi_i \geq 0.
 \]
@@ -2061,6 +2127,7 @@ A fundamental question in convex geometry is: "how round is a convex body?" The 
 
 <div class="definition">
 <strong>Banach–Mazur distance.</strong> For two \(n\)-dimensional normed spaces \(X\) and \(Y\) (or convex bodies), the Banach–Mazur distance is
+
 \[
 d_{\mathrm{BM}}(X, Y) = \inf\{\|T\| \cdot \|T^{-1}\| : T : X \to Y \text{ invertible linear map}\}.
 \]
@@ -2077,6 +2144,7 @@ A key aspect of high-dimensional geometry is that volumes behave very differentl
 
 <div class="remark">
 <strong>Volume of the unit ball in high dimensions.</strong> The volume of the unit ball \(\omega_n = \mathrm{Vol}(\mathbb{B}^n)\) satisfies:
+
 \[
 \omega_n = \frac{\pi^{n/2}}{\Gamma(n/2 + 1)}.
 \]
@@ -2095,6 +2163,7 @@ The unit ball becomes exponentially small in volume as the dimension grows. This
 
 <div class="remark">
 <strong>The cube contains exponentially more volume than the ball.</strong> The unit cube \([-1,1]^n\) has volume \(2^n\). The inscribed unit ball has volume \(\omega_n \to 0\). Their ratio:
+
 \[
 \frac{\mathrm{Vol}([-1,1]^n)}{\omega_n} = \frac{2^n}{\omega_n} \sim \sqrt{n\pi} \cdot \left(\frac{n}{2\pi e}\right)^{n/2} \to \infty.
 \]
@@ -2105,6 +2174,7 @@ By contrast, for the cross-polytope \(\mathcal{C}_n = \{x : \|x\|_1 \leq 1\}\), 
 
 <div class="example">
 <strong>Volume formula for the simplex.</strong> The standard simplex \(\Delta_n = \{x \in \mathbb{R}^n : x_i \geq 0, \sum x_i \leq 1\}\) has volume \(\mathrm{Vol}_n(\Delta_n) = 1/n!\). This follows from the iterated integral:
+
 \[
 \int_0^1 \int_0^{1-x_1} \cdots \int_0^{1-x_1-\cdots-x_{n-1}} dx_n \cdots dx_1 = \frac{1}{n!}.
 \]
@@ -2133,6 +2203,7 @@ The analogy between the Brunn–Minkowski inequality and information theory is d
 
 <div class="remark">
 <strong>The entropy power inequality.</strong> Shannon (1948) proved that for independent random vectors \(X\) and \(Y\) in \(\mathbb{R}^n\):
+
 \[
 e^{2h(X+Y)/n} \geq e^{2h(X)/n} + e^{2h(Y)/n},
 \]
@@ -2150,6 +2221,7 @@ The precise connection (Lieb 1978): both inequalities follow from the Prékopa�
 
 <div class="remark">
 <strong>Fisher information and convexity.</strong> The Fisher information of a distribution with density \(f\) is:
+
 \[
 I(f) = \int \frac{|\nabla f|^2}{f}\,dx = \int f \left|\nabla \log f\right|^2\,dx.
 \]
@@ -2164,6 +2236,7 @@ The Brunn–Minkowski inequality and its functional analogue the Prékopa–Lein
 
 <div class="theorem">
 <strong>Concentration of measure on the sphere.</strong> For any 1-Lipschitz function \(f : \mathbb{S}^{n-1} \to \mathbb{R}\) (where the sphere has unit radius), and for any \(t > 0\):
+
 \[
 \mathbb{P}\left(|f - \mathrm{median}(f)| \geq t\right) \leq 2 e^{-(n-1)t^2/2}.
 \]
@@ -2211,6 +2284,7 @@ More precisely: \(v \in \partial f(x)\) iff for all \(y\), \(g(Ay) \geq g(Ax) + 
 In \(\mathbb{R}^1\), Brunn–Minkowski for intervals \(A = [0,a]\) and \(B = [0,b]\) gives \(|A+B| = a+b = |A|+|B|\) — equality. What is the connection to AM–GM?
 
 <em>Solution.</em> The AM–GM inequality \((ab)^{1/2} \leq (a+b)/2\) can be derived from Brunn–Minkowski in \(\mathbb{R}^n\) by taking \(A = \varepsilon \mathbb{B}^n\) and \(B = \delta \mathbb{B}^n\). Then \(A + B = (\varepsilon + \delta)\mathbb{B}^n\), and the BM inequality:
+
 \[
 (\varepsilon+\delta)^n \omega_n \geq (\varepsilon^n\omega_n)^{1/n}\cdot n + (\delta^n\omega_n)^{1/n}\cdot n = n\omega_n^{1/n}(\varepsilon + \delta),
 \]
@@ -2340,6 +2414,7 @@ We gave John's theorem in the appendix; here we develop it more fully, with the 
 <li>\(E_J(K) \subseteq K \subseteq n \cdot E_J(K)\) (where \(n \cdot E_J\) denotes dilation by \(n\) about the center of \(E_J\)).</li>
 <li>If \(K\) is centrally symmetric (\(K = -K\)), the bound improves to \(E_J(K) \subseteq K \subseteq \sqrt{n} \cdot E_J(K)\).</li>
 <li>The ellipsoid \(E_J(K) = \mathbb{B}^n\) (the unit ball) if and only if there exist contact points \(u_1, \ldots, u_m \in \partial \mathbb{B}^n \cap \partial K\) and positive weights \(c_1, \ldots, c_m > 0\) such that:
+
 \[
 \sum_{i=1}^m c_i u_i = 0 \quad \text{and} \quad \sum_{i=1}^m c_i u_i \otimes u_i = I_n.
 \]
@@ -2364,6 +2439,7 @@ This explains why linear programming over a simplex can require exponentially ma
 
 <div class="definition">
 <strong>Mahler volume.</strong> For a symmetric convex body \(K \subset \mathbb{R}^n\) (with \(K = -K\) and \(0 \in \mathrm{int}(K)\)), the <em>Mahler volume</em> (or volume product) is:
+
 \[
 \mathcal{M}(K) = \mathrm{Vol}_n(K) \cdot \mathrm{Vol}_n(K^\circ).
 \]
@@ -2372,6 +2448,7 @@ This is an affine invariant: \(\mathcal{M}(TK) = \mathcal{M}(K)\) for any invert
 
 <div class="theorem">
 <strong>Santaló Inequality.</strong> For any symmetric convex body \(K \subset \mathbb{R}^n\):
+
 \[
 \mathcal{M}(K) = \mathrm{Vol}(K) \cdot \mathrm{Vol}(K^\circ) \leq \omega_n^2,
 \]
@@ -2386,6 +2463,7 @@ The Santaló inequality is proved using Steiner symmetrization (each symmetrizat
 
 <div class="remark">
 <strong>The Mahler conjecture — the open problem.</strong> The Santaló inequality gives an upper bound on the Mahler volume. The corresponding lower bound question is:
+
 \[
 \mathcal{M}(K) \geq \text{???}
 \]
@@ -2400,6 +2478,7 @@ One of the most remarkable theorems of high-dimensional convex geometry is that 
 
 <div class="theorem">
 <strong>Dvoretzky's Theorem.</strong> For any \(\varepsilon > 0\) and any convex body \(K \subset \mathbb{R}^n\) (with \(n\) sufficiently large), there exists a \(k\)-dimensional central section \(K \cap E\) (where \(E\) is a \(k\)-dimensional subspace) that is \((1+\varepsilon)\)-close to an ellipsoid in the Banach–Mazur distance, where:
+
 \[
 k \geq c(\varepsilon) \cdot \log n.
 \]
@@ -2424,6 +2503,7 @@ A striking recent development is that log-concave probability measures satisfy a
 
 <div class="remark">
 <strong>The KLS conjecture.</strong> The Kannan–Lovász–Simonovits (KLS) conjecture (1995) asserts that for any log-concave measure \(\mu\) on \(\mathbb{R}^n\), the Poincaré constant (the inverse of the spectral gap) is of order 1/variance of any linear functional. Formally, there exists an absolute constant \(C > 0\) such that for any log-concave measure \(\mu\) and any smooth function \(f\):
+
 \[
 \mathrm{Var}_\mu(f) \leq C \cdot \mathbb{E}_\mu[\|\nabla f\|^2].
 \]
@@ -2452,6 +2532,7 @@ We stated the Alexandrov–Fenchel inequalities in Chapter 4. Here we give more 
 
 <div class="theorem">
 <strong>Alexandrov–Fenchel Inequality (restated).</strong> For convex bodies \(K_1, K_2, K_3, \ldots, K_n \in \mathbb{R}^n\):
+
 \[
 V(K_1, K_2, K_3, \ldots, K_n)^2 \geq V(K_1, K_1, K_3, \ldots, K_n) \cdot V(K_2, K_2, K_3, \ldots, K_n).
 \]
@@ -2476,6 +2557,7 @@ Just as the Brunn–Minkowski inequality governs Minkowski sums, there is a "dua
 
 <div class="definition">
 <strong>Intersection body.</strong> For a star-shaped body \(K \subset \mathbb{R}^n$ containing the origin, the \emph{intersection body} \(IK\) is the star-shaped body whose radial function satisfies:
+
 \[
 \rho_{IK}(u) = \mathrm{Vol}_{n-1}(K \cap u^\perp),
 \]
@@ -2484,6 +2566,7 @@ where \(u^\perp = \{x : \langle x, u\rangle = 0\}\) is the hyperplane perpendicu
 
 <div class="theorem">
 <strong>Busemann Intersection Inequality.</strong> For any convex body \(K \subset \mathbb{R}^n\) symmetric about the origin:
+
 \[
 \mathrm{Vol}_n(IK) \geq \frac{\omega_n^2}{\omega_{n-1}^2} \cdot \mathrm{Vol}_n(K)^{n-1}/\mathrm{Vol}_n(K).
 \]
@@ -2498,6 +2581,7 @@ More precisely, \(\mathrm{Vol}(IK)/\omega_n \geq (\mathrm{Vol}(K)/\omega_n)^{n-1
 
 <div class="theorem">
 <strong>Rogers–Shephard Inequality.</strong> For any convex body \(K \subset \mathbb{R}^n\) containing the origin:
+
 \[
 \mathrm{Vol}_n(K - K) \leq \binom{2n}{n} \mathrm{Vol}_n(K),
 \]

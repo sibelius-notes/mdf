@@ -53,7 +53,10 @@ The following equivalences are among the most useful. De Morgan's Laws say that 
 <div class="proposition">
 
 <strong>Proposition 1.4 (De Morgan's Laws).</strong>
-\[\neg(A \vee B) \equiv (\neg A) \wedge (\neg B), \qquad \neg(A \wedge B) \equiv (\neg A) \vee (\neg B).\]
+
+\[
+\neg(A \vee B) \equiv (\neg A) \wedge (\neg B), \qquad \neg(A \wedge B) \equiv (\neg A) \vee (\neg B).
+\]
 
 </div>
 
@@ -62,7 +65,10 @@ Two further equivalences govern implications: the *contrapositive* and the *nega
 <div class="proposition">
 
 <strong>Proposition 1.5 (Contrapositive and Negation of Implication).</strong>
-\[(A \Rightarrow B) \equiv (\neg B \Rightarrow \neg A), \qquad \neg(A \Rightarrow B) \equiv A \wedge (\neg B).\]
+
+\[
+(A \Rightarrow B) \equiv (\neg B \Rightarrow \neg A), \qquad \neg(A \Rightarrow B) \equiv A \wedge (\neg B).
+\]
 
 </div>
 
@@ -135,7 +141,10 @@ The intuition is a domino argument: the first domino falls (base case), and each
 <em>Base case:</em> \(n = 1\): LHS \(= 1\), RHS \(= \frac{1 \cdot 2}{2} = 1\). ✓
 
 <em>Inductive step:</em> Assume the formula holds for some \(k \geq 1\). Then
-\[\sum_{i=1}^{k+1} i = \left(\sum_{i=1}^k i\right) + (k+1) = \frac{k(k+1)}{2} + (k+1) = (k+1)\cdot\frac{k+2}{2} = \frac{(k+1)(k+2)}{2},\]
+
+\[
+\sum_{i=1}^{k+1} i = \left(\sum_{i=1}^k i\right) + (k+1) = \frac{k(k+1)}{2} + (k+1) = (k+1)\cdot\frac{k+2}{2} = \frac{(k+1)(k+2)}{2},
+\]
 which is the formula for \(n = k+1\). \(\square\)
 
 </div>
@@ -232,7 +241,10 @@ Before we can discuss GCDs, we need to establish that integer division always le
 <div class="theorem">
 
 <strong>Theorem 3.5 (Division Algorithm).</strong> Let \(a \in \mathbb{Z}\) and \(b \in \mathbb{Z}\) with \(b > 0\). Then there exist <em>unique</em> integers \(q\) (quotient) and \(r\) (remainder) such that
-\[a = qb + r, \qquad 0 \leq r < b.\]
+
+\[
+a = qb + r, \qquad 0 \leq r < b.
+\]
 
 </div>
 
@@ -266,7 +278,10 @@ The key tool for computing GCDs efficiently is the following lemma, which says G
 *Proof.* It suffices to show the two pairs have the same set of common divisors. If \(d \mid a\) and \(d \mid b\), then \(d \mid (a - qb) = r\), so \(d\) is a common divisor of \(b\) and \(r\). Conversely, if \(d \mid b\) and \(d \mid r\), then \(d \mid (qb + r) = a\). The two sets of common divisors coincide, so their maxima coincide. \(\square\)
 
 The Euclidean Algorithm applies the Division Algorithm repeatedly, exploiting Proposition 3.7 at each step:
-\[\gcd(a,b) = \gcd(b, r_1) = \gcd(r_1, r_2) = \cdots = \gcd(r_{k-1}, r_k) = \gcd(r_k, 0) = r_k.\]
+
+\[
+\gcd(a,b) = \gcd(b, r_1) = \gcd(r_1, r_2) = \cdots = \gcd(r_{k-1}, r_k) = \gcd(r_k, 0) = r_k.
+\]
 The remainders \(r_1 > r_2 > \cdots \geq 0\) strictly decrease, so the algorithm terminates. The last nonzero remainder is the GCD.
 
 <div class="example">
@@ -282,7 +297,10 @@ Perhaps the single most important theorem in elementary number theory: the GCD i
 <div class="theorem">
 
 <strong>Theorem 3.9 (Bézout's Identity).</strong> For integers \(a, b\) not both zero, there exist integers \(x, y\) such that
-\[ax + by = \gcd(a,b).\]
+
+\[
+ax + by = \gcd(a,b).
+\]
 
 </div>
 
@@ -367,7 +385,10 @@ Euclid's Lemma is the key to <em>uniqueness</em> in prime factorization. It says
 </div>
 
 *Proof.* Suppose for contradiction that the set of all primes is finite: \(\{p_1, p_2, \ldots, p_k\}\). Form the integer
-\[N = p_1 p_2 \cdots p_k + 1.\]
+
+\[
+N = p_1 p_2 \cdots p_k + 1.
+\]
 By Proposition 4.3, \(N > 1\) has a prime factor \(p\). Since every \(p_i\) divides the product \(p_1 \cdots p_k\), we have \(p_i \mid (N - p_1 \cdots p_k) = 1\) if \(p = p_i\), which is impossible. So \(p \notin \{p_1, \ldots, p_k\}\), contradicting that the list was complete. \(\square\)
 
 ## The Fundamental Theorem of Arithmetic
@@ -422,7 +443,10 @@ The FTA allows us to write every \(n > 1\) uniquely as \(n = p_1^{\alpha_1} p_2^
 <div class="proposition">
 
 <strong>Proposition 4.6 (GCD from Prime Factorization).</strong> Write \(a = \prod_i p_i^{\alpha_i}\) and \(b = \prod_i p_i^{\beta_i}\) (using all primes, with zero exponents allowed). Then
-\[\gcd(a,b) = \prod_i p_i^{\min(\alpha_i,\, \beta_i)}.\]
+
+\[
+\gcd(a,b) = \prod_i p_i^{\min(\alpha_i,\, \beta_i)}.
+\]
 
 </div>
 
@@ -451,7 +475,10 @@ A Diophantine equation asks: given integer coefficients, do integer solutions ex
 <div class="theorem">
 
 <strong>Theorem 5.3 (LDE Complete Solution, LDET 2).</strong> If \(x_0, y_0\) is one particular solution to \(ax + by = c\), with \(\gcd(a,b) = d \neq 0\), then the complete integer solution is
-\[x = x_0 + \frac{b}{d}\,n, \qquad y = y_0 - \frac{a}{d}\,n, \qquad n \in \mathbb{Z}.\]
+
+\[
+x = x_0 + \frac{b}{d}\,n, \qquad y = y_0 - \frac{a}{d}\,n, \qquad n \in \mathbb{Z}.
+\]
 
 </div>
 
@@ -543,7 +570,10 @@ Without the coprimeness condition, cancellation can fail: \(6 \equiv 2 \pmod{4}\
 <div class="definition">
 
 <strong>Definition 6.5 (Congruence Class, \(\mathbb{Z}/n\mathbb{Z}\)).</strong> The <em>congruence class</em> of \(a\) modulo \(m\) is \([a]_m = \{x \in \mathbb{Z} : x \equiv a \pmod{m}\}\). The set of all congruence classes
-\[\mathbb{Z}/n\mathbb{Z} = \{[0], [1], \ldots, [n-1]\}\]
+
+\[
+\mathbb{Z}/n\mathbb{Z} = \{[0], [1], \ldots, [n-1]\}
+\]
 with operations \([a] + [b] = [a+b]\) and \([a] \cdot [b] = [ab]\) is the <em>ring of integers modulo \(n\)</em>.
 
 </div>
@@ -587,7 +617,10 @@ The collection of all units forms a group under multiplication:
 <div class="definition">
 
 <strong>Definition 6.9 (Group of Units, \((\mathbb{Z}/n\mathbb{Z})^*\)).</strong> The <em>group of units modulo \(n\)</em> is
-\[(\mathbb{Z}/n\mathbb{Z})^* = \{[a] \in \mathbb{Z}/n\mathbb{Z} : \gcd(a,n) = 1\}.\]
+
+\[
+(\mathbb{Z}/n\mathbb{Z})^* = \{[a] \in \mathbb{Z}/n\mathbb{Z} : \gcd(a,n) = 1\}.
+\]
 Its order is Euler's totient function \(\phi(n) = \lvert (\mathbb{Z}/n\mathbb{Z})^* \rvert\).
 
 </div>
@@ -597,7 +630,10 @@ Its order is Euler's totient function \(\phi(n) = \lvert (\mathbb{Z}/n\mathbb{Z}
 <div class="theorem">
 
 <strong>Theorem 6.10 (Linear Congruence Theorem, LCT).</strong> Let \(d = \gcd(a,m)\). The congruence \(ax \equiv c \pmod{m}\) has a solution if and only if \(d \mid c\). When solutions exist, there are exactly \(d\) distinct solutions modulo \(m\), and if \(x_0\) is one solution then the complete solution set is
-\[\left\{x_0 + \frac{m}{d}\,k : k = 0, 1, \ldots, d-1\right\} \pmod{m}.\]
+
+\[
+\left\{x_0 + \frac{m}{d}\,k : k = 0, 1, \ldots, d-1\right\} \pmod{m}.
+\]
 
 </div>
 
@@ -637,7 +673,10 @@ One of the jewels of number theory: a system of simultaneous congruences with co
 <div class="theorem">
 
 <strong>Theorem 6.11 (Chinese Remainder Theorem, CRT).</strong> Let \(m_1, m_2, \ldots, m_k\) be pairwise coprime positive integers and let \(a_1, \ldots, a_k\) be any integers. Then the system
-\[n \equiv a_1 \pmod{m_1}, \quad n \equiv a_2 \pmod{m_2}, \quad \ldots, \quad n \equiv a_k \pmod{m_k}\]
+
+\[
+n \equiv a_1 \pmod{m_1}, \quad n \equiv a_2 \pmod{m_2}, \quad \ldots, \quad n \equiv a_k \pmod{m_k}
+\]
 has a unique solution modulo \(M = m_1 m_2 \cdots m_k\).
 
 </div>
@@ -647,7 +686,10 @@ has a unique solution modulo \(M = m_1 m_2 \cdots m_k\).
 **Case \(k = 2\):** We want \(n\) with \(n \equiv a_1 \pmod{m_1}\) and \(n \equiv a_2 \pmod{m_2}\). The first congruence gives \(n = a_1 + m_1 t\) for some integer \(t\). Substituting into the second: \(a_1 + m_1 t \equiv a_2 \pmod{m_2}\), i.e., \(m_1 t \equiv a_2 - a_1 \pmod{m_2}\). Since \(\gcd(m_1, m_2) = 1\), this has a unique solution \(t_0 \pmod{m_2}\) by LCT. Setting \(n_0 = a_1 + m_1 t_0\) gives a solution unique modulo \(m_1 m_2\).
 
 **General case:** Let \(M_i = M/m_i\). Since the \(m_i\) are pairwise coprime, \(\gcd(M_i, m_i) = 1\), so there exist integers \(y_i\) with \(M_i y_i \equiv 1 \pmod{m_i}\). Set
-\[n \equiv \sum_{i=1}^k a_i M_i y_i \pmod{M}.\]
+
+\[
+n \equiv \sum_{i=1}^k a_i M_i y_i \pmod{M}.
+\]
 Since \(m_j \mid M_i\) for \(j \neq i\), the \(j\)-th term with \(i \neq j\) vanishes mod \(m_j\), leaving \(n \equiv a_j M_j y_j \equiv a_j \pmod{m_j}\). Uniqueness mod \(M\) follows because any two solutions differ by a multiple of each \(m_i\), hence by a multiple of \(M\). \(\square\)
 
 <div class="remark">
@@ -673,14 +715,20 @@ With the algebraic framework in place, we can prove the deep structure theorems:
 <div class="definition">
 
 <strong>Definition 7.1 (Euler's Totient).</strong> For \(n \geq 1\), the <em>Euler totient function</em> \(\phi(n)\) counts the integers in \(\{1, 2, \ldots, n\}\) that are coprime to \(n\):
-\[\phi(n) = \lvert\{a : 1 \leq a \leq n,\ \gcd(a,n) = 1\}\rvert.\]
+
+\[
+\phi(n) = \lvert\{a : 1 \leq a \leq n,\ \gcd(a,n) = 1\}\rvert.
+\]
 
 </div>
 
 <div class="proposition">
 
 <strong>Proposition 7.2 (Totient of a Prime Power).</strong> For a prime \(p\) and \(k \geq 1\),
-\[\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1).\]
+
+\[
+\phi(p^k) = p^k - p^{k-1} = p^{k-1}(p-1).
+\]
 In particular, \(\phi(p) = p-1\).
 
 </div>
@@ -702,7 +750,10 @@ Fermat's Little Theorem is the foundation of almost all practical primality test
 <div class="theorem">
 
 <strong>Theorem 7.4 (Fermat's Little Theorem, FLT).</strong> Let \(p\) be prime and \(a \in \mathbb{Z}\) with \(p \nmid a\). Then
-\[a^{p-1} \equiv 1 \pmod{p}.\]
+
+\[
+a^{p-1} \equiv 1 \pmod{p}.
+\]
 Equivalently, \(a^p \equiv a \pmod{p}\) for <em>every</em> integer \(a\).
 
 </div>
@@ -712,7 +763,10 @@ Equivalently, \(a^p \equiv a \pmod{p}\) for <em>every</em> integer \(a\).
 - They are distinct: if \(ia \equiv ja \pmod{p}\), then \(p \mid (i-j)a\), and since \(\gcd(a,p) = 1\) we get \(p \mid (i-j)\), forcing \(i = j\) in the range \(1, \ldots, p-1\).
 
 Therefore \(\{a, 2a, \ldots, (p-1)a\} = \{1, 2, \ldots, p-1\}\) as sets of residues. Multiply all elements:
-\[(a)(2a)(3a)\cdots((p-1)a) \equiv 1 \cdot 2 \cdot 3 \cdots (p-1) \pmod{p},\]
+
+\[
+(a)(2a)(3a)\cdots((p-1)a) \equiv 1 \cdot 2 \cdot 3 \cdots (p-1) \pmod{p},
+\]
 i.e., \(a^{p-1} \cdot (p-1)! \equiv (p-1)! \pmod{p}\). Since \(\gcd((p-1)!, p) = 1\), we cancel to get \(a^{p-1} \equiv 1 \pmod{p}\). \(\square\)
 
 <div class="corollary">
@@ -732,7 +786,10 @@ Euler's Theorem is the generalization of FLT to composite moduli: the exponent \
 </div>
 
 *Proof.* Let \(\{u_1, u_2, \ldots, u_{\phi(n)}\}\) be the units in \(\mathbb{Z}/n\mathbb{Z}\). Since \(\gcd(a,n) = 1\), multiplication by \(a\) permutes the units (same argument as FLT: the products \(au_1, \ldots, au_{\phi(n)}\) are distinct units, hence the same set). Taking the product of both sides:
-\[(au_1)(au_2)\cdots(au_{\phi(n)}) \equiv u_1 u_2 \cdots u_{\phi(n)} \pmod{n},\]
+
+\[
+(au_1)(au_2)\cdots(au_{\phi(n)}) \equiv u_1 u_2 \cdots u_{\phi(n)} \pmod{n},
+\]
 so \(a^{\phi(n)} \cdot U \equiv U \pmod{n}\) where \(U = u_1 \cdots u_{\phi(n)}\). Since \(U\) is a product of units, \(\gcd(U,n) = 1\), and we cancel to obtain \(a^{\phi(n)} \equiv 1 \pmod{n}\). \(\square\)
 
 <div class="remark">
@@ -748,7 +805,10 @@ Wilson's Theorem gives an elegant necessary and sufficient condition for primali
 <div class="theorem">
 
 <strong>Theorem 7.7 (Wilson's Theorem).</strong> An integer \(p > 1\) is prime if and only if
-\[(p-1)! \equiv -1 \pmod{p}.\]
+
+\[
+(p-1)! \equiv -1 \pmod{p}.
+\]
 
 </div>
 
@@ -757,7 +817,11 @@ Wilson's Theorem gives an elegant necessary and sufficient condition for primali
 **(\(\Rightarrow\))** Let \(p\) be prime. In \(\mathbb{Z}/p\mathbb{Z}\), every nonzero element has a unique inverse. The equation \(x^2 \equiv 1 \pmod{p}\) means \(p \mid (x-1)(x+1)\), so \(x \equiv \pm 1 \pmod{p}\). Hence the only elements equal to their own inverse are \(1\) and \(p-1 \equiv -1\).
 
 Pair each element \(a \in \{2, 3, \ldots, p-2\}\) with its distinct inverse \(a^{-1} \neq a\). These \(p-3\) elements pair up into \((p-3)/2\) pairs, each with product \(1\). Therefore
-\[(p-1)! = 1 \cdot \underbrace{(2 \cdot 3 \cdots (p-2))}_{\text{pairs multiply to } 1} \cdot (p-1) \equiv 1 \cdot 1 \cdot (-1) = -1 \pmod{p}.\] \(\square\)
+
+\[
+(p-1)! = 1 \cdot \underbrace{(2 \cdot 3 \cdots (p-2))}_{\text{pairs multiply to } 1} \cdot (p-1) \equiv 1 \cdot 1 \cdot (-1) = -1 \pmod{p}.
+\]
+\(\square\)
 
 <div class="remark">
 
@@ -822,7 +886,10 @@ Once we know a primitive root \(g\) exists, every element of \((\mathbb{Z}/p\mat
 <div class="theorem">
 
 <strong>Theorem 7.14 (Euler's Criterion).</strong> Let \(p\) be an odd prime and \(\gcd(a,p) = 1\). Then
-\[a^{(p-1)/2} \equiv \begin{cases} 1 \pmod{p} & \text{if } a \text{ is a QR mod } p, \\ -1 \pmod{p} & \text{if } a \text{ is a QNR mod } p. \end{cases}\]
+
+\[
+a^{(p-1)/2} \equiv \begin{cases} 1 \pmod{p} & \text{if } a \text{ is a QR mod } p, \\ -1 \pmod{p} & \text{if } a \text{ is a QNR mod } p. \end{cases}
+\]
 
 </div>
 
@@ -831,14 +898,20 @@ Once we know a primitive root \(g\) exists, every element of \((\mathbb{Z}/p\mat
 <div class="definition">
 
 <strong>Definition 7.15 (Legendre Symbol).</strong> For an odd prime \(p\) and \(\gcd(a,p) = 1\), the <em>Legendre symbol</em> is
-\[\left(\frac{a}{p}\right) = \begin{cases} 1 & \text{if } a \text{ is a QR mod } p, \\ -1 & \text{if } a \text{ is a QNR mod } p. \end{cases}\]
+
+\[
+\left(\frac{a}{p}\right) = \begin{cases} 1 & \text{if } a \text{ is a QR mod } p, \\ -1 & \text{if } a \text{ is a QNR mod } p. \end{cases}
+\]
 
 </div>
 
 <div class="proposition">
 
 <strong>Proposition 7.16 (Multiplicativity of Legendre Symbol).</strong>
-\[\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right).\]
+
+\[
+\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right)\left(\frac{b}{p}\right).
+\]
 
 </div>
 
@@ -879,7 +952,10 @@ To encrypt a message \(M\) with \(0 \leq M < n\), compute \(C \equiv M^e \pmod{n
 *Proof.* We must show \(M^{ed} \equiv M \pmod{n}\). Since \(ed \equiv 1 \pmod{(p-1)(q-1)}\), write \(ed = 1 + k(p-1)(q-1)\) for some integer \(k\).
 
 **Case 1: \(\gcd(M, p) = 1\).** By FLT, \(M^{p-1} \equiv 1 \pmod{p}\), so
-\[M^{ed} = M^{1 + k(p-1)(q-1)} = M \cdot (M^{p-1})^{k(q-1)} \equiv M \cdot 1 = M \pmod{p}.\]
+
+\[
+M^{ed} = M^{1 + k(p-1)(q-1)} = M \cdot (M^{p-1})^{k(q-1)} \equiv M \cdot 1 = M \pmod{p}.
+\]
 
 **Case 2: \(p \mid M\).** Then \(M^{ed} \equiv 0 \equiv M \pmod{p}\).
 

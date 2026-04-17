@@ -14,7 +14,9 @@ These notes integrate two sets of course materials: **Sue Ann Campbell's** lectu
 
 A **dynamical system** describes the evolution of some state over time according to a fixed rule. In continuous time, this rule takes the form of an ordinary differential equation. We concentrate on **autonomous** systems — those where the rule does not depend explicitly on time — of the form
 
-\[  \dot{x} = f(x), \quad x \in \mathbb{R}^n, \]
+\[
+\dot{x} = f(x), \quad x \in \mathbb{R}^n,
+\]
 
 where \( f: \mathbb{R}^n \to \mathbb{R}^n \) is a smooth (at least \( C^1 \) vector field. The term *autonomous* means that \( f \) does not depend on \( t \); the state \( x \) alone determines how the system evolves. A **solution** to this system is a differentiable curve \( x(t) \) satisfying the equation on some interval \( (a, b) \).
 
@@ -24,7 +26,9 @@ where \( f: \mathbb{R}^n \to \mathbb{R}^n \) is a smooth (at least \( C^1 \) vec
 
 A classical motivation comes from population dynamics. Suppose two species compete for the same resource, with populations \( x_1(t) \) and \( x_2(t) \). A simple model is
 
-\[  \begin{aligned} \dot{x}_1 &= a_1 x_1 - b_{11} x_1^2 - b_{12} x_1 x_2, \\ \dot{x}_2 &= a_2 x_2 - b_{21} x_1 x_2 - b_{22} x_2^2, \end{aligned} \]
+\[
+\begin{aligned} \dot{x}_1 &= a_1 x_1 - b_{11} x_1^2 - b_{12} x_1 x_2, \\ \dot{x}_2 &= a_2 x_2 - b_{21} x_1 x_2 - b_{22} x_2^2, \end{aligned}
+\]
 
 where \( a_i > 0 \) are intrinsic growth rates and \( b_{ij} > 0 \) are competition coefficients. The term \( -b_{ii} x_i^2 \) represents intraspecies competition (logistic self-limiting), while \( -b_{ij} x_i x_j \) captures interspecies competition. This system has up to four equilibria: the origin (mutual extinction), two single-species equilibria, and potentially a coexistence equilibrium. Determining which equilibrium is stable — and hence which species persists or whether coexistence is possible — is a central question of dynamical systems analysis.
 
@@ -32,11 +36,15 @@ where \( a_i > 0 \) are intrinsic growth rates and \( b_{ij} > 0 \) are competit
 
 A second fundamental example is the damped harmonic oscillator. A mass \( m \) attached to a spring (stiffness \( k \) with damping coefficient \( c \) satisfies
 
-\[  m \ddot{q} + c \dot{q} + k q = 0. \]
+\[
+m \ddot{q} + c \dot{q} + k q = 0.
+\]
 
 Introducing state variables \( x_1 = q \) and \( x_2 = \dot{q} \), this becomes the first-order system
 
-\[  \begin{pmatrix} \dot{x}_1 \\ \dot{x}_2 \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ -k/m & -c/m \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}. \]
+\[
+\begin{pmatrix} \dot{x}_1 \\ \dot{x}_2 \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ -k/m & -c/m \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}.
+\]
 
 When \( c = 0 \) (undamped), solutions are periodic oscillations. When \( c > 0 \) (overdamped, critically damped, or underdamped), solutions decay to the rest state at the origin. The mass-spring system thus illustrates the three qualitatively different behaviors of a 2D linear system.
 
@@ -46,7 +54,9 @@ When \( c = 0 \) (undamped), solutions are periodic oscillations. When \( c > 0 
 
 **Definition 1.2 (Flow).** Given initial data \( x(t_0) = x_0 \), the unique solution (when it exists) defines a map \( \phi_t: \mathbb{R}^n \to \mathbb{R}^n \) by \( \phi_t(x_0) = x(t_0 + t) \). This family of maps is called the **flow** of the system and satisfies the group property
 
-\[  \phi_0 = \text{id}, \qquad \phi_{s+t} = \phi_s \circ \phi_t. \]
+\[
+\phi_0 = \text{id}, \qquad \phi_{s+t} = \phi_s \circ \phi_t.
+\]
 
 **Definition 1.3 (Orbit).** The **orbit** (or *trajectory*) through \( x_0 \) is the set \( \{\phi_t(x_0) : t \in \mathbb{R}\} \). A **phase portrait** is the collection of all orbits drawn in state space, which is called the **phase space**.
 
@@ -58,7 +68,9 @@ We distinguish several notions of stability for an equilibrium \( x^* \). Withou
 
 **Definition 1.4 (Lyapunov Stability).** The equilibrium \( x^* = 0 \) is **Lyapunov stable** if for every \( \epsilon > 0 \) there exists \( \delta > 0 \) such that
 
-\[  \|x(0)\| < \delta \implies \|x(t)\| < \epsilon \quad \text{for all } t \geq 0. \]
+\[
+\|x(0)\| < \delta \implies \|x(t)\| < \epsilon \quad \text{for all } t \geq 0.
+\]
 
 **Definition 1.5 (Asymptotic Stability).** The equilibrium is **asymptotically stable** if it is Lyapunov stable and there exists \( \delta > 0 \) such that \( \|x(0)\| < \delta \) implies \( x(t) \to 0 \) as \( t \to \infty \).
 
@@ -72,17 +84,23 @@ The theoretical foundation of dynamical systems rests on the following theorem.
 
 **Theorem 1.7 (Picard–Lindelöf / Cauchy–Lipschitz).** Let \( f: U \to \mathbb{R}^n \) be continuous on an open set \( U \subseteq \mathbb{R}^n \), and suppose \( f \) is **locally Lipschitz** in \( x \): for each compact \( K \subset U \) there exists \( L > 0 \) such that
 
-\[  \|f(x) - f(y)\| \leq L\|x - y\| \quad \forall x, y \in K. \]
+\[
+\|f(x) - f(y)\| \leq L\|x - y\| \quad \forall x, y \in K.
+\]
 
 Then for each \( x_0 \in U \) there exists \( T > 0 \) and a unique solution \( x: (-T, T) \to U \) satisfying \( \dot{x} = f(x) \) and \( x(0) = x_0 \). In particular, if \( f \in C^1(U) \), then the Lipschitz condition is automatically satisfied.
 
 The proof proceeds by **Picard iteration**: one converts the ODE into the integral equation
 
-\[  x(t) = x_0 + \int_0^t f(x(s)) \, ds, \]
+\[
+x(t) = x_0 + \int_0^t f(x(s)) \, ds,
+\]
 
 and defines the iterates \( x^{(0)}(t) = x_0 \) and
 
-\[  x^{(k+1)}(t) = x_0 + \int_0^t f(x^{(k)}(s)) \, ds. \]
+\[
+x^{(k+1)}(t) = x_0 + \int_0^t f(x^{(k)}(s)) \, ds.
+\]
 
 The Lipschitz condition ensures that \( \{x^{(k)}\} \) is a Cauchy sequence in the space of continuous functions on a sufficiently small interval, and the limit is the unique solution. The Lipschitz constant also controls the rate of convergence: the error after \( k \) steps is bounded by \( (Lt)^k / k! \) times a constant.
 
@@ -98,15 +116,21 @@ The Lipschitz condition ensures that \( \{x^{(k)}\} \) is a Cauchy sequence in t
 
 A **linear system** takes the form
 
-\[  \dot{x} = Ax, \quad x \in \mathbb{R}^n, \]
+\[
+\dot{x} = Ax, \quad x \in \mathbb{R}^n,
+\]
 
 where \( A \) is an \( n \times n \) real matrix. The unique solution with initial condition \( x(0) = x_0 \) is
 
-\[  x(t) = e^{At} x_0, \]
+\[
+x(t) = e^{At} x_0,
+\]
 
 where the **matrix exponential** is defined by the convergent series
 
-\[  e^{At} = \sum_{k=0}^{\infty} \frac{(At)^k}{k!} = I + At + \frac{A^2 t^2}{2!} + \cdots \]
+\[
+e^{At} = \sum_{k=0}^{\infty} \frac{(At)^k}{k!} = I + At + \frac{A^2 t^2}{2!} + \cdots
+\]
 
 This series converges absolutely for all \( t \) and all matrices \( A \). The matrix exponential satisfies several key properties:
 
@@ -123,13 +147,17 @@ For an \( n \times n \) matrix \( A \), the series definition is impractical. We
 
 **Case 1: Diagonalizable.** If \( A = P D P^{-1} \) where \( D = \text{diag}(\lambda_1, \ldots, \lambda_n) \), then
 
-\[  e^{At} = P e^{Dt} P^{-1} = P \begin{pmatrix} e^{\lambda_1 t} & & \\ & \ddots & \\ & & e^{\lambda_n t} \end{pmatrix} P^{-1}. \]
+\[
+e^{At} = P e^{Dt} P^{-1} = P \begin{pmatrix} e^{\lambda_1 t} & & \\ & \ddots & \\ & & e^{\lambda_n t} \end{pmatrix} P^{-1}.
+\]
 
 The columns of \( P \) are eigenvectors. The solution is then a linear combination of modes \( e^{\lambda_i t} v_i \) where \( v_i \) is the \( i \)-th eigenvector.
 
 **Case 2: Complex conjugate eigenvalues.** If \( A \) is real and has complex eigenvalues \( \lambda = \alpha \pm \beta i \), write the complex eigenvector as \( v = a + bi \). The real solutions form the pair
 
-\[  e^{\alpha t}(\cos(\beta t) a - \sin(\beta t) b), \qquad e^{\alpha t}(\sin(\beta t) a + \cos(\beta t) b). \]
+\[
+e^{\alpha t}(\cos(\beta t) a - \sin(\beta t) b), \qquad e^{\alpha t}(\sin(\beta t) a + \cos(\beta t) b).
+\]
 
 ### 2.3 Jordan Canonical Form
 
@@ -137,17 +165,23 @@ When \( A \) is not diagonalizable, it may still be brought to **Jordan canonica
 
 **Theorem 2.1 (Jordan Normal Form).** For any \( n \times n \) matrix \( A \) over \( \mathbb{C} \), there exists an invertible matrix \( P \) such that \( P^{-1}AP = J \) where \( J \) is block-diagonal with **Jordan blocks**:
 
-\[  J_k(\lambda) = \begin{pmatrix} \lambda & 1 & & \\ & \lambda & \ddots & \\ & & \ddots & 1 \\ & & & \lambda \end{pmatrix}_{k \times k}. \]
+\[
+J_k(\lambda) = \begin{pmatrix} \lambda & 1 & & \\ & \lambda & \ddots & \\ & & \ddots & 1 \\ & & & \lambda \end{pmatrix}_{k \times k}.
+\]
 
 The matrix exponential of a Jordan block satisfies
 
-\[  e^{J_k(\lambda)t} = e^{\lambda t} \begin{pmatrix} 1 & t & \frac{t^2}{2!} & \cdots & \frac{t^{k-1}}{(k-1)!} \\ 0 & 1 & t & \cdots & \frac{t^{k-2}}{(k-2)!} \\ \vdots & & \ddots & & \vdots \\ 0 & \cdots & & & 1 \end{pmatrix}. \]
+\[
+e^{J_k(\lambda)t} = e^{\lambda t} \begin{pmatrix} 1 & t & \frac{t^2}{2!} & \cdots & \frac{t^{k-1}}{(k-1)!} \\ 0 & 1 & t & \cdots & \frac{t^{k-2}}{(k-2)!} \\ \vdots & & \ddots & & \vdots \\ 0 & \cdots & & & 1 \end{pmatrix}.
+\]
 
 The presence of Jordan blocks introduces polynomial growth factors \( t^j e^{\lambda t} \), which appear in solutions corresponding to repeated eigenvalues.
 
 **Definition 2.2.** The **generalized eigenspace** corresponding to eigenvalue \( \lambda \) is
 
-\[  V_\lambda = \ker(A - \lambda I)^n. \]
+\[
+V_\lambda = \ker(A - \lambda I)^n.
+\]
 
 Generalized eigenvectors \( v \) of rank \( r \) satisfy \( (A - \lambda I)^r v = 0 \) but \( (A - \lambda I)^{r-1} v \neq 0 \). They are found by solving the chain of equations \( (A - \lambda I) w_r = w_{r-1}, \ldots, (A - \lambda I) w_1 = 0 \), where \( w_1 \) is a genuine eigenvector.
 
@@ -181,13 +215,17 @@ Liu's notes emphasize the geometric interpretation of linear flows in terms of *
 
 For a contraction, the flow \( e^{At} \) shrinks distances: there exist constants \( C > 0 \) and \( \alpha > 0 \) such that
 
-\[  \|e^{At} x\| \leq C e^{-\alpha t} \|x\| \quad \text{for all } t \geq 0. \]
+\[
+\|e^{At} x\| \leq C e^{-\alpha t} \|x\| \quad \text{for all } t \geq 0.
+\]
 
 This exponential decay rate is related to the **spectral abscissa** \( \mu(A) = \max_i \text{Re}(\lambda_i) \). Any \( \alpha < |\mu(A)| \) works as the decay rate, with the constant \( C \) absorbing the transient polynomial factors from Jordan blocks.
 
 The **Liouville formula** connects the determinant of the flow to the trace of \( A \):
 
-\[  \det(e^{At}) = e^{\text{tr}(A) \cdot t}. \]
+\[
+\det(e^{At}) = e^{\text{tr}(A) \cdot t}.
+\]
 
 Since \( \text{tr}(A) = \sum_i \lambda_i \), the flow expands volumes if \( \text{tr}(A) > 0 \), preserves them if \( \text{tr}(A) = 0 \), and contracts them if \( \text{tr}(A) < 0 \).
 
@@ -195,7 +233,9 @@ Since \( \text{tr}(A) = \sum_i \lambda_i \), the flow expands volumes if \( \tex
 
 For the nonhomogeneous system \( \dot{x} = Ax + g(t) \), the solution with \( x(0) = x_0 \) is given by the **variation of parameters** formula:
 
-\[  x(t) = e^{At} x_0 + \int_0^t e^{A(t-s)} g(s) \, ds. \]
+\[
+x(t) = e^{At} x_0 + \int_0^t e^{A(t-s)} g(s) \, ds.
+\]
 
 This formula follows from multiplying both sides of the equation by the integrating factor \( e^{-At} \) and integrating. It shows that the response is a superposition of the free motion \( e^{At} x_0 \) and the convolution of the impulse response \( e^{At} \) with the forcing \( g(t) \).
 
@@ -209,7 +249,9 @@ The long-term behavior of \( \dot{x} = Ax \) is completely characterized by the 
 
 **Definition 2.4 (Stable, Unstable, Centre Subspaces).** Decompose \( \mathbb{R}^n \) according to the eigenvalues of \( A \):
 
-\[  E^s = \bigoplus_{\text{Re}(\lambda) < 0} V_\lambda, \quad E^u = \bigoplus_{\text{Re}(\lambda) > 0} V_\lambda, \quad E^c = \bigoplus_{\text{Re}(\lambda) = 0} V_\lambda. \]
+\[
+E^s = \bigoplus_{\text{Re}(\lambda) < 0} V_\lambda, \quad E^u = \bigoplus_{\text{Re}(\lambda) > 0} V_\lambda, \quad E^c = \bigoplus_{\text{Re}(\lambda) = 0} V_\lambda.
+\]
 
 These are \( A \)-invariant subspaces satisfying \( E^s \oplus E^u \oplus E^c = \mathbb{R}^n \). Trajectories starting in \( E^s \) decay to zero exponentially; those in \( E^u \) grow; those in \( E^c \) neither grow nor decay (they oscillate, or remain constant).
 
@@ -219,33 +261,45 @@ The linear systems framework extends naturally to mechanical systems with multip
 
 **Equations of Motion.** For two masses \( m_1, m_2 \) connected by three springs (spring constants \( k_1, k_2, k_3 \) between two walls, application of Hooke's law and Newton's second law gives
 
-\[  \begin{pmatrix} m_1 & 0 \\ 0 & m_2 \end{pmatrix} \begin{pmatrix} \ddot{y}_1 \\ \ddot{y}_2 \end{pmatrix} + \begin{pmatrix} k_1 + k_2 & -k_2 \\ -k_2 & k_2 + k_3 \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \end{pmatrix} = \underline{c}, \]
+\[
+\begin{pmatrix} m_1 & 0 \\ 0 & m_2 \end{pmatrix} \begin{pmatrix} \ddot{y}_1 \\ \ddot{y}_2 \end{pmatrix} + \begin{pmatrix} k_1 + k_2 & -k_2 \\ -k_2 & k_2 + k_3 \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \end{pmatrix} = \underline{c},
+\]
 
 which in operator notation is \( \hat{O}[y] = \underline{c} \) with \( \hat{O} \equiv MD^2 + K \). Here \( M \) is the **mass matrix** (diagonal, positive definite), \( K \) is the **stiffness matrix** (symmetric, positive semi-definite), and \( \underline{c} \) is a constant vector encoding the natural lengths of the springs.
 
 **Reduction to Homogeneous Form.** By linearity, the general solution is the particular (equilibrium) solution plus the homogeneous solution. Setting \( y_i = \eta_i + x_i \) where \( K\underline{\eta} = \underline{c} \) defines the **equilibrium positions** \( \eta_i \), the displacements \( x_i(t) \) from equilibrium satisfy
 
-\[  M\ddot{x} + Kx = 0. \]
+\[
+M\ddot{x} + Kx = 0.
+\]
 
 For equal unit masses \( M = I \), this simplifies to \( \ddot{x} + Gx = 0 \) with \( G = K \). (When \( M \neq I \), one rescales coordinates to reduce to this form.)
 
 **Normal Mode Analysis.** Substituting the trial solution \( x(t) = \underline{p}\cos(\omega t - \phi) \) into \( \ddot{x} + Gx = 0 \) gives
 
-\[  \left[G - \omega^2 I\right]\underline{p} = 0. \]
+\[
+\left[G - \omega^2 I\right]\underline{p} = 0.
+\]
 
 This is an **eigenvalue problem**: \( \underline{p} \) must be an eigenvector of \( G \) with eigenvalue \( \lambda = \omega^2 \). Non-trivial solutions exist only when \( \det(G - \lambda I) = 0 \). Since \( G \) is real symmetric, all eigenvalues are real and eigenvectors are orthogonal.
 
 **Symmetric Example.** Take \( m_1 = m_2 = 1 \) and \( k_1 = k_3 \) (left-right symmetric system). Then
 
-\[  G = \begin{pmatrix} k_1 + k_2 & -k_2 \\ -k_2 & k_1 + k_2 \end{pmatrix}. \]
+\[
+G = \begin{pmatrix} k_1 + k_2 & -k_2 \\ -k_2 & k_1 + k_2 \end{pmatrix}.
+\]
 
 The characteristic equation \( (k_1 + k_2 - \lambda)^2 - k_2^2 = 0 \) gives two eigenvalues:
 
-\[  \lambda_1 = k_1, \qquad \lambda_2 = k_1 + 2k_2, \]
+\[
+\lambda_1 = k_1, \qquad \lambda_2 = k_1 + 2k_2,
+\]
 
 with corresponding normalized eigenvectors (normal modes):
 
-\[  \underline{p}^{(1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}, \qquad \underline{p}^{(2)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}. \]
+\[
+\underline{p}^{(1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}, \qquad \underline{p}^{(2)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}.
+\]
 
 **Physical Interpretation.**
 
@@ -254,13 +308,17 @@ with corresponding normalized eigenvectors (normal modes):
 
 **General Solution.** The general solution is a superposition of the two normal modes:
 
-\[  x(t) = \beta^{(1)} \underline{p}^{(1)} \cos\left(\omega_1 t - \phi^{(1)}\right) + \beta^{(2)} \underline{p}^{(2)} \cos\left(\omega_2 t - \phi^{(2)}\right), \]
+\[
+x(t) = \beta^{(1)} \underline{p}^{(1)} \cos\left(\omega_1 t - \phi^{(1)}\right) + \beta^{(2)} \underline{p}^{(2)} \cos\left(\omega_2 t - \phi^{(2)}\right),
+\]
 
 where the four constants \( \beta^{(1)}, \beta^{(2)}, \phi^{(1)}, \phi^{(2)} \) are determined by the four initial conditions \( x_1(0), x_2(0), \dot{x}_1(0), \dot{x}_2(0) \). Any motion of the system, however complex, decomposes uniquely into these two fundamental oscillations.
 
 **Connection to Linear Systems Theory.** The normal mode analysis connects directly to the eigenstructure of the matrix \( A \) in the first-order reformulation. Writing \( z = (x, \dot{x})^T \), the system \( \ddot{x} + Gx = 0 \) becomes \( \dot{z} = Az \) with
 
-\[  A = \begin{pmatrix} 0 & I \\ -G & 0 \end{pmatrix}. \]
+\[
+A = \begin{pmatrix} 0 & I \\ -G & 0 \end{pmatrix}.
+\]
 
 The eigenvalues of \( A \) are \( \pm i\omega_j \) — purely imaginary, confirming that the undamped oscillator is a centre (Lyapunov stable but not asymptotically stable). The normal mode eigenvectors of \( G \) encode the spatial patterns of oscillation, while the eigenvalues \( \omega_j^2 \) give the squared frequencies.
 
@@ -274,7 +332,9 @@ The fundamental idea of local analysis is to approximate a nonlinear system near
 
 **Definition 3.1.** Let \( x^* \) be an equilibrium of \( \dot{x} = f(x) \). Writing \( x = x^* + u \) and expanding,
 
-\[  \dot{u} = f(x^* + u) = f(x^*) + Df(x^*) u + O(\|u\|^2) = Df(x^*) u + O(\|u\|^2), \]
+\[
+\dot{u} = f(x^* + u) = f(x^*) + Df(x^*) u + O(\|u\|^2) = Df(x^*) u + O(\|u\|^2),
+\]
 
 since \( f(x^*) = 0 \). The **linearization** at \( x^* \) is the linear system \( \dot{u} = Df(x^*) u \) where \( Df(x^*) \) is the Jacobian matrix evaluated at the equilibrium.
 
@@ -312,11 +372,15 @@ When the equilibrium is non-hyperbolic — when \( Df(x^*) \) has eigenvalues wi
 
 **Theorem 3.5 (Centre Manifold Theorem).** Let the origin be an equilibrium of \( \dot{x} = f(x) \) with \( f \in C^r \), \( r \geq 2 \), and write the system in block form using the decomposition \( \mathbb{R}^n = E^c \oplus E^s \oplus E^u \):
 
-\[  \dot{u} = Cu + F(u, v, w), \quad \dot{v} = Sv + G(u, v, w), \quad \dot{w} = Uw + H(u, v, w), \]
+\[
+\dot{u} = Cu + F(u, v, w), \quad \dot{v} = Sv + G(u, v, w), \quad \dot{w} = Uw + H(u, v, w),
+\]
 
 where \( C \) has eigenvalues with zero real part, \( S \) has eigenvalues with negative real part, and \( U \) has eigenvalues with positive real part. Then there exists a **\( C^r \) centre manifold** \( W^c \) of the form
 
-\[  W^c = \{(u, v, w) : v = h_1(u), \ w = h_2(u), \ h_i(0) = 0, \ Dh_i(0) = 0\} \]
+\[
+W^c = \{(u, v, w) : v = h_1(u), \ w = h_2(u), \ h_i(0) = 0, \ Dh_i(0) = 0\}
+\]
 
 for smooth functions \( h_i \) defined in a neighborhood of the origin. The centre manifold is locally invariant and tangent to \( E^c \) at the origin.
 
@@ -324,7 +388,9 @@ The reduced system on the centre manifold is \( \dot{u} = Cu + F(u, h_1(u), h_2(
 
 **Finding the Centre Manifold.** The functions \( h_i \) satisfy a quasilinear PDE called the **centre manifold equation**, obtained by differentiating \( v = h_1(u) \):
 
-\[  Dh_1(u)(Cu + F(u,h_1(u), h_2(u))) = Sh_1(u) + G(u, h_1(u), h_2(u)). \]
+\[
+Dh_1(u)(Cu + F(u,h_1(u), h_2(u))) = Sh_1(u) + G(u, h_1(u), h_2(u)).
+\]
 
 This is typically solved approximately by expanding in power series, matching terms order by order. At leading order, \( h_i(u) = O(\|u\|^2) \), and higher-order terms can be computed iteratively.
 
@@ -342,7 +408,9 @@ The intuition is elegant: \( V \) measures a generalized "energy" or "distance f
 
 **Example.** For the nonlinear system \( \dot{x}_1 = -x_1 + x_2^2 \), \( \dot{x}_2 = -x_2 \), take \( V(x) = x_1^2 + x_2^2 \). Then
 
-\[  \dot{V} = 2x_1(-x_1 + x_2^2) + 2x_2(-x_2) = -2x_1^2 + 2x_1 x_2^2 - 2x_2^2. \]
+\[
+\dot{V} = 2x_1(-x_1 + x_2^2) + 2x_2(-x_2) = -2x_1^2 + 2x_1 x_2^2 - 2x_2^2.
+\]
 
 Near the origin, the term \( 2x_1 x_2^2 \) is dominated by \( -2x_1^2 - 2x_2^2 \), so \( \dot{V} < 0 \) in a sufficiently small neighborhood, confirming asymptotic stability.
 
@@ -362,19 +430,25 @@ Consider a one-parameter family \( \dot{x} = f(x, \mu) \) where \( \mu \in \math
 
 **Saddle-Node Bifurcation.** This is the generic way in which two equilibria (one stable, one unstable) collide and annihilate, or are created. The normal form on the centre manifold is
 
-\[  \dot{x} = \mu - x^2. \]
+\[
+\dot{x} = \mu - x^2.
+\]
 
 For \( \mu < 0 \), no equilibria exist; at \( \mu = 0 \), a semi-stable equilibrium appears at the origin; for \( \mu > 0 \), two equilibria exist at \( x = \pm\sqrt{\mu} \) (one stable, one unstable).
 
 **Transcritical Bifurcation.** Two equilibria exist for all parameter values near \( \mu = 0 \) but exchange stability as \( \mu \) passes through zero. The normal form is
 
-\[  \dot{x} = \mu x - x^2 = x(\mu - x). \]
+\[
+\dot{x} = \mu x - x^2 = x(\mu - x).
+\]
 
 For any \( \mu \), there are equilibria at \( x = 0 \) and \( x = \mu \). When \( \mu < 0 \), \( x = 0 \) is stable and \( x = \mu \) is unstable; when \( \mu > 0 \), the stabilities exchange.
 
 **Pitchfork Bifurcation.** A symmetric bifurcation where one equilibrium splits into three. The normal form (supercritical) is
 
-\[  \dot{x} = \mu x - x^3. \]
+\[
+\dot{x} = \mu x - x^3.
+\]
 
 For \( \mu \leq 0 \), only \( x = 0 \) is an equilibrium (stable). For \( \mu > 0 \), the origin becomes unstable and two new stable equilibria appear at \( x = \pm\sqrt{\mu} \). The subcritical pitchfork has the form \( \dot{x} = \mu x + x^3 \), where for \( \mu < 0 \) the origin is stable with two flanking unstable equilibria at \( x = \pm\sqrt{-\mu} \), and for \( \mu > 0 \) only the unstable origin remains.
 
@@ -396,17 +470,23 @@ Periodic solutions are especially important in two-dimensional systems, where th
 
 When a periodic solution exists, one can study the stability of *nearby* solutions using Floquet theory. Consider a system with a known periodic solution \( \gamma(t) \) of period \( T \). Write \( x(t) = \gamma(t) + u(t) \) and linearize to obtain the **variational equation**:
 
-\[  \dot{u} = Df(\gamma(t)) u, \]
+\[
+\dot{u} = Df(\gamma(t)) u,
+\]
 
 a linear system with \( T \)-periodic coefficients.
 
 **Theorem 4.2 (Floquet).** Let \( \Phi(t) \) be the **fundamental matrix solution** of \( \dot{u} = A(t) u \) with \( \Phi(0) = I \), where \( A(t) \) is \( T \)-periodic. Then
 
-\[  \Phi(t + T) = \Phi(t) M, \]
+\[
+\Phi(t + T) = \Phi(t) M,
+\]
 
 where \( M = \Phi(T) \) is the **monodromy matrix**. There exists a (possibly complex) matrix \( B \) with \( e^{BT} = M \) and a \( T \)-periodic matrix function \( P(t) \) such that
 
-\[  \Phi(t) = P(t) e^{Bt}. \]
+\[
+\Phi(t) = P(t) e^{Bt}.
+\]
 
 The eigenvalues of the monodromy matrix \( M \) are called **Floquet multipliers** (or *characteristic multipliers*). Their logarithms divided by \( T \) are the **Floquet exponents** (or *characteristic exponents*).
 
@@ -414,11 +494,15 @@ The eigenvalues of the monodromy matrix \( M \) are called **Floquet multipliers
 
 **Proposition 4.3 (Product Formula for Floquet Multipliers).** For the \( n \times n \) variational equation, the product of all Floquet multipliers is
 
-\[  \prod_{i=1}^n \mu_i = \det(\Phi(T)) = \exp\left(\int_0^T \text{tr}(Df(\gamma(t))) \, dt\right). \]
+\[
+\prod_{i=1}^n \mu_i = \det(\Phi(T)) = \exp\left(\int_0^T \text{tr}(Df(\gamma(t))) \, dt\right).
+\]
 
 This follows from Liouville's formula. For a 2D system \( \dot{x} = f(x) \), one multiplier is always \( \mu_1 = 1 \), so the other is
 
-\[  \mu_2 = \exp\left(\int_0^T \text{tr}(Df(\gamma(t))) \, dt\right) = \exp\left(\int_0^T (\partial_{x_1} f_1 + \partial_{x_2} f_2) \, dt\right). \]
+\[
+\mu_2 = \exp\left(\int_0^T \text{tr}(Df(\gamma(t))) \, dt\right) = \exp\left(\int_0^T (\partial_{x_1} f_1 + \partial_{x_2} f_2) \, dt\right).
+\]
 
 The sign of this exponent determines the orbital stability: \( |\mu_2| < 1 \) (stable) if and only if \( \int_0^T \text{div}(f) \, dt < 0 \).
 
@@ -453,13 +537,17 @@ Dulac's criterion provides a sufficient condition for the *absence* of closed or
 
 **Theorem 4.6 (Dulac's Criterion).** Let \( \dot{x} = f(x) \) be a \( C^1 \) system on a simply connected region \( D \subseteq \mathbb{R}^2 \). If there exists a \( C^1 \) function \( B(x) \) (a **Dulac function**) such that
 
-\[  \text{div}(B f) = \frac{\partial (B f_1)}{\partial x_1} + \frac{\partial (B f_2)}{\partial x_2} \]
+\[
+\text{div}(B f) = \frac{\partial (B f_1)}{\partial x_1} + \frac{\partial (B f_2)}{\partial x_2}
+\]
 
 is of one sign (does not change sign and is not identically zero) in \( D \), then \( \dot{x} = f(x) \) has no closed orbits in \( D \).
 
 **Proof.** Suppose for contradiction that \( \Gamma \) is a closed orbit in \( D \), enclosing a region \( R \). By Green's theorem (divergence theorem in 2D),
 
-\[  \iint_R \text{div}(Bf) \, dA = \oint_{\Gamma} B f \cdot n \, ds. \]
+\[
+\iint_R \text{div}(Bf) \, dA = \oint_{\Gamma} B f \cdot n \, ds.
+\]
 
 But since \( \Gamma \) is an orbit of \( f \), the vector \( f \) is tangent to \( \Gamma \), so \( f \cdot n = 0 \) on \( \Gamma \). Thus the right side is zero. But the left side is nonzero since \( \text{div}(Bf) \) has one sign. Contradiction.
 
@@ -469,15 +557,21 @@ But since \( \Gamma \) is an orbit of \( f \), the vector \( f \) is tangent to 
 
 A broad class of oscillator models fits the **Liénard equation**:
 
-\[  \ddot{x} + f(x) \dot{x} + g(x) = 0, \]
+\[
+\ddot{x} + f(x) \dot{x} + g(x) = 0,
+\]
 
 or equivalently in system form with \( y = \dot{x} \):
 
-\[  \dot{x} = y, \qquad \dot{y} = -f(x)y - g(x). \]
+\[
+\dot{x} = y, \qquad \dot{y} = -f(x)y - g(x).
+\]
 
 The **Van der Pol equation** is the canonical example, with \( f(x) = \mu(x^2 - 1) \) and \( g(x) = x \):
 
-\[  \ddot{x} + \mu(x^2 - 1)\dot{x} + x = 0. \]
+\[
+\ddot{x} + \mu(x^2 - 1)\dot{x} + x = 0.
+\]
 
 For \( \mu > 0 \), the damping is negative for \( |x| < 1 \) (energy input) and positive for \( |x| > 1 \) (energy dissipation). This self-sustaining oscillation is responsible for the existence and uniqueness of a stable limit cycle for any \( \mu > 0 \).
 
@@ -496,13 +590,17 @@ More generally, for a Liénard system, suppose:
 
 **Definition 4.9.** A **Hamiltonian system** on \( \mathbb{R}^{2n} \) with coordinates \( (q, p) \in \mathbb{R}^n \times \mathbb{R}^n \) is defined by a smooth function \( H(q, p) \) (the **Hamiltonian** or *total energy*) via
 
-\[  \dot{q}_i = \frac{\partial H}{\partial p_i}, \qquad \dot{p}_i = -\frac{\partial H}{\partial q_i}, \quad i = 1, \ldots, n. \]
+\[
+\dot{q}_i = \frac{\partial H}{\partial p_i}, \qquad \dot{p}_i = -\frac{\partial H}{\partial q_i}, \quad i = 1, \ldots, n.
+\]
 
 The Hamiltonian is a **first integral** (conserved quantity): \( \dot{H} = \sum_i (\partial H/\partial q_i) \dot{q}_i + (\partial H/\partial p_i) \dot{p}_i = 0 \) along any solution. Thus every trajectory lies on a level set \( H = \text{const} \).
 
 **Proposition 4.10 (No Asymptotically Stable Equilibria).** A Hamiltonian system has no asymptotically stable equilibria. More strongly, it is **volume-preserving**: the divergence of the vector field is
 
-\[  \text{div}(f) = \sum_i \left(\frac{\partial^2 H}{\partial q_i \partial p_i} - \frac{\partial^2 H}{\partial p_i \partial q_i}\right) = 0. \]
+\[
+\text{div}(f) = \sum_i \left(\frac{\partial^2 H}{\partial q_i \partial p_i} - \frac{\partial^2 H}{\partial p_i \partial q_i}\right) = 0.
+\]
 
 By Liouville's theorem, the flow \( \phi_t \) preserves phase-space volume. This rules out attracting limit cycles and attracting equilibria alike.
 
@@ -520,7 +618,9 @@ Gradient systems are in many ways opposite to Hamiltonian systems: they dissipat
 
 **Proof.** Suppose \( x(t) \) is a periodic solution with period \( T \). Then
 
-\[  0 = V(x(T)) - V(x(0)) = \int_0^T \frac{d}{dt} V(x(t)) \, dt = \int_0^T \nabla V(x) \cdot \dot{x} \, dt = -\int_0^T \|\nabla V(x)\|^2 \, dt. \]
+\[
+0 = V(x(T)) - V(x(0)) = \int_0^T \frac{d}{dt} V(x(t)) \, dt = \int_0^T \nabla V(x) \cdot \dot{x} \, dt = -\int_0^T \|\nabla V(x)\|^2 \, dt.
+\]
 
 This forces \( \nabla V = 0 \) along the entire orbit, so every point on the orbit is an equilibrium. But a periodic orbit consists of non-equilibrium points, contradiction.
 
@@ -563,19 +663,25 @@ The **Hopf bifurcation** is the most important mechanism by which equilibria giv
 
 **Setup.** Consider \( \dot{x} = f(x, \mu) \) in \( \mathbb{R}^2 \) (or in the plane of the centre manifold for higher-dimensional systems). Suppose the origin is an equilibrium for all \( \mu \), and the linearization \( A(\mu) = D_x f(0, \mu) \) has complex conjugate eigenvalues
 
-\[  \lambda(\mu) = \alpha(\mu) \pm i \beta(\mu) \]
+\[
+\lambda(\mu) = \alpha(\mu) \pm i \beta(\mu)
+\]
 
 with \( \alpha(0) = 0 \), \( \beta(0) = \beta_0 \neq 0 \), and the **transversality condition** \( \alpha'(0) = d\alpha/d\mu|_{\mu=0} \neq 0 \).
 
 **Example (polar coordinates).** The canonical Hopf bifurcation is:
 
-\[  \dot{r} = \mu r - r^3, \qquad \dot{\theta} = 1. \]
+\[
+\dot{r} = \mu r - r^3, \qquad \dot{\theta} = 1.
+\]
 
 In Cartesian coordinates, this is \( \dot{x}_1 = \mu x_1 - x_2 - x_1(x_1^2 + x_2^2) \), \( \dot{x}_2 = x_1 + \mu x_2 - x_2(x_1^2 + x_2^2) \). The radial equation decouples: for \( \mu \leq 0 \), \( r = 0 \) is the only non-negative equilibrium of \( \dot{r} = r(\mu - r^2) \) and it is stable. For \( \mu > 0 \), a new equilibrium appears at \( r^* = \sqrt{\mu} \), corresponding to a periodic orbit of the original system with radius \( \sqrt{\mu} \) and frequency \( 1 \).
 
 **Theorem 4.19 (Poincaré–Andronov–Hopf).** Under the above transversality condition, there exists a family of periodic orbits bifurcating from the origin at \( \mu = 0 \). Define the **first Lyapunov coefficient** \( \sigma \) via the Taylor expansion of \( f \) at the origin:
 
-\[  \sigma = \frac{1}{16}\left[ f^1_{xxx} + f^1_{xyy} + f^2_{xxy} + f^2_{yyy} \right] + \frac{1}{16\beta_0}\left[ f^1_{xy}(f^1_{xx} + f^1_{yy}) - f^2_{xy}(f^2_{xx} + f^2_{yy}) - f^1_{xx}f^2_{xx} + f^1_{yy}f^2_{yy} \right], \]
+\[
+\sigma = \frac{1}{16}\left[ f^1_{xxx} + f^1_{xyy} + f^2_{xxy} + f^2_{yyy} \right] + \frac{1}{16\beta_0}\left[ f^1_{xy}(f^1_{xx} + f^1_{yy}) - f^2_{xy}(f^2_{xx} + f^2_{yy}) - f^1_{xx}f^2_{xx} + f^1_{yy}f^2_{yy} \right],
+\]
 
 where superscripts denote components and subscripts denote partial derivatives evaluated at the origin.
 

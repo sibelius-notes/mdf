@@ -47,6 +47,7 @@ When two charts overlap, we need to understand how their coordinate systems are 
 
 <div class="definition">
 <strong>Definition 1.3 (Transition Map).</strong> If \((U, \varphi)\) and \((V, \psi)\) are two charts on \(M\) with \(U \cap V \neq \emptyset\), the <strong>transition map</strong> from \(\varphi\) to \(\psi\) is the map
+
 \[
 \psi \circ \varphi^{-1} \colon \varphi(U \cap V) \to \psi(U \cap V).
 \]
@@ -99,6 +100,7 @@ We now present the most important examples of smooth manifolds. These examples w
 
 <div class="example">
 <strong>Example 1.9 (The \(n\)-sphere \(S^n\)).</strong> The unit sphere
+
 \[
 S^n = \{x \in \mathbb{R}^{n+1} : |x|^2 = (x^1)^2 + \cdots + (x^{n+1})^2 = 1\}
 \]
@@ -130,6 +132,7 @@ The transition map for the stereographic atlas is a central computation that we 
 
 <div class="proposition">
 <strong>Proposition 1.10 (Transition Map for Stereographic Projection).</strong> On the overlap \(U_N \cap U_S = S^n \setminus \{N, S\}\), the transition map \(\sigma_S \circ \sigma_N^{-1} \colon \mathbb{R}^n \setminus \{0\} \to \mathbb{R}^n \setminus \{0\}\) is given by
+
 \[
 \sigma_S \circ \sigma_N^{-1}(u) = \frac{u}{|u|^2},
 \]
@@ -138,6 +141,7 @@ which is the <strong>inversion in the unit sphere</strong> in \(\mathbb{R}^n\).
 
 <div class="proof">
 <strong>Proof.</strong> We first compute \(\sigma_N^{-1}\). Given \(u = (u^1, \ldots, u^n) \in \mathbb{R}^n\), we need to find \(x = (x^1, \ldots, x^{n+1}) \in S^n \setminus \{N\}\) such that
+
 \[
 u^i = \frac{x^i}{1 - x^{n+1}}, \qquad i = 1, \ldots, n.
 \]
@@ -151,6 +155,7 @@ Setting \(|u|^2 = \sum (u^i)^2\) and \(t = x^{n+1}\), this gives \(|u|^2(1-t)^2 
 \[
 |u|^2 - 2|u|^2 t + |u|^2 t^2 + t^2 = 1,
 \]
+
 \[
 (|u|^2 + 1)t^2 - 2|u|^2 t + (|u|^2 - 1) = 0.
 \]
@@ -198,6 +203,7 @@ This is a smooth map on \(\mathbb{R}^n \setminus \{0\}\), and it is its own inve
 
 <div class="example">
 <strong>Example 1.11 (Real Projective Space \(\mathbb{R}P^n\)).</strong> The <strong>real projective space</strong> \(\mathbb{R}P^n\) is the set of all one-dimensional linear subspaces (lines through the origin) of \(\mathbb{R}^{n+1}\). Equivalently, it is the quotient space
+
 \[
 \mathbb{R}P^n = ({\mathbb{R}^{n+1} \setminus \{0\}})/{\sim},
 \]
@@ -213,6 +219,7 @@ where the hat means that the \(i\)-th entry is omitted. The sets \(U_0, \ldots, 
 
 <div class="example">
 <strong>Example 1.12 (Product Manifolds).</strong> If \(M\) is a smooth \(m\)-manifold and \(N\) is a smooth \(n\)-manifold, their product \(M \times N\) is naturally a smooth \((m+n)\)-manifold. The product topology makes \(M \times N\) Hausdorff and second countable. If \(\{(U_\alpha, \varphi_\alpha)\}\) is an atlas for \(M\) and \(\{(V_\beta, \psi_\beta)\}\) is an atlas for \(N\), then
+
 \[
 \{(U_\alpha \times V_\beta,\; \varphi_\alpha \times \psi_\beta)\}
 \]
@@ -221,6 +228,7 @@ is a smooth atlas for \(M \times N\), where \((\varphi_\alpha \times \psi_\beta)
 
 <div class="example">
 <strong>Example 1.13 (Tori).</strong> The <strong>\(n\)-torus</strong> is the product manifold
+
 \[
 T^n = \underbrace{S^1 \times S^1 \times \cdots \times S^1}_{n \text{ copies}}.
 \]
@@ -258,6 +266,7 @@ For many applications — particularly in integration theory and Stokes' theorem
 
 <div class="definition">
 <strong>Definition 1.15 (Upper Half-Space).</strong> The <strong>upper half-space</strong> of \(\mathbb{R}^n\) is
+
 \[
 \mathbb{H}^n = \{(x^1, \ldots, x^n) \in \mathbb{R}^n : x^n \geq 0\}.
 \]
@@ -288,6 +297,7 @@ Having established the notion of a smooth manifold, we now develop the theory of
 
 <div class="definition">
 <strong>Definition 2.1 (Smooth Function).</strong> Let \(M\) be a smooth \(n\)-manifold. A function \(f \colon M \to \mathbb{R}\) is <strong>smooth</strong> (or \(C^\infty\)) if for every point \(p \in M\) and every smooth chart \((U, \varphi)\) with \(p \in U\), the composite
+
 \[
 f \circ \varphi^{-1} \colon \varphi(U) \to \mathbb{R}
 \]
@@ -313,6 +323,7 @@ We now extend the notion of smoothness from functions to maps between manifolds.
 
 <div class="definition">
 <strong>Definition 2.3 (Smooth Map).</strong> Let \(M\) and \(N\) be smooth manifolds of dimensions \(m\) and \(n\), respectively. A continuous map \(F \colon M \to N\) is <strong>smooth</strong> if for every \(p \in M\), there exist charts \((U, \varphi)\) for \(M\) with \(p \in U\) and \((V, \psi)\) for \(N\) with \(F(p) \in V\) such that \(F(U) \subseteq V\) and the <strong>coordinate representation</strong>
+
 \[
 \hat{F} = \psi \circ F \circ \varphi^{-1} \colon \varphi(U) \to \psi(V)
 \]
@@ -327,6 +338,7 @@ Again, the smoothness of transition maps ensures that if this condition holds fo
 
 <div class="proof">
 <strong>Proof.</strong> Let \(p \in M\) and choose charts \((U, \varphi)\) around \(p\), \((V, \psi)\) around \(F(p)\), and \((W, \theta)\) around \(G(F(p))\) with \(F(U) \subseteq V\) and \(G(V) \subseteq W\). Then
+
 \[
 \theta \circ (G \circ F) \circ \varphi^{-1} = (\theta \circ G \circ \psi^{-1}) \circ (\psi \circ F \circ \varphi^{-1})
 \]
@@ -351,6 +363,7 @@ Before discussing partitions of unity, we need to establish the existence of smo
 
 <div class="definition">
 <strong>Definition 2.6 (Support).</strong> The <strong>support</strong> of a function \(f \colon M \to \mathbb{R}\) is
+
 \[
 \mathrm{supp}(f) = \overline{\{p \in M : f(p) \neq 0\}},
 \]
@@ -361,6 +374,7 @@ The fundamental building block is the following function on \(\mathbb{R}\).
 
 <div class="lemma">
 <strong>Lemma 2.7.</strong> The function \(h \colon \mathbb{R} \to \mathbb{R}\) defined by
+
 \[
 h(t) = \begin{cases} e^{-1/t} & \text{if } t > 0, \\ 0 & \text{if } t \leq 0, \end{cases}
 \]
@@ -478,6 +492,7 @@ To see why derivations capture the right concept, think about what a tangent vec
 
 <div class="definition">
 <strong>Definition 3.1 (Derivation at a Point).</strong> Let \(M\) be a smooth manifold and \(p \in M\). A <strong>derivation at \(p\)</strong> is a linear map \(v \colon C^\infty(M) \to \mathbb{R}\) satisfying the <strong>Leibniz rule</strong> (product rule):
+
 \[
 v(fg) = f(p) \, v(g) + g(p) \, v(f)
 \]
@@ -486,6 +501,7 @@ for all \(f, g \in C^\infty(M)\).
 
 <div class="definition">
 <strong>Definition 3.2 (Tangent Space).</strong> The <strong>tangent space to \(M\) at \(p\)</strong>, denoted \(T_pM\), is the set of all derivations at \(p\). It is a real vector space under the operations
+
 \[
 (v + w)(f) = v(f) + w(f), \qquad (\lambda v)(f) = \lambda \, v(f).
 \]
@@ -527,6 +543,7 @@ where \(r^1, \ldots, r^n\) are the standard coordinates on \(\mathbb{R}^n\). In 
 
 <div class="theorem">
 <strong>Theorem 3.4 (Dimension of the Tangent Space).</strong> Let \(M\) be a smooth \(n\)-manifold, \(p \in M\), and \((U, \varphi) = (U, x^1, \ldots, x^n)\) a smooth chart containing \(p\). Then the tangent vectors
+
 \[
 \left.\frac{\partial}{\partial x^1}\right|_p, \ldots, \left.\frac{\partial}{\partial x^n}\right|_p
 \]
@@ -570,6 +587,7 @@ One of the most important operations in differential geometry is the pushforward
 
 <div class="definition">
 <strong>Definition 3.5 (Pushforward / Differential).</strong> Let \(F \colon M \to N\) be a smooth map and \(p \in M\). The <strong>pushforward</strong> (or <strong>differential</strong>) of \(F\) at \(p\) is the linear map
+
 \[
 F_{*,p} \colon T_pM \to T_{F(p)}N
 \]
@@ -608,6 +626,7 @@ The basis vector \(\frac{\partial}{\partial x}\big|_{(x,y)}\) maps to \(2x\frac{
 
 <div class="proposition">
 <strong>Proposition 3.6 (Pushforward in Coordinates).</strong> Let \(F \colon M \to N\) be smooth, \(p \in M\), \((U, \varphi) = (U, x^1, \ldots, x^m)\) a chart around \(p\), and \((V, \psi) = (V, y^1, \ldots, y^n)\) a chart around \(F(p)\). Write the coordinate representation of \(F\) as
+
 \[
 \hat{F} = \psi \circ F \circ \varphi^{-1} \colon \varphi(U) \to \psi(V), \qquad \hat{F}(x) = (\hat{F}^1(x), \ldots, \hat{F}^n(x)).
 \]
@@ -621,6 +640,7 @@ In other words, the matrix of \(F_{*,p}\) with respect to the coordinate bases i
 
 <div class="proof">
 <strong>Proof.</strong> For any \(g \in C^\infty(N)\), we compute
+
 \[
 F_{*,p}\left(\frac{\partial}{\partial x^i}\bigg|_p\right)(g) = \frac{\partial}{\partial x^i}\bigg|_p(g \circ F) = \frac{\partial (g \circ F \circ \varphi^{-1})}{\partial r^i}\bigg|_{\varphi(p)}.
 \]
@@ -638,6 +658,7 @@ The chain rule from multivariable calculus generalizes beautifully to manifolds.
 
 <div class="theorem">
 <strong>Theorem 3.7 (Chain Rule for Pushforwards).</strong> If \(F \colon M \to N\) and \(G \colon N \to P\) are smooth maps, then for every \(p \in M\),
+
 \[
 (G \circ F)_{<em>,p} = G_{</em>,F(p)} \circ F_{*,p}.
 \]
@@ -646,6 +667,7 @@ Moreover, \((\mathrm{id}_M)_{*,p} = \mathrm{id}_{T_pM}\).
 
 <div class="proof">
 <strong>Proof.</strong> For any \(v \in T_pM\) and \(h \in C^\infty(P)\):
+
 \[
 (G \circ F)_{<em>,p}(v)(h) = v(h \circ G \circ F) = F_{</em>,p}(v)(h \circ G) = G_{<em>,F(p)}(F_{</em>,p}(v))(h).
 \]
@@ -685,6 +707,7 @@ The coordinate basis vectors \(\frac{\partial}{\partial x^i}\big|_p\) depend on 
 
 <div class="proposition">
 <strong>Proposition 3.9 (Change of Coordinates).</strong> Let \((U, x^1, \ldots, x^n)\) and \((V, y^1, \ldots, y^n)\) be two charts around \(p \in M\). Then
+
 \[
 \frac{\partial}{\partial x^i}\bigg|_p = \sum_{j=1}^n \frac{\partial y^j}{\partial x^i}(p) \, \frac{\partial}{\partial y^j}\bigg|_p,
 \]
@@ -707,6 +730,7 @@ We now connect the algebraic definition of tangent vectors to the geometric pict
 
 <div class="definition">
 <strong>Definition 3.10 (Smooth Curve and Velocity Vector).</strong> A <strong>smooth curve</strong> in \(M\) is a smooth map \(\gamma \colon I \to M\), where \(I \subseteq \mathbb{R}\) is an open interval. If \(t_0 \in I\), the <strong>velocity vector</strong> of \(\gamma\) at \(t_0\) is the tangent vector
+
 \[
 \gamma'(t_0) = \gamma_{*,t_0}\left(\frac{d}{dt}\bigg|_{t_0}\right) \in T_{\gamma(t_0)}M.
 \]
@@ -742,6 +766,7 @@ Having constructed the tangent space \(T_pM\) at each point, we now assemble all
 
 <div class="definition">
 <strong>Definition 3.12 (Tangent Bundle).</strong> The <strong>tangent bundle</strong> of a smooth \(n\)-manifold \(M\) is the disjoint union
+
 \[
 TM = \bigsqcup_{p \in M} T_pM = \{(p, v) : p \in M, \, v \in T_pM\}.
 \]
@@ -757,6 +782,7 @@ The tangent bundle \(TM\) carries a natural topology and smooth structure making
 <ol>
 <li>The projection \(\pi \colon TM \to M\) is a smooth surjection.</li>
 <li>For each smooth chart \((U, \varphi) = (U, x^1, \ldots, x^n)\) on \(M\), the map \(\tilde{\varphi} \colon \pi^{-1}(U) \to \varphi(U) \times \mathbb{R}^n\) defined by
+
 \[
 \tilde{\varphi}\left(p,\, v^i \frac{\partial}{\partial x^i}\bigg|_p\right) = (x^1(p), \ldots, x^n(p), v^1, \ldots, v^n)
 \]
@@ -814,6 +840,7 @@ where the <strong>component functions</strong> \(X^i \colon U \to \mathbb{R}\) a
 
 <div class="definition">
 <strong>Definition 4.2 (Space of Smooth Vector Fields).</strong> The set of all smooth vector fields on \(M\) is denoted \(\Gamma(TM)\) or \(\mathfrak{X}(M)\). It is a real vector space under pointwise addition:
+
 \[
 (X + Y)_p = X_p + Y_p, \qquad (\lambda X)_p = \lambda X_p.
 \]
@@ -830,6 +857,7 @@ Each tangent vector \(v \in T_pM\) acts as a derivation on \(C^\infty(M)\) at th
 
 <div class="definition">
 <strong>Definition 4.3 (Vector Field as Derivation).</strong> A smooth vector field \(X \in \Gamma(TM)\) acts on smooth functions by
+
 \[
 (Xf)(p) = X_p(f) \quad \text{for all } f \in C^\infty(M), \, p \in M.
 \]
@@ -862,6 +890,7 @@ When we have a smooth map \(F \colon M \to N\), we generally cannot "push forwar
 
 <div class="definition">
 <strong>Definition 4.5 (\(F\)-Related Vector Fields).</strong> Let \(F \colon M \to N\) be a smooth map. A vector field \(X \in \Gamma(TM)\) and a vector field \(Y \in \Gamma(TN)\) are <strong>\(F\)-related</strong> if
+
 \[
 F_{*,p}(X_p) = Y_{F(p)} \qquad \text{for all } p \in M.
 \]
@@ -870,6 +899,7 @@ Equivalently, \(F_* \circ X = Y \circ F\) as maps \(M \to TN\).
 
 <div class="proposition">
 <strong>Proposition 4.6 (Characterization of \(F\)-Relatedness).</strong> Let \(F \colon M \to N\) be smooth, \(X \in \Gamma(TM)\), and \(Y \in \Gamma(TN)\). Then \(X\) and \(Y\) are \(F\)-related if and only if
+
 \[
 X(g \circ F) = (Yg) \circ F \qquad \text{for all } g \in C^\infty(N).
 \]
@@ -877,9 +907,11 @@ X(g \circ F) = (Yg) \circ F \qquad \text{for all } g \in C^\infty(N).
 
 <div class="proof">
 <strong>Proof.</strong> For any \(p \in M\) and \(g \in C^\infty(N)\):
+
 \[
 X(g \circ F)(p) = X_p(g \circ F) = (F_{*,p} X_p)(g),
 \]
+
 \[
 ((Yg) \circ F)(p) = (Yg)(F(p)) = Y_{F(p)}(g).
 \]
@@ -898,6 +930,7 @@ Given two vector fields \(X, Y \in \Gamma(TM)\), each acts as a derivation of \(
 
 <div class="definition">
 <strong>Definition 4.7 (Lie Bracket).</strong> The <strong>Lie bracket</strong> of two smooth vector fields \(X, Y \in \Gamma(TM)\) is the smooth vector field \([X, Y] \in \Gamma(TM)\) defined by
+
 \[
 [X, Y](f) = X(Yf) - Y(Xf) \qquad \text{for all } f \in C^\infty(M).
 \]
@@ -909,6 +942,7 @@ We must verify that \([X, Y]\) is indeed a derivation (and hence corresponds to 
 
 <div class="proof">
 <strong>Proof that \([X, Y]\) is a derivation.</strong> Linearity is clear. For the Leibniz rule, let \(f, g \in C^\infty(M)\):
+
 \[
 X(Y(fg)) = X(f \cdot Yg + g \cdot Yf) = Xf \cdot Yg + f \cdot X(Yg) + Xg \cdot Yf + g \cdot X(Yf).
 \]
@@ -928,6 +962,7 @@ Now we compute the Lie bracket in local coordinates.
 
 <div class="proposition">
 <strong>Proposition 4.8 (Coordinate Formula for the Lie Bracket).</strong> In local coordinates \((U, x^1, \ldots, x^n)\), if \(X = \sum_i X^i \frac{\partial}{\partial x^i}\) and \(Y = \sum_j Y^j \frac{\partial}{\partial x^j}\), then
+
 \[
 [X, Y] = \sum_{k=1}^n \left(\sum_{i=1}^n X^i \frac{\partial Y^k}{\partial x^i} - Y^i \frac{\partial X^k}{\partial x^i}\right) \frac{\partial}{\partial x^k}.
 \]
@@ -935,6 +970,7 @@ Now we compute the Lie bracket in local coordinates.
 
 <div class="proof">
 <strong>Proof.</strong> We compute \([X, Y](f)\) for an arbitrary smooth function \(f\):
+
 \[
 X(Yf) = \sum_i X^i \frac{\partial}{\partial x^i}\left(\sum_j Y^j \frac{\partial f}{\partial x^j}\right) = \sum_{i,j} X^i \frac{\partial Y^j}{\partial x^i}\frac{\partial f}{\partial x^j} + \sum_{i,j} X^i Y^j \frac{\partial^2 f}{\partial x^i \partial x^j}.
 \]
@@ -957,6 +993,7 @@ Relabelling the summation index \(j\) as \(k\) gives the stated formula. \(\blac
 
 <div class="example">
 <strong>Example 4.8a (Concrete Lie bracket computations on \(\mathbb{R}^2\)).</strong> Let \(x, y\) be standard coordinates on \(\mathbb{R}^2\). Consider the vector fields
+
 \[
 X = \frac{\partial}{\partial x}, \qquad Y = x\frac{\partial}{\partial y}.
 \]
@@ -965,6 +1002,7 @@ To compute \([X, Y]\) we apply the coordinate formula. Here \(X^1 = 1, X^2 = 0\)
 \[
 [X, Y]^1 = X^1 \frac{\partial Y^1}{\partial x} + X^2 \frac{\partial Y^1}{\partial y} - Y^1 \frac{\partial X^1}{\partial x} - Y^2 \frac{\partial X^1}{\partial y} = 1 \cdot 0 + 0 - 0 - 0 = 0,
 \]
+
 \[
 [X, Y]^2 = X^1 \frac{\partial Y^2}{\partial x} + X^2 \frac{\partial Y^2}{\partial y} - Y^1 \frac{\partial X^2}{\partial x} - Y^2 \frac{\partial X^2}{\partial y} = 1 \cdot 1 + 0 - 0 - 0 = 1.
 \]
@@ -993,9 +1031,11 @@ The Lie bracket satisfies three fundamental algebraic properties that make \(\Ga
 <li><strong>Bilinearity</strong>: \([aX + bY, Z] = a[X,Z] + b[Y,Z]\) and \([Z, aX+bY] = a[Z,X] + b[Z,Y]\).</li>
 <li><strong>Skew-symmetry (antisymmetry)</strong>: \([X, Y] = -[Y, X]\).</li>
 <li><strong>Jacobi identity</strong>:
+
 \[
 [X, [Y, Z]] + [Y, [Z, X]] + [Z, [X, Y]] = 0.
-\]</li>
+\]
+</li>
 </ol>
 </div>
 
@@ -1012,6 +1052,7 @@ Similarly,
 \[
 [Y,[Z,X]](f) = Y(Z(Xf)) - Y(X(Zf)) - Z(X(Yf)) + X(Z(Yf)),
 \]
+
 \[
 [Z,[X,Y]](f) = Z(X(Yf)) - Z(Y(Xf)) - X(Y(Zf)) + Y(X(Zf)).
 \]
@@ -1020,6 +1061,7 @@ Adding all three expressions, every term cancels in pairs, giving \(0\). \(\blac
 
 <div class="remark">
 <strong>Remark.</strong> The Lie bracket also satisfies the following compatibility with the \(C^\infty(M)\)-module structure: for \(f, g \in C^\infty(M)\),
+
 \[
 [fX, gY] = fg[X,Y] + f(Xg)Y - g(Yf)X.
 \]
@@ -1036,9 +1078,11 @@ A crucial property of the Lie bracket is its naturality with respect to smooth m
 
 <div class="proof">
 <strong>Proof.</strong> By Proposition 4.6, \(X_i\) is \(F\)-related to \(Y_i\) means \(X_i(g \circ F) = (Y_i g) \circ F\) for all \(g \in C^\infty(N)\). Then
+
 \[
 [X_1, X_2](g \circ F) = X_1(X_2(g \circ F)) - X_2(X_1(g \circ F))
 \]
+
 \[
 = X_1((Y_2 g) \circ F) - X_2((Y_1 g) \circ F) = (Y_1(Y_2 g)) \circ F - (Y_2(Y_1 g)) \circ F = ([Y_1, Y_2]g) \circ F.
 \]
@@ -1059,6 +1103,7 @@ We now develop one of the most beautiful applications of vector fields: the Lie 
 
 <div class="definition">
 <strong>Definition 4.13 (Left Multiplication).</strong> For each \(g \in G\), the <strong>left multiplication</strong> (or <strong>left translation</strong>) by \(g\) is the map
+
 \[
 L_g \colon G \to G, \qquad L_g(h) = gh.
 \]
@@ -1069,6 +1114,7 @@ Since each \(L_g\) is a diffeomorphism, it induces an isomorphism \((L_g)_{*,h} 
 
 <div class="definition">
 <strong>Definition 4.14 (Left-Invariant Vector Field).</strong> A vector field \(X \in \Gamma(TG)\) is <strong>left-invariant</strong> if it is invariant under all left translations:
+
 \[
 (L_g)_* X = X \qquad \text{for all } g \in G.
 \]
@@ -1079,6 +1125,7 @@ The condition of left-invariance means that \(X\) is \(L_g\)-related to itself f
 
 <div class="proposition">
 <strong>Proposition 4.15.</strong> The map \(\mathrm{ev}_e \colon \{\text{left-invariant vector fields on } G\} \to T_eG\) defined by \(\mathrm{ev}_e(X) = X_e\) is a linear isomorphism. Its inverse sends \(v \in T_eG\) to the left-invariant vector field \(\tilde{v}\) defined by
+
 \[
 \tilde{v}_g = (L_g)_{*,e}(v) \qquad \text{for all } g \in G.
 \]
@@ -1131,6 +1178,7 @@ The correspondence between Lie groups and Lie algebras is functorial: smooth gro
 
 <div class="theorem">
 <strong>Theorem 4.21 (Induced Lie Algebra Homomorphism).</strong> Let \(\Phi \colon G \to H\) be a Lie group homomorphism. Then the pushforward at the identity,
+
 \[
 \Phi_{*,e} \colon T_eG \to T_eH,
 \]
@@ -1200,6 +1248,7 @@ Now we bring this construction to manifolds. At each point \( p \) of a smooth m
 
 <div class="definition">
 <strong>Definition 5.2 (Cotangent Space).</strong> Let \( M \) be a smooth manifold and \( p \in M \). The <strong>cotangent space</strong> of \( M \) at \( p \) is the dual space
+
 \[
 T_p^<em>M = (T_pM)^</em>.
 \]
@@ -1232,6 +1281,7 @@ Just as we assembled all tangent spaces into the tangent bundle \( TM \), we now
 
 <div class="definition">
 <strong>Definition 5.3 (Cotangent Bundle).</strong> The <strong>cotangent bundle</strong> of a smooth \( n \)-manifold \( M \) is the disjoint union
+
 \[
 T^<em>M = \bigsqcup_{p \in M} T_p^</em>M = \{ (p, \omega) : p \in M, \, \omega \in T_p^*M \}.
 \]
@@ -1260,6 +1310,7 @@ To see why \(T^*M\) is the natural home for Hamiltonian mechanics rather than \(
 
 <div class="definition">
 <strong>Definition 5.5 (Covector Field / 1-Form).</strong> A <strong>covector field</strong> (or <strong>1-form</strong>) on \( M \) is a smooth section of the cotangent bundle, i.e., a smooth map \( \omega \colon M \to T^*M \) such that \( \pi \circ \omega = \mathrm{id}_M \). The space of all smooth 1-forms on \( M \) is denoted
+
 \[
 \Omega^1(M) = \Gamma(T^*M).
 \]
@@ -1293,6 +1344,7 @@ The most natural and important source of covector fields is the differential of 
 
 <div class="definition">
 <strong>Definition 5.6 (Differential of a Function).</strong> Let \( f \in C^\infty(M) \). The <strong>differential</strong> of \( f \) is the 1-form \( df \in \Omega^1(M) \) defined by
+
 \[
 (df)_p(X_p) = X_p f
 \]
@@ -1309,6 +1361,7 @@ In words, \( df \) at a point \( p \) eats a tangent vector and returns the dire
 
 <div class="proposition">
 <strong>Proposition 5.7 (Local Expression for \( df \)).</strong> Let \( (U, (x^1, \ldots, x^n)) \) be a smooth chart on \( M \). For any \( f \in C^\infty(M) \),
+
 \[
 df = \frac{\partial f}{\partial x^i} \, dx^i
 \]
@@ -1317,6 +1370,7 @@ on \( U \).
 
 <div class="proof">
 <strong>Proof.</strong> We must show that both sides agree when applied to any basis vector field \( \frac{\partial}{\partial x^j} \). On one hand,
+
 \[
 df\!\left( \frac{\partial}{\partial x^j} \right) = \frac{\partial f}{\partial x^j}.
 \]
@@ -1331,6 +1385,7 @@ This proposition shows that the notation \( dx^i \) for the dual basis elements 
 
 <div class="example">
 <strong>Example 5.8.</strong> Consider \( f \colon \mathbb{R}^3 \to \mathbb{R} \) given by \( f(x, y, z) = x^2 y + e^z \). Then
+
 \[
 df = 2xy \, dx + x^2 \, dy + e^z \, dz.
 \]
@@ -1338,6 +1393,7 @@ df = 2xy \, dx + x^2 \, dy + e^z \, dz.
 
 <div class="example">
 <strong>Example 5.9.</strong> Let \( M = S^2 \) with the spherical coordinate chart \( (\theta, \phi) \) (where \( \theta \) is the polar angle and \( \phi \) is the azimuthal angle). If \( h \colon S^2 \to \mathbb{R} \) is the height function \( h = \cos \theta \), then
+
 \[
 dh = -\sin\theta \, d\theta.
 \]
@@ -1348,6 +1404,7 @@ The differential satisfies the following algebraic properties, all immediate fro
 
 <div class="proposition">
 <strong>Proposition 5.10.</strong> The map \( d \colon C^\infty(M) \to \Omega^1(M) \) is \( \mathbb{R} \)-linear and satisfies the <strong>Leibniz rule</strong> (product rule):
+
 \[
 d(fg) = f \, dg + g \, df
 \]
@@ -1362,6 +1419,7 @@ One of the most important features distinguishing covectors from vectors is that
 
 <div class="definition">
 <strong>Definition 5.11 (Pullback of a Covector).</strong> Let \( F \colon M \to N \) be a smooth map, and let \( p \in M \). The <strong>pullback</strong> (or <strong>codifferential</strong>) at \( p \) is the linear map
+
 \[
 F^<em> \colon T_{F(p)}^</em>N \to T_p^*M
 \]
@@ -1408,6 +1466,7 @@ The following proposition lists the key properties of pullback.
 
 <div class="proof">
 <strong>Proof.</strong> We prove property (3), the naturality with respect to \( d \), as it is the most important. For any \( p \in M \) and \( X_p \in T_pM \),
+
 \[
 (F^<em>(dh))_p(X_p) = (dh)_{F(p)}(F_{</em>,p}X_p) = (F_{*,p}X_p)(h) = X_p(h \circ F) = d(h \circ F)_p(X_p).
 \]
@@ -1428,6 +1487,7 @@ F^*\omega = (\omega_j \circ F) \frac{\partial F^j}{\partial x^i} \, dx^i.
 
 <div class="example">
 <strong>Example 5.14.</strong> Let \( F \colon \mathbb{R}^2 \to \mathbb{R}^3 \) be given by \( F(s,t) = (s^2, st, t^2) \), and let \( \omega = z \, dx + x \, dy - y \, dz \) be a 1-form on \( \mathbb{R}^3 \). We compute the pullback \( F^*\omega \). We have \( x = s^2, y = st, z = t^2 \), so:
+
 \[
 F^<em>(dx) = d(s^2) = 2s \, ds, \qquad F^</em>(dy) = d(st) = t \, ds + s \, dt, \qquad F^*(dz) = d(t^2) = 2t \, dt.
 \]
@@ -1444,6 +1504,7 @@ One of the key motivations for studying covector fields is that they are the nat
 
 <div class="definition">
 <strong>Definition 5.15 (Line Integral of a Covector Field).</strong> Let \( \omega \) be a smooth covector field on \( M \), and let \( \gamma \colon [a, b] \to M \) be a smooth curve. The <strong>line integral</strong> of \( \omega \) along \( \gamma \) is
+
 \[
 \int_\gamma \omega = \int_a^b \omega_{\gamma(t)}(\gamma'(t)) \, dt.
 \]
@@ -1463,6 +1524,7 @@ The line integral is also invariant under orientation-preserving reparametrisati
 
 <div class="example">
 <strong>Example 5.15a (Explicit line integral computation).</strong> Let \(M = \mathbb{R}^2 \setminus \{0\}\) and consider the 1-form
+
 \[
 \omega = \frac{-y\,dx + x\,dy}{x^2+y^2}.
 \]
@@ -1488,6 +1550,7 @@ These two computations illustrate an important point: the value of \(\int_\gamma
 
 <div class="theorem">
 <strong>Theorem 5.16 (Fundamental Theorem for Line Integrals).</strong> If \( f \in C^\infty(M) \) and \( \gamma \colon [a,b] \to M \) is a smooth curve, then
+
 \[
 \int_\gamma df = f(\gamma(b)) - f(\gamma(a)).
 \]
@@ -1495,6 +1558,7 @@ These two computations illustrate an important point: the value of \(\int_\gamma
 
 <div class="proof">
 <strong>Proof.</strong> By the chain rule,
+
 \[
 \int_\gamma df = \int_a^b (df)_{\gamma(t)}(\gamma'(t)) \, dt = \int_a^b \frac{d}{dt}(f \circ \gamma)(t) \, dt = f(\gamma(b)) - f(\gamma(a)). \qquad \square
 \]
@@ -1511,9 +1575,11 @@ The fundamental theorem for line integrals motivates the following important not
 <ul>
 <li><strong>exact</strong> if \( \omega = df \) for some \( f \in C^\infty(M) \); the function \( f \) is called a <strong>potential</strong> for \( \omega \);</li>
 <li><strong>closed</strong> if, in every smooth chart \( (U, (x^1, \ldots, x^n)) \), we have
+
 \[
 \frac{\partial \omega_i}{\partial x^j} = \frac{\partial \omega_j}{\partial x^i} \qquad \text{for all } i, j.
-\]</li>
+\]
+</li>
 </ul>
 </div>
 
@@ -1535,6 +1601,7 @@ Thus, exactness and conservativeness are equivalent, and both imply closedness.
 
 <div class="proof">
 <strong>Proof.</strong> Statement (1) follows directly from the fundamental theorem for line integrals. For (2), if \( \omega \) is conservative, we fix a point \( p_0 \in M \) and define \( f(p) = \int_\gamma \omega \) where \( \gamma \) is any piecewise smooth curve from \( p_0 \) to \( p \). (On each connected component, we choose a basepoint; if \( M \) is connected, one basepoint suffices.) The independence of path guarantees that \( f \) is well-defined. One then verifies that \( f \) is smooth and \( df = \omega \) by computing in local coordinates. Statement (3) follows from the equality of mixed partials: if \( \omega = df \), then
+
 \[
 \frac{\partial \omega_i}{\partial x^j} = \frac{\partial^2 f}{\partial x^j \partial x^i} = \frac{\partial^2 f}{\partial x^i \partial x^j} = \frac{\partial \omega_j}{\partial x^i}. \qquad \square
 \]
@@ -1544,6 +1611,7 @@ The converse of (3) — "every closed 1-form is exact" — is **not** true in ge
 
 <div class="example">
 <strong>Example 5.20.</strong> On \( \mathbb{R}^2 \setminus \{0\} \), the 1-form
+
 \[
 \omega = \frac{-y \, dx + x \, dy}{x^2 + y^2}
 \]
@@ -1564,6 +1632,7 @@ In multivariable calculus, the behaviour of a smooth map \( F \colon \mathbb{R}^
 
 <div class="definition">
 <strong>Definition 6.1 (Rank of a Smooth Map).</strong> Let \( F \colon M \to N \) be a smooth map between smooth manifolds. The <strong>rank</strong> of \( F \) at \( p \in M \) is the rank of the linear map \( F_{*,p} \colon T_pM \to T_{F(p)}N \), that is,
+
 \[
 \operatorname{rank}_p F = \dim F_{<em>,p}(T_pM) = \operatorname{rank}(F_{</em>,p}).
 \]
@@ -1588,6 +1657,7 @@ Submersions are the smooth analogues of "onto" linear maps. The defining conditi
 
 <div class="theorem">
 <strong>Theorem 6.4 (Local Submersion Theorem / Canonical Form for Submersions).</strong> Let \( F \colon M^m \to N^n \) be a smooth submersion. For every \( p \in M \), there exist smooth charts \( (U, \varphi) \) centred at \( p \) and \( (V, \psi) \) centred at \( F(p) \) such that the coordinate representation of \( F \) is
+
 \[
 \hat{F}(x^1, \ldots, x^m) = (x^1, \ldots, x^n).
 \]
@@ -1596,6 +1666,7 @@ That is, in suitable coordinates, a submersion is just a projection onto the fir
 
 <div class="proof">
 <strong>Proof.</strong> This is a consequence of the inverse function theorem. After choosing initial charts and performing a linear change of coordinates on the domain, we may assume that the Jacobian matrix of \( \hat{F} \) at the origin has its first \( n \) rows forming a nonsingular \( n \times n \) block. Define \( \Phi \colon \mathbb{R}^m \to \mathbb{R}^m \) by
+
 \[
 \Phi(x^1, \ldots, x^m) = (\hat{F}^1(x), \ldots, \hat{F}^n(x), x^{n+1}, \ldots, x^m).
 \]
@@ -1630,6 +1701,7 @@ An immersion need not be injective as a map of sets — only the differential is
 
 <div class="theorem">
 <strong>Theorem 6.9 (Local Immersion Theorem / Canonical Form for Immersions).</strong> Let \( F \colon M^m \to N^n \) be a smooth immersion. For every \( p \in M \), there exist smooth charts \( (U, \varphi) \) centred at \( p \) and \( (V, \psi) \) centred at \( F(p) \) such that the coordinate representation of \( F \) is
+
 \[
 \hat{F}(x^1, \ldots, x^m) = (x^1, \ldots, x^m, 0, \ldots, 0).
 \]
@@ -1638,6 +1710,7 @@ That is, in suitable coordinates, an immersion is just the inclusion \( \mathbb{
 
 <div class="proof">
 <strong>Proof.</strong> By choosing coordinates appropriately, we may assume \( p = 0 \in \mathbb{R}^m \) and \( F(0) = 0 \in \mathbb{R}^n \), and that the first \( m \) rows of the Jacobian are linearly independent. Define \( \Psi \colon \mathbb{R}^m \times \mathbb{R}^{n-m} \to \mathbb{R}^n \) by
+
 \[
 \Psi(x^1, \ldots, x^m, x^{m+1}, \ldots, x^n) = \hat{F}(x^1, \ldots, x^m) + (0, \ldots, 0, x^{m+1}, \ldots, x^n).
 \]
@@ -1680,6 +1753,7 @@ The local submersion and immersion theorems are special cases of a more general 
 
 <div class="theorem">
 <strong>Theorem 6.15 (Constant Rank Theorem).</strong> Let \( F \colon M^m \to N^n \) be a smooth map of constant rank \( r \) (i.e., \( \operatorname{rank}_p F = r \) for all \( p \in M \)). Then for each \( p \in M \), there exist smooth charts \( (U, \varphi) \) centred at \( p \) and \( (V, \psi) \) centred at \( F(p) \) in which \( F \) has the coordinate representation
+
 \[
 \hat{F}(x^1, \ldots, x^m) = (x^1, \ldots, x^r, 0, \ldots, 0).
 \]
@@ -1718,6 +1792,7 @@ Moreover, the tangent space to the level set at any point \( p \in F^{-1}(c) \) 
 
 <div class="proposition">
 <strong>Proposition 6.19.</strong> If \( c \) is a regular value of \( F \colon M \to N \) and \( S = F^{-1}(c) \), then for each \( p \in S \),
+
 \[
 T_p S = \ker F_{<em>,p} = \{ v \in T_pM : F_{</em>,p}(v) = 0 \}.
 \]
@@ -1727,6 +1802,7 @@ This provides a practical way to compute tangent spaces to manifolds defined as 
 
 <div class="example">
 <strong>Example 6.20 (\( S^n \) as a Regular Level Set).</strong> Define \( f \colon \mathbb{R}^{n+1} \to \mathbb{R} \) by \( f(x) = |x|^2 = (x^1)^2 + \cdots + (x^{n+1})^2 \). Then
+
 \[
 df_x = 2x^1 \, dx^1 + \cdots + 2x^{n+1} \, dx^{n+1} = 2x^i \, dx^i.
 \]
@@ -1747,6 +1823,7 @@ the orthogonal complement of \( p \) in \( \mathbb{R}^{n+1} \).
 
 <div class="example">
 <strong>Example 6.21 (\( O(n) \) as a Regular Level Set).</strong> Define \( \Phi \colon M(n, \mathbb{R}) \to \operatorname{Sym}(n, \mathbb{R}) \) by \( \Phi(A) = A^T A \), where \( \operatorname{Sym}(n, \mathbb{R}) \) is the space of symmetric \( n \times n \) matrices (a vector space of dimension \( n(n+1)/2 \)). The orthogonal group is
+
 \[
 O(n) = \Phi^{-1}(I_n).
 \]
@@ -1779,6 +1856,7 @@ The notion of submanifold gives a rigorous framework for studying lower-dimensio
 
 <div class="definition">
 <strong>Definition 7.1 (Embedded Submanifold).</strong> Let \( M \) be a smooth manifold of dimension \( n \). A subset \( S \subseteq M \) is an <strong>embedded submanifold</strong> (or <strong>regular submanifold</strong>) of dimension \( k \) if for every point \( p \in S \), there exists a smooth chart \( (U, \varphi) \) for \( M \) centred at \( p \) such that
+
 \[
 \varphi(U \cap S) = \{ (x^1, \ldots, x^n) \in \varphi(U) : x^{k+1} = \cdots = x^n = 0 \}.
 \]
@@ -1852,6 +1930,7 @@ If \( S \subseteq M \) is an embedded (or immersed) submanifold and \( \iota \co
 
 <div class="proposition">
 <strong>Proposition 7.10.</strong> Let \( S \subseteq M \) be an embedded submanifold, and let \( (U, \varphi) \) be a slice chart for \( S \) centred at \( p \in S \), with coordinates \( (x^1, \ldots, x^n) \). Under the identification \( T_pS \subseteq T_pM \),
+
 \[
 T_pS = \operatorname{span}\left\{ \frac{\partial}{\partial x^1}\bigg|_p, \ldots, \frac{\partial}{\partial x^k}\bigg|_p \right\},
 \]
@@ -1962,6 +2041,7 @@ Let \( V \) be a finite-dimensional real vector space with dual space \( V^* \).
 
 <div class="definition">
 <strong>Definition 8.1 (Tensor Product of Vector Spaces).</strong> If \( V_1, \ldots, V_r \) are finite-dimensional real vector spaces, their <strong>tensor product</strong> \( V_1 \otimes \cdots \otimes V_r \) is the vector space characterised (up to canonical isomorphism) by the universal property: there is a multilinear map
+
 \[
 \iota \colon V_1 \times \cdots \times V_r \to V_1 \otimes \cdots \otimes V_r
 \]
@@ -1980,6 +2060,7 @@ In the context of tangent spaces, we form tensor products of copies of \( V = T_
 
 <div class="definition">
 <strong>Definition 8.2 (Mixed Tensors).</strong> A tensor of <strong>type \( (k, \ell) \)</strong> (or a <strong>\( (k, \ell) \)-tensor</strong>) on a vector space \( V \) is an element of
+
 \[
 T^{(k,\ell)}(V) = \underbrace{V^<em> \otimes \cdots \otimes V^</em>}_{k} \otimes \underbrace{V \otimes \cdots \otimes V}_{\ell}.
 \]
@@ -2022,6 +2103,7 @@ We now globalise the construction by assembling tensors over all points of a man
 
 <div class="definition">
 <strong>Definition 8.4 (Tensor Bundle).</strong> Let \( M \) be a smooth \( n \)-manifold. The <strong>tensor bundle of type \( (k, \ell) \)</strong> is
+
 \[
 T^{(k,\ell)}M = \bigsqcup_{p \in M} T^{(k,\ell)}(T_pM) = \bigsqcup_{p \in M} \big( (T_p^*M)^{\otimes k} \otimes (T_pM)^{\otimes \ell} \big).
 \]
@@ -2030,6 +2112,7 @@ It is a smooth vector bundle over \( M \) of rank \( n^{k+\ell} \), so \( T^{(k,
 
 <div class="definition">
 <strong>Definition 8.5 (Tensor Field).</strong> A <strong>tensor field of type \( (k, \ell) \)</strong> on \( M \) is a smooth section of the tensor bundle \( T^{(k,\ell)}M \). The space of all smooth \( (k, \ell) \)-tensor fields on \( M \) is denoted
+
 \[
 \Gamma(T^{(k,\ell)}M) = \mathcal{T}^{k}_{\ell}(M).
 \]
@@ -2134,6 +2217,7 @@ The matrix \( (g_{ij}(p)) \) is a symmetric positive definite \( n \times n \) m
 
 <div class="example">
 <strong>Example 8.11 (Euclidean Metric).</strong> The standard inner product on \( \mathbb{R}^n \) defines a Riemannian metric
+
 \[
 \bar{g} = \delta_{ij} \, dx^i \otimes dx^j = (dx^1)^2 + \cdots + (dx^n)^2,
 \]
@@ -2142,6 +2226,7 @@ where \( \delta_{ij} \) is the Kronecker delta. This is the <strong>Euclidean me
 
 <div class="example">
 <strong>Example 8.12 (Round Metric on \( S^n \)).</strong> The <strong>round metric</strong> on the unit sphere \( S^n \subset \mathbb{R}^{n+1} \) is the metric induced by the Euclidean metric on \( \mathbb{R}^{n+1} \). If \( \iota \colon S^n \hookrightarrow \mathbb{R}^{n+1} \) is the inclusion, then
+
 \[
 g_{S^n} = \iota^* \bar{g}.
 \]
@@ -2157,6 +2242,7 @@ The round metric has constant sectional curvature \( +1 \).
 
 <div class="example">
 <strong>Example 8.13 (Hyperbolic Metric).</strong> On the upper half-space \( \mathbb{H}^n = \{ (x^1, \ldots, x^n) \in \mathbb{R}^n : x^n > 0 \} \), the <strong>hyperbolic metric</strong> is
+
 \[
 g = \frac{(dx^1)^2 + \cdots + (dx^n)^2}{(x^n)^2}.
 \]
@@ -2167,6 +2253,7 @@ In matrix form, \( g_{ij} = \frac{\delta_{ij}}{(x^n)^2} \). This metric has cons
 
 <div class="example">
 <strong>Example 8.14 (Pullback Metrics).</strong> More generally, if \( F \colon M \to (N, h) \) is a smooth immersion and \( (N, h) \) is a Riemannian manifold, then the <strong>pullback metric</strong> \( g = F^*h \) defined by
+
 \[
 g_p(v, w) = h_{F(p)}(F_{<em>,p}v, F_{</em>,p}w)
 \]
@@ -2175,6 +2262,7 @@ is a Riemannian metric on \( M \). (Positive definiteness uses the injectivity o
 
 <div class="example">
 <strong>Example 8.15 (Product Metrics).</strong> If \( (M_1, g_1) \) and \( (M_2, g_2) \) are Riemannian manifolds, the <strong>product metric</strong> on \( M_1 \times M_2 \) is defined by
+
 \[
 g = \pi_1^<em> g_1 + \pi_2^</em> g_2,
 \]
@@ -2191,6 +2279,7 @@ One might worry that Riemannian metrics are difficult to construct. The followin
 
 <div class="proof">
 <strong>Proof.</strong> Let \( \{(U_\alpha, \varphi_\alpha)\}_{\alpha \in A} \) be a smooth atlas for \( M \), and let \( \{\rho_\alpha\}_{\alpha \in A} \) be a smooth partition of unity subordinate to the open cover \( \{U_\alpha\} \). On each chart domain \( U_\alpha \), define the local Riemannian metric
+
 \[
 g_\alpha = \delta_{ij} \, d(x_\alpha^i) \otimes d(x_\alpha^j),
 \]
@@ -2217,6 +2306,7 @@ A Riemannian metric establishes a canonical isomorphism between the tangent and 
 
 <div class="definition">
 <strong>Definition 8.18 (Flat and Sharp).</strong> Let \( (M, g) \) be a Riemannian manifold. The <strong>flat map</strong> (or <strong>index-lowering map</strong>) is the bundle map
+
 \[
 \flat \colon TM \to T^*M
 \]
@@ -2263,6 +2353,7 @@ The musical isomorphisms give us the correct definition of the gradient vector f
 
 <div class="definition">
 <strong>Definition 8.20 (Gradient).</strong> Let \( (M, g) \) be a Riemannian manifold and \( f \in C^\infty(M) \). The <strong>gradient</strong> of \( f \) is the vector field
+
 \[
 \operatorname{grad} f = (df)^\sharp.
 \]
@@ -2289,6 +2380,7 @@ because \( g^{ij} = \delta^{ij} \). On a general Riemannian manifold, however, t
 
 <div class="example">
 <strong>Example 8.21.</strong> On \( S^2 \) with the round metric \( g = d\theta^2 + \sin^2\theta \, d\phi^2 \), the inverse metric matrix is
+
 \[
 (g^{ij}) = \begin{pmatrix} 1 & 0 \\ 0 & \csc^2\theta \end{pmatrix}.
 \]
@@ -2316,6 +2408,7 @@ The Riemannian metric \( g \) on \( TM \) induces a corresponding inner product 
 
 <div class="definition">
 <strong>Definition 8.23 (Induced Inner Product on Covectors).</strong> Let \( (M, g) \) be a Riemannian manifold. The <strong>induced inner product</strong> on covectors is the symmetric \( (0,2) \)-tensor field \( g^{-1} \) on \( T^*M \) defined by
+
 \[
 g^{-1}(\omega, \eta) = g(\omega^\sharp, \eta^\sharp)
 \]
@@ -2346,6 +2439,7 @@ A Riemannian metric allows us to measure the lengths of tangent vectors, and the
 
 <div class="definition">
 <strong>Definition 8.24 (Length of a Curve).</strong> Let \( (M, g) \) be a Riemannian manifold and \( \gamma \colon [a, b] \to M \) a smooth (or piecewise smooth) curve. The <strong>length</strong> of \( \gamma \) is
+
 \[
 L(\gamma) = \int_a^b |\gamma'(t)|_g \, dt = \int_a^b \sqrt{g_{\gamma(t)}(\gamma'(t), \gamma'(t))} \, dt.
 \]
@@ -2363,6 +2457,7 @@ The length is independent of the parametrisation of the curve (as one can verify
 
 <div class="definition">
 <strong>Definition 8.25 (Riemannian Distance).</strong> On a connected Riemannian manifold \( (M, g) \), the <strong>Riemannian distance</strong> between two points \( p, q \in M \) is
+
 \[
 d_g(p, q) = \inf \{ L(\gamma) : \gamma \text{ is a piecewise smooth curve from } p \text{ to } q \}.
 \]
@@ -2386,6 +2481,7 @@ This can be written in matrix form as \( \tilde{G} = J^T G J \), where \( J = \l
 
 <div class="example">
 <strong>Example 8.27 (Polar Coordinates).</strong> Consider \( \mathbb{R}^2 \) with the Euclidean metric \( g = dx^2 + dy^2 \). In polar coordinates \( (r, \theta) \), we have \( x = r\cos\theta \), \( y = r\sin\theta \), so
+
 \[
 dx = \cos\theta \, dr - r\sin\theta \, d\theta, \qquad dy = \sin\theta \, dr + r\cos\theta \, d\theta.
 \]
@@ -2406,6 +2502,7 @@ The metric matrix is \( (g_{ij}) = \operatorname{diag}(1, r^2) \), and the inver
 
 <div class="definition">
 <strong>Definition 8.28 (Isometry).</strong> Let \( (M, g) \) and \( (N, h) \) be Riemannian manifolds. A diffeomorphism \( F \colon M \to N \) is an <strong>isometry</strong> if \( F^*h = g \), i.e.,
+
 \[
 h_{F(p)}(F_{<em>,p}v, F_{</em>,p}w) = g_p(v, w)
 \]
@@ -2434,6 +2531,7 @@ Let \( V \) be a finite-dimensional real vector space of dimension \( n \). Reca
 
 <div class="definition">
 <strong>Definition 9.1 (Alternating tensor).</strong> A covariant \( k \)-tensor \( \alpha \in T^k(V^*) \) is called <strong>alternating</strong> if for every permutation \( \sigma \in S_k \) and all vectors \( v_1, \ldots, v_k \in V \),
+
 \[
 \alpha(v_{\sigma(1)}, \ldots, v_{\sigma(k)}) = (\operatorname{sgn} \sigma) \, \alpha(v_1, \ldots, v_k).
 \]
@@ -2462,6 +2560,7 @@ The tensor product of two alternating tensors is generally not alternating. To o
 
 <div class="definition">
 <strong>Definition 9.2 (Wedge product).</strong> Given \( \alpha \in \Lambda^k(V^<em>) \) and \( \beta \in \Lambda^\ell(V^</em>) \), their <strong>wedge product</strong> (or <strong>exterior product</strong>) is the alternating \( (k+\ell) \)-tensor
+
 \[
 \alpha \wedge \beta = \frac{(k+\ell)!}{k!\, \ell!} \operatorname{Alt}(\alpha \otimes \beta).
 \]
@@ -2501,6 +2600,7 @@ With the pointwise algebra of alternating tensors in hand, we now globalize to m
 
 <div class="definition">
 <strong>Definition 9.4 (Differential \( k \)-form).</strong> A <strong>differential \( k \)-form</strong> (or simply a <strong>\( k \)-form</strong>) on a smooth manifold \( M \) is a smooth section of the bundle \( \Lambda^k(T^*M) \). The space of all smooth \( k \)-forms on \( M \) is denoted
+
 \[
 \Omega^k(M) = \Gamma(\Lambda^k(T^*M)).
 \]
@@ -2534,6 +2634,7 @@ The exterior derivative is a first-order differential operator that generalizes 
 <li><strong>\( d \) on functions:</strong> For \( f \in \Omega^0(M) = C^\infty(M) \), \( df \) is the differential of \( f \), i.e., \( df(X) = Xf \) for all vector fields \( X \).</li>
 <li><strong>Nilpotency:</strong> \( d \circ d = 0 \), i.e., \( d(d\omega) = 0 \) for all \( \omega \).</li>
 <li><strong>Graded Leibniz rule:</strong> For \( \alpha \in \Omega^k(M) \) and \( \beta \in \Omega^\ell(M) \),
+
 \[
 d(\alpha \wedge \beta) = d\alpha \wedge \beta + (-1)^k \alpha \wedge d\beta.
 \]
@@ -2554,6 +2655,7 @@ d\omega = \sum_{I} d\omega_I \wedge dx^I = \sum_{I} \sum_{j=1}^{n} \frac{\partia
 
 <div class="proof">
 <strong>Proof sketch (that \( d^2 = 0 \)).</strong> It suffices to verify this on a coordinate domain. For a function \( f \),
+
 \[
 d(df) = d\Bigl(\sum_j \frac{\partial f}{\partial x^j} dx^j\Bigr) = \sum_{i,j} \frac{\partial^2 f}{\partial x^i \partial x^j} dx^i \wedge dx^j = 0,
 \]
@@ -2570,11 +2672,13 @@ Since \( d^2\omega_I = 0 \) by the function case, and \( d(dx^I) = 0 \) because 
 <ul>
 <li>If \( f \in C^\infty(\mathbb{R}^3) \), then \( df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy + \frac{\partial f}{\partial z} dz \). This corresponds to the gradient \( \nabla f \).</li>
 <li>If \( \omega = P\,dx + Q\,dy + R\,dz \) is a 1-form, then
+
 \[
 d\omega = \Bigl(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\Bigr) dx \wedge dy + \Bigl(\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}\Bigr) dy \wedge dz + \Bigl(\frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}\Bigr) dz \wedge dx.
 \]
 This corresponds to the curl \( \nabla \times \mathbf{F} \).</li>
 <li>If \( \eta = A\, dy \wedge dz + B\, dz \wedge dx + C\, dx \wedge dy \) is a 2-form, then
+
 \[
 d\eta = \Bigl(\frac{\partial A}{\partial x} + \frac{\partial B}{\partial y} + \frac{\partial C}{\partial z}\Bigr) dx \wedge dy \wedge dz.
 \]
@@ -2585,6 +2689,7 @@ The identity \( d^2 = 0 \) unifies the classical vector calculus identities \( \
 
 <div class="remark">
 <strong>Remark (The de Rham complex and the topology of \(\mathbb{R}^3\)).</strong> The chain of maps
+
 \[
 \Omega^0(\mathbb{R}^3) \xrightarrow{d} \Omega^1(\mathbb{R}^3) \xrightarrow{d} \Omega^2(\mathbb{R}^3) \xrightarrow{d} \Omega^3(\mathbb{R}^3)
 \]
@@ -2604,6 +2709,7 @@ While the coordinate formula for \( d \) is useful for computation, it is often 
 
 <div class="proposition">
 <strong>Proposition 9.8 (Invariant formula).</strong> For \( \omega \in \Omega^k(M) \) and smooth vector fields \( X_0, \ldots, X_k \),
+
 \[
 d\omega(X_0, \ldots, X_k) = \sum_{i=0}^{k} (-1)^i X_i\bigl(\omega(X_0, \ldots, \widehat{X}_i, \ldots, X_k)\bigr) + \sum_{i < j} (-1)^{i+j} \omega\bigl([X_i, X_j], X_0, \ldots, \widehat{X}_i, \ldots, \widehat{X}_j, \ldots, X_k\bigr),
 \]
@@ -2623,6 +2729,7 @@ If \( F \colon M \to N \) is a smooth map and \( \omega \) is a differential for
 
 <div class="definition">
 <strong>Definition 9.9 (Pullback of a \( k \)-form).</strong> Let \( F \colon M \to N \) be a smooth map and \( \omega \in \Omega^k(N) \). The <strong>pullback</strong> \( F^*\omega \in \Omega^k(M) \) is defined by
+
 \[
 (F^*\omega)_p(v_1, \ldots, v_k) = \omega_{F(p)}(dF_p(v_1), \ldots, dF_p(v_k))
 \]
@@ -2649,6 +2756,7 @@ The interior product (also called contraction) is an algebraic operation that "i
 
 <div class="definition">
 <strong>Definition 9.11 (Interior product).</strong> Let \( X \) be a smooth vector field on \( M \). The <strong>interior product</strong> (or <strong>contraction</strong>) \( \iota_X \colon \Omega^k(M) \to \Omega^{k-1}(M) \) is defined by
+
 \[
 (\iota_X \omega)(Y_1, \ldots, Y_{k-1}) = \omega(X, Y_1, \ldots, Y_{k-1}).
 \]
@@ -2668,6 +2776,7 @@ The most remarkable formula involving the interior product connects it to the Li
 
 <div class="theorem">
 <strong>Theorem 9.12 (Cartan's magic formula).</strong> Let \( X \) be a smooth vector field on \( M \) and \( \omega \in \Omega^k(M) \). Then the Lie derivative of \( \omega \) along \( X \) is given by
+
 \[
 \mathcal{L}_X \omega = \iota_X(d\omega) + d(\iota_X \omega).
 \]
@@ -2767,6 +2876,7 @@ where \( g_{ij} = g\bigl(\frac{\partial}{\partial x^i}, \frac{\partial}{\partial
 
 <div class="example">
 <strong>Example 10.7a (Integrating a 2-form over \(S^2\)).</strong> We compute the integral of the 2-form
+
 \[
 \omega = x\,dy \wedge dz + y\,dz \wedge dx + z\,dx \wedge dy
 \]
@@ -2777,9 +2887,11 @@ We use spherical coordinates \(x = \sin\theta\cos\phi\), \(y = \sin\theta\sin\ph
 \[
 dx = \cos\theta\cos\phi\,d\theta - \sin\theta\sin\phi\,d\phi,
 \]
+
 \[
 dy = \cos\theta\sin\phi\,d\theta + \sin\theta\cos\phi\,d\phi,
 \]
+
 \[
 dz = -\sin\theta\,d\theta.
 \]
@@ -2799,6 +2911,7 @@ restricted to \(S^2\) equals the Riemannian volume form \(\sin\theta\,d\theta \w
 \[
 x \cdot \sin^2\theta\cos\phi + y \cdot \sin^2\theta\sin\phi + z \cdot \sin\theta\cos\theta
 \]
+
 \[
 = \sin^2\theta\cos^2\phi + \sin^2\theta\sin^2\phi + \cos^2\theta\sin\theta
 = \sin^2\theta + \cos^2\theta\sin\theta.
@@ -2823,14 +2936,17 @@ We are now in a position to define integration of differential forms on oriented
 <strong>Definition 10.8 (Integration of a compactly supported \( n \)-form).</strong> Let \( M \) be an oriented smooth \( n \)-manifold and \( \omega \in \Omega^n_c(M) \) a compactly supported \( n \)-form.
 <ol>
 <li><strong>Single chart:</strong> If \( \operatorname{supp}(\omega) \) is contained in a single positively oriented coordinate chart \( (U, \varphi) \) with coordinates \( (x^1, \ldots, x^n) \), write \( \omega = f\, dx^1 \wedge \cdots \wedge dx^n \) on \( U \), and define
+
 \[
 \int_M \omega = \int_{\varphi(U)} f \circ \varphi^{-1}\, dx^1 \cdots dx^n,
 \]
 where the right-hand side is the ordinary Lebesgue integral on \( \mathbb{R}^n \).</li>
 <li><strong>General case:</strong> Choose a partition of unity \( \{\psi_\alpha\} \) subordinate to a positively oriented atlas, and define
+
 \[
 \int_M \omega = \sum_\alpha \int_M \psi_\alpha \omega.
-\]</li>
+\]
+</li>
 </ol>
 </div>
 
@@ -2867,6 +2983,7 @@ We now arrive at the crowning result of the theory of differential forms and int
 
 <div class="theorem">
 <strong>Theorem 10.12 (Stokes's Theorem).</strong> Let \( M \) be an oriented smooth \( n \)-manifold with boundary (possibly empty), and let \( \omega \in \Omega^{n-1}_c(M) \) be a compactly supported \( (n-1) \)-form. Then
+
 \[
 \int_M d\omega = \int_{\partial M} \omega,
 \]
@@ -2879,6 +2996,7 @@ where \( \partial M \) carries the induced (Stokes) orientation. If \( \partial 
 <strong>Proof sketch.</strong> Using a partition of unity, it suffices to prove the theorem when \( \operatorname{supp}(\omega) \) lies in a single coordinate chart. There are two cases.
 
 <strong>Case 1: Interior chart.</strong> Suppose \( \operatorname{supp}(\omega) \subset U \) where \( U \) is diffeomorphic to an open subset of \( \mathbb{R}^n \). In coordinates, write
+
 \[
 \omega = \sum_{j=1}^{n} (-1)^{j-1} f_j\, dx^1 \wedge \cdots \wedge \widehat{dx^j} \wedge \cdots \wedge dx^n.
 \]
@@ -2890,6 +3008,7 @@ d\omega = \Bigl(\sum_{j=1}^{n} \frac{\partial f_j}{\partial x^j}\Bigr) dx^1 \wed
 The integral \( \int_M d\omega = \sum_j \int_{\mathbb{R}^n} \frac{\partial f_j}{\partial x^j}\, dx^1 \cdots dx^n \). Each term vanishes by iterated integration: integrating \( \frac{\partial f_j}{\partial x^j} \) with respect to \( x^j \) over all of \( \mathbb{R} \), the compact support ensures the integral of the derivative is zero. Since \( U \cap \partial M = \emptyset \), the right-hand side is also zero.
 
 <strong>Case 2: Boundary chart.</strong> Suppose \( \operatorname{supp}(\omega) \subset U \) where \( U \) is diffeomorphic to an open subset of \( \mathbb{H}^n = \{x^n \ge 0\} \). The computation is similar, but now integrating \( \frac{\partial f_n}{\partial x^n} \) over \( x^n \in [0, \infty) \) yields a boundary contribution. Specifically,
+
 \[
 \int_0^\infty \frac{\partial f_n}{\partial x^n}\, dx^n = -f_n(x^1, \ldots, x^{n-1}, 0),
 \]
@@ -2902,6 +3021,7 @@ The classical integral theorems of vector calculus are all special cases of Stok
 
 <div class="corollary">
 <strong>Corollary 10.13 (Fundamental Theorem of Calculus).</strong> If \( f \colon [a,b] \to \mathbb{R} \) is smooth, then
+
 \[
 \int_a^b f'(t)\, dt = f(b) - f(a).
 \]
@@ -2910,6 +3030,7 @@ This is Stokes's theorem with \( M = [a,b] \), \( \omega = f \), and \( d\omega 
 
 <div class="corollary">
 <strong>Corollary 10.14 (Green's theorem).</strong> Let \( D \subset \mathbb{R}^2 \) be a compact region with smooth boundary \( \partial D \), and let \( P, Q \in C^\infty(\mathbb{R}^2) \). Then
+
 \[
 \int_D \Bigl(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\Bigr)\, dx\, dy = \oint_{\partial D} (P\, dx + Q\, dy).
 \]
@@ -2920,6 +3041,7 @@ This is Stokes's theorem with \( \omega = P\, dx + Q\, dy \).
 
 <div class="corollary">
 <strong>Corollary 10.15 (Classical Stokes's theorem).</strong> Let \( \Sigma \subset \mathbb{R}^3 \) be an oriented compact surface with boundary \( \partial \Sigma \), and let \( \mathbf{F} \) be a smooth vector field on \( \mathbb{R}^3 \). Then
+
 \[
 \iint_\Sigma (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = \oint_{\partial \Sigma} \mathbf{F} \cdot d\mathbf{r}.
 \]
@@ -2929,6 +3051,7 @@ This is Stokes's theorem with \( \omega = P\, dx + Q\, dy \).
 
 <div class="corollary">
 <strong>Corollary 10.16 (Divergence theorem).</strong> Let \( \Omega \subset \mathbb{R}^3 \) be a compact region with smooth boundary \( \partial \Omega \), and let \( \mathbf{F} \) be a smooth vector field. Then
+
 \[
 \iiint_\Omega (\nabla \cdot \mathbf{F})\, dV = \iint_{\partial \Omega} \mathbf{F} \cdot d\mathbf{S}.
 \]
@@ -2962,6 +3085,7 @@ On a Riemannian manifold \( (M, g) \), one can define the divergence of a vector
 
 <div class="definition">
 <strong>Definition 10.17 (Divergence).</strong> Let \( (M, g) \) be an oriented Riemannian manifold with volume form \( dV_g \). The <strong>divergence</strong> of a smooth vector field \( X \) on \( M \) is the smooth function \( \operatorname{div} X \) defined by
+
 \[
 \mathcal{L}_X(dV_g) = (\operatorname{div} X)\, dV_g,
 \]
@@ -2976,6 +3100,7 @@ In local coordinates with \( dV_g = \sqrt{\det g}\, dx^1 \wedge \cdots \wedge dx
 
 <div class="theorem">
 <strong>Theorem 10.18 (Divergence theorem on Riemannian manifolds).</strong> Let \( (M, g) \) be a compact oriented Riemannian manifold with boundary, and let \( X \) be a smooth vector field on \( M \). Let \( \nu \) be the outward-pointing unit normal along \( \partial M \). Then
+
 \[
 \int_M (\operatorname{div} X)\, dV_g = \int_{\partial M} g(X, \nu)\, dV_{\bar{g}},
 \]
@@ -3009,6 +3134,7 @@ To ground the discussion in physics: in electrostatics, the electric field \(\ma
 
 <div class="example">
 <strong>Example 11.2.</strong> Consider the 1-form \( \omega = \frac{-y\, dx + x\, dy}{x^2 + y^2} \) on \( \mathbb{R}^2 \setminus \{0\} \). A direct computation shows \( d\omega = 0 \), so \( \omega \) is closed. However, \( \omega \) is not exact: if we integrate \( \omega \) around the unit circle, we get
+
 \[
 \oint_{S^1} \omega = \int_0^{2\pi} d\theta = 2\pi \neq 0.
 \]
@@ -3021,6 +3147,7 @@ By Stokes's theorem, if \( \omega = df \) for some function \( f \), then this i
 
 <div class="definition">
 <strong>Definition 11.3 (De Rham cohomology).</strong> The <strong>\( k \)-th de Rham cohomology group</strong> of a smooth manifold \( M \) is the quotient vector space
+
 \[
 H^k_{\text{dR}}(M) = \frac{Z^k(M)}{B^k(M)} = \frac{\ker(d \colon \Omega^k \to \Omega^{k+1})}{\operatorname{im}(d \colon \Omega^{k-1} \to \Omega^k)}.
 \]
@@ -3033,6 +3160,7 @@ The de Rham cohomology groups are real vector spaces. They are diffeomorphism in
 
 <div class="proposition">
 <strong>Proposition 11.4.</strong> For any smooth manifold \( M \),
+
 \[
 H^0_{\text{dR}}(M) \cong \mathbb{R}^c,
 \]
@@ -3079,6 +3207,7 @@ De Rham cohomology is invariant under a much weaker equivalence than diffeomorph
 
 <div class="theorem">
 <strong>Theorem 11.8 (Homotopy invariance of de Rham cohomology).</strong> If \( F, G \colon M \to N \) are smoothly homotopic, then
+
 \[
 F^<em> = G^</em> \colon H^k_{\text{dR}}(N) \to H^k_{\text{dR}}(M)
 \]
@@ -3098,6 +3227,7 @@ The most fundamental computation in de Rham cohomology is the cohomology of \( \
 
 <div class="theorem">
 <strong>Theorem 11.9 (Poincaré Lemma).</strong> For all \( k \ge 1 \),
+
 \[
 H^k_{\text{dR}}(\mathbb{R}^n) = 0.
 \]
@@ -3106,6 +3236,7 @@ That is, every closed \( k \)-form on \( \mathbb{R}^n \) (with \( k \ge 1 \)) is
 
 <div class="proof">
 <strong>Proof sketch.</strong> The space \( \mathbb{R}^n \) is contractible: the identity map \( \mathrm{Id}_{\mathbb{R}^n} \) is homotopic to the constant map \( c_0 \colon \mathbb{R}^n \to \{0\} \hookrightarrow \mathbb{R}^n \) via the homotopy \( H(x, t) = tx \). By homotopy invariance,
+
 \[
 H^k_{\text{dR}}(\mathbb{R}^n) \cong H^k_{\text{dR}}(\{\text{point}\}).
 \]
@@ -3131,6 +3262,7 @@ The Mayer–Vietoris sequence is the primary computational tool for de Rham coho
 
 <div class="theorem">
 <strong>Theorem 11.11 (Mayer–Vietoris sequence).</strong> Let \( M = U \cup V \) where \( U, V \subset M \) are open. There is a long exact sequence of vector spaces:
+
 \[
 \cdots \to H^{k-1}_{\text{dR}}(U \cap V) \xrightarrow{\delta^<em>} H^k_{\text{dR}}(M) \xrightarrow{(i^</em>, j^<em>)} H^k_{\text{dR}}(U) \oplus H^k_{\text{dR}}(V) \xrightarrow{k^</em> - \ell^<em>} H^k_{\text{dR}}(U \cap V) \xrightarrow{\delta^</em>} H^{k+1}_{\text{dR}}(M) \to \cdots
 \]
@@ -3152,6 +3284,7 @@ The Mayer–Vietoris sequence is extremely powerful because it reduces the compu
 
 <div class="example">
 <strong>Example 11.12 (Cohomology of \( S^1 \)).</strong> Write \( S^1 = U \cup V \) where \( U \) and \( V \) are open arcs covering \( S^1 \), each contractible, with \( U \cap V \) consisting of two disjoint open arcs (each contractible). The Mayer–Vietoris sequence in degree 0 gives:
+
 \[
 0 \to H^0_{\text{dR}}(S^1) \to H^0_{\text{dR}}(U) \oplus H^0_{\text{dR}}(V) \to H^0_{\text{dR}}(U \cap V) \xrightarrow{\delta^*} H^1_{\text{dR}}(S^1) \to 0.
 \]
@@ -3162,6 +3295,7 @@ This is \( 0 \to \mathbb{R} \to \mathbb{R}^2 \to \mathbb{R}^2 \xrightarrow{\delt
 
 <div class="example">
 <strong>Example 11.13 (Cohomology of \( S^n \) for \( n \ge 1 \)).</strong> Using the Mayer–Vietoris sequence with \( U \) and \( V \) being the complements of the north and south poles (each contractible, \( U \cap V \simeq S^{n-1} \)), one shows by induction:
+
 \[
 H^k_{\text{dR}}(S^n) \cong \begin{cases} \mathbb{R} & \text{if } k = 0 \text{ or } k = n, \\ 0 & \text{otherwise.} \end{cases}
 \]
@@ -3172,6 +3306,7 @@ The generator of \( H^n_{\text{dR}}(S^n) \) is the class of any volume form on \
 
 <div class="example">
 <strong>Example 11.14 (Cohomology of \( T^n \)).</strong> The \( n \)-torus \( T^n = S^1 \times \cdots \times S^1 \) has cohomology
+
 \[
 H^k_{\text{dR}}(T^n) \cong \mathbb{R}^{\binom{n}{k}}.
 \]
@@ -3200,6 +3335,7 @@ This theorem has a beautiful application to degree theory. If \( F \colon M \to 
 
 <div class="definition">
 <strong>Definition 11.16 (Degree of a smooth map).</strong> Let \( F \colon M \to N \) be a smooth map between compact, connected, oriented \( n \)-manifolds. The <strong>degree</strong> of \( F \), denoted \( \deg F \), is the unique real number such that
+
 \[
 \int_M F^*\omega = (\deg F) \int_N \omega
 \]
@@ -3228,6 +3364,7 @@ where we used \( d\mu \wedge \beta = d(\mu \wedge \beta) \pm \mu \wedge d\beta =
 
 <div class="theorem">
 <strong>Theorem 11.17 (Poincaré Duality).</strong> Let \( M \) be a compact, connected, oriented smooth \( n \)-manifold without boundary. Then for each \( 0 \leq k \leq n \), the Poincaré pairing
+
 \[
 \langle \cdot, \cdot \rangle \colon H^k_{\text{dR}}(M) \times H^{n-k}_{\text{dR}}(M) \to \mathbb{R}
 \]
@@ -3260,6 +3397,7 @@ This symmetry of Betti numbers is a powerful constraint on the topology of compa
 
 <div class="proof">
 <strong>Proof.</strong> By Poincaré duality, \( b_k = b_{n-k} \). Pairing the terms in the alternating sum:
+
 \[
 \chi(M) = \sum_{k=0}^n (-1)^k b_k = \sum_{k=0}^{(n-1)/2} \bigl[ (-1)^k b_k + (-1)^{n-k} b_{n-k} \bigr] = \sum_{k=0}^{(n-1)/2} b_k \bigl[ (-1)^k + (-1)^{n-k} \bigr].
 \]
@@ -3292,6 +3430,7 @@ A vector field on a smooth manifold assigns a "direction of motion" to each poin
 
 <div class="definition">
 <strong>Definition 12.1 (Integral curve).</strong> Let \( V \) be a smooth vector field on a smooth manifold \( M \). An <strong>integral curve</strong> of \( V \) is a smooth curve \( \gamma \colon I \to M \) (where \( I \subseteq \mathbb{R} \) is an interval) satisfying
+
 \[
 \gamma'(t) = V_{\gamma(t)} \quad \text{for all } t \in I.
 \]
@@ -3349,9 +3488,11 @@ The key theorems about flows establish existence, uniqueness, and the group prop
 <strong>Theorem 12.7 (Fundamental Theorem of Flows II — the group law).</strong> Let \( \Theta \colon \mathcal{D} \to M \) be the maximal flow of a smooth vector field \( V \). Then:
 <ol>
 <li>For each \( (t, p) \in \mathcal{D} \) and \( s \in \mathbb{R} \) such that \( (s, \Theta_t(p)) \in \mathcal{D} \), we have \( (t+s, p) \in \mathcal{D} \) and
+
 \[
 \Theta_s(\Theta_t(p)) = \Theta_{t+s}(p).
-\]</li>
+\]
+</li>
 <li>For each \( t \) such that \( \Theta_t \) is defined, it is a diffeomorphism from its domain onto its image, with \( \Theta_t^{-1} = \Theta_{-t} \).</li>
 </ol>
 </div>
@@ -3392,6 +3533,7 @@ Near a regular point, the flow of a vector field can be completely "straightened
 
 <div class="theorem">
 <strong>Theorem 12.11 (Canonical Form Theorem / Flow-Box Theorem).</strong> Let \( V \) be a smooth vector field on \( M \) and let \( p \) be a regular point of \( V \). Then there exists a smooth coordinate chart \( (U, \varphi) \) centered at \( p \) with coordinates \( (y^1, \ldots, y^n) \) such that
+
 \[
 V = \frac{\partial}{\partial y^1} \quad \text{on } U.
 \]
@@ -3400,6 +3542,7 @@ In these coordinates, the integral curves of \( V \) are simply the lines \( t \
 
 <div class="proof">
 <strong>Proof sketch.</strong> Since \( V_p \neq 0 \), we may choose coordinates \( (x^1, \ldots, x^n) \) centered at \( p \) such that \( V_p = \frac{\partial}{\partial x^1}\big|_p \). Consider the map \( \Phi \colon \mathbb{R}^n \supset W \to M \) defined by
+
 \[
 \Phi(t, a^2, \ldots, a^n) = \Theta_t(0, a^2, \ldots, a^n),
 \]
@@ -3418,6 +3561,7 @@ We introduced the Lie derivative of differential forms in Chapter 9 via Cartan's
 
 <div class="definition">
 <strong>Definition 12.13 (Lie derivative of a vector field).</strong> Let \( V \) and \( W \) be smooth vector fields on \( M \), and let \( \Theta \) be the flow of \( V \). The <strong>Lie derivative</strong> of \( W \) with respect to \( V \) is the vector field defined by
+
 \[
 (\mathcal{L}_V W)_p = \lim_{t \to 0} \frac{(d\Theta_{-t})_{\Theta_t(p)}(W_{\Theta_t(p)}) - W_p}{t} = \frac{d}{dt}\bigg|_{t=0} (\Theta_{-t})_* W_{\Theta_t(p)}.
 \]
@@ -3435,6 +3579,7 @@ The remarkable fact is that this dynamical construction yields the same result a
 
 <div class="theorem">
 <strong>Theorem 12.15.</strong> For any smooth vector fields \( V \) and \( W \) on \( M \),
+
 \[
 \mathcal{L}_V W = [V, W].
 \]
@@ -3442,6 +3587,7 @@ The remarkable fact is that this dynamical construction yields the same result a
 
 <div class="proof">
 <strong>Proof sketch.</strong> It suffices to show that \( (\mathcal{L}_V W)(f) = [V, W](f) \) for all \( f \in C^\infty(M) \). One writes
+
 \[
 (\mathcal{L}_V W)_p(f) = \frac{d}{dt}\bigg|_{t=0} W_{\Theta_t(p)}(f \circ \Theta_{-t}).
 \]
@@ -3500,6 +3646,7 @@ This pulls the form back from \( \Theta_t(p) \) to \( p \) using the flow and th
 
 <div class="theorem">
 <strong>Theorem 12.19 (Cartan's formula, revisited).</strong> For any smooth vector field \( X \) and \( \omega \in \Omega^k(M) \),
+
 \[
 \mathcal{L}_X \omega = \iota_X(d\omega) + d(\iota_X \omega).
 \]
@@ -3561,6 +3708,7 @@ The Frobenius theorem has a clean statement for commuting vector fields, which c
 
 <div class="theorem">
 <strong>Theorem 12.25 (Simple version of Frobenius).</strong> Let \( V_1, \ldots, V_k \) be smooth vector fields on \( M \) that are linearly independent at a point \( p \) and satisfy \( [V_i, V_j] = 0 \) for all \( i, j \). Then there exist local coordinates \( (y^1, \ldots, y^n) \) centered at \( p \) such that
+
 \[
 V_i = \frac{\partial}{\partial y^i}, \quad i = 1, \ldots, k.
 \]
@@ -3582,6 +3730,7 @@ The collection \( \{\theta^1, \ldots, \theta^{n-k}\} \) is called a **Pfaffian s
 
 <div class="theorem">
 <strong>Theorem 12.25\( {}' \) (Frobenius Theorem — differential forms version).</strong> Let \( D \) be a smooth rank-\( k \) distribution on a smooth \( n \)-manifold \( M \), locally defined by the Pfaffian system \( \{\theta^1, \ldots, \theta^{n-k}\} \). Then \( D \) is involutive (equivalently, integrable) if and only if
+
 \[
 d\theta^i \equiv 0 \pmod{\theta^1, \ldots, \theta^{n-k}} \quad \text{for each } i = 1, \ldots, n-k.
 \]
@@ -3592,6 +3741,7 @@ This formulation is equivalent to the vector-field version: the condition \( d\t
 
 <div class="example">
 <strong>Example 12.27 (The standard contact structure on \( \mathbb{R}^3 \)).</strong> Consider \( \mathbb{R}^3 \) with coordinates \( (x, y, z) \) and the 1-form
+
 \[
 \theta = dz - y\, dx.
 \]
@@ -3615,6 +3765,7 @@ The need for connections arises because there is no canonical way to compare tan
 
 <div class="definition">
 <strong>Definition 12.26 (Affine connection / covariant derivative).</strong> An <strong>affine connection</strong> (or <strong>covariant derivative</strong>) on a smooth manifold \( M \) is a map
+
 \[
 \nabla \colon \mathfrak{X}(M) \times \mathfrak{X}(M) \to \mathfrak{X}(M), \quad (X, Y) \mapsto \nabla_X Y,
 \]
@@ -3638,6 +3789,7 @@ In local coordinates \( (x^1, \ldots, x^n) \), a connection is completely determ
 
 <div class="definition">
 <strong>Definition 12.28 (Christoffel symbols).</strong> The <strong>Christoffel symbols</strong> of a connection \( \nabla \) with respect to local coordinates \( (x^1, \ldots, x^n) \) are the \( n^3 \) smooth functions \( \Gamma^k_{ij} \) defined by
+
 \[
 \nabla_{\partial/\partial x^i} \frac{\partial}{\partial x^j} = \Gamma^k_{ij} \frac{\partial}{\partial x^k}.
 \]
@@ -3664,6 +3816,7 @@ Two of the most important constructions associated with a connection are geodesi
 
 <div class="definition">
 <strong>Definition 12.30 (Geodesic).</strong> A smooth curve \( \gamma \colon I \to M \) is a <strong>geodesic</strong> (with respect to the connection \( \nabla \)) if its velocity vector field is parallel along itself:
+
 \[
 \nabla_{\gamma'(t)} \gamma'(t) = 0 \quad \text{for all } t \in I.
 \]
@@ -3678,6 +3831,7 @@ This is a second-order system of ODEs, so by the existence and uniqueness theore
 
 <div class="definition">
 <strong>Definition 12.31 (Parallel transport).</strong> Let \( \gamma \colon [a,b] \to M \) be a smooth curve. A vector field \( V \) along \( \gamma \) (i.e., a smooth map \( V \colon [a,b] \to TM \) with \( V(t) \in T_{\gamma(t)}M \)) is <strong>parallel</strong> along \( \gamma \) if
+
 \[
 \nabla_{\gamma'(t)} V(t) = 0 \quad \text{for all } t.
 \]
@@ -3694,6 +3848,7 @@ Not all connections are created equal. On a Riemannian manifold, there is a cano
 
 <div class="definition">
 <strong>Definition 12.32 (Torsion).</strong> The <strong>torsion</strong> of a connection \( \nabla \) is the tensor field \( T \colon \mathfrak{X}(M) \times \mathfrak{X}(M) \to \mathfrak{X}(M) \) defined by
+
 \[
 T(X, Y) = \nabla_X Y - \nabla_Y X - [X, Y].
 \]
@@ -3706,6 +3861,7 @@ The torsion measures the extent to which the connection fails to be "symmetric."
 
 <div class="definition">
 <strong>Definition 12.33 (Metric compatibility).</strong> A connection \( \nabla \) on a Riemannian manifold \( (M, g) \) is <strong>compatible with the metric</strong> (or <strong>metric-compatible</strong>) if
+
 \[
 \nabla g = 0,
 \]
@@ -3750,6 +3906,7 @@ The curvature of a connection measures the extent to which parallel transport ar
 
 <div class="definition">
 <strong>Definition 12.35 (Riemann curvature tensor).</strong> The <strong>Riemann curvature tensor</strong> (or <strong>Riemann curvature endomorphism</strong>) of a connection \( \nabla \) is the map \( R \colon \mathfrak{X}(M)^3 \to \mathfrak{X}(M) \) defined by
+
 \[
 R(X, Y)Z = \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]} Z.
 \]
@@ -3789,6 +3946,7 @@ The full Riemann tensor contains a wealth of information. Various traces and con
 
 <div class="definition">
 <strong>Definition 12.38 (Sectional curvature).</strong> Let \( \sigma \subset T_pM \) be a 2-dimensional subspace spanned by linearly independent vectors \( X, Y \). The <strong>sectional curvature</strong> of \( \sigma \) is
+
 \[
 K(\sigma) = K(X, Y) = \frac{\operatorname{Rm}(X, Y, Y, X)}{|X|^2 |Y|^2 - g(X, Y)^2}.
 \]
@@ -3801,6 +3959,7 @@ The sectional curvature \( K(\sigma) \) is the Gauss curvature of the "slice" of
 
 <div class="definition">
 <strong>Definition 12.39 (Ricci curvature).</strong> The <strong>Ricci curvature</strong> is the trace of the curvature endomorphism:
+
 \[
 \operatorname{Ric}(Y, Z) = \operatorname{tr}(X \mapsto R(X, Y)Z) = \sum_{i=1}^{n} \operatorname{Rm}(E_i, Y, Z, E_i),
 \]
@@ -3809,6 +3968,7 @@ where \( (E_1, \ldots, E_n) \) is any orthonormal frame. The Ricci tensor is a s
 
 <div class="definition">
 <strong>Definition 12.40 (Scalar curvature).</strong> The <strong>scalar curvature</strong> is the trace of the Ricci tensor:
+
 \[
 S = \operatorname{tr}_g(\operatorname{Ric}) = \sum_{i=1}^{n} \operatorname{Ric}(E_i, E_i) = \sum_{i,j} K(E_i, E_j).
 \]
@@ -3823,6 +3983,7 @@ It is a smooth function on \( M \).
 
 <div class="definition">
 <strong>Definition 12.42 (Einstein manifold).</strong> A Riemannian manifold \( (M, g) \) is called an <strong>Einstein manifold</strong> if the Ricci tensor is proportional to the metric:
+
 \[
 \operatorname{Ric} = \lambda g
 \]

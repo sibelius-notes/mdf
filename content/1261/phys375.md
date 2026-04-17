@@ -669,9 +669,11 @@ where \(\tau \propto T^{-1/3}\) relates to the Gamow peak and \(n\) is an effect
 \[
 \text{p} + \text{p} \to \text{d} + e^+ + \nu_e \quad (Q = 0.42\ \text{MeV excluding neutrino})
 \]
+
 \[
 \text{d} + \text{p} \to {}^3\text{He} + \gamma \quad (Q = 5.49\ \text{MeV})
 \]
+
 \[
 {}^3\text{He} + {}^3\text{He} \to {}^4\text{He} + 2\text{p} \quad (Q = 12.86\ \text{MeV})
 \]
@@ -683,18 +685,23 @@ The net result is \(4\text{p} \to {}^4\text{He} + 2e^+ + 2\nu_e + 26.7\ \text{Me
 \[
 {}^{12}\text{C} + \text{p} \to {}^{13}\text{N} + \gamma
 \]
+
 \[
 {}^{13}\text{N} \to {}^{13}\text{C} + e^+ + \nu_e
 \]
+
 \[
 {}^{13}\text{C} + \text{p} \to {}^{14}\text{N} + \gamma
 \]
+
 \[
 {}^{14}\text{N} + \text{p} \to {}^{15}\text{O} + \gamma \quad (\text{slowest step})
 \]
+
 \[
 {}^{15}\text{O} \to {}^{15}\text{N} + e^+ + \nu_e
 \]
+
 \[
 {}^{15}\text{N} + \text{p} \to {}^{12}\text{C} + {}^{4}\text{He}
 \]
@@ -708,9 +715,11 @@ When hydrogen in the core is exhausted, the core contracts and heats until heliu
 \[
 {}^4\text{He} + {}^4\text{He} \rightleftharpoons {}^8\text{Be} + \gamma \quad (\text{unstable, } \tau_{1/2} = 8.2 \times 10^{-17}\ \text{s})
 \]
+
 \[
 {}^8\text{Be} + {}^4\text{He} \to {}^{12}\text{C}^* + \gamma \quad (\text{Hoyle resonance at } 7.65\ \text{MeV})
 \]
+
 \[
 {}^{12}\text{C}^* \to {}^{12}\text{C} + 2\gamma
 \]
@@ -729,16 +738,28 @@ The complete set of **four equations of stellar structure** governs the internal
 <strong>The Four Equations of Stellar Structure</strong>
 
 <strong>1. Mass continuity:</strong>
-\[\frac{dM}{dr} = 4\pi r^2 \rho\]
+
+\[
+\frac{dM}{dr} = 4\pi r^2 \rho
+\]
 
 <strong>2. Hydrostatic equilibrium:</strong>
-\[\frac{dP}{dr} = -\frac{G M(r)\rho}{r^2}\]
+
+\[
+\frac{dP}{dr} = -\frac{G M(r)\rho}{r^2}
+\]
 
 <strong>3. Energy transport (radiative):</strong>
-\[\frac{dT}{dr} = -\frac{3\kappa\rho}{4acT^3}\frac{L_r}{4\pi r^2}\]
+
+\[
+\frac{dT}{dr} = -\frac{3\kappa\rho}{4acT^3}\frac{L_r}{4\pi r^2}
+\]
 
 <strong>4. Energy conservation:</strong>
-\[\frac{dL_r}{dr} = 4\pi r^2 \rho\,\varepsilon\]
+
+\[
+\frac{dL_r}{dr} = 4\pi r^2 \rho\,\varepsilon
+\]
 
 where \(\varepsilon\) is the nuclear energy generation rate per unit mass.
 </div>
@@ -1157,5 +1178,8 @@ The following relations are central to stellar astrophysics:
 <strong>Main-sequence lifetime:</strong> \(\tau_\text{MS} \approx 10^{10}\text{ yr} \cdot (M/M_\odot)^{1-\alpha}\)
 
 <strong>Four equations of stellar structure:</strong>
-\[\frac{dM}{dr} = 4\pi r^2\rho, \quad \frac{dP}{dr} = -\frac{GM\rho}{r^2}, \quad \frac{dT}{dr} = -\frac{3\kappa\rho L_r}{16\pi acT^3 r^2}, \quad \frac{dL_r}{dr} = 4\pi r^2\rho\varepsilon\]
+
+\[
+\frac{dM}{dr} = 4\pi r^2\rho, \quad \frac{dP}{dr} = -\frac{GM\rho}{r^2}, \quad \frac{dT}{dr} = -\frac{3\kappa\rho L_r}{16\pi acT^3 r^2}, \quad \frac{dL_r}{dr} = 4\pi r^2\rho\varepsilon
+\]
 </div>

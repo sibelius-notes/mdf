@@ -45,6 +45,7 @@ All maximal tori in a connected reductive group are conjugate — this is a fund
 
 <div class="example">
 For \(G = \mathrm{GL}_n(k)\), a maximal torus is the group of diagonal matrices
+
 \[
 T = \left\{ \begin{pmatrix} t_1 & & \\ & \ddots & \\ & & t_n \end{pmatrix} : t_i \in k^\times \right\} \cong (\mathbb{G}_m)^n.
 \]
@@ -54,6 +55,7 @@ For \(G = \mathrm{SL}_n(k)\), the maximal torus is the subgroup of diagonal matr
 The character lattice \(X^*(T) = \mathrm{Hom}(T, \mathbb{G}_m)\) and the cocharacter lattice \(X_*(T) = \mathrm{Hom}(\mathbb{G}_m, T)\) are free abelian groups of rank \(r\) in natural duality via the pairing \(\langle \chi, \lambda \rangle\) defined by \(\chi \circ \lambda(t) = t^{\langle \chi, \lambda \rangle}\).
 
 The adjoint action of \(T\) on the Lie algebra \(\mathfrak{g} = \mathrm{Lie}(G)\) decomposes \(\mathfrak{g}\) into weight spaces:
+
 \[
 \mathfrak{g} = \mathfrak{t} \oplus \bigoplus_{\alpha \in \Phi} \mathfrak{g}_\alpha
 \]
@@ -105,6 +107,7 @@ The <strong>flag variety</strong> is the quotient \(\mathcal{B} = G/B\). It is a
 
 <div class="example">
 For \(G = \mathrm{SL}_n(k)\) and \(B\) the upper triangular matrices, the flag variety is
+
 \[
 \mathcal{B} = \mathrm{SL}_n / B \cong \{0 = V_0 \subset V_1 \subset \cdots \subset V_n = k^n : \dim V_i = i\},
 \]
@@ -115,6 +118,7 @@ The Bruhat decomposition is the key structural result about the flag variety.
 
 <div class="theorem">
 <strong>Bruhat Decomposition.</strong> The flag variety \(G/B\) decomposes as a disjoint union of \(B\)-orbits:
+
 \[
 G/B = \bigsqcup_{w \in W} BwB/B.
 \]
@@ -127,6 +131,7 @@ Each orbit \(C_w = BwB/B\) is isomorphic to affine space \(\mathbb{A}^{\ell(w)}\
 <strong>Step 1: The double coset decomposition.</strong> We first establish that \(G = \bigsqcup_{w \in W} BwB\). Consider the action of \(B\) on \(G/B\) by left multiplication. By the structure theory of reductive groups, the \(B\)-orbits on \(G/B\) are indexed by \(W\). More precisely, one shows that any \(g \in G\) can be written in the form \(g = b_1 \dot{w} b_2\) for some \(w \in W\) and \(b_1, b_2 \in B\), using induction on the dimension of \(G\) and the structure of minimal parabolic subgroups.
 
 <strong>Step 2: The cell structure.</strong> For each \(w \in W\), we must show \(BwB/B \cong \mathbb{A}^{\ell(w)}\). Write \(U = \prod_{\alpha \in \Phi^+} U_\alpha\) for the unipotent radical of \(B\). Consider the subgroup
+
 \[
 U_w = \prod_{\alpha \in \Phi^+ \cap w(\Phi^-)} U_\alpha.
 \]
@@ -139,6 +144,7 @@ Then the map \(U_w \to BwB/B\) given by \(u \mapsto uw B\) is an isomorphism of 
 
 <div class="definition">
 The <strong>Schubert variety</strong> \(X_w\) is the closure of the Schubert cell \(C_w\) in \(G/B\):
+
 \[
 X_w = \overline{C_w} = \overline{BwB/B}.
 \]
@@ -146,6 +152,7 @@ It is an irreducible projective variety of dimension \(\ell(w)\).
 </div>
 
 The inclusion relations among Schubert varieties are governed by the Bruhat order:
+
 \[
 X_w = \bigsqcup_{v \leq w} C_v
 \]
@@ -163,6 +170,7 @@ Each character \(\lambda \in X^*(T)\) extends to a character of \(B\) (trivial o
 
 <div class="definition">
 The <strong>homogeneous line bundle</strong> \(\mathcal{L}(\lambda)\) on \(G/B\) associated to \(\lambda \in X^*(T)\) is
+
 \[
 \mathcal{L}(\lambda) = G \times^B k_{-\lambda},
 \]
@@ -187,6 +195,7 @@ The Borel-Weil theorem, proven independently by Armand Borel and André Weil in 
 We prove this for \(G = \mathrm{SL}_2(k)\) to illustrate the ideas, then indicate the general argument.
 
 <strong>The case \(G = \mathrm{SL}_2\).</strong> Here \(G/B \cong \mathbb{P}^1\), and dominant weights are non-negative integers \(n \geq 0\). The line bundle \(\mathcal{L}(n)\) is \(\mathcal{O}_{\mathbb{P}^1}(n)\). Its global sections form the space of homogeneous polynomials of degree \(n\) in two variables:
+
 \[
 H^0(\mathbb{P}^1, \mathcal{O}(n)) = k[x, y]_n = \mathrm{Span}\{x^n, x^{n-1}y, \ldots, y^n\},
 \]
@@ -216,6 +225,7 @@ Let \(\rho = \frac{1}{2}\sum_{\alpha \in \Phi^+} \alpha\) be the half-sum of pos
 <ol>
 <li>If \(\lambda + \rho\) is singular (i.e., \(\langle \lambda + \rho, \alpha^\vee \rangle = 0\) for some root \(\alpha\)), then \(H^i(G/B, \mathcal{L}(\lambda)) = 0\) for all \(i \geq 0\).</li>
 <li>If \(\lambda + \rho\) is regular, let \(w \in W\) be the unique element such that \(w \cdot \lambda\) is dominant. Then
+
 \[
 H^i(G/B, \mathcal{L}(\lambda)) = \begin{cases} V(w \cdot \lambda) & \text{if } i = \ell(w), \\ 0 & \text{if } i \neq \ell(w). \end{cases}
 \]
@@ -239,6 +249,7 @@ Let \(X\) be a smooth algebraic variety over \(k\) with structure sheaf \(\mathc
 
 <div class="definition">
 The sheaf of <strong>differential operators</strong> \(\mathcal{D}_X\) on \(X\) is defined by the following filtration. Set \(\mathcal{D}_X^0 = \mathcal{O}_X\) (multiplication operators), and define inductively:
+
 \[
 \mathcal{D}_X^k = \{P \in \mathcal{E}nd_k(\mathcal{O}_X) : [P, f] \in \mathcal{D}_X^{k-1} \text{ for all } f \in \mathcal{O}_X\}.
 \]
@@ -246,6 +257,7 @@ Then \(\mathcal{D}_X = \bigcup_{k \geq 0} \mathcal{D}_X^k\).
 </div>
 
 On an affine open set \(U\) with local coordinates \(x_1, \ldots, x_n\), the ring \(\mathcal{D}_X(U)\) is generated by \(\mathcal{O}_X(U)\) and the partial derivatives \(\partial_1, \ldots, \partial_n\) subject to the relations:
+
 \[
 [\partial_i, \partial_j] = 0, \quad [\partial_i, f] = \frac{\partial f}{\partial x_i} \quad \text{for all } f \in \mathcal{O}_X(U).
 \]
@@ -254,6 +266,7 @@ The associated graded \(\mathrm{gr}(\mathcal{D}_X) = \bigoplus_{k \geq 0} \mathc
 
 <div class="example">
 For \(X = \mathbb{A}^n\), the ring of differential operators is the <strong>Weyl algebra</strong>
+
 \[
 D_n = k[x_1, \ldots, x_n, \partial_1, \ldots, \partial_n]
 \]
@@ -269,6 +282,7 @@ A <strong>left \(\mathcal{D}_X\)-module</strong> is a sheaf \(\mathcal{M}\) of l
 The canonical example of a left D-module is \(\mathcal{O}_X\) itself, with the natural action of differential operators. The canonical example of a right D-module is the canonical sheaf \(\omega_X = \Omega_X^n\) (top exterior power of the cotangent bundle), where a vector field \(\xi\) acts on a top form \(\omega\) by the negative Lie derivative: \(\omega \cdot \xi = -\mathcal{L}_\xi \omega\).
 
 There is an equivalence between left and right D-modules given by:
+
 \[
 \mathcal{M} \mapsto \mathcal{M} \otimes_{\mathcal{O}_X} \omega_X \quad (\text{left} \to \text{right}), \qquad \mathcal{N} \mapsto \mathcal{N} \otimes_{\mathcal{O}_X} \omega_X^{-1} \quad (\text{right} \to \text{left}).
 \]
@@ -281,6 +295,7 @@ A <strong>flat connection</strong> on a vector bundle \(\mathcal{E}\) on \(X\) i
 
 <div class="definition">
 Let \(\mathcal{M}\) be a left \(\mathcal{D}_X\)-module. The <strong>de Rham complex</strong> of \(\mathcal{M}\) is
+
 \[
 \mathrm{DR}(\mathcal{M}) = [\mathcal{M} \xrightarrow{\nabla} \mathcal{M} \otimes \Omega^1_X \xrightarrow{\nabla} \cdots \xrightarrow{\nabla} \mathcal{M} \otimes \Omega^n_X]
 \]
@@ -291,6 +306,7 @@ For the trivial D-module \(\mathcal{M} = \mathcal{O}_X\), the de Rham complex re
 
 <div class="definition">
 Let \(\mathcal{M}\) be a coherent \(\mathcal{D}_X\)-module. Choose a good filtration \(\{F_k \mathcal{M}\}\) (compatible with the order filtration on \(\mathcal{D}_X\)). The <strong>characteristic variety</strong> (or <strong>singular support</strong>) of \(\mathcal{M}\) is
+
 \[
 \mathrm{Ch}(\mathcal{M}) = \mathrm{Supp}(\mathrm{gr}^F \mathcal{M}) \subseteq T^*X.
 \]
@@ -319,10 +335,12 @@ The six operations for D-modules are the D-module analogues of the six-functor f
 
 <div class="definition">
 The <strong>inverse image</strong> (or pullback) of a \(\mathcal{D}_Y\)-module \(\mathcal{N}\) is
+
 \[
 f^! \mathcal{N} = \mathcal{D}_{X \to Y} \otimes_{f^{-1}\mathcal{D}_Y}^L f^{-1}\mathcal{N}[\dim X - \dim Y]
 \]
 where \(\mathcal{D}_{X \to Y} = \mathcal{O}_X \otimes_{f^{-1}\mathcal{O}_Y} f^{-1}\mathcal{D}_Y\) is the transfer bimodule. The <strong>direct image</strong> (or pushforward) is
+
 \[
 f_+ \mathcal{M} = Rf_*(\mathcal{D}_{Y \leftarrow X} \otimes_{\mathcal{D}_X}^L \mathcal{M})
 \]
@@ -336,12 +354,14 @@ These functors preserve holonomicity and satisfy base-change and projection form
 We now specialize to the flag variety \(\mathcal{B} = G/B\). The group \(G\) acts on \(\mathcal{B}\), and hence on \(\mathcal{D}_\mathcal{B}\). We are interested in \(G\)-equivariant D-modules.
 
 The Lie algebra \(\mathfrak{g}\) acts on \(\mathcal{B}\) via the infinitesimal \(G\)-action, giving a Lie algebra homomorphism \(\mathfrak{g} \to \Gamma(\mathcal{B}, \mathcal{T}_\mathcal{B})\) from \(\mathfrak{g}\) to global vector fields on \(\mathcal{B}\). Composing with the inclusion of vector fields into differential operators, we obtain a map
+
 \[
 \mu: U(\mathfrak{g}) \to \Gamma(\mathcal{B}, \mathcal{D}_\mathcal{B}).
 \]
 
 <div class="theorem">
 <strong>(Beilinson-Bernstein)</strong> The map \(\mu\) descends to an isomorphism
+
 \[
 U(\mathfrak{g}) / (U(\mathfrak{g}) \cdot \ker \chi_0) \xrightarrow{\sim} \Gamma(\mathcal{B}, \mathcal{D}_\mathcal{B}),
 \]
@@ -360,10 +380,12 @@ For \(\lambda \in \mathfrak{t}^*\), let \(\mathcal{D}_\lambda\) denote the sheaf
 <ol>
 <li><strong>Global sections:</strong> \(\Gamma(\mathcal{B}, \mathcal{D}_\lambda) \cong U_\lambda\).</li>
 <li><strong>If \(\lambda\) is dominant and regular</strong> (i.e., \(\langle \lambda + \rho, \alpha^\vee \rangle \notin \{0, -1, -2, \ldots\}\) for all positive roots \(\alpha\)), then the global sections functor
+
 \[
 \Gamma: \mathrm{Mod}_{qc}(\mathcal{D}_\lambda) \to \mathrm{Mod}(U_\lambda)
 \]
 is an equivalence of categories, with quasi-inverse given by <strong>localization</strong>:
+
 \[
 \Delta_\lambda: M \mapsto \mathcal{D}_\lambda \otimes_{U_\lambda} M.
 \]
@@ -378,6 +400,7 @@ We give the main steps of the proof.
 <strong>Step 1: The map \(U_\lambda \to \Gamma(\mathcal{B}, \mathcal{D}_\lambda)\) is an isomorphism.</strong> The Lie algebra map \(\mathfrak{g} \to \Gamma(\mathcal{B}, \mathcal{T}_\mathcal{B}) \subset \Gamma(\mathcal{B}, \mathcal{D}_\lambda)\) extends to a surjection \(U(\mathfrak{g}) \to \Gamma(\mathcal{B}, \mathcal{D}_\lambda)\). The kernel is the ideal generated by \(\ker \chi_\lambda\) in the center \(Z(\mathfrak{g})\), which follows from the computation of \(\Gamma(\mathcal{B}, \mathcal{O}_\mathcal{B}) = k\) (since \(\mathcal{B}\) is projective) and the identification of the center's action via the Harish-Chandra isomorphism.
 
 <strong>Step 2: Vanishing of higher cohomology.</strong> One shows that for \(\lambda\) dominant and regular, and for any quasi-coherent \(\mathcal{D}_\lambda\)-module \(\mathcal{M}\),
+
 \[
 H^i(\mathcal{B}, \mathcal{M}) = 0 \quad \text{for } i > 0.
 \]
@@ -458,9 +481,11 @@ The standard t-structure on \(D^b_c(X)\) has heart equal to the category of cons
 
 <div class="definition">
 Fix a stratification \(X = \bigsqcup_\alpha S_\alpha\) with inclusions \(i_\alpha: S_\alpha \hookrightarrow X\). The <strong>perverse t-structure</strong> on \(D^b_c(X)\) is defined by:
+
 \[
 {}^p D^{\leq 0} = \{F \in D^b_c(X) : \dim \mathrm{supp}(\mathcal{H}^j(F)) \leq -j \text{ for all } j\},
 \]
+
 \[
 {}^p D^{\geq 0} = \{F \in D^b_c(X) : \dim \mathrm{supp}(\mathcal{H}^j(\mathbb{D}_X F)) \leq -j \text{ for all } j\}.
 \]
@@ -501,6 +526,7 @@ The decomposition theorem, proved by Beilinson, Bernstein, Deligne, and Gabber (
 
 <div class="theorem">
 <strong>Decomposition Theorem (BBDG).</strong> Let \(f: X \to Y\) be a proper morphism of algebraic varieties, and let \(\mathcal{F}\) be a semisimple perverse sheaf on \(X\). Then the direct image \(Rf_* \mathcal{F}\) decomposes in \(D^b_c(Y)\) as a direct sum of shifts of simple perverse sheaves:
+
 \[
 Rf_* \mathcal{F} \cong \bigoplus_i {}^p \mathcal{H}^i(Rf_* \mathcal{F})[-i],
 \]
@@ -523,6 +549,7 @@ The Riemann-Hilbert correspondence, established by Kashiwara and Mebkhout indepe
 
 <div class="theorem">
 <strong>Riemann-Hilbert Correspondence.</strong> Let \(X\) be a smooth complex algebraic variety. The de Rham functor
+
 \[
 \mathrm{DR}: D^b_{\mathrm{rh}}(\mathcal{D}_X) \to D^b_c(X, \mathbb{C})
 \]
@@ -548,6 +575,7 @@ Let \(\mathfrak{g}\) be a semisimple Lie algebra over \(\mathbb{C}\) with adjoin
 
 <div class="definition">
 The <strong>nilpotent cone</strong> is the variety of nilpotent elements:
+
 \[
 \mathcal{N} = \{x \in \mathfrak{g} : x \text{ is nilpotent}\} = \{x \in \mathfrak{g} : \mathrm{ad}(x) \text{ is a nilpotent endomorphism}\}.
 \]
@@ -564,10 +592,12 @@ For \(\mathfrak{g} = \mathfrak{sl}_n\), the nilpotent cone is \(\mathcal{N} = \{
 
 <div class="definition">
 The <strong>Springer resolution</strong> is the morphism
+
 \[
 \mu: \widetilde{\mathcal{N}} \to \mathcal{N}
 \]
 where
+
 \[
 \widetilde{\mathcal{N}} = \{(x, \mathfrak{b}) \in \mathcal{N} \times \mathcal{B} : x \in \mathfrak{b}\} = T^*\mathcal{B}
 \]
@@ -584,6 +614,7 @@ For \(\mathfrak{sl}_2\), the flag variety is \(\mathcal{B} = \mathbb{P}^1\), and
 
 <div class="definition">
 For \(x \in \mathcal{N}\), the <strong>Springer fiber</strong> over \(x\) is
+
 \[
 \mathcal{B}_x = \mu^{-1}(x) = \{\mathfrak{b} \in \mathcal{B} : x \in \mathfrak{b}\},
 \]
@@ -607,6 +638,7 @@ Springer's fundamental insight was that the top cohomology of Springer fibers ca
 
 <div class="theorem">
 <strong>Springer Correspondence.</strong> There is a natural action of the Weyl group \(W\) on \(H^*(\mathcal{B}_x, \mathbb{C})\) for each \(x \in \mathcal{N}\), depending only on the orbit \(\mathcal{O}\) of \(x\). Moreover, the top-degree cohomology \(H^{2d_x}(\mathcal{B}_x, \mathbb{C})\), where \(d_x = \dim \mathcal{B}_x\), decomposes under the \(W\)-action and provides a bijection:
+
 \[
 \mathrm{Irr}(W) \longleftrightarrow \{(\mathcal{O}, \mathcal{L}) : \mathcal{O} \text{ a nilpotent orbit}, \mathcal{L} \text{ an irreducible } G\text{-equivariant local system on } \mathcal{O}\}_{\text{Springer}},
 \]
@@ -614,6 +646,7 @@ where the right-hand side consists of "Springer pairs" — a subset (not all!) o
 </div>
 
 To be more precise, for each nilpotent orbit \(\mathcal{O}\), the top cohomology \(H^{2d}(\mathcal{B}_x)\) (for \(x \in \mathcal{O}\)) decomposes as
+
 \[
 H^{2d}(\mathcal{B}_x) = \bigoplus_\phi m_\phi V_\phi
 \]
@@ -631,10 +664,12 @@ The modern proof of the Springer correspondence uses perverse sheaves and the de
 <strong>Proof sketch.</strong> Consider the Springer resolution \(\mu: \widetilde{\mathcal{N}} \to \mathcal{N}\). Since \(\mu\) is proper and \(\widetilde{\mathcal{N}} = T^*\mathcal{B}\) is smooth of dimension \(2N\) (where \(N = |\Phi^+|\)), the shifted constant sheaf \(\mathbb{C}_{\widetilde{\mathcal{N}}}[2N]\) is perverse on \(\widetilde{\mathcal{N}}\).
 
 By the decomposition theorem, the direct image
+
 \[
 R\mu_* \mathbb{C}_{\widetilde{\mathcal{N}}}[2N]
 \]
 is a semisimple perverse sheaf on \(\mathcal{N}\). It therefore decomposes as a direct sum of IC-sheaves:
+
 \[
 R\mu_* \mathbb{C}_{\widetilde{\mathcal{N}}}[2N] \cong \bigoplus_{(\mathcal{O}, \mathcal{L})} V_{(\mathcal{O}, \mathcal{L})} \otimes \mathrm{IC}(\overline{\mathcal{O}}, \mathcal{L}),
 \]
@@ -647,6 +682,7 @@ The Weyl group \(W\) acts on the Springer sheaf \(R\mu_* \mathbb{C}_{\widetilde{
 
 <div class="definition">
 The <strong>Steinberg variety</strong> is the fiber product
+
 \[
 Z = \widetilde{\mathcal{N}} \times_\mathcal{N} \widetilde{\mathcal{N}} = \{(x, \mathfrak{b}, \mathfrak{b}') \in \mathcal{N} \times \mathcal{B} \times \mathcal{B} : x \in \mathfrak{b} \cap \mathfrak{b}'\}.
 \]
@@ -660,6 +696,7 @@ The Springer resolution fits into a larger family — the Grothendieck simultane
 
 <div class="definition">
 The <strong>Grothendieck simultaneous resolution</strong> is the diagram
+
 \[
 \widetilde{\mathfrak{g}} = \{(x, \mathfrak{b}) \in \mathfrak{g} \times \mathcal{B} : x \in \mathfrak{b}\} \xrightarrow{\pi} \mathfrak{g} \xrightarrow{\chi} \mathfrak{t}/W
 \]
@@ -690,6 +727,7 @@ Let \(\mathfrak{g}\) be a complex semisimple Lie algebra with Cartan subalgebra 
 </div>
 
 Category \(\mathcal{O}\) is an abelian category with enough projectives. It decomposes into blocks indexed by central characters:
+
 \[
 \mathcal{O} = \bigoplus_{\chi} \mathcal{O}_\chi.
 \]
@@ -698,6 +736,7 @@ Category \(\mathcal{O}\) is an abelian category with enough projectives. It deco
 
 <div class="definition">
 For \(\lambda \in \mathfrak{h}^*\), the <strong>Verma module</strong> is the induced module
+
 \[
 M(\lambda) = U(\mathfrak{g}) \otimes_{U(\mathfrak{b})} \mathbb{C}_\lambda,
 \]
@@ -712,6 +751,7 @@ Key properties of Verma modules:
 
 <div class="example">
 For \(\mathfrak{sl}_2\), a Verma module \(M(\lambda)\) has basis \(\{v, fv, f^2 v, \ldots\}\) with \(hv = \lambda v\), \(ev = 0\), and weights \(\lambda, \lambda - 2, \lambda - 4, \ldots\). The module \(M(\lambda)\) is simple unless \(\lambda \in \mathbb{Z}_{\geq 0}\), in which case the simple quotient \(L(\lambda)\) is the \((\lambda+1)\)-dimensional representation and \(M(\lambda)\) has the short exact sequence
+
 \[
 0 \to M(-\lambda - 2) \to M(\lambda) \to L(\lambda) \to 0.
 \]
@@ -760,10 +800,12 @@ The first non-trivial KL polynomials appear in type \(A_3\): for the element \(w
 
 <div class="theorem">
 <strong>Kazhdan-Lusztig Conjecture (Theorem of Beilinson-Bernstein and Brylinski-Kashiwara, 1981).</strong> In the principal block of category \(\mathcal{O}\), the multiplicity of the simple module in a Verma module is given by:
+
 \[
 [M(w \cdot (-2\rho)) : L(v \cdot (-2\rho))] = P_{w_0 w, w_0 v}(1),
 \]
 or equivalently (with the more standard normalization):
+
 \[
 \mathrm{ch}\, L(w \cdot 0) = \sum_{v \leq w} (-1)^{\ell(w) - \ell(v)} P_{v,w}(1) \, \mathrm{ch}\, M(v \cdot 0).
 \]
@@ -783,6 +825,7 @@ or equivalently (with the more standard normalization):
 <strong>Step 3: Intersection cohomology.</strong> The multiplicity \([M(w) : L(v)]\) is now the multiplicity of \(\mathrm{IC}(X_v)\) in the "standard" sheaf on \(C_w\). By the theory of perverse sheaves, this multiplicity equals the dimension of the stalk of \(\mathrm{IC}(X_w)\) at a point of \(C_v\), which is computed by the local intersection cohomology.
 
 <strong>Step 4: The KL polynomial counts stalks.</strong> Kazhdan and Lusztig independently showed (using the geometry of Schubert varieties, originally in the \(\ell\)-adic setting) that
+
 \[
 P_{v,w}(q) = \sum_i \dim IH^{2i}(X_w)_x \cdot q^i
 \]
@@ -795,10 +838,12 @@ Wolfgang Soergel introduced an algebraic approach to KL theory via bimodules ove
 
 <div class="definition">
 Let \(R = \mathbb{C}[\mathfrak{h}^*] = \mathrm{Sym}(\mathfrak{h})\) be the polynomial ring, graded so that \(\mathfrak{h}\) has degree 2. For a simple reflection \(s \in S\), the <strong>Soergel bimodule</strong> (or <strong>Bott-Samelson bimodule</strong>) is
+
 \[
 B_s = R \otimes_{R^s} R(1),
 \]
 where \(R^s\) is the ring of \(s\)-invariants and \((1)\) denotes a grading shift. For a reduced expression \(w = s_1 \cdots s_k\), the <strong>Bott-Samelson bimodule</strong> is
+
 \[
 BS(s_1, \ldots, s_k) = B_{s_1} \otimes_R B_{s_2} \otimes_R \cdots \otimes_R B_{s_k}.
 \]
@@ -832,6 +877,7 @@ The <strong>quantum group</strong> (or <strong>quantized universal enveloping al
 <li>\(K_i E_j K_i^{-1} = q_i^{a_{ij}} E_j\) and \(K_i F_j K_i^{-1} = q_i^{-a_{ij}} F_j\), where \(q_i = q^{d_i}\) and \(d_i\) are the symmetrizing integers.</li>
 <li>\([E_i, F_j] = \delta_{ij} \frac{K_i - K_i^{-1}}{q_i - q_i^{-1}}\).</li>
 <li>The <strong>quantum Serre relations</strong>: for \(i \neq j\),
+
 \[
 \sum_{k=0}^{1 - a_{ij}} (-1)^k \binom{1 - a_{ij}}{k}_{q_i} E_i^{1 - a_{ij} - k} E_j E_i^k = 0
 \]
@@ -844,10 +890,12 @@ As \(q \to 1\), the quantum group \(U_q(\mathfrak{g})\) degenerates to the unive
 
 <div class="example">
 For \(\mathfrak{g} = \mathfrak{sl}_2\), the quantum group \(U_q(\mathfrak{sl}_2)\) is generated by \(E, F, K, K^{-1}\) with:
+
 \[
 KEK^{-1} = q^2 E, \quad KFK^{-1} = q^{-2} F, \quad [E, F] = \frac{K - K^{-1}}{q - q^{-1}}.
 \]
 The finite-dimensional irreducible representations \(V_n\) (for \(n \geq 0\)) have dimension \(n + 1\), with basis \(v_0, \ldots, v_n\) and actions:
+
 \[
 K v_j = q^{n - 2j} v_j, \quad E v_j = [n - j + 1]_q v_{j-1}, \quad F v_j = [j + 1]_q v_{j+1}.
 \]
@@ -859,6 +907,7 @@ One of the original motivations for quantum groups comes from mathematical physi
 
 <div class="definition">
 The <strong>quantum Yang-Baxter equation</strong> (QYBE) for an invertible operator \(R \in \mathrm{End}(V \otimes V)\) is
+
 \[
 R_{12} R_{13} R_{23} = R_{23} R_{13} R_{12} \quad \in \mathrm{End}(V \otimes V \otimes V),
 \]
@@ -904,6 +953,7 @@ One of the great advantages of crystal bases is that the tensor product of cryst
 
 <div class="theorem">
 <strong>Tensor Product Rule for Crystals.</strong> If \(\mathcal{B}_1\) and \(\mathcal{B}_2\) are crystal bases for \(V_1\) and \(V_2\), then the crystal basis for \(V_1 \otimes V_2\) is \(\mathcal{B}_1 \otimes \mathcal{B}_2 = \{b_1 \otimes b_2 : b_1 \in \mathcal{B}_1, b_2 \in \mathcal{B}_2\}\) with operators:
+
 \[
 \tilde{f}_i(b_1 \otimes b_2) = \begin{cases} \tilde{f}_i(b_1) \otimes b_2 & \text{if } \varphi_i(b_1) > \varepsilon_i(b_2), \\ b_1 \otimes \tilde{f}_i(b_2) & \text{if } \varphi_i(b_1) \leq \varepsilon_i(b_2). \end{cases}
 \]
@@ -935,6 +985,7 @@ Kashiwara proved that the global crystal basis coincides with Lusztig's canonica
 Lusztig gave a geometric construction of the canonical basis and of the quantum group itself using perverse sheaves on quiver varieties.
 
 Let \(Q\) be a quiver whose underlying graph is the Dynkin diagram of \(\mathfrak{g}\), and fix a dimension vector \(\mathbf{v}\). The representation space
+
 \[
 E_\mathbf{v} = \bigoplus_{(i \to j) \in Q} \mathrm{Hom}(k^{v_i}, k^{v_j})
 \]
@@ -950,6 +1001,7 @@ Hiraku Nakajima, building on work of Kronheimer and others, introduced in the 19
 
 <div class="definition">
 Fix a quiver \(Q\) with vertex set \(I\), a dimension vector \(\mathbf{v} = (v_i)_{i \in I}\), and a framing vector \(\mathbf{w} = (w_i)_{i \in I}\). The <strong>Nakajima quiver variety</strong> is the hyperkähler quotient
+
 \[
 \mathfrak{M}(\mathbf{v}, \mathbf{w}) = T^*\mathrm{Rep}(Q, \mathbf{v}, \mathbf{w}) /\!\!/\!\!/ G_\mathbf{v},
 \]
@@ -962,6 +1014,7 @@ More concretely, for a quiver \(Q\) with adjacency matrix \(a_{ij}\), the repres
 <strong>(Nakajima)</strong>
 <ol>
 <li>The direct sum of top Borel-Moore homologies
+
 \[
 \bigoplus_\mathbf{v} H_{2d(\mathbf{v})}^{BM}(\mathfrak{M}(\mathbf{v}, \mathbf{w}))
 \]
@@ -973,6 +1026,7 @@ is isomorphic, as a representation of \(\mathfrak{g}\), to the irreducible highe
 
 <div class="example">
 For the quiver of type \(A_1\) (a single vertex, no edges), with \(\mathbf{v} = (n)\) and \(\mathbf{w} = (N)\), the Nakajima quiver variety is the cotangent bundle of the Grassmannian:
+
 \[
 \mathfrak{M}(n, N) = T^*\mathrm{Gr}(n, N).
 \]
@@ -1013,6 +1067,7 @@ The Jones polynomial \(J(L; q) \in \mathbb{Z}[q, q^{-1}]\) is a knot invariant (
 
 <div class="definition">
 <strong>Khovanov homology</strong> \(Kh^{i,j}(L)\) is a bigraded abelian group associated to a link \(L\) such that the Jones polynomial is recovered as the graded Euler characteristic:
+
 \[
 J(L; q) = \sum_{i,j} (-1)^i q^j \dim Kh^{i,j}(L).
 \]
@@ -1048,6 +1103,7 @@ The full framework of categorical Lie algebra actions uses the <strong>KLR algeb
 
 <div class="definition">
 For a symmetrizable Kac-Moody algebra \(\mathfrak{g}\), the <strong>KLR algebra</strong> \(R(\nu)\) (for a positive root \(\nu\)) is a graded algebra defined by generators and relations that categorify the quantum group \(U_q^-(\mathfrak{g})\): the Grothendieck group
+
 \[
 K_0\left(\bigoplus_\nu R(\nu)\text{-pmod}\right) \cong U_q^-(\mathfrak{g})_{\mathbb{Z}[q,q^{-1}]}
 \]
@@ -1086,6 +1142,7 @@ The geometric Satake correspondence (Lusztig, Ginzburg, Beilinson-Drinfeld, Mirk
 
 <div class="definition">
 Let \(G\) be a connected reductive group over \(\mathbb{C}\), and let \(G^\vee\) be the Langlands dual group (the reductive group whose root datum is dual to that of \(G\)). The <strong>affine Grassmannian</strong> of \(G\) is
+
 \[
 \mathrm{Gr}_G = G(\!(t)\!) / G[\![t]\!],
 \]
@@ -1096,6 +1153,7 @@ The affine Grassmannian is an ind-scheme (an infinite-dimensional algebraic vari
 
 <div class="theorem">
 <strong>Geometric Satake Correspondence.</strong> There is an equivalence of tensor categories
+
 \[
 \mathrm{Perv}_{G[\![t]\!]}(\mathrm{Gr}_G) \cong \mathrm{Rep}(G^\vee)
 \]
@@ -1126,6 +1184,7 @@ The <strong>moduli stack of \(G\)-bundles</strong> on \(\Sigma\) is denoted \(\m
 </div>
 
 The geometric Langlands conjecture (in its strongest form, due to Arinkin-Gaitsgory) posits an equivalence of derived categories:
+
 \[
 D\text{-}\mathrm{mod}(\mathrm{Bun}_G(\Sigma)) \cong \mathrm{IndCoh}(\mathrm{Loc}_{G^\vee}(\Sigma))
 \]

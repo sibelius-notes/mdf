@@ -24,7 +24,9 @@ At any smooth interface, the law of reflection states that the angle of incidenc
 
 Curved mirrors introduce focusing power. For a spherical mirror of radius of curvature \( R \), the paraxial focal length is \( f = R/2 \). Taking the concave (converging) mirror as positive, its focal point lies in front of the reflecting surface. The Cartesian mirror equation is
 
-\[ \frac{1}{s'} + \frac{1}{s} = \frac{2}{R} = \frac{1}{f}, \]
+\[
+\frac{1}{s'} + \frac{1}{s} = \frac{2}{R} = \frac{1}{f},
+\]
 
 and the transverse (lateral) magnification is \( m = -s'/s \). A positive \( m \) means an erect image, a negative \( m \) an inverted one; \( |m| > 1 \) enlarges and \( |m| < 1 \) reduces.
 
@@ -34,7 +36,9 @@ Concave mirrors produce real inverted images for objects beyond the focal point 
 
 When a ray crosses a boundary between two transparent media it bends according to Snell's law:
 
-\[ n_1 \sin\theta_1 = n_2 \sin\theta_2. \]
+\[
+n_1 \sin\theta_1 = n_2 \sin\theta_2.
+\]
 
 Angles are measured from the normal, and the refracted ray lies in the plane of incidence. Light entering a denser medium bends toward the normal; leaving it, it bends away. A useful paraxial approximation replaces \( \sin\theta \) by \( \theta \) for small angles (say, less than 10 degrees), giving linear relationships that underpin Gauss's paraxial theory of image formation.
 
@@ -46,7 +50,9 @@ A plane interface seen from above shifts images vertically: an object at real de
 
 A prism is a wedge of transparent material whose two refracting faces meet at an apex angle \( A \). For a thin prism of apex \( A \), the deviation produced on a paraxial ray is approximately
 
-\[ \delta \approx (n - 1) A, \]
+\[
+\delta \approx (n - 1) A,
+\]
 
 independent of the angle of incidence. For finite prisms, minimum deviation \( \delta_{\min} \) occurs when the ray passes symmetrically, yielding \( n = \sin((A + \delta_{\min})/2) / \sin(A/2) \) — the classical Fraunhofer method for measuring refractive index. Because \( n \) depends on wavelength, blue light deviates more than red, producing dispersion; the difference \( n_F - n_C \) across the hydrogen F and C lines, divided by \( n_D - 1 \), defines the Abbe number that measures how chromatically clean a glass is.
 
@@ -58,7 +64,9 @@ Ophthalmic prisms are used diagnostically to measure phorias and to dissociate t
 
 A single refracting spherical surface of radius \( R \) between media of indices \( n_1 \) and \( n_2 \) obeys the paraxial equation
 
-\[ \frac{n_2}{s'} - \frac{n_1}{s} = \frac{n_2 - n_1}{R}. \]
+\[
+\frac{n_2}{s'} - \frac{n_1}{s} = \frac{n_2 - n_1}{R}.
+\]
 
 The quantity on the right, \( P = (n_2 - n_1)/R \), is the surface power, measured in dioptres when \( R \) is in metres. For the anterior cornea (\( n_1 = 1 \), \( n_2 \approx 1.376 \), \( R \approx 7.8 \) mm) this gives roughly \( +48 \) D, the largest single contribution to the eye's optical power.
 
@@ -72,11 +80,15 @@ A spherical refracting interface has two distinct focal lengths, \( f = -n_1/P \
 
 A thin lens is an idealization whose thickness is negligible compared with object and image distances. For a lens of refractive index \( n \) with front radius \( R_1 \) and back radius \( R_2 \), the lensmaker's equation gives its power in air:
 
-\[ P = (n - 1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right). \]
+\[
+P = (n - 1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right).
+\]
 
 Combined with the thin-lens imaging equation
 
-\[ \frac{1}{s'} - \frac{1}{s} = \frac{1}{f} = P, \]
+\[
+\frac{1}{s'} - \frac{1}{s} = \frac{1}{f} = P,
+\]
 
 this yields image distance, image size (\( m = s'/s \)), and sign (real versus virtual, erect versus inverted) for any paraxial object. A converging lens has positive power and collects parallel light to a real secondary focal point at \( f' > 0 \); a diverging lens has negative power and spreads parallel light as if from a virtual secondary focal point.
 
@@ -88,11 +100,15 @@ Thin lenses introduce aberrations: spherical aberration (marginal rays focus sho
 
 When a lens thickness \( t \) is not negligible, one treats it as two refracting surfaces with paraxial stepping between them. Gullstrand's equation gives the equivalent power of two surfaces of powers \( P_1 \) and \( P_2 \) separated by \( t \) in medium \( n \):
 
-\[ P_{\text{eq}} = P_1 + P_2 - \frac{t}{n}P_1 P_2. \]
+\[
+P_{\text{eq}} = P_1 + P_2 - \frac{t}{n}P_1 P_2.
+\]
 
 This generalizes the thin-lens formula by adding the "reduced-thickness" correction \( t/n \). For a thick lens, the cardinal points — two focal points, two principal planes \( H \) and \( H' \), and two nodal points \( N \) and \( N' \) — fully describe its paraxial behaviour. Distances measured from the principal planes obey the thin-lens form
 
-\[ \frac{1}{s'} - \frac{1}{s} = P_{\text{eq}}, \]
+\[
+\frac{1}{s'} - \frac{1}{s} = P_{\text{eq}},
+\]
 
 so the two principal planes act as a virtual thin lens inserted into the system, restoring the elegant simplicity of the vergence description.
 
@@ -126,7 +142,9 @@ A diffraction grating is a periodic array of \( N \) slits of spacing \( d \). C
 
 The Rayleigh criterion says that two incoherent point sources are barely resolved by a circular aperture when the central maximum of one Airy disk coincides with the first dark ring of the other; the limiting angular separation is
 
-\[ \theta_{\min} = 1.22 \frac{\lambda}{D}. \]
+\[
+\theta_{\min} = 1.22 \frac{\lambda}{D}.
+\]
 
 For a human eye with a 3 mm pupil at \( \lambda = 555 \) nm, this gives roughly \( 0.8 \) arcmin, consistent with the one-minute recognition criterion behind the standard Snellen acuity chart and its 20/20 benchmark. Real eyes are further limited by photoreceptor sampling and by monochromatic and chromatic aberrations; aberration-corrected optics can approach the diffraction-limited ideal but not exceed it.
 
@@ -158,7 +176,9 @@ Retinal image blur in uncorrected ametropia can be analysed as a defocus term ac
 
 Correction works by shifting the apparent object vergence to match the eye's far point. A myopic eye with far point at distance \( f_p \) in front of the cornea needs a diverging lens whose secondary focal point coincides with that far point. Placed at the corneal plane (contact lens case) it has power \( P_{\text{CL}} = -1/f_p \) in dioptres with \( f_p \) in metres. Placed at the spectacle plane, typically \( 14 \) mm in front of the cornea, it has a different effective power: the back-vertex distance formula
 
-\[ P_s = \frac{P_c}{1 - d P_c} \]
+\[
+P_s = \frac{P_c}{1 - d P_c}
+\]
 
 converts between contact-lens power \( P_c \) and spectacle power \( P_s \) with vertex distance \( d \). For high myopes the difference can exceed a full dioptre, which is why high-minus contact lens and spectacle prescriptions do not numerically agree.
 
@@ -172,7 +192,9 @@ A laser (light amplification by stimulated emission of radiation) is a source of
 
 Stimulated emission, predicted by Einstein in 1917, is the cloning of a photon by a suitably excited atom. The new photon shares the stimulating photon's frequency, phase, direction, and polarization. Repeated amplification in the cavity produces an output beam of extraordinary spatial and temporal coherence, often in a clean Gaussian transverse mode whose waist and divergence obey
 
-\[ \theta \approx \frac{\lambda}{\pi w_0}, \]
+\[
+\theta \approx \frac{\lambda}{\pi w_0},
+\]
 
 where \( w_0 \) is the waist radius. Because divergence is diffraction-limited and close to zero, laser beams can be focused to spot sizes near the wavelength, producing immense irradiance from modest powers. Temporal coherence lengths of metres to kilometres make lasers the natural sources for interferometry, holography, and OCT.
 

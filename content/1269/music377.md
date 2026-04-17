@@ -41,6 +41,7 @@ The group structure of \(\mathbb{Z}_{12}\) is not merely a mathematical convenie
 
 <div class="definition">
 <strong>Definition 1.3 (Directed Pitch-Class Interval).</strong> The <em>directed pitch-class interval</em> from pitch class \(x\) to pitch class \(y\) is
+
 \[
 i(x, y) = y - x \pmod{12}.
 \]
@@ -53,12 +54,15 @@ Note that \(i(x, y) \neq i(y, x)\) in general: the interval from C (0) to G (7) 
 
 <div class="example">
 <strong>Example 1.1.</strong> Some illustrative directed pitch-class intervals:
+
 \[
 i(0, 4) = 4 \quad (\text{C to E: major third}), \qquad i(4, 0) = 8 \quad (\text{E to C: minor sixth}),
 \]
+
 \[
 i(9, 2) = 2 - 9 \equiv -7 \equiv 5 \pmod{12} \quad (\text{A to D: perfect fourth}),
 \]
+
 \[
 i(11, 3) = 3 - 11 \equiv -8 \equiv 4 \pmod{12} \quad (\text{B to E\flat: major third}).
 \]
@@ -70,6 +74,7 @@ For many analytical purposes, however, we wish to abstract away from direction a
 
 <div class="definition">
 <strong>Definition 1.4 (Interval Class).</strong> The <em>interval class</em> of two pitch classes \(x\) and \(y\) is
+
 \[
 \text{ic}(x, y) = \min\bigl(i(x,y),\; 12 - i(x,y)\bigr) = \min\bigl(i(x,y),\; i(y,x)\bigr).
 \]
@@ -104,6 +109,7 @@ The two most fundamental operations on pitch-class space are transposition and i
 
 <div class="definition">
 <strong>Definition 1.5 (Transposition).</strong> For \(n \in \mathbb{Z}_{12}\), the <em>transposition operation</em> \(T_n : \mathbb{Z}_{12} \to \mathbb{Z}_{12}\) is defined by
+
 \[
 T_n(p) = p + n \pmod{12}.
 \]
@@ -114,10 +120,12 @@ T_n(p) = p + n \pmod{12}.
 
 <div class="definition">
 <strong>Definition 1.6 (Inversion).</strong> The <em>inversion operation</em> \(I : \mathbb{Z}_{12} \to \mathbb{Z}_{12}\) is defined by
+
 \[
 I(p) = -p \pmod{12} = 12 - p \pmod{12}.
 \]
 More generally, the combined operation \(T_nI\) is defined by
+
 \[
 T_nI(p) = n - p \pmod{12}.
 \]
@@ -128,6 +136,7 @@ Note: \(T_nI\) first inverts (\(p \mapsto -p\)) then transposes (\(-p \mapsto -p
 
 <div class="theorem">
 <strong>Theorem 1.1 (The \(T/I\) Group).</strong> The set of operations \(\{T_n : n \in \mathbb{Z}_{12}\} \cup \{T_nI : n \in \mathbb{Z}_{12}\}\) forms a group of order 24 under composition, called the <em>\(T/I\) group</em>, isomorphic to the dihedral group \(D_{12}\). Explicitly:
+
 \[
 T_n \circ T_m = T_{n+m}, \quad T_nI \circ T_m = T_{n+m}I, \quad T_m \circ T_nI = T_{n-m}I, \quad T_mI \circ T_nI = T_{m-n}.
 \]
@@ -138,10 +147,12 @@ The transpositions \(\{T_n\}\) form a normal subgroup isomorphic to \(\mathbb{Z}
 
 <div class="example">
 <strong>Example 1.2 (Computing Transformations).</strong> Apply \(T_3I\) to the pitch class A (9):
+
 \[
 T_3I(9) = 3 - 9 \equiv -6 \equiv 6 \pmod{12} = \text{F\sharp}.
 \]
 Apply \(T_7\) to the major triad \(\{0, 4, 7\}\) (C major):
+
 \[
 T_7\{0,4,7\} = \{7, 11, 2\} = \text{\{G, B, D\}} = \text{G major.}
 \]
@@ -188,6 +199,7 @@ The prime form of a pc set is invariant under both transposition and inversion: 
 
 <div class="example">
 <strong>Example 2.1 (Normal Form Computation).</strong> Find the normal form of \(\{3, 7, 10, 2\}\) (E\(\flat\), G, B\(\flat\), D — a minor seventh chord). Arrange in ascending order: \([2, 3, 7, 10]\). Four rotations and their spans:
+
 \[
 [2,3,7,10]: \text{span } 10-2=8; \quad [3,7,10,2]: \text{span } 14-3 \equiv 11; \quad [7,10,2,3]: \text{span } 15-7\equiv 8; \quad [10,2,3,7]: \text{span } 17-10\equiv 9.
 \]
@@ -200,6 +212,7 @@ Two rotations tie at span 8: \([2,3,7,10]\) and \([7,10,2,3]\). Tiebreak: compar
 
 <div class="definition">
 <strong>Definition 2.3 (Interval Vector).</strong> Let \(S\) be a pitch-class set of cardinality \(n\). The <em>interval vector</em> of \(S\) is the ordered 6-tuple \(\langle f_1, f_2, f_3, f_4, f_5, f_6 \rangle\), where
+
 \[
 f_k = \#\bigl\{\{x, y\} \subseteq S : \text{ic}(x, y) = k\bigr\}
 \]
@@ -216,6 +229,7 @@ counts the unordered pairs in \(S\) with interval class \(k\). The total number 
 
 <div class="example">
 <strong>Example 2.3 (Forte's Catalogue Entries).</strong> A selection of important set classes with their interval vectors:
+
 \[
 \begin{array}{lll}
 \text{[3-1]} & (0\,1\,2) & \langle 2\,1\,0\,0\,0\,0 \rangle \quad \text{(chromatic trichord)} \\
@@ -249,6 +263,7 @@ Z-related pairs are relatively rare — Forte's catalogue contains 23 Z-pairs �
 
 <div class="theorem">
 <strong>Theorem 2.1 (Complement Theorem).</strong> If \(T\) is a transposition or inversion of \(S\), then \(\bar{T}\) is the corresponding transposition or inversion of \(\bar{S}\). Hence complementation sends set classes to set classes. Moreover, if \(S\) has interval vector \(\langle f_1, \ldots, f_6 \rangle\), then \(\bar{S}\) has interval vector
+
 \[
 \langle f_1 + A, f_2 + A, f_3 + A, f_4 + A, f_5 + A, f_6 + B \rangle,
 \]
@@ -265,6 +280,7 @@ Beyond the binary relationship of "same set class" vs. "different set class," se
 
 <div class="definition">
 <strong>Definition 2.6b (Interval-Vector Similarity).</strong> Let \(S\) and \(T\) be pc sets with interval vectors \(\mathbf{v}(S) = \langle a_1, \ldots, a_6 \rangle\) and \(\mathbf{v}(T) = \langle b_1, \ldots, b_6 \rangle\). The <em>interval-vector similarity</em> of \(S\) and \(T\) is
+
 \[
 \text{IVsim}(S, T) = \sum_{k=1}^{6} |a_k - b_k|.
 \]
@@ -508,6 +524,7 @@ The composer Iannis Xenakis, trained as an architect under Le Corbusier and as a
 
 <div class="definition">
 <strong>Definition 5.3 (Stochastic Music).</strong> In Xenakis's formulation, a <em>stochastic music</em> is one governed by probability distributions over musical parameters. If events arrive according to a Poisson process with rate \(\lambda\) (events per unit time), the probability of exactly \(k\) events in an interval of length \(t\) is
+
 \[
 P(N(t) = k) = \frac{(\lambda t)^k e^{-\lambda t}}{k!}.
 \]
@@ -528,6 +545,7 @@ Elliott Carter's solution to the challenge of rhythmic complexity was neither se
 
 <div class="definition">
 <strong>Definition 5.4b (Metric Modulation).</strong> A <em>metric modulation</em> occurs when the performer reinterprets a note value \(v_1\) in the old tempo \(T_1\) beats-per-minute as a different note value \(v_2\) in the new tempo \(T_2\) beats-per-minute, such that the duration of \(v_1\) in the old tempo equals the duration of \(v_2\) in the new tempo:
+
 \[
 \frac{60}{T_1} \cdot d_1 = \frac{60}{T_2} \cdot d_2 \quad \Longrightarrow \quad \frac{T_2}{T_1} = \frac{d_2}{d_1},
 \]
@@ -564,6 +582,7 @@ The "spectral" school of composition emerged from the work of Gérard Grisey and
 
 <div class="definition">
 <strong>Definition 6.1 (Harmonic Series).</strong> A tone at fundamental frequency \(f_0\) Hz produces a <em>harmonic series</em> consisting of sinusoidal components at frequencies \(f_k = k \cdot f_0\) for \(k = 1, 2, 3, \ldots\). The \(k\)th partial has frequency \(k f_0\). The interval from the \(m\)th to the \(n\)th partial (\(n > m\)) has frequency ratio \(n : m\) and measures
+
 \[
 1200 \cdot \log_2\!\left(\frac{n}{m}\right) \text{ cents}
 \]
@@ -580,6 +599,7 @@ Gérard Grisey's *Partiels* (1975), the third work in the six-work cycle *Les Es
 
 <div class="example">
 <strong>Example 6.1 (Spectrum of E2 \(\approx 82.4\) Hz, Partials 1–14).</strong>
+
 \[
 \begin{array}{crlr}
 k & f_k \text{ (Hz)} & \text{Nearest ET pitch} & \text{Deviation (cents)} \\
@@ -621,6 +641,7 @@ Tristan Murail's *Gondwana* (1980) for orchestra demonstrates the technique of <
 
 <div class="definition">
 <strong>Definition 6.3 (Stretched Spectrum).</strong> Given a harmonic series with partials at \(f_0, 2f_0, 3f_0, \ldots\), a <em>stretched spectrum</em> with stretch factor \(\alpha > 1\) places partials at
+
 \[
 f_k = f_0 \cdot \alpha^{k-1}, \quad k = 1, 2, 3, \ldots.
 \]
@@ -695,6 +716,7 @@ In Lewin's words, the traditional theoretical question is "what is the interval 
 
 <div class="definition">
 <strong>Definition 7.2 (Transformation Network).</strong> A <em>transformation network</em> is a directed graph \((V, E, \ell_V, \ell_E)\) where \(V\) is a finite set of nodes, \(E \subseteq V \times V\) is a set of directed edges, \(\ell_V : V \to S\) assigns musical objects to nodes, and \(\ell_E : E \to \text{End}(S)\) assigns transformations to edges, such that for each \((u, v) \in E\):
+
 \[
 \ell_E(u,v)\bigl(\ell_V(u)\bigr) = \ell_V(v).
 \]
@@ -796,6 +818,7 @@ Proof sketch: The 24 triads biject naturally with the 24 elements of \(D_{12}\) 
 
 <div class="example">
 <strong>Example 8.1 (LR Cycle and Hexatonic Systems).</strong> Starting from C major:
+
 \[
 \begin{array}{lll}
 \text{C major} & \xrightarrow{L} & \text{E minor} \xrightarrow{R} \text{G major} \xrightarrow{L} \text{B minor} \xrightarrow{R} \text{D major} \xrightarrow{L} \text{F\sharp minor} \xrightarrow{R} \text{A major} \xrightarrow{L} \text{C\sharp minor} \xrightarrow{R} \cdots
@@ -804,6 +827,7 @@ Proof sketch: The 24 triads biject naturally with the 24 elements of \(D_{12}\) 
 Applying \(LR\) six times returns to C major. The six triads \{\text{C major, E minor, G major, B minor, D major, F\sharp minor}\} form an \(LR\)-chain cycling through two "hexatonic systems." Alternatively: the PL cycle.
 
 Starting from C major:
+
 \[
 C \text{ maj} \xrightarrow{P} C\text{ min} \xrightarrow{L} A\flat\text{ maj} \xrightarrow{P} A\flat\text{ min} \xrightarrow{L} E\text{ maj} \xrightarrow{P} E\text{ min} \xrightarrow{L} C\text{ maj}.
 \]
@@ -814,6 +838,7 @@ Applying PL three times returns to the start. The six triads \{C maj, C min, A\(
 
 <div class="definition">
 <strong>Definition 8.2 (Hexatonic Systems).</strong> Cohn identifies four hexatonic systems, each a set of six triads (three major, three minor) closed under the PL subgroup of the neo-Riemannian group:
+
 \[
 \begin{array}{ll}
 \text{Northern: } & \{C\text{ maj, C min, A\flat maj, A\flat min, E maj, E min}\} \\
@@ -914,6 +939,7 @@ The following table lists all twelve trichord set classes (cardinality-3 pc sets
 
 <div class="definition">
 <strong>Definition A.1 (Trichord Catalogue).</strong> The twelve trichord set classes are:
+
 \[
 \begin{array}{lllp{5cm}}
 \text{Label} & \text{Prime Form} & \text{IV} & \text{Common Names / Character} \\
@@ -944,6 +970,7 @@ The following six hexachords are the all-combinatorial source hexachords identif
 
 <div class="definition">
 <strong>Definition A.2 (All-Combinatorial Hexachords).</strong> Babbitt's six source sets:
+
 \[
 \begin{array}{lll}
 \text{Forte Label} & \text{Prime Form} & \text{Interval Vector} \\
@@ -974,6 +1001,7 @@ Olivier Messiaen's "modes of limited transposition," described in his treatise *
 
 <div class="example">
 <strong>Example A.1 (Messiaen's Seven Modes).</strong> Messiaen identified seven modes:
+
 \[
 \begin{array}{llll}
 \text{Mode} & \text{pc set} & \text{Sym. order} & \text{Distinct transpositions} \\
@@ -999,10 +1027,12 @@ A significant development in post-tonal theory since the 1990s has been the geom
 
 <div class="definition">
 <strong>Definition A.4 (Chord Space).</strong> The <em>chord space</em> for \(n\)-voice chords is the orbifold
+
 \[
 \mathcal{O}_n = \mathbb{T}^n / S_n,
 \]
 where \(\mathbb{T}^n = (\mathbb{R}/12\mathbb{Z})^n\) is the \(n\)-dimensional torus of pitch-class \(n\)-tuples (ordered), and \(S_n\) is the symmetric group acting by permutation of coordinates (encoding the equivalence of ordering within an unordered chord). The <em>voice-leading distance</em> between two chords \(A\) and \(B\) (as points in \(\mathcal{O}_n\)) is the minimum \(L^1\) distance over all bijections \(\phi : A \to B\):
+
 \[
 d_{VL}(A, B) = \min_{\phi : A \to B} \sum_{a \in A} |a - \phi(a)| \pmod{12\text{-optimal}}.
 \]
@@ -1072,6 +1102,7 @@ A recent and mathematically sophisticated development in post-tonal theory appli
 
 <div class="definition">
 <strong>Definition B.1 (DFT of a Pitch-Class Set).</strong> Let \(S \subseteq \mathbb{Z}_{12}\) be a pitch-class set. Define its <em>characteristic function</em> \(f_S : \mathbb{Z}_{12} \to \{0,1\}\) by \(f_S(k) = 1\) if \(k \in S\) and \(f_S(k) = 0\) otherwise. The <em>Discrete Fourier Transform</em> of \(f_S\) is
+
 \[
 \hat{f}_S(n) = \sum_{k=0}^{11} f_S(k) \cdot e^{2\pi i k n / 12} = \sum_{k \in S} e^{2\pi i k n / 12}, \quad n = 0, 1, \ldots, 11.
 \]
@@ -1090,6 +1121,7 @@ The coefficient \(\hat{f}_S(n)\) is a complex number; its magnitude \(|\hat{f}_S
 
 <div class="example">
 <strong>Example B.7 (DFT of the Major Scale).</strong> The major scale \(S = \{0,2,4,5,7,9,11\}\):
+
 \[
 \hat{f}_S(1) = e^0 + e^{2\pi i \cdot 2/12} + e^{2\pi i \cdot 4/12} + e^{2\pi i \cdot 5/12} + e^{2\pi i \cdot 7/12} + e^{2\pi i \cdot 9/12} + e^{2\pi i \cdot 11/12}.
 \]

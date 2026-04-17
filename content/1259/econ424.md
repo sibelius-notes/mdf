@@ -57,7 +57,9 @@ ML models are built around the **prediction function** \( \hat{f} \), trading in
 
 For a test observation \( (\mathbf{x}_0, y_0) \), the expected prediction error (EPE) of a fitted model \( \hat{f} \) decomposes as:
 
-\[ E\!\left[(y_0 - \hat{f}(\mathbf{x}_0))^2\right] = \underbrace{\left[\text{Bias}(\hat{f}(\mathbf{x}_0))\right]^2}_{\text{systematic error}} + \underbrace{\text{Var}(\hat{f}(\mathbf{x}_0))}_{\text{estimation variance}} + \underbrace{\sigma^2}_{\text{irreducible error}} \]
+\[
+E\!\left[(y_0 - \hat{f}(\mathbf{x}_0))^2\right] = \underbrace{\left[\text{Bias}(\hat{f}(\mathbf{x}_0))\right]^2}_{\text{systematic error}} + \underbrace{\text{Var}(\hat{f}(\mathbf{x}_0))}_{\text{estimation variance}} + \underbrace{\sigma^2}_{\text{irreducible error}}
+\]
 
 where \( \text{Bias}(\hat{f}(\mathbf{x}_0)) = E[\hat{f}(\mathbf{x}_0)] - f(\mathbf{x}_0) \) is the systematic error and \( \text{Var}(\hat{f}(\mathbf{x}_0)) \) is the variance due to sampling.
 
@@ -110,15 +112,21 @@ For time series data, CV must respect temporal order — **rolling-origin** or *
 
 A **regression tree** partitions the feature space \( \mathcal{X} \subseteq \mathbb{R}^p \) into rectangular regions \( R_1, \ldots, R_J \) and predicts the mean of training observations in each region:
 
-\[ \hat{f}(\mathbf{x}) = \sum_{j=1}^J c_j\, \mathbf{1}(\mathbf{x} \in R_j), \quad c_j = \text{avg}_{i: \mathbf{x}_i \in R_j} y_i \]
+\[
+\hat{f}(\mathbf{x}) = \sum_{j=1}^J c_j\, \mathbf{1}(\mathbf{x} \in R_j), \quad c_j = \text{avg}_{i: \mathbf{x}_i \in R_j} y_i
+\]
 
 At each step, the algorithm finds the variable \( x_k \) and split point \( s \) minimizing the total within-region sum of squares:
 
-\[ \min_{k,\,s} \left[\sum_{i: x_{ik} < s}(y_i - \bar{y}_{left})^2 + \sum_{i: x_{ik} \geq s}(y_i - \bar{y}_{right})^2\right] \]
+\[
+\min_{k,\,s} \left[\sum_{i: x_{ik} < s}(y_i - \bar{y}_{left})^2 + \sum_{i: x_{ik} \geq s}(y_i - \bar{y}_{right})^2\right]
+\]
 
 Trees are grown until a stopping criterion (minimum node size or maximum depth), then **pruned** back using cost-complexity regularization with parameter \( \alpha \geq 0 \):
 
-\[ C_\alpha(T) = \sum_{m=1}^{|T|} \sum_{i \in R_m} (y_i - \hat{c}_m)^2 + \alpha|T| \]
+\[
+C_\alpha(T) = \sum_{m=1}^{|T|} \sum_{i \in R_m} (y_i - \hat{c}_m)^2 + \alpha|T|
+\]
 
 The parameter \( \alpha \) is selected by cross-validation.
 
@@ -126,7 +134,9 @@ The parameter \( \alpha \) is selected by cross-validation.
 
 For a \( K \)-class problem, splits minimize the **Gini index** or **cross-entropy** (deviance) rather than squared error:
 
-\[ \text{Gini} = \sum_{k=1}^K \hat{p}_{mk}(1 - \hat{p}_{mk}), \qquad \text{Cross-entropy} = -\sum_{k=1}^K \hat{p}_{mk}\ln\hat{p}_{mk} \]
+\[
+\text{Gini} = \sum_{k=1}^K \hat{p}_{mk}(1 - \hat{p}_{mk}), \qquad \text{Cross-entropy} = -\sum_{k=1}^K \hat{p}_{mk}\ln\hat{p}_{mk}
+\]
 
 where \( \hat{p}_{mk} \) is the fraction of class-\( k \) observations in region \( m \). The Gini index is generally preferred for growing trees; misclassification rate for pruning.
 
@@ -138,11 +148,15 @@ where \( \hat{p}_{mk} \) is the fraction of class-\( k \) observations in region
 
 When \( p \) is large or predictors are collinear, OLS variance is high. **Ridge regression** adds an \( \ell_2 \) penalty:
 
-\[ \hat{\boldsymbol{\beta}}^{ridge} = \argmin_{\boldsymbol{\beta}} \left\{\sum_{i=1}^n(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})^2 + \lambda\sum_{j=1}^p\beta_j^2\right\} \]
+\[
+\hat{\boldsymbol{\beta}}^{ridge} = \argmin_{\boldsymbol{\beta}} \left\{\sum_{i=1}^n(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})^2 + \lambda\sum_{j=1}^p\beta_j^2\right\}
+\]
 
 The closed-form solution:
 
-\[ \hat{\boldsymbol{\beta}}^{ridge} = (\mathbf{X}^{\top}\mathbf{X} + \lambda\mathbf{I})^{-1}\mathbf{X}^{\top}\mathbf{y} \]
+\[
+\hat{\boldsymbol{\beta}}^{ridge} = (\mathbf{X}^{\top}\mathbf{X} + \lambda\mathbf{I})^{-1}\mathbf{X}^{\top}\mathbf{y}
+\]
 
 Ridge shrinks all coefficients toward zero but never sets any to exactly zero. The **effective degrees of freedom** are \( \text{df}(\lambda) = \sum_{j=1}^p d_j^2/(d_j^2 + \lambda) \) where \( d_j \) are the singular values of \( \mathbf{X} \). The tuning parameter \( \lambda \) is selected by cross-validation.
 
@@ -150,7 +164,9 @@ Ridge shrinks all coefficients toward zero but never sets any to exactly zero. T
 
 **Least Absolute Shrinkage and Selection Operator (LASSO)** uses an \( \ell_1 \) penalty:
 
-\[ \hat{\boldsymbol{\beta}}^{lasso} = \argmin_{\boldsymbol{\beta}} \left\{\sum_{i=1}^n(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})^2 + \lambda\sum_{j=1}^p|\beta_j|\right\} \]
+\[
+\hat{\boldsymbol{\beta}}^{lasso} = \argmin_{\boldsymbol{\beta}} \left\{\sum_{i=1}^n(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})^2 + \lambda\sum_{j=1}^p|\beta_j|\right\}
+\]
 
 The non-differentiability of \( |\beta_j| \) at zero means LASSO sets some coefficients **exactly to zero**, performing automatic **variable selection**. The solution path as a function of \( \lambda \) is piecewise linear (LARS algorithm).
 
@@ -160,7 +176,9 @@ The non-differentiability of \( |\beta_j| \) at zero means LASSO sets some coeff
 
 The **elastic net** combines both penalties:
 
-\[ \hat{\boldsymbol{\beta}}^{EN} = \argmin_{\boldsymbol{\beta}} \left\{\sum_{i}(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})^2 + \lambda\left[\alpha\sum_{j}|\beta_j| + (1-\alpha)\sum_{j}\beta_j^2\right]\right\} \]
+\[
+\hat{\boldsymbol{\beta}}^{EN} = \argmin_{\boldsymbol{\beta}} \left\{\sum_{i}(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})^2 + \lambda\left[\alpha\sum_{j}|\beta_j| + (1-\alpha)\sum_{j}\beta_j^2\right]\right\}
+\]
 
 Elastic net handles correlated predictors better than pure LASSO (which tends to select only one from a group of correlated variables).
 
@@ -193,7 +211,9 @@ The **permutation importance** (Breiman 2001) randomly shuffles the values of fe
 
 **Bootstrap Aggregating (Bagging)** reduces variance by averaging predictions from \( B \) models trained on bootstrap samples:
 
-\[ \hat{f}^{bag}(\mathbf{x}) = \frac{1}{B}\sum_{b=1}^B \hat{f}^*_b(\mathbf{x}) \]
+\[
+\hat{f}^{bag}(\mathbf{x}) = \frac{1}{B}\sum_{b=1}^B \hat{f}^*_b(\mathbf{x})
+\]
 
 For regression trees (high-variance, low-bias learners), bagging dramatically reduces variance with little increase in bias. The **out-of-bag (OOB) error** uses predictions from trees for which each observation was not in the bootstrap sample, providing a nearly unbiased test-error estimate without a separate validation set.
 
@@ -201,7 +221,9 @@ For regression trees (high-variance, low-bias learners), bagging dramatically re
 
 **Random forests** extend bagging by introducing additional randomness: at each split, only a random subset of \( m \) features is considered (typically \( m \approx \sqrt{p} \) for classification, \( m \approx p/3 \) for regression). This **decorrelates** the trees, further reducing variance relative to bagging.
 
-\[ \hat{f}^{RF}(\mathbf{x}) = \frac{1}{B}\sum_{b=1}^B T_b(\mathbf{x}; \boldsymbol{\Theta}_b) \]
+\[
+\hat{f}^{RF}(\mathbf{x}) = \frac{1}{B}\sum_{b=1}^B T_b(\mathbf{x}; \boldsymbol{\Theta}_b)
+\]
 
 where \( \boldsymbol{\Theta}_b \) captures the random feature subsampling at each split. Random forests are among the best off-the-shelf predictors for tabular data.
 
@@ -213,7 +235,9 @@ where \( \boldsymbol{\Theta}_b \) captures the random feature subsampling at eac
 
 **Gradient Boosting Machine (GBM):**
 
-\[ \hat{f}^{(m)}(\mathbf{x}) = \hat{f}^{(m-1)}(\mathbf{x}) + \nu\, T_m\!\left(\mathbf{x};\, -\nabla_f \mathcal{L}\big|_{f=\hat{f}^{(m-1)}}\right) \]
+\[
+\hat{f}^{(m)}(\mathbf{x}) = \hat{f}^{(m-1)}(\mathbf{x}) + \nu\, T_m\!\left(\mathbf{x};\, -\nabla_f \mathcal{L}\big|_{f=\hat{f}^{(m-1)}}\right)
+\]
 
 The **shrinkage parameter** (learning rate) \( \nu \in (0,1] \) controls the contribution of each tree. Smaller \( \nu \) requires more trees but often improves out-of-sample performance.
 
@@ -227,11 +251,15 @@ The **shrinkage parameter** (learning rate) \( \nu \in (0,1] \) controls the con
 
 **PCA** finds low-dimensional linear projections that capture maximum variance. The first principal component is:
 
-\[ z_{i1} = \phi_{11}x_{i1} + \phi_{21}x_{i2} + \cdots + \phi_{p1}x_{ip} \]
+\[
+z_{i1} = \phi_{11}x_{i1} + \phi_{21}x_{i2} + \cdots + \phi_{p1}x_{ip}
+\]
 
 where \( \boldsymbol{\phi}_1 = (\phi_{11}, \ldots, \phi_{p1})^{\top} \) (the first **loading vector**) solves:
 
-\[ \max_{\boldsymbol{\phi}: \|\boldsymbol{\phi}\|=1}\, \text{Var}(\mathbf{X}\boldsymbol{\phi}) \]
+\[
+\max_{\boldsymbol{\phi}: \|\boldsymbol{\phi}\|=1}\, \text{Var}(\mathbf{X}\boldsymbol{\phi})
+\]
 
 Equivalently, the loadings are the eigenvectors of the sample covariance matrix \( \hat{\boldsymbol{\Sigma}} \), ordered by decreasing eigenvalue. The proportion of variance explained by the first \( k \) components is \( \sum_{j=1}^k d_j^2 / \sum_{j=1}^p d_j^2 \) (where \( d_j \) are singular values from SVD of \( \mathbf{X} \)).
 
@@ -241,7 +269,9 @@ PCA applications in economics: constructing economic activity indices from many 
 
 **\( K \)-means clustering** partitions \( n \) observations into \( K \) clusters \( C_1, \ldots, C_K \) minimizing total within-cluster variance:
 
-\[ \min_{C_1, \ldots, C_K} \sum_{k=1}^K \sum_{i \in C_k} \|\mathbf{x}_i - \bar{\mathbf{x}}_k\|^2 \]
+\[
+\min_{C_1, \ldots, C_K} \sum_{k=1}^K \sum_{i \in C_k} \|\mathbf{x}_i - \bar{\mathbf{x}}_k\|^2
+\]
 
 The algorithm alternates between assigning observations to the nearest centroid and updating centroids, converging to a local minimum. The number of clusters \( K \) is chosen using the **elbow method** (plot within-cluster SS vs. \( K \)) or the **silhouette score**.
 
@@ -255,9 +285,17 @@ The algorithm alternates between assigning observations to the nearest centroid 
 
 A feedforward neural network (multilayer perceptron) computes:
 
-\[ \mathbf{h}^{(1)} = g\!\left(\mathbf{W}^{(1)}\mathbf{x} + \mathbf{b}^{(1)}\right) \]
-\[ \mathbf{h}^{(l)} = g\!\left(\mathbf{W}^{(l)}\mathbf{h}^{(l-1)} + \mathbf{b}^{(l)}\right), \quad l = 2, \ldots, L-1 \]
-\[ \hat{y} = \mathbf{w}^{(L)\top}\mathbf{h}^{(L-1)} + b^{(L)} \]
+\[
+\mathbf{h}^{(1)} = g\!\left(\mathbf{W}^{(1)}\mathbf{x} + \mathbf{b}^{(1)}\right)
+\]
+
+\[
+\mathbf{h}^{(l)} = g\!\left(\mathbf{W}^{(l)}\mathbf{h}^{(l-1)} + \mathbf{b}^{(l)}\right), \quad l = 2, \ldots, L-1
+\]
+
+\[
+\hat{y} = \mathbf{w}^{(L)\top}\mathbf{h}^{(L-1)} + b^{(L)}
+\]
 
 where \( g \) is a non-linear **activation function**. Common choices:
 
@@ -271,7 +309,9 @@ The **universal approximation theorem** (Cybenko 1989; Hornik 1991) states that 
 
 Parameters \( \boldsymbol{\theta} = \{\mathbf{W}^{(l)}, \mathbf{b}^{(l)}\} \) are learned by minimizing the empirical loss \( \mathcal{L}(\boldsymbol{\theta}) = n^{-1}\sum_i \ell(y_i, \hat{y}_i(\boldsymbol{\theta})) \) using **stochastic gradient descent (SGD)**:
 
-\[ \boldsymbol{\theta}^{(t+1)} = \boldsymbol{\theta}^{(t)} - \eta\, \nabla_{\boldsymbol{\theta}} \mathcal{L}_{B^{(t)}} \]
+\[
+\boldsymbol{\theta}^{(t+1)} = \boldsymbol{\theta}^{(t)} - \eta\, \nabla_{\boldsymbol{\theta}} \mathcal{L}_{B^{(t)}}
+\]
 
 where \( B^{(t)} \) is a random mini-batch and \( \eta \) is the **learning rate**. **Backpropagation** efficiently computes gradients using the chain rule.
 
@@ -287,7 +327,9 @@ Optimizers beyond vanilla SGD: **Momentum SGD**, **Adam** (adaptive learning rat
 
 **Convolutional Neural Networks (CNNs)** exploit spatial structure via local filters and pooling, revolutionizing image recognition. The convolution operation:
 
-\[ (f * g)(t) = \sum_\tau f(\tau)\, g(t - \tau) \]
+\[
+(f * g)(t) = \sum_\tau f(\tau)\, g(t - \tau)
+\]
 
 A CNN layer learns to detect local patterns (edges, textures) regardless of spatial position.
 
@@ -295,7 +337,9 @@ A CNN layer learns to detect local patterns (edges, textures) regardless of spat
 
 **Transformers** (Vaswani et al. 2017) replaced RNNs in NLP via **self-attention**: each token attends to all other tokens with learned attention weights:
 
-\[ \text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax}\!\left(\frac{\mathbf{Q}\mathbf{K}^{\top}}{\sqrt{d_k}}\right)\mathbf{V} \]
+\[
+\text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax}\!\left(\frac{\mathbf{Q}\mathbf{K}^{\top}}{\sqrt{d_k}}\right)\mathbf{V}
+\]
 
 Transformers scale effectively with data and compute, enabling the large language models discussed in Chapter 10.
 
@@ -316,7 +360,9 @@ Raw text must be converted to numerical features. Approaches from simple to comp
 
 **Large Language Models (LLMs)** are transformer-based neural networks trained on massive text corpora using the **self-supervised** task of predicting the next token. GPT-style (decoder-only) models are trained on:
 
-\[ \mathcal{L}_{LM} = -\sum_{t} \ln P(x_t \mid x_{t-1}, x_{t-2}, \ldots, x_1; \boldsymbol{\theta}) \]
+\[
+\mathcal{L}_{LM} = -\sum_{t} \ln P(x_t \mid x_{t-1}, x_{t-2}, \ldots, x_1; \boldsymbol{\theta})
+\]
 
 Key innovations enabling modern LLMs:
 - **Scaling laws (Kaplan et al. 2020):** Performance improves predictably with model size, data volume, and compute.
@@ -349,13 +395,20 @@ Concretely: a model trained to predict job search activity may find that unemplo
 
 **Double ML (Chernozhukov et al. 2018)** uses ML to control for high-dimensional confounders while maintaining valid inference on a low-dimensional causal parameter. For the partially linear model:
 
-\[ Y_i = \theta D_i + g(\mathbf{X}_i) + U_i, \quad E[U_i \mid D_i, \mathbf{X}_i] = 0 \]
-\[ D_i = m(\mathbf{X}_i) + V_i, \quad E[V_i \mid \mathbf{X}_i] = 0 \]
+\[
+Y_i = \theta D_i + g(\mathbf{X}_i) + U_i, \quad E[U_i \mid D_i, \mathbf{X}_i] = 0
+\]
+
+\[
+D_i = m(\mathbf{X}_i) + V_i, \quad E[V_i \mid \mathbf{X}_i] = 0
+\]
 
 Step 1: Use any ML method to estimate \( \hat{g} \) (outcome on controls) and \( \hat{m} \) (treatment on controls) via cross-fitting.
 Step 2: Estimate \( \theta \) by regressing the residualized outcome \( \tilde{Y}_i = Y_i - \hat{g}(\mathbf{X}_i) \) on the residualized treatment \( \tilde{D}_i = D_i - \hat{m}(\mathbf{X}_i) \):
 
-\[ \hat{\theta}_{DML} = \frac{\sum_i \tilde{D}_i\tilde{Y}_i}{\sum_i \tilde{D}_i^2} \]
+\[
+\hat{\theta}_{DML} = \frac{\sum_i \tilde{D}_i\tilde{Y}_i}{\sum_i \tilde{D}_i^2}
+\]
 
 Cross-fitting (leave-one-fold-out estimation of nuisance functions) ensures that regularization bias from the ML steps does not contaminate inference on \( \theta \). Under mild conditions, \( \hat{\theta}_{DML} \) is \( \sqrt{n} \)-consistent and asymptotically normal.
 
@@ -365,7 +418,9 @@ The **Causal Forest (Wager & Athey 2018)** estimates heterogeneous treatment eff
 
 The **R-learner** (Nie & Wager 2021) estimates heterogeneous effects by minimizing:
 
-\[ \min_\tau \sum_{i=1}^n \left[(Y_i - \hat{m}(\mathbf{X}_i)) - \tau(\mathbf{X}_i)(D_i - \hat{e}(\mathbf{X}_i))\right]^2 \]
+\[
+\min_\tau \sum_{i=1}^n \left[(Y_i - \hat{m}(\mathbf{X}_i)) - \tau(\mathbf{X}_i)(D_i - \hat{e}(\mathbf{X}_i))\right]^2
+\]
 
 where \( \hat{m} \) and \( \hat{e} \) are cross-fit estimates of the conditional mean outcome and propensity score. Any ML algorithm can be used to estimate \( \tau(\cdot) \) in the second step.
 
@@ -377,13 +432,17 @@ where \( \hat{m} \) and \( \hat{e} \) are cross-fit estimates of the conditional
 
 For binary classification, an **SVM** finds the separating hyperplane \( \{\mathbf{x}: \mathbf{w}^{\top}\mathbf{x} + b = 0\} \) that maximizes the **margin** — the distance between the hyperplane and the nearest training points (**support vectors**):
 
-\[ \min_{\mathbf{w}, b} \frac{1}{2}\|\mathbf{w}\|^2 \quad \text{subject to} \quad y_i(\mathbf{w}^{\top}\mathbf{x}_i + b) \geq 1 \;\; \forall i \]
+\[
+\min_{\mathbf{w}, b} \frac{1}{2}\|\mathbf{w}\|^2 \quad \text{subject to} \quad y_i(\mathbf{w}^{\top}\mathbf{x}_i + b) \geq 1 \;\; \forall i
+\]
 
 ## 12.2 Soft Margin and the Kernel Trick
 
 The **soft-margin SVM** allows some misclassifications via slack variables \( \xi_i \geq 0 \):
 
-\[ \min_{\mathbf{w}, b, \boldsymbol{\xi}} \frac{1}{2}\|\mathbf{w}\|^2 + C\sum_{i=1}^n\xi_i \quad \text{s.t.} \quad y_i(\mathbf{w}^{\top}\mathbf{x}_i + b) \geq 1 - \xi_i,\;\; \xi_i \geq 0 \]
+\[
+\min_{\mathbf{w}, b, \boldsymbol{\xi}} \frac{1}{2}\|\mathbf{w}\|^2 + C\sum_{i=1}^n\xi_i \quad \text{s.t.} \quad y_i(\mathbf{w}^{\top}\mathbf{x}_i + b) \geq 1 - \xi_i,\;\; \xi_i \geq 0
+\]
 
 The tuning parameter \( C \) controls the bias-variance tradeoff.
 
@@ -410,13 +469,17 @@ SVMs with RBF kernels are flexible classifiers with solid theoretical foundation
 
 The discount factor \( \gamma \in [0,1) \) weights near-term rewards more heavily. The **Bellman equation** for the value function:
 
-\[ V^\pi(s) = \sum_a \pi(a\mid s)\left[R(s,a) + \gamma\sum_{s'}P(s'\mid s,a)V^\pi(s')\right] \]
+\[
+V^\pi(s) = \sum_a \pi(a\mid s)\left[R(s,a) + \gamma\sum_{s'}P(s'\mid s,a)V^\pi(s')\right]
+\]
 
 ## 13.2 Q-Learning and Deep RL
 
 **Q-learning** learns the action-value function \( Q^*(s,a) = \max_\pi E\!\left[\sum_{k=0}^\infty\gamma^k r_{t+k}\mid s_t=s, a_t=a, \pi\right] \) via temporal difference updates:
 
-\[ Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha\left[r_t + \gamma\max_{a'}Q(s_{t+1}, a') - Q(s_t, a_t)\right] \]
+\[
+Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha\left[r_t + \gamma\max_{a'}Q(s_{t+1}, a') - Q(s_t, a_t)\right]
+\]
 
 **Deep Q-Networks (DQN)** approximate \( Q(s,a;\boldsymbol{\theta}) \) with a neural network, enabling RL in high-dimensional state spaces. RL has achieved superhuman performance in games (AlphaGo, AlphaZero) and is increasingly applied to:
 - Dynamic pricing
@@ -428,7 +491,9 @@ The discount factor \( \gamma \in [0,1) \) weights near-term rewards more heavil
 
 RL is conceptually related to dynamic programming in economics. The agent's optimization problem mirrors the consumer's Bellman equation:
 
-\[ V(a) = \max_{c,\,a'} \{u(c) + \beta V(a')\} \quad \text{s.t. budget constraint} \]
+\[
+V(a) = \max_{c,\,a'} \{u(c) + \beta V(a')\} \quad \text{s.t. budget constraint}
+\]
 
 RL provides computational tools to approximate value functions in high-dimensional problems where analytical solutions are intractable.
 

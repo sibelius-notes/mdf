@@ -52,6 +52,7 @@ We generalize the single-variable limit concept to functions of several variable
 <div class="definition">
 
 <strong>Definition (Limit).</strong> Let \(f : \mathbb{R}^2 \to \mathbb{R}\). If \(f\) is defined in a neighborhood of \(\mathbf{a} \in \mathbb{R}^2\), except possibly at \(\mathbf{a}\), then \(\displaystyle\lim_{\mathbf{x} \to \mathbf{a}} f(\mathbf{x}) = L\) means that for every \(\varepsilon > 0\), there exists a \(\delta > 0\) such that for all \(\mathbf{x}\) in the domain of \(f\),
+
 \[
 |f(\mathbf{x}) - L| < \varepsilon \quad \text{whenever} \quad 0 < \|\mathbf{x} - \mathbf{a}\| < \delta.
 \]
@@ -103,6 +104,7 @@ All definitions and theorems in this chapter generalize to \(f : \mathbb{R}^n \t
 <div class="definition">
 
 <strong>Definition (Continuous Function).</strong> A function \(f : \mathbb{R}^2 \to \mathbb{R}\) is continuous at \(\mathbf{a}\) if and only if
+
 \[
 \lim_{\mathbf{x}\to\mathbf{a}} f(\mathbf{x}) = f(\mathbf{a}).
 \]
@@ -159,6 +161,7 @@ The following basic functions are known to be continuous on their domains: const
 <div class="definition">
 
 <strong>Definition (Partial Derivatives).</strong> Let \(f : \mathbb{R}^2 \to \mathbb{R}\). The partial derivatives of \(f\) at \((a,b)\) are defined by
+
 \[
 \frac{\partial f}{\partial x}(a,b) = \lim_{h \to 0} \frac{f(a+h,b) - f(a,b)}{h}, \qquad \frac{\partial f}{\partial y}(a,b) = \lim_{h \to 0} \frac{f(a,b+h) - f(a,b)}{h},
 \]
@@ -175,6 +178,7 @@ There are four second partial derivatives of \(f : \mathbb{R}^2 \to \mathbb{R}\)
 <div class="definition">
 
 <strong>Definition (Hessian Matrix).</strong> Let \(f : \mathbb{R}^2 \to \mathbb{R}\). The Hessian matrix of \(f\), denoted \(H_f(x,y)\), is
+
 \[
 H_f(x,y) = \begin{bmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy} \end{bmatrix}.
 \]
@@ -203,6 +207,7 @@ This definition is formalized in Chapter 5 using the concept of differentiabilit
 <div class="definition">
 
 <strong>Definition (Linear Approximation, 2D).</strong> Let \(f : \mathbb{R}^2 \to \mathbb{R}\). The linear approximation \(L_{(a,b)}(x,y)\) of \(f\) at \((a,b)\) is
+
 \[
 L_{(a,b)}(x,y) = f(a,b) + \frac{\partial f}{\partial x}(a,b)(x - a) + \frac{\partial f}{\partial y}(a,b)(y - b).
 \]
@@ -216,6 +221,7 @@ The increment form is \(\Delta f \approx f_x(a,b)\,\Delta x + f_y(a,b)\,\Delta y
 <div class="definition">
 
 <strong>Definition (Gradient).</strong> Suppose \(f : \mathbb{R}^n \to \mathbb{R}\) has partial derivatives at \(\mathbf{a}\). The gradient of \(f\) at \(\mathbf{a}\) is
+
 \[
 \nabla f(\mathbf{a}) = (D_1 f(\mathbf{a}), D_2 f(\mathbf{a}), \ldots, D_n f(\mathbf{a})).
 \]
@@ -225,6 +231,7 @@ The increment form is \(\Delta f \approx f_x(a,b)\,\Delta x + f_y(a,b)\,\Delta y
 <div class="definition">
 
 <strong>Definition (Linear Approximation, General).</strong> Suppose \(f : \mathbb{R}^n \to \mathbb{R}\) has partial derivatives at \(\mathbf{a}\). The linear approximation of \(f\) at \(\mathbf{a}\) is
+
 \[
 L_{\mathbf{a}}(\mathbf{x}) = f(\mathbf{a}) + \nabla f(\mathbf{a}) \cdot (\mathbf{x} - \mathbf{a}).
 \]
@@ -244,6 +251,7 @@ The error in the linear approximation is \(R_{1,\mathbf{a}}(\mathbf{x}) = f(\mat
 <div class="definition">
 
 <strong>Definition (Differentiable Function).</strong> A function \(f : \mathbb{R}^2 \to \mathbb{R}\) is differentiable at \(\mathbf{a} = (a,b)\) if and only if there is a linear function \(L(\mathbf{x}) = f(a,b) + c(x-a) + d(y-b)\) such that
+
 \[
 \lim_{\mathbf{x}\to\mathbf{a}} \frac{|R_{1,\mathbf{a}}(\mathbf{x})|}{\|\mathbf{x} - \mathbf{a}\|} = 0, \quad \text{where } R_{1,\mathbf{a}}(\mathbf{x}) = f(\mathbf{x}) - L(\mathbf{x}).
 \]
@@ -261,6 +269,7 @@ Thus, to prove differentiability at \(\mathbf{a}\), one checks that \(\displayst
 <div class="definition">
 
 <strong>Definition (Tangent Plane).</strong> Consider \(f : \mathbb{R}^2 \to \mathbb{R}\) which is differentiable at \((a,b)\). The tangent plane of the surface \(z = f(x,y)\) at \((a, b, f(a,b))\) is the graph of the linear approximation:
+
 \[
 z = f(a,b) + \frac{\partial f}{\partial x}(a,b)(x - a) + \frac{\partial f}{\partial y}(a,b)(y - b).
 \]
@@ -304,6 +313,7 @@ We can write \(f(\mathbf{x}) = f(\mathbf{a}) + \nabla f(\mathbf{a}) \cdot (\math
 <div class="theorem">
 
 <strong>Theorem 6.1 (Chain Rule).</strong> Given \(f : \mathbb{R}^2 \to \mathbb{R}\), \(x : \mathbb{R} \to \mathbb{R}\), and \(y : \mathbb{R} \to \mathbb{R}\), let \(G(t) = f(x(t), y(t))\), and let \(a = x(t_0)\), \(b = y(t_0)\). If \(f\) is differentiable at \((a,b)\) and \(x'(t_0)\) and \(y'(t_0)\) exist, then \(G'(t_0)\) exists and is given by
+
 \[
 G'(t_0) = f_x(a,b)\,x'(t_0) + f_y(a,b)\,y'(t_0).
 \]
@@ -335,6 +345,7 @@ To compute second derivatives of composite functions, one applies the chain rule
 <div class="definition">
 
 <strong>Definition (Directional Derivative).</strong> The directional derivative of \(f : \mathbb{R}^2 \to \mathbb{R}\) at a point \(\mathbf{a}\) in the direction of a unit vector \(\hat{\mathbf{u}}\) is
+
 \[
 D_{\hat{\mathbf{u}}} f(\mathbf{a}) = \frac{d}{ds} f(\mathbf{a} + s\hat{\mathbf{u}})\Big|_{s=0}.
 \]
@@ -344,6 +355,7 @@ D_{\hat{\mathbf{u}}} f(\mathbf{a}) = \frac{d}{ds} f(\mathbf{a} + s\hat{\mathbf{u
 <div class="theorem">
 
 <strong>Theorem 7.1.</strong> If \(f : \mathbb{R}^2 \to \mathbb{R}\) is differentiable at \(\mathbf{a}\), then
+
 \[
 D_{\hat{\mathbf{u}}} f(\mathbf{a}) = \nabla f(\mathbf{a}) \cdot \hat{\mathbf{u}},
 \]
@@ -392,6 +404,7 @@ This gives the equation of the tangent plane to the surface \(f(x,y,z) = k\) at 
 <div class="definition">
 
 <strong>Definition (Second Degree Taylor Polynomial).</strong> The second degree Taylor polynomial \(P_{2,\mathbf{a}}(x,y)\) of \(f : \mathbb{R}^2 \to \mathbb{R}\) at \(\mathbf{a} = (a,b)\) is
+
 \[
 P_{2,\mathbf{a}}(x,y) = f(\mathbf{a}) + f_x(\mathbf{a})(x-a) + f_y(\mathbf{a})(y-b) + \frac{1}{2}\left[f_{xx}(\mathbf{a})(x-a)^2 + 2f_{xy}(\mathbf{a})(x-a)(y-b) + f_{yy}(\mathbf{a})(y-b)^2\right].
 \]
@@ -405,6 +418,7 @@ This approximates \(f(x,y)\) near \((a,b)\) with better accuracy than the linear
 <div class="theorem">
 
 <strong>Theorem 8.1 (Taylor's Formula).</strong> Consider \(f : \mathbb{R}^2 \to \mathbb{R}\). If \(f \in C^2\) in some neighborhood \(N(\mathbf{a})\) of \(\mathbf{a}\), then for all \(\mathbf{x} \in N(\mathbf{a})\), there exists a point \(\mathbf{c}\) on the line segment joining \(\mathbf{a}\) and \(\mathbf{x}\) such that
+
 \[
 f(\mathbf{x}) = f(\mathbf{a}) + f_x(\mathbf{a})(x-a) + f_y(\mathbf{a})(y-b) + R_{1,\mathbf{a}}(\mathbf{x}),
 \]
@@ -419,6 +433,7 @@ R_{1,\mathbf{a}}(\mathbf{x}) = \frac{1}{2}\left[f_{xx}(\mathbf{c})(x-a)^2 + 2f_{
 <div class="corollary">
 
 <strong>Corollary 8.1.</strong> If \(f : \mathbb{R}^2 \to \mathbb{R}\), \(f \in C^2\) in some closed neighborhood \(N_\delta(\mathbf{a}) = \{\mathbf{x} \in \mathbb{R}^2 \mid \|\mathbf{x} - \mathbf{a}\| \leq \delta\}\), then there exists a positive constant \(M\) such that
+
 \[
 |R_{1,\mathbf{a}}(\mathbf{x})| \leq M\|\mathbf{x} - \mathbf{a}\|^2, \quad \text{for all } \mathbf{x} \in N_\delta(\mathbf{a}).
 \]
@@ -437,6 +452,7 @@ where the expression \([(x-a)D_1 + (y-b)D_2]^k\) is expanded using the Binomial 
 <div class="theorem">
 
 <strong>Theorem 8.2 (Taylor's Theorem of Order \(k\)).</strong> Let \(f : \mathbb{R}^2 \to \mathbb{R}\), \(f \in C^{k+1}\) at each point on the line segment joining \(\mathbf{a}\) and \(\mathbf{x}\). Then there exists a point \(\mathbf{c}\) on the line segment between \(\mathbf{a}\) and \(\mathbf{x}\) such that
+
 \[
 f(\mathbf{x}) = P_{k,\mathbf{a}}(\mathbf{x}) + R_{k,\mathbf{a}}(\mathbf{x}),
 \]
@@ -447,6 +463,7 @@ where \(R_{k,\mathbf{a}}(\mathbf{x}) = \frac{1}{(k+1)!}[(x-a)D_1 + (y-b)D_2]^{k+
 <div class="corollary">
 
 <strong>Corollary 8.2.</strong> If \(f \in C^k\) in some neighborhood of \(\mathbf{a}\), then
+
 \[
 \lim_{\mathbf{x}\to\mathbf{a}} \frac{|f(\mathbf{x}) - P_{k,\mathbf{a}}(\mathbf{x})|}{\|\mathbf{x}-\mathbf{a}\|^k} = 0.
 \]
@@ -477,6 +494,7 @@ where \(R_{k,\mathbf{a}}(\mathbf{x}) = \frac{1}{(k+1)!}[(x-a)D_1 + (y-b)D_2]^{k+
 <div class="theorem">
 
 <strong>Theorem 9.1.</strong> Let \(f : \mathbb{R}^2 \to \mathbb{R}\). If \((a,b)\) is a local maximum or minimum point of \(f\), then
+
 \[
 f_x(a,b) = 0 = f_y(a,b),
 \]
@@ -595,6 +613,7 @@ The same lemma holds with "positive definite" replaced by "negative definite" or
 <div class="theorem">
 
 <strong>Theorem 10.1 (Extreme Value Theorem).</strong> If \(f : \mathbb{R}^2 \to \mathbb{R}\) is continuous on a closed and bounded set \(S \subset \mathbb{R}^2\), then there exist \(\mathbf{c}_1, \mathbf{c}_2 \in S\) such that
+
 \[
 f(\mathbf{c}_1) \leq f(\mathbf{x}) \leq f(\mathbf{c}_2) \quad \text{for all } \mathbf{x} \in S.
 \]
@@ -680,6 +699,7 @@ A mapping \(F : \mathbb{R}^2 \to \mathbb{R}^2\) is defined by component function
 <div class="definition">
 
 <strong>Definition (Derivative Matrix).</strong> The derivative matrix of a mapping \(F : \mathbb{R}^2 \to \mathbb{R}^2\) defined by \(F(x,y) = (f(x,y), g(x,y))\) is
+
 \[
 DF = \begin{bmatrix} \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} \\[6pt] \frac{\partial g}{\partial x} & \frac{\partial g}{\partial y} \end{bmatrix}.
 \]
@@ -693,6 +713,7 @@ The linear approximation for mappings is \(\Delta\mathbf{u} \approx DF(\mathbf{a
 <div class="theorem">
 
 <strong>Theorem 12.1 (Chain Rule in Matrix Form).</strong> Consider \(G : \mathbb{R}^2 \to \mathbb{R}^2\) and \(F : \mathbb{R}^2 \to \mathbb{R}^2\). If \(G\) has continuous partial derivatives at \(\mathbf{x}\) and \(F\) has continuous partial derivatives at \(\mathbf{u} = G(\mathbf{x})\), then
+
 \[
 D(F \circ G)(\mathbf{x}) = DF(\mathbf{u})\,DG(\mathbf{x}).
 \]
@@ -722,6 +743,7 @@ The derivative matrix of the composite mapping is the matrix product of the indi
 <div class="theorem">
 
 <strong>Theorem 13.1.</strong> If \(F : \mathbb{R}^2 \to \mathbb{R}^2\) has continuous partial derivatives at \(\mathbf{x}\) and its inverse \(F^{-1}\) has continuous partial derivatives at \(\mathbf{u} = F(\mathbf{x})\), then
+
 \[
 DF^{-1}(\mathbf{u})\,DF(\mathbf{x}) = I.
 \]
@@ -731,6 +753,7 @@ DF^{-1}(\mathbf{u})\,DF(\mathbf{x}) = I.
 <div class="definition">
 
 <strong>Definition (Jacobian).</strong> The Jacobian of a mapping \(F : \mathbb{R}^2 \to \mathbb{R}^2\), \((u,v) = F(x,y)\), is
+
 \[
 \frac{\partial(u,v)}{\partial(x,y)} = \det[DF(\mathbf{x})] = \det\begin{bmatrix} \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\[4pt] \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y} \end{bmatrix}.
 \]
@@ -746,6 +769,7 @@ DF^{-1}(\mathbf{u})\,DF(\mathbf{x}) = I.
 <div class="corollary">
 
 <strong>Corollary 13.2 (Inverse Property of the Jacobian).</strong> Under the hypotheses of Theorem 13.1,
+
 \[
 \frac{\partial(x,y)}{\partial(u,v)} = \frac{1}{\frac{\partial(u,v)}{\partial(x,y)}}.
 \]
@@ -770,6 +794,7 @@ For a linear mapping this is exact. In three dimensions, the Jacobian gives the 
 <div class="definition">
 
 <strong>Definition (Jacobian, General).</strong> For \(F : \mathbb{R}^n \to \mathbb{R}^n\), \(\mathbf{u} = F(\mathbf{x})\), the Jacobian is
+
 \[
 \frac{\partial(u_1,\ldots,u_n)}{\partial(x_1,\ldots,x_n)} = \det[DF(\mathbf{x})].
 \]
@@ -795,6 +820,7 @@ When performing change of variables in integrals, one needs to construct an inve
 <div class="definition">
 
 <strong>Definition (Double Integral).</strong> If \(f : \mathbb{R}^2 \to \mathbb{R}\) is integrable on a closed bounded set \(D\), then
+
 \[
 \iint_D f(x,y)\,dA = \lim_{|\Delta P| \to 0} \sum_{i=1}^n f(x_i,y_i)\,\Delta A_i.
 \]
@@ -832,6 +858,7 @@ If \(f\) is continuous on \(D\), then \(f\) is integrable on \(D\). Interpretati
 <div class="theorem">
 
 <strong>Theorem 14.5 (Iterated Integral).</strong> Let \(D \subset \mathbb{R}^2\) be defined by \(y_\ell(x) \leq y \leq y_u(x)\) and \(x_\ell \leq x \leq x_u\), where \(y_\ell, y_u\) are continuous. If \(f(x,y)\) is continuous on \(D\), then
+
 \[
 \iint_D f(x,y)\,dA = \int_{x_\ell}^{x_u} \int_{y_\ell(x)}^{y_u(x)} f(x,y)\,dy\,dx.
 \]
@@ -845,6 +872,7 @@ The order of integration can be reversed when the region is described as \(x_\el
 <div class="theorem">
 
 <strong>Theorem 14.6 (Change of Variable for Double Integrals).</strong> Let \((x,y) = F(u,v) = (f(u,v), g(u,v))\) be a one-to-one mapping of \(D_{uv}\) onto \(D_{xy}\) with \(f, g \in C^1\) and \(\frac{\partial(x,y)}{\partial(u,v)} \neq 0\) (except possibly on finitely many piecewise-smooth curves). If \(H(x,y)\) is continuous on \(D_{xy}\), then
+
 \[
 \iint_{D_{xy}} H(x,y)\,dx\,dy = \iint_{D_{uv}} H(f(u,v), g(u,v))\left|\frac{\partial(x,y)}{\partial(u,v)}\right|du\,dv.
 \]
@@ -912,6 +940,7 @@ For polar coordinates \((x,y) = (r\cos\theta, r\sin\theta)\), the Jacobian is \(
 <div class="definition">
 
 <strong>Definition (Triple Integral).</strong> If \(f : \mathbb{R}^3 \to \mathbb{R}\) is integrable on a closed bounded set \(D\), then
+
 \[
 \iiint_D f(x,y,z)\,dV = \lim_{|\Delta P| \to 0} \sum_{i=1}^n f(x_i,y_i,z_i)\,\Delta V_i.
 \]
@@ -921,6 +950,7 @@ For polar coordinates \((x,y) = (r\cos\theta, r\sin\theta)\), the Jacobian is \(
 <div class="definition">
 
 <strong>Definition (Average Value).</strong> Let \(D \subset \mathbb{R}^3\) be closed and bounded with \(V(D) \neq 0\). The average value of \(f\) over \(D\) is
+
 \[
 f_{\text{av}} = \frac{1}{V(D)}\iiint_D f(x,y,z)\,dV.
 \]
@@ -934,6 +964,7 @@ The triple integral satisfies the same linearity, inequality, and decomposition 
 <div class="theorem">
 
 <strong>Theorem 15.1 (Iterated Triple Integral).</strong> Let \(D\) be defined by \(z_\ell(x,y) \leq z \leq z_u(x,y)\) and \((x,y) \in D_{xy}\), with \(z_\ell, z_u\) continuous on \(D_{xy}\). If \(f(x,y,z)\) is continuous on \(D\), then
+
 \[
 \iiint_D f(x,y,z)\,dV = \iint_{D_{xy}} \int_{z_\ell(x,y)}^{z_u(x,y)} f(x,y,z)\,dz\,dA.
 \]
@@ -947,6 +978,7 @@ The order of integration can be chosen for convenience. A triple integral can be
 <div class="theorem">
 
 <strong>Theorem 15.2 (Change of Variable for Triple Integrals).</strong> Let \((x,y,z) = F(u,v,w)\) be a one-to-one mapping of \(D_{uvw}\) onto \(D_{xyz}\) with continuous partials and non-zero Jacobian. If \(H\) is continuous on \(D_{xyz}\), then
+
 \[
 \iiint_{D_{xyz}} H(x,y,z)\,dx\,dy\,dz = \iiint_{D_{uvw}} H(F(u,v,w))\left|\frac{\partial(x,y,z)}{\partial(u,v,w)}\right|du\,dv\,dw.
 \]

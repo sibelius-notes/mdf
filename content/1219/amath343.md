@@ -22,7 +22,9 @@ Beyond these practical motivations, discrete dynamical systems exhibit a remarka
 
 One important source of difference equations is numerical analysis. When a differential equation cannot be solved in closed form, one common approach is *Euler's method*: divide time into small steps of size \( h \), and approximate the derivative \( \dot{x} = f(x, t) \) by a forward difference \( (x_{n+1} - x_n)/h \). Rearranging,
 
-\[ x_{n+1} = x_n + h \, f(x_n, t_n). \]
+\[
+x_{n+1} = x_n + h \, f(x_n, t_n).
+\]
 
 This is a first-order difference equation in \( x_n \). Euler's method is the simplest numerical integrator; more accurate methods (Runge-Kutta, Adams-Bashforth) produce more involved difference equations, but all share the same discrete-time structure. The analysis of these methods — their stability, accuracy, and long-time behaviour — is itself a branch of discrete dynamical systems theory.
 
@@ -30,7 +32,9 @@ This is a first-order difference equation in \( x_n \). Euler's method is the si
 
 A **difference equation of order \( k \)** is a relation of the form
 
-\[ F(n, x_n, x_{n+1}, \ldots, x_{n+k}) = 0, \]
+\[
+F(n, x_n, x_{n+1}, \ldots, x_{n+k}) = 0,
+\]
 
 where \( F \) is some specified function and \( k \geq 1 \). The equation is **linear** if \( F \) is linear in all the \( x \) variables, and **nonlinear** otherwise. It has **constant coefficients** if the coefficients multiplying the \( x \) terms do not depend on \( n \). A difference equation is **autonomous** if \( n \) does not appear explicitly, so the rule governing evolution is the same at every time step. The **order** of a difference equation is analogous to the order of a differential equation: a first-order equation involves only two consecutive values \( x_n \) and \( x_{n+1} \), while a second-order equation involves three consecutive values \( x_{n-1}, x_n, x_{n+1} \).
 
@@ -40,15 +44,21 @@ To solve a difference equation of order \( k \), one must specify \( k \) initia
 
 Perhaps the most familiar context for difference equations is compound interest. Suppose an account earns interest at a rate \( r \) per period (say, per year). If \( x_n \) denotes the balance after \( n \) periods, then
 
-\[ x_{n+1} = (1 + r) x_n. \]
+\[
+x_{n+1} = (1 + r) x_n.
+\]
 
 This is a first-order linear difference equation with constant coefficients. Starting from an initial deposit \( x_0 = P \), the solution is immediately seen to be
 
-\[ x_n = P (1 + r)^n, \]
+\[
+x_n = P (1 + r)^n,
+\]
 
 the familiar compound-interest formula. If, in addition, a fixed payment \( b \) is deposited (or withdrawn) at each period, the equation becomes
 
-\[ x_{n+1} = (1 + r) x_n + b, \]
+\[
+x_{n+1} = (1 + r) x_n + b,
+\]
 
 which is a nonhomogeneous first-order linear equation. These simple models already capture the essential features of mortgages, annuities, and savings plans, and they motivate the general theory of first-order linear difference equations developed in the next chapter.
 
@@ -60,7 +70,9 @@ which is a nonhomogeneous first-order linear equation. These simple models alrea
 
 A **first-order linear difference equation with constant coefficients** takes the form
 
-\[ x_{n+1} = a x_n + b, \]
+\[
+x_{n+1} = a x_n + b,
+\]
 
 where \( a \) and \( b \) are given constants. When \( b = 0 \), the equation is called **homogeneous**; when \( b \neq 0 \), it is **nonhomogeneous**. This single equation, seemingly modest, encapsulates an enormous range of applications: compound interest, population growth with immigration, drug dosage models, and radioactive decay with a constant source, to name a few.
 
@@ -74,11 +86,15 @@ x_1 = a x_0 + b, \quad x_2 = a x_1 + b = a^2 x_0 + ab + b, \quad x_3 = a^3 x_0 +
 
 and in general
 
-\[ x_n = a^n x_0 + b(a^{n-1} + a^{n-2} + \cdots + 1). \]
+\[
+x_n = a^n x_0 + b(a^{n-1} + a^{n-2} + \cdots + 1).
+\]
 
 When \( a \neq 1 \), the geometric sum evaluates to \( (a^n - 1)/(a - 1) \), giving
 
-\[ x_n = a^n x_0 + b \cdot \frac{a^n - 1}{a - 1}. \]
+\[
+x_n = a^n x_0 + b \cdot \frac{a^n - 1}{a - 1}.
+\]
 
 When \( a = 1 \), the equation reduces to \( x_{n+1} = x_n + b \), and the solution is simply \( x_n = x_0 + nb \), an arithmetic progression.
 
@@ -86,11 +102,15 @@ When \( a = 1 \), the equation reduces to \( x_{n+1} = x_n + b \), and the solut
 
 A **fixed point** (or *equilibrium*) of the difference equation is a constant solution \( x_n = \bar{x} \) for all \( n \). Substituting into \( x_{n+1} = a x_n + b \), we require \( \bar{x} = a \bar{x} + b \), which gives
 
-\[ \bar{x} = \frac{b}{1 - a}, \quad \text{provided } a \neq 1. \]
+\[
+\bar{x} = \frac{b}{1 - a}, \quad \text{provided } a \neq 1.
+\]
 
 The long-term behaviour of solutions depends critically on the parameter \( a \). Writing \( y_n = x_n - \bar{x} \) for the deviation from equilibrium, the equation for \( y_n \) is
 
-\[ y_{n+1} = a y_n, \]
+\[
+y_{n+1} = a y_n,
+\]
 
 whose solution is \( y_n = a^n y_0 \). Thus \( x_n \to \bar{x} \) as \( n \to \infty \) if and only if \( |a| < 1 \). In this case the fixed point is called **stable** (or *attracting*). If \( |a| > 1 \), deviations grow without bound and the fixed point is **unstable** (or *repelling*). The boundary case \( |a| = 1 \) requires separate analysis.
 
@@ -107,7 +127,9 @@ whose solution is \( y_n = a^n y_0 \). Thus \( x_n \to \bar{x} \) as \( n \to \i
 
 Consider a patient who takes a drug dose of \( D \) units at regular intervals of time \( T \). Between doses, the body eliminates a fraction \( (1 - a) \) of the drug present, where \( 0 < a < 1 \) is the *retention factor*. If \( x_n \) denotes the drug level just after the \( n \)-th dose, then
 
-\[ x_{n+1} = a x_n + D. \]
+\[
+x_{n+1} = a x_n + D.
+\]
 
 Here \( a \) and \( D \) play the roles of the parameters in the general first-order equation. The fixed point is \( \bar{x} = D/(1-a) \), which represents the *steady-state drug level*. Since \( |a| < 1 \), the fixed point is stable, and the drug level converges to \( \bar{x} \) regardless of the initial dose. The physician must choose \( D \) and the dosing interval (which affects \( a \)) so that the steady-state level lies within the therapeutic window — high enough to be effective but low enough to avoid toxicity.
 
@@ -118,7 +140,9 @@ Here \( a \) and \( D \) play the roles of the parameters in the general first-o
 
 A mortgage is a loan of amount \( P \) to be repaid in equal monthly payments of \( m \) dollars. If the monthly interest rate is \( r \) (annual rate divided by 12), and \( x_n \) denotes the outstanding balance after \( n \) months, then
 
-\[ x_{n+1} = (1 + r) x_n - m. \]
+\[
+x_{n+1} = (1 + r) x_n - m.
+\]
 
 This is a first-order linear equation with \( a = 1 + r > 1 \) and \( b = -m \). The fixed point is \( \bar{x} = m/r \). Since \( a > 1 \), the fixed point is unstable: if the balance starts below \( m/r \) (because payments are large enough), the balance decreases toward zero and the loan is repaid; if it starts above \( m/r \) (payments too small), the balance grows without bound. The standard calculation for the monthly payment that retires the loan in exactly \( N \) months sets \( x_N = 0 \) and solves for \( m \).
 
@@ -130,11 +154,15 @@ This is a first-order linear equation with \( a = 1 + r > 1 \) and \( b = -m \).
 
 A **second-order linear difference equation with constant coefficients** has the form
 
-\[ x_{n+1} + p x_n + q x_{n-1} = 0 \]
+\[
+x_{n+1} + p x_n + q x_{n-1} = 0
+\]
 
 for the homogeneous case, or
 
-\[ x_{n+1} + p x_n + q x_{n-1} = f(n) \]
+\[
+x_{n+1} + p x_n + q x_{n-1} = f(n)
+\]
 
 for the nonhomogeneous case, where \( p \), \( q \), and the forcing function \( f(n) \) are given. Two initial conditions \( x_0 \) and \( x_1 \) uniquely determine the entire solution sequence.
 
@@ -142,11 +170,15 @@ for the nonhomogeneous case, where \( p \), \( q \), and the forcing function \(
 
 The key to solving second-order linear equations is the observation that solutions of exponential form \( x_n = m^n \) may exist. Substituting into the homogeneous equation:
 
-\[ m^{n+1} + p m^n + q m^{n-1} = 0. \]
+\[
+m^{n+1} + p m^n + q m^{n-1} = 0.
+\]
 
 Dividing by \( m^{n-1} \) (for \( m \neq 0 \)) yields the **characteristic equation**
 
-\[ m^2 + pm + q = 0. \]
+\[
+m^2 + pm + q = 0.
+\]
 
 The nature of the roots of this quadratic determines the form of the general solution.
 
@@ -154,7 +186,9 @@ The nature of the roots of this quadratic determines the form of the general sol
 
 If the discriminant \( p^2 - 4q > 0 \), the characteristic equation has two distinct real roots \( m_1 \) and \( m_2 \). The general solution is
 
-\[ x_n = c_1 m_1^n + c_2 m_2^n, \]
+\[
+x_n = c_1 m_1^n + c_2 m_2^n,
+\]
 
 where \( c_1 \) and \( c_2 \) are arbitrary constants determined by the initial conditions.
 
@@ -162,7 +196,9 @@ where \( c_1 \) and \( c_2 \) are arbitrary constants determined by the initial 
 
 If \( p^2 - 4q = 0 \), there is a single real root \( m = -p/2 \) of multiplicity two. In this case the two independent solutions are \( m^n \) and \( n m^n \), giving the general solution
 
-\[ x_n = (c_1 + c_2 n) m^n. \]
+\[
+x_n = (c_1 + c_2 n) m^n.
+\]
 
 The appearance of the factor \( n \) is analogous to the repeated-root case in ordinary differential equations, where the second independent solution acquires a factor of \( t \).
 
@@ -170,7 +206,9 @@ The appearance of the factor \( n \) is analogous to the repeated-root case in o
 
 If \( p^2 - 4q < 0 \), the roots are complex conjugates \( m_{1,2} = \alpha \pm \beta i \). It is most convenient to write them in polar form: \( m_{1,2} = r e^{\pm i\theta} \), where the *modulus* is \( r = \sqrt{\alpha^2 + \beta^2} = \sqrt{q} \) and the *argument* is \( \theta = \arctan(\beta/\alpha) \). The general real-valued solution is
 
-\[ x_n = r^n (c_1 \cos(n\theta) + c_2 \sin(n\theta)). \]
+\[
+x_n = r^n (c_1 \cos(n\theta) + c_2 \sin(n\theta)).
+\]
 
 This solution exhibits *oscillatory* behaviour with amplitude growing as \( r^n \) (if \( r > 1 \)), decaying (if \( r < 1 \)), or constant (if \( r = 1 \)). The frequency of oscillation is determined by \( \theta \).
 
@@ -180,19 +218,27 @@ This solution exhibits *oscillatory* behaviour with amplitude growing as \( r^n 
 
 The <strong>Fibonacci sequence</strong> is defined by the recurrence
 
-\[ F_{n+1} = F_n + F_{n-1}, \quad F_0 = 0, \quad F_1 = 1. \]
+\[
+F_{n+1} = F_n + F_{n-1}, \quad F_0 = 0, \quad F_1 = 1.
+\]
 
 This is a homogeneous second-order linear equation with \( p = -1 \) and \( q = -1 \). The characteristic equation is \( m^2 - m - 1 = 0 \), with roots
 
-\[ m_{1,2} = \frac{1 \pm \sqrt{5}}{2}. \]
+\[
+m_{1,2} = \frac{1 \pm \sqrt{5}}{2}.
+\]
 
 The larger root \( \phi = (1 + \sqrt{5})/2 \approx 1.618 \) is the celebrated <strong>golden ratio</strong>. The general solution is
 
-\[ F_n = c_1 \phi^n + c_2 \psi^n, \quad \text{where } \psi = \frac{1 - \sqrt{5}}{2} \approx -0.618. \]
+\[
+F_n = c_1 \phi^n + c_2 \psi^n, \quad \text{where } \psi = \frac{1 - \sqrt{5}}{2} \approx -0.618.
+\]
 
 Applying the initial conditions \( F_0 = 0 \) and \( F_1 = 1 \) gives \( c_1 = 1/\sqrt{5} \) and \( c_2 = -1/\sqrt{5} \), yielding <strong>Binet's formula</strong>:
 
-\[ F_n = \frac{1}{\sqrt{5}} \left[ \left(\frac{1 + \sqrt{5}}{2}\right)^n - \left(\frac{1 - \sqrt{5}}{2}\right)^n \right]. \]
+\[
+F_n = \frac{1}{\sqrt{5}} \left[ \left(\frac{1 + \sqrt{5}}{2}\right)^n - \left(\frac{1 - \sqrt{5}}{2}\right)^n \right].
+\]
 
 Remarkably, this formula involving irrational numbers always produces an integer. Since \( |\psi| < 1 \), the term \( \psi^n / \sqrt{5} \) tends to zero, so \( F_n \) is the nearest integer to \( \phi^n / \sqrt{5} \). The ratio of successive Fibonacci numbers \( F_{n+1}/F_n \to \phi \) as \( n \to \infty \).
 
@@ -200,7 +246,9 @@ Remarkably, this formula involving irrational numbers always produces an integer
 
 Consider an annual plant species in which each individual lives for one year, produces seeds, and then dies. Let \( x_n \) denote the population size in year \( n \). Seeds germinate in the following year, and some fraction also lie dormant for an additional year. If a fraction \( a \) of seeds germinate immediately and a fraction \( b \) of <em>this year's</em> seeds lie dormant and germinate next year, the population satisfies
 
-\[ x_{n+1} = a x_n + b x_{n-1}. \]
+\[
+x_{n+1} = a x_n + b x_{n-1}.
+\]
 
 This is precisely a second-order linear equation. The characteristic roots determine whether the population grows, decays, or oscillates. Such models are foundational in theoretical ecology.
 
@@ -212,11 +260,15 @@ This is precisely a second-order linear equation. The characteristic roots deter
 
 The general solution of a nonhomogeneous linear difference equation
 
-\[ x_{n+1} + p x_n + q x_{n-1} = f(n) \]
+\[
+x_{n+1} + p x_n + q x_{n-1} = f(n)
+\]
 
 has the form
 
-\[ x_n = x_n^{(h)} + x_n^{(p)}, \]
+\[
+x_n = x_n^{(h)} + x_n^{(p)},
+\]
 
 where \( x_n^{(h)} \) is the general solution of the corresponding <em>homogeneous</em> equation (with \( f = 0 \)), and \( x_n^{(p)} \) is any <em>particular solution</em> of the nonhomogeneous equation. This principle of superposition holds because the equation is linear.
 
@@ -251,7 +303,9 @@ The crucial subtlety arises when the *natural frequency* of the forcing function
 
 Many models involve several interacting quantities that all evolve simultaneously in discrete time. A <strong>linear system of difference equations</strong> takes the form
 
-\[ \mathbf{x}_{n+1} = A \mathbf{x}_n, \]
+\[
+\mathbf{x}_{n+1} = A \mathbf{x}_n,
+\]
 
 where \( \mathbf{x}_n \in \mathbb{R}^k \) is a vector of state variables and \( A \) is a \( k \times k \) matrix of constant coefficients. This formulation also subsumes higher-order scalar equations: a \( k \)-th order scalar equation can always be converted to a first-order system in \( k \) dimensions by introducing the state vector \( \mathbf{x}_n = (x_n, x_{n-1}, \ldots, x_{n-k+1})^T \).
 
@@ -259,11 +313,15 @@ where \( \mathbf{x}_n \in \mathbb{R}^k \) is a vector of state variables and \( 
 
 The solution of \( \mathbf{x}_{n+1} = A\mathbf{x}_n \) is, formally, \( \mathbf{x}_n = A^n \mathbf{x}_0 \). To compute \( A^n \) efficiently, one diagonalizes \( A \). Suppose \( A \) has \( k \) linearly independent eigenvectors \( \mathbf{v}_1, \ldots, \mathbf{v}_k \) with corresponding eigenvalues \( \lambda_1, \ldots, \lambda_k \). Then any initial condition can be written as
 
-\[ \mathbf{x}_0 = c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \cdots + c_k \mathbf{v}_k, \]
+\[
+\mathbf{x}_0 = c_1 \mathbf{v}_1 + c_2 \mathbf{v}_2 + \cdots + c_k \mathbf{v}_k,
+\]
 
 and the solution is
 
-\[ \mathbf{x}_n = c_1 \lambda_1^n \mathbf{v}_1 + c_2 \lambda_2^n \mathbf{v}_2 + \cdots + c_k \lambda_k^n \mathbf{v}_k. \]
+\[
+\mathbf{x}_n = c_1 \lambda_1^n \mathbf{v}_1 + c_2 \lambda_2^n \mathbf{v}_2 + \cdots + c_k \lambda_k^n \mathbf{v}_k.
+\]
 
 Each eigenvector defines an <strong>invariant line</strong> through the origin: if the initial condition lies exactly along \( \mathbf{v}_i \), the trajectory stays on that line and is simply scaled by \( \lambda_i \) at each step.
 
@@ -281,12 +339,19 @@ The origin \( \mathbf{x} = \mathbf{0} \) is a stable fixed point if all eigenval
 
 A classical application is the model of red blood cell production. Let \( R_n \) denote the number of red blood cells in circulation at time step \( n \), and let \( M_n \) denote the concentration of a control hormone (such as erythropoietin) that stimulates production. A simplified model assumes:
 
-\[ R_{n+1} = (1 - \gamma) R_n + \beta M_n, \]
-\[ M_{n+1} = \alpha R_n - \delta M_n, \]
+\[
+R_{n+1} = (1 - \gamma) R_n + \beta M_n,
+\]
+
+\[
+M_{n+1} = \alpha R_n - \delta M_n,
+\]
 
 where \( \gamma \) is the daily destruction rate of red blood cells, \( \beta \) is the sensitivity of cell production to the hormone, \( \alpha \) is the feedback gain from cell count to hormone production, and \( \delta \) is the hormone decay rate. Written in matrix form, \( \mathbf{x}_{n+1} = A \mathbf{x}_n \) with
 
-\[ A = \begin{pmatrix} 1 - \gamma & \beta \\ \alpha & -\delta \end{pmatrix}. \]
+\[
+A = \begin{pmatrix} 1 - \gamma & \beta \\ \alpha & -\delta \end{pmatrix}.
+\]
 
 The stability of this system (whether red blood cell counts converge to a normal level, oscillate, or diverge) is determined by the eigenvalues of \( A \). Oscillating solutions correspond to complex eigenvalues with \( |\lambda| \approx 1 \) and can model pathological conditions such as periodic anemia.
 
@@ -311,7 +376,9 @@ Fixed points appear as intersections of \( y = f(x) \) with the diagonal \( y = 
 
 A <strong>fixed point</strong> of the map \( f : \mathbb{R} \to \mathbb{R} \) is a value \( \bar{x} \) satisfying \( f(\bar{x}) = \bar{x} \). The local stability of \( \bar{x} \) is determined by the derivative of \( f \) at that point. Linearizing the equation near \( \bar{x} \) by setting \( x_n = \bar{x} + \epsilon_n \) for small \( \epsilon_n \):
 
-\[ \bar{x} + \epsilon_{n+1} = f(\bar{x} + \epsilon_n) \approx f(\bar{x}) + f'(\bar{x}) \epsilon_n = \bar{x} + f'(\bar{x}) \epsilon_n, \]
+\[
+\bar{x} + \epsilon_{n+1} = f(\bar{x} + \epsilon_n) \approx f(\bar{x}) + f'(\bar{x}) \epsilon_n = \bar{x} + f'(\bar{x}) \epsilon_n,
+\]
 
 so \( \epsilon_{n+1} \approx f'(\bar{x}) \epsilon_n \). This is a linear first-order equation with multiplier \( a = f'(\bar{x}) \).
 
@@ -329,7 +396,9 @@ A point \( x_0 \) is a **periodic point of period \( p \)** if \( f^p(x_0) = x_0
 
 The stability of a period-\( p \) orbit is determined by the *chain rule* for the derivative of the composed map: if \( \{x_0, x_1, \ldots, x_{p-1}\} \) is a period-\( p \) orbit, then
 
-\[ (f^p)'(x_0) = f'(x_0) f'(x_1) \cdots f'(x_{p-1}). \]
+\[
+(f^p)'(x_0) = f'(x_0) f'(x_1) \cdots f'(x_{p-1}).
+\]
 
 The orbit is stable if \( |(f^p)'(x_0)| < 1 \) and unstable if \( |(f^p)'(x_0)| > 1 \).
 
@@ -344,7 +413,9 @@ The orbit is stable if \( |(f^p)'(x_0)| < 1 \) and unstable if \( |(f^p)'(x_0)| 
 
 The **logistic map** is the function
 
-\[ f_a(x) = ax(1 - x), \quad x \in [0, 1], \]
+\[
+f_a(x) = ax(1 - x), \quad x \in [0, 1],
+\]
 
 parameterized by \( a \in (0, 4] \). When \( a \leq 4 \), the map sends \( [0,1] \) into itself. The logistic map is the canonical model of *population growth with a carrying capacity*: the factor \( x \) represents the current population (normalized to the interval \( [0,1] \)), and the factor \( (1-x) \) represents the restraining effect of limited resources. The parameter \( a \) is the intrinsic growth rate.
 
@@ -352,13 +423,17 @@ parameterized by \( a \in (0, 4] \). When \( a \leq 4 \), the map sends \( [0,1]
 
 The fixed points of \( f_a \) satisfy \( f_a(x) = x \), i.e., \( ax(1-x) = x \). This gives \( x(a(1-x) - 1) = 0 \), so the fixed points are
 
-\[ \bar{x}_1 = 0, \qquad \bar{x}_2 = \frac{a-1}{a}. \]
+\[
+\bar{x}_1 = 0, \qquad \bar{x}_2 = \frac{a-1}{a}.
+\]
 
 Note that \( \bar{x}_2 \in (0,1) \) only when \( a > 1 \).
 
 The derivatives are \( f_a'(x) = a(1 - 2x) \), giving
 
-\[ f_a'(\bar{x}_1) = a, \qquad f_a'(\bar{x}_2) = 2 - a. \]
+\[
+f_a'(\bar{x}_1) = a, \qquad f_a'(\bar{x}_2) = 2 - a.
+\]
 
 Thus:
 - \( \bar{x}_1 = 0 \) is stable when \( |a| < 1 \), i.e., \( 0 < a < 1 \).
@@ -380,7 +455,9 @@ As \( a \) increases through a sequence of critical values \( a_1 < a_2 < a_3 < 
 
 The critical values \( a_k \) at which period-doublings occur converge to \( a_\infty \) with a *geometric* rate. The ratio of successive gaps converges to the **Feigenbaum constant**:
 
-\[ \delta = \lim_{k \to \infty} \frac{a_k - a_{k-1}}{a_{k+1} - a_k} \approx 4.6692. \]
+\[
+\delta = \lim_{k \to \infty} \frac{a_k - a_{k-1}}{a_{k+1} - a_k} \approx 4.6692.
+\]
 
 This constant is *universal*: the same value \( \delta \approx 4.6692 \) appears in the period-doubling cascade of *any* smooth unimodal map with a quadratic maximum. Feigenbaum's discovery in the late 1970s was one of the first rigorous results on universality in the transition to chaos.
 
@@ -420,7 +497,9 @@ For \( f_4 \), the periodic points are dense in \( [0,1] \): near any point \( x
 
 A sufficient condition for SDIC follows from the mean value theorem: if \( |f'(x)| \geq K > 1 \) for all \( x \) in an interval, then
 
-\[ |f^n(x) - f^n(y)| \geq K^n |x - y|, \]
+\[
+|f^n(x) - f^n(y)| \geq K^n |x - y|,
+\]
 
 so nearby points separate exponentially fast. While \( f_4 \) is not uniformly expanding (its derivative vanishes at \( x = 1/2 \)), the geometry of its iterates still produces sensitive dependence over any neighbourhood.
 
@@ -444,13 +523,17 @@ Two other maps are important for building intuition about chaos.
 
 The <strong>tent map</strong> is defined by
 
-\[ T(x) = \begin{cases} 2x, & 0 \leq x \leq 1/2 \\ 2(1-x), & 1/2 < x \leq 1. \end{cases} \]
+\[
+T(x) = \begin{cases} 2x, & 0 \leq x \leq 1/2 \\ 2(1-x), & 1/2 < x \leq 1. \end{cases}
+\]
 
 It maps \( [0,1] \) into itself, has slope \( \pm 2 \) everywhere (away from \( x = 1/2 \)), and is conjugate to \( f_4 \) via the homeomorphism \( h(x) = \sin^2(\pi x/2) \). Because the tent map is piecewise linear with constant slope modulus 2, it is easier to analyze directly.
 
 The <strong>Baker map</strong> (or <strong>doubling map</strong>) is
 
-\[ B(x) = 2x \pmod{1}, \quad x \in [0,1). \]
+\[
+B(x) = 2x \pmod{1}, \quad x \in [0,1).
+\]
 
 This map is essentially multiplication by 2 modulo 1: it takes the binary expansion \( x = 0.b_1 b_2 b_3 \cdots \) (base 2) and shifts it left, producing \( B(x) = 0.b_2 b_3 b_4 \cdots \). The Baker map is chaotic, and it provides the cleanest entry point into symbolic dynamics.
 
@@ -462,13 +545,17 @@ This map is essentially multiplication by 2 modulo 1: it takes the binary expans
 
 <strong>Symbolic dynamics</strong> is a powerful technique that encodes the complex dynamics of a map by translating the trajectory of each initial condition into a sequence of symbols. The central object is the <strong>space of binary sequences</strong>
 
-\[ \Sigma_2 = \{ (b_0, b_1, b_2, \ldots) : b_i \in \{0, 1\} \text{ for all } i \geq 0 \}. \]
+\[
+\Sigma_2 = \{ (b_0, b_1, b_2, \ldots) : b_i \in \{0, 1\} \text{ for all } i \geq 0 \}.
+\]
 
 This is an uncountable set; it can be put in bijection with \( [0,1] \) via binary expansions, though this correspondence has subtleties at dyadic rationals.
 
 A natural metric on \( \Sigma_2 \) is
 
-\[ d(\mathbf{b}, \mathbf{c}) = \sum_{i=0}^\infty \frac{|b_i - c_i|}{2^{i+1}}, \]
+\[
+d(\mathbf{b}, \mathbf{c}) = \sum_{i=0}^\infty \frac{|b_i - c_i|}{2^{i+1}},
+\]
 
 which makes \( \Sigma_2 \) a compact metric space. Two sequences are close in this metric if and only if they agree on a long initial block.
 
@@ -476,7 +563,9 @@ which makes \( \Sigma_2 \) a compact metric space. Two sequences are close in th
 
 The <strong>Bernoulli left-shift</strong> \( S : \Sigma_2 \to \Sigma_2 \) is defined by
 
-\[ S(b_0, b_1, b_2, \ldots) = (b_1, b_2, b_3, \ldots). \]
+\[
+S(b_0, b_1, b_2, \ldots) = (b_1, b_2, b_3, \ldots).
+\]
 
 The shift simply discards the first symbol and advances all remaining symbols by one position. The shift map is continuous with respect to the metric on \( \Sigma_2 \) and is the archetypal model for symbolic dynamics.
 
@@ -492,7 +581,9 @@ The shift simply discards the first symbol and advances all remaining symbols by
 
 The existence of a dense orbit under \( S \) is constructive. One writes down the sequence that concatenates all finite binary strings in some order — for instance, listing them in order of increasing length: 0, 1, 00, 01, 10, 11, 000, 001, 010, \ldots — and concatenates them into one infinite sequence
 
-\[ \mathbf{b}^* = (0 \mid 1 \mid 00 \mid 01 \mid 10 \mid 11 \mid 000 \mid 001 \mid \cdots). \]
+\[
+\mathbf{b}^* = (0 \mid 1 \mid 00 \mid 01 \mid 10 \mid 11 \mid 000 \mid 001 \mid \cdots).
+\]
 
 For any open ball \( B_\varepsilon(\mathbf{c}) \) in \( \Sigma_2 \), there exists a finite initial segment that determines membership in the ball. Since every finite binary string appears somewhere in \( \mathbf{b}^* \), a shift of \( \mathbf{b}^* \) will eventually agree with \( \mathbf{c} \) on any finite number of initial symbols, placing it inside \( B_\varepsilon(\mathbf{c}) \).
 
@@ -500,7 +591,9 @@ For any open ball \( B_\varepsilon(\mathbf{c}) \) in \( \Sigma_2 \), there exist
 
 The Baker map \( B(x) = 2x \pmod 1 \) is conjugate to the shift map \( S \) on \( \Sigma_2 \) via the encoding: each \( x \in [0,1) \) is identified with its binary expansion \( x = 0.b_0 b_1 b_2 \cdots \), and then
 
-\[ B(x) = 0.b_1 b_2 b_3 \cdots \]
+\[
+B(x) = 0.b_1 b_2 b_3 \cdots
+\]
 
 corresponds precisely to \( S(b_0, b_1, b_2, \ldots) = (b_1, b_2, b_3, \ldots) \). This identification shows that the dynamics of \( B \) is *topologically conjugate* to the dynamics of \( S \): the maps are the "same" in a dynamical sense, merely described in different coordinates. Since \( S \) is chaotic, so is \( B \).
 
@@ -508,7 +601,9 @@ corresponds precisely to \( S(b_0, b_1, b_2, \ldots) = (b_1, b_2, b_3, \ldots) \
 
 The same symbolic coding works for the tent map \( T \) and the logistic map \( f_4 \). For the tent map, partition \( [0,1] \) into \( I_0 = [0, 1/2) \) and \( I_1 = [1/2, 1] \). The **itinerary** of \( x \) under \( T \) is the sequence \( \mathbf{b}(x) = (b_0, b_1, b_2, \ldots) \) where
 
-\[ b_n = \begin{cases} 0 & \text{if } T^n(x) \in I_0, \\ 1 & \text{if } T^n(x) \in I_1. \end{cases} \]
+\[
+b_n = \begin{cases} 0 & \text{if } T^n(x) \in I_0, \\ 1 & \text{if } T^n(x) \in I_1. \end{cases}
+\]
 
 One can show that the itinerary map \( x \mapsto \mathbf{b}(x) \) is a semiconjugacy between \( T \) and \( S \): \( \mathbf{b}(T(x)) = S(\mathbf{b}(x)) \). The same construction applies to \( f_4 \), confirming that all three maps — Baker, Tent, and Logistic at \( a = 4 \) — have isomorphic symbolic dynamics and are therefore all chaotic by the same argument.
 
@@ -516,7 +611,9 @@ One can show that the itinerary map \( x \mapsto \mathbf{b}(x) \) is a semiconju
 
 A brief, non-examinable note on the statistical behavior of chaotic trajectories: even though individual trajectories are sensitive to initial conditions and difficult to predict, the *long-run frequency* with which a typical orbit visits different regions of the interval is well-defined and described by an **invariant measure** \( \mu \). For the tent map, the invariant measure is uniform (Lebesgue measure): almost every orbit spends equal time in equal-length subintervals. For \( f_4 \), the invariant measure has density
 
-\[ \rho(x) = \frac{1}{\pi \sqrt{x(1-x)}}, \quad x \in (0,1), \]
+\[
+\rho(x) = \frac{1}{\pi \sqrt{x(1-x)}}, \quad x \in (0,1),
+\]
 
 the arcsine distribution. This density is large near \( x = 0 \) and \( x = 1 \) and small near \( x = 1/2 \), reflecting the fact that orbits of \( f_4 \) spend more time near the endpoints. These measures are connected to the ergodic theory of chaotic systems and provide a bridge between the deterministic chaos of individual trajectories and the probabilistic language of statistics.
 
@@ -530,11 +627,15 @@ When \( a > 4 \), the logistic map \( f_a(x) = ax(1-x) \) no longer maps \( [0,1
 
 More precisely, there exists an open interval \( J_1 \subset (0,1) \) that is mapped above 1 by \( f_a \). Define
 
-\[ J_1 = \{ x \in [0,1] : f_a(x) > 1 \}. \]
+\[
+J_1 = \{ x \in [0,1] : f_a(x) > 1 \}.
+\]
 
 Points in \( J_1 \) escape to \( -\infty \) in the next step. The preimage of \( J_1 \) consists of two intervals \( J_2 = J_{21} \cup J_{22} \), whose points map into \( J_1 \) in one step and then escape. Continuing, define \( J_{n+1} \) as the preimage of \( J_n \) under \( f_a \). The complement of all these escaping sets defines the **invariant Cantor-like set**
 
-\[ C = [0,1] \setminus \bigcup_{n=0}^\infty J_n = \bigcap_{n=0}^\infty C_n, \]
+\[
+C = [0,1] \setminus \bigcup_{n=0}^\infty J_n = \bigcap_{n=0}^\infty C_n,
+\]
 
 where \( C_n = [0,1] \setminus (J_1 \cup J_2 \cup \cdots \cup J_n) \). The sets \( C_n \) are nested closed sets, and their intersection is the Cantor-like attractor for the restricted dynamics.
 
@@ -542,7 +643,9 @@ where \( C_n = [0,1] \setminus (J_1 \cup J_2 \cup \cdots \cup J_n) \). The sets 
 
 A cleaner construction arises from the *modified tent map* \( T_3 \), which stretches the middle third of \( [0,1] \) above 1:
 
-\[ T_3(x) = \begin{cases} 3x, & 0 \leq x \leq 1/3 \\ 3(1-x)/2 + 1, & 1/3 < x < 2/3 \\ 3(1-x), & 2/3 \leq x \leq 1. \end{cases} \]
+\[
+T_3(x) = \begin{cases} 3x, & 0 \leq x \leq 1/3 \\ 3(1-x)/2 + 1, & 1/3 < x < 2/3 \\ 3(1-x), & 2/3 \leq x \leq 1. \end{cases}
+\]
 
 The interval \( J_1 = (1/3, 2/3) \) maps above 1. Its preimage \( J_2 \) consists of two intervals, each of length \( 1/9 \), located at the middle thirds of \( [0,1/3] \) and \( [2/3,1] \). Continuing, one removes middle thirds at every stage, generating the classical **ternary Cantor set**.
 
@@ -559,7 +662,9 @@ The Cantor set has several remarkable and at first counterintuitive properties.
 
 <strong>Zero total length.</strong> The total length removed in constructing \( C \) is
 
-\[ \frac{1}{3} + \frac{2}{9} + \frac{4}{27} + \cdots = \frac{1/3}{1 - 2/3} = 1. \]
+\[
+\frac{1}{3} + \frac{2}{9} + \frac{4}{27} + \cdots = \frac{1/3}{1 - 2/3} = 1.
+\]
 
 Every bit of length is removed, yet \( C \) is nonempty (it contains the endpoints of all removed intervals, among others).
 
@@ -573,11 +678,15 @@ Every bit of length is removed, yet \( C \) is nonempty (it contains the endpoin
 
 The <strong>Newton-Raphson method</strong> for finding roots of a function \( f(x) \) generates the sequence
 
-\[ x_{n+1} = N(x_n) = x_n - \frac{f(x_n)}{f'(x_n)}. \]
+\[
+x_{n+1} = N(x_n) = x_n - \frac{f(x_n)}{f'(x_n)}.
+\]
 
 This defines a discrete dynamical system with the iteration function \( N(x) \). The zeros \( x^<em> \) of \( f \) are precisely the fixed points of \( N \): \( N(x^</em>) = x^<em> - 0 = x^</em> \). The derivative of \( N \) at a simple zero is
 
-\[ N'(x^<em>) = 1 - \frac{(f'(x^</em>))^2 - f(x^<em>) f''(x^</em>)}{(f'(x^*))^2} = 0, \]
+\[
+N'(x^<em>) = 1 - \frac{(f'(x^</em>))^2 - f(x^<em>) f''(x^</em>)}{(f'(x^*))^2} = 0,
+\]
 
 showing that every simple zero of \( f \) is a <em>super-attracting</em> fixed point of \( N \) (derivative exactly zero). This is why Newton's method converges quadratically: the error at each step satisfies \( |x_{n+1} - x^<em>| \approx C |x_n - x^</em>|^2 \).
 
@@ -597,7 +706,9 @@ Classical geometry assigns integer dimensions: a point has dimension 0, a curve 
 
 The motivating question is: how long is the coastline of Britain? The answer depends on the resolution of measurement. If one uses measuring rods of length \( \varepsilon \), and \( N(\varepsilon) \) is the number of rods required to trace the coastline, then for a smooth curve \( N(\varepsilon) \sim 1/\varepsilon \). But for a fractal coastline, the empirical finding (Richardson's measurements, 1961) is that
 
-\[ N(\varepsilon) \sim \varepsilon^{-D} \]
+\[
+N(\varepsilon) \sim \varepsilon^{-D}
+\]
 
 for some \( D > 1 \). The exponent \( D \) is the fractal dimension of the coastline.
 
@@ -607,7 +718,9 @@ The <strong>von Koch curve</strong> is constructed iteratively. Start with a lin
 
 At stage \( n \), there are \( 4^n \) segments each of length \( (1/3)^n \), so the total length is \( (4/3)^n \to \infty \). The curve has infinite length despite fitting inside a bounded region. Now, to cover the curve with \( \varepsilon \)-balls, if \( \varepsilon = (1/3)^n \) then \( N(\varepsilon) = 4^n \). Taking logarithms:
 
-\[ D = \lim_{\varepsilon \to 0} \frac{\log N(\varepsilon)}{\log(1/\varepsilon)} = \frac{\log 4^n}{\log 3^n} = \frac{\log 4}{\log 3} \approx 1.2619. \]
+\[
+D = \lim_{\varepsilon \to 0} \frac{\log N(\varepsilon)}{\log(1/\varepsilon)} = \frac{\log 4^n}{\log 3^n} = \frac{\log 4}{\log 3} \approx 1.2619.
+\]
 
 The von Koch curve has a non-integer fractal dimension between 1 and 2, confirming it is "more than a curve but less than a surface."
 
@@ -615,11 +728,15 @@ The von Koch curve has a non-integer fractal dimension between 1 and 2, confirmi
 
 For a self-similar set generated by \( n \) copies of itself, each scaled by a factor \( r \), the self-similarity equation reads
 
-\[ n \cdot r^D = 1, \]
+\[
+n \cdot r^D = 1,
+\]
 
 giving the <strong>self-similar dimension</strong>
 
-\[ D = \frac{\log n}{\log(1/r)}. \]
+\[
+D = \frac{\log n}{\log(1/r)}.
+\]
 
 Applying this formula:
 
@@ -635,7 +752,9 @@ Applying this formula:
 
 When a self-similar set is generated by \( n \) pieces with <em>different</em> scaling ratios \( r_1, r_2, \ldots, r_n \), the self-similar dimension \( D \) satisfies the <strong>Moran equation</strong>:
 
-\[ r_1^D + r_2^D + \cdots + r_n^D = 1. \]
+\[
+r_1^D + r_2^D + \cdots + r_n^D = 1.
+\]
 
 This implicit equation for \( D \) has a unique solution in \( (0, \infty) \) provided the \( r_i \) satisfy the appropriate open set condition. For equal scalings \( r_i = r \), it reduces to \( nr^D = 1 \), recovering the formula above.
 
@@ -648,7 +767,9 @@ This implicit equation for \( D \) has a unique solution in \( (0, \infty) \) pr
 
 For practical measurement of fractal dimension, one uses the <strong>box-counting dimension</strong> (also called the Minkowski-Bouligand dimension). Cover the set \( A \) with a grid of \( \varepsilon \)-boxes (squares in \( \mathbb{R}^2 \), cubes in \( \mathbb{R}^3 \)), and let \( N(\varepsilon) \) be the number of boxes that intersect \( A \). The box-counting dimension is
 
-\[ D = \lim_{\varepsilon \to 0} \frac{\log N(\varepsilon)}{\log(1/\varepsilon)}, \]
+\[
+D = \lim_{\varepsilon \to 0} \frac{\log N(\varepsilon)}{\log(1/\varepsilon)},
+\]
 
 provided the limit exists. In practice, one plots \( \log N(\varepsilon) \) versus \( \log(1/\varepsilon) \) for several values of \( \varepsilon \) and estimates \( D \) from the slope of the best-fit line.
 
@@ -681,7 +802,10 @@ The preceding chapters have shown that fractals like the Cantor set and the von 
 The theoretical foundation rests on the concept of a contraction mapping.
 
 <div class="definition"><strong>Definition (Contraction Mapping).</strong> Let \( (X, d) \) be a metric space. A function \( f : X \to X \) is a <em>contraction mapping</em> with <em>contraction ratio</em> \( C \) if there exists a constant \( 0 \leq C < 1 \) such that
-\[ d(f(x), f(y)) \leq C \cdot d(x, y) \]
+
+\[
+d(f(x), f(y)) \leq C \cdot d(x, y)
+\]
 for all \( x, y \in X \).</div>
 
 <div class="theorem"><strong>Banach Contraction Mapping Theorem.</strong> Let \( (X, d) \) be a complete metric space, and let \( f : X \to X \) be a contraction mapping with ratio \( C < 1 \). Then \( f \) has a unique fixed point \( x^<em> \in X \), and for any starting point \( x_0 \), the iterates \( x_n = f^n(x_0) \) converge to \( x^</em> \).</div>
@@ -689,20 +813,28 @@ for all \( x, y \in X \).</div>
 ## Definition of an IFS
 
 <div class="definition"><strong>Definition (Iterated Function System).</strong> An <em>iterated function system</em> (IFS) is a finite collection of contraction mappings \( \{ f_1, f_2, \ldots, f_N \} \) on a complete metric space \( X \). The IFS defines a set-valued map
-\[ \hat{f}(S) = f_1(S) \cup f_2(S) \cup \cdots \cup f_N(S) \]
+
+\[
+\hat{f}(S) = f_1(S) \cup f_2(S) \cup \cdots \cup f_N(S)
+\]
 on the space \( \mathcal{K}(X) \) of nonempty compact subsets of \( X \), equipped with the Hausdorff metric.</div>
 
 The Hausdorff metric \( h(A, B) \) measures the distance between two compact sets: it is the smallest \( \varepsilon \) such that \( A \subseteq B_\varepsilon(B) \) and \( B \subseteq B_\varepsilon(A) \).
 
 <div class="theorem"><strong>Theorem (Existence of IFS Attractor).</strong> If each \( f_i \) is a contraction with ratio \( C_i < 1 \), then \( \hat{f} \) is a contraction on \( (\mathcal{K}(X), h) \) with ratio \( C = \max_i C_i \). Hence \( \hat{f} \) has a unique fixed point \( A \in \mathcal{K}(X) \) — the <em>attractor</em> of the IFS — satisfying
-\[ A = f_1(A) \cup f_2(A) \cup \cdots \cup f_N(A). \]
+
+\[
+A = f_1(A) \cup f_2(A) \cup \cdots \cup f_N(A).
+\]
 For any starting compact set \( S_0 \), the sequence \( S_{n+1} = \hat{f}(S_n) \) converges to \( A \) in the Hausdorff metric.</div>
 
 ## The Cantor Set as an IFS Attractor
 
 The ternary Cantor set \( C \) is the attractor of the two-map IFS:
 
-\[ f_1(x) = \frac{x}{3}, \qquad f_2(x) = \frac{x}{3} + \frac{2}{3}. \]
+\[
+f_1(x) = \frac{x}{3}, \qquad f_2(x) = \frac{x}{3} + \frac{2}{3}.
+\]
 
 One verifies that \( C = f_1(C) \cup f_2(C) \): the map \( f_1 \) maps \( C \) onto the left third of \( C \), and \( f_2 \) maps it onto the right third. Starting from \( S_0 = [0,1] \), after one application: \( S_1 = [0, 1/3] \cup [2/3, 1] \), which is exactly \( C_1 \) in the classical construction. Subsequent applications remove middle thirds iteratively, recovering the standard Cantor set construction. The dimension of this IFS attractor satisfies the Moran equation \( (1/3)^D + (1/3)^D = 1 \), giving \( D = \log 2 / \log 3 \) as expected.
 
@@ -714,7 +846,9 @@ The real power of IFS becomes apparent through a variety of examples.
 
 <strong>Sierpinski Triangle (Gasket).</strong> Three maps on \( \mathbb{R}^2 \), each contracting by factor \( 1/2 \) toward one vertex of an equilateral triangle:
 
-\[ f_i(\mathbf{x}) = \frac{1}{2}(\mathbf{x} - \mathbf{v}_i) + \mathbf{v}_i = \frac{1}{2}\mathbf{x} + \frac{1}{2}\mathbf{v}_i, \quad i = 1, 2, 3. \]
+\[
+f_i(\mathbf{x}) = \frac{1}{2}(\mathbf{x} - \mathbf{v}_i) + \mathbf{v}_i = \frac{1}{2}\mathbf{x} + \frac{1}{2}\mathbf{v}_i, \quad i = 1, 2, 3.
+\]
 
 The attractor is the Sierpinski triangle with dimension \( D = \log 3 / \log 2 \approx 1.585 \).
 
@@ -726,8 +860,13 @@ The attractor is the Sierpinski triangle with dimension \( D = \log 3 / \log 2 \
 
 <strong>Barnsley's Fern.</strong> Perhaps the most famous IFS is Barnsley's spleenwort fern, defined by four affine maps on \( \mathbb{R}^2 \):
 
-\[ f_1(\mathbf{x}) = \begin{pmatrix} 0 \\ 0.16 y \end{pmatrix}, \quad f_2(\mathbf{x}) = \begin{pmatrix} 0.85x + 0.04y \\ -0.04x + 0.85y + 1.6 \end{pmatrix}, \]
-\[ f_3(\mathbf{x}) = \begin{pmatrix} 0.2x - 0.26y \\ 0.23x + 0.22y + 1.6 \end{pmatrix}, \quad f_4(\mathbf{x}) = \begin{pmatrix} -0.15x + 0.28y \\ 0.26x + 0.24y + 0.44 \end{pmatrix}. \]
+\[
+f_1(\mathbf{x}) = \begin{pmatrix} 0 \\ 0.16 y \end{pmatrix}, \quad f_2(\mathbf{x}) = \begin{pmatrix} 0.85x + 0.04y \\ -0.04x + 0.85y + 1.6 \end{pmatrix},
+\]
+
+\[
+f_3(\mathbf{x}) = \begin{pmatrix} 0.2x - 0.26y \\ 0.23x + 0.22y + 1.6 \end{pmatrix}, \quad f_4(\mathbf{x}) = \begin{pmatrix} -0.15x + 0.28y \\ 0.26x + 0.24y + 0.44 \end{pmatrix}.
+\]
 
 The attractor of this four-map IFS is a faithful model of a <em>Nephrolepis exaltata</em> fern frond. Map \( f_1 \) maps the entire fern to a short stalk; map \( f_2 \) produces the large central frond; maps \( f_3 \) and \( f_4 \) produce the lowest two leaflets. The result is visually indistinguishable from a real fern, demonstrating that biological shapes can arise from iterative self-similar processes.
 
@@ -763,7 +902,9 @@ The IFS framework extends from attractors (sets) to <strong>functions</strong> v
 
 The IFSM defines an operator \( T \) acting on bounded functions \( u : X \to \mathbb{R} \) by
 
-\[ (Tu)(x) = \sum_{i : x \in f_i(X)} \phi_i(u(f_i^{-1}(x))). \]
+\[
+(Tu)(x) = \sum_{i : x \in f_i(X)} \phi_i(u(f_i^{-1}(x))).
+\]
 
 Under appropriate contractivity conditions on the \( \phi_i \) (specifically, \( \sum |\alpha_i| < 1 \)), the operator \( T \) is a contraction on the space of bounded functions, and its unique fixed point \( \bar{u} = T\bar{u} \) is the <strong>attractor function</strong> of the IFSM.
 
@@ -771,7 +912,9 @@ Under appropriate contractivity conditions on the \( \phi_i \) (specifically, \(
 
 A canonical example of an IFSM attractor is the <em>Devil's Staircase</em> (Cantor function). Consider a three-map IFSM on \( [0,1] \):
 
-\[ f_1(x) = \frac{x}{3}, \quad f_2(x) = \frac{x}{3} + \frac{1}{3}, \quad f_3(x) = \frac{x}{3} + \frac{2}{3}, \]
+\[
+f_1(x) = \frac{x}{3}, \quad f_2(x) = \frac{x}{3} + \frac{1}{3}, \quad f_3(x) = \frac{x}{3} + \frac{2}{3},
+\]
 
 with grey-level maps \( \phi_1(y) = y/2 \), \( \phi_2(y) = 1/2 \) (constant), \( \phi_3(y) = y/2 + 1/2 \). The attractor function \( \bar{u} \) is the Devil's Staircase: a continuous, non-decreasing function on \( [0,1] \) that is constant on the removed intervals of the Cantor set and increases only on the Cantor set itself, which has measure zero. Its derivative is zero almost everywhere, yet it rises from 0 to 1. The Devil's Staircase is a striking example of a function that is continuous but not absolutely continuous.
 
@@ -781,7 +924,9 @@ The IFSM framework provides the theoretical basis for <strong>fractal image comp
 
 In practice, the domain of the image is partitioned into <em>range blocks</em> \( R_i \) (small, non-overlapping tiles) and <em>domain blocks</em> \( D_j \) (larger tiles, possibly overlapping, from the same image). For each range block \( R_i \), one finds the domain block \( D_j \) that, after decimation (shrinking to the size of \( R_i \)) and a grey-level affine map \( \phi(y) = \alpha y + \beta \), best approximates \( R_i \) in least-squares sense. The optimal \( \alpha \) and \( \beta \) for each pair \( (R_i, D_j) \) are found by minimizing
 
-\[ \| \phi(\text{decimated } D_j) - R_i \|^2. \]
+\[
+\| \phi(\text{decimated } D_j) - R_i \|^2.
+\]
 
 The encoded image is then just the list of triplets \( (i, j, \alpha_i, \beta_i) \) — a compact representation from which the original image can be reconstructed (approximately) by iterating \( T \) from any starting function. Fractal image coding can achieve high compression ratios with good visual quality, particularly for images with self-similar structure at different scales (natural scenes, textures). The decoding is computationally fast (just iterate \( T \)); the encoding (searching for matching domain blocks) can be slow but needs to be done only once.
 

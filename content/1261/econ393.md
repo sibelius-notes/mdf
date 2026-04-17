@@ -30,7 +30,9 @@ A **perfectly competitive market** achieves allocative efficiency: price equals 
 
 With supply curve \( Q^S(P) \) and demand curve \( Q^D(P) \), competitive equilibrium price \( P^* \) satisfies \( Q^S(P^*) = Q^D(P^*) \). Total surplus is
 
-\[ TS = CS + PS = \int_0^{Q^*} \left[ D(q) - P^* \right] dq + \int_0^{Q^*} \left[ P^* - S(q) \right] dq = \int_0^{Q^*} \left[ D(q) - S(q) \right] dq, \]
+\[
+TS = CS + PS = \int_0^{Q^*} \left[ D(q) - P^* \right] dq + \int_0^{Q^*} \left[ P^* - S(q) \right] dq = \int_0^{Q^*} \left[ D(q) - S(q) \right] dq,
+\]
 
 where \( D(q) \) is the inverse demand and \( S(q) \) is the inverse supply. Any intervention that reduces \( Q \) below \( Q^* \) (or increases it above) generates **deadweight loss (DWL)**.
 
@@ -42,7 +44,9 @@ A per-unit **specific tax** \( t \) on producers shifts supply up by \( t \): th
 
 **Tax incidence:** Who bears the burden depends on relative elasticities. Define the consumer's share of the tax burden:
 
-\[ \text{Consumer burden} = \frac{\varepsilon_S}{\varepsilon_S - \varepsilon_D} \cdot t, \]
+\[
+\text{Consumer burden} = \frac{\varepsilon_S}{\varepsilon_S - \varepsilon_D} \cdot t,
+\]
 
 where \( \varepsilon_S > 0 \) is supply elasticity and \( \varepsilon_D < 0 \) is demand elasticity. The more inelastic side bears more of the tax.
 
@@ -62,21 +66,30 @@ A **monopolist** is the sole seller in a market. Unlike a competitive firm that 
 
 Facing inverse demand \( P(q) \) with \( P'(q) < 0 \), the monopolist maximizes
 
-\[ \pi(q) = P(q) q - C(q). \]
+\[
+\pi(q) = P(q) q - C(q).
+\]
 
 The first-order condition is
 
-\[ P(q^m) + P'(q^m) q^m = C'(q^m), \]
+\[
+P(q^m) + P'(q^m) q^m = C'(q^m),
+\]
 
 i.e., **marginal revenue equals marginal cost**:
 
-\[ MR = MC. \]
+\[
+MR = MC.
+\]
 
 Since \( MR = P\left(1 + \frac{1}{\varepsilon}\right) < P \) (where \( \varepsilon < 0 \) is the price elasticity of demand), the monopolist sets \( P^m > MC \) — a markup above marginal cost.
 
 <div class="definition">
 <strong>Lerner Index:</strong> The monopolist's price-cost markup is characterized by the <strong>Lerner index</strong>:
-\[ L = \frac{P^m - MC}{P^m} = -\frac{1}{\varepsilon_D}. \]
+
+\[
+L = \frac{P^m - MC}{P^m} = -\frac{1}{\varepsilon_D}.
+\]
 A higher Lerner index indicates greater market power. For a competitive firm, <em>L</em> = 0 (since <em>P</em> = <em>MC</em>). A monopolist with inelastic demand (|ε| small) charges a large markup.
 </div>
 
@@ -84,7 +97,9 @@ A higher Lerner index indicates greater market power. For a competitive firm, <e
 
 The monopolist restricts output below the competitive level \( q^c \) to raise the price. The welfare loss is the DWL triangle:
 
-\[ DWL = \frac{1}{2} (P^m - MC)(q^c - q^m). \]
+\[
+DWL = \frac{1}{2} (P^m - MC)(q^c - q^m).
+\]
 
 Consumer surplus is reduced (partly transferred to the monopolist as profit, partly lost as DWL). Monopoly profit is not itself a social loss — it is a transfer from consumers to the monopolist — but the quantity restriction creates the net efficiency cost.
 
@@ -106,7 +121,9 @@ A **monopsonist** is the sole buyer in a market (e.g., a single employer in a la
 
 The **marginal expenditure (ME)** on the monopsonist's \( L \)-th worker exceeds the wage:
 
-\[ ME = w + w'(L) \cdot L > w(L). \]
+\[
+ME = w + w'(L) \cdot L > w(L).
+\]
 
 The monopsonist hires where \( ME = VMP_L \) (value of marginal product), resulting in employment \( L^m < L^c \) and wage \( w^m < w^c \). Like monopoly, monopsony creates a DWL from restricting the quantity of employment below the socially efficient level.
 
@@ -131,11 +148,15 @@ Let firms 1 and 2 produce differentiated goods with demands \( q_i(p_i, p_j) \).
 
 In the **Cournot model** (reviewed from ECON 392), firms compete by simultaneously setting quantities. With \( n \) symmetric firms, the Cournot equilibrium has each firm producing
 
-\[ q^* = \frac{a-c}{(n+1)b}, \]
+\[
+q^* = \frac{a-c}{(n+1)b},
+\]
 
 where \( a \) is demand intercept and \( b \) is the slope of inverse demand. As \( n \to \infty \), the Cournot outcome converges to the competitive outcome; as \( n \to 1 \), it converges to the monopoly outcome. The **Cournot markup** is
 
-\[ \frac{P - MC}{P} = \frac{1}{n \cdot |\varepsilon_D|}, \]
+\[
+\frac{P - MC}{P} = \frac{1}{n \cdot |\varepsilon_D|},
+\]
 
 so market power decreases with the number of firms and demand elasticity.
 
@@ -224,7 +245,9 @@ In insurance markets, buyers have private information about their own risk level
 
 An agent (worker) can exert effort \( e \in \{L, H\} \) (low or high), which is unobservable to the principal (firm). Effort raises the probability of a good outcome:
 
-\[ P(\text{good} | e=H) = p_H > p_L = P(\text{good} | e=L). \]
+\[
+P(\text{good} | e=H) = p_H > p_L = P(\text{good} | e=L).
+\]
 
 The agent has utility \( u(w) - c(e) \), where \( w \) is wage and \( c(H) > c(L) \).
 
@@ -281,7 +304,9 @@ Let a firm produce output \( q \) with private marginal cost \( PMC(q) \) and ge
 
 A **Pigouvian tax** equal to the external marginal damage at the optimal output can internalize the externality:
 
-\[ t^* = d'(q^{opt}). \]
+\[
+t^* = d'(q^{opt}).
+\]
 
 With this tax, the firm faces \( P = PMC + t^* = SMC \) and produces the socially optimal quantity. A **Pigouvian subsidy** can similarly encourage positive externalities.
 
@@ -332,7 +357,9 @@ Because public goods are non-excludable, individuals have an incentive to **free
 
 **Samuelson's condition** for the optimal provision of a public good \( G \) is
 
-\[ \sum_i MRS_i^{G,x} = MRT^{G,x}, \]
+\[
+\sum_i MRS_i^{G,x} = MRT^{G,x},
+\]
 
 i.e., the sum of all individuals' marginal willingness to pay must equal the marginal cost of provision. This is in contrast to the private good optimality condition \( MRS_i = MRT \) for each \( i \). The social value of a public good reflects all individuals' willingness to pay simultaneously.
 
@@ -340,11 +367,15 @@ i.e., the sum of all individuals' marginal willingness to pay must equal the mar
 
 In the private provision Nash equilibrium, individual \( i \) contributes \( g_i \) to the public good, choosing
 
-\[ \max_{g_i} u_i(x_i, g_i + G_{-i}) \quad \text{s.t.} \quad p_x x_i + g_i = I_i, \]
+\[
+\max_{g_i} u_i(x_i, g_i + G_{-i}) \quad \text{s.t.} \quad p_x x_i + g_i = I_i,
+\]
 
 where \( G_{-i} = \sum_{j \neq i} g_j \) is others' provision. The FOC for an interior solution:
 
-\[ MRS_i = \frac{MU_G}{MU_x} = \frac{p_G}{p_x} = 1, \]
+\[
+MRS_i = \frac{MU_G}{MU_x} = \frac{p_G}{p_x} = 1,
+\]
 
 which implies private provision satisfies \( MRS_i = 1 = MRT \) for the contributor, but the Samuelson condition requires \( \sum_i MRS_i = MRT \). Private provision therefore **under-provides** the public good unless only one consumer contributes.
 

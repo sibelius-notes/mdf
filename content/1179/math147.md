@@ -115,6 +115,7 @@ Completeness has far-reaching consequences. Two of the most important are that \
 <div class="definition">
 
 <strong>Definition 1.9 (Absolute Value).</strong> For \(x \in \mathbb{R}\), the <em>absolute value</em> is
+
 \[
 |x| = \begin{cases} x & x \ge 0 \\ -x & x < 0. \end{cases}
 \]
@@ -125,6 +126,7 @@ Geometrically, \(|x|\) is the distance from \(x\) to \(0\), and \(|a - b|\) is t
 <div class="theorem">
 
 <strong>Theorem 1.10 (Triangle Inequality).</strong> For all \(x, y \in \mathbb{R}\):
+
 \[
 |x + y| \le |x| + |y|, \qquad \bigl||x| - |y|\bigr| \le |x - y|.
 \]
@@ -309,6 +311,7 @@ With sequences in hand, we can define limits of functions. The interplay between
 <div class="definition">
 
 <strong>Definition 3.1 (Limit of a Function).</strong> Let \(f\) be defined on an open interval containing \(a\), except possibly at \(a\) itself. We write \(\lim_{x \to a} f(x) = L\) if for every \(\varepsilon > 0\) there exists \(\delta > 0\) such that
+
 \[
 0 < |x - a| < \delta \implies |f(x) - L| < \varepsilon.
 \]
@@ -362,6 +365,7 @@ This theorem is the bridge between sequence theory and function limits. It means
 <div class="theorem">
 
 <strong>Theorem 3.7 (Fundamental Trigonometric Limit).</strong>
+
 \[
 \lim_{\theta \to 0} \frac{\sin \theta}{\theta} = 1.
 \]
@@ -399,6 +403,7 @@ This theorem is the bridge between sequence theory and function limits. It means
 <div class="definition">
 
 <strong>Definition 3.11 (Continuity at a Point).</strong> A function \(f\) is <em>continuous at \(a\)</em> if
+
 \[
 \lim_{x \to a} f(x) = f(a).
 \]
@@ -455,6 +460,7 @@ Ordinary continuity allows \(\delta\) to depend on both \(\varepsilon\) *and* th
 <div class="definition">
 
 <strong>Definition 3.16 (Uniform Continuity).</strong> A function \(f : [a,b] \to \mathbb{R}\) is <em>uniformly continuous</em> if for every \(\varepsilon > 0\) there exists \(\delta > 0\) such that for <em>all</em> \(x, y \in [a,b]\),
+
 \[
 |x - y| < \delta \implies |f(x) - f(y)| < \varepsilon.
 \]
@@ -486,6 +492,7 @@ Differentiation is the mathematical formalization of the notion of instantaneous
 <div class="definition">
 
 <strong>Definition 4.1 (Derivative at a Point).</strong> A function \(f\) is <em>differentiable at \(a\)</em> if the limit
+
 \[
 f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}
 \]
@@ -536,6 +543,7 @@ The chain rule is perhaps the most important differentiation rule, governing how
 <div class="theorem">
 
 <strong>Theorem 4.5 (Chain Rule).</strong> If \(f\) is differentiable at \(a\) and \(g\) is differentiable at \(f(a)\), then \(h = g \circ f\) is differentiable at \(a\) and
+
 \[
 h'(a) = g'(f(a)) \cdot f'(a).
 \]
@@ -561,6 +569,7 @@ When a relation \(F(x,y) = 0\) defines \(y\) implicitly as a differentiable func
 <div class="theorem">
 
 <strong>Theorem 4.6 (Inverse Function Theorem, one-variable).</strong> Suppose \(f\) is continuous and strictly monotone on an interval \(I\), differentiable at \(a \in I\), and \(f'(a) \ne 0\). Let \(g = f^{-1}\) be the inverse function, and \(b = f(a)\). Then \(g\) is differentiable at \(b\) and
+
 \[
 g'(b) = \frac{1}{f'(a)} = \frac{1}{f'(g(b))}.
 \]
@@ -598,6 +607,7 @@ The Mean Value Theorem is the central result of one-variable differential calcul
 <div class="theorem">
 
 <strong>Theorem 5.2 (Mean Value Theorem).</strong> If \(f\) is continuous on \([a,b]\) and differentiable on \((a,b)\), then there exists \(c \in (a,b)\) such that
+
 \[
 f'(c) = \frac{f(b) - f(a)}{b - a}.
 \]
@@ -628,6 +638,7 @@ L'Hôpital's Rule handles indeterminate forms \(0/0\) and \(\infty/\infty\) by r
 <div class="theorem">
 
 <strong>Theorem 5.4 (Cauchy Mean Value Theorem).</strong> If \(f\) and \(g\) are continuous on \([a,b]\) and differentiable on \((a,b)\), then there exists \(c \in (a,b)\) with
+
 \[
 [f(b)-f(a)]g'(c) = [g(b)-g(a)]f'(c).
 \]
@@ -659,6 +670,7 @@ The most frequently used instances: \(\lim_{x\to 0}\frac{\sin x}{x} = 1\), \(\li
 <div class="definition">
 
 <strong>Definition 5.6 (Convexity).</strong> \(f\) is <em>convex</em> (concave up) on \((a,b)\) if for all \(x, y \in (a,b)\) and \(t \in [0,1]\),
+
 \[
 f(tx + (1-t)y) \le tf(x) + (1-t)f(y).
 \]
@@ -691,6 +703,7 @@ The derivative captures the first-order behaviour of a function near a point. Hi
 <div class="definition">
 
 <strong>Definition 6.1 (Taylor Polynomial).</strong> Suppose \(f\) is \(n\) times differentiable at \(a\). The <em>\(n\)-th order Taylor polynomial of \(f\) centred at \(a\)</em> is
+
 \[
 T_{n,a}(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x - a)^k.
 \]
@@ -704,6 +717,7 @@ Key Maclaurin series (centred at \(a = 0\)):
 \[
 e^x = \sum_{k=0}^{n} \frac{x^k}{k!} + R_n(x), \quad \sin x = \sum_{k=0}^{m} \frac{(-1)^k x^{2k+1}}{(2k+1)!} + R_{2m+1}(x),
 \]
+
 \[
 \cos x = \sum_{k=0}^{m} \frac{(-1)^k x^{2k}}{(2k)!} + R_{2m}(x), \quad \frac{1}{1-x} = \sum_{k=0}^{n} x^k + R_n(x) \text{ for } |x| < 1.
 \]
@@ -713,6 +727,7 @@ e^x = \sum_{k=0}^{n} \frac{x^k}{k!} + R_n(x), \quad \sin x = \sum_{k=0}^{m} \fra
 <div class="theorem">
 
 <strong>Theorem 6.2 (Taylor's Theorem, Lagrange Remainder).</strong> Suppose \(f\) is \((n+1)\) times differentiable on an open interval containing \(a\) and \(x\). Define the remainder \(R_{n,a}(x) = f(x) - T_{n,a}(x)\). Then there exists \(c\) strictly between \(a\) and \(x\) such that
+
 \[
 R_{n,a}(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}.
 \]
@@ -731,6 +746,7 @@ When \(n = 0\), Taylor's Theorem reduces to the Mean Value Theorem. The Lagrange
 <div class="corollary">
 
 <strong>Corollary 6.3 (Error Bound).</strong> If \(|f^{(n+1)}(t)| \le M\) for all \(t\) between \(a\) and \(x\), then
+
 \[
 |f(x) - T_{n,a}(x)| \le \frac{M}{(n+1)!}|x - a|^{n+1}.
 \]
@@ -754,6 +770,7 @@ When \(n = 0\), Taylor's Theorem reduces to the Mean Value Theorem. The Lagrange
 <div class="theorem">
 
 <strong>Theorem 6.6 (Characterization of Taylor Polynomials).</strong> Suppose \(f\) is \((n+1)\) times differentiable near \(a\) with \(f^{(n+1)}\) continuous. If \(p\) is any polynomial of degree at most \(n\) with
+
 \[
 \lim_{x\to a}\frac{f(x) - p(x)}{(x-a)^n} = 0,
 \]
@@ -790,6 +807,7 @@ The converse is famously false: \(\sum 1/n\) diverges (the harmonic series) desp
 <div class="theorem">
 
 <strong>Theorem 7.3 (Geometric Series).</strong> The series \(\sum_{n=0}^\infty r^n\) converges if and only if \(|r| < 1\), in which case
+
 \[
 \sum_{n=0}^\infty r^n = \frac{1}{1-r}.
 \]

@@ -518,7 +518,10 @@ The Hardy-Weinberg law was discovered independently by G.H. Hardy (a mathematici
 ## 9.4 Case Study III: Expected Utility Theory in Economics
 
 **Expected utility theory** (期望效用理论) holds that rational agents maximize expected utility:
-\[ EU(A) = \sum_i p_i \cdot u(x_i) \]
+
+\[
+EU(A) = \sum_i p_i \cdot u(x_i)
+\]
 where \( p_i \) are probabilities of outcomes \( x_i \) under action \( A \), and \( u \) is a utility function. This theory is the basis of rational choice theory and much of economic modeling.
 
 The mathematical apparatus — real-valued utility functions, subjective probability measures, the expectation operator — is essential to the theory's formulation. The von Neumann-Morgenstern representation theorem provides the mathematical foundation: if a preference relation \( \succsim \) over lotteries satisfies four axioms (completeness, transitivity, continuity, and independence), then there exists a utility function \( u \) such that \[ A \succsim B \iff EU(A) \geq EU(B) \] The function \( u \) is unique up to positive affine transformation. This is a purely mathematical result — it establishes the representability of rational preferences by a real-valued function given the axioms — and its applicability in economics rests on the assumption that rational agents' preferences satisfy the axioms.

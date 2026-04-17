@@ -602,6 +602,7 @@ Transfer functions describe systems from an input-output perspective and are suf
 \[
 \dot{\mathbf{x}}(t) = A\mathbf{x}(t) + B\mathbf{u}(t),
 \]
+
 \[
 \mathbf{y}(t) = C\mathbf{x}(t) + D\mathbf{u}(t),
 \]

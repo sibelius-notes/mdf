@@ -15,13 +15,16 @@ Consider a pure substance occupying a region \(\Omega \subset \mathbb{R}^n\) tha
 
 <div class="definition">
 <strong>Definition 1.1 (Classical Two-Phase Stefan Problem).</strong> Find the temperature \(T(x,t)\) and the free boundary \(\Gamma(t)\) such that:
+
 \[
 \rho_i c_i \frac{\partial T}{\partial t} = \nabla \cdot (k_i \nabla T), \quad x \in \Omega_i(t), \quad i \in \{s, l\},
 \]
 with the conditions on the interface \(\Gamma(t)\):
+
 \[
 T = T_m \quad \text{on } \Gamma(t),
 \]
+
 \[
 L \rho v_n = k_s \frac{\partial T}{\partial n}\bigg|_s - k_l \frac{\partial T}{\partial n}\bigg|_l \quad \text{on } \Gamma(t),
 \]
@@ -34,9 +37,11 @@ In the simplest setting, we assume equal and constant material properties in bot
 
 <div class="definition">
 <strong>Definition 1.2 (One-Phase Stefan Problem).</strong> When the temperature in one phase is uniformly at the melting point \(T_m\), only one heat equation needs to be solved. For solidification into a supercooled liquid at temperature \(T_\infty < T_m\), we solve:
+
 \[
 \frac{\partial T}{\partial t} = \kappa \nabla^2 T, \quad x \in \Omega_l(t),
 \]
+
 \[
 T = T_m \quad \text{on } \Gamma(t), \qquad L\rho\, v_n = -k \frac{\partial T}{\partial n}\bigg|_l \quad \text{on } \Gamma(t).
 \]
@@ -47,6 +52,7 @@ The one-phase Stefan problem arises naturally in many applications: the freezing
 ### 1.2 The Stefan Condition and Energy Balance
 
 The Stefan condition deserves careful derivation from first principles. Consider a pillbox control volume straddling the interface \(\Gamma(t)\), of thickness \(2\varepsilon\) and cross-sectional area \(A\). The total energy in the pillbox is
+
 \[
 E = \int_V \rho\, e(T)\, dV,
 \]
@@ -54,6 +60,7 @@ where \(e(T)\) is the internal energy per unit mass. As the interface sweeps thr
 
 <div class="theorem">
 <strong>Theorem 1.1 (Stefan Condition from Energy Conservation).</strong> Let \(\Gamma(t)\) be a smooth interface separating solid and liquid phases, with unit normal \(\hat{n}\) pointing into the liquid. If \(T\) satisfies the heat equation in each phase and is continuous across \(\Gamma(t)\), then energy conservation at the interface implies
+
 \[
 L\rho\, v_n = [k \nabla T \cdot \hat{n}]_s^l = k_s \nabla T_s \cdot \hat{n} - k_l \nabla T_l \cdot \hat{n},
 \]
@@ -62,10 +69,12 @@ where \(v_n\) is the normal velocity of \(\Gamma(t)\) in the direction of \(\hat
 
 <div class="proof">
 <strong>Proof.</strong> Apply the Reynolds transport theorem to the energy integral over a control volume \(V(t)\) containing a segment of the interface. The internal energy density has a jump \([\rho e] = \rho L\) across \(\Gamma(t)\). Writing the energy balance:
+
 \[
 \frac{d}{dt} \int_{V(t)} \rho\, e\, dV = -\oint_{\partial V(t)} \mathbf{q} \cdot \hat{n}\, dS,
 \]
 where \(\mathbf{q} = -k\nabla T\) is the heat flux. Using the generalized divergence theorem for a domain with a moving discontinuity, the left-hand side produces a surface integral over \(\Gamma(t)\) involving the jump in \(\rho e\) multiplied by \(v_n\). Shrinking the pillbox (\(\varepsilon \to 0\)) eliminates volume contributions, leaving
+
 \[
 \rho L\, v_n = k_s \frac{\partial T_s}{\partial n} - k_l \frac{\partial T_l}{\partial n}
 \]
@@ -84,13 +93,16 @@ The most celebrated exact solution of the Stefan problem is the Neumann solution
 
 <div class="example">
 <strong>Example 1.1 (Neumann Solution for Solidification in a Half-Space).</strong> Seek a similarity solution with the interface at \(x = s(t) = 2\lambda\sqrt{\kappa_s t}\), where \(\lambda\) is a dimensionless constant. Introducing the similarity variable \(\eta = x/(2\sqrt{\kappa_i t})\) in each phase:
+
 \[
 T_s(\eta) = T_w + (T_m - T_w)\frac{\operatorname{erf}(\eta)}{\operatorname{erf}(\lambda)}, \quad 0 < \eta < \lambda,
 \]
+
 \[
 T_l(\eta) = T_0 - (T_0 - T_m)\frac{\operatorname{erfc}(\eta\sqrt{\kappa_s/\kappa_l})}{\operatorname{erfc}(\lambda\sqrt{\kappa_s/\kappa_l})}, \quad \eta > \lambda.
 \]
 The Stefan condition yields the transcendental equation for \(\lambda\):
+
 \[
 \frac{k_s(T_m - T_w)}{\sqrt{\pi\kappa_s}\,\operatorname{erf}(\lambda)} e^{-\lambda^2} - \frac{k_l(T_0 - T_m)}{\sqrt{\pi\kappa_l}\,\operatorname{erfc}(\lambda\sqrt{\kappa_s/\kappa_l})} e^{-\lambda^2 \kappa_s/\kappa_l} = \rho L \lambda \sqrt{\kappa_s}.
 \]
@@ -123,10 +135,12 @@ To handle irregular interfaces and topological changes, we reformulate the Stefa
 
 <div class="definition">
 <strong>Definition 1.3 (Enthalpy Formulation).</strong> Define the enthalpy as:
+
 \[
 H(T) = \begin{cases} \rho c_s T & \text{if } T < T_m, \\ \rho c_s T_m + \rho L \xi & \text{if } T = T_m, \; \xi \in [0,1], \\ \rho c_l T + \rho L & \text{if } T > T_m, \end{cases}
 \]
 where \(\xi\) represents the liquid fraction. The Stefan problem is equivalent to finding \(H\) and \(T\) satisfying:
+
 \[
 \frac{\partial H}{\partial t} = \nabla \cdot (k(T)\nabla T) \quad \text{in } \Omega \times (0,\infty)
 \]
@@ -143,6 +157,7 @@ The enthalpy method is also the starting point for numerical approximation. Disc
 
 <div class="example">
 <strong>Example 1.4 (Enthalpy Method on a Uniform Grid).</strong> Consider the one-dimensional Stefan problem on \([0, 1]\) with \(T(0,t) = -1\), \(T(1,t) = 1\), and initial temperature \(T(x,0) = 2x - 1\), so the initial interface is at \(x = 1/2\). Let \(T_m = 0\), \(\kappa = 1\), and \(\rho L = 1\). Discretize with \(N\) cells of width \(\Delta x = 1/N\) and time step \(\Delta t\). The implicit enthalpy scheme reads:
+
 \[
 \frac{H_j^{n+1} - H_j^n}{\Delta t} = \frac{T_{j+1}^{n+1} - 2T_j^{n+1} + T_{j-1}^{n+1}}{\Delta x^2},
 \]
@@ -155,6 +170,7 @@ The key dimensionless parameter governing the Stefan problem is the Stefan numbe
 
 <div class="definition">
 <strong>Definition 1.4 (Stefan Number).</strong> The Stefan number is defined as:
+
 \[
 \mathrm{St} = \frac{c\,\Delta T}{L},
 \]
@@ -165,10 +181,12 @@ For water at atmospheric pressure, \(L \approx 334\) kJ/kg and \(c \approx 4.2\)
 
 <div class="example">
 <strong>Example 1.2 (Quasi-Steady Approximation).</strong> For \(\mathrm{St} \ll 1\) in one dimension with a cold wall at \(x = 0\) and melting temperature at the interface \(x = s(t)\), the quasi-steady temperature profile is linear:
+
 \[
 T(x,t) \approx T_w + (T_m - T_w)\frac{x}{s(t)}, \quad 0 < x < s(t).
 \]
 The Stefan condition then gives:
+
 \[
 \rho L \dot{s} = k\frac{T_m - T_w}{s}, \qquad \Rightarrow \qquad s(t) = \sqrt{\frac{2k(T_m - T_w)t}{\rho L}} = \sqrt{2\,\mathrm{St}\,\kappa\, t}.
 \]
@@ -179,6 +197,7 @@ The quasi-steady approximation is the foundation of many engineering correlation
 
 <div class="example">
 <strong>Example 1.5 (Perturbation Expansion in the Stefan Number).</strong> For the one-phase problem in a half-space with \(\mathrm{St} \ll 1\), write the interface position as \(s(t) = s_0(t) + \mathrm{St}\, s_1(t) + O(\mathrm{St}^2)\). The leading-order term is the quasi-steady result \(s_0 = \sqrt{2\,\mathrm{St}\,\kappa\, t}\). At next order, the sensible heat stored in the solid (which the quasi-steady approximation neglects) contributes a correction. Expanding the exact Neumann transcendental equation for small \(\lambda\):
+
 \[
 \lambda = \sqrt{\mathrm{St}/\pi}\left(1 + \frac{\mathrm{St}}{2\pi} + \frac{\mathrm{St}^2}{3\pi^2} + \cdots\right),
 \]
@@ -197,6 +216,7 @@ The comparison principle is a fundamental tool for obtaining a priori bounds on 
 
 <div class="example">
 <strong>Example 1.3 (Bounding the Freezing Time of a Slab).</strong> Consider a slab of water of thickness \(2a\) initially at the melting temperature \(T_m = 0^\circ\)C, with both faces held at temperature \(T_w < 0\). The two solidification fronts advance inward from \(x = 0\) and \(x = 2a\). By the comparison principle, each front is bounded above by the Neumann solution for a half-space (which ignores the finite slab width) and bounded below by the quasi-steady approximation. The slab is completely frozen at time \(t_f\) satisfying:
+
 \[
 \frac{a^2}{2\,\mathrm{St}\,\kappa} \leq t_f \leq \frac{a^2}{4\lambda^2\kappa},
 \]
@@ -218,14 +238,17 @@ Henry Selby Hele-Shaw introduced his cell in 1898 as an analogue device for visu
 
 <div class="definition">
 <strong>Definition 2.1 (Hele-Shaw Flow).</strong> In a Hele-Shaw cell with gap width \(b\), the gap-averaged velocity \(\mathbf{u}\) and pressure \(p\) satisfy:
+
 \[
 \mathbf{u} = -\frac{b^2}{12\mu}\nabla p, \qquad \nabla \cdot \mathbf{u} = 0,
 \]
 so that \(p\) is harmonic in the fluid domain:
+
 \[
 \nabla^2 p = 0 \quad \text{in } \Omega(t).
 \]
 On the free boundary \(\Gamma(t)\) separating fluid from air (or a less viscous fluid):
+
 \[
 p = -\sigma \kappa \quad \text{on } \Gamma(t), \qquad v_n = -\frac{b^2}{12\mu}\frac{\partial p}{\partial n} \quad \text{on } \Gamma(t),
 \]
@@ -242,10 +265,12 @@ In 1958, Saffman and Taylor demonstrated experimentally and theoretically that w
 
 <div class="theorem">
 <strong>Theorem 2.1 (Saffman-Taylor Instability).</strong> Consider a planar interface \(y = Y(t)\) in a Hele-Shaw cell of width \(W\), with the less viscous fluid above and the more viscous fluid below. A sinusoidal perturbation of wavenumber \(k\):
+
 \[
 y = Y(t) + \hat{\epsilon}\, e^{\sigma t}\cos(kx)
 \]
 grows at rate
+
 \[
 \sigma = V_0 k - \frac{b^2 \sigma_{\text{st}}}{12\mu} k^3,
 \]
@@ -254,6 +279,7 @@ where \(V_0\) is the unperturbed interface speed and \(\sigma_{\text{st}}\) is t
 
 <div class="proof">
 <strong>Proof.</strong> The base state is a planar interface advancing at speed \(V_0\), with pressure \(p_0 = -12\mu V_0 y/b^2\) in the viscous fluid. Perturbing the interface to \(y = Y_0(t) + \hat{\epsilon}\,e^{ikx}\) and linearizing Laplace's equation for the pressure perturbation \(\hat{p}\) gives \(\hat{p} = A\,e^{-|k|(y - Y_0)}\). The kinematic condition and the pressure boundary condition (with curvature) yield
+
 \[
 \sigma = V_0|k| - \frac{b^2\sigma_{\text{st}}}{12\mu}|k|^3.
 \]
@@ -264,6 +290,7 @@ The Saffman-Taylor instability is the Hele-Shaw analogue of the Mullins-Sekerka 
 
 <div class="remark">
 <strong>Remark 2.1 (The Saffman-Taylor Finger).</strong> Beyond the linear instability, Saffman and Taylor (1958) found a remarkable family of exact steady-state solutions for a finger of less viscous fluid advancing through a channel of width \(W\). In the zero-surface-tension limit, a finger of any width \(\lambda W\) (with \(0 < \lambda < 1\)) is a valid steady state, and its shape is given implicitly by the conformal mapping
+
 \[
 x + iy = -\frac{W}{2\pi}\left[\lambda\,\ln\frac{1}{2}(1 + \cos\pi\eta) + (1 - \lambda)\,\ln\frac{1}{2}(1 - \cos\pi\eta)\right],
 \]
@@ -280,10 +307,12 @@ A remarkable feature of the zero-surface-tension Hele-Shaw problem is the existe
 
 <div class="theorem">
 <strong>Theorem 2.2 (Richardson's Moment Theorem).</strong> For zero-surface-tension Hele-Shaw flow driven by injection at the origin with flux \(Q\), the moments
+
 \[
 M_k(t) = \iint_{\Omega(t)} z^k\, dA, \quad k = 0, 1, 2, \ldots,
 \]
 (where \(z = x + iy\) is the complex coordinate) satisfy
+
 \[
 \dot{M}_0 = Q, \qquad \dot{M}_k = 0, \quad k \geq 1.
 \]
@@ -294,6 +323,7 @@ Richardson's moments provide a powerful tool for constructing exact solutions vi
 
 <div class="definition">
 <strong>Definition 2.2 (Polubarinova-Galin Equation).</strong> Let \(z = f(\zeta, t)\) be the conformal map from the unit disk \(|\zeta| < 1\) to the fluid domain \(\Omega(t)\), normalized so that \(f(0,t) = 0\) and \(f'(0,t) > 0\). Then
+
 \[
 \operatorname{Re}\left[\dot{f}(\zeta,t)\,\overline{\zeta f'(\zeta,t)}\right] = \frac{Q}{2\pi}, \quad |\zeta| = 1.
 \]
@@ -303,6 +333,7 @@ The Schwarz function approach, developed by Davis, Crowdy, and others, provides 
 
 <div class="remark">
 <strong>Remark 2.3 (The Schwarz Function and Integrability).</strong> The Schwarz function \(S(z)\) of an analytic curve \(\Gamma\) extends analytically to a neighborhood of \(\Gamma\) and satisfies the fundamental identity \(\bar{z} = S(z)\) on \(\Gamma\). For zero-surface-tension Hele-Shaw flow, the evolution of \(S\) is governed by:
+
 \[
 \frac{\partial S}{\partial t} = -\frac{\partial}{\partial z}\left(\frac{Q}{\pi(z - z_0)}\right) \quad \text{near the singularities of } S,
 \]
@@ -311,10 +342,12 @@ where \(z_0\) is the injection point and \(Q\) the injection rate. The singulari
 
 <div class="example">
 <strong>Example 2.1 (Exact Solution: Expanding Circle).</strong> For injection at the origin with flux \(Q\) into an initially circular domain of radius \(R_0\), the conformal map is \(f(\zeta, t) = R(t)\zeta\) and the Polubarinova-Galin equation reduces to:
+
 \[
 R\dot{R} = \frac{Q}{2\pi}, \qquad \Rightarrow \qquad R(t) = \sqrt{R_0^2 + \frac{Qt}{\pi}}.
 \]
 The domain remains circular for all time, and the pressure is:
+
 \[
 p(r,t) = \frac{Q\mu}{2\pi b^2/12}\ln\frac{r}{R(t)}, \quad r < R(t).
 \]
@@ -341,6 +374,7 @@ When a solidification front is not perfectly planar, small perturbations can gro
 ### 3.1 Linear Stability of a Planar Front
 
 Consider a planar solidification front advancing at steady velocity \(V\) into a supercooled melt. In a frame moving with the front, the temperature in the liquid satisfies:
+
 \[
 \kappa \nabla^2 T + V \frac{\partial T}{\partial z} = 0,
 \]
@@ -348,14 +382,17 @@ where \(z\) is the coordinate normal to the front. The base state solution is \(
 
 <div class="theorem">
 <strong>Theorem 3.1 (Mullins-Sekerka Instability).</strong> A sinusoidal perturbation \(\hat{\epsilon}\,e^{\sigma t + ikx}\) of the planar front has growth rate
+
 \[
 \sigma(k) = V|k|\left(\frac{G_l}{V|k|/\kappa + V/\kappa} - \frac{\Gamma_{\text{GT}} k^2}{V|k|/\kappa + V/\kappa}\right) - V|k|\frac{G_s}{V|k|/\kappa + V/\kappa},
 \]
 where, in the symmetric model (\(k_s = k_l\), \(\kappa_s = \kappa_l\)), this simplifies to
+
 \[
 \sigma(k) = \frac{V|k|}{2}\left(1 - \frac{2\kappa \Gamma_{\text{GT}}}{V} k^2 - \frac{2\kappa}{V^2}|k|G\right),
 \]
 with \(G\) the (stabilizing) temperature gradient in the liquid ahead of the front and \(\Gamma_{\text{GT}} = \sigma_{sl} T_m / (\rho L)\) the Gibbs-Thomson capillary length. There exists a critical wavenumber
+
 \[
 k_c = \sqrt{\frac{V}{2\kappa \Gamma_{\text{GT}}}}
 \]
@@ -370,6 +407,7 @@ The physical mechanism is clear: a bump on the solidification front protrudes in
 
 <div class="remark">
 <strong>Remark 3.1.</strong> The Mullins-Sekerka analysis can be extended to directional solidification (solidification in an imposed temperature gradient \(G\)), which is the standard configuration in crystal growth experiments. The instability criterion becomes the constitutional supercooling criterion:
+
 \[
 G < \frac{m_L G_C}{D_l/V} = \frac{m_L V C_0(1 - k_p)}{D_l k_p},
 \]
@@ -378,6 +416,7 @@ where \(G_C\) is the solute concentration gradient at the interface. When the te
 
 <div class="example">
 <strong>Example 3.2 (Critical Wavelength for Ice Solidification).</strong> For ice solidifying from pure water at modest undercoolings (\(\Delta T \approx 1\) K), the capillary length is \(\Gamma_{\text{GT}} \approx 2.7 \times 10^{-8}\) m, the thermal diffusivity is \(\kappa \approx 1.3 \times 10^{-7}\) m\(^2\)/s, and a typical growth velocity is \(V \approx 10^{-5}\) m/s. The critical wavelength is:
+
 \[
 \lambda_c = \frac{2\pi}{k_c} = 2\pi\sqrt{\frac{2\kappa\Gamma_{\text{GT}}}{V}} \approx 2\pi\sqrt{\frac{2 \times 1.3 \times 10^{-7} \times 2.7 \times 10^{-8}}{10^{-5}}} \approx 5 \times 10^{-5} \text{ m} = 50 \;\mu\text{m}.
 \]
@@ -390,6 +429,7 @@ The key stabilizing mechanism is the dependence of the equilibrium melting tempe
 
 <div class="definition">
 <strong>Definition 3.1 (Gibbs-Thomson Condition).</strong> The equilibrium temperature of a curved solid-liquid interface with mean curvature \(\kappa\) is:
+
 \[
 T_{\Gamma} = T_m - \Gamma_{\text{GT}} \kappa - \frac{V}{\mu_k},
 \]
@@ -400,10 +440,12 @@ The capillary length \(\Gamma_{\text{GT}}\) is tiny — on the order of angstrom
 
 <div class="proof">
 <strong>Proof.</strong> (Derivation of the Gibbs-Thomson Condition from Thermodynamics.) Consider a small patch of the solid-liquid interface with area \(A\) and mean curvature \(\kappa\). The Gibbs free energy of the system includes a bulk term and a surface term:
+
 \[
 G = G_{\text{bulk}} + \sigma_{sl} A.
 \]
 If the interface advances by a distance \(\delta n\) normal to itself, the volume of solid increases by \(\delta V = A\,\delta n\) and the area changes by \(\delta A = -\kappa A\,\delta n\) (by the first variation of area formula). At temperature \(T\) near \(T_m\), the bulk free energy change per unit volume upon solidification is \(\Delta g = \rho L(T_m - T)/T_m\). At equilibrium (\(\delta G = 0\)):
+
 \[
 0 = \Delta g\, A\,\delta n + \sigma_{sl}(-\kappa A\,\delta n) = \left(\rho L\frac{T_m - T}{T_m} - \sigma_{sl}\kappa\right)A\,\delta n.
 \]
@@ -416,6 +458,7 @@ Dendrites — the tree-like crystal structures that form during solidification �
 
 <div class="example">
 <strong>Example 3.1 (Ivantsov Paraboloid Solution).</strong> Ivantsov (1947) found an exact steady-state solution for a paraboloidal dendrite tip growing at velocity \(V\) into a supercooled melt. In parabolic coordinates centered on the tip, the temperature field satisfies:
+
 \[
 \operatorname{Iv}(\operatorname{Pe}) = \operatorname{Pe}\, e^{\operatorname{Pe}} E_1(\operatorname{Pe}) = \frac{\Delta T c_l}{L} \equiv \mathrm{St},
 \]
@@ -434,6 +477,7 @@ The tip selection problem — determining which member of the Ivantsov family is
 
 <div class="theorem">
 <strong>Theorem 3.2 (Solvability Theory).</strong> For an anisotropic Gibbs-Thomson condition of the form \(\Gamma_{\text{GT}}(\theta) = \Gamma_0(1 - \epsilon_4 \cos 4\theta)\) with fourfold crystalline anisotropy \(\epsilon_4 > 0\), there exists a discrete set of steady-state needle crystal solutions. Only the fastest-growing solution (with the largest tip velocity) is linearly stable. The selected operating point satisfies
+
 \[
 \sigma^* = \frac{2\kappa d_0}{V R^2} = \text{const}(\epsilon_4),
 \]
@@ -452,6 +496,7 @@ Beyond the steady-state tip, real dendrites exhibit sidebranches — secondary a
 
 <div class="proposition">
 <strong>Proposition 3.1.</strong> In the WKB approximation, a perturbation created at the tip with wavenumber \(k\) and amplitude \(A_0\) is amplified as it travels along the dendrite surface to position \(s\) (arc length from the tip) as:
+
 \[
 A(s) = A_0 \exp\left(\int_0^s \sigma(k(s'), s')\, \frac{ds'}{V_{\text{tip}}}\right),
 \]
@@ -477,6 +522,7 @@ The solidification of a binary alloy (two components, A and B) is governed by th
 
 <div class="definition">
 <strong>Definition 4.1 (Liquidus and Solidus).</strong> For a binary alloy with composition \(C\) (mass fraction of solute B):
+
 \[
 T_L(C) = T_m - m_L C \quad \text{(liquidus)}, \qquad T_S(C) = T_m - \frac{m_L}{k_p} C \quad \text{(solidus)},
 \]
@@ -487,6 +533,7 @@ When a binary alloy at initial composition \(C_0\) is cooled from above the liqu
 
 <div class="example">
 <strong>Example 4.2 (Pb-Sn Solder Alloy).</strong> The Pb-Sn system is the classic example used in introductory metallurgy courses. With \(T_m(\text{Pb}) = 327^\circ\)C, \(m_L \approx 2.3\) K/wt%, and \(k_p \approx 0.31\) for dilute Sn in Pb, an alloy with 10 wt% Sn begins to solidify at \(T_L = 327 - 2.3 \times 10 = 304^\circ\)C. The first solid contains only \(k_p \times 10 = 3.1\) wt% Sn, so the remaining liquid is enriched in tin. As solidification proceeds, the liquid composition and the solid composition both increase, tracing out the liquidus and solidus curves respectively. The resulting microsegregation — the variation of composition within a single dendrite arm — is described by the Scheil equation (assuming no diffusion in the solid):
+
 \[
 C_s(f_s) = k_p C_0 (1 - f_s)^{k_p - 1},
 \]
@@ -499,17 +546,21 @@ When constitutional supercooling is sufficiently strong, the planar solidificati
 
 <div class="definition">
 <strong>Definition 4.2 (Worster's Mushy-Layer Equations).</strong> Let \(\phi(x,t)\) be the local solid fraction, \(T(x,t)\) the temperature, and \(C(x,t)\) the interstitial liquid composition. In the mushy zone, local thermodynamic equilibrium gives:
+
 \[
 T = T_L(C) = T_m - m_L C.
 \]
 Conservation of heat and solute yield:
+
 \[
 \rho c \frac{\partial T}{\partial t} + \rho L \frac{\partial \phi}{\partial t} = \nabla \cdot (k_{\text{eff}} \nabla T),
 \]
+
 \[
 (1 - \phi)\frac{\partial C}{\partial t} + C(1 - k_p)\frac{\partial \phi}{\partial t} = \nabla \cdot (D_{\text{eff}}(1-\phi)\nabla C) + (1-\phi)\mathbf{u} \cdot \nabla C,
 \]
 where the interstitial liquid velocity \(\mathbf{u}\) satisfies Darcy's law:
+
 \[
 \mathbf{u} = -\frac{\Pi(\phi)}{\mu}(\nabla p + \rho_l \beta_C C\, \mathbf{g}),
 \]
@@ -526,6 +577,7 @@ One of the most striking phenomena in mushy-layer solidification is the formatio
 
 <div class="theorem">
 <strong>Theorem 4.1 (Linear Stability of the Mushy Layer — Worster).</strong> The quiescent base state of unidirectional solidification of a binary alloy is governed by a Rayleigh number:
+
 \[
 \mathrm{Ra}_m = \frac{\rho_l \beta_C \Delta C\, g\, \Pi_0 h}{\mu \kappa},
 \]
@@ -542,6 +594,7 @@ The derivation of the mushy-layer equations from the microscopic Stefan problem 
 
 <div class="proposition">
 <strong>Proposition 4.1.</strong> The effective thermal conductivity \(k_{\text{eff}}\) of a mushy zone with solid fraction \(\phi\) satisfies the Hashin-Shtrikman bounds:
+
 \[
 k_s + \frac{(1-\phi)}{\frac{1}{k_l - k_s} + \frac{\phi}{n k_s}} \leq k_{\text{eff}} \leq k_l + \frac{\phi}{\frac{1}{k_s - k_l} + \frac{(1-\phi)}{n k_l}},
 \]
@@ -556,6 +609,7 @@ Similar bounds exist for the solutal diffusivity and permeability, though the pe
 
 <div class="example">
 <strong>Example 4.3 (Rayleigh Number for NH\(_4\)Cl-H\(_2\)O).</strong> The aqueous ammonium chloride system (NH\(_4\)Cl-H\(_2\)O) is the canonical laboratory model for mushy-layer convection, since it is transparent and solidifies at convenient temperatures. For a 26 wt% NH\(_4\)Cl solution cooled from below at rate \(\Delta T/h \approx 1\) K/cm with mushy-layer thickness \(h \approx 2\) cm, permeability \(\Pi_0 \approx 10^{-9}\) m\(^2\), and dynamic viscosity \(\mu \approx 10^{-3}\) Pa\(\cdot\)s, the mushy-layer Rayleigh number is
+
 \[
 \mathrm{Ra}_m = \frac{\rho g \beta_C \Delta C\, \Pi_0 h}{\mu \kappa} \approx \frac{10^3 \times 10 \times 3 \times 10^{-2} \times 10^{-9} \times 2 \times 10^{-2}}{10^{-3} \times 10^{-7}} \approx 60.
 \]
@@ -568,10 +622,12 @@ Beyond simple binary alloys with a single mushy zone, more complex phase diagram
 
 <div class="definition">
 <strong>Definition 4.3 (Eutectic Solidification).</strong> At the eutectic composition \(C_E\) and temperature \(T_E\), the liquid transforms simultaneously into two distinct solid phases \(\alpha\) and \(\beta\):
+
 \[
 \text{Liquid}(C_E) \xrightarrow{T_E} \alpha(C_\alpha) + \beta(C_\beta).
 \]
 The resulting microstructure consists of alternating lamellae (or rods) of \(\alpha\) and \(\beta\) with a characteristic spacing \(\lambda\) determined by the competition between interfacial energy and diffusion. The Jackson-Hunt theory (1966) predicts:
+
 \[
 \lambda^2 V = \text{const},
 \]
@@ -582,6 +638,7 @@ Eutectic solidification involves two coupled free boundaries (the \(\alpha\)-liq
 
 <div class="remark">
 <strong>Remark 4.3 (Jackson-Hunt Theory and Extremum Principles).</strong> The Jackson-Hunt (1966) analysis of eutectic growth parallels the Ivantsov analysis for dendrites in that it produces a family of solutions parameterized by the lamellar spacing \(\lambda\). For a given growth velocity \(V\), the undercooling of the eutectic front is
+
 \[
 \Delta T(\lambda) = K_1 V \lambda + \frac{K_2}{\lambda},
 \]
@@ -603,10 +660,12 @@ The key observation is that after a Baiocchi-type transformation, the Stefan pro
 
 <div class="definition">
 <strong>Definition 5.1 (Baiocchi Transform).</strong> Define the transformed variable:
+
 \[
 w(x,t) = \int_0^t T(x,\tau)\, d\tau.
 \]
 If \(T\) solves the one-phase Stefan problem, then \(w\) satisfies:
+
 \[
 w \geq 0, \qquad -\Delta w + \frac{\partial w}{\partial t} \leq f, \qquad w\left(-\Delta w + \frac{\partial w}{\partial t} - f\right) = 0,
 \]
@@ -625,6 +684,7 @@ The obstacle problem is the simplest and most studied variational inequality. It
 
 <div class="definition">
 <strong>Definition 5.2 (Classical Obstacle Problem).</strong> Given a domain \(\Omega \subset \mathbb{R}^n\), an obstacle \(\psi \in C^2(\Omega)\) with \(\psi < 0\) on \(\partial\Omega\), and boundary data \(g \geq \psi\) on \(\partial\Omega\), find \(u \in H^1(\Omega)\) minimizing:
+
 \[
 J[u] = \frac{1}{2}\int_\Omega |\nabla u|^2\, dx
 \]
@@ -632,12 +692,14 @@ subject to \(u \geq \psi\) in \(\Omega\) and \(u = g\) on \(\partial\Omega\). Th
 </div>
 
 The Euler-Lagrange conditions for the obstacle problem are:
+
 \[
 u \geq \psi, \qquad -\Delta u \geq 0, \qquad (u - \psi)(-\Delta u) = 0 \quad \text{in } \Omega.
 \]
 In the region where \(u > \psi\), the solution is harmonic. In the coincidence set \(\{u = \psi\}\), we have \(u = \psi\), and \(-\Delta u = -\Delta\psi \geq 0\). The transition between these two regimes occurs at the free boundary \(\Gamma\).
 
 The obstacle problem admits an equivalent formulation as a variational inequality: find \(u \in K = \{v \in H^1_0(\Omega) : v \geq \psi\}\) such that
+
 \[
 \int_\Omega \nabla u \cdot \nabla(v - u)\, dx \geq 0 \quad \text{for all } v \in K.
 \]
@@ -645,6 +707,7 @@ The existence and uniqueness of the solution follow from the Lions-Stampacchia t
 
 <div class="example">
 <strong>Example 5.1 (Elastic Membrane over an Obstacle).</strong> A stretched elastic membrane is pressed against a rigid obstacle from above. The displacement \(u(x)\) of the membrane minimizes its elastic energy (proportional to \(\int|\nabla u|^2\)) subject to staying above the obstacle \(u \geq \psi\). The contact region is the coincidence set, and the free boundary is the edge of contact. In one dimension with obstacle \(\psi(x) = 1 - x^2\) on \((-2,2)\) and \(u = 0\) on the boundary, the solution is:
+
 \[
 u(x) = \begin{cases} 1 - x^2 & |x| \leq 1, \\ 2 - 2|x| + x^2 - 1 & 1 < |x| < 2, \end{cases}
 \]
@@ -657,6 +720,7 @@ The regularity theory for the free boundary in obstacle problems, developed by L
 
 <div class="theorem">
 <strong>Theorem 5.1 (Optimal Regularity — Caffarelli).</strong> Let \(u\) solve the obstacle problem with \(\psi \in C^2(\Omega)\). Then:
+
 \[
 u \in C^{1,1}(\Omega),
 \]
@@ -665,6 +729,7 @@ that is, \(u\) has Lipschitz continuous first derivatives. This regularity is op
 
 <div class="proof">
 <strong>Proof.</strong> (Sketch.) The key tool is the monotonicity formula. Define, for a free boundary point \(x_0 \in \Gamma\),
+
 \[
 \Phi(r) = \frac{1}{r^4}\int_{B_r(x_0)} |\nabla u|^2\, dx.
 \]
@@ -683,6 +748,7 @@ The classification proceeds via blow-up analysis at free boundary points. At a r
 
 <div class="example">
 <strong>Example 5.2 (Blow-Up Analysis in Two Dimensions).</strong> Consider the obstacle problem in \(\mathbb{R}^2\) with obstacle \(\psi \equiv 0\). At a regular free boundary point \(x_0 \in \Gamma\), define the rescaled functions \(u_r(x) = u(x_0 + rx)/r^2\). As \(r \to 0\), these converge (up to rotation) to the half-plane solution:
+
 \[
 u_0(x_1, x_2) = \frac{1}{2}\max(x_1, 0)^2.
 \]
@@ -705,6 +771,7 @@ The thin obstacle problem arises in the study of semipermeable membranes, in the
 
 <div class="example">
 <strong>Example 5.3 (The Signorini Problem in Elasticity).</strong> The original motivation for the thin obstacle problem comes from contact mechanics. Consider an elastic body \(\Omega\) resting on a rigid surface \(\{x_n = 0\}\) under the action of gravity. The displacement \(u\) minimizes the elastic energy subject to the non-penetration constraint \(u(x', 0) \geq 0\). The contact region \(\{u(x', 0) = 0\}\) and its boundary (the contact line) are unknown a priori. In the scalar simplification, this is exactly Definition 5.3 with \(\psi = 0\). The contact pressure \(-\partial u/\partial x_n|_{x_n = 0^+}\) is nonnegative in the contact region and vanishes outside it, giving the complementarity conditions:
+
 \[
 u \geq 0, \quad -\frac{\partial u}{\partial x_n} \geq 0, \quad u \cdot \frac{\partial u}{\partial x_n} = 0 \quad \text{on } \{x_n = 0\}.
 \]
@@ -722,6 +789,7 @@ The simplest phase-field model is the Allen-Cahn equation, introduced by Allen a
 
 <div class="definition">
 <strong>Definition 6.1 (Ginzburg-Landau Free Energy).</strong> The Ginzburg-Landau (or Van der Waals-Cahn-Hilliard) free energy is:
+
 \[
 \mathcal{F}[\phi] = \int_\Omega \left(\frac{\epsilon^2}{2}|\nabla\phi|^2 + W(\phi)\right)\, dx,
 \]
@@ -730,14 +798,17 @@ where \(\phi(x) \in [-1, 1]\) is the order parameter (\(\phi = +1\) in one phase
 
 <div class="definition">
 <strong>Definition 6.2 (Allen-Cahn Equation).</strong> The Allen-Cahn equation is the \(L^2\) gradient flow of \(\mathcal{F}\):
+
 \[
 \tau \frac{\partial\phi}{\partial t} = \epsilon^2 \nabla^2\phi - W'(\phi) = \epsilon^2 \nabla^2\phi + \phi - \phi^3,
 \]
 where \(\tau > 0\) is a relaxation time. The equilibrium interface profile is the heteroclinic connection:
+
 \[
 \phi_0(z) = \tanh\left(\frac{z}{\sqrt{2}\,\epsilon}\right),
 \]
 where \(z\) is the signed distance to the interface. The interface width scales as \(\epsilon\), and the interfacial energy is
+
 \[
 \sigma = \int_{-\infty}^{\infty} \epsilon|\phi_0'|^2 + \frac{1}{\epsilon}W(\phi_0)\, dz = \frac{2\sqrt{2}}{3}\epsilon.
 \]
@@ -755,6 +826,7 @@ For conserved order parameters, the appropriate gradient flow is the \(H^{-1}\) 
 
 <div class="definition">
 <strong>Definition 6.3 (Cahn-Hilliard Equation).</strong> The Cahn-Hilliard equation for spinodal decomposition is:
+
 \[
 \frac{\partial\phi}{\partial t} = \nabla \cdot \left(M \nabla \mu\right), \qquad \mu = \frac{\delta\mathcal{F}}{\delta\phi} = -\epsilon^2\nabla^2\phi + W'(\phi),
 \]
@@ -765,6 +837,7 @@ The Cahn-Hilliard equation was derived by Cahn and Hilliard (1958) to model spin
 
 <div class="example">
 <strong>Example 6.1 (Spinodal Decomposition in a Binary Alloy).</strong> Consider a homogeneous binary alloy with composition \(C_0 = 0.5\) (symmetric quench) inside the spinodal curve, where \(W''(C_0) < 0\). Linearizing the Cahn-Hilliard equation about the uniform state \(\phi = C_0\), a Fourier mode \(\hat{\phi}_k e^{ikx}\) grows at rate
+
 \[
 \sigma(k) = -M k^2\left(W''(C_0) + \epsilon^2 k^2\right).
 \]
@@ -777,19 +850,24 @@ The central theoretical result connecting phase-field models to the classical fr
 
 <div class="theorem">
 <strong>Theorem 6.1 (Sharp-Interface Limit of Allen-Cahn).</strong> Consider the Allen-Cahn equation with a coupling to the temperature field:
+
 \[
 \tau\epsilon \frac{\partial\phi}{\partial t} = \epsilon^2\nabla^2\phi - W'(\phi) + \epsilon\, \lambda\, u,
 \]
+
 \[
 \frac{\partial u}{\partial t} + \frac{L}{2c}\frac{\partial\phi}{\partial t} = \kappa\nabla^2 u,
 \]
 where \(u = (T - T_m)/(L/c)\) is the dimensionless temperature. In the limit \(\epsilon \to 0\) with \(\tau, \lambda\) appropriately scaled, the phase-field model reduces to the two-phase Stefan problem with Gibbs-Thomson condition:
+
 \[
 \kappa\nabla^2 u = \frac{\partial u}{\partial t} \quad \text{in each phase},
 \]
+
 \[
 u = -\sigma_{sl}\kappa/(\rho L) - \beta\, v_n \quad \text{on } \Gamma(t),
 \]
+
 \[
 L\rho\, v_n = [k\nabla u \cdot \hat{n}] \quad \text{on } \Gamma(t),
 \]
@@ -804,10 +882,12 @@ The matched-asymptotic approach is powerful but formal. Rigorous justification o
 
 <div class="example">
 <strong>Example 6.2 (Matched Asymptotics: Inner Region Solvability).</strong> The solvability condition in the matched-asymptotic derivation deserves a closer look, as it is the mechanism by which the Gibbs-Thomson condition emerges. In the inner region, at first order the perturbation \(\phi_1(\xi)\) satisfies the linear equation
+
 \[
 \mathcal{L}\phi_1 = \left(\frac{d^2}{d\xi^2} - W''(\phi_0(\xi))\right)\phi_1 = g(\xi),
 \]
 where \(g\) contains terms involving the curvature \(\kappa\), the normal velocity \(v_n\), and the outer temperature \(u_0\). The operator \(\mathcal{L}\) is self-adjoint with a one-dimensional null space spanned by \(\phi_0'(\xi) = \operatorname{sech}^2(\xi/\sqrt{2})/\sqrt{2}\) (the translation mode, arising from the invariance of the equilibrium profile under shifts). By the Fredholm alternative, a bounded solution \(\phi_1\) exists if and only if \(g\) is orthogonal to the null space:
+
 \[
 \int_{-\infty}^{\infty} g(\xi)\,\phi_0'(\xi)\, d\xi = 0.
 \]
@@ -820,6 +900,7 @@ A key practical issue is that standard phase-field models introduce spurious int
 
 <div class="remark">
 <strong>Remark 6.1.</strong> In the Karma-Rappel model, the anti-trapping current
+
 \[
 \mathbf{j}_{at} = \frac{\epsilon}{2\sqrt{2}}\frac{\partial\phi}{\partial t}\frac{\nabla\phi}{|\nabla\phi|}
 \]
@@ -832,6 +913,7 @@ Phase-field models extend naturally to multi-phase systems (e.g., grain growth, 
 
 <div class="definition">
 <strong>Definition 6.4 (Multi-Phase Field Model).</strong> For \(N\) phases with order parameters \(\phi_i(x,t)\), \(i = 1, \ldots, N\), subject to the constraint \(\sum_{i=1}^N \phi_i = 1\), the free energy is:
+
 \[
 \mathcal{F}[\{\phi_i\}] = \int_\Omega \sum_{i < j} \left(\frac{\epsilon_{ij}^2}{2}|\phi_i \nabla\phi_j - \phi_j \nabla\phi_i|^2 + W_{ij}(\phi_i, \phi_j)\right)\, dx,
 \]
@@ -852,6 +934,7 @@ Numerical solution of free boundary problems requires a method for representing 
 ### 7.1 The Level Set Method
 
 The level set method, introduced by Osher and Sethian (1988), represents the interface \(\Gamma(t)\) as the zero level set of a function \(\phi(x,t)\):
+
 \[
 \Gamma(t) = \{x : \phi(x,t) = 0\}.
 \]
@@ -859,10 +942,12 @@ The function \(\phi\) is typically initialized as the signed distance to the int
 
 <div class="definition">
 <strong>Definition 7.1 (Level Set Equation).</strong> If the interface \(\Gamma(t)\) moves with normal velocity \(v_n\), the level set function evolves according to:
+
 \[
 \frac{\partial\phi}{\partial t} + v_n|\nabla\phi| = 0,
 \]
 or equivalently, if the velocity field \(\mathbf{v}\) is extended to a neighborhood of the interface:
+
 \[
 \frac{\partial\phi}{\partial t} + \mathbf{v} \cdot \nabla\phi = 0.
 \]
@@ -891,6 +976,7 @@ The standard numerical discretization uses upwind schemes from hyperbolic conser
 
 <div class="example">
 <strong>Example 7.1 (Motion by Mean Curvature).</strong> For an interface moving with normal velocity proportional to its curvature, \(v_n = -\kappa\), the level set equation becomes:
+
 \[
 \frac{\partial\phi}{\partial t} = |\nabla\phi|\nabla \cdot \left(\frac{\nabla\phi}{|\nabla\phi|}\right).
 \]
@@ -903,6 +989,7 @@ A practical difficulty with the level set method is that the function \(\phi\) c
 
 <div class="definition">
 <strong>Definition 7.2 (Reinitialization Equation).</strong> To restore the signed distance property, solve to steady state in fictitious time \(\tau\):
+
 \[
 \frac{\partial\phi}{\partial\tau} + \operatorname{sgn}(\phi_0)(|\nabla\phi| - 1) = 0,
 \]
@@ -919,6 +1006,7 @@ The level set method is not the only approach to interface tracking. Two importa
 
 <div class="definition">
 <strong>Definition 7.3 (Volume-of-Fluid Method).</strong> The VOF method (Hirt and Nichols, 1981) represents the interface through the volume fraction \(f(x,t) \in [0,1]\), defined in each computational cell as the fraction occupied by one of the two fluids. The volume fraction satisfies:
+
 \[
 \frac{\partial f}{\partial t} + \nabla \cdot (f\mathbf{u}) = 0.
 \]
@@ -945,6 +1033,7 @@ An important class of methods that bridges the gap between sharp and diffuse int
 
 <div class="definition">
 <strong>Definition 7.5 (Ghost Fluid Method).</strong> In the GFM for the Stefan problem, the temperature field is extended across the interface using "ghost" values that enforce the jump conditions. At grid points adjacent to the interface (identified by sign changes in the level set function), the finite difference stencil is modified so that the Stefan condition
+
 \[
 L\rho\,v_n = [k\nabla T \cdot \hat{n}]
 \]
@@ -997,12 +1086,15 @@ The formation of snowflakes (ice crystals growing from water vapor) is one of th
 
 <div class="example">
 <strong>Example 8.2 (Snowflake as a Free Boundary Problem).</strong> The growth of an ice crystal from vapor is governed by:
+
 \[
 \nabla^2 c = 0 \quad \text{in the vapor (quasi-steady)},
 \]
+
 \[
 c = c_{\text{eq}}(\kappa, T) \quad \text{on the crystal surface } \Gamma(t),
 \]
+
 \[
 v_n = D\frac{\partial c}{\partial n}\bigg|_\Gamma \quad \text{(mass conservation)},
 \]
@@ -1020,6 +1112,7 @@ Sea ice covers approximately 7% of the Earth's surface at its maximum extent and
 <br>(iii) Snow cover as an insulating layer with variable thermal conductivity;
 <br>(iv) Radiative forcing at the upper surface.
 The classic Stefan model (with appropriate effective thermal properties) predicts ice thickness growing as
+
 \[
 h(t) \approx \sqrt{\frac{2k_i(T_m - T_a)t}{\rho L}},
 \]
@@ -1036,6 +1129,7 @@ Continuous casting is the process by which most of the world's steel is produced
 
 <div class="example">
 <strong>Example 8.4 (Continuous Casting of Steel).</strong> In a continuous caster operating at withdrawal speed \(V\), the shell thickness \(s(z)\) at distance \(z\) below the meniscus satisfies approximately
+
 \[
 s(z) \approx K\sqrt{z/V},
 \]
@@ -1052,6 +1146,7 @@ The rapid solidification rates (\(10^5\)-\(10^7\) K/s) place the process far fro
 
 <div class="example">
 <strong>Example 8.6 (Melt Pool Geometry in Selective Laser Melting).</strong> For a Ti-6Al-4V powder bed irradiated by a laser of power \(P = 200\) W and scan speed \(V_s = 1\) m/s with spot radius \(r_0 = 50\;\mu\)m, the steady-state melt pool can be approximated by the Rosenthal solution — the three-dimensional analogue of the Neumann similarity solution for a moving point source. The temperature field in a frame moving with the laser is:
+
 \[
 T(x,y,z) = T_0 + \frac{P}{2\pi k R}\exp\left(-\frac{V_s(R + x)}{2\kappa}\right), \quad R = \sqrt{x^2 + y^2 + z^2},
 \]
@@ -1064,13 +1159,16 @@ In a striking application outside traditional materials science, the growth of s
 
 <div class="example">
 <strong>Example 8.5 (Tumor Growth Model).</strong> A simplified model of avascular tumor growth treats the tumor as a region \(\Omega(t) \subset \mathbb{R}^3\) with a free boundary \(\Gamma(t)\). The nutrient concentration \(c(x,t)\) (e.g., oxygen) satisfies:
+
 \[
 \nabla^2 c = \lambda c \quad \text{in } \Omega(t) \quad \text{(consumption)},
 \]
+
 \[
 c = c_\infty \quad \text{on } \Gamma(t) \quad \text{(supply from vasculature)},
 \]
 and the tumor boundary moves according to:
+
 \[
 v_n = -\frac{\partial p}{\partial n}\bigg|_\Gamma, \qquad -\nabla^2 p = S(c) \quad \text{in } \Omega(t),
 \]

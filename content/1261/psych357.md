@@ -267,7 +267,9 @@ This framework has important implications for prosocial behaviour research: lab 
 
 William D. Hamilton's theory of **kin selection** provides the most mathematically rigorous evolutionary account of altruism. Hamilton's rule states that an altruistic act will be selected for when:
 
-\[ rb > c \]
+\[
+rb > c
+\]
 
 where \( r \) is the coefficient of genetic relatedness between actor and recipient, \( b \) is the fitness benefit to the recipient, and \( c \) is the fitness cost to the actor.
 

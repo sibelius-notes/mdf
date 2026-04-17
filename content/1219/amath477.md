@@ -121,7 +121,10 @@ The **Cauchy** distribution has PDF \(p(x) = \frac{1}{\pi(1+x^2)}\). It is a not
 
 <div class="definition">
 For events \(E, F\) with \(P(F) > 0\), the <strong>conditional probability</strong> of \(E\) given \(F\) is
-\[P(E|F) = \frac{P(E \cap F)}{P(F)}.\]
+
+\[
+P(E|F) = \frac{P(E \cap F)}{P(F)}.
+\]
 </div>
 
 This is the rescaled probability restricted to the event \(F\). Conditional probability is itself a probability measure on \((\Omega, \mathcal{F})\) conditioned on \(F\).
@@ -145,7 +148,10 @@ Bayes' theorem is the engine of Bayesian inference: given prior probabilities \(
 For continuous random variables \(X\) and \(Y\) with joint density \(p_{XY}\), the conditional density of \(X\) given \(Y = y\) is \(p_{X|Y}(x|y) = p_{XY}(x,y)/p_Y(y)\), and the conditional expectation is \(E[X|Y=y] = \int x\, p_{X|Y}(x|y)\,dx\).
 
 The **abstract definition** via \(\sigma\)-algebras is more general and foundational. Given a sub-\(\sigma\)-algebra \(\mathcal{G} \subseteq \mathcal{F}\), the conditional expectation \(E[X|\mathcal{G}]\) is the unique \(\mathcal{G}\)-measurable random variable satisfying the **partial averaging property**: for every \(G \in \mathcal{G}\),
-\[\int_G E[X|\mathcal{G}]\,dP = \int_G X\,dP.\]
+
+\[
+\int_G E[X|\mathcal{G}]\,dP = \int_G X\,dP.
+\]
 
 **Properties of conditional expectation:**
 
@@ -193,7 +199,10 @@ The exponential distribution is the unique continuous distribution with the memo
 </div>
 
 **Proof:** For \(X \sim \text{Exp}(\lambda)\), \(P(X > x) = e^{-\lambda x}\), so
-\[P(X > s+t|X>s) = \frac{P(X>s+t)}{P(X>s)} = \frac{e^{-\lambda(s+t)}}{e^{-\lambda s}} = e^{-\lambda t} = P(X>t).\]
+
+\[
+P(X > s+t|X>s) = \frac{P(X>s+t)}{P(X>s)} = \frac{e^{-\lambda(s+t)}}{e^{-\lambda s}} = e^{-\lambda t} = P(X>t).
+\]
 
 ---
 
@@ -226,7 +235,10 @@ These three theorems govern when the limit and integral (or expectation) can be 
 ## Transformations of Random Variables
 
 Given a differentiable bijection \(y = g(x)\) with inverse \(x = g^{-1}(y)\), the density of \(Y = g(X)\) is
-\[p_Y(y) = p_X(g^{-1}(y))\left|\frac{d g^{-1}}{dy}\right|.\]
+
+\[
+p_Y(y) = p_X(g^{-1}(y))\left|\frac{d g^{-1}}{dy}\right|.
+\]
 
 For a multivariate transformation \(\mathbf{Y} = g(\mathbf{X})\) in \(\mathbb{R}^n\), the Jacobian determinant replaces the scalar derivative. The **Rayleigh distribution** example: if \(X,Y\) are i.i.d. \(N(0,\sigma^2)\), then \(R = \sqrt{X^2+Y^2}\) has the Rayleigh density \(p_R(r) = (r/\sigma^2)e^{-r^2/(2\sigma^2)}\) for \(r \ge 0\).
 
@@ -288,7 +300,10 @@ Given a sequence of random variables \(X_1, X_2, \ldots\) and a target \(X\), fo
 </svg>
 
 The implication (m.s.) \(\Rightarrow\) (p.) follows from **Markov's inequality**: for any \(\varepsilon > 0\),
-\[P(|X_n - X| > \varepsilon) \le \frac{E[(X_n-X)^2]}{\varepsilon^2} \to 0.\]
+
+\[
+P(|X_n - X| > \varepsilon) \le \frac{E[(X_n-X)^2]}{\varepsilon^2} \to 0.
+\]
 
 **Chebyshev's inequality** is a special case: \(P(|X - \mu| \ge k\sigma) \le 1/k^2\).
 
@@ -298,7 +313,10 @@ The implication (m.s.) \(\Rightarrow\) (p.) follows from **Markov's inequality**
 
 <div class="theorem">
 <strong>Central Limit Theorem.</strong> Let \(X_1, X_2, \ldots\) be i.i.d. with mean \(\mu\) and variance \(\sigma^2 < \infty\). Then
-\[\frac{\sum_{i=1}^n X_i - n\mu}{\sigma\sqrt{n}} \xrightarrow{d} N(0,1).\]
+
+\[
+\frac{\sum_{i=1}^n X_i - n\mu}{\sigma\sqrt{n}} \xrightarrow{d} N(0,1).
+\]
 </div>
 
 **Heuristic via characteristic functions.** Let \(S_n = (X_1+\cdots+X_n - n\mu)/(\sigma\sqrt{n})\). The characteristic function of \(X_i - \mu\) is \(\phi(t) = 1 - \sigma^2 t^2/2 + O(t^3)\). By independence, the characteristic function of \(S_n\) is \(\phi(t/(\sigma\sqrt{n}))^n = (1 - t^2/(2n) + O(n^{-3/2}))^n \to e^{-t^2/2}\), which is the characteristic function of \(N(0,1)\).
@@ -335,19 +353,34 @@ For a single observation \(Y\): \(\hat{X} = E[X] + \text{Cov}(X,Y)\text{Var}(Y)^
 </div>
 
 The sequence \(\tilde{Y}_k\) consists of the **innovations** — the new information brought by each observation beyond what was already predictable from prior ones. Since orthogonal variables have a trivial joint projection (sum of individual projections), working with the innovations simplifies the MMSE formula to
-\[\hat{E}[X|Y_1,\ldots,Y_n] = E[X] + \sum_{k=1}^n \frac{\text{Cov}(X,\tilde{Y}_k)}{\text{Var}(\tilde{Y}_k)}\tilde{Y}_k.\]
+
+\[
+\hat{E}[X|Y_1,\ldots,Y_n] = E[X] + \sum_{k=1}^n \frac{\text{Cov}(X,\tilde{Y}_k)}{\text{Var}(\tilde{Y}_k)}\tilde{Y}_k.
+\]
 
 ## Vector MMSE and Schur Complements
 
 For random vectors \(X \in \mathbb{R}^n\) and \(Y \in \mathbb{R}^m\), the vector MMSE estimator is
-\[\hat{X} = E[X] + R_{XY}R_Y^{-1}(Y - E[Y]),\]
+
+\[
+\hat{X} = E[X] + R_{XY}R_Y^{-1}(Y - E[Y]),
+\]
 where \(R_{XY} = \text{Cov}(X,Y)\) and \(R_Y = \text{Cov}(Y,Y)\). The estimation error covariance is
-\[P = R_X - R_{XY}R_Y^{-1}R_{YX}.\]
+
+\[
+P = R_X - R_{XY}R_Y^{-1}R_{YX}.
+\]
 
 The derivation uses **block Gaussian elimination**. Write the joint covariance matrix as a block matrix
-\[\begin{pmatrix} R_X & R_{XY} \\ R_{YX} & R_Y \end{pmatrix}.\]
+
+\[
+\begin{pmatrix} R_X & R_{XY} \\ R_{YX} & R_Y \end{pmatrix}.
+\]
 The **Schur complement** of the \(R_Y\) block is \(\Delta_A = R_X - R_{XY}R_Y^{-1}R_{YX}\), which equals the minimum achievable error covariance. The block factorization
-\[\begin{pmatrix} I & 0 \\ -R_{YX}R_X^{-1} & I \end{pmatrix}\begin{pmatrix} R_X & R_{XY} \\ R_{YX} & R_Y \end{pmatrix}\begin{pmatrix} I & -R_X^{-1}R_{XY} \\ 0 & I \end{pmatrix} = \begin{pmatrix} R_X & 0 \\ 0 & \Delta_D \end{pmatrix}\]
+
+\[
+\begin{pmatrix} I & 0 \\ -R_{YX}R_X^{-1} & I \end{pmatrix}\begin{pmatrix} R_X & R_{XY} \\ R_{YX} & R_Y \end{pmatrix}\begin{pmatrix} I & -R_X^{-1}R_{XY} \\ 0 & I \end{pmatrix} = \begin{pmatrix} R_X & 0 \\ 0 & \Delta_D \end{pmatrix}
+\]
 leads directly to the optimal gain matrix via completing the square in the mean-square error.
 
 ## Recursive MMSE Estimation
@@ -355,12 +388,21 @@ leads directly to the optimal gain matrix via completing the square in the mean-
 Instead of inverting the full covariance matrix of all past observations when a new observation arrives, one can update the estimate recursively using the innovations. This is the key idea behind the Kalman filter.
 
 Suppose we have the estimate \(\hat{X}_{k-1}\) based on \(Y_1, \ldots, Y_{k-1}\). When the new observation \(Y_k\) arrives, the innovation is
-\[\tilde{Y}_k = Y_k - \hat{E}[Y_k | Y_1, \ldots, Y_{k-1}].\]
+
+\[
+\tilde{Y}_k = Y_k - \hat{E}[Y_k | Y_1, \ldots, Y_{k-1}].
+\]
 The update takes the form
-\[\hat{X}_k = \hat{X}_{k-1} + B_k \tilde{Y}_k,\quad B_k = \frac{(X, \tilde{Y}_k)_{L^2}}{(\tilde{Y}_k, \tilde{Y}_k)_{L^2}}.\]
+
+\[
+\hat{X}_k = \hat{X}_{k-1} + B_k \tilde{Y}_k,\quad B_k = \frac{(X, \tilde{Y}_k)_{L^2}}{(\tilde{Y}_k, \tilde{Y}_k)_{L^2}}.
+\]
 
 For the scalar example with \(X\) unknown constant observed with additive noise \(Y_k = X + V_k\) where \(V_k\) are i.i.d. with variance \(a^2\), the recursive scalar update is:
-\[\hat{X}_k = \hat{X}_{k-1} + \frac{P_{k-1}}{P_{k-1}+a^2}(Y_k - \hat{X}_{k-1}),\quad P_k = \frac{a^2 P_{k-1}}{a^2 + P_{k-1}}.\]
+
+\[
+\hat{X}_k = \hat{X}_{k-1} + \frac{P_{k-1}}{P_{k-1}+a^2}(Y_k - \hat{X}_{k-1}),\quad P_k = \frac{a^2 P_{k-1}}{a^2 + P_{k-1}}.
+\]
 The error variance \(P_k\) decreases monotonically to zero as more observations are accumulated, reflecting the fact that more data about a constant signal eventually pins it down completely.
 
 ---
@@ -405,10 +447,16 @@ If the equality is replaced by \(\ge\), the process is a **submartingale**; if b
 
 <div class="theorem">
 <strong>Doob's Maximal Inequality.</strong> For a nonnegative submartingale \((S_n)\),
-\[P\!\left(\max_{k \le n} S_k \ge \lambda\right) \le \frac{E[S_n]}{\lambda}.\]
+
+\[
+P\!\left(\max_{k \le n} S_k \ge \lambda\right) \le \frac{E[S_n]}{\lambda}.
+\]
 
 <strong>Kolmogorov's Maximal Inequality.</strong> For a martingale \((S_n)\) with \(E[S_n^2] < \infty\),
-\[P\!\left(\max_{k \le n} |S_k| \ge \lambda\right) \le \frac{E[S_n^2]}{\lambda^2}.\]
+
+\[
+P\!\left(\max_{k \le n} |S_k| \ge \lambda\right) \le \frac{E[S_n^2]}{\lambda^2}.
+\]
 </div>
 
 **Proof of Doob's inequality.** Define the stopping time \(\tau = \min\{k \le n : S_k \ge \lambda\}\) (with \(\tau = \infty\) if no such \(k\) exists). On the event \(A = \{\max_{k\le n} S_k \ge \lambda\}\), we have \(\tau \le n\) and by the submartingale property \(\lambda P(A) \le E[S_n \mathbf{1}_A] \le E[S_n]\).
@@ -433,11 +481,17 @@ The optional stopping theorem is used to solve the Gambler's ruin: applying it t
 
 <div class="definition">
 A stochastic process \(\{X_t\}\) is a <strong>Markov process</strong> if for all \(s < t\) and measurable sets \(A\),
-\[P(X_t \in A | X_u,\, u \le s) = P(X_t \in A | X_s).\]
+
+\[
+P(X_t \in A | X_u,\, u \le s) = P(X_t \in A | X_s).
+\]
 </div>
 
 The future is conditionally independent of the past given the present. The **transition density** \(p(t,x,s,y)\) gives the density of \(X_t = y\) given \(X_s = x\). The **Chapman–Kolmogorov equation** expresses the consistency of transition densities over multiple time intervals:
-\[p(t,x,u,z) = \int p(t,x,s,y)\,p(s,y,u,z)\,dy,\quad s \in (t,u).\]
+
+\[
+p(t,x,u,z) = \int p(t,x,s,y)\,p(s,y,u,z)\,dy,\quad s \in (t,u).
+\]
 
 A **diffusion process** is a Markov process characterized by its **drift** \(b(\xi, t) = \lim_{\Delta t\to 0} E[X_{t+\Delta t} - X_t | X_t = \xi]/\Delta t\) and **diffusion coefficient** \(a(\xi,t) = \lim_{\Delta t\to 0} E[(X_{t+\Delta t}-X_t)^2|X_t=\xi]/\Delta t\). The Brownian motion is the fundamental diffusion, with \(b \equiv 0\) and \(a \equiv \sigma^2\).
 
@@ -466,26 +520,38 @@ Additional properties established in the lectures include: (6) positive definite
 
 <div class="definition">
 A <strong>Markov chain</strong> with state space \(S = \{1, \ldots, N\}\) is a sequence of random variables \((X_0, X_1, \ldots)\) satisfying the Markov property:
-\[P(X_{n+1} = j | X_n = i, X_{n-1} = i_{n-1}, \ldots, X_0 = i_0) = p_{ij},\]
+
+\[
+P(X_{n+1} = j | X_n = i, X_{n-1} = i_{n-1}, \ldots, X_0 = i_0) = p_{ij},
+\]
 where the transition probabilities \(p_{ij}\) do not depend on \(n\) (time-homogeneous).
 </div>
 
 The **transition matrix** \(P = (p_{ij})\) is **stochastic**: \(p_{ij} \ge 0\) for all \(i,j\) and \(\sum_j p_{ij} = 1\) for all \(i\). The initial distribution \(\pi_0\) is a row vector with \(\pi_0(i) = P(X_0 = i)\).
 
 The **Markov theorem** states that the finite-dimensional distributions of the chain are completely determined by \(\pi_0\) and \(P\):
-\[P(X_0=i_0, X_1=i_1, \ldots, X_n=i_n) = \pi_0(i_0)\,p_{i_0 i_1}\,p_{i_1 i_2}\cdots p_{i_{n-1}i_n}.\]
+
+\[
+P(X_0=i_0, X_1=i_1, \ldots, X_n=i_n) = \pi_0(i_0)\,p_{i_0 i_1}\,p_{i_1 i_2}\cdots p_{i_{n-1}i_n}.
+\]
 
 ## Chapman–Kolmogorov and n-Step Transitions
 
 The \(n\)-step transition probabilities are \(p^{(n)}_{ij} = P(X_{n}=j|X_0=i)\), and the matrix of these probabilities is \(P^n\) (the \(n\)-th matrix power). The **Chapman–Kolmogorov equation** states:
-\[P^{(n+m)} = P^{(n)}\cdot P^{(m)},\quad \text{i.e.,}\quad p^{(n+m)}_{ij} = \sum_k p^{(n)}_{ik}\, p^{(m)}_{kj}.\]
+
+\[
+P^{(n+m)} = P^{(n)}\cdot P^{(m)},\quad \text{i.e.,}\quad p^{(n+m)}_{ij} = \sum_k p^{(n)}_{ik}\, p^{(m)}_{kj}.
+\]
 
 The distribution at time \(n\) is \(\pi_n = \pi_0 P^n\).
 
 ## Two-State Chain: Explicit Solution
 
 Consider a two-state chain with states \(\{0,1\}\) and transition matrix \(P = \begin{pmatrix}1-\alpha & \alpha \\ \beta & 1-\beta\end{pmatrix}\). The eigenvalues are 1 and \(1-\alpha-\beta\). Diagonalizing yields the explicit formula:
-\[P(X_n = 0) = \frac{\beta}{\alpha+\beta} + \left(1-\alpha-\beta\right)^n\!\left(\pi_0(0) - \frac{\beta}{\alpha+\beta}\right).\]
+
+\[
+P(X_n = 0) = \frac{\beta}{\alpha+\beta} + \left(1-\alpha-\beta\right)^n\!\left(\pi_0(0) - \frac{\beta}{\alpha+\beta}\right).
+\]
 
 As \(n \to \infty\), provided \(|1-\alpha-\beta| < 1\), the chain converges to the **stationary distribution** \(\pi = (\beta/(\alpha+\beta),\, \alpha/(\alpha+\beta))\).
 
@@ -516,7 +582,10 @@ The **Strong Markov Property** states that at any stopping time \(\tau\), the pr
 ## Time Reversibility
 
 A chain with stationary distribution \(\pi\) is **time reversible** if the **detailed balance equations** hold:
-\[\pi_i p_{ij} = \pi_j p_{ji}\quad \text{for all } i,j.\]
+
+\[
+\pi_i p_{ij} = \pi_j p_{ji}\quad \text{for all } i,j.
+\]
 The time-reversed chain has transition probabilities \(q_{ij} = \pi_j p_{ji}/\pi_i\). If the chain is reversible, \(q_{ij} = p_{ij}\) — the chain looks the same in both directions of time.
 
 ---
@@ -526,20 +595,35 @@ The time-reversed chain has transition probabilities \(q_{ij} = \pi_j p_{ji}/\pi
 ## Damped Harmonic Oscillator with Random Forcing
 
 The equation of motion for a randomly forced mechanical oscillator is
-\[\ddot{X} + 2\beta\omega\dot{X} + \omega^2 X = f(t),\quad X(t_0)=x_0,\quad \dot{X}(t_0)=v_0,\]
+
+\[
+\ddot{X} + 2\beta\omega\dot{X} + \omega^2 X = f(t),\quad X(t_0)=x_0,\quad \dot{X}(t_0)=v_0,
+\]
 where \(f(t)\) is a stationary Gaussian forcing process with mean \(\mu_f\) and covariance \(C_{ff}(t-s)\), and \(\beta < 1\) (underdamped). The parameters are: \(\beta = b/(2m\omega)\) (damping ratio) and \(\omega^2 = k/m\) (natural frequency).
 
 By variation of parameters, the general solution is
-\[X(t) = g(t-t_0)x_0 + h(t-t_0)v_0 + \int_{t_0}^t h(t-\tau)f(\tau)\,d\tau,\]
+
+\[
+X(t) = g(t-t_0)x_0 + h(t-t_0)v_0 + \int_{t_0}^t h(t-\tau)f(\tau)\,d\tau,
+\]
 where the homogeneous response functions are
-\[g(t) = e^{-\beta\omega t}\!\left(\cos\omega_d t + \frac{\beta\omega}{\omega_d}\sin\omega_d t\right),\quad h(t) = \frac{e^{-\beta\omega t}}{\omega_d}\sin\omega_d t,\]
+
+\[
+g(t) = e^{-\beta\omega t}\!\left(\cos\omega_d t + \frac{\beta\omega}{\omega_d}\sin\omega_d t\right),\quad h(t) = \frac{e^{-\beta\omega t}}{\omega_d}\sin\omega_d t,
+\]
 with \(\omega_d = \omega\sqrt{1-\beta^2}\) the damped natural frequency.
 
 Since the system is linear, the response \(X(t)\) is Gaussian when the forcing and initial conditions are Gaussian. The **mean response** is
-\[\mu_X(t) = g(t-t_0)E[x_0] + h(t-t_0)E[v_0] + \frac{\mu_f}{\omega^2}(1-g(t-t_0)).\]
+
+\[
+\mu_X(t) = g(t-t_0)E[x_0] + h(t-t_0)E[v_0] + \frac{\mu_f}{\omega^2}(1-g(t-t_0)).
+\]
 
 For white noise forcing \(C_{ff}(\tau) = 2\pi\Phi_0\delta(\tau)\) and zero mean, the covariance simplifies. In the **stationary regime** (taking \(t_0 \to -\infty\), the autocovariance of the response is
-\[C_{XX}(\tau) = \frac{\pi\Phi_0}{2\omega^3\beta}\,e^{-\beta\omega|\tau|}\!\left(\cos\omega_d|\tau| + \frac{\beta\omega}{\omega_d}\sin\omega_d|\tau|\right),\]
+
+\[
+C_{XX}(\tau) = \frac{\pi\Phi_0}{2\omega^3\beta}\,e^{-\beta\omega|\tau|}\!\left(\cos\omega_d|\tau| + \frac{\beta\omega}{\omega_d}\sin\omega_d|\tau|\right),
+\]
 and the stationary variance is \(C_{XX}(0) = \pi\Phi_0/(2\omega^3\beta)\). This shows that lighter damping (\(\beta \to 0\) leads to larger variance in the response, as the random energy accumulates without sufficient dissipation.
 
 ---
@@ -549,15 +633,27 @@ and the stationary variance is \(C_{XX}(0) = \pi\Phi_0/(2\omega^3\beta)\). This 
 ## State-Space Formulation
 
 The **filtering problem** is set up in state-space form. The unknown signal \(X_k \in \mathbb{R}^n\) evolves according to the **state equation**
-\[X_{k+1} = A_k X_k + W_k,\]
+
+\[
+X_{k+1} = A_k X_k + W_k,
+\]
 and is observed through the **observation equation**
-\[Y_k = H_k X_k + V_k.\]
+
+\[
+Y_k = H_k X_k + V_k.
+\]
 Here \(W_k\) is process noise with \(E[W_k] = 0\), \(\text{Cov}(W_k) = Q_k\), and \(V_k\) is measurement noise with \(E[V_k] = 0\), \(\text{Cov}(V_k) = R_k\). The initial state has \(E[X_0] = \bar{X}_0\) and \(\text{Cov}(X_0) = P_0\). All noise sources and the initial condition are pairwise uncorrelated.
 
 Taking expectations of the state equation yields the mean propagation
-\[\bar{X}_{k+1} = A_k\bar{X}_k.\]
+
+\[
+\bar{X}_{k+1} = A_k\bar{X}_k.
+\]
 For the covariance, using the uncorrelatedness of \(X_k\) and \(W_k\):
-\[P_{k+1} = A_k P_k A_k^T + Q_k\quad\text{(Lyapunov Difference Equation).}\]
+
+\[
+P_{k+1} = A_k P_k A_k^T + Q_k\quad\text{(Lyapunov Difference Equation).}
+\]
 Similarly, \(\bar{Y}_k = H_k\bar{X}_k\) and \(E[(Y_k - \bar{Y}_k)(Y_k-\bar{Y}_k)^T] = H_k P_k H_k^T + R_k\).
 
 In the Gaussian case with \(W_k \sim N(0,Q_k)\) and \(V_k \sim N(0,R_k)\), the state distribution remains Gaussian for all time: \(X_k \sim N(\bar{X}_k, P_k)\).
@@ -577,31 +673,52 @@ The Kalman filter operates in two alternating steps at each time \(k\):
 ## Innovations and Information Update
 
 The key insight is to decompose the information in \(Y_k\) into what is already predictable from \(Y_0, \ldots, Y_{k-1}\) and the genuinely new information. The **innovation** is
-\[\tilde{Y}_k = Y_k - \hat{E}[Y_k | Y_0,\ldots,Y_{k-1}] = Y_k - H_k\hat{X}_{k|k-1}.\]
+
+\[
+\tilde{Y}_k = Y_k - \hat{E}[Y_k | Y_0,\ldots,Y_{k-1}] = Y_k - H_k\hat{X}_{k|k-1}.
+\]
 
 Using the state equation \(\tilde{Y}_k = H_k \tilde{X}_{k|k-1} + V_k\) where \(\tilde{X}_{k|k-1} = X_k - \hat{X}_{k|k-1}\) is the prior error.
 
 Applying the orthogonality principle from Chapter 3 to update \(\hat{X}_{k|k}\) using the innovation:
-\[\hat{X}_{k|k} = \hat{X}_{k|k-1} + \Sigma_{k|k-1} H_k^T M_k^{-1} \tilde{Y}_k,\]
+
+\[
+\hat{X}_{k|k} = \hat{X}_{k|k-1} + \Sigma_{k|k-1} H_k^T M_k^{-1} \tilde{Y}_k,
+\]
 where \(M_k = H_k\Sigma_{k|k-1}H_k^T + R_k = \text{Cov}(\tilde{Y}_k)\) is the innovation covariance and \(\Sigma_{k|k-1} = \text{Cov}(X_k - \hat{X}_{k|k-1})\) is the prior error covariance.
 
 The **posterior error covariance** after the information update is
-\[\Sigma_{k|k} = \Sigma_{k|k-1} - \Sigma_{k|k-1}H_k^T M_k^{-1}H_k\Sigma_{k|k-1}^T.\]
+
+\[
+\Sigma_{k|k} = \Sigma_{k|k-1} - \Sigma_{k|k-1}H_k^T M_k^{-1}H_k\Sigma_{k|k-1}^T.
+\]
 
 An equivalent form using the matrix inversion lemma is \(\Sigma_{k|k}^{-1} = \Sigma_{k|k-1}^{-1} + H_k^T R_k^{-1} H_k\).
 
 ## Time Update
 
 After the information update, the time update propagates both the posterior estimate and error covariance through the dynamics. Since \(W_k\) is uncorrelated with all observations \(Y_0, \ldots, Y_k\),
-\[\hat{X}_{k+1|k} = A_k \hat{X}_{k|k},\quad \Sigma_{k+1|k} = A_k \Sigma_{k|k} A_k^T + Q_k.\]
+
+\[
+\hat{X}_{k+1|k} = A_k \hat{X}_{k|k},\quad \Sigma_{k+1|k} = A_k \Sigma_{k|k} A_k^T + Q_k.
+\]
 
 ## The Kalman Filter Equations (Combined)
 
 Combining the two steps, defining the **Kalman gain** matrix
-\[K_k = A_k \Sigma_{k|k-1} H_k^T \left(H_k\Sigma_{k|k-1}H_k^T + R_k\right)^{-1},\]
+
+\[
+K_k = A_k \Sigma_{k|k-1} H_k^T \left(H_k\Sigma_{k|k-1}H_k^T + R_k\right)^{-1},
+\]
 the full recursion for the **prior estimate** and **prior error covariance** is:
-\[\hat{X}_{k+1|k} = A_k\hat{X}_{k|k-1} + K_k\left(Y_k - H_k\hat{X}_{k|k-1}\right),\]
-\[\Sigma_{k+1|k} = A_k\Sigma_{k|k-1} A_k^T - A_k\Sigma_{k|k-1}H_k^T\left(H_k\Sigma_{k|k-1}H_k^T+R_k\right)^{-1}H_k\Sigma_{k|k-1}A_k^T + Q_k,\]
+
+\[
+\hat{X}_{k+1|k} = A_k\hat{X}_{k|k-1} + K_k\left(Y_k - H_k\hat{X}_{k|k-1}\right),
+\]
+
+\[
+\Sigma_{k+1|k} = A_k\Sigma_{k|k-1} A_k^T - A_k\Sigma_{k|k-1}H_k^T\left(H_k\Sigma_{k|k-1}H_k^T+R_k\right)^{-1}H_k\Sigma_{k|k-1}A_k^T + Q_k,
+\]
 initialized with \(\hat{X}_{0|-1} = \bar{X}_0\) and \(\Sigma_{0|-1} = P_0\).
 
 The structure of the Kalman filter update \(\hat{X}_{k+1|k} = A_k\hat{X}_{k|k-1} + K_k\tilde{Y}_k\) is a linear dynamical system driven by the innovation sequence. The Kalman gain weights the innovation by the prior uncertainty relative to the observation noise.
@@ -629,8 +746,14 @@ The two steps of the filter correspond to:
 ## Gaussian Case: Exact Bayes Update
 
 For the linear-Gaussian model, if the prior at time \(k\) is Gaussian \(\pi_k^p \sim N(X_k^p, P_k^p)\), then after the Bayes update with observation \(Y_k\), the posterior is also Gaussian \(\pi_k^u \sim N(X_k^u, P_k^u)\) with:
-\[X_k^u = X_k^p + P_k^u H_k^T R_k^{-1}(Y_k - H_k X_k^p),\]
-\[(P_k^u)^{-1} = (P_k^p)^{-1} + H_k^T R_k^{-1} H_k.\]
+
+\[
+X_k^u = X_k^p + P_k^u H_k^T R_k^{-1}(Y_k - H_k X_k^p),
+\]
+
+\[
+(P_k^u)^{-1} = (P_k^p)^{-1} + H_k^T R_k^{-1} H_k.
+\]
 
 The explicit density computation — completing the square in the product of prior and likelihood Gaussians — shows that the posterior is itself Gaussian, confirming that the Gaussian family is closed under Bayesian updating for linear-Gaussian models.
 
@@ -643,14 +766,29 @@ This theorem justifies the Kalman filter as the globally optimal (not just optim
 ## Continuous-Time Kalman–Bucy Filter
 
 Passing to the continuous-time limit as the time step \(\Delta t \to 0\) in the scalar model, one obtains the **Kalman–Bucy filter**. For the model
-\[dX(t) = aX(t)\,dt + b\,dW(t),\quad dY(t) = hX(t)\,dt + g\,dV(t),\]
+
+\[
+dX(t) = aX(t)\,dt + b\,dW(t),\quad dY(t) = hX(t)\,dt + g\,dV(t),
+\]
 the filter equations for the conditional mean \(m(t) = E[X(t)|Y_s,\,s \le t]\) and conditional variance \(\gamma(t)\) are:
-\[dm(t) = am(t)\,dt + \frac{h\gamma(t)}{g^2}\left(dY(t) - hm(t)\,dt\right),\]
-\[\dot{\gamma}(t) = 2a\gamma(t) + b^2 - \frac{h^2\gamma^2(t)}{g^2}.\]
+
+\[
+dm(t) = am(t)\,dt + \frac{h\gamma(t)}{g^2}\left(dY(t) - hm(t)\,dt\right),
+\]
+
+\[
+\dot{\gamma}(t) = 2a\gamma(t) + b^2 - \frac{h^2\gamma^2(t)}{g^2}.
+\]
 
 The second equation is a **Riccati equation** for the error variance. In the vector case, for the model \(dX = AX\,dt + B\,dW\), \(dY = HX\,dt + G\,dV\), the Kalman–Bucy filter is:
-\[d\pi_t = A\pi_t\,dt + \Sigma_t H^*(GG^*)^{-1}(dY_t - H\pi_t\,dt),\]
-\[\dot{\Sigma}_t = A\Sigma_t + \Sigma_t A^* + BB^* - \Sigma_t H^*(GG^*)^{-1}H\Sigma_t,\]
+
+\[
+d\pi_t = A\pi_t\,dt + \Sigma_t H^*(GG^*)^{-1}(dY_t - H\pi_t\,dt),
+\]
+
+\[
+\dot{\Sigma}_t = A\Sigma_t + \Sigma_t A^* + BB^* - \Sigma_t H^*(GG^*)^{-1}H\Sigma_t,
+\]
 where \(\Sigma_t = E[(X_t - \pi_t)(X_t-\pi_t)^*]\) is the error covariance. The quantity \(d\nu_t = dY_t - H\pi_t\,dt\) is the **innovation process** in continuous time.
 
 ---
@@ -684,24 +822,39 @@ The following topics form the core of the course:
 ## Linear First-Order ODEs
 
 The general first-order linear ODE in standard form is
-\[\frac{dy}{dx} + P(x)y = Q(x).\]
+
+\[
+\frac{dy}{dx} + P(x)y = Q(x).
+\]
 
 **Solution by integrating factor.** The integrating factor is \(\mu(x) = e^{\int P(x)\,dx}\). Multiplying through converts the left side to an exact differential:
-\[\frac{d}{dx}[\mu(x)y(x)] = \mu(x)Q(x).\]
+
+\[
+\frac{d}{dx}[\mu(x)y(x)] = \mu(x)Q(x).
+\]
 Integrating and solving for \(y\):
-\[y(x) = e^{-\int P(x)\,dx}\left(c + \int Q(x)\,e^{\int P(x)\,dx}\,dx\right).\]
+
+\[
+y(x) = e^{-\int P(x)\,dx}\left(c + \int Q(x)\,e^{\int P(x)\,dx}\,dx\right).
+\]
 
 **Solution by variation of parameters.** The homogeneous solution is \(y_h = c\varphi(x)\) where \(\varphi(x) = e^{-\int P(x)\,dx}\). The particular solution is sought in the form \(y_p = v(x)\varphi(x)\), leading to \(v'(x) = Q(x)/\varphi(x)\), which recovers the same formula.
 
 ## Bernoulli Equations
 
 The **Bernoulli equation** \(\frac{dy}{dx} + P(x)y = Q(x)y^\alpha\) for \(\alpha \ne 0,1\) is nonlinear but reducible to linear form via the substitution \(v = y^{1-\alpha}\):
-\[\frac{dv}{dx} + (1-\alpha)P(x)v = (1-\alpha)Q(x).\]
+
+\[
+\frac{dv}{dx} + (1-\alpha)P(x)v = (1-\alpha)Q(x).
+\]
 
 ## Riccati Equations
 
 The **Riccati equation** \(\frac{dy}{dx} = P(x) + Q(x)y + R(x)y^2\) is not generally solvable in closed form. However, if a particular solution \(y_1(x)\) is known, the substitution \(y = y_1 + v\) reduces the equation to a Bernoulli equation for \(v\):
-\[\frac{dv}{dx} - [Q(x) + 2R(x)y_1(x)]v = R(x)v^2.\]
+
+\[
+\frac{dv}{dx} - [Q(x) + 2R(x)y_1(x)]v = R(x)v^2.
+\]
 This Bernoulli equation with \(\alpha = 2\) is then solved via \(w = v^{-1}\), yielding a linear ODE for \(w\).
 
 The Riccati structure appears throughout the course: the discrete-time Kalman filter's error covariance satisfies a matrix Riccati recursion, and the continuous-time error covariance satisfies the matrix Riccati ODE \(\dot{\Sigma} = A\Sigma + \Sigma A^* + BB^* - \Sigma H^*(GG^*)^{-1}H\Sigma\).
@@ -747,7 +900,10 @@ The **state distribution** at time \(n\) is \(\pi(n) = \pi(0)P^n\). For the two-
 **Example 1 (i.i.d. observations of a constant):** \(X_k = X_{k-1}\), \(Y_k = X_k + V_k\) with \(V_k \sim N(0,\sigma^2)\). The posterior variance satisfies \(\Sigma_{k|k} = \Sigma_{k-1|k-1}\sigma^2/(\Sigma_{k-1|k-1}+\sigma^2)\), which decreases monotonically. Equivalently, \(\sigma^2/\Sigma_{k|k} = 1 + \sigma^2/\Sigma_{k-1|k-1}\), showing \(\Sigma_{k|k} \to 0\) as \(k \to \infty\).
 
 **Example 2 (AR(1) signal):** \(X_n = aX_{n-1} + W_n\), \(Y_n = X_n + V_n\). The posterior is \(N(m_n, s_n^2)\) with
-\[m_n = \frac{\tau^2 a m_{n-1} + (a^2 s_{n-1}^2 + \sigma^2)Y_n}{\tau^2 + a^2 s_{n-1}^2 + \sigma^2},\quad s_n^2 = \frac{\tau^2(a^2 s_{n-1}^2 + \sigma^2)}{\tau^2 + a^2 s_{n-1}^2 + \sigma^2}.\]
+
+\[
+m_n = \frac{\tau^2 a m_{n-1} + (a^2 s_{n-1}^2 + \sigma^2)Y_n}{\tau^2 + a^2 s_{n-1}^2 + \sigma^2},\quad s_n^2 = \frac{\tau^2(a^2 s_{n-1}^2 + \sigma^2)}{\tau^2 + a^2 s_{n-1}^2 + \sigma^2}.
+\]
 Simulation with \(a = 0.98\) and unit noise variances shows the filter track closely following the true signal, with the error variance quickly reaching steady state.
 
 ---
@@ -767,7 +923,10 @@ It is an important fact that \(\mathcal{B}(\mathbb{R})\) can also be generated b
 ## The Inclusion-Exclusion Principle
 
 For three events \(A, B, C\), the inclusion-exclusion principle generalizes to
-\[P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C).\]
+
+\[
+P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C).
+\]
 For \(n\) events it reads \(P\!\left(\bigcup_{i=1}^n A_i\right) = \sum_k (-1)^{k+1}\sum_{|S|=k} P\!\left(\bigcap_{i \in S} A_i\right)\). A useful consequence is the union bound (Boole's inequality): \(P(\bigcup_i A_i) \le \sum_i P(A_i)\).
 
 ## Detailed Study of the Borel–Cantelli Lemmas
@@ -775,7 +934,10 @@ For \(n\) events it reads \(P\!\left(\bigcup_{i=1}^n A_i\right) = \sum_k (-1)^{k
 The first Borel–Cantelli lemma, \(\sum_n P(A_n) < \infty \Rightarrow P(\limsup_n A_n) = 0\), is used throughout the course in convergence proofs. The second Borel–Cantelli lemma, \(\sum_n P(A_n) = \infty\) and \(A_n\) independent \(\Rightarrow P(\limsup_n A_n) = 1\), establishes the converse under independence. Note the independence requirement: the lemma fails without it (consider \(A_n = A\) for a single event with \(P(A) = 1/2\); then \(\sum P(A_n) = \infty\) but \(P(A_n \text{ i.o.}) = 1/2 < 1\).
 
 **Proof of Borel–Cantelli II.** It suffices to show \(P\!\left(\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k\right) = 1\), or equivalently \(P\!\left(\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k^c\right) = 0\). For any fixed \(n\), by independence:
-\[P\!\left(\bigcap_{k=n}^{n+m} A_k^c\right) = \prod_{k=n}^{n+m}(1 - P(A_k)) \le \prod_{k=n}^{n+m} e^{-P(A_k)} = \exp\!\left(-\sum_{k=n}^{n+m}P(A_k)\right) \to 0\]
+
+\[
+P\!\left(\bigcap_{k=n}^{n+m} A_k^c\right) = \prod_{k=n}^{n+m}(1 - P(A_k)) \le \prod_{k=n}^{n+m} e^{-P(A_k)} = \exp\!\left(-\sum_{k=n}^{n+m}P(A_k)\right) \to 0
+\]
 as \(m \to \infty\) since \(\sum_k P(A_k) = \infty\). Taking \(m \to \infty\) and applying continuity from above gives \(P(\bigcap_{k=n}^\infty A_k^c) = 0\) for every \(n\), hence the event \(\bigcup_n \bigcap_{k \ge n} A_k^c\) has probability zero.
 
 ## Random Variables: Deeper Properties
@@ -789,13 +951,22 @@ as \(m \to \infty\) since \(\sum_k P(A_k) = \infty\). Taking \(m \to \infty\) an
 The **moment generating function (MGF)** of \(X\) is \(M_X(t) = E[e^{tX}]\). When it exists in a neighborhood of zero, all moments are finite and \(E[X^n] = M_X^{(n)}(0)\). The MGF uniquely determines the distribution (when it exists).
 
 For the normal distribution \(X \sim N(\mu, \sigma^2)\):
-\[M_X(t) = \exp\!\left(\mu t + \frac{\sigma^2 t^2}{2}\right).\]
+
+\[
+M_X(t) = \exp\!\left(\mu t + \frac{\sigma^2 t^2}{2}\right).
+\]
 
 For the Poisson distribution with rate \(\lambda\): \(M_X(t) = \exp(\lambda(e^t - 1))\).
 
 The **cumulant generating function** is \(K_X(t) = \log M_X(t)\). The first few cumulants are:
-\[\kappa_1 = K_X'(0) = E[X] = \mu,\quad \kappa_2 = K_X''(0) = \text{Var}(X) = \sigma^2,\]
-\[\kappa_3 = K_X'''(0) = E[(X-\mu)^3]\quad\text{(skewness numerator)},\quad \kappa_4 = K_X^{(4)}(0) = \mu_4 - 3\sigma^4\quad\text{(excess kurtosis numerator)}.\]
+
+\[
+\kappa_1 = K_X'(0) = E[X] = \mu,\quad \kappa_2 = K_X''(0) = \text{Var}(X) = \sigma^2,
+\]
+
+\[
+\kappa_3 = K_X'''(0) = E[(X-\mu)^3]\quad\text{(skewness numerator)},\quad \kappa_4 = K_X^{(4)}(0) = \mu_4 - 3\sigma^4\quad\text{(excess kurtosis numerator)}.
+\]
 
 For the normal distribution, all cumulants of order \(\ge 3\) vanish: \(\kappa_n = 0\) for \(n \ge 3\). This makes the normal distribution uniquely simple from the cumulant perspective and explains why the CLT converges to it.
 
@@ -817,13 +988,22 @@ The Poisson process and exponential distribution are intimately connected: if ev
 The abstract definition of conditional expectation is motivated by seeking a random variable \(Z = E[X|\mathcal{G}]\) that encodes the best prediction of \(X\) given the information in \(\mathcal{G}\). By the Radon–Nikodym theorem, this exists and is unique: for any \(X \in L^1(\Omega,\mathcal{F},P)\) and sub-\(\sigma\)-algebra \(\mathcal{G}\), there exists a unique (a.s.) \(\mathcal{G}\)-measurable \(Z\) with \(E[Z] = E[X]\) and \(\int_G Z\,dP = \int_G X\,dP\) for all \(G \in \mathcal{G}\).
 
 A detailed verification of the tower property: suppose \(\mathcal{H} \subseteq \mathcal{G}\). We must show \(E[E[X|\mathcal{G}]|\mathcal{H}] = E[X|\mathcal{H}]\), i.e., for every \(H \in \mathcal{H}\),
-\[\int_H E[E[X|\mathcal{G}]|\mathcal{H}]\,dP = \int_H X\,dP.\]
+
+\[
+\int_H E[E[X|\mathcal{G}]|\mathcal{H}]\,dP = \int_H X\,dP.
+\]
 But since \(H \in \mathcal{H} \subseteq \mathcal{G}\), the partial averaging property of the outer conditional expectation gives
-\[\int_H E[E[X|\mathcal{G}]|\mathcal{H}]\,dP = \int_H E[X|\mathcal{G}]\,dP = \int_H X\,dP,\]
+
+\[
+\int_H E[E[X|\mathcal{G}]|\mathcal{H}]\,dP = \int_H E[X|\mathcal{G}]\,dP = \int_H X\,dP,
+\]
 where the last equality uses the partial averaging property of \(E[X|\mathcal{G}]\) with \(H \in \mathcal{G}\). Since the characterization holds for all \(H \in \mathcal{H}\), the tower property is established.
 
 The property "taking out what is known": if \(Z\) is \(\mathcal{G}\)-measurable and bounded, then \(E[ZX|\mathcal{G}] = Z E[X|\mathcal{G}]\). Proof: for any \(G \in \mathcal{G}\),
-\[\int_G Z E[X|\mathcal{G}]\,dP = \int_G ZX\,dP\]
+
+\[
+\int_G Z E[X|\mathcal{G}]\,dP = \int_G ZX\,dP
+\]
 holds by the integral version of the result for indicator functions, extended to general bounded \(Z\) by linearity and monotone convergence.
 
 ---
@@ -835,14 +1015,20 @@ holds by the integral version of the result for indicator functions, extended to
 A random process \(\{X_t\}\) is **strictly stationary** if its finite-dimensional distributions are invariant under time shifts. It is **wide-sense stationary (WSS)** or **weakly stationary** if \(\mu_X(t) = \mu\) (constant) and \(R_X(t,s) = R_X(t-s)\) (depends only on the lag). WSS processes have a rich spectral theory.
 
 The **power spectral density (PSD)** of a WSS process is the Fourier transform of the autocorrelation:
-\[S_X(\omega) = \int_{-\infty}^\infty R_X(\tau) e^{-i2\pi\omega\tau}\,d\tau.\]
+
+\[
+S_X(\omega) = \int_{-\infty}^\infty R_X(\tau) e^{-i2\pi\omega\tau}\,d\tau.
+\]
 
 The PSD is real, non-negative, and even. The **Wiener–Khinchin theorem** states that for a WSS process, \(S_X(\omega)\) is the PSD in the sense that \(\text{Var}(X_t) = R_X(0) = \int_{-\infty}^\infty S_X(\omega)\,d\omega\).
 
 White noise has a flat PSD: \(S_\xi(\omega) \equiv 1\) (or a constant). This is the origin of the term "white" — analogous to white light containing all frequencies equally. The autocovariance of white noise is \(C_\xi(\tau) = \delta(\tau)\). The response of a linear system with transfer function \(H(\omega)\) to white noise has PSD \(S_Y(\omega) = |H(\omega)|^2 S_\xi(\omega) = |H(\omega)|^2\).
 
 For the damped oscillator driven by white noise, the transfer function is
-\[H(\omega) = \frac{1}{\omega_0^2 - \omega^2 + 2i\beta\omega_0\omega},\]
+
+\[
+H(\omega) = \frac{1}{\omega_0^2 - \omega^2 + 2i\beta\omega_0\omega},
+\]
 and the PSD of the response is \(S_X(\omega) = |H(\omega)|^2\), peaked near \(\omega \approx \omega_d\) — the resonance frequency.
 
 ## Independent Increment Processes
@@ -878,7 +1064,10 @@ The martingale betting strategy provides an intuitive way to construct martingal
 Let \((S_n, \mathcal{F}_n)\) be a nonnegative submartingale. Define \(S_n^* = \max_{k \le n} S_k\). We prove \(\lambda P(S_n^* \ge \lambda) \le E[S_n]\).
 
 Let \(A = \{S_n^* \ge \lambda\}\) and \(\tau = \min\{k \le n: S_k \ge \lambda\}\), with \(\tau = n+1\) on \(A^c\). Define \(A_k = \{\tau = k\} \in \mathcal{F}_k\) for \(k \le n\). On \(A_k\), \(S_k \ge \lambda\). Since \(A = \bigcup_{k=1}^n A_k\) (disjoint union) and \((S_n)\) is a submartingale:
-\[\lambda P(A) = \lambda \sum_{k=1}^n P(A_k) \le \sum_{k=1}^n E[S_k \mathbf{1}_{A_k}] \le \sum_{k=1}^n E[S_n \mathbf{1}_{A_k}] = E[S_n \mathbf{1}_A] \le E[S_n].\]
+
+\[
+\lambda P(A) = \lambda \sum_{k=1}^n P(A_k) \le \sum_{k=1}^n E[S_k \mathbf{1}_{A_k}] \le \sum_{k=1}^n E[S_n \mathbf{1}_{A_k}] = E[S_n \mathbf{1}_A] \le E[S_n].
+\]
 The second inequality uses the submartingale property: \(E[S_k \mathbf{1}_{A_k}] \le E[E[S_n|\mathcal{F}_k]\mathbf{1}_{A_k}] = E[S_n \mathbf{1}_{A_k}]\).
 
 ## Optional Stopping: Conditions and Proof
@@ -894,7 +1083,10 @@ The optional stopping theorem (OST) states \(E[S_\tau] = E[S_0]\) for a martinga
 ## Ehrenfest Chain
 
 The **Ehrenfest model** of heat exchange has \(N\) balls distributed between two urns. At each step, one ball is chosen uniformly at random and moved to the other urn. The state is \(X_n \in \{0, 1, \ldots, N\}\) (number of balls in urn 1). The transition probabilities are:
-\[p_{k,k+1} = \frac{N-k}{N},\quad p_{k,k-1} = \frac{k}{N},\quad p_{k,j} = 0\text{ otherwise.}\]
+
+\[
+p_{k,k+1} = \frac{N-k}{N},\quad p_{k,k-1} = \frac{k}{N},\quad p_{k,j} = 0\text{ otherwise.}
+\]
 
 This chain is irreducible, aperiodic, and has a unique stationary distribution: the Binomial\((N, 1/2)\) distribution. The chain models the equalization of temperature: starting from all balls in one urn (maximum order), the system evolves toward the most probable state with \(N/2\) balls in each urn.
 
@@ -904,7 +1096,10 @@ For a three-state Markov chain with transition matrix \(P\), the \(n\)-step tran
 
 <div class="example">
 <strong>Social Mobility Example.</strong> Consider a three-class social mobility model with transition matrix
-\[P = \begin{pmatrix}0.45 & 0.48 & 0.07 \\ 0.05 & 0.70 & 0.25 \\ 0.01 & 0.50 & 0.49\end{pmatrix}.\]
+
+\[
+P = \begin{pmatrix}0.45 & 0.48 & 0.07 \\ 0.05 & 0.70 & 0.25 \\ 0.01 & 0.50 & 0.49\end{pmatrix}.
+\]
 The eigenvalues are 1, and two others with \(|\lambda| < 1\). The stationary distribution \(\pi\) satisfying \(\pi P = \pi\) gives the long-run class distribution. Starting from any initial distribution, \(\pi(n) = \pi(0)P^n \to \pi\) geometrically fast.
 </div>
 
@@ -920,7 +1115,10 @@ Moreover, \(\mathbf{h}^A\) is the minimal non-negative solution to this system.
 </div>
 
 **Proof.** For \(i \in A\), the chain starts in \(A\) so \(\tau^A = 0\) almost surely. For \(i \notin A\), condition on the first step:
-\[h_i^A = P(\tau^A < \infty | X_0 = i) = \sum_j P(X_1 = j | X_0 = i) P(\tau^A < \infty | X_1 = j) = \sum_j p_{ij} h_j^A,\]
+
+\[
+h_i^A = P(\tau^A < \infty | X_0 = i) = \sum_j P(X_1 = j | X_0 = i) P(\tau^A < \infty | X_1 = j) = \sum_j p_{ij} h_j^A,
+\]
 where we used the Markov property: given \(X_1 = j\), the chain starts fresh from \(j\), so \(P(\tau^A < \infty | X_1 = j) = h_j^A\).
 
 The minimality is important: the system of linear equations may have multiple solutions (for example, if A is transient from some states), and \(\mathbf{h}^A\) is the smallest.
@@ -966,26 +1164,47 @@ The MSE hierarchy is: \(E[(X - E[X|Y])^2] \le E[(X - \hat{E}[X|Y])^2] \le E[(X -
 ## Gram–Schmidt in Detail
 
 The Gram–Schmidt process orthogonalizes a sequence of observations \(Y_1, Y_2, \ldots\) (centered) as follows:
-\[\tilde{Y}_1 = Y_1 - E[Y_1],\]
-\[\tilde{Y}_k = Y_k - E[Y_k] - \sum_{j=1}^{k-1} \frac{\text{Cov}(Y_k, \tilde{Y}_j)}{\text{Var}(\tilde{Y}_j)}\tilde{Y}_j\quad\text{for }k \ge 2.\]
+
+\[
+\tilde{Y}_1 = Y_1 - E[Y_1],
+\]
+
+\[
+\tilde{Y}_k = Y_k - E[Y_k] - \sum_{j=1}^{k-1} \frac{\text{Cov}(Y_k, \tilde{Y}_j)}{\text{Var}(\tilde{Y}_j)}\tilde{Y}_j\quad\text{for }k \ge 2.
+\]
 
 The resulting \(\tilde{Y}_j\) are uncorrelated (in the sense \(E[\tilde{Y}_i \tilde{Y}_j] = 0\) for \(i \ne j\) and span the same linear space as the original \(Y_j\)'s. The joint projection decomposes as:
-\[\hat{E}[X|Y_1,\ldots,Y_n] = E[X] + \sum_{k=1}^n \frac{\text{Cov}(X,\tilde{Y}_k)}{\text{Var}(\tilde{Y}_k)}\tilde{Y}_k.\]
+
+\[
+\hat{E}[X|Y_1,\ldots,Y_n] = E[X] + \sum_{k=1}^n \frac{\text{Cov}(X,\tilde{Y}_k)}{\text{Var}(\tilde{Y}_k)}\tilde{Y}_k.
+\]
 
 The recursion for Gram–Schmidt corresponds exactly to the **innovations process** in filtering: each \(\tilde{Y}_k\) is the "new information" in \(Y_k\) beyond what was already captured in \(Y_1,\ldots,Y_{k-1}\).
 
 ## Block Matrix Inversion and Schur Complements
 
 The **Schur complement formula** provides a powerful tool for inverting block matrices. If
-\[M = \begin{pmatrix}A & B \\ C & D\end{pmatrix}\]
+
+\[
+M = \begin{pmatrix}A & B \\ C & D\end{pmatrix}
+\]
 with \(D\) invertible, then \(M\) is invertible if and only if the Schur complement \(\Delta_A = A - BD^{-1}C\) is invertible, and
-\[M^{-1} = \begin{pmatrix}\Delta_A^{-1} & -\Delta_A^{-1}BD^{-1} \\ -D^{-1}C\Delta_A^{-1} & D^{-1} + D^{-1}C\Delta_A^{-1}BD^{-1}\end{pmatrix}.\]
+
+\[
+M^{-1} = \begin{pmatrix}\Delta_A^{-1} & -\Delta_A^{-1}BD^{-1} \\ -D^{-1}C\Delta_A^{-1} & D^{-1} + D^{-1}C\Delta_A^{-1}BD^{-1}\end{pmatrix}.
+\]
 
 The **matrix inversion lemma** (Woodbury identity) is a consequence:
-\[(A + BCD)^{-1} = A^{-1} - A^{-1}B(C^{-1} + DA^{-1}B)^{-1}DA^{-1}.\]
+
+\[
+(A + BCD)^{-1} = A^{-1} - A^{-1}B(C^{-1} + DA^{-1}B)^{-1}DA^{-1}.
+\]
 
 In the Kalman filter context, the two equivalent forms of the posterior error covariance
-\[\Sigma_{k|k} = \Sigma_{k|k-1} - \Sigma_{k|k-1}H_k^T M_k^{-1}H_k\Sigma_{k|k-1}\quad\text{and}\quad \Sigma_{k|k}^{-1} = \Sigma_{k|k-1}^{-1} + H_k^T R_k^{-1}H_k\]
+
+\[
+\Sigma_{k|k} = \Sigma_{k|k-1} - \Sigma_{k|k-1}H_k^T M_k^{-1}H_k\Sigma_{k|k-1}\quad\text{and}\quad \Sigma_{k|k}^{-1} = \Sigma_{k|k-1}^{-1} + H_k^T R_k^{-1}H_k
+\]
 are related by exactly this matrix inversion lemma. The first form is numerically stable when \(R_k\) is much larger than \(\Sigma_{k|k-1}\) (high noise); the second form (information filter form) is stable when \(\Sigma_{k|k-1}\) is large (high prior uncertainty).
 
 ---
@@ -1003,34 +1222,58 @@ The **covariance of the innovation** is \(M_k = E[\tilde{Y}_k\tilde{Y}_k^T] = H_
 ## Kalman Filter as Sequential Orthogonal Projection
 
 The Kalman filter can be understood as performing Gram–Schmidt orthogonalization of the observation sequence in real time. At each step, the prior estimate \(\hat{X}_{k|k-1}\) is the projection of \(X_k\) onto the linear span of \(\{1,Y_0,\ldots,Y_{k-1}\}\). The innovation \(\tilde{Y}_k\) is the component of \(Y_k\) orthogonal to this span. The posterior \(\hat{X}_{k|k}\) adds to the prior the component of \(X_k\) that can be predicted from \(\tilde{Y}_k\):
-\[\hat{X}_{k|k} = \hat{X}_{k|k-1} + \frac{\text{Cov}(X_k,\tilde{Y}_k)}{\text{Cov}(\tilde{Y}_k)}\tilde{Y}_k = \hat{X}_{k|k-1} + \Sigma_{k|k-1}H_k^T M_k^{-1}\tilde{Y}_k.\]
+
+\[
+\hat{X}_{k|k} = \hat{X}_{k|k-1} + \frac{\text{Cov}(X_k,\tilde{Y}_k)}{\text{Cov}(\tilde{Y}_k)}\tilde{Y}_k = \hat{X}_{k|k-1} + \Sigma_{k|k-1}H_k^T M_k^{-1}\tilde{Y}_k.
+\]
 
 The **Kalman gain** \(G_k = \Sigma_{k|k-1}H_k^T M_k^{-1}\) (as used in the information update) measures how much the estimate should be adjusted per unit of innovation. When prior uncertainty is large (\(\Sigma_{k|k-1}\) large), the gain is large — we trust the observations more. When measurement noise is large (\(R_k\) large, hence \(M_k\) large), the gain is small — we trust the model prediction more.
 
 ## Steady-State Kalman Filter
 
 For a time-invariant system (constant \(A, H, Q, R\), the error covariance sequence \(\Sigma_{k|k-1}\) converges to a steady-state value \(\bar{\Sigma}\) satisfying the **discrete algebraic Riccati equation (DARE)**:
-\[\bar{\Sigma} = A\bar{\Sigma}A^T - A\bar{\Sigma}H^T(H\bar{\Sigma}H^T + R)^{-1}H\bar{\Sigma}A^T + Q.\]
+
+\[
+\bar{\Sigma} = A\bar{\Sigma}A^T - A\bar{\Sigma}H^T(H\bar{\Sigma}H^T + R)^{-1}H\bar{\Sigma}A^T + Q.
+\]
 
 The steady-state Kalman gain is \(\bar{K} = A\bar{\Sigma}H^T(H\bar{\Sigma}H^T+R)^{-1}\), and the filter becomes a time-invariant linear system:
-\[\hat{X}_{k+1|k} = A\hat{X}_{k|k-1} + \bar{K}(Y_k - H\hat{X}_{k|k-1}).\]
+
+\[
+\hat{X}_{k+1|k} = A\hat{X}_{k|k-1} + \bar{K}(Y_k - H\hat{X}_{k|k-1}).
+\]
 
 The stability of this steady-state filter (i.e., the convergence of estimation errors) is related to the stability of the matrix \(A - \bar{K}H\). Under standard observability and controllability conditions, the steady-state Kalman filter is stable.
 
 ## Scalar Kalman Filter: Complete Example
 
 Consider the tracking problem: \(X_{k+1} = X_k + W_k\) (random walk), \(Y_k = X_k + V_k\), with \(Q = \sigma_w^2\), \(R = \sigma_v^2\), and initial variance \(\Sigma_{0|-1} = P_0\). The Kalman gain at step \(k\)</span >, using \(A = H = 1\), is:
-\[K_k = \frac{\Sigma_{k|k-1}}{\Sigma_{k|k-1} + \sigma_v^2},\]
+
+\[
+K_k = \frac{\Sigma_{k|k-1}}{\Sigma_{k|k-1} + \sigma_v^2},
+\]
 the posterior error variance is:
-\[\Sigma_{k|k} = \frac{\sigma_v^2\Sigma_{k|k-1}}{\Sigma_{k|k-1}+\sigma_v^2} = (1-K_k)\Sigma_{k|k-1},\]
+
+\[
+\Sigma_{k|k} = \frac{\sigma_v^2\Sigma_{k|k-1}}{\Sigma_{k|k-1}+\sigma_v^2} = (1-K_k)\Sigma_{k|k-1},
+\]
 and the next prior error variance is:
-\[\Sigma_{k+1|k} = \Sigma_{k|k} + \sigma_w^2 = \frac{\sigma_v^2\Sigma_{k|k-1}}{\Sigma_{k|k-1}+\sigma_v^2} + \sigma_w^2.\]
+
+\[
+\Sigma_{k+1|k} = \Sigma_{k|k} + \sigma_w^2 = \frac{\sigma_v^2\Sigma_{k|k-1}}{\Sigma_{k|k-1}+\sigma_v^2} + \sigma_w^2.
+\]
 
 The steady-state prior variance satisfies \(\bar{\Sigma} = \frac{\sigma_v^2\bar{\Sigma}}{\bar{\Sigma}+\sigma_v^2} + \sigma_w^2\), a quadratic equation with positive solution
-\[\bar{\Sigma} = \frac{\sigma_w^2 + \sqrt{\sigma_w^4 + 4\sigma_w^2\sigma_v^2}}{2}.\]
+
+\[
+\bar{\Sigma} = \frac{\sigma_w^2 + \sqrt{\sigma_w^4 + 4\sigma_w^2\sigma_v^2}}{2}.
+\]
 
 The estimate update is:
-\[\hat{X}_{k+1|k} = \hat{X}_{k|k-1} + K_k(Y_k - \hat{X}_{k|k-1}).\]
+
+\[
+\hat{X}_{k+1|k} = \hat{X}_{k|k-1} + K_k(Y_k - \hat{X}_{k|k-1}).
+\]
 
 When \(\sigma_w^2 = 0\) (no process noise), \(\bar{\Sigma} = 0\): the random walk has no diffusion, so eventually we know the state exactly. When \(\sigma_v^2 \to \infty\) (very noisy measurements), \(K_k \to 0\): we discard observations and predict by momentum alone.
 
@@ -1041,25 +1284,43 @@ When \(\sigma_w^2 = 0\) (no process noise), \(\bar{\Sigma} = 0\): the random wal
 ## Response of Linear Systems to Gaussian Input
 
 The fundamental theorem for linear systems driven by Gaussian processes is: if the input is Gaussian, the output is Gaussian. This follows from the fact that any linear transformation of a Gaussian random variable (or vector, or process) produces a Gaussian result. For the oscillator
-\[X(t) = g(t-t_0)x_0 + h(t-t_0)v_0 + \int_{t_0}^t h(t-\tau)f(\tau)\,d\tau,\]
+
+\[
+X(t) = g(t-t_0)x_0 + h(t-t_0)v_0 + \int_{t_0}^t h(t-\tau)f(\tau)\,d\tau,
+\]
 the output \(X(t)\) is a linear functional of the Gaussian input \(f\) and the Gaussian initial conditions \(x_0, v_0\). Therefore \(X(t)\) is Gaussian for each \(t\), and the joint distribution of \((X(t_1), \ldots, X(t_n))\) is multivariate Gaussian.
 
 **Mean and covariance of the response.** The mean \(\mu_X(t)\) satisfies a deterministic version of the equation with \(f\) replaced by \(\mu_f\). The covariance \(C_{XX}(t,s)\) is determined by:
-\[C_{XX}(t,s) = g(t-t_0)g(s-t_0)\text{Var}(x_0) + h(t-t_0)h(s-t_0)\text{Var}(v_0)\]
-\[+ \int\!\!\int h(t-\tau)h(s-\sigma)C_{ff}(\tau,\sigma)\,d\tau\,d\sigma,\]
+
+\[
+C_{XX}(t,s) = g(t-t_0)g(s-t_0)\text{Var}(x_0) + h(t-t_0)h(s-t_0)\text{Var}(v_0)
+\]
+
+\[
++ \int\!\!\int h(t-\tau)h(s-\sigma)C_{ff}(\tau,\sigma)\,d\tau\,d\sigma,
+\]
 assuming initial conditions and forcing are uncorrelated.
 
 **Stationarity of the response.** As the initial time \(t_0 \to -\infty\), the transient terms involving \(g\) and \(h\) multiplied by initial conditions decay exponentially (since \(\beta > 0\), and the response converges to a WSS process. The stationary autocovariance
-\[C_{XX}(\tau) = 2\pi\Phi_0\int_0^\infty h(u)h(u+|\tau|)\,du\]
+
+\[
+C_{XX}(\tau) = 2\pi\Phi_0\int_0^\infty h(u)h(u+|\tau|)\,du
+\]
 for white noise input, evaluated via the residue theorem, gives the explicit formula stated earlier.
 
 ## Connection to Spectral Analysis
 
 For a WSS process observed in steady state, the PSD of the response is \(S_X(\omega) = |H(\omega)|^2 S_f(\omega)\). For white noise \(S_f(\omega) = 2\pi\Phi_0\) (constant), the PSD of the response is
-\[S_X(\omega) = \frac{2\pi\Phi_0}{(\omega_0^2 - \omega^2)^2 + 4\beta^2\omega_0^2\omega^2}.\]
+
+\[
+S_X(\omega) = \frac{2\pi\Phi_0}{(\omega_0^2 - \omega^2)^2 + 4\beta^2\omega_0^2\omega^2}.
+\]
 
 The variance is the integral of the PSD:
-\[\text{Var}(X) = \int_{-\infty}^\infty S_X(\omega)\,d\omega = \frac{\pi\Phi_0}{2\omega_0^3\beta},\]
+
+\[
+\text{Var}(X) = \int_{-\infty}^\infty S_X(\omega)\,d\omega = \frac{\pi\Phi_0}{2\omega_0^3\beta},
+\]
 confirming the earlier calculation. The peak of the PSD occurs near the resonance \(\omega = \omega_d = \omega_0\sqrt{1-\beta^2}\), becoming sharper as \(\beta \to 0\).
 
 ---
@@ -1075,18 +1336,30 @@ The Kalman filter's remarkable property is that for linear-Gaussian models, the 
 ## The Innovations Process in Continuous Time
 
 For the continuous-time model \(dX = AX\,dt + B\,dW\), \(dY = HX\,dt + G\,dV\), the **innovations process** is defined as:
-\[d\nu_t = dY_t - H\pi_t\,dt,\]
+
+\[
+d\nu_t = dY_t - H\pi_t\,dt,
+\]
 where \(\pi_t = E[X_t|Y_s, s \le t]\) is the filter estimate. The Kalman–Bucy theorem states that \(\nu_t\) is a Brownian motion with the same covariance as \(GG^*\) — it is the "new information" arriving per unit time that cannot be predicted from the past observations. The Kalman–Bucy filter can be written as:
-\[d\pi_t = A\pi_t\,dt + \Sigma_t H^*(GG^*)^{-1}d\nu_t,\]
+
+\[
+d\pi_t = A\pi_t\,dt + \Sigma_t H^*(GG^*)^{-1}d\nu_t,
+\]
 a stochastic ODE driven by the innovations. The error covariance satisfies the deterministic Riccati equation; this is the deep fact making linear filtering tractable.
 
 ## Discrete-to-Continuous Passage
 
 The derivation of the Kalman–Bucy filter from its discrete counterpart provides important insight. Discretizing \(dX = aX\,dt + b\,dW\) with time step \(\Delta t\):
-\[X_{n+1} = (1+a\Delta t)X_n + b\sqrt{\Delta t}W_{n+1},\quad Y_{n+1} = hX_n\Delta t + g\sqrt{\Delta t}V_{n+1}.\]
+
+\[
+X_{n+1} = (1+a\Delta t)X_n + b\sqrt{\Delta t}W_{n+1},\quad Y_{n+1} = hX_n\Delta t + g\sqrt{\Delta t}V_{n+1}.
+\]
 
 Applying the discrete Kalman filter and taking \(\Delta t \to 0\):
-\[\frac{m_{n+1}-m_n}{\Delta t} \to \dot{m},\quad \frac{\gamma_{n+1}-\gamma_n}{\Delta t} \to \dot{\gamma},\]
+
+\[
+\frac{m_{n+1}-m_n}{\Delta t} \to \dot{m},\quad \frac{\gamma_{n+1}-\gamma_n}{\Delta t} \to \dot{\gamma},
+\]
 the recursions become ODEs. The Kalman gain \(K_k = (1+a\Delta t)\gamma_n h\Delta t/(g^2\Delta t + h^2\gamma_n(\Delta t)^2)\) scales as \(h\gamma/g^2\) as \(\Delta t \to 0\), giving the continuous-time gain \(h\gamma/g^2\) in the innovation term \(d\nu = dY - hm\,dt\). The Riccati equation for \(\gamma\) follows similarly.
 
 ---
@@ -1106,8 +1379,13 @@ the recursions become ODEs. The Kalman gain \(K_k = (1+a\Delta t)\gamma_n h\Delt
 
 ## Convergence Relations
 
-\[\text{a.s. convergence} \Rightarrow \text{convergence in probability} \Rightarrow \text{convergence in distribution}\]
-\[\text{m.s. convergence} \Rightarrow \text{convergence in probability} \Rightarrow \text{convergence in distribution}\]
+\[
+\text{a.s. convergence} \Rightarrow \text{convergence in probability} \Rightarrow \text{convergence in distribution}
+\]
+
+\[
+\text{m.s. convergence} \Rightarrow \text{convergence in probability} \Rightarrow \text{convergence in distribution}
+\]
 
 No other implications hold in general, but: (i) if \(X_n \xrightarrow{p} X\), there exists a subsequence converging a.s.; (ii) if \(X_n \xrightarrow{d} c\) (constant), then \(X_n \xrightarrow{p} c\).
 
@@ -1118,17 +1396,32 @@ No other implications hold in general, but: (i) if \(X_n \xrightarrow{p} X\), th
 **Observation model:** \(Y_k = H_k X_k + V_k\), \(E[V_k]=0\), \(\text{Cov}(V_k)=R_k\).
 
 **Information update:**
-\[\hat{X}_{k|k} = \hat{X}_{k|k-1} + \Sigma_{k|k-1}H_k^T(H_k\Sigma_{k|k-1}H_k^T+R_k)^{-1}(Y_k - H_k\hat{X}_{k|k-1}),\]
-\[\Sigma_{k|k} = \Sigma_{k|k-1} - \Sigma_{k|k-1}H_k^T(H_k\Sigma_{k|k-1}H_k^T+R_k)^{-1}H_k\Sigma_{k|k-1}.\]
+
+\[
+\hat{X}_{k|k} = \hat{X}_{k|k-1} + \Sigma_{k|k-1}H_k^T(H_k\Sigma_{k|k-1}H_k^T+R_k)^{-1}(Y_k - H_k\hat{X}_{k|k-1}),
+\]
+
+\[
+\Sigma_{k|k} = \Sigma_{k|k-1} - \Sigma_{k|k-1}H_k^T(H_k\Sigma_{k|k-1}H_k^T+R_k)^{-1}H_k\Sigma_{k|k-1}.
+\]
 
 **Time update:**
-\[\hat{X}_{k+1|k} = A_k\hat{X}_{k|k},\quad \Sigma_{k+1|k} = A_k\Sigma_{k|k}A_k^T + Q_k.\]
+
+\[
+\hat{X}_{k+1|k} = A_k\hat{X}_{k|k},\quad \Sigma_{k+1|k} = A_k\Sigma_{k|k}A_k^T + Q_k.
+\]
 
 **Kalman gain (combined):**
-\[K_k = A_k\Sigma_{k|k-1}H_k^T(H_k\Sigma_{k|k-1}H_k^T+R_k)^{-1}.\]
+
+\[
+K_k = A_k\Sigma_{k|k-1}H_k^T(H_k\Sigma_{k|k-1}H_k^T+R_k)^{-1}.
+\]
 
 **Combined recursion for prior:**
-\[\hat{X}_{k+1|k} = A_k\hat{X}_{k|k-1} + K_k(Y_k - H_k\hat{X}_{k|k-1}).\]
+
+\[
+\hat{X}_{k+1|k} = A_k\hat{X}_{k|k-1} + K_k(Y_k - H_k\hat{X}_{k|k-1}).
+\]
 
 ## Wiener Process Properties Summary
 
@@ -1144,20 +1437,41 @@ The study of stochastic differential equations requires a solid foundation in or
 ## Standard Form and Integrating Factors
 
 A first-order linear ODE for an unknown function \(y(x)\) is any equation that can be written in the standard form
-\[\frac{dy}{dx} + P(x)\,y = Q(x),\]
+
+\[
+\frac{dy}{dx} + P(x)\,y = Q(x),
+\]
 where \(P\) and \(Q\) are given functions of the independent variable \(x\). The classical method of integrating factors, due to Euler, reduces this equation to exact form by multiplying through by a carefully chosen function \(\mu(x)\). The result of the multiplication is
-\[\mu(x)\frac{dy}{dx} + \mu(x)P(x)\,y = \mu(x)Q(x).\]
+
+\[
+\mu(x)\frac{dy}{dx} + \mu(x)P(x)\,y = \mu(x)Q(x).
+\]
 
 The key insight is to require that the left-hand side be an exact derivative of the product \(\mu(x)y(x)\). Expanding by the product rule,
-\[\frac{d}{dx}[\mu(x)y(x)] = \mu(x)\frac{dy}{dx} + y(x)\frac{d\mu}{dx}.\]
+
+\[
+\frac{d}{dx}[\mu(x)y(x)] = \mu(x)\frac{dy}{dx} + y(x)\frac{d\mu}{dx}.
+\]
 Comparing with the multiplied equation, exactness requires \(\mu(x)P(x) = \mu'(x)\), which is the separable ODE
-\[\frac{1}{\mu}\frac{d\mu}{dx} = P(x)\quad\Rightarrow\quad \mu(x) = e^{\int P(x)\,dx}.\]
+
+\[
+\frac{1}{\mu}\frac{d\mu}{dx} = P(x)\quad\Rightarrow\quad \mu(x) = e^{\int P(x)\,dx}.
+\]
 Any choice of constant of integration (equivalently, any nonzero constant multiple of \(\mu\) works; convention takes the constant to be one. With this integrating factor, the equation becomes
-\[\frac{d}{dx}[\mu(x)y(x)] = \mu(x)Q(x),\]
+
+\[
+\frac{d}{dx}[\mu(x)y(x)] = \mu(x)Q(x),
+\]
 which integrates directly to
-\[\mu(x)y(x) = \int \mu(x)Q(x)\,dx + C,\]
+
+\[
+\mu(x)y(x) = \int \mu(x)Q(x)\,dx + C,
+\]
 and thus
-\[y(x) = e^{-\int P(x)\,dx}\!\left(C + \int Q(x)e^{\int P(x)\,dx}\,dx\right).\]
+
+\[
+y(x) = e^{-\int P(x)\,dx}\!\left(C + \int Q(x)e^{\int P(x)\,dx}\,dx\right).
+\]
 This formula solves every first-order linear ODE to within quadrature — the only remaining task is evaluating the integral, which may or may not admit a closed form.
 
 The connection to stochastic systems is immediate: the Lyapunov equation for the error covariance of the Kalman filter, and the matrix Riccati equation governing the continuous-time filter, are both differential equations of this general structure in a matrix-valued setting.
@@ -1165,27 +1479,51 @@ The connection to stochastic systems is immediate: the Lyapunov equation for the
 ## Variation of Parameters for First-Order Equations
 
 The method of variation of parameters provides an alternative derivation of the same solution formula and is the direct ancestor of the stochastic variation-of-parameters used in random oscillation analysis. The starting point is the associated homogeneous equation
-\[y' + P(x)y = 0,\]
+
+\[
+y' + P(x)y = 0,
+\]
 which factors as a separable equation with solution
-\[y_h(x) = Ce^{-\int P(x)\,dx} =: C\varphi(x).\]
+
+\[
+y_h(x) = Ce^{-\int P(x)\,dx} =: C\varphi(x).
+\]
 Here \(\varphi(x) = e^{-\int P(x)\,dx}\) is the fundamental solution of the homogeneous equation. For the non-homogeneous equation, one seeks a particular solution of the form \(\varphi_p(x) = v(x)\varphi(x)\), where the "constant" \(C\) has been allowed to vary, hence the name. Substituting into the non-homogeneous equation,
-\[v'(x)\varphi(x) + v(x)\varphi'(x) + P(x)v(x)\varphi(x) = Q(x).\]
+
+\[
+v'(x)\varphi(x) + v(x)\varphi'(x) + P(x)v(x)\varphi(x) = Q(x).
+\]
 Because \(\varphi\) satisfies the homogeneous equation, \(\varphi'(x) + P(x)\varphi(x) = 0\), so the middle two terms combine to zero and one is left with
-\[v'(x)\varphi(x) = Q(x)\quad\Rightarrow\quad v(x) = \int \varphi^{-1}(x)Q(x)\,dx + C.\]
+
+\[
+v'(x)\varphi(x) = Q(x)\quad\Rightarrow\quad v(x) = \int \varphi^{-1}(x)Q(x)\,dx + C.
+\]
 The general solution \(y = v(x)\varphi(x)\) then recovers the integrating factor formula exactly. In the stochastic setting, one applies an analogous idea: the response of a linear dynamical system to random forcing is expressed as a convolution integral (variation of parameters), and the statistics of the response (mean, covariance) are then computed from the statistics of the forcing.
 
 ## Bernoulli Equations
 
 A Bernoulli equation is a nonlinear first-order ODE of the form
-\[\frac{dy}{dx} + P(x)y = Q(x)y^\alpha,\quad \alpha\in\mathbb{R},\]
+
+\[
+\frac{dy}{dx} + P(x)y = Q(x)y^\alpha,\quad \alpha\in\mathbb{R},
+\]
 named after Jacob Bernoulli who studied the case \(\alpha = 2\) in 1695. For \(\alpha = 0\) or \(\alpha = 1\) the equation is linear and the preceding methods apply directly. For other values of \(\alpha\), the nonlinearity is removed by a change of variable. Observing that \(y = 0\) is a trivial solution (for \(\alpha \neq 0\), the non-trivial solutions satisfy dividing by \(y^\alpha\):
-\[y^{-\alpha}\frac{dy}{dx} + P(x)y^{1-\alpha} = Q(x).\]
+
+\[
+y^{-\alpha}\frac{dy}{dx} + P(x)y^{1-\alpha} = Q(x).
+\]
 Setting \(v = y^{1-\alpha}\), the chain rule gives \(\frac{dv}{dx} = (1-\alpha)y^{-\alpha}\frac{dy}{dx}\), so the equation transforms to
-\[\frac{dv}{dx} + (1-\alpha)P(x)\,v = (1-\alpha)Q(x),\]
+
+\[
+\frac{dv}{dx} + (1-\alpha)P(x)\,v = (1-\alpha)Q(x),
+\]
 which is a linear first-order ODE for \(v\) and is solved by integrating factors.
 
 **Example.** Consider \(\frac{dy}{dx} - 5y = -\frac{5}{2}xy^3\), a Bernoulli equation with \(\alpha = 3\). Setting \(v = y^{-2}\) yields \(\frac{dv}{dx} + 10v = 5x\). The integrating factor is \(\mu = e^{10x}\), and the solution is
-\[v(x) = \frac{x}{2} - \frac{1}{20} + Ce^{-10x},\]
+
+\[
+v(x) = \frac{x}{2} - \frac{1}{20} + Ce^{-10x},
+\]
 so \(y(x) = \left(\frac{x}{2} - \frac{1}{20} + Ce^{-10x}\right)^{-1/2}\). Note that the solution \(y = 0\) is lost in the division step.
 
 The Bernoulli equation appears in filtering theory when the error covariance of a scalar system evolves according to a Riccati equation: after a suitable substitution, the scalar Riccati equation for \(\gamma\) becomes Bernoulli with \(\alpha = 2\), which in turn reduces to a linear equation for \(\gamma^{-1}\).
@@ -1193,18 +1531,33 @@ The Bernoulli equation appears in filtering theory when the error covariance of 
 ## Riccati Equations
 
 The Riccati equation is the nonlinear first-order ODE
-\[\frac{dy}{dx} = P(x) + Q(x)y + R(x)y^2,\]
+
+\[
+\frac{dy}{dx} = P(x) + Q(x)y + R(x)y^2,
+\]
 where the right-hand side is quadratic in \(y\). The constant term \(P(x)\) makes this a non-homogeneous equation, so \(y = 0\) is generally not a solution. In general, Riccati equations cannot be solved in closed form without additional information. However, if one particular solution \(y_1(x)\) is known, the general solution can be found by the substitution \(y = y_1 + v\), which transforms the Riccati equation into a Bernoulli equation for \(v\). Indeed, since \(y_1' = P + Qy_1 + Ry_1^2\), the equation for \(v = y - y_1\) is
-\[v' = Q(x)v + R(x)v^2 + 2R(x)y_1(x)v = [Q(x) + 2R(x)y_1(x)]v + R(x)v^2,\]
+
+\[
+v' = Q(x)v + R(x)v^2 + 2R(x)y_1(x)v = [Q(x) + 2R(x)y_1(x)]v + R(x)v^2,
+\]
 which is Bernoulli with \(\alpha = 2\). Setting \(w = v^{-1}\) gives the linear equation \(w' - [Q(x) + 2R(x)y_1(x)]w = -R(x)\).
 
 **Example.** Consider \(\frac{dy}{dx} = 2 - 2xy + y^2\). One can verify that \(y_1(x) = 2x\) is a particular solution: \(2 = 2 - (2x)^2 + (2x)^2 = 2\). Setting \(y = 2x + v\) gives \(v' - 2xv = v^2\), a Bernoulli equation. With \(w = v^{-1}\), this becomes \(w' + 2xw = -1\), which is linear with integrating factor \(e^{x^2}\). Hence
-\[e^{x^2}w = -\int e^{x^2}\,dx + C =: -\varphi(x) + C,\]
+
+\[
+e^{x^2}w = -\int e^{x^2}\,dx + C =: -\varphi(x) + C,
+\]
 where \(\varphi(x) = \int_0^x e^{t^2}\,dt\) is related to the error function. Reverting through \(v = w^{-1}\) and \(y = 2x + v\) gives the general solution
-\[y(x) = 2x + \frac{e^{x^2}}{C - \varphi(x)}.\]
+
+\[
+y(x) = 2x + \frac{e^{x^2}}{C - \varphi(x)}.
+\]
 
 The Riccati equation is central to filtering and control. The scalar continuous-time Riccati equation
-\[\dot{\gamma} = 2a\gamma + b^2 - \frac{h^2}{g^2}\gamma^2\]
+
+\[
+\dot{\gamma} = 2a\gamma + b^2 - \frac{h^2}{g^2}\gamma^2
+\]
 describes the evolution of the estimation error variance in the Kalman-Bucy filter for the one-dimensional system. Here \(a\) is the drift coefficient, \(b^2\) is the state noise intensity, \(h\) is the observation coefficient, and \(g^2\) is the observation noise intensity. At steady state \(\dot{\gamma} = 0\), the positive root of this quadratic gives the asymptotic error variance \(\gamma^* = \frac{g^2}{h^2}\left(a + \sqrt{a^2 + b^2h^2/g^2}\right)\).
 
 ---
@@ -1214,52 +1567,91 @@ describes the evolution of the estimation error variance in the Kalman-Bucy filt
 ## Tutorial 2: Transformations of Random Variables
 
 One of the most fundamental operations in probability is computing the distribution of \(Y = g(X)\) when the distribution of \(X\) is known. For a monotone differentiable function \(g\), the PDF of \(Y\) is
-\[f_Y(y) = f_X(g^{-1}(y))\left|\frac{d}{dy}g^{-1}(y)\right|,\]
+
+\[
+f_Y(y) = f_X(g^{-1}(y))\left|\frac{d}{dy}g^{-1}(y)\right|,
+\]
 which is the Jacobian formula. The absolute value accounts for monotone decreasing transformations.
 
 **Linear scaling.** If \(Y = aX + b\) with \(a \neq 0\), then \(x = (y-b)/a\) and \(|dx/dy| = 1/|a|\), giving
-\[f_Y(y) = \frac{1}{|a|}f_X\!\left(\frac{y-b}{a}\right).\]
+
+\[
+f_Y(y) = \frac{1}{|a|}f_X\!\left(\frac{y-b}{a}\right).
+\]
 Applying this to \(X \sim N(\mu, \sigma^2)\) with \(Y = (X-\mu)/\sigma\) yields \(f_Y(y) = \frac{1}{\sqrt{2\pi}}e^{-y^2/2}\), confirming that standardization produces a standard normal. More generally, any affine function of a Gaussian is Gaussian: \(aX + b \sim N(a\mu + b, a^2\sigma^2)\).
 
 **Non-monotone transformations.** When \(g\) is not monotone, one must sum contributions from all preimages:
-\[f_Y(y) = \sum_{x:\, g(x)=y} \frac{f_X(x)}{|g'(x)|}.\]
+
+\[
+f_Y(y) = \sum_{x:\, g(x)=y} \frac{f_X(x)}{|g'(x)|}.
+\]
 For example, if \(X \sim N(0,1)\) and \(Y = X^2\), both \(x = \pm\sqrt{y}\) contribute, giving
-\[f_Y(y) = \frac{1}{\sqrt{2\pi y}}e^{-y/2},\quad y > 0,\]
+
+\[
+f_Y(y) = \frac{1}{\sqrt{2\pi y}}e^{-y/2},\quad y > 0,
+\]
 which is the chi-squared distribution with one degree of freedom, also written \(\chi^2_1\).
 
 ## Tutorial 3: Conditional Expectation — Law of Iterated Expectations
 
 The law of iterated expectations (also called the tower property) states that for random variables \(X\), \(Y\) on the same probability space,
-\[E[X] = E[E[X \mid Y]],\]
+
+\[
+E[X] = E[E[X \mid Y]],
+\]
 where the outer expectation on the right is with respect to \(Y\). This result follows directly from the definition of conditional expectation by integration:
-\[E[E[X|Y]] = \int_{\mathcal{Y}} E[X|Y=y]\,f_Y(y)\,dy = \int_{\mathcal{Y}}\!\int_{\mathcal{X}} x\,f_{X|Y}(x|y)\,dx\,f_Y(y)\,dy\]
-\[= \int_{\mathcal{X}}\int_{\mathcal{Y}} x\,f_{X,Y}(x,y)\,dy\,dx = \int_{\mathcal{X}} x\,f_X(x)\,dx = E[X].\]
+
+\[
+E[E[X|Y]] = \int_{\mathcal{Y}} E[X|Y=y]\,f_Y(y)\,dy = \int_{\mathcal{Y}}\!\int_{\mathcal{X}} x\,f_{X|Y}(x|y)\,dx\,f_Y(y)\,dy
+\]
+
+\[
+= \int_{\mathcal{X}}\int_{\mathcal{Y}} x\,f_{X,Y}(x,y)\,dy\,dx = \int_{\mathcal{X}} x\,f_X(x)\,dx = E[X].
+\]
 The interchange of integration order is justified by Fubini's theorem whenever \(E[|X|] < \infty\).
 
 More generally, for any sub-\(\sigma\)-algebra \(\mathcal{G} \subseteq \mathcal{H} \subseteq \mathcal{F}\), the tower property reads
-\[E[E[X|\mathcal{H}]|\mathcal{G}] = E[X|\mathcal{G}].\]
+
+\[
+E[E[X|\mathcal{H}]|\mathcal{G}] = E[X|\mathcal{G}].
+\]
 Conditioning on a coarser \(\sigma\)-algebra (less information) dominates: knowing less about \(Y\) washes out the finer conditioning.
 
 The law of total variance is the variance analogue:
-\[\operatorname{Var}(X) = E[\operatorname{Var}(X|Y)] + \operatorname{Var}(E[X|Y]).\]
+
+\[
+\operatorname{Var}(X) = E[\operatorname{Var}(X|Y)] + \operatorname{Var}(E[X|Y]).
+\]
 The first term, \(E[\operatorname{Var}(X|Y)]\), is the expected within-group variance (residual uncertainty after observing \(Y\). The second term, \(\operatorname{Var}(E[X|Y])\), is the between-group variance (the variance of the conditional mean). This decomposition underlies the MMSE variance identity \(\operatorname{Var}(X) = \operatorname{Var}(\hat{X}) + \operatorname{Var}(\tilde{X})\) discussed in the MMSE section.
 
 ## Tutorial 5: MMSE Estimation — Orthogonality and Error Analysis
 
 Suppose one observes \(Y = X + W\) where \(X \sim N(0,1)\) and \(W \sim N(0,\sigma_W^2)\) are independent, and wants to estimate \(X\) from \(Y\). The MMSE estimator is \(E[X|Y]\). By the Gaussian joint distribution, this conditional expectation is linear:
-\[\hat{X} = E[X|Y] = \frac{\operatorname{Cov}(X,Y)}{\operatorname{Var}(Y)}Y = \frac{1}{1+\sigma_W^2}Y.\]
+
+\[
+\hat{X} = E[X|Y] = \frac{\operatorname{Cov}(X,Y)}{\operatorname{Var}(Y)}Y = \frac{1}{1+\sigma_W^2}Y.
+\]
 The signal-to-noise ratio \(\sigma_X^2/\sigma_W^2 = 1/\sigma_W^2\) determines how much the estimator trusts the observation: when \(\sigma_W^2 \to 0\) (very clean observations), \(\hat{X} \to Y\); when \(\sigma_W^2 \to \infty\) (very noisy observations), \(\hat{X} \to 0 = E[X]\).
 
 The orthogonality principle states that the estimation error \(\tilde{X} = X - \hat{X}\) is uncorrelated with any function of the observation:
-\[E[\tilde{X}\,h(Y)] = 0 \quad\text{for all measurable } h.\]
+
+\[
+E[\tilde{X}\,h(Y)] = 0 \quad\text{for all measurable } h.
+\]
 In particular, \(E[\tilde{X} \cdot Y] = 0\), which one verifies: \(E[(X - \hat{X})Y] = E[XY] - E[\hat{X}Y]\). Since \(\hat{X} = \alpha Y\) with \(\alpha = 1/(1+\sigma_W^2)\), this becomes \(E[XY] - \alpha E[Y^2] = 1 - \alpha(1+\sigma_W^2) = 0\). The MMSE is
-\[\text{MMSE} = E[\tilde{X}^2] = \operatorname{Var}(X|Y) = \frac{\sigma_W^2}{1+\sigma_W^2},\]
+
+\[
+\text{MMSE} = E[\tilde{X}^2] = \operatorname{Var}(X|Y) = \frac{\sigma_W^2}{1+\sigma_W^2},
+\]
 which is also equal to \(\sigma_X^2 - \sigma_{\hat{X}}^2 = 1 - \frac{1}{(1+\sigma_W^2)}\), confirming the variance decomposition identity.
 
 ## Tutorial 6: Standard Brownian Motion — Covariance Calculation
 
 The covariance calculation \(\operatorname{Cov}(W_s, W_t) = \min(s,t)\) is a fundamental result that follows directly from the independent increment property. For \(s \leq t\):
-\[E[W_sW_t] = E[W_s(W_s + (W_t - W_s))] = E[W_s^2] + E[W_s(W_t - W_s)].\]
+
+\[
+E[W_sW_t] = E[W_s(W_s + (W_t - W_s))] = E[W_s^2] + E[W_s(W_t - W_s)].
+\]
 The second term vanishes because \(W_s\) is \(\mathcal{F}_s\)-measurable and \(W_t - W_s\) is independent of \(\mathcal{F}_s\) (independent increments), with \(E[W_t - W_s] = 0\). Therefore \(E[W_sW_t] = E[W_s^2] = s\), and since \(E[W_s] = E[W_t] = 0\), we have \(\operatorname{Cov}(W_s,W_t) = s = \min(s,t)\) for \(s \leq t\).
 
 Geometric Brownian motion \(S_t = S_0 e^{(\mu - \sigma^2/2)t + \sigma W_t}\) models stock prices and is the foundation of the Black-Scholes theory. While \(W_t\) is Gaussian, \(S_t\) is log-normally distributed: \(\log(S_t/S_0) \sim N((\mu - \sigma^2/2)t, \sigma^2 t)\). The parameter \(\mu\) is the drift rate and \(\sigma\) is the volatility. The shift \(-\sigma^2/2\) in the exponent is the Itô correction that ensures \(E[S_t] = S_0 e^{\mu t}\); without this correction, the process would not be a martingale when \(\mu = 0\).
@@ -1267,13 +1659,22 @@ Geometric Brownian motion \(S_t = S_0 e^{(\mu - \sigma^2/2)t + \sigma W_t}\) mod
 ## Tutorial 7: Markov Chain Computations
 
 For a two-state Markov chain with states \(\{1, 2\}\) and transition matrix
-\[P = \begin{pmatrix} 1-p & p \\ q & 1-q \end{pmatrix},\]
+
+\[
+P = \begin{pmatrix} 1-p & p \\ q & 1-q \end{pmatrix},
+\]
 the \(n\)-step transition probabilities can be computed by diagonalizing \(P\). The eigenvalues of \(P\) are \(\lambda_1 = 1\) and \(\lambda_2 = 1 - p - q\). Provided \(p + q \neq 0\), the matrix power is
-\[P^n = \frac{1}{p+q}\begin{pmatrix} q & p \\ q & p \end{pmatrix} + \frac{(1-p-q)^n}{p+q}\begin{pmatrix} p & -p \\ -q & q \end{pmatrix}.\]
+
+\[
+P^n = \frac{1}{p+q}\begin{pmatrix} q & p \\ q & p \end{pmatrix} + \frac{(1-p-q)^n}{p+q}\begin{pmatrix} p & -p \\ -q & q \end{pmatrix}.
+\]
 As \(n \to \infty\), since \(|1-p-q| < 1\) when \(0 < p,q < 1\), the second term vanishes and every row of \(P^n\) converges to the stationary distribution \(\pi = (q/(p+q),\; p/(p+q))\). This confirms that the chain is ergodic and that the initial condition is forgotten.
 
 The stationary distribution can also be found by solving \(\pi P = \pi\) subject to \(\pi_1 + \pi_2 = 1\):
-\[\pi_1(1-p) + \pi_2 q = \pi_1\quad\Rightarrow\quad \pi_1 p = \pi_2 q,\]
+
+\[
+\pi_1(1-p) + \pi_2 q = \pi_1\quad\Rightarrow\quad \pi_1 p = \pi_2 q,
+\]
 giving \(\pi_1/\pi_2 = q/p\) and therefore \(\pi_1 = q/(p+q)\), \(\pi_2 = p/(p+q)\).
 
 ## Tutorial 8: Kalman Filter — AR(1) Signal Example
@@ -1281,9 +1682,15 @@ giving \(\pi_1/\pi_2 = q/p\) and therefore \(\pi_1 = q/(p+q)\), \(\pi_2 = p/(p+q
 Consider an AR(1) signal process \(X_{k+1} = aX_k + W_k\) with \(|a| < 1\), \(W_k \sim N(0, Q)\) i.i.d., observed as \(Y_k = X_k + V_k\) with \(V_k \sim N(0, R)\) i.i.d. and independent of \(W_k\). This is the canonical example for the scalar Kalman filter.
 
 The stationary variance of \(X_k\) satisfies \(\sigma_X^2 = a^2\sigma_X^2 + Q\), giving \(\sigma_X^2 = Q/(1-a^2)\). The steady-state prior error variance \(\gamma_\infty\) satisfies the DARE
-\[\gamma_\infty = a^2\left(\gamma_\infty - \frac{\gamma_\infty^2}{\gamma_\infty + R}\right) + Q = a^2\frac{R\gamma_\infty}{\gamma_\infty + R} + Q.\]
+
+\[
+\gamma_\infty = a^2\left(\gamma_\infty - \frac{\gamma_\infty^2}{\gamma_\infty + R}\right) + Q = a^2\frac{R\gamma_\infty}{\gamma_\infty + R} + Q.
+\]
 Rearranging, \(\gamma_\infty(\gamma_\infty + R)(1 - a^2) = Q(\gamma_\infty + R) + (a^2 - 1)R\gamma_\infty\)... after algebra the positive root is
-\[\gamma_\infty = \frac{(R(1-a^2)+Q) + \sqrt{(R(1-a^2)+Q)^2 + 4a^2QR}}{2a^2} \cdot \frac{a^2}{1}\]
+
+\[
+\gamma_\infty = \frac{(R(1-a^2)+Q) + \sqrt{(R(1-a^2)+Q)^2 + 4a^2QR}}{2a^2} \cdot \frac{a^2}{1}
+\]
 or more cleanly for the scalar case, by treating the DARE directly as a quadratic. The steady-state Kalman gain is \(K_\infty = a\gamma_\infty/(\gamma_\infty + R)\).
 
 When the signal variance is large relative to noise (\(\sigma_X^2 \gg R\), the filter trusts the observations strongly: \(K_\infty \approx a\). When observations are very noisy (\(R \gg \sigma_X^2\), the filter weights the prior prediction more heavily: \(K_\infty \approx aQ/R \approx 0\).
@@ -1295,25 +1702,43 @@ When the signal variance is large relative to noise (\(\sigma_X^2 \gg R\), the f
 ## Power Spectral Density and Wiener–Khinchin Theorem
 
 For a wide-sense stationary process \(X(t)\) with autocorrelation function \(R_{XX}(\tau) = E[X(t+\tau)X(t)]\), the power spectral density (PSD) is defined as the Fourier transform
-\[S_{XX}(\omega) = \int_{-\infty}^{\infty} R_{XX}(\tau)\,e^{-i\omega\tau}\,d\tau,\]
+
+\[
+S_{XX}(\omega) = \int_{-\infty}^{\infty} R_{XX}(\tau)\,e^{-i\omega\tau}\,d\tau,
+\]
 provided the integral converges. The Wiener–Khinchin theorem guarantees that \(S_{XX}(\omega) \geq 0\) for all \(\omega\) and that \(R_{XX}(\tau)\) is recovered by the inverse transform:
-\[R_{XX}(\tau) = \frac{1}{2\pi}\int_{-\infty}^{\infty} S_{XX}(\omega)\,e^{i\omega\tau}\,d\omega.\]
+
+\[
+R_{XX}(\tau) = \frac{1}{2\pi}\int_{-\infty}^{\infty} S_{XX}(\omega)\,e^{i\omega\tau}\,d\omega.
+\]
 Setting \(\tau = 0\) gives the total power: \(E[X(t)^2] = R_{XX}(0) = \frac{1}{2\pi}\int_{-\infty}^{\infty} S_{XX}(\omega)\,d\omega\), showing that the PSD describes the distribution of power across frequencies.
 
 **White noise.** Ideal white noise has the flat spectrum \(S_{\xi\xi}(\omega) = \Phi_0\) (constant for all \(\omega\), corresponding to the autocorrelation \(R_{\xi\xi}(\tau) = \Phi_0\delta(\tau)\). Physical white noise approximates this spectrum over a finite bandwidth. The formal derivative \(\xi(t) = \dot{W}_t\) of Brownian motion has this flat spectrum, which is why it is called white noise — by analogy with white light containing all frequencies equally.
 
 **Rational spectra and linear filtering.** If white noise \(\xi(t)\) is passed through a linear time-invariant filter with transfer function \(H(i\omega)\), the output PSD is
-\[S_{YY}(\omega) = |H(i\omega)|^2 S_{\xi\xi}(\omega) = \Phi_0|H(i\omega)|^2.\]
+
+\[
+S_{YY}(\omega) = |H(i\omega)|^2 S_{\xi\xi}(\omega) = \Phi_0|H(i\omega)|^2.
+\]
 For the damped oscillator system \(\ddot{X} + 2\beta\omega_0\dot{X} + \omega_0^2 X = \xi(t)\), the transfer function is
-\[H(i\omega) = \frac{1}{\omega_0^2 - \omega^2 + 2i\beta\omega_0\omega},\]
+
+\[
+H(i\omega) = \frac{1}{\omega_0^2 - \omega^2 + 2i\beta\omega_0\omega},
+\]
 and the PSD of the response is
-\[S_{XX}(\omega) = \frac{\Phi_0}{(\omega_0^2-\omega^2)^2 + 4\beta^2\omega_0^2\omega^2}.\]
+
+\[
+S_{XX}(\omega) = \frac{\Phi_0}{(\omega_0^2-\omega^2)^2 + 4\beta^2\omega_0^2\omega^2}.
+\]
 Integrating this over all frequencies and using the residue theorem yields the total mean square response, which agrees with the stationary variance \(\pi\Phi_0/(2\omega_0^3\beta)\) derived by directly solving the Lyapunov equation.
 
 ## Ergodicity and Time Averages
 
 A stationary process is ergodic (in the mean) if time averages converge to ensemble averages:
-\[\bar{X}_T := \frac{1}{T}\int_0^T X(t)\,dt \xrightarrow{m.s.} E[X(t)] \quad\text{as } T \to \infty.\]
+
+\[
+\bar{X}_T := \frac{1}{T}\int_0^T X(t)\,dt \xrightarrow{m.s.} E[X(t)] \quad\text{as } T \to \infty.
+\]
 A sufficient condition is that \(R_{XX}(\tau) \to 0\) as \(|\tau| \to \infty\) (the correlations decay). Ergodicity is crucial for applications: it justifies estimating statistical properties from a single long realization of the process.
 
 For Gaussian processes with rational PSD (such as the output of a linear system driven by white noise), ergodicity holds under mild conditions. In particular, all the processes arising in the Kalman filter context — Gaussian with rational spectra — are ergodic, meaning the stationary distribution can be approached through simulation of a single trajectory.
@@ -1321,11 +1746,20 @@ For Gaussian processes with rational PSD (such as the output of a linear system 
 ## The Chapman-Kolmogorov Equation in Detail
 
 The Chapman-Kolmogorov (CK) equation is the fundamental consistency condition for Markov processes. For a time-homogeneous Markov chain with \(n\)-step transition matrix \(P^{(n)}\), the CK equation reads
-\[P^{(m+n)} = P^{(m)}P^{(n)},\]
+
+\[
+P^{(m+n)} = P^{(m)}P^{(n)},
+\]
 which expresses the semigroup property: to go from state \(i\) to state \(j\) in \(m+n\) steps, one passes through some intermediate state \(k\) after \(m\) steps. For continuous-state Markov processes with transition density \(p(t,x;s,y) = P(X_s \in dy \mid X_t = x)/dy\) (for \(s > t\), the CK equation is the integral identity
-\[p(t,x;u,z) = \int p(t,x;s,y)\,p(s,y;u,z)\,dy,\quad t < s < u.\]
+
+\[
+p(t,x;u,z) = \int p(t,x;s,y)\,p(s,y;u,z)\,dy,\quad t < s < u.
+\]
 The differential form of the CK equation (as \(u - s \to 0\) yields the Fokker-Planck equation (also called the Kolmogorov forward equation), which governs the evolution of the transition density:
-\[\frac{\partial p}{\partial u} = -\frac{\partial}{\partial z}[a(z)p] + \frac{1}{2}\frac{\partial^2}{\partial z^2}[b^2(z)p],\]
+
+\[
+\frac{\partial p}{\partial u} = -\frac{\partial}{\partial z}[a(z)p] + \frac{1}{2}\frac{\partial^2}{\partial z^2}[b^2(z)p],
+\]
 where \(a(z)\) is the drift coefficient and \(b^2(z)\) is the diffusion coefficient of the SDE \(dX_t = a(X_t)\,dt + b(X_t)\,dW_t\). The Fokker-Planck equation is the stochastic analog of the Liouville equation in classical mechanics and shows why the study of stochastic processes requires the same ODE techniques (integrating factors, etc.) developed in the supplement.
 
 ## Poisson Process as a Counting Process
@@ -1339,11 +1773,17 @@ The Poisson process is both a Markov chain (in continuous time, with states \(\m
 A Gaussian process \(\{X(t)\}_{t \in T}\) is completely characterized by its mean function \(m(t) = E[X(t)]\) and covariance kernel \(K(s,t) = \operatorname{Cov}(X(s),X(t))\), because all finite-dimensional distributions are jointly Gaussian. Any symmetric positive-semidefinite kernel \(K\) defines a valid Gaussian process.
 
 **Ornstein-Uhlenbeck process.** The OU process satisfies the SDE \(dX_t = -\alpha X_t\,dt + \sigma\,dW_t\) with solution
-\[X_t = X_0 e^{-\alpha t} + \sigma\int_0^t e^{-\alpha(t-s)}\,dW_s.\]
+
+\[
+X_t = X_0 e^{-\alpha t} + \sigma\int_0^t e^{-\alpha(t-s)}\,dW_s.
+\]
 Starting from \(X_0 \sim N(0, \sigma^2/(2\alpha))\) (the stationary distribution), the process is stationary with covariance \(K(s,t) = \frac{\sigma^2}{2\alpha}e^{-\alpha|t-s|}\). The OU process is the unique stationary Gaussian Markov process (in continuous time), serving as the continuous-time limit of the AR(1) model.
 
 The OU process models mean-reverting dynamics in many applications: interest rates (Vasicek model), velocity in physical Brownian motion (Langevin equation), and the state noise in the Kalman filter when the signal is stationary. The exponential covariance kernel corresponds to the rational PSD
-\[S_{XX}(\omega) = \frac{\sigma^2}{\alpha^2 + \omega^2},\]
+
+\[
+S_{XX}(\omega) = \frac{\sigma^2}{\alpha^2 + \omega^2},
+\]
 a Lorentzian spectrum with half-width \(\alpha\) — the process has characteristic correlation time \(1/\alpha\), and observations separated by much more than \(1/\alpha\) are essentially uncorrelated.
 
 

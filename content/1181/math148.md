@@ -22,9 +22,15 @@ We work throughout with bounded functions on a closed interval \([a,b]\).
 <div class="definition">
 
 <strong>Definition 1.2 (Upper and Lower Sums).</strong> Let \(f : [a,b] \to \mathbb{R}\) be bounded and let \(P = \{x_0, \ldots, x_n\}\) be a partition. For each subinterval \([x_{i-1}, x_i]\), set
-\[M_i = \sup_{x \in [x_{i-1},x_i]} f(x), \qquad m_i = \inf_{x \in [x_{i-1},x_i]} f(x).\]
+
+\[
+M_i = \sup_{x \in [x_{i-1},x_i]} f(x), \qquad m_i = \inf_{x \in [x_{i-1},x_i]} f(x).
+\]
 The <em>upper sum</em> and <em>lower sum</em> of \(f\) with respect to \(P\) are
-\[U(f,P) = \sum_{i=1}^n M_i (x_i - x_{i-1}), \qquad L(f,P) = \sum_{i=1}^n m_i (x_i - x_{i-1}).\]
+
+\[
+U(f,P) = \sum_{i=1}^n M_i (x_i - x_{i-1}), \qquad L(f,P) = \sum_{i=1}^n m_i (x_i - x_{i-1}).
+\]
 
 </div>
 
@@ -37,7 +43,10 @@ Notice that \(L(f,P) \le U(f,P)\) always, since \(m_i \le M_i\). The key monoton
 </div>
 
 *Proof.* It suffices to check the effect of adding a single point. Suppose \(Q = P \cup \{x^*\}\) where \(x^* \in (x_{k-1}, x_k)\). Every term in \(U(f,Q)\) except those for \([x_{k-1},x^*]\) and \([x^*,x_k]\) coincides with the corresponding term in \(U(f,P)\). For the affected term,
-\[\sup_{[x_{k-1},x_k]} f \cdot (x_k - x_{k-1}) \ge \sup_{[x_{k-1},x^*]} f \cdot (x^* - x_{k-1}) + \sup_{[x^*,x_k]} f \cdot (x_k - x^*),\]
+
+\[
+\sup_{[x_{k-1},x_k]} f \cdot (x_k - x_{k-1}) \ge \sup_{[x_{k-1},x^*]} f \cdot (x^* - x_{k-1}) + \sup_{[x^*,x_k]} f \cdot (x_k - x^*),
+\]
 since the supremum over a larger set is at least as large. Hence \(U(f,Q) \le U(f,P)\). The lower sum case is analogous. \(\square\)
 
 <div class="corollary">
@@ -49,13 +58,19 @@ since the supremum over a larger set is at least as large. Hence \(U(f,Q) \le U(
 *Proof.* Let \(R = P \cup Q\). Then \(L(f,P) \le L(f,R) \le U(f,R) \le U(f,Q)\). \(\square\)
 
 This corollary says every lower sum is a lower bound for every upper sum. It follows that
-\[\sup_P L(f,P) \le \inf_P U(f,P),\]
+
+\[
+\sup_P L(f,P) \le \inf_P U(f,P),
+\]
 and the gap between these two quantities measures how "integrable" \(f\) is.
 
 <div class="definition">
 
 <strong>Definition 1.5 (Upper and Lower Integrals).</strong> The <em>lower integral</em> and <em>upper integral</em> of \(f\) on \([a,b]\) are
-\[\underline{\int_a^b} f = \sup_P L(f,P), \qquad \overline{\int_a^b} f = \inf_P U(f,P).\]
+
+\[
+\underline{\int_a^b} f = \sup_P L(f,P), \qquad \overline{\int_a^b} f = \inf_P U(f,P).
+\]
 
 </div>
 
@@ -66,7 +81,10 @@ We now have the tools to say precisely what it means for a function to be integr
 <div class="definition">
 
 <strong>Definition 1.6 (Darboux Integrability).</strong> A bounded function \(f : [a,b] \to \mathbb{R}\) is <em>Darboux integrable</em> (or simply <em>integrable</em>) on \([a,b]\) if
-\[\underline{\int_a^b} f = \overline{\int_a^b} f.\]
+
+\[
+\underline{\int_a^b} f = \overline{\int_a^b} f.
+\]
 The common value is the <em>definite integral</em> \(\displaystyle\int_a^b f(x)\,dx\).
 
 </div>
@@ -88,7 +106,10 @@ The following criterion gives a practical way to verify integrability without co
 </div>
 
 *Proof.* Since \(f\) is continuous on a closed bounded interval, it is uniformly continuous: for every \(\varepsilon > 0\) there exists \(\delta > 0\) such that \(|x-y| < \delta\) implies \(|f(x) - f(y)| < \varepsilon/(b-a)\). Choose any partition \(P\) with \(\|P\| < \delta\). On each subinterval \([x_{i-1},x_i]\), the oscillation \(M_i - m_i < \varepsilon/(b-a)\). Then
-\[U(f,P) - L(f,P) = \sum_{i=1}^n (M_i - m_i)(x_i - x_{i-1}) < \frac{\varepsilon}{b-a}\sum_{i=1}^n (x_i - x_{i-1}) = \varepsilon. \quad \square\]
+
+\[
+U(f,P) - L(f,P) = \sum_{i=1}^n (M_i - m_i)(x_i - x_{i-1}) < \frac{\varepsilon}{b-a}\sum_{i=1}^n (x_i - x_{i-1}) = \varepsilon. \quad \square
+\]
 
 <div class="theorem">
 
@@ -97,7 +118,10 @@ The following criterion gives a practical way to verify integrability without co
 </div>
 
 *Proof.* Assume \(f\) is non-decreasing (the decreasing case is symmetric). For the uniform partition \(P_n\) with \(n\) subintervals of length \(\Delta x = (b-a)/n\), on each subinterval \(m_i = f(x_{i-1})\) and \(M_i = f(x_i)\). Hence
-\[U(f,P_n) - L(f,P_n) = \Delta x \sum_{i=1}^n (f(x_i) - f(x_{i-1})) = \frac{b-a}{n}(f(b) - f(a)) \to 0.\quad \square\]
+
+\[
+U(f,P_n) - L(f,P_n) = \Delta x \sum_{i=1}^n (f(x_i) - f(x_{i-1})) = \frac{b-a}{n}(f(b) - f(a)) \to 0.\quad \square
+\]
 
 <div class="remark">
 
@@ -128,7 +152,10 @@ The integral inherits the expected algebraic and order properties directly from 
 <div class="theorem">
 
 <strong>Theorem 1.12 (Mean Value Theorem for Integrals).</strong> If \(f : [a,b] \to \mathbb{R}\) is continuous, there exists \(c \in [a,b]\) with
-\[f(c) = \frac{1}{b-a}\int_a^b f(x)\,dx.\]
+
+\[
+f(c) = \frac{1}{b-a}\int_a^b f(x)\,dx.
+\]
 
 </div>
 
@@ -143,7 +170,10 @@ The Fundamental Theorem is the central result of calculus: it says that differen
 <div class="definition">
 
 <strong>Definition 1.13 (Accumulation Function).</strong> If \(f\) is integrable on \([a,b]\), the <em>accumulation function</em> of \(f\) based at \(a\) is
-\[F(x) = \int_a^x f(t)\,dt, \quad x \in [a,b].\]
+
+\[
+F(x) = \int_a^x f(t)\,dt, \quad x \in [a,b].
+\]
 
 </div>
 
@@ -154,9 +184,15 @@ The Fundamental Theorem is the central result of calculus: it says that differen
 </div>
 
 *Proof.* We estimate the difference quotient. For \(h > 0\) (the case \(h < 0\) is analogous),
-\[\frac{F(x_0+h) - F(x_0)}{h} = \frac{1}{h}\int_{x_0}^{x_0+h} f(t)\,dt.\]
+
+\[
+\frac{F(x_0+h) - F(x_0)}{h} = \frac{1}{h}\int_{x_0}^{x_0+h} f(t)\,dt.
+\]
 We compare this to \(f(x_0) = \frac{1}{h}\int_{x_0}^{x_0+h} f(x_0)\,dt\). Their difference is
-\[\left|\frac{F(x_0+h)-F(x_0)}{h} - f(x_0)\right| = \left|\frac{1}{h}\int_{x_0}^{x_0+h}(f(t)-f(x_0))\,dt\right| \le \frac{1}{h}\int_{x_0}^{x_0+h}|f(t)-f(x_0)|\,dt.\]
+
+\[
+\left|\frac{F(x_0+h)-F(x_0)}{h} - f(x_0)\right| = \left|\frac{1}{h}\int_{x_0}^{x_0+h}(f(t)-f(x_0))\,dt\right| \le \frac{1}{h}\int_{x_0}^{x_0+h}|f(t)-f(x_0)|\,dt.
+\]
 Given \(\varepsilon > 0\), by continuity of \(f\) at \(x_0\) there exists \(\delta > 0\) such that \(|t - x_0| < \delta\) implies \(|f(t) - f(x_0)| < \varepsilon\). For \(0 < h < \delta\), every \(t \in [x_0, x_0+h]\) satisfies \(|t-x_0| < \delta\), so the expression above is at most \(\frac{1}{h} \cdot \varepsilon h = \varepsilon\). Hence the limit is \(f(x_0)\). \(\square\)
 
 The geometric meaning is immediate: \(F(x)\) measures accumulated area, and its rate of change at any point is precisely the height of \(f\) at that point. If \(f\) is large at \(x_0\), area is accumulating quickly; if \(f\) is small or negative, area accumulates slowly or decreases.
@@ -164,7 +200,10 @@ The geometric meaning is immediate: \(F(x)\) measures accumulated area, and its 
 <div class="theorem">
 
 <strong>Theorem 1.15 (Fundamental Theorem of Calculus, Part 2).</strong> If \(f : [a,b] \to \mathbb{R}\) is continuous and \(G : [a,b] \to \mathbb{R}\) satisfies \(G' = f\) on \([a,b]\), then
-\[\int_a^b f(x)\,dx = G(b) - G(a).\]
+
+\[
+\int_a^b f(x)\,dx = G(b) - G(a).
+\]
 
 </div>
 
@@ -173,7 +212,10 @@ The geometric meaning is immediate: \(F(x)\) measures accumulated area, and its 
 <div class="theorem">
 
 <strong>Theorem 1.16 (Extended FTC / Leibniz Rule).</strong> If \(f\) is continuous and \(u, v\) are differentiable, then
-\[\frac{d}{dx}\int_{u(x)}^{v(x)} f(t)\,dt = f(v(x))\,v'(x) - f(u(x))\,u'(x).\]
+
+\[
+\frac{d}{dx}\int_{u(x)}^{v(x)} f(t)\,dt = f(v(x))\,v'(x) - f(u(x))\,u'(x).
+\]
 
 </div>
 
@@ -188,7 +230,10 @@ With the theoretical foundation secure, we develop the computational toolkit. Ev
 <div class="theorem">
 
 <strong>Theorem 2.1 (Substitution Rule).</strong> If \(g : [a,b] \to \mathbb{R}\) is continuously differentiable and \(f\) is continuous on the range of \(g\), then
-\[\int_a^b f(g(x))\,g'(x)\,dx = \int_{g(a)}^{g(b)} f(u)\,du.\]
+
+\[
+\int_a^b f(g(x))\,g'(x)\,dx = \int_{g(a)}^{g(b)} f(u)\,du.
+\]
 
 </div>
 
@@ -199,7 +244,10 @@ With the theoretical foundation secure, we develop the computational toolkit. Ev
 <div class="theorem">
 
 <strong>Theorem 2.2 (Integration by Parts).</strong> If \(f'\) and \(g'\) are continuous on \([a,b]\), then
-\[\int_a^b f(x)\,g'(x)\,dx = f(x)g(x)\Big|_a^b - \int_a^b f'(x)\,g(x)\,dx.\]
+
+\[
+\int_a^b f(x)\,g'(x)\,dx = f(x)g(x)\Big|_a^b - \int_a^b f'(x)\,g(x)\,dx.
+\]
 
 </div>
 
@@ -242,7 +290,10 @@ So far our integral handles bounded functions on bounded intervals. Many natural
 <div class="definition">
 
 <strong>Definition 3.1 (Type I Improper Integrals).</strong> If \(f\) is integrable on \([a,b]\) for all \(b > a\), we define
-\[\int_a^\infty f(x)\,dx = \lim_{b \to \infty} \int_a^b f(x)\,dx\]
+
+\[
+\int_a^\infty f(x)\,dx = \lim_{b \to \infty} \int_a^b f(x)\,dx
+\]
 when this limit exists (and is finite). Similarly for \(\int_{-\infty}^a\) and \(\int_{-\infty}^\infty\) (the last requires splitting at some finite point \(c\) and demanding both halves converge independently).
 
 </div>
@@ -250,7 +301,10 @@ when this limit exists (and is finite). Similarly for \(\int_{-\infty}^a\) and \
 <div class="definition">
 
 <strong>Definition 3.2 (Type II Improper Integrals).</strong> If \(f\) is integrable on \([a+\varepsilon, b]\) for all \(\varepsilon > 0\) but has a singularity at \(a\), we define
-\[\int_a^b f(x)\,dx = \lim_{\varepsilon \to 0^+} \int_{a+\varepsilon}^b f(x)\,dx.\]
+
+\[
+\int_a^b f(x)\,dx = \lim_{\varepsilon \to 0^+} \int_{a+\varepsilon}^b f(x)\,dx.
+\]
 Similarly for singularities at \(b\) or at an interior point.
 
 </div>
@@ -330,7 +384,10 @@ Integration measures more than area; it is the natural tool for any quantity bui
 <div class="definition">
 
 <strong>Definition 4.1 (Area Between Curves).</strong> If \(f, g : [a,b] \to \mathbb{R}\) are continuous, the area of the region between their graphs is
-\[A = \int_a^b |f(x) - g(x)|\,dx.\]
+
+\[
+A = \int_a^b |f(x) - g(x)|\,dx.
+\]
 
 </div>
 
@@ -341,16 +398,25 @@ For volumes, we use the <em>method of cross-sections</em>: if \(A(x)\) is the ar
 <div class="definition">
 
 <strong>Definition 4.2 (Disk/Washer Method).</strong> The volume obtained by rotating \(y = f(x) \ge 0\) around the \(x\)-axis over \([a,b]\) is
-\[V = \int_a^b \pi [f(x)]^2\,dx.\]
+
+\[
+V = \int_a^b \pi [f(x)]^2\,dx.
+\]
 If a region between \(0 \le f(x) \le g(x)\) is rotated, we subtract the inner disk:
-\[V = \int_a^b \pi[(g(x))^2 - (f(x))^2]\,dx.\]
+
+\[
+V = \int_a^b \pi[(g(x))^2 - (f(x))^2]\,dx.
+\]
 
 </div>
 
 <div class="definition">
 
 <strong>Definition 4.3 (Shell Method).</strong> The volume obtained by rotating the region between \(f(x)\) and \(g(x)\) (with \(f \le g\)) around the \(y\)-axis over \([a,b]\) (with \(a \ge 0\)) is
-\[V = \int_a^b 2\pi x\,(g(x) - f(x))\,dx.\]
+
+\[
+V = \int_a^b 2\pi x\,(g(x) - f(x))\,dx.
+\]
 
 </div>
 
@@ -361,7 +427,10 @@ For a smooth parametric curve \(\vec{r}(t) = (x(t), y(t))\), \(t \in [a,b]\), th
 <div class="definition">
 
 <strong>Definition 4.4 (Arc Length).</strong> If \(\vec{r} : [a,b] \to \mathbb{R}^2\) is continuously differentiable, the <em>arc length</em> of the curve is
-\[L = \int_a^b \|\vec{r}'(t)\|\,dt = \int_a^b \sqrt{(x'(t))^2 + (y'(t))^2}\,dt.\]
+
+\[
+L = \int_a^b \|\vec{r}'(t)\|\,dt = \int_a^b \sqrt{(x'(t))^2 + (y'(t))^2}\,dt.
+\]
 
 </div>
 
@@ -378,7 +447,10 @@ The rigorous justification: approximate by polygonal segments with vertices at \
 ## 4.3 Work and Physics Applications
 
 In physics, work is the line integral of force over displacement. When force \(F(x)\) is variable along a one-dimensional path,
-\[W = \int_a^b F(x)\,dx.\]
+
+\[
+W = \int_a^b F(x)\,dx.
+\]
 Hooke's Law \(F(x) = kx\) for a spring gives \(W = \frac{1}{2}k(b^2 - a^2)\). Gravitational and hydrostatic pressure problems follow the same accumulation principle: slice the region into thin pieces, approximate the contribution of each slice, and integrate.
 
 ---
@@ -410,7 +482,10 @@ The justification is clean: if \(y = \varphi(x)\) is a solution, then by the cha
 <div class="theorem">
 
 <strong>Theorem 5.3 (Integrating Factor Method).</strong> The general solution to \(y' - p(x)\,y = q(x)\) is
-\[y(x) = e^{P(x)}\left(\int q(x)\,e^{-P(x)}\,dx + C\right)\]
+
+\[
+y(x) = e^{P(x)}\left(\int q(x)\,e^{-P(x)}\,dx + C\right)
+\]
 where \(P(x) = \int p(x)\,dx\). The function \(\mu(x) = e^{-P(x)}\) is the <em>integrating factor</em>.
 
 </div>
@@ -424,14 +499,23 @@ Before solving any initial value problem, we should ask: does a solution exist, 
 <div class="theorem">
 
 <strong>Theorem 5.4 (Picard–Lindelöf Existence and Uniqueness).</strong> Suppose \(f : U \to \mathbb{R}\) is defined on an open set \(U \subseteq \mathbb{R}^2\) containing the point \((x_0, y_0)\), that \(f\) is continuous on \(U\), and that \(f\) satisfies a <em>Lipschitz condition</em> in \(y\): there exists \(L > 0\) such that
-\[|f(x,y_1) - f(x,y_2)| \le L|y_1 - y_2|\]
+
+\[
+|f(x,y_1) - f(x,y_2)| \le L|y_1 - y_2|
+\]
 for all \((x,y_1), (x,y_2) \in U\). Then there exists \(\delta > 0\) and a unique function \(\varphi : (x_0 - \delta, x_0 + \delta) \to \mathbb{R}\) satisfying
-\[\varphi'(x) = f(x, \varphi(x)), \quad \varphi(x_0) = y_0.\]
+
+\[
+\varphi'(x) = f(x, \varphi(x)), \quad \varphi(x_0) = y_0.
+\]
 
 </div>
 
 The Lipschitz condition is satisfied whenever \(\partial f/\partial y\) exists and is bounded on \(U\) — in particular, whenever \(f\) is \(C^1\). The proof constructs the solution as the limit of the Picard iterates:
-\[\varphi_0(x) = y_0, \qquad \varphi_{n+1}(x) = y_0 + \int_{x_0}^x f(t, \varphi_n(t))\,dt.\]
+
+\[
+\varphi_0(x) = y_0, \qquad \varphi_{n+1}(x) = y_0 + \int_{x_0}^x f(t, \varphi_n(t))\,dt.
+\]
 One verifies that this sequence converges uniformly on a small interval using the Lipschitz condition and the contraction mapping principle.
 
 <div class="remark">
@@ -449,7 +533,10 @@ The following models all reduce to separable or linear first-order ODEs.
 **Newton's Law of Cooling.** \(T'(t) = k(T - T_e)\) (temperature difference decays exponentially). Solution: \(T(t) = T_e + (T_0 - T_e)e^{kt}\), \(k < 0\).
 
 **Logistic Growth.** \(P' = kP(1 - P/M)\) with carrying capacity \(M > 0\). This is separable; the explicit solution is
-\[P(t) = \frac{MP_0}{P_0 + (M - P_0)e^{-kt}}.\]
+
+\[
+P(t) = \frac{MP_0}{P_0 + (M - P_0)e^{-kt}}.
+\]
 As \(t \to \infty\), \(P(t) \to M\). The inflection point occurs at \(P = M/2\), where growth is fastest.
 
 ---
@@ -596,12 +683,18 @@ The contrast with pointwise convergence is that for pointwise convergence \(N\) 
 </div>
 
 *Proof.* Fix \(x_0 \in E\) and \(\varepsilon > 0\). Choose \(N\) so that \(|f_n(x) - f(x)| < \varepsilon/3\) for all \(x \in E\) and \(n \ge N\). By continuity of \(f_N\), there exists \(\delta > 0\) such that \(|x - x_0| < \delta\) implies \(|f_N(x) - f_N(x_0)| < \varepsilon/3\). Then for \(|x-x_0| < \delta\):
-\[|f(x)-f(x_0)| \le |f(x)-f_N(x)| + |f_N(x)-f_N(x_0)| + |f_N(x_0)-f(x_0)| < \varepsilon. \quad \square\]
+
+\[
+|f(x)-f(x_0)| \le |f(x)-f_N(x)| + |f_N(x)-f_N(x_0)| + |f_N(x_0)-f(x_0)| < \varepsilon. \quad \square
+\]
 
 <div class="theorem">
 
 <strong>Theorem 6.17 (Uniform Convergence and Integration).</strong> If \(f_n \to f\) uniformly on \([a,b]\), then
-\[\lim_{n\to\infty}\int_a^b f_n(x)\,dx = \int_a^b f(x)\,dx.\]
+
+\[
+\lim_{n\to\infty}\int_a^b f_n(x)\,dx = \int_a^b f(x)\,dx.
+\]
 
 </div>
 
@@ -626,7 +719,10 @@ Taylor series are the ultimate tool for approximating functions by polynomials. 
 <div class="definition">
 
 <strong>Definition 7.1 (Taylor Series).</strong> If \(f\) has derivatives of all orders at \(a\), its <em>Taylor series centred at \(a\)</em> is
-\[\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n.\]
+
+\[
+\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n.
+\]
 When \(a = 0\) this is the <em>Maclaurin series</em>. The \(n\)-th partial sum \(T_{n,a}(x) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k\) is the <em>Taylor polynomial</em> of degree \(n\).
 
 </div>
@@ -634,7 +730,10 @@ When \(a = 0\) this is the <em>Maclaurin series</em>. The \(n\)-th partial sum \
 <div class="theorem">
 
 <strong>Theorem 7.2 (Taylor's Theorem with Lagrange Remainder).</strong> If \(f\) is \((n+1)\)-times differentiable on an interval containing \(a\) and \(x\), then there exists \(c\) strictly between \(a\) and \(x\) such that
-\[f(x) = T_{n,a}(x) + R_{n,a}(x), \quad R_{n,a}(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}.\]
+
+\[
+f(x) = T_{n,a}(x) + R_{n,a}(x), \quad R_{n,a}(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}.
+\]
 
 </div>
 
@@ -649,13 +748,19 @@ When \(a = 0\) this is the <em>Maclaurin series</em>. The \(n\)-th partial sum \
 *Proof.* By Taylor's Theorem, \(|R_{n,a}(x)| \le M\frac{|x-a|^{n+1}}{(n+1)!} \to 0\) as \(n \to \infty\), since \(r^n/n! \to 0\) for any fixed \(r\). \(\square\)
 
 The standard Taylor series (valid for all \(x \in \mathbb{R}\)):
-\[e^x = \sum_{n=0}^\infty \frac{x^n}{n!}, \quad \cos x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}, \quad \sin x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!}.\]
+
+\[
+e^x = \sum_{n=0}^\infty \frac{x^n}{n!}, \quad \cos x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}, \quad \sin x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!}.
+\]
 For \(|x| \le 1\): \(\ln(1+x) = \sum_{n=1}^\infty \frac{(-1)^{n-1}x^n}{n}\) and \(\arctan x = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{2n+1}\). Setting \(x=1\) in the arctan series gives Leibniz's formula \(\pi/4 = 1 - 1/3 + 1/5 - \cdots\).
 
 <div class="theorem">
 
 <strong>Theorem 7.4 (Generalized Binomial Series).</strong> For any \(\alpha \in \mathbb{R}\) and \(|x| < 1\),
-\[(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k}x^k, \quad \binom{\alpha}{k} = \frac{\alpha(\alpha-1)\cdots(\alpha-k+1)}{k!}.\]
+
+\[
+(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k}x^k, \quad \binom{\alpha}{k} = \frac{\alpha(\alpha-1)\cdots(\alpha-k+1)}{k!}.
+\]
 
 </div>
 
@@ -666,13 +771,19 @@ The central analytical fact about power series is that they behave exactly like 
 <div class="theorem">
 
 <strong>Theorem 7.5 (Termwise Differentiation of Power Series).</strong> If \(f(x) = \sum_{n=0}^\infty c_n(x-a)^n\) has radius of convergence \(R > 0\), then \(f\) is differentiable on \((a-R,a+R)\) and
-\[f'(x) = \sum_{n=1}^\infty n\,c_n(x-a)^{n-1}.\]
+
+\[
+f'(x) = \sum_{n=1}^\infty n\,c_n(x-a)^{n-1}.
+\]
 The differentiated series also has radius of convergence \(R\).
 
 </div>
 
 *Proof.* Let \(g(x) = \sum_{n=1}^\infty n\,c_n(x-a)^{n-1}\). We verify that this series has radius of convergence \(R\): since \(\lim n^{1/n} = 1\), the Hadamard formula gives \(\limsup |nc_n|^{1/n} = \limsup |c_n|^{1/n} = 1/R\). By Theorem 6.18, for any \(r < R\) the original and differentiated series converge uniformly on \([a-r,a+r]\). Fix \(x_0\) with \(|x_0 - a| < R\) and choose \(r\) with \(|x_0-a| < r < R\). Consider the difference quotient:
-\[\frac{f(x)-f(x_0)}{x-x_0} = \sum_{n=1}^\infty c_n \frac{(x-a)^n - (x_0-a)^n}{x - x_0}.\]
+
+\[
+\frac{f(x)-f(x_0)}{x-x_0} = \sum_{n=1}^\infty c_n \frac{(x-a)^n - (x_0-a)^n}{x - x_0}.
+\]
 For each \(n\), by the factorisation \(\frac{u^n - v^n}{u-v} = u^{n-1}+u^{n-2}v+\cdots+v^{n-1}\), the \(n\)-th summand converges to \(n\,c_n(x_0-a)^{n-1}\) as \(x \to x_0\). The key step is that this convergence is dominated uniformly in \(n\) by a convergent series (using the bound on \([a-r,a+r]\)), allowing us to interchange the limit with the sum. Hence \(f'(x_0) = g(x_0)\). \(\square\)
 
 Repeated application shows \(f\) has derivatives of all orders, and evaluating \(f^{(k)}(a)\) gives \(k!\,c_k\), confirming that the coefficients must be \(c_k = f^{(k)}(a)/k!\) — the Taylor coefficients. In other words, if a function has a power series representation, that representation must be its Taylor series.
@@ -680,7 +791,10 @@ Repeated application shows \(f\) has derivatives of all orders, and evaluating \
 <div class="theorem">
 
 <strong>Theorem 7.6 (Termwise Integration of Power Series).</strong> If \(f(x) = \sum_{n=0}^\infty c_n(x-a)^n\) has radius of convergence \(R > 0\), then for \(|x-a| < R\),
-\[\int_a^x f(t)\,dt = \sum_{n=0}^\infty \frac{c_n}{n+1}(x-a)^{n+1}.\]
+
+\[
+\int_a^x f(t)\,dt = \sum_{n=0}^\infty \frac{c_n}{n+1}(x-a)^{n+1}.
+\]
 
 </div>
 
@@ -689,11 +803,17 @@ Repeated application shows \(f\) has derivatives of all orders, and evaluating \
 ## 7.3 Applications
 
 **Computing integrals without closed form.** The function \(e^{-x^2}\) has no elementary antiderivative, but its Maclaurin series \(\sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{n!}\) integrates termwise to give
-\[\int_0^x e^{-t^2}\,dt = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{n!(2n+1)}.\]
+
+\[
+\int_0^x e^{-t^2}\,dt = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{n!(2n+1)}.
+\]
 This series converges for all \(x\) and gives the error function \(\operatorname{erf}(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}\,dt\) to any desired precision.
 
 **Euler's Formula.** Substituting \(x = i\theta\) (with \(i^2 = -1\)) into the Maclaurin series for \(e^x\) and collecting real and imaginary parts gives:
-\[e^{i\theta} = \cos\theta + i\sin\theta.\]
+
+\[
+e^{i\theta} = \cos\theta + i\sin\theta.
+\]
 This is the starting point for the theory of complex power series.
 
 **Brief Note on Complex Power Series.** A power series \(\sum_{n=0}^\infty c_n(z-a)^n\) with \(c_n, a, z \in \mathbb{C}\) converges in a disk \(|z-a| < R\) in the complex plane, where \(R\) is again given by the Hadamard formula. Within this disk, all the same termwise differentiation and integration theorems hold, and the sum defines an analytic (holomorphic) function. The real and imaginary parts of a complex power series satisfy the Cauchy–Riemann equations. This is the entry point to PMATH 352 (Complex Analysis).
@@ -713,7 +833,10 @@ We close with a brief treatment of vector-valued functions, which gives a coordi
 <div class="definition">
 
 <strong>Definition A.2 (Derivative and Velocity).</strong>
-\[\vec{r}'(t_0) = \lim_{h \to 0}\frac{\vec{r}(t_0+h) - \vec{r}(t_0)}{h} = (x'(t_0), y'(t_0)).\]
+
+\[
+\vec{r}'(t_0) = \lim_{h \to 0}\frac{\vec{r}(t_0+h) - \vec{r}(t_0)}{h} = (x'(t_0), y'(t_0)).
+\]
 In a physical context, \(\vec{r}'(t)\) is the <em>velocity vector</em> and \(\|\vec{r}'(t)\|\) is the <em>speed</em>. The curve is <em>smooth</em> at \(t_0\) if \(\vec{r}'(t_0) \ne (0,0)\), in which case \(\vec{r}'(t_0)\) is tangent to the curve.
 
 </div>
@@ -721,12 +844,18 @@ In a physical context, \(\vec{r}'(t)\) is the <em>velocity vector</em> and \(\|\
 <div class="theorem">
 
 <strong>Theorem A.3 (Arc Length as Integral of Speed).</strong> If \(\vec{r} : [a,b] \to \mathbb{R}^2\) is continuously differentiable, the arc length of the curve is
-\[L = \int_a^b \|\vec{r}'(t)\|\,dt = \int_a^b \sqrt{(x'(t))^2 + (y'(t))^2}\,dt.\]
+
+\[
+L = \int_a^b \|\vec{r}'(t)\|\,dt = \int_a^b \sqrt{(x'(t))^2 + (y'(t))^2}\,dt.
+\]
 
 </div>
 
 The derivation: partition \([a,b]\) and approximate the curve by line segments. The \(i\)-th segment has length
-\[\|\vec{r}(t_i) - \vec{r}(t_{i-1})\| = \sqrt{(x(t_i)-x(t_{i-1}))^2 + (y(t_i)-y(t_{i-1}))^2}.\]
+
+\[
+\|\vec{r}(t_i) - \vec{r}(t_{i-1})\| = \sqrt{(x(t_i)-x(t_{i-1}))^2 + (y(t_i)-y(t_{i-1}))^2}.
+\]
 By the MVT, \(x(t_i)-x(t_{i-1}) = x'(\xi_i)\Delta t_i\) and \(y(t_i)-y(t_{i-1}) = y'(\eta_i)\Delta t_i\) for some \(\xi_i, \eta_i\) in the subinterval. Since \(\|\vec{r}'\|\) is continuous, as \(\|P\| \to 0\) the Riemann sums converge to the integral. A careful argument using uniform continuity makes this precise.
 
 <div class="remark">

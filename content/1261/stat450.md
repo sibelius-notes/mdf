@@ -63,6 +63,7 @@ Verifying sufficiency via the conditional distribution is cumbersome. The factor
 
 <div class="theorem">
 <strong>Theorem (Neyman-Fisher Factorization)</strong>: Let \(X = (X_1, \ldots, X_n)\) have joint density (or mass function) \(f_\theta(x)\). A statistic \(T(X)\) is sufficient for \(\theta\) if and only if there exist non-negative functions \(g\) and \(h\) such that
+
 \[
 f_\theta(x) = g(T(x);\; \theta)\; h(x) \qquad \text{for all } x \in \mathcal{X},\; \theta \in \Omega.
 \]
@@ -71,6 +72,7 @@ The function \(g\) depends on the data only through \(T(x)\), and \(h\) is free 
 
 <div class="proof">
 <strong>Proof (discrete case)</strong>: Suppose the factorization holds. Then for any fixed \(t\):
+
 \[
 P_\theta(X = x \mid T = t) = \frac{P_\theta(X = x,\; T = t)}{P_\theta(T = t)} = \frac{g(t;\theta)\,h(x)}{\sum_{x': T(x')=t} g(t;\theta)\,h(x')} = \frac{h(x)}{\sum_{x': T(x')=t} h(x')},
 \]
@@ -120,6 +122,7 @@ The constructive characterization of minimal sufficiency is the key theorem:
 
 <div class="proof">
 <strong>Proof</strong>: Let \(T\) be defined as above, so \(T(x) = T(y)\) iff \(f_\theta(x)/f_\theta(y) = H(x,y)\) independent of \(\theta\). Choose any representative \(y_t\) in each equivalence class \(\{x: T(x)=t\}\). Then for \(x\) in the class of \(y_t\):
+
 \[
 f_\theta(x) = H(x,y_t)\,f_\theta(y_t),
 \]
@@ -141,6 +144,7 @@ The **exponential family** is the most important class of distributions in theor
 
 <div class="definition">
 <strong>Definition (Exponential Family)</strong>: A parametric family of densities belongs to the <em>\(k\)-parameter exponential family</em> if the density can be written
+
 \[
 f_\theta(x) = C(\theta)\exp\!\left\{\sum_{j=1}^k q_j(\theta)\,T_j(x)\right\} h(x). \tag{1.1}
 \]
@@ -199,6 +203,7 @@ One of the most useful properties of regular exponential families is that all mo
 \[
 E_\eta[T_j(X)] = \frac{\partial}{\partial\eta_j}[-\log C(\eta)] = -\frac{\partial\log C}{\partial\eta_j},
 \]
+
 \[
 \operatorname{Cov}_\eta(T_i(X), T_j(X)) = \frac{\partial^2}{\partial\eta_i\partial\eta_j}[-\log C(\eta)].
 \]
@@ -214,6 +219,7 @@ The property of completeness is closely linked to uniqueness of estimators. To s
 
 <div class="definition">
 <strong>Definition (Complete Statistic)</strong>: A statistic \(T\), or the family of its distributions indexed by \(\theta\), is <em>complete</em> if
+
 \[
 E_\theta[h(T)] = 0 \text{ for all } \theta \in \Omega \implies P_\theta(h(T) = 0) = 1 \text{ for all } \theta \in \Omega.
 \]
@@ -248,6 +254,7 @@ The Rao-Blackwell theorem is the bridge between any unbiased estimator and the b
 
 <div class="proof">
 <strong>Proof</strong>: Point 1 follows from the definition of sufficiency: the conditional distribution of \(X\) given \(T\) is \(\theta\)-free, so \(E[W \mid T]\) is also \(\theta\)-free. Point 2 is the tower property: \(E_\theta[\phi(T)] = E_\theta[E[W \mid T]] = E_\theta[W] = \tau(\theta)\). For point 3, use the law of total variance:
+
 \[
 \operatorname{Var}_\theta(W) = E_\theta[\operatorname{Var}(W \mid T)] + \operatorname{Var}_\theta(E[W \mid T]) = E_\theta[\operatorname{Var}(W \mid T)] + \operatorname{Var}_\theta(\phi(T)).
 \]
@@ -308,6 +315,7 @@ Basu's theorem is one of the most elegant results in all of mathematical statist
 
 <div class="proof">
 <strong>Proof</strong>: For any Borel set \(B\), define
+
 \[
 g(t) = P(U \in B \mid T = t) - P(U \in B).
 \]
@@ -350,6 +358,7 @@ and the **log-likelihood** is \(\ell(\theta) = \sum_{i=1}^n \log f_\theta(x_i)\)
 
 <div class="definition">
 <strong>Definition (Maximum Likelihood Estimator)</strong>: The <em>MLE</em> \(\hat\theta\) is any maximizer of \(L(\theta)\) (or equivalently \(\ell(\theta)\)) over \(\theta \in \Omega\):
+
 \[
 \hat\theta = \arg\max_{\theta \in \Omega}\, \ell(\theta).
 \]
@@ -448,6 +457,7 @@ This is the UMVUE.
 
 <div class="theorem">
 <strong>Theorem (Orthogonality Characterization)</strong>: An unbiased estimator \(T^*(X)\) of \(\tau(\theta)\) is the UMVUE if and only if
+
 \[
 E_\theta[T^*(X)\cdot U(X)] = 0 \quad \text{for all } \theta \in \Omega
 \]
@@ -472,6 +482,7 @@ The score function measures how sensitively the log-likelihood varies with the p
 
 <div class="definition">
 <strong>Definition (Score Function)</strong>: For a model \(\{f_\theta;\, \theta \in \Omega\}\) satisfying regularity conditions, the <em>score function</em> for a single observation is
+
 \[
 S(\theta; x) = \frac{\partial}{\partial\theta}\log f_\theta(x).
 \]
@@ -482,6 +493,7 @@ The score has two fundamental properties under regularity:
 
 <div class="theorem">
 <strong>Theorem (Score identities)</strong>: For a regular model,
+
 \[
 E_\theta[S(\theta; X)] = 0 \qquad \text{and} \qquad \operatorname{Var}_\theta[S(\theta; X)] = -E_\theta\!\left[\frac{\partial^2\log f_\theta(X)}{\partial\theta^2}\right].
 \]
@@ -489,6 +501,7 @@ E_\theta[S(\theta; X)] = 0 \qquad \text{and} \qquad \operatorname{Var}_\theta[S(
 
 <div class="proof">
 <strong>Proof</strong>: Differentiate the identity \(\int f_\theta(x)\, dx = 1\) under the integral:
+
 \[
 0 = \frac{\partial}{\partial\theta}\int f_\theta\, dx = \int \frac{\partial f_\theta}{\partial\theta}\, dx = \int \frac{\partial\log f_\theta}{\partial\theta}\, f_\theta\, dx = E_\theta[S(\theta; X)].
 \]
@@ -504,6 +517,7 @@ Since \(E[S] = 0\), we have \(\operatorname{Var}[S] = E[S^2] = -E[\partial^2\ell
 
 <div class="definition">
 <strong>Definition (Fisher Information)</strong>: The <em>Fisher information</em> for a single observation is
+
 \[
 \mathcal{I}(\theta) = E_\theta\!\left[S(\theta; X)^2\right] = \operatorname{Var}_\theta[S(\theta; X)] = -E_\theta\!\left[\frac{\partial^2\log f_\theta(X)}{\partial\theta^2}\right].
 \]
@@ -542,6 +556,7 @@ This result, sometimes called the **data processing inequality** for Fisher info
 
 <div class="theorem">
 <strong>Theorem (Cramér-Rao Information Inequality)</strong>: Let \(\{f_\theta;\, \theta \in \Omega\}\) be a regular model and \(T(X)\) an unbiased estimator of \(\tau(\theta)\) with \(E_\theta[T^2] < \infty\). Then
+
 \[
 \operatorname{Var}_\theta(T) \geq \frac{[\tau'(\theta)]^2}{\mathcal{I}(\theta)}. \tag{CR}
 \]
@@ -550,6 +565,7 @@ Equality holds if and only if \(f_\theta\) is a regular exponential family with 
 
 <div class="proof">
 <strong>Proof</strong>: Since \(T\) is unbiased: \(\int T(x)\, f_\theta(x)\, dx = \tau(\theta)\). Differentiating:
+
 \[
 \int T(x)\, \frac{\partial f_\theta}{\partial\theta}\, dx = \tau'(\theta) \implies \operatorname{Cov}_\theta(T,\, S(\theta; X)) = \tau'(\theta).
 \]
@@ -664,6 +680,7 @@ A **test** is specified by a **critical (rejection) region** \(R \subseteq \math
 
 <div class="definition">
 <strong>Definition (Power Function)</strong>: The <em>power function</em> of a test with critical region \(R\) is
+
 \[
 \beta(\theta) = P_\theta(X \in R), \quad \theta \in \Omega.
 \]
@@ -703,6 +720,7 @@ The duality between tests and confidence sets is a cornerstone of frequentist in
 
 <div class="theorem">
 <strong>Theorem (Test Inversion)</strong>: For each \(\theta_0 \in \Omega\), let \(A(\theta_0)\) be the acceptance region of a level-\(\alpha\) test for \(H_0: \theta = \theta_0\). Then
+
 \[
 C(x) = \{\theta_0 \in \Omega : x \in A(\theta_0)\}
 \]
@@ -721,6 +739,7 @@ The Neyman-Pearson lemma gives the complete solution to the simplest testing pro
 
 <div class="theorem">
 <strong>Theorem (Neyman-Pearson Lemma, 1933)</strong>: Consider testing \(H_0: \theta = \theta_0\) vs. \(H_1: \theta = \theta_1\). For any \(k \geq 0\), define the critical region
+
 \[
 R = \left\{x : \frac{f_{\theta_1}(x)}{f_{\theta_0}(x)} > k\right\}.
 \]
@@ -729,6 +748,7 @@ If \(P_{\theta_0}(X \in R) = \alpha\), then \(R\) is the <em>most powerful test<
 
 <div class="proof">
 <strong>Proof</strong>: Let \(R^*\) be any critical region with \(P_{\theta_0}(R^*) \leq \alpha = P_{\theta_0}(R)\). Consider the four regions \(R \cap R^*\), \(R \cap \bar R^*\), \(\bar R \cap R^*\), \(\bar R \cap \bar R^*\). From the size constraint:
+
 \[
 \int_{R \cap \bar{R}^*} f_{\theta_0}\, dx \leq \int_{\bar R \cap R^*} f_{\theta_0}\, dx. \tag{*}
 \]
@@ -815,6 +835,7 @@ When no UMP or UMPU test is available — which is the case for most multi-param
 
 <div class="definition">
 <strong>Definition (GLRT Statistic)</strong>: For testing \(H_0: \theta \in \Omega_0\) vs. \(H_1: \theta \in \Omega \setminus \Omega_0\), the <em>GLRT statistic</em> is
+
 \[
 \Lambda(x) = \frac{\sup_{\theta \in \Omega} L(\theta; x)}{\sup_{\theta \in \Omega_0} L(\theta; x)} = \frac{L(\hat\theta)}{L(\hat\theta_0)},
 \]
@@ -829,6 +850,7 @@ The key to using the GLRT is determining the null distribution of \(\Lambda\). W
 
 <div class="theorem">
 <strong>Theorem (Wilks, 1938)</strong>: Let \(X_1, \ldots, X_n\) be iid from a regular model \(\{f_\theta;\, \theta \in \Omega\}\) where \(\Omega\) is open in \(\mathbb{R}^k\). Consider \(H_0: \theta \in \Omega_0\) where \(\Omega_0 = \{\theta(\eta) : \eta \in H\}\) for \(H\) open in \(\mathbb{R}^q\) with \(q < k\). Under \(H_0\),
+
 \[
 W_n = 2\log\Lambda_n(X) \overset{d}{\to} \chi^2(k - q).
 \]
@@ -836,6 +858,7 @@ W_n = 2\log\Lambda_n(X) \overset{d}{\to} \chi^2(k - q).
 
 <div class="proof">
 <strong>Proof sketch</strong>: Let \(\theta_0\) be the true parameter. The key is the Taylor expansion of the log-likelihood ratio:
+
 \[
 2\log\Lambda_n = 2[\ell(\hat\theta) - \ell(\hat\theta_0)] \approx n(\hat\theta - \hat\theta_0)^T \mathcal{I}(\theta_0)(\hat\theta - \hat\theta_0).
 \]
@@ -1125,6 +1148,7 @@ The asymptotic distribution of the MLE is the most fundamental result in large-s
 
 <div class="theorem">
 <strong>Theorem (Asymptotic Normality of MLE)</strong>: Under the regularity conditions for a regular model, if \(\hat\theta_n\) is a consistent root of the likelihood equation, then
+
 \[
 \sqrt{n}\,(\hat\theta_n - \theta_0) \overset{d}{\to} N\!\left(0,\; \mathcal{I}_1(\theta_0)^{-1}\right)
 \]
@@ -1133,6 +1157,7 @@ where \(\mathcal{I}_1(\theta_0) = E_{\theta_0}[S_1(\theta_0; X)^2]\) is the sing
 
 <div class="proof">
 <strong>Proof sketch</strong>: Taylor expand the score equation \(0 = n^{-1}\sum_{i=1}^n S(\theta_0; X_i) + (\hat\theta_n - \theta_0)\cdot n^{-1}\sum_{i=1}^n S'(\theta_0; X_i) + o_p(1)\). By the CLT, \(n^{-1/2}\sum S(\theta_0; X_i) \overset{d}{\to} N(0, \mathcal{I}_1(\theta_0))\). By the WLLN, \(n^{-1}\sum S'(\theta_0; X_i) \overset{p}{\to} E[S'] = -\mathcal{I}_1(\theta_0)\). Solving for \(\sqrt{n}(\hat\theta_n - \theta_0)\):
+
 \[
 \sqrt{n}(\hat\theta_n - \theta_0) \approx \frac{n^{-1/2}\sum S(\theta_0; X_i)}{-n^{-1}\sum S'(\theta_0; X_i)} \overset{d}{\to} \frac{N(0, \mathcal{I}_1)}{\mathcal{I}_1} = N(0, \mathcal{I}_1^{-1}).
 \]

@@ -54,18 +54,28 @@ The <strong>money market</strong> encompasses short-term debt instruments with m
 
 The yield on a T-bill is most naturally expressed as a <strong>bond equivalent yield</strong> to facilitate comparison with other instruments:
 
-\[ y_{BEY} = \frac{F - P}{P} \times \frac{365}{T} \]
+\[
+y_{BEY} = \frac{F - P}{P} \times \frac{365}{T}
+\]
 
 where \(F\) is face value, \(P\) is purchase price, and \(T\) is days to maturity. Alternatively, the <strong>bank discount yield</strong> convention divides by face value rather than price:
 
-\[ y_{BD} = \frac{F - P}{F} \times \frac{360}{T} \]
+\[
+y_{BD} = \frac{F - P}{F} \times \frac{360}{T}
+\]
 
 The bank discount yield understates the true return (it divides by face value, which exceeds price) and uses a 360-day year; it should not be compared directly to yields on other instruments quoted on a 365-day, price-divided basis.
 
 <div class="example"><strong>Example 2.1.</strong> A 91-day Government of Canada T-bill with face value \$10,000 is purchased for \$9,910. The bank discount yield is:
-\[ y_{BD} = \frac{10000 - 9910}{10000} \times \frac{360}{91} = \frac{90}{10000} \times 3.956 = 0.0356 = 3.56\% \]
+
+\[
+y_{BD} = \frac{10000 - 9910}{10000} \times \frac{360}{91} = \frac{90}{10000} \times 3.956 = 0.0356 = 3.56\%
+\]
 The bond equivalent yield is:
-\[ y_{BEY} = \frac{90}{9910} \times \frac{365}{91} = 0.009082 \times 4.011 = 0.03643 = 3.64\% \]
+
+\[
+y_{BEY} = \frac{90}{9910} \times \frac{365}{91} = 0.009082 \times 4.011 = 0.03643 = 3.64\%
+\]
 The BEY exceeds the BD yield because it divides by the actual price paid and uses a 365-day year.</div>
 
 <div class="definition"><strong>Definition 2.2 (Certificate of Deposit).</strong> A <strong>certificate of deposit (CD)</strong> is a time deposit offered by a commercial bank specifying a fixed interest rate for a fixed term. <strong>Negotiable CDs</strong> (typically \$100,000 or more) can be sold in the secondary market before maturity, converting them from illiquid time deposits to liquid money market instruments.</div>
@@ -107,7 +117,10 @@ A <strong>stock market index</strong> is a number designed to summarize the perf
 <div class="example"><strong>Example 2.2.</strong> Suppose an index contains two stocks: A at \$60 and B at \$40. The index value is \(\frac{60+40}{2} = 50\). Stock A has weight \(60/100 = 60\%\) and B has weight 40%. If A undergoes a 2-for-1 split, its price falls to \$30 and B remains at \$40. To maintain continuity, the divisor is adjusted: the new index value should still be 50, so the new divisor \(d\) satisfies \(\frac{30+40}{d} = 50\), giving \(d = 1.4\). After the split, A's weight falls to \(30/70 = 42.9\%\) — the split has mechanically reduced A's index influence, even though the firm's total value (capitalization) is unchanged.</div>
 
 <div class="definition"><strong>Definition 2.12 (Market-Capitalization Weighted Index).</strong> A <strong>market-capitalization weighted (value-weighted) index</strong> weights each stock by its total market capitalization, so that a firm worth \$500 billion has ten times the weight of a firm worth \$50 billion. The weight of firm \(i\) at time \(t\) is:
-\[ w_i = \frac{P_i \times \text{shares}_i}{\sum_j P_j \times \text{shares}_j} \]
+
+\[
+w_i = \frac{P_i \times \text{shares}_i}{\sum_j P_j \times \text{shares}_j}
+\]
 The <strong>S&P 500</strong>, the <strong>S&P/TSX Composite</strong>, and the <strong>MSCI World</strong> are cap-weighted.</div>
 
 Cap-weighted indices have two practical advantages: they are <strong>self-rebalancing</strong> (as prices change, weights naturally adjust with no trading required) and they are <strong>passively replicable</strong> (an investor holding all constituents in proportion to their market caps holds the index, with zero turnover). The disadvantage is that overvalued stocks automatically receive higher weights.
@@ -151,14 +164,24 @@ Two prominent theories explain IPO underpricing. The <strong>winner's curse</str
 <div class="definition"><strong>Definition 3.7 (Margin Trading).</strong> <strong>Margin trading</strong> is the purchase of securities using borrowed funds from a broker. The <strong>initial margin</strong> requirement specifies the minimum fraction of the position value that must be funded by the investor's own equity. In Canada and the U.S., initial margin on equities is typically 50%. The <strong>maintenance margin</strong> is the minimum equity fraction that must be maintained subsequently; if equity falls below this level, a <strong>margin call</strong> is issued requiring additional deposits to restore the account to initial margin.</div>
 
 <div class="proposition"><strong>Proposition 3.8 (Margin Call Trigger Price).</strong> Suppose an investor buys \(N\) shares at price \(P_0\), financing the purchase with equity \(E_0 = m P_0 N\) and a loan of \((1-m)P_0 N\), where \(m\) is the initial margin fraction. The maintenance margin level is \(\bar{m}\). A margin call is triggered when the stock price falls to:
-\[ P^* = \frac{(1-m)P_0}{1 - \bar{m}} \]
+
+\[
+P^* = \frac{(1-m)P_0}{1 - \bar{m}}
+\]
 At \(P^*\), the equity in the account equals \(\bar{m}\) times the position value.</div>
 
 <div class="proof"><strong>Derivation.</strong> The loan outstanding is fixed at \(L = (1-m)P_0 N\). At stock price \(P\), the equity is \(E = PN - L = PN - (1-m)P_0 N\). The margin ratio is \(E/(PN) = 1 - (1-m)P_0/P\). Setting this equal to \(\bar{m}\):
-\[ 1 - \frac{(1-m)P_0}{P^<em>} = \bar{m} \implies P^</em> = \frac{(1-m)P_0}{1 - \bar{m}} \qquad \square \]</div>
+
+\[
+1 - \frac{(1-m)P_0}{P^<em>} = \bar{m} \implies P^</em> = \frac{(1-m)P_0}{1 - \bar{m}} \qquad \square
+\]
+</div>
 
 <div class="example"><strong>Example 3.1.</strong> An investor buys 100 shares of a stock at \$50 with 50% initial margin, borrowing \$2,500. The loan is fixed at \$2,500. The maintenance margin is 25%. The margin call trigger price is:
-\[ P^* = \frac{(1 - 0.5) \times 50}{1 - 0.25} = \frac{25}{0.75} = \$33.33 \]
+
+\[
+P^* = \frac{(1 - 0.5) \times 50}{1 - 0.25} = \frac{25}{0.75} = \$33.33
+\]
 If the stock falls below \$33.33, a margin call is issued. At \$33.33, equity = \(33.33 \times 100 - 2500 = \$833\), which is \(833/3333 = 25\%\) of position value. ✓</div>
 
 <div class="definition"><strong>Definition 3.9 (Short Sale).</strong> A <strong>short sale</strong> involves borrowing shares from a broker (who typically borrows them from another client's margin account), selling them in the open market, and later repurchasing shares in the market to return to the lender. The short seller profits if the stock price falls. The short seller must pay any dividends declared on the borrowed shares to the lender, and must maintain a margin account. The maximum gain on a short position is 100% (if the stock falls to zero); the maximum loss is theoretically unlimited (if the stock price rises without bound).</div>
@@ -172,23 +195,42 @@ The quantitative analysis of investment begins with precise definitions of retur
 ## Measuring Returns
 
 <div class="definition"><strong>Definition 4.1 (Holding Period Return).</strong> The <strong>holding period return (HPR)</strong> over a single period is:
-\[ r = \frac{P_1 - P_0 + D_1}{P_0} = \underbrace{\frac{P_1 - P_0}{P_0}}_{\text{capital gain yield}} + \underbrace{\frac{D_1}{P_0}}_{\text{dividend yield}} \]
+
+\[
+r = \frac{P_1 - P_0 + D_1}{P_0} = \underbrace{\frac{P_1 - P_0}{P_0}}_{\text{capital gain yield}} + \underbrace{\frac{D_1}{P_0}}_{\text{dividend yield}}
+\]
 where \(P_0\) and \(P_1\) are the beginning and ending prices, and \(D_1\) is any cash dividend received during the period.</div>
 
 When returns are measured over multiple sub-periods, two summary statistics arise naturally:
 
 <div class="definition"><strong>Definition 4.2 (Arithmetic and Geometric Mean Returns).</strong> Given returns \(r_1, r_2, \ldots, r_T\) over \(T\) equal-length sub-periods, the <strong>arithmetic mean return</strong> is:
-\[ \bar{r}_A = \frac{1}{T}\sum_{t=1}^{T} r_t \]
+
+\[
+\bar{r}_A = \frac{1}{T}\sum_{t=1}^{T} r_t
+\]
 The <strong>geometric mean return</strong> is:
-\[ \bar{r}_G = \left[\prod_{t=1}^{T}(1 + r_t)\right]^{1/T} - 1 \]</div>
+
+\[
+\bar{r}_G = \left[\prod_{t=1}^{T}(1 + r_t)\right]^{1/T} - 1
+\]
+</div>
 
 <div class="proposition"><strong>Proposition 4.3 (Arithmetic vs. Geometric Mean).</strong> For any sequence of non-constant returns, \(\bar{r}_A > \bar{r}_G\). The approximation:
-\[ \bar{r}_A - \bar{r}_G \approx \frac{\sigma^2}{2} \]
+
+\[
+\bar{r}_A - \bar{r}_G \approx \frac{\sigma^2}{2}
+\]
 holds, where \(\sigma^2\) is the variance of the periodic returns. The arithmetic mean is the appropriate estimate of the expected return in any single future period; the geometric mean is the realized compound growth rate over the history.</div>
 
 <div class="example"><strong>Example 4.1.</strong> A stock returns +50% in year 1 and −33.3% in year 2.
-\[ \bar{r}_A = \frac{0.50 + (-0.333)}{2} = 8.35\% \]
-\[ \bar{r}_G = \sqrt{(1.50)(0.667)} - 1 = \sqrt{1.0005} - 1 \approx 0.025\% \]
+
+\[
+\bar{r}_A = \frac{0.50 + (-0.333)}{2} = 8.35\%
+\]
+
+\[
+\bar{r}_G = \sqrt{(1.50)(0.667)} - 1 = \sqrt{1.0005} - 1 \approx 0.025\%
+\]
 The geometric mean is nearly zero because a 50% gain followed by a 33.3% loss returns to approximately the starting value: \(1.50 \times 0.667 = 1.000\). The arithmetic mean of 8.35% gives the expected return for each individual year's draw, not the compounded growth.</div>
 
 ## Expected Return and Variance
@@ -196,9 +238,18 @@ The geometric mean is nearly zero because a 50% gain followed by a 33.3% loss re
 When returns are treated as random variables (the appropriate treatment in forward-looking analysis), the relevant statistics are:
 
 <div class="definition"><strong>Definition 4.4 (Expected Return, Variance, and Standard Deviation).</strong> Let \(r\) be a random variable representing the return on an asset. If the asset has \(S\) possible states \(s = 1, \ldots, S\) occurring with probabilities \(p_s\) and delivering returns \(r_s\), then:
-\[ E(r) = \sum_{s=1}^{S} p_s r_s \]
-\[ \sigma^2 = \text{Var}(r) = \sum_{s=1}^{S} p_s \bigl[r_s - E(r)\bigr]^2 \]
-\[ \sigma = \sqrt{\sigma^2} \]
+
+\[
+E(r) = \sum_{s=1}^{S} p_s r_s
+\]
+
+\[
+\sigma^2 = \text{Var}(r) = \sum_{s=1}^{S} p_s \bigl[r_s - E(r)\bigr]^2
+\]
+
+\[
+\sigma = \sqrt{\sigma^2}
+\]
 The standard deviation \(\sigma\) is expressed in the same units as the return and serves as the primary measure of risk in mean-variance analysis.</div>
 
 <div class="example"><strong>Example 4.2.</strong> An analyst assigns the following return scenarios to a stock:
@@ -209,32 +260,69 @@ The standard deviation \(\sigma\) is expressed in the same units as the return a
 | Normal | 0.45 | 14% |
 | Recession | 0.30 | −16% |
 
-\[ E(r) = 0.25(0.44) + 0.45(0.14) + 0.30(-0.16) = 0.110 + 0.063 - 0.048 = 12.5\% \]
-\[ \sigma^2 = 0.25(0.44 - 0.125)^2 + 0.45(0.14 - 0.125)^2 + 0.30(-0.16 - 0.125)^2 \]
-\[ = 0.25(0.0992) + 0.45(0.000225) + 0.30(0.0812) = 0.02480 + 0.000101 + 0.02436 = 0.04926 \]
-\[ \sigma = \sqrt{0.04926} = 22.2\% \]</div>
+\[
+E(r) = 0.25(0.44) + 0.45(0.14) + 0.30(-0.16) = 0.110 + 0.063 - 0.048 = 12.5\%
+\]
+
+\[
+\sigma^2 = 0.25(0.44 - 0.125)^2 + 0.45(0.14 - 0.125)^2 + 0.30(-0.16 - 0.125)^2
+\]
+
+\[
+= 0.25(0.0992) + 0.45(0.000225) + 0.30(0.0812) = 0.02480 + 0.000101 + 0.02436 = 0.04926
+\]
+
+\[
+\sigma = \sqrt{0.04926} = 22.2\%
+\]
+</div>
 
 ## Covariance, Correlation, and Portfolio Risk
 
 The co-movement of assets determines the diversification benefit from combining them in a portfolio:
 
 <div class="definition"><strong>Definition 4.5 (Covariance and Correlation).</strong> The <strong>covariance</strong> between the returns of assets \(i\) and \(j\) is:
-\[ \sigma_{ij} = \text{Cov}(r_i, r_j) = \sum_s p_s \bigl[r_{i,s} - E(r_i)\bigr]\bigl[r_{j,s} - E(r_j)\bigr] \]
+
+\[
+\sigma_{ij} = \text{Cov}(r_i, r_j) = \sum_s p_s \bigl[r_{i,s} - E(r_i)\bigr]\bigl[r_{j,s} - E(r_j)\bigr]
+\]
 The <strong>correlation coefficient</strong> normalises the covariance to the unit interval:
-\[ \rho_{ij} = \frac{\sigma_{ij}}{\sigma_i \sigma_j}, \qquad \rho_{ij} \in [-1, 1] \]
+
+\[
+\rho_{ij} = \frac{\sigma_{ij}}{\sigma_i \sigma_j}, \qquad \rho_{ij} \in [-1, 1]
+\]
 A correlation of \(+1\) indicates perfect positive co-movement; \(-1\) indicates perfect negative co-movement; \(0\) indicates no linear relationship.</div>
 
 <div class="theorem"><strong>Theorem 4.6 (Two-Asset Portfolio Statistics).</strong> Let asset 1 have expected return \(E(r_1)\) and standard deviation \(\sigma_1\), and asset 2 have \(E(r_2)\) and \(\sigma_2\), with correlation \(\rho_{12}\). For a portfolio with weight \(w\) in asset 1 and \((1-w)\) in asset 2:
-\[ E(r_p) = w E(r_1) + (1-w)E(r_2) \]
-\[ \sigma_p^2 = w^2\sigma_1^2 + (1-w)^2\sigma_2^2 + 2w(1-w)\sigma_1\sigma_2\rho_{12} \]</div>
+
+\[
+E(r_p) = w E(r_1) + (1-w)E(r_2)
+\]
+
+\[
+\sigma_p^2 = w^2\sigma_1^2 + (1-w)^2\sigma_2^2 + 2w(1-w)\sigma_1\sigma_2\rho_{12}
+\]
+</div>
 
 <div class="remark"><strong>Remark.</strong> The expected return formula is linear in weights — straightforward averaging. The variance formula is the key insight of modern portfolio theory. For any \(\rho_{12} < 1\), portfolio variance is strictly less than the weighted average of individual variances \(w^2\sigma_1^2 + (1-w)^2\sigma_2^2 + 2w(1-w)\sigma_1\sigma_2\). The reduction comes entirely from the cross-term involving \(\rho_{12}\). When \(\rho_{12} = -1\), there exists a weight \(w^*\) that achieves \(\sigma_p = 0\) (a perfectly hedged portfolio). This is diversification in its purest mathematical form.</div>
 
 <div class="example"><strong>Example 4.3.</strong> Stock A: \(E(r_A) = 10\%\), \(\sigma_A = 20\%\). Stock B: \(E(r_B) = 6\%\), \(\sigma_B = 10\%\). Correlation \(\rho_{AB} = 0.1\). For a 60/40 portfolio (\(w=0.6\)):
-\[ E(r_p) = 0.6(10\%) + 0.4(6\%) = 6\% + 2.4\% = 8.4\% \]
-\[ \sigma_p^2 = (0.6)^2(0.04) + (0.4)^2(0.01) + 2(0.6)(0.4)(0.2)(0.1)(0.1) \]
-\[ = 0.0144 + 0.0016 + 0.00096 = 0.01696 \]
-\[ \sigma_p = \sqrt{0.01696} = 13.02\% \]
+
+\[
+E(r_p) = 0.6(10\%) + 0.4(6\%) = 6\% + 2.4\% = 8.4\%
+\]
+
+\[
+\sigma_p^2 = (0.6)^2(0.04) + (0.4)^2(0.01) + 2(0.6)(0.4)(0.2)(0.1)(0.1)
+\]
+
+\[
+= 0.0144 + 0.0016 + 0.00096 = 0.01696
+\]
+
+\[
+\sigma_p = \sqrt{0.01696} = 13.02\%
+\]
 The weighted-average standard deviation would be \(0.6(20\%) + 0.4(10\%) = 16\%\). The portfolio standard deviation of 13.02% is substantially lower — this is the diversification benefit.</div>
 
 ## The Sharpe Ratio
@@ -242,7 +330,10 @@ The weighted-average standard deviation would be \(0.6(20\%) + 0.4(10\%) = 16\%\
 The most widely used risk-adjusted performance measure is the ratio of expected excess return to standard deviation:
 
 <div class="definition"><strong>Definition 4.7 (Sharpe Ratio).</strong> The <strong>Sharpe ratio</strong> (reward-to-variability ratio) of a portfolio \(p\) is:
-\[ S_p = \frac{E(r_p) - r_f}{\sigma_p} \]
+
+\[
+S_p = \frac{E(r_p) - r_f}{\sigma_p}
+\]
 where \(r_f\) is the risk-free rate. The Sharpe ratio measures the additional expected return earned per unit of standard deviation — it is the slope of the <strong>Capital Allocation Line</strong> (defined in Chapter 5).</div>
 
 The Sharpe ratio is the appropriate performance measure when the portfolio being evaluated represents the investor's entire risky portfolio — i.e., when it has no diversification relationship with other holdings. When the portfolio is a component of a larger portfolio, the appropriate measure is the information ratio or Treynor ratio (which uses beta-adjusted risk).
@@ -252,7 +343,10 @@ The Sharpe ratio is the appropriate performance measure when the portfolio being
 Decades of data from Canadian and U.S. markets establish the empirical risk-return relationship with considerable precision. Canadian equities (S&P/TSX) have historically delivered arithmetic mean annual returns of approximately 11–13%, with annual standard deviation near 18–20%. Long-term Government of Canada bonds have returned roughly 6–8% with standard deviation near 10%. 91-day T-bills have returned approximately 3–5% with near-zero variance.
 
 <div class="definition"><strong>Definition 4.8 (Equity Risk Premium).</strong> The <strong>equity risk premium (ERP)</strong> is the expected excess return of equities over the risk-free rate:
-\[ \text{ERP} = E(r_M) - r_f \]
+
+\[
+\text{ERP} = E(r_M) - r_f
+\]
 Historically (1926–2020), the U.S. arithmetic ERP has been approximately 7–8% per year. Forward-looking estimates, based on current valuations, are typically somewhat lower. The ERP compensates equity investors for bearing systematic risk — the co-movement of equity returns with aggregate consumption and output that cannot be diversified away.</div>
 
 ---
@@ -264,11 +358,17 @@ Historically (1926–2020), the U.S. arithmetic ERP has been approximately 7–8
 Investors differ in their tolerance for risk. We model this formally through utility functions that trade off expected return against return variance:
 
 <div class="definition"><strong>Definition 5.1 (Mean-Variance Utility).</strong> The <strong>mean-variance utility</strong> of an investment portfolio with expected return \(E(r)\) and variance \(\sigma^2\) is:
-\[ U = E(r) - \frac{1}{2}A\sigma^2 \]
+
+\[
+U = E(r) - \frac{1}{2}A\sigma^2
+\]
 where \(A > 0\) is the investor's <strong>coefficient of risk aversion</strong>. A higher value of \(A\) means the investor penalises variance more heavily relative to expected return. Empirical estimates from market data typically place \(A\) in the range 2–4 for average investors.</div>
 
 <div class="definition"><strong>Definition 5.2 (Certainty Equivalent Return).</strong> The <strong>certainty equivalent return (CER)</strong> is the risk-free return that the investor regards as equivalent to the risky portfolio. For mean-variance utility:
-\[ \text{CER} = E(r) - \frac{1}{2}A\sigma^2 \]
+
+\[
+\text{CER} = E(r) - \frac{1}{2}A\sigma^2
+\]
 An investor accepts a risky portfolio only if its CER exceeds the available risk-free rate \(r_f\).</div>
 
 <div class="example"><strong>Example 5.1.</strong> Two portfolios are available:
@@ -277,10 +377,19 @@ An investor accepts a risky portfolio only if its CER exceeds the available risk
 <li>Portfolio Q: \(E(r_Q) = 8\%\), \(\sigma_Q = 10\%\)</li>
 </ul>
 For an investor with \(A = 3\):
-\[ \text{CER}_P = 12\% - \frac{1}{2}(3)(0.04) = 12\% - 6\% = 6\% \]
-\[ \text{CER}_Q = 8\% - \frac{1}{2}(3)(0.01) = 8\% - 1.5\% = 6.5\% \]
+
+\[
+\text{CER}_P = 12\% - \frac{1}{2}(3)(0.04) = 12\% - 6\% = 6\%
+\]
+
+\[
+\text{CER}_Q = 8\% - \frac{1}{2}(3)(0.01) = 8\% - 1.5\% = 6.5\%
+\]
 This investor prefers Q despite its lower expected return, because P's higher variance more than offsets its higher expected return. For \(A = 1\):
-\[ \text{CER}_P = 12\% - 2\% = 10\%, \quad \text{CER}_Q = 8\% - 0.5\% = 7.5\% \]
+
+\[
+\text{CER}_P = 12\% - 2\% = 10\%, \quad \text{CER}_Q = 8\% - 0.5\% = 7.5\%
+\]
 This investor prefers P. Risk aversion determines which portfolio is preferred.</div>
 
 ## The Capital Allocation Line
@@ -288,28 +397,57 @@ This investor prefers P. Risk aversion determines which portfolio is preferred.<
 The central problem of capital allocation is: given a risk-free asset and a risky portfolio, what fraction of wealth should an investor place in each?
 
 <div class="definition"><strong>Definition 5.3 (Capital Allocation Line).</strong> Consider a risk-free asset with return \(r_f\) and a risky portfolio \(P\) with expected return \(E(r_P)\) and standard deviation \(\sigma_P\). An investor who places fraction \(y\) in \(P\) and \((1-y)\) in the risk-free asset holds a <strong>complete portfolio</strong> \(C\) with:
-\[ E(r_C) = r_f + y[E(r_P) - r_f] \]
-\[ \sigma_C = y\sigma_P \]
+
+\[
+E(r_C) = r_f + y[E(r_P) - r_f]
+\]
+
+\[
+\sigma_C = y\sigma_P
+\]
 Eliminating \(y = \sigma_C/\sigma_P\), the locus of achievable risk-return combinations is the <strong>Capital Allocation Line (CAL)</strong>:
-\[ E(r_C) = r_f + \frac{E(r_P) - r_f}{\sigma_P} \cdot \sigma_C \]
+
+\[
+E(r_C) = r_f + \frac{E(r_P) - r_f}{\sigma_P} \cdot \sigma_C
+\]
 The slope of the CAL is the Sharpe ratio \(S_P = [E(r_P) - r_f]/\sigma_P\).</div>
 
 The CAL is a straight line in mean-standard deviation space, passing through the risk-free point \((0, r_f)\) and the risky portfolio point \((\sigma_P, E(r_P))\). Points along the CAL to the left of \(P\) correspond to \(y < 1\) (partial investment in \(P\) plus risk-free lending); points to the right of \(P\) correspond to \(y > 1\) (leveraged investment, i.e., borrowing at \(r_f\) to invest more than 100% in \(P\)).
 
 <div class="theorem"><strong>Theorem 5.4 (Optimal Complete Portfolio).</strong> An investor with mean-variance utility coefficient \(A\) maximises utility by allocating fraction:
-\[ y^* = \frac{E(r_P) - r_f}{A\sigma_P^2} \]
+
+\[
+y^* = \frac{E(r_P) - r_f}{A\sigma_P^2}
+\]
 to the risky portfolio \(P\).</div>
 
 <div class="proof"><strong>Derivation.</strong> Substituting the complete portfolio statistics into the utility function:
-\[ U(y) = r_f + y[E(r_P) - r_f] - \frac{1}{2}A(y\sigma_P)^2 \]
+
+\[
+U(y) = r_f + y[E(r_P) - r_f] - \frac{1}{2}A(y\sigma_P)^2
+\]
 Taking the derivative with respect to \(y\) and setting equal to zero:
-\[ \frac{dU}{dy} = E(r_P) - r_f - Ay\sigma_P^2 = 0 \implies y^* = \frac{E(r_P) - r_f}{A\sigma_P^2} \qquad \square \]</div>
+
+\[
+\frac{dU}{dy} = E(r_P) - r_f - Ay\sigma_P^2 = 0 \implies y^* = \frac{E(r_P) - r_f}{A\sigma_P^2} \qquad \square
+\]
+</div>
 
 <div class="example"><strong>Example 5.2.</strong> Let \(r_f = 3\%\), \(E(r_P) = 12\%\), \(\sigma_P = 18\%\), and \(A = 4\).
-\[ y^* = \frac{0.12 - 0.03}{4 \times (0.18)^2} = \frac{0.09}{4 \times 0.0324} = \frac{0.09}{0.1296} = 69.4\% \]
+
+\[
+y^* = \frac{0.12 - 0.03}{4 \times (0.18)^2} = \frac{0.09}{4 \times 0.0324} = \frac{0.09}{0.1296} = 69.4\%
+\]
 The investor places 69.4% in the risky portfolio and 30.6% in T-bills. The complete portfolio has:
-\[ E(r_C) = 3\% + 0.694(12\% - 3\%) = 3\% + 6.25\% = 9.25\% \]
-\[ \sigma_C = 0.694 \times 18\% = 12.49\% \]</div>
+
+\[
+E(r_C) = 3\% + 0.694(12\% - 3\%) = 3\% + 6.25\% = 9.25\%
+\]
+
+\[
+\sigma_C = 0.694 \times 18\% = 12.49\%
+\]
+</div>
 
 ## The Efficient Frontier and the Separation Theorem
 
@@ -319,7 +457,9 @@ When investors can combine any number of risky assets freely, the full opportuni
 
 The <strong>minimum-variance portfolio (MVP)</strong> is the leftmost point on the frontier — the portfolio with the lowest achievable variance across all risky portfolios. For two assets, the MVP weight is:
 
-\[ w_1^{MVP} = \frac{\sigma_2^2 - \sigma_{12}}{\sigma_1^2 + \sigma_2^2 - 2\sigma_{12}} \]
+\[
+w_1^{MVP} = \frac{\sigma_2^2 - \sigma_{12}}{\sigma_1^2 + \sigma_2^2 - 2\sigma_{12}}
+\]
 
 <div class="theorem"><strong>Theorem 5.6 (Two-Fund Separation Theorem).</strong> When a risk-free asset is available, every mean-variance efficient investor — regardless of their risk aversion coefficient — holds the same risky portfolio: the portfolio that maximizes the Sharpe ratio (the <strong>tangency portfolio</strong>). Risk aversion determines only the split between the risk-free asset and this tangency portfolio.</div>
 
@@ -344,11 +484,17 @@ The <strong>Capital Asset Pricing Model (CAPM)</strong>, developed by Sharpe (19
 Under these assumptions, the two-fund separation theorem implies every investor holds the same risky portfolio. Since investors collectively own the economy's entire stock of risky assets, the common risky portfolio must be the <strong>market portfolio</strong>:
 
 <div class="definition"><strong>Definition 7.2 (Market Portfolio).</strong> The <strong>market portfolio</strong> \(M\) contains every risky asset in the economy, weighted by its market capitalization:
-\[ w_i^M = \frac{P_i \times \text{shares}_i}{\sum_j P_j \times \text{shares}_j} \]
+
+\[
+w_i^M = \frac{P_i \times \text{shares}_i}{\sum_j P_j \times \text{shares}_j}
+\]
 In practice, broad market indices (S&P/TSX Composite, S&P 500, MSCI World) serve as proxies for the market portfolio.</div>
 
 <div class="definition"><strong>Definition 7.3 (Capital Market Line).</strong> The CAL corresponding to the market portfolio is the <strong>Capital Market Line (CML)</strong>:
-\[ E(r_C) = r_f + \frac{E(r_M) - r_f}{\sigma_M} \cdot \sigma_C \]
+
+\[
+E(r_C) = r_f + \frac{E(r_M) - r_f}{\sigma_M} \cdot \sigma_C
+\]
 The CML represents the highest achievable Sharpe ratio; no portfolio outside the CML exists in equilibrium. The slope \([E(r_M) - r_f]/\sigma_M\) is the market price of risk per unit of total standard deviation. The CML describes only efficient portfolios — it does not apply to individual assets.</div>
 
 ## Beta and the Security Market Line
@@ -356,31 +502,52 @@ The CML represents the highest achievable Sharpe ratio; no portfolio outside the
 For individual securities, the relevant risk measure is not total standard deviation (much of which can be diversified away) but systematic risk:
 
 <div class="definition"><strong>Definition 7.4 (Beta).</strong> The <strong>beta</strong> of asset \(i\) measures its sensitivity to the market portfolio's returns:
-\[ \beta_i = \frac{\text{Cov}(r_i, r_M)}{\text{Var}(r_M)} = \frac{\sigma_{iM}}{\sigma_M^2} \]
+
+\[
+\beta_i = \frac{\text{Cov}(r_i, r_M)}{\text{Var}(r_M)} = \frac{\sigma_{iM}}{\sigma_M^2}
+\]
 Beta is the slope coefficient in the regression \(r_i = \alpha_i + \beta_i r_M + \varepsilon_i\). The market portfolio has \(\beta_M = 1\) by construction. A risk-free asset has \(\beta = 0\).</div>
 
 <div class="theorem"><strong>Theorem 7.5 (Security Market Line / CAPM).</strong> In equilibrium, the expected return of every asset satisfies:
-\[ \boxed{E(r_i) = r_f + \beta_i[E(r_M) - r_f]} \]
+
+\[
+\boxed{E(r_i) = r_f + \beta_i[E(r_M) - r_f]}
+\]
 This relationship defines the <strong>Security Market Line (SML)</strong>. The quantity \(E(r_M) - r_f\) is the <strong>market risk premium</strong>.</div>
 
 <div class="proof"><strong>Derivation (sketch).</strong> Consider adding a small amount \(\varepsilon\) of asset \(i\) to the market portfolio (reducing other holdings proportionally). The change in expected portfolio return is:
-\[ \Delta E(r) = \varepsilon [E(r_i) - E(r_M)] \]
+
+\[
+\Delta E(r) = \varepsilon [E(r_i) - E(r_M)]
+\]
 The change in portfolio variance is (to first order):
-\[ \Delta\sigma^2 = 2\varepsilon[\text{Cov}(r_i, r_M) - \sigma_M^2] = 2\varepsilon\sigma_M^2[\beta_i - 1] \]
+
+\[
+\Delta\sigma^2 = 2\varepsilon[\text{Cov}(r_i, r_M) - \sigma_M^2] = 2\varepsilon\sigma_M^2[\beta_i - 1]
+\]
 For the market portfolio to be optimal, the marginal reward-to-risk trade-off must be the same for every asset as for the market itself. This requirement yields the SML. \(\square\)</div>
 
 <div class="definition"><strong>Definition 7.6 (Alpha).</strong> The <strong>Jensen's alpha</strong> of asset \(i\) is the deviation of its expected return from the SML:
-\[ \alpha_i = E(r_i) - \bigl[r_f + \beta_i(E(r_M) - r_f)\bigr] \]
+
+\[
+\alpha_i = E(r_i) - \bigl[r_f + \beta_i(E(r_M) - r_f)\bigr]
+\]
 In CAPM equilibrium, \(\alpha_i = 0\) for every asset. In empirical tests of the CAPM (using realized returns), a positive alpha indicates outperformance relative to systematic risk; a negative alpha indicates underperformance.</div>
 
 <div class="example"><strong>Example 7.1.</strong> The risk-free rate is 3%, the market risk premium is 7%, and stock XYZ has \(\beta = 1.3\). The CAPM required return is:
-\[ E(r_{XYZ}) = 3\% + 1.3 \times 7\% = 3\% + 9.1\% = 12.1\% \]
+
+\[
+E(r_{XYZ}) = 3\% + 1.3 \times 7\% = 3\% + 9.1\% = 12.1\%
+\]
 If the analyst estimates the stock's true expected return at 14%, the stock has an alpha of \(14\% - 12.1\% = 1.9\%\), suggesting it is underpriced relative to its systematic risk.</div>
 
 ## Risk Decomposition
 
 <div class="theorem"><strong>Theorem 7.7 (Decomposition of Total Risk).</strong> For any asset \(i\) with return \(r_i = \alpha_i + \beta_i r_M + \varepsilon_i\) (where \(\text{Cov}(r_M, \varepsilon_i) = 0\)):
-\[ \sigma_i^2 = \underbrace{\beta_i^2 \sigma_M^2}_{\text{systematic risk}} + \underbrace{\sigma^2(\varepsilon_i)}_{\text{idiosyncratic risk}} \]
+
+\[
+\sigma_i^2 = \underbrace{\beta_i^2 \sigma_M^2}_{\text{systematic risk}} + \underbrace{\sigma^2(\varepsilon_i)}_{\text{idiosyncratic risk}}
+\]
 Only systematic risk (the first component) commands a risk premium. Idiosyncratic risk averages to zero in a diversified portfolio and earns no expected return compensation.</div>
 
 The <strong>coefficient of determination</strong> \(R^2 = \beta_i^2\sigma_M^2/\sigma_i^2\) measures what fraction of the asset's variance is systematic. A well-diversified portfolio has \(R^2\) near 1; an individual stock might have \(R^2\) of 20–50%.
@@ -402,15 +569,27 @@ Fixed income securities are the largest component of global capital markets by t
 ## Bond Pricing
 
 <div class="theorem"><strong>Theorem 12.4 (Bond Pricing Formula).</strong> The price of a coupon bond with \(T\) remaining semi-annual periods, semi-annual coupon \(C\), face value \(F\), and semi-annual yield \(y\) is:
-\[ P = \sum_{t=1}^{T} \frac{C}{(1+y)^t} + \frac{F}{(1+y)^T} = C \cdot \frac{1 - (1+y)^{-T}}{y} + F(1+y)^{-T} \]
+
+\[
+P = \sum_{t=1}^{T} \frac{C}{(1+y)^t} + \frac{F}{(1+y)^T} = C \cdot \frac{1 - (1+y)^{-T}}{y} + F(1+y)^{-T}
+\]
 </div>
 
 <div class="proof"><strong>Derivation.</strong> The bond delivers a certain sequence of cash flows. By the principle of no-arbitrage (the absence of riskless profit opportunities), the bond's price must equal the present value of all future cash flows discounted at the market yield \(y\). The sum \(\sum_{t=1}^T C/(1+y)^t\) is a geometric series summing to the annuity formula \(C[1-(1+y)^{-T}]/y\). Adding the present value of face value gives the result. \(\square\)</div>
 
 <div class="example"><strong>Example 12.1.</strong> A Government of Canada bond has 6% annual coupon (paid semi-annually, so \$30 per period), face value \$1,000, 5 years to maturity (\(T = 10\) semi-annual periods), and trades at a yield to maturity of 5% annually (2.5% semi-annual).
-\[ P = 30 \cdot \frac{1 - (1.025)^{-10}}{0.025} + 1000 \cdot (1.025)^{-10} \]
-\[ = 30 \times 8.7521 + 1000 \times 0.7812 \]
-\[ = 262.56 + 781.20 = \$1043.76 \]
+
+\[
+P = 30 \cdot \frac{1 - (1.025)^{-10}}{0.025} + 1000 \cdot (1.025)^{-10}
+\]
+
+\[
+= 30 \times 8.7521 + 1000 \times 0.7812
+\]
+
+\[
+= 262.56 + 781.20 = \$1043.76
+\]
 The bond prices above par because its coupon rate (6%) exceeds the market yield (5%).</div>
 
 <div class="proposition"><strong>Proposition 12.5 (Par, Premium, and Discount Bonds).</strong> For a fixed-coupon bond:
@@ -424,19 +603,31 @@ Furthermore, as maturity approaches, the price of any coupon bond converges to f
 ## Yield Measures
 
 <div class="definition"><strong>Definition 12.6 (Yield to Maturity).</strong> The <strong>yield to maturity (YTM)</strong> of a bond is the discount rate \(y\) that equates the present value of all future cash flows to the current market price:
-\[ P = \sum_{t=1}^{T} \frac{CF_t}{(1+y)^t} \]
+
+\[
+P = \sum_{t=1}^{T} \frac{CF_t}{(1+y)^t}
+\]
 The YTM is the bond's internal rate of return, assuming coupons are reinvested at the YTM rate. Since no closed-form solution exists for \(y\), it is found numerically (Newton's method or a financial calculator).</div>
 
 <div class="definition"><strong>Definition 12.7 (Current Yield).</strong> The <strong>current yield</strong> is annual coupon divided by price:
-\[ y_{\text{current}} = \frac{2C}{P} \]
+
+\[
+y_{\text{current}} = \frac{2C}{P}
+\]
 (for semi-annual bonds, \(2C\) is the annual coupon). The current yield ignores both the time value of money and the capital gain or loss from holding a bond to maturity. It overstates the return on premium bonds (which are bought above par and return face value, incurring a capital loss) and understates the return on discount bonds.</div>
 
 <div class="definition"><strong>Definition 12.8 (Yield to Call).</strong> For a callable bond, the <strong>yield to call (YTC)</strong> is computed as YTM but using the call date as the maturity date and the call price as the terminal cash flow. The <strong>yield to worst</strong> is the minimum of the YTM and all YTCs across possible call dates — it gives the worst-case yield the investor will earn if the issuer calls at the most advantageous time.</div>
 
 <div class="example"><strong>Example 12.2.</strong> A bond has 8% semi-annual coupon, face value \$1,000, 10 years to maturity, and currently trades at \$950. The current yield is:
-\[ y_{\text{current}} = \frac{80}{950} = 8.42\% \]
+
+\[
+y_{\text{current}} = \frac{80}{950} = 8.42\%
+\]
 The YTM is found by solving:
-\[ 950 = \sum_{t=1}^{20} \frac{40}{(1+y)^t} + \frac{1000}{(1+y)^{20}} \]
+
+\[
+950 = \sum_{t=1}^{20} \frac{40}{(1+y)^t} + \frac{1000}{(1+y)^{20}}
+\]
 Using a financial calculator: N=20, PV=−950, PMT=40, FV=1000 → solve for I/Y: \(y = 4.32\%\) semi-annual, or 8.64% annual YTM. The YTM exceeds the current yield because the bond is priced below par and will generate a capital gain of \$50 at maturity.</div>
 
 ## The Price-Yield Relationship
@@ -472,14 +663,24 @@ The term structure describes how yields vary across maturities. Understanding th
 ## Forward Rates
 
 <div class="definition"><strong>Definition 13.3 (Forward Rate).</strong> The <strong>forward rate</strong> \(f_{t,t+1}\) is the interest rate that can be locked in today for a one-period investment beginning at time \(t\). From no-arbitrage:
-\[ (1+y_{t+1})^{t+1} = (1+y_t)^t(1 + f_{t,t+1}) \]
+
+\[
+(1+y_{t+1})^{t+1} = (1+y_t)^t(1 + f_{t,t+1})
+\]
 Solving:
-\[ f_{t,t+1} = \frac{(1+y_{t+1})^{t+1}}{(1+y_t)^t} - 1 \]</div>
+
+\[
+f_{t,t+1} = \frac{(1+y_{t+1})^{t+1}}{(1+y_t)^t} - 1
+\]
+</div>
 
 <div class="proof"><strong>Derivation.</strong> Two strategies that invest \$1 for \(t+1\) periods must yield the same return (no-arbitrage). Strategy 1: invest in a \((t+1)\)-period zero, earning \((1+y_{t+1})^{t+1}\). Strategy 2: invest in a \(t\)-period zero, then rollover at the forward rate locked in today, earning \((1+y_t)^t(1+f_{t,t+1})\). Setting these equal and solving for \(f_{t,t+1}\) gives the stated result. The forward rate can be locked in by simultaneously buying a long zero and selling short a short zero in appropriate proportions. \(\square\)</div>
 
 <div class="example"><strong>Example 13.1.</strong> Given spot rates: \(y_1 = 3.0\%\) and \(y_2 = 3.5\%\). The one-year forward rate one year from now:
-\[ f_{1,2} = \frac{(1.035)^2}{(1.030)^1} - 1 = \frac{1.07122}{1.030} - 1 = 1.03993 - 1 = 4.00\% \]
+
+\[
+f_{1,2} = \frac{(1.035)^2}{(1.030)^1} - 1 = \frac{1.07122}{1.030} - 1 = 1.03993 - 1 = 4.00\%
+\]
 The forward rate (4.00%) exceeds the current 1-year spot (3.00%) and 2-year spot (3.50%), consistent with the upward-sloping yield curve implying rising expected short rates.</div>
 
 ## Bootstrapping the Spot Curve
@@ -497,11 +698,17 @@ In practice, the zero-coupon spot curve must be extracted from coupon bond price
 ## Theories of the Term Structure
 
 <div class="definition"><strong>Definition 13.5 (Pure Expectations Hypothesis).</strong> The <strong>pure expectations hypothesis (PEH)</strong> holds that long-term yields are geometric averages of expected future short rates:
-\[ (1+y_T)^T = \prod_{t=0}^{T-1}(1 + E[r_{t,t+1}]) \]
+
+\[
+(1+y_T)^T = \prod_{t=0}^{T-1}(1 + E[r_{t,t+1}])
+\]
 Under the PEH, forward rates are unbiased forecasts of future spot rates, and all bonds of any maturity offer the same expected return over any holding period. The yield curve slopes upward if and only if the market expects short rates to rise.</div>
 
 <div class="definition"><strong>Definition 13.6 (Liquidity Preference Theory).</strong> The <strong>liquidity preference theory</strong> (Keynes, Hicks) holds that long-term bonds expose investors to greater price risk and therefore require a <strong>liquidity premium</strong> (or term premium) \(\ell_t > 0\):
-\[ f_{t-1,t} = E[r_{t-1,t}] + \ell_t \]
+
+\[
+f_{t-1,t} = E[r_{t-1,t}] + \ell_t
+\]
 The forward rate embeds both the expected future short rate and a risk premium that increases with maturity. This explains why the yield curve typically slopes upward even in periods when short rates are not expected to rise: the term premium creates a persistent upward slope.</div>
 
 <div class="remark"><strong>Remark.</strong> The empirical evidence strongly favors the liquidity preference theory over the pure expectations hypothesis. If the PEH held, the yield curve would predict future interest rates with some accuracy; in practice, yield curve slopes have weak predictive power for future rate changes, suggesting the slope primarily reflects term premia rather than expectations. The inverted yield curve's ability to predict recessions is consistent with either hypothesis — it may reflect expectations of falling rates (expected recession causing central bank cuts) or elevated short-term risk premia relative to long-term premia.</div>
@@ -515,13 +722,25 @@ The forward rate embeds both the expected future short rate and a risk premium t
 The central risk of bond investing is <strong>interest rate risk</strong> — the inverse relationship between bond prices and yields means that rising rates cause portfolio losses. Duration is the tool for measuring and managing this risk:
 
 <div class="definition"><strong>Definition 14.1 (Macaulay Duration).</strong> The <strong>Macaulay duration</strong> of a bond is the weighted average time to receipt of all cash flows, where weights are the present values of cash flows as fractions of total price:
-\[ D = \sum_{t=1}^{T} t \cdot \frac{CF_t/(1+y)^t}{P} = \sum_{t=1}^{T} t \cdot w_t \]
+
+\[
+D = \sum_{t=1}^{T} t \cdot \frac{CF_t/(1+y)^t}{P} = \sum_{t=1}^{T} t \cdot w_t
+\]
 where \(w_t = CF_t/(1+y)^t / P\) and \(\sum_t w_t = 1\). Duration is measured in periods (or years for annual compounding).</div>
 
 <div class="example"><strong>Example 14.1.</strong> A 2-year bond with annual 8% coupon, face \$1,000, YTM = 10%.
-\[ P = \frac{80}{1.10} + \frac{1080}{(1.10)^2} = 72.73 + 892.56 = \$965.29 \]
-\[ w_1 = 72.73/965.29 = 0.0754, \quad w_2 = 892.56/965.29 = 0.9246 \]
-\[ D = 1 \times 0.0754 + 2 \times 0.9246 = 0.0754 + 1.8492 = 1.924 \text{ years} \]
+
+\[
+P = \frac{80}{1.10} + \frac{1080}{(1.10)^2} = 72.73 + 892.56 = \$965.29
+\]
+
+\[
+w_1 = 72.73/965.29 = 0.0754, \quad w_2 = 892.56/965.29 = 0.9246
+\]
+
+\[
+D = 1 \times 0.0754 + 2 \times 0.9246 = 0.0754 + 1.8492 = 1.924 \text{ years}
+\]
 For a zero-coupon bond, \(D = T\) always (all weight on the single terminal cash flow).</div>
 
 <div class="proposition"><strong>Proposition 14.2 (Duration Properties).</strong>
@@ -538,17 +757,29 @@ For a zero-coupon bond, \(D = T\) always (all weight on the single terminal cash
 Macaulay duration is related to price sensitivity through a simple adjustment:
 
 <div class="theorem"><strong>Theorem 14.3 (Price Sensitivity via Modified Duration).</strong> Let \(D^* = D/(1+y)\) denote the <strong>modified duration</strong>. For a small change \(\Delta y\) in yield:
-\[ \frac{\Delta P}{P} \approx -D^* \cdot \Delta y \]
+
+\[
+\frac{\Delta P}{P} \approx -D^* \cdot \Delta y
+\]
 or equivalently:
-\[ \Delta P \approx -D^* \cdot P \cdot \Delta y \]
+
+\[
+\Delta P \approx -D^* \cdot P \cdot \Delta y
+\]
 </div>
 
 <div class="proof"><strong>Derivation.</strong> Differentiate the bond price formula with respect to yield:
-\[ \frac{dP}{dy} = -\sum_{t=1}^{T} \frac{t \cdot CF_t}{(1+y)^{t+1}} = -\frac{1}{1+y}\sum_{t=1}^{T} \frac{t \cdot CF_t}{(1+y)^t} = -\frac{P \cdot D}{1+y} = -P \cdot D^* \]
+
+\[
+\frac{dP}{dy} = -\sum_{t=1}^{T} \frac{t \cdot CF_t}{(1+y)^{t+1}} = -\frac{1}{1+y}\sum_{t=1}^{T} \frac{t \cdot CF_t}{(1+y)^t} = -\frac{P \cdot D}{1+y} = -P \cdot D^*
+\]
 Therefore \(dP/P = -D^* \cdot dy\). For discrete changes, this is a linear approximation valid for small \(\Delta y\). \(\square\)</div>
 
 <div class="example"><strong>Example 14.2.</strong> A bond has modified duration \(D^* = 7.2\) years and trades at \$980. If yields rise by 50 basis points (0.50%):
-\[ \Delta P \approx -7.2 \times 980 \times 0.005 = -\$35.28 \]
+
+\[
+\Delta P \approx -7.2 \times 980 \times 0.005 = -\$35.28
+\]
 The new approximate price is \$944.72. The dollar duration (\(D^* \times P = 7,056\)) gives the dollar price change per 100 basis point move.</div>
 
 ## Convexity
@@ -556,9 +787,15 @@ The new approximate price is \$944.72. The dollar duration (\(D^* \times P = 7,0
 The modified duration approximation is linear in yield changes. The actual price-yield curve is convex — for equal yield changes up and down, the price rises more than it falls. This second-order correction is captured by convexity:
 
 <div class="definition"><strong>Definition 14.4 (Convexity).</strong> The <strong>convexity</strong> of a bond is:
-\[ \text{CX} = \frac{1}{P(1+y)^2}\sum_{t=1}^{T}\frac{t(t+1)\cdot CF_t}{(1+y)^t} \]
+
+\[
+\text{CX} = \frac{1}{P(1+y)^2}\sum_{t=1}^{T}\frac{t(t+1)\cdot CF_t}{(1+y)^t}
+\]
 The improved price approximation including convexity is:
-\[ \frac{\Delta P}{P} \approx -D^*\Delta y + \frac{1}{2}\text{CX}\cdot(\Delta y)^2 \]
+
+\[
+\frac{\Delta P}{P} \approx -D^*\Delta y + \frac{1}{2}\text{CX}\cdot(\Delta y)^2
+\]
 </div>
 
 <div class="remark"><strong>Remark.</strong> The convexity correction \(\frac{1}{2}\text{CX}\cdot(\Delta y)^2\) is always non-negative for option-free bonds (convexity is always positive). This means bondholders always benefit from convexity: price rises more for yield declines than it falls for equal yield increases. For bonds with embedded calls (callable bonds), convexity can become negative at low yields — when rates are low, the call option is more likely to be exercised, and the bond behaves more like a short-maturity bond, reducing its price appreciation.</div>
@@ -583,17 +820,26 @@ Equity valuation is both more intellectually demanding and more practically infl
 ## Intrinsic Value and Mispricing
 
 <div class="definition"><strong>Definition 16.1 (Intrinsic Value).</strong> The <strong>intrinsic value</strong> \(V_0\) of a share is the present value of all future cash flows that the share will generate for its owner, discounted at the appropriate risk-adjusted required rate of return \(k\). The <strong>required rate of return</strong> is estimated using the CAPM:
-\[ k = r_f + \beta[E(r_M) - r_f] \]
+
+\[
+k = r_f + \beta[E(r_M) - r_f]
+\]
 If \(V_0 > P_0\) (current market price), the stock is undervalued; if \(V_0 < P_0\), it is overvalued.</div>
 
 ## The Dividend Discount Model
 
 <div class="theorem"><strong>Theorem 16.2 (General Dividend Discount Model).</strong> The intrinsic value of a share is the present value of all future dividends:
-\[ V_0 = \sum_{t=1}^{\infty}\frac{D_t}{(1+k)^t} \]
+
+\[
+V_0 = \sum_{t=1}^{\infty}\frac{D_t}{(1+k)^t}
+\]
 where \(D_t\) is the expected dividend in period \(t\) and \(k\) is the required rate of return.</div>
 
 <div class="proof"><strong>Derivation.</strong> A share held for one period delivers dividend \(D_1\) and a selling price \(P_1\). By no-arbitrage:
-\[ V_0 = \frac{D_1 + P_1}{1+k} \]
+
+\[
+V_0 = \frac{D_1 + P_1}{1+k}
+\]
 But \(P_1\) itself equals the present value of subsequent dividends discounted one period later. Iterating indefinitely (and assuming the terminal price term vanishes as the horizon grows), the result follows. \(\square\)</div>
 
 ## The Gordon Growth Model
@@ -601,19 +847,31 @@ But \(P_1\) itself equals the present value of subsequent dividends discounted o
 The most widely used simplification of the DDM is the constant-growth model:
 
 <div class="theorem"><strong>Theorem 16.3 (Gordon Growth Model).</strong> If dividends grow at a constant rate \(g\) forever (\(D_t = D_0(1+g)^t\)), and if \(k > g\), then:
-\[ V_0 = \frac{D_1}{k - g} = \frac{D_0(1+g)}{k - g} \]
+
+\[
+V_0 = \frac{D_1}{k - g} = \frac{D_0(1+g)}{k - g}
+\]
 </div>
 
 <div class="proof"><strong>Derivation.</strong> Substituting the constant growth assumption into the general DDM:
-\[ V_0 = \sum_{t=1}^{\infty}\frac{D_0(1+g)^t}{(1+k)^t} = D_0(1+g)\sum_{t=1}^{\infty}\left(\frac{1+g}{1+k}\right)^{t-1}\cdot\frac{1}{1+k} = \frac{D_0(1+g)}{k-g} \]
+
+\[
+V_0 = \sum_{t=1}^{\infty}\frac{D_0(1+g)^t}{(1+k)^t} = D_0(1+g)\sum_{t=1}^{\infty}\left(\frac{1+g}{1+k}\right)^{t-1}\cdot\frac{1}{1+k} = \frac{D_0(1+g)}{k-g}
+\]
 using the geometric series formula \(\sum_{t=0}^{\infty} x^t = 1/(1-x)\) for \(|x| < 1\) (which requires \(g < k\)). \(\square\)</div>
 
 <div class="example"><strong>Example 16.1.</strong> A firm just paid a dividend \(D_0 = \$2.50\). Dividends are expected to grow at \(g = 5\%\) indefinitely. The required return is \(k = 10\%\).
-\[ V_0 = \frac{2.50 \times 1.05}{0.10 - 0.05} = \frac{2.625}{0.05} = \$52.50 \]
+
+\[
+V_0 = \frac{2.50 \times 1.05}{0.10 - 0.05} = \frac{2.625}{0.05} = \$52.50
+\]
 If the stock currently trades at \$48, it appears undervalued by \$4.50.
 
 Rearranging the Gordon model provides a useful alternative perspective:
-\[ k = \frac{D_1}{V_0} + g \]
+
+\[
+k = \frac{D_1}{V_0} + g
+\]
 The required return equals the dividend yield plus the (constant) capital gain rate. This decomposition holds at every point in time in the constant-growth model.</div>
 
 ## The Plowback Model of Growth
@@ -621,7 +879,10 @@ The required return equals the dividend yield plus the (constant) capital gain r
 The constant growth rate \(g\) is not arbitrary — it is determined by the firm's reinvestment policy:
 
 <div class="definition"><strong>Definition 16.4 (Plowback Ratio and Sustainable Growth).</strong> The <strong>plowback ratio</strong> (or retention ratio) \(b = 1 - d\) is the fraction of earnings retained for reinvestment, where \(d\) is the payout ratio. If the firm earns a return on equity (ROE) on its reinvested earnings, the sustainable growth rate is:
-\[ g = b \times \text{ROE} \]
+
+\[
+g = b \times \text{ROE}
+\]
 A firm paying out all earnings as dividends (\(b=0\)) has \(g=0\); a firm retaining 60% of earnings with ROE of 15% grows at 9%.</div>
 
 <div class="remark"><strong>Remark (Modigliani-Miller insight).</strong> The Gordon model implies that a firm with higher \(g\) is worth more. But note that \(g = b \times \text{ROE}\) increases both the growth in dividends and reduces the current dividend (since higher \(b\) means lower payout). Growth only adds value if \(\text{ROE} > k\) — if the firm earns more than its cost of equity on retained earnings. If \(\text{ROE} = k\), paying out all earnings as dividends (no growth) yields the same stock price as retaining and reinvesting. This is the content of Modigliani-Miller dividend irrelevance in a world without taxes.</div>
@@ -629,20 +890,35 @@ A firm paying out all earnings as dividends (\(b=0\)) has \(g=0\); a firm retain
 ## Multistage Growth Models
 
 <div class="definition"><strong>Definition 16.5 (Two-Stage DDM).</strong> A <strong>two-stage DDM</strong> models a period of high or abnormal growth at rate \(g_1\) for the first \(T\) periods, followed by a perpetual mature growth rate \(g_2 < k\):
-\[ V_0 = \sum_{t=1}^{T}\frac{D_t}{(1+k)^t} + \frac{P_T}{(1+k)^T} \]
+
+\[
+V_0 = \sum_{t=1}^{T}\frac{D_t}{(1+k)^t} + \frac{P_T}{(1+k)^T}
+\]
 where \(D_t = D_0(1+g_1)^t\) and the terminal value uses the Gordon model: \(P_T = D_{T+1}/(k - g_2)\).</div>
 
 <div class="example"><strong>Example 16.2.</strong> A firm has just paid \(D_0 = \$1.00\). It is expected to grow at 20% for the next 3 years (growth phase), then settle to a perpetual 5% growth rate. Required return \(k = 12\%\).
 
 Dividends during high-growth phase:
-\[ D_1 = 1.20, \quad D_2 = 1.44, \quad D_3 = 1.728 \]
+
+\[
+D_1 = 1.20, \quad D_2 = 1.44, \quad D_3 = 1.728
+\]
 
 Terminal value at \(T = 3\):
-\[ P_3 = \frac{D_4}{k - g_2} = \frac{1.728 \times 1.05}{0.12 - 0.05} = \frac{1.8144}{0.07} = \$25.92 \]
+
+\[
+P_3 = \frac{D_4}{k - g_2} = \frac{1.728 \times 1.05}{0.12 - 0.05} = \frac{1.8144}{0.07} = \$25.92
+\]
 
 Present value:
-\[ V_0 = \frac{1.20}{1.12} + \frac{1.44}{1.12^2} + \frac{1.728}{1.12^3} + \frac{25.92}{1.12^3} \]
-\[ = 1.071 + 1.148 + 1.230 + 18.44 = \$21.89 \]
+
+\[
+V_0 = \frac{1.20}{1.12} + \frac{1.44}{1.12^2} + \frac{1.728}{1.12^3} + \frac{25.92}{1.12^3}
+\]
+
+\[
+= 1.071 + 1.148 + 1.230 + 18.44 = \$21.89
+\]
 
 Note that the terminal value accounts for \$18.44/\$21.89 = 84% of total value — the assumed long-run growth rate dominates the valuation.</div>
 
@@ -651,9 +927,15 @@ Note that the terminal value accounts for \$18.44/\$21.89 = 84% of total value �
 The <strong>price-to-earnings (P/E) ratio</strong> is the most widely used equity valuation metric. The Gordon model implies a theoretical P/E:
 
 <div class="definition"><strong>Definition 16.6 (P/E Ratio and PVGO).</strong> The <strong>price-to-earnings ratio</strong> is \(P/E = P_0/E_1\). For the Gordon growth model with payout ratio \(d = D_1/E_1\):
-\[ \frac{P_0}{E_1} = \frac{d}{k - g} \]
+
+\[
+\frac{P_0}{E_1} = \frac{d}{k - g}
+\]
 The stock price can be decomposed as:
-\[ P_0 = \frac{E_1}{k} + \text{PVGO} \]
+
+\[
+P_0 = \frac{E_1}{k} + \text{PVGO}
+\]
 where \(E_1/k\) is the value of the stock as a no-growth perpetuity and \(\text{PVGO}\) (Present Value of Growth Opportunities) is the additional value from profitable reinvestment. If \(\text{ROE} > k\), \(\text{PVGO} > 0\); if \(\text{ROE} = k\), \(\text{PVGO} = 0\).</div>
 
 ---
@@ -702,15 +984,24 @@ The break-even stock price is \(X + C = 53\). Maximum loss = \$3 (premium paid);
 ## Option Strategies
 
 <div class="definition"><strong>Definition 18.4 (Protective Put).</strong> A <strong>protective put</strong> combines a long position in the stock with a long put option:
-\[ \text{Payoff} = S_T + \max(X - S_T, 0) = \max(S_T, X) \]
+
+\[
+\text{Payoff} = S_T + \max(X - S_T, 0) = \max(S_T, X)
+\]
 This provides downside insurance: the position value never falls below \(X\), regardless of how far the stock drops. The cost is the put premium, which functions exactly as an insurance premium.</div>
 
 <div class="definition"><strong>Definition 18.5 (Covered Call).</strong> A <strong>covered call</strong> combines a long stock position with a short call:
-\[ \text{Payoff} = S_T - \max(S_T - X, 0) = \min(S_T, X) \]
+
+\[
+\text{Payoff} = S_T - \max(S_T - X, 0) = \min(S_T, X)
+\]
 The investor collects the call premium and retains upside up to the strike, but caps gains above the strike. Covered calls are attractive when the investor believes the stock will not rise significantly above the strike in the near term.</div>
 
 <div class="definition"><strong>Definition 18.6 (Straddle).</strong> A <strong>straddle</strong> combines a long call and a long put with the same strike and expiry:
-\[ \text{Payoff} = \max(S_T - X, 0) + \max(X - S_T, 0) = |S_T - X| \]
+
+\[
+\text{Payoff} = \max(S_T - X, 0) + \max(X - S_T, 0) = |S_T - X|
+\]
 The straddle profits from large moves in either direction. It is valuable when the investor expects high volatility but is uncertain about direction — before an earnings announcement, regulatory decision, or merger vote, for instance.</div>
 
 ## Factors Affecting Option Prices
@@ -734,9 +1025,15 @@ The volatility sensitivity deserves special emphasis. Unlike all other inputs, w
 The most fundamental no-arbitrage constraint linking call and put prices is:
 
 <div class="theorem"><strong>Theorem 18.8 (Put-Call Parity).</strong> For European options on a non-dividend paying stock with the same strike \(X\) and expiry \(T\):
-\[ C + Xe^{-rT} = P + S_0 \]
+
+\[
+C + Xe^{-rT} = P + S_0
+\]
 or equivalently:
-\[ C - P = S_0 - Xe^{-rT} \]
+
+\[
+C - P = S_0 - Xe^{-rT}
+\]
 </div>
 
 <div class="proof"><strong>Derivation.</strong> Construct two portfolios:
@@ -752,11 +1049,21 @@ Payoffs at expiry \(T\):
 | \(S_T \leq X\) | \(0 + X = X\) | \((X - S_T) + S_T = X\) |
 
 The payoffs are identical for all outcomes. By no-arbitrage, the initial costs must be equal:
-\[ C + Xe^{-rT} = P + S_0 \qquad \square \]</div>
+
+\[
+C + Xe^{-rT} = P + S_0 \qquad \square
+\]
+</div>
 
 <div class="example"><strong>Example 18.2.</strong> A stock trades at \$50. A 3-month European call with strike \$50 is priced at \$4.50. The continuously compounded risk-free rate is 4% per year. What should a put with the same strike and expiry be worth?
-\[ P = C + Xe^{-rT} - S_0 = 4.50 + 50e^{-0.04 \times 0.25} - 50 \]
-\[ = 4.50 + 50(0.9900) - 50 = 4.50 + 49.50 - 50 = \$4.00 \]
+
+\[
+P = C + Xe^{-rT} - S_0 = 4.50 + 50e^{-0.04 \times 0.25} - 50
+\]
+
+\[
+= 4.50 + 50(0.9900) - 50 = 4.50 + 49.50 - 50 = \$4.00
+\]
 If the put traded at \$4.40, an arbitrageur could earn a riskless profit of \$0.40 by buying the put (\$4.40), selling the call (\$4.50), buying the stock (\$50), and borrowing \$49.50 — a net inflow of \$0.40 now, with zero net cash flows at expiry regardless of \(S_T\).</div>
 
 ---
@@ -770,23 +1077,51 @@ The binomial model provides the conceptual foundation for all option pricing. It
 <div class="definition"><strong>Definition 19.1 (Single-Period Binomial Model).</strong> The stock currently trades at \(S\). Over one period it moves to either \(S_u = uS\) (up) with risk-neutral probability \(p\) or \(S_d = dS\) (down). A call option with strike \(X\) has payoffs \(C_u = \max(uS - X, 0)\) and \(C_d = \max(dS - X, 0)\) at expiry.</div>
 
 <div class="theorem"><strong>Theorem 19.2 (Binomial Call Price).</strong> The no-arbitrage call price is:
-\[ C = \frac{pC_u + (1-p)C_d}{1 + r_f} \]
+
+\[
+C = \frac{pC_u + (1-p)C_d}{1 + r_f}
+\]
 where the <strong>risk-neutral probability</strong> is:
-\[ p = \frac{(1+r_f) - d}{u - d} \]
+
+\[
+p = \frac{(1+r_f) - d}{u - d}
+\]
 and \(r_f\) is the one-period risk-free rate. The <strong>hedge ratio</strong> (delta) of the replicating portfolio is:
-\[ \Delta = \frac{C_u - C_d}{S_u - S_d} = \frac{C_u - C_d}{(u-d)S} \]</div>
+
+\[
+\Delta = \frac{C_u - C_d}{S_u - S_d} = \frac{C_u - C_d}{(u-d)S}
+\]
+</div>
 
 <div class="proof"><strong>Derivation.</strong> Construct a riskless portfolio by holding \(\Delta\) shares and being short one call. The portfolio must earn the risk-free rate:
-\[ \Delta S_u - C_u = \Delta S_d - C_d \implies \Delta = \frac{C_u - C_d}{S_u - S_d} \]
+
+\[
+\Delta S_u - C_u = \Delta S_d - C_d \implies \Delta = \frac{C_u - C_d}{S_u - S_d}
+\]
 The current cost of this portfolio is \(\Delta S - C\). Since it is riskless:
-\[ \Delta S - C = \frac{\Delta S_d - C_d}{1+r_f} \implies C = \Delta S - \frac{\Delta S_d - C_d}{1+r_f} \]
+
+\[
+\Delta S - C = \frac{\Delta S_d - C_d}{1+r_f} \implies C = \Delta S - \frac{\Delta S_d - C_d}{1+r_f}
+\]
 Substituting \(\Delta\) and simplifying yields the risk-neutral pricing formula. The risk-neutral probability \(p = [(1+r_f)-d]/(u-d)\) is chosen so that the stock earns the risk-free rate in expectation: \(pS_u + (1-p)S_d = S(1+r_f)\). \(\square\)</div>
 
 <div class="example"><strong>Example 19.1.</strong> Stock price \(S = \$100\). Over one period, up factor \(u = 1.20\), down factor \(d = 0.80\), risk-free rate \(r_f = 5\%\). Call strike \(X = \$105\).
-\[ S_u = 120, \quad C_u = \max(120-105, 0) = 15 \]
-\[ S_d = 80, \quad C_d = \max(80-105, 0) = 0 \]
-\[ p = \frac{1.05 - 0.80}{1.20 - 0.80} = \frac{0.25}{0.40} = 0.625 \]
-\[ C = \frac{0.625 \times 15 + 0.375 \times 0}{1.05} = \frac{9.375}{1.05} = \$8.93 \]
+
+\[
+S_u = 120, \quad C_u = \max(120-105, 0) = 15
+\]
+
+\[
+S_d = 80, \quad C_d = \max(80-105, 0) = 0
+\]
+
+\[
+p = \frac{1.05 - 0.80}{1.20 - 0.80} = \frac{0.25}{0.40} = 0.625
+\]
+
+\[
+C = \frac{0.625 \times 15 + 0.375 \times 0}{1.05} = \frac{9.375}{1.05} = \$8.93
+\]
 Hedge ratio: \(\Delta = (15-0)/(120-80) = 15/40 = 0.375\). A portfolio long 0.375 shares, short one call costs \(0.375 \times 100 - 8.93 = \$28.57\) and pays \(0.375 \times 80 - 0 = \$30 = 28.57 \times 1.05\). ✓</div>
 
 ## The Black-Scholes Formula
@@ -794,21 +1129,45 @@ Hedge ratio: \(\Delta = (15-0)/(120-80) = 15/40 = 0.375\). A portfolio long 0.37
 As the number of binomial periods increases and the time step shrinks to zero, the binomial model converges to the <strong>Black-Scholes formula</strong>:
 
 <div class="theorem"><strong>Theorem 19.3 (Black-Scholes Option Pricing Model).</strong> Assume the stock price follows a geometric Brownian motion with continuously compounded drift \(\mu\) and volatility \(\sigma\), and that the risk-free rate is \(r\) (continuously compounded). For a European call on a non-dividend paying stock:
-\[ C = S_0 N(d_1) - Xe^{-rT}N(d_2) \]
-\[ P = Xe^{-rT}N(-d_2) - S_0 N(-d_1) \]
+
+\[
+C = S_0 N(d_1) - Xe^{-rT}N(d_2)
+\]
+
+\[
+P = Xe^{-rT}N(-d_2) - S_0 N(-d_1)
+\]
 where:
-\[ d_1 = \frac{\ln(S_0/X) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}, \qquad d_2 = d_1 - \sigma\sqrt{T} \]
+
+\[
+d_1 = \frac{\ln(S_0/X) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}, \qquad d_2 = d_1 - \sigma\sqrt{T}
+\]
 and \(N(\cdot)\) is the standard normal CDF.</div>
 
 <div class="remark"><strong>Remark (Interpretation).</strong> The Black-Scholes formula has a clean economic interpretation. \(N(d_2)\) is the risk-neutral probability that the call expires in the money (\(S_T > X\)). \(N(d_1)\) is the call's delta — the hedge ratio, or the number of shares of stock that replicate one long call. The formula says:
-\[ C = \underbrace{S_0 N(d_1)}_{\text{expected stock receipt}} - \underbrace{Xe^{-rT}N(d_2)}_{\text{expected strike payment}} \]
+
+\[
+C = \underbrace{S_0 N(d_1)}_{\text{expected stock receipt}} - \underbrace{Xe^{-rT}N(d_2)}_{\text{expected strike payment}}
+\]
 The drift \(\mu\) does not appear in the formula — consistent with the risk-neutral pricing approach in which the stock earns the risk-free rate. Investor risk preferences are irrelevant once we know the stock price and volatility.</div>
 
 <div class="example"><strong>Example 19.2.</strong> Stock price \(S_0 = \$50\), strike \(X = \$50\) (ATM), time \(T = 0.5\) years, risk-free rate \(r = 5\%\), volatility \(\sigma = 30\%\).
-\[ d_1 = \frac{\ln(1) + (0.05 + 0.045)(0.5)}{0.30\sqrt{0.5}} = \frac{0 + 0.0475}{0.2121} = 0.2239 \]
-\[ d_2 = 0.2239 - 0.2121 = 0.0118 \]
-\[ N(d_1) = N(0.2239) \approx 0.5886, \quad N(d_2) = N(0.0118) \approx 0.5047 \]
-\[ C = 50(0.5886) - 50e^{-0.025}(0.5047) = 29.43 - 50(0.9753)(0.5047) = 29.43 - 24.61 = \$4.82 \]
+
+\[
+d_1 = \frac{\ln(1) + (0.05 + 0.045)(0.5)}{0.30\sqrt{0.5}} = \frac{0 + 0.0475}{0.2121} = 0.2239
+\]
+
+\[
+d_2 = 0.2239 - 0.2121 = 0.0118
+\]
+
+\[
+N(d_1) = N(0.2239) \approx 0.5886, \quad N(d_2) = N(0.0118) \approx 0.5047
+\]
+
+\[
+C = 50(0.5886) - 50e^{-0.025}(0.5047) = 29.43 - 50(0.9753)(0.5047) = 29.43 - 24.61 = \$4.82
+\]
 By put-call parity: \(P = 4.82 + 50e^{-0.025} - 50 = 4.82 - 1.23 = \$3.59\).</div>
 
 ## The Greeks
@@ -847,7 +1206,10 @@ The empirical finding that implied volatility varies systematically across strik
 ## Futures Pricing: The Cost of Carry Model
 
 <div class="theorem"><strong>Theorem 20.4 (Futures Pricing for Non-Dividend Paying Assets).</strong> For an asset with no carrying costs or intermediate cash flows:
-\[ F_0 = S_0(1+r_f)^T \]
+
+\[
+F_0 = S_0(1+r_f)^T
+\]
 (discrete compounding) or \(F_0 = S_0 e^{rT}\) (continuous compounding), where \(S_0\) is the current spot price, \(r_f\) is the risk-free rate, and \(T\) is time to delivery in years.</div>
 
 <div class="proof"><strong>Derivation (cash-and-carry arbitrage).</strong>
@@ -858,7 +1220,10 @@ The empirical finding that implied volatility varies systematically across strik
 Both arbitrage opportunities are eliminated only when \(F_0 = S_0(1+r_f)^T\). \(\square\)</div>
 
 <div class="definition"><strong>Definition 20.5 (Cost of Carry).</strong> More generally, the futures price incorporates all costs and benefits of holding the underlying asset until delivery:
-\[ F_0 = S_0 e^{(r + u - d)T} \]
+
+\[
+F_0 = S_0 e^{(r + u - d)T}
+\]
 where \(u\) is the continuously compounded storage cost (for commodities) or zero for financial assets, and \(d\) is the continuous dividend yield (for stocks or indices) or convenience yield (for commodities). The term \(r + u - d\) is the <strong>net cost of carry</strong>.</div>
 
 <div class="definition"><strong>Definition 20.6 (Basis and Convergence).</strong> The <strong>basis</strong> is defined as \(S_0 - F_0\). For non-dividend-paying assets, basis = \(-S_0 r_f T < 0\) (futures exceed spot price, called <strong>contango</strong>). For dividend-paying assets or commodities with high convenience yield, \(d > r + u\) and the basis can be positive (futures below spot, called <strong>backwardation</strong>). At expiry, the futures price converges to the spot price: \(F_T = S_T\).</div>
@@ -868,11 +1233,17 @@ where \(u\) is the continuously compounded storage cost (for commodities) or zer
 <div class="definition"><strong>Definition 20.7 (Short Hedge and Long Hedge).</strong> A <strong>short hedge</strong> involves selling futures to protect against a price decline in an asset held or to be produced. A farmer who has planted wheat in spring and will sell at harvest enters a short wheat futures position to lock in a selling price. A <strong>long hedge</strong> involves buying futures to lock in the acquisition cost of an asset to be purchased. An airline entering a long crude oil futures position to lock in jet fuel costs is a long hedge.</div>
 
 <div class="theorem"><strong>Theorem 20.8 (Minimum Variance Hedge Ratio).</strong> Let \(\Delta S\) and \(\Delta F\) denote changes in spot and futures prices. The hedge ratio \(h\) (futures contracts per unit of spot exposure) that minimizes the variance of the hedged position is:
-\[ h^* = \rho_{SF} \cdot \frac{\sigma_S}{\sigma_F} \]
+
+\[
+h^* = \rho_{SF} \cdot \frac{\sigma_S}{\sigma_F}
+\]
 where \(\rho_{SF}\) is the correlation between spot and futures price changes.</div>
 
 <div class="proof"><strong>Derivation.</strong> The hedged position P&L is \(\Delta S - h\Delta F\). Its variance is:
-\[ \text{Var}(\Delta S - h\Delta F) = \sigma_S^2 - 2h\sigma_{SF} + h^2\sigma_F^2 \]
+
+\[
+\text{Var}(\Delta S - h\Delta F) = \sigma_S^2 - 2h\sigma_{SF} + h^2\sigma_F^2
+\]
 Differentiating with respect to \(h\) and setting to zero: \(-2\sigma_{SF} + 2h\sigma_F^2 = 0 \implies h^* = \sigma_{SF}/\sigma_F^2 = \rho_{SF}\sigma_S/\sigma_F\). \(\square\)</div>
 
 <div class="remark"><strong>Remark.</strong> The hedge ratio equals one (a unit hedge) only when spot and futures prices are perfectly correlated and have equal volatility. In practice, the hedged asset often differs from the futures contract's underlying in grade, location, or timing — introducing <strong>basis risk</strong>. Basis risk means the hedge cannot be perfect even with the optimal ratio. The hedging effectiveness \(R^2 = \rho_{SF}^2\) measures the fraction of spot price variance eliminated by the optimal hedge.</div>
@@ -888,7 +1259,10 @@ Differentiating with respect to \(h\) and setting to zero: \(-2\sigma_{SF} + 2h\
 The floating-rate debt has been effectively converted to 5% fixed-rate, eliminating interest rate risk. The swap dealer earns the bid-offer spread between the fixed rates paid by fixed-rate receivers and fixed-rate payers.</div>
 
 <div class="definition"><strong>Definition 20.10 (Swap Valuation).</strong> At inception, a plain vanilla interest rate swap is structured so its value is zero: the swap rate is set so that the present value of fixed payments equals the present value of expected floating payments:
-\[ \sum_{t=1}^{T} \frac{k \cdot \text{Notional}}{(1+y_t)^t} = \text{Notional} - \frac{\text{Notional}}{(1+y_T)^T} \]
+
+\[
+\sum_{t=1}^{T} \frac{k \cdot \text{Notional}}{(1+y_t)^t} = \text{Notional} - \frac{\text{Notional}}{(1+y_T)^T}
+\]
 where \(k\) is the swap rate (annual fixed coupon as a fraction of notional) and \(y_t\) are the relevant spot rates. This shows that a pay-fixed swap is equivalent to a long position in a floating-rate bond and a short position in a fixed-rate bond.</div>
 
 <div class="definition"><strong>Definition 20.11 (Credit Default Swap).</strong> A <strong>credit default swap (CDS)</strong> is a bilateral contract in which the <strong>protection buyer</strong> pays periodic premiums (the <strong>CDS spread</strong>, in basis points per annum on notional) to the <strong>protection seller</strong>, who in return agrees to pay the notional (minus recovery value) if a specified <strong>reference entity</strong> defaults. The CDS spread is a direct market measure of credit risk: a wider spread reflects higher perceived default probability. CDSs allow credit risk to be separated from interest rate risk and transferred to parties who wish to take credit exposure, or used to hedge credit exposure by bond holders.</div>

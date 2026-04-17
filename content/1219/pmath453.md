@@ -40,10 +40,16 @@ The Cantor-Schroeder-Bernstein Theorem is extremely useful in practice: to show 
 Lebesgue measure is the rigorous foundation for integration in this course. The key step is the extension from the obvious notion of the length of an interval to a measure defined on a much larger class of sets — including all open and closed sets — while preserving countable additivity.
 
 **Definition 0.6 (Outer Measure).** For \( A \subseteq \mathbb{R} \), the **Lebesgue outer measure** of \( A \) is
-\[ \lambda^*(A) = \inf \left\{ \sum_{n=1}^\infty |I_n| \;\Big|\; \text{each } I_n \text{ is a bounded open interval and } A \subseteq \bigcup_{n=1}^\infty I_n \right\}. \]
+
+\[
+\lambda^*(A) = \inf \left\{ \sum_{n=1}^\infty |I_n| \;\Big|\; \text{each } I_n \text{ is a bounded open interval and } A \subseteq \bigcup_{n=1}^\infty I_n \right\}.
+\]
 
 **Definition 0.7 (Lebesgue Measurability).** A set \( A \subseteq \mathbb{R} \) is **(Lebesgue) measurable** when for every \( X \subseteq \mathbb{R} \),
-\[ \lambda^*(X) = \lambda^*(X \cap A) + \lambda^*(X \setminus A). \]
+
+\[
+\lambda^*(X) = \lambda^*(X \cap A) + \lambda^*(X \setminus A).
+\]
 When \( A \) is measurable, its **Lebesgue measure** is \( \lambda(A) = \lambda^*(A) \).
 
 **Theorem 0.8 (Properties of Measure).** The collection \( \mathcal{M} \) of measurable subsets of \( \mathbb{R} \) forms a \( \sigma \)-algebra containing all open and closed sets. Measure is countably additive: if \( A_1, A_2, \ldots \) are measurable and pairwise disjoint then \( \lambda(\bigcup_{k=1}^\infty A_k) = \sum_{k=1}^\infty \lambda(A_k) \). If \( A_1 \subseteq A_2 \subseteq \cdots \) then \( \lambda(\bigcup A_n) = \lim_{n\to\infty} \lambda(A_n) \). There exist non-measurable sets.
@@ -111,7 +117,10 @@ In particular, \( \|\cdot\| \) is a norm on \( U \). **Proof omitted.**
 Each step in this hierarchy loses structure: an inner product remembers angles and lengths, a norm remembers only lengths, a metric remembers only distances, and a topology remembers only which sets are "open." The key analytic property — completeness — lives at the metric level and gives us Banach and Hilbert spaces as the canonical objects of study.
 
 **Definition 1.7 (Convergence and Cauchy Sequences).** Let \( (x_n)_{n \geq 1} \) be a sequence in a metric space \( X \). We say \( x_n \to a \) when
-\[ \forall \varepsilon > 0 \; \exists n_0 \in \mathbb{Z}^+ \; \forall k \geq n_0 : d(x_k, a) < \varepsilon. \]
+
+\[
+\forall \varepsilon > 0 \; \exists n_0 \in \mathbb{Z}^+ \; \forall k \geq n_0 : d(x_k, a) < \varepsilon.
+\]
 The sequence is **Cauchy** when \( \forall \varepsilon > 0 \; \exists n_0 \; \forall k, \ell \geq n_0 : d(x_k, x_\ell) < \varepsilon \). Every convergent sequence is Cauchy.
 
 **Definition 1.8 (Complete Spaces).** A metric space is **complete** when every Cauchy sequence converges. A complete normed linear space is called a **Banach space**. A complete inner product space is called a **Hilbert space**.
@@ -127,7 +136,10 @@ With the definitions in place, we now survey the principal examples. These space
 **Example 1.11 (\( \ell^2 \).** Let \( \ell^2 = \ell^2(\mathbb{F}) = \{ x \in \mathbb{F}^\omega \mid \sum_{k=1}^\infty |x_k|^2 < \infty \} \). The **standard inner product** is \( \langle x, y \rangle = \sum_{k=1}^\infty x_k \overline{y_k} \), inducing the **2-norm** \( \|x\|_2 = (\sum_{k=1}^\infty |x_k|^2)^{1/2} \). The space \( \ell^2 \) is an infinite-dimensional separable Hilbert space.
 
 **Example 1.12 (\( L^2(A) \).** Let \( A \subseteq \mathbb{R} \) be measurable. Let
-\[ L^2(A) = L^2(A, \mathbb{F}) = \left\{ f \in M(A) \Big| \int_A |f|^2 < \infty \right\} \big/ \sim \]
+
+\[
+L^2(A) = L^2(A, \mathbb{F}) = \left\{ f \in M(A) \Big| \int_A |f|^2 < \infty \right\} \big/ \sim
+\]
 where \( f \sim g \iff f = g \) a.e. The standard inner product is \( \langle f, g \rangle = \int_A f \bar{g} \). For \( a < b \), \( L^2[a,b] \) is an infinite-dimensional separable Hilbert space.
 
 **Example 1.13 (\( p \)-norms on \( \mathbb{F}^n \).** For \( x \in \mathbb{F}^n \), define the **\( p \)-norm** \( \|x\|_p = (\sum_{k=1}^n |x_k|^p)^{1/p} \) for \( 1 \leq p < \infty \), and \( \|x\|_\infty = \max_k |x_k| \) (the **supremum norm**). Each gives a norm, and \( \mathbb{F}^n \) is a finite-dimensional separable Banach space under each \( p \)-norm.
@@ -166,6 +178,7 @@ We distinguish between <em>linear manifolds</em> (vector subspaces that may not 
 
 <div class="example">
 <strong>Example 1.B (The disc algebra).</strong> Let \( \mathbb{D} \subseteq \mathbb{C} \) be the open unit disc and \( \mathbb{T} = \partial \mathbb{D} \) its boundary. The <strong>disc algebra</strong> is
+
 \[
 A(\mathbb{D}) := \{ f \in C(\overline{\mathbb{D}}) : f \text{ is holomorphic on } \mathbb{D} \}
 \]
@@ -174,6 +187,7 @@ equipped with \( \|f\|_\infty := \sup_{z \in \overline{\mathbb{D}}} |f(z)| \). T
 
 <div class="example">
 <strong>Example 1.C (Weighted \( \ell^2 \) space).</strong> Fix a sequence of positive reals \( (r_n)_{n \geq 1} \). Define
+
 \[
 \ell^2_{(r_n)} := \left\{ (x_n)_{n \geq 1} \in \mathbb{K}^\mathbb{N} : \sum_{n \geq 1} r_n |x_n|^2 < \infty \right\}
 \]
@@ -182,6 +196,7 @@ with inner product \( \langle x, y \rangle = \sum_{n \geq 1} r_n x_n \overline{y
 
 <div class="definition">
 <strong>Definition 1.D (\( \ell^p \)-direct sum and \( \ell^\infty \)-direct sum).</strong> Let \( (X_n, \|\cdot\|_n)_{n \geq 1} \) be a countable family of Banach spaces and \( X = \prod_n X_n \). For \( 1 \leq p < \infty \), the <strong>\( \ell^p \)-direct sum</strong> is
+
 \[
 \bigoplus_p X_n := \left\{ (x_n) \in X : \|(x_n)\|_p := \left(\sum_n \|x_n\|_n^p\right)^{1/p} < \infty \right\},
 \]
@@ -203,9 +218,15 @@ This criterion is often more convenient in practice than verifying Cauchy sequen
 
 <div class="example">
 <strong>Example 1.J (Bounded Variation Sequences).</strong> For a sequence \( x = (x_n)_{n \geq 1} \) of scalars, the <strong>total variation</strong> is
-\[V(x) := \sum_{n=1}^\infty |x_{n+1} - x_n|.\]
+
+\[
+V(x) := \sum_{n=1}^\infty |x_{n+1} - x_n|.
+\]
 If \( V(x) < \infty \), we say \( x \) has <strong>bounded variation</strong>. The space
-\[bv := \{(x_n)_{n \geq 1} \in \mathbb{K}^\mathbb{N} : V(x) < \infty\},\]
+
+\[
+bv := \{(x_n)_{n \geq 1} \in \mathbb{K}^\mathbb{N} : V(x) < \infty\},
+\]
 equipped with the norm \( \|(x_n)\|_{bv} := |x_1| + V(x) \), is a Banach space. The subspace \( bv_0 := \{x \in bv : x_n \to 0\} \) is a Banach space under \( \|(x_n)\|_{bv_0} := V(x) \).
 </div>
 
@@ -215,7 +236,10 @@ The norm \( \|(x_n)\|_{bv} = |x_1| + V(x) \) controls both the initial value and
 <strong>Remark 1.K (Tsirel'son and James Spaces).</strong> For decades after Banach's 1932 monograph, a central open problem asked whether every infinite-dimensional Banach space contains a subspace isomorphic to \( c_0 \) or to \( \ell^p \) for some \( 1 \leq p < \infty \). In 1974, B.S. Tsirel'son answered this in the negative by constructing an infinite-dimensional Banach space \( T \) — the <strong>Tsirel'son space</strong> — containing no isomorphic copy of \( c_0 \) or any \( \ell^p \). The norm on \( T \) is defined implicitly via the Minkowski functional of a convex set \( D \subseteq c_0 \) satisfying certain block-stability conditions; the resulting space is far removed from the classical sequence spaces.
 
 An equally remarkable example is <strong>James' space</strong> \( J \), the subspace of \( c_0 \) of sequences satisfying
-\[\sup_{n_1 < n_2 < \cdots < n_k} \left[(x_{n_1} - x_{n_2})^2 + (x_{n_2} - x_{n_3})^2 + \cdots + (x_{n_{k-1}} - x_{n_k})^2\right]^{1/2} < \infty.\]
+
+\[
+\sup_{n_1 < n_2 < \cdots < n_k} \left[(x_{n_1} - x_{n_2})^2 + (x_{n_2} - x_{n_3})^2 + \cdots + (x_{n_{k-1}} - x_{n_k})^2\right]^{1/2} < \infty.
+\]
 James' space is isometrically isomorphic to its own double dual \( J^{<strong>} \), yet is <em>not reflexive</em> — it sits as a proper closed subspace of codimension one in \( J^{</strong>} \). This answered (negatively) the conjecture that isomorphic identification with the double dual forces reflexivity.
 </div>
 
@@ -226,9 +250,15 @@ The morphisms between normed spaces are the bounded linear operators. Theorem 1.
 **Remark 1.20.** When \( U \) and \( V \) are normed linear spaces, a linear map \( F : U \to V \) is also called a **linear operator**. When \( V = \mathbb{F} \), it is called a **linear functional**.
 
 **Definition 1.21 (Operator Norm).** Let \( F : U \to V \) be a linear operator. The **operator norm** of \( F \) is
-\[ \|F\| = \sup\{ \|Fx\| \mid x \in U, \|x\| \leq 1 \}. \]
+
+\[
+\|F\| = \sup\{ \|Fx\| \mid x \in U, \|x\| \leq 1 \}.
+\]
 We say \( F \) is **bounded** when \( \|F\| < \infty \). Equivalently,
-\[ \|F\| = \sup\{ \|Fx\| \mid x \in U, \|x\| = 1\} = \inf\{ m \geq 0 \mid \|Fx\| \leq m\|x\| \; \forall x \in U\}, \]
+
+\[
+\|F\| = \sup\{ \|Fx\| \mid x \in U, \|x\| = 1\} = \inf\{ m \geq 0 \mid \|Fx\| \leq m\|x\| \; \forall x \in U\},
+\]
 and \( \|Fx\| \leq \|F\|\,\|x\| \) for all \( x \in U \). The space of bounded linear operators \( F : U \to V \) is denoted \( B(U,V) \).
 
 **Example 1.22.** When \( U \) and \( V \) are non-trivial finite-dimensional inner product spaces over \( \mathbb{R} \) and \( F : U \to V \) is linear, the maximum of \( \|Fx\| \) over the unit ball is attained and equals \( \sqrt{\lambda} \) where \( \lambda \) is the largest eigenvalue of \( F^* F \).
@@ -260,7 +290,10 @@ In this case, \( \|F\| \) is a Lipschitz constant for \( F \).
 The dual space \( U^* \) of bounded linear functionals on \( U \) is one of the most important constructions in functional analysis. It is always a Banach space regardless of whether \( U \) itself is complete, because the scalar field \( \mathbb{F} \) is complete. Understanding \( U^* \) concretely — identifying which Banach space it is isomorphic to — is a recurring theme. The Riesz Representation Theorems below do exactly this for \( \ell^p \), \( L^p \), and later for Hilbert spaces.
 
 **Definition 1.27.** The **(continuous) dual space** of a normed linear space \( U \) is
-\[ U^* = B(U, \mathbb{F}) = \{ f : U \to \mathbb{F} \mid f \text{ is linear with } \|f\| < \infty \}. \]
+
+\[
+U^* = B(U, \mathbb{F}) = \{ f : U \to \mathbb{F} \mid f \text{ is linear with } \|f\| < \infty \}.
+\]
 By Theorem 1.23, \( U^* \) is always a Banach space.
 
 ### Schauder Bases and the Canonical Embedding
@@ -269,6 +302,7 @@ A Schauder basis is the Banach-space analogue of a countable orthonormal basis i
 
 <div class="definition">
 <strong>Definition 1.F (Schauder Basis).</strong> A sequence \( \{e_n\}_{n \geq 1} \) in a Banach space \( X \) is a <strong>Schauder basis</strong> if every \( x \in X \) can be uniquely written as a norm-convergent series
+
 \[
 x = \sum_{n=1}^\infty x_n e_n, \quad x_n \in \mathbb{K}.
 \]
@@ -329,7 +363,10 @@ The Baire Category Theorem says, informally, that a complete metric space cannot
 The Uniform Boundedness Principle is remarkably useful: to show a sequence of operators is uniformly norm-bounded, it suffices to check pointwise boundedness. This often turns a hard uniform estimate into a sequence of easier pointwise ones. The Condensation of Singularities below is a striking corollary showing that "pathological" pointwise behavior is in fact generic.
 
 **Theorem 1.41 (Condensation of Singularities).** Let \( X \) be a Banach space, \( Y \) a normed space, and \( L_{m,n} : X \to Y \) bounded linear for \( m, n \in \mathbb{Z}^+ \). Suppose that for each \( m \) there exists \( x_m \in X \) with \( \limsup_{n\to\infty} \|L_{m,n}(x_m)\| = \infty \). Then the set
-\[ E = \left\{ x \in X \;\Big|\; \limsup_{n\to\infty} \|L_{m,n}(x)\| = \infty \; \forall m \in \mathbb{Z}^+ \right\} \]
+
+\[
+E = \left\{ x \in X \;\Big|\; \limsup_{n\to\infty} \|L_{m,n}(x)\| = \infty \; \forall m \in \mathbb{Z}^+ \right\}
+\]
 is a dense \( G_\delta \) set (hence residual and, by the Baire Category Theorem, dense in \( X \).
 
 **Proof sketch.** Fix \( m \). The sets \( A_\ell = \{ x \mid \|L_{m,n}(x)\| \leq \ell \; \forall n\} \) are closed. If one were not nowhere dense, the Uniform Boundedness Principle would give a bound on \( \|L_{m,n}\| \), contradicting the hypothesis. So all \( A_\ell \) are nowhere dense, making \( B_m = \bigcup_\ell A_\ell \) first category. Then \( E = X \setminus \bigcup_m B_m \) is a countable intersection of dense open sets, hence dense by Baire. \( \square \)
@@ -347,11 +384,17 @@ Hilbert spaces are the geometric heart of functional analysis. The presence of a
 **Definition 2.2 (Orthogonal and Orthonormal Sets).** Let \( V \) be an inner product space. A subset \( B \subseteq V \) is **orthogonal** when \( \langle u, v \rangle = 0 \) for all distinct \( u, v \in B \), and **orthonormal** when it is orthogonal and every element has norm 1.
 
 **Theorem 2.3.** Let \( V \) be an inner product space with orthonormal set \( B \). Let \( x = \sum_{k=1}^n a_k u_k \) and \( y = \sum_{k=1}^n b_k u_k \) with \( u_k \in B \). Then
-\[ \langle x, u_k \rangle = a_k, \quad \langle x, y \rangle = \sum_{k=1}^n a_k \overline{b_k}, \quad \|x\|^2 = \sum_{k=1}^n |a_k|^2. \]
+
+\[
+\langle x, u_k \rangle = a_k, \quad \langle x, y \rangle = \sum_{k=1}^n a_k \overline{b_k}, \quad \|x\|^2 = \sum_{k=1}^n |a_k|^2.
+\]
 In particular, \( B \) is linearly independent. **Proof omitted.**
 
 **Theorem 2.4 (Gram-Schmidt Procedure).** Let \( V \) be an inner product space of finite or countable Hamel dimension with ordered Hamel basis \( A = (u_1, u_2, u_3, \ldots) \). Define \( v_1 = u_1 \) and for \( n \geq 2 \),
-\[ v_n = u_n - \sum_{k=1}^{n-1} \frac{\langle u_n, v_k \rangle}{\|v_k\|^2} v_k. \]
+
+\[
+v_n = u_n - \sum_{k=1}^{n-1} \frac{\langle u_n, v_k \rangle}{\|v_k\|^2} v_k.
+\]
 Then \( B = (v_1, v_2, v_3, \ldots) \) is an orthogonal Hamel basis with \( \operatorname{Span}\{v_1, \ldots, v_n\} = \operatorname{Span}\{u_1, \ldots, u_n\} \) for every \( n \). **Proof omitted.**
 
 **Corollary 2.5.** Every inner product space of finite or countable Hamel dimension has an orthonormal Hamel basis.
@@ -369,7 +412,10 @@ With orthonormality established, we introduce the direct sum decomposition and o
 **Definition 2.9 (Direct Sum).** For subspaces \( U, V \subseteq W \), write \( W = U \oplus V \) when \( W = U + V \) and \( U \cap V = \{0\} \), so every \( x \in W \) has a unique decomposition \( x = u + v \).
 
 **Definition 2.10 (Orthogonal Complement).** For a subspace \( U \) of an inner product space \( V \), the **orthogonal complement** is
-\[ U^\perp = \{ x \in V \mid \langle x, u \rangle = 0 \; \forall u \in U \}. \]
+
+\[
+U^\perp = \{ x \in V \mid \langle x, u \rangle = 0 \; \forall u \in U \}.
+\]
 
 The orthogonal complement \( U^\perp \) always has the nice properties listed in Theorem 2.11, but the decomposition \( V = U \oplus U^\perp \) and the identity \( (U^\perp)^\perp = U \) require finite-dimensionality at the algebraic level. In Hilbert spaces, closedness is the correct replacement for finite-dimensionality, as Theorem 2.20 makes precise.
 
@@ -386,7 +432,10 @@ When \( U \) is finite-dimensional: additionally \( U \oplus U^\perp = V \) and 
 **Theorem 2.13.** Under the conditions of Definition 2.12, \( \operatorname{Proj}_U(x) \) is the unique point in \( U \) nearest to \( x \). **Proof omitted.**
 
 **Example 2.14.** Let \( U \) be finite-dimensional with orthogonal basis \( \{u_1, \ldots, u_n\} \). Then
-\[ \operatorname{Proj}_U(x) = \sum_{k=1}^n \frac{\langle x, u_k \rangle}{\|u_k\|^2} u_k. \]
+
+\[
+\operatorname{Proj}_U(x) = \sum_{k=1}^n \frac{\langle x, u_k \rangle}{\|u_k\|^2} u_k.
+\]
 
 **Note 2.16.** If \( U \subseteq W \) is a subspace, its closure \( \overline{U} \) is also a subspace. Moreover \( \overline{U}^\perp = U^\perp \). This follows because if \( v \in U^\perp \) and \( u \in \overline{U} \) with \( x_n \to u \) in \( U \), then \( \langle v, u \rangle = \lim_n \langle v, x_n \rangle = 0 \).
 
@@ -405,7 +454,10 @@ The key tool for extending the finite-dimensional theory to Hilbert spaces is th
 The proof is a clean application of the Parallelogram Law: convexity forces the midpoints of a minimizing sequence back into \( S \), and the Parallelogram Law forces the distances between terms to zero, making the sequence Cauchy.
 
 **Proof.** Let \( d = \operatorname{dist}(a, S) \). Choose \( x_n \in S \) with \( \|x_n - a\|^2 \to d^2 \). By the Parallelogram Law and convexity (\( \frac{x_k+x_\ell}{2} \in S \) so \( \|\frac{x_k+x_\ell}{2} - a\| \geq d \),
-\[ \|x_k - x_\ell\|^2 = 2\|x_k-a\|^2 + 2\|x_\ell-a\|^2 - 4\Big\|\tfrac{x_k+x_\ell}{2}-a\Big\|^2 \leq 2\|x_k-a\|^2 + 2\|x_\ell-a\|^2 - 4d^2 \to 0, \]
+
+\[
+\|x_k - x_\ell\|^2 = 2\|x_k-a\|^2 + 2\|x_\ell-a\|^2 - 4\Big\|\tfrac{x_k+x_\ell}{2}-a\Big\|^2 \leq 2\|x_k-a\|^2 + 2\|x_\ell-a\|^2 - 4d^2 \to 0,
+\]
 so \( (x_n) \) is Cauchy, converging to some \( b \in S \) (since \( S \) is closed and \( H \) is complete). Then \( \|b-a\| = \lim \|x_n-a\| = d \). Uniqueness follows similarly from the Parallelogram Law. \( \square \)
 
 Theorem 2.20 is the cornerstone result of Hilbert space geometry: a subspace is closed if and only if it admits an orthogonal complement decomposition. In particular, every closed subspace of a Hilbert space has a well-defined orthogonal projection, and the projection is the nearest-point map.
@@ -427,7 +479,10 @@ Absolute convergence implies unconditional convergence in finite-dimensional spa
 **Definition 2.22.** A series \( \sum_{k=1}^\infty a_k \) in a normed space \( V \) **converges absolutely** when \( \sum_{k=1}^\infty \|a_k\| < \infty \), and **converges unconditionally** when every rearrangement converges.
 
 **Definition 2.24 (Unordered Series).** Let \( K \) be a nonempty (possibly uncountable) index set and \( (a_k)_{k \in K} \) an indexed set in a normed space \( X \). The **unordered series** \( \sum_{k \in K} a_k \) **converges** to \( s \in X \) when
-\[ \forall \varepsilon > 0 \; \exists F \in \operatorname{Fin}(K) \; \forall I \in \operatorname{Fin}(K) \; I \supseteq F \implies \|s_I - s\| < \varepsilon, \]
+
+\[
+\forall \varepsilon > 0 \; \exists F \in \operatorname{Fin}(K) \; \forall I \in \operatorname{Fin}(K) \; I \supseteq F \implies \|s_I - s\| < \varepsilon,
+\]
 where \( s_I = \sum_{k \in I} a_k \) for finite \( I \). It **converges absolutely** when \( \sum_{k \in K} \|a_k\| < \infty \).
 
 Theorem 2.26 is reassuring: even though our Hilbert basis may be uncountable, Bessel's Inequality (Theorem 2.32) will force all but countably many Fourier coefficients to be zero. So in practice, the Fourier expansion is always a countable sum.
@@ -445,7 +500,10 @@ Theorem 2.26 is reassuring: even though our Hilbert basis may be uncountable, Be
 **Definition 2.29.** An indexed set \( (u_k)_{k \in K} \) in an inner product space is **orthonormal** when \( \|u_k\| = 1 \) for all \( k \) and \( \langle u_k, u_\ell \rangle = 0 \) for \( k \neq \ell \).
 
 **Theorem 2.30.** Let \( H \) be a Hilbert space, \( (u_k)_{k \in K} \) orthonormal, \( B = \{u_k\} \), and \( x, y \in \overline{\operatorname{Span}\, B} \). Let \( a_k = \langle x, u_k \rangle \), \( b_k = \langle y, u_k \rangle \). Then:
-\[ (1)\; \sum_{k \in K} a_k u_k = x, \qquad (2)\; \sum_{k \in K} |a_k|^2 = \|x\|^2, \qquad (3)\; \sum_{k \in K} a_k \overline{b_k} = \langle x, y \rangle. \]
+
+\[
+(1)\; \sum_{k \in K} a_k u_k = x, \qquad (2)\; \sum_{k \in K} |a_k|^2 = \|x\|^2, \qquad (3)\; \sum_{k \in K} a_k \overline{b_k} = \langle x, y \rangle.
+\]
 
 **Theorem 2.31.** Let \( (u_k)_{k \in K} \) be orthonormal in a Hilbert space \( H \) and let \( (c_k)_{k \in K} \) be scalars.
 1. If \( \sum_{k \in K} c_k u_k \) converges to \( x \), then \( x \in \overline{\operatorname{Span}\, B} \) and \( c_k = \langle x, u_k \rangle \).
@@ -454,14 +512,23 @@ Theorem 2.26 is reassuring: even though our Hilbert basis may be uncountable, Be
 Bessel's Inequality is the key estimate that makes the Hilbert basis theory work: even before knowing that \( B \) spans \( H \), we know the Fourier coefficients are square-summable. The inequality becomes an equality — Parseval's identity — precisely when \( B \) is a Hilbert basis.
 
 **Theorem 2.32 (Bessel's Inequality).** Let \( (u_k)_{k \in K} \) be orthonormal in an inner product space \( V \). For all \( x \in V \),
-\[ \sum_{k \in K} |\langle x, u_k \rangle|^2 \leq \|x\|^2. \]
+
+\[
+\sum_{k \in K} |\langle x, u_k \rangle|^2 \leq \|x\|^2.
+\]
 
 **Proof.** For any finite \( F \subseteq K \) and \( w_F = \sum_{k \in F} \langle x, u_k \rangle u_k \),
-\[ 0 \leq \|x - w_F\|^2 = \|x\|^2 - \sum_{k \in F} |\langle x, u_k \rangle|^2. \]
+
+\[
+0 \leq \|x - w_F\|^2 = \|x\|^2 - \sum_{k \in F} |\langle x, u_k \rangle|^2.
+\]
 Taking the supremum over all finite \( F \) gives the inequality. \( \square \)
 
 **Theorem 2.33 (Orthogonal Projection Formula).** Let \( H \) be a Hilbert space, \( (u_k)_{k \in K} \) orthonormal, \( B = \{u_k\} \), \( U = \overline{\operatorname{Span}\, B} \). The orthogonal projection \( P : H \to U \) is given by
-\[ Px = \sum_{k \in K} \langle x, u_k \rangle u_k, \]
+
+\[
+Px = \sum_{k \in K} \langle x, u_k \rangle u_k,
+\]
 and \( \|P\| = 1 \).
 
 **Proof.** By Bessel's Inequality, \( \sum_k |\langle x, u_k \rangle|^2 \leq \|x\|^2 < \infty \), so by Theorem 2.31(2) the sum converges, and by Theorem 2.31(1) it lies in \( U \). For any \( u_k \), \( \langle Px - x, u_k \rangle = \langle x, u_k \rangle - \langle x, u_k \rangle = 0 \), so \( x - Px \in U^\perp \). Thus \( P \) is the orthogonal projection. Since \( \|Px\|^2 = \sum_k |\langle x, u_k \rangle|^2 \leq \|x\|^2 \), we have \( \|P\| \leq 1 \); and \( P(u_k) = u_k \) gives \( \|P\| \geq 1 \). \( \square \)
@@ -509,7 +576,10 @@ Now that we understand the structure of Hilbert spaces through their orthonormal
 Using the Riesz Representation Theorem, every bounded operator \( F : H \to K \) has a unique adjoint \( F^* : K \to H \). The adjoint plays the role that the transpose plays for matrices, and the self-adjoint operators — those with \( F^* = F \) — are the operator-theoretic analogues of symmetric matrices. Their spectral theory is the subject of the chapter's final section.
 
 **Definition 2.43 (Adjoint).** When \( H \) and \( K \) are Hilbert spaces and \( F \in B(H,K) \), the **(Hilbert space) adjoint** of \( F \) is the unique map \( F^* : K \to H \) satisfying
-\[ \langle Fx, y \rangle = \langle x, F^* y \rangle \quad \forall x \in H, y \in K. \]
+
+\[
+\langle Fx, y \rangle = \langle x, F^* y \rangle \quad \forall x \in H, y \in K.
+\]
 We have \( \|F^*\| = \|F\| \).
 
 ## Weak Convergence
@@ -543,7 +613,10 @@ Compactness of an operator is a strong condition that forces it to map bounded s
 2. \( \|F\| = \sup\{ |\langle Fu, u \rangle| \mid \|u\| = 1 \} \). Every eigenvalue satisfies \( |\lambda| \leq \|F\| \).
 
 **Proof of (1).** \( \langle Fu, u \rangle = \langle u, F^*u \rangle = \langle u, Fu \rangle = \overline{\langle Fu, u \rangle} \). For (2): let \( M = \sup\{\langle Fu, u \rangle \mid \|u\| = 1\} \). Cauchy-Schwarz gives \( M \leq \|F\| \). For the reverse, use a polarization-type identity valid when \( \langle Fu, v \rangle \in \mathbb{R} \):
-\[ \langle Fu, v \rangle = \tfrac{1}{4}(\langle F(u+v), u+v \rangle - \langle F(u-v), u-v \rangle) \leq \tfrac{M}{2}(\|u\|^2 + \|v\|^2), \]
+
+\[
+\langle Fu, v \rangle = \tfrac{1}{4}(\langle F(u+v), u+v \rangle - \langle F(u-v), u-v \rangle) \leq \tfrac{M}{2}(\|u\|^2 + \|v\|^2),
+\]
 so choosing \( v = Fu/\|Fu\| \) (when \( Fu \neq 0 \) gives \( \|Fu\| \leq M \). \( \square \)
 
 The multiplication operator in Example 2.52 is a good reminder that not every self-adjoint operator has eigenvalues. On \( L^2[0,1] \), multiplying by \( x \) has "continuous spectrum" — points near which the operator behaves like a very small multiple of the identity, but with no actual eigenvectors. This is why the Spectral Theorem below requires the compactness hypothesis in addition to self-adjointness.
@@ -553,7 +626,10 @@ The multiplication operator in Example 2.52 is a good reminder that not every se
 **Theorem 2.53.** Let \( F \) be a compact self-adjoint operator on a Hilbert space \( H \) with \( F \neq 0 \). Then \( F \) has an eigenvalue \( \lambda \) with \( |\lambda| = \|F\| \).
 
 **Proof.** By Theorem 2.51, either \( \|F\| = \sup\{\langle Fu, u \rangle \mid \|u\|=1\} \) or its negative is the infimum. WLOG suppose the former; choose \( (u_n) \) with \( \|u_n\| = 1 \) and \( \langle Fu_n, u_n \rangle \to \lambda = \|F\| \). Then
-\[ \|Fu_n - \lambda u_n\|^2 = \|Fu_n\|^2 - 2\lambda\langle Fu_n, u_n \rangle + \lambda^2 \leq \|F\|^2 - 2\lambda\langle Fu_n, u_n \rangle + \lambda^2 \to 0. \]
+
+\[
+\|Fu_n - \lambda u_n\|^2 = \|Fu_n\|^2 - 2\lambda\langle Fu_n, u_n \rangle + \lambda^2 \leq \|F\|^2 - 2\lambda\langle Fu_n, u_n \rangle + \lambda^2 \to 0.
+\]
 Since \( F \) is compact and \( (u_n) \) is bounded, a subsequence \( (v_k) \) gives \( Fv_k \to Fw \) weakly. Then \( \lambda v_k \to Fw \) in norm. Applying \( F \): \( F(Fw) = \lambda Fw \), so \( \lambda \) is an eigenvalue with eigenvector \( Fw \). \( \square \)
 
 Before stating the full Spectral Theorem, we collect the auxiliary facts about eigenspaces of compact self-adjoint operators. These properties — orthogonality of distinct eigenspaces, finite-dimensionality of nonzero eigenspaces, and the projection formula — are the ingredients that make the diagonalization precise.
@@ -571,10 +647,16 @@ Theorem 2.53 is the crucial existence step: a nonzero compact self-adjoint opera
 - The set of nonzero eigenvalues is at most countable.
 - Each nonzero eigenspace \( E_{\lambda_k} \) is finite-dimensional.
 - If there are finitely many nonzero eigenvalues \( \lambda_1, \ldots, \lambda_n \):
-\[ F = \sum_{k=1}^n \lambda_k P_{\lambda_k}, \]
+
+\[
+F = \sum_{k=1}^n \lambda_k P_{\lambda_k},
+\]
 where \( P_{\lambda_k} \) is the orthogonal projection onto \( E_{\lambda_k} \).
 - If there are countably many eigenvalues, they can be arranged as \( \lambda_1, \lambda_2, \ldots \) in nonincreasing order of absolute value, with \( \lambda_n \to 0 \), and
-\[ F = \sum_{k=1}^\infty \lambda_k P_{\lambda_k} \]
+
+\[
+F = \sum_{k=1}^\infty \lambda_k P_{\lambda_k}
+\]
 in the operator norm topology.
 
 The Spectral Theorem says that a compact self-adjoint operator is completely determined by its eigenvalues and the projections onto eigenspaces — the rest of the space (the null space \( \ker F \)) contributes nothing to the action of \( F \). The series \( \sum_k \lambda_k P_{\lambda_k} \) converges in operator norm because \( |\lambda_n| \to 0 \), so the tail of the partial sums has small operator norm.
@@ -662,7 +744,10 @@ The Hahn-Banach Theorem has a geometric reformulation: disjoint convex sets can 
 **Definition 3.17.** A point \( a \in A \) in a real vector space is an **internal point** of \( A \) when for every \( u \in U \) there exists \( r > 0 \) with \( a + tu \in A \) for all \( t \in (-r,r) \). The set of internal points is the **core** of \( A \), denoted \( \operatorname{Core}(A) \). The interior of \( A \) is always contained in its core.
 
 **Definition 3.18 (Minkowski Functional).** Let \( U \) be a real vector space and \( A \subseteq U \) convex with \( 0 \in \operatorname{Core}(A) \). The **Minkowski functional** of \( A \) is
-\[ p_A(x) = \inf\left\{ r > 0 \;\Big|\; \tfrac{1}{r}x \in A \right\}. \]
+
+\[
+p_A(x) = \inf\left\{ r > 0 \;\Big|\; \tfrac{1}{r}x \in A \right\}.
+\]
 
 **Theorem 3.19.** The Minkowski functional of a convex set with \( 0 \) in its core is positively homogeneous and subadditive.
 
@@ -677,13 +762,19 @@ We now give a concrete description of the dual of \( C[a,b] \), the space of con
 **Definition 3.22 (Bounded Variation).** For \( f : [a,b] \to \mathbb{R} \) and a partition \( P = (x_0, \ldots, x_n) \), define \( V(f,P) = \sum_{k=1}^n |f(x_k) - f(x_{k-1})| \). The **total variation** is \( V(f,[a,b]) = \sup_P V(f,P) \). We say \( f \) is of **bounded variation** when \( V(f,[a,b]) < \infty \); the space is denoted \( BV[a,b] \).
 
 **Definition 3.24 (Riemann-Stieltjes Integral).** For \( g \in BV[a,b] \) and \( f \in C[a,b] \), the **Riemann-Stieltjes integral** is
-\[ \int_a^b f\,dg = \lim_{\|P\|\to 0} \sum_{k=1}^n f(t_k)(g(x_k) - g(x_{k-1})). \]
+
+\[
+\int_a^b f\,dg = \lim_{\|P\|\to 0} \sum_{k=1}^n f(t_k)(g(x_k) - g(x_{k-1})).
+\]
 One can show this limit exists and satisfies \( |\int_a^b f\,dg| \leq V(g,[a,b]) \cdot \|f\|_\infty \).
 
 The total variation \( V(g,[a,b]) \) plays the role of the norm of the functional: the map \( g \mapsto L_g \) where \( L_g(f) = \int_a^b f\,dg \) is an isometric isomorphism from a suitable quotient of \( BV[a,b] \) onto \( C[a,b]^* \). This gives a concrete, measure-theoretic description of all continuous linear functionals on continuous functions.
 
 **Theorem 3.26 (Riesz Representation for \( C[a,b]^* \).** For every \( L \in C[a,b]^* \) there exists \( g \in BV[a,b] \) with \( g(a) = 0 \), \( V(g,[a,b]) = \|L\| \), and
-\[ L(f) = \int_a^b f\,dg \quad \forall f \in C[a,b]. \]
+
+\[
+L(f) = \int_a^b f\,dg \quad \forall f \in C[a,b].
+\]
 
 **Proof sketch.** Extend \( L \) to \( M \in B[a,b]^* \) with \( \|M\| = \|L\| \). Define \( g(x) = M(s_x) \) where \( s_x \) is the step function \( s_x(t) = \mathbf{1}_{t \leq x} \). Show \( g \in BV[a,b] \) by estimating variation against \( \|M\| \). For continuous \( f \), approximate by step functions \( f_n \) in the supremum norm; then \( M(f) = \lim M(f_n) = \lim \sum f(x_k)(g(x_k)-g(x_{k-1})) = \int_a^b f\,dg \). \( \square \)
 
@@ -849,7 +940,10 @@ Urysohn's Lemma and the Tietze Extension Theorem are two powerful results about 
 Tychonoff's Theorem — that any product of compact spaces is compact in the product topology — is the technical cornerstone of the Banach-Alaoglu Theorem. The proof requires Zorn's Lemma (or equivalently, the Axiom of Choice), and the choice of the product topology over the box topology is essential: the box topology on an infinite product of compact spaces need not be compact. The distinction is that basic open sets in the product topology are allowed to impose conditions on only finitely many coordinates.
 
 **Definition 4.27.** The **cartesian product** \( \prod_{k \in K} X_k \) is the set of all indexed families \( (a_k)_{k \in K} \) with \( a_k \in X_k \). When each \( X_k \) is a topological space, the **product topology** has basis
-\[ \left\{ \prod_{k \in K} U_k \;\Big|\; U_k \subseteq X_k \text{ open}, \; U_k = X_k \text{ for all but finitely many } k \right\}. \]
+
+\[
+\left\{ \prod_{k \in K} U_k \;\Big|\; U_k \subseteq X_k \text{ open}, \; U_k = X_k \text{ for all but finitely many } k \right\}.
+\]
 The coarser product topology differs from the finer **box topology** (which allows arbitrary open \( U_k \) at every index) when \( K \) is infinite.
 
 **Theorem 4.29.** A function \( f : A \to \prod_{k \in K} X_k \) (with the product topology) is continuous iff each component \( f_k = p_k \circ f : A \to X_k \) is continuous, where \( p_k \) is the projection.
@@ -950,7 +1044,10 @@ Every normed linear space is a TVS under the norm topology. Less obvious example
 
 <div class="proposition">
 <strong>Proposition 5.3 (Neighbourhoods of 0 are absorbing).</strong> Let \( (V, \mathcal{T}) \) be a topological vector space. If \( U \in \mathcal{U}_0 \) is any neighbourhood of \( 0 \), then
-\[V = \bigcup_{n \geq 1} nU.\]
+
+\[
+V = \bigcup_{n \geq 1} nU.
+\]
 </div>
 
 This says that every neighbourhood of \( 0 \) in a TVS is <em>absorbing</em>: scaling it by large integers covers the whole space. The proof uses the continuity of scalar multiplication: for any \( x \in V \), the map \( t \mapsto tx \) is continuous, so \( tx \in U \) for small enough \( t > 0 \), which means \( x \in nU \) for large enough \( n \).
@@ -1061,7 +1158,10 @@ Note that the triangle inequality implies \( |p(x) - p(z)| \leq p(z - x) \) for 
 
 <div class="definition">
 <strong>Definition 6.3 (Minkowski functional on TVS).</strong> Let \( W \) be a TVS and \( E \in \mathcal{U}_0 \) a convex neighbourhood of \( 0 \). The <strong>Minkowski (gauge) functional</strong> of \( E \) is
-\[p_E(x) := \inf\{r > 0 : x \in rE\}.\]
+
+\[
+p_E(x) := \inf\{r > 0 : x \in rE\}.
+\]
 </div>
 
 <div class="proposition">
@@ -1082,7 +1182,10 @@ Note that the triangle inequality implies \( |p(x) - p(z)| \leq p(z - x) \) for 
 
 <div class="theorem">
 <strong>Theorem 6.8.</strong> If \( \Gamma \) is a separating family of seminorms on a vector space \( W \), then
-\[\mathcal{B} := \{N(x, F, \varepsilon) : x \in W, \varepsilon > 0, F \subseteq \Gamma \text{ finite}\},\]
+
+\[
+\mathcal{B} := \{N(x, F, \varepsilon) : x \in W, \varepsilon > 0, F \subseteq \Gamma \text{ finite}\},
+\]
 where \( N(x, F, \varepsilon) = \{y \in W : p(x-y) < \varepsilon \text{ for all } p \in F\} \), is a base for a locally convex topology \( \mathcal{T} \) on \( W \) in which each \( p \in \Gamma \) is continuous. Conversely, every locally convex topology is generated by some separating family of seminorms (Theorem 6.9).
 </div>
 
@@ -1100,7 +1203,10 @@ The bounded operators \( B(H) \) on a Hilbert space \( H \) carry not just the o
 
 <div class="definition">
 <strong>Definition 6.12 (Strong Operator Topology).</strong> For each \( x \in H \), let \( p_x : B(H) \to \mathbb{R} \) be the seminorm \( p_x(T) = \|Tx\| \). The family \( \Gamma_\mathrm{SOT} = \{p_x : x \in H\} \) is separating. The locally convex topology generated by \( \Gamma_\mathrm{SOT} \) is called the <strong>strong operator topology (SOT)</strong> on \( B(H) \). A net \( (T_\lambda) \) converges to \( T \) in SOT if and only if \( \|T_\lambda x - Tx\| \to 0 \) for all \( x \in H \) (pointwise convergence of operators). A neighbourhood base for SOT at \( T \in B(H) \) is
-\[\{N(T, \{x_1,\ldots,x_m\}, \varepsilon) : m \geq 1, x_i \in H, \varepsilon > 0\},\]
+
+\[
+\{N(T, \{x_1,\ldots,x_m\}, \varepsilon) : m \geq 1, x_i \in H, \varepsilon > 0\},
+\]
 where \( N(T, F, \varepsilon) = \{R \in B(H) : \|Rx_i - Tx_i\| < \varepsilon, \, i \in [m]\} \).
 </div>
 
@@ -1196,7 +1302,10 @@ The classical Hahn-Banach theorems extend dominated or bounded linear functional
 
 <div class="theorem">
 <strong>Theorem 7.14.</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( W \subseteq V \) a linear manifold. Then
-\[\overline{W} = \bigcap \{ \ker f : f \in V^*, \; W \subseteq \ker f \}.\]
+
+\[
+\overline{W} = \bigcap \{ \ker f : f \in V^*, \; W \subseteq \ker f \}.
+\]
 In particular: (a) \( W \) is dense iff \( f \in V^* \) and \( f|_W = 0 \) implies \( f = 0 \); (b) the canonical embedding \( J : X \to X^{**} \) is an isometry (so \( \|x\| = \sup\{|x^<em>(x)| : x^</em> \in X^<em>, \|x^</em>\| \leq 1\} \)).
 </div>
 
@@ -1304,9 +1413,15 @@ Although weak and weak\( ^* \) topologies are not metrizable in general, their r
 
 <div class="definition">
 <strong>Definition 8.15 (Annihilator and pre-annihilator).</strong> Let \( X \) be a Banach space, \( M \subseteq X \), \( N \subseteq X^* \). The <strong>annihilator</strong> of \( M \) is
-\[M^\perp = \{x^<em> \in X^</em> : x^*(m) = 0 \text{ for all } m \in M\}.\]
+
+\[
+M^\perp = \{x^<em> \in X^</em> : x^*(m) = 0 \text{ for all } m \in M\}.
+\]
 The <strong>pre-annihilator</strong> of \( N \) is
-\[{}^\perp N = \{x \in X : n^<em>(x) = 0 \text{ for all } n^</em> \in N\}.\]
+
+\[
+{}^\perp N = \{x \in X : n^<em>(x) = 0 \text{ for all } n^</em> \in N\}.
+\]
 </div>
 
 <div class="theorem">
@@ -1355,7 +1470,10 @@ The Krein-Milman Theorem is the capstone result connecting convexity theory with
 
 <div class="lemma">
 <strong>Lemma 9.5.</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( K \subseteq V \) nonempty, compact, and convex. For any \( \rho \in V^* \), the set
-\[F := \{x \in K : \operatorname{Re} \rho(x) = \sup_{w \in K} \operatorname{Re} \rho(w)\}\]
+
+\[
+F := \{x \in K : \operatorname{Re} \rho(x) = \sup_{w \in K} \operatorname{Re} \rho(w)\}
+\]
 is a nonempty, compact face of \( K \).
 </div>
 
@@ -1365,7 +1483,10 @@ is a nonempty, compact face of \( K \).
 
 <div class="theorem">
 <strong>Theorem 9.7 (Krein-Milman).</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( K \subseteq V \) nonempty, compact, and convex. Then
-\[K = \overline{\operatorname{conv}}(\operatorname{Ext}(K)),\]
+
+\[
+K = \overline{\operatorname{conv}}(\operatorname{Ext}(K)),
+\]
 the closed convex hull of the extreme points of \( K \).
 </div>
 
@@ -1537,12 +1658,18 @@ If \( T \) is compact, then \( \sigma(T) = \sigma_p(T) \cup \{0\} \). For every 
 
 <div class="theorem">
 <strong>Theorem 11.18 (Decomposition for compact normal operators).</strong> Let \( H \) be a complex Hilbert space and \( N \in B(H) \) compact and normal. If \( \sigma_p(N) = \{\alpha_n : n \in \Omega\} \), then
-\[H = \bigoplus_{n \in \Omega} \ker(N - \alpha_n I).\]
+
+\[
+H = \bigoplus_{n \in \Omega} \ker(N - \alpha_n I).
+\]
 </div>
 
 <div class="theorem">
 <strong>Theorem 11.19 (Spectral Theorem for Compact Normal Operators).</strong> Let \( H \) be a Hilbert space and \( N \in B(H) \) a compact normal operator. Let \( \{\alpha_n : n \in \Omega\} \) be the distinct nonzero eigenvalues of \( N \) and \( P_n \) the orthogonal projection onto \( M_n := \ker(N - \alpha_n I) \) for each \( n \in \Omega \). Then \( P_n P_m = 0 \) for \( n \neq m \) and
-\[N = \sum_{n \in \Omega} \alpha_n P_n,\]
+
+\[
+N = \sum_{n \in \Omega} \alpha_n P_n,
+\]
 where the series converges in operator norm. Each \( M_n \) is finite-dimensional, \( |\alpha_n| \to 0 \), and the eigenvalues accumulate only at \( 0 \).
 </div>
 
@@ -1564,9 +1691,15 @@ The prototype is \( B(X) \) for any Banach space \( X \): multiplication is comp
 
 <div class="definition">
 <strong>Definition 11.22 (Resolvent, Spectrum, Spectral Radius).</strong> Let \( A \) be a unital Banach algebra and \( a \in A \). The <strong>resolvent set</strong> of \( a \) is
-\[\rho(a) = \{\lambda \in \mathbb{C} : \lambda\mathbf{1} - a \text{ is invertible in } A\},\]
+
+\[
+\rho(a) = \{\lambda \in \mathbb{C} : \lambda\mathbf{1} - a \text{ is invertible in } A\},
+\]
 and the <strong>spectrum</strong> of \( a \) is \( \sigma(a) = \mathbb{C} \setminus \rho(a) \). The <strong>resolvent function</strong> of \( a \) is
-\[R(\cdot, a) : \rho(a) \to A, \qquad R(\lambda, a) = (\lambda\mathbf{1} - a)^{-1}.\]
+
+\[
+R(\cdot, a) : \rho(a) \to A, \qquad R(\lambda, a) = (\lambda\mathbf{1} - a)^{-1}.
+\]
 The <strong>spectral radius</strong> of \( a \) is \( \operatorname{spr}(a) = \sup\{|\lambda| : \lambda \in \sigma(a)\} \).
 </div>
 
@@ -1574,12 +1707,18 @@ For \( T \in B(X) \), Definition 11.22 recovers Definition 11.17 verbatim. That 
 
 <div class="theorem">
 <strong>Theorem 11.23 (Resolvent is Analytic).</strong> For any \( a \) in a unital Banach algebra \( A \), the resolvent function \( R(\cdot, a) : \rho(a) \to A \) is analytic. For \( |\lambda| > \|a\| \), the Neumann expansion
-\[R(\lambda, a) = \sum_{n=0}^{\infty} \frac{a^n}{\lambda^{n+1}}\]
+
+\[
+R(\lambda, a) = \sum_{n=0}^{\infty} \frac{a^n}{\lambda^{n+1}}
+\]
 converges absolutely in \( A \).
 </div>
 
 Analyticity follows from the **Common Denominator Formula**: for \( \lambda, \mu \in \rho(a) \),
-\[R(\lambda, a) - R(\mu, a) = (\mu - \lambda)\,R(\lambda, a)\,R(\mu, a),\]
+
+\[
+R(\lambda, a) - R(\mu, a) = (\mu - \lambda)\,R(\lambda, a)\,R(\mu, a),
+\]
 which gives the Newton quotient \( (R(\lambda, a) - R(\lambda_0, a))/(\lambda - \lambda_0) \to -R(\lambda_0, a)^2 \) as \( \lambda \to \lambda_0 \). The Neumann expansion for \( |\lambda| > \|a\| \) is the formal series for \( \lambda^{-1}(\mathbf{1} - \lambda^{-1}a)^{-1} \).
 
 To prove non-emptiness of the spectrum, we need Liouville's theorem for Banach-space-valued functions.
@@ -1598,7 +1737,10 @@ To prove non-emptiness of the spectrum, we need Liouville's theorem for Banach-s
 
 <div class="proof">
 <strong>Proof.</strong> Suppose for contradiction that \( \sigma(a) = \emptyset \), so \( \rho(a) = \mathbb{C} \) and \( R(\cdot, a) \) is entire. For \( |\lambda| > \|a\| \), the Neumann bound gives
-\[\|R(\lambda, a)\| \leq \sum_{n=0}^\infty \frac{\|a\|^n}{|\lambda|^{n+1}} = \frac{1}{|\lambda| - \|a\|} \xrightarrow{|\lambda| \to \infty} 0.\]
+
+\[
+\|R(\lambda, a)\| \leq \sum_{n=0}^\infty \frac{\|a\|^n}{|\lambda|^{n+1}} = \frac{1}{|\lambda| - \|a\|} \xrightarrow{|\lambda| \to \infty} 0.
+\]
 In particular \( R(\cdot, a) \) is bounded on \( \{|\lambda| > \|a\|\} \), and by continuity it is bounded on the compact disc \( \{|\lambda| \leq \|a\|\} \), so it is bounded on all of \( \mathbb{C} \). By Theorem 11.24, \( R(\cdot, a) \) is constant — but a constant whose norm tends to zero at infinity must be identically zero, contradicting \( R(\lambda, a) = (\lambda\mathbf{1} - a)^{-1} \neq \mathbf{0} \). Hence \( \sigma(a) \neq \emptyset \). \( \square \)
 </div>
 
@@ -1616,7 +1758,10 @@ The Gelfand-Mazur theorem is foundational in C\(^*\)-algebra theory: it implies 
 
 <div class="theorem">
 <strong>Theorem 11.27 (Polynomial Spectral Mapping Theorem).</strong> Let \( A \) be a unital Banach algebra, \( a \in A \), and \( p \in \mathbb{C}[z] \) a polynomial. Then
-\[\sigma(p(a)) = p(\sigma(a)) := \{p(\lambda) : \lambda \in \sigma(a)\}.\]
+
+\[
+\sigma(p(a)) = p(\sigma(a)) := \{p(\lambda) : \lambda \in \sigma(a)\}.
+\]
 </div>
 
 <div class="proof">
@@ -1627,7 +1772,10 @@ The Spectral Radius Formula is the capstone result of this section. It is by no 
 
 <div class="theorem">
 <strong>Theorem 11.28 (Beurling's Spectral Radius Formula).</strong> For any element \( a \) of a Banach algebra \( A \),
-\[\operatorname{spr}(a) = \lim_{n \to \infty} \|a^n\|^{1/n}.\]
+
+\[
+\operatorname{spr}(a) = \lim_{n \to \infty} \|a^n\|^{1/n}.
+\]
 In particular, the limit exists.
 </div>
 
@@ -1635,10 +1783,16 @@ In particular, the limit exists.
 <strong>Proof.</strong> We may assume \( A \) is unital.
 
 <em>Lower bound.</em> If \( \lambda \in \sigma(a) \) then \( \lambda^n \in \sigma(a^n) \) for all \( n \geq 1 \): since \( a^n - \lambda^n\mathbf{1} = (a - \lambda\mathbf{1})(a^{n-1} + \lambda a^{n-2} + \cdots + \lambda^{n-1}\mathbf{1}) \) is noninvertible (as \( a - \lambda\mathbf{1} \) is noninvertible and all factors commute). Hence \( \operatorname{spr}(a)^n \leq \operatorname{spr}(a^n) \leq \|a^n\| \), giving
-\[\operatorname{spr}(a) \leq \|a^n\|^{1/n} \qquad \text{for all } n \geq 1.\]
+
+\[
+\operatorname{spr}(a) \leq \|a^n\|^{1/n} \qquad \text{for all } n \geq 1.
+\]
 
 <em>Upper bound.</em> Fix \( \lambda \in \mathbb{C} \) with \( |\lambda| > \operatorname{spr}(a) \). By Theorem 11.23, the Neumann expansion \( R(\mu, a) = \sum_{n \geq 0} a^n/\mu^{n+1} \) holds for \( |\mu| > \|a\| \). Since \( R(\cdot, a) \) is analytic on the larger open set \( \{|\mu| > \operatorname{spr}(a)\} \), this Laurent series extends to converge absolutely there. In particular, for any \( \varphi \in A^<em> \), the scalar series \( \sum_{n \geq 0} \varphi(a^n)/\lambda^{n+1} \) converges, so \( \varphi(a^n)/\lambda^{n+1} \to 0 \). Hence the sequence \( \{a^n/\lambda^{n+1}\}_{n \geq 0} \) is pointwise bounded by every functional in \( A^</em> \). By the Uniform Boundedness Principle (Theorem 1.35), there exists \( M_\lambda > 0 \) with \( \|a^n\| \leq M_\lambda\,|\lambda|^{n+1} \) for all \( n \). Taking \( n \)-th roots:
-\[\limsup_{n \to \infty} \|a^n\|^{1/n} \leq |\lambda|.\]
+
+\[
+\limsup_{n \to \infty} \|a^n\|^{1/n} \leq |\lambda|.
+\]
 Since \( |\lambda| > \operatorname{spr}(a) \) was arbitrary, \( \limsup_n \|a^n\|^{1/n} \leq \operatorname{spr}(a) \).
 
 Combining: \( \operatorname{spr}(a) \leq \liminf_n \|a^n\|^{1/n} \leq \limsup_n \|a^n\|^{1/n} \leq \operatorname{spr}(a) \), so the limit exists and equals \( \operatorname{spr}(a) \). \( \square \)
@@ -1652,9 +1806,15 @@ The proof beautifully intertwines the Uniform Boundedness Principle (real analys
 
 <div class="proof">
 <strong>Proof.</strong> We claim \( \|N^{2^k}\| = \|N\|^{2^k} \) for all \( k \geq 0 \). The case \( k = 0 \) is trivial. For the inductive step, suppose \( M = N^{2^k} \) is normal. Since \( N \) is normal, \( \|Ny\| = \|N^* y\| \) for all \( y \in H \) (Proposition 11.16), so for any \( x \in H \):
-\[\|M^2 x\| = \|M(Mx)\| = \|M^<em>(Mx)\| = \|M^</em>Mx\|.\]
+
+\[
+\|M^2 x\| = \|M(Mx)\| = \|M^<em>(Mx)\| = \|M^</em>Mx\|.
+\]
 Therefore \( \|M^2\| = \sup_{\|x\|=1} \|M^<em>Mx\| \geq \sup_{\|x\|=1} |\langle M^</em>Mx, x\rangle| = \sup_{\|x\|=1} \|Mx\|^2 = \|M\|^2 \), and the reverse inequality \( \|M^2\| \leq \|M\|^2 \) follows from submultiplicativity. Hence \( \|N^{2^{k+1}}\| = \|N^{2^k}\|^2 = \|N\|^{2^{k+1}} \). By Theorem 11.28,
-\[\operatorname{spr}(N) = \lim_{k \to \infty} \|N^{2^k}\|^{1/2^k} = \lim_{k \to \infty} \|N\|^{2^k / 2^k} = \|N\|. \quad \square\]
+
+\[
+\operatorname{spr}(N) = \lim_{k \to \infty} \|N^{2^k}\|^{1/2^k} = \lim_{k \to \infty} \|N\|^{2^k / 2^k} = \|N\|. \quad \square
+\]
 </div>
 
 An operator \( Q \in B(X) \) is called **quasinilpotent** if \( \sigma(Q) = \{0\} \), equivalently \( \operatorname{spr}(Q) = 0 \), equivalently \( \|Q^n\|^{1/n} \to 0 \). Corollary 11.29 says the only quasinilpotent normal operator is \( 0 \): normality forces \( \operatorname{spr}(N) = \|N\| \), so \( \operatorname{spr}(N) = 0 \) implies \( N = 0 \). On general Banach spaces, however, nontrivial quasinilpotent operators abound.
@@ -1662,14 +1822,23 @@ An operator \( Q \in B(X) \) is called **quasinilpotent** if \( \sigma(Q) = \{0\
 ### The Volterra Operator: A Quasinilpotent Example
 
 The most classical quasinilpotent operator is the **Volterra integration operator**
-\[V : C([0,1]) \to C([0,1]), \qquad (Vf)(x) = \int_0^x f(t)\,dt.\]
+
+\[
+V : C([0,1]) \to C([0,1]), \qquad (Vf)(x) = \int_0^x f(t)\,dt.
+\]
 Since \( |(Vf)(x)| \leq \int_0^x |f(t)|\,dt \leq \|f\|_\infty \), we have \( \|V\| \leq 1 \). Testing on the constant function \( \mathbf{1} \) shows \( (V\mathbf{1})(x) = x \), so \( \|V\mathbf{1}\|_\infty = 1 = \|\mathbf{1}\|_\infty \), giving \( \|V\| = 1 \).
 
 For the iterated operators, a direct calculation yields \( (V^n f)(x) = \int_0^x k_n(x, y)\,f(y)\,dy \) where the iterated kernel satisfies \( |k_n(x, y)| \leq \frac{(x-y)^{n-1}}{(n-1)!} \) for \( x > y \) and \( 0 \) otherwise. The base case \( k_1(x,y) = \mathbf{1}_{[0,x]}(y) \) satisfies the bound trivially. For the inductive step, \( k_{n+1}(x,y) = \int_0^x k_1(x,t)\,k_n(t,y)\,dt = \int_y^x k_n(t,y)\,dt \), so \( |k_{n+1}(x,y)| \leq \int_y^x \frac{(t-y)^{n-1}}{(n-1)!}\,dt = \frac{(x-y)^n}{n!} \). Therefore,
-\[\|V^n\| = \sup_{\|f\|_\infty = 1} \|V^n f\|_\infty \leq \sup_{x \in [0,1]} \int_0^x |k_n(x,y)|\,dy \leq \frac{1}{(n-1)!}.\]
+
+\[
+\|V^n\| = \sup_{\|f\|_\infty = 1} \|V^n f\|_\infty \leq \sup_{x \in [0,1]} \int_0^x |k_n(x,y)|\,dy \leq \frac{1}{(n-1)!}.
+\]
 
 By Beurling's formula,
-\[\operatorname{spr}(V) = \lim_{n \to \infty} \|V^n\|^{1/n} \leq \lim_{n \to \infty} \left(\frac{1}{(n-1)!}\right)^{1/n} = 0.\]
+
+\[
+\operatorname{spr}(V) = \lim_{n \to \infty} \|V^n\|^{1/n} \leq \lim_{n \to \infty} \left(\frac{1}{(n-1)!}\right)^{1/n} = 0.
+\]
 
 Thus \( V \) is quasinilpotent: \( \sigma(V) = \{0\} \). Every \( \lambda \neq 0 \) lies in the resolvent — the equation \( (\lambda I - V)f = g \) has a unique solution in \( C([0,1]) \) for every \( g \), given explicitly by the Neumann series \( f = \sum_{n \geq 0} \lambda^{-n-1} V^n g \) (converging in operator norm since \( \|V^n\|^{1/n} \to 0 \)). The Volterra operator is one of the simplest examples of an operator whose spectrum is a single point yet which is not zero, illustrating clearly how spectral theory in infinite dimensions diverges from the finite-dimensional eigenvalue picture.
 

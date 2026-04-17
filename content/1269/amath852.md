@@ -17,6 +17,7 @@ Consider a continuous medium occupying a region \(\Omega \subset \mathbb{R}^3\).
 
 <div class="definition">
 <strong>Definition 1.1 (Linearized Strain Tensor).</strong> The <em>linearized (infinitesimal) strain tensor</em> is
+
 \[
 \epsilon_{ij} = \frac{1}{2}\left(\frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i}\right),
 \]
@@ -29,10 +30,12 @@ The internal forces in the medium are described by the Cauchy stress tensor \(\s
 
 <div class="definition">
 <strong>Definition 1.2 (Hooke's Law and the Elastic Tensor).</strong> In a general linearly elastic medium, the stress-strain relation is
+
 \[
 \sigma_{ij} = C_{ijkl}\, \epsilon_{kl},
 \]
 where \(C_{ijkl}\) is the <em>fourth-order elastic stiffness tensor</em> (81 components). The symmetries \(C_{ijkl} = C_{jikl} = C_{ijlk} = C_{klij}\) reduce the number of independent components to at most 21. For an <em>isotropic</em> medium, the elastic tensor takes the form
+
 \[
 C_{ijkl} = \lambda\, \delta_{ij}\delta_{kl} + \mu\,(\delta_{ik}\delta_{jl} + \delta_{il}\delta_{jk}),
 \]
@@ -43,10 +46,12 @@ The parameter \(\mu\) is the shear modulus (rigidity), measuring resistance to s
 
 <div class="theorem">
 <strong>Theorem 1.3 (Navier's Equation).</strong> In a homogeneous, isotropic, linearly elastic medium with density \(\rho\), the displacement field \(\mathbf{u}(\mathbf{x}, t)\) satisfies the <em>Navier equation</em>:
+
 \[
 \rho\, \ddot{\mathbf{u}} = (\lambda + 2\mu)\,\nabla(\nabla \cdot \mathbf{u}) - \mu\,\nabla \times (\nabla \times \mathbf{u}) + \mathbf{f},
 \]
 equivalently written as
+
 \[
 \rho\, \ddot{\mathbf{u}} = (\lambda + \mu)\,\nabla(\nabla \cdot \mathbf{u}) + \mu\,\nabla^2 \mathbf{u} + \mathbf{f},
 \]
@@ -55,6 +60,7 @@ where \(\mathbf{f}(\mathbf{x}, t)\) is the body-force density and \(\ddot{\mathb
 
 <div class="proof">
 <strong>Proof.</strong> Cauchy's equation of motion states \(\rho\,\ddot{u}_i = \partial_j \sigma_{ij} + f_i\). Substituting the isotropic Hooke's law \(\sigma_{ij} = \lambda\, \delta_{ij}\, \epsilon_{kk} + 2\mu\, \epsilon_{ij}\) and using \(\epsilon_{kk} = \nabla \cdot \mathbf{u}\), we obtain
+
 \[
 \partial_j \sigma_{ij} = \lambda\, \partial_i(\nabla \cdot \mathbf{u}) + 2\mu\, \partial_j \epsilon_{ij} = \lambda\, \partial_i(\nabla \cdot \mathbf{u}) + \mu\,(\partial_j \partial_j u_i + \partial_i \partial_j u_j).
 \]
@@ -73,6 +79,7 @@ The Navier equation, while compact, couples all three components of displacement
 
 <div class="theorem">
 <strong>Theorem 1.4 (Helmholtz Decomposition).</strong> Any sufficiently smooth vector field \(\mathbf{u}\) on \(\mathbb{R}^3\) that decays at infinity can be uniquely decomposed as
+
 \[
 \mathbf{u} = \nabla \phi + \nabla \times \boldsymbol{\psi}, \qquad \nabla \cdot \boldsymbol{\psi} = 0,
 \]
@@ -83,10 +90,12 @@ Substituting this decomposition into the source-free Navier equation (\(\mathbf{
 
 <div class="theorem">
 <strong>Theorem 1.5 (P and S Wave Equations).</strong> The scalar potential \(\phi\) and vector potential \(\boldsymbol{\psi}\) satisfy
+
 \[
 \ddot{\phi} = \alpha^2\, \nabla^2 \phi, \qquad \ddot{\boldsymbol{\psi}} = \beta^2\, \nabla^2 \boldsymbol{\psi},
 \]
 where the <em>P-wave velocity</em> (compressional) and <em>S-wave velocity</em> (shear) are
+
 \[
 \alpha = \sqrt{\frac{\lambda + 2\mu}{\rho}}, \qquad \beta = \sqrt{\frac{\mu}{\rho}}.
 \]
@@ -106,6 +115,7 @@ We now examine the simplest solutions of the elastic wave equations: plane waves
 
 <div class="definition">
 <strong>Definition 1.7 (Plane Wave).</strong> A <em>plane wave</em> is a solution of the form
+
 \[
 \mathbf{u}(\mathbf{x}, t) = \mathbf{A}\, f(\mathbf{k} \cdot \mathbf{x} - \omega t),
 \]
@@ -116,6 +126,7 @@ Substituting a monochromatic plane wave \(\mathbf{u} = \mathbf{A}\, e^{i(\mathbf
 
 <div class="theorem">
 <strong>Theorem 1.8 (Christoffel Equation).</strong> In a homogeneous isotropic medium, the Christoffel equation is
+
 \[
 \left[(\lambda + \mu)\, k_i k_j + \mu\, |\mathbf{k}|^2\, \delta_{ij} - \rho\omega^2\, \delta_{ij}\right] A_j = 0.
 \]
@@ -126,10 +137,12 @@ The energy carried by elastic waves is characterized by the elastic energy densi
 
 <div class="definition">
 <strong>Definition 1.9 (Energy Density and Flux).</strong> The <em>total energy density</em> (kinetic plus potential) of the elastic wavefield is
+
 \[
 E = \frac{1}{2}\rho\, |\dot{\mathbf{u}}|^2 + \frac{1}{2}\sigma_{ij}\, \epsilon_{ij}.
 \]
 The <em>energy flux vector</em> (seismic intensity) is
+
 \[
 \mathcal{F}_i = -\sigma_{ij}\, \dot{u}_j.
 \]
@@ -154,6 +167,7 @@ Consider a planar interface at \(z = 0\) separating medium 1 (above, with parame
 
 <div class="theorem">
 <strong>Theorem 1.11 (Snell's Law for Elastic Media).</strong> At a planar interface, all wave types share the same horizontal slowness (ray parameter):
+
 \[
 p = \frac{\sin\theta_1}{\alpha_1} = \frac{\sin\theta_1'}{\alpha_1} = \frac{\sin\phi_1}{\beta_1} = \frac{\sin\theta_2}{\alpha_2} = \frac{\sin\phi_2}{\beta_2},
 \]
@@ -168,6 +182,7 @@ The amplitudes of the reflected and transmitted waves are determined by a system
 
 <div class="example">
 <strong>Example 1.12 (Normal Incidence Reflection Coefficient).</strong> For a P-wave at normal incidence (\(\theta_1 = 0\)), there is no mode conversion and the reflection coefficient simplifies to
+
 \[
 R = \frac{Z_2 - Z_1}{Z_2 + Z_1}, \qquad T = \frac{2Z_1}{Z_2 + Z_1},
 \]
@@ -186,6 +201,7 @@ The Earth's crust and upper mantle are well approximated as a stack of homogeneo
 
 <div class="definition">
 <strong>Definition 2.1 (SH Wave).</strong> An <em>SH wave</em> is a shear wave in which the displacement is purely horizontal and perpendicular to the plane of propagation. If the wave propagates in the \(x\)-\(z\) plane, then \(\mathbf{u} = (0, u_y(x, z, t), 0)\). The governing equation in a homogeneous layer is
+
 \[
 \rho\, \ddot{u}_y = \mu\left(\frac{\partial^2 u_y}{\partial x^2} + \frac{\partial^2 u_y}{\partial z^2}\right).
 \]
@@ -199,6 +215,7 @@ To handle a stack of \(N\) layers, we need an efficient method for propagating t
 
 <div class="definition">
 <strong>Definition 2.2 (Layer Transfer Matrix for SH Waves).</strong> In a single homogeneous layer of thickness \(h\), shear modulus \(\mu\), and vertical wavenumber \(\nu\), the displacement \(u_y\) and traction \(\tau = \mu\, \partial u_y / \partial z\) at the top (\(z = 0\)) and bottom (\(z = h\)) of the layer are related by
+
 \[
 \begin{bmatrix} u_y \\ \tau \end{bmatrix}_{z=h} = \mathbf{T}\, \begin{bmatrix} u_y \\ \tau \end{bmatrix}_{z=0}, \qquad \mathbf{T} = \begin{bmatrix} \cos(\nu h) & (\mu\nu)^{-1}\sin(\nu h) \\ -\mu\nu\sin(\nu h) & \cos(\nu h) \end{bmatrix}.
 \]
@@ -221,6 +238,7 @@ Love waves, discovered theoretically by A.E.H. Love in 1911, are surface waves c
 
 <div class="theorem">
 <strong>Theorem 2.4 (Love Wave Dispersion Relation).</strong> Consider a single layer of thickness \(H\), shear velocity \(\beta_1\), and density \(\rho_1\), overlying a half-space with shear velocity \(\beta_2 > \beta_1\) and density \(\rho_2\). Love waves exist for phase velocities \(c\) satisfying \(\beta_1 < c < \beta_2\), and the dispersion relation is
+
 \[
 \tan\left(\omega H \sqrt{\frac{1}{\beta_1^2} - \frac{1}{c^2}}\right) = \frac{\mu_2 \sqrt{\frac{1}{c^2} - \frac{1}{\beta_2^2}}}{\mu_1 \sqrt{\frac{1}{\beta_1^2} - \frac{1}{c^2}}},
 \]
@@ -229,6 +247,7 @@ where \(\mu_k = \rho_k \beta_k^2\). This transcendental equation has infinitely 
 
 <div class="proof">
 <strong>Proof.</strong> In the layer (\(0 \le z \le H\)), the SH displacement has the form \(u_y = [A\cos(\nu_1 z) + B\sin(\nu_1 z)]\, e^{i(kx - \omega t)}\), where \(\nu_1 = \omega\sqrt{1/\beta_1^2 - 1/c^2}\) is real. In the half-space (\(z > H\)), the radiation condition requires exponential decay: \(u_y = C\, e^{-\hat{\nu}_2(z - H)}\, e^{i(kx - \omega t)}\), where \(\hat{\nu}_2 = \omega\sqrt{1/c^2 - 1/\beta_2^2}\) is real and positive. The free-surface condition \(\tau = 0\) at \(z = 0\) gives \(B = 0\). Continuity of \(u_y\) and \(\tau\) at \(z = H\) yields
+
 \[
 A\cos(\nu_1 H) = C, \qquad -\mu_1 \nu_1 A\sin(\nu_1 H) = -\mu_2 \hat{\nu}_2 C.
 \]
@@ -247,6 +266,7 @@ The dispersion of Love waves is a consequence of the waveguide geometry: longer-
 
 <div class="example">
 <strong>Example 2.7 (Numerical Dispersion Curve Computation).</strong> Consider a crustal model with a layer of thickness \(H = 35\) km, \(\beta_1 = 3.5\) km/s, \(\rho_1 = 2700\) kg/m\(^3\), overlying a half-space with \(\beta_2 = 4.5\) km/s, \(\rho_2 = 3300\) kg/m\(^3\). The fundamental-mode Love wave dispersion relation becomes
+
 \[
 \tan\left(\omega \cdot 35 \sqrt{\frac{1}{3.5^2} - \frac{1}{c^2}}\right) = \frac{3300 \cdot 4.5^2 \sqrt{\frac{1}{c^2} - \frac{1}{4.5^2}}}{2700 \cdot 3.5^2 \sqrt{\frac{1}{3.5^2} - \frac{1}{c^2}}}.
 \]
@@ -259,6 +279,7 @@ Rayleigh waves, predicted theoretically by Lord Rayleigh in 1885, are the most p
 
 <div class="theorem">
 <strong>Theorem 2.6 (Rayleigh's Secular Equation).</strong> In a homogeneous, isotropic elastic half-space with P-wave velocity \(\alpha\) and S-wave velocity \(\beta\), a Rayleigh surface wave exists with phase velocity \(c_R\) determined by the secular equation
+
 \[
 \left(2 - \frac{c_R^2}{\beta^2}\right)^2 = 4\sqrt{1 - \frac{c_R^2}{\alpha^2}}\,\sqrt{1 - \frac{c_R^2}{\beta^2}}.
 \]
@@ -267,6 +288,7 @@ This equation always has exactly one real root satisfying \(0 < c_R < \beta\).
 
 <div class="proof">
 <strong>Proof.</strong> We seek solutions of the form \(\mathbf{u} = \mathbf{U}(z)\, e^{i(kx - \omega t)}\) that decay as \(z \to \infty\). The P-wave potential \(\phi = A\, e^{-k r_\alpha z}\, e^{i(kx-\omega t)}\) with \(r_\alpha = \sqrt{1 - c^2/\alpha^2}\) and the SV-wave potential \(\psi = B\, e^{-k r_\beta z}\, e^{i(kx-\omega t)}\) with \(r_\beta = \sqrt{1 - c^2/\beta^2}\) are both evanescent provided \(c < \beta < \alpha\). The free-surface conditions \(\sigma_{zz} = \sigma_{xz} = 0\) at \(z = 0\) yield the system
+
 \[
 \begin{bmatrix} \lambda k^2 + (\lambda + 2\mu)k^2 r_\alpha^2 & 2i\mu k^2 r_\beta \\ -2ik^2 r_\alpha & k^2(1 + r_\beta^2) \end{bmatrix} \begin{bmatrix} A \\ B \end{bmatrix} = 0.
 \]
@@ -275,6 +297,7 @@ Setting the determinant to zero and simplifying using \(\lambda + 2\mu = \rho\al
 
 <div class="example">
 <strong>Example 2.9 (Rayleigh Velocity for Typical Earth Materials).</strong> The Rayleigh secular equation can be reduced by substituting \(\eta = c_R^2/\beta^2\) and \(\gamma = \beta^2/\alpha^2\). Squaring both sides and rearranging yields a cubic in \(\eta\):
+
 \[
 \eta^3 - 8\eta^2 + (24 - 16\gamma)\eta - 16(1-\gamma) = 0.
 \]
@@ -293,6 +316,7 @@ In a layered medium, both Love and Rayleigh waves become dispersive: the phase v
 
 <div class="definition">
 <strong>Definition 2.7 (Group Velocity).</strong> For a dispersive wave with phase velocity \(c(\omega)\), the <em>group velocity</em> is
+
 \[
 U = \frac{d\omega}{dk} = c + k\frac{dc}{dk} = c\left(1 - \frac{\omega}{c}\frac{dc}{d\omega}\right)^{-1}.
 \]
@@ -321,6 +345,7 @@ We seek an asymptotic solution of the elastic wave equation valid in the high-fr
 
 <div class="definition">
 <strong>Definition 3.1 (Ray Ansatz).</strong> The <em>ray-theory ansatz</em> is the asymptotic expansion
+
 \[
 u(\mathbf{x}, t) = A(\mathbf{x})\, e^{i\omega[T(\mathbf{x}) - t]}\left[1 + \frac{a_1(\mathbf{x})}{i\omega} + \frac{a_2(\mathbf{x})}{(i\omega)^2} + \cdots\right],
 \]
@@ -333,6 +358,7 @@ Substituting this ansatz into the wave equation and collecting powers of \(\omeg
 
 <div class="theorem">
 <strong>Theorem 3.2 (Eikonal Equation).</strong> At leading order in \(\omega\), the travel-time function \(T(\mathbf{x})\) satisfies the <em>eikonal equation</em>:
+
 \[
 |\nabla T|^2 = \frac{1}{c(\mathbf{x})^2}.
 \]
@@ -341,6 +367,7 @@ This is a first-order nonlinear PDE of Hamilton-Jacobi type. The surfaces \(T(\m
 
 <div class="theorem">
 <strong>Theorem 3.3 (Transport Equation).</strong> At the next order, the amplitude \(A(\mathbf{x})\) satisfies the <em>transport equation</em>:
+
 \[
 2\nabla T \cdot \nabla A + A\, \nabla^2 T = 0,
 \]
@@ -351,10 +378,12 @@ The eikonal equation can be solved by the method of characteristics, which yield
 
 <div class="theorem">
 <strong>Theorem 3.4 (Ray Equations).</strong> The ray paths are solutions of
+
 \[
 \frac{d\mathbf{x}}{ds} = c\, \mathbf{p}, \qquad \frac{d\mathbf{p}}{ds} = -\frac{1}{c^2}\nabla c = \nabla\left(\frac{1}{c}\right),
 \]
 where \(s\) is arc length. Equivalently, parameterized by travel time \(T\),
+
 \[
 \frac{d\mathbf{x}}{dT} = c^2\, \mathbf{p}, \qquad \frac{d\mathbf{p}}{dT} = \frac{1}{c}\nabla c.
 \]
@@ -370,6 +399,7 @@ The transport equation (Theorem 3.3) determines how amplitudes vary along rays. 
 
 <div class="definition">
 <strong>Definition 3.6 (Geometric Spreading).</strong> The <em>geometric spreading factor</em> \(J\) is defined as the cross-sectional area of an infinitesimal ray tube divided by a reference area. The amplitude along a ray is
+
 \[
 A(\mathbf{x}) = A_0 \sqrt{\frac{\rho_0\, c_0}{\rho(\mathbf{x})\, c(\mathbf{x})}}\, \frac{1}{\sqrt{J(\mathbf{x})}},
 \]
@@ -382,6 +412,7 @@ In a spherically symmetric Earth model where velocity depends only on radius, \(
 
 <div class="theorem">
 <strong>Theorem 3.5 (Benndorf's Ray Parameter).</strong> In a spherically symmetric medium with velocity \(c(r)\), the quantity
+
 \[
 p = \frac{r \sin i}{c(r)}
 \]
@@ -404,6 +435,7 @@ The travel time \(T(\Delta)\) as a function of epicentral distance \(\Delta\) fo
 
 <div class="theorem">
 <strong>Theorem 3.6 (Travel Time in a Spherically Symmetric Earth).</strong> For a ray with ray parameter \(p\) in a spherically symmetric Earth, the epicentral distance and travel time are
+
 \[
 \Delta(p) = 2\int_{r_t}^{r_s} \frac{p}{r\sqrt{\eta^2(r) - p^2}}\, dr, \qquad T(p) = 2\int_{r_t}^{r_s} \frac{\eta^2(r)}{r\sqrt{\eta^2(r) - p^2}}\, dr,
 \]
@@ -414,6 +446,7 @@ The relation \(dT/d\Delta = p\) is extremely important: it means that the ray pa
 
 <div class="theorem">
 <strong>Theorem 3.7 (Wiechert-Herglotz Inversion).</strong> If the velocity \(c(r)\) increases monotonically with depth (so that \(\eta(r) = r/c(r)\) is strictly monotonically decreasing), then the velocity profile can be uniquely recovered from the travel-time curve by
+
 \[
 \ln\frac{r_s}{r_t(p)} = \frac{1}{\pi}\int_0^{\Delta(p)} \cosh^{-1}\left(\frac{p_0}{p}\right)\, d\Delta',
 \]
@@ -440,6 +473,7 @@ The most famous shadow zone in seismology is the P-wave shadow between approxima
 
 <div class="example">
 <strong>Example 3.11 (Ray Tracing in a Linear Velocity Gradient).</strong> Consider a medium with velocity \(c(z) = c_0 + gz\), where \(g\) is the constant velocity gradient (a good approximation for the upper crust). The ray equations can be solved analytically. A ray launched at angle \(i_0\) from the surface follows a circular arc with radius \(R = c_0 / (g\sin i_0)\) and center at depth \(z_c = -c_0/g\). The turning depth is \(z_t = (c_0/g)(\sec i_0 - 1)\), and the travel time for a ray reaching horizontal distance \(x\) is
+
 \[
 T(x) = \frac{1}{g}\ln\left(\frac{gx/c_0 + \sqrt{1 + (gx/c_0)^2}}{1}\right) = \frac{1}{g}\,\text{arcsinh}\left(\frac{gx}{c_0}\right).
 \]
@@ -456,6 +490,7 @@ At sufficiently low frequencies, the concept of propagating rays becomes inappro
 
 <div class="definition">
 <strong>Definition 4.1 (Normal Mode Problem).</strong> The free oscillations of a self-gravitating, spherically symmetric, non-rotating, elastic, isotropic (SNREI) Earth model are solutions of the form \(\mathbf{u}(\mathbf{x}, t) = \mathbf{s}(\mathbf{x})\, e^{-i\omega t}\), where the eigenfunction \(\mathbf{s}\) and eigenfrequency \(\omega\) satisfy
+
 \[
 -\omega^2 \rho\, \mathbf{s} = \nabla \cdot \boldsymbol{\sigma}(\mathbf{s}) + \nabla(\rho\, \mathbf{s} \cdot \mathbf{g}_0) - \rho\, \nabla\Phi_1 + \rho_1\, \mathbf{g}_0,
 \]
@@ -472,12 +507,14 @@ The spherical symmetry of the Earth allows the normal modes to be classified int
 <strong>Theorem 4.2 (Mode Classification).</strong> In a spherically symmetric Earth, the normal modes decompose into two families:
 
 (i) <em>Spheroidal modes</em> \({}_n S_l\), with displacement
+
 \[
 \mathbf{s} = U(r)\, Y_l^m(\theta, \phi)\, \hat{\mathbf{r}} + V(r)\, \nabla_1 Y_l^m(\theta, \phi),
 \]
 where \(U(r)\) and \(V(r)\) are radial eigenfunctions, \(Y_l^m\) are spherical harmonics, and \(\nabla_1\) is the surface gradient. These involve radial and horizontal motion (P-SV analogue) and are sensitive to compressional and shear velocity structure.
 
 (ii) <em>Toroidal modes</em> \({}_n T_l\), with displacement
+
 \[
 \mathbf{s} = W(r)\, \hat{\mathbf{r}} \times \nabla_1 Y_l^m(\theta, \phi),
 \]
@@ -504,6 +541,7 @@ The eigenfrequencies of the Earth's normal modes satisfy a variational principle
 
 <div class="theorem">
 <strong>Theorem 4.4 (Rayleigh's Principle for Elastic Eigenfrequencies).</strong> The squared eigenfrequency \(\omega^2\) is stationary with respect to variations \(\delta\mathbf{s}\) of the eigenfunction, and is given by the Rayleigh quotient:
+
 \[
 \omega^2 = \frac{\int_V \sigma_{ij}(\mathbf{s})\, \epsilon_{ij}(\mathbf{s})\, dV + \text{(gravitational terms)}}{\int_V \rho\, |\mathbf{s}|^2\, dV},
 \]
@@ -514,6 +552,7 @@ This variational characterization provides a powerful framework for perturbation
 
 <div class="theorem">
 <strong>Theorem 4.5 (First-Order Perturbation of Eigenfrequencies).</strong> For a small perturbation of the Earth model, the fractional change in eigenfrequency is
+
 \[
 \frac{\delta\omega}{\omega} = \frac{1}{2\omega^2}\frac{\int_0^a \left[K_\rho(r)\,\frac{\delta\rho}{\rho} + K_\mu(r)\,\frac{\delta\mu}{\mu} + K_\kappa(r)\,\frac{\delta\kappa}{\kappa}\right] r^2\, dr}{\int_0^a \rho\, [U^2 + l(l+1)V^2]\, r^2\, dr},
 \]
@@ -530,6 +569,7 @@ In a perfectly spherically symmetric, non-rotating Earth, each multiplet \({}_n 
 
 <div class="theorem">
 <strong>Theorem 4.6 (Rotational Splitting).</strong> The Earth's rotation, to first order, splits each multiplet into \(2l+1\) singlets with frequencies
+
 \[
 {}_n\omega_l^m = {}_n\omega_l + m\,\beta_{nl},
 \]
@@ -544,6 +584,7 @@ Lateral heterogeneity produces more complex splitting patterns that depend on th
 
 <div class="example">
 <strong>Example 4.8 (Splitting of \({}_0 S_2\) and Mantle Structure).</strong> The fundamental spheroidal mode \({}_0 S_2\) has angular degree \(l = 2\), so it splits into \(2l+1 = 5\) singlets under the combined effects of rotation and three-dimensional structure. The observed splitting pattern encodes the degree-2 lateral variations in shear velocity and density throughout the mantle. The splitting matrix for this multiplet has the form
+
 \[
 H_{mm'} = \omega_0^2\,\delta_{mm'} + \sum_{s=0}^{2l} \sum_{t=-s}^{s} c_{st}\, \gamma_{mm'}^{st},
 \]
@@ -566,10 +607,12 @@ An earthquake is a sudden release of accumulated tectonic stress, producing seis
 
 <div class="definition">
 <strong>Definition 5.1 (Equivalent Body Force and Moment Tensor).</strong> An earthquake source at point \(\mathbf{x}_s\) is represented by a system of equivalent body forces with density
+
 \[
 f_i(\mathbf{x}, t) = -M_{ij}(t)\, \frac{\partial}{\partial x_j}\delta(\mathbf{x} - \mathbf{x}_s),
 \]
 where \(M_{ij}(t)\) is the <em>seismic moment tensor</em>, a symmetric second-order tensor whose time dependence describes the history of the source. The displacement field radiated by this source is
+
 \[
 u_i(\mathbf{x}, t) = M_{jk}(t) * G_{ij,k}(\mathbf{x}, t; \mathbf{x}_s),
 \]
@@ -584,6 +627,7 @@ The vast majority of earthquakes are caused by shear faulting, in which rock sli
 
 <div class="theorem">
 <strong>Theorem 5.2 (Double-Couple Representation).</strong> For a shear dislocation with slip vector \(\hat{\mathbf{d}}\) on a fault plane with normal \(\hat{\mathbf{n}}\), the moment tensor is
+
 \[
 M_{ij} = M_0(t)\,(\hat{d}_i \hat{n}_j + \hat{d}_j \hat{n}_i),
 \]
@@ -596,11 +640,13 @@ The far-field P-wave displacement from a double-couple source has a characterist
 <strong>Theorem 5.3 (Far-Field Radiation Patterns).</strong> For a double-couple point source at the origin, the far-field displacement is:
 
 P-wave:
+
 \[
 \mathbf{u}^P(\mathbf{x}, t) = \frac{1}{4\pi\rho\alpha^3}\frac{\dot{M}_0(t - r/\alpha)}{r}\,(\hat{\mathbf{r}} \cdot \hat{\mathbf{d}})(\hat{\mathbf{r}} \cdot \hat{\mathbf{n}})\,\hat{\mathbf{r}},
 \]
 
 S-wave:
+
 \[
 \mathbf{u}^S(\mathbf{x}, t) = \frac{1}{4\pi\rho\beta^3}\frac{\dot{M}_0(t - r/\beta)}{r}\left[(\hat{\mathbf{r}} \cdot \hat{\mathbf{d}})\hat{\mathbf{n}} + (\hat{\mathbf{r}} \cdot \hat{\mathbf{n}})\hat{\mathbf{d}} - 2(\hat{\mathbf{r}} \cdot \hat{\mathbf{d}})(\hat{\mathbf{r}} \cdot \hat{\mathbf{n}})\hat{\mathbf{r}}\right],
 \]
@@ -623,6 +669,7 @@ Real earthquakes are not point sources: they rupture finite fault areas over fin
 
 <div class="definition">
 <strong>Definition 5.5 (Haskell's Rupture Model).</strong> In Haskell's kinematic model, the fault is a rectangular area of length \(L\) and width \(W\). Rupture propagates unilaterally along the fault at a constant rupture velocity \(v_r\), with uniform final slip \(D\) and a boxcar slip-rate function of duration \(\tau_r\) (rise time) at each point. The slip function is
+
 \[
 D(\xi, t) = D\, H(t - \xi/v_r)\, [H(t - \xi/v_r) - H(t - \xi/v_r - \tau_r)] / \tau_r,
 \]
@@ -633,10 +680,12 @@ The finite rupture produces a directivity effect: the pulse is compressed (Doppl
 
 <div class="theorem">
 <strong>Theorem 5.6 (Directivity Effect).</strong> For a unilateral rupture of length \(L\) at rupture velocity \(v_r\), the apparent source duration observed at azimuth \(\theta\) from the rupture direction is
+
 \[
 T(\theta) = \frac{L}{v_r} - \frac{L\cos\theta}{c},
 \]
 where \(c = \alpha\) for P-waves and \(c = \beta\) for S-waves. The source spectrum at frequency \(f\) is modulated by the directivity factor
+
 \[
 D(f, \theta) = \frac{\sin(\pi f T(\theta))}{\pi f T(\theta)}.
 \]
@@ -654,6 +703,7 @@ The characterization of earthquake size has evolved from purely empirical magnit
 
 <div class="definition">
 <strong>Definition 5.7 (Moment Magnitude).</strong> The <em>moment magnitude</em> \(M_W\) is defined by Kanamori (1977) as
+
 \[
 M_W = \frac{2}{3}\log_{10} M_0 - 6.07,
 \]
@@ -662,6 +712,7 @@ where \(M_0\) is the scalar seismic moment in N\(\cdot\)m. Unlike the Richter ma
 
 <div class="definition">
 <strong>Definition 5.8 (Stress Drop).</strong> The <em>static stress drop</em> is the average change in shear stress on the fault during rupture:
+
 \[
 \Delta\sigma = C\, \mu\, \frac{\bar{D}}{L_c},
 \]
@@ -669,6 +720,7 @@ where \(\bar{D}\) is the average slip, \(L_c\) is the characteristic fault dimen
 </div>
 
 The self-similarity of stress drops across many orders of magnitude in earthquake size (from \(M_W\) 1 to \(M_W\) 9) is one of the most remarkable empirical observations in seismology. It implies that the relationship \(M_0 \propto L_c^3\) holds on average, meaning that the ratio of slip to fault dimension is roughly constant regardless of earthquake size. This scaling was first noted by Aki (1967) and remains the subject of active research, as deviations from self-similarity could have important implications for seismic hazard assessment. The Brune (1970) source model, which assumes a circular crack with instantaneous stress release, predicts a far-field displacement spectrum that is flat below a corner frequency \(f_c \propto \beta / L_c\) and decays as \(\omega^{-2}\) above it:
+
 \[
 \hat{u}(\omega) = \frac{M_0}{1 + (\omega/\omega_c)^2},
 \]
@@ -690,10 +742,12 @@ Consider a reference medium with velocity \(c_0(\mathbf{x})\) and a perturbation
 
 <div class="theorem">
 <strong>Theorem 6.1 (Born Approximation).</strong> To first order in \(\delta c / c_0\), the scattered wavefield \(u_s\) satisfies
+
 \[
 \left(\nabla^2 - \frac{1}{c_0^2}\frac{\partial^2}{\partial t^2}\right)u_s = \frac{2\delta c}{c_0^3}\frac{\partial^2 u_0}{\partial t^2},
 \]
 with solution
+
 \[
 u_s(\mathbf{x}, \omega) = \int_V G(\mathbf{x}, \mathbf{x}'; \omega)\, \frac{2\omega^2\, \delta c(\mathbf{x}')}{c_0(\mathbf{x}')^3}\, u_0(\mathbf{x}', \omega)\, dV',
 \]
@@ -704,6 +758,7 @@ The Born approximation replaces the unknown total field in the scattering integr
 
 <div class="example">
 <strong>Example 6.2 (Born Scattering from a Spherical Inclusion).</strong> Consider a spherical inclusion of radius \(a\) with velocity perturbation \(\delta c\) embedded in a homogeneous background of velocity \(c_0\). For a plane P-wave of wavenumber \(k = \omega/c_0\) incident on the inclusion, the Born scattered field in the far field (\(r \gg a\)) is
+
 \[
 u_s(r, \theta) \approx -\frac{2\omega^2 \delta c}{c_0^3}\, \frac{e^{ikr}}{r}\, \frac{4\pi a^3}{3}\, \frac{3[\sin(qa) - qa\cos(qa)]}{(qa)^3},
 \]
@@ -716,6 +771,7 @@ An alternative to the Born approximation that better handles the cumulative effe
 
 <div class="definition">
 <strong>Definition 6.2 (Rytov Approximation).</strong> The <em>Rytov approximation</em> writes the wavefield as \(u = u_0\, e^{\psi}\), where \(\psi\) is a complex phase perturbation. To first order, \(\psi\) satisfies
+
 \[
 \psi(\mathbf{x}, \omega) = \frac{1}{u_0(\mathbf{x}, \omega)}\int_V G(\mathbf{x}, \mathbf{x}'; \omega)\, \frac{2\omega^2\, \delta c(\mathbf{x}')}{c_0(\mathbf{x}')^3}\, u_0(\mathbf{x}', \omega)\, dV'.
 \]
@@ -729,10 +785,12 @@ Real seismic waves lose amplitude not only through geometric spreading but also 
 
 <div class="definition">
 <strong>Definition 6.3 (Quality Factor).</strong> The <em>quality factor</em> \(Q\) is defined as
+
 \[
 Q^{-1} = -\frac{\Delta E}{2\pi E},
 \]
 where \(\Delta E\) is the energy lost per cycle and \(E\) is the peak stored energy. In a medium with constant \(Q\), a plane wave at frequency \(\omega\) propagating a distance \(x\) has amplitude
+
 \[
 A(x) = A_0\, \exp\left(-\frac{\omega x}{2cQ}\right).
 \]
@@ -743,10 +801,12 @@ Attenuation and dispersion are intimately linked through causality, expressed by
 
 <div class="theorem">
 <strong>Theorem 6.4 (Kramers-Kronig Relations for Seismic Attenuation).</strong> The real and imaginary parts of the complex velocity \(c(\omega) = c_R(\omega) + ic_I(\omega)\) of an attenuating medium are related by
+
 \[
 c_R(\omega) = c_R(\omega_r) + \frac{2}{\pi}\int_0^\infty \frac{\omega' c_I(\omega') - \omega c_I(\omega)}{\omega'^2 - \omega^2}\, d\omega',
 \]
 where \(\omega_r\) is a reference frequency. For a nearly constant-\(Q\) medium, this yields the approximate dispersion relation (Liu, Anderson, and Kanamori, 1976):
+
 \[
 c(\omega) = c(\omega_r)\left[1 + \frac{1}{\pi Q}\ln\frac{\omega}{\omega_r}\right].
 \]
@@ -757,6 +817,7 @@ This dispersion is essential for comparing seismic velocities measured at differ
 
 <div class="example">
 <strong>Example 6.5 (Attenuation in PREM).</strong> The Preliminary Reference Earth Model (PREM) of Dziewonski and Anderson (1981) specifies attenuation as well as elastic velocities. In the asthenosphere (80--220 km depth), the shear quality factor is \(Q_\mu = 80\), reflecting the presence of partial melt and high temperatures near the solidus. In the lower mantle, \(Q_\mu \approx 312\), and in the inner core, \(Q_\mu \approx 85\). The compressional quality factor \(Q_\kappa\) is much larger (typically \(> 1000\) in the mantle), indicating that bulk dissipation is far weaker than shear dissipation. The velocity correction between 1 Hz (body wave) and 1 mHz (normal mode) reference frequencies is
+
 \[
 \frac{\delta c}{c} = \frac{1}{\pi Q}\ln\frac{1\,\text{Hz}}{1\,\text{mHz}} = \frac{\ln 1000}{\pi Q} \approx \frac{2.2}{Q}.
 \]
@@ -769,6 +830,7 @@ The tail of a local earthquake seismogram, after the direct P and S arrivals, is
 
 <div class="theorem">
 <strong>Theorem 6.5 (Aki's Single-Scattering Coda Model).</strong> For a point source in a medium with uniform background velocity \(c\) and random heterogeneities characterized by a scattering coefficient \(g_0\) (total scattering cross-section per unit volume), the mean coda power spectral density at frequency \(\omega\) and lapse time \(t\) (time after the origin) is
+
 \[
 P(\omega, t) = \frac{2g_0}{4\pi c t^2}\, |S(\omega)|^2\, \exp\left(-\frac{\omega t}{Q_c}\right),
 \]
@@ -785,6 +847,7 @@ When scattering is strong (mean free path comparable to the wavelength), the sin
 
 <div class="theorem">
 <strong>Theorem 6.7 (Energy Diffusion Equation).</strong> In the multiple-scattering regime, the ensemble-averaged energy density \(E(\mathbf{x}, t)\) satisfies a diffusion equation:
+
 \[
 \frac{\partial E}{\partial t} = D\, \nabla^2 E - \frac{\omega}{Q_i}\, E + S(\mathbf{x}, t),
 \]
@@ -809,6 +872,7 @@ Seismic tomography is the art and science of inferring the three-dimensional str
 
 <div class="definition">
 <strong>Definition 7.1 (Travel-Time Tomography).</strong> In <em>travel-time tomography</em>, the data are travel-time residuals \(\delta t_i\) (observed minus predicted travel times for a reference model). The slowness perturbation \(\delta s(\mathbf{x}) = 1/c(\mathbf{x}) - 1/c_0(\mathbf{x})\) is related to the data by
+
 \[
 \delta t_i = \int_{\text{ray}_i} \delta s(\mathbf{x})\, ds,
 \]
@@ -823,6 +887,7 @@ Before the advent of large-scale computational tomography, Backus and Gilbert (1
 
 <div class="theorem">
 <strong>Theorem 7.2 (Backus-Gilbert Resolution).</strong> Given data \(\mathbf{d} = \mathbf{G}\mathbf{m} + \boldsymbol{\epsilon}\), any linear estimate of the model at a target point \(\mathbf{x}_0\) has the form
+
 \[
 \hat{m}(\mathbf{x}_0) = \sum_{i=1}^N a_i\, \delta t_i = \int_V R(\mathbf{x}_0, \mathbf{x})\, \delta s(\mathbf{x})\, dV,
 \]
@@ -837,10 +902,12 @@ The travel-time tomography problem is typically underdetermined (more unknowns t
 
 <div class="definition">
 <strong>Definition 7.3 (Tikhonov Regularization).</strong> The <em>Tikhonov-regularized solution</em> minimizes
+
 \[
 \Phi(\mathbf{m}) = \|\mathbf{G}\mathbf{m} - \mathbf{d}\|^2 + \lambda^2 \|\mathbf{L}\mathbf{m}\|^2,
 \]
 where \(\lambda > 0\) is the regularization parameter and \(\mathbf{L}\) is a regularization operator (e.g., \(\mathbf{L} = \mathbf{I}\) for norm damping, or \(\mathbf{L} = \nabla\) for smoothness). The solution is
+
 \[
 \hat{\mathbf{m}} = (\mathbf{G}^T\mathbf{G} + \lambda^2 \mathbf{L}^T\mathbf{L})^{-1}\mathbf{G}^T\mathbf{d}.
 \]
@@ -848,6 +915,7 @@ where \(\lambda > 0\) is the regularization parameter and \(\mathbf{L}\) is a re
 
 <div class="definition">
 <strong>Definition 7.4 (Truncated SVD).</strong> The <em>truncated singular value decomposition (TSVD)</em> regularization uses the SVD \(\mathbf{G} = \mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^T\) and retains only the \(k\) largest singular values:
+
 \[
 \hat{\mathbf{m}} = \sum_{j=1}^k \frac{\mathbf{u}_j^T \mathbf{d}}{\sigma_j}\, \mathbf{v}_j,
 \]
@@ -856,10 +924,12 @@ where \(\sigma_1 \ge \sigma_2 \ge \cdots\) are the singular values and \(\mathbf
 
 <div class="theorem">
 <strong>Theorem 7.5 (Resolution and Trade-off).</strong> For Tikhonov regularization, the model resolution matrix is
+
 \[
 \mathbf{R} = (\mathbf{G}^T\mathbf{G} + \lambda^2 \mathbf{L}^T\mathbf{L})^{-1}\mathbf{G}^T\mathbf{G},
 \]
 and the model covariance matrix is
+
 \[
 \mathbf{C}_m = (\mathbf{G}^T\mathbf{G} + \lambda^2 \mathbf{L}^T\mathbf{L})^{-1}\mathbf{G}^T\mathbf{C}_\epsilon\,\mathbf{G}\,(\mathbf{G}^T\mathbf{G} + \lambda^2 \mathbf{L}^T\mathbf{L})^{-1}.
 \]
@@ -876,6 +946,7 @@ Classical ray-theoretical tomography assumes that travel times are sensitive onl
 
 <div class="theorem">
 <strong>Theorem 7.6 (Banana-Doughnut Kernels).</strong> The finite-frequency travel-time sensitivity kernel \(K(\mathbf{x})\) for a body wave, defined by
+
 \[
 \delta t = \int_V K(\mathbf{x})\, \frac{\delta c(\mathbf{x})}{c_0(\mathbf{x})}\, dV,
 \]
@@ -888,6 +959,7 @@ has the following properties: (i) it is zero on the geometric ray path (the "dou
 
 <div class="example">
 <strong>Example 7.8 (Fresnel Zone Width).</strong> The first Fresnel zone for a body wave of period \(T\) that has traveled a distance \(L\) from source to receiver has a maximum half-width of approximately
+
 \[
 w = \sqrt{\frac{\lambda L}{2}} = \sqrt{\frac{cTL}{2}},
 \]
@@ -900,10 +972,12 @@ The ultimate goal of seismic tomography is to use the entire seismogram --- not 
 
 <div class="definition">
 <strong>Definition 7.8 (Full Waveform Inversion).</strong> Given observed seismograms \(\mathbf{d}^{\text{obs}}\) and synthetic seismograms \(\mathbf{d}(\mathbf{m})\) computed for model \(\mathbf{m}\), FWI minimizes the misfit functional
+
 \[
 \chi(\mathbf{m}) = \frac{1}{2}\sum_{\text{sources}}\sum_{\text{receivers}}\int_0^T \|\mathbf{d}^{\text{obs}}(t) - \mathbf{d}(\mathbf{m}; t)\|^2\, dt.
 \]
 This is a nonlinear optimization problem, typically solved by iterative gradient descent:
+
 \[
 \mathbf{m}_{k+1} = \mathbf{m}_k - \alpha_k\, \mathbf{H}_k^{-1}\, \nabla_m \chi(\mathbf{m}_k),
 \]
@@ -914,10 +988,12 @@ The key computational challenge is computing the gradient \(\nabla_m \chi\), whi
 
 <div class="theorem">
 <strong>Theorem 7.9 (Adjoint Method for Seismology).</strong> The gradient of the misfit functional with respect to any model parameter \(m_j\) (e.g., shear velocity at a grid point) can be computed as a space-time correlation of the forward wavefield \(\mathbf{u}\) and the adjoint wavefield \(\mathbf{u}^\dagger\):
+
 \[
 \frac{\partial \chi}{\partial m_j} = -\int_0^T \int_V \mathbf{u}^\dagger(\mathbf{x}, T-t) \cdot \frac{\partial \mathcal{L}}{\partial m_j}\, \mathbf{u}(\mathbf{x}, t)\, dV\, dt,
 \]
 where \(\mathcal{L}\) is the wave-equation operator and \(\mathbf{u}^\dagger\) is the solution of the adjoint wave equation with sources at the receivers, driven by the time-reversed data residuals:
+
 \[
 f_i^\dagger(\mathbf{x}, t) = \sum_r [d_i^{\text{obs}}(T-t) - d_i(\mathbf{m}; T-t)]\, \delta(\mathbf{x} - \mathbf{x}_r).
 \]
@@ -942,13 +1018,16 @@ The development of numerical methods for solving the elastic wave equation has t
 
 <div class="definition">
 <strong>Definition 8.1 (Staggered-Grid Finite Difference Scheme).</strong> The velocity-stress formulation of the elastic wave equation in 2D is
+
 \[
 \rho\,\frac{\partial v_x}{\partial t} = \frac{\partial \sigma_{xx}}{\partial x} + \frac{\partial \sigma_{xz}}{\partial z}, \qquad \rho\,\frac{\partial v_z}{\partial t} = \frac{\partial \sigma_{xz}}{\partial x} + \frac{\partial \sigma_{zz}}{\partial z},
 \]
+
 \[
 \frac{\partial \sigma_{xx}}{\partial t} = (\lambda + 2\mu)\frac{\partial v_x}{\partial x} + \lambda\frac{\partial v_z}{\partial z}, \qquad \frac{\partial \sigma_{zz}}{\partial t} = \lambda\frac{\partial v_x}{\partial x} + (\lambda + 2\mu)\frac{\partial v_z}{\partial z}, \qquad \frac{\partial \sigma_{xz}}{\partial t} = \mu\left(\frac{\partial v_x}{\partial z} + \frac{\partial v_z}{\partial x}\right).
 \]
 In the <em>staggered-grid</em> scheme (Virieux, 1986), the velocity and stress components are defined at staggered grid positions, and spatial derivatives are approximated by centered finite differences. For a fourth-order scheme, the spatial derivative is
+
 \[
 \frac{\partial f}{\partial x}\bigg|_{i+1/2} \approx \frac{c_1(f_{i+1} - f_i) + c_2(f_{i+2} - f_{i-1})}{\Delta x},
 \]
@@ -959,6 +1038,7 @@ The staggered-grid approach avoids the need to explicitly impose continuity cond
 
 <div class="theorem">
 <strong>Theorem 8.2 (Stability Condition).</strong> The explicit time-stepping of the staggered-grid FD scheme is conditionally stable. For a second-order leap-frog time integrator with a fourth-order spatial operator in \(d\) dimensions, the Courant-Friedrichs-Lewy (CFL) stability condition requires
+
 \[
 \Delta t \le \frac{\Delta x}{c_{\max}\sqrt{d}\,\sum_k |c_k|},
 \]
@@ -971,6 +1051,7 @@ where \(c_{\max}\) is the maximum P-wave velocity in the model and the sum is ov
 
 <div class="example">
 <strong>Example 8.4 (Grid Dispersion Analysis).</strong> To quantify numerical dispersion, substitute a plane-wave trial solution \(v = V_0 \exp[i(k_x x + k_z z - \omega t)]\) into the discrete FD equations. For a second-order centered scheme with grid spacing \(\Delta x\), the discrete dispersion relation is
+
 \[
 \frac{\omega^2}{\omega_{\text{exact}}^2} = \left(\frac{\sin(k\Delta x/2)}{k\Delta x/2}\right)^2,
 \]
@@ -983,6 +1064,7 @@ The spectral element method (SEM) combines the flexibility of finite elements (u
 
 <div class="definition">
 <strong>Definition 8.4 (Spectral Element Discretization).</strong> The computational domain is partitioned into non-overlapping hexahedral elements \(\Omega_e\). Within each element, the displacement field is represented as
+
 \[
 \mathbf{u}(\boldsymbol{\xi}) = \sum_{i=0}^N \sum_{j=0}^N \sum_{k=0}^N \mathbf{u}_{ijk}\, \ell_i(\xi_1)\, \ell_j(\xi_2)\, \ell_k(\xi_3),
 \]
@@ -991,6 +1073,7 @@ where \(\boldsymbol{\xi} = (\xi_1, \xi_2, \xi_3)\) are the local coordinates on 
 
 <div class="theorem">
 <strong>Theorem 8.5 (Diagonal Mass Matrix Property).</strong> When the integration points for the weak form of the equation of motion are chosen to coincide with the GLL interpolation nodes, the mass matrix \(\mathbf{M}\) is exactly diagonal:
+
 \[
 M_{(e,i,j,k),(e',i',j',k')} = \delta_{ee'}\delta_{ii'}\delta_{jj'}\delta_{kk'}\, \rho_e(\boldsymbol{\xi}_{ijk})\, J_e(\boldsymbol{\xi}_{ijk})\, w_i\, w_j\, w_k,
 \]
@@ -1009,6 +1092,7 @@ Numerical simulations of wave propagation are performed in finite computational 
 
 <div class="definition">
 <strong>Definition 8.6 (Perfectly Matched Layer).</strong> The <em>perfectly matched layer</em> (PML), introduced by Berenger (1994) for electromagnetic waves and adapted to elastodynamics by Chew and Liu (1996) and Komatitsch and Tromp (2003), is an absorbing boundary layer that is, in principle, perfectly non-reflecting for waves at any frequency and any angle of incidence. The PML is implemented by an analytic continuation of the spatial coordinates into the complex plane:
+
 \[
 x \to \tilde{x} = x + \frac{1}{i\omega}\int_0^x d_x(x')\, dx',
 \]
@@ -1027,6 +1111,7 @@ A fundamental principle that pervades computational seismology is reciprocity: t
 
 <div class="theorem">
 <strong>Theorem 8.8 (Elastodynamic Reciprocity).</strong> Let \(\mathbf{u}\) be the displacement field due to a body-force distribution \(\mathbf{f}\), and let \(\mathbf{u}'\) be the displacement field due to a different body-force distribution \(\mathbf{f}'\), both in the same elastic medium. Then
+
 \[
 \int_V f_i\, u_i'\, dV = \int_V f_i'\, u_i\, dV.
 \]
@@ -1035,6 +1120,7 @@ In terms of the Green's function, this is \(G_{ij}(\mathbf{x}_A, \mathbf{x}_B; t
 
 <div class="proof">
 <strong>Proof.</strong> Let both fields satisfy the elastic wave equation with zero initial conditions and traction-free surface boundary conditions. Consider
+
 \[
 I = \int_0^T \int_V \left[\mathbf{u}' \cdot (\rho\ddot{\mathbf{u}} - \nabla \cdot \boldsymbol{\sigma} - \mathbf{f}) - \mathbf{u} \cdot (\rho\ddot{\mathbf{u}}' - \nabla \cdot \boldsymbol{\sigma}' - \mathbf{f}')\right] dV\, dt = 0.
 \]
@@ -1045,6 +1131,7 @@ Reciprocity allows the computation of synthetic seismograms for many sources and
 
 <div class="remark">
 <strong>Remark 8.9.</strong> The Green's function representation theorem, which follows directly from elastodynamic reciprocity, states that the displacement at any point in the medium can be expressed as a surface integral of the Green's function and the boundary values of displacement and traction. For a moment-tensor point source, this gives the representation theorem of Aki and Richards (1980):
+
 \[
 u_n(\mathbf{x}, t) = \int_\Sigma M_{pq}(\boldsymbol{\xi}, \tau)\, G_{np,q}(\mathbf{x}, t; \boldsymbol{\xi}, \tau)\, d\Sigma(\boldsymbol{\xi})\, d\tau,
 \]
@@ -1077,6 +1164,7 @@ A remarkable development of the 21st century is the extraction of structural inf
 
 <div class="theorem">
 <strong>Theorem 8.11 (Noise Cross-Correlation Theorem).</strong> If the ambient noise wavefield is generated by a spatially uniform distribution of uncorrelated random sources, then the cross-correlation of noise recordings at two stations \(A\) and \(B\) converges, in the long-time average, to the Green's function between the two stations:
+
 \[
 \frac{d}{dt}\langle u(x_A, t) * u(x_B, -t) \rangle \approx G(\mathbf{x}_A, \mathbf{x}_B; t) + G(\mathbf{x}_A, \mathbf{x}_B; -t),
 \]

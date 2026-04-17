@@ -29,21 +29,36 @@ The fundamental bookkeeping tool is the phase diagram, which separates the soil 
 ### Key Phase-Relationship Definitions
 
 **Void ratio** (used extensively in consolidation and classification):
-\[e = \frac{V_v}{V_s}\]
+
+\[
+e = \frac{V_v}{V_s}
+\]
 Void ratio ranges from about 0.35 (dense sand) to over 2.0 (soft clays).
 
 **Porosity** (fraction of total volume that is void):
-\[n = \frac{V_v}{V} = \frac{e}{1+e}\]
+
+\[
+n = \frac{V_v}{V} = \frac{e}{1+e}
+\]
 
 **Water content** (gravimetric, the standard measurement):
-\[w = \frac{W_w}{W_s} \times 100\%\]
+
+\[
+w = \frac{W_w}{W_s} \times 100\%
+\]
 
 **Degree of saturation**:
-\[S = \frac{V_w}{V_v} \times 100\%\]
+
+\[
+S = \frac{V_w}{V_v} \times 100\%
+\]
 \(S = 0\) for dry soil; \(S = 100\%\) for fully saturated soil.
 
 **Specific gravity of solids**:
-\[G_s = \frac{\rho_s}{\rho_w} \approx 2.65 \text{ for most minerals}\]
+
+\[
+G_s = \frac{\rho_s}{\rho_w} \approx 2.65 \text{ for most minerals}
+\]
 
 ### Unit Weights
 
@@ -57,7 +72,10 @@ Void ratio ranges from about 0.35 (dense sand) to over 2.0 (soft clays).
 ### The Critical Identity
 
 A fundamental relationship linking the three phase parameters \(S\), \(e\), and \(G_s\):
-\[S \cdot e = G_s \cdot w\]
+
+\[
+S \cdot e = G_s \cdot w
+\]
 For saturated soil (\(S = 1\)): \(e = G_s \cdot w\).
 
 This identity is the most-used single equation in phase-relationship problems. From it and Darcy's unit weights, all other parameters can be derived.
@@ -75,21 +93,33 @@ A classic application is comparing the cost of compacting soil to different void
 The simplest model of soil structure is an assembly of equal-sized spheres. Three ideal packings bracket real behaviour:
 
 **Simple Cubic Packing (SC)**: Spheres stacked directly above each other. This is the loosest regular packing.
-\[e_{SC} = \frac{\pi/6}{1 - \pi/6} \approx 0.91\]
+
+\[
+e_{SC} = \frac{\pi/6}{1 - \pi/6} \approx 0.91
+\]
 Each sphere touches 6 neighbours (coordination number = 6).
 
 **Body-Centred Cubic Packing (BCC)**: One sphere in the centre of a cube, touching all 8 corner spheres. Coordination number = 8.
-\[e_{BCC} \approx 0.471\]
+
+\[
+e_{BCC} \approx 0.471
+\]
 
 **Face-Centred Cubic / Close Packing (FCC)**: The densest possible regular packing of equal spheres. Coordination number = 12.
-\[e_{FCC} \approx 0.35\]
+
+\[
+e_{FCC} \approx 0.35
+\]
 
 Real sands have void ratios between approximately 0.35 (very dense) and 0.91 (very loose), with natural deposits typically in the range 0.5–0.8.
 
 ## Specific Surface
 
 The **specific surface** \(A_s\) is the total particle surface area per unit mass (m²/g). It governs the importance of surface chemistry:
-\[A_s \propto \frac{1}{r}\]
+
+\[
+A_s \propto \frac{1}{r}
+\]
 for spheres of radius \(r\). As particle size decreases, specific surface increases dramatically. Clays have specific surfaces thousands of times larger than sands, which is why clay behaviour is dominated by physicochemical interactions rather than mechanical contact.
 
 ## Hertz and Mindlin Contact Theories
@@ -112,11 +142,17 @@ Key diameters:
 - \(D_{60}\): diameter at 60% finer
 
 **Coefficient of Uniformity** (measure of grading range):
-\[C_u = \frac{D_{60}}{D_{10}}\]
+
+\[
+C_u = \frac{D_{60}}{D_{10}}
+\]
 Well-graded soils: \(C_u \geq 6\) (gravels) or \(\geq 4\) (sands); poorly-graded (uniform): \(C_u < 4\).
 
 **Coefficient of Curvature** (measure of gradation shape):
-\[C_c = \frac{D_{30}^2}{D_{60} \cdot D_{10}}\]
+
+\[
+C_c = \frac{D_{30}^2}{D_{60} \cdot D_{10}}
+\]
 Well-graded criteria require \(1 \leq C_c \leq 3\).
 
 For fine-grained particles (silt and clay, \(<0.075\) mm), the **hydrometer test** uses settling velocity (Stokes' law) to infer particle size.
@@ -170,11 +206,17 @@ The Atterberg limits define transition water contents between different consiste
 **Shrinkage Limit (SL)**: water content below which further drying does not cause further volume reduction.
 
 **Plasticity Index**:
-\[PI = LL - PL\]
+
+\[
+PI = LL - PL
+\]
 A measure of the range of water contents over which the soil behaves plastically.
 
 **Liquidity Index**: position of natural water content within the plastic range:
-\[LI = \frac{w - PL}{PI}\]
+
+\[
+LI = \frac{w - PL}{PI}
+\]
 \(LI > 1\): soil is above liquid limit (liquid state); \(LI = 0\): at plastic limit; \(LI < 0\): below plastic limit (brittle).
 
 High-plasticity clays (e.g., montmorillonite-rich) have large PI and are prone to large volume changes with water content variation. Low-plasticity soils (kaolinite) are more stable.
@@ -197,7 +239,10 @@ The standard laboratory procedure applies a specified compaction energy to soil 
 **Modified Proctor**: Energy = 2700 kN·m/m³ (using 4.5 kg hammer, 457 mm drop, 5 layers).
 
 For each water content, the dry unit weight is computed:
-\[\gamma_d = \frac{\gamma}{1 + w}\]
+
+\[
+\gamma_d = \frac{\gamma}{1 + w}
+\]
 
 When plotted, \(\gamma_d\) vs \(w\) produces a compaction curve with a distinct peak:
 - **Optimum Water Content (OWC)**: water content at maximum dry unit weight
@@ -206,7 +251,10 @@ When plotted, \(\gamma_d\) vs \(w\) produces a compaction curve with a distinct 
 ### Zero Air Voids (ZAV) Line
 
 The theoretical maximum dry unit weight at any water content occurs when \(S = 100\%\) (no air voids):
-\[\gamma_{d,ZAV} = \frac{G_s \gamma_w}{1 + G_s w}\]
+
+\[
+\gamma_{d,ZAV} = \frac{G_s \gamma_w}{1 + G_s w}
+\]
 The ZAV line plots to the right of the compaction curve. The compaction curve can never cross the ZAV line. Typical compaction curves reach 95–100% saturation at the peak.
 
 ### Effect of Compaction Energy
@@ -235,7 +283,10 @@ In the field, compaction is specified as a percentage of the laboratory maximum 
 ## Capillary Effects
 
 Water in soil pores exists under negative pressure (suction) due to surface tension. The **capillary rise** in a tube of radius \(r\) is:
-\[h_c = \frac{2T_s \cos\alpha}{\gamma_w r}\]
+
+\[
+h_c = \frac{2T_s \cos\alpha}{\gamma_w r}
+\]
 where \(T_s\) is surface tension (~0.073 N/m for water), \(\alpha\) is the contact angle. For soil, \(r\) is effectively the pore throat radius, which scales with \(D_{10}\). Fine-grained soils (small \(r\)) can support large negative pore pressures.
 
 Negative pore pressure \(u = -\gamma_w h_c\) increases the effective stress \(\sigma' = \sigma - u\), meaning capillary action provides apparent cohesion (temporary cementation) in unsaturated fine sands.
@@ -243,18 +294,27 @@ Negative pore pressure \(u = -\gamma_w h_c\) increases the effective stress \(\s
 ## Darcy's Law
 
 For laminar flow through a porous medium, the **discharge velocity** is proportional to the hydraulic gradient:
-\[v = ki\]
+
+\[
+v = ki
+\]
 where:
 - \(v\) = discharge velocity (m/s), defined as flow per unit total area
 - \(k\) = coefficient of permeability (m/s)
 - \(i = \Delta h / L\) = hydraulic gradient (dimensionless)
 
 The **seepage velocity** (actual pore fluid velocity) is larger:
-\[v_s = \frac{v}{n}\]
+
+\[
+v_s = \frac{v}{n}
+\]
 since flow passes only through the void fraction \(n\).
 
 **Hazen's empirical equation** (for clean sands, \(D_{10}\) in mm):
-\[k \approx C_H (D_{10})^2\]
+
+\[
+k \approx C_H (D_{10})^2
+\]
 with \(C_H \approx 10^{-2}\) m/s when \(D_{10}\) is in mm.
 
 Typical permeability ranges:
@@ -266,26 +326,41 @@ Typical permeability ranges:
 ## Laboratory Permeability Tests
 
 **Constant-head permeameter**: Maintains a constant head difference across the sample. Flow \(Q\) is measured directly.
-\[k = \frac{QL}{Aht}\]
+
+\[
+k = \frac{QL}{Aht}
+\]
 
 **Falling-head permeameter**: Water level falls in a standpipe of area \(a\) as seepage occurs through the sample (area \(A\), length \(L\)).
-\[k = \frac{aL}{At} \ln\frac{h_1}{h_2}\]
+
+\[
+k = \frac{aL}{At} \ln\frac{h_1}{h_2}
+\]
 Preferred for low-permeability soils.
 
 ## One-Dimensional Flow: Equivalent Permeability
 
 When flow is parallel to stratification (horizontal flow), each layer maintains the same gradient but carries different flow. The equivalent horizontal permeability is the weighted average:
-\[k_{H,eq} = \frac{\sum k_i H_i}{\sum H_i}\]
+
+\[
+k_{H,eq} = \frac{\sum k_i H_i}{\sum H_i}
+\]
 
 When flow is perpendicular to stratification (vertical flow), continuity requires the same flow rate through each layer. The equivalent vertical permeability follows the harmonic mean (analogous to resistors in series):
-\[k_{V,eq} = \frac{\sum H_i}{\sum (H_i/k_i)}\]
+
+\[
+k_{V,eq} = \frac{\sum H_i}{\sum (H_i/k_i)}
+\]
 
 Note: \(k_{H,eq} \geq k_{V,eq}\) always. Real deposits are anisotropic, with horizontal permeability often 2–10× the vertical permeability.
 
 ## The Laplace Equation and Flow Nets
 
 For steady, two-dimensional, isotropic seepage, the total head \(h\) satisfies:
-\[\frac{\partial^2 h}{\partial x^2} + \frac{\partial^2 h}{\partial z^2} = 0\]
+
+\[
+\frac{\partial^2 h}{\partial x^2} + \frac{\partial^2 h}{\partial z^2} = 0
+\]
 
 This is the Laplace equation. Its solution gives a family of **equipotential lines** (lines of constant \(h\)) and orthogonal **flow lines** that together form a **flow net**.
 
@@ -298,7 +373,9 @@ This is the Laplace equation. Its solution gives a family of **equipotential lin
 
 ### Flow Calculation from Flow Net
 
-\[Q = k \cdot H_T \cdot \frac{N_f}{N_d}\]
+\[
+Q = k \cdot H_T \cdot \frac{N_f}{N_d}
+\]
 
 where:
 - \(H_T\) = total head difference (m)
@@ -309,10 +386,15 @@ The ratio \(N_f / N_d\) is a geometric property of the flow domain, independent 
 
 ### Head Drop Per Equipotential
 
-\[\Delta H = \frac{H_T}{N_d}\]
+\[
+\Delta H = \frac{H_T}{N_d}
+\]
 
 The total head at any point that has traversed \(n_d\) equipotential drops from the entry is:
-\[h = h_{entry} - n_d \cdot \Delta H\]
+
+\[
+h = h_{entry} - n_d \cdot \Delta H
+\]
 
 ## Uplift Pressure Under a Dam
 
@@ -335,7 +417,10 @@ For example, with \(H_T = 6.5\) m and \(N_d = 15\) drops, each drop = 0.43 m of 
 ## Terzaghi's Effective Stress Principle
 
 The mechanical behaviour of soil (deformation, strength, failure) is controlled by **effective stresses**, not total stresses. The effective stress is:
-\[\sigma' = \sigma - u\]
+
+\[
+\sigma' = \sigma - u
+\]
 where \(u\) is the pore water pressure (positive for compression, i.e., positive gauge pressure).
 
 Total stress \(\sigma\) is the average total force per unit area, including the contribution of water. It can be computed from the weight of soil and water above any plane. Effective stress is the portion carried through the soil skeleton via particle contacts — the stress that actually deforms and shears the soil.
@@ -343,32 +428,54 @@ Total stress \(\sigma\) is the average total force per unit area, including the 
 ### Example: Saturated Soil Profile
 
 For a layer of saturated soil of height \(z\) with unit weight \(\gamma_{sat}\) and water table at the surface:
-\[\sigma = \gamma_{sat} \cdot z\]
-\[u = \gamma_w \cdot z\]
-\[\sigma' = (\gamma_{sat} - \gamma_w) \cdot z = \gamma' \cdot z\]
+
+\[
+\sigma = \gamma_{sat} \cdot z
+\]
+
+\[
+u = \gamma_w \cdot z
+\]
+
+\[
+\sigma' = (\gamma_{sat} - \gamma_w) \cdot z = \gamma' \cdot z
+\]
 
 Effective stress increases linearly with depth at rate \(\gamma' \approx 9\)–\(11\) kN/m³.
 
 ### Artesian Conditions
 
 When a confined aquifer has a piezometric head above the point being considered (e.g., artesian conditions), the pore pressure is:
-\[u = \gamma_w \cdot h_{piezo}\]
+
+\[
+u = \gamma_w \cdot h_{piezo}
+\]
 where \(h_{piezo}\) is the height of water in a piezometer above the point of interest. Artesian conditions reduce effective stress, potentially to zero or negative values.
 
 ## Seepage-Induced Pore Pressure
 
 When water seeps through soil, the hydraulic gradient generates a **seepage body force** per unit volume:
-\[j = i \gamma_w\] (seepage force per unit volume, in direction of flow)
+
+\[
+j = i \gamma_w
+\]
+(seepage force per unit volume, in direction of flow)
 
 For **downward seepage** (flow in the same direction as gravity), effective stresses increase.
 For **upward seepage**, effective stresses decrease. If upward gradient \(i\) equals the **critical gradient**:
-\[i_{cr} = \frac{\gamma'}{\gamma_w} = \frac{G_s - 1}{1 + e} \approx 1.0\]
+
+\[
+i_{cr} = \frac{\gamma'}{\gamma_w} = \frac{G_s - 1}{1 + e} \approx 1.0
+\]
 the effective stress becomes zero — **quick condition** (hydraulic failure, also called "quicksand"). The soil loses all strength and behaves like a liquid.
 
 ### Factor of Safety Against Heave (Sheet Pile)
 
 For a sheet pile with penetration depth \(d\) below the excavation level, the factor of safety against piping/heave on the passive side is:
-\[FS = \frac{\gamma' d}{\gamma_w \cdot h_{exit} / N_d \cdot N_{d,exit}}\]
+
+\[
+FS = \frac{\gamma' d}{\gamma_w \cdot h_{exit} / N_d \cdot N_{d,exit}}
+\]
 Practically, the exit gradient is read from the flow net at the point where flow re-enters the open excavation side. Exit gradient > \(i_{cr}\) means heave/piping failure. Codes require \(FS \geq 1.5\) to 2.0.
 
 ---
@@ -391,8 +498,13 @@ From the oedometer test, the **void ratio vs. log effective stress** relationshi
 
 ### Compression Index and Swelling Index
 
-\[C_c = -\frac{\Delta e}{\Delta \log \sigma'_v} \quad \text{(slope of virgin consolidation line)}\]
-\[C_s = C_r = -\frac{\Delta e}{\Delta \log \sigma'_v} \quad \text{(slope of swelling/recompression line)}\]
+\[
+C_c = -\frac{\Delta e}{\Delta \log \sigma'_v} \quad \text{(slope of virgin consolidation line)}
+\]
+
+\[
+C_s = C_r = -\frac{\Delta e}{\Delta \log \sigma'_v} \quad \text{(slope of swelling/recompression line)}
+\]
 Typically \(C_s \approx C_c / 5\) to \(C_c / 10\).
 
 ### Preconsolidation Pressure
@@ -406,38 +518,59 @@ The preconsolidation pressure \(\sigma'_p\) (also written \(\sigma'_c\) or \(\si
 4. Extend the straight portion of the virgin compression line until it intersects the bisector — that intersection is \(\sigma'_p\).
 
 **Overconsolidation Ratio (OCR)**:
-\[OCR = \frac{\sigma'_p}{\sigma'_{v0}}\]
+
+\[
+OCR = \frac{\sigma'_p}{\sigma'_{v0}}
+\]
 where \(\sigma'_{v0}\) is the current effective vertical stress. OCR > 1 means overconsolidated (OC); OCR = 1 means normally consolidated (NC).
 
 ## Settlement Calculation
 
 The total primary consolidation settlement of a clay layer of thickness \(H\) with initial void ratio \(e_0\) is:
-\[S_c = \int_0^H \frac{\Delta e}{1 + e_0}\,dz\]
+
+\[
+S_c = \int_0^H \frac{\Delta e}{1 + e_0}\,dz
+\]
 
 For an increment of effective stress \(\Delta\sigma'\):
 
 **Overconsolidated (if \(\sigma'_{v0} + \Delta\sigma' \leq \sigma'_p\))**:
-\[S_c = \frac{C_s H}{1+e_0} \log\frac{\sigma'_{v0} + \Delta\sigma'}{\sigma'_{v0}}\]
+
+\[
+S_c = \frac{C_s H}{1+e_0} \log\frac{\sigma'_{v0} + \Delta\sigma'}{\sigma'_{v0}}
+\]
 
 **Normally consolidated (if \(\sigma'_{v0} = \sigma'_p\))**:
-\[S_c = \frac{C_c H}{1+e_0} \log\frac{\sigma'_{v0} + \Delta\sigma'}{\sigma'_{v0}}\]
+
+\[
+S_c = \frac{C_c H}{1+e_0} \log\frac{\sigma'_{v0} + \Delta\sigma'}{\sigma'_{v0}}
+\]
 
 **Crossing the preconsolidation pressure (OC→NC)**:
-\[S_c = \frac{C_s H}{1+e_0} \log\frac{\sigma'_p}{\sigma'_{v0}} + \frac{C_c H}{1+e_0} \log\frac{\sigma'_{v0} + \Delta\sigma'}{\sigma'_p}\]
+
+\[
+S_c = \frac{C_s H}{1+e_0} \log\frac{\sigma'_p}{\sigma'_{v0}} + \frac{C_c H}{1+e_0} \log\frac{\sigma'_{v0} + \Delta\sigma'}{\sigma'_p}
+\]
 
 For multi-layer profiles, subdivide the clay layer into sublayers, assign appropriate \(e_0\) and \(\sigma'_p\) to each, and sum the incremental settlements.
 
 ### Heave from Load Removal
 
 If effective stress is reduced (e.g., excavation), the soil swells along the recompression line, producing **heave**:
-\[S_{heave} = \frac{C_s H}{1+e_0} \log\frac{\sigma'_{v0}}{\sigma'_{v0} - \Delta\sigma'_{removed}}\]
+
+\[
+S_{heave} = \frac{C_s H}{1+e_0} \log\frac{\sigma'_{v0}}{\sigma'_{v0} - \Delta\sigma'_{removed}}
+\]
 
 ## Terzaghi's One-Dimensional Consolidation Theory
 
 ### Governing Differential Equation
 
 Combining Darcy's law for flow out of an element with the volumetric compressibility relationship:
-\[\frac{\partial u_e}{\partial t} = c_v \frac{\partial^2 u_e}{\partial z^2}\]
+
+\[
+\frac{\partial u_e}{\partial t} = c_v \frac{\partial^2 u_e}{\partial z^2}
+\]
 where:
 - \(u_e\) = excess pore pressure (above hydrostatic)
 - \(t\) = time
@@ -453,15 +586,23 @@ This is the 1D heat/diffusion equation. The rate of consolidation depends on:
 ### Degree of Consolidation
 
 **Local degree of consolidation** at depth \(z\) and time \(t\):
-\[U_z = 1 - \frac{u_e(z,t)}{u_{e,0}(z)}\]
+
+\[
+U_z = 1 - \frac{u_e(z,t)}{u_{e,0}(z)}
+\]
 where \(u_{e,0}(z)\) is the initial excess pore pressure at depth \(z\).
 
 **Average degree of consolidation** (for computing settlement at time \(t\)):
-\[U_{avg} = 1 - \frac{\int_0^{2d} u_e \,dz}{\int_0^{2d} u_{e,0} \,dz} = \frac{S(t)}{S_{final}}\]
+
+\[
+U_{avg} = 1 - \frac{\int_0^{2d} u_e \,dz}{\int_0^{2d} u_{e,0} \,dz} = \frac{S(t)}{S_{final}}
+\]
 
 ### Time Factor
 
-\[T_v = \frac{c_v t}{d^2}\]
+\[
+T_v = \frac{c_v t}{d^2}
+\]
 where \(d\) is the length of the longest drainage path:
 - Single drainage (one permeable boundary): \(d = H\)
 - Double drainage (permeable boundaries top and bottom): \(d = H/2\)
@@ -469,10 +610,16 @@ where \(d\) is the length of the longest drainage path:
 **Approximate formulas**:
 
 For \(U_{avg} \leq 60\%\) (\(T_v \leq 0.3\)):
-\[T_v = \frac{\pi}{4} U_{avg}^2\]
+
+\[
+T_v = \frac{\pi}{4} U_{avg}^2
+\]
 
 For \(U_{avg} > 60\%\):
-\[T_v = -0.933 \log(1 - U_{avg}) - 0.085\]
+
+\[
+T_v = -0.933 \log(1 - U_{avg}) - 0.085
+\]
 
 Using \(U = 0.6\) (60%) as the crossover point introduces less than 1.5% error and is acceptable for engineering practice.
 
@@ -500,7 +647,10 @@ The root-time method is less ambiguous and is preferred in practice.
 ### Numerical (Finite Difference) Solution
 
 For non-uniform initial excess pore pressure distributions (e.g., triangular, or complex boundary conditions), the consolidation equation is solved numerically using a finite difference scheme:
-\[u_{i,j+1} = \beta u_{i-1,j} + (1-2\beta) u_{i,j} + \beta u_{i+1,j}\]
+
+\[
+u_{i,j+1} = \beta u_{i-1,j} + (1-2\beta) u_{i,j} + \beta u_{i+1,j}
+\]
 where \(\beta = c_v \Delta t / (\Delta z)^2\). For stability, \(\beta \leq 0.5\). This allows tracking the excess pore pressure profile at each time step, providing the full consolidation history.
 
 Isochrones (profiles of excess pore pressure vs. depth at specific times) show how the pressure dissipation front progresses from drainage boundaries inward.
@@ -512,7 +662,10 @@ Isochrones (profiles of excess pore pressure vs. depth at specific times) show h
 ## Friction and the Mohr-Coulomb Criterion
 
 Soils are **frictional materials**: their shear resistance increases linearly with normal stress. The fundamental relationship is:
-\[\tau_f = c' + \sigma'_n \tan\phi'\]
+
+\[
+\tau_f = c' + \sigma'_n \tan\phi'
+\]
 
 where:
 - \(\tau_f\) = shear stress at failure on a given plane
@@ -532,8 +685,14 @@ At any point in a soil body, the state of stress on a plane at angle \(\theta\) 
 - The circle's center is at \(\sigma_c = (\sigma_1 + \sigma_3)/2\) on the \(\sigma\) axis
 - The radius is \(R = (\sigma_1 - \sigma_3)/2\)
 - Normal and shear stresses on a plane inclined at angle \(\theta\) to the major principal plane are:
-\[\sigma_n = \sigma_c + R \cos 2\theta\]
-\[\tau = R \sin 2\theta\]
+
+\[
+\sigma_n = \sigma_c + R \cos 2\theta
+\]
+
+\[
+\tau = R \sin 2\theta
+\]
 
 **Sign convention**: angles in the physical plane appear as doubled angles in the Mohr circle representation (a 90° physical angle becomes 180° in the circle).
 
@@ -551,7 +710,10 @@ The pole is unique — both initial stress states should yield the same pole poi
 ### Principal Stresses and Failure Angle
 
 The principal stresses \(\sigma_1\) and \(\sigma_3\) are where the Mohr circle crosses the \(\sigma\) axis (\(\tau = 0\)). The failure plane in a triaxial specimen is inclined at:
-\[\alpha_f = 45° + \frac{\phi'}{2}\]
+
+\[
+\alpha_f = 45° + \frac{\phi'}{2}
+\]
 to the minor principal plane. For a frictionless material (\(\phi' = 0\)), failure occurs at 45°; for real soils, the failure plane tilts towards the major principal stress.
 
 ## The Failure Envelope
@@ -559,7 +721,10 @@ to the minor principal plane. For a frictionless material (\(\phi' = 0\)), failu
 ### Mohr-Coulomb Failure Envelope
 
 As confining stress increases, the Mohr circle at failure grows larger. The line tangent to all such failure circles defines the **Mohr-Coulomb failure envelope**:
-\[\tau_f = c' + \sigma'_n \tan\phi'\]
+
+\[
+\tau_f = c' + \sigma'_n \tan\phi'
+\]
 Any Mohr circle that touches this envelope represents a stress state at failure.
 
 ### Modified Failure Envelope (Cambridge \(p'\)–\(q\) Space)
@@ -569,13 +734,19 @@ An alternative representation uses the apex of each Mohr circle as the plotted p
 - \(R = (\sigma'_1 - \sigma'_3)/2\) (deviatoric stress / radius)
 
 The line through all apex points (modified failure envelope) has intercept \(a'\) and inclination \(\alpha'\):
-\[\sin\phi' = \tan\alpha', \quad c' \cos\phi' = a'\]
+
+\[
+\sin\phi' = \tan\alpha', \quad c' \cos\phi' = a'
+\]
 This representation is convenient when \(\sigma_1\) and \(\sigma_3\) are directly measured, as in triaxial tests.
 
 ## Factor of Safety
 
 The ratio of strength to applied stress:
-\[FS = \frac{R_{max}}{R_{applied}}\]
+
+\[
+FS = \frac{R_{max}}{R_{applied}}
+\]
 where \(R_{max}\) is the radius of the largest Mohr circle that just touches the failure envelope (at the current mean stress), and \(R_{applied}\) is the radius of the actual stress state. \(FS < 1\) means failure.
 
 ## Lateral Earth Pressure Coefficients
@@ -583,15 +754,24 @@ where \(R_{max}\) is the radius of the largest Mohr circle that just touches the
 The ratio of horizontal to vertical effective stress depends on the strain condition of the soil:
 
 **At-rest coefficient** (no lateral strain, \(\epsilon_x = 0\)):
-\[K_0 = 1 - \sin\phi' \quad \text{(Jaky's empirical formula for NC soils)}\]
+
+\[
+K_0 = 1 - \sin\phi' \quad \text{(Jaky's empirical formula for NC soils)}
+\]
 For OC soils: \(K_0 \approx (1-\sin\phi') \cdot OCR^{0.5}\)
 
 **Active earth pressure** (wall moves away from soil, \(\epsilon_x < 0\), soil expands laterally):
-\[K_A = \tan^2\!\left(45° - \frac{\phi'}{2}\right) = \frac{1-\sin\phi'}{1+\sin\phi'}\]
+
+\[
+K_A = \tan^2\!\left(45° - \frac{\phi'}{2}\right) = \frac{1-\sin\phi'}{1+\sin\phi'}
+\]
 Also: \(\sigma'_{v} / \sigma'_{h,min} = K_A\) at active failure, or equivalently \(\sigma'_1/\sigma'_3 = 1/K_A\).
 
 **Passive earth pressure** (wall pushes into soil, \(\epsilon_x > 0\)):
-\[K_P = \tan^2\!\left(45° + \frac{\phi'}{2}\right) = \frac{1+\sin\phi'}{1-\sin\phi'} = \frac{1}{K_A}\]
+
+\[
+K_P = \tan^2\!\left(45° + \frac{\phi'}{2}\right) = \frac{1+\sin\phi'}{1-\sin\phi'} = \frac{1}{K_A}
+\]
 
 Note: \(K_P \gg K_0 \gg K_A\) for a typical sand. For \(\phi' = 30°\): \(K_A = 1/3\), \(K_0 \approx 0.5\), \(K_P = 3\).
 
@@ -614,7 +794,10 @@ The most versatile shear strength test. A cylindrical specimen is enclosed in a 
 UU tests are used for rapid loading (earthquakes, quick fill on soft clay). CD tests give long-term strength for drained design. CU tests measure pore pressure during shearing and thus give both total and effective parameters.
 
 **Back pressure** is applied inside the specimen to dissolve air bubbles and ensure full saturation. Skempton's B parameter verifies saturation:
-\[B = \frac{\Delta u}{\Delta \sigma_3} \approx 1 \quad \text{for } S = 1\]
+
+\[
+B = \frac{\Delta u}{\Delta \sigma_3} \approx 1 \quad \text{for } S = 1
+\]
 
 ### Direct Simple Shear (DSS) Test
 
@@ -639,7 +822,10 @@ The peak (dilative) friction angle \(\phi'_{peak} > \phi'_{cs}\) (constant-volum
 ### Sensitivity and Thixotropy of Clays
 
 **Sensitivity** \(S_t\) characterises structure loss on remoulding:
-\[S_t = \frac{c_{u,undisturbed}}{c_{u,remoulded}}\]
+
+\[
+S_t = \frac{c_{u,undisturbed}}{c_{u,remoulded}}
+\]
 
 | Sensitivity range | Description |
 |------------------|-------------|
@@ -653,7 +839,10 @@ Quick clays (e.g., Leda clay in the St. Lawrence valley) undergo catastrophic fl
 ## Undrained Shear Strength of Clays
 
 For short-term loading of saturated clays (time scale less than consolidation), the undrained shear strength \(c_u\) (also written \(S_u\)) controls behaviour. In a UU test:
-\[c_u = \frac{\sigma_{1,failure} - \sigma_3}{2} = \frac{q_u}{2}\]
+
+\[
+c_u = \frac{\sigma_{1,failure} - \sigma_3}{2} = \frac{q_u}{2}
+\]
 where \(q_u\) is the unconfined compressive strength (triaxial test with \(\sigma_3 = 0\)).
 
 Clay consistency classifications (Canadian Foundation Manual):
@@ -674,12 +863,17 @@ Clay consistency classifications (Canadian Foundation Manual):
 ## In-Situ Vertical Effective Stress
 
 The vertical effective stress at any depth is computed by integrating the effective unit weight:
-\[\sigma'_{v} = \sum \gamma'_i H_i\]
+
+\[
+\sigma'_{v} = \sum \gamma'_i H_i
+\]
 accounting for layers above and below the water table (using \(\gamma_{moist}\) above and \(\gamma'\) below). Artesian heads are accounted for by computing the pore pressure at each level from the piezometric head.
 
 ## In-Situ Horizontal Stress
 
-\[\sigma'_{h} = K_0 \sigma'_{v}\]
+\[
+\sigma'_{h} = K_0 \sigma'_{v}
+\]
 For normally consolidated sands: \(K_0 = 1 - \sin\phi'\).
 For overconsolidated clays, \(K_0\) can exceed 1.0.
 
@@ -689,7 +883,9 @@ A surface load induces additional stresses in the underlying soil. These decay w
 
 ### Point Load
 
-\[\Delta\sigma_z = \frac{3Q z^3}{2\pi (r^2 + z^2)^{5/2}}\]
+\[
+\Delta\sigma_z = \frac{3Q z^3}{2\pi (r^2 + z^2)^{5/2}}
+\]
 where \(Q\) = point load (kN), \(r\) = horizontal distance from load, \(z\) = depth. Stress decreases as \(1/z^2\) directly below the load.
 
 ### Line Load (per unit length \(q_L\))
@@ -698,19 +894,31 @@ The stress decays as \(1/z^2\) in the plane of interest. Used for long structure
 
 ### Strip Foundation (uniform pressure \(q\), width \(B\))
 
-\[\Delta\sigma_z = \frac{q}{\pi}(\alpha + \sin\alpha\cos(\alpha + 2\beta))\]
-\[\Delta\sigma_x = \frac{q}{\pi}(\alpha - \sin\alpha\cos(\alpha + 2\beta))\]
-\[\Delta\tau_{xz} = \frac{q}{\pi}\sin\alpha\sin(\alpha + 2\beta)\]
+\[
+\Delta\sigma_z = \frac{q}{\pi}(\alpha + \sin\alpha\cos(\alpha + 2\beta))
+\]
+
+\[
+\Delta\sigma_x = \frac{q}{\pi}(\alpha - \sin\alpha\cos(\alpha + 2\beta))
+\]
+
+\[
+\Delta\tau_{xz} = \frac{q}{\pi}\sin\alpha\sin(\alpha + 2\beta)
+\]
 where \(\alpha\) is the angle subtended by the loaded width at the point of interest (in radians), and \(\beta\) is a signed angle following the right-hand rule from the vertical at the near edge.
 
 ### Circular Foundation
 
-\[\Delta\sigma_z = q \left[1 - \left(\frac{1}{1+(B/2z)^2}\right)^{3/2}\right]\]
+\[
+\Delta\sigma_z = q \left[1 - \left(\frac{1}{1+(B/2z)^2}\right)^{3/2}\right]
+\]
 For the same applied pressure, a circular foundation of diameter \(B\) induces about 63% of the stress that an equivalent strip foundation induces at the same depth.
 
 ### Rectangular Foundation (influence factor method)
 
-\[\Delta\sigma_z = q \cdot I_R(m, n)\]
+\[
+\Delta\sigma_z = q \cdot I_R(m, n)
+\]
 where \(m = B/z\), \(n = L/z\). The influence factor \(I_R\) applies to the corner of the rectangle. For stress at the centre, superpose four quarter-rectangles. For points outside the foundation, use the superposition with imaginary negative areas.
 
 ### Depth of Influence
@@ -726,11 +934,20 @@ The Leaning Tower of Pisa was founded on a circular base of roughly 20 m diamete
 ## Total Applied Stresses and Factor of Safety
 
 Once in-situ and induced stresses are computed, total stresses are:
-\[\sigma_{v,total} = \sigma_{v,insitu} + \Delta\sigma_v\]
-\[\sigma_{h,total} = \sigma_{h,insitu} + \Delta\sigma_h\]
+
+\[
+\sigma_{v,total} = \sigma_{v,insitu} + \Delta\sigma_v
+\]
+
+\[
+\sigma_{h,total} = \sigma_{h,insitu} + \Delta\sigma_h
+\]
 
 The Mohr circle is drawn for the total stress state. For a principal stress state (zero shear, which occurs at the centre of a symmetric foundation), the factor of safety against failure is:
-\[FS = \frac{R_{max}}{R_{applied}}\]
+
+\[
+FS = \frac{R_{max}}{R_{applied}}
+\]
 where \(R_{max}\) is computed from the Mohr-Coulomb parameters and the mean effective stress.
 
 For a soil with \(c' = 0\) and \(\phi' = 36°\): if the applied stresses create a circle whose radius exceeds \(c \sin\phi'\), failure occurs. For a soil with significant cohesion (\(c' = 40\) kPa), the factor of safety improves dramatically. However, in practice, cohesive strength should be relied on only for short-term design (undrained conditions), since long-term drainage may reduce \(c'\) toward zero.
@@ -738,7 +955,10 @@ For a soil with \(c' = 0\) and \(\phi' = 36°\): if the applied stresses create 
 ## Settlement: Immediate and Consolidation
 
 Total settlement of a foundation:
-\[S_{total} = S_i + S_c + S_{creep}\]
+
+\[
+S_{total} = S_i + S_c + S_{creep}
+\]
 
 **Immediate settlement** \(S_i\): occurs rapidly as load is applied, predominantly elastic. For flexible and rigid foundations, settlement distributions differ:
 - Flexible on clay: maximum at centre, minimum at edges
@@ -746,7 +966,10 @@ Total settlement of a foundation:
 - Rigid foundation: uniform settlement, but stress distribution is non-uniform to enforce this
 
 For clays (elastic approximation):
-\[S_i = \frac{q B}{E_u}(1-\mu^2) I_s\]
+
+\[
+S_i = \frac{q B}{E_u}(1-\mu^2) I_s
+\]
 where \(E_u\) is the undrained elastic modulus and \(I_s\) is an influence factor.
 
 **Consolidation settlement** \(S_c\): time-dependent, dominates in clays.
@@ -801,21 +1024,45 @@ Students are expected to be able to:
 # Appendix: Important Equations Reference
 
 ## Phase Relationships
-\[e = \frac{V_v}{V_s}, \quad n = \frac{e}{1+e}, \quad Se = G_s w, \quad \gamma_d = \frac{G_s \gamma_w}{1+e}\]
+
+\[
+e = \frac{V_v}{V_s}, \quad n = \frac{e}{1+e}, \quad Se = G_s w, \quad \gamma_d = \frac{G_s \gamma_w}{1+e}
+\]
 
 ## Permeability and Seepage
-\[v = ki, \quad Q = k H_T \frac{N_f}{N_d}, \quad i_{cr} = \frac{G_s - 1}{1+e} \approx 1.0\]
+
+\[
+v = ki, \quad Q = k H_T \frac{N_f}{N_d}, \quad i_{cr} = \frac{G_s - 1}{1+e} \approx 1.0
+\]
 
 ## Effective Stress
-\[\sigma' = \sigma - u, \quad u = \gamma_w z_w \quad \text{(static)}\]
+
+\[
+\sigma' = \sigma - u, \quad u = \gamma_w z_w \quad \text{(static)}
+\]
 
 ## Settlement
-\[S_c = \frac{C_c H}{1+e_0}\log\frac{\sigma'_{v0} + \Delta\sigma'}{\sigma'_{v0}} \quad \text{(NC)}\]
-\[T_v = \frac{c_v t}{d^2}, \quad c_v = \frac{k}{m_v \gamma_w}\]
+
+\[
+S_c = \frac{C_c H}{1+e_0}\log\frac{\sigma'_{v0} + \Delta\sigma'}{\sigma'_{v0}} \quad \text{(NC)}
+\]
+
+\[
+T_v = \frac{c_v t}{d^2}, \quad c_v = \frac{k}{m_v \gamma_w}
+\]
 
 ## Shear Strength
-\[\tau_f = c' + \sigma'_n \tan\phi', \quad \alpha_f = 45° + \frac{\phi'}{2}\]
-\[K_A = \tan^2\!\left(45° - \frac{\phi'}{2}\right), \quad K_P = \tan^2\!\left(45° + \frac{\phi'}{2}\right), \quad K_0 = 1 - \sin\phi'\]
+
+\[
+\tau_f = c' + \sigma'_n \tan\phi', \quad \alpha_f = 45° + \frac{\phi'}{2}
+\]
+
+\[
+K_A = \tan^2\!\left(45° - \frac{\phi'}{2}\right), \quad K_P = \tan^2\!\left(45° + \frac{\phi'}{2}\right), \quad K_0 = 1 - \sin\phi'
+\]
 
 ## Induced Stress (Strip Foundation)
-\[\Delta\sigma_z = \frac{q}{\pi}(\alpha + \sin\alpha\cos(\alpha + 2\beta)) \quad \text{(\(\alpha\) in radians)}\]
+
+\[
+\Delta\sigma_z = \frac{q}{\pi}(\alpha + \sin\alpha\cos(\alpha + 2\beta)) \quad \text{(\(\alpha\) in radians)}
+\]

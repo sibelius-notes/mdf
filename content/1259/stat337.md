@@ -102,6 +102,7 @@ Quantifying how often disease occurs is the starting point of epidemiology. The 
 
 <div class="definition">
 <strong>Prevalence</strong> is the proportion of a population that has a particular disease or condition at a specified point in time (point prevalence) or during a specified period (period prevalence).
+
 \[
 \text{Prevalence} = \frac{\text{Number of existing cases at a given time}}{\text{Total population at that time}}
 \]
@@ -109,6 +110,7 @@ Quantifying how often disease occurs is the starting point of epidemiology. The 
 
 <div class="definition">
 <strong>Incidence rate</strong> (also called incidence density or person-time rate) measures the rate at which new cases of disease occur in a population over time.
+
 \[
 \text{Incidence rate} = \frac{\text{Number of new cases during a time period}}{\text{Total person-time at risk during that period}}
 \]
@@ -117,6 +119,7 @@ The units are typically expressed as cases per person-year (or per 1,000 person-
 
 <div class="definition">
 <strong>Cumulative incidence</strong> (also called incidence proportion or attack rate) is the proportion of an initially disease-free population that develops disease during a specified time period.
+
 \[
 \text{Cumulative incidence} = \frac{\text{Number of new cases during a time period}}{\text{Population at risk at the start of the period}}
 \]
@@ -135,6 +138,7 @@ where \( P \) is the prevalence. This identity shows that prevalence can be high
 
 <div class="example">
 <strong>Example: HIV prevalence and incidence.</strong> Suppose a population of 500,000 has an HIV incidence rate of 2 per 1,000 person-years and the average duration of living with HIV (with treatment) is 25 years. The expected prevalence is approximately
+
 \[
 P \approx 0.002 \times 25 = 0.05 = 5\%.
 \]
@@ -161,6 +165,7 @@ Direct standardization removes the confounding effect of age (or another variabl
 
 <div class="definition">
 <strong>Directly standardized rate:</strong> Choose a standard population with age-specific weights \( w_i \) (the proportion of the standard population in age group \( i \)). Let \( r_i \) be the age-specific rate in the study population for age group \( i \). Then
+
 \[
 \text{Directly standardized rate} = \sum_{i} w_i \cdot r_i.
 \]
@@ -213,6 +218,7 @@ When age-specific rates in the study population are unreliable (because the popu
 <strong>Indirect standardization</strong> compares the observed number of events in the study population with the number that would be expected if the study population experienced the age-specific rates of a reference (standard) population.
 
 <strong>Expected number of events:</strong>
+
 \[
 E = \sum_{i} n_i \cdot R_i,
 \]
@@ -221,6 +227,7 @@ where \( n_i \) is the number of persons in age group \( i \) of the study popul
 
 <div class="definition">
 <strong>Standardized Mortality Ratio (SMR):</strong>
+
 \[
 \text{SMR} = \frac{O}{E} \times 100,
 \]
@@ -329,6 +336,7 @@ An RR of 1 indicates no association. An RR greater than 1 indicates that exposur
 
 <div class="definition">
 <strong>Risk Difference (RD):</strong> the absolute difference in risk between the exposed and unexposed groups.
+
 \[
 \text{RD} = \frac{a}{a+b} - \frac{c}{c+d}
 \]
@@ -337,11 +345,13 @@ The risk difference is also called the attributable risk among the exposed when 
 
 <div class="definition">
 <strong>Attributable Risk Percent (AR%):</strong> the proportion of risk in the exposed group that is attributable to the exposure.
+
 \[
 \text{AR\%} = \frac{\text{RR} - 1}{\text{RR}} \times 100\%
 \]
 
 <strong>Population Attributable Risk Percent (PAR%):</strong> the proportion of disease in the total population that is attributable to the exposure.
+
 \[
 \text{PAR\%} = \frac{p_e(\text{RR} - 1)}{1 + p_e(\text{RR} - 1)} \times 100\%
 \]
@@ -514,6 +524,7 @@ Stratification is the most transparent method for dealing with confounding. The 
 
 <div class="definition">
 <strong>Mantel-Haenszel weighted estimate of the common relative risk.</strong> For \( K \) strata, each with a 2x2 table having cells \( a_k, b_k, c_k, d_k \) and total \( N_k \):
+
 \[
 \text{RR}_{MH} = \frac{\sum_{k=1}^{K} \frac{a_k (c_k + d_k)}{N_k}}{\sum_{k=1}^{K} \frac{c_k (a_k + b_k)}{N_k}}
 \]
@@ -648,15 +659,19 @@ Exponentiating both endpoints gives the 95% CI for the OR.
 
 <div class="example">
 <strong>Continuing the asbestos example:</strong>
+
 \[
 \ln(6.0) = 1.7918
 \]
+
 \[
 \text{SE} = \sqrt{\frac{1}{120} + \frac{1}{80} + \frac{1}{80} + \frac{1}{320}} = \sqrt{0.00833 + 0.0125 + 0.0125 + 0.003125} = \sqrt{0.03646} = 0.1909
 \]
+
 \[
 95\% \text{ CI for } \ln(\text{OR}): 1.7918 \pm 1.96(0.1909) = (1.4177, 2.1660)
 \]
+
 \[
 95\% \text{ CI for OR}: (e^{1.4177}, e^{2.1660}) = (4.13, 8.72)
 \]
@@ -670,6 +685,7 @@ When confounding is present, stratified analysis using the Mantel-Haenszel metho
 
 <div class="definition">
 <strong>Mantel-Haenszel OR:</strong> For \( K \) strata, each with 2x2 table entries \( a_k, b_k, c_k, d_k \) and stratum total \( N_k \):
+
 \[
 \text{OR}_{MH} = \frac{\sum_{k=1}^{K} \frac{a_k d_k}{N_k}}{\sum_{k=1}^{K} \frac{b_k c_k}{N_k}}
 \]
@@ -678,6 +694,7 @@ This is valid when the stratum-specific ORs are approximately equal (i.e., no ef
 
 <div class="definition">
 <strong>Mantel-Haenszel chi-squared test:</strong>
+
 \[
 \chi^2_{MH} = \frac{\left[\sum_k \left(a_k - \frac{(a_k + b_k)(a_k + c_k)}{N_k}\right)\right]^2}{\sum_k \frac{(a_k + b_k)(c_k + d_k)(a_k + c_k)(b_k + d_k)}{N_k^2(N_k - 1)}}
 \]
@@ -710,6 +727,7 @@ McNemar's test is used to test the null hypothesis that the matched OR equals 1 
 
 <div class="definition">
 <strong>McNemar's test statistic:</strong>
+
 \[
 \chi^2 = \frac{(x - y)^2}{x + y}
 \]
@@ -747,6 +765,7 @@ When there are multiple confounders or when matching on many variables is imprac
 
 <div class="definition">
 <strong>Logistic regression model:</strong> For a binary outcome \( D \) (1 = disease, 0 = no disease) and predictors \( X_1, \ldots, X_p \):
+
 \[
 \ln\left(\frac{P(D=1)}{1 - P(D=1)}\right) = \beta_0 + \beta_1 X_1 + \cdots + \beta_p X_p
 \]
@@ -867,16 +886,19 @@ Several measures quantify the treatment effect:
 
 <div class="definition">
 <strong>Absolute Risk Reduction (ARR):</strong>
+
 \[
 \text{ARR} = p_{\text{control}} - p_{\text{treatment}}
 \]
 
 <strong>Relative Risk Reduction (RRR):</strong>
+
 \[
 \text{RRR} = \frac{p_{\text{control}} - p_{\text{treatment}}}{p_{\text{control}}} = 1 - \text{RR}
 \]
 
 <strong>Number Needed to Treat (NNT):</strong>
+
 \[
 \text{NNT} = \frac{1}{\text{ARR}}
 \]
@@ -900,9 +922,11 @@ Risk in placebo group: \( 150/1500 = 0.100 \)
 \[
 \text{ARR} = 0.100 - 0.060 = 0.040
 \]
+
 \[
 \text{RRR} = \frac{0.040}{0.100} = 40\%
 \]
+
 \[
 \text{NNT} = \frac{1}{0.040} = 25
 \]
@@ -916,6 +940,7 @@ RCTs are the standard method for evaluating vaccines. Vaccine efficacy (VE) meas
 
 <div class="definition">
 <strong>Vaccine Efficacy (VE):</strong>
+
 \[
 \text{VE} = \frac{\text{ARR}}{\text{Risk in unvaccinated}} = 1 - \text{RR} = 1 - \frac{\text{Risk in vaccinated}}{\text{Risk in unvaccinated}}
 \]
@@ -942,6 +967,7 @@ Risk in placebo group: \( 162/21728 = 0.007455 \)
 <strong>Basic reproduction number \( R_0 \):</strong> the average number of secondary infections produced by a single infected individual in a completely susceptible population. If \( R_0 > 1 \), the infection can spread through the population; if \( R_0 < 1 \), the infection will die out.
 
 <strong>Herd immunity threshold:</strong> the proportion of the population that must be immune to prevent sustained transmission:
+
 \[
 p_c = 1 - \frac{1}{R_0}
 \]
@@ -965,11 +991,13 @@ Consider a diagnostic test applied to individuals who truly have or do not have 
 | Test Negative (T--) | False Negative (FN) | True Negative (TN) |
 
 <strong>Sensitivity</strong> (true positive rate): the probability that the test is positive given the person has the disease.
+
 \[
 \text{Sensitivity} = \frac{\text{TP}}{\text{TP} + \text{FN}} = P(T+ \mid D+)
 \]
 
 <strong>Specificity</strong> (true negative rate): the probability that the test is negative given the person does not have the disease.
+
 \[
 \text{Specificity} = \frac{\text{TN}}{\text{FP} + \text{TN}} = P(T- \mid D-)
 \]
@@ -983,11 +1011,13 @@ While sensitivity and specificity describe the test's performance from the persp
 
 <div class="definition">
 <strong>Positive Predictive Value (PPV):</strong> the probability that the disease is present given a positive test.
+
 \[
 \text{PPV} = \frac{\text{TP}}{\text{TP} + \text{FP}} = P(D+ \mid T+)
 \]
 
 <strong>Negative Predictive Value (NPV):</strong> the probability that the disease is absent given a negative test.
+
 \[
 \text{NPV} = \frac{\text{TN}}{\text{FN} + \text{TN}} = P(D- \mid T-)
 \]
@@ -1022,6 +1052,7 @@ Consider 10,000 women, of whom 500 have breast cancer and 9,500 do not.
 \[
 \text{PPV} = \frac{450}{925} = 48.6\%
 \]
+
 \[
 \text{NPV} = \frac{9025}{9075} = 99.4\%
 \]
@@ -1038,6 +1069,7 @@ Consider 10,000 women, of whom 50 have breast cancer and 9,950 do not.
 \[
 \text{PPV} = \frac{45}{542.5} = 8.3\%
 \]
+
 \[
 \text{NPV} = \frac{9452.5}{9457.5} = 99.95\%
 \]
@@ -1051,11 +1083,13 @@ Likelihood ratios provide an alternative way to express test performance that is
 
 <div class="definition">
 <strong>Positive Likelihood Ratio (LR+):</strong>
+
 \[
 \text{LR}+ = \frac{\text{Sensitivity}}{1 - \text{Specificity}} = \frac{P(T+ \mid D+)}{P(T+ \mid D-)}
 \]
 
 <strong>Negative Likelihood Ratio (LR--):</strong>
+
 \[
 \text{LR}- = \frac{1 - \text{Sensitivity}}{\text{Specificity}} = \frac{P(T- \mid D+)}{P(T- \mid D-)}
 \]
@@ -1087,6 +1121,7 @@ If the pre-test probability (prevalence) is 5%, pre-test odds = 0.05/0.95 = 0.05
 \[
 \text{Post-test odds} = 0.0526 \times 18 = 0.947
 \]
+
 \[
 \text{Post-test probability} = \frac{0.947}{1 + 0.947} = 0.486 = 48.6\%
 \]
@@ -1285,6 +1320,7 @@ The Kaplan-Meier (KM) estimator, introduced by Edward Kaplan and Paul Meier in 1
 
 <div class="definition">
 <strong>Kaplan-Meier estimator:</strong> Let \( t_1 < t_2 < \cdots < t_m \) be the distinct ordered event times. At each event time \( t_j \), let \( n_j \) be the number at risk (alive and not yet censored just before \( t_j \)) and \( d_j \) be the number of events at \( t_j \). The KM estimate of the survival function is:
+
 \[
 \hat{S}(t) = \prod_{j: t_j \leq t} \left(1 - \frac{d_j}{n_j}\right)
 \]
@@ -1326,6 +1362,7 @@ The estimated median survival time is the time at which \( \hat{S}(t) \) first d
 
 <div class="definition">
 <strong>Greenwood's formula</strong> for the estimated variance of the KM estimator:
+
 \[
 \widehat{\text{Var}}[\hat{S}(t)] = [\hat{S}(t)]^2 \sum_{j: t_j \leq t} \frac{d_j}{n_j(n_j - d_j)}
 \]
@@ -1382,6 +1419,7 @@ While the log-rank test compares survival curves between groups, it cannot adjus
 
 <div class="definition">
 <strong>Cox proportional hazards model:</strong>
+
 \[
 h(t \mid X_1, \ldots, X_p) = h_0(t) \exp(\beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p),
 \]

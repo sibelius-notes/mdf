@@ -221,14 +221,20 @@ The area of each bar, not its height, represents relative frequency when bin wid
 
 <div class="definition">
 <strong>Kernel density estimate (KDE)</strong>: a non-parametric estimate of the probability density function of a random variable. Given observations \( x_1, \ldots, x_n \), the KDE at point \( x \) is
-\[ \hat{f}(x) = \frac{1}{n h} \sum_{i=1}^{n} K\!\left(\frac{x - x_i}{h}\right) \]
+
+\[
+\hat{f}(x) = \frac{1}{n h} \sum_{i=1}^{n} K\!\left(\frac{x - x_i}{h}\right)
+\]
 where \( K \) is a kernel function satisfying \( \int K(u)\,du = 1 \), and \( h > 0 \) is the bandwidth.
 </div>
 
 Common kernels: Gaussian, Epanechnikov (optimal in mean squared error sense), triangular, uniform (rectangular). The Gaussian kernel is the most widely used because it produces smooth estimates.
 
 **Bandwidth selection**: analogous to bin width. The optimal bandwidth under a Gaussian reference distribution (Silverman's rule of thumb) is:
-\[ h = 1.06 \hat{\sigma} n^{-1/5} \]
+
+\[
+h = 1.06 \hat{\sigma} n^{-1/5}
+\]
 Broader kernels produce smoother but more biased estimates; narrower kernels capture more detail but introduce variance.
 
 **Boundary bias**: KDEs assign probability mass outside the support of the variable. For age data bounded at 0, the KDE will show a positive density at negative ages unless boundary correction is applied. Always verify that the KDE does not predict impossible values.
@@ -345,7 +351,10 @@ Key design decisions:
 ### Regression Lines and Confidence Bands
 
 `geom_smooth(method = "lm")` in ggplot2 overlays a fitted regression line with a \(1 - \alpha\) confidence band. The band is curved even for straight-line fits because the standard error of prediction \( \hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x \) varies with \( x \):
-\[ \text{SE}(\hat{y}) = \hat{\sigma} \sqrt{\frac{1}{n} + \frac{(x - \bar{x})^2}{\sum(x_i - \bar{x})^2}} \]
+
+\[
+\text{SE}(\hat{y}) = \hat{\sigma} \sqrt{\frac{1}{n} + \frac{(x - \bar{x})^2}{\sum(x_i - \bar{x})^2}}
+\]
 The band is narrowest at \(\bar{x}\) and widens toward the extremes.
 
 `geom_smooth(method = "loess")` or `method = "gam"` adds a non-parametric smooth, useful for detecting non-linear relationships.
@@ -419,7 +428,10 @@ In R all three are available in the `vcd` package: `mosaic()`, `sieve()`, `assoc
 The baseline against which categorical associations are measured is **statistical independence**: \( P(X = i, Y = j) = P(X = i) \cdot P(Y = j) \). Under independence, expected cell counts are \( \hat{n}_{ij} = n_{i+} n_{+j} / n \) (row total times column total divided by grand total).
 
 Departures from independence are quantified by Pearson's chi-squared statistic:
-\[ \chi^2 = \sum_{i,j} \frac{(n_{ij} - \hat{n}_{ij})^2}{\hat{n}_{ij}} \]
+
+\[
+\chi^2 = \sum_{i,j} \frac{(n_{ij} - \hat{n}_{ij})^2}{\hat{n}_{ij}}
+\]
 
 Visualizations like the sieve diagram and association plot make the *spatial pattern* of these departures visible — which cells are over- or under-represented, not just whether the overall association is significant. This is the crucial advantage of visualization over a single-number test statistic.
 
@@ -590,7 +602,10 @@ In R: `pheatmap::pheatmap()` or `ComplexHeatmap::Heatmap()` (Bioconductor) for c
 ## 5.4 Andrews Curves
 
 Andrews (1972) proposed encoding a \( p \)-dimensional observation \( \mathbf{x} = (x_1, \ldots, x_p)^\top \) as the Fourier function:
-\[ f_{\mathbf{x}}(t) = \frac{x_1}{\sqrt{2}} + x_2 \sin(t) + x_3 \cos(t) + x_4 \sin(2t) + x_5 \cos(2t) + \cdots \]
+
+\[
+f_{\mathbf{x}}(t) = \frac{x_1}{\sqrt{2}} + x_2 \sin(t) + x_3 \cos(t) + x_4 \sin(2t) + x_5 \cos(2t) + \cdots
+\]
 for \( t \in [-\pi, \pi] \). Each observation becomes a curve; observations in the same cluster produce similar curves, while outliers produce visually distinct trajectories. Andrews curves preserve distances: \( \|\mathbf{x} - \mathbf{y}\|^2 = \frac{1}{\pi} \int_{-\pi}^{\pi} [f_{\mathbf{x}}(t) - f_{\mathbf{y}}(t)]^2 \, dt \).
 
 The main limitation of Andrews curves is that the visual appearance depends heavily on the ordering of variables (which variable is assigned \( x_1, x_2, \ldots \)) and is difficult to interpret for non-statisticians. They are primarily used in exploratory analysis for detecting clusters and outliers.
@@ -807,7 +822,10 @@ For binary classification models:
 **Partial dependence plots (PDPs)** (Friedman 2001) show the marginal effect of one (or two) predictors on the model output, averaging over the joint distribution of all other predictors.
 
 For a model \( f(\mathbf{x}) \) and a subset of predictors \( \mathbf{x}_S \) (typically one or two variables):
-\[ \hat{f}_S(\mathbf{x}_S) = \mathbb{E}_{\mathbf{x}_C}\left[f(\mathbf{x}_S, \mathbf{x}_C)\right] \approx \frac{1}{n} \sum_{i=1}^{n} f(\mathbf{x}_S, \mathbf{x}_{i,C}) \]
+
+\[
+\hat{f}_S(\mathbf{x}_S) = \mathbb{E}_{\mathbf{x}_C}\left[f(\mathbf{x}_S, \mathbf{x}_C)\right] \approx \frac{1}{n} \sum_{i=1}^{n} f(\mathbf{x}_S, \mathbf{x}_{i,C})
+\]
 where \( \mathbf{x}_C \) are the complement variables.
 
 PDPs assume feature independence; if predictors are strongly correlated, the averaging over impossible feature combinations produces misleading summaries. The **Accumulated Local Effects (ALE) plot** (Apley and Zhu 2020) addresses this by integrating over conditional rather than marginal distributions.
@@ -827,7 +845,10 @@ In R: `pdp::partial(ice = TRUE)`.
 **SHAP (SHapley Additive exPlanations)** (Lundberg and Lee 2017) decomposes a model prediction for a single observation into additive contributions from each feature, grounded in game-theoretic Shapley values.
 
 For observation \( i \), the SHAP decomposition is:
-\[ f(\mathbf{x}_i) = \phi_0 + \sum_{j=1}^{p} \phi_{ij} \]
+
+\[
+f(\mathbf{x}_i) = \phi_0 + \sum_{j=1}^{p} \phi_{ij}
+\]
 where \( \phi_0 = \mathbb{E}[f(\mathbf{x})] \) is the base rate (average prediction) and \( \phi_{ij} \) is the SHAP value for feature \( j \) on observation \( i \). SHAP values sum exactly to the prediction minus the base rate.
 
 **Properties**: efficiency (values sum to the prediction gap), symmetry (symmetric features get equal contributions), dummy (zero-contribution features get \( \phi = 0 \)), additivity.

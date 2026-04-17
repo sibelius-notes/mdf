@@ -22,7 +22,9 @@ P&C insurance compensates policyholders for losses to property they own or for l
 
 The gross premium charged to a policyholder is not a single number handed down by regulation; it is an engineered sum.
 
-\[ P = \text{Pure Premium} + \text{Expenses} + \text{Profit/Contingency Load} + \text{Cost of Capital} \]
+\[
+P = \text{Pure Premium} + \text{Expenses} + \text{Profit/Contingency Load} + \text{Cost of Capital}
+\]
 
 The **pure premium** is the actuarial expected cost of claims over the policy period, ignoring expenses and capital. Expense loads cover commissions, underwriting, claims handling, and reinsurance. The profit and contingency load buffers adverse deviation and rewards shareholders; the cost-of-capital charge compensates equity holders for the capital that backs unexpected losses. Predictive modelling's job is to estimate the pure premium with as much granularity and accuracy as data support, while the other components are typically added through a gross-up factor.
 
@@ -30,14 +32,19 @@ The **pure premium** is the actuarial expected cost of claims over the policy pe
 
 For a policy with random claim count \(N\) and individual claim amounts \(X_1, X_2, \dots, X_N\), the aggregate loss is \(S = \sum_{i=1}^{N} X_i\). Under the classical independence assumption — \(N\) independent of the \(X_i\)'s and the \(X_i\)'s identically distributed — the Wald identity gives
 
-\[ \mathbb{E}[S] = \mathbb{E}[N]\cdot\mathbb{E}[X] . \]
+\[
+\mathbb{E}[S] = \mathbb{E}[N]\cdot\mathbb{E}[X] .
+\]
 
 This is the workhorse of frequency-severity modelling: build one model for how often claims happen and another for how much each costs, then multiply.
 
 <div class="definition">
 <strong>Pure Premium.</strong> The <em>pure premium</em> per unit exposure is
 <br>
-\[ \mathrm{PP} = \frac{\mathbb{E}[\text{Losses}]}{\text{Exposure}} = \mathbb{E}[\text{frequency}]\cdot\mathbb{E}[\text{severity}] , \]
+
+\[
+\mathrm{PP} = \frac{\mathbb{E}[\text{Losses}]}{\text{Exposure}} = \mathbb{E}[\text{frequency}]\cdot\mathbb{E}[\text{severity}] ,
+\]
 <br>
 assuming independence between frequency and severity. Exposure is typically measured in car-years for auto and house-years for property.
 </div>
@@ -49,7 +56,10 @@ A **rating factor** is any variable used to differentiate premium: driver age, v
 <div class="example">
 <strong>A stylized tariff.</strong> Consider a driver with base pure premium 600 dollars. A rural territory relativity of 0.85, a vehicle-use multiplier of 1.10 for commuting, and an age multiplier of 1.20 for a 22-year-old produces a modelled pure premium of
 <br>
-\[ 600 \times 0.85 \times 1.10 \times 1.20 \approx 673 \text{ dollars}. \]
+
+\[
+600 \times 0.85 \times 1.10 \times 1.20 \approx 673 \text{ dollars}.
+\]
 <br>
 Loaded with 25% expenses and 5% profit, the gross premium lands near 962 dollars.
 </div>
@@ -100,7 +110,9 @@ Out-of-sample validation is mandatory. A train/validation/test split with strati
 
 Claim counts are non-negative integers, so Poisson regression is the natural first model. Let \(N_i\) be the number of claims on policy \(i\) with exposure \(e_i\). We assume
 
-\[ N_i \sim \mathrm{Poisson}(\lambda_i e_i), \qquad \log \lambda_i = \mathbf{x}_i^\top \boldsymbol\beta . \]
+\[
+N_i \sim \mathrm{Poisson}(\lambda_i e_i), \qquad \log \lambda_i = \mathbf{x}_i^\top \boldsymbol\beta .
+\]
 
 The link makes \(\log \mathbb{E}[N_i] = \log e_i + \mathbf{x}_i^\top \boldsymbol\beta\), with \(\log e_i\) entering as an **offset** — a term with coefficient fixed at one. This parametrizes claim rates rather than counts and automatically scales predictions with exposure.
 
@@ -115,11 +127,15 @@ Two remedies:
 1. **Quasi-Poisson** — keep the Poisson mean structure but fit a dispersion parameter \(\phi\) so that \(\mathrm{Var}(N) = \phi\mu\). Point estimates of \(\boldsymbol\beta\) are unchanged; standard errors are scaled by \(\sqrt{\phi}\).
 2. **Negative Binomial** — derive \(N\) by mixing Poisson rates across a Gamma-distributed frailty:
 
-\[ N \mid \mu, W \sim \mathrm{Poisson}(\mu W), \qquad W \sim \mathrm{Gamma}(\kappa, \kappa) . \]
+\[
+N \mid \mu, W \sim \mathrm{Poisson}(\mu W), \qquad W \sim \mathrm{Gamma}(\kappa, \kappa) .
+\]
 
 Marginalizing over \(W\) yields a negative binomial with
 
-\[ \mathrm{Var}(N) = \mu\left(1 + \frac{\mu}{\kappa}\right) = \mu + \frac{\mu^2}{\kappa} . \]
+\[
+\mathrm{Var}(N) = \mu\left(1 + \frac{\mu}{\kappa}\right) = \mu + \frac{\mu^2}{\kappa} .
+\]
 
 Smaller \(\kappa\) means more heterogeneity; as \(\kappa \to \infty\), the negative binomial collapses back to Poisson.
 
@@ -131,18 +147,25 @@ Many policies report zero claims — a feature, not a bug. If the observed numbe
 
 Candidate models are compared with AIC and BIC,
 
-\[ \mathrm{AIC} = -2\ell(\hat\theta) + 2p , \qquad \mathrm{BIC} = -2\ell(\hat\theta) + p\log n , \]
+\[
+\mathrm{AIC} = -2\ell(\hat\theta) + 2p , \qquad \mathrm{BIC} = -2\ell(\hat\theta) + p\log n ,
+\]
 
 and nested models with a likelihood ratio test,
 
-\[ -2(\ell_R - \ell_F) \sim \chi^2_{p_F - p_R} . \]
+\[
+-2(\ell_R - \ell_F) \sim \chi^2_{p_F - p_R} .
+\]
 
 Residual analysis uses Pearson residuals \((y_i - \hat\mu_i)/\sqrt{V(\hat\mu_i)}\) and deviance residuals that respect the exponential family form. Out-of-sample lift charts close the loop: a model that fits well in-sample but has a flat lift curve on held-out data is not fit for pricing.
 
 <div class="theorem">
 <strong>Exponential family mean and variance.</strong> For a response \(Y\) with density
 <br>
-\[ f(y;\theta,\phi) = \exp\!\left\{\frac{y\theta - b(\theta)}{a(\phi)} + c(y,\phi)\right\}, \]
+
+\[
+f(y;\theta,\phi) = \exp\!\left\{\frac{y\theta - b(\theta)}{a(\phi)} + c(y,\phi)\right\},
+\]
 <br>
 we have \(\mathbb{E}[Y] = b'(\theta) = \mu\) and \(\mathrm{Var}(Y) = a(\phi)\, b''(\theta) = a(\phi)\, V(\mu)\). The <em>variance function</em> \(V(\mu)\) determines the family: \(V(\mu) = \mu\) gives Poisson, \(V(\mu) = \mu^2\) gives Gamma, and \(V(\mu) = \mu^p\) with \(1 < p < 2\) gives the Tweedie compound Poisson–Gamma that appears in Chapter 5.
 </div>
@@ -166,11 +189,15 @@ Conditional on a claim occurring, the loss amount is a positive continuous rando
 
 Assume per-claim severity \(Y \sim \mathrm{Gamma}(\mu, \nu)\) with shape \(\nu\) and mean \(\mu\), and use the log link,
 
-\[ \log \mu_i = \mathbf{x}_i^\top \boldsymbol\beta . \]
+\[
+\log \mu_i = \mathbf{x}_i^\top \boldsymbol\beta .
+\]
 
 The Gamma density rewritten in exponential family form has \(V(\mu) = \mu^2\), so \(\mathrm{Var}(Y) = \phi\mu^2\) — the coefficient of variation is constant. The canonical link is the inverse link, but the log link is overwhelmingly preferred because it produces a **multiplicative** tariff consistent with the frequency model. The Gamma deviance,
 
-\[ D = 2\sum_i \left[ -\log(y_i/\hat\mu_i) + \frac{y_i - \hat\mu_i}{\hat\mu_i} \right] , \]
+\[
+D = 2\sum_i \left[ -\log(y_i/\hat\mu_i) + \frac{y_i - \hat\mu_i}{\hat\mu_i} \right] ,
+\]
 
 drops out of the likelihood and plays the role that sum of squared errors plays in Gaussian regression.
 
@@ -178,7 +205,9 @@ drops out of the likelihood and plays the role that sum of squared errors plays 
 
 A practical alternative is to take logs and fit ordinary least squares:
 
-\[ \log Y_i = \mathbf{x}_i^\top \boldsymbol\beta + \varepsilon_i, \qquad \varepsilon_i \sim N(0,\sigma^2) . \]
+\[
+\log Y_i = \mathbf{x}_i^\top \boldsymbol\beta + \varepsilon_i, \qquad \varepsilon_i \sim N(0,\sigma^2) .
+\]
 
 Predictions on the original scale require bias correction: \(\mathbb{E}[Y_i] = \exp(\mathbf{x}_i^\top\boldsymbol\beta + \sigma^2/2)\). Lognormal regression is convenient but can be unstable if some losses are very small or if a claim reopens with zero additional payment.
 
@@ -211,7 +240,9 @@ A single million-dollar liability claim can swing severity coefficients. Two pra
 
 The frequency-severity approach fits two models and multiplies. An alternative fits a single model to pure premium
 
-\[ Y_i = \frac{\text{losses}_i}{\text{exposure}_i} \]
+\[
+Y_i = \frac{\text{losses}_i}{\text{exposure}_i}
+\]
 
 directly. The challenge is that \(Y_i\) is zero for policies with no claims and a positive continuous value otherwise — a mixture that no single exponential-family member with strictly positive support accommodates. The **Tweedie** family does.
 
@@ -219,13 +250,17 @@ directly. The challenge is that \(Y_i\) is zero for policies with no claims and 
 
 Let \(N \sim \mathrm{Poisson}(\lambda)\) and, conditional on \(N = n\), let losses be iid \(X_j \sim \mathrm{Gamma}(\alpha, \gamma)\). The aggregate \(S = \sum_{j=1}^{N} X_j\) is a compound Poisson–Gamma random variable. Its distribution has a point mass at zero (when \(N = 0\)) and a continuous positive density otherwise. Tweedie showed that \(S\) belongs to the exponential dispersion family with variance function
 
-\[ V(\mu) = \mu^p , \qquad 1 < p < 2 , \]
+\[
+V(\mu) = \mu^p , \qquad 1 < p < 2 ,
+\]
 
 and that \(p\) encodes the Poisson-Gamma mixture through \(p = (\alpha + 2)/(\alpha + 1)\). The GLM with log link and Tweedie variance is the pure-premium analogue of Gamma and Poisson GLMs.
 
 The full variance is
 
-\[ \mathrm{Var}(Y) = \phi \mu^p . \]
+\[
+\mathrm{Var}(Y) = \phi \mu^p .
+\]
 
 The index \(p\) is estimated by profile likelihood; values around 1.5–1.7 are typical for personal auto, with higher \(p\) for lower-frequency, heavier-tailed commercial lines.
 
@@ -233,7 +268,9 @@ The index \(p\) is estimated by profile likelihood; values around 1.5–1.7 are 
 
 A remarkable and practically convenient result: if frequency is modelled as Poisson with log link and severity as Gamma with log link, the implied pure premium has the same **multiplicative** structure as a Tweedie GLM on pure premium directly.
 
-\[ \mu_i = \mu_0 \prod_{k} r_{k,\, l(i,k)} , \]
+\[
+\mu_i = \mu_0 \prod_{k} r_{k,\, l(i,k)} ,
+\]
 
 where \(\mu_0\) is the base rate, \(k\) indexes rating variables, \(l(i,k)\) is the level of variable \(k\) on policy \(i\), and \(r_{k,l}\) is the level's relativity. In principle, frequency-severity and Tweedie should produce similar tariffs; in practice they can diverge when data are thin, when different variables carry frequency versus severity signal, or when the \(p\) assumption is off. Best practice is to fit both and reconcile.
 
@@ -244,7 +281,9 @@ Three tools dominate pure-premium validation:
 - **Lift chart** — sort by predicted pure premium, bucket into deciles, plot actual loss cost. A steep, monotone curve is the goal.
 - **Normalized Gini coefficient** — twice the area between the Lorenz curve and the diagonal,
 
-\[ G = 2\int_0^1 \bigl(L(u) - u\bigr)\, du , \]
+\[
+G = 2\int_0^1 \bigl(L(u) - u\bigr)\, du ,
+\]
 
 where \(L(u)\) is the cumulative proportion of actual losses captured in the lowest \(u\) fraction of predictions. Normalized Gini divides by the maximum achievable, making values comparable across portfolios.
 - **Double-lift chart** — overlay two candidate models, sort on the ratio of their predictions, and check which tracks actual losses in each bin.
@@ -252,7 +291,10 @@ where \(L(u)\) is the cumulative proportion of actual losses captured in the low
 <div class="theorem">
 <strong>Tweedie as exponential dispersion member.</strong> For \(1 < p < 2\) the Tweedie compound Poisson–Gamma has density of the exponential dispersion form
 <br>
-\[ f(y; \mu, \phi, p) = a(y, \phi, p) \exp\!\left\{\frac{1}{\phi}\!\left(y\, \frac{\mu^{1-p}}{1-p} - \frac{\mu^{2-p}}{2-p}\right)\right\}, \]
+
+\[
+f(y; \mu, \phi, p) = a(y, \phi, p) \exp\!\left\{\frac{1}{\phi}\!\left(y\, \frac{\mu^{1-p}}{1-p} - \frac{\mu^{2-p}}{2-p}\right)\right\},
+\]
 <br>
 on \(y \ge 0\) with a point mass at \(y = 0\). The normalizing constant \(a(y,\phi,p)\) is an infinite series — intractable in closed form but handled numerically by the <code>tweedie</code> R package.
 </div>
@@ -288,7 +330,9 @@ Several families of methods trade bias for variance:
 
 A Generalized Additive Model (GAM) replaces some of the linear terms in a GLM with smooth functions estimated by penalized splines. For territorial rating, a two-dimensional smoother on longitude and latitude captures geography as a continuous surface:
 
-\[ \log \mu_i = \mathbf{x}_i^\top \boldsymbol\beta + s(\text{lon}_i, \text{lat}_i) . \]
+\[
+\log \mu_i = \mathbf{x}_i^\top \boldsymbol\beta + s(\text{lon}_i, \text{lat}_i) .
+\]
 
 The `mgcv` package fits this with thin-plate regression splines and automatic smoothing-parameter selection by REML. The output is a smooth relativity surface that can be overlaid on a map, inspected visually, and then discretized into territory bins for the filed rating plan.
 
@@ -309,7 +353,10 @@ Neighbouring FSAs on opposite sides of a territory boundary may have nearly iden
 <div class="definition">
 <strong>CAR prior.</strong> The <em>intrinsic conditional autoregressive</em> prior on an area-level random effect \(\phi_i\) specifies
 <br>
-\[ \phi_i \mid \phi_{-i} \sim N\!\left(\frac{1}{n_i}\sum_{j \sim i}\phi_j,\; \frac{\sigma^2}{n_i}\right) , \]
+
+\[
+\phi_i \mid \phi_{-i} \sim N\!\left(\frac{1}{n_i}\sum_{j \sim i}\phi_j,\; \frac{\sigma^2}{n_i}\right) ,
+\]
 <br>
 where \(j \sim i\) denotes adjacency and \(n_i\) is the number of neighbours of area \(i\). The prior shrinks each area toward the average of its neighbours.
 </div>

@@ -22,14 +22,18 @@ Living cells are dynamic chemical systems — a human cell contains thousands of
 
 For a bimolecular reaction
 
-\[ A + B \xrightarrow{k} C, \]
+\[
+A + B \xrightarrow{k} C,
+\]
 
 the reaction rate is \(v = k[A][B]\), where \(k\) is the **rate constant** (units depend on the order of the reaction). For a first-order, unimolecular reaction \(A \xrightarrow{k} B\), the rate is simply \(v = k[A]\). The intuition is elementary: two molecules react only when they collide, and the collision frequency is proportional to the product of their concentrations.
 
 <div class="definition">
 <strong>Definition (Mass Action Kinetics)</strong>: For an elementary reaction involving reactants with concentrations <em>X</em><sub>1</sub>, <em>X</em><sub>2</sub>, …, the reaction rate is
 
-\[ v = k \prod_{i} X_i^{n_i}, \]
+\[
+v = k \prod_{i} X_i^{n_i},
+\]
 
 where <em>n<sub>i</sub></em> is the stoichiometric coefficient of species <em>i</em> on the reactant side, and <em>k</em> is the rate constant.
 </div>
@@ -41,40 +45,56 @@ Given a set of reactions and their rates, we construct ordinary differential equ
 <div class="example">
 <strong>Example — ODE system and steady state for a three-reaction linear pathway</strong>: Consider the network
 
-\[ \emptyset \xrightarrow{k_1} A \xrightarrow{k_2} B \xrightarrow{k_3} \emptyset, \]
+\[
+\emptyset \xrightarrow{k_1} A \xrightarrow{k_2} B \xrightarrow{k_3} \emptyset,
+\]
 
 where \(k_1\) is a zeroth-order synthesis rate and \(k_2\), \(k_3\) are first-order degradation rate constants. By mass action kinetics, \(v_1 = k_1\), \(v_2 = k_2[A]\), \(v_3 = k_3[B]\). The ODE system is:
 
-\[ \frac{d[A]}{dt} = k_1 - k_2[A], \qquad \frac{d[B]}{dt} = k_2[A] - k_3[B]. \]
+\[
+\frac{d[A]}{dt} = k_1 - k_2[A], \qquad \frac{d[B]}{dt} = k_2[A] - k_3[B].
+\]
 
 <em>Steady state</em>: Setting both derivatives to zero, from the first equation:
 
-\[ k_1 - k_2[A]^* = 0 \implies [A]^* = \frac{k_1}{k_2}. \]
+\[
+k_1 - k_2[A]^* = 0 \implies [A]^* = \frac{k_1}{k_2}.
+\]
 
 Substituting into the second equation:
 
-\[ k_2 \cdot \frac{k_1}{k_2} - k_3[B]^* = 0 \implies [B]^* = \frac{k_1}{k_3}. \]
+\[
+k_2 \cdot \frac{k_1}{k_2} - k_3[B]^* = 0 \implies [B]^* = \frac{k_1}{k_3}.
+\]
 
 Notice that \([B]^*\) depends only on the input rate \(k_1\) and the output rate \(k_3\), not on the intermediate conversion rate \(k_2\). This is a general feature of linear pathways: the steady-state concentration of a species is set by the balance of its input and output, and the intermediate rates determine the dynamics (how fast the system reaches steady state) but not the final concentrations.
 
 <em>Numerical verification</em>: Let \(k_1 = 2\,\mu\text{M/min}\), \(k_2 = 1\,\text{min}^{-1}\), \(k_3 = 0.5\,\text{min}^{-1}\). Then:
 
-\[ [A]^* = \frac{2}{1} = 2\,\mu\text{M}, \qquad [B]^* = \frac{2}{0.5} = 4\,\mu\text{M}. \]
+\[
+[A]^* = \frac{2}{1} = 2\,\mu\text{M}, \qquad [B]^* = \frac{2}{0.5} = 4\,\mu\text{M}.
+\]
 
 <em>Check</em>: \(v_1 = 2\), \(v_2 = 1 \times 2 = 2\), \(v_3 = 0.5 \times 4 = 2\). All fluxes are equal, confirming that at steady state the network carries a uniform flux of \(2\,\mu\text{M/min}\) through every step.
 </div>
 
 Consider the reversible reaction
 
-\[ A \underset{k_{-1}}{\stackrel{k_1}{\rightleftharpoons}} B. \]
+\[
+A \underset{k_{-1}}{\stackrel{k_1}{\rightleftharpoons}} B.
+\]
 
 The forward reaction \(A \to B\) occurs at rate \(k_1[A]\) and the reverse reaction \(B \to A\) at rate \(k_{-1}[B]\). Therefore:
 
-\[ \frac{d[A]}{dt} = -k_1[A] + k_{-1}[B], \qquad \frac{d[B]}{dt} = k_1[A] - k_{-1}[B]. \]
+\[
+\frac{d[A]}{dt} = -k_1[A] + k_{-1}[B], \qquad \frac{d[B]}{dt} = k_1[A] - k_{-1}[B].
+\]
 
 At **thermodynamic equilibrium**, the net rates vanish: \(k_1[A]^* = k_{-1}[B]^*\), giving the equilibrium constant
 
-\[ K_{eq} = \frac{[B]^*}{[A]^*} = \frac{k_1}{k_{-1}}. \]
+\[
+K_{eq} = \frac{[B]^*}{[A]^*} = \frac{k_1}{k_{-1}}.
+\]
 
 This ratio of rate constants encodes the thermodynamic favourability of the reaction. The principle of **detailed balance** states that at equilibrium each individual reaction must be balanced by its reverse — this connects kinetic parameters to thermodynamics and constrains the parameters of any physically consistent model.
 
@@ -88,20 +108,28 @@ For networks with many species and reactions, tracking each ODE separately becom
 
 If \(\mathbf{X}\) is the vector of species concentrations and \(\mathbf{v}(\mathbf{X})\) is the vector of reaction rates, then the entire ODE system is compactly expressed as:
 
-\[ \frac{d\mathbf{X}}{dt} = S \cdot \mathbf{v}(\mathbf{X}). \]
+\[
+\frac{d\mathbf{X}}{dt} = S \cdot \mathbf{v}(\mathbf{X}).
+\]
 
 <div class="example">
 <strong>Example — Three-reaction network</strong>: Consider the network
 
-\[ \emptyset \xrightarrow{v_1} A, \quad A \xrightarrow{v_2} B, \quad B \xrightarrow{v_3} \emptyset. \]
+\[
+\emptyset \xrightarrow{v_1} A, \quad A \xrightarrow{v_2} B, \quad B \xrightarrow{v_3} \emptyset.
+\]
 
 With species ordered \((A, B)\) and reactions ordered \((v_1, v_2, v_3)\):
 
-\[ S = \begin{pmatrix} 1 & -1 & 0 \\ 0 & 1 & -1 \end{pmatrix}. \]
+\[
+S = \begin{pmatrix} 1 & -1 & 0 \\ 0 & 1 & -1 \end{pmatrix}.
+\]
 
 The ODE system is then:
 
-\[ \frac{d[A]}{dt} = v_1 - v_2, \qquad \frac{d[B]}{dt} = v_2 - v_3, \]
+\[
+\frac{d[A]}{dt} = v_1 - v_2, \qquad \frac{d[B]}{dt} = v_2 - v_3,
+\]
 
 which matches what one would write by inspection.
 </div>
@@ -110,7 +138,10 @@ which matches what one would write by inspection.
 
 <div class="example">
 <strong>Example — Michaelis–Menten scheme via stoichiometry</strong>: Recall the Michaelis–Menten reaction scheme:
-\[ E + S \underset{k_{-1}}{\stackrel{k_1}{\rightleftharpoons}} ES \xrightarrow{k_2} E + P. \]
+
+\[
+E + S \underset{k_{-1}}{\stackrel{k_1}{\rightleftharpoons}} ES \xrightarrow{k_2} E + P.
+\]
 
 We have 4 species \((S, E, ES, P)\) and 3 reactions (forward binding, reverse binding, catalysis). The stoichiometric matrix (rows = species, columns = reactions \(r_1, r_{-1}, r_2\)) is:
 
@@ -120,10 +151,14 @@ We have 4 species \((S, E, ES, P)\) and 3 reactions (forward binding, reverse bi
 1 & -1 & -1 \\
 0 & 0 & 1
 \end{pmatrix}
-\begin{array}{l} [S] \\ [E] \\ [ES] \\ [P] \end{array} \]
+\begin{array}{l} [S] \\ [E] \\ [ES] \\ [P] \end{array} 
+\]
 
 The rate vector is \(\mathbf{v} = (k_1[E][S],\; k_{-1}[ES],\; k_2[ES])^T\). The ODE system \(d\mathbf{X}/dt = S_{stoich}\,\mathbf{v}\) gives exactly the equations in Section 2.1. The left null space of \(S_{stoich}\) has dimension \(4 - \text{rank}(S_{stoich}) = 4 - 3 = 1\), spanned by \(\mathbf{c} = (0, 1, 1, 0)^T\). This gives the conservation law:
-\[ [E] + [ES] = E_{tot} = \text{const}, \]
+
+\[
+[E] + [ES] = E_{tot} = \text{const},
+\]
 confirming the enzyme conservation that underlies the QSSA derivation. The stoichiometric matrix thus captures in a single object both the dynamics and the conservation laws of the system.
 </div>
 
@@ -131,19 +166,26 @@ confirming the enzyme conservation that underlies the QSSA derivation. The stoic
 
 Many biochemical reaction networks conserve the total amount of certain chemical **moieties** (structural subgroups), even as individual species interconvert. The systematic enumeration of conservation laws via the left null space of \(S\) is not merely a mathematical convenience — it directly guides model reduction and experimental design. A conserved quantity is both a constraint that reduces the dimensionality of the ODE system and a biological invariant that can be measured to verify model consistency. These conservation laws reduce the effective dimension of the system. Mathematically, a conservation law corresponds to a vector \(\mathbf{c}\) such that \(\mathbf{c}^T S = \mathbf{0}\) — that is, \(\mathbf{c}\) lies in the **left null space** of \(S\). Then
 
-\[ \frac{d}{dt}\left(\mathbf{c}^T \mathbf{X}\right) = \mathbf{c}^T S \mathbf{v} = 0, \]
+\[
+\frac{d}{dt}\left(\mathbf{c}^T \mathbf{X}\right) = \mathbf{c}^T S \mathbf{v} = 0,
+\]
 
 so the quantity \(\mathbf{c}^T \mathbf{X}\) is constant in time.
 
 A ubiquitous example is **enzyme conservation**: a free enzyme \(E\) and its substrate-bound complex \(ES\) together conserve the total enzyme:
 
-\[ [E] + [ES] = E_{tot} = \text{const}. \]
+\[
+[E] + [ES] = E_{tot} = \text{const}.
+\]
 
 This allows us to eliminate one variable and reduce the system's dimension. Conservation laws are automatically found by computing the left null space of \(S\), a linear algebra operation readily performed by software.
 
 <div class="definition">
 <strong>Definition (Steady State)</strong>: A <em>steady state</em> (or <em>equilibrium point</em>) of the ODE system \(\dot{\mathbf{X}} = S\,\mathbf{v}(\mathbf{X})\) is a concentration vector \(\mathbf{X}^*\) at which all time derivatives vanish:
-\[ S\,\mathbf{v}(\mathbf{X}^*) = \mathbf{0}. \]
+
+\[
+S\,\mathbf{v}(\mathbf{X}^*) = \mathbf{0}.
+\]
 The system, once placed at \(\mathbf{X}^*\), remains there in the absence of perturbations. Stability of the steady state (whether perturbations grow or decay) is determined by the Jacobian at \(\mathbf{X}^*\).
 </div>
 
@@ -157,7 +199,10 @@ This theorem is the foundation of flux balance analysis: rather than solving non
 <strong>Example — Steady state of the three-reaction network</strong>: Return to the network \(\emptyset \xrightarrow{v_1} A\), \(A \xrightarrow{v_2} B\), \(B \xrightarrow{v_3} \emptyset\), with specific rate laws \(v_1 = 2\) (constant influx), \(v_2 = k_2[A]\) with \(k_2 = 0.5\), \(v_3 = k_3[B]\) with \(k_3 = 1\).
 
 The ODEs are:
-\[ \frac{d[A]}{dt} = 2 - 0.5[A], \qquad \frac{d[B]}{dt} = 0.5[A] - [B]. \]
+
+\[
+\frac{d[A]}{dt} = 2 - 0.5[A], \qquad \frac{d[B]}{dt} = 0.5[A] - [B].
+\]
 
 Setting both to zero: from the first equation, \([A]^* = 2/0.5 = 4\). Substituting into the second: \([B]^* = 0.5 \times 4 / 1 = 2\). The unique steady state is \([A]^* = 4\,\mu\text{M}\), \([B]^* = 2\,\mu\text{M}\).
 
@@ -166,9 +211,15 @@ Setting both to zero: from the first equation, \([A]^* = 2/0.5 = 4\). Substituti
 
 <div class="example">
 <strong>Example — Left null space and conservation law</strong>: For the stoichiometric matrix
-\[ S = \begin{pmatrix} 1 & -1 & 0 \\ 0 & 1 & -1 \end{pmatrix}, \]
+
+\[
+S = \begin{pmatrix} 1 & -1 & 0 \\ 0 & 1 & -1 \end{pmatrix},
+\]
 we seek a vector \(\mathbf{c} = (c_1, c_2)^T\) such that \(\mathbf{c}^T S = \mathbf{0}\), i.e.,
-\[ c_1 \begin{pmatrix}1 & -1 & 0\end{pmatrix} + c_2 \begin{pmatrix}0 & 1 & -1\end{pmatrix} = \begin{pmatrix}0 & 0 & 0\end{pmatrix}. \]
+
+\[
+c_1 \begin{pmatrix}1 & -1 & 0\end{pmatrix} + c_2 \begin{pmatrix}0 & 1 & -1\end{pmatrix} = \begin{pmatrix}0 & 0 & 0\end{pmatrix}.
+\]
 Column by column: \(c_1 = 0\), \(-c_1 + c_2 = 0\), \(-c_2 = 0\). The only solution is \(\mathbf{c} = \mathbf{0}\) — this network has a <em>trivial</em> left null space, meaning no conservation law of the form \(c_1[A] + c_2[B] = \text{const}\) holds. Indeed, both \([A]\) and \([B]\) change freely since the network has an input (\(v_1\)) and an output (\(v_3\)).
 
 By contrast, for a <em>closed</em> network with only the interconversion \(A \rightleftharpoons B\) (no input or output), the stoichiometric matrix is \(S = \begin{pmatrix}-1 \\ 1\end{pmatrix}\) (one reaction, two species), and \(\mathbf{c} = (1, 1)\) is a left null vector: \(\mathbf{c}^T S = (-1 + 1) = 0\). The conservation law is \([A] + [B] = \text{const}\), which is immediately obvious from the fact that the total amount of \(A\)-and-\(B\)-moiety cannot change.
@@ -185,16 +236,25 @@ By contrast, for a <em>closed</em> network with only the interconversion \(A \ri
 <div class="example">
 <strong>Example — Conservation law in ATP-coupled reactions (energy coupling)</strong>: In glycolysis, the phosphofructokinase reaction consumes one ATP (converting it to ADP), while downstream substrate-level phosphorylation at pyruvate kinase produces two ATP molecules. Consider a simplified two-step model with species \([A]\) (ATP) and \([B]\) (ADP), and reactions:
 
-\[ \text{rxn 1}: \text{ATP} \to \text{ADP} \quad (k_1, \text{ATP-consuming}), \]
-\[ \text{rxn 2}: \text{ADP} \to \text{ATP} \quad (k_2, \text{ATP-producing}). \]
+\[
+\text{rxn 1}: \text{ATP} \to \text{ADP} \quad (k_1, \text{ATP-consuming}),
+\]
+
+\[
+\text{rxn 2}: \text{ADP} \to \text{ATP} \quad (k_2, \text{ATP-producing}).
+\]
 
 The stoichiometric matrix (rows: ATP, ADP; columns: rxn 1, rxn 2) is:
 
-\[ S = \begin{pmatrix} -1 & +1 \\ +1 & -1 \end{pmatrix}. \]
+\[
+S = \begin{pmatrix} -1 & +1 \\ +1 & -1 \end{pmatrix}.
+\]
 
 The left null space is spanned by \(\mathbf{c} = (1, 1)^T\) since \(\mathbf{c}^T S = (-1+1, +1-1) = (0, 0)\). Therefore the quantity
 
-\[ [\text{ATP}] + [\text{ADP}] = \text{const} \]
+\[
+[\text{ATP}] + [\text{ADP}] = \text{const}
+\]
 
 is conserved at all times. This is the conservation of total adenylate — ATP and ADP interconvert but their sum is fixed by the total pool. In glycolysis, this conservation law means that every ATP consumed in one step must be produced somewhere else; the cell cannot create adenylate from nothing, only rechannelling the existing pool. The conservation law vector \(\mathbf{c} = (1,1)\) physically corresponds to counting all adenylate species equally and verifying that the total count is unchanged by each reaction.
 </div>
@@ -209,17 +269,27 @@ Nearly all biochemical reactions in cells are catalysed by **enzymes** — prote
 
 The canonical model is the **Michaelis–Menten scheme**, proposed by Leonor Michaelis and Maud Menten in 1913. A substrate \(S\) binds reversibly to the enzyme \(E\) to form a complex \(ES\), which then releases product \(P\) and regenerates the free enzyme:
 
-\[ E + S \underset{k_{-1}}{\stackrel{k_1}{\rightleftharpoons}} ES \xrightarrow{k_2} E + P. \]
+\[
+E + S \underset{k_{-1}}{\stackrel{k_1}{\rightleftharpoons}} ES \xrightarrow{k_2} E + P.
+\]
 
 By mass action kinetics, the ODEs for this scheme are:
 
-\[ \frac{d[S]}{dt} = -k_1[E][S] + k_{-1}[ES], \]
+\[
+\frac{d[S]}{dt} = -k_1[E][S] + k_{-1}[ES],
+\]
 
-\[ \frac{d[ES]}{dt} = k_1[E][S] - k_{-1}[ES] - k_2[ES], \]
+\[
+\frac{d[ES]}{dt} = k_1[E][S] - k_{-1}[ES] - k_2[ES],
+\]
 
-\[ \frac{d[E]}{dt} = -k_1[E][S] + (k_{-1} + k_2)[ES], \]
+\[
+\frac{d[E]}{dt} = -k_1[E][S] + (k_{-1} + k_2)[ES],
+\]
 
-\[ \frac{d[P]}{dt} = k_2[ES]. \]
+\[
+\frac{d[P]}{dt} = k_2[ES].
+\]
 
 The enzyme conservation \([E] + [ES] = E_{tot}\) allows us to eliminate \([E]\). This still leaves a nonlinear system, which motivates the key approximation.
 
@@ -227,22 +297,30 @@ The enzyme conservation \([E] + [ES] = E_{tot}\) allows us to eliminate \([E]\).
 
 If the enzyme concentration is much smaller than the substrate concentration (\(E_{tot} \ll [S]\)), the complex \([ES]\) reaches a **quasi-steady state** rapidly and thereafter tracks the slow variable \([S]\). Setting \(d[ES]/dt \approx 0\):
 
-\[ k_1(E_{tot} - [ES])[S] - (k_{-1} + k_2)[ES] = 0. \]
+\[
+k_1(E_{tot} - [ES])[S] - (k_{-1} + k_2)[ES] = 0.
+\]
 
 Solving for \([ES]\):
 
-\[ [ES] = \frac{E_{tot}[S]}{K_M + [S]}, \]
+\[
+[ES] = \frac{E_{tot}[S]}{K_M + [S]},
+\]
 
 where \(K_M = (k_{-1} + k_2)/k_1\) is the **Michaelis constant**. The net rate of product formation is then:
 
-\[ v = k_2[ES] = \frac{V_{max}[S]}{K_M + [S]}, \]
+\[
+v = k_2[ES] = \frac{V_{max}[S]}{K_M + [S]},
+\]
 
 with \(V_{max} = k_2 E_{tot}\). This is the celebrated **Michaelis–Menten equation**.
 
 <div class="definition">
 <strong>Definition (Michaelis–Menten Kinetics)</strong>: The reaction rate for an enzyme-catalysed reaction under the quasi-steady-state approximation is
 
-\[ v = \frac{V_{max}[S]}{K_M + [S]}, \]
+\[
+v = \frac{V_{max}[S]}{K_M + [S]},
+\]
 
 where <em>V</em><sub>max</sub> is the maximal rate (achieved when all enzyme is saturated) and <em>K<sub>M</sub></em> is the substrate concentration at half-maximal rate: <em>v</em>(<em>K<sub>M</sub></em>) = <em>V</em><sub>max</sub>/2.
 </div>
@@ -253,15 +331,23 @@ The parameter \(K_M\) has an elegant biological interpretation: it measures the 
 
 The QSSA is valid when the complex \([ES]\) equilibrates fast relative to the substrate. A more precise criterion (Segel and Slemrod, 1989) is:
 
-\[ \frac{E_{tot}}{K_M + [S]_0} \ll 1, \]
+\[
+\frac{E_{tot}}{K_M + [S]_0} \ll 1,
+\]
 
 where \([S]_0\) is the initial substrate concentration. This corrects the naive criterion \(E_{tot} \ll [S]_0\) by including the case when \([S]_0\) is itself small but \(K_M\) is large.
 
 <div class="example">
 <strong>Example — QSSA validity check</strong>: Suppose \(E_{tot} = 1\,\mu\text{M}\), \([S]_0 = 10\,\mu\text{M}\), and \(K_M = 5\,\mu\text{M}\). Then:
-\[ \frac{E_{tot}}{K_M + [S]_0} = \frac{1}{5 + 10} = \frac{1}{15} \approx 0.067 \ll 1. \]
+
+\[
+\frac{E_{tot}}{K_M + [S]_0} = \frac{1}{5 + 10} = \frac{1}{15} \approx 0.067 \ll 1.
+\]
 The QSSA is valid. Now suppose \(E_{tot} = 3\,\mu\text{M}\), \([S]_0 = 2\,\mu\text{M}\), \(K_M = 0.5\,\mu\text{M}\):
-\[ \frac{E_{tot}}{K_M + [S]_0} = \frac{3}{0.5 + 2} = \frac{3}{2.5} = 1.2 \not\ll 1. \]
+
+\[
+\frac{E_{tot}}{K_M + [S]_0} = \frac{3}{0.5 + 2} = \frac{3}{2.5} = 1.2 \not\ll 1.
+\]
 The QSSA fails here because the enzyme concentration is comparable to the substrate. In this regime, one must retain the full system of ODEs for \([S]\) and \([ES]\) — the Michaelis–Menten rate equation would give significant errors. Such "high-enzyme" regimes occur in single-cell settings or in assays where enzyme concentration is deliberately elevated to accelerate the reaction.
 </div>
 
@@ -271,15 +357,24 @@ Inhibitors are molecules that reduce enzyme activity. Their mechanisms fall into
 
 <div class="definition">
 <strong>Definition (Competitive Inhibition)</strong>: An inhibitor \(I\) is <em>competitive</em> if it binds reversibly to the free enzyme \(E\) at the substrate binding site, forming an inactive complex \(EI\):
-\[ E + I \underset{k_{-I}}{\stackrel{k_I}{\rightleftharpoons}} EI, \qquad K_I = k_{-I}/k_I. \]
+
+\[
+E + I \underset{k_{-I}}{\stackrel{k_I}{\rightleftharpoons}} EI, \qquad K_I = k_{-I}/k_I.
+\]
 The inhibitor-bound enzyme cannot form \(ES\) or produce product. Under the quasi-steady-state approximation the reaction rate becomes
-\[ v = \frac{V_{max}[S]}{K_M^{app} + [S]}, \qquad K_M^{app} = K_M\!\left(1 + \frac{[I]}{K_I}\right). \]
+
+\[
+v = \frac{V_{max}[S]}{K_M^{app} + [S]}, \qquad K_M^{app} = K_M\!\left(1 + \frac{[I]}{K_I}\right).
+\]
 The <em>apparent</em> Michaelis constant is increased, while \(V_{max}\) is unchanged. At sufficiently high \([S]\), competitive inhibition can be fully overcome.
 </div>
 
 <div class="definition">
 <strong>Definition (Non-competitive Inhibition)</strong>: An inhibitor \(I\) is <em>non-competitive</em> (or <em>mixed</em>, in the symmetric case) if it binds a site distinct from the active site on both free enzyme \(E\) and the enzyme-substrate complex \(ES\). Neither \(EI\) nor \(ESI\) produces product. The rate becomes
-\[ v = \frac{V_{max}^{app}[S]}{K_M + [S]}, \qquad V_{max}^{app} = \frac{V_{max}}{1 + [I]/K_I}. \]
+
+\[
+v = \frac{V_{max}^{app}[S]}{K_M + [S]}, \qquad V_{max}^{app} = \frac{V_{max}}{1 + [I]/K_I}.
+\]
 Here \(V_{max}\) is reduced while \(K_M\) is unchanged. No amount of additional substrate can rescue the inhibited velocity.
 </div>
 
@@ -290,7 +385,9 @@ The distinction has profound practical implications. Competitive inhibitors (suc
 
 <em>Apparent Michaelis constant</em>:
 
-\[ K_M^{app} = K_M\!\left(1 + \frac{[I]}{K_I}\right) = 2\left(1 + \frac{2}{1}\right) = 2 \times 3 = 6\,\text{mM}. \]
+\[
+K_M^{app} = K_M\!\left(1 + \frac{[I]}{K_I}\right) = 2\left(1 + \frac{2}{1}\right) = 2 \times 3 = 6\,\text{mM}.
+\]
 
 The \(V_{max}\) is unchanged at \(10\,\mu\text{M/s}\). We now compare the rate-versus-substrate curves with and without the inhibitor at three representative substrate concentrations:
 
@@ -299,7 +396,8 @@ The \(V_{max}\) is unchanged at \(10\,\mu\text{M/s}\). We now compare the rate-v
 2 & 10 \times 2/(2+2) = 5.00 & 10 \times 2/(6+2) = 2.50 \\
 6 & 10 \times 6/(2+6) = 7.50 & 10 \times 6/(6+6) = 5.00 \\
 18 & 10 \times 18/(2+18) = 9.00 & 10 \times 18/(6+18) = 7.50
-\end{array} \]
+\end{array} 
+\]
 
 At \([S] = 6\,\text{mM}\) (the new \(K_M^{app}\)), the inhibited enzyme runs at half its \(V_{max}\) — the same rate the uninhibited enzyme achieves at only 2 mM substrate. Increasing \([S]\) to very high values will eventually drive both rates toward the same \(V_{max} = 10\,\mu\text{M/s}\), confirming that competitive inhibition is fully reversible at high substrate. In a cellular context, the cell can partially compensate for a competitive inhibitor by accumulating more substrate — exactly why many drug-resistant mutants overexpress the metabolite being competed over.
 </div>
@@ -314,20 +412,26 @@ At \([S] = 6\,\text{mM}\) (the new \(K_M^{app}\)), the inhibited enzyme runs at 
 5 & 10 \times 5/(2+5) = 7.14 & 71\% \\
 10 & 10 \times 10/(2+10) = 8.33 & 83\% \\
 100 & 10 \times 100/(2+100) = 9.80 & 98\%
-\end{array} \]
+\end{array} 
+\]
 
 As predicted by the definition, \(v(K_M) = v(2) = V_{max}/2 = 5\,\mu\text{M/s}\). At \([S] = 100\,\text{mM}\) (fifty times \(K_M\)), the enzyme is 98% saturated. The rate approaches \(V_{max}\) asymptotically — full saturation is never achieved at finite substrate concentration.
 
 <em>Substrate concentration for 90% of \(V_{max}\)</em>: We want \([S]\) such that \(v = 0.9\,V_{max}\):
 
-\[ 0.9\,V_{max} = \frac{V_{max}[S]}{K_M + [S]} \implies 0.9(K_M + [S]) = [S] \implies [S] = \frac{0.9\,K_M}{0.1} = 9\,K_M. \]
+\[
+0.9\,V_{max} = \frac{V_{max}[S]}{K_M + [S]} \implies 0.9(K_M + [S]) = [S] \implies [S] = \frac{0.9\,K_M}{0.1} = 9\,K_M.
+\]
 
 For \(K_M = 2\,\text{mM}\), the substrate concentration giving 90% maximal rate is \([S]_{90} = 9 \times 2 = 18\,\text{mM}\). This confirms the general rule: achieving 90% saturation requires a substrate concentration nine times the Michaelis constant, illustrating how the hyperbolic curve becomes increasingly insensitive at high \([S]\).
 </div>
 
 <div class="remark">
 <strong>Remark (Parameter Estimation — the Lineweaver–Burk Plot)</strong>: Taking the reciprocal of the Michaelis–Menten equation gives the <em>double reciprocal</em> (Lineweaver–Burk) form:
-\[ \frac{1}{v} = \frac{K_M}{V_{max}} \cdot \frac{1}{[S]} + \frac{1}{V_{max}}. \]
+
+\[
+\frac{1}{v} = \frac{K_M}{V_{max}} \cdot \frac{1}{[S]} + \frac{1}{V_{max}}.
+\]
 This is linear in \(1/[S]\): a plot of \(1/v\) (vertical axis) versus \(1/[S]\) (horizontal axis) is a straight line with slope \(K_M/V_{max}\) and \(y\)-intercept \(1/V_{max}\). The \(x\)-intercept is \(-1/K_M\). Although the Lineweaver–Burk plot has statistical drawbacks (errors in \(v\) are amplified near \([S] = 0\)), it remains a standard teaching tool for visualising the effect of inhibitors: competitive inhibition rotates the line about the \(y\)-intercept (unchanged \(V_{max}\)), while non-competitive inhibition shifts the line upward in parallel (unchanged slope, larger \(y\)-intercept).
 </div>
 
@@ -337,7 +441,9 @@ Many enzymes and receptors display **cooperativity**: binding of one ligand mole
 
 The **Hill equation** phenomenologically captures sigmoidal binding curves:
 
-\[ v = \frac{V_{max}[S]^n}{K_{half}^n + [S]^n}, \]
+\[
+v = \frac{V_{max}[S]^n}{K_{half}^n + [S]^n},
+\]
 
 where \(n\) is the **Hill coefficient** and \(K_{half}\) is the concentration giving half-maximal activity. For \(n = 1\), the Hill equation reduces to Michaelis–Menten kinetics. For \(n > 1\), the response is sigmoidal — the curve rises steeply around \(K_{half}\), creating a **switch-like** response that is highly biologically relevant. Hill coefficients \(n > 1\) indicate positive cooperativity; \(n < 1\) indicates negative cooperativity.
 
@@ -359,7 +465,8 @@ For \(n=1\): \(v = 20[S]/(5+[S])\). For \(n=2\): \(v = 20[S]^2/(25+[S]^2)\).
 2 & 20\times2/7 \approx 5.71 & 20\times4/29 \approx 2.76 \\
 5 & 20\times5/10 = 10.00 & 20\times25/50 = 10.00 \\
 10 & 20\times10/15 \approx 13.33 & 20\times100/125 = 16.00
-\end{array} \]
+\end{array} 
+\]
 
 The key observations are: (1) Both curves pass through half-maximal rate \(v = 10\) at \([S] = K_{half} = 5\), by definition. (2) For \([S] < K_{half}\), the cooperative curve (\(n=2\)) lies <em>below</em> the Michaelis–Menten curve — the enzyme is less active at low substrate. (3) For \([S] > K_{half}\), the cooperative curve rises more steeply toward \(V_{max}\). This creates the switch-like sigmoidal character: the enzyme is essentially off below \(K_{half}\) and essentially on above it, with a sharper transition than the hyperbolic Michaelis–Menten curve. The higher \(n\), the sharper the switch.
 </div>
@@ -372,7 +479,9 @@ The key observations are: (1) Both curves pass through half-maximal rate \(v = 1
 
 For a two-dimensional ODE system
 
-\[ \frac{dx}{dt} = f(x, y), \qquad \frac{dy}{dt} = g(x, y), \]
+\[
+\frac{dx}{dt} = f(x, y), \qquad \frac{dy}{dt} = g(x, y),
+\]
 
 the **phase plane** is the \((x, y)\) space in which the trajectory of a solution is traced. A central tool is the **nullcline**: the \(x\)-nullcline is the set of points where \(dx/dt = 0\) (i.e., \(f(x,y) = 0\)), and the \(y\)-nullcline where \(dy/dt = 0\). **Fixed points** (steady states) occur at the intersections of nullclines.
 
@@ -382,11 +491,15 @@ By drawing nullclines and noting the direction of flow in each region, one can o
 
 Near a fixed point \(\mathbf{x}^*\), the dynamics of small perturbations \(\delta\mathbf{x} = \mathbf{x} - \mathbf{x}^*\) are governed by the **linearised system**:
 
-\[ \frac{d\,\delta\mathbf{x}}{dt} \approx J\,\delta\mathbf{x}, \]
+\[
+\frac{d\,\delta\mathbf{x}}{dt} \approx J\,\delta\mathbf{x},
+\]
 
 where \(J\) is the **Jacobian matrix** evaluated at \(\mathbf{x}^*\):
 
-\[ J_{ij} = \frac{\partial f_i}{\partial x_j}\bigg|_{\mathbf{x}^*}. \]
+\[
+J_{ij} = \frac{\partial f_i}{\partial x_j}\bigg|_{\mathbf{x}^*}.
+\]
 
 The stability of the fixed point is determined by the eigenvalues \(\lambda\) of \(J\). If all eigenvalues satisfy \(\text{Re}(\lambda) < 0\), the fixed point is **locally asymptotically stable**: perturbations decay and trajectories return to \(\mathbf{x}^*\). If any eigenvalue has \(\text{Re}(\lambda) > 0\), the fixed point is **unstable**.
 
@@ -406,23 +519,38 @@ Before discussing bifurcations, we work through a complete linearisation example
 
 <div class="example">
 <strong>Example — Predator–prey (Lotka–Volterra) stability analysis</strong>: Consider the classical predator–prey system
-\[ \frac{dx}{dt} = \alpha x - \beta xy, \qquad \frac{dy}{dt} = \delta xy - \gamma y, \]
+
+\[
+\frac{dx}{dt} = \alpha x - \beta xy, \qquad \frac{dy}{dt} = \delta xy - \gamma y,
+\]
 where \(x\) is prey abundance, \(y\) is predator abundance, \(\alpha, \beta, \delta, \gamma > 0\).
 
 <em>Finding fixed points</em>: Setting \(dx/dt = 0\): either \(x = 0\) or \(y = \alpha/\beta\). Setting \(dy/dt = 0\): either \(y = 0\) or \(x = \gamma/\delta\). The nontrivial fixed point is
-\[ (x^*, y^*) = \left(\frac{\gamma}{\delta},\, \frac{\alpha}{\beta}\right). \]
+
+\[
+(x^*, y^*) = \left(\frac{\gamma}{\delta},\, \frac{\alpha}{\beta}\right).
+\]
 
 <em>Jacobian at the fixed point</em>: The partial derivatives of \(f = \alpha x - \beta xy\) and \(g = \delta xy - \gamma y\) are
-\[ J = \begin{pmatrix} \alpha - \beta y & -\beta x \\ \delta y & \delta x - \gamma \end{pmatrix}. \]
+
+\[
+J = \begin{pmatrix} \alpha - \beta y & -\beta x \\ \delta y & \delta x - \gamma \end{pmatrix}.
+\]
 At \((x^*, y^*)\):
-\[ J\big|_{(x^*,y^*)} = \begin{pmatrix} \alpha - \beta(\alpha/\beta) & -\beta(\gamma/\delta) \\ \delta(\alpha/\beta) & \delta(\gamma/\delta) - \gamma \end{pmatrix} = \begin{pmatrix} 0 & -\beta\gamma/\delta \\ \delta\alpha/\beta & 0 \end{pmatrix}. \]
+
+\[
+J\big|_{(x^*,y^*)} = \begin{pmatrix} \alpha - \beta(\alpha/\beta) & -\beta(\gamma/\delta) \\ \delta(\alpha/\beta) & \delta(\gamma/\delta) - \gamma \end{pmatrix} = \begin{pmatrix} 0 & -\beta\gamma/\delta \\ \delta\alpha/\beta & 0 \end{pmatrix}.
+\]
 
 <em>Eigenvalues</em>: The characteristic polynomial is \(\lambda^2 - \text{tr}(J)\lambda + \det(J) = \lambda^2 + (\beta\gamma/\delta)(\delta\alpha/\beta) = \lambda^2 + \alpha\gamma = 0\). So \(\lambda = \pm i\sqrt{\alpha\gamma}\) — purely imaginary eigenvalues.
 
 <em>Classification</em>: The linear analysis gives a <strong>centre</strong> (\(\tau = 0\), \(\Delta > 0\)). Linear theory predicts neutral stability — perturbations neither grow nor decay but orbit the fixed point.
 
 <em>Nonlinear behaviour</em>: The full nonlinear system admits a conserved quantity (Lyapunov function):
-\[ H(x,y) = \delta x - \gamma\ln x + \beta y - \alpha\ln y = \text{const}. \]
+
+\[
+H(x,y) = \delta x - \gamma\ln x + \beta y - \alpha\ln y = \text{const}.
+\]
 One can verify \(dH/dt = 0\) along solutions. This means orbits are truly closed — the predator–prey cycles are periodic, not merely approximately so. The conserved quantity \(H\) is the biological analogue of energy in a Hamiltonian system.
 </div>
 
@@ -433,21 +561,29 @@ One can verify \(dH/dt = 0\) along solutions. This means orbits are truly closed
 <div class="example">
 <strong>Example — Brusselator: linearisation and stability classification</strong>: The Brusselator is a minimal two-variable model of an autocatalytic oscillator. With species \(x\) and \(y\) and parameters \(a > 0\), \(b > 0\):
 
-\[ \frac{dx}{dt} = 1 - (b+1)x + ax^2 y, \qquad \frac{dy}{dt} = bx - ax^2 y. \]
+\[
+\frac{dx}{dt} = 1 - (b+1)x + ax^2 y, \qquad \frac{dy}{dt} = bx - ax^2 y.
+\]
 
 <em>Steady state</em>: Adding the two equations gives \(d(x+y)/dt = 1 - x\), so at steady state \(x^* = 1\). Substituting into the \(dy/dt = 0\) equation: \(b - ay^* = 0\), giving \(y^* = b/a\). The unique positive steady state is \((x^*, y^*) = (1, b/a)\).
 
 <em>Jacobian</em>: The partial derivatives of \(f = 1 - (b+1)x + ax^2 y\) and \(g = bx - ax^2 y\) are:
 
-\[ J = \begin{pmatrix} -(b+1) + 2axy & ax^2 \\ b - 2axy & -ax^2 \end{pmatrix}. \]
+\[
+J = \begin{pmatrix} -(b+1) + 2axy & ax^2 \\ b - 2axy & -ax^2 \end{pmatrix}.
+\]
 
 Evaluating at \((1, b/a)\):
 
-\[ J\big|_{(1,\,b/a)} = \begin{pmatrix} -(b+1) + 2b & a \\ b - 2b & -a \end{pmatrix} = \begin{pmatrix} b - 1 & a \\ -b & -a \end{pmatrix}. \]
+\[
+J\big|_{(1,\,b/a)} = \begin{pmatrix} -(b+1) + 2b & a \\ b - 2b & -a \end{pmatrix} = \begin{pmatrix} b - 1 & a \\ -b & -a \end{pmatrix}.
+\]
 
 <em>Numerical case \(a = 1\), \(b = 2\)</em>: The Jacobian becomes
 
-\[ J = \begin{pmatrix} 1 & 1 \\ -2 & -1 \end{pmatrix}. \]
+\[
+J = \begin{pmatrix} 1 & 1 \\ -2 & -1 \end{pmatrix}.
+\]
 
 The trace is \(\tau = 1 + (-1) = 0\) and the determinant is \(\Delta = (1)(-1) - (1)(-2) = -1 + 2 = 1 > 0\). Since \(\tau = 0\) and \(\Delta > 0\), the eigenvalues are purely imaginary: \(\lambda = \pm i\sqrt{\Delta} = \pm i\). The linear analysis classifies this as a <strong>centre</strong> — the system is on the boundary between stable and unstable. For the Brusselator, a nonlinear analysis (or direct numerical simulation) shows that this boundary case is in fact a Hopf bifurcation point: for \(b > a + 1\), the trace \(\tau = b - 1 - a > 0\) and the steady state is unstable, with trajectories spiralling outward onto a stable limit cycle. The Brusselator therefore exhibits sustained oscillations whenever \(b > a + 1\).
 </div>
@@ -472,7 +608,9 @@ The Hopf bifurcation is the primary mechanism generating **sustained oscillation
 <div class="example">
 <strong>Example — The genetic toggle switch and saddle-node bifurcation</strong>: The toggle switch of Gardner et al. (2000) consists of two genes that mutually repress each other. Let \(u\) and \(v\) denote the protein concentrations of repressor 1 and repressor 2 respectively. With Hill-function repression and equal parameters for simplicity:
 
-\[ \frac{du}{dt} = \frac{\alpha_1}{1 + v^\beta} - u, \qquad \frac{dv}{dt} = \frac{\alpha_2}{1 + u^\gamma} - v. \]
+\[
+\frac{du}{dt} = \frac{\alpha_1}{1 + v^\beta} - u, \qquad \frac{dv}{dt} = \frac{\alpha_2}{1 + u^\gamma} - v.
+\]
 
 <em>Nullcline analysis</em>: The \(u\)-nullcline (where \(du/dt = 0\)) gives \(u = \alpha_1 / (1 + v^\beta)\), a decreasing function of \(v\). The \(v\)-nullcline gives \(v = \alpha_2 / (1 + u^\gamma)\), a decreasing function of \(u\). Equivalently, on the \((u, v)\) plane, the \(v\)-nullcline can be written as \(u = ((\alpha_2/v) - 1)^{1/\gamma}\).
 
@@ -493,19 +631,28 @@ A **limit cycle** is an isolated closed trajectory in the phase plane: nearby tr
 
 The **Goodwin oscillator** is the canonical minimal model for a biological negative-feedback oscillator — a single gene producing a protein that ultimately represses its own synthesis through a chain of intermediate steps. With \(m\) intermediate species \(X_1, \ldots, X_m\) and the last species repressing production of the first:
 
-\[ \frac{dX_1}{dt} = \frac{v_1}{1 + (X_m/K)^n} - k_1 X_1, \]
-\[ \frac{dX_i}{dt} = k_{i-1} X_{i-1} - k_i X_i, \quad i = 2, \ldots, m. \]
+\[
+\frac{dX_1}{dt} = \frac{v_1}{1 + (X_m/K)^n} - k_1 X_1,
+\]
+
+\[
+\frac{dX_i}{dt} = k_{i-1} X_{i-1} - k_i X_i, \quad i = 2, \ldots, m.
+\]
 
 Each step degrades the previous species and produces the next, with Hill-function repression closing the loop.
 
 <div class="example">
 <strong>Example — Goodwin oscillator: why \(n \geq 8\) is needed (qualitative analysis)</strong>: For the Goodwin model to exhibit limit cycle oscillations, the unique interior fixed point must be unstable, requiring a Hopf bifurcation. Linear stability analysis of the fixed point produces the characteristic polynomial
 
-\[ \lambda^m + k^m + \frac{v_1 n k^m / K^n}{(1 + (X_m^*/K)^n)^2} \cdot \frac{1}{\prod_{i=1}^m (\lambda + k_i)} = 0, \]
+\[
+\lambda^m + k^m + \frac{v_1 n k^m / K^n}{(1 + (X_m^*/K)^n)^2} \cdot \frac{1}{\prod_{i=1}^m (\lambda + k_i)} = 0,
+\]
 
 which at the bifurcation point has purely imaginary roots \(\lambda = \pm i\omega\). A classical result (Griffith, 1971) shows that for the symmetric case (\(k_1 = \cdots = k_m = k\)), oscillations are possible only if the Hill coefficient satisfies:
 
-\[ n > \frac{\sin(m\pi/(2m+1))}{\cos(m\pi/(2m+1))} \cdot \text{(lower bound)}. \]
+\[
+n > \frac{\sin(m\pi/(2m+1))}{\cos(m\pi/(2m+1))} \cdot \text{(lower bound)}.
+\]
 
 For \(m = 3\) steps, this yields the requirement \(n > 8\). Intuitively: with only 3 intermediate steps, the delay introduced by the chain is modest, and the feedback loop needs very steep (highly cooperative) repression (\(n\) large) to sustain oscillations. With more steps (\(m\) larger), the effective delay is greater and oscillations arise at lower \(n\). The Drosophila circadian clock, for example, achieves the necessary delay through a long chain of phosphorylation events and nuclear transport steps, making \(n\) need not be biologically unrealistic.
 </div>
@@ -528,14 +675,19 @@ When a system contains processes occurring at very different rates, one can expl
 
 <div class="example">
 <strong>Example — Time-scale separation in a two-variable system</strong>: Consider
-\[ \frac{dx}{dt} = -x + y^2, \qquad \frac{dy}{dt} = -\frac{1}{\varepsilon}(y - \sin x), \]
+
+\[
+\frac{dx}{dt} = -x + y^2, \qquad \frac{dy}{dt} = -\frac{1}{\varepsilon}(y - \sin x),
+\]
 with \(\varepsilon \ll 1\) (e.g., \(\varepsilon = 0.01\)). The variable \(y\) is fast: it relaxes to \(y \approx \sin x\) on a time scale \(\varepsilon\), while \(x\) evolves slowly. Setting \(dy/dt \approx 0\) gives the **slow manifold** \(y^* = \sin x\). Substituting back: \(dx/dt \approx -x + \sin^2 x\). This single ODE governs the slow dynamics. For small \(x\), \(\sin x \approx x\), so \(dx/dt \approx -x + x^2\), a logistic-like equation with equilibria at \(x = 0\) (stable) and \(x = 1\) (unstable). The two-dimensional system has been reduced to a one-dimensional problem on the slow manifold, with a great reduction in complexity and a transparent qualitative picture.
 </div>
 
 <div class="remark">
 <strong>Remark (Validity criterion for the QSSA — Segel–Slemrod, 1989)</strong>: The quasi-steady-state approximation is often justified by the intuitive condition \(E_{tot} \ll [S]_0\) — the enzyme is much less abundant than the substrate. This condition was used for decades but is actually incorrect in general. The rigorous validity criterion, derived by Segel and Slemrod (1989) using singular perturbation theory, is:
 
-\[ E_{tot} \ll K_M + [S]_0. \]
+\[
+E_{tot} \ll K_M + [S]_0.
+\]
 
 This is the <em>Segel–Slemrod criterion</em>. The key difference emerges when the initial substrate concentration \([S]_0\) is small — in that regime, the classical condition \(E_{tot} \ll [S]_0\) can be violated even when the QSSA is perfectly valid (because \(K_M\) may be large). Conversely, the QSSA may break down if \([S]_0 \gg K_M\), even when \(E_{tot} \ll [S]_0\) is satisfied, because the substrate is rapidly consumed. The correct intuition is that the QSSA is valid when the enzyme concentration is small relative to the total amount of substrate that the enzyme is capable of binding simultaneously — and this total capacity is set by \(K_M + [S]_0\), not \([S]_0\) alone. The lesson is broader: approximations in nonlinear models must be validated by asymptotic analysis, not merely by dimensional comparison.
 </div>
@@ -548,7 +700,9 @@ This is the <em>Segel–Slemrod criterion</em>. The key difference emerges when 
 
 **Metabolic networks** consist of chains and cycles of enzyme-catalysed reactions that convert nutrient substrates into energy and biosynthetic precursors. A canonical motif is the **linear biosynthetic pathway**:
 
-\[ S \xrightarrow{E_1} M_1 \xrightarrow{E_2} M_2 \xrightarrow{E_3} P, \]
+\[
+S \xrightarrow{E_1} M_1 \xrightarrow{E_2} M_2 \xrightarrow{E_3} P,
+\]
 
 where \(S\) is the substrate, \(M_i\) are intermediates, and \(P\) is the end product. A common regulatory design is **end-product (feedback) inhibition**: the end product \(P\) inhibits the first enzyme \(E_1\), preventing wasteful overproduction of \(P\) when its concentration is already high. This is a classic example of negative feedback securing **homeostasis** — maintaining product levels near a set point despite fluctuating inputs.
 
@@ -560,25 +714,33 @@ A central question in metabolic network modelling is: how is control over the st
 
 The **flux control coefficient** measures the relative change in steady-state flux \(J\) in response to a relative change in the activity (or level) of enzyme \(E_i\):
 
-\[ C^J_{E_i} = \frac{\partial J}{\partial E_i} \cdot \frac{E_i}{J} = \frac{d\ln J}{d\ln E_i}. \]
+\[
+C^J_{E_i} = \frac{\partial J}{\partial E_i} \cdot \frac{E_i}{J} = \frac{d\ln J}{d\ln E_i}.
+\]
 
 A coefficient \(C^J_{E_i} = 0.8\) means that a 1% increase in enzyme \(i\) increases steady-state flux by 0.8% — enzyme \(i\) exerts substantial control.
 
 <div class="theorem">
 <strong>Summation Theorem (MCA)</strong>: For any metabolic pathway, the flux control coefficients over all enzymes sum to unity:
 
-\[ \sum_i C^J_{E_i} = 1. \]
+\[
+\sum_i C^J_{E_i} = 1.
+\]
 </div>
 
 This theorem, independently discovered by Burns, Kacser, and Heinrich and Rapoport in the early 1970s, is more surprising than it looks. The naive biochemist's intuition is that one enzyme — the "rate-limiting step" — controls the flux, with all others playing a secondary role. If that were true, the sum would be dominated by a single coefficient near 1, with the rest near 0. What Kacser and Burns showed experimentally is that control is typically distributed: in many real pathways, no single enzyme has \( C^J_{E_i} > 0.5 \), and the sum constraint forces the coefficients to compete. The theorem thus quantitatively refutes the "rate-limiting step" dogma and suggests that interventions (drug targets, metabolic engineering) should account for systemic redistribution of control, not just the single bottleneck enzyme. It is a conservation law for regulatory influence.
 
 **Elasticity coefficients** describe how an individual enzyme's rate responds to changes in its substrates or products:
 
-\[ \varepsilon^{v_i}_{S} = \frac{\partial \ln v_i}{\partial \ln [S]}. \]
+\[
+\varepsilon^{v_i}_{S} = \frac{\partial \ln v_i}{\partial \ln [S]}.
+\]
 
 These are local properties of individual enzymes (measured in isolation), while flux control coefficients are global properties of the network. The **connectivity theorem** relates the two:
 
-\[ \sum_i C^J_{E_i} \varepsilon^{v_i}_{S} = 0, \]
+\[
+\sum_i C^J_{E_i} \varepsilon^{v_i}_{S} = 0,
+\]
 
 for any intermediate metabolite \(S\). MCA thus provides a powerful framework for understanding how enzymatic parameters determine the behaviour of an entire metabolic system.
 
@@ -602,7 +764,10 @@ The summation theorem is most illuminating through a concrete calculation.
 <strong>Example — Flux control in a two-enzyme pathway</strong>: Consider a linear pathway \(S \xrightarrow{E_1} M \xrightarrow{E_2} P\), with Michaelis–Menten kinetics for each enzyme. Suppose that at the operating steady state, MCA gives flux control coefficients \(C^J_{E_1} = 0.8\) and \(C^J_{E_2} = 0.2\) (the summation theorem is satisfied: \(0.8 + 0.2 = 1\)).
 
 <em>Interpretation</em>: Enzyme \(E_1\) is the dominant controller, but \(E_2\) also contributes. If we reduce \(E_2\) activity by 50% (e.g., by adding a competitive inhibitor that effectively halves its \(V_{max}\)), the <em>naive "rate-limiting step" prediction</em> would be: "Only the rate-limiting enzyme \(E_1\) matters, so a 50% reduction in \(E_2\) should have negligible effect." The MCA prediction is:
-\[ \frac{\Delta J}{J} \approx C^J_{E_2} \cdot \frac{\Delta E_2}{E_2} = 0.2 \times (-0.5) = -0.10. \]
+
+\[
+\frac{\Delta J}{J} \approx C^J_{E_2} \cdot \frac{\Delta E_2}{E_2} = 0.2 \times (-0.5) = -0.10.
+\]
 The pathway flux decreases by approximately 10% — a non-negligible effect despite \(E_2\) not being the "rate-limiting" enzyme. The naive intuition is wrong; even the less-controlling enzyme contributes measurably.
 
 <em>Drug target implications</em>: If we aim to reduce flux by 50% (e.g., to inhibit a pathogen), inhibiting \(E_1\) alone requires achieving \(-0.50/0.8 = -62.5\%\) reduction in \(E_1\) activity. Inhibiting \(E_2\) alone requires \(-0.50/0.2 = -250\%\) — impossible. A combination targeting both enzymes could achieve the goal at lower doses of each inhibitor, with potential for synergy. This systems-level reasoning, enabled by MCA, is the basis for rational polypharmacology in metabolic diseases.
@@ -621,17 +786,28 @@ The key biological assumption is that cells maximise growth rate — an objectiv
 <div class="example">
 <strong>Example — FBA on a toy network</strong>: Consider a minimal network with 2 internal metabolites \(A\), \(B\) and 3 reactions:
 
-\[ v_1: \emptyset \to A \quad (uptake), \qquad v_2: A \to B \quad (conversion), \qquad v_3: B \to \emptyset \quad (export). \]
+\[
+v_1: \emptyset \to A \quad (uptake), \qquad v_2: A \to B \quad (conversion), \qquad v_3: B \to \emptyset \quad (export).
+\]
 
 The stoichiometric matrix (rows = species, columns = reactions) is:
-\[ S = \begin{pmatrix} 1 & -1 & 0 \\ 0 & 1 & -1 \end{pmatrix}. \]
+
+\[
+S = \begin{pmatrix} 1 & -1 & 0 \\ 0 & 1 & -1 \end{pmatrix}.
+\]
 
 The steady-state constraint \(S\mathbf{v} = \mathbf{0}\) gives:
-\[ v_1 - v_2 = 0, \qquad v_2 - v_3 = 0. \]
+
+\[
+v_1 - v_2 = 0, \qquad v_2 - v_3 = 0.
+\]
 Hence \(v_1 = v_2 = v_3 =: J\). The flux distribution collapses to a single free parameter — the through-flux \(J\).
 
 Subject to capacity constraints \(0 \leq v_1 \leq 5\) (uptake limit) and the objective of maximising the export flux \(v_3 = J\), the LP solution is immediately:
-\[ J^* = 5, \quad v_1^* = v_2^* = v_3^* = 5. \]
+
+\[
+J^* = 5, \quad v_1^* = v_2^* = v_3^* = 5.
+\]
 All reactions operate at the maximum allowed rate dictated by the uptake constraint.
 
 <em>Gene knockout</em>: If the gene encoding \(E_2\) is deleted, \(v_2 = 0\) is forced, which forces \(J = 0\) — the entire pathway is blocked. FBA correctly predicts a lethal knockout, even without knowing any kinetic parameters. This is why FBA is the tool of choice for genome-scale metabolic modelling.
@@ -645,11 +821,15 @@ All reactions operate at the maximum allowed rate dictated by the uptake constra
 
 Cells communicate through **signal transduction**: extracellular signals (hormones, growth factors, neurotransmitters) bind to cell-surface receptors, triggering intracellular cascades. The basic binding reaction is
 
-\[ R + L \underset{k_{-1}}{\stackrel{k_1}{\rightleftharpoons}} RL, \]
+\[
+R + L \underset{k_{-1}}{\stackrel{k_1}{\rightleftharpoons}} RL,
+\]
 
 where \(R\) is the free receptor and \(L\) is the ligand. At steady state, the fraction of occupied receptors follows a hyperbolic (Michaelis–Menten-like) curve:
 
-\[ f = \frac{[L]}{K_D + [L]}, \]
+\[
+f = \frac{[L]}{K_D + [L]},
+\]
 
 where \(K_D = k_{-1}/k_1\) is the **dissociation constant** (lower \(K_D\) means higher affinity). This is the **dose-response** relationship: it describes how the cellular response varies with ligand concentration. The steepness of the dose-response curve — its **sensitivity** — determines how precisely a cell can detect changes in ligand concentration.
 
@@ -658,22 +838,31 @@ where \(K_D = k_{-1}/k_1\) is the **dissociation constant** (lower \(K_D\) means
 <div class="example">
 <strong>Example — Insulin receptor occupancy at physiological concentrations</strong>: The insulin receptor has a dissociation constant \(K_D \approx 0.5\,\text{nM}\). Plasma insulin concentrations fluctuate between approximately 0.05 nM in the fasting state and 0.5 nM after a meal. The fraction of occupied receptors is:
 
-\[ f = \frac{[L]}{K_D + [L]}. \]
+\[
+f = \frac{[L]}{K_D + [L]}.
+\]
 
 <em>Fasting state</em> (\([L] = 0.05\,\text{nM}\)):
 
-\[ f_{fasting} = \frac{0.05}{0.5 + 0.05} = \frac{0.05}{0.55} \approx 0.091 \approx 9\%. \]
+\[
+f_{fasting} = \frac{0.05}{0.5 + 0.05} = \frac{0.05}{0.55} \approx 0.091 \approx 9\%.
+\]
 
 <em>Post-meal state</em> (\([L] = 0.5\,\text{nM} = K_D\)):
 
-\[ f_{meal} = \frac{0.5}{0.5 + 0.5} = \frac{0.5}{1.0} = 0.50 = 50\%. \]
+\[
+f_{meal} = \frac{0.5}{0.5 + 0.5} = \frac{0.5}{1.0} = 0.50 = 50\%.
+\]
 
 A tenfold increase in plasma insulin (from 0.05 nM to 0.5 nM) increases receptor occupancy from 9% to 50% — a 5.6-fold increase in the signalling input. This steep dependence near \(K_D\) places the physiological operating range in the most sensitive region of the hyperbolic dose-response curve. Type 2 diabetes is associated with insulin resistance: downstream signalling components are desensitised so that even 50% receptor occupancy fails to trigger adequate glucose uptake. Therapeutic strategies to restore sensitivity (e.g., PPAR\(\gamma\) agonists) act not at the receptor but at intracellular steps far downstream.
 </div>
 
 <div class="example">
 <strong>Example — Receptor occupancy as a function of ligand concentration</strong>: Suppose a receptor has dissociation constant \(K_D = 10\,\text{nM}\). The fraction of receptors occupied at ligand concentration \([L]\) is
-\[ f([L]) = \frac{[L]}{K_D + [L]} = \frac{[L]}{10 + [L]}. \]
+
+\[
+f([L]) = \frac{[L]}{K_D + [L]} = \frac{[L]}{10 + [L]}.
+\]
 Computing at several concentrations:
 
 \[ \begin{array}{c|c}
@@ -681,7 +870,8 @@ Computing at several concentrations:
 1 & 1/11 \approx 0.091 \\
 10 & 10/20 = 0.500 \\
 100 & 100/110 \approx 0.909
-\end{array} \]
+\end{array} 
+\]
 
 At \([L] = K_D = 10\,\text{nM}\), exactly half the receptors are occupied, confirming the definition. To go from 9% to 91% occupancy (a tenfold increase in response), the ligand concentration must increase 100-fold (from 1 nM to 100 nM). This sensitivity — a 100-fold stimulus range for a near-complete response — is characteristic of a hyperbolic dose-response. Compare this to the Hill equation with \(n = 2\): the equivalent 10%-to-90% occupancy range requires only a \(\sqrt{81} = 9\)-fold concentration change. Cooperativity dramatically compresses the response range, enabling sharper cellular decision-making.
 </div>
@@ -702,7 +892,9 @@ A remarkable property discovered by Goldbeter and Koshland is **zero-order ultra
 
 The steady-state fraction of activated substrate \(W^*\) at each tier satisfies the Goldbeter–Koshland equation. If we denote the kinase activity \(u\), phosphatase activity \(v\), and Michaelis constants \(J = K_M^{kinase}/[S_{total}]\) and \(K = K_M^{phosphatase}/[S_{total}]\), then
 
-\[ W^* = GK(u, v, J, K) = \frac{2u J}{v - u + vJ + uK + \sqrt{(v - u + vJ + uK)^2 - 4(v-u)uJ}}. \]
+\[
+W^* = GK(u, v, J, K) = \frac{2u J}{v - u + vJ + uK + \sqrt{(v - u + vJ + uK)^2 - 4(v-u)uJ}}.
+\]
 
 This function transitions sharply from 0 to 1 as the ratio \(u/v\) crosses 1, with the sharpness increasing as \(J\) and \(K\) decrease (i.e., as both enzymes approach saturation). When three such zero-order ultrasensitive stages are cascaded in the MAPK pathway, the overall input-output response can achieve an apparent Hill coefficient exceeding 30 — far more switch-like than anything achievable by allosteric cooperativity alone.
 
@@ -714,7 +906,10 @@ Perfect adaptation requires **integral feedback control** — a special network 
 
 <div class="example">
 <strong>Example — Minimal model of perfect adaptation</strong>: A two-component system can achieve perfect adaptation. Let \(A(t)\) be the output (e.g., receptor activity) and \(B(t)\) an internal adaptation variable:
-\[ \frac{dA}{dt} = f(I) - kAB, \qquad \frac{dB}{dt} = \ell(A - A_0). \]
+
+\[
+\frac{dA}{dt} = f(I) - kAB, \qquad \frac{dB}{dt} = \ell(A - A_0).
+\]
 Here \(I\) is the stimulus input, \(f(I)\) its effect on activity, \(k\) the inactivation rate constant, \(\ell\) the adaptation rate, and \(A_0\) the basal activity set point. At steady state, \(dB/dt = 0\) requires \(A^* = A_0\) — the steady-state activity is always equal to \(A_0\), regardless of the input \(I\). This is perfect adaptation: a step change in \(I\) transiently perturbs \(A\), but \(B\) adjusts until \(A\) returns exactly to \(A_0\). The variable \(B\) acts as the integral of the activity error \((A - A_0)\), which is the hallmark of integral feedback control. The robustness to parameter variation arises because the steady-state condition \(A^* = A_0\) does not involve \(f(I)\), \(k\), or \(\ell\) — it follows purely from the circuit topology.
 </div>
 
@@ -723,11 +918,15 @@ Here \(I\) is the stimulus input, \(f(I)\) its effect on activity, \(k\) the ina
 
 Let \(m\) denote the receptor methylation level and \(a\) the receptor activity. A minimal model captures the integral feedback:
 
-\[ \frac{dm}{dt} = \underbrace{k_R (1 - a)}_{\text{CheR methylates when activity is low}} - \underbrace{k_B\,a\,m}_{\text{CheB demethylates when activity is high}}. \]
+\[
+\frac{dm}{dt} = \underbrace{k_R (1 - a)}_{\text{CheR methylates when activity is low}} - \underbrace{k_B\,a\,m}_{\text{CheB demethylates when activity is high}}.
+\]
 
 At steady state, \(dm/dt = 0\) requires a specific balance between methylation and demethylation. The key insight is that the steady-state activity \(a^*\) is uniquely determined by the kinetic parameters \(k_R\) and \(k_B\) — it does not depend on the external attractant concentration \([L]\). This can be seen by solving:
 
-\[ k_R(1 - a^*) = k_B a^* m^* \implies a^* = \frac{k_R}{k_R + k_B m^*}. \]
+\[
+k_R(1 - a^*) = k_B a^* m^* \implies a^* = \frac{k_R}{k_R + k_B m^*}.
+\]
 
 When attractant concentration suddenly increases, receptor activity \(a\) drops (attractant inhibits the active state). This activates CheR-mediated methylation and inhibits CheB-mediated demethylation, causing \(m\) to rise. As \(m\) rises, receptor activity is restored. The system acts as an <strong>integral controller</strong>: the methylation \(m\) integrates the error (deviation of \(a\) from its set-point \(a^*\)) and adjusts until \(a\) returns exactly to \(a^*\), regardless of the new background attractant level.
 
@@ -752,18 +951,27 @@ Gene expression is regulated by transcription factors — proteins that bind spe
 
 <div class="definition">
 <strong>Definition (Toggle Switch)</strong>: A <em>genetic toggle switch</em> is a synthetic gene circuit consisting of two genes, each encoding a transcriptional repressor of the other. With Hill-function repression of Hill coefficient \(n\):
-\[ \frac{du}{dt} = \frac{\alpha_1}{1 + v^n} - u, \qquad \frac{dv}{dt} = \frac{\alpha_2}{1 + u^n} - v, \]
+
+\[
+\frac{du}{dt} = \frac{\alpha_1}{1 + v^n} - u, \qquad \frac{dv}{dt} = \frac{\alpha_2}{1 + u^n} - v,
+\]
 where \(u\) and \(v\) are the (dimensionless) protein concentrations of the two repressors, and \(\alpha_1\), \(\alpha_2\) are the maximal transcription rates. The system was first constructed and analysed by Gardner, Cantor, and Collins (Gardner et al., <em>Nature</em> 2000).
 </div>
 
 The nullclines of this system are:
-\[ u\text{-nullcline: } u = \frac{\alpha_1}{1 + v^n}, \qquad v\text{-nullcline: } v = \frac{\alpha_2}{1 + u^n}. \]
+
+\[
+u\text{-nullcline: } u = \frac{\alpha_1}{1 + v^n}, \qquad v\text{-nullcline: } v = \frac{\alpha_2}{1 + u^n}.
+\]
 
 For small \(n\) (weak cooperativity) and moderate \(\alpha_1 = \alpha_2\), the two nullclines intersect only once, at the symmetric fixed point \(u^* = v^*\) — the system is monostable. For large \(n\) (strong cooperativity) or large \(\alpha\), the nullclines develop an S-shaped character and intersect at three points: two stable nodes and one unstable saddle. The system is then **bistable**: it can reside in either "gene \(u\) on / gene \(v\) off" or "gene \(u\) off / gene \(v\) on", corresponding to distinct cellular phenotypes.
 
 <div class="example">
 <strong>Example — Bistability condition for the toggle switch</strong>: Take \(\alpha_1 = \alpha_2 = \alpha\) and \(n = 2\). The nullclines are \(u = \alpha/(1+v^2)\) and \(v = \alpha/(1+u^2)\). By symmetry, one fixed point is always at \(u^* = v^*\) satisfying \(u^* = \alpha/(1+(u^*)^2)\), or \((u^*)^3 + u^* = \alpha\). For \(\alpha = 3\): numerically, \(u^* \approx 1.21\). The stability of the symmetric point is determined by the Jacobian:
-\[ J = \begin{pmatrix} -1 & -\alpha_1 n v^{n-1}/(1+v^n)^2 \\ -\alpha_2 n u^{n-1}/(1+u^n)^2 & -1 \end{pmatrix}\bigg|_{(u^*,u^*)}. \]
+
+\[
+J = \begin{pmatrix} -1 & -\alpha_1 n v^{n-1}/(1+v^n)^2 \\ -\alpha_2 n u^{n-1}/(1+u^n)^2 & -1 \end{pmatrix}\bigg|_{(u^*,u^*)}.
+\]
 Setting \(\varepsilon = \alpha n (u^*)^{n-1}/(1+(u^*)^n)^2\), the eigenvalues are \(\lambda = -1 \pm \varepsilon\). The symmetric fixed point is stable if \(\varepsilon < 1\) and unstable (saddle) if \(\varepsilon > 1\). When \(\varepsilon > 1\), the symmetric state is unstable and two asymmetric stable states exist — this is the bistability condition. A larger Hill coefficient \(n\) or a larger \(\alpha\) increases \(\varepsilon\), making bistability more likely. This design principle — strong repression creates bistability — is a general feature of mutual-repression networks.
 </div>
 
@@ -779,11 +987,15 @@ Setting \(\varepsilon = \alpha n (u^*)^{n-1}/(1+(u^*)^n)^2\), the eigenvalues ar
 
 Gene expression involves two main steps: **transcription** (synthesis of mRNA from a DNA template) and **translation** (synthesis of protein from the mRNA template). A minimal model treats mRNA concentration \(m\) and protein concentration \(p\) as dynamic variables:
 
-\[ \frac{dm}{dt} = \beta_m - \gamma_m m, \qquad \frac{dp}{dt} = \beta_p m - \gamma_p p, \]
+\[
+\frac{dm}{dt} = \beta_m - \gamma_m m, \qquad \frac{dp}{dt} = \beta_p m - \gamma_p p,
+\]
 
 where \(\beta_m\) is the mRNA transcription rate, \(\gamma_m\) the mRNA degradation rate constant, \(\beta_p\) the translation rate constant (protein produced per mRNA per time), and \(\gamma_p\) the protein degradation rate constant. The steady-state protein level is:
 
-\[ p^* = \frac{\beta_m \beta_p}{\gamma_m \gamma_p}. \]
+\[
+p^* = \frac{\beta_m \beta_p}{\gamma_m \gamma_p}.
+\]
 
 The timescales are set by the half-lives: \(\tau_m = \ln 2 / \gamma_m\) and \(\tau_p = \ln 2 / \gamma_p\). In many bacteria, \(\tau_m \approx\) 2–5 minutes while \(\tau_p\) can be hours (protein is diluted by cell division as well as degraded). The separation of these timescales justifies a further quasi-steady-state approximation: setting \(m \approx \beta_m/\gamma_m\) gives an effective single-equation model for protein.
 
@@ -791,9 +1003,13 @@ The timescales are set by the half-lives: \(\tau_m = \ln 2 / \gamma_m\) and \(\t
 
 The **toggle switch** (Gardner et al., *Nature* 2000) is a synthetic gene circuit comprising two mutually repressing genes. Gene A encodes a repressor of gene B, and gene B encodes a repressor of gene A. With Hill-function repression:
 
-\[ \frac{dm_A}{dt} = \frac{\alpha_A}{1 + \left([P_B]/K_B\right)^n} - \gamma_{m_A} m_A, \]
+\[
+\frac{dm_A}{dt} = \frac{\alpha_A}{1 + \left([P_B]/K_B\right)^n} - \gamma_{m_A} m_A,
+\]
 
-\[ \frac{dm_B}{dt} = \frac{\alpha_B}{1 + \left([P_A]/K_A\right)^n} - \gamma_{m_B} m_B. \]
+\[
+\frac{dm_B}{dt} = \frac{\alpha_B}{1 + \left([P_A]/K_A\right)^n} - \gamma_{m_B} m_B.
+\]
 
 Phase plane analysis reveals that for sufficiently strong repression (large Hill coefficient \(n\) or high repressor production), this network is bistable: either gene A is highly expressed and gene B suppressed, or vice versa. The two stable states correspond to distinct cellular phenotypes. Transient stimuli can flip the circuit from one state to the other. The toggle switch illustrates how bistability emerges from positive feedback (mutual repression creates a double-negative, equivalent to positive, feedback loop).
 
@@ -803,17 +1019,25 @@ The **repressilator** (Elowitz & Leibler, *Nature* 2000) is a three-gene synthet
 
 The minimal protein-only model:
 
-\[ \frac{dp_i}{dt} = \frac{\alpha}{1 + p_j^n} - \gamma p_i, \quad (i, j) \in \{(A,C), (B,A), (C,B)\}. \]
+\[
+\frac{dp_i}{dt} = \frac{\alpha}{1 + p_j^n} - \gamma p_i, \quad (i, j) \in \{(A,C), (B,A), (C,B)\}.
+\]
 
 For large \(n\) (strong cooperativity), the system undergoes a Hopf bifurcation as the repression strength increases, giving rise to limit cycle oscillations. The repressilator demonstrates that oscillations do not require explicit positive feedback — they can arise from delayed negative feedback alone.
 
 <div class="example">
 <strong>Example — Repressilator fixed point and its stability</strong>: By symmetry, the unique fixed point of the repressilator has all three protein levels equal: \(p_A^* = p_B^* = p_C^* = p^*\), where \(p^*\) satisfies
-\[ p^* = \frac{\alpha}{\gamma(1 + (p^*)^n)}. \]
+
+\[
+p^* = \frac{\alpha}{\gamma(1 + (p^*)^n)}.
+\]
 For \(\alpha = 20\), \(\gamma = 1\), \(n = 2\): \(p^*(1 + (p^*)^2) = 20\), i.e., \((p^*)^3 + p^* - 20 = 0\). Numerically, \(p^* \approx 2.49\).
 
 The Jacobian at the symmetric fixed point has a circulant structure. Its eigenvalues come in three groups, each associated with a different "Fourier mode" of the ring:
-\[ \lambda_k = -\gamma + \frac{-\alpha n (p^*)^{n-1}}{(1+(p^*)^n)^2} \cdot e^{2\pi i k/3}, \quad k = 0, 1, 2. \]
+
+\[
+\lambda_k = -\gamma + \frac{-\alpha n (p^*)^{n-1}}{(1+(p^*)^n)^2} \cdot e^{2\pi i k/3}, \quad k = 0, 1, 2.
+\]
 
 The \(k=0\) mode is always stable (it corresponds to uniform perturbations, damped by the feedback). The \(k=1\) and \(k=2\) modes are complex conjugates of each other; they lose stability (their real part crosses zero) at the Hopf bifurcation. Setting \(\text{Re}(\lambda_1) = 0\) gives the condition for oscillations. For the parameters above, the system is near the bifurcation point, and the period of oscillation near the Hopf bifurcation is \(T \approx 2\pi/\text{Im}(\lambda_1) \approx 2\pi\sqrt{3}/\gamma \approx 10.9\) (in units of \(1/\gamma\)).
 </div>
@@ -832,7 +1056,10 @@ For a simple gene expression model (birth–death process for protein), the stat
 
 <div class="example">
 <strong>Example — Noise in a bursty gene expression model</strong>: Many genes are expressed in transcriptional bursts: the promoter switches stochastically between an active state (mRNA produced at rate \(k_{on}\)) and an inactive state. If burst size is geometrically distributed with mean \(b\) (proteins per burst) and burst frequency \(k_f\) (bursts per unit time), and protein degrades at rate \(\gamma\), then the mean and variance of protein number at steady state are:
-\[ \langle p \rangle = \frac{k_f b}{\gamma}, \qquad \text{Var}(p) = \langle p \rangle(1 + b). \]
+
+\[
+\langle p \rangle = \frac{k_f b}{\gamma}, \qquad \text{Var}(p) = \langle p \rangle(1 + b).
+\]
 Therefore \(CV^2 = (1 + b)/\langle p \rangle\). For \(b = 10\) (mean 10 proteins per burst), \(\gamma = 0.01\,\text{min}^{-1}\), and \(k_f = 0.1\,\text{min}^{-1}\): \(\langle p \rangle = 0.1 \times 10/0.01 = 100\) proteins, \(CV^2 = 11/100 = 0.11\), so \(CV = 33\%\). The burst size \(b\) contributes an additive factor to the noise above the Poisson baseline (\(CV^2 = 1/\langle p\rangle\)), reflecting the shot noise from discrete burst events. This "super-Poissonian" noise is a hallmark of bursty expression and has been measured in bacteria, yeast, and mammalian cells by single-cell fluorescence microscopy.
 </div>
 
@@ -852,11 +1079,15 @@ Neurons and muscle cells are electrically excitable: they can generate rapid, tr
 
 The electrochemical equilibrium potential for a single ion species is given by the **Nernst equation**:
 
-\[ E_{ion} = \frac{RT}{zF} \ln\frac{[ion]_{out}}{[ion]_{in}}, \]
+\[
+E_{ion} = \frac{RT}{zF} \ln\frac{[ion]_{out}}{[ion]_{in}},
+\]
 
 where \(R\) is the gas constant, \(T\) temperature (Kelvin), \(F\) the Faraday constant, and \(z\) the ion valence. For \(K^+\) at body temperature with typical physiological concentrations, \(E_K \approx -90\) mV; for \(Na^+\), \(E_{Na} \approx +60\) mV. The **resting membrane potential** of a typical neuron (~−70 mV) lies between these extremes because multiple ion species contribute, weighted by their respective membrane permeabilities. The **Goldman equation** accounts for this:
 
-\[ V_{rest} = \frac{RT}{F} \ln\frac{P_K[K^+]_{out} + P_{Na}[Na^+]_{out} + P_{Cl}[Cl^-]_{in}}{P_K[K^+]_{in} + P_{Na}[Na^+]_{in} + P_{Cl}[Cl^-]_{out}}, \]
+\[
+V_{rest} = \frac{RT}{F} \ln\frac{P_K[K^+]_{out} + P_{Na}[Na^+]_{out} + P_{Cl}[Cl^-]_{in}}{P_K[K^+]_{in} + P_{Na}[Na^+]_{in} + P_{Cl}[Cl^-]_{out}},
+\]
 
 where \(P_X\) denotes the membrane permeability to ion species \(X\). Ion flow across the membrane is mediated by **ion channels** — protein pores that open and close in response to voltage, ligands, or mechanical stimuli.
 
@@ -864,19 +1095,29 @@ where \(P_X\) denotes the membrane permeability to ion species \(X\). Ion flow a
 
 The **Hodgkin–Huxley (HH) model** (1952, Nobel Prize 1963) is the quantitative foundation of modern computational neuroscience. Alan Hodgkin and Andrew Huxley developed the model from voltage-clamp experiments on the squid giant axon. The membrane is modelled as a capacitor in parallel with conductance elements for each ion species:
 
-\[ C_m \frac{dV}{dt} = I_{app} - I_{Na} - I_K - I_L, \]
+\[
+C_m \frac{dV}{dt} = I_{app} - I_{Na} - I_K - I_L,
+\]
 
 where \(C_m\) is the membrane capacitance, \(I_{app}\) an applied current, and the ionic currents are:
 
-\[ I_{Na} = g_{Na} m^3 h (V - E_{Na}), \]
+\[
+I_{Na} = g_{Na} m^3 h (V - E_{Na}),
+\]
 
-\[ I_K = g_K n^4 (V - E_K), \]
+\[
+I_K = g_K n^4 (V - E_K),
+\]
 
-\[ I_L = g_L (V - E_L). \]
+\[
+I_L = g_L (V - E_L).
+\]
 
 Here \(g_{Na}\), \(g_K\), \(g_L\) are maximal conductances, and \(m\), \(h\), \(n\) are **gating variables** between 0 and 1 representing the probabilities that individual channel gates are open. Each gating variable obeys a first-order kinetic equation:
 
-\[ \frac{dw}{dt} = \frac{w_\infty(V) - w}{\tau_w(V)}, \quad w \in \{m, h, n\}, \]
+\[
+\frac{dw}{dt} = \frac{w_\infty(V) - w}{\tau_w(V)}, \quad w \in \{m, h, n\},
+\]
 
 where \(w_\infty(V)\) is the voltage-dependent steady-state gate value and \(\tau_w(V)\) is the voltage-dependent time constant, both determined from experimental data.
 
@@ -890,9 +1131,13 @@ The action potential mechanism in the HH model: A sufficiently large depolarisat
 
 The full 4-dimensional HH model is difficult to analyse analytically. The **FitzHugh–Nagumo (FHN) model** is a 2-dimensional caricature that retains the essential excitability:
 
-\[ \frac{dv}{dt} = v - \frac{v^3}{3} - w + I_{app}, \]
+\[
+\frac{dv}{dt} = v - \frac{v^3}{3} - w + I_{app},
+\]
 
-\[ \frac{dw}{dt} = \varepsilon(v + a - bw), \]
+\[
+\frac{dw}{dt} = \varepsilon(v + a - bw),
+\]
 
 where \(v\) is a fast voltage-like variable, \(w\) is a slow recovery variable, \(I_{app}\) is the applied current, and \(\varepsilon \ll 1\) enforces the time-scale separation.
 
@@ -902,12 +1147,18 @@ The \(v\)-nullcline is a cubic \(w = v - v^3/3 + I_{app}\); the \(w\)-nullcline 
 
 <div class="example">
 <strong>Example — FitzHugh-Nagumo fixed point and Hopf bifurcation</strong>: Take standard parameters \(a = 0.7\), \(b = 0.8\), \(\varepsilon = 0.08\). The fixed point \((v^*, w^*)\) satisfies:
-\[ v^* - (v^*)^3/3 - w^* + I_{app} = 0, \qquad v^* + a - bw^* = 0. \]
+
+\[
+v^* - (v^*)^3/3 - w^* + I_{app} = 0, \qquad v^* + a - bw^* = 0.
+\]
 
 From the second equation: \(w^* = (v^* + a)/b = (v^* + 0.7)/0.8\). Substituting into the first and expanding gives a cubic in \(v^*\); for \(I_{app} = 0\), numerical solution gives \(v^* \approx -1.20\), \(w^* \approx -0.625\).
 
 The Jacobian at the fixed point:
-\[ J = \begin{pmatrix} 1 - (v^*)^2 & -1 \\ \varepsilon & -\varepsilon b \end{pmatrix} = \begin{pmatrix} 1 - 1.44 & -1 \\ 0.08 & -0.064 \end{pmatrix} = \begin{pmatrix} -0.44 & -1 \\ 0.08 & -0.064 \end{pmatrix}. \]
+
+\[
+J = \begin{pmatrix} 1 - (v^*)^2 & -1 \\ \varepsilon & -\varepsilon b \end{pmatrix} = \begin{pmatrix} 1 - 1.44 & -1 \\ 0.08 & -0.064 \end{pmatrix} = \begin{pmatrix} -0.44 & -1 \\ 0.08 & -0.064 \end{pmatrix}.
+\]
 
 Trace: \(\tau = -0.44 - 0.064 = -0.504 < 0\). Determinant: \(\Delta = (-0.44)(-0.064) - (-1)(0.08) = 0.0282 + 0.08 = 0.108 > 0\). The fixed point is a stable spiral (resting state). As \(I_{app}\) increases, \(v^*\) shifts and the trace \(\tau\) increases. The Hopf bifurcation occurs when \(\tau = 0\), i.e., when \(1-(v^*)^2 = \varepsilon b = 0.064\), giving \(v^*_c = \pm\sqrt{0.936} \approx \pm 0.968\). The positive root corresponds to the physiologically relevant depolarised state; at this bifurcation point, repetitive firing (limit cycle) is born.
 </div>
@@ -928,7 +1179,9 @@ Neurons communicate at **synapses**. An action potential in the **presynaptic** 
 
 The simplest model of a postsynaptic neuron is the **integrate-and-fire** model:
 
-\[ C_m \frac{dV}{dt} = -g_L(V - E_L) + I_{syn}(t), \]
+\[
+C_m \frac{dV}{dt} = -g_L(V - E_L) + I_{syn}(t),
+\]
 
 with the rule that whenever \(V\) reaches a threshold \(V_{th}\), a spike is recorded and \(V\) is reset to \(V_{reset}\). Despite its simplicity, the integrate-and-fire model captures many features of neural coding and is widely used in network-scale simulations.
 
@@ -955,7 +1208,10 @@ The saddle-node bifurcation is the simplest and most ubiquitous bifurcation. It 
 <li>\(f_{xx}(x_0, \mu_0) \neq 0\) (the quadratic term is non-degenerate).</li>
 </ol>
 The <em>normal form</em> is
-\[ \dot{x} = \mu - x^2. \]
+
+\[
+\dot{x} = \mu - x^2.
+\]
 For \(\mu < 0\): no fixed points. For \(\mu = 0\): one semi-stable fixed point at \(x = 0\). For \(\mu > 0\): two fixed points, \(x_{\pm} = \pm\sqrt{\mu}\), with \(x_+ = +\sqrt{\mu}\) unstable and \(x_- = -\sqrt{\mu}\) stable.
 </div>
 
@@ -963,15 +1219,24 @@ The bifurcation diagram for the normal form \(\dot{x} = \mu - x^2\) has a charac
 
 <div class="example">
 <strong>Example — Saddle-node bifurcation in a gene expression switch</strong>: Consider a self-activating gene where protein \(x\) activates its own transcription via a Hill function, balanced by linear degradation:
-\[ \dot{x} = \frac{\mu x^2}{K^2 + x^2} - \gamma x, \]
+
+\[
+\dot{x} = \frac{\mu x^2}{K^2 + x^2} - \gamma x,
+\]
 with \(\mu > 0\) the maximal self-activation rate, \(K = 1\,\mu\text{M}\) the half-saturation constant, \(\gamma = 1\,\text{min}^{-1}\) the degradation rate. Fixed points satisfy \(\mu x/(K^2 + x^2) = \gamma\), i.e., \(\mu x = \gamma(K^2 + x^2)\) (dividing by \(x > 0\)).
 
 Rearranging: \(\gamma x^2 - \mu x + \gamma K^2 = 0\). Using the quadratic formula:
-\[ x_{\pm} = \frac{\mu \pm \sqrt{\mu^2 - 4\gamma^2 K^2}}{2\gamma}. \]
+
+\[
+x_{\pm} = \frac{\mu \pm \sqrt{\mu^2 - 4\gamma^2 K^2}}{2\gamma}.
+\]
 Real solutions exist only when the discriminant is non-negative: \(\mu^2 \geq 4\gamma^2 K^2\), i.e., \(\mu \geq 2\gamma K = 2 \times 1 \times 1 = 2\,\mu\text{M/min}\). At the <em>critical parameter</em> \(\mu_c = 2\,\mu\text{M/min}\), the two fixed points collide at \(x_c = \mu_c/(2\gamma) = 1\,\mu\text{M} = K\).
 
 <em>Numerical check at \(\mu = 3\,\mu\text{M/min}\)</em>:
-\[ x_{\pm} = \frac{3 \pm \sqrt{9 - 4}}{2} = \frac{3 \pm \sqrt{5}}{2}. \]
+
+\[
+x_{\pm} = \frac{3 \pm \sqrt{9 - 4}}{2} = \frac{3 \pm \sqrt{5}}{2}.
+\]
 So \(x_+ = (3 + 2.236)/2 \approx 2.618\,\mu\text{M}\) (unstable) and \(x_- = (3 - 2.236)/2 \approx 0.382\,\mu\text{M}\) (stable). The system also has a stable fixed point at \(x = 0\) (trivial off-state). This three-fixed-point configuration (\(x = 0\) stable, \(x_-\) stable, \(x_+\) unstable saddle) is the bistable regime of a self-activating switch, entered via a saddle-node bifurcation at \(\mu = \mu_c\).
 
 <em>Biological interpretation</em>: the "on" state at \(x \approx 0.382\,\mu\text{M}\) and the "off" state at \(x = 0\) are two stable gene expression levels. A brief pulse of external signal that transiently increases \(x\) above the saddle at \(x \approx 2.618\,\mu\text{M}\) would push the system into the high-expression basin — but wait, here \(x_-\) is the lower stable state and \(x_+\) is the upper unstable, so the actual high-on state requires a more complex topology. In real bistable gene circuits (e.g., the \(CI\) repressor network in \(\lambda\) phage), the topology is analogous and the saddle-node bifurcation marks the boundary of bistability.
@@ -983,7 +1248,10 @@ When a system has a symmetry (such as \(x \to -x\)), saddle-node bifurcations oc
 
 <div class="definition">
 <strong>Definition (Pitchfork Bifurcation)</strong>: The <em>supercritical pitchfork bifurcation</em> has normal form
-\[ \dot{x} = \mu x - x^3. \]
+
+\[
+\dot{x} = \mu x - x^3.
+\]
 For \(\mu \leq 0\): the only fixed point is \(x^* = 0\), which is stable for \(\mu < 0\). For \(\mu > 0\): \(x^* = 0\) becomes unstable, and two new stable fixed points appear at \(x^* = \pm\sqrt{\mu}\). The bifurcation occurs at \(\mu = 0\).
 
 The <em>subcritical pitchfork bifurcation</em> has normal form \(\dot{x} = \mu x + x^3\). For \(\mu < 0\): three fixed points — \(x^* = 0\) (stable) and \(x^* = \pm\sqrt{-\mu}\) (unstable). At \(\mu = 0\), the unstable pair collides with the stable origin and the origin becomes unstable for \(\mu > 0\).
@@ -1001,7 +1269,8 @@ The supercritical pitchfork models **spontaneous symmetry breaking**: for \(\mu 
 0 & x^* = 0 & \text{Marginally stable} \\
 1 & x^* = 0,\; x^* = \pm 1 & x=0 \text{ unstable; } \pm 1 \text{ stable} \\
 4 & x^* = 0,\; x^* = \pm 2 & x=0 \text{ unstable; } \pm 2 \text{ stable}
-\end{array} \]
+\end{array} 
+\]
 
 <em>Stability check at \(\mu = 1\)</em>: The Jacobian \(f_x = \mu - 3x^2\). At \(x=0\): \(f_x = 1 > 0\) (unstable). At \(x = \pm 1\): \(f_x = 1 - 3 = -2 < 0\) (stable). At \(\mu = 4\): at \(x = \pm 2\): \(f_x = 4 - 3(4) = -8 < 0\) (stable).
 
@@ -1014,13 +1283,18 @@ The bifurcation diagram traces a pitchfork shape in the \((\mu, x^*)\) plane: a 
 
 The Hopf bifurcation governs the birth of limit cycle oscillations from a fixed point. The normal form in polar coordinates \((r, \theta)\) for the supercritical case is:
 
-\[ \dot{r} = \mu r - r^3, \qquad \dot{\theta} = \omega, \]
+\[
+\dot{r} = \mu r - r^3, \qquad \dot{\theta} = \omega,
+\]
 
 where \(r \geq 0\) is the amplitude of oscillation and \(\omega > 0\) is the angular frequency. For \(\mu < 0\), the only attractor is the fixed point \(r = 0\) (the origin, a stable spiral). For \(\mu > 0\), the fixed point \(r = 0\) is unstable and a stable limit cycle appears at \(r^* = \sqrt{\mu}\) with angular frequency \(\omega\). At \(\mu = 0\), the eigenvalues of the linearisation are exactly \(\pm i\omega\).
 
 <div class="example">
 <strong>Example — Hopf bifurcation in the Brusselator</strong>: From the earlier Brusselator analysis, recall the steady state \((x^*, y^*) = (1, b/a)\) with Jacobian
-\[ J = \begin{pmatrix} b-1 & a \\ -b & -a \end{pmatrix}. \]
+
+\[
+J = \begin{pmatrix} b-1 & a \\ -b & -a \end{pmatrix}.
+\]
 The trace and determinant are \(\tau = b - 1 - a\) and \(\Delta = a > 0\). The eigenvalues are \(\lambda = (\tau \pm \sqrt{\tau^2 - 4\Delta})/2\). The Hopf bifurcation occurs when \(\tau = 0\), i.e., when \(b = b_c := a + 1\).
 
 <em>Numerical case \(a = 2\)</em>: The Hopf bifurcation occurs at \(b_c = 3\). For \(b < 3\): the steady state is stable (trajectories spiral in). For \(b > 3\): the steady state is unstable and a stable limit cycle surrounds it.
@@ -1048,7 +1322,10 @@ Other examples include: immune response delays (cytokine production after pathog
 
 <div class="definition">
 <strong>Definition (Delay Differential Equation)</strong>: A <em>delay differential equation</em> of retarded type with constant delay \(\tau > 0\) is an equation of the form
-\[ \dot{x}(t) = f(x(t),\, x(t - \tau)), \]
+
+\[
+\dot{x}(t) = f(x(t),\, x(t - \tau)),
+\]
 where the rate of change at time \(t\) depends on the state at the earlier time \(t - \tau\). Unlike ODEs, DDEs require specification of the initial <em>history function</em> \(\phi: [-\tau, 0] \to \mathbb{R}\) rather than a single initial condition. The solution is then determined for \(t > 0\) by integrating forward using the known history. The state space of a DDE is infinite-dimensional (a function space), even for a scalar equation.
 </div>
 
@@ -1056,15 +1333,21 @@ where the rate of change at time \(t\) depends on the state at the earlier time 
 
 The canonical scalar DDE with negative feedback is:
 
-\[ \dot{x}(t) = -k\, x(t - \tau), \]
+\[
+\dot{x}(t) = -k\, x(t - \tau),
+\]
 
 where \(k > 0\) is the feedback gain and \(\tau > 0\) is the time delay. The unique steady state is \(x^* = 0\). To analyse stability, we seek solutions of the form \(x(t) = e^{\lambda t}\) (a characteristic solution). Substituting:
 
-\[ \lambda e^{\lambda t} = -k e^{\lambda(t-\tau)} = -k e^{-\lambda\tau} e^{\lambda t}. \]
+\[
+\lambda e^{\lambda t} = -k e^{\lambda(t-\tau)} = -k e^{-\lambda\tau} e^{\lambda t}.
+\]
 
 Dividing by \(e^{\lambda t} \neq 0\) gives the **characteristic equation**:
 
-\[ \lambda = -k e^{-\lambda\tau}. \]
+\[
+\lambda = -k e^{-\lambda\tau}.
+\]
 
 This transcendental equation has infinitely many complex roots \(\lambda_n\), in contrast to a polynomial characteristic equation from an ODE. For stability, we need all roots to satisfy \(\text{Re}(\lambda) < 0\).
 
@@ -1083,13 +1366,22 @@ This transcendental equation has infinitely many complex roots \(\lambda_n\), in
 
 <div class="example">
 <strong>Example — DDE oscillations from time delay in a gene circuit</strong>: Consider a model of a self-repressing gene where protein \(p(t)\) represses its own production after a delay \(\tau\) (representing transcription, splicing, and translation time):
-\[ \dot{p}(t) = \frac{\beta}{1 + (p(t-\tau)/K)^n} - \gamma p(t). \]
+
+\[
+\dot{p}(t) = \frac{\beta}{1 + (p(t-\tau)/K)^n} - \gamma p(t).
+\]
 This is the delayed Goodwin oscillator. The unique positive steady state satisfies \(p^* = \beta/(\gamma(1 + (p^*/K)^n))\).
 
 <em>Linearising about \(p^*\)</em>: Let \(p(t) = p^* + \delta(t)\). The linearised equation is:
-\[ \dot{\delta}(t) = -A\,\delta(t - \tau) - \gamma\,\delta(t), \]
+
+\[
+\dot{\delta}(t) = -A\,\delta(t - \tau) - \gamma\,\delta(t),
+\]
 where \(A = \beta n (p^*/K)^n / (K(1+(p^*/K)^n)^2)\) is the magnitude of the delayed feedback. The characteristic equation is \(\lambda + \gamma + Ae^{-\lambda\tau} = 0\). Oscillations arise when the characteristic equation has purely imaginary roots. Setting \(\lambda = i\omega\):
-\[ i\omega + \gamma + A(\cos\omega\tau - i\sin\omega\tau) = 0. \]
+
+\[
+i\omega + \gamma + A(\cos\omega\tau - i\sin\omega\tau) = 0.
+\]
 Real part: \(\gamma + A\cos\omega\tau = 0 \Rightarrow \cos\omega\tau = -\gamma/A\). Imaginary part: \(\omega - A\sin\omega\tau = 0 \Rightarrow \sin\omega\tau = \omega/A\). Adding squares: \(\gamma^2 + \omega^2 = A^2\), so \(\omega_c = \sqrt{A^2 - \gamma^2}\) (real only if \(A > \gamma\)).
 
 <em>Numerical case</em>: Let \(\beta = 10\,\mu\text{M/min}\), \(K = 2\,\mu\text{M}\), \(n = 4\), \(\gamma = 0.5\,\text{min}^{-1}\). At the steady state \(p^* \approx 1.5\,\mu\text{M}\) (found numerically), we compute \(A \approx 1.8\,\text{min}^{-1}\). Since \(A > \gamma\), the critical frequency is \(\omega_c = \sqrt{1.8^2 - 0.5^2} = \sqrt{3.24 - 0.25} = \sqrt{2.99} \approx 1.73\,\text{min}^{-1}\). The critical delay is \(\tau_c = (1/\omega_c)\arccos(-\gamma/A) = (1/1.73)\arccos(-0.278) \approx (1/1.73)(1.852) \approx 1.07\,\text{min}\). For \(\tau > \tau_c \approx 1.07\,\text{min}\), sustained oscillations emerge. The oscillation period at the bifurcation is \(T = 2\pi/\omega_c = 2\pi/1.73 \approx 3.63\,\text{min}\).
@@ -1119,12 +1411,18 @@ The **Langevin equation** provides a bridge between deterministic and stochastic
 
 <div class="definition">
 <strong>Definition (Langevin Equation)</strong>: The <em>Langevin equation</em> for a scalar state \(x(t)\) is
-\[ \dot{x}(t) = f(x(t)) + g(x(t))\,\xi(t), \]
+
+\[
+\dot{x}(t) = f(x(t)) + g(x(t))\,\xi(t),
+\]
 where \(f(x)\) is the deterministic drift, \(g(x)\) is the noise amplitude (which may depend on state), and \(\xi(t)\) is Gaussian white noise with mean zero and correlation \(\langle \xi(t)\xi(t') \rangle = \delta(t-t')\). The term \(g(x)\,\xi(t)\) represents the random fluctuations due to molecular discreteness. When \(g(x) = \sqrt{D}\) is constant (state-independent noise), this is additive noise; when \(g(x)\) depends on \(x\), this is multiplicative noise.
 </div>
 
 For a birth-death process where molecules are produced at rate \(\beta\) and degraded at rate \(\gamma x\), the Langevin approximation gives:
-\[ \dot{x} = \beta - \gamma x + \sqrt{\beta + \gamma x}\,\xi(t). \]
+
+\[
+\dot{x} = \beta - \gamma x + \sqrt{\beta + \gamma x}\,\xi(t).
+\]
 The noise amplitude \(\sqrt{\beta + \gamma x}\) is the square root of the total propensity (a consequence of the Poisson statistics of individual reaction events in the linear noise approximation).
 
 ## 10.3 The Fokker-Planck Equation
@@ -1133,27 +1431,42 @@ Rather than tracking individual stochastic trajectories, one can describe the ev
 
 <div class="definition">
 <strong>Definition (Fokker-Planck Equation)</strong>: For a Langevin process \(\dot{x} = f(x) + g(x)\xi(t)\), the time evolution of the probability density \(P(x, t)\) is governed by the <em>Fokker-Planck equation</em>:
-\[ \frac{\partial P}{\partial t} = -\frac{\partial}{\partial x}\left[f(x)\,P\right] + \frac{1}{2}\frac{\partial^2}{\partial x^2}\left[D(x)\,P\right], \]
+
+\[
+\frac{\partial P}{\partial t} = -\frac{\partial}{\partial x}\left[f(x)\,P\right] + \frac{1}{2}\frac{\partial^2}{\partial x^2}\left[D(x)\,P\right],
+\]
 where \(D(x) = g(x)^2\) is the local diffusion coefficient. The first term is the <em>drift term</em> (deterministic flow of probability), and the second is the <em>diffusion term</em> (spreading of probability due to noise). The stationary distribution \(P_{stat}(x)\) satisfies \(\partial P_{stat}/\partial t = 0\).
 </div>
 
 For additive noise (\(D = \text{const}\)), the stationary distribution of a potential system \(f(x) = -dU/dx\) is:
-\[ P_{stat}(x) \propto \exp\!\left(-\frac{2U(x)}{D}\right). \]
+
+\[
+P_{stat}(x) \propto \exp\!\left(-\frac{2U(x)}{D}\right).
+\]
 This is a Boltzmann-like distribution: the system is most likely to be found near the minima of the potential \(U(x)\) (stable fixed points), with probability exponentially decreasing toward the maxima (unstable fixed points). The ratio of the noise strength \(D\) to the potential barrier height determines the rate of noise-driven transitions between stable states.
 
 ## 10.4 Intrinsic vs. Extrinsic Noise in Gene Expression
 
 <div class="definition">
 <strong>Definition (Fano Factor)</strong>: For a random variable \(X\) (such as protein copy number), the <em>Fano factor</em> is
-\[ F = \frac{\text{Var}(X)}{\langle X \rangle}. \]
+
+\[
+F = \frac{\text{Var}(X)}{\langle X \rangle}.
+\]
 For a Poisson distribution, \(F = 1\) (since \(\text{Var} = \langle X \rangle\) for Poisson). A Fano factor \(F > 1\) indicates <em>super-Poissonian</em> or <em>bursty</em> statistics; \(F < 1\) indicates <em>sub-Poissonian</em> statistics (less variable than Poisson, achievable only in quantum systems or systems with active noise suppression).
 </div>
 
 <div class="example">
 <strong>Example — Fano factor for a simple birth-death process</strong>: Consider a protein produced at constant rate \(\beta\) (molecules/min) and degraded at rate \(\gamma\) per molecule. The stochastic dynamics are a birth-death process with birth propensity \(\beta\) and death propensity \(\gamma n\) when \(n\) molecules are present. The master equation for the probability \(P(n, t)\) is:
-\[ \frac{dP(n,t)}{dt} = \beta P(n-1,t) - \beta P(n,t) + \gamma(n+1)P(n+1,t) - \gamma n P(n,t). \]
+
+\[
+\frac{dP(n,t)}{dt} = \beta P(n-1,t) - \beta P(n,t) + \gamma(n+1)P(n+1,t) - \gamma n P(n,t).
+\]
 At steady state, this has an exact Poisson solution: \(P_{stat}(n) = e^{-\mu}\mu^n/n!\) with mean \(\mu = \beta/\gamma\). Therefore:
-\[ \langle n \rangle = \frac{\beta}{\gamma}, \quad \text{Var}(n) = \frac{\beta}{\gamma} = \langle n\rangle, \quad F = \frac{\text{Var}(n)}{\langle n\rangle} = 1. \]
+
+\[
+\langle n \rangle = \frac{\beta}{\gamma}, \quad \text{Var}(n) = \frac{\beta}{\gamma} = \langle n\rangle, \quad F = \frac{\text{Var}(n)}{\langle n\rangle} = 1.
+\]
 
 <em>Numerical example</em>: If \(\beta = 5\) molecules/min and \(\gamma = 0.1\,\text{min}^{-1}\), then the mean protein level is \(\langle n \rangle = 5/0.1 = 50\) molecules, the variance is also 50, and the Fano factor is \(F = 1\). The coefficient of variation is \(CV = \sigma/\langle n\rangle = \sqrt{50}/50 = 1/\sqrt{50} \approx 0.141\), or 14.1% noise.
 
@@ -1164,7 +1477,9 @@ At steady state, this has an exact Poisson solution: \(P_{stat}(n) = e^{-\mu}\mu
 
 A widely used stochastic model of gene expression is the **two-state promoter** (also called the telegraph model). The promoter switches between an active state (ON) and an inactive state (OFF):
 
-\[ \text{OFF} \underset{k_{off}}{\stackrel{k_{on}}{\rightleftharpoons}} \text{ON} \xrightarrow{\beta} \text{mRNA} \xrightarrow{\gamma} \emptyset. \]
+\[
+\text{OFF} \underset{k_{off}}{\stackrel{k_{on}}{\rightleftharpoons}} \text{ON} \xrightarrow{\beta} \text{mRNA} \xrightarrow{\gamma} \emptyset.
+\]
 
 When the promoter is in the ON state, mRNA is produced at rate \(\beta\); in the OFF state, production is zero. mRNA degrades at rate \(\gamma\). This model accounts for bursty transcription: when \(k_{off} \gg k_{on}\) (the promoter spends most time OFF but occasionally fires), mRNA is produced in bursts, each burst lasting an exponentially distributed ON period of mean duration \(1/k_{off}\) and containing a geometrically distributed number of transcripts with mean \(\beta/k_{off}\).
 
@@ -1201,15 +1516,23 @@ The double-positive feedback loop (MPF activates Cdc25, which activates MPF; MPF
 
 A minimal model for the MPF switch uses a single variable \(m\) representing the fraction of CDK1 in the active (dephosphorylated) form, controlled by the balance of Cdc25 activation and Wee1 inactivation. The rate of CDK1 activation by Cdc25 is an increasing, ultrasensitive (sigmoidal) function of \(m\), while the rate of CDK1 inactivation by Wee1 is a decreasing sigmoidal function. The net equation:
 
-\[ \frac{dm}{dt} = \frac{V_{Cdc25}\,m^n}{K_{Cdc25}^n + m^n} \cdot (1 - m) - \frac{V_{Wee1}}{1 + (m/K_{Wee1})^n} \cdot m, \]
+\[
+\frac{dm}{dt} = \frac{V_{Cdc25}\,m^n}{K_{Cdc25}^n + m^n} \cdot (1 - m) - \frac{V_{Wee1}}{1 + (m/K_{Wee1})^n} \cdot m,
+\]
 
 where the first term is Cdc25-mediated activation of inactive CDK1 (fraction \(1-m\)) and the second term is Wee1-mediated inactivation of active CDK1 (fraction \(m\)).
 
 <div class="example">
 <strong>Example — Bistability in the MPF switch: worked numerical example</strong>: Use parameters \(V_{Cdc25} = 1\,\text{min}^{-1}\), \(K_{Cdc25} = 0.5\), \(V_{Wee1} = 1\,\text{min}^{-1}\), \(K_{Wee1} = 0.5\), and Hill coefficient \(n = 4\). We look for fixed points of
-\[ \dot{m} = \frac{m^4}{0.0625 + m^4}(1-m) - \frac{1}{1+(m/0.5)^4}\cdot m. \]
+
+\[
+\dot{m} = \frac{m^4}{0.0625 + m^4}(1-m) - \frac{1}{1+(m/0.5)^4}\cdot m.
+\]
 Setting \(\dot{m} = 0\) and dividing by \(m > 0\):
-\[ \frac{m^4}{0.0625 + m^4}(1-m)/m = \frac{m}{1+(2m)^4}. \]
+
+\[
+\frac{m^4}{0.0625 + m^4}(1-m)/m = \frac{m}{1+(2m)^4}.
+\]
 
 Numerically, this equation has three solutions (for these parameters):
 - \(m_1^* \approx 0.03\) (stable — the G1 "off" state, CDK1 mostly inactive)
@@ -1239,8 +1562,14 @@ The models developed so far assume a **well-mixed** intracellular environment �
 
 <div class="definition">
 <strong>Definition (Reaction-Diffusion PDE)</strong>: For species with concentrations \(u(\mathbf{x}, t)\) and \(v(\mathbf{x}, t)\) in a spatial domain \(\Omega \subseteq \mathbb{R}^d\), a two-component reaction-diffusion system is:
-\[ \frac{\partial u}{\partial t} = D_u \nabla^2 u + f(u,v), \]
-\[ \frac{\partial v}{\partial t} = D_v \nabla^2 v + g(u,v), \]
+
+\[
+\frac{\partial u}{\partial t} = D_u \nabla^2 u + f(u,v),
+\]
+
+\[
+\frac{\partial v}{\partial t} = D_v \nabla^2 v + g(u,v),
+\]
 where \(D_u, D_v > 0\) are diffusion coefficients and \(f, g\) are the reaction kinetics (the same nonlinearities as in the ODE model). The Laplacian \(\nabla^2 u = \partial^2 u/\partial x^2\) (in 1D) captures Fickian diffusion.
 </div>
 
@@ -1260,18 +1589,36 @@ Under these conditions, there exists a range of wavenumbers \(k \in (k_1, k_2)\)
 </div>
 
 The dispersion relation for the two-component RD system linearised about \((u^*, v^*)\) is:
-\[ \sigma(k) = \frac{1}{2}\left[(J_{11} - D_u k^2) + (J_{22} - D_v k^2) \pm \sqrt{((J_{11} - D_u k^2) - (J_{22} - D_v k^2))^2 + 4J_{12}J_{21}}\right]. \]
+
+\[
+\sigma(k) = \frac{1}{2}\left[(J_{11} - D_u k^2) + (J_{22} - D_v k^2) \pm \sqrt{((J_{11} - D_u k^2) - (J_{22} - D_v k^2))^2 + 4J_{12}J_{21}}\right].
+\]
 The instability condition \(\sigma(k) > 0\) for some \(k \neq 0\) requires:
-\[ h(k^2) := D_u D_v k^4 - (D_v J_{11} + D_u J_{22})k^2 + \det(J) < 0. \]
+
+\[
+h(k^2) := D_u D_v k^4 - (D_v J_{11} + D_u J_{22})k^2 + \det(J) < 0.
+\]
 The minimum of \(h\) occurs at \(k_{max}^2 = (D_v J_{11} + D_u J_{22})/(2D_u D_v)\), and the Turing instability requires \(h(k_{max}^2) < 0\), which gives:
-\[ (D_v J_{11} + D_u J_{22})^2 > 4 D_u D_v \det(J). \]
+
+\[
+(D_v J_{11} + D_u J_{22})^2 > 4 D_u D_v \det(J).
+\]
 
 <div class="example">
 <strong>Example — Turing instability in the Brusselator with diffusion</strong>: The Brusselator with diffusion:
-\[ \frac{\partial u}{\partial t} = D_u u_{xx} + 1 - (b+1)u + au^2v, \]
-\[ \frac{\partial v}{\partial t} = D_v v_{xx} + bu - au^2v. \]
+
+\[
+\frac{\partial u}{\partial t} = D_u u_{xx} + 1 - (b+1)u + au^2v,
+\]
+
+\[
+\frac{\partial v}{\partial t} = D_v v_{xx} + bu - au^2v.
+\]
 The homogeneous steady state is \((u^*, v^*) = (1, b/a)\) with Jacobian
-\[ J = \begin{pmatrix} b-1 & a \\ -b & -a \end{pmatrix}. \]
+
+\[
+J = \begin{pmatrix} b-1 & a \\ -b & -a \end{pmatrix}.
+\]
 So \(J_{11} = b-1\), \(J_{12} = a\), \(J_{21} = -b\), \(J_{22} = -a\), \(\text{tr}(J) = b-1-a\), \(\det(J) = a\).
 
 For the ODE to be stable, we need \(\text{tr}(J) < 0\), i.e., \(b < a + 1\).
@@ -1281,17 +1628,32 @@ For the ODE to be stable, we need \(\text{tr}(J) < 0\), i.e., \(b < a + 1\).
 Then: \(J_{11} = 1\), \(J_{12} = 2\), \(J_{21} = -2\), \(J_{22} = -2\), \(\det(J) = (1)(-2) - (2)(-2) = -2 + 4 = 2 > 0\). The ODE is stable.
 
 The Turing instability condition requires \((D_v J_{11} + D_u J_{22})^2 > 4D_u D_v \det(J)\):
-\[ (8 \times 1 + 0.5 \times (-2))^2 = (8 - 1)^2 = 49. \]
-\[ 4 \times 0.5 \times 8 \times 2 = 32. \]
+
+\[
+(8 \times 1 + 0.5 \times (-2))^2 = (8 - 1)^2 = 49.
+\]
+
+\[
+4 \times 0.5 \times 8 \times 2 = 32.
+\]
 Since \(49 > 32\), the Turing instability criterion is satisfied.
 
 <em>Critical wavenumber</em>:
-\[ k_{max}^2 = \frac{D_v J_{11} + D_u J_{22}}{2 D_u D_v} = \frac{8(1) + 0.5(-2)}{2 \times 0.5 \times 8} = \frac{8 - 1}{8} = \frac{7}{8} = 0.875. \]
-\[ k_{max} = \sqrt{0.875} \approx 0.935. \]
+
+\[
+k_{max}^2 = \frac{D_v J_{11} + D_u J_{22}}{2 D_u D_v} = \frac{8(1) + 0.5(-2)}{2 \times 0.5 \times 8} = \frac{8 - 1}{8} = \frac{7}{8} = 0.875.
+\]
+
+\[
+k_{max} = \sqrt{0.875} \approx 0.935.
+\]
 The preferred spatial wavelength is \(\lambda = 2\pi/k_{max} \approx 2\pi/0.935 \approx 6.72\) (in units of the diffusion length scale \(\sqrt{D_u/\text{rate}}\)). Spatial patterns with this wavelength will grow fastest and emerge preferentially in numerical simulations.
 
 <em>Checking that \(\sigma(k_{max}) > 0\)</em>: The growth rate at \(k = k_{max}\) is:
-\[ \sigma(k_{max}) = \frac{1}{2}\left[\tau_k - \sqrt{\tau_k^2 - 4h(k_{max}^2)}\right], \]
+
+\[
+\sigma(k_{max}) = \frac{1}{2}\left[\tau_k - \sqrt{\tau_k^2 - 4h(k_{max}^2)}\right],
+\]
 where \(\tau_k = (J_{11} - D_u k_{max}^2) + (J_{22} - D_v k_{max}^2) = (1 - 0.5\times 0.875) + (-2 - 8\times 0.875) = (1 - 0.4375) + (-2 - 7) = 0.5625 - 9 = -8.44\), and \(h(k_{max}^2) = D_u D_v k_{max}^4 - (D_v J_{11} + D_u J_{22})k_{max}^2 + \det(J) = 0.5\times 8 \times 0.875^2 - 7 \times 0.875 + 2 = 4 \times 0.766 - 6.125 + 2 = 3.062 - 6.125 + 2 = -1.063\). Since \(h < 0\), we have \(\tau_k^2 - 4h = 71.2 + 4.25 = 75.5\), giving \(\sigma = (-8.44 + \sqrt{75.5})/2 = (-8.44 + 8.69)/2 = 0.13 > 0\). Turing instability is confirmed.
 
 <em>Biological interpretation</em>: In biological systems, Turing patterns are proposed to underlie many spatial structures: the spacing of hair follicles, the stripe patterns on zebrafish, the branching morphogenesis of the lung, and digit patterning in the vertebrate limb. The mathematical requirement — activator diffuses slowly, inhibitor diffuses fast — corresponds to a short-range activating signal (perhaps a membrane-bound protein or a protein with limited diffusivity) paired with a long-range inhibitory signal (a secreted small molecule or rapidly diffusing protein).
@@ -1328,17 +1690,33 @@ The Li–Rinzel model (Li and Rinzel, 1994) is a minimal two-variable reduction 
 
 The equations are:
 
-\[ \frac{dc}{dt} = J_{IP3R}(c, h) - J_{pump}(c) + J_{leak}, \]
+\[
+\frac{dc}{dt} = J_{IP3R}(c, h) - J_{pump}(c) + J_{leak},
+\]
 
-\[ \frac{dh}{dt} = \frac{h_\infty(c) - h}{\tau_h(c)}, \]
+\[
+\frac{dh}{dt} = \frac{h_\infty(c) - h}{\tau_h(c)},
+\]
 
 where the fluxes are:
-\[ J_{IP3R} = v_1 m_\infty^3(p)\, n_\infty^3(c)\, h^3\, (c_{ER} - c), \]
-\[ J_{pump} = \frac{v_3 c^2}{k_3^2 + c^2}, \]
-\[ J_{leak} = v_2(c_{ER} - c), \]
+
+\[
+J_{IP3R} = v_1 m_\infty^3(p)\, n_\infty^3(c)\, h^3\, (c_{ER} - c),
+\]
+
+\[
+J_{pump} = \frac{v_3 c^2}{k_3^2 + c^2},
+\]
+
+\[
+J_{leak} = v_2(c_{ER} - c),
+\]
 
 with activating functions
-\[ m_\infty(p) = \frac{p}{p + d_1}, \quad n_\infty(c) = \frac{c}{c + d_5}, \quad h_\infty(c) = \frac{d_2}{c + d_2}, \]
+
+\[
+m_\infty(p) = \frac{p}{p + d_1}, \quad n_\infty(c) = \frac{c}{c + d_5}, \quad h_\infty(c) = \frac{d_2}{c + d_2},
+\]
 
 and inactivation time constant \(\tau_h(c) = 1/(a_2(c + d_2))\). Here \(p\) is the IP3 concentration (treated as a fixed parameter), \(c_{ER}\) is the (approximately constant) ER Ca\(^{2+}\) concentration, and \(v_1, v_2, v_3, d_1, d_2, d_5, k_3, a_2\) are kinetic parameters.
 
@@ -1346,8 +1724,14 @@ and inactivation time constant \(\tau_h(c) = 1/(a_2(c + d_2))\). Here \(p\) is t
 <strong>Example — Li–Rinzel model: oscillation mechanism and parameter example</strong>: Using standard Li–Rinzel parameters: \(v_1 = 7.3\,\mu\text{M/s}\), \(v_2 = 0.11\,\mu\text{M/s}\), \(v_3 = 0.9\,\mu\text{M/s}\), \(d_1 = 0.13\,\mu\text{M}\), \(d_2 = 1.049\,\mu\text{M}\), \(d_5 = 0.08234\,\mu\text{M}\), \(k_3 = 0.1\,\mu\text{M}\), \(a_2 = 0.2\,\mu\text{M}^{-1}\text{s}^{-1}\), \(c_{ER} = 2.0\,\mu\text{M}\), and IP3 concentration \(p = 0.5\,\mu\text{M}\).
 
 <em>Activating gate values at rest (\(c \approx 0.1\,\mu\text{M}\))</em>:
-\[ m_\infty(0.5) = \frac{0.5}{0.5 + 0.13} \approx 0.794, \quad n_\infty(0.1) = \frac{0.1}{0.1 + 0.082} \approx 0.549, \]
-\[ h_\infty(0.1) = \frac{1.049}{0.1 + 1.049} \approx 0.913. \]
+
+\[
+m_\infty(0.5) = \frac{0.5}{0.5 + 0.13} \approx 0.794, \quad n_\infty(0.1) = \frac{0.1}{0.1 + 0.082} \approx 0.549,
+\]
+
+\[
+h_\infty(0.1) = \frac{1.049}{0.1 + 1.049} \approx 0.913.
+\]
 
 At rest, IP3R flux: \(J_{IP3R} \approx 7.3 \times (0.794)^3 \times (0.549)^3 \times (0.913)^3 \times (2.0 - 0.1)\). Computing: \((0.794)^3 \approx 0.501\), \((0.549)^3 \approx 0.166\), \((0.913)^3 \approx 0.761\), so \(J_{IP3R} \approx 7.3 \times 0.501 \times 0.166 \times 0.761 \times 1.9 \approx 7.3 \times 0.120 \approx 0.878\,\mu\text{M/s}\).
 
@@ -1405,10 +1789,15 @@ EFMs have a direct biological interpretation: each EFM corresponds to a distinct
 <div class="example">
 <strong>Example — Null space, degrees of freedom, and elementary flux modes for a 4-reaction network</strong>: Consider a network with 3 internal metabolites (\(A\), \(B\), \(C\)) and 4 reactions:
 
-\[ r_1: \emptyset \to A, \quad r_2: A \to B, \quad r_3: A \to C, \quad r_4: B + C \to \emptyset. \]
+\[
+r_1: \emptyset \to A, \quad r_2: A \to B, \quad r_3: A \to C, \quad r_4: B + C \to \emptyset.
+\]
 
 The stoichiometric matrix (rows = species \(A, B, C\); columns = reactions \(r_1, r_2, r_3, r_4\)):
-\[ S = \begin{pmatrix} 1 & -1 & -1 & 0 \\ 0 & 1 & 0 & -1 \\ 0 & 0 & 1 & -1 \end{pmatrix}. \]
+
+\[
+S = \begin{pmatrix} 1 & -1 & -1 & 0 \\ 0 & 1 & 0 & -1 \\ 0 & 0 & 1 & -1 \end{pmatrix}.
+\]
 
 <em>Rank computation</em>: Row reduce \(S\):
 Row 1: \((1, -1, -1, 0)\); Row 2: \((0, 1, 0, -1)\); Row 3: \((0, 0, 1, -1)\). This is already in row echelon form with 3 non-zero rows, so \(\text{rank}(S) = 3\).
@@ -1416,7 +1805,10 @@ Row 1: \((1, -1, -1, 0)\); Row 2: \((0, 1, 0, -1)\); Row 3: \((0, 0, 1, -1)\). T
 <em>Degrees of freedom</em>: \(n - \rho = 4 - 3 = 1\). There is one free flux parameter — specifying any single flux (e.g., the uptake flux \(v_1\)) determines all other fluxes at steady state.
 
 <em>Null space</em>: Solve \(S\mathbf{v} = \mathbf{0}\):
-\[ v_1 - v_2 - v_3 = 0, \quad v_2 - v_4 = 0, \quad v_3 - v_4 = 0. \]
+
+\[
+v_1 - v_2 - v_3 = 0, \quad v_2 - v_4 = 0, \quad v_3 - v_4 = 0.
+\]
 From rows 2 and 3: \(v_2 = v_4\) and \(v_3 = v_4\). From row 1: \(v_1 = v_2 + v_3 = 2v_4\). Setting \(v_4 = 1\) as the free parameter, the null space basis vector is \(\mathbf{e} = (2, 1, 1, 1)^T\).
 
 <em>Elementary flux modes</em>: Since \(\dim(\ker S) = 1\), there is exactly one EFM (up to scaling): \(\mathbf{e} = (2, 1, 1, 1)^T\). Every feasible steady-state flux distribution is a positive multiple of this: \(\mathbf{v} = \lambda(2, 1, 1, 1)^T\) for \(\lambda \geq 0\). The unique EFM says: for every 2 units of \(A\) produced, 1 unit passes through \(r_2\) to \(B\), 1 unit passes through \(r_3\) to \(C\), and then 1 unit of the combined \(B + C\) pair is consumed by \(r_4\).
@@ -1424,7 +1816,10 @@ From rows 2 and 3: \(v_2 = v_4\) and \(v_3 = v_4\). From row 1: \(v_1 = v_2 + v_
 <em>Biological interpretation</em>: This network has a balanced branch point at \(A\): half the flux goes through \(r_2\) and half through \(r_3\), and the two branches must recombine at \(r_4\) stoichiometrically. There is no flexibility in the flux split — the stoichiometry of \(r_4\) (consuming one \(B\) and one \(C\) simultaneously) forces equal fluxes through \(r_2\) and \(r_3\). If a second reaction were added (e.g., \(B \to \emptyset\) independently), the null space dimension would increase to 2 and two EFMs would exist: one using \(r_4\) and one bypassing it.
 
 <em>Numerical flux values at uptake rate \(v_1 = 4\,\mu\text{M/min}\)</em>: With \(\lambda = 2\):
-\[ v_1 = 4, \quad v_2 = 2, \quad v_3 = 2, \quad v_4 = 2\,\mu\text{M/min}. \]
+
+\[
+v_1 = 4, \quad v_2 = 2, \quad v_3 = 2, \quad v_4 = 2\,\mu\text{M/min}.
+\]
 Verify steady state: \(\dot{A} = v_1 - v_2 - v_3 = 4 - 2 - 2 = 0\). \(\dot{B} = v_2 - v_4 = 2 - 2 = 0\). \(\dot{C} = v_3 - v_4 = 2 - 2 = 0\). All metabolites are at steady state.
 </div>
 
@@ -1489,7 +1884,8 @@ Given Jacobian \(J\) with \(\tau = \text{tr}(J)\) and \(\Delta = \det(J)\):
 \Delta > 0,\; \tau > 0,\; \tau^2 > 4\Delta: & \text{unstable node} \\
 \Delta > 0,\; \tau > 0,\; \tau^2 < 4\Delta: & \text{unstable spiral} \\
 \Delta > 0,\; \tau = 0: & \text{centre (linear analysis; need nonlinear correction)}
-\end{array} \]
+\end{array} 
+\]
 
 ### Metabolic Control Analysis
 
@@ -1500,5 +1896,8 @@ Given Jacobian \(J\) with \(\tau = \text{tr}(J)\) and \(\Delta = \det(J)\):
 ### Goldbeter-Koshland Function
 
 For a substrate cycle with kinase activity \(u\), phosphatase activity \(v\), and scaled Michaelis constants \(J\) and \(K\), the steady-state fraction of activated substrate is:
-\[ GK(u,v,J,K) = \frac{2uJ}{v-u+vJ+uK+\sqrt{(v-u+vJ+uK)^2 - 4(v-u)uJ}}. \]
+
+\[
+GK(u,v,J,K) = \frac{2uJ}{v-u+vJ+uK+\sqrt{(v-u+vJ+uK)^2 - 4(v-u)uJ}}.
+\]
 When \(J, K \to 0\) (enzyme saturation), \(GK \to 0\) for \(u < v\) and \(GK \to 1\) for \(u > v\) — a perfect switch.

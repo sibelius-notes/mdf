@@ -48,6 +48,7 @@ Combining the two, the expected loss in a layer \((d, u]\) is \(\mathbb{E}[X \we
 
 <div class="definition">
 <strong>Definition 1.1 (Layer)</strong>. A <em>layer</em> of width \(u-d\) attaching at \(d\) is the random variable
+
 \[
 L_{d,u}(X) = (X \wedge u) - (X \wedge d) = \min\bigl((X-d)_+, u-d\bigr).
 \]
@@ -259,6 +260,7 @@ Parameters are estimated by **maximum likelihood**, implemented via **iterativel
 
 <div class="definition">
 <strong>Definition 5.1 (Deviance)</strong>. The <em>deviance</em> of a fitted GLM is
+
 \[
 D = 2\sum_i\bigl\{y_i(\tilde\theta_i - \hat\theta_i) - b(\tilde\theta_i) + b(\hat\theta_i)\bigr\},
 \]

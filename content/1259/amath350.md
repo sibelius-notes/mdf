@@ -26,7 +26,10 @@ Before computing solutions, we should ask whether a solution even exists, and wh
 
 <div class="theorem">
 <strong>Theorem (Picard–Lindelöf Existence and Uniqueness)</strong>: Suppose \(f(x,y)\) and \(\frac{\partial f}{\partial y}\) are continuous on an open rectangle containing \((x_0, y_0)\). Then the IVP
-\[ y' = f(x,y), \quad y(x_0) = y_0 \]
+
+\[
+y' = f(x,y), \quad y(x_0) = y_0
+\]
 has a unique solution on some interval containing \(x_0\).
 <br><em>Proof sketch.</em> Rewrite the IVP as the integral equation \(y(x) = y_0 + \int_{x_0}^x f(t,y(t))\,dt\). Define a sequence of approximations \(y_0(x) = y_0\), \(y_{n+1}(x) = y_0 + \int_{x_0}^x f(t,y_n(t))\,dt\). The Lipschitz condition on \(f\) (guaranteed by continuity of \(\partial f/\partial y\)) ensures this sequence converges uniformly to a unique fixed point.
 </div>
@@ -36,7 +39,9 @@ The theorem tells us that pathological behaviour — solutions that blow up, spl
 <div class="example">
 <strong>Example — Failure of uniqueness when the Lipschitz condition fails</strong>: Consider the IVP \(y' = y^{2/3}\), \(y(0) = 0\). The right-hand side \(f(x, y) = y^{2/3}\) is continuous everywhere, but \(\partial f/\partial y = \frac{2}{3}y^{-1/3} \to \infty\) as \(y \to 0\), so the Lipschitz condition fails at \(y = 0\). This IVP has infinitely many solutions. Two obvious ones are \(y_1(x) \equiv 0\) and \(y_2(x) = (x/3)^3 = x^3/27\). Verification for \(y_2\): \(y_2' = 3x^2/27 = x^2/9\), and \(y_2^{2/3} = (x^3/27)^{2/3} = x^2/9\). Both satisfy the ODE and the initial condition \(y(0) = 0\). More generally, for any \(a \geq 0\), the function
 
-\[ y_a(x) = \begin{cases} 0 & x \leq a, \\ \left(\dfrac{x-a}{3}\right)^3 & x > a \end{cases} \]
+\[
+y_a(x) = \begin{cases} 0 & x \leq a, \\ \left(\dfrac{x-a}{3}\right)^3 & x > a \end{cases}
+\]
 
 is differentiable everywhere and solves the IVP. This yields infinitely many distinct solutions from the same initial data, demonstrating that the Lipschitz hypothesis of Picard–Lindelöf is not a formality — it is genuinely necessary for uniqueness.
 </div>
@@ -47,45 +52,66 @@ Many important first-order ODEs have the form \(y' = f(x)\,g(y)\), where the rig
 
 <div class="definition">
 <strong>Definition (Separable ODE)</strong>: A first-order ODE is <em>separable</em> if it can be written as
-\[ \frac{dy}{dx} = f(x)\,g(y). \]
+
+\[
+\frac{dy}{dx} = f(x)\,g(y).
+\]
 The general solution is obtained by separating variables and integrating both sides:
-\[ \int \frac{dy}{g(y)} = \int f(x)\,dx + C. \]
+
+\[
+\int \frac{dy}{g(y)} = \int f(x)\,dx + C.
+\]
 </div>
 
 The separation step is formally justified by writing \(dy = g(y)\,f(x)\,dx\) and dividing through by \(g(y)\) (wherever \(g(y) \neq 0\)). Note that any value \(y = y^*\) with \(g(y^*) = 0\) is a constant (equilibrium) solution, and it should be checked separately.
 
 <div class="example">
 <strong>Example (Continuous Compounding)</strong>: Let \(A(t)\) be the value of a bank account at time \(t\) (in years), earning interest at a continuously compounded annual rate \(r\). The rate of growth of the account is proportional to its current value:
-\[ \frac{dA}{dt} = rA, \quad A(0) = A_0. \]
+
+\[
+\frac{dA}{dt} = rA, \quad A(0) = A_0.
+\]
 Separating variables: \(\frac{dA}{A} = r\,dt\). Integrating both sides: \(\ln|A| = rt + C_1\), so \(A(t) = A_0 e^{rt}\). This is the fundamental law of continuous compounding. For a present value calculation: if we want a future value \(FV\) at time \(T\), its present value is \(PV = FV \cdot e^{-rT}\). The factor \(e^{-rT}\) is the <em>discount factor</em> — it reflects that a dollar today is worth more than a dollar tomorrow.
 </div>
 
 <div class="example">
 <strong>Example — Logistic population growth</strong>: The exponential growth model \(dP/dt = rP\) predicts unbounded growth, which is unrealistic. The **logistic model** introduces a carrying capacity \(K\):
 
-\[ \frac{dP}{dt} = rP\!\left(1 - \frac{P}{K}\right), \quad P(0) = P_0. \]
+\[
+\frac{dP}{dt} = rP\!\left(1 - \frac{P}{K}\right), \quad P(0) = P_0.
+\]
 
 This is separable. Separating variables:
 
-\[ \frac{dP}{P(1 - P/K)} = r\,dt. \]
+\[
+\frac{dP}{P(1 - P/K)} = r\,dt.
+\]
 
 Using partial fractions on the left side: \(\frac{1}{P(1-P/K)} = \frac{1}{P} + \frac{1/K}{1 - P/K}\). Integrating:
 
-\[ \ln|P| - \ln\left|1 - \frac{P}{K}\right| = rt + C \implies \ln\frac{P}{K - P} = rt + C. \]
+\[
+\ln|P| - \ln\left|1 - \frac{P}{K}\right| = rt + C \implies \ln\frac{P}{K - P} = rt + C.
+\]
 
 Exponentiating and applying the initial condition \(P(0) = P_0\):
 
-\[ P(t) = \frac{K}{1 + \left(\dfrac{K - P_0}{P_0}\right)e^{-rt}}. \]
+\[
+P(t) = \frac{K}{1 + \left(\dfrac{K - P_0}{P_0}\right)e^{-rt}}.
+\]
 
 <em>Numerical example</em>: Let \(r = 0.1\,\text{yr}^{-1}\), \(K = 1000\), \(P_0 = 10\). Then the solution is
 
-\[ P(t) = \frac{1000}{1 + 99\,e^{-0.1t}}. \]
+\[
+P(t) = \frac{1000}{1 + 99\,e^{-0.1t}}.
+\]
 
 As \(t \to \infty\), \(e^{-0.1t} \to 0\), so \(P(t) \to 1000 = K\). The population converges to the carrying capacity regardless of initial size.
 
 <em>Time to reach 50% of carrying capacity</em>: We want \(P(t_{1/2}) = 500\):
 
-\[ 500 = \frac{1000}{1 + 99\,e^{-0.1t_{1/2}}} \implies 1 + 99\,e^{-0.1t_{1/2}} = 2 \implies e^{-0.1t_{1/2}} = \frac{1}{99}. \]
+\[
+500 = \frac{1000}{1 + 99\,e^{-0.1t_{1/2}}} \implies 1 + 99\,e^{-0.1t_{1/2}} = 2 \implies e^{-0.1t_{1/2}} = \frac{1}{99}.
+\]
 
 Therefore \(t_{1/2} = \ln(99)/0.1 \approx 4.595/0.1 \approx 46\) years. The logistic model is widely used in market saturation models (a new technology reaches half its maximum market share), epidemic modelling (cumulative infections follow a logistic curve before herd immunity), and resource management.
 </div>
@@ -96,7 +122,10 @@ Not all first-order equations are separable. The next most tractable class is **
 
 <div class="definition">
 <strong>Definition (First-Order Linear ODE)</strong>: An ODE of the form
-\[ \frac{dy}{dx} + P(x)\,y = Q(x) \]
+
+\[
+\frac{dy}{dx} + P(x)\,y = Q(x)
+\]
 is called a <em>first-order linear ODE</em>. When \(Q(x) = 0\) it is <em>homogeneous</em>; otherwise <em>inhomogeneous</em> (or nonhomogeneous).
 </div>
 
@@ -104,30 +133,45 @@ The key technique for solving first-order linear ODEs is the **integrating facto
 
 <div class="theorem">
 <strong>Theorem (Integrating Factor Method)</strong>: For the first-order linear ODE \(y' + P(x)y = Q(x)\), let
-\[ \mu(x) = e^{\int P(x)\,dx}. \]
+
+\[
+\mu(x) = e^{\int P(x)\,dx}.
+\]
 Multiplying both sides by \(\mu(x)\) yields \(\frac{d}{dx}[\mu(x)y] = \mu(x)Q(x)\). Integrating:
-\[ y = \frac{1}{\mu(x)}\left[\int \mu(x)Q(x)\,dx + C\right]. \]
+
+\[
+y = \frac{1}{\mu(x)}\left[\int \mu(x)Q(x)\,dx + C\right].
+\]
 <br><em>Proof sketch.</em> Note that \(\mu'(x) = P(x)\mu(x)\). Then \(\frac{d}{dx}[\mu y] = \mu y' + \mu' y = \mu(y' + Py) = \mu Q\). The result follows by integration.
 </div>
 
 <div class="example">
 <strong>Example (Debt Dynamics)</strong>: Let \(D(t)\) denote government debt at time \(t\), \(r\) the interest rate, and \(T(t)\) the rate of tax revenue. Then
-\[ \frac{dD}{dt} = rD - T(t). \]
+
+\[
+\frac{dD}{dt} = rD - T(t).
+\]
 This is a first-order linear ODE with \(P(t) = -r\) and \(Q(t) = -T(t)\). The integrating factor is \(\mu(t) = e^{-rt}\). Multiplying through: \(\frac{d}{dt}[e^{-rt}D] = -e^{-rt}T(t)\). Integrating: \(D(t) = e^{rt}D(0) - e^{rt}\int_0^t e^{-rs}T(s)\,ds\). The first term is the compounded initial debt; the second term represents the accumulated present value of tax revenues. Sustainable debt requires the second term to eventually dominate the first.
 </div>
 
 <div class="example">
 <strong>Example — Debt with exponentially growing tax revenue</strong>: Let \(r = 0.05\) and \(T(t) = 100\,e^{0.02t}\) (tax revenues growing at 2% per year). The debt equation becomes:
 
-\[ \frac{dD}{dt} = 0.05\,D - 100\,e^{0.02t}. \]
+\[
+\frac{dD}{dt} = 0.05\,D - 100\,e^{0.02t}.
+\]
 
 The integrating factor is \(\mu(t) = e^{-0.05t}\). Multiplying through and integrating from 0 to \(t\):
 
-\[ e^{-0.05t}D(t) - D(0) = -100\int_0^t e^{-0.03s}\,ds = -\frac{100}{0.03}\!\left(1 - e^{-0.03t}\right). \]
+\[
+e^{-0.05t}D(t) - D(0) = -100\int_0^t e^{-0.03s}\,ds = -\frac{100}{0.03}\!\left(1 - e^{-0.03t}\right).
+\]
 
 Solving for \(D(t)\):
 
-\[ D(t) = D(0)\,e^{0.05t} + \frac{100}{0.03}\!\left(e^{0.05t} - e^{0.02t}\right). \]
+\[
+D(t) = D(0)\,e^{0.05t} + \frac{100}{0.03}\!\left(e^{0.05t} - e^{0.02t}\right).
+\]
 
 As \(t \to \infty\), since \(0.05 > 0.02\), the \(e^{0.05t}\) terms dominate and \(D(t) \to +\infty\), regardless of \(D(0)\). Despite growing revenues, debt grows without bound — the interest rate exceeds the revenue growth rate, so the debt-to-revenue ratio diverges. This is the mathematical expression of the Domar fiscal sustainability criterion: long-run debt stability requires the interest rate not to exceed the growth rate of the economy. The condition \(r > g\), made famous by Piketty, signals precisely this explosive dynamic.
 </div>
@@ -138,25 +182,42 @@ Not every important first-order ODE is linear. Two nonlinear equations that appe
 
 <div class="definition">
 <strong>Definition (Logistic Growth)</strong>: The <em>logistic differential equation</em> is
-\[ \frac{dP}{dt} = rP\!\left(1 - \frac{P}{K}\right), \]
+
+\[
+\frac{dP}{dt} = rP\!\left(1 - \frac{P}{K}\right),
+\]
 where \(P(t)\) is a population (or market share, or adoption level), \(r > 0\) is the intrinsic growth rate, and \(K > 0\) is the <em>carrying capacity</em> (the maximum sustainable level). The factor \((1 - P/K)\) acts as a drag: growth slows as \(P\) approaches \(K\), and is negative when \(P > K\).
 </div>
 
 The logistic equation is separable. Separating variables:
-\[ \frac{dP}{P(1 - P/K)} = r\,dt. \]
+
+\[
+\frac{dP}{P(1 - P/K)} = r\,dt.
+\]
 Using partial fractions: \(\frac{1}{P(1-P/K)} = \frac{1}{P} + \frac{1/K}{1 - P/K}\). Integrating both sides and applying the initial condition \(P(0) = P_0\):
 
-\[ P(t) = \frac{K}{1 + \left(\dfrac{K - P_0}{P_0}\right)e^{-rt}}. \]
+\[
+P(t) = \frac{K}{1 + \left(\dfrac{K - P_0}{P_0}\right)e^{-rt}}.
+\]
 
 <div class="example">
 <strong>Example — Logistic growth with market saturation</strong>: Suppose a new technology is adopted in a market of size \(K = 1000\) firms, with intrinsic adoption rate \(r = 0.2\,\text{yr}^{-1}\) and initial adopters \(P_0 = 100\). Then
-\[ P(t) = \frac{1000}{1 + 9\,e^{-0.2t}}. \]
+
+\[
+P(t) = \frac{1000}{1 + 9\,e^{-0.2t}}.
+\]
 
 At \(t = 10\) years:
-\[ P(10) = \frac{1000}{1 + 9\,e^{-2}} = \frac{1000}{1 + 9 \times 0.1353} = \frac{1000}{1 + 1.218} = \frac{1000}{2.218} \approx 451. \]
+
+\[
+P(10) = \frac{1000}{1 + 9\,e^{-2}} = \frac{1000}{1 + 9 \times 0.1353} = \frac{1000}{1 + 1.218} = \frac{1000}{2.218} \approx 451.
+\]
 
 At \(t = 50\) years:
-\[ P(50) = \frac{1000}{1 + 9\,e^{-10}} = \frac{1000}{1 + 9 \times 4.54 \times 10^{-5}} \approx \frac{1000}{1.0004} \approx 999.6. \]
+
+\[
+P(50) = \frac{1000}{1 + 9\,e^{-10}} = \frac{1000}{1 + 9 \times 4.54 \times 10^{-5}} \approx \frac{1000}{1.0004} \approx 999.6.
+\]
 
 The market is nearly fully saturated by year 50. Notice that the inflection point — the time of fastest growth — occurs when \(P = K/2 = 500\), i.e., when \(1 + 9e^{-0.2t^*} = 2\), giving \(t^* = \ln(9)/0.2 = 2.197/0.2 \approx 11\) years. After the inflection, growth decelerates as saturation approaches.
 
@@ -169,9 +230,15 @@ The market is nearly fully saturated by year 50. Notice that the inflection poin
 
 <div class="example">
 <strong>Example — Newton's law of cooling</strong>: Let \(T(t)\) be the temperature of an object and \(A\) the ambient temperature. Newton's law of cooling states
-\[ \frac{dT}{dt} = k(A - T), \quad k > 0. \]
+
+\[
+\frac{dT}{dt} = k(A - T), \quad k > 0.
+\]
 This is a first-order linear ODE with integrating factor \(\mu(t) = e^{kt}\). The solution is:
-\[ T(t) = A + (T_0 - A)e^{-kt}. \]
+
+\[
+T(t) = A + (T_0 - A)e^{-kt}.
+\]
 
 <em>Numerical instance</em>: A cup of coffee starts at \(T_0 = 90°\text{C}\), the room is at \(A = 20°\text{C}\), and the cooling constant is \(k = 0.1\,\text{min}^{-1}\). Then \(T(t) = 20 + 70\,e^{-0.1t}\).
 
@@ -189,26 +256,37 @@ Some equations are neither separable nor linear in their original form, but a ch
 A **Bernoulli equation** has the form \(y' + P(x)y = Q(x)y^n\) for some \(n \neq 0, 1\). The substitution \(v = y^{1-n}\) linearises it: differentiating, \(v' = (1-n)y^{-n}y'\), and substituting into the Bernoulli equation yields a linear ODE for \(v\).
 
 A **homogeneous equation** (in the sense of this substitution method) has the form \(y' = f(y/x)\). The substitution \(v = y/x\), so \(y = vx\) and \(y' = v + xv'\), converts this to a separable equation in \(v\) and \(x\):
-\[ v + xv' = f(v) \implies \int \frac{dv}{f(v) - v} = \int \frac{dx}{x}. \]
+
+\[
+v + xv' = f(v) \implies \int \frac{dv}{f(v) - v} = \int \frac{dx}{x}.
+\]
 
 **Dimensional homogeneity** is a useful modelling principle: every term in a physical or economic equation must have the same units. This constrains the form of equations and provides a check on algebra. For example, in an equation relating dollars, time, and rates, each additive term must have units of dollars (or dollars per unit time, consistently). Violations of dimensional homogeneity indicate errors in model formulation.
 
 <div class="example">
 <strong>Example — Bernoulli equation: logistic death model</strong>: Consider the Bernoulli equation
 
-\[ \frac{dP}{dt} + P = P^2, \quad P(0) = 2. \]
+\[
+\frac{dP}{dt} + P = P^2, \quad P(0) = 2.
+\]
 
 This has \(n = 2\). The substitution \(v = P^{1-2} = P^{-1} = 1/P\) linearises the equation. Differentiating: \(v' = -P^{-2}P'\). Dividing the Bernoulli equation by \(P^2\):
 
-\[ P^{-2}P' + P^{-1} = 1 \implies -v' + v = 1 \implies v' - v = -1. \]
+\[
+P^{-2}P' + P^{-1} = 1 \implies -v' + v = 1 \implies v' - v = -1.
+\]
 
 This is a first-order linear ODE. The integrating factor is \(e^{-t}\):
 
-\[ \frac{d}{dt}\!\left[e^{-t}v\right] = -e^{-t} \implies e^{-t}v = e^{-t} + C \implies v = 1 + Ce^t. \]
+\[
+\frac{d}{dt}\!\left[e^{-t}v\right] = -e^{-t} \implies e^{-t}v = e^{-t} + C \implies v = 1 + Ce^t.
+\]
 
 Therefore \(P(t) = 1/(1 + Ce^t)\). Applying the initial condition \(P(0) = 2\): \(2 = 1/(1 + C)\), so \(1 + C = 1/2\), giving \(C = -1/2\). The solution is:
 
-\[ P(t) = \frac{1}{1 - \tfrac{1}{2}e^t} = \frac{2}{2 - e^t}. \]
+\[
+P(t) = \frac{1}{1 - \tfrac{1}{2}e^t} = \frac{2}{2 - e^t}.
+\]
 
 <em>Finite-time blowup</em>: The denominator vanishes when \(e^t = 2\), i.e., at \(t^* = \ln 2 \approx 0.693\). The solution \(P(t) \to +\infty\) as \(t \to \ln 2^-\). The quadratic death term \(P^2\) (modelling e.g. competition for limited resources causing mass die-off, or runaway positive feedback) overwhelms the linear birth term, driving the population to infinity in finite time. This phenomenon — finite-time blowup — is impossible for linear ODEs but is generic in nonlinear equations with superlinear growth terms.
 </div>
@@ -225,19 +303,31 @@ In introductory economics, supply and demand determine a static equilibrium pric
 
 <div class="definition">
 <strong>Definition (Price Adjustment Dynamics)</strong>: Let \(P(t)\) be the market price at time \(t\), \(D(P)\) the demand function, and \(S(P)\) the supply function. The <em>price adjustment equation</em> is
-\[ \frac{dP}{dt} = \alpha\left[D(P) - S(P)\right], \quad \alpha > 0. \]
+
+\[
+\frac{dP}{dt} = \alpha\left[D(P) - S(P)\right], \quad \alpha > 0.
+\]
 The parameter \(\alpha\) is the speed of adjustment. Equilibrium occurs at \(P^*\) where \(D(P^*) = S(P^*)\).
 </div>
 
 To analyse stability, linearise near \(P^*\). Let \(p = P - P^*\) be the deviation. Then to first order:
-\[ \frac{dp}{dt} \approx \alpha\left[D'(P^*) - S'(P^*)\right]p. \]
+
+\[
+\frac{dp}{dt} \approx \alpha\left[D'(P^*) - S'(P^*)\right]p.
+\]
 In a normal market, demand slopes downward (\(D' < 0\)) and supply slopes upward (\(S' > 0\)), so \(D'(P^*) - S'(P^*) < 0\). Setting \(\beta = -\alpha[D'(P^*) - S'(P^*)] > 0\), the linearised equation is \(dp/dt = -\beta p\), with solution \(p(t) = p(0)e^{-\beta t} \to 0\). The equilibrium is **stable**: prices converge exponentially to \(P^*\).
 
 <div class="example">
 <strong>Example (Linear Supply and Demand)</strong>: Suppose \(D(P) = a - bP\) and \(S(P) = c + dP\) with \(a, b, c, d > 0\). The equilibrium price is \(P^* = (a-c)/(b+d)\). The price adjustment ODE is
-\[ \frac{dP}{dt} = \alpha\left[(a - bP) - (c + dP)\right] = \alpha(a - c) - \alpha(b+d)P. \]
+
+\[
+\frac{dP}{dt} = \alpha\left[(a - bP) - (c + dP)\right] = \alpha(a - c) - \alpha(b+d)P.
+\]
 This is a first-order linear ODE. Setting \(\beta = \alpha(b+d)\) and \(\gamma = \alpha(a-c)\):
-\[ \frac{dP}{dt} + \beta P = \gamma. \]
+
+\[
+\frac{dP}{dt} + \beta P = \gamma.
+\]
 The integrating factor is \(e^{\beta t}\). The solution is \(P(t) = P^* + (P_0 - P^*) e^{-\beta t}\), confirming exponential convergence.
 </div>
 
@@ -245,16 +335,24 @@ The integrating factor is \(e^{\beta t}\). The solution is \(P(t) = P^* + (P_0 -
 
 A classic application of first-order linear ODEs in macroeconomics is the **Domar (1944) model** of public debt dynamics. If the government runs a primary deficit that grows at rate \(g\) and the existing debt accumulates interest at rate \(r\), the evolution of the debt stock \(D(t)\) is:
 
-\[ \frac{dD}{dt} = rD + G_0 e^{gt}, \]
+\[
+\frac{dD}{dt} = rD + G_0 e^{gt},
+\]
 
 where \(G_0 e^{gt}\) is the (growing) primary deficit. This is a first-order linear ODE with \(P(t) = -r\) and \(Q(t) = G_0 e^{gt}\). The integrating factor is \(\mu(t) = e^{-rt}\).
 
 Multiplying through: \(\frac{d}{dt}[e^{-rt}D] = G_0 e^{(g-r)t}\).
 
 <em>Case 1: \(g \neq r\)</em>. Integrating:
-\[ e^{-rt}D = \frac{G_0}{g - r}e^{(g-r)t} + C. \]
+
+\[
+e^{-rt}D = \frac{G_0}{g - r}e^{(g-r)t} + C.
+\]
 Applying \(D(0) = D_0\): \(C = D_0 - G_0/(g-r)\). Therefore:
-\[ D(t) = e^{rt}\left[D_0 - \frac{G_0}{g-r}\right] + \frac{G_0}{g-r}e^{gt}. \]
+
+\[
+D(t) = e^{rt}\left[D_0 - \frac{G_0}{g-r}\right] + \frac{G_0}{g-r}e^{gt}.
+\]
 
 <em>Case 2: \(g = r\)</em>. Then \(\frac{d}{dt}[e^{-rt}D] = G_0\), giving \(D(t) = e^{rt}(D_0 + G_0 t)\) — debt grows faster than exponential.
 
@@ -272,7 +370,10 @@ This result — that \(r < g\) is the sustainability condition — has been cent
 ## 2.3 The Evans Price Adjustment Model
 
 The **Evans model** extends price dynamics to include inventory adjustments, leading to second-order behaviour. Let \(P(t)\) be the market price, \(D(P)\) demand, and \(S(P)\) supply. Inventories \(I(t)\) accumulate according to \(I' = S(P) - D(P)\). If prices respond to both excess demand and the rate of inventory change:
-\[ P'' + \alpha P' + \beta P = \gamma, \]
+
+\[
+P'' + \alpha P' + \beta P = \gamma,
+\]
 this is a second-order constant-coefficient ODE, analysed in Chapter 3. The roots of the characteristic equation determine whether prices oscillate to equilibrium (complex roots with negative real part) or converge monotonically (real negative roots). The Evans model thus predicts **price cycles** in commodity markets as a natural consequence of inventory dynamics, not market irrationality.
 
 ## 2.4 The Solow Growth Model
@@ -280,7 +381,10 @@ this is a second-order constant-coefficient ODE, analysed in Chapter 3. The root
 One of the most influential models in macroeconomics is the Solow growth model, which describes how capital accumulates in an economy over time.
 
 Let \(k = K/L\) be capital per worker, \(f(k)\) be output per worker (a concave production function such as \(f(k) = k^\alpha\)), \(s\) the savings rate, \(n\) the population growth rate, and \(\delta\) the depreciation rate. Capital per worker evolves according to:
-\[ \frac{dk}{dt} = sf(k) - (n + \delta)k. \]
+
+\[
+\frac{dk}{dt} = sf(k) - (n + \delta)k.
+\]
 
 The steady state \(k^*\) satisfies \(sf(k^*) = (n+\delta)k^*\) — investment exactly offsets the dilution of capital from population growth and depreciation. Linearising near \(k^*\) shows the steady state is stable when \(sf'(k^*) < n + \delta\), which is guaranteed by the concavity of \(f\). This ODE is a Bernoulli equation when \(f(k) = k^\alpha\), and can be solved explicitly by the substitution \(v = k^{1-\alpha}\).
 
@@ -292,10 +396,16 @@ The steady state \(k^*\) satisfies \(sf(k^*) = (n+\delta)k^*\) — investment ex
 <strong>Example — Solow model with Cobb-Douglas production</strong>: Take \(f(k) = k^{1/2}\) (so \(\alpha = 1/2\)), \(s = 0.3\), \(n = 0.02\), \(\delta = 0.08\), so \(n + \delta = 0.10\). The equation is \(dk/dt = 0.3 k^{1/2} - 0.10 k\). The steady state satisfies \(0.3(k^*)^{1/2} = 0.10 k^*\), giving \((k^*)^{1/2} = 3\), so \(k^* = 9\).
 
 To solve explicitly, set \(v = k^{1/2}\), so \(k = v^2\) and \(dk/dt = 2v\,dv/dt\). The equation becomes \(2v\,dv/dt = 0.3v - 0.10v^2\), i.e., \(dv/dt = 0.15 - 0.05v\). This is a first-order linear ODE! The integrating factor gives \(v(t) = 3 + (v_0 - 3)e^{-0.05t}\), so:
-\[ k(t) = \left[3 + (k_0^{1/2} - 3)e^{-0.05t}\right]^2. \]
+
+\[
+k(t) = \left[3 + (k_0^{1/2} - 3)e^{-0.05t}\right]^2.
+\]
 
 Starting from \(k_0 = 1\) (so \(k_0^{1/2} = 1\)):
-\[ k(t) = \left[3 - 2e^{-0.05t}\right]^2. \]
+
+\[
+k(t) = \left[3 - 2e^{-0.05t}\right]^2.
+\]
 
 At \(t = 20\): \(k(20) = [3 - 2e^{-1}]^2 = [3 - 0.736]^2 = [2.264]^2 \approx 5.13\). At \(t = 100\): \(k(100) = [3 - 2e^{-5}]^2 \approx [3 - 0.013]^2 \approx 8.92\), close to the steady state \(k^* = 9\). The half-life of convergence is \(\ln(2)/0.05 \approx 13.9\) years — consistent with empirical estimates of convergence rates in cross-country growth regressions.
 </div>
@@ -304,7 +414,9 @@ At \(t = 20\): \(k(20) = [3 - 2e^{-1}]^2 = [3 - 0.736]^2 = [2.264]^2 \approx 5.1
 
 The **IS-LM model** of macroeconomic equilibrium — the workhorse of undergraduate macro — can be cast as a dynamic system. Let \(Y(t)\) be national income and \(r(t)\) the interest rate. In a simple dynamic version:
 
-\[ \frac{dY}{dt} = \alpha\left[I(r) + G - S(Y)\right], \qquad \frac{dr}{dt} = \beta\left[L(Y, r) - M\right], \]
+\[
+\frac{dY}{dt} = \alpha\left[I(r) + G - S(Y)\right], \qquad \frac{dr}{dt} = \beta\left[L(Y, r) - M\right],
+\]
 
 where \(I(r)\) is investment (decreasing in \(r\)), \(G\) government spending, \(S(Y)\) saving (increasing in \(Y\)), \(L(Y,r)\) money demand (increasing in \(Y\), decreasing in \(r\)), and \(M\) the money supply. Near the IS-LM equilibrium, linearising gives a 2D linear system whose eigenvalues determine whether adjustment is monotone or oscillatory. In typical parameterisations both eigenvalues are negative (stable node or spiral), so the economy converges to its IS-LM equilibrium.
 
@@ -316,7 +428,10 @@ First-order equations describe systems with a single degree of freedom — one p
 
 <div class="definition">
 <strong>Definition (n-th Order Linear ODE)</strong>: An ODE of the form
-\[ a_n(x)y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_1(x)y' + a_0(x)y = g(x) \]
+
+\[
+a_n(x)y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_1(x)y' + a_0(x)y = g(x)
+\]
 is called an <em>n-th order linear ODE</em>. It is <em>homogeneous</em> when \(g(x) = 0\) and <em>inhomogeneous</em> when \(g(x) \neq 0\).
 </div>
 
@@ -328,7 +443,10 @@ The question of whether \(n\) solutions are linearly independent is answered by 
 
 <div class="definition">
 <strong>Definition (Wronskian)</strong>: For \(n\) functions \(y_1, \ldots, y_n\), the <em>Wronskian</em> is
-\[ W(y_1,\ldots,y_n)(x) = \det \begin{pmatrix} y_1 & y_2 & \cdots & y_n \\ y_1' & y_2' & \cdots & y_n' \\ \vdots & & & \vdots \\ y_1^{(n-1)} & y_2^{(n-1)} & \cdots & y_n^{(n-1)} \end{pmatrix}. \]
+
+\[
+W(y_1,\ldots,y_n)(x) = \det \begin{pmatrix} y_1 & y_2 & \cdots & y_n \\ y_1' & y_2' & \cdots & y_n' \\ \vdots & & & \vdots \\ y_1^{(n-1)} & y_2^{(n-1)} & \cdots & y_n^{(n-1)} \end{pmatrix}.
+\]
 If \(y_1, \ldots, y_n\) are solutions of a linear ODE with continuous coefficients, they are linearly independent if and only if \(W(x_0) \neq 0\) for some (equivalently, every) \(x_0\) in the interval.
 </div>
 
@@ -339,7 +457,9 @@ If \(y_1, \ldots, y_n\) are solutions of a linear ODE with continuous coefficien
 
 <em>Wronskian</em>:
 
-\[ W(e^x, e^{2x}) = \det \begin{pmatrix} e^x & e^{2x} \\ e^x & 2e^{2x} \end{pmatrix} = e^x \cdot 2e^{2x} - e^{2x} \cdot e^x = 2e^{3x} - e^{3x} = e^{3x}. \]
+\[
+W(e^x, e^{2x}) = \det \begin{pmatrix} e^x & e^{2x} \\ e^x & 2e^{2x} \end{pmatrix} = e^x \cdot 2e^{2x} - e^{2x} \cdot e^x = 2e^{3x} - e^{3x} = e^{3x}.
+\]
 
 Since \(W(x) = e^{3x} \neq 0\) for all \(x\), the two solutions are linearly independent. The general solution is therefore \(y = c_1 e^x + c_2 e^{2x}\).
 
@@ -349,9 +469,15 @@ Since \(W(x) = e^{3x} \neq 0\) for all \(x\), the two solutions are linearly ind
 ## 3.2 The Damped Oscillator: Three Cases
 
 A paradigmatic second-order ODE arising in mechanics, electronics, and economic cycle theory is the **damped oscillator**:
-\[ y'' + 2\gamma y' + \omega_0^2 y = 0, \]
+
+\[
+y'' + 2\gamma y' + \omega_0^2 y = 0,
+\]
 where \(\gamma \geq 0\) is the damping coefficient and \(\omega_0 > 0\) is the natural frequency. The characteristic equation is \(r^2 + 2\gamma r + \omega_0^2 = 0\), giving roots
-\[ r = -\gamma \pm \sqrt{\gamma^2 - \omega_0^2}. \]
+
+\[
+r = -\gamma \pm \sqrt{\gamma^2 - \omega_0^2}.
+\]
 
 The behaviour splits into three qualitatively different cases:
 
@@ -359,15 +485,24 @@ The behaviour splits into three qualitatively different cases:
 <strong>Example — Three damping cases</strong>: Take \(\omega_0 = 2\) and consider varying \(\gamma\).
 
 <em>Case 1: Overdamped</em> (\(\gamma > \omega_0\), take \(\gamma = 3\)). The roots are \(r = -3 \pm \sqrt{9-4} = -3 \pm \sqrt{5}\), both real and negative: \(r_1 = -3 + \sqrt{5} \approx -0.76\) and \(r_2 = -3 - \sqrt{5} \approx -5.24\). General solution:
-\[ y(t) = c_1 e^{-0.76t} + c_2 e^{-5.24t}. \]
+
+\[
+y(t) = c_1 e^{-0.76t} + c_2 e^{-5.24t}.
+\]
 The solution decays to zero without oscillating — it is exponential decay with two time scales. The system returns to equilibrium sluggishly.
 
 <em>Case 2: Critically damped</em> (\(\gamma = \omega_0 = 2\)). Repeated root \(r = -2\). General solution:
-\[ y(t) = (c_1 + c_2 t)e^{-2t}. \]
+
+\[
+y(t) = (c_1 + c_2 t)e^{-2t}.
+\]
 This decays to zero faster than the overdamped case (for the same \(\omega_0\)) and without oscillation. Critical damping is the threshold: it gives the fastest non-oscillatory return to equilibrium, and is the design target for shock absorbers and galvanometers.
 
 <em>Case 3: Underdamped</em> (\(\gamma < \omega_0\), take \(\gamma = 1\)). The roots are complex: \(r = -1 \pm i\sqrt{4-1} = -1 \pm i\sqrt{3}\). General solution:
-\[ y(t) = e^{-t}\!\left(A\cos\!\sqrt{3}\,t + B\sin\!\sqrt{3}\,t\right). \]
+
+\[
+y(t) = e^{-t}\!\left(A\cos\!\sqrt{3}\,t + B\sin\!\sqrt{3}\,t\right).
+\]
 The solution oscillates at frequency \(\omega_d = \sqrt{\omega_0^2 - \gamma^2} = \sqrt{3} \approx 1.73\) (the **damped natural frequency**), with exponentially decaying amplitude \(e^{-t}\).
 </div>
 
@@ -377,9 +512,15 @@ The solution oscillates at frequency \(\omega_d = \sqrt{\omega_0^2 - \gamma^2} =
 
 <div class="example">
 <strong>Example — Resonance: forcing at the natural frequency</strong>: Consider the undamped harmonic oscillator driven at its own natural frequency \(\omega\):
-\[ y'' + \omega^2 y = F_0 \cos(\omega t). \]
+
+\[
+y'' + \omega^2 y = F_0 \cos(\omega t).
+\]
 Since \(\cos(\omega t)\) solves the homogeneous equation, the standard guess \(y_p = A\cos(\omega t)\) fails. The method of undetermined coefficients with the multiplicity factor \(s = 1\) gives:
-\[ y_p = \frac{F_0}{2\omega} t\sin(\omega t). \]
+
+\[
+y_p = \frac{F_0}{2\omega} t\sin(\omega t).
+\]
 The general solution is \(y(t) = c_1\cos(\omega t) + c_2\sin(\omega t) + \frac{F_0}{2\omega}t\sin(\omega t)\). The amplitude grows <em>linearly</em> in time — there is no saturation. Physically, energy is pumped into the system at exactly the rate it can absorb, leading to unbounded oscillations.
 </div>
 
@@ -393,9 +534,15 @@ When the coefficients \(a_i\) are constants, we can solve the homogeneous equati
 
 <div class="theorem">
 <strong>Theorem (Characteristic Equation)</strong>: For the constant-coefficient homogeneous ODE
-\[ a_n y^{(n)} + \cdots + a_1 y' + a_0 y = 0, \]
+
+\[
+a_n y^{(n)} + \cdots + a_1 y' + a_0 y = 0,
+\]
 substituting \(y = e^{rx}\) gives the <em>characteristic (auxiliary) equation</em>
-\[ a_n r^n + a_{n-1} r^{n-1} + \cdots + a_1 r + a_0 = 0. \]
+
+\[
+a_n r^n + a_{n-1} r^{n-1} + \cdots + a_1 r + a_0 = 0.
+\]
 The structure of the general solution depends on the roots:
 <ul>
   <li><em>Distinct real roots</em> \(r_1, \ldots, r_n\): general solution \(y = c_1 e^{r_1 x} + \cdots + c_n e^{r_n x}\).</li>
@@ -421,23 +568,35 @@ The factor of \(x^s\) corrects for resonance — when the driving frequency matc
 <div class="example">
 <strong>Example — Resonance: \(y'' + 4y = \cos(2x)\)</strong>: The complementary solution is \(y_h = A\cos(2x) + B\sin(2x)\), with characteristic roots \(r = \pm 2i\). The right-hand side \(\cos(2x)\) corresponds to frequency \(\omega = 2\), which <em>equals</em> the natural frequency — this is the resonance case. The standard guess \(y_p = C\cos(2x) + D\sin(2x)\) would duplicate the homogeneous solution and yield \(0 = 1\) upon substitution, so we must multiply by \(x\):
 
-\[ y_p = x\!\left(C\cos(2x) + D\sin(2x)\right). \]
+\[
+y_p = x\!\left(C\cos(2x) + D\sin(2x)\right).
+\]
 
 Computing derivatives:
 
-\[ y_p' = C\cos(2x) + D\sin(2x) + x(-2C\sin(2x) + 2D\cos(2x)), \]
+\[
+y_p' = C\cos(2x) + D\sin(2x) + x(-2C\sin(2x) + 2D\cos(2x)),
+\]
 
-\[ y_p'' = -2C\sin(2x) + 2D\cos(2x) - 2C\sin(2x) + 2D\cos(2x) + x(-4C\cos(2x) - 4D\sin(2x)). \]
+\[
+y_p'' = -2C\sin(2x) + 2D\cos(2x) - 2C\sin(2x) + 2D\cos(2x) + x(-4C\cos(2x) - 4D\sin(2x)).
+\]
 
-\[ y_p'' = -4C\sin(2x) + 4D\cos(2x) - 4x\!\left(C\cos(2x) + D\sin(2x)\right). \]
+\[
+y_p'' = -4C\sin(2x) + 4D\cos(2x) - 4x\!\left(C\cos(2x) + D\sin(2x)\right).
+\]
 
 Substituting into \(y_p'' + 4y_p\):
 
-\[ y_p'' + 4y_p = -4C\sin(2x) + 4D\cos(2x) - 4x(\cdots) + 4x(\cdots) = -4C\sin(2x) + 4D\cos(2x). \]
+\[
+y_p'' + 4y_p = -4C\sin(2x) + 4D\cos(2x) - 4x(\cdots) + 4x(\cdots) = -4C\sin(2x) + 4D\cos(2x).
+\]
 
 Setting this equal to \(\cos(2x)\): \(-4C = 0\) and \(4D = 1\), giving \(C = 0\), \(D = 1/4\). Therefore:
 
-\[ y_p = \frac{x}{4}\sin(2x). \]
+\[
+y_p = \frac{x}{4}\sin(2x).
+\]
 
 The general solution is \(y(x) = A\cos(2x) + B\sin(2x) + \frac{x}{4}\sin(2x)\). The particular solution \(\frac{x}{4}\sin(2x)\) has amplitude growing linearly with \(x\) — there is no saturation. This is the signature of resonance: energy is pumped into the system at exactly the rate it can absorb, leading to unbounded oscillations.
 </div>
@@ -452,7 +611,10 @@ The method of undetermined coefficients works only for special forms of \(g(x)\)
 
 <div class="theorem">
 <strong>Theorem (Variation of Parameters)</strong>: Given the second-order ODE \(y'' + p(x)y' + q(x)y = g(x)\), with homogeneous solutions \(y_1, y_2\) (Wronskian \(W \neq 0\)), a particular solution is
-\[ y_p = -y_1(x)\int \frac{y_2(x)g(x)}{W(x)}\,dx + y_2(x)\int \frac{y_1(x)g(x)}{W(x)}\,dx. \]
+
+\[
+y_p = -y_1(x)\int \frac{y_2(x)g(x)}{W(x)}\,dx + y_2(x)\int \frac{y_1(x)g(x)}{W(x)}\,dx.
+\]
 <br><em>Proof sketch.</em> Assume \(y_p = u_1(x)y_1 + u_2(x)y_2\). Impose the constraint \(u_1' y_1 + u_2' y_2 = 0\) (to simplify \(y_p''\)). Substituting into the ODE yields \(u_1' y_1' + u_2' y_2' = g\). Solving this \(2\times 2\) system by Cramer's rule gives \(u_1' = -y_2 g/W\) and \(u_2' = y_1 g/W\). Integrating gives \(y_p\).
 </div>
 
@@ -468,7 +630,10 @@ Many economic models involve not one but several interacting quantities — pric
 
 <div class="definition">
 <strong>Definition (Linear System)</strong>: A <em>first-order linear system</em> has the form
-\[ \mathbf{X}' = A(t)\mathbf{X} + \mathbf{F}(t), \]
+
+\[
+\mathbf{X}' = A(t)\mathbf{X} + \mathbf{F}(t),
+\]
 where \(\mathbf{X}(t) \in \mathbb{R}^n\) is the unknown vector, \(A(t)\) is an \(n \times n\) matrix of coefficients, and \(\mathbf{F}(t)\) is a forcing vector. When \(\mathbf{F} = \mathbf{0}\) the system is <em>homogeneous</em>.
 </div>
 
@@ -480,7 +645,10 @@ Any \(n\)-th order linear ODE can be written as a first-order system by introduc
 
 <div class="example">
 <strong>Example — Converting a second-order ODE to a system</strong>: Consider \(y'' + py' + qy = g(t)\). Introduce \(X_1 = y\) and \(X_2 = y'\). Then \(X_1' = X_2\) and \(X_2' = y'' = g(t) - py' - qy = g(t) - pX_2 - qX_1\). The first-order system is:
-\[ \begin{pmatrix} X_1' \\ X_2' \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ -q & -p \end{pmatrix} \begin{pmatrix} X_1 \\ X_2 \end{pmatrix} + \begin{pmatrix} 0 \\ g(t) \end{pmatrix}. \]
+
+\[
+\begin{pmatrix} X_1' \\ X_2' \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ -q & -p \end{pmatrix} \begin{pmatrix} X_1 \\ X_2 \end{pmatrix} + \begin{pmatrix} 0 \\ g(t) \end{pmatrix}.
+\]
 The companion matrix \(A = \begin{pmatrix} 0 & 1 \\ -q & -p \end{pmatrix}\) has characteristic polynomial \(\lambda^2 + p\lambda + q = 0\) — exactly the characteristic equation of the original second-order ODE. The eigenvalues of \(A\) are identical to the roots of the characteristic equation, confirming the consistency of the two approaches.
 </div>
 
@@ -492,7 +660,10 @@ The eigenvalue method applies beyond ecological systems to economic models of in
 
 <div class="example">
 <strong>Example — Two-country export dynamics</strong>: Let \(X_1(t)\) and \(X_2(t)\) denote export volumes of countries 1 and 2, respectively. Suppose exports grow or decline based on comparative advantage and trade barriers:
-\[ \begin{pmatrix} X_1' \\ X_2' \end{pmatrix} = \begin{pmatrix} -0.5 & 0.3 \\ 0.4 & -0.6 \end{pmatrix} \begin{pmatrix} X_1 \\ X_2 \end{pmatrix}. \]
+
+\[
+\begin{pmatrix} X_1' \\ X_2' \end{pmatrix} = \begin{pmatrix} -0.5 & 0.3 \\ 0.4 & -0.6 \end{pmatrix} \begin{pmatrix} X_1 \\ X_2 \end{pmatrix}.
+\]
 The matrix has trace \(\tau = -1.1\) and determinant \(\Delta = (-0.5)(-0.6) - (0.3)(0.4) = 0.30 - 0.12 = 0.18 > 0\). Since \(\tau < 0\) and \(\Delta > 0\), both eigenvalues have negative real part, and the equilibrium \((X_1, X_2) = (0,0)\) is a stable node or stable spiral.
 
 Eigenvalues: \(\lambda = (-1.1 \pm \sqrt{1.21 - 0.72})/2 = (-1.1 \pm \sqrt{0.49})/2 = (-1.1 \pm 0.7)/2\). So \(\lambda_1 = -0.2\) and \(\lambda_2 = -0.9\).
@@ -503,12 +674,18 @@ Both eigenvalues are real and negative — a stable node. Both countries' export
 ## 4.3 Homogeneous Systems: The Eigenvalue Method
 
 For the autonomous homogeneous system \(\mathbf{X}' = A\mathbf{X}\) with constant matrix \(A\), we seek solutions of the form \(\mathbf{X}(t) = e^{\lambda t}\mathbf{v}\). Substituting:
-\[ \lambda e^{\lambda t}\mathbf{v} = A e^{\lambda t}\mathbf{v} \implies A\mathbf{v} = \lambda\mathbf{v}. \]
+
+\[
+\lambda e^{\lambda t}\mathbf{v} = A e^{\lambda t}\mathbf{v} \implies A\mathbf{v} = \lambda\mathbf{v}.
+\]
 So \(\lambda\) must be an eigenvalue of \(A\) and \(\mathbf{v}\) a corresponding eigenvector.
 
 <div class="theorem">
 <strong>Theorem (General Solution via Eigenvalues)</strong>: If \(A\) is an \(n\times n\) matrix with \(n\) linearly independent eigenvectors \(\mathbf{v}_1, \ldots, \mathbf{v}_n\) corresponding to eigenvalues \(\lambda_1, \ldots, \lambda_n\) (not necessarily distinct), the general solution of \(\mathbf{X}' = A\mathbf{X}\) is
-\[ \mathbf{X}(t) = c_1 e^{\lambda_1 t}\mathbf{v}_1 + c_2 e^{\lambda_2 t}\mathbf{v}_2 + \cdots + c_n e^{\lambda_n t}\mathbf{v}_n. \]
+
+\[
+\mathbf{X}(t) = c_1 e^{\lambda_1 t}\mathbf{v}_1 + c_2 e^{\lambda_2 t}\mathbf{v}_2 + \cdots + c_n e^{\lambda_n t}\mathbf{v}_n.
+\]
 When \(A\) has a repeated eigenvalue \(\lambda\) with deficient eigenspace, generalised eigenvectors (Jordan chains) must be used; a repeated eigenvalue \(\lambda\) with multiplicity 2 and only one eigenvector \(\mathbf{v}\) contributes solutions \(e^{\lambda t}\mathbf{v}\) and \(e^{\lambda t}(t\mathbf{v} + \mathbf{w})\) where \((A - \lambda I)\mathbf{w} = \mathbf{v}\).
 </div>
 
@@ -517,7 +694,9 @@ For \(2 \times 2\) systems, the **phase portrait** gives qualitative insight: if
 <div class="example">
 <strong>Example — Solving a 2×2 system via eigenvalues with initial condition</strong>: Solve the system
 
-\[ \mathbf{X}' = \begin{pmatrix} 0 & 1 \\ -2 & -3 \end{pmatrix}\mathbf{X}, \qquad \mathbf{X}(0) = \begin{pmatrix} 1 \\ 0 \end{pmatrix}. \]
+\[
+\mathbf{X}' = \begin{pmatrix} 0 & 1 \\ -2 & -3 \end{pmatrix}\mathbf{X}, \qquad \mathbf{X}(0) = \begin{pmatrix} 1 \\ 0 \end{pmatrix}.
+\]
 
 <em>Characteristic polynomial</em>: \(\det(A - \lambda I) = \det\begin{pmatrix} -\lambda & 1 \\ -2 & -3-\lambda \end{pmatrix} = \lambda(\lambda+3) + 2 = \lambda^2 + 3\lambda + 2 = (\lambda+1)(\lambda+2) = 0\).
 
@@ -529,11 +708,15 @@ For \(\lambda_2 = -2\): \((A + 2I)\mathbf{v} = \begin{pmatrix}2&1\\-2&-1\end{pma
 
 <em>General solution</em>:
 
-\[ \mathbf{X}(t) = c_1 e^{-t}\begin{pmatrix}1\\-1\end{pmatrix} + c_2 e^{-2t}\begin{pmatrix}1\\-2\end{pmatrix}. \]
+\[
+\mathbf{X}(t) = c_1 e^{-t}\begin{pmatrix}1\\-1\end{pmatrix} + c_2 e^{-2t}\begin{pmatrix}1\\-2\end{pmatrix}.
+\]
 
 <em>Initial condition</em>: At \(t = 0\): \(c_1 + c_2 = 1\) and \(-c_1 - 2c_2 = 0\). From the second equation \(c_1 = -2c_2\). Substituting: \(-2c_2 + c_2 = -c_2 = 1\), so \(c_2 = -1\) and \(c_1 = 2\). The solution is:
 
-\[ x(t) = 2e^{-t} - e^{-2t}, \qquad y(t) = -2e^{-t} + 2e^{-2t}. \]
+\[
+x(t) = 2e^{-t} - e^{-2t}, \qquad y(t) = -2e^{-t} + 2e^{-2t}.
+\]
 
 Both components decay to zero. The fast mode (\(e^{-2t}\)) relaxes first, leaving the slow mode (\(e^{-t}\)) to dominate at large times. In an economic context where \(x\) and \(y\) are deviations of output and investment from equilibrium, the slow mode represents the long-run adjustment path toward equilibrium, while the fast mode represents rapid initial transients.
 </div>
@@ -541,7 +724,9 @@ Both components decay to zero. The fast mode (\(e^{-2t}\)) relaxes first, leavin
 <div class="example">
 <strong>Example — Repeated eigenvalue and generalised eigenvector</strong>: Solve
 
-\[ \mathbf{X}' = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix}\mathbf{X}. \]
+\[
+\mathbf{X}' = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix}\mathbf{X}.
+\]
 
 The characteristic polynomial is \((\lambda - 2)^2 = 0\), giving the repeated eigenvalue \(\lambda = 2\) with multiplicity 2.
 
@@ -549,13 +734,17 @@ The characteristic polynomial is \((\lambda - 2)^2 = 0\), giving the repeated ei
 
 <em>Generalised eigenvector</em>: Solve \((A - 2I)\mathbf{w} = \mathbf{v}_1\):
 
-\[ \begin{pmatrix}0&1\\0&0\end{pmatrix}\mathbf{w} = \begin{pmatrix}1\\0\end{pmatrix} \implies w_2 = 1. \]
+\[
+\begin{pmatrix}0&1\\0&0\end{pmatrix}\mathbf{w} = \begin{pmatrix}1\\0\end{pmatrix} \implies w_2 = 1.
+\]
 
 Taking \(w_1 = 0\): \(\mathbf{w} = (0, 1)^T\).
 
 <em>General solution</em>: The two linearly independent solutions are \(e^{2t}\mathbf{v}_1\) and \(e^{2t}(t\mathbf{v}_1 + \mathbf{w})\):
 
-\[ \mathbf{X}(t) = c_1 e^{2t}\begin{pmatrix}1\\0\end{pmatrix} + c_2 e^{2t}\!\left(t\begin{pmatrix}1\\0\end{pmatrix} + \begin{pmatrix}0\\1\end{pmatrix}\right) = e^{2t}\begin{pmatrix}c_1 + c_2 t \\ c_2\end{pmatrix}. \]
+\[
+\mathbf{X}(t) = c_1 e^{2t}\begin{pmatrix}1\\0\end{pmatrix} + c_2 e^{2t}\!\left(t\begin{pmatrix}1\\0\end{pmatrix} + \begin{pmatrix}0\\1\end{pmatrix}\right) = e^{2t}\begin{pmatrix}c_1 + c_2 t \\ c_2\end{pmatrix}.
+\]
 
 The \(c_2 t\,e^{2t}\) term grows super-exponentially relative to pure exponential growth — the repeated eigenvalue introduces polynomial growth multiplying the exponential. In economics, such dynamics can model a linearly escalating instability (e.g., a hyperinflation spiral where the rate of inflation itself accelerates linearly before the eventual stabilisation).
 </div>
@@ -563,13 +752,19 @@ The \(c_2 t\,e^{2t}\) term grows super-exponentially relative to pure exponentia
 ## 4.4 Inhomogeneous Systems: Variation of Parameters
 
 For the inhomogeneous system \(\mathbf{X}' = A\mathbf{X} + \mathbf{F}(t)\), the **fundamental matrix** \(\Phi(t)\) is the matrix whose columns are \(n\) linearly independent solutions of the homogeneous system. A particular solution is given by:
-\[ \mathbf{X}_p(t) = \Phi(t)\int \Phi^{-1}(t)\mathbf{F}(t)\,dt. \]
+
+\[
+\mathbf{X}_p(t) = \Phi(t)\int \Phi^{-1}(t)\mathbf{F}(t)\,dt.
+\]
 
 The general solution is \(\mathbf{X} = \Phi(t)\mathbf{c} + \mathbf{X}_p(t)\), where \(\mathbf{c}\) is a constant vector determined by initial conditions.
 
 <div class="example">
 <strong>Example (Coupled Price Dynamics)</strong>: Suppose two goods have prices \(P_1(t)\) and \(P_2(t)\) that interact — excess demand in market 1 is affected by both prices. A linearised model might give
-\[ \begin{pmatrix} P_1' \\ P_2' \end{pmatrix} = \begin{pmatrix} -2 & 1 \\ 1 & -2 \end{pmatrix} \begin{pmatrix} P_1 \\ P_2 \end{pmatrix} + \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}. \]
+
+\[
+\begin{pmatrix} P_1' \\ P_2' \end{pmatrix} = \begin{pmatrix} -2 & 1 \\ 1 & -2 \end{pmatrix} \begin{pmatrix} P_1 \\ P_2 \end{pmatrix} + \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}.
+\]
 The eigenvalues of the coefficient matrix are \(\lambda_1 = -1\) and \(\lambda_2 = -3\). Since both are negative, the system is stable: both prices converge to their joint equilibrium. The eigenvector for \(\lambda_1 = -1\) is \((1,1)^T\) (both prices move together) and for \(\lambda_2 = -3\) is \((1,-1)^T\) (prices move in opposite directions). Any initial disequilibrium is a superposition of these two modes, both decaying exponentially.
 </div>
 
@@ -577,11 +772,15 @@ The eigenvalues of the coefficient matrix are \(\lambda_1 = -1\) and \(\lambda_2
 
 The **Samuelson (1939) multiplier-accelerator model** of business cycles generates oscillatory output through the interaction of consumption multiplier effects and investment accelerator effects. In continuous time, if \(Y(t)\) is aggregate income, \(c \in (0,1)\) the marginal propensity to consume, and \(a > 0\) the accelerator coefficient:
 
-\[ Y'' - (c - 1 + a)Y' + (1 - c)Y = G_0, \]
+\[
+Y'' - (c - 1 + a)Y' + (1 - c)Y = G_0,
+\]
 
 where \(G_0\) is autonomous government expenditure. This is a second-order constant-coefficient ODE with forcing. The characteristic roots are:
 
-\[ r = \frac{(c - 1 + a) \pm \sqrt{(c-1+a)^2 - 4(1-c)}}{2}. \]
+\[
+r = \frac{(c - 1 + a) \pm \sqrt{(c-1+a)^2 - 4(1-c)}}{2}.
+\]
 
 <div class="example">
 <strong>Example — Business cycle classification</strong>: Take \(c = 0.8\) and \(a = 0.5\). Then the characteristic equation coefficients give: \(c - 1 + a = 0.3\) and \(1 - c = 0.2\). Discriminant: \((0.3)^2 - 4(0.2) = 0.09 - 0.80 = -0.71 < 0\). The roots are complex: \(r = 0.15 \pm i\sqrt{0.71}/2 \approx 0.15 \pm 0.421i\).
@@ -611,7 +810,10 @@ The simplest first-order linear PDE in two variables is \(a u_x + b u_t = c\), w
 
 <div class="theorem">
 <strong>Theorem (Method of Characteristics)</strong>: For the first-order linear PDE \(a(x,t)u_x + b(x,t)u_t = c(x,t,u)\), the solution is constant along <em>characteristic curves</em> defined by the system
-\[ \frac{dx}{ds} = a, \quad \frac{dt}{ds} = b, \quad \frac{du}{ds} = c. \]
+
+\[
+\frac{dx}{ds} = a, \quad \frac{dt}{ds} = b, \quad \frac{du}{ds} = c.
+\]
 Along each characteristic, the PDE reduces to an ODE in the parameter \(s\). The solution surface is swept out by the family of characteristics emanating from the initial data curve.
 </div>
 
@@ -621,14 +823,20 @@ Along each characteristic, the PDE reduces to an ODE in the parameter \(s\). The
 
 <div class="example">
 <strong>Example — Characteristics with a source term</strong>: Consider the PDE \(u_t + 2u_x = u\) with initial condition \(u(x,0) = e^{-x^2}\). The characteristic equations are \(dx/ds = 2\), \(dt/ds = 1\), \(du/ds = u\). Integrating: \(t = s\), \(x = 2s + x_0\), and \(u = u_0 e^s\) where \(u_0 = u(x_0, 0)\). Along the characteristic through \((x_0, 0)\): \(x_0 = x - 2t\), so \(u_0 = e^{-(x-2t)^2}\). Since \(u = u_0 e^t\):
-\[ u(x,t) = e^t \cdot e^{-(x-2t)^2}. \]
+
+\[
+u(x,t) = e^t \cdot e^{-(x-2t)^2}.
+\]
 The initial Gaussian profile translates to the right at speed 2 (the advection part) while its amplitude grows as \(e^t\) (the source term amplifies the signal). This example is economically relevant as a model of information propagation in a market where the information itself grows in value over time.
 </div>
 
 ## 5.2 Classification of Second-Order Linear PDEs
 
 The most important second-order linear PDE in two variables has the form:
-\[ A u_{xx} + B u_{xt} + C u_{tt} + D u_x + E u_t + Fu = G. \]
+
+\[
+A u_{xx} + B u_{xt} + C u_{tt} + D u_x + E u_t + Fu = G.
+\]
 
 <div class="definition">
 <strong>Definition (Classification)</strong>: The second-order linear PDE above is classified by the <em>discriminant</em> \(\Delta = B^2 - 4AC\):
@@ -646,45 +854,73 @@ This classification is not merely taxonomic — it determines which boundary con
 The heat equation \(u_t = \kappa u_{xx}\) (where \(\kappa > 0\) is the diffusivity) models the spread of heat in a rod or, more abstractly, the diffusion of any quantity — concentration of a chemical, probability distributions in stochastic processes.
 
 **Separation of variables** on a finite domain \(0 \leq x \leq L\) with boundary conditions \(u(0,t) = u(L,t) = 0\): assume \(u(x,t) = X(x)T(t)\). Substituting:
-\[ \frac{T'}{T\kappa} = \frac{X''}{X} = -\lambda \quad (\text{separation constant}). \]
+
+\[
+\frac{T'}{T\kappa} = \frac{X''}{X} = -\lambda \quad (\text{separation constant}).
+\]
 The spatial equation \(X'' + \lambda X = 0\) with \(X(0) = X(L) = 0\) has solutions only for \(\lambda_n = (n\pi/L)^2\), giving eigenfunctions \(X_n(x) = \sin(n\pi x/L)\). The temporal part gives \(T_n(t) = e^{-\kappa\lambda_n t}\). The general solution is the **Fourier series**:
-\[ u(x,t) = \sum_{n=1}^\infty b_n \sin\!\left(\frac{n\pi x}{L}\right) e^{-\kappa (n\pi/L)^2 t}, \]
+
+\[
+u(x,t) = \sum_{n=1}^\infty b_n \sin\!\left(\frac{n\pi x}{L}\right) e^{-\kappa (n\pi/L)^2 t},
+\]
 where the coefficients \(b_n = \frac{2}{L}\int_0^L f(x)\sin(n\pi x/L)\,dx\) are determined by the initial condition \(u(x,0) = f(x)\). The exponential decay factor ensures the solution smooths out and decays to zero as \(t \to \infty\).
 
 <div class="example">
 <strong>Example — Computing the first Fourier sine coefficient for \(f(x) = x\) on \([0,\pi]\)</strong>: With \(L = \pi\), the Fourier sine coefficients of the initial condition \(f(x) = x\) are:
 
-\[ b_n = \frac{2}{\pi}\int_0^\pi x\sin(nx)\,dx. \]
+\[
+b_n = \frac{2}{\pi}\int_0^\pi x\sin(nx)\,dx.
+\]
 
 Integrating by parts with \(u = x\), \(dv = \sin(nx)\,dx\):
 
-\[ \int_0^\pi x\sin(nx)\,dx = \left[-\frac{x\cos(nx)}{n}\right]_0^\pi + \frac{1}{n}\int_0^\pi \cos(nx)\,dx = -\frac{\pi\cos(n\pi)}{n} + \frac{1}{n}\left[\frac{\sin(nx)}{n}\right]_0^\pi. \]
+\[
+\int_0^\pi x\sin(nx)\,dx = \left[-\frac{x\cos(nx)}{n}\right]_0^\pi + \frac{1}{n}\int_0^\pi \cos(nx)\,dx = -\frac{\pi\cos(n\pi)}{n} + \frac{1}{n}\left[\frac{\sin(nx)}{n}\right]_0^\pi.
+\]
 
 Since \(\sin(n\pi) = 0\) for all integers \(n\):
 
-\[ \int_0^\pi x\sin(nx)\,dx = -\frac{\pi\cos(n\pi)}{n} = \frac{\pi(-1)^{n+1}}{n}. \]
+\[
+\int_0^\pi x\sin(nx)\,dx = -\frac{\pi\cos(n\pi)}{n} = \frac{\pi(-1)^{n+1}}{n}.
+\]
 
 Therefore:
 
-\[ b_n = \frac{2}{\pi}\cdot\frac{\pi(-1)^{n+1}}{n} = \frac{2(-1)^{n+1}}{n}. \]
+\[
+b_n = \frac{2}{\pi}\cdot\frac{\pi(-1)^{n+1}}{n} = \frac{2(-1)^{n+1}}{n}.
+\]
 
 <em>First coefficient</em>: \(b_1 = 2(-1)^2/1 = 2\). <em>Second coefficient</em>: \(b_2 = 2(-1)^3/2 = -1\). <em>Third</em>: \(b_3 = 2/3\). The full solution to the heat equation with \(f(x) = x\) is:
 
-\[ u(x,t) = \sum_{n=1}^\infty \frac{2(-1)^{n+1}}{n}\sin(nx)\,e^{-n^2 t}. \]
+\[
+u(x,t) = \sum_{n=1}^\infty \frac{2(-1)^{n+1}}{n}\sin(nx)\,e^{-n^2 t}.
+\]
 
 At \(t = 0\), this recovers the Fourier sine series of \(x\) on \([0, \pi]\). As \(t\) increases, the higher modes (large \(n\)) decay much faster than the fundamental (\(n=1\)) because the decay rate is \(e^{-n^2 t}\), so the solution rapidly becomes dominated by the first term \(2e^{-t}\sin(x)\). The "sawtooth" initial profile is smoothed into a single half-arch.
 </div>
 
 <div class="example">
 <strong>Example — Heat equation on \([0,\pi]\) with two-mode initial condition</strong>: Consider the problem
-\[ u_t = u_{xx}, \quad 0 < x < \pi, \quad t > 0, \]
-\[ u(0,t) = u(\pi,t) = 0, \quad u(x,0) = \sin(x) + 0.5\sin(2x). \]
+
+\[
+u_t = u_{xx}, \quad 0 < x < \pi, \quad t > 0,
+\]
+
+\[
+u(0,t) = u(\pi,t) = 0, \quad u(x,0) = \sin(x) + 0.5\sin(2x).
+\]
 
 With \(L = \pi\) and \(\kappa = 1\), the eigenvalues are \(\lambda_n = n^2\) and the Fourier series formula gives:
-\[ u(x,t) = \sum_{n=1}^\infty b_n \sin(nx)\,e^{-n^2 t}. \]
+
+\[
+u(x,t) = \sum_{n=1}^\infty b_n \sin(nx)\,e^{-n^2 t}.
+\]
 
 The initial condition \(u(x,0) = \sin(x) + 0.5\sin(2x)\) is already a finite sum of eigenfunctions. Matching coefficients: \(b_1 = 1\), \(b_2 = 0.5\), \(b_n = 0\) for \(n \geq 3\). The exact solution is therefore:
-\[ u(x,t) = e^{-t}\sin(x) + 0.5\,e^{-4t}\sin(2x). \]
+
+\[
+u(x,t) = e^{-t}\sin(x) + 0.5\,e^{-4t}\sin(2x).
+\]
 
 This is an <em>exact</em> closed-form solution — no approximation is made.
 
@@ -698,13 +934,22 @@ This is an <em>exact</em> closed-form solution — no approximation is made.
 ## 5.4 Steady-State Solutions of the Heat Equation
 
 A **steady-state solution** of the heat equation satisfies \(u_t = 0\), which reduces the PDE to an ODE:
-\[ u_{xx} = 0. \]
+
+\[
+u_{xx} = 0.
+\]
 
 <div class="theorem">
 <strong>Theorem (Steady-State of the 1D Heat Equation)</strong>: The general steady-state solution of \(u_{xx} = 0\) is the linear function
-\[ u_{ss}(x) = ax + b, \]
+
+\[
+u_{ss}(x) = ax + b,
+\]
 where the constants \(a\) and \(b\) are determined by the boundary conditions. For Dirichlet boundary conditions \(u(0) = T_1\) and \(u(L) = T_2\), the unique steady state is:
-\[ u_{ss}(x) = T_1 + \frac{T_2 - T_1}{L}\,x. \]
+
+\[
+u_{ss}(x) = T_1 + \frac{T_2 - T_1}{L}\,x.
+\]
 This is the linear interpolation between the two boundary temperatures.
 </div>
 
@@ -712,7 +957,10 @@ This result is the one-dimensional version of Laplace's equation. The steady sta
 
 <div class="example">
 <strong>Example — Convergence to steady state</strong>: Suppose \(u_t = u_{xx}\) on \([0,1]\) with \(u(0,t) = 0\), \(u(1,t) = 1\), and initial condition \(u(x,0) = 0\) (rod initially at zero temperature, one end suddenly raised to 1). The steady state is \(u_{ss}(x) = x\). Defining \(w = u - u_{ss}\) gives a heat equation for \(w\) with homogeneous boundary conditions \(w(0,t) = w(1,t) = 0\) and initial condition \(w(x,0) = -x\). The Fourier series for \(w\) has coefficients \(b_n = \frac{2}{1}\int_0^1 (-x)\sin(n\pi x)\,dx = 2(-1)^n/(n\pi)\). Therefore:
-\[ u(x,t) = x + \frac{2}{\pi}\sum_{n=1}^\infty \frac{(-1)^n}{n}\sin(n\pi x)\,e^{-n^2\pi^2 t}. \]
+
+\[
+u(x,t) = x + \frac{2}{\pi}\sum_{n=1}^\infty \frac{(-1)^n}{n}\sin(n\pi x)\,e^{-n^2\pi^2 t}.
+\]
 All transient modes decay exponentially; the solution converges to \(x\) as \(t\to\infty\).
 </div>
 
@@ -724,9 +972,15 @@ Separation of variables works beautifully on a finite interval, but many problem
 
 <div class="definition">
 <strong>Definition (Fourier Transform)</strong>: For a function \(f(x)\) defined on \(\mathbb{R}\), the <em>Fourier Transform</em> is
-\[ \hat{f}(\omega) = \int_{-\infty}^{\infty} f(x)\,e^{-i\omega x}\,dx, \]
+
+\[
+\hat{f}(\omega) = \int_{-\infty}^{\infty} f(x)\,e^{-i\omega x}\,dx,
+\]
 provided the integral converges. The <em>inverse Fourier Transform</em> recovers \(f\) from \(\hat{f}\):
-\[ f(x) = \frac{1}{2\pi}\int_{-\infty}^{\infty} \hat{f}(\omega)\,e^{i\omega x}\,d\omega. \]
+
+\[
+f(x) = \frac{1}{2\pi}\int_{-\infty}^{\infty} \hat{f}(\omega)\,e^{i\omega x}\,d\omega.
+\]
 </div>
 
 The Fourier Transform has several key properties that make it ideal for solving constant-coefficient linear PDEs:
@@ -740,15 +994,21 @@ The Fourier Transform has several key properties that make it ideal for solving 
 
 By definition:
 
-\[ \hat{f}(\omega) = \int_{-\infty}^{\infty} e^{-x^2} e^{-i\omega x}\,dx = \int_{-\infty}^{\infty} e^{-(x^2 + i\omega x)}\,dx. \]
+\[
+\hat{f}(\omega) = \int_{-\infty}^{\infty} e^{-x^2} e^{-i\omega x}\,dx = \int_{-\infty}^{\infty} e^{-(x^2 + i\omega x)}\,dx.
+\]
 
 Complete the square in the exponent: \(x^2 + i\omega x = \left(x + \frac{i\omega}{2}\right)^2 + \frac{\omega^2}{4} - \frac{(i\omega)^2}{4}\). Wait — more carefully: \(x^2 + i\omega x = \left(x + \frac{i\omega}{2}\right)^2 - \left(\frac{i\omega}{2}\right)^2 = \left(x + \frac{i\omega}{2}\right)^2 + \frac{\omega^2}{4}\). Therefore:
 
-\[ \hat{f}(\omega) = e^{-\omega^2/4}\int_{-\infty}^{\infty} \exp\!\left(-\left(x + \frac{i\omega}{2}\right)^2\right)dx. \]
+\[
+\hat{f}(\omega) = e^{-\omega^2/4}\int_{-\infty}^{\infty} \exp\!\left(-\left(x + \frac{i\omega}{2}\right)^2\right)dx.
+\]
 
 The integral \(\int_{-\infty}^{\infty} e^{-u^2}\,du = \sqrt{\pi}\) (the Gaussian integral) holds for complex shifts by analyticity (contour deformation). Therefore:
 
-\[ \mathcal{F}\{e^{-x^2}\}(\omega) = \sqrt{\pi}\,e^{-\omega^2/4}. \]
+\[
+\mathcal{F}\{e^{-x^2}\}(\omega) = \sqrt{\pi}\,e^{-\omega^2/4}.
+\]
 
 This result is fundamental: <em>the Fourier transform of a Gaussian is a Gaussian</em>. The Gaussian \(e^{-x^2}\) has "width" of order 1 in \(x\)-space and "width" of order 2 in \(\omega\)-space — wider in frequency space, reflecting the uncertainty principle. This is the mathematical origin of the heat kernel: in the heat equation solution \(\hat{u}(\omega, t) = \hat{f}(\omega)e^{-\kappa\omega^2 t}\), the factor \(e^{-\kappa\omega^2 t}\) is a Gaussian in \(\omega\) whose inverse transform gives the Gaussian heat kernel \(G(x,t) \propto e^{-x^2/(4\kappa t)}\).
 </div>
@@ -756,23 +1016,41 @@ This result is fundamental: <em>the Fourier transform of a Gaussian is a Gaussia
 ## 6.1 Solving the Heat Equation on the Real Line
 
 Consider the heat equation on the entire real line:
-\[ u_t = \kappa u_{xx}, \quad x \in \mathbb{R},\; t > 0, \quad u(x,0) = f(x). \]
+
+\[
+u_t = \kappa u_{xx}, \quad x \in \mathbb{R},\; t > 0, \quad u(x,0) = f(x).
+\]
 
 Take the Fourier Transform in \(x\), denoting \(\hat{u}(\omega, t) = \mathcal{F}[u]\):
-\[ \frac{\partial \hat{u}}{\partial t} = \kappa(i\omega)^2 \hat{u} = -\kappa\omega^2 \hat{u}. \]
+
+\[
+\frac{\partial \hat{u}}{\partial t} = \kappa(i\omega)^2 \hat{u} = -\kappa\omega^2 \hat{u}.
+\]
 
 This is now an ordinary differential equation in \(t\) for each fixed \(\omega\):
-\[ \hat{u}(\omega, t) = \hat{f}(\omega)\,e^{-\kappa\omega^2 t}. \]
+
+\[
+\hat{u}(\omega, t) = \hat{f}(\omega)\,e^{-\kappa\omega^2 t}.
+\]
 
 To invert, note that \(e^{-\kappa\omega^2 t}\) is itself a Gaussian in \(\omega\): its inverse Fourier Transform is the **heat kernel** (or **Gaussian kernel**):
-\[ G(x,t) = \frac{1}{\sqrt{4\pi\kappa t}}\,e^{-x^2/(4\kappa t)}. \]
+
+\[
+G(x,t) = \frac{1}{\sqrt{4\pi\kappa t}}\,e^{-x^2/(4\kappa t)}.
+\]
 
 By the convolution theorem:
-\[ u(x,t) = \int_{-\infty}^{\infty} f(y)\,G(x-y,t)\,dy = \frac{1}{\sqrt{4\pi\kappa t}}\int_{-\infty}^{\infty} f(y)\,\exp\!\left(-\frac{(x-y)^2}{4\kappa t}\right)dy. \]
+
+\[
+u(x,t) = \int_{-\infty}^{\infty} f(y)\,G(x-y,t)\,dy = \frac{1}{\sqrt{4\pi\kappa t}}\int_{-\infty}^{\infty} f(y)\,\exp\!\left(-\frac{(x-y)^2}{4\kappa t}\right)dy.
+\]
 
 <div class="theorem">
 <strong>Theorem (Heat Kernel Solution)</strong>: The unique bounded solution of the heat equation \(u_t = \kappa u_{xx}\) on \(\mathbb{R}\) with initial condition \(u(x,0) = f(x)\) is the convolution
-\[ u(x,t) = \frac{1}{\sqrt{4\pi\kappa t}}\int_{-\infty}^{\infty} f(y)\,\exp\!\left(-\frac{(x-y)^2}{4\kappa t}\right)dy. \]
+
+\[
+u(x,t) = \frac{1}{\sqrt{4\pi\kappa t}}\int_{-\infty}^{\infty} f(y)\,\exp\!\left(-\frac{(x-y)^2}{4\kappa t}\right)dy.
+\]
 Interpretation: the heat kernel \(G(x-y,t)\) is a Gaussian centred at \(y\) with variance \(2\kappa t\). The solution at time \(t\) is a weighted average of the initial condition, where the weights are Gaussian of width \(\sqrt{2\kappa t}\). As time increases, the Gaussian spreads: initial sharp features are smoothed out, reflecting the diffusive nature of heat conduction.
 </div>
 
@@ -780,9 +1058,15 @@ This formula is not just elegant — it is precisely the structure that underpin
 
 <div class="example">
 <strong>Example — Fourier Transform solution with a Gaussian initial condition</strong>: Suppose \(f(x) = e^{-x^2/(4\sigma^2)}\), a Gaussian of width \(\sigma\). Its Fourier Transform is \(\hat{f}(\omega) = 2\sigma\sqrt{\pi}\,e^{-\sigma^2\omega^2}\). After time \(t\) (with \(\kappa = 1\)):
-\[ \hat{u}(\omega,t) = 2\sigma\sqrt{\pi}\,e^{-\sigma^2\omega^2}\cdot e^{-\omega^2 t} = 2\sigma\sqrt{\pi}\,e^{-(\sigma^2+t)\omega^2}. \]
+
+\[
+\hat{u}(\omega,t) = 2\sigma\sqrt{\pi}\,e^{-\sigma^2\omega^2}\cdot e^{-\omega^2 t} = 2\sigma\sqrt{\pi}\,e^{-(\sigma^2+t)\omega^2}.
+\]
 This is another Gaussian in \(\omega\), corresponding to a spatial Gaussian of width \(\sqrt{\sigma^2 + t}\):
-\[ u(x,t) = \frac{\sigma}{\sqrt{\sigma^2+t}}\,e^{-x^2/(4(\sigma^2+t))}. \]
+
+\[
+u(x,t) = \frac{\sigma}{\sqrt{\sigma^2+t}}\,e^{-x^2/(4(\sigma^2+t))}.
+\]
 
 The initial Gaussian spreads: its width grows as \(\sqrt{\sigma^2 + t}\). For \(t \gg \sigma^2\), the width is \(\approx \sqrt{t}\) — the characteristic diffusive scaling. The height of the Gaussian decreases as \(\sigma/\sqrt{\sigma^2+t}\) to conserve the total "heat" \(\int u\,dx = 2\sigma\sqrt{\pi} = \text{const}\). This example cleanly illustrates that the Fourier Transform diagonalises the diffusion operator: each Fourier mode evolves independently and exponentially.
 </div>
@@ -790,14 +1074,23 @@ The initial Gaussian spreads: its width grows as \(\sqrt{\sigma^2 + t}\). For \(
 ## 6.2 The Black-Scholes Equation as a Heat Equation
 
 The **Black-Scholes PDE** for the price \(V(S,t)\) of a European option on a stock following Geometric Brownian Motion is:
-\[ \frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + rS\frac{\partial V}{\partial S} - rV = 0, \]
+
+\[
+\frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + rS\frac{\partial V}{\partial S} - rV = 0,
+\]
 with terminal condition \(V(S,T) = \text{Payoff}(S)\) at expiry \(T\). The variable coefficient \(S^2\) makes this look different from the heat equation, but a change of variables transforms it exactly.
 
 <div class="theorem">
 <strong>Theorem (Black-Scholes Reduces to the Heat Equation)</strong>: Define the change of variables
-\[ x = \ln S, \qquad \tau = T - t, \qquad V(S,t) = e^{\alpha x + \beta \tau}\,u(x,\tau), \]
+
+\[
+x = \ln S, \qquad \tau = T - t, \qquad V(S,t) = e^{\alpha x + \beta \tau}\,u(x,\tau),
+\]
 where \(\alpha = -\frac{1}{2}\!\left(\frac{2r}{\sigma^2} - 1\right)\) and \(\beta = -\frac{\sigma^2}{2}\!\left(\alpha + \frac{1}{2}\right)^2\). Then \(u(x,\tau)\) satisfies the standard heat equation:
-\[ \frac{\partial u}{\partial \tau} = \frac{\sigma^2}{2}\frac{\partial^2 u}{\partial x^2}, \quad x \in \mathbb{R},\; \tau > 0, \]
+
+\[
+\frac{\partial u}{\partial \tau} = \frac{\sigma^2}{2}\frac{\partial^2 u}{\partial x^2}, \quad x \in \mathbb{R},\; \tau > 0,
+\]
 with initial condition \(u(x,0)\) determined by the option payoff. The transformed initial condition for a European call with strike \(K\) is \(u(x,0) = e^{-\alpha x}\max(e^x - K, 0)\).
 </div>
 
@@ -806,9 +1099,15 @@ with initial condition \(u(x,0)\) determined by the option payoff. The transform
 </div>
 
 Once \(u(x,\tau)\) is found via the heat kernel formula, we recover \(V\) by reversing the substitution. Carrying through this inversion for the call payoff yields the celebrated Black-Scholes formula:
-\[ C(S,t) = S\,N(d_1) - K e^{-r(T-t)} N(d_2), \]
+
+\[
+C(S,t) = S\,N(d_1) - K e^{-r(T-t)} N(d_2),
+\]
 where \(N\) is the standard normal CDF and
-\[ d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)(T-t)}{\sigma\sqrt{T-t}}, \qquad d_2 = d_1 - \sigma\sqrt{T-t}. \]
+
+\[
+d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)(T-t)}{\sigma\sqrt{T-t}}, \qquad d_2 = d_1 - \sigma\sqrt{T-t}.
+\]
 
 <div class="remark">
 <strong>Remark (The heat kernel as a pricing kernel)</strong>: In the Black-Scholes framework, the heat kernel \(G(x-y,\tau)\) plays the role of the **risk-neutral transition density**: the probability density (under the risk-neutral measure) that the log-price \(\ln S_T\) equals \(y\) given that it is currently \(x\). The option price is literally the expected payoff under this density, discounted at the risk-free rate. The Gaussian shape of the kernel reflects the log-normal distribution of stock prices under Geometric Brownian Motion, and the spreading of the kernel with \(\sqrt{\tau}\) reflects increasing uncertainty with longer time to expiry. This is why options with longer maturities command higher prices: the heat kernel is wider, meaning more probability weight in the tails where the payoff is large.
@@ -826,7 +1125,10 @@ A fundamental challenge in finance is modelling the future price of an asset. Pr
 
 <div class="definition">
 <strong>Definition (Geometric Brownian Motion)</strong>: The stock price \(S(t)\) follows <em>Geometric Brownian Motion</em> if it satisfies the stochastic differential equation
-\[ dS = \mu S\,dt + \sigma S\,dW_t, \]
+
+\[
+dS = \mu S\,dt + \sigma S\,dW_t,
+\]
 where \(\mu\) is the <em>drift</em> (expected instantaneous return), \(\sigma > 0\) is the <em>volatility</em> (standard deviation of log-returns per unit time), and \(W_t\) is a standard Wiener process (Brownian motion).
 </div>
 
@@ -840,9 +1142,15 @@ To price derivatives — contracts whose payoff depends on \(S\) — we need to 
 
 <div class="theorem">
 <strong>Theorem (Itô's Lemma)</strong>: Let \(S\) follow \(dS = \mu S\,dt + \sigma S\,dW_t\), and let \(V(S,t)\) be twice continuously differentiable in \(S\) and once in \(t\). Then
-\[ dV = \left(\frac{\partial V}{\partial t} + \mu S\frac{\partial V}{\partial S} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2}\right)dt + \sigma S\frac{\partial V}{\partial S}\,dW_t. \]
+
+\[
+dV = \left(\frac{\partial V}{\partial t} + \mu S\frac{\partial V}{\partial S} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2}\right)dt + \sigma S\frac{\partial V}{\partial S}\,dW_t.
+\]
 <br><em>Heuristic derivation.</em> Expand \(dV\) by the multivariable Taylor theorem: \(dV \approx V_t\,dt + V_S\,dS + \tfrac{1}{2}V_{SS}(dS)^2 + \cdots\). Substituting \(dS = \mu S\,dt + \sigma S\,dW_t\) and using the Itô rule \((dW_t)^2 = dt\), \((dt)^2 = 0\), \(dt\,dW_t = 0\):
-\[ (dS)^2 = \sigma^2 S^2 (dW_t)^2 = \sigma^2 S^2\,dt. \]
+
+\[
+(dS)^2 = \sigma^2 S^2 (dW_t)^2 = \sigma^2 S^2\,dt.
+\]
 Collecting \(dt\) and \(dW_t\) terms gives the formula above.
 </div>
 
@@ -851,22 +1159,37 @@ The crucial extra term \(\frac{1}{2}\sigma^2 S^2 V_{SS}\,dt\) is the **Itô corr
 ## 7.3 Delta-Hedging and the Black-Scholes PDE
 
 Consider a financial institution that has sold an option on a stock and wants to hedge the risk. The **delta-hedging** strategy constructs a portfolio \(\Pi\) consisting of the option \(V\) and a short position of \(\Delta\) shares of stock:
-\[ \Pi = V - \Delta\cdot S. \]
+
+\[
+\Pi = V - \Delta\cdot S.
+\]
 
 By Itô's Lemma, the change in portfolio value over \(dt\) is:
-\[ d\Pi = dV - \Delta\,dS = \left(V_t + \mu S V_S + \tfrac{1}{2}\sigma^2 S^2 V_{SS}\right)dt + \sigma S V_S\,dW_t - \Delta\left(\mu S\,dt + \sigma S\,dW_t\right). \]
+
+\[
+d\Pi = dV - \Delta\,dS = \left(V_t + \mu S V_S + \tfrac{1}{2}\sigma^2 S^2 V_{SS}\right)dt + \sigma S V_S\,dW_t - \Delta\left(\mu S\,dt + \sigma S\,dW_t\right).
+\]
 
 Choosing \(\Delta = \frac{\partial V}{\partial S}\) **eliminates the stochastic term** \(dW_t\):
-\[ d\Pi = \left(V_t + \tfrac{1}{2}\sigma^2 S^2 V_{SS}\right)dt. \]
+
+\[
+d\Pi = \left(V_t + \tfrac{1}{2}\sigma^2 S^2 V_{SS}\right)dt.
+\]
 
 This portfolio is now **instantaneously risk-free** — its return over \(dt\) is deterministic. In an arbitrage-free market, a risk-free portfolio must earn exactly the risk-free rate \(r\):
-\[ d\Pi = r\Pi\,dt = r(V - \Delta S)\,dt = r(V - S V_S)\,dt. \]
+
+\[
+d\Pi = r\Pi\,dt = r(V - \Delta S)\,dt = r(V - S V_S)\,dt.
+\]
 
 Setting the two expressions for \(d\Pi\) equal and rearranging:
 
 <div class="theorem">
 <strong>Theorem (Black-Scholes PDE)</strong>: Under the GBM model, in an arbitrage-free market with risk-free rate \(r\), the price \(V(S,t)\) of any European derivative satisfies the <em>Black-Scholes PDE</em>:
-\[ \frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + rS\frac{\partial V}{\partial S} - rV = 0. \]
+
+\[
+\frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + rS\frac{\partial V}{\partial S} - rV = 0.
+\]
 The terminal condition is \(V(S,T) = \text{Payoff}(S)\), where \(T\) is the expiry date.
 <br>For a European call option with strike \(K\): Payoff\((S) = \max(S-K, 0)\).
 <br>For a European put option: Payoff\((S) = \max(K-S, 0)\).
@@ -885,7 +1208,10 @@ We transform the Black-Scholes PDE into the standard heat equation through a seq
 **Step 3**: Remove the exponential growth by writing \(V = e^{\alpha x + \beta \tau} u(x, \tau)\) for constants \(\alpha\) and \(\beta\) to be determined.
 
 After careful substitution into the Black-Scholes PDE, and choosing \(\alpha = -\frac{1}{2}\left(\frac{2r}{\sigma^2} - 1\right)\) and \(\beta = -\frac{1}{4}\sigma^2\left(\frac{2r}{\sigma^2} + 1\right)^2\) (or equivalently values that remove the first-derivative and zeroth-order terms), the PDE for \(u\) becomes:
-\[ \frac{\partial u}{\partial \tau} = \frac{\sigma^2}{2}\frac{\partial^2 u}{\partial x^2}. \]
+
+\[
+\frac{\partial u}{\partial \tau} = \frac{\sigma^2}{2}\frac{\partial^2 u}{\partial x^2}.
+\]
 
 This is exactly the heat equation with diffusivity \(\kappa = \sigma^2/2\)! The initial condition \(u(x, 0)\) is determined by the payoff function.
 
@@ -895,11 +1221,20 @@ Applying the heat kernel solution (Chapter 6) to the transformed initial value p
 
 <div class="theorem">
 <strong>Theorem (Black-Scholes Formula)</strong>: The price at time \(t\) of a European <em>call</em> option with strike \(K\), expiry \(T\), on a stock with current price \(S\), volatility \(\sigma\), with risk-free rate \(r\), is
-\[ C(S,t) = S\,N(d_1) - K e^{-r(T-t)} N(d_2), \]
+
+\[
+C(S,t) = S\,N(d_1) - K e^{-r(T-t)} N(d_2),
+\]
 where \(N(\cdot)\) is the standard normal cumulative distribution function and
-\[ d_1 = \frac{\ln(S/K) + \left(r + \tfrac{1}{2}\sigma^2\right)(T-t)}{\sigma\sqrt{T-t}}, \qquad d_2 = d_1 - \sigma\sqrt{T-t}. \]
+
+\[
+d_1 = \frac{\ln(S/K) + \left(r + \tfrac{1}{2}\sigma^2\right)(T-t)}{\sigma\sqrt{T-t}}, \qquad d_2 = d_1 - \sigma\sqrt{T-t}.
+\]
 By put-call parity (\(C - P = S - Ke^{-r(T-t)}\)), the European put price is
-\[ P(S,t) = Ke^{-r(T-t)}N(-d_2) - S\,N(-d_1). \]
+
+\[
+P(S,t) = Ke^{-r(T-t)}N(-d_2) - S\,N(-d_1).
+\]
 </div>
 
 The formula has a beautiful economic interpretation. \(N(d_2)\) is the risk-neutral probability that the option expires in the money (\(S_T > K\)) — the probability, computed under a risk-neutral measure that replaces the drift \(\mu\) with the risk-free rate \(r\). The term \(Ke^{-r(T-t)}N(d_2)\) is the discounted expected strike payment. The term \(S\,N(d_1)\) accounts for the expected receipt of the stock, adjusted for the probability weighting. The option price is the present value of the expected net benefit from exercising.
@@ -947,13 +1282,22 @@ Despite these limitations, Black-Scholes remains the universal benchmark in opti
 <strong>Example — Pricing a European call option</strong>: A stock currently trades at \(S = 100\). A call option has strike \(K = 105\), time to expiry \(T - t = 0.5\) years, risk-free rate \(r = 0.05\), and volatility \(\sigma = 0.20\). Compute the call price.
 
 <em>Step 1: Compute \(d_1\) and \(d_2\)</em>:
-\[ d_1 = \frac{\ln(100/105) + (0.05 + 0.02)(0.5)}{0.20\sqrt{0.5}} = \frac{-0.04879 + 0.035}{0.1414} \approx -0.0975. \]
-\[ d_2 = d_1 - \sigma\sqrt{T-t} = -0.0975 - 0.1414 \approx -0.239. \]
+
+\[
+d_1 = \frac{\ln(100/105) + (0.05 + 0.02)(0.5)}{0.20\sqrt{0.5}} = \frac{-0.04879 + 0.035}{0.1414} \approx -0.0975.
+\]
+
+\[
+d_2 = d_1 - \sigma\sqrt{T-t} = -0.0975 - 0.1414 \approx -0.239.
+\]
 
 <em>Step 2: Normal CDF values</em>: \(N(-0.098) \approx 0.461\) and \(N(-0.239) \approx 0.406\).
 
 <em>Step 3: Call price</em>:
-\[ C = 100 \times 0.461 - 105 \times e^{-0.025} \times 0.406 = 46.1 - 105 \times 0.9753 \times 0.406 \approx 46.1 - 41.6 = 4.50. \]
+
+\[
+C = 100 \times 0.461 - 105 \times e^{-0.025} \times 0.406 = 46.1 - 105 \times 0.9753 \times 0.406 \approx 46.1 - 41.6 = 4.50.
+\]
 
 The call is worth approximately \$4.50. By put-call parity: \(P = C - S + Ke^{-r\tau} \approx 4.50 - 100 + 102.4 = 6.90\). The put commands a higher price because it is in-the-money while the call is out-of-the-money.
 </div>
@@ -1039,11 +1383,17 @@ The \(x\)-nullcline (for \(x > 0\)): \(x + 0.5y = 100\), i.e., \(x = 100 - 0.5y\
 The \(y\)-nullcline (for \(y > 0\)): \(0.5x + y = 100\), i.e., \(y = 100 - 0.5x\).
 
 Setting both equal to zero: \(100 - 0.5y = 0\) and \(100 - 0.5x = 0\) at the corner equilibria \((100, 0)\) and \((0, 100)\). The interior equilibrium satisfies:
-\[ x + 0.5y = 100, \quad 0.5x + y = 100. \]
+
+\[
+x + 0.5y = 100, \quad 0.5x + y = 100.
+\]
 Adding: \(1.5(x + y) = 200\), so \(x + y = 133.3\). Subtracting the second from the first: \(0.5(x - y) = 0\), so \(x = y\). Then \(1.5x = 100\), giving \(x^* = y^* = 200/3 \approx 66.7\).
 
 To classify the interior equilibrium, linearise. The Jacobian at \((x^*, y^*)\) is:
-\[ J = \begin{pmatrix} -r_1 x^*/K_1 & -r_1\alpha_{12}x^*/K_1 \\ -r_2\alpha_{21}y^*/K_2 & -r_2 y^*/K_2 \end{pmatrix} = \begin{pmatrix} -2/3 & -1/3 \\ -1/3 & -2/3 \end{pmatrix}. \]
+
+\[
+J = \begin{pmatrix} -r_1 x^*/K_1 & -r_1\alpha_{12}x^*/K_1 \\ -r_2\alpha_{21}y^*/K_2 & -r_2 y^*/K_2 \end{pmatrix} = \begin{pmatrix} -2/3 & -1/3 \\ -1/3 & -2/3 \end{pmatrix}.
+\]
 
 \(\tau = -4/3 < 0\), \(\Delta = 4/9 - 1/9 = 3/9 = 1/3 > 0\), \(\tau^2 - 4\Delta = 16/9 - 4/3 = 4/9 > 0\): <strong>stable node</strong>. The two species <em>coexist</em> at the interior equilibrium. When \(\alpha_{12}\alpha_{21} < 1\) (interspecific competition weaker than intraspecific), coexistence is always stable. When \(\alpha_{12}\alpha_{21} > 1\), the interior equilibrium is a saddle and one species excludes the other — the initial conditions determine which.
 
@@ -1078,7 +1428,10 @@ where \(\beta > 0\) is the transmission rate and \(\gamma > 0\) is the recovery 
 
 <div class="definition">
 <strong>Definition (Basic Reproduction Number \(\mathcal{R}_0\))</strong>: The <em>basic reproduction number</em> is
-\[ \mathcal{R}_0 = \frac{\beta N}{\gamma}. \]
+
+\[
+\mathcal{R}_0 = \frac{\beta N}{\gamma}.
+\]
 It represents the expected number of secondary infections produced by a single infective in an otherwise fully susceptible population. If \(\mathcal{R}_0 > 1\), an epidemic can occur; if \(\mathcal{R}_0 \leq 1\), the infection dies out.
 </div>
 
@@ -1092,7 +1445,10 @@ It represents the expected number of secondary infections produced by a single i
 The only equilibria with \(I \geq 0\) and \(S \geq 0\) are the **disease-free equilibria** \((S^*, 0)\) for any \(0 \leq S^* \leq N\). (There is no interior equilibrium with \(I > 0\) that is a fixed point; the epidemic must end at some \(S^* < N\).)
 
 <em>Jacobian</em>: At a disease-free equilibrium \((S^*, 0)\):
-\[ J = \begin{pmatrix} \frac{\partial}{\partial S}(-\beta SI) & \frac{\partial}{\partial I}(-\beta SI) \\ \frac{\partial}{\partial S}(\beta SI - \gamma I) & \frac{\partial}{\partial I}(\beta SI - \gamma I) \end{pmatrix}\Bigg|_{(S^*, 0)} = \begin{pmatrix} 0 & -\beta S^* \\ 0 & \beta S^* - \gamma \end{pmatrix}. \]
+
+\[
+J = \begin{pmatrix} \frac{\partial}{\partial S}(-\beta SI) & \frac{\partial}{\partial I}(-\beta SI) \\ \frac{\partial}{\partial S}(\beta SI - \gamma I) & \frac{\partial}{\partial I}(\beta SI - \gamma I) \end{pmatrix}\Bigg|_{(S^*, 0)} = \begin{pmatrix} 0 & -\beta S^* \\ 0 & \beta S^* - \gamma \end{pmatrix}.
+\]
 
 The eigenvalues are \(\lambda_1 = 0\) and \(\lambda_2 = \beta S^* - \gamma\).
 
@@ -1128,19 +1484,28 @@ where \(s\) is the marginal propensity to save, \(k > 0\) is the income sensitiv
 
 <div class="theorem">
 <strong>Theorem (IS-LM Stability)</strong>: The IS-LM equilibrium is stable if and only if \(\tau < 0\) and \(\Delta > 0\), where
-\[ \tau = -\alpha s - \beta h < 0 \quad\text{(always negative)}, \qquad \Delta = \alpha\beta(sh + bk) > 0 \quad\text{(always positive)}. \]
+
+\[
+\tau = -\alpha s - \beta h < 0 \quad\text{(always negative)}, \qquad \Delta = \alpha\beta(sh + bk) > 0 \quad\text{(always positive)}.
+\]
 Therefore the IS-LM equilibrium is always a stable node or stable spiral: the economy always converges to its Keynesian equilibrium, regardless of initial conditions.
 </div>
 
 <div class="example">
 <strong>Example — IS-LM with a fiscal policy shock</strong>: Suppose \(\alpha = 1\), \(\beta = 0.5\), \(s = 0.2\), \(b = 0.5\), \(k = 0.1\), \(h = 1\). The linearised matrix is:
-\[ A = \begin{pmatrix} -0.2 & -0.5 \\ 0.05 & -0.5 \end{pmatrix}. \]
+
+\[
+A = \begin{pmatrix} -0.2 & -0.5 \\ 0.05 & -0.5 \end{pmatrix}.
+\]
 \(\tau = -0.7\), \(\Delta = 0.1 + 0.025 = 0.125\). Since \(\tau^2 - 4\Delta = 0.49 - 0.5 = -0.01 < 0\): <strong>stable spiral</strong>. Income and interest rates converge to equilibrium through damped oscillations.
 
 Eigenvalues: \(\lambda = (-0.7 \pm \sqrt{-0.01})/2 = -0.35 \pm 0.05i\). The period of oscillation is \(2\pi/0.05 \approx 125.6\) time units. The decay rate is \(e^{-0.35t}\); after \(t = 10\), the amplitude has fallen by factor \(e^{-3.5} \approx 0.030\). This represents a business cycle of very long period — consistent with the observation that IS-LM adjustment in calibrated macro models takes several years to complete.
 
 <em>Fiscal multiplier</em>: At the steady state, \(G\) enters through the IS equation. Setting \(dY/dt = 0\) and \(dr/dt = 0\) simultaneously and solving for \(\partial Y^*/\partial G\):
-\[ \frac{\partial Y^*}{\partial G} = \frac{h}{sh + bk} = \frac{1}{s + bk/h}. \]
+
+\[
+\frac{\partial Y^*}{\partial G} = \frac{h}{sh + bk} = \frac{1}{s + bk/h}.
+\]
 With the numbers above: \(bk/h = 0.05\), so the multiplier is \(1/(0.2 + 0.05) = 4\). A unit increase in government spending raises equilibrium income by 4 units — this is the Keynesian multiplier, modified downward from \(1/s = 5\) by the crowding-out effect (higher \(G\) raises \(r\), reducing \(I\)). The eigenvalue ratio \(\lambda_1/\lambda_2\) encodes the relative speeds at which the goods market and money market adjust — a deeper connection between the dynamical and comparative-static analyses.
 </div>
 
@@ -1161,7 +1526,7 @@ With a Cobb-Douglas production function \(Y = K^\alpha H^\phi L^{1-\alpha-\phi}\
 The steady state \((k^*, h^*)\) satisfies both equations simultaneously. Taking logs and setting \(\hat{k} = \ln k - \ln k^*\) and \(\hat{h} = \ln h - \ln h^*\) (log-deviations from steady state), the linearised system is:
 
 \[
-\frac{d}{dt}\begin{pmatrix}\hat{k}\\\hat{h}\end{pmatrix} = (n+\delta)\begin{pmatrix}\alpha - 1 & \phi \\ \alpha & \phi - 1\end{pmatrix}\begin{pmatrix}\hat{k}\\\hat{h}\end{pmatrix}.
+\frac{d}{dt}\begin{pmatrix}\hat{k}\\hat{h}\end{pmatrix} = (n+\delta)\begin{pmatrix}\alpha - 1 & \phi \\ \alpha & \phi - 1\end{pmatrix}\begin{pmatrix}\hat{k}\\hat{h}\end{pmatrix}.
 \]
 
 <div class="theorem">
@@ -1184,7 +1549,10 @@ While the Fourier Transform is the right tool for problems on the entire real li
 
 <div class="definition">
 <strong>Definition (Laplace Transform)</strong>: The <em>Laplace Transform</em> of a function \(f(t)\) defined for \(t \geq 0\) is
-\[ \mathcal{L}\{f\}(s) = F(s) = \int_0^\infty f(t)\,e^{-st}\,dt, \]
+
+\[
+\mathcal{L}\{f\}(s) = F(s) = \int_0^\infty f(t)\,e^{-st}\,dt,
+\]
 provided the integral converges for some \(s \in \mathbb{C}\). The <em>region of convergence</em> is a right half-plane \(\mathrm{Re}(s) > a\) for some abscissa of convergence \(a\).
 </div>
 
@@ -1223,26 +1591,47 @@ Here \(u_c(t)\) is the **Heaviside step function** that switches on at \(t = c\)
 
 <div class="example">
 <strong>Example — Second-order IVP with a Heaviside step forcing</strong>: Solve
-\[ y'' + 4y = u_2(t), \quad y(0) = 0,\; y'(0) = 0, \]
+
+\[
+y'' + 4y = u_2(t), \quad y(0) = 0,\; y'(0) = 0,
+\]
 where \(u_2(t)\) is the Heaviside function switching on at \(t = 2\) (a sudden injection of stimulus at time \(t = 2\)).
 
 <em>Step 1 — Take the Laplace Transform</em>: Applying \(\mathcal{L}\) to both sides:
-\[ s^2 Y - sy(0) - y'(0) + 4Y = \frac{e^{-2s}}{s}. \]
+
+\[
+s^2 Y - sy(0) - y'(0) + 4Y = \frac{e^{-2s}}{s}.
+\]
 Applying initial conditions \(y(0) = y'(0) = 0\):
-\[ (s^2 + 4)Y = \frac{e^{-2s}}{s}, \qquad Y(s) = \frac{e^{-2s}}{s(s^2+4)}. \]
+
+\[
+(s^2 + 4)Y = \frac{e^{-2s}}{s}, \qquad Y(s) = \frac{e^{-2s}}{s(s^2+4)}.
+\]
 
 <em>Step 2 — Partial fractions</em>: Decompose \(1/(s(s^2+4))\):
-\[ \frac{1}{s(s^2+4)} = \frac{A}{s} + \frac{Bs + C}{s^2+4}. \]
+
+\[
+\frac{1}{s(s^2+4)} = \frac{A}{s} + \frac{Bs + C}{s^2+4}.
+\]
 Multiplying through: \(1 = A(s^2+4) + (Bs+C)s\). Setting \(s = 0\): \(A = 1/4\). Comparing \(s^2\): \(0 = A + B\), so \(B = -1/4\). Comparing \(s^1\): \(0 = C\). Therefore:
-\[ \frac{1}{s(s^2+4)} = \frac{1}{4s} - \frac{s/4}{s^2+4} = \frac{1}{4}\!\left(\frac{1}{s} - \frac{s}{s^2+4}\right). \]
+
+\[
+\frac{1}{s(s^2+4)} = \frac{1}{4s} - \frac{s/4}{s^2+4} = \frac{1}{4}\!\left(\frac{1}{s} - \frac{s}{s^2+4}\right).
+\]
 
 Let \(G(s) = \frac{1}{s(s^2+4)}\), so \(g(t) = \mathcal{L}^{-1}\{G\}(t) = \frac{1}{4}(1 - \cos(2t))\).
 
 <em>Step 3 — Apply the second shifting theorem</em>: Since \(Y(s) = e^{-2s}G(s)\):
-\[ y(t) = \mathcal{L}^{-1}\{e^{-2s}G(s)\}(t) = u_2(t)\,g(t-2) = u_2(t)\cdot\frac{1}{4}\bigl(1 - \cos(2(t-2))\bigr). \]
+
+\[
+y(t) = \mathcal{L}^{-1}\{e^{-2s}G(s)\}(t) = u_2(t)\,g(t-2) = u_2(t)\cdot\frac{1}{4}\bigl(1 - \cos(2(t-2))\bigr).
+\]
 
 <em>Full solution</em>:
-\[ y(t) = \begin{cases} 0 & t < 2, \\ \dfrac{1}{4}\!\left(1 - \cos(2t - 4)\right) & t \geq 2. \end{cases} \]
+
+\[
+y(t) = \begin{cases} 0 & t < 2, \\ \dfrac{1}{4}\!\left(1 - \cos(2t - 4)\right) & t \geq 2. \end{cases}
+\]
 
 For \(t < 2\): no forcing has occurred, so the system remains at rest. At \(t = 2\), the forcing switches on, exciting oscillations at the natural frequency \(\omega_0 = 2\). The solution oscillates with amplitude \(1/4\) around the constant particular solution \(1/4\). Note: this is close to (but not exactly) resonance — the forcing is a step function, which has Fourier content at all frequencies, including \(\omega = 2\).
 
@@ -1253,16 +1642,27 @@ For \(t < 2\): no forcing has occurred, so the system remains at rest. At \(t = 
 
 <div class="example">
 <strong>Example — Tax reform as a step change in fiscal policy</strong>: Consider the dynamic IS equation for income \(Y(t)\):
-\[ Y' + \alpha(s - c)Y = \alpha G(t), \quad Y(0) = Y_0, \]
+
+\[
+Y' + \alpha(s - c)Y = \alpha G(t), \quad Y(0) = Y_0,
+\]
 where \(s - c > 0\) is the net "saving drag," \(\alpha > 0\) the adjustment speed, and \(G(t) = G_0 + \Delta G \cdot u_{t_0}(t)\) models government spending that is raised permanently by \(\Delta G\) at time \(t_0\). Let \(\lambda = \alpha(s-c)\) for brevity.
 
 Taking the Laplace Transform:
-\[ sY - Y_0 + \lambda Y = \alpha\!\left(\frac{G_0}{s} + \frac{\Delta G\,e^{-t_0 s}}{s}\right), \]
-\[ Y = \frac{Y_0}{s + \lambda} + \frac{\alpha G_0}{s(s+\lambda)} + \frac{\alpha\,\Delta G\,e^{-t_0 s}}{s(s+\lambda)}. \]
+
+\[
+sY - Y_0 + \lambda Y = \alpha\!\left(\frac{G_0}{s} + \frac{\Delta G\,e^{-t_0 s}}{s}\right),
+\]
+
+\[
+Y = \frac{Y_0}{s + \lambda} + \frac{\alpha G_0}{s(s+\lambda)} + \frac{\alpha\,\Delta G\,e^{-t_0 s}}{s(s+\lambda)}.
+\]
 
 Partial fractions: \(\frac{1}{s(s+\lambda)} = \frac{1}{\lambda s} - \frac{1}{\lambda(s+\lambda)}\). Inverting:
 
-\[ Y(t) = Y_0 e^{-\lambda t} + \frac{\alpha G_0}{\lambda}\!\left(1 - e^{-\lambda t}\right) + \frac{\alpha\,\Delta G}{\lambda}\,u_{t_0}(t)\!\left(1 - e^{-\lambda(t-t_0)}\right). \]
+\[
+Y(t) = Y_0 e^{-\lambda t} + \frac{\alpha G_0}{\lambda}\!\left(1 - e^{-\lambda t}\right) + \frac{\alpha\,\Delta G}{\lambda}\,u_{t_0}(t)\!\left(1 - e^{-\lambda(t-t_0)}\right).
+\]
 
 For \(t < t_0\): \(Y\) decays from \(Y_0\) toward \(Y^*_{\text{pre}} = \alpha G_0/\lambda\). After \(t_0\): \(Y\) makes a further transition toward \(Y^*_{\text{post}} = \alpha(G_0 + \Delta G)/\lambda\). The policy multiplier on the new long-run income is \(\alpha/\lambda = 1/(s-c)\) — the standard Keynesian multiplier restated in these units. The Laplace approach makes it mechanical to handle piecewise-constant policy paths, which would be cumbersome to analyse by the method of variation of parameters.
 </div>
@@ -1284,17 +1684,26 @@ Not every ODE with variable coefficients can be solved by the previous methods. 
 
 <div class="theorem">
 <strong>Theorem (Method of Frobenius)</strong>: If \(x_0 = 0\) is a regular singular point of \(y'' + P(x)y' + Q(x)y = 0\), the <em>indicial equation</em> is
-\[ r(r-1) + p_0 r + q_0 = 0, \]
+
+\[
+r(r-1) + p_0 r + q_0 = 0,
+\]
 where \(p_0 = \lim_{x\to 0} xP(x)\) and \(q_0 = \lim_{x\to 0} x^2 Q(x)\). If the two roots \(r_1 \geq r_2\) of the indicial equation do not differ by an integer, there are two Frobenius series solutions \(y_j = x^{r_j}\sum_{n=0}^\infty a_n^{(j)} x^n\), \(a_0^{(j)} \neq 0\). If \(r_1 - r_2\) is a non-negative integer, the second solution may involve a logarithm: \(y_2 = y_1 \ln x + x^{r_2}\sum a_n x^n\).
 </div>
 
 ## 13.1 The Euler Equation
 
 The **Euler equation** (or equidimensional equation) is
-\[ x^2 y'' + \alpha x y' + \beta y = 0, \quad x > 0. \]
+
+\[
+x^2 y'' + \alpha x y' + \beta y = 0, \quad x > 0.
+\]
 
 The origin \(x_0 = 0\) is a regular singular point with \(p_0 = \alpha\) and \(q_0 = \beta\). The indicial equation is \(r(r-1) + \alpha r + \beta = 0\), i.e.,
-\[ r^2 + (\alpha - 1)r + \beta = 0. \]
+
+\[
+r^2 + (\alpha - 1)r + \beta = 0.
+\]
 
 The substitution \(x = e^t\) (i.e., \(t = \ln x\)) converts the Euler equation into a constant-coefficient ODE in \(t\), which can be solved by the characteristic equation method.
 
@@ -1308,8 +1717,14 @@ The substitution \(x = e^t\) (i.e., \(t = \ln x\)) converts the Euler equation i
 <em>Second solution</em> (logarithmic case — repeated root): \(y_2 = x^{-1}\ln x\).
 
 <em>Verification of \(y_2\)</em>: \(y_2' = x^{-2}(\ln x \cdot (-1) \cdot x^{-1} \cdot x + 1 \cdot 1) \). More carefully: \(y_2 = x^{-1}\ln x\), so \(y_2' = -x^{-2}\ln x + x^{-2} = x^{-2}(1 - \ln x)\), and \(y_2'' = -2x^{-3}(1-\ln x) + x^{-2}(-x^{-1}) = x^{-3}(-2 + 2\ln x - 1) = x^{-3}(2\ln x - 3)\). Substituting into the ODE:
-\[ x^2 \cdot x^{-3}(2\ln x - 3) + 3x \cdot x^{-2}(1 - \ln x) + x^{-1}\ln x = x^{-1}(2\ln x - 3) + 3x^{-1}(1 - \ln x) + x^{-1}\ln x. \]
-\[ = x^{-1}(2\ln x - 3 + 3 - 3\ln x + \ln x) = x^{-1} \cdot 0 = 0. \checkmark \]
+
+\[
+x^2 \cdot x^{-3}(2\ln x - 3) + 3x \cdot x^{-2}(1 - \ln x) + x^{-1}\ln x = x^{-1}(2\ln x - 3) + 3x^{-1}(1 - \ln x) + x^{-1}\ln x.
+\]
+
+\[
+= x^{-1}(2\ln x - 3 + 3 - 3\ln x + \ln x) = x^{-1} \cdot 0 = 0. \checkmark
+\]
 
 <em>General solution</em>: \(y = c_1 x^{-1} + c_2 x^{-1}\ln x = x^{-1}(c_1 + c_2 \ln x)\).
 
@@ -1330,26 +1745,42 @@ Near an ordinary point, the method of power series is simpler than Frobenius —
 <strong>Example — Power series solution of \(y'' - xy' - y = 0\) about \(x = 0\)</strong>: The coefficient functions \(P(x) = -x\) and \(Q(x) = -1\) are both analytic everywhere, so \(x = 0\) is an ordinary point and we assume \(y = \sum_{n=0}^\infty a_n x^n\).
 
 Computing term by term:
-\[ y' = \sum_{n=1}^\infty n a_n x^{n-1}, \quad y'' = \sum_{n=2}^\infty n(n-1)a_n x^{n-2} = \sum_{n=0}^\infty (n+2)(n+1)a_{n+2}x^n. \]
-\[ xy' = \sum_{n=1}^\infty n a_n x^n = \sum_{n=0}^\infty n a_n x^n. \]
+
+\[
+y' = \sum_{n=1}^\infty n a_n x^{n-1}, \quad y'' = \sum_{n=2}^\infty n(n-1)a_n x^{n-2} = \sum_{n=0}^\infty (n+2)(n+1)a_{n+2}x^n.
+\]
+
+\[
+xy' = \sum_{n=1}^\infty n a_n x^n = \sum_{n=0}^\infty n a_n x^n.
+\]
 
 Substituting into \(y'' - xy' - y = 0\):
-\[ \sum_{n=0}^\infty \bigl[(n+2)(n+1)a_{n+2} - n a_n - a_n\bigr]x^n = 0. \]
+
+\[
+\sum_{n=0}^\infty \bigl[(n+2)(n+1)a_{n+2} - n a_n - a_n\bigr]x^n = 0.
+\]
 
 Setting each coefficient to zero: \((n+2)(n+1)a_{n+2} = (n+1)a_n\), so
-\[ a_{n+2} = \frac{a_n}{n+2}, \quad n = 0, 1, 2, \ldots \]
+
+\[
+a_{n+2} = \frac{a_n}{n+2}, \quad n = 0, 1, 2, \ldots
+\]
 
 This recurrence connects even and odd coefficients separately. Starting from free constants \(a_0\) and \(a_1\):
 
 \[
 a_2 = \frac{a_0}{2},\quad a_4 = \frac{a_2}{4} = \frac{a_0}{8},\quad a_6 = \frac{a_4}{6} = \frac{a_0}{48}, \ldots
 \]
+
 \[
 a_3 = \frac{a_1}{3},\quad a_5 = \frac{a_3}{5} = \frac{a_1}{15},\quad a_7 = \frac{a_5}{7} = \frac{a_1}{105}, \ldots
 \]
 
 The general pattern for even terms: \(a_{2k} = a_0/(2^k k!)\) (verifiable by induction). The two linearly independent solutions are:
-\[ y_1(x) = a_0\sum_{k=0}^\infty \frac{x^{2k}}{2^k k!} = a_0\,e^{x^2/2}, \qquad y_2(x) = a_1\sum_{k=0}^\infty \frac{x^{2k+1}}{1 \cdot 3 \cdot 5 \cdots (2k+1)}. \]
+
+\[
+y_1(x) = a_0\sum_{k=0}^\infty \frac{x^{2k}}{2^k k!} = a_0\,e^{x^2/2}, \qquad y_2(x) = a_1\sum_{k=0}^\infty \frac{x^{2k+1}}{1 \cdot 3 \cdot 5 \cdots (2k+1)}.
+\]
 
 Indeed, \(y_1 = e^{x^2/2}\) can be verified directly: \(y_1' = xe^{x^2/2}\), \(y_1'' = (1+x^2)e^{x^2/2}\), and \(y_1'' - xy_1' - y_1 = (1+x^2)e^{x^2/2} - x^2 e^{x^2/2} - e^{x^2/2} = 0\). The power series method has efficiently produced both solutions, and the even-indexed one turns out to be an elementary function while the odd-indexed one is a non-elementary special function related to the error function \(\mathrm{erf}(x)\).
 </div>
@@ -1371,7 +1802,10 @@ where we have scaled so that the carrying capacity is 1. This is the **Fisher-KP
 
 <div class="definition">
 <strong>Definition (Travelling Wave Solution)</strong>: A <em>travelling wave</em> of the Fisher-KPP equation is a solution of the form \(u(x,t) = \varphi(\xi)\) where \(\xi = x - ct\), connecting the unstable equilibrium \(u = 0\) ahead of the front to the stable equilibrium \(u = 1\) behind it:
-\[ \lim_{\xi \to +\infty}\varphi(\xi) = 0, \qquad \lim_{\xi \to -\infty}\varphi(\xi) = 1. \]
+
+\[
+\lim_{\xi \to +\infty}\varphi(\xi) = 0, \qquad \lim_{\xi \to -\infty}\varphi(\xi) = 1.
+\]
 The parameter \(c > 0\) is the <em>wave speed</em>.
 </div>
 
@@ -1390,19 +1824,28 @@ The equilibria are \((\varphi, p) = (0, 0)\) and \((1, 0)\). A travelling wave c
 
 <div class="theorem">
 <strong>Theorem (Minimal Wave Speed)</strong>: The Fisher-KPP equation admits monotone travelling wave solutions connecting \(u = 1\) to \(u = 0\) if and only if the wave speed \(c\) satisfies
-\[ c \geq c^* = 2\sqrt{Dr}. \]
+
+\[
+c \geq c^* = 2\sqrt{Dr}.
+\]
 The minimal speed \(c^* = 2\sqrt{Dr}\) is selected by initial conditions with compact support (spatially localised perturbation). Waves with \(c < c^*\) do not exist as monotone fronts.
 </div>
 
 <div class="proof">
 <strong>Proof sketch.</strong> Linearise near the equilibrium \((\varphi, p) = (0,0)\):
-\[ \frac{d}{d\xi}\begin{pmatrix}\varphi\\p\end{pmatrix} = \begin{pmatrix}0&1\\-r/D&-c/D\end{pmatrix}\begin{pmatrix}\varphi\\p\end{pmatrix}. \]
+
+\[
+\frac{d}{d\xi}\begin{pmatrix}\varphi\\p\end{pmatrix} = \begin{pmatrix}0&1\\-r/D&-c/D\end{pmatrix}\begin{pmatrix}\varphi\\p\end{pmatrix}.
+\]
 The eigenvalues are \(\lambda = \frac{-c/D \pm \sqrt{c^2/D^2 - 4r/D}}{2}\). For the wave to approach zero monotonically (without oscillation in \(\varphi\)), we need real eigenvalues: \(c^2/D^2 \geq 4r/D\), i.e., \(c^2 \geq 4Dr\), i.e., \(c \geq 2\sqrt{Dr}\). If \(c < 2\sqrt{Dr}\), the eigenvalues are complex and \(\varphi\) oscillates near zero — but \(\varphi < 0\) is not a valid population density, ruling out such waves.
 </div>
 
 <div class="example">
 <strong>Example — Wave speed in an epidemic spatial model</strong>: Suppose infected individuals diffuse with coefficient \(D = 0.01\) km\(^2\)/day and the logistic growth rate (net infection minus recovery) is \(r = 0.5\) per day. Then:
-\[ c^* = 2\sqrt{Dr} = 2\sqrt{0.01 \times 0.5} = 2\sqrt{0.005} = 2 \times 0.0707 \approx 0.141 \text{ km/day} \approx 51.5 \text{ km/year}. \]
+
+\[
+c^* = 2\sqrt{Dr} = 2\sqrt{0.01 \times 0.5} = 2\sqrt{0.005} = 2 \times 0.0707 \approx 0.141 \text{ km/day} \approx 51.5 \text{ km/year}.
+\]
 
 This is the minimum speed at which an epidemic front advances spatially. Historical data on the Black Death (1347-1353) gives an observed wave speed of roughly 500 km/year, suggesting much higher effective diffusion (\(D \sim 40\,\text{km}^2/\text{day}\)) consistent with long-range travel by trade routes rather than pure local diffusion.
 
@@ -1458,7 +1901,10 @@ Resonance: multiply particular solution guess by \(x^s\) where \(s\) = multiplic
 **PDE**: \(V_t + \frac{1}{2}\sigma^2 S^2 V_{SS} + rSV_S - rV = 0\)
 
 **Formula** (European call, \(\tau = T-t\)):
-\[ C = SN(d_1) - Ke^{-r\tau}N(d_2), \quad d_1 = \frac{\ln(S/K)+(r+\sigma^2/2)\tau}{\sigma\sqrt{\tau}}, \quad d_2 = d_1 - \sigma\sqrt{\tau}. \]
+
+\[
+C = SN(d_1) - Ke^{-r\tau}N(d_2), \quad d_1 = \frac{\ln(S/K)+(r+\sigma^2/2)\tau}{\sigma\sqrt{\tau}}, \quad d_2 = d_1 - \sigma\sqrt{\tau}.
+\]
 
 **Put-call parity**: \(C - P = S - Ke^{-r\tau}\).
 

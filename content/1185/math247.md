@@ -18,6 +18,7 @@ We work in \(\mathbb{R}^n\) equipped with the Euclidean norm \(\|\mathbf{x}\| = 
 <div class="definition">
 
 <strong>Definition 1.1 (Open Ball).</strong> For \(\mathbf{a} \in \mathbb{R}^n\) and \(r > 0\), the <em>open ball</em> of radius \(r\) centred at \(\mathbf{a}\) is
+
 \[
 B_r(\mathbf{a}) = \{\mathbf{x} \in \mathbb{R}^n : \|\mathbf{x} - \mathbf{a}\| < r\}.
 \]
@@ -158,6 +159,7 @@ The interplay between topology and analysis begins in earnest once we ask: when 
 <div class="definition">
 
 <strong>Definition 2.1 (Limit).</strong> Let \(f : D \to \mathbb{R}\) with \(D \subseteq \mathbb{R}^n\), and let \(\mathbf{a}\) be a limit point of \(D\). We say \(\displaystyle\lim_{\mathbf{x} \to \mathbf{a}} f(\mathbf{x}) = L\) if for every \(\varepsilon > 0\) there exists \(\delta > 0\) such that
+
 \[
 0 < \|\mathbf{x} - \mathbf{a}\| < \delta \text{ and } \mathbf{x} \in D \implies |f(\mathbf{x}) - L| < \varepsilon.
 \]
@@ -169,6 +171,7 @@ The key feature distinguishing this from single-variable limits is that \(\delta
 <div class="theorem">
 
 <strong>Theorem 2.2 (Limit Laws).</strong> If \(\lim_{\mathbf{x}\to\mathbf{a}} f(\mathbf{x}) = L\) and \(\lim_{\mathbf{x}\to\mathbf{a}} g(\mathbf{x}) = M\), then
+
 \[
 \lim_{\mathbf{x}\to\mathbf{a}} [f(\mathbf{x}) + g(\mathbf{x})] = L + M, \quad \lim_{\mathbf{x}\to\mathbf{a}} f(\mathbf{x})g(\mathbf{x}) = LM, \quad \lim_{\mathbf{x}\to\mathbf{a}} \frac{f(\mathbf{x})}{g(\mathbf{x})} = \frac{L}{M} \text{ if } M \neq 0.
 \]
@@ -190,6 +193,7 @@ A useful bounding inequality: since \(|x_i| \leq \|\mathbf{x}\|\) for each compo
 <div class="definition">
 
 <strong>Definition 2.4 (Continuity).</strong> A function \(f : D \to \mathbb{R}\) is <em>continuous at</em> \(\mathbf{a} \in D\) if
+
 \[
 \lim_{\mathbf{x} \to \mathbf{a}} f(\mathbf{x}) = f(\mathbf{a}).
 \]
@@ -212,6 +216,7 @@ The polynomial functions, coordinate projections, exponential, logarithm, trigon
 <div class="definition">
 
 <strong>Definition 2.6 (Partial Derivative).</strong> Let \(f : D \to \mathbb{R}\) with \(D \subseteq \mathbb{R}^n\). The <em>partial derivative</em> of \(f\) with respect to \(x_i\) at \(\mathbf{a}\) is
+
 \[
 \frac{\partial f}{\partial x_i}(\mathbf{a}) = \lim_{h \to 0} \frac{f(\mathbf{a} + h\mathbf{e}_i) - f(\mathbf{a})}{h},
 \]
@@ -224,6 +229,7 @@ A partial derivative measures the rate of change of \(f\) when we move in the di
 <div class="definition">
 
 <strong>Definition 2.7 (Gradient).</strong> If all partial derivatives of \(f : D \to \mathbb{R}\) exist at \(\mathbf{a}\), the <em>gradient</em> is the vector
+
 \[
 \nabla f(\mathbf{a}) = \left(\frac{\partial f}{\partial x_1}(\mathbf{a}), \ldots, \frac{\partial f}{\partial x_n}(\mathbf{a})\right) \in \mathbb{R}^n.
 \]
@@ -243,6 +249,7 @@ Partial derivatives capture rates of change along coordinate directions, but the
 <div class="definition">
 
 <strong>Definition 3.1 (Differentiable, Total Derivative).</strong> A function \(f : D \to \mathbb{R}^m\) with \(D \subseteq \mathbb{R}^n\) open is <em>differentiable</em> at \(\mathbf{a} \in D\) if there exists a linear map \(L : \mathbb{R}^n \to \mathbb{R}^m\) such that
+
 \[
 \lim_{\mathbf{h} \to \mathbf{0}} \frac{\|f(\mathbf{a} + \mathbf{h}) - f(\mathbf{a}) - L(\mathbf{h})\|}{\|\mathbf{h}\|} = 0.
 \]
@@ -263,6 +270,7 @@ The total derivative is unique when it exists: if both \(L\) and \(L'\) satisfy 
 <div class="theorem">
 
 <strong>Theorem 3.3 (Partials from the Total Derivative).</strong> If \(f : D \to \mathbb{R}\) is differentiable at \(\mathbf{a}\), then all partial derivatives \(\partial f / \partial x_i\) exist at \(\mathbf{a}\), and
+
 \[
 Df(\mathbf{a})(\mathbf{h}) = \nabla f(\mathbf{a}) \cdot \mathbf{h} = \sum_{i=1}^n \frac{\partial f}{\partial x_i}(\mathbf{a})\, h_i.
 \]
@@ -288,6 +296,7 @@ For a map \(F = (f_1, \ldots, f_m) : D \subseteq \mathbb{R}^n \to \mathbb{R}^m\)
 <div class="definition">
 
 <strong>Definition 3.5 (Jacobian Matrix).</strong> If \(F : D \subseteq \mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(\mathbf{a}\), the matrix of the linear map \(DF(\mathbf{a})\) with respect to the standard bases is the <em>Jacobian matrix</em>
+
 \[
 JF(\mathbf{a}) = \begin{bmatrix} \dfrac{\partial f_1}{\partial x_1} & \cdots & \dfrac{\partial f_1}{\partial x_n} \\[8pt] \vdots & \ddots & \vdots \\[4pt] \dfrac{\partial f_m}{\partial x_1} & \cdots & \dfrac{\partial f_m}{\partial x_n} \end{bmatrix}_{\mathbf{a}}.
 \]
@@ -304,6 +313,7 @@ The chain rule is the engine of multivariable calculus: it converts questions ab
 <div class="theorem">
 
 <strong>Theorem 3.6 (Chain Rule).</strong> Let \(G : D \subseteq \mathbb{R}^n \to \mathbb{R}^m\) be differentiable at \(\mathbf{a}\), and let \(F : E \subseteq \mathbb{R}^m \to \mathbb{R}^p\) be differentiable at \(G(\mathbf{a})\). Then the composite \(F \circ G\) is differentiable at \(\mathbf{a}\) and
+
 \[
 D(F \circ G)(\mathbf{a}) = DF(G(\mathbf{a})) \circ DG(\mathbf{a}),
 \]
@@ -335,6 +345,7 @@ The "sum over intermediate variables" rule is precisely matrix multiplication.
 <div class="definition">
 
 <strong>Definition 3.7 (Directional Derivative).</strong> The <em>directional derivative</em> of \(f\) at \(\mathbf{a}\) in the direction of a unit vector \(\hat{\mathbf{u}} \in \mathbb{R}^n\) is
+
 \[
 D_{\hat{\mathbf{u}}} f(\mathbf{a}) = \lim_{t \to 0} \frac{f(\mathbf{a} + t\hat{\mathbf{u}}) - f(\mathbf{a})}{t} = \frac{d}{dt}\bigg|_{t=0} f(\mathbf{a} + t\hat{\mathbf{u}}).
 \]
@@ -362,6 +373,7 @@ These two theorems are among the deepest results in multivariable calculus, and 
 <div class="theorem">
 
 <strong>Theorem 4.1 (Inverse Function Theorem).</strong> Let \(F : D \subseteq \mathbb{R}^n \to \mathbb{R}^n\) be a \(C^1\) map, and suppose \(\det JF(\mathbf{a}) \neq 0\) at some \(\mathbf{a} \in D\). Then there exist open sets \(U \ni \mathbf{a}\) and \(V \ni F(\mathbf{a})\) such that \(F|_U : U \to V\) is a bijection, and its inverse \(F^{-1} : V \to U\) is also \(C^1\) with
+
 \[
 JF^{-1}(\mathbf{y}) = \bigl[JF(F^{-1}(\mathbf{y}))\bigr]^{-1}.
 \]
@@ -414,6 +426,7 @@ The Implicit Function Theorem answers the question: when does the zero set of a 
 <div class="theorem">
 
 <strong>Theorem 4.2 (Implicit Function Theorem).</strong> Let \(F : D \subseteq \mathbb{R}^{n+m} \to \mathbb{R}^m\) be \(C^1\), and write points in \(\mathbb{R}^{n+m}\) as \((\mathbf{x}, \mathbf{y})\) with \(\mathbf{x} \in \mathbb{R}^n\), \(\mathbf{y} \in \mathbb{R}^m\). Suppose \(F(\mathbf{a}, \mathbf{b}) = \mathbf{0}\) and the \(m \times m\) matrix
+
 \[
 \frac{\partial F}{\partial \mathbf{y}}(\mathbf{a}, \mathbf{b}) = \left[\frac{\partial F_i}{\partial y_j}\right]_{i,j=1}^m
 \]
@@ -456,6 +469,7 @@ Once we know \(f\) is differentiable, we can ask: is \(Df\) itself differentiabl
 <div class="definition">
 
 <strong>Definition 5.1 (Second Partial Derivatives, Hessian).</strong> For \(f \in C^2(D)\), the <em>second partial derivatives</em> are \(\partial^2 f/\partial x_i \partial x_j = \partial/\partial x_i (\partial f/\partial x_j)\). The <em>Hessian matrix</em> is
+
 \[
 Hf(\mathbf{a}) = \left[\frac{\partial^2 f}{\partial x_i \partial x_j}(\mathbf{a})\right]_{i,j=1}^n.
 \]
@@ -475,6 +489,7 @@ The Hessian captures the curvature of the graph of \(f\), just as the second der
 <div class="theorem">
 
 <strong>Theorem 5.3 (Taylor's Theorem).</strong> Let \(f \in C^{k+1}\) on an open convex set containing the segment from \(\mathbf{a}\) to \(\mathbf{x}\). Then
+
 \[
 f(\mathbf{x}) = \sum_{|\alpha| \leq k} \frac{1}{\alpha!}\, \partial^\alpha f(\mathbf{a})\, (\mathbf{x} - \mathbf{a})^\alpha + R_k(\mathbf{x}),
 \]
@@ -536,6 +551,7 @@ The geometric insight is this: at a constrained maximum of \(f\) on the surface 
 <div class="theorem">
 
 <strong>Theorem 6.1 (Lagrange Multiplier Theorem).</strong> Let \(f, g : D \subseteq \mathbb{R}^n \to \mathbb{R}\) be \(C^1\). If \(\mathbf{a}\) is a local extremum of \(f\) subject to \(g(\mathbf{a}) = 0\) and \(\nabla g(\mathbf{a}) \neq \mathbf{0}\), then there exists \(\lambda \in \mathbb{R}\) such that
+
 \[
 \nabla f(\mathbf{a}) = \lambda\, \nabla g(\mathbf{a}).
 \]
@@ -549,6 +565,7 @@ The geometric insight is this: at a constrained maximum of \(f\) on the surface 
 <div class="theorem">
 
 <strong>Theorem 6.2 (Multiple Constraints).</strong> Suppose \(f : \mathbb{R}^n \to \mathbb{R}\) and \(g_1, \ldots, g_k : \mathbb{R}^n \to \mathbb{R}\) are \(C^1\) with \(k < n\). If \(\mathbf{a}\) is a local extremum of \(f\) on \(\{g_1 = \cdots = g_k = 0\}\) and the gradients \(\nabla g_1(\mathbf{a}), \ldots, \nabla g_k(\mathbf{a})\) are linearly independent, then there exist \(\lambda_1, \ldots, \lambda_k \in \mathbb{R}\) such that
+
 \[
 \nabla f(\mathbf{a}) = \lambda_1 \nabla g_1(\mathbf{a}) + \cdots + \lambda_k \nabla g_k(\mathbf{a}).
 \]
@@ -591,6 +608,7 @@ Integration in \(\mathbb{R}^n\) extends the Riemann integral from intervals to m
 <div class="theorem">
 
 <strong>Theorem 7.3 (Fubini's Theorem).</strong> Let \(f\) be integrable on the box \(R = [a,b] \times [c,d] \subseteq \mathbb{R}^2\). Then
+
 \[
 \iint_R f(x,y)\, dA = \int_a^b \left(\int_c^d f(x,y)\, dy\right) dx = \int_c^d \left(\int_a^b f(x,y)\, dx\right) dy.
 \]
@@ -612,6 +630,7 @@ The change-of-variables theorem is the multivariable substitute for integration 
 <div class="theorem">
 
 <strong>Theorem 7.4 (Change of Variables).</strong> Let \(\Phi : D^<em> \subseteq \mathbb{R}^n \to \mathbb{R}^n\) be a \(C^1\) bijection from an open set \(D^</em>\) onto \(D\), with \(\det J\Phi(\mathbf{u}) \neq 0\) on \(D^*\) (except possibly on a set of measure zero). If \(f : D \to \mathbb{R}\) is integrable, then
+
 \[
 \int_D f(\mathbf{x})\, d\mathbf{x} = \int_{D^*} f(\Phi(\mathbf{u}))\, |\det J\Phi(\mathbf{u})|\, d\mathbf{u}.
 \]
@@ -643,6 +662,7 @@ The final chapter draws together differentiation and integration in \(\mathbb{R}
 <div class="definition">
 
 <strong>Definition 8.1 (Line Integral).</strong> Let \(\mathbf{F} : D \subseteq \mathbb{R}^n \to \mathbb{R}^n\) be a continuous vector field and \(\gamma : [a,b] \to D\) a \(C^1\) curve. The <em>line integral</em> of \(\mathbf{F}\) along \(\gamma\) is
+
 \[
 \int_\gamma \mathbf{F} \cdot d\mathbf{s} = \int_a^b \mathbf{F}(\gamma(t)) \cdot \gamma'(t)\, dt.
 \]
@@ -666,6 +686,7 @@ Green's theorem is the two-dimensional case of Stokes' theorem. It relates a lin
 <div class="theorem">
 
 <strong>Theorem 8.3 (Green's Theorem).</strong> Let \(D \subseteq \mathbb{R}^2\) be a compact region with piecewise smooth boundary \(\partial D\) oriented counterclockwise. If \(P, Q : D \to \mathbb{R}\) are \(C^1\), then
+
 \[
 \oint_{\partial D} P\, dx + Q\, dy = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dA.
 \]
@@ -694,6 +715,7 @@ These theorems generalise Green's theorem to three dimensions: Stokes' theorem t
 <div class="theorem">
 
 <strong>Theorem 8.4 (Stokes' Theorem).</strong> Let \(S\) be an oriented \(C^2\) surface in \(\mathbb{R}^3\) with piecewise smooth boundary \(\partial S\) oriented consistently with \(S\). If \(\mathbf{F} : D \to \mathbb{R}^3\) is \(C^1\) on an open set containing \(S\), then
+
 \[
 \oint_{\partial S} \mathbf{F} \cdot d\mathbf{s} = \iint_S (\operatorname{curl} \mathbf{F}) \cdot d\mathbf{S},
 \]
@@ -706,6 +728,7 @@ where \(\operatorname{curl} \mathbf{F} = \nabla \times \mathbf{F}\).
 <div class="theorem">
 
 <strong>Theorem 8.5 (Divergence Theorem, Gauss's Theorem).</strong> Let \(E \subseteq \mathbb{R}^3\) be a compact region with piecewise smooth outward-oriented boundary \(\partial E\). If \(\mathbf{F} : D \to \mathbb{R}^3\) is \(C^1\) on an open set containing \(E\), then
+
 \[
 \oiint_{\partial E} \mathbf{F} \cdot d\mathbf{S} = \iiint_E \operatorname{div} \mathbf{F}\, dV,
 \]
@@ -732,6 +755,7 @@ The three integral theorems — Fundamental Theorem, Green's, Stokes', Divergenc
 <div class="definition">
 
 <strong>Definition 8.7 (Exterior Derivative).</strong> The <em>exterior derivative</em> \(d\) maps \(k\)-forms to \((k+1)\)-forms. For a 0-form (function) \(f\):
+
 \[
 df = \frac{\partial f}{\partial x_1}\, dx_1 + \cdots + \frac{\partial f}{\partial x_n}\, dx_n.
 \]
@@ -744,6 +768,7 @@ Notice that \(d^2 = 0\) encodes the commutativity of mixed partials: the identit
 <div class="theorem">
 
 <strong>Theorem 8.8 (Generalised Stokes' Theorem).</strong> Let \(\omega\) be a smooth \((k-1)\)-form and \(M\) an oriented \(k\)-dimensional manifold with boundary \(\partial M\). Then
+
 \[
 \int_M d\omega = \int_{\partial M} \omega.
 \]

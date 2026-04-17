@@ -35,6 +35,7 @@ The physics underlying the theremin is the principle of the *heterodyne oscillat
 
 <div class="definition">
 <strong>Definition 1.1 (Heterodyne Principle).</strong> Two oscillators are operated at frequencies close to each other: a fixed oscillator at frequency \( f_{\text{fixed}} \) and a variable oscillator whose frequency \( f_{\text{var}} \) is altered by the proximity of the player's hand to the pitch antenna. The two signals are combined in a mixing circuit, producing sum and difference frequencies. The sum frequency \( f_{\text{fixed}} + f_{\text{var}} \) lies far above the range of human hearing and is filtered out. The difference frequency
+
 \[
 f_{\text{audio}} = |f_{\text{fixed}} - f_{\text{var}}|
 \]
@@ -45,10 +46,12 @@ A typical theremin circuit might use \( f_{\text{fixed}} = 170{,}000 \) Hz and \
 
 <div class="definition">
 <strong>Definition 1.2b (Theremin Pitch Response).</strong> If the pitch antenna has effective capacitance \( C_0 \) when no hand is present, and the player's hand at distance \( d \) adds a hand capacitance approximately \( C_h(d) \approx k/d \) for a constant \( k \) determined by hand size and orientation, then the variable oscillator frequency is approximately
+
 \[
 f_{\text{var}}(d) = \frac{1}{2\pi \sqrt{L (C_0 + C_h(d))}} = \frac{1}{2\pi \sqrt{L (C_0 + k/d)}},
 \]
 where \( L \) is the inductance of the tuned circuit. The audio frequency produced is then
+
 \[
 f_{\text{audio}}(d) = |f_{\text{fixed}} - f_{\text{var}}(d)|.
 \]
@@ -123,6 +126,7 @@ Every pitched musical sound can be described, at the level of physics, by its sp
 
 <div class="definition">
 <strong>Definition 1.4 (Fourier Series Representation of Timbre).</strong> A periodic acoustic signal with fundamental frequency \( f_0 \) and period \( T = 1/f_0 \) can be represented as a Fourier series:
+
 \[
 p(t) = \sum_{n=1}^{\infty} A_n \sin(2\pi n f_0 t + \phi_n),
 \]
@@ -371,10 +375,12 @@ The EMS (Electronic Music Studios) Synthi AKS, developed in London by Peter Zino
 
 <div class="definition">
 <strong>Definition 5.2 (Ring Modulation).</strong> Ring modulation is a signal-processing technique in which two audio signals \( x(t) \) and \( y(t) \) are multiplied together:
+
 \[
 z(t) = x(t) \cdot y(t).
 \]
 When \( x(t) = A \sin(2\pi f_1 t) \) and \( y(t) = B \sin(2\pi f_2 t) \), the product is
+
 \[
 z(t) = \frac{AB}{2} \left[\cos(2\pi (f_1 - f_2) t) - \cos(2\pi (f_1 + f_2) t)\right],
 \]
@@ -407,10 +413,12 @@ John Chowning, a composer working at the Center for Computer Research in Music a
 
 <div class="definition">
 <strong>Definition 6.2 (FM Synthesis).</strong> In FM synthesis, the instantaneous frequency of one oscillator (the <em>carrier</em>, at nominal frequency \( f_c \)) is modulated by the output of a second oscillator (the <em>modulator</em>, at frequency \( f_m \)) with a modulation index \( I \). The resulting signal has the form
+
 \[
 y(t) = A \sin\!\bigl(2\pi f_c t + I \sin(2\pi f_m t)\bigr).
 \]
 By the Jacobi-Anger expansion, this signal contains frequency components (sidebands) at
+
 \[
 f_c + n f_m \quad \text{for } n = 0, \pm 1, \pm 2, \pm 3, \ldots
 \]
@@ -445,6 +453,7 @@ Iannis Xenakis, the Greek-French composer and architect who worked in Le Corbusi
 
 <div class="example">
 <strong>Example 6.1 (Stochastic Methods in <em>Achorripsis</em>).</strong> <em>Achorripsis</em> (1957) applies the Poisson distribution to determine the density of musical events. If events (notes, attacks, sound-objects) occur independently and randomly at an average rate of \( \lambda \) events per unit time, the probability of exactly \( k \) events occurring in a given time unit is
+
 \[
 P(k) = \frac{\lambda^k e^{-\lambda}}{k!}.
 \]
@@ -477,6 +486,7 @@ One of the most powerful and aesthetically distinctive synthesis techniques deve
 
 <div class="definition">
 <strong>Definition 6.3 (Granular Synthesis).</strong> In granular synthesis, the output signal is the superposition of \( N \) grains per unit time, where each grain \( g_i(t) \) has the form
+
 \[
 g_i(t) = A_i \cdot w_i(t - t_i) \cdot \sin(2\pi f_i (t - t_i) + \phi_i),
 \]
@@ -562,6 +572,7 @@ The development of the phase vocoder by James Flanagan and his colleagues at Bel
 
 <div class="definition">
 <strong>Definition 7.2 (Short-Time Fourier Transform).</strong> The Short-Time Fourier Transform (STFT) of an audio signal \( x(t) \) is defined as
+
 \[
 X(\tau, \omega) = \int_{-\infty}^{\infty} x(t)\, w(t - \tau)\, e^{-i\omega t}\, dt,
 \]
@@ -693,6 +704,7 @@ Every electronic music system, from the simplest theremin to the most complex mu
 <div class="definition">
 <strong>Definition 9.1 (Audio Signal).</strong> An <em>audio signal</em> is a function \( x(t) \) of time \( t \), representing the instantaneous amplitude of an electrical voltage (in analog circuits) or a sequence of numerical values \( x[n] \) sampled at discrete time intervals (in digital systems). The relationship between continuous and discrete representations is given by the sampling theorem:
 if \( x(t) \) contains no frequency components above \( f_{\max} \), then \( x(t) \) is completely determined by its samples at any rate \( f_s > 2 f_{\max} \):
+
 \[
 x[n] = x(n / f_s), \qquad n \in \mathbb{Z}.
 \]
@@ -727,6 +739,7 @@ H(i\omega) = \frac{1}{1 + i\omega RC},
 
 <div class="definition">
 <strong>Definition 9.2 (Cutoff Frequency of an RC Filter).</strong> The <em>cutoff frequency</em> (or \(-3\,\text{dB}\) frequency) of a first-order RC low-pass filter is
+
 \[
 f_c = \frac{1}{2\pi RC}.
 \]
@@ -761,6 +774,7 @@ The spatial dimension of electronic music — the placement, movement, and diffu
 
 <div class="definition">
 <strong>Definition 9.4 (Ambisonics).</strong> Ambisonics is a full-sphere surround-sound format developed by Michael Gerzon at the Mathematical Institute, University of Oxford, in the 1970s. In first-order Ambisonics (B-format), the sound field is encoded as four channels: \( W \) (omnidirectional pressure component) and three directional components \( X, Y, Z \) corresponding to the three Cartesian axes. For a plane wave arriving from direction \( (\theta, \phi) \) (azimuth and elevation), the encoding is:
+
 \[
 W = \frac{1}{\sqrt{2}},\quad
 X = \cos\theta\cos\phi,\quad
@@ -818,10 +832,12 @@ The relationship between the physical intensity of a sound and its perceived lou
 
 <div class="definition">
 <strong>Definition 9.5 (Sound Pressure Level).</strong> The <em>sound pressure level</em> (SPL) of a sound with root-mean-square pressure \( p_{\text{rms}} \) is measured in decibels (dB) relative to the reference pressure \( p_0 = 20 \, \mu\text{Pa} \) (the threshold of human hearing at 1 kHz):
+
 \[
 L_p = 20 \log_{10}\!\left(\frac{p_{\text{rms}}}{p_0}\right) \quad \text{dB SPL}.
 \]
 Equivalently, in terms of acoustic intensity \( I \) (watts per square metre) and the reference intensity \( I_0 = 10^{-12} \, \text{W/m}^2 \):
+
 \[
 L_I = 10 \log_{10}\!\left(\frac{I}{I_0}\right) \quad \text{dB}.
 \]
@@ -840,10 +856,12 @@ Reverberation — the persistence of sound in an enclosed space after the direct
 
 <div class="definition">
 <strong>Definition 9.6 (Room Impulse Response and Convolution Reverb).</strong> The acoustic behavior of a room is characterized by its <em>impulse response</em> \( h(t) \): the sound pressure measured at a specific listening position when an ideal impulse (a Dirac delta function \( \delta(t) \)) is produced at a specific source position. For a linear time-invariant room, the sound at the listener position resulting from any source signal \( x(t) \) is the convolution
+
 \[
 y(t) = (x * h)(t) = \int_{-\infty}^{\infty} x(\tau)\, h(t - \tau)\, d\tau.
 \]
 In the discrete-time domain (sampled at rate \( f_s \)), this becomes
+
 \[
 y[n] = \sum_{k=0}^{N-1} x[n-k]\, h[k],
 \]
@@ -887,6 +905,7 @@ From the 1980s onward, commercial music production has exhibited a trend toward 
 
 <div class="definition">
 <strong>Definition 9.8 (Dynamic Range and Crest Factor).</strong> The <em>dynamic range</em> of an audio signal is the ratio of its maximum instantaneous amplitude to its minimum perceivable amplitude, typically expressed in decibels. The <em>crest factor</em> is the ratio of peak amplitude to RMS amplitude:
+
 \[
 CF = 20\log_{10}\!\left(\frac{A_{\text{peak}}}{A_{\text{rms}}}\right) \quad \text{dB}.
 \]

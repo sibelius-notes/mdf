@@ -83,6 +83,7 @@ where \(K\) is a **kernel function** (a symmetric, non-negative function integra
 
 <div class="definition">
 <strong>Bandwidth selection.</strong> The bandwidth \(h\) controls the trade-off between bias and variance of the KDE. A small \(h\) gives low bias but high variance (a wiggly curve), while a large \(h\) gives high bias but low variance (an over-smoothed curve). The mean integrated squared error (MISE) provides a global measure of accuracy:
+
 \[
 \text{MISE}(h) = E\!\left[\int \bigl(\hat{f}(x) - f(x)\bigr)^2 dx\right].
 \]
@@ -135,6 +136,7 @@ This definition ensures that \(y^{(\lambda)}\) is a continuous function of \(\la
 
 <div class="theorem">
 <strong>Choosing \(\lambda\) by maximum likelihood.</strong> Suppose \(y_1, \ldots, y_n\) are positive observations modelled as \(y_i^{(\lambda)} \sim \mathcal{N}(\mu, \sigma^2)\). The profile log-likelihood for \(\lambda\) is
+
 \[
 \ell(\lambda) = -\frac{n}{2}\ln\!\left(\frac{1}{n}\sum_{i=1}^{n}\bigl(y_i^{(\lambda)} - \overline{y^{(\lambda)}}\bigr)^2\right) + (\lambda - 1)\sum_{i=1}^{n}\ln y_i.
 \]
@@ -182,6 +184,7 @@ The **breakdown point** of an estimator quantifies the proportion of arbitrarily
 
 <div class="definition">
 <strong>Finite-sample breakdown point.</strong> For an estimator \(T(\mathbf{y})\) based on a sample of size \(n\), the breakdown point is
+
 \[
 \varepsilon^* = \frac{1}{n}\max\{m : \text{replacing any } m \text{ observations with arbitrary values keeps } T \text{ bounded}\}.
 \]
@@ -196,6 +199,7 @@ The **influence function** measures the effect on an estimator of adding a singl
 
 <div class="definition">
 <strong>Influence function.</strong> Let \(T(F)\) be a statistical functional (an estimator viewed as a function of the distribution \(F\)). The influence function of \(T\) at the point \(x\) relative to the distribution \(F\) is
+
 \[
 \text{IF}(x; T, F) = \lim_{\varepsilon \to 0}\frac{T\bigl((1-\varepsilon)F + \varepsilon\,\delta_x\bigr) - T(F)}{\varepsilon},
 \]
@@ -284,6 +288,7 @@ An **implicitly defined attribute** is one that is specified as the solution to 
 
 <div class="definition">
 <strong>Implicit attribute.</strong> An attribute \(\theta^*\) of a population \(\{y_1, \ldots, y_N\}\) is <em>implicitly defined</em> if
+
 \[
 \theta^* = \arg\min_{\theta} \sum_{i=1}^{N} \rho(y_i, \theta)
 \]
@@ -351,6 +356,7 @@ With a **fixed step size** \(\alpha_t = \alpha\), convergence is guaranteed unde
 
 <div class="theorem">
 <strong>Convergence rate of gradient descent (convex case).</strong> Under the Lipschitz gradient assumption with constant \(L\) and step size \(\alpha = 1/L\), gradient descent satisfies
+
 \[
 f(\boldsymbol{\theta}^{(t)}) - f(\boldsymbol{\theta}^*) \leq \frac{L\|\boldsymbol{\theta}^{(0)} - \boldsymbol{\theta}^*\|^2}{2t},
 \]
@@ -359,6 +365,7 @@ where \(\boldsymbol{\theta}^*\) is the minimizer. This is an \(O(1/t)\) converge
 
 <div class="theorem">
 <strong>Convergence rate (strongly convex case).</strong> If in addition \(f\) is strongly convex with parameter \(\mu > 0\) (meaning \(f(\mathbf{y}) \geq f(\mathbf{x}) + \nabla f(\mathbf{x})^T(\mathbf{y}-\mathbf{x}) + \frac{\mu}{2}\|\mathbf{y}-\mathbf{x}\|^2\) for all \(\mathbf{x},\mathbf{y}\)), then gradient descent with step size \(\alpha = 1/L\) achieves <em>linear convergence</em>:
+
 \[
 f(\boldsymbol{\theta}^{(t)}) - f(\boldsymbol{\theta}^*) \leq \left(1 - \frac{\mu}{L}\right)^t \bigl(f(\boldsymbol{\theta}^{(0)}) - f(\boldsymbol{\theta}^*)\bigr).
 \]
@@ -419,6 +426,7 @@ where \(\mathbf{H}(\boldsymbol{\theta}) = \nabla^2 f(\boldsymbol{\theta})\) is t
 
 <div class="theorem">
 <strong>Quadratic convergence of Newton's method.</strong> If \(f\) is twice continuously differentiable, the Hessian is Lipschitz continuous, and the starting point is sufficiently close to a minimizer \(\boldsymbol{\theta}^*\) where \(\mathbf{H}(\boldsymbol{\theta}^*)\) is positive definite, then Newton's method converges quadratically:
+
 \[
 \|\boldsymbol{\theta}^{(t+1)} - \boldsymbol{\theta}^*\| \leq C\|\boldsymbol{\theta}^{(t)} - \boldsymbol{\theta}^*\|^2
 \]
@@ -567,6 +575,7 @@ E[\bar{y}_s] = \bar{y}_U.
 
 <div class="proof">
 <strong>Proof of unbiasedness.</strong> Let \(\delta_i\) be the indicator that unit \(i\) is in the sample. Then \(E[\delta_i] = n/N\) for all \(i\) under SRSWOR. We have
+
 \[
 E[\bar{y}_s] = E\!\left[\frac{1}{n}\sum_{i=1}^{N}\delta_i y_i\right] = \frac{1}{n}\sum_{i=1}^{N}y_i\,E[\delta_i] = \frac{1}{n}\sum_{i=1}^{N}y_i\cdot\frac{n}{N} = \frac{1}{N}\sum_{i=1}^{N}y_i = \bar{y}_U.
 \]
@@ -605,6 +614,7 @@ where \(W_h = N_h/N\) is the stratum weight and \(\bar{y}_h\) is the sample mean
 
 <div class="theorem">
 <strong>Variance of the stratified mean.</strong> Under stratified SRSWOR,
+
 \[
 \text{Var}(\bar{y}_{\text{st}}) = \sum_{h=1}^{H}W_h^2\,\frac{S_h^2}{n_h}\left(1 - \frac{n_h}{N_h}\right),
 \]
@@ -662,6 +672,7 @@ The **Horvitz-Thompson (HT) estimator** is a general-purpose unbiased estimator 
 
 <div class="definition">
 <strong>Horvitz-Thompson estimator.</strong> The HT estimator of the population total \(\tau = \sum_{i=1}^{N} y_i\) is
+
 \[
 \hat{\tau}_{\text{HT}} = \sum_{i \in s}\frac{y_i}{\pi_i},
 \]
@@ -690,6 +701,7 @@ The HT estimator of the population mean is simply \(\hat{\bar{y}}_{\text{HT}} = 
 
 <div class="theorem">
 <strong>Horvitz-Thompson variance formula.</strong> The variance of \(\hat{\tau}_{\text{HT}}\) is
+
 \[
 \text{Var}(\hat{\tau}_{\text{HT}}) = \sum_{i=1}^{N}\sum_{j=1}^{N}(\pi_{ij} - \pi_i\pi_j)\frac{y_i}{\pi_i}\frac{y_j}{\pi_j}.
 \]
@@ -821,6 +833,7 @@ When we perform \(m\) simultaneous hypothesis tests, the chance of at least one 
 
 <div class="definition">
 <strong>Family-wise error rate (FWER).</strong> The probability of making one or more false rejections among all \(m\) tests:
+
 \[
 \text{FWER} = P(\text{at least one false rejection}).
 \]
@@ -828,6 +841,7 @@ When we perform \(m\) simultaneous hypothesis tests, the chance of at least one 
 
 <div class="definition">
 <strong>False discovery rate (FDR).</strong> The expected proportion of rejections that are false:
+
 \[
 \text{FDR} = E\!\left[\frac{V}{R \vee 1}\right],
 \]
@@ -842,6 +856,7 @@ The **Bonferroni correction** is the simplest method for controlling the FWER. I
 
 <div class="theorem">
 <strong>Bonferroni inequality.</strong> For any set of events \(A_1, \ldots, A_m\),
+
 \[
 P\!\left(\bigcup_{i=1}^{m}A_i\right) \leq \sum_{i=1}^{m}P(A_i).
 \]
@@ -882,6 +897,7 @@ The **Benjamini-Hochberg (BH) procedure** (1995) controls the FDR at level \(q\)
 
 <div class="theorem">
 <strong>Benjamini-Hochberg FDR control.</strong> If the p-values corresponding to the true null hypotheses are independent (or satisfy positive regression dependence on each one, PRDS), the BH procedure controls the FDR:
+
 \[
 \text{FDR} \leq \frac{m_0}{m}\,q \leq q,
 \]
@@ -958,6 +974,7 @@ The bootstrap can also estimate the **bias** of an estimator. The bias of \(\hat
 
 <div class="theorem">
 <strong>Bootstrap bias estimator.</strong> The bootstrap estimate of bias is
+
 \[
 \widehat{\text{Bias}}_{\text{boot}} = \bar{\theta}^* - \hat{\theta},
 \]
@@ -966,6 +983,7 @@ where \(\bar{\theta}^* = \frac{1}{B}\sum_{b=1}^{B}\hat{\theta}^{*b}\) is the mea
 
 <div class="proof">
 <strong>Derivation.</strong> In the bootstrap world, \(\hat{F}_n\) plays the role of the true distribution \(F\), and \(\hat{\theta}\) plays the role of the true parameter \(\theta(F)\). The bootstrap version of the bias is
+
 \[
 E^*[\hat{\theta}^*] - \hat{\theta},
 \]
@@ -1019,6 +1037,7 @@ The two correction parameters are:
 - **Bias correction** \(\hat{z}_0\): estimated as \(\hat{z}_0 = \Phi^{-1}\!\left(\frac{\#\{\hat{\theta}^{*b} < \hat{\theta}\}}{B}\right)\), the proportion of bootstrap estimates below the original estimate, transformed to the normal scale.
 
 - **Acceleration** \(\hat{a}\): estimated using the jackknife. Let \(\hat{\theta}_{(-i)}\) be the estimate with the \(i\)-th observation deleted, and \(\bar{\theta}_{(\cdot)} = \frac{1}{n}\sum_{i=1}^{n}\hat{\theta}_{(-i)}\). Then
+
 \[
 \hat{a} = \frac{\sum_{i=1}^{n}(\bar{\theta}_{(\cdot)} - \hat{\theta}_{(-i)})^3}{6\left[\sum_{i=1}^{n}(\bar{\theta}_{(\cdot)} - \hat{\theta}_{(-i)})^2\right]^{3/2}}.
 \]
@@ -1104,6 +1123,7 @@ In supervised learning and regression, the primary goal is often prediction: giv
 
 <div class="definition">
 <strong>Expected prediction error.</strong> For a squared-error loss, the expected prediction error of a fitted model \(\hat{f}\) at a new point \(\mathbf{x}_0\) is
+
 \[
 \text{Err}(\mathbf{x}_0) = E\bigl[(Y_0 - \hat{f}(\mathbf{x}_0))^2\bigr],
 \]
@@ -1132,6 +1152,7 @@ The expected prediction error can be decomposed into three components. For a reg
 
 <div class="theorem">
 <strong>Bias-variance decomposition.</strong> At a fixed point \(\mathbf{x}_0\),
+
 \[
 E\bigl[(Y_0 - \hat{f}(\mathbf{x}_0))^2\bigr] = \text{Var}(\varepsilon) + \bigl[\text{Bias}(\hat{f}(\mathbf{x}_0))\bigr]^2 + \text{Var}(\hat{f}(\mathbf{x}_0)),
 \]
@@ -1145,6 +1166,7 @@ is the bias of the prediction at \(\mathbf{x}_0\), and \(\text{Var}(\hat{f}(\mat
 
 <div class="proof">
 <strong>Derivation.</strong> Let \(f(\mathbf{x}_0) = E[Y_0 \mid \mathbf{x}_0]\) be the true regression function, and write \(Y_0 = f(\mathbf{x}_0) + \varepsilon\) where \(E[\varepsilon] = 0\) and \(\text{Var}(\varepsilon) = \sigma^2\). Then
+
 \[
 E[(Y_0 - \hat{f})^2] = E[(f + \varepsilon - \hat{f})^2] = E[(f - \hat{f})^2] + E[\varepsilon^2] + 2E[\varepsilon(f - \hat{f})].
 \]

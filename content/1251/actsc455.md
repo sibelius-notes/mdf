@@ -21,7 +21,9 @@ A risk is **diversifiable** if its contribution to the coefficient of variation 
 <div class="definition">
 <strong>Diversifiable risk.</strong> Let \(L_1, L_2, \ldots, L_n\) be i.i.d. policy losses with mean \(\mu\) and standard deviation \(\sigma\). The aggregate loss is \(L_n = \sum_{i=1}^n L_i\). Then \(\mathbb E[L_n] = n\mu\) and \(\mathrm{Var}(L_n) = n\sigma^2\), so the coefficient of variation is
 
-\[ \mathrm{CV}(L_n) = \frac{\sigma\sqrt n}{n\mu} = \frac{\mathrm{CV}(L_1)}{\sqrt n}, \]
+\[
+\mathrm{CV}(L_n) = \frac{\sigma\sqrt n}{n\mu} = \frac{\mathrm{CV}(L_1)}{\sqrt n},
+\]
 
 which tends to zero as \(n \to \infty\). The risk is diversifiable because its relative uncertainty vanishes in large pools.
 </div>
@@ -58,9 +60,13 @@ The sponsor's obligation at valuation date is summarised by the **accrued liabil
 
 For a final-salary plan with accrual rate \(\alpha\), service \(s\), projected final salary \(\widetilde S_r\), retirement age \(r\), retirement annuity factor \(\bar a_r^{\mathrm{ret}}\), survival probability \(_{r-x}p_x\) from age \(x\) to \(r\), and discount factor \(v^{r-x}\),
 
-\[ \mathrm{AL}^{\mathrm{PUC}}_x = \alpha\,s\,\widetilde S_r\,\bar a_r^{\mathrm{ret}}\,v^{r-x}\,_{r-x}p_x, \]
+\[
+\mathrm{AL}^{\mathrm{PUC}}_x = \alpha\,s\,\widetilde S_r\,\bar a_r^{\mathrm{ret}}\,v^{r-x}\,_{r-x}p_x,
+\]
 
-\[ \mathrm{NC}^{\mathrm{PUC}}_x = \alpha\,\widetilde S_r\,\bar a_r^{\mathrm{ret}}\,v^{r-x}\,_{r-x}p_x. \]
+\[
+\mathrm{NC}^{\mathrm{PUC}}_x = \alpha\,\widetilde S_r\,\bar a_r^{\mathrm{ret}}\,v^{r-x}\,_{r-x}p_x.
+\]
 
 Intuitively, the AL counts \(s\) accrued years while the NC counts one additional year of accrual, so NC is the AL divided by completed service (for a flat-accrual plan). In practice, full valuations use decrement-weighted service tables that account for withdrawal, disability, and pre-retirement death, discounting each benefit to its expected payment age.
 
@@ -82,7 +88,9 @@ Profit testing is the core pricing technique for non-participating life insuranc
 
 Let \(_{t-1}V\) denote the reserve at the start of policy year \(t\), and suppose the insurer receives premium \(P_{t-1}\) and pays expense \(E_{t-1}\) at the start of the year, earns interest at rate \(i\) through the year on the invested fund \(_{t-1}V + P_{t-1} - E_{t-1}\), and pays death benefit \(S_t^{\mathrm{db}}\) to decedents at year-end. The **profit emerging** per unit in force at the start of year \(t\) is
 
-\[ \Pi_t = (\,_{t-1}V + P_{t-1} - E_{t-1})(1+i) - q_{x+t-1}\,S_t^{\mathrm{db}} - p_{x+t-1}\,_tV. \]
+\[
+\Pi_t = (\,_{t-1}V + P_{t-1} - E_{t-1})(1+i) - q_{x+t-1}\,S_t^{\mathrm{db}} - p_{x+t-1}\,_tV.
+\]
 
 The first term is the accumulated invested fund, the second is expected death benefit outflow, and the third is the reserve that must be set up for survivors at year-end. Taking expectations in this way implicitly assumes best-estimate mortality and a deterministic interest path; stochastic extensions replace the deterministic accumulation by a simulated one.
 
@@ -90,14 +98,18 @@ The first term is the accumulated invested fund, the second is expected death be
 
 Because \(\Pi_t\) is conditional on being in force at time \(t-1\), multiplying by the survival probability \(_{t-1}p_x\) converts it to a cash flow per policy issued:
 
-\[ \sigma_t = {}_{t-1}p_x\,\Pi_t. \]
+\[
+\sigma_t = {}_{t-1}p_x\,\Pi_t.
+\]
 
 The sequence \(\{\sigma_t\}_{t=1}^n\) is the **profit signature**. It typically starts negative in year one (the **new-business strain** caused by acquisition expenses and initial reserve set-up) and turns positive as the reserves unwind.
 
 <div class="definition">
 <strong>Net present value and internal rate of return.</strong> Given a hurdle rate \(r\) used to discount surplus back to the shareholder, the NPV of the contract is
 
-\[ \mathrm{NPV} = \sum_{t=1}^{n} \sigma_t\,(1 + r)^{-t}. \]
+\[
+\mathrm{NPV} = \sum_{t=1}^{n} \sigma_t\,(1 + r)^{-t}.
+\]
 
 The internal rate of return (yield on strain) is the value of \(r\) for which \(\mathrm{NPV} = 0\). A contract is acceptable when \(\mathrm{NPV}(r_{\mathrm{hurdle}}) \geq 0\) or, equivalently, when the IRR exceeds the hurdle.
 </div>
@@ -122,11 +134,15 @@ Traditional whole life bundles insurance, savings, and surrender value into a si
 
 Let \(\mathrm{AV}_t\) be the account value at time \(t\), \(P_t\) the premium deposited, \(E_t\) the expense charge, \(i_t^c\) the credited interest rate for year \(t\) (often equal to a crediting-rate formula tied to an asset portfolio), and \(\mathrm{COI}_t\) the cost of insurance for the coverage band. The recursion is
 
-\[ \mathrm{AV}_{t+1} = (\mathrm{AV}_t + P_t - E_t)(1 + i_t^c) - \mathrm{COI}_t. \]
+\[
+\mathrm{AV}_{t+1} = (\mathrm{AV}_t + P_t - E_t)(1 + i_t^c) - \mathrm{COI}_t.
+\]
 
 The cost of insurance is charged against the **net amount at risk**, namely the face amount in excess of the account value. If \(S_t\) is the face amount and \(q_t^{\mathrm{COI}}\) is a pricing mortality rate,
 
-\[ \mathrm{COI}_t = (S_t - \mathrm{AV}_t)\,q_t^{\mathrm{COI}}. \]
+\[
+\mathrm{COI}_t = (S_t - \mathrm{AV}_t)\,q_t^{\mathrm{COI}}.
+\]
 
 <div class="definition">
 <strong>Net amount at risk.</strong> The net amount at risk \((S_t - \mathrm{AV}_t)\) is the portion of the face amount genuinely underwritten by the insurer. As the account value grows, COI charges fall, which is precisely why UL with a large cash value behaves more like a savings product than traditional term insurance.
@@ -160,18 +176,24 @@ The alphabet soup of variable-annuity guarantees shares a common structure: a gu
 
 A minimal stochastic model takes the fund value under geometric Brownian motion,
 
-\[ F_t = F_0\,e^{(\mu - \tfrac12\sigma^2)t + \sigma B_t}, \]
+\[
+F_t = F_0\,e^{(\mu - \tfrac12\sigma^2)t + \sigma B_t},
+\]
 
 where \(B_t\) is a standard Brownian motion, \(\mu\) is the drift, and \(\sigma\) the volatility. Under this assumption the GMMB liability at maturity \(T\) is
 
-\[ L^{\mathrm{GMMB}} = (G - F_T)_+, \]
+\[
+L^{\mathrm{GMMB}} = (G - F_T)_+,
+\]
 
 which is precisely the payoff of a European put option struck at \(G\). Hardy's book exploits this identification to price and hedge the guarantee with equity-derivatives machinery rather than conventional equivalence-principle premiums.
 
 <div class="theorem">
 <strong>Black–Scholes put for a GMMB.</strong> Under GBM with risk-free rate \(r\) and volatility \(\sigma\), the fair market-consistent value at issue of a GMMB is
 
-\[ P_0 = G\,e^{-rT}\,N(-d_2) - F_0\,N(-d_1), \]
+\[
+P_0 = G\,e^{-rT}\,N(-d_2) - F_0\,N(-d_1),
+\]
 
 where \(d_1 = \big(\log(F_0/G) + (r + \tfrac12\sigma^2)T\big)/(\sigma\sqrt T)\) and \(d_2 = d_1 - \sigma\sqrt T\). This is the cost of a replicating put and provides a lower bound on the fee the insurer must charge to eliminate market risk, ignoring mortality and lapses.
 </div>
@@ -180,7 +202,9 @@ where \(d_1 = \big(\log(F_0/G) + (r + \tfrac12\sigma^2)T\big)/(\sigma\sqrt T)\) 
 
 Because the liability distribution has a heavy right tail (the guarantee bites only in poor scenarios), the insurer cares about tail statistics rather than the mean. Two measures dominate. **Value at Risk (VaR)** at level \(\alpha\) is the \(\alpha\)-quantile of the loss. **Conditional tail expectation (CTE)**, also known as Tail VaR, is the expected loss above the VaR:
 
-\[ \mathrm{CTE}_\alpha(L) = \mathbb E[L \mid L > \mathrm{VaR}_\alpha(L)]. \]
+\[
+\mathrm{CTE}_\alpha(L) = \mathbb E[L \mid L > \mathrm{VaR}_\alpha(L)].
+\]
 
 In practice the liability distribution is simulated by Monte Carlo. One projects large numbers of real-world fund scenarios (drift \(\mu\)), computes the realised loss on each, and reads off empirical VaR and CTE. Capital and reserves are set using CTE at levels such as 0.95 or 0.99, reflecting the regulatory preference for a coherent risk measure that respects sub-additivity.
 
@@ -198,7 +222,9 @@ A **static hedge** buys an off-the-shelf instrument at policy issue whose payoff
 
 A **dynamic hedge** holds a self-financing portfolio of the underlying fund (and cash) designed to replicate the option's payoff through continuous rebalancing. The portfolio weight is chosen so that the hedge has the same first-order sensitivity as the liability to fund movements. For a European put on a non-dividend stock this delta is
 
-\[ \Delta_P = N(d_1) - 1, \]
+\[
+\Delta_P = N(d_1) - 1,
+\]
 
 which is negative, meaning the replicating portfolio is short the underlying (or equivalently long cash, short fund). The insurer adjusts the short position daily or weekly as \(d_1\) drifts.
 

@@ -40,7 +40,9 @@ The Bellman expectation and optimality equations express \( V^{*} \) as a fixed 
 
 Model-free TD control: SARSA is on-policy, Q-learning is off-policy, and both update
 
-\[ Q(s, a) \leftarrow Q(s, a) + \alpha\bigl[r + \gamma \max_{a'} Q(s', a') - Q(s, a)\bigr] \]
+\[
+Q(s, a) \leftarrow Q(s, a) + \alpha\bigl[r + \gamma \max_{a'} Q(s', a') - Q(s, a)\bigr]
+\]
 
 from single transitions. These are the workhorses of tabular RL.
 

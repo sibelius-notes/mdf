@@ -248,6 +248,7 @@ where \( A_2 = 3/(d_2\sqrt{n}) \), and \( D_3 \), \( D_4 \) are tabulated consta
 \[
 \text{UCL}_{\bar{X}} = 20.07 + 0.577 \times 0.342 = 20.27
 \]
+
 \[
 \text{LCL}_{\bar{X}} = 20.07 - 0.577 \times 0.342 = 19.87
 \]
@@ -267,6 +268,7 @@ For larger subgroup sizes (\( n \geq 10 \)) or when estimating \( \sigma \) more
 \[
 \text{UCL}_S = B_4 \bar{S}, \qquad \text{LCL}_S = B_3 \bar{S}
 \]
+
 \[
 \text{UCL}_{\bar{X}} = \bar{\bar{X}} + A_3 \bar{S}, \qquad \text{LCL}_{\bar{X}} = \bar{\bar{X}} - A_3 \bar{S}
 \]
@@ -290,6 +292,7 @@ MR_i = |X_i - X_{i-1}|, \qquad i = 2, 3, \ldots, m
 \[
 \text{UCL}_X = \bar{X} + 3\frac{\overline{MR}}{d_2}, \qquad d_2 = 1.128 \text{ (for span 2)}
 \]
+
 \[
 \text{UCL}_{MR} = D_4 \overline{MR} = 3.267\,\overline{MR}
 \]
@@ -324,6 +327,7 @@ Adding more rules increases the probability of detecting certain patterns but al
 
 <div class="definition">
 <strong>Average run length (ARL)</strong>: the expected number of subgroups plotted before an out-of-control signal is generated. For a Shewhart chart with independent subgroups:
+
 \[
 \text{ARL} = \frac{1}{p}
 \]
@@ -398,6 +402,7 @@ When each inspection unit can have multiple defects and the Poisson model applie
 \[
 \bar{c} = \frac{1}{m}\sum_{i=1}^m c_i
 \]
+
 \[
 \text{UCL}_c = \bar{c} + 3\sqrt{\bar{c}}, \qquad \text{LCL}_c = \bar{c} - 3\sqrt{\bar{c}}
 \]
@@ -411,6 +416,7 @@ When the inspection unit size varies (e.g., rolls of fabric with different lengt
 \[
 \bar{u} = \frac{\sum c_i}{\sum n_i}
 \]
+
 \[
 \text{UCL}_{u,i} = \bar{u} + 3\sqrt{\frac{\bar{u}}{n_i}}, \qquad \text{LCL}_{u,i} = \bar{u} - 3\sqrt{\frac{\bar{u}}{n_i}}
 \]
@@ -443,6 +449,7 @@ Define the reference value \( K = k\sigma \) (typically \( k = 0.5 \) to detect 
 \[
 C^+_i = \max\!\left[0,\; (X_i - \mu_0 - K) + C^+_{i-1}\right]
 \]
+
 \[
 C^-_i = \max\!\left[0,\; (\mu_0 - K - X_i) + C^-_{i-1}\right]
 \]
@@ -554,15 +561,19 @@ A confidence interval for \( C_p \) exploits the relationship \( (n-1)S^2/\sigma
 
 <div class="example">
 <strong>Worked CI for C<sub>pk</sub></strong>: Suppose 25 subgroups of size 4 give <em>Ĉ<sub>pk</sub></em> = 1.40 and <em>N</em> = 100 total observations. An approximate 95 % confidence interval for <em>C<sub>pk</sub></em> uses:
+
 \[
 \hat{C}_{pk} \pm 1.96\sqrt{\frac{1}{9N\hat{C}_{pk}^2} + \frac{1}{2(N-1)}}
 \]
+
 \[
 = 1.40 \pm 1.96\sqrt{\frac{1}{9(100)(1.40)^2} + \frac{1}{2(99)}}
 \]
+
 \[
 = 1.40 \pm 1.96\sqrt{0.000570 + 0.00505}
 \]
+
 \[
 = 1.40 \pm 1.96 \times 0.0746 = 1.40 \pm 0.146
 \]
@@ -636,6 +647,7 @@ The *gauge R&R* variance is:
 \[
 \sigma^2_{R\&R} = \sigma^2_{\text{repeatability}} + \sigma^2_{\text{reproducibility}}
 \]
+
 \[
 \sigma^2_{\text{repeatability}} = \sigma^2_E, \qquad \sigma^2_{\text{reproducibility}} = \sigma^2_O + \sigma^2_{PO}
 \]
@@ -644,6 +656,7 @@ The *gauge R&R* variance is:
 
 <div class="definition">
 <strong>%GR&amp;R</strong>: the fraction of total process variation attributable to measurement system error:
+
 \[
 \%GR\&R = 100 \times \frac{\hat{\sigma}_{R\&R}}{\hat{\sigma}_{\text{total}}}
 \]
@@ -652,6 +665,7 @@ AIAG guidelines: %GR&amp;R &lt; 10 % is excellent; 10–30 % is marginal (decisi
 
 <div class="definition">
 <strong>Number of distinct categories (ndc)</strong>: the number of non-overlapping confidence intervals that span the product variation:
+
 \[
 \text{ndc} = \left\lfloor 1.41 \frac{\hat{\sigma}_P}{\hat{\sigma}_{R\&R}} \right\rfloor
 \]
@@ -945,9 +959,11 @@ Similarly: \( \hat{B} = 2.90 \), \( \hat{C} = 0.65 \), \( \hat{D} = 1.40 \). Nor
 \[
 \hat{\sigma} = 0.94, \quad \bar{X} = 24.9, \quad n = 4
 \]
+
 \[
 \text{UCL}_{\bar{X}} = 24.9 + 1.628 \times \hat{S} \approx 24.9 + 1.53 = 26.4
 \]
+
 \[
 \text{LCL}_{\bar{X}} = 24.9 - 1.53 = 23.4
 \]

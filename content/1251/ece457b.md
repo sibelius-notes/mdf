@@ -37,7 +37,9 @@ Logistic regression is introduced via the sigmoid and cross-entropy loss, with s
 ### Support vector classification
 SVMs are developed from the maximum-margin idea, leading to the primal formulation
 
-\[ \min_{w,b}\ \tfrac{1}{2}\|w\|^2 \quad \text{s.t.}\quad y_i(w^\top x_i + b) \ge 1. \]
+\[
+\min_{w,b}\ \tfrac{1}{2}\|w\|^2 \quad \text{s.t.}\quad y_i(w^\top x_i + b) \ge 1.
+\]
 
 Soft margins and the kernel trick are presented at an intuition level so that nonlinear decision boundaries can be obtained without explicit feature maps.
 

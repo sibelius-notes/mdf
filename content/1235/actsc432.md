@@ -18,11 +18,15 @@ Property and casualty ratemaking rests on a handful of probabilistic tools that 
 
 A random variable \(X\) is said to follow a mixture distribution whenever its density can be written as an average of component densities. In the discrete case,
 
-\[ f_X(x) = \sum_{j=1}^{m} p_j f_j(x), \qquad \sum_j p_j = 1, \]
+\[
+f_X(x) = \sum_{j=1}^{m} p_j f_j(x), \qquad \sum_j p_j = 1,
+\]
 
 and in the continuous case,
 
-\[ f_X(x) = \int f(x \mid \theta) \, \pi(\theta) \, d\theta. \]
+\[
+f_X(x) = \int f(x \mid \theta) \, \pi(\theta) \, d\theta.
+\]
 
 Continuous mixtures are pervasive in ratemaking: the Poisson–Gamma mixture produces the negative binomial claim count distribution, and the exponential–inverse Gamma mixture yields a Pareto severity. Mixtures are the natural language for the statement "each policyholder draws its own risk parameter from a population distribution," which is precisely the credibility worldview developed in later chapters.
 
@@ -30,11 +34,15 @@ Continuous mixtures are pervasive in ratemaking: the Poisson–Gamma mixture pro
 
 If \(X\) and \(\Theta\) are jointly distributed, the conditional mean \(\mathbb{E}[X \mid \Theta]\) is itself a random variable and satisfies the tower property
 
-\[ \mathbb{E}[X] = \mathbb{E}\bigl[\mathbb{E}[X \mid \Theta]\bigr]. \]
+\[
+\mathbb{E}[X] = \mathbb{E}\bigl[\mathbb{E}[X \mid \Theta]\bigr].
+\]
 
 Variance decomposes analogously into the sum of the expected conditional variance and the variance of the conditional mean:
 
-\[ \mathrm{Var}(X) = \mathbb{E}\bigl[\mathrm{Var}(X \mid \Theta)\bigr] + \mathrm{Var}\bigl(\mathbb{E}[X \mid \Theta]\bigr). \]
+\[
+\mathrm{Var}(X) = \mathbb{E}\bigl[\mathrm{Var}(X \mid \Theta)\bigr] + \mathrm{Var}\bigl(\mathbb{E}[X \mid \Theta]\bigr).
+\]
 
 The two summands are, respectively, the expected process variance (EPV) and the variance of the hypothetical means (VHM); both will become load-bearing quantities when we build credibility formulas.
 
@@ -46,7 +54,9 @@ The two summands are, respectively, the expected process variance (EPV) and the 
 
 Given an i.i.d. sample \(X_1, \ldots, X_n\) from a parametric family \(f(\cdot; \boldsymbol\beta)\), the maximum likelihood estimator (MLE) \(\hat{\boldsymbol\beta}\) maximises the log-likelihood
 
-\[ \ell(\boldsymbol\beta) = \sum_{i=1}^{n} \log f(X_i; \boldsymbol\beta). \]
+\[
+\ell(\boldsymbol\beta) = \sum_{i=1}^{n} \log f(X_i; \boldsymbol\beta).
+\]
 
 The method of moments instead equates empirical and theoretical moments \(\mathbb{E}[X^k] = \bar{X^k}\) for as many \(k\) as there are parameters. Method-of-moments estimators are easy to compute but are generally less efficient than MLE when the likelihood is tractable.
 
@@ -54,7 +64,9 @@ The method of moments instead equates empirical and theoretical moments \(\mathb
 
 If \(\boldsymbol\beta\) is itself endowed with a prior \(\pi(\boldsymbol\beta)\), the posterior density given data \(\mathbf{x}\) is
 
-\[ \pi(\boldsymbol\beta \mid \mathbf{x}) \propto \pi(\boldsymbol\beta) \prod_{i=1}^{n} f(x_i; \boldsymbol\beta). \]
+\[
+\pi(\boldsymbol\beta \mid \mathbf{x}) \propto \pi(\boldsymbol\beta) \prod_{i=1}^{n} f(x_i; \boldsymbol\beta).
+\]
 
 Under squared-error loss the Bayes estimator is the posterior mean \(\hat{\boldsymbol\beta}_{\mathrm{Bayes}} = \mathbb{E}[\boldsymbol\beta \mid \mathbf{x}]\). Conjugacy — the phenomenon whereby the posterior stays in the same family as the prior — makes this explicit for Poisson–Gamma, Normal–Normal, and Beta–Bernoulli pairings that recur throughout the course.
 
@@ -62,7 +74,9 @@ Under squared-error loss the Bayes estimator is the posterior mean \(\hat{\bolds
 
 The bias of an estimator \(\hat\theta\) of \(\theta\) is \(\mathrm{bias}(\hat\theta) = \mathbb{E}[\hat\theta] - \theta\), and the mean squared error (MSE) decomposes as
 
-\[ \mathrm{MSE}(\hat\theta) = \mathrm{Var}(\hat\theta) + \bigl[\mathrm{bias}(\hat\theta)\bigr]^2. \]
+\[
+\mathrm{MSE}(\hat\theta) = \mathrm{Var}(\hat\theta) + \bigl[\mathrm{bias}(\hat\theta)\bigr]^2.
+\]
 
 An estimator is asymptotically unbiased if \(\mathrm{bias}(\hat\theta) \to 0\) as \(n \to \infty\), and consistent if \(\hat\theta \xrightarrow{p} \theta\). Under regularity conditions the MLE is consistent, asymptotically normal, and attains the Cramér–Rao lower bound, all of which matter when we build Wald-style confidence intervals for GLM relativities.
 
@@ -78,7 +92,9 @@ Ratemaking in non-life insurance begins from a flat book of policies in which ob
 
 Let \(i\) index policies and \(k = 1, \ldots, K\) index rating factors. Writing \(l(i,k)\) for the level of factor \(k\) held by policy \(i\), the multiplicative tariff model is
 
-\[ \mu_i = \mu_0 \prod_{k=1}^{K} r_{k, l(i,k)}, \]
+\[
+\mu_i = \mu_0 \prod_{k=1}^{K} r_{k, l(i,k)},
+\]
 
 where \(\mu_0\) is a base level and \(r_{k,\ell}\) is the relativity of level \(\ell\) of factor \(k\). Taking logs yields an additive linear predictor, which is exactly what a generalized linear model with a log link fits by maximum likelihood.
 
@@ -86,7 +102,9 @@ where \(\mu_0\) is a base level and \(r_{k,\ell}\) is the relativity of level \(
 
 GLMs extend ordinary least squares in two ways: the response is allowed to come from a family richer than the Gaussian, and the linear predictor is connected to the mean through a known link function. The response family is an exponential dispersion family (EDF), with density
 
-\[ f(y; \theta, \phi) = \exp\!\left(\frac{y\theta - b(\theta)}{\phi / w} + c(y, \phi, w)\right), \]
+\[
+f(y; \theta, \phi) = \exp\!\left(\frac{y\theta - b(\theta)}{\phi / w} + c(y, \phi, w)\right),
+\]
 
 where \(\theta\) is the canonical parameter, \(\phi\) the dispersion parameter, \(w\) a known prior weight, and \(b(\cdot)\), \(c(\cdot)\) family-specific functions. One verifies that \(\mathbb{E}[Y] = b'(\theta) = \mu\) and \(\mathrm{Var}(Y) = b''(\theta) \, \phi / w = V(\mu) \, \phi / w\), so the variance of a GLM response is a known function of its mean up to the dispersion.
 
@@ -104,7 +122,9 @@ The Tweedie distribution with power \(p \in (1,2)\) corresponds exactly to a com
 
 A GLM fits
 
-\[ g(\mu_i) = \eta_i = \mathbf{x}_i^{\top} \boldsymbol\beta, \]
+\[
+g(\mu_i) = \eta_i = \mathbf{x}_i^{\top} \boldsymbol\beta,
+\]
 
 where \(\mathbf{x}_i\) encodes the rating factors (usually as dummy variables for factor levels) and \(g\) is the link. Taking \(g(\mu) = \log\mu\) makes the tariff exactly multiplicative: \(\mu_i = \exp(\mathbf{x}_i^{\top} \boldsymbol\beta)\), so \(\exp(\beta_{k,\ell})\) is directly the relativity of level \(\ell\) of factor \(k\).
 
@@ -118,7 +138,9 @@ Non-life pricing is commonly split into two pieces, each of which is estimated b
 
 **Frequency model.** Let \(N_i\) be the number of claims on policy \(i\) with exposure \(e_i\) (in policy-years). Under a Poisson model,
 
-\[ N_i \sim \mathrm{Poisson}(e_i \mu_i), \qquad \log(e_i \mu_i) = \log e_i + \mathbf{x}_i^{\top} \boldsymbol\beta, \]
+\[
+N_i \sim \mathrm{Poisson}(e_i \mu_i), \qquad \log(e_i \mu_i) = \log e_i + \mathbf{x}_i^{\top} \boldsymbol\beta,
+\]
 
 where the term \(\log e_i\) enters the linear predictor with coefficient fixed to one and is called an **offset**. The fitted \(\mu_i\) is the claim frequency per unit of exposure.
 
@@ -130,7 +152,9 @@ where the term \(\log e_i\) enters the linear predictor with coefficient fixed t
 
 The MLE for a GLM is found by solving the score equations
 
-\[ \sum_i \frac{(y_i - \mu_i) x_{ij}}{V(\mu_i) \, g'(\mu_i)} = 0, \qquad j = 1, \ldots, p, \]
+\[
+\sum_i \frac{(y_i - \mu_i) x_{ij}}{V(\mu_i) \, g'(\mu_i)} = 0, \qquad j = 1, \ldots, p,
+\]
 
 which are nonlinear in \(\boldsymbol\beta\) and are solved by iteratively reweighted least squares (IRLS). At convergence the estimated information matrix gives asymptotic standard errors for \(\hat{\boldsymbol\beta}\), and Wald intervals for a relativity follow by exponentiating the interval for the corresponding coefficient.
 
@@ -138,19 +162,27 @@ which are nonlinear in \(\boldsymbol\beta\) and are solved by iteratively reweig
 
 Two omnibus measures of fit are routinely reported. The **scaled deviance** compares the fitted model to the saturated model and takes the form
 
-\[ D^{\ast} = 2\bigl[\ell(\tilde{\boldsymbol\theta}) - \ell(\hat{\boldsymbol\theta})\bigr], \]
+\[
+D^{\ast} = 2\bigl[\ell(\tilde{\boldsymbol\theta}) - \ell(\hat{\boldsymbol\theta})\bigr],
+\]
 
 where \(\tilde{\boldsymbol\theta}\) is the saturated-model MLE. For the Poisson family the deviance simplifies to
 
-\[ D = 2 \sum_i \left[y_i \log\frac{y_i}{\hat\mu_i} - (y_i - \hat\mu_i)\right]. \]
+\[
+D = 2 \sum_i \left[y_i \log\frac{y_i}{\hat\mu_i} - (y_i - \hat\mu_i)\right].
+\]
 
 The **Pearson chi-square statistic**
 
-\[ X^2 = \sum_i \frac{(y_i - \hat\mu_i)^2}{V(\hat\mu_i)} \]
+\[
+X^2 = \sum_i \frac{(y_i - \hat\mu_i)^2}{V(\hat\mu_i)}
+\]
 
 estimates the dispersion \(\phi\) via \(\hat\phi = X^2 / (n - p)\). For nested models \(B \subset A\) with \(p_B\) and \(p_A\) parameters respectively, hierarchical model selection uses the **likelihood ratio test**,
 
-\[ -2 \log \Lambda = 2(\ell_A - \ell_B) \ \ \dot\sim \ \ \chi^2_{p_A - p_B}, \]
+\[
+-2 \log \Lambda = 2(\ell_A - \ell_B) \ \ \dot\sim \ \ \chi^2_{p_A - p_B},
+\]
 
 so that a large test statistic rejects the reduced model in favour of the richer one. In R this is produced by `anova(fitB, fitA, test = "Chisq")` on two `glm` objects.
 
@@ -166,11 +198,15 @@ Rating factors capture only observable heterogeneity. Two policyholders who look
 
 Let \(\Theta\) be a random risk parameter drawn from a prior \(\pi\) and let \(X_1, \ldots, X_n \mid \Theta = \theta\) be i.i.d. with mean \(\mu(\theta)\) and variance \(v(\theta)\). The collective premium is the unconditional mean
 
-\[ \mu = \mathbb{E}[\mu(\Theta)], \]
+\[
+\mu = \mathbb{E}[\mu(\Theta)],
+\]
 
 the expected process variance is \(\mathrm{EPV} = \mathbb{E}[v(\Theta)]\), and the variance of the hypothetical means is \(\mathrm{VHM} = \mathrm{Var}(\mu(\Theta))\). By the variance decomposition of Chapter 1,
 
-\[ \mathrm{Var}(X) = \mathrm{EPV} + \mathrm{VHM}. \]
+\[
+\mathrm{Var}(X) = \mathrm{EPV} + \mathrm{VHM}.
+\]
 
 The quantity we really want to charge is the **individual premium** \(\mu(\Theta)\) of this specific policyholder — unobservable, because \(\Theta\) is unobservable — so we replace it with an estimator that uses the data the insurer actually sees.
 
@@ -178,14 +214,18 @@ The quantity we really want to charge is the **individual premium** \(\mu(\Theta
 
 Under squared-error loss the best estimator of \(\mu(\Theta)\) given past experience \(\mathbf{X} = (X_1, \ldots, X_n)\) is
 
-\[ P_{\mathrm{Bayes}} = \mathbb{E}\bigl[\mu(\Theta) \mid \mathbf{X}\bigr] = \int \mu(\theta) \, \pi(\theta \mid \mathbf{x}) \, d\theta. \]
+\[
+P_{\mathrm{Bayes}} = \mathbb{E}\bigl[\mu(\Theta) \mid \mathbf{X}\bigr] = \int \mu(\theta) \, \pi(\theta \mid \mathbf{x}) \, d\theta.
+\]
 
 In conjugate settings this integral is computed in closed form.
 
 <div class="theorem">
 <strong>Theorem 3.1 (Poisson–Gamma conjugacy).</strong> <em>If</em> \(\Theta \sim \mathrm{Gamma}(\alpha, \beta)\) <em>(rate parametrization, so that</em> \(\mathbb{E}[\Theta] = \alpha/\beta\)<em>) and</em> \(X_i \mid \Theta \stackrel{\text{i.i.d.}}{\sim} \mathrm{Poisson}(\Theta)\), <em>then the posterior is</em> \(\mathrm{Gamma}(\alpha + \sum x_i, \beta + n)\) <em>and the Bayesian premium is</em>
 
-\[ P_{\mathrm{Bayes}} = \frac{\alpha + \sum_{i=1}^{n} x_i}{\beta + n}. \]
+\[
+P_{\mathrm{Bayes}} = \frac{\alpha + \sum_{i=1}^{n} x_i}{\beta + n}.
+\]
 </div>
 
 The Normal–Normal and Bernoulli–Beta conjugate pairs yield analogously tidy posterior means; the general pattern is that the posterior mean is a weighted average of the prior mean and the sample mean, with weights that depend on sample size.
@@ -194,18 +234,24 @@ The Normal–Normal and Bernoulli–Beta conjugate pairs yield analogously tidy 
 
 When conjugacy fails — or when only the first two moments of the model are trusted — one restricts attention to estimators that are linear in the observed claims. The **Bühlmann credibility premium** is the best linear estimator of \(\mu(\Theta)\) in mean square:
 
-\[ P^{\mathrm{Bu}} = a_0 + \sum_{i=1}^{n} a_i X_i. \]
+\[
+P^{\mathrm{Bu}} = a_0 + \sum_{i=1}^{n} a_i X_i.
+\]
 
 Minimising \(\mathbb{E}[(\mu(\Theta) - P^{\mathrm{Bu}})^2]\) over \((a_0, a_1, \ldots, a_n)\) yields the celebrated form
 
-\[ P^{\mathrm{Bu}} = Z \bar X + (1 - Z) \mu, \qquad Z = \frac{n}{n + k}, \qquad k = \frac{\mathrm{EPV}}{\mathrm{VHM}}, \]
+\[
+P^{\mathrm{Bu}} = Z \bar X + (1 - Z) \mu, \qquad Z = \frac{n}{n + k}, \qquad k = \frac{\mathrm{EPV}}{\mathrm{VHM}},
+\]
 
 a weighted average of the sample mean and the collective mean, with weight determined by how much process noise there is relative to between-risk variability. When \(k\) is small, process variance is small and the risks differ a lot, so the individual's own experience is believable and \(Z\) is close to 1; when \(k\) is large, the individual's experience is drowned out by process noise and we pool back to the collective.
 
 <div class="theorem">
 <strong>Theorem 3.2 (Bühlmann credibility).</strong> <em>Let</em> \(X_1, \ldots, X_n \mid \Theta\) <em>be i.i.d. with</em> \(\mathbb{E}[X_i \mid \Theta] = \mu(\Theta)\) <em>and</em> \(\mathrm{Var}(X_i \mid \Theta) = v(\Theta)\). <em>Define</em> \(\mu = \mathbb{E}[\mu(\Theta)]\), \(\mathrm{EPV} = \mathbb{E}[v(\Theta)]\), \(\mathrm{VHM} = \mathrm{Var}(\mu(\Theta))\). <em>Then the estimator that minimises the mean squared error of the form</em> \(a_0 + \sum a_i X_i\) <em>for</em> \(\mu(\Theta)\) <em>is the Bühlmann credibility premium</em>
 
-\[ P^{\mathrm{Bu}} = Z \bar X + (1-Z) \mu, \qquad Z = \frac{n}{n + k}, \qquad k = \frac{\mathrm{EPV}}{\mathrm{VHM}}. \]
+\[
+P^{\mathrm{Bu}} = Z \bar X + (1-Z) \mu, \qquad Z = \frac{n}{n + k}, \qquad k = \frac{\mathrm{EPV}}{\mathrm{VHM}}.
+\]
 </div>
 
 ## Exact Credibility
@@ -224,15 +270,21 @@ Real insurance portfolios rarely consist of policyholders with equal exposure, a
 
 For each of \(r\) policyholders \(i = 1, \ldots, r\) observed over years \(j = 1, \ldots, n_i\), let \(X_{ij}\) denote the average claim amount per unit of exposure and \(m_{ij}\) the exposure. Conditional on \(\Theta_i\),
 
-\[ \mathbb{E}[X_{ij} \mid \Theta_i] = \mu(\Theta_i), \qquad \mathrm{Var}(X_{ij} \mid \Theta_i) = \frac{v(\Theta_i)}{m_{ij}}, \]
+\[
+\mathbb{E}[X_{ij} \mid \Theta_i] = \mu(\Theta_i), \qquad \mathrm{Var}(X_{ij} \mid \Theta_i) = \frac{v(\Theta_i)}{m_{ij}},
+\]
 
 which is the natural scaling of process variance when \(X_{ij}\) is an average over \(m_{ij}\) i.i.d. observations. Defining total exposure \(m_i = \sum_j m_{ij}\) and the weighted individual mean
 
-\[ \bar X_i = \frac{1}{m_i} \sum_{j} m_{ij} X_{ij}, \]
+\[
+\bar X_i = \frac{1}{m_i} \sum_{j} m_{ij} X_{ij},
+\]
 
 the Bühlmann–Straub credibility premium for policyholder \(i\) is
 
-\[ P_i^{\mathrm{BS}} = Z_i \bar X_i + (1 - Z_i) \mu, \qquad Z_i = \frac{m_i}{m_i + k}, \qquad k = \frac{\mathrm{EPV}}{\mathrm{VHM}}. \]
+\[
+P_i^{\mathrm{BS}} = Z_i \bar X_i + (1 - Z_i) \mu, \qquad Z_i = \frac{m_i}{m_i + k}, \qquad k = \frac{\mathrm{EPV}}{\mathrm{VHM}}.
+\]
 
 The factor \(Z_i\) now depends on the individual's total exposure, not on a shared sample size, so a large policyholder is naturally credited more weight than a small one.
 
@@ -240,15 +292,21 @@ The factor \(Z_i\) now depends on the individual's total exposure, not on a shar
 
 So far we have pretended that \(\mu\), EPV, and VHM are known. In practice they must be estimated from the same data used to compute credibility premiums, which is the **empirical Bayes** programme. In the non-parametric Bühlmann–Straub estimators,
 
-\[ \hat\mu = \frac{\sum_i m_i \bar X_i}{\sum_i m_i}, \]
+\[
+\hat\mu = \frac{\sum_i m_i \bar X_i}{\sum_i m_i},
+\]
 
 the expected process variance is estimated by pooling within-firm sample variances,
 
-\[ \widehat{\mathrm{EPV}} = \frac{\sum_i \sum_j m_{ij}(X_{ij} - \bar X_i)^2}{\sum_i (n_i - 1)}, \]
+\[
+\widehat{\mathrm{EPV}} = \frac{\sum_i \sum_j m_{ij}(X_{ij} - \bar X_i)^2}{\sum_i (n_i - 1)},
+\]
 
 and the variance of hypothetical means by subtracting the within-firm noise from the between-firm variance,
 
-\[ \widehat{\mathrm{VHM}} = \frac{\sum_i m_i (\bar X_i - \hat\mu)^2 - (r - 1)\widehat{\mathrm{EPV}}}{m_{\bullet} - m_{\bullet}^{-1} \sum_i m_i^2}, \]
+\[
+\widehat{\mathrm{VHM}} = \frac{\sum_i m_i (\bar X_i - \hat\mu)^2 - (r - 1)\widehat{\mathrm{EPV}}}{m_{\bullet} - m_{\bullet}^{-1} \sum_i m_i^2},
+\]
 
 where \(m_{\bullet} = \sum_i m_i\). In the classical Bühlmann setup (no exposure weighting) these reduce to the familiar within and between group mean squares. If \(\widehat{\mathrm{VHM}}\) turns out negative — possible because variance of hypothetical means is estimated by a difference of sums of squares — it is standard to truncate it at zero, which collapses all \(Z_i\) to zero and reverts to the collective premium.
 
@@ -269,13 +327,17 @@ A parallel, older tradition for credibility — still ubiquitous in US casualty 
 
 Under the Normal approximation \(\sqrt{n}(\bar X - \mu)/\sigma \ \dot\sim \ N(0,1)\), the requirement \(\Pr(|\bar X - \mu| \leq r\mu) \geq 1 - \alpha\) rearranges to the **full credibility standard**
 
-\[ n \geq \left(\frac{z_{\alpha/2}}{r}\right)^{2} \frac{\sigma^{2}}{\mu^{2}} = n_0 \cdot \mathrm{CV}^{2}, \qquad n_0 = \left(\frac{z_{\alpha/2}}{r}\right)^{2}, \]
+\[
+n \geq \left(\frac{z_{\alpha/2}}{r}\right)^{2} \frac{\sigma^{2}}{\mu^{2}} = n_0 \cdot \mathrm{CV}^{2}, \qquad n_0 = \left(\frac{z_{\alpha/2}}{r}\right)^{2},
+\]
 
 where \(\mathrm{CV} = \sigma / \mu\) is the coefficient of variation. Typical choices are \(\alpha = 0.10\) and \(r = 0.05\), giving \(z_{0.05} \approx 1.645\) and \(n_0 \approx 1082\) — the familiar "1082 claim" full credibility standard for pure Poisson counts.
 
 When the exposure does not reach the full credibility standard, partial credibility is assigned by the square-root rule
 
-\[ Z = \min\!\left(1, \sqrt{\frac{n}{n_0}}\right), \]
+\[
+Z = \min\!\left(1, \sqrt{\frac{n}{n_0}}\right),
+\]
 
 and the credibility-weighted estimator is again \(Z \bar X + (1-Z) \mu\). The limited fluctuation framework is simpler than Bühlmann–Straub but does not reward within-class heterogeneity: two books with identical exposures receive the same \(Z\) even if one is far more homogeneous than the other. Modern actuarial practice therefore tends to use Bühlmann–Straub for individual rate relativities and to keep the limited fluctuation standard for regulatory and reporting conventions.
 

@@ -61,7 +61,10 @@ With foundations in hand, we can give the central definition.
 <li>A class \(\mathrm{Ob}(\mathcal{C})\) of <em>objects</em>.</li>
 <li>For each pair of objects \(A, B \in \mathrm{Ob}(\mathcal{C})\), a set \(\mathrm{Hom}_\mathcal{C}(A, B)\) of <em>morphisms from \(A\) to \(B\)</em>. We write \(f : A \to B\) to mean \(f \in \mathrm{Hom}_\mathcal{C}(A, B)\).</li>
 <li>For each triple of objects \(A, B, C \in \mathrm{Ob}(\mathcal{C})\), a <em>composition map</em>
-\[ \circ : \mathrm{Hom}_\mathcal{C}(B, C) \times \mathrm{Hom}_\mathcal{C}(A, B) \to \mathrm{Hom}_\mathcal{C}(A, C), \quad (g, f) \mapsto g \circ f, \]
+
+\[
+\circ : \mathrm{Hom}_\mathcal{C}(B, C) \times \mathrm{Hom}_\mathcal{C}(A, B) \to \mathrm{Hom}_\mathcal{C}(A, C), \quad (g, f) \mapsto g \circ f,
+\]
 satisfying <em>associativity</em>: \(h \circ (g \circ f) = (h \circ g) \circ f\) for all composable \(f, g, h\).</li>
 <li>For each object \(A \in \mathrm{Ob}(\mathcal{C})\), an <em>identity morphism</em> \(\mathrm{id}_A \in \mathrm{Hom}_\mathcal{C}(A, A)\) satisfying \(f \circ \mathrm{id}_A = f\) and \(\mathrm{id}_B \circ f = f\) for all \(f : A \to B\).</li>
 </ol>
@@ -91,7 +94,10 @@ The following examples illustrate the range of the definition. In each case the 
 
 <div class="example">
 <strong>Example 1.4 (Poset Categories).</strong> Every partially ordered set \((P, \leq)\) defines a <em>small</em> category \(\mathbf{P}\) by: \(\mathrm{Ob}(\mathbf{P}) = P\), and
-\[ \mathrm{Hom}_{\mathbf{P}}(x, y) = \begin{cases} \{(x,y)\} & \text{if } x \leq y, \\ \emptyset & \text{otherwise.} \end{cases} \]
+
+\[
+\mathrm{Hom}_{\mathbf{P}}(x, y) = \begin{cases} \{(x,y)\} & \text{if } x \leq y, \\ \emptyset & \text{otherwise.} \end{cases}
+\]
 Composition exists because \(\leq\) is transitive, and identity morphisms exist because \(\leq\) is reflexive. In a poset category, there is <em>at most one</em> morphism between any two objects, so all the structure lies in the existence or non-existence of morphisms rather than in the morphisms themselves.
 
 Products in the poset category are greatest lower bounds (meets) and coproducts are least upper bounds (joins). This observation connects order theory to category theory and will recur throughout the course when we define limits and colimits.
@@ -315,6 +321,7 @@ Natural transformations are the reason categories were invented. They encode the
 
 <div class="definition">
 <strong>Definition 3.1 (Natural Transformation).</strong> Let \(F, G : \mathcal{C} \to \mathcal{D}\) be functors. A <em>natural transformation</em> \(\alpha : F \Rightarrow G\) consists of, for each object \(A \in \mathrm{Ob}(\mathcal{C})\), a morphism \(\alpha_A : F(A) \to G(A)\) in \(\mathcal{D}\) (called the <em>component</em> of \(\alpha\) at \(A\)), such that for every morphism \(f : A \to B\) in \(\mathcal{C}\), the following diagram commutes:
+
 \[
 \begin{array}{ccc}
 F(A) & \xrightarrow{F(f)} & F(B) \\
@@ -392,12 +399,18 @@ There is a second operation on natural transformations, called horizontal compos
 
 <div class="definition">
 <strong>Definition 3.9 (Horizontal Composition).</strong> Suppose \(F, G : \mathcal{C} \to \mathcal{D}\) and \(H, K : \mathcal{D} \to \mathcal{E}\) are functors, with natural transformations \(\alpha : F \Rightarrow G\) and \(\beta : H \Rightarrow K\). The <em>horizontal composite</em> \(\beta * \alpha : H \circ F \Rightarrow K \circ G\) has components
-\[ (\beta * \alpha)_A = \beta_{G(A)} \circ H(\alpha_A) = K(\alpha_A) \circ \beta_{F(A)}. \]
+
+\[
+(\beta * \alpha)_A = \beta_{G(A)} \circ H(\alpha_A) = K(\alpha_A) \circ \beta_{F(A)}.
+\]
 (The two expressions are equal by the naturality of \(\beta\).)
 </div>
 
 Horizontal and vertical composition are related by the **interchange law**: for composable natural transformations \(\alpha_1 : F \Rightarrow G\), \(\alpha_2 : G \Rightarrow H\) (between \(\mathcal{C} \to \mathcal{D}\)) and \(\beta_1 : F' \Rightarrow G'\), \(\beta_2 : G' \Rightarrow H'\) (between \(\mathcal{D} \to \mathcal{E}\)):
-\[ (\beta_2 \circ \beta_1) * (\alpha_2 \circ \alpha_1) = (\beta_2 * \alpha_2) \circ (\beta_1 * \alpha_1). \]
+
+\[
+(\beta_2 \circ \beta_1) * (\alpha_2 \circ \alpha_1) = (\beta_2 * \alpha_2) \circ (\beta_1 * \alpha_1).
+\]
 This law is the categorical shadow of the fact that horizontal and vertical multiplication in a matrix of morphisms commute in a well-defined way.
 
 <div class="remark">
@@ -491,13 +504,25 @@ Adjoint functors are, in Mac Lane's celebrated phrase, "the most important conce
 
 <div class="definition">
 <strong>Definition 5.1 (Adjoint Functors).</strong> Let \(\mathcal{C}\) and \(\mathcal{D}\) be categories. A functor \(F : \mathcal{C} \to \mathcal{D}\) is <em>left adjoint</em> to a functor \(G : \mathcal{D} \to \mathcal{C}\) (equivalently, \(G\) is <em>right adjoint</em> to \(F\)) if there is a bijection
-\[ \alpha_{A,B} : \mathrm{Hom}_\mathcal{D}(FA, B) \xrightarrow{\sim} \mathrm{Hom}_\mathcal{C}(A, GB) \]
+
+\[
+\alpha_{A,B} : \mathrm{Hom}_\mathcal{D}(FA, B) \xrightarrow{\sim} \mathrm{Hom}_\mathcal{C}(A, GB)
+\]
 natural in both \(A \in \mathrm{Ob}(\mathcal{C})\) and \(B \in \mathrm{Ob}(\mathcal{D})\). We write \(F \dashv G\) and call \(\alpha\) the <em>adjunction bijection</em>.
 
 Naturality in \(A\) means: for any \(\varphi : A' \to A\) in \(\mathcal{C}\), the diagram
-\[ \mathrm{Hom}(FA, B) \xrightarrow{\alpha_{A,B}} \mathrm{Hom}(A, GB) \]
-\[ \downarrow{(F\varphi)^*} \qquad\qquad \downarrow{\varphi^*} \]
-\[ \mathrm{Hom}(FA', B) \xrightarrow{\alpha_{A',B}} \mathrm{Hom}(A', GB) \]
+
+\[
+\mathrm{Hom}(FA, B) \xrightarrow{\alpha_{A,B}} \mathrm{Hom}(A, GB)
+\]
+
+\[
+\downarrow{(F\varphi)^*} \qquad\qquad \downarrow{\varphi^*}
+\]
+
+\[
+\mathrm{Hom}(FA', B) \xrightarrow{\alpha_{A',B}} \mathrm{Hom}(A', GB)
+\]
 commutes. Naturality in \(B\) is the analogous condition for maps \(\psi : B \to B'\).
 </div>
 
@@ -514,7 +539,10 @@ There is an equivalent formulation of adjunctions in terms of two natural transf
 <li>The <em>counit</em> \(\varepsilon : FG \Rightarrow \mathrm{Id}_\mathcal{D}\) by \(\varepsilon_B = \alpha_{GB, B}^{-1}(\mathrm{id}_{GB}) \in \mathrm{Hom}_\mathcal{D}(FGB, B)\).</li>
 </ul>
 These satisfy the <em>triangle identities</em>:
-\[ (G\varepsilon) \circ (\eta G) = \mathrm{id}_G \quad \text{and} \quad (\varepsilon F) \circ (F\eta) = \mathrm{id}_F, \]
+
+\[
+(G\varepsilon) \circ (\eta G) = \mathrm{id}_G \quad \text{and} \quad (\varepsilon F) \circ (F\eta) = \mathrm{id}_F,
+\]
 where \(\eta G\) denotes the natural transformation with components \(\eta_{G(B)} : G(B) \to GFG(B)\), and \(G\varepsilon\) has components \(G(\varepsilon_B) : GFG(B) \to G(B)\).
 </div>
 
@@ -531,7 +559,10 @@ Given (1), the unit and counit are defined as in Definition 5.2. Given (2), the 
 
 <div class="proof">
 <strong>Proof (Sketch).</strong> We verify that the two formulas are inverse to each other. Starting with \(f : FA \to B\), we have
-\[ \alpha_{A,B}^{-1}(\alpha_{A,B}(f)) = \varepsilon_B \circ F(G(f) \circ \eta_A) = \varepsilon_B \circ FG(f) \circ F(\eta_A) = f \circ \varepsilon_{FA} \circ F(\eta_A) = f \circ \mathrm{id}_{FA} = f, \]
+
+\[
+\alpha_{A,B}^{-1}(\alpha_{A,B}(f)) = \varepsilon_B \circ F(G(f) \circ \eta_A) = \varepsilon_B \circ FG(f) \circ F(\eta_A) = f \circ \varepsilon_{FA} \circ F(\eta_A) = f \circ \mathrm{id}_{FA} = f,
+\]
 using naturality of \(\varepsilon\) and the triangle identity \((\varepsilon F) \circ (F\eta) = \mathrm{id}_F\). The reverse direction is similar. The naturality of \(\alpha\) follows from the naturality of \(\eta\) and \(\varepsilon\). \(\square\)
 </div>
 
@@ -555,13 +586,19 @@ Examples: (i) For a ring \(R\) and module \(M\), the "annihilator" construction 
 
 <div class="example">
 <strong>Example 5.6 (Stone-Čech Compactification).</strong> Let \(\mathbf{CHaus}\) be the category of compact Hausdorff spaces with continuous maps, and \(\mathbf{Top}\) the category of all topological spaces. The inclusion \(\iota : \mathbf{CHaus} \hookrightarrow \mathbf{Top}\) has a left adjoint \(\beta : \mathbf{Top} \to \mathbf{CHaus}\), the Stone-Čech compactification. The adjunction bijection
-\[ \mathrm{Hom}_{\mathbf{CHaus}}(\beta X, K) \cong \mathrm{Hom}_{\mathbf{Top}}(X, K) \]
+
+\[
+\mathrm{Hom}_{\mathbf{CHaus}}(\beta X, K) \cong \mathrm{Hom}_{\mathbf{Top}}(X, K)
+\]
 says: every continuous map from \(X\) to a compact Hausdorff space \(K\) factors uniquely through the Stone-Čech compactification \(\beta X \to K\). The unit \(\eta_X : X \to \beta X\) is the canonical embedding of \(X\) into its compactification. This is the universal compact Hausdorff space "generated by" \(X\).
 </div>
 
 <div class="example">
 <strong>Example 5.7 (Sheaf Adjunctions in Geometry).</strong> For a continuous map \(f : X \to Y\) of topological spaces, there is an adjunction \(f^{-1} \dashv f_*\) between the categories of sheaves of abelian groups on \(Y\) and \(X\):
-\[ \mathrm{Hom}_{\mathbf{Sh}(X)}(f^{-1}\mathcal{G}, \mathcal{F}) \cong \mathrm{Hom}_{\mathbf{Sh}(Y)}(\mathcal{G}, f_*\mathcal{F}). \]
+
+\[
+\mathrm{Hom}_{\mathbf{Sh}(X)}(f^{-1}\mathcal{G}, \mathcal{F}) \cong \mathrm{Hom}_{\mathbf{Sh}(Y)}(\mathcal{G}, f_*\mathcal{F}).
+\]
 Here \(f_*\mathcal{F}(U) = \mathcal{F}(f^{-1}(U))\) is the direct image (pushing forward to \(Y\)) and \(f^{-1}\mathcal{G}\) is the inverse image (pulling back to \(X\)). This adjunction is fundamental in algebraic geometry, where it is the basis for the definition of cohomology with support, the projection formula, and Grothendieck duality. The Leray spectral sequence, for instance, arises from the composition \(g \circ f\) of two maps and the adjunction between \((g \circ f)_*\) and \(f_* g_*\).
 </div>
 
@@ -577,7 +614,10 @@ We first recall the construction of the tensor product. Let \(R\) be a commutati
 
 <div class="theorem">
 <strong>Theorem 5.9 (Tensor-Hom Adjunction).</strong> For \(R\)-modules \(M, N, P\) (with \(R\) commutative), there is a natural isomorphism
-\[ \mathrm{Hom}_R(M \otimes_R N, P) \cong \mathrm{Hom}_R(M, \mathrm{Hom}_R(N, P)). \]
+
+\[
+\mathrm{Hom}_R(M \otimes_R N, P) \cong \mathrm{Hom}_R(M, \mathrm{Hom}_R(N, P)).
+\]
 In categorical terms, for each \(R\)-module \(N\), the functor \(- \otimes_R N : R\text{-}\mathbf{Mod} \to R\text{-}\mathbf{Mod}\) is left adjoint to the functor \(\mathrm{Hom}_R(N, -) : R\text{-}\mathbf{Mod} \to R\text{-}\mathbf{Mod}\).
 </div>
 
@@ -593,7 +633,10 @@ The Tensor-Hom adjunction has an immediate and fundamental consequence for exact
 
 <div class="remark">
 <strong>Remark 5.10 (Extension of Scalars).</strong> A fundamental application of the Tensor-Hom adjunction arises from "extension and restriction of scalars." Given a ring homomorphism \(\varphi : R \to S\), every \(S\)-module can be viewed as an \(R\)-module via \(\varphi\) (this is the <em>restriction of scalars</em> functor \(\mathrm{Res}_\varphi : S\text{-}\mathbf{Mod} \to R\text{-}\mathbf{Mod}\)). The <em>extension of scalars</em> functor \(S \otimes_R - : R\text{-}\mathbf{Mod} \to S\text{-}\mathbf{Mod}\) is left adjoint to \(\mathrm{Res}_\varphi\):
-\[ \mathrm{Hom}_S(S \otimes_R M, N) \cong \mathrm{Hom}_R(M, \mathrm{Res}_\varphi(N)). \]
+
+\[
+\mathrm{Hom}_S(S \otimes_R M, N) \cong \mathrm{Hom}_R(M, \mathrm{Res}_\varphi(N)).
+\]
 This adjunction is ubiquitous in algebra and algebraic geometry: "base change" (extending scalars along a ring map, e.g., from \(\mathbb{Z}\) to \(\mathbb{Q}\) or from \(\mathbb{R}\) to \(\mathbb{C}\)) is always a left adjoint to restriction, and therefore always right exact. The failure of exact base change is measured by Tor.
 </div>
 
@@ -605,7 +648,10 @@ This adjunction is ubiquitous in algebra and algebraic geometry: "base change" (
 
 <div class="proof">
 <strong>Proof.</strong> We construct a natural isomorphism \(\eta : F \Rightarrow F'\). For each object \(A\), the adjunction bijections give
-\[ \mathrm{Hom}_\mathcal{D}(FA, B) \cong \mathrm{Hom}_\mathcal{C}(A, GB) \cong \mathrm{Hom}_\mathcal{D}(F'A, B) \]
+
+\[
+\mathrm{Hom}_\mathcal{D}(FA, B) \cong \mathrm{Hom}_\mathcal{C}(A, GB) \cong \mathrm{Hom}_\mathcal{D}(F'A, B)
+\]
 naturally in \(B\). By the Yoneda lemma (Chapter 6), a natural isomorphism of functors \(\mathrm{Hom}(FA, -) \cong \mathrm{Hom}(F'A, -)\) in \(B\) corresponds to a unique isomorphism \(FA \cong F'A\). These isomorphisms fit together into a natural isomorphism \(F \cong F'\). \(\square\)
 </div>
 
@@ -679,17 +725,26 @@ Representable functors are fundamental because they are completely determined by
 
 <div class="theorem">
 <strong>Theorem 6.3 (Yoneda Lemma).</strong> Let \(\mathcal{C}\) be a locally small category, \(F : \mathcal{C} \to \mathbf{Set}\) a functor, and \(A \in \mathrm{Ob}(\mathcal{C})\). There is a bijection
-\[ \Phi_{A, F} : \mathrm{Nat}(\mathrm{Hom}_\mathcal{C}(A, -), F) \xrightarrow{\sim} F(A) \]
+
+\[
+\Phi_{A, F} : \mathrm{Nat}(\mathrm{Hom}_\mathcal{C}(A, -), F) \xrightarrow{\sim} F(A)
+\]
 natural in both \(A\) and \(F\). The bijection sends a natural transformation \(\eta : \mathrm{Hom}(A, -) \Rightarrow F\) to \(\eta_A(\mathrm{id}_A) \in F(A)\).
 </div>
 
 <div class="proof">
 <strong>Proof.</strong> Define \(\Phi(\eta) = \eta_A(\mathrm{id}_A)\). We construct an inverse \(\Psi : F(A) \to \mathrm{Nat}(\mathrm{Hom}(A, -), F)\). Given \(x \in F(A)\), define the natural transformation \(\Psi(x) : \mathrm{Hom}(A, -) \Rightarrow F\) by
-\[ \Psi(x)_B : \mathrm{Hom}(A, B) \to F(B), \quad f \mapsto F(f)(x). \]
+
+\[
+\Psi(x)_B : \mathrm{Hom}(A, B) \to F(B), \quad f \mapsto F(f)(x).
+\]
 Naturality of \(\Psi(x)\): for \(g : B \to B'\), we need \(\Psi(x)_{B'}(g \circ f) = F(g)(\Psi(x)_B(f))\). Indeed: \(\Psi(x)_{B'}(g \circ f) = F(g \circ f)(x) = F(g)(F(f)(x)) = F(g)(\Psi(x)_B(f))\).
 
 Now \(\Phi\Psi(x) = \Psi(x)_A(\mathrm{id}_A) = F(\mathrm{id}_A)(x) = x\). And for \(\eta\) a natural transformation, \(\Psi(\Phi(\eta))_B(f) = F(f)(\eta_A(\mathrm{id}_A))\). But by naturality of \(\eta\) applied to \(f : A \to B\):
-\[ \eta_B(f) = \eta_B(\mathrm{Hom}(A,f)(\mathrm{id}_A)) = F(f)(\eta_A(\mathrm{id}_A)). \]
+
+\[
+\eta_B(f) = \eta_B(\mathrm{Hom}(A,f)(\mathrm{id}_A)) = F(f)(\eta_A(\mathrm{id}_A)).
+\]
 So \(\Psi(\Phi(\eta))_B = \eta_B\) for all \(B\), meaning \(\Psi\Phi(\eta) = \eta\). \(\square\)
 </div>
 
@@ -707,7 +762,10 @@ The proof reveals the Yoneda lemma's content: a natural transformation out of a 
 
 <div class="theorem">
 <strong>Theorem 6.5 (Yoneda Embedding).</strong> The assignment \(A \mapsto \mathrm{Hom}_\mathcal{C}(-, A) = h^A\) defines a fully faithful functor
-\[ \mathbf{y} : \mathcal{C} \to [\mathcal{C}^{\mathrm{op}}, \mathbf{Set}], \quad A \mapsto h^A, \quad f \mapsto (f \circ -), \]
+
+\[
+\mathbf{y} : \mathcal{C} \to [\mathcal{C}^{\mathrm{op}}, \mathbf{Set}], \quad A \mapsto h^A, \quad f \mapsto (f \circ -),
+\]
 called the <em>Yoneda embedding</em>. ("Fully faithful" means bijective on all hom-sets.)
 </div>
 
@@ -741,7 +799,10 @@ The prototypical sheaf is the sheaf of continuous functions: \(\mathcal{O}_X(U) 
 
 <div class="remark">
 <strong>Remark 6.9 (The Free Cocompletion).</strong> The presheaf category \(\hat{\mathcal{C}} = [\mathcal{C}^{\mathrm{op}}, \mathbf{Set}]\) is the <em>free cocompletion</em> of \(\mathcal{C}\): it is the "smallest" category containing \(\mathcal{C}\) (via the Yoneda embedding) that has all small colimits. The co-Yoneda lemma (or density theorem) states that every presheaf \(F \in \hat{\mathcal{C}}\) is a canonical colimit of representable presheaves:
-\[ F \cong \varinjlim_{(A, x) \in \mathcal{C}^{\mathrm{op}} \downarrow F} h^A. \]
+
+\[
+F \cong \varinjlim_{(A, x) \in \mathcal{C}^{\mathrm{op}} \downarrow F} h^A.
+\]
 This says every presheaf is "built from" representable ones by taking colimits. Sheafification — the process of converting a presheaf into a sheaf — is the left adjoint to the inclusion of sheaves into presheaves, and it can be constructed as a left Kan extension (§7.9).
 </div>
 
@@ -755,7 +816,10 @@ The representability of the derivation functor provides an important application
 
 <div class="theorem">
 <strong>Theorem 6.11 (Representability of Derivations — Kähler Differentials).</strong> For each commutative \(k\)-algebra \(C\), there exists a \(C\)-module \(\Omega_{C/k}\) (the <em>module of Kähler differentials</em>) and a universal \(k\)-derivation \(d : C \to \Omega_{C/k}\) such that for every \(C\)-module \(M\),
-\[ \mathrm{Hom}_C(\Omega_{C/k}, M) \cong \mathrm{Der}_k(C, M) \]
+
+\[
+\mathrm{Hom}_C(\Omega_{C/k}, M) \cong \mathrm{Der}_k(C, M)
+\]
 naturally in \(M\). In other words, \(\mathrm{Der}_k(C, -)\) is represented by \(\Omega_{C/k}\).
 </div>
 
@@ -874,7 +938,10 @@ Products are limits over the discrete diagram \(\mathcal{J}\) with objects \(\{i
 
 <div class="proof">
 <strong>Proof (Sketch).</strong> Given a diagram \(D : \mathcal{J} \to \mathcal{C}\), construct the limit as the equalizer of two maps between products:
-\[ \varprojlim D = \mathrm{Eq}\left(\prod_{j \in \mathrm{Ob}(\mathcal{J})} D(j) \rightrightarrows \prod_{u \in \mathrm{Mor}(\mathcal{J})} D(\mathrm{cod}(u))\right) \]
+
+\[
+\varprojlim D = \mathrm{Eq}\left(\prod_{j \in \mathrm{Ob}(\mathcal{J})} D(j) \rightrightarrows \prod_{u \in \mathrm{Mor}(\mathcal{J})} D(\mathrm{cod}(u))\right)
+\]
 where the two parallel maps send a cone \((x_j)_{j \in \mathrm{Ob}(\mathcal{J})}\) to either \((D(u)(x_{\mathrm{dom}(u)}))_u\) or \((x_{\mathrm{cod}(u)})_u\). Their equalizer is exactly the set of compatible families, which is the limit. \(\square\)
 </div>
 
@@ -932,12 +999,18 @@ Kan extensions are the most general limit/colimit-type construction in category 
 
 <div class="definition">
 <strong>Definition 7.17 (Kan Extension).</strong> Let \(K : \mathcal{C} \to \mathcal{D}\) and \(F : \mathcal{C} \to \mathcal{E}\) be functors. The <em>left Kan extension</em> \(\mathrm{Lan}_K F : \mathcal{D} \to \mathcal{E}\) (if it exists) is the functor that is "left adjoint to restriction along \(K\)": there is a natural bijection
-\[ \mathrm{Nat}(\mathrm{Lan}_K F, G) \cong \mathrm{Nat}(F, G \circ K) \]
+
+\[
+\mathrm{Nat}(\mathrm{Lan}_K F, G) \cong \mathrm{Nat}(F, G \circ K)
+\]
 for all \(G : \mathcal{D} \to \mathcal{E}\), together with a universal natural transformation \(\eta : F \Rightarrow (\mathrm{Lan}_K F) \circ K\). The <em>right Kan extension</em> \(\mathrm{Ran}_K F\) is defined dually.
 </div>
 
 When \(\mathcal{E}\) is cocomplete and \(\mathcal{C}\) is small, the left Kan extension exists and is computed by the <em>coend formula</em>:
-\[ (\mathrm{Lan}_K F)(d) = \varinjlim_{(c, K(c) \to d) \in K \downarrow d} F(c). \]
+
+\[
+(\mathrm{Lan}_K F)(d) = \varinjlim_{(c, K(c) \to d) \in K \downarrow d} F(c).
+\]
 This is a colimit over the comma category \(K \downarrow d\) (whose objects are pairs \((c, u)\) with \(c \in \mathcal{C}\) and \(u : K(c) \to d\) in \(\mathcal{D}\)).
 
 <div class="example">
@@ -994,7 +1067,10 @@ The categories of sets, abelian groups, \(R\)-modules (for commutative \(R\)), a
 
 <div class="definition">
 <strong>Definition 8.5 (Closed Monoidal Category).</strong> A monoidal category \((\mathcal{C}, \otimes, I)\) is <em>(left) closed</em> if for each object \(B\), the functor \(- \otimes B : \mathcal{C} \to \mathcal{C}\) has a right adjoint, written \([B, -]\) or \(\underline{\mathrm{Hom}}(B, -)\):
-\[ \mathrm{Hom}_\mathcal{C}(A \otimes B, C) \cong \mathrm{Hom}_\mathcal{C}(A, [B, C]). \]
+
+\[
+\mathrm{Hom}_\mathcal{C}(A \otimes B, C) \cong \mathrm{Hom}_\mathcal{C}(A, [B, C]).
+\]
 The object \([B, C]\) is called the <em>internal Hom</em> from \(B\) to \(C\).
 </div>
 
@@ -1064,7 +1140,10 @@ The presence of a zero object strengthens the structure considerably. Recall fro
 
 <div class="definition">
 <strong>Definition 9.2 (Additive Category).</strong> A preadditive category \(\mathcal{A}\) is <em>additive</em> if it has a zero object and if every finite collection of objects has a biproduct. The <em>biproduct</em> (or <em>direct sum</em>) \(A \oplus B\) of two objects comes equipped with morphisms
-\[ A \xrightarrow{i_1} A \oplus B \xleftarrow{i_2} B \quad \text{and} \quad A \xleftarrow{p_1} A \oplus B \xrightarrow{p_2} B \]
+
+\[
+A \xrightarrow{i_1} A \oplus B \xleftarrow{i_2} B \quad \text{and} \quad A \xleftarrow{p_1} A \oplus B \xrightarrow{p_2} B
+\]
 satisfying \(p_j \circ i_j = \mathrm{id}\) and \(p_j \circ i_k = 0\) for \(j \neq k\), and \(i_1 \circ p_1 + i_2 \circ p_2 = \mathrm{id}_{A \oplus B}\).
 </div>
 
@@ -1192,7 +1271,10 @@ None of these functors is exact in general. The extent to which they fail to be 
 
 <div class="proof">
 <strong>Proof.</strong> We prove (1); the others are analogous or dual. Let \(0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0\) be exact. Applying \(\mathrm{Hom}_R(M, -)\) gives:
-\[ 0 \to \mathrm{Hom}_R(M, A) \xrightarrow{f_*} \mathrm{Hom}_R(M, B) \xrightarrow{g_*} \mathrm{Hom}_R(M, C) \]
+
+\[
+0 \to \mathrm{Hom}_R(M, A) \xrightarrow{f_*} \mathrm{Hom}_R(M, B) \xrightarrow{g_*} \mathrm{Hom}_R(M, C)
+\]
 where \(f_* (\phi) = f \circ \phi\) and \(g_* (\phi) = g \circ \phi\). 
 
 <em>Injectivity of \(f_*\)</em>: If \(f_*(\phi) = f \circ \phi = 0\), then since \(f\) is monic, \(\phi = 0\).
@@ -1214,6 +1296,7 @@ The power of abelian categories manifests most vividly in the "diagram lemmas" �
 
 <div class="theorem">
 <strong>Theorem 9.13 (The Snake Lemma).</strong> Let \(\mathcal{A}\) be an abelian category. Given a commutative diagram with exact rows:
+
 \[
 \begin{array}{ccccccccc}
  & & A & \xrightarrow{f} & B & \xrightarrow{g} & C & \to & 0 \\
@@ -1222,9 +1305,15 @@ The power of abelian categories manifests most vividly in the "diagram lemmas" �
 \end{array}
 \]
 there is a natural exact sequence:
-\[ \ker \alpha \to \ker \beta \to \ker \gamma \xrightarrow{\partial} \mathrm{coker}\, \alpha \to \mathrm{coker}\, \beta \to \mathrm{coker}\, \gamma \]
+
+\[
+\ker \alpha \to \ker \beta \to \ker \gamma \xrightarrow{\partial} \mathrm{coker}\, \alpha \to \mathrm{coker}\, \beta \to \mathrm{coker}\, \gamma
+\]
 where \(\partial\) is the <em>connecting homomorphism</em>. If moreover \(A \to B\) is monic and \(B' \to C'\) is epic, then the sequence extends to:
-\[ 0 \to \ker \alpha \to \ker \beta \to \ker \gamma \xrightarrow{\partial} \mathrm{coker}\, \alpha \to \mathrm{coker}\, \beta \to \mathrm{coker}\, \gamma \to 0. \]
+
+\[
+0 \to \ker \alpha \to \ker \beta \to \ker \gamma \xrightarrow{\partial} \mathrm{coker}\, \alpha \to \mathrm{coker}\, \beta \to \mathrm{coker}\, \gamma \to 0.
+\]
 </div>
 
 <div class="proof">
@@ -1243,6 +1332,7 @@ The connecting homomorphism \(\partial\) is the fundamental mechanism by which s
 
 <div class="theorem">
 <strong>Theorem 9.14 (The Five Lemma).</strong> Given a commutative diagram with exact rows in an abelian category:
+
 \[
 \begin{array}{ccccccccccc}
 A_1 & \to & A_2 & \to & A_3 & \to & A_4 & \to & A_5 \\
@@ -1294,7 +1384,10 @@ The proof of Mitchell's theorem is one of the triumphs of abstract category theo
 **Step 2: Enough injectives.** Grothendieck's theorem guarantees that every Grothendieck abelian category has enough injectives (every object embeds in an injective). This key result, proved in §12.2 in the special case of \(R\text{-}\mathbf{Mod}\), holds in this generality.
 
 **Step 3: An exact embedding.** One chooses an injective cogenerator \(U\) of \([\mathcal{A}^{op}, \mathbf{Ab}]\) (an injective object that "sees" every other object) and considers the functor \(\mathrm{Hom}(-, U)\). The composition
-\[ \mathcal{A} \xrightarrow{Y} [\mathcal{A}^{op}, \mathbf{Ab}] \xrightarrow{\mathrm{Hom}(-,U)} \mathbf{Ab} \]
+
+\[
+\mathcal{A} \xrightarrow{Y} [\mathcal{A}^{op}, \mathbf{Ab}] \xrightarrow{\mathrm{Hom}(-,U)} \mathbf{Ab}
+\]
 is exact and faithful. Setting \(R = \mathrm{End}(U)^{op}\) and noting that \(\mathrm{Hom}(-, U)\) takes values in \(R\text{-}\mathbf{Mod}\) gives the desired embedding.
 
 <div class="remark">
@@ -1333,6 +1426,7 @@ The notion of a projective module is equivalent to several a priori different co
 
 <div class="definition">
 <strong>Definition 11.1 (Projective Module).</strong> Let \(R\) be a ring. A left \(R\)-module \(P\) is <em>projective</em> if for any surjection \(g : M \twoheadrightarrow N\) and any homomorphism \(f : P \to N\), there exists a lift \(\tilde{f} : P \to M\) with \(g \circ \tilde{f} = f\):
+
 \[
 \begin{array}{ccc}
  & & M \\
@@ -1446,6 +1540,7 @@ The key theme of this chapter is the theorem that every module embeds in an inje
 
 <div class="definition">
 <strong>Definition 12.1 (Injective Module).</strong> A left \(R\)-module \(I\) is <em>injective</em> if for any injection \(f : A \hookrightarrow B\) and any homomorphism \(g : A \to I\), there exists a homomorphism \(\tilde{g} : B \to I\) with \(\tilde{g} \circ f = g\):
+
 \[
 \begin{array}{ccc}
 0 \to A & \xrightarrow{f} & B \\
@@ -1558,6 +1653,7 @@ The algebraic formalization of "sequences that compose to zero" is the chain com
 
 <div class="definition">
 <strong>Definition 13.1 (Chain Complex).</strong> Let \(\mathcal{A}\) be an abelian category. A <em>chain complex</em> \(C_\bullet\) in \(\mathcal{A}\) is a sequence of objects and morphisms
+
 \[
 \cdots \to C_{n+1} \xrightarrow{d_{n+1}} C_n \xrightarrow{d_n} C_{n-1} \to \cdots
 \]
@@ -1570,6 +1666,7 @@ The condition \(d^2 = 0\) is the minimal algebraic requirement for a notion of "
 
 <div class="definition">
 <strong>Definition 13.2 (Homology and Cohomology).</strong> Let \(C_\bullet\) be a chain complex in \(R\text{-}\mathbf{Mod}\). The <em>cycle objects</em>, <em>boundary objects</em>, and <em>homology objects</em> at degree \(n\) are:
+
 \[
 Z_n = \ker(d_n : C_n \to C_{n-1}), \quad B_n = \mathrm{im}(d_{n+1} : C_{n+1} \to C_n), \quad H_n(C_\bullet) = Z_n / B_n.
 \]
@@ -1588,6 +1685,7 @@ For instance, the boundary of a triangle \([v_0, v_1, v_2]\) is \([v_1, v_2] - [
 
 <div class="example">
 <strong>Example 13.4 (The Koszul Complex).</strong> Let \(R = k[x_1, \ldots, x_n]\) and \(M = k = R/(x_1, \ldots, x_n)\). The <em>Koszul complex</em> \(K_\bullet(x_1, \ldots, x_n)\) is a chain complex of free \(R\)-modules providing a projective resolution of \(k\). Concretely, \(K_p = \bigwedge^p R^n\) (the \(p\)th exterior power of \(R^n\), a free module of rank \(\binom{n}{p}\)), and the differential is:
+
 \[
 d_p(e_{i_1} \wedge \cdots \wedge e_{i_p}) = \sum_{j=1}^p (-1)^{j-1} x_{i_j} \cdot e_{i_1} \wedge \cdots \wedge \widehat{e_{i_j}} \wedge \cdots \wedge e_{i_p}.
 \]
@@ -1600,6 +1698,7 @@ The most fundamental result in homological algebra is that a short exact sequenc
 
 <div class="theorem">
 <strong>Theorem 13.5 (Long Exact Sequence in Homology).</strong> Let
+
 \[
 0 \to A_\bullet \xrightarrow{f_\bullet} B_\bullet \xrightarrow{g_\bullet} C_\bullet \to 0
 \]
@@ -1631,6 +1730,7 @@ Two chain maps may induce the same maps on homology even though they are not equ
 
 <div class="definition">
 <strong>Definition 13.7 (Chain Homotopy).</strong> Two chain maps \(f_\bullet, g_\bullet : C_\bullet \to D_\bullet\) are <em>chain homotopic</em> (written \(f \simeq g\)) if there exists a collection of maps \(h_n : C_n \to D_{n+1}\) (a <em>chain homotopy</em>) such that:
+
 \[
 f_n - g_n = d_{n+1}^D \circ h_n + h_{n-1} \circ d_n^C.
 \]
@@ -1656,6 +1756,7 @@ The mapping cone provides a powerful tool for understanding the relationship bet
 
 <div class="definition">
 <strong>Definition 13.9 (Mapping Cone).</strong> Let \(f_\bullet : C_\bullet \to D_\bullet\) be a chain map. The <em>mapping cone</em> \(\mathrm{Cone}(f)_\bullet\) is the chain complex with:
+
 \[
 \mathrm{Cone}(f)_n = C_{n-1} \oplus D_n, \quad d_n^{\mathrm{Cone}} = \begin{pmatrix} -d_{n-1}^C & 0 \\ f_{n-1} & d_n^D \end{pmatrix}.
 \]
@@ -1677,6 +1778,7 @@ A projective resolution of a module \(M\) is an exact sequence terminating at \(
 
 <div class="definition">
 <strong>Definition 14.1 (Projective Resolution).</strong> A <em>projective resolution</em> of an \(R\)-module \(M\) is an exact sequence:
+
 \[
 \cdots \to P_2 \xrightarrow{d_2} P_1 \xrightarrow{d_1} P_0 \xrightarrow{\epsilon} M \to 0
 \]
@@ -1700,6 +1802,7 @@ Dually, every module embeds in an injective module, allowing the construction of
 
 <div class="definition">
 <strong>Definition 14.3 (Injective Resolution).</strong> An <em>injective resolution</em> of an \(R\)-module \(M\) is an exact sequence:
+
 \[
 0 \to M \xrightarrow{\eta} I^0 \xrightarrow{d^0} I^1 \xrightarrow{d^1} I^2 \to \cdots
 \]
@@ -1734,6 +1837,7 @@ The horseshoe lemma allows one to construct resolutions of the total module \(B\
 
 <div class="theorem">
 <strong>Theorem 14.6 (Horseshoe Lemma).</strong> Let \(0 \to A \to B \to C \to 0\) be a short exact sequence of \(R\)-modules with projective resolutions \(P_\bullet \twoheadrightarrow A\) and \(Q_\bullet \twoheadrightarrow C\). Then there is a projective resolution \((P \oplus Q)_\bullet \twoheadrightarrow B\) such that the diagram:
+
 \[
 0 \to P_\bullet \to (P \oplus Q)_\bullet \to Q_\bullet \to 0
 \]
@@ -1748,6 +1852,7 @@ The length of the shortest projective (or injective) resolution of a module is a
 
 <div class="definition">
 <strong>Definition 14.7 (Projective and Injective Dimension).</strong> The <em>projective dimension</em> \(\mathrm{pd}(M)\) of a module \(M\) is the infimum of lengths of projective resolutions:
+
 \[
 \mathrm{pd}(M) = \min\{n \geq 0 : \text{there is a projective resolution } 0 \to P_n \to \cdots \to P_0 \to M \to 0\}.
 \]
@@ -1778,6 +1883,7 @@ With the machinery of Chapter 14 in place, we can now construct the derived func
 
 <div class="definition">
 <strong>Definition 15.1 (Left Derived Functors).</strong> Let \(F : R\text{-}\mathbf{Mod} \to \mathbf{Ab}\) be a right exact additive functor. Choose, for each \(R\)-module \(M\), a projective resolution \(P_\bullet \xrightarrow{\epsilon} M \to 0\). The <em>\(n\)th left derived functor</em> of \(F\) is:
+
 \[
 L_n F(M) := H_n(F(P_\bullet)) = H_n(\cdots \to F(P_1) \to F(P_0) \to 0).
 \]
@@ -1797,6 +1903,7 @@ Dually, a left-exact functor \(G\) is "completed" by its right derived functors,
 
 <div class="definition">
 <strong>Definition 15.2 (Right Derived Functors).</strong> Let \(G : R\text{-}\mathbf{Mod} \to \mathbf{Ab}\) be a left exact additive functor. For each module \(M\), choose an injective resolution \(0 \to M \to I^0 \to I^1 \to \cdots\). The <em>\(n\)th right derived functor</em> of \(G\) is:
+
 \[
 R^n G(M) := H^n(G(I^\bullet)) = H^n(0 \to G(I^0) \to G(I^1) \to \cdots).
 \]
@@ -1845,6 +1952,7 @@ In practice, computing derived functors using injective or projective resolution
 
 <div class="example">
 <strong>Example 15.8 (de Rham Cohomology as a Derived Functor).</strong> Let \(M\) be a smooth manifold and \(\underline{\mathbb{R}}\) the constant sheaf on \(M\). The de Rham complex \(0 \to \underline{\mathbb{R}} \to \Omega^0 \xrightarrow{d} \Omega^1 \xrightarrow{d} \Omega^2 \to \cdots\) provides a resolution of the constant sheaf by the sheaves of differential forms. By the Poincaré lemma, each \(\Omega^k\) is acyclic for the global section functor \(\Gamma(M, -)\) (the sheaves of differential forms are fine sheaves, hence acyclic). Applying the Acyclic Resolution Theorem:
+
 \[
 H^n(M; \mathbb{R}) = R^n \Gamma(M, \underline{\mathbb{R}}) \cong H^n_{\mathrm{dR}}(M) = H^n(\Gamma(M, \Omega^\bullet)).
 \]
@@ -1857,6 +1965,7 @@ This is the de Rham theorem: singular cohomology with real coefficients equals d
 
 <div class="definition">
 <strong>Definition 16.1 (Tor).</strong> Let \(R\) be a ring, \(M\) a right \(R\)-module, and \(N\) a left \(R\)-module. Choose a projective resolution \(P_\bullet \xrightarrow{\sim} N\) of \(N\). The <em>Tor groups</em> are:
+
 \[
 \mathrm{Tor}_n^R(M, N) := L_n(M \otimes_R -)(N) = H_n(M \otimes_R P_\bullet).
 \]
@@ -1884,6 +1993,7 @@ This symmetry ("balance") is not obvious — tensor product is a priori a functo
 
 <div class="example">
 <strong>Example 16.4 (Tor over \(\mathbb{Z}\)).</strong> Using the projective resolution \(0 \to \mathbb{Z} \xrightarrow{\times m} \mathbb{Z} \to \mathbb{Z}/m \to 0\) and tensoring with \(\mathbb{Z}/n\):
+
 \[
 0 \to \mathbb{Z}/n \xrightarrow{\times m} \mathbb{Z}/n \to \mathbb{Z}/m \otimes_\mathbb{Z} \mathbb{Z}/n \to 0.
 \]
@@ -1915,11 +2025,13 @@ This theorem shows that Tor is precisely the obstruction to flatness. The Govoro
 <strong>Definition 16.7 (Ext).</strong> Let \(R\) be a ring and \(M, N\) left \(R\)-modules.
 
 <em>Via projective resolution of \(M\)</em>: Choose \(P_\bullet \xrightarrow{\sim} M\). Apply \(\mathrm{Hom}_R(-, N)\) (which reverses arrows, turning the projective resolution into a cochain complex). Then:
+
 \[
 \mathrm{Ext}_R^n(M, N) := R^n \mathrm{Hom}_R(M, -)(N) = H^n(\mathrm{Hom}_R(P_\bullet, N)).
 \]
 
 <em>Via injective resolution of \(N\)</em>: Choose \(0 \to N \to I^\bullet\). Apply \(\mathrm{Hom}_R(M, -)\). Then:
+
 \[
 \mathrm{Ext}_R^n(M, N) = H^n(\mathrm{Hom}_R(M, I^\bullet)).
 \]
@@ -1942,6 +2054,7 @@ These two constructions agree (by a balance theorem analogous to Tor).
 
 <div class="example">
 <strong>Example 16.9 (Ext over \(\mathbb{Z}\)).</strong> From the free resolution \(0 \to \mathbb{Z} \xrightarrow{\times m} \mathbb{Z} \to \mathbb{Z}/m \to 0\), applying \(\mathrm{Hom}_\mathbb{Z}(-, \mathbb{Z}/n)\):
+
 \[
 0 \to \mathrm{Hom}(\mathbb{Z}/m, \mathbb{Z}/n) \to \mathrm{Hom}(\mathbb{Z}, \mathbb{Z}/n) \xrightarrow{\times m} \mathrm{Hom}(\mathbb{Z}, \mathbb{Z}/n) \to 0.
 \]
@@ -1956,6 +2069,7 @@ One of the deepest facts about \(\mathrm{Ext}^1\) is that it classifies extensio
 
 <div class="theorem">
 <strong>Theorem 16.10 (Ext\(^1\) Classifies Extensions).</strong> Let \(M, N\) be \(R\)-modules. There is a bijection between \(\mathrm{Ext}_R^1(M, N)\) and the set of equivalence classes of short exact sequences (extensions of \(M\) by \(N\)):
+
 \[
 0 \to N \to E \to M \to 0.
 \]
@@ -1973,6 +2087,7 @@ The zero element of \(\mathrm{Ext}^1(M, N)\) corresponds to the split extension 
 
 <div class="proof">
 <strong>Proof sketch.</strong> Given a projective resolution \(P_1 \xrightarrow{d_1} P_0 \xrightarrow{\epsilon} M \to 0\) and an extension class \([\alpha] \in \mathrm{Ext}^1(M, N) = \ker(\partial)/\mathrm{im}(\cdot \circ d_1)\) (from the cochain complex \(\mathrm{Hom}(P_\bullet, N)\)), define the extension \(E\) as the pushout:
+
 \[
 \begin{array}{ccc}
 P_1 & \xrightarrow{\alpha} & N \\
@@ -1998,6 +2113,7 @@ The description of \(\mathrm{Ext}^n\) as classifying \(n\)-fold extensions (long
 
 <div class="definition">
 <strong>Definition 16.12 (Yoneda Ext).</strong> An <em>\(n\)-fold extension of \(M\) by \(N\)</em> is an exact sequence:
+
 \[
 \xi : 0 \to N \to E_n \to E_{n-1} \to \cdots \to E_1 \to M \to 0.
 \]
@@ -2008,6 +2124,7 @@ The <em>Yoneda product</em> (or Yoneda composition) \(\mathrm{Ext}^m(N, L) \time
 
 <div class="theorem">
 <strong>Theorem 16.13 (Yoneda's Equivalence).</strong> For any abelian category \(\mathcal{A}\) and objects \(M, N\), there is a natural isomorphism:
+
 \[
 \mathrm{Ext}^n_\mathcal{A}(M, N) \cong \mathrm{Ext}^n_Y(M, N).
 \]
@@ -2028,9 +2145,11 @@ The formalism of Ext and Tor connects directly to classical and modern mathemati
 
 <div class="theorem">
 <strong>Theorem 16.15 (Universal Coefficient Theorem).</strong> Let \(C_\bullet\) be a chain complex of free abelian groups and \(G\) an abelian group. There are natural short exact sequences:
+
 \[
 0 \to H_n(C_\bullet) \otimes_\mathbb{Z} G \to H_n(C_\bullet \otimes G) \to \mathrm{Tor}_1^\mathbb{Z}(H_{n-1}(C_\bullet), G) \to 0,
 \]
+
 \[
 0 \to \mathrm{Ext}_\mathbb{Z}^1(H_{n-1}(C_\bullet), G) \to H^n(\mathrm{Hom}(C_\bullet, G)) \to \mathrm{Hom}(H_n(C_\bullet), G) \to 0.
 \]
@@ -2041,6 +2160,7 @@ The universal coefficient theorem shows that the homology/cohomology of \(X\) wi
 
 <div class="theorem">
 <strong>Theorem 16.16 (Künneth Formula).</strong> Let \(X, Y\) be topological spaces (with \(H_\bullet(X;\mathbb{Z})\) consisting of free abelian groups). Then there is a natural short exact sequence:
+
 \[
 0 \to \bigoplus_{i+j=n} H_i(X;\mathbb{Z}) \otimes H_j(Y;\mathbb{Z}) \to H_n(X \times Y;\mathbb{Z}) \to \bigoplus_{i+j=n-1} \mathrm{Tor}^\mathbb{Z}_1(H_i(X;\mathbb{Z}), H_j(Y;\mathbb{Z})) \to 0.
 \]
@@ -2050,6 +2170,7 @@ The Künneth formula expresses the homology of a product in terms of the homolog
 
 <div class="theorem">
 <strong>Theorem 16.17 (Group Cohomology).</strong> Let \(G\) be a group and \(M\) a left \(\mathbb{Z}[G]\)-module (a \(G\)-module). The <em>group cohomology</em> groups are:
+
 \[
 H^n(G; M) := \mathrm{Ext}^n_{\mathbb{Z}[G]}(\mathbb{Z}, M),
 \]
@@ -2066,6 +2187,7 @@ show that the abstract Ext machinery recovers and clarifies classical constructi
 
 <div class="theorem">
 <strong>Theorem 16.18 (Hochschild Cohomology).</strong> Let \(A\) be a \(k\)-algebra and \(M\) an \(A\)-bimodule (equivalently, a left \(A \otimes_k A^{op}\)-module). The <em>Hochschild cohomology</em> is:
+
 \[
 HH^n(A, M) := \mathrm{Ext}^n_{A \otimes A^{op}}(A, M).
 \]

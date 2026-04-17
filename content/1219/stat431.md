@@ -18,11 +18,15 @@ Classical statistics rests on the normal linear model, which serves as the conce
 
 The framework begins with \( n \) independent response variables \( Y_1, Y_2, \ldots, Y_n \) and for each subject \( i \) a vector of explanatory variables \( \mathbf{x}_i = (1, x_{i1}, \ldots, x_{ip})^\top \). The model postulates that each response is drawn from a normal distribution:
 
-\[ Y_i \sim N(\mu_i, \sigma^2), \quad \text{independently,} \]
+\[
+Y_i \sim N(\mu_i, \sigma^2), \quad \text{independently,}
+\]
 
 where the mean \( \mu_i \) is a linear function of the covariates:
 
-\[ E[Y_i] = \mu_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_p x_{ip} = \mathbf{x}_i^\top \boldsymbol{\beta}. \]
+\[
+E[Y_i] = \mu_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_p x_{ip} = \mathbf{x}_i^\top \boldsymbol{\beta}.
+\]
 
 The errors \( \varepsilon_i = Y_i - \mu_i \) are independent and identically distributed as \( N(0, \sigma^2) \), so the full model in matrix form is \( \mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\varepsilon} \) with \( \boldsymbol{\varepsilon} \sim \mathrm{MVN}(\mathbf{0}, \sigma^2 \mathbf{I}) \). The \( n \times (p+1) \) **design matrix** \( \mathbf{X} \) has rows \( \mathbf{x}_i^\top \).
 
@@ -32,21 +36,29 @@ The errors \( \varepsilon_i = Y_i - \mu_i \) are independent and identically dis
 
 The **least squares estimator** (LSE) minimises the residual sum of squares:
 
-\[ S(\boldsymbol{\beta}) = \sum_{i=1}^n \left(y_i - \mathbf{x}_i^\top \boldsymbol{\beta}\right)^2 = (\mathbf{y} - \mathbf{X}\boldsymbol{\beta})^\top(\mathbf{y} - \mathbf{X}\boldsymbol{\beta}). \]
+\[
+S(\boldsymbol{\beta}) = \sum_{i=1}^n \left(y_i - \mathbf{x}_i^\top \boldsymbol{\beta}\right)^2 = (\mathbf{y} - \mathbf{X}\boldsymbol{\beta})^\top(\mathbf{y} - \mathbf{X}\boldsymbol{\beta}).
+\]
 
 Setting \( \partial S / \partial \boldsymbol{\beta} = \mathbf{0} \) yields the normal equations \( \mathbf{X}^\top \mathbf{X}\boldsymbol{\beta} = \mathbf{X}^\top \mathbf{y} \), whose unique solution (when \( \mathbf{X}^\top \mathbf{X} \) has full rank) is:
 
-\[ \hat{\boldsymbol{\beta}} = (\mathbf{X}^\top \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{Y}. \]
+\[
+\hat{\boldsymbol{\beta}} = (\mathbf{X}^\top \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{Y}.
+\]
 
 Under the normality assumption, the log-likelihood for \( \boldsymbol{\beta} \) (treating \( \sigma^2 \) as fixed) is:
 
-\[ \ell(\boldsymbol{\beta}; \mathbf{y}) = -\frac{n}{2}\log(2\pi\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^n \left(y_i - \mathbf{x}_i^\top \boldsymbol{\beta}\right)^2, \]
+\[
+\ell(\boldsymbol{\beta}; \mathbf{y}) = -\frac{n}{2}\log(2\pi\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^n \left(y_i - \mathbf{x}_i^\top \boldsymbol{\beta}\right)^2,
+\]
 
 which is maximised by the same \( \hat{\boldsymbol{\beta}} \). Thus the LSE and MLE of \( \boldsymbol{\beta} \) coincide in the normal linear model — a coincidence that does not hold for other GLM families.
 
 The **fitted values** are \( \hat{\mathbf{Y}} = \mathbf{X}\hat{\boldsymbol{\beta}} = \mathbf{H}\mathbf{Y} \), where the **hat matrix** \( \mathbf{H} = \mathbf{X}(\mathbf{X}^\top \mathbf{X})^{-1}\mathbf{X}^\top \) is the orthogonal projection onto the column space of \( \mathbf{X} \). The diagonal entries \( h_{ii} \) are the **leverage values**, measuring how far observation \( i \) is from the centre of the predictor space. The **raw residuals** \( \hat{\mathbf{r}} = \mathbf{y} - \hat{\mathbf{y}} \) satisfy \( \mathbf{H}\hat{\mathbf{r}} = \mathbf{0} \), confirming orthogonality between residuals and fitted values. An unbiased estimate of \( \sigma^2 \) is:
 
-\[ \hat\sigma^2 = \frac{1}{n - p - 1}\sum_{i=1}^n \hat r_i^2. \]
+\[
+\hat\sigma^2 = \frac{1}{n - p - 1}\sum_{i=1}^n \hat r_i^2.
+\]
 
 The **standardized residuals** \( d_i = \hat r_i / [\hat\sigma\sqrt{1 - h_{ii}}] \) have approximate \( N(0,1) \) distribution and are used to detect outliers and assess model adequacy. Under the normal linear model, \( \hat{\boldsymbol{\beta}} \sim \mathrm{MVN}(\boldsymbol{\beta}, \sigma^2 (\mathbf{X}^\top \mathbf{X})^{-1}) \), and inference on individual \( \beta_j \) uses the \( t_{n-p-1} \) distribution.
 
@@ -62,7 +74,9 @@ Linear regression rests on assumptions that are routinely violated when the resp
 
 The likelihood framework underpins all inference for GLMs, so a thorough review is warranted. Let \( Y \) have density or mass function \( f(y \mid \theta) \) for an unknown scalar \( \theta \in \Omega \). Given data \( y \), the **likelihood function** is:
 
-\[ L(\theta \mid y) = c \cdot f(y \mid \theta), \]
+\[
+L(\theta \mid y) = c \cdot f(y \mid \theta),
+\]
 
 where \( c > 0 \) is any positive constant free of \( \theta \). The likelihood is not a probability distribution over \( \theta \); it is a function that ranks how consistent different parameter values are with the observed data. The **MLE** \( \hat\theta \) is the value maximising \( L(\theta) \), or equivalently the log-likelihood \( \ell(\theta) = \log L(\theta) \).
 
@@ -84,7 +98,9 @@ The Cramér–Rao lower bound states that any unbiased estimator of \( \theta \)
 
 **Poisson MLE — worked example.** Let \( Y_1, \ldots, Y_n \overset{\mathrm{iid}}{\sim} \mathrm{Poisson}(\theta) \). The likelihood is \( L(\theta) = \theta^{\sum y_i} e^{-n\theta} / \prod y_i! \), giving log-likelihood:
 
-\[ \ell(\theta) = \left(\sum_i y_i\right)\log\theta - n\theta - \sum_i \log(y_i!). \]
+\[
+\ell(\theta) = \left(\sum_i y_i\right)\log\theta - n\theta - \sum_i \log(y_i!).
+\]
 
 Score: \( S(\theta) = \sum_i y_i / \theta - n \). Setting to zero: \( \hat\theta = \bar y \). Information: \( I(\theta) = \sum_i y_i / \theta^2 \), so \( I(\hat\theta) = n/\bar y > 0 \), confirming a maximum. For the **tropical cyclone dataset** — 13 successive seasons from 1956–57 to 1968–69 in Northeastern Australia with total 72 cyclones — \( \hat\theta = 72/13 \approx 5.538 \).
 
@@ -106,11 +122,15 @@ The LR interval is generally preferred: it is invariant to reparametrisation, ty
 
 When \( S(\theta) = 0 \) has no closed form, the MLE is found iteratively. A first-order Taylor expansion about the current estimate \( \theta^{(r)} \) gives:
 
-\[ S(\theta) \approx S(\theta^{(r)}) - I(\theta^{(r)})(\theta - \theta^{(r)}), \]
+\[
+S(\theta) \approx S(\theta^{(r)}) - I(\theta^{(r)})(\theta - \theta^{(r)}),
+\]
 
 leading to the **Newton–Raphson update**:
 
-\[ \theta^{(r+1)} = \theta^{(r)} + I^{-1}(\theta^{(r)}) S(\theta^{(r)}). \]
+\[
+\theta^{(r+1)} = \theta^{(r)} + I^{-1}(\theta^{(r)}) S(\theta^{(r)}).
+\]
 
 **Fisher scoring** replaces the observed information \( I(\theta^{(r)}) \) with the expected information \( \mathcal{I}(\theta^{(r)}) \). The algorithms are identical under the canonical link (shown in Chapter 3). For vector parameters \( \boldsymbol{\theta} \), the update becomes \( \boldsymbol{\theta}^{(r+1)} = \boldsymbol{\theta}^{(r)} + \mathbf{I}^{-1}(\boldsymbol{\theta}^{(r)}) \mathbf{S}(\boldsymbol{\theta}^{(r)}) \), iterating until convergence. For the cyclone example starting at \( \theta^{(0)} = 5 \), the algorithm reaches \( \hat\theta = 5.538 \) in four steps.
 
@@ -118,15 +138,21 @@ leading to the **Newton–Raphson update**:
 
 When \( \boldsymbol{\theta} = (\alpha^\top, \boldsymbol{\beta}^\top)^\top \) with \( \alpha \) a nuisance parameter and \( \boldsymbol{\beta} \) the parameter of interest, the **partitioned information matrix** is:
 
-\[ \mathbf{I}(\boldsymbol{\theta}) = \begin{pmatrix} \mathbf{I}_{\alpha\alpha} & \mathbf{I}_{\alpha\beta} \\ \mathbf{I}_{\beta\alpha} & \mathbf{I}_{\beta\beta} \end{pmatrix}. \]
+\[
+\mathbf{I}(\boldsymbol{\theta}) = \begin{pmatrix} \mathbf{I}_{\alpha\alpha} & \mathbf{I}_{\alpha\beta} \\ \mathbf{I}_{\beta\alpha} & \mathbf{I}_{\beta\beta} \end{pmatrix}.
+\]
 
 The relevant block of the inverse information for \( \boldsymbol{\beta} \) is:
 
-\[ \mathbf{I}^{\beta\beta} = \left(\mathbf{I}_{\beta\beta} - \mathbf{I}_{\beta\alpha}\mathbf{I}_{\alpha\alpha}^{-1}\mathbf{I}_{\alpha\beta}\right)^{-1}, \]
+\[
+\mathbf{I}^{\beta\beta} = \left(\mathbf{I}_{\beta\beta} - \mathbf{I}_{\beta\alpha}\mathbf{I}_{\alpha\alpha}^{-1}\mathbf{I}_{\alpha\beta}\right)^{-1},
+\]
 
 which is the **Schur complement**. The Wald statistic for testing \( H_0: \boldsymbol{\beta} = \boldsymbol{\beta}_0 \) is:
 
-\[ W = (\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}_0)^\top [\mathbf{I}^{\beta\beta}(\hat{\boldsymbol{\theta}})]^{-1} (\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}_0) \overset{\text{approx}}{\sim} \chi^2_q. \]
+\[
+W = (\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}_0)^\top [\mathbf{I}^{\beta\beta}(\hat{\boldsymbol{\theta}})]^{-1} (\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}_0) \overset{\text{approx}}{\sim} \chi^2_q.
+\]
 
 # Chapter 2: Exponential Dispersion Families
 
@@ -136,7 +162,10 @@ The bridge from linear models to GLMs is the **exponential family**, which encom
 
 <div class="definition">
 <strong>Exponential family</strong>: A random variable \( Y_i \) belongs to the <em>exponential family</em> if its density or mass function can be written:
-\[ f(y_i \mid \theta_i, \phi) = \exp\!\left\{ \frac{y_i \theta_i - b(\theta_i)}{a_i(\phi)} + c(y_i; \phi) \right\} \]
+
+\[
+f(y_i \mid \theta_i, \phi) = \exp\!\left\{ \frac{y_i \theta_i - b(\theta_i)}{a_i(\phi)} + c(y_i; \phi) \right\}
+\]
 for specific functions \( a_i(\cdot) \), \( b(\cdot) \), and \( c(\cdot,\cdot) \). The parameter \( \theta_i \) is the <em>canonical parameter</em> and \( \phi \) is the <em>dispersion parameter</em> (assumed known for now).
 </div>
 
@@ -154,7 +183,10 @@ Applying these to the exponential family (where \( S_i = (Y_i - b'(\theta_i))/a_
 
 <div class="definition">
 <strong>Mean and variance for the exponential family</strong>:
-\[ E[Y_i] = b'(\theta_i) = \mu_i, \qquad \mathrm{Var}(Y_i) = b''(\theta_i)\, a_i(\phi). \]
+
+\[
+E[Y_i] = b'(\theta_i) = \mu_i, \qquad \mathrm{Var}(Y_i) = b''(\theta_i)\, a_i(\phi).
+\]
 The <em>variance function</em> is \( V(\mu_i) = b''(\theta_i) \), capturing the mean–variance relationship. When \( a_i(\phi) = \phi/w_i \), we write \( \mathrm{Var}(Y_i) = \phi\, V(\mu_i) / w_i \).
 </div>
 
@@ -164,19 +196,25 @@ The variance function is the single most important concept distinguishing expone
 
 **Normal distribution.** For \( Y \sim N(\mu, \sigma^2) \):
 
-\[ f(y) = \exp\!\left\{ \frac{y\mu - \mu^2/2}{\sigma^2} - \frac{y^2}{2\sigma^2} - \frac{1}{2}\log(2\pi\sigma^2) \right\}. \]
+\[
+f(y) = \exp\!\left\{ \frac{y\mu - \mu^2/2}{\sigma^2} - \frac{y^2}{2\sigma^2} - \frac{1}{2}\log(2\pi\sigma^2) \right\}.
+\]
 
 Canonical parameter \( \theta = \mu \), cumulant \( b(\theta) = \theta^2/2 \), dispersion \( a(\phi) = \sigma^2 \). Then \( b'(\theta) = \theta = \mu \) and \( V(\mu) = b''(\theta) = 1 \). The variance is constant, independent of the mean — the defining property of normal data.
 
 **Poisson distribution.** For \( Y \sim \mathrm{Poisson}(\lambda) \), \( y = 0, 1, 2, \ldots \):
 
-\[ f(y) = \frac{\lambda^y e^{-\lambda}}{y!} = \exp\!\left\{ y\log\lambda - \lambda - \log(y!) \right\}. \]
+\[
+f(y) = \frac{\lambda^y e^{-\lambda}}{y!} = \exp\!\left\{ y\log\lambda - \lambda - \log(y!) \right\}.
+\]
 
 Canonical parameter \( \theta = \log\lambda \), cumulant \( b(\theta) = e^\theta \). Then \( \mu = b'(\theta) = e^\theta = \lambda \) and \( V(\mu) = b''(\theta) = e^\theta = \mu \). **Variance equals mean** — the characteristic property of Poisson data. The canonical link is \( \log \).
 
 **Binomial distribution.** For \( Y \sim \mathrm{Binomial}(m, \pi) \), \( y = 0, 1, \ldots, m \):
 
-\[ f(y) = \binom{m}{y} \pi^y(1-\pi)^{m-y} = \exp\!\left\{ y\log\!\frac{\pi}{1-\pi} + m\log(1-\pi) + \log\binom{m}{y} \right\}. \]
+\[
+f(y) = \binom{m}{y} \pi^y(1-\pi)^{m-y} = \exp\!\left\{ y\log\!\frac{\pi}{1-\pi} + m\log(1-\pi) + \log\binom{m}{y} \right\}.
+\]
 
 Canonical parameter \( \theta = \log[\pi/(1-\pi)] \) (the **logit**), cumulant \( b(\theta) = m\log(1 + e^\theta) \). Mean \( \mu = m\pi \) and \( V(\mu) = m\pi(1-\pi) = \mu(1 - \mu/m) \). The canonical link is the **logit link**.
 
@@ -225,31 +263,45 @@ Fitting a GLM requires maximising the log-likelihood over \( \boldsymbol{\beta} 
 
 **The score vector.** The log-likelihood for a single exponential family observation is:
 
-\[ \ell_i = \frac{y_i\theta_i - b(\theta_i)}{a_i(\phi)} + c(y_i;\phi). \]
+\[
+\ell_i = \frac{y_i\theta_i - b(\theta_i)}{a_i(\phi)} + c(y_i;\phi).
+\]
 
 Applying the chain rule \( \partial\ell_i/\partial\beta_j = (\partial\ell_i/\partial\theta_i) \cdot (\partial\theta_i/\partial\mu_i) \cdot (\partial\mu_i/\partial\eta_i) \cdot (\partial\eta_i/\partial\beta_j) \):
 
-\[ \frac{\partial\ell_i}{\partial\theta_i} = \frac{y_i - \mu_i}{a_i(\phi)}, \quad \frac{\partial\theta_i}{\partial\mu_i} = \frac{a_i(\phi)}{\mathrm{Var}(Y_i)}, \quad \frac{\partial\mu_i}{\partial\eta_i} = [g'(\mu_i)]^{-1}, \quad \frac{\partial\eta_i}{\partial\beta_j} = x_{ij}. \]
+\[
+\frac{\partial\ell_i}{\partial\theta_i} = \frac{y_i - \mu_i}{a_i(\phi)}, \quad \frac{\partial\theta_i}{\partial\mu_i} = \frac{a_i(\phi)}{\mathrm{Var}(Y_i)}, \quad \frac{\partial\mu_i}{\partial\eta_i} = [g'(\mu_i)]^{-1}, \quad \frac{\partial\eta_i}{\partial\beta_j} = x_{ij}.
+\]
 
 Combining and summing over all \( n \) observations, the \( j \)-th score equation is:
 
-\[ \left[\mathbf{S}(\boldsymbol{\beta})\right]_j = \sum_{i=1}^n \frac{(y_i - \mu_i)}{\mathrm{Var}(Y_i)} \cdot \frac{\partial\mu_i}{\partial\eta_i} \cdot x_{ij}, \]
+\[
+\left[\mathbf{S}(\boldsymbol{\beta})\right]_j = \sum_{i=1}^n \frac{(y_i - \mu_i)}{\mathrm{Var}(Y_i)} \cdot \frac{\partial\mu_i}{\partial\eta_i} \cdot x_{ij},
+\]
 
 or in matrix form \( \mathbf{S}(\boldsymbol{\beta}) = \mathbf{X}\mathbf{W}(\mathbf{y} - \boldsymbol{\mu}) \circ (\partial\boldsymbol{\eta}/\partial\boldsymbol{\mu}) \), where the **GLM weight** is:
 
-\[ w_i = \frac{1}{\mathrm{Var}(Y_i)\left(\partial\eta_i/\partial\mu_i\right)^2}. \]
+\[
+w_i = \frac{1}{\mathrm{Var}(Y_i)\left(\partial\eta_i/\partial\mu_i\right)^2}.
+\]
 
 **The expected information matrix.** Since \( E[y_i - \mu_i] = 0 \), the cross-term in \( E[-\partial^2\ell/\partial\beta_j\partial\beta_k] \) vanishes, leaving:
 
-\[ [\mathbf{I}(\boldsymbol{\beta})]_{jk} = \sum_{i=1}^n x_{ij} w_i x_{ik} = [\mathbf{X}\mathbf{W}\mathbf{X}^\top]_{jk}. \]
+\[
+[\mathbf{I}(\boldsymbol{\beta})]_{jk} = \sum_{i=1}^n x_{ij} w_i x_{ik} = [\mathbf{X}\mathbf{W}\mathbf{X}^\top]_{jk}.
+\]
 
 **The IRLS update.** The Fisher scoring step \( \boldsymbol{\beta}^{(r+1)} = \boldsymbol{\beta}^{(r)} + \mathbf{I}^{-1}(\boldsymbol{\beta}^{(r)})\mathbf{S}(\boldsymbol{\beta}^{(r)}) \) can be rewritten. Define the **working response**:
 
-\[ z_i^{(r)} = \eta_i^{(r)} + (y_i - \mu_i^{(r)})\frac{\partial\eta_i}{\partial\mu_i}\bigg|^{(r)}. \]
+\[
+z_i^{(r)} = \eta_i^{(r)} + (y_i - \mu_i^{(r)})\frac{\partial\eta_i}{\partial\mu_i}\bigg|^{(r)}.
+\]
 
 Then:
 
-\[ \boldsymbol{\beta}^{(r+1)} = \left(\mathbf{X}\mathbf{W}^{(r)}\mathbf{X}^\top\right)^{-1} \mathbf{X}\mathbf{W}^{(r)}\mathbf{z}^{(r)}, \]
+\[
+\boldsymbol{\beta}^{(r+1)} = \left(\mathbf{X}\mathbf{W}^{(r)}\mathbf{X}^\top\right)^{-1} \mathbf{X}\mathbf{W}^{(r)}\mathbf{z}^{(r)},
+\]
 
 which is precisely the weighted least squares estimator of \( \boldsymbol{\beta} \) with response \( \mathbf{z}^{(r)} \) and weights \( \mathbf{W}^{(r)} \). At each iteration, one solves a standard weighted linear regression — hence the name IRLS. This insight is what makes GLM software efficient: every IRLS step reuses the linear algebra infrastructure of weighted least squares.
 
@@ -261,7 +313,9 @@ which is precisely the weighted least squares estimator of \( \boldsymbol{\beta}
 
 Under standard regularity conditions (identifiability, correct specification, bounded third derivatives), the MLE satisfies:
 
-\[ \hat{\boldsymbol{\beta}} \overset{\text{approx}}{\sim} \mathrm{MVN}\!\left(\boldsymbol{\beta},\, \mathbf{I}^{-1}(\boldsymbol{\beta})\right), \]
+\[
+\hat{\boldsymbol{\beta}} \overset{\text{approx}}{\sim} \mathrm{MVN}\!\left(\boldsymbol{\beta},\, \mathbf{I}^{-1}(\boldsymbol{\beta})\right),
+\]
 
 with the information matrix evaluated at \( \hat{\boldsymbol{\beta}} \) in practice. Marginal distributions give Wald \( z \)-tests: \( z_j = \hat\beta_j / \widehat{\mathrm{se}}(\hat\beta_j) \overset{\text{approx}}{\sim} N(0,1) \), where \( \widehat{\mathrm{se}}(\hat\beta_j) = \sqrt{[\mathbf{I}^{-1}(\hat{\boldsymbol{\beta}})]_{jj}} \). These are the \( z \)-values reported by R's `summary(glm(...))`.
 
@@ -271,19 +325,25 @@ with the information matrix evaluated at \( \hat{\boldsymbol{\beta}} \) in pract
 
 To assess absolute fit, one compares the fitted model against the **saturated model**, which uses one parameter per observation and fits exactly: \( \tilde\mu_i = y_i \). The **deviance** is:
 
-\[ D(\mathbf{y}; \hat{\boldsymbol{\mu}}) = 2\left[\ell(\tilde{\boldsymbol{\mu}}) - \ell(\hat{\boldsymbol{\mu}})\right] = 2\sum_{i=1}^n \left[\ell_i(y_i) - \ell_i(\hat\mu_i)\right]. \]
+\[
+D(\mathbf{y}; \hat{\boldsymbol{\mu}}) = 2\left[\ell(\tilde{\boldsymbol{\mu}}) - \ell(\hat{\boldsymbol{\mu}})\right] = 2\sum_{i=1}^n \left[\ell_i(y_i) - \ell_i(\hat\mu_i)\right].
+\]
 
 Under the null hypothesis that the \( p \)-dimensional model is correct, \( D \overset{\text{approx}}{\sim} \chi^2_{n-p} \) for large \( n \) (the approximation requires sufficient replication within cells; it is poor for ungrouped binary data with \( m_i = 1 \)).
 
 **Binomial deviance.** The saturated log-likelihood is \( \tilde\ell_i = y_i\log(y_i/m_i) + (m_i-y_i)\log(1 - y_i/m_i) \). The deviance becomes:
 
-\[ D = 2\sum_{i=1}^n \left[ y_i \log\!\frac{y_i}{m_i\hat\pi_i} + (m_i - y_i)\log\!\frac{m_i - y_i}{m_i(1-\hat\pi_i)} \right] = 2\sum_i \left[O_i\log\!\frac{O_i}{E_i}\right], \]
+\[
+D = 2\sum_{i=1}^n \left[ y_i \log\!\frac{y_i}{m_i\hat\pi_i} + (m_i - y_i)\log\!\frac{m_i - y_i}{m_i(1-\hat\pi_i)} \right] = 2\sum_i \left[O_i\log\!\frac{O_i}{E_i}\right],
+\]
 
 where \( O_i \) and \( E_i \) denote observed and expected counts (in the two-cell sense). R reports this as `Residual deviance`.
 
 **Poisson deviance.** With saturated \( \tilde\mu_i = y_i \):
 
-\[ D = 2\sum_{i=1}^n \left[ y_i \log\!\frac{y_i}{\hat\mu_i} - (y_i - \hat\mu_i) \right]. \]
+\[
+D = 2\sum_{i=1}^n \left[ y_i \log\!\frac{y_i}{\hat\mu_i} - (y_i - \hat\mu_i) \right].
+\]
 
 When the model includes an intercept, \( \sum_i y_i = \sum_i \hat\mu_i \) and the second term vanishes, yielding \( D = 2\sum_i O_i \log(O_i/E_i) \).
 
@@ -291,7 +351,9 @@ When the model includes an intercept, \( \sum_i y_i = \sum_i \hat\mu_i \) and th
 
 The most powerful use of deviance is comparing **nested models**. If model \( M_0 \) is nested within \( M_1 \) (differing by \( q \) parameters):
 
-\[ \Delta D = D(M_0) - D(M_1) = 2\left[\ell(\hat{\boldsymbol{\mu}}_1) - \ell(\hat{\boldsymbol{\mu}}_0)\right] \overset{\text{approx}}{\sim} \chi^2_q \quad \text{under } H_0. \]
+\[
+\Delta D = D(M_0) - D(M_1) = 2\left[\ell(\hat{\boldsymbol{\mu}}_1) - \ell(\hat{\boldsymbol{\mu}}_0)\right] \overset{\text{approx}}{\sim} \chi^2_q \quad \text{under } H_0.
+\]
 
 This is the **likelihood ratio test (LRT)** for GLMs. The \( \chi^2 \) approximation for \( \Delta D \) is far better than for the individual deviances \( D(M_0) \) or \( D(M_1) \), because errors in the asymptotic approximation largely cancel.
 
@@ -321,7 +383,9 @@ Is Stage important (given Age)? \( \Delta D = 83.583 - 9.625 = 73.958 \) on 4 df
 
 The **Pearson chi-squared statistic** provides an alternative goodness-of-fit measure:
 
-\[ X^2 = \sum_{i=1}^n \frac{(y_i - \hat\mu_i)^2}{V(\hat\mu_i)}, \]
+\[
+X^2 = \sum_{i=1}^n \frac{(y_i - \hat\mu_i)^2}{V(\hat\mu_i)},
+\]
 
 where \( V(\hat\mu_i) \) is the estimated variance function value. Like \( D \), we have \( X^2 \overset{\text{approx}}{\sim} \chi^2_{n-p} \) under the null. The two statistics are not identical but agree well for large grouped data. For ungrouped binary data (\( m_i = 1 \)), both approximations are unreliable; in that case the Hosmer–Lemeshow test groups predictions into deciles and tests goodness of fit within groups.
 
@@ -329,11 +393,15 @@ where \( V(\hat\mu_i) \) is the estimated variance function value. Like \( D \),
 
 The **Wald test** for \( H_0: \boldsymbol{\beta}_B = \mathbf{0} \) (\( q \)-dimensional subvector) uses:
 
-\[ W = \hat{\boldsymbol{\beta}}_B^\top \left[\mathbf{I}^{BB}(\hat{\boldsymbol{\beta}})\right]^{-1} \hat{\boldsymbol{\beta}}_B \overset{\text{approx}}{\sim} \chi^2_q, \]
+\[
+W = \hat{\boldsymbol{\beta}}_B^\top \left[\mathbf{I}^{BB}(\hat{\boldsymbol{\beta}})\right]^{-1} \hat{\boldsymbol{\beta}}_B \overset{\text{approx}}{\sim} \chi^2_q,
+\]
 
 where \( \mathbf{I}^{BB} \) is the appropriate block of \( \mathbf{I}^{-1}(\hat{\boldsymbol{\beta}}) \). For a scalar \( \beta_k \), the Wald \( z \)-statistic \( z = \hat\beta_k / \widehat{\mathrm{se}}(\hat\beta_k) \) is reported in R's GLM summary. The **score test** evaluates the score at the restricted MLE \( \tilde{\boldsymbol{\beta}} \) (fitted under \( H_0 \)):
 
-\[ U = \mathbf{S}^\top(\tilde{\boldsymbol{\beta}})\, \mathbf{I}^{-1}(\tilde{\boldsymbol{\beta}})\, \mathbf{S}(\tilde{\boldsymbol{\beta}}) \overset{\text{approx}}{\sim} \chi^2_q. \]
+\[
+U = \mathbf{S}^\top(\tilde{\boldsymbol{\beta}})\, \mathbf{I}^{-1}(\tilde{\boldsymbol{\beta}})\, \mathbf{S}(\tilde{\boldsymbol{\beta}}) \overset{\text{approx}}{\sim} \chi^2_q.
+\]
 
 All three tests (LRT, Wald, score) are asymptotically equivalent, but for moderate samples the LRT generally has the best finite-sample behaviour.
 
@@ -341,7 +409,9 @@ All three tests (LRT, Wald, score) are asymptotically equivalent, but for modera
 
 When comparing non-nested models, penalised likelihood criteria are used:
 
-\[ \mathrm{AIC} = -2\ell(\hat{\boldsymbol{\beta}}) + 2p, \qquad \mathrm{BIC} = -2\ell(\hat{\boldsymbol{\beta}}) + p\log n. \]
+\[
+\mathrm{AIC} = -2\ell(\hat{\boldsymbol{\beta}}) + 2p, \qquad \mathrm{BIC} = -2\ell(\hat{\boldsymbol{\beta}}) + p\log n.
+\]
 
 AIC targets predictive accuracy; BIC targets model identification (the true model). BIC penalises complexity more severely for large \( n \), tending to select simpler models. For the neuroblastoma example, Model 1 (Age + Stage) has AIC 55.4, compared to AIC 84.2 for Stage only — confirming Model 1 as preferred.
 
@@ -363,21 +433,31 @@ For rare events (\( \pi_1, \pi_2 \approx 0 \)), \( \psi \approx \pi_1/\pi_2 \) (
 
 **Likelihood-based estimation.** Reparameterising with \( \theta_1 = \log\psi \) and \( \theta_2 = \log[\pi_2/(1-\pi_2)] \), solving the score equations gives:
 
-\[ \hat\psi = \frac{y_1(m_2 - y_2)}{y_2(m_1 - y_1)}. \]
+\[
+\hat\psi = \frac{y_1(m_2 - y_2)}{y_2(m_1 - y_1)}.
+\]
 
 The asymptotic variance of \( \log\hat\psi \) is:
 
-\[ \widehat{\mathrm{Var}}(\log\hat\psi) = \frac{1}{y_1} + \frac{1}{m_1-y_1} + \frac{1}{y_2} + \frac{1}{m_2-y_2}, \]
+\[
+\widehat{\mathrm{Var}}(\log\hat\psi) = \frac{1}{y_1} + \frac{1}{m_1-y_1} + \frac{1}{y_2} + \frac{1}{m_2-y_2},
+\]
 
 the sum of four reciprocals corresponding to the four cells of the table. The Wald 95% CI for \( \psi \) is:
 
-\[ \exp\!\left\{ \log\hat\psi \pm 1.96\sqrt{\frac{1}{y_1} + \frac{1}{m_1-y_1} + \frac{1}{y_2} + \frac{1}{m_2-y_2}} \right\}. \]
+\[
+\exp\!\left\{ \log\hat\psi \pm 1.96\sqrt{\frac{1}{y_1} + \frac{1}{m_1-y_1} + \frac{1}{y_2} + \frac{1}{m_2-y_2}} \right\}.
+\]
 
 **Prenatal care example (2×2 table).** Level of Care: Intensive (20 deaths, 316 survived, total 336) vs Regular (46 deaths, 373 survived, total 419).
 
-\[ \log\hat\psi = \log\!\frac{20 \times 373}{46 \times 316} = -0.6671, \qquad \hat\psi = 0.513. \]
+\[
+\log\hat\psi = \log\!\frac{20 \times 373}{46 \times 316} = -0.6671, \qquad \hat\psi = 0.513.
+\]
 
-\[ \widehat{\mathrm{Var}}(\log\hat\psi) = \frac{1}{20} + \frac{1}{316} + \frac{1}{46} + \frac{1}{373} = 0.0776. \]
+\[
+\widehat{\mathrm{Var}}(\log\hat\psi) = \frac{1}{20} + \frac{1}{316} + \frac{1}{46} + \frac{1}{373} = 0.0776.
+\]
 
 95% CI for \( \log\psi \): \( -0.667 \pm 1.96\sqrt{0.0776} = (-1.213, -0.121) \). 95% CI for \( \psi \): \( (0.297, 0.886) \). Intensive care appears strongly protective. However, stratifying by clinic reveals \( \hat\psi_A = 0.80 \), \( \hat\psi_B = 1.01 \), both compatible with no effect — a striking instance of **Simpson's paradox**. Clinic is a confounder: Clinic A (better outcomes overall) disproportionately received intensive-care patients. Multiple logistic regression resolves this.
 
@@ -385,15 +465,21 @@ the sum of four reciprocals corresponding to the four cells of the table. The Wa
 
 For \( Y_i \sim \mathrm{Binomial}(m_i, \pi_i) \) with multiple covariates \( \mathbf{x}_i = (1, x_{i1}, \ldots, x_{i,p-1})^\top \):
 
-\[ \mathrm{logit}(\pi_i) = \log\!\frac{\pi_i}{1 - \pi_i} = \mathbf{x}_i^\top \boldsymbol{\beta} = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_{p-1} x_{i,p-1}. \]
+\[
+\mathrm{logit}(\pi_i) = \log\!\frac{\pi_i}{1 - \pi_i} = \mathbf{x}_i^\top \boldsymbol{\beta} = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_{p-1} x_{i,p-1}.
+\]
 
 The logit is the canonical link for the binomial. The inverse — the **expit** (logistic) function — maps back to probability:
 
-\[ \pi_i = \frac{e^{\eta_i}}{1 + e^{\eta_i}} = \mathrm{expit}(\eta_i). \]
+\[
+\pi_i = \frac{e^{\eta_i}}{1 + e^{\eta_i}} = \mathrm{expit}(\eta_i).
+\]
 
 **Interpretation of coefficients.** For a binary predictor \( x_j \in \{0,1\} \):
 
-\[ \beta_j = \log\!\frac{\pi(x_j=1)/(1-\pi(x_j=1))}{\pi(x_j=0)/(1-\pi(x_j=0))} = \log\psi_j, \]
+\[
+\beta_j = \log\!\frac{\pi(x_j=1)/(1-\pi(x_j=1))}{\pi(x_j=0)/(1-\pi(x_j=0))} = \log\psi_j,
+\]
 
 so \( e^{\beta_j} \) is the **odds ratio** comparing \( x_j = 1 \) to \( x_j = 0 \), adjusted for all other covariates. For a continuous predictor, \( e^{\beta_j} \) is the odds ratio per unit increase in \( x_j \).
 
@@ -412,13 +498,17 @@ Model 2 (main effects) is selected as the final model for scientific reasons —
 
 The total deviance decomposes as \( D = \sum_{i=1}^n d_i \). The **deviance residuals** are:
 
-\[ r_i^D = \mathrm{sign}(y_i - m_i\hat\pi_i)\sqrt{d_i}, \]
+\[
+r_i^D = \mathrm{sign}(y_i - m_i\hat\pi_i)\sqrt{d_i},
+\]
 
 where \( d_i \) is the \( i \)-th contribution to the deviance. Under the adequately fitting model, \( r_i^D \overset{\text{approx}}{\sim} N(0,1) \). Plotting deviance residuals against fitted values \( \hat\pi_i \) or against explanatory variables reveals systematic misfit.
 
 The **Pearson residuals** are:
 
-\[ r_i^P = \frac{y_i - m_i\hat\pi_i}{\sqrt{m_i\hat\pi_i(1-\hat\pi_i)}}. \]
+\[
+r_i^P = \frac{y_i - m_i\hat\pi_i}{\sqrt{m_i\hat\pi_i(1-\hat\pi_i)}}.
+\]
 
 Both types are used in practice; deviance residuals are slightly preferred because they have a distribution closer to \( N(0,1) \) for skewed data.
 
@@ -428,11 +518,15 @@ Both types are used in practice; deviance residuals are slightly preferred becau
 
 The delta method extends confidence intervals to nonlinear functions of \( \boldsymbol{\beta} \). Since \( \hat{\boldsymbol{\beta}} \approx \mathrm{MVN}(\boldsymbol{\beta}, \mathbf{I}^{-1}(\hat{\boldsymbol{\beta}})) \), any linear combination \( \mathbf{c}^\top \boldsymbol{\beta} \) has approximate distribution:
 
-\[ \mathbf{c}^\top \hat{\boldsymbol{\beta}} \sim N\!\left(\mathbf{c}^\top\boldsymbol{\beta},\; \mathbf{c}^\top \mathbf{I}^{-1}(\hat{\boldsymbol{\beta}})\mathbf{c}\right). \]
+\[
+\mathbf{c}^\top \hat{\boldsymbol{\beta}} \sim N\!\left(\mathbf{c}^\top\boldsymbol{\beta},\; \mathbf{c}^\top \mathbf{I}^{-1}(\hat{\boldsymbol{\beta}})\mathbf{c}\right).
+\]
 
 A 95% CI for \( e^{\mathbf{c}^\top\boldsymbol{\beta}} \) is:
 
-\[ \exp\!\left\{ \mathbf{c}^\top\hat{\boldsymbol{\beta}} \pm 1.96\sqrt{\mathbf{c}^\top \mathbf{I}^{-1}(\hat{\boldsymbol{\beta}})\mathbf{c}} \right\}. \]
+\[
+\exp\!\left\{ \mathbf{c}^\top\hat{\boldsymbol{\beta}} \pm 1.96\sqrt{\mathbf{c}^\top \mathbf{I}^{-1}(\hat{\boldsymbol{\beta}})\mathbf{c}} \right\}.
+\]
 
 For the neuroblastoma example, the OR comparing age 24+ to age 12–23 (controlling for stage) is \( e^{\beta_2 - \beta_1} \), so \( \mathbf{c} = (0,-1,1,0,0,0,0)^\top \). One needs \( \mathrm{Var}(\hat\beta_2 - \hat\beta_1) = \mathrm{Var}(\hat\beta_2) + \mathrm{Var}(\hat\beta_1) - 2\mathrm{Cov}(\hat\beta_1,\hat\beta_2) \), obtainable from `summary(model1)$cov.unscaled`. The estimated OR is \( e^{-2.613 - (-2.118)} = 0.61 \).
 
@@ -444,7 +538,9 @@ For predicted probabilities: a 95% CI for \( \pi_0 = \mathrm{expit}(\mathbf{x}_0
 
 Count data — the number of events in a fixed period or region — are naturally modelled by the Poisson distribution. Poisson regression with the canonical log link specifies:
 
-\[ Y_i \sim \mathrm{Poisson}(\mu_i), \quad \log\mu_i = \mathbf{x}_i^\top \boldsymbol{\beta}. \]
+\[
+Y_i \sim \mathrm{Poisson}(\mu_i), \quad \log\mu_i = \mathbf{x}_i^\top \boldsymbol{\beta}.
+\]
 
 The log link ensures \( \hat\mu_i > 0 \) always. The model parameters have **log rate ratio** interpretations: \( e^{\beta_j} \) is the multiplicative change in the expected count per unit increase in \( x_j \), holding all other covariates fixed.
 
@@ -452,7 +548,9 @@ The log link ensures \( \hat\mu_i > 0 \) always. The model parameters have **log
 
 **Wald tests for Poisson regression.** For \( H_0: \beta_k = \beta_{k0} \) vs \( H_A: \beta_k \neq \beta_{k0} \):
 
-\[ z = \frac{\hat\beta_k - \beta_{k0}}{\widehat{\mathrm{se}}(\hat\beta_k)} \overset{\text{approx}}{\sim} N(0,1). \]
+\[
+z = \frac{\hat\beta_k - \beta_{k0}}{\widehat{\mathrm{se}}(\hat\beta_k)} \overset{\text{approx}}{\sim} N(0,1).
+\]
 
 The summary output from R's `glm()` reports these statistics directly.
 
@@ -460,7 +558,9 @@ The summary output from R's `glm()` reports these statistics directly.
 
 When \( Y_i \) counts events in an exposure period \( t_i \) (person-years, area, population at risk), the appropriate model is for the **rate** \( \lambda_i = \mu_i/t_i \):
 
-\[ \log\mu_i = \log t_i + \mathbf{x}_i^\top \boldsymbol{\beta}. \]
+\[
+\log\mu_i = \log t_i + \mathbf{x}_i^\top \boldsymbol{\beta}.
+\]
 
 The term \( \log t_i \) is an **offset** — a known covariate with coefficient fixed at 1. In R: `glm(y ~ x + offset(log(t)), family = poisson)`. The regression coefficients describe effects on the log rate; \( e^{\beta_j} \) is now a **rate ratio**.
 
@@ -468,7 +568,9 @@ The term \( \log t_i \) is an **offset** — a known covariate with coefficient 
 
 The McCullagh–Nelder ship damage dataset records 40 incident counts for cargo ships classified by type (5 levels), period of construction (4 levels), and period of operation (2 levels), with months of service as offset. The main effects model:
 
-\[ \log\mu_i = \log t_i + \beta_0 + \sum_j \alpha_j^{\text{type}} + \sum_k \gamma_k^{\text{con}} + \sum_l \delta_l^{\text{op}}, \]
+\[
+\log\mu_i = \log t_i + \beta_0 + \sum_j \alpha_j^{\text{type}} + \sum_k \gamma_k^{\text{con}} + \sum_l \delta_l^{\text{op}},
+\]
 
 is fitted and compared to models including interactions. An analysis of deviance table guides model selection. For this dataset, the interaction between construction period and operation period is significant (\( \Delta D \) large on limited df), while other interactions are not needed. The selected model gives log rate ratio estimates for each ship type, construction era, and operation period, interpretable as multiplicative effects on the incident rate per aggregate month of service.
 
@@ -478,15 +580,21 @@ One of the most important applications of Poisson regression is modelling **cont
 
 **Two-way \( I \times J \) table.** The saturated log-linear model:
 
-\[ \log\mu_{ij} = u + u_i^V + u_j^W + u_{ij}^{VW}, \]
+\[
+\log\mu_{ij} = u + u_i^V + u_j^W + u_{ij}^{VW},
+\]
 
 has \( I \cdot J \) parameters (one per cell). The **independence model** drops the interaction:
 
-\[ \log\mu_{ij} = u + u_i^V + u_j^W. \]
+\[
+\log\mu_{ij} = u + u_i^V + u_j^W.
+\]
 
 The MLEs under independence are \( \hat\mu_{ij} = y_{i\cdot}y_{\cdot j}/y_{\cdot\cdot} \) (expected cell counts). The deviance:
 
-\[ D = 2\sum_{ij} O_{ij}\log\!\frac{O_{ij}}{E_{ij}} \overset{\text{approx}}{\sim} \chi^2_{(I-1)(J-1)}, \]
+\[
+D = 2\sum_{ij} O_{ij}\log\!\frac{O_{ij}}{E_{ij}} \overset{\text{approx}}{\sim} \chi^2_{(I-1)(J-1)},
+\]
 
 is the standard log-likelihood chi-square test for independence.
 
@@ -498,7 +606,9 @@ is the standard log-likelihood chi-square test for independence.
 
 For a three-way \( I \times J \times K \) table, the saturated log-linear model includes all main effects, two-way interactions, and the three-way interaction:
 
-\[ \log\mu_{ijk} = u + u_i^V + u_j^W + u_k^Z + u_{ij}^{VW} + u_{ik}^{VZ} + u_{jk}^{WZ} + u_{ijk}^{VWZ}. \]
+\[
+\log\mu_{ijk} = u + u_i^V + u_j^W + u_k^Z + u_{ij}^{VW} + u_{ik}^{VZ} + u_{jk}^{WZ} + u_{ijk}^{VWZ}.
+\]
 
 **Hierarchical models** require: whenever an interaction is in the model, all lower-order relatives of those variables must also be present. Models are described by their highest-order terms (generators):
 
@@ -529,7 +639,9 @@ Model 2 is the most parsimonious adequate fit: all three variables are pairwise 
 
 The Poisson model assumes \( \mathrm{Var}(Y_i) = \mu_i \) and the binomial assumes \( \mathrm{Var}(Y_i) = m_i\pi_i(1-\pi_i) \). In practice, the observed variance often exceeds these theoretical values — **overdispersion**. The key diagnostic is the **scaled Pearson statistic**:
 
-\[ \hat\phi = \frac{X^2}{n - p} = \frac{\sum_i (y_i - \hat\mu_i)^2 / V(\hat\mu_i)}{n - p}. \]
+\[
+\hat\phi = \frac{X^2}{n - p} = \frac{\sum_i (y_i - \hat\mu_i)^2 / V(\hat\mu_i)}{n - p}.
+\]
 
 Values substantially exceeding 1 indicate overdispersion; values near 1 suggest the standard model is appropriate; values below 1 (**underdispersion**) are rare but possible with inhibitory processes.
 
@@ -539,7 +651,9 @@ Values substantially exceeding 1 indicate overdispersion; values near 1 suggest 
 
 The simplest correction is to multiply all standard errors by \( \hat\phi^{1/2} \), where \( \hat\phi \) is estimated from the Pearson statistic. In R, `family = quasipoisson` and `family = quasibinomial` implement this automatically. When \( \hat\phi > 1 \), confidence intervals widen and \( z \)-tests become more conservative. Deviance-based LRTs are replaced by quasi-\( F \) tests:
 
-\[ F = \frac{\Delta D / q}{\hat\phi} \sim F_{q, n-p}. \]
+\[
+F = \frac{\Delta D / q}{\hat\phi} \sim F_{q, n-p}.
+\]
 
 **Epilepsy trial example.** An epilepsy clinical trial records seizure counts for each patient over successive observation periods, with treatment and baseline factors as covariates. The Poisson model gives \( \hat\phi = X^2/(n-p) \approx 12.1 \), indicating severe overdispersion — variance about 12 times the Poisson mean. Refitting with `quasipoisson` inflates all standard errors by \( \hat\phi^{1/2} \approx 3.5 \), substantially widening confidence intervals and reducing the apparent significance of treatment effects.
 
@@ -547,7 +661,9 @@ The simplest correction is to multiply all standard errors by \( \hat\phi^{1/2} 
 
 A parametric approach posits a random effect \( U_i \sim \mathrm{Gamma}(1/k, k) \) (mean 1, variance \( k \)) acting multiplicatively on the Poisson mean: \( Y_i \mid U_i \sim \mathrm{Poisson}(\mu_i U_i) \). Marginalising over \( U_i \):
 
-\[ Y_i \sim \mathrm{NegativeBinomial}(\mu_i, k), \qquad \mathrm{Var}(Y_i) = \mu_i(1 + k\mu_i). \]
+\[
+Y_i \sim \mathrm{NegativeBinomial}(\mu_i, k), \qquad \mathrm{Var}(Y_i) = \mu_i(1 + k\mu_i).
+\]
 
 The variance function is \( V(\mu) = \mu + k\mu^2 \), which is the Poisson variance plus a quadratic overdispersion term. As \( k \to 0 \), the model converges to Poisson. The parameter \( k \) is estimated by maximum likelihood jointly with \( \boldsymbol{\beta} \). In R, `MASS::glm.nb()` fits the negative binomial GLM.
 
@@ -555,7 +671,9 @@ The variance function is \( V(\mu) = \mu + k\mu^2 \), which is the Poisson varia
 
 Overdispersion in grouped binary data typically arises from within-group correlation. The **beta-binomial** model places a Beta prior on \( \pi_i \): given \( \Pi_i \sim \mathrm{Beta}(\alpha, \beta) \), \( Y_i \mid \Pi_i \sim \mathrm{Binomial}(m_i, \Pi_i) \). The marginal moments are:
 
-\[ E[Y_i] = m_i\mu, \quad \mathrm{Var}(Y_i) = m_i\mu(1-\mu)\left[1 + (m_i-1)\rho\right], \]
+\[
+E[Y_i] = m_i\mu, \quad \mathrm{Var}(Y_i) = m_i\mu(1-\mu)\left[1 + (m_i-1)\rho\right],
+\]
 
 where \( \mu = \alpha/(\alpha+\beta) \) is the mean probability and \( \rho = 1/(\alpha+\beta+1) \) is the **intraclass correlation coefficient**. The variance inflation factor \( 1 + (m_i-1)\rho \) grows with cluster size \( m_i \) and correlation \( \rho \). 
 
@@ -565,13 +683,17 @@ where \( \mu = \alpha/(\alpha+\beta) \) is the mean probability and \( \rho = 1/
 
 Wedderburn (1974) showed that specifying only the mean function \( \mu(\boldsymbol{\beta}) \) and the variance function \( V(\mu) \phi \) is sufficient to define consistent estimating equations. The **quasi-score** is:
 
-\[ \mathbf{Q}(\boldsymbol{\beta}) = \sum_{i=1}^n \frac{(y_i - \mu_i)}{\phi V(\mu_i)} \cdot \frac{\partial\mu_i}{\partial\boldsymbol{\beta}} = \mathbf{0}. \]
+\[
+\mathbf{Q}(\boldsymbol{\beta}) = \sum_{i=1}^n \frac{(y_i - \mu_i)}{\phi V(\mu_i)} \cdot \frac{\partial\mu_i}{\partial\boldsymbol{\beta}} = \mathbf{0}.
+\]
 
 The solution \( \hat{\boldsymbol{\beta}} \) is the **quasi-MLE**, consistent and asymptotically normal with variance \( \phi(\mathbf{X}\mathbf{W}\mathbf{X}^\top)^{-1} \) regardless of the true distribution (as long as the mean function and variance function are correctly specified). This semi-parametric approach is particularly valuable when the exact distribution is unknown but the mean–variance relationship can be specified.
 
 The **sandwich (robust) variance estimator** relaxes even the mean–variance specification:
 
-\[ \widehat{\mathrm{Var}}(\hat{\boldsymbol{\beta}}) = (\mathbf{X}\mathbf{W}\mathbf{X}^\top)^{-1} \left[\sum_i \mathbf{x}_i \hat r_i^2 w_i^2 \mathbf{x}_i^\top\right] (\mathbf{X}\mathbf{W}\mathbf{X}^\top)^{-1}, \]
+\[
+\widehat{\mathrm{Var}}(\hat{\boldsymbol{\beta}}) = (\mathbf{X}\mathbf{W}\mathbf{X}^\top)^{-1} \left[\sum_i \mathbf{x}_i \hat r_i^2 w_i^2 \mathbf{x}_i^\top\right] (\mathbf{X}\mathbf{W}\mathbf{X}^\top)^{-1},
+\]
 
 where \( \hat r_i = (y_i - \hat\mu_i)/V(\hat\mu_i)^{1/2} \) are the Pearson residuals. The sandwich estimator is consistent even when the variance function is misspecified, though it requires large samples to be reliable.
 
@@ -583,13 +705,19 @@ In linear regression, raw residuals \( r_i = y_i - \hat y_i \) are the natural m
 
 <div class="definition">
 <strong>Pearson residuals</strong>:
-\[ r_i^P = \frac{y_i - \hat\mu_i}{\sqrt{V(\hat\mu_i)\hat\phi}}, \]
+
+\[
+r_i^P = \frac{y_i - \hat\mu_i}{\sqrt{V(\hat\mu_i)\hat\phi}},
+\]
 scaled by the estimated standard deviation. They measure departure in units of the standard deviation and sum of squares gives \( X^2 \).
 </div>
 
 <div class="definition">
 <strong>Deviance residuals</strong>:
-\[ r_i^D = \mathrm{sign}(y_i - \hat\mu_i)\sqrt{d_i}, \]
+
+\[
+r_i^D = \mathrm{sign}(y_i - \hat\mu_i)\sqrt{d_i},
+\]
 where \( d_i \) is the \( i \)-th deviance contribution. Deviance residuals have a distribution closer to \( N(0,1) \) for skewed families.
 </div>
 
@@ -599,7 +727,10 @@ where \( d_i \) is the \( i \)-th deviance contribution. Deviance residuals have
 
 <div class="definition">
 <strong>Working residuals</strong>:
-\[ r_i^W = (y_i - \hat\mu_i)\frac{\partial\eta_i}{\partial\mu_i}, \]
+
+\[
+r_i^W = (y_i - \hat\mu_i)\frac{\partial\eta_i}{\partial\mu_i},
+\]
 the residuals from the weighted linear regression solved at each IRLS step. They equal the difference between the working response \( z_i \) and the fitted linear predictor \( \hat\eta_i \).
 </div>
 
@@ -623,7 +754,9 @@ For the neuroblastoma example, the residual plot (deviance residuals vs fitted p
 
 An observation is **influential** if its removal substantially changes the parameter estimates. **Cook's distance** for GLMs:
 
-\[ D_i \approx \frac{h_{ii} (r_i^{S})^2}{p(1 - h_{ii})}, \]
+\[
+D_i \approx \frac{h_{ii} (r_i^{S})^2}{p(1 - h_{ii})},
+\]
 
 where \( r_i^S \) is the standardised deviance (or Pearson) residual. Large \( D_i \) flags both high leverage (\( h_{ii} \)) and large residual — either alone is insufficient to be influential. Observations with \( D_i > 1 \) (or \( D_i > 4/n \) by a more sensitive threshold) warrant investigation.
 
@@ -633,7 +766,9 @@ where \( r_i^S \) is the standardised deviance (or Pearson) residual. Large \( D
 
 The **component-plus-residual plot** (partial residual plot) assesses linearity of the relationship between predictor \( x_j \) and the linear predictor. The partial residuals are:
 
-\[ r_i^{(j)} = r_i^W + \hat\beta_j x_{ij}, \]
+\[
+r_i^{(j)} = r_i^W + \hat\beta_j x_{ij},
+\]
 
 the sum of working residuals and the fitted linear component for predictor \( j \). Plotting \( r_i^{(j)} \) against \( x_{ij} \) reveals whether the relationship is truly linear. A smooth curve through the plotted points that departs from the fitted line \( \hat\beta_j x_{ij} \) suggests a transformation is needed. In R, `car::crPlots()` produces these for any GLM.
 
@@ -647,14 +782,19 @@ An **added variable plot** for predictor \( x_j \) plots the residuals from regr
 
 When the response has \( J \geq 3 \) **ordered** categories, the **proportional odds model** (McCullagh 1980) extends binary logistic regression. Define cumulative probabilities \( \gamma_{ij} = P(Y_i \leq j) \) for \( j = 1, \ldots, J-1 \). The model:
 
-\[ \mathrm{logit}(P(Y_i \leq j)) = \alpha_j - \mathbf{x}_i^\top \boldsymbol{\beta}, \quad j = 1, \ldots, J-1, \]
+\[
+\mathrm{logit}(P(Y_i \leq j)) = \alpha_j - \mathbf{x}_i^\top \boldsymbol{\beta}, \quad j = 1, \ldots, J-1,
+\]
 
 uses a single coefficient vector \( \boldsymbol{\beta} \) common to all \( J-1 \) cumulative logit equations, with ordered cutpoints \( \alpha_1 < \alpha_2 < \cdots < \alpha_{J-1} \). The convention of subtracting \( \mathbf{x}_i^\top\boldsymbol{\beta} \) ensures that positive \( \beta_j \) corresponds to stochastically larger outcomes.
 
 The **proportional odds assumption** states that the log odds ratio for \( Y_i \leq j \) vs \( Y_i > j \) is the same for every threshold \( j \) — i.e., the effect of \( \mathbf{x}_i \) "shifts" the entire response distribution uniformly. This can be tested by comparing the proportional odds model to a general model with threshold-specific \( \boldsymbol{\beta}_j \); the likelihood ratio test statistic is \( \chi^2_{(J-2)(p-1)} \) under the null.
 
 Cell probabilities are recovered as:
-\[ P(Y_i = j) = \mathrm{expit}(\alpha_j - \mathbf{x}_i^\top\boldsymbol{\beta}) - \mathrm{expit}(\alpha_{j-1} - \mathbf{x}_i^\top\boldsymbol{\beta}). \]
+
+\[
+P(Y_i = j) = \mathrm{expit}(\alpha_j - \mathbf{x}_i^\top\boldsymbol{\beta}) - \mathrm{expit}(\alpha_{j-1} - \mathbf{x}_i^\top\boldsymbol{\beta}).
+\]
 
 The model is fitted by maximum likelihood in R via `MASS::polr()`.
 
@@ -662,11 +802,15 @@ The model is fitted by maximum likelihood in R via `MASS::polr()`.
 
 For unordered categorical responses with \( J \geq 3 \) categories, the **multinomial logistic regression model** generalises binary logistic regression. With category \( J \) as reference:
 
-\[ \log\!\frac{P(Y_i = j)}{P(Y_i = J)} = \mathbf{x}_i^\top \boldsymbol{\beta}_j, \quad j = 1, \ldots, J-1. \]
+\[
+\log\!\frac{P(Y_i = j)}{P(Y_i = J)} = \mathbf{x}_i^\top \boldsymbol{\beta}_j, \quad j = 1, \ldots, J-1.
+\]
 
 Category probabilities must sum to 1:
 
-\[ P(Y_i = j) = \frac{e^{\mathbf{x}_i^\top\boldsymbol{\beta}_j}}{1 + \sum_{k=1}^{J-1} e^{\mathbf{x}_i^\top\boldsymbol{\beta}_k}}, \quad P(Y_i = J) = \frac{1}{1 + \sum_{k=1}^{J-1} e^{\mathbf{x}_i^\top\boldsymbol{\beta}_k}}. \]
+\[
+P(Y_i = j) = \frac{e^{\mathbf{x}_i^\top\boldsymbol{\beta}_j}}{1 + \sum_{k=1}^{J-1} e^{\mathbf{x}_i^\top\boldsymbol{\beta}_k}}, \quad P(Y_i = J) = \frac{1}{1 + \sum_{k=1}^{J-1} e^{\mathbf{x}_i^\top\boldsymbol{\beta}_k}}.
+\]
 
 There are \( (J-1)(p) \) free parameters. The coefficients \( \boldsymbol{\beta}_j \) are category-specific; \( e^{\beta_{jk}} \) is the odds ratio for category \( j \) vs \( J \) per unit increase in \( x_k \).
 
@@ -676,7 +820,9 @@ The **Poisson trick** (Palmgren 1981): the multinomial logistic regression model
 
 For continuous positive responses, the **Gamma GLM** models right-skewed data where variance grows proportionally with the square of the mean. With log link:
 
-\[ \log\mu_i = \mathbf{x}_i^\top\boldsymbol{\beta}, \quad \mathrm{Var}(Y_i) = \mu_i^2/k, \]
+\[
+\log\mu_i = \mathbf{x}_i^\top\boldsymbol{\beta}, \quad \mathrm{Var}(Y_i) = \mu_i^2/k,
+\]
 
 where the shape parameter \( k \) is constant across observations. The coefficients have multiplicative interpretations on the mean: a one-unit increase in \( x_j \) multiplies the expected response by \( e^{\beta_j} \). Applications include insurance claims, survival times (Weibull and log-normal are special cases), and reaction times in psychology.
 
@@ -686,11 +832,15 @@ The **Inverse Gaussian GLM** has \( V(\mu) = \mu^3 \) and arises in first-passag
 
 Count data sometimes contain far more zeros than predicted by the Poisson or negative binomial — a phenomenon called **zero inflation**. The **Zero-Inflated Poisson (ZIP)** mixes a point mass at zero with a Poisson component:
 
-\[ P(Y_i = 0) = \omega_i + (1-\omega_i)e^{-\mu_i}, \quad P(Y_i = k) = (1-\omega_i)\frac{e^{-\mu_i}\mu_i^k}{k!} \text{ for } k \geq 1, \]
+\[
+P(Y_i = 0) = \omega_i + (1-\omega_i)e^{-\mu_i}, \quad P(Y_i = k) = (1-\omega_i)\frac{e^{-\mu_i}\mu_i^k}{k!} \text{ for } k \geq 1,
+\]
 
 where \( \omega_i \in [0,1] \) is the probability of a **structural zero** (an observation from a permanently non-responding subpopulation). Both \( \omega_i \) and \( \mu_i \) can depend on covariates:
 
-\[ \mathrm{logit}(\omega_i) = \mathbf{z}_i^\top \boldsymbol{\gamma}, \quad \log\mu_i = \mathbf{x}_i^\top\boldsymbol{\beta}. \]
+\[
+\mathrm{logit}(\omega_i) = \mathbf{z}_i^\top \boldsymbol{\gamma}, \quad \log\mu_i = \mathbf{x}_i^\top\boldsymbol{\beta}.
+\]
 
 The covariates \( \mathbf{z}_i \) and \( \mathbf{x}_i \) may differ. The ZIP model is estimated by EM or direct maximum likelihood. A **Zero-Inflated Negative Binomial (ZINB)** further accommodates overdispersion in the count component.
 
@@ -700,7 +850,9 @@ The **Vuong test** distinguishes between the standard Poisson and ZIP: under the
 
 A natural generalisation relaxes the linearity constraint. A **Generalised Additive Model (GAM)** replaces the linear predictor with a sum of smooth functions:
 
-\[ g(\mu_i) = \alpha + f_1(x_{i1}) + f_2(x_{i2}) + \cdots + f_p(x_{ip}), \]
+\[
+g(\mu_i) = \alpha + f_1(x_{i1}) + f_2(x_{i2}) + \cdots + f_p(x_{ip}),
+\]
 
 where each \( f_j \) is estimated from the data using **smoothing splines**, local polynomial regression, or regression splines with a roughness penalty. The GLM structure (exponential family, link function) is retained; only linearity in the systematic component is relaxed.
 
@@ -741,11 +893,15 @@ The unifying thread across all chapters is that GLM software — whether fitting
 
 The exponential family has a rich set of moment-generating properties that underpin the clean likelihood theory of GLMs. Let \( Y \) have density \( f(y \mid \theta) = \exp\{y\theta - b(\theta) + c(y)\} \) (the canonical form with unit dispersion). The **moment generating function** of \( Y \) is:
 
-\[ M_Y(t) = E[e^{tY}] = \int e^{ty}\exp\{y\theta - b(\theta) + c(y)\}\,dy = \exp\{b(\theta + t) - b(\theta)\}, \]
+\[
+M_Y(t) = E[e^{tY}] = \int e^{ty}\exp\{y\theta - b(\theta) + c(y)\}\,dy = \exp\{b(\theta + t) - b(\theta)\},
+\]
 
 confirming that \( b(\theta) \) is literally the cumulant generating function of \( Y \) shifted to \( \theta \). Taking derivatives at \( t = 0 \):
 
-\[ E[Y] = b'(\theta), \quad \mathrm{Var}(Y) = b''(\theta), \quad \kappa_3 = b'''(\theta), \quad \kappa_4 = b^{(4)}(\theta), \ldots \]
+\[
+E[Y] = b'(\theta), \quad \mathrm{Var}(Y) = b''(\theta), \quad \kappa_3 = b'''(\theta), \quad \kappa_4 = b^{(4)}(\theta), \ldots
+\]
 
 All cumulants of \( Y \) are derivatives of \( b(\theta) \). This is the reason \( b \) is called the cumulant function. It further implies that the exponential family is characterised entirely by \( b \) — knowing the cumulant function determines all moments and hence the entire distribution (within the family).
 
@@ -757,15 +913,21 @@ To see the exponential family structure concretely, we work through the normal d
 
 The density is:
 
-\[ f(y \mid \mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\!\left\{-\frac{(y-\mu)^2}{2\sigma^2}\right\}. \]
+\[
+f(y \mid \mu, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\!\left\{-\frac{(y-\mu)^2}{2\sigma^2}\right\}.
+\]
 
 Expanding the exponent:
 
-\[ -\frac{(y-\mu)^2}{2\sigma^2} = -\frac{y^2 - 2y\mu + \mu^2}{2\sigma^2} = \frac{y\mu}{\sigma^2} - \frac{\mu^2}{2\sigma^2} - \frac{y^2}{2\sigma^2}. \]
+\[
+-\frac{(y-\mu)^2}{2\sigma^2} = -\frac{y^2 - 2y\mu + \mu^2}{2\sigma^2} = \frac{y\mu}{\sigma^2} - \frac{\mu^2}{2\sigma^2} - \frac{y^2}{2\sigma^2}.
+\]
 
 Collecting terms by role:
 
-\[ f(y \mid \mu, \sigma^2) = \exp\!\left\{ \underbrace{\frac{y\mu - \mu^2/2}{\sigma^2}}_{\text{exponential family kernel}} + \underbrace{\left(-\frac{y^2}{2\sigma^2} - \frac{1}{2}\log(2\pi\sigma^2)\right)}_{c(y;\sigma^2)} \right\}. \]
+\[
+f(y \mid \mu, \sigma^2) = \exp\!\left\{ \underbrace{\frac{y\mu - \mu^2/2}{\sigma^2}}_{\text{exponential family kernel}} + \underbrace{\left(-\frac{y^2}{2\sigma^2} - \frac{1}{2}\log(2\pi\sigma^2)\right)}_{c(y;\sigma^2)} \right\}.
+\]
 
 Identifying terms: \( \theta = \mu \) (canonical parameter), \( b(\theta) = \theta^2/2 = \mu^2/2 \) (cumulant function), \( a(\phi) = \phi = \sigma^2 \) (dispersion), \( c(y;\phi) = -y^2/(2\phi) - \frac{1}{2}\log(2\pi\phi) \).
 
@@ -780,11 +942,15 @@ The canonical link for the normal distribution is thus the **identity link** \( 
 
 For \( Y \sim \mathrm{Binomial}(m, \pi) \):
 
-\[ f(y \mid \pi) = \binom{m}{y}\pi^y(1-\pi)^{m-y} = \binom{m}{y}\exp\!\left\{y\log\pi + (m-y)\log(1-\pi)\right\}. \]
+\[
+f(y \mid \pi) = \binom{m}{y}\pi^y(1-\pi)^{m-y} = \binom{m}{y}\exp\!\left\{y\log\pi + (m-y)\log(1-\pi)\right\}.
+\]
 
 Rewrite:
 
-\[ = \binom{m}{y}\exp\!\left\{y\log\!\frac{\pi}{1-\pi} + m\log(1-\pi)\right\}. \]
+\[
+= \binom{m}{y}\exp\!\left\{y\log\!\frac{\pi}{1-\pi} + m\log(1-\pi)\right\}.
+\]
 
 Let \( \theta = \log[\pi/(1-\pi)] \) (the logit), so \( \pi = e^\theta/(1+e^\theta) \) and \( 1-\pi = 1/(1+e^\theta) \). Then \( m\log(1-\pi) = -m\log(1+e^\theta) \). Identifying:
 
@@ -802,11 +968,15 @@ Verification:
 
 For a single observation from the exponential family (with \( a(\phi) = \phi \) and \( w = 1 \)):
 
-\[ I(\theta) = -E\!\left[\frac{\partial^2 \ell}{\partial\theta^2}\right] = \frac{b''(\theta)}{\phi} = \frac{V(\mu)}{\phi}. \]
+\[
+I(\theta) = -E\!\left[\frac{\partial^2 \ell}{\partial\theta^2}\right] = \frac{b''(\theta)}{\phi} = \frac{V(\mu)}{\phi}.
+\]
 
 The expected information equals the variance function divided by the dispersion. For a sample of \( n \) iid observations from a GLM, the total expected information for \( \theta_i \) is:
 
-\[ \mathcal{I}(\theta) = \frac{n\,b''(\theta)}{\phi}. \]
+\[
+\mathcal{I}(\theta) = \frac{n\,b''(\theta)}{\phi}.
+\]
 
 The asymptotic standard error of the MLE \( \hat\theta \) is therefore \( \sqrt{\phi/(nb''(\theta))} \), which decreases as \( \sqrt{1/n} \) as expected from the central limit theorem.
 
@@ -820,7 +990,9 @@ The birdkeeping and lung cancer dataset (from Ramsey and Schafer) examines wheth
 
 **Fitted model.** The main effects logistic regression gives:
 
-\[ \mathrm{logit}(\hat\pi_i) = -1.933 + 1.362 x_1 + 0.560 x_2 + 0.025 x_3 - 0.387 x_4 + 0.031 x_5 + 0.020 x_6. \]
+\[
+\mathrm{logit}(\hat\pi_i) = -1.933 + 1.362 x_1 + 0.560 x_2 + 0.025 x_3 - 0.387 x_4 + 0.031 x_5 + 0.020 x_6.
+\]
 
 The coefficient for birdkeeping: \( e^{1.362} = 3.91 \) (95% CI: 1.97 to 7.75). After adjusting for smoking, sex, age, and socioeconomic status, bird owners have nearly 4 times the odds of developing lung cancer compared to non-bird owners. This is a substantial and statistically significant effect (\( z = 3.87 \), \( p < 0.001 \)).
 
@@ -834,7 +1006,9 @@ A time-inhomogeneous Poisson process model for the incidence of tumours in rats 
 
 **Model.** \( Y_i \sim \mathrm{Poisson}(\lambda_i t_i) \) where \( \log\lambda_i = \beta_0 + \beta_1 x_i \), and \( \log t_i \) is the offset:
 
-\[ \log\mu_i = \log t_i + \beta_0 + \beta_1 x_i. \]
+\[
+\log\mu_i = \log t_i + \beta_0 + \beta_1 x_i.
+\]
 
 **Fitting and interpretation.** The MLE satisfies \( \hat\beta_1 > 0 \) if higher doses lead to higher rates. The rate ratio per unit dose is \( e^{\hat\beta_1} \). A 95% CI is \( \exp(\hat\beta_1 \pm 1.96\,\widehat{\mathrm{se}}(\hat\beta_1)) \). Testing \( H_0: \beta_1 = 0 \) (no dose effect) uses either the Wald test or the likelihood ratio test.
 
@@ -871,7 +1045,9 @@ The epilepsy trial data (Thall and Vail 1990) records seizure counts for 59 pati
 
 **Poisson model.** Fitting a Poisson log-linear model with treatment, period, and baseline (log-transformed) as covariates gives:
 
-\[ \log\hat\mu_{ij} = \hat\beta_0 + \hat\beta_1 \cdot \text{trt}_i + \hat\beta_2 \cdot \text{period}_{ij} + \hat\beta_3 \cdot \log(\text{base}_i). \]
+\[
+\log\hat\mu_{ij} = \hat\beta_0 + \hat\beta_1 \cdot \text{trt}_i + \hat\beta_2 \cdot \text{period}_{ij} + \hat\beta_3 \cdot \log(\text{base}_i).
+\]
 
 The Pearson statistic is \( X^2 = 1208 \) on 228 df, giving \( \hat\phi = 5.3 \) — severe overdispersion. The quasiPoisson standard errors are inflated by \( \sqrt{5.3} = 2.3 \), making the treatment effect non-significant.
 
@@ -889,7 +1065,9 @@ To see IRLS concretely, consider a simple binomial logistic regression with \( n
 
 **Working responses.** \( z_i = \hat\eta_i + (y_i - \hat\mu_i)/[m_i\hat\pi_i(1-\hat\pi_i)] \cdot m_i\hat\pi_i(1-\hat\pi_i)/(m_i\hat\pi_i(1-\hat\pi_i)) \). More directly: \( z_i = \hat\eta_i + (y_i - \hat\mu_i) \cdot (d\eta/d\mu)|_i \) where \( d\eta_i/d\mu_i = 1/[m_i\hat\pi_i(1-\hat\pi_i)] \):
 
-\[ z_i = 0 + \frac{y_i - 5}{2.5}: \quad z = (-1.2, -0.4, 0.4, 1.2). \]
+\[
+z_i = 0 + \frac{y_i - 5}{2.5}: \quad z = (-1.2, -0.4, 0.4, 1.2).
+\]
 
 **Weighted LS.** Regress \( z \) on \( (1, x) \) with weights \( (2.5, 2.5, 2.5, 2.5) \). Since weights are equal, the WLS estimate equals the OLS estimate: \( \hat\beta_0^{(1)} = -1.2 \), \( \hat\beta_1^{(1)} = 0.8 \). (More precisely, \( \hat\beta_1 = \sum w_i(x_i - \bar x)(z_i - \bar z)/\sum w_i(x_i-\bar x)^2 = [(-1.5)(-1.2)+(-0.5)(-0.4)+(0.5)(0.4)+(1.5)(1.2)]/5 = 3.6/5 = 0.72 \).)
 
@@ -1012,11 +1190,15 @@ Under the canonical link, the score vector \( \mathbf{S}(\boldsymbol{\beta}) = \
 
 **Proof sketch.** Write the joint density of \( (Y_1, \ldots, Y_n) \) under the canonical exponential family:
 
-\[ f(\mathbf{y} \mid \boldsymbol{\theta}) = \exp\!\left\{\sum_i y_i\theta_i - \sum_i b(\theta_i) + \sum_i c(y_i;\phi)\right\}. \]
+\[
+f(\mathbf{y} \mid \boldsymbol{\theta}) = \exp\!\left\{\sum_i y_i\theta_i - \sum_i b(\theta_i) + \sum_i c(y_i;\phi)\right\}.
+\]
 
 Under the canonical link \( \theta_i = \mathbf{x}_i^\top\boldsymbol{\beta} \), this becomes:
 
-\[ = \exp\!\left\{ \boldsymbol{\beta}^\top \underbrace{\sum_i \mathbf{x}_i y_i}_{\mathbf{X}\mathbf{y}} - \sum_i b(\mathbf{x}_i^\top\boldsymbol{\beta}) + \sum_i c(y_i;\phi)\right\}, \]
+\[
+= \exp\!\left\{ \boldsymbol{\beta}^\top \underbrace{\sum_i \mathbf{x}_i y_i}_{\mathbf{X}\mathbf{y}} - \sum_i b(\mathbf{x}_i^\top\boldsymbol{\beta}) + \sum_i c(y_i;\phi)\right\},
+\]
 
 which factors as \( g(\mathbf{X}\mathbf{y}, \boldsymbol{\beta}) \cdot h(\mathbf{y}) \) with \( h(\mathbf{y}) = \exp\{\sum_i c(y_i;\phi)\} \). By the Neyman–Pearson factorisation theorem, \( \mathbf{X}\mathbf{y} \) is sufficient for \( \boldsymbol{\beta} \). \( \square \)
 
@@ -1024,7 +1206,9 @@ which factors as \( g(\mathbf{X}\mathbf{y}, \boldsymbol{\beta}) \cdot h(\mathbf{
 
 Under standard regularity conditions, the MLE \( \hat{\boldsymbol{\beta}} \) in a GLM satisfies:
 
-\[ \sqrt{n}(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}) \overset{d}{\to} N(\mathbf{0}, \mathbf{I}^{-1}(\boldsymbol{\beta})), \]
+\[
+\sqrt{n}(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}) \overset{d}{\to} N(\mathbf{0}, \mathbf{I}^{-1}(\boldsymbol{\beta})),
+\]
 
 where \( \mathbf{I}(\boldsymbol{\beta}) = \mathbf{X}\mathbf{W}\mathbf{X}^\top/n \) (scaled information). The key steps are:
 
@@ -1070,13 +1254,17 @@ In the GLM context, the working response \( z_i = \eta_i + (y_i - \mu_i)g'(\mu_i
 
 Wedderburn (1974) introduced **quasi-likelihood** by observing that the GLM estimating equations for \( \boldsymbol{\beta} \) — the score equations — depend on the distribution only through the mean function \( \mu(\boldsymbol{\beta}) \) and the variance function \( V(\mu)\phi \). He defined the **quasi-score** for a single observation:
 
-\[ Q(\mu; y) = \int_\mu^y \frac{y - t}{V(t)}\,dt, \]
+\[
+Q(\mu; y) = \int_\mu^y \frac{y - t}{V(t)}\,dt,
+\]
 
 and the quasi-likelihood as \( q(\mu; y) = Q(\mu; y)/\phi \). The quasi-score functions like a log-likelihood: \( \partial q/\partial\mu = (y - \mu)/(V(\mu)\phi) \), \( E[\partial q/\partial\mu] = 0 \), and \( E[(\partial q/\partial\mu)^2] = -E[\partial^2 q/\partial\mu^2] \). The estimating equations \( \sum_i (\partial q_i/\partial\boldsymbol{\beta}) = \mathbf{0} \) coincide with the GLM score equations, so IRLS solves them regardless of whether a full likelihood is available.
 
 The quasi-MLE is consistent and asymptotically normal under the sole assumption that the mean and variance functions are correctly specified:
 
-\[ \sqrt{n}(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}) \overset{d}{\to} N\!\left(\mathbf{0},\; \phi \left(\sum_i w_i \mathbf{x}_i\mathbf{x}_i^\top\right)^{-1}\right). \]
+\[
+\sqrt{n}(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}) \overset{d}{\to} N\!\left(\mathbf{0},\; \phi \left(\sum_i w_i \mathbf{x}_i\mathbf{x}_i^\top\right)^{-1}\right).
+\]
 
 No distributional assumption beyond correct mean and variance function specification is required for consistency or asymptotic normality. This makes quasi-likelihood methods semi-parametric and robust to distributional misspecification.
 
@@ -1084,7 +1272,9 @@ No distributional assumption beyond correct mean and variance function specifica
 
 McCullagh and Nelder (1989) proposed the **extended quasi-likelihood** (EQL), which generalises quasi-likelihood to allow estimation of the dispersion parameter \( \phi \) alongside \( \boldsymbol{\beta} \). The EQL is:
 
-\[ Q^+(\boldsymbol{\beta}, \phi; \mathbf{y}) = -\frac{1}{2}\sum_i \left[\frac{d_i}{\phi} + \log(2\pi\phi V(y_i))\right], \]
+\[
+Q^+(\boldsymbol{\beta}, \phi; \mathbf{y}) = -\frac{1}{2}\sum_i \left[\frac{d_i}{\phi} + \log(2\pi\phi V(y_i))\right],
+\]
 
 where \( d_i = 2\int_{y_i}^{\hat\mu_i} (y_i - t)/V(t)\,dt \) are the deviance contributions. Maximising over \( \phi \) gives \( \hat\phi = D/(n-p) \) — the familiar moment estimator from the deviance. The EQL framework provides a principled basis for AIC-like model selection under quasi-likelihood: \( \mathrm{QAIC} = D/\hat\phi + 2p \).
 
@@ -1092,11 +1282,15 @@ where \( d_i = 2\int_{y_i}^{\hat\mu_i} (y_i - t)/V(t)\,dt \) are the deviance co
 
 For correlated data (repeated measurements, clustered observations), **Generalised Estimating Equations (GEE)** extend quasi-likelihood by modelling the within-cluster correlation structure through a working correlation matrix \( \mathbf{R}(\boldsymbol{\alpha}) \). The GEE estimating equations for subject \( i \) with cluster \( \{Y_{i1}, \ldots, Y_{im_i}\} \) are:
 
-\[ \sum_{i=1}^n \frac{\partial\boldsymbol{\mu}_i^\top}{\partial\boldsymbol{\beta}} \mathbf{V}_i^{-1}(\mathbf{y}_i - \boldsymbol{\mu}_i) = \mathbf{0}, \]
+\[
+\sum_{i=1}^n \frac{\partial\boldsymbol{\mu}_i^\top}{\partial\boldsymbol{\beta}} \mathbf{V}_i^{-1}(\mathbf{y}_i - \boldsymbol{\mu}_i) = \mathbf{0},
+\]
 
 where \( \mathbf{V}_i = \phi\mathbf{A}_i^{1/2}\mathbf{R}(\boldsymbol{\alpha})\mathbf{A}_i^{1/2} \) with \( \mathbf{A}_i = \mathrm{diag}(V(\mu_{i1}), \ldots, V(\mu_{im_i})) \). The GEE estimator is consistent for \( \boldsymbol{\beta} \) regardless of whether the working correlation structure is correctly specified, and inference uses the **sandwich variance estimator**:
 
-\[ \widehat{\mathrm{Var}}(\hat{\boldsymbol{\beta}}) = \mathbf{B}^{-1}\mathbf{M}\mathbf{B}^{-1}, \]
+\[
+\widehat{\mathrm{Var}}(\hat{\boldsymbol{\beta}}) = \mathbf{B}^{-1}\mathbf{M}\mathbf{B}^{-1},
+\]
 
 where \( \mathbf{B} = \sum_i \partial\boldsymbol{\mu}_i^\top/\partial\boldsymbol{\beta}\cdot\mathbf{V}_i^{-1}\cdot\partial\boldsymbol{\mu}_i/\partial\boldsymbol{\beta}^\top \) and \( \mathbf{M} = \sum_i \partial\boldsymbol{\mu}_i^\top/\partial\boldsymbol{\beta}\cdot\mathbf{V}_i^{-1}(\mathbf{y}_i - \boldsymbol{\mu}_i)(\mathbf{y}_i - \boldsymbol{\mu}_i)^\top\mathbf{V}_i^{-1}\cdot\partial\boldsymbol{\mu}_i/\partial\boldsymbol{\beta}^\top \).
 
@@ -1129,7 +1323,9 @@ GEE gives population-average (marginal) estimates of \( \boldsymbol{\beta} \), a
 
 The standard GLM framework as presented assumes the dispersion parameter \( \phi \) is known. In the normal linear model, \( \phi = \sigma^2 \) is estimated by \( \hat\sigma^2 = D/(n-p) \) separately from \( \boldsymbol{\beta} \). For the Poisson and binomial, \( \phi = 1 \) is known by assumption (the distributional mean–variance relationship determines \( \phi \)). The **exponential dispersion model** (EDM) of Jørgensen (1987) provides a unified framework in which \( \phi \) is an additional parameter:
 
-\[ f(y \mid \theta, \phi) = a(y, \phi)\exp\!\left\{\frac{y\theta - b(\theta)}{\phi}\right\}, \]
+\[
+f(y \mid \theta, \phi) = a(y, \phi)\exp\!\left\{\frac{y\theta - b(\theta)}{\phi}\right\},
+\]
 
 where the unit deviance \( d(y; \mu) = 2[y(\tilde\theta - \hat\theta) - b(\tilde\theta) + b(\hat\theta)] \) with \( \tilde\theta \) the canonical parameter at the saturated value \( y \) and \( \hat\theta \) the canonical parameter at the fitted value \( \hat\mu \). The deviance is \( D = \sum_i d(y_i;\hat\mu_i)/\phi \), and the MLE of \( \phi \) from the EDM is the Pearson estimator \( \hat\phi = X^2/(n-p) \).
 
@@ -1141,7 +1337,9 @@ When analysing clustered or longitudinal data with a binary or count response, t
 
 **GLMMs (subject-specific/conditional models).** A **Generalised Linear Mixed Model** (GLMM) adds random effects \( \mathbf{b}_i \) to the linear predictor:
 
-\[ g(\mu_{ij}) = \mathbf{x}_{ij}^\top\boldsymbol{\beta} + \mathbf{z}_{ij}^\top\mathbf{b}_i, \quad \mathbf{b}_i \sim N(\mathbf{0}, \mathbf{G}). \]
+\[
+g(\mu_{ij}) = \mathbf{x}_{ij}^\top\boldsymbol{\beta} + \mathbf{z}_{ij}^\top\mathbf{b}_i, \quad \mathbf{b}_i \sim N(\mathbf{0}, \mathbf{G}).
+\]
 
 The fixed-effect estimates \( \boldsymbol{\beta} \) describe how a one-unit change in \( x_{ij} \) affects a specific individual's response on the link scale, conditional on their random effect. For non-identity links (logit, log), the marginal (population-average) and conditional (subject-specific) parameters differ; the subject-specific parameters are larger in magnitude. GLMMs are fitted by maximum likelihood after integrating out the random effects — typically by Laplace approximation or Gaussian–Hermite quadrature — using R packages `lme4` (`glmer()`) or `glmmTMB`.
 
@@ -1151,7 +1349,9 @@ The fixed-effect estimates \( \boldsymbol{\beta} \) describe how a one-unit chan
 
 **Complete separation** occurs in logistic regression when there exists a linear combination \( \mathbf{c}^\top\mathbf{x}_i \) that perfectly predicts the response:
 
-\[ \mathbf{c}^\top\mathbf{x}_i > 0 \implies y_i = 1, \qquad \mathbf{c}^\top\mathbf{x}_i < 0 \implies y_i = 0. \]
+\[
+\mathbf{c}^\top\mathbf{x}_i > 0 \implies y_i = 1, \qquad \mathbf{c}^\top\mathbf{x}_i < 0 \implies y_i = 0.
+\]
 
 When complete separation holds, the MLE does not exist: the log-likelihood increases without bound as \( \|\boldsymbol{\beta}\| \to \infty \) along the separating direction. R will produce very large estimates with very large standard errors and a warning about non-convergence.
 
@@ -1175,7 +1375,9 @@ Beyond standard residual plots, several additional checks are recommended for GL
 
 **Hosmer–Lemeshow test for logistic regression.** For ungrouped binary data (\( m_i = 1 \)), the standard Pearson and deviance statistics have poor \( \chi^2 \) approximations. The Hosmer–Lemeshow test partitions the data into \( g = 10 \) groups based on deciles of the estimated probabilities \( \hat\pi_i \), and computes a Pearson-type statistic on the resulting \( 10 \times 2 \) table:
 
-\[ C = \sum_{k=1}^{g} \frac{(O_{1k} - n_k\bar\pi_k)^2}{n_k\bar\pi_k(1-\bar\pi_k)} \overset{\text{approx}}{\sim} \chi^2_{g-2}, \]
+\[
+C = \sum_{k=1}^{g} \frac{(O_{1k} - n_k\bar\pi_k)^2}{n_k\bar\pi_k(1-\bar\pi_k)} \overset{\text{approx}}{\sim} \chi^2_{g-2},
+\]
 
 where \( O_{1k} \) is the number of events in group \( k \), \( n_k \) is the group size, and \( \bar\pi_k \) is the mean fitted probability. Implemented in `ResourceSelection::hoslem.test()`.
 
@@ -1185,7 +1387,9 @@ For contingency tables with many cells and complex hierarchical log-linear model
 
 For a model with generators \( \{S_1, S_2, \ldots, S_k\} \) (sets of variables whose marginal totals are preserved), IPF cycles through each generator and adjusts the fitted values \( \hat\mu_{ijk\ldots} \) so that the fitted marginal totals equal the observed marginals:
 
-\[ \hat\mu^{(r+1)}_{ijk\ldots} = \hat\mu^{(r)}_{ijk\ldots} \times \frac{y_{s_j}}{\hat\mu^{(r)}_{s_j}}, \quad \text{for each generator } S_j \text{ at iteration } r. \]
+\[
+\hat\mu^{(r+1)}_{ijk\ldots} = \hat\mu^{(r)}_{ijk\ldots} \times \frac{y_{s_j}}{\hat\mu^{(r)}_{s_j}}, \quad \text{for each generator } S_j \text{ at iteration } r.
+\]
 
 IPF converges to the MLE for log-linear models, and its convergence is guaranteed for hierarchical models when the MLEs exist. For a two-way table under the independence model, IPF converges in one step: \( \hat\mu_{ij} = y_{i\cdot}y_{\cdot j}/y_{\cdot\cdot} \). For the three-way homogeneous association model \( (VW, VZ, WZ) \), IPF requires multiple cycles but converges rapidly.
 
@@ -1195,7 +1399,9 @@ Fisher's linear discriminant analysis (LDA) and logistic regression both address
 
 **LDA** models the class-conditional densities \( f(\mathbf{x} \mid Y = k) \sim N(\boldsymbol{\mu}_k, \boldsymbol{\Sigma}) \) with equal covariance matrices, then applies Bayes' theorem. The resulting decision boundary is linear in \( \mathbf{x} \), and the posterior log odds:
 
-\[ \log\!\frac{P(Y=1|\mathbf{x})}{P(Y=0|\mathbf{x})} = \boldsymbol{\alpha}^\top\mathbf{x} + \alpha_0, \]
+\[
+\log\!\frac{P(Y=1|\mathbf{x})}{P(Y=0|\mathbf{x})} = \boldsymbol{\alpha}^\top\mathbf{x} + \alpha_0,
+\]
 
 is exactly a logistic regression model with specific coefficients determined by the LDA estimates.
 
@@ -1209,13 +1415,17 @@ For the birdkeeping/lung cancer example, LDA would require assuming multivariate
 
 The **score test** (Rao 1948) is particularly useful for testing whether a GLM requires an additional term, because it requires fitting only the restricted model (under \( H_0 \)). The test statistic is:
 
-\[ U = \mathbf{S}^\top(\tilde{\boldsymbol{\beta}})\, \mathbf{I}^{-1}(\tilde{\boldsymbol{\beta}})\, \mathbf{S}(\tilde{\boldsymbol{\beta}}) \overset{\text{approx}}{\sim} \chi^2_q, \]
+\[
+U = \mathbf{S}^\top(\tilde{\boldsymbol{\beta}})\, \mathbf{I}^{-1}(\tilde{\boldsymbol{\beta}})\, \mathbf{S}(\tilde{\boldsymbol{\beta}}) \overset{\text{approx}}{\sim} \chi^2_q,
+\]
 
 where \( \tilde{\boldsymbol{\beta}} \) is the restricted MLE (under \( H_0: \boldsymbol{\beta}_B = \mathbf{0} \)).
 
 **Score test for overdispersion.** A standard application is testing \( H_0: \phi = 1 \) (no overdispersion) against the alternative that \( \phi > 1 \). For the Poisson, the score test for overdispersion based on the negative binomial alternative has statistic:
 
-\[ U_\phi = \frac{[\sum_i(y_i - \hat\mu_i)^2/\hat\mu_i - (n-p)]^2}{2(n-p)} \overset{\text{approx}}{\sim} \chi^2_1 \quad \text{under } H_0:\phi=1. \]
+\[
+U_\phi = \frac{[\sum_i(y_i - \hat\mu_i)^2/\hat\mu_i - (n-p)]^2}{2(n-p)} \overset{\text{approx}}{\sim} \chi^2_1 \quad \text{under } H_0:\phi=1.
+\]
 
 This is a one-sided test (\( \phi > 1 \) only), and the \( p \)-value is \( P(\chi^2_1 > U_\phi)/2 \). For the epilepsy data, \( U_\phi \) is highly significant, confirming substantial overdispersion.
 
@@ -1225,7 +1435,9 @@ This is a one-sided test (\( \phi > 1 \) only), and the \( p \)-value is \( P(\c
 
 Before fitting a logistic regression to grouped data, it is helpful to plot the **empirical logit**:
 
-\[ \tilde\eta_i = \log\!\frac{y_i/m_i}{1 - y_i/m_i} = \log\!\frac{y_i}{m_i - y_i}, \]
+\[
+\tilde\eta_i = \log\!\frac{y_i/m_i}{1 - y_i/m_i} = \log\!\frac{y_i}{m_i - y_i},
+\]
 
 against each continuous predictor. If the logistic model with a given predictor is appropriate, this plot should be approximately linear. Cells with \( y_i = 0 \) or \( y_i = m_i \) produce \( \tilde\eta_i = -\infty \) or \( +\infty \) and must be handled by continuity corrections: \( (y_i + 0.5)/(m_i + 1) \).
 

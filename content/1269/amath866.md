@@ -18,12 +18,14 @@ We begin with the full Maxwell equations in a medium characterised by free charg
 \[
 \nabla \cdot \mathbf{E} = \frac{\rho_f}{\varepsilon_0}, \quad \nabla \cdot \mathbf{B} = 0,
 \]
+
 \[
 \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}.
 \]
 
 <div class="definition">
 <strong>Definition 1.1 (Pre-Maxwell Equations).</strong> In the <em>MHD approximation</em>, the displacement current \(\mu_0 \varepsilon_0 \partial \mathbf{E}/\partial t\) is neglected. The resulting system is called the <em>pre-Maxwell</em> or <em>magnetostatic</em> set:
+
 \[
 \nabla \times \mathbf{B} = \mu_0 \mathbf{J}, \quad \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}, \quad \nabla \cdot \mathbf{B} = 0.
 \]
@@ -41,6 +43,7 @@ In a stationary conductor, Ohm's law is simply \(\mathbf{J} = \sigma \mathbf{E}\
 
 <div class="definition">
 <strong>Definition 1.2 (Ohm's Law for a Moving Conductor).</strong> For an electrically conducting fluid with conductivity \(\sigma\) moving with velocity \(\mathbf{u}\), the generalised Ohm's law is
+
 \[
 \mathbf{J} = \sigma(\mathbf{E} + \mathbf{u} \times \mathbf{B}).
 \]
@@ -51,6 +54,7 @@ This is the simplest form of Ohm's law appropriate for MHD. More complete versio
 
 <div class="remark">
 <strong>Remark 1.3.</strong> The conductivity \(\sigma\) of a fully ionised plasma was computed by Spitzer (1962) using the Fokker-Planck collision operator:
+
 \[
 \sigma_\text{Spitzer} = \frac{n e^2}{m_e \nu_{ei}} \approx 1.5 \times 10^{-2}\,\frac{T^{3/2}}{\ln\Lambda}\;\text{S}\,\text{m}^{-1},
 \]
@@ -63,6 +67,7 @@ The central equation of MHD electrodynamics is obtained by eliminating \(\mathbf
 
 <div class="theorem">
 <strong>Theorem 1.1 (Magnetic Induction Equation).</strong> Let \(\mathbf{B}\) be the magnetic field in a conducting fluid with velocity \(\mathbf{u}\) and magnetic diffusivity \(\eta = 1/(\mu_0 \sigma)\). Then
+
 \[
 \frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{u} \times \mathbf{B}) + \eta \nabla^2 \mathbf{B}.
 \]
@@ -70,14 +75,17 @@ The central equation of MHD electrodynamics is obtained by eliminating \(\mathbf
 
 <div class="proof">
 <strong>Proof.</strong> From Ohm's law, \(\mathbf{E} = -\mathbf{u} \times \mathbf{B} + \mathbf{J}/\sigma\). Substituting into Faraday's law:
+
 \[
 \frac{\partial \mathbf{B}}{\partial t} = -\nabla \times \mathbf{E} = \nabla \times (\mathbf{u} \times \mathbf{B}) - \nabla \times \left(\frac{\mathbf{J}}{\sigma}\right).
 \]
 Using \(\mathbf{J} = \nabla \times \mathbf{B}/\mu_0\) and writing \(\eta = 1/(\mu_0 \sigma)\):
+
 \[
 \frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{u} \times \mathbf{B}) - \eta \nabla \times (\nabla \times \mathbf{B}).
 \]
 Since \(\nabla \cdot \mathbf{B} = 0\), we have \(\nabla \times (\nabla \times \mathbf{B}) = -\nabla^2 \mathbf{B}\), giving
+
 \[
 \frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{u} \times \mathbf{B}) + \eta \nabla^2 \mathbf{B}. \quad \square
 \]
@@ -89,6 +97,7 @@ The induction equation is the magnetic analogue of the vorticity equation in flu
 
 <div class="definition">
 <strong>Definition 1.3 (Magnetic Reynolds Number).</strong> The <em>magnetic Reynolds number</em> is defined as
+
 \[
 \mathrm{Rm} = \frac{UL}{\eta},
 \]
@@ -107,6 +116,7 @@ The most profound consequence of the ideal MHD limit is Alfvén's theorem, prove
 
 <div class="theorem">
 <strong>Theorem 1.2 (Alfvén's Frozen-In Flux Theorem).</strong> In ideal MHD (\(\eta = 0\)), the magnetic flux \(\Phi = \int_S \mathbf{B} \cdot d\mathbf{S}\) through any material surface \(S(t)\) moving with the fluid is constant:
+
 \[
 \frac{d\Phi}{dt} = \frac{d}{dt}\int_{S(t)} \mathbf{B} \cdot d\mathbf{S} = 0.
 \]
@@ -114,10 +124,12 @@ The most profound consequence of the ideal MHD limit is Alfvén's theorem, prove
 
 <div class="proof">
 <strong>Proof.</strong> Using the transport theorem for a material surface:
+
 \[
 \frac{d}{dt}\int_{S(t)} \mathbf{B} \cdot d\mathbf{S} = \int_S \left(\frac{\partial \mathbf{B}}{\partial t} + \nabla \times (\mathbf{B} \times \mathbf{u}) + \mathbf{u}(\nabla \cdot \mathbf{B})\right) \cdot d\mathbf{S}.
 \]
 Since \(\nabla \cdot \mathbf{B} = 0\) and the ideal induction equation gives \(\partial \mathbf{B}/\partial t = \nabla \times (\mathbf{u} \times \mathbf{B})\), we have
+
 \[
 \frac{d}{dt}\int_{S(t)} \mathbf{B} \cdot d\mathbf{S} = \int_S \left[\nabla \times (\mathbf{u} \times \mathbf{B}) + \nabla \times (\mathbf{B} \times \mathbf{u})\right] \cdot d\mathbf{S} = 0,
 \]
@@ -156,6 +168,7 @@ The Lorentz force per unit volume on a conducting fluid is \(\mathbf{F}_L = \mat
 
 <div class="theorem">
 <strong>Theorem 2.1 (Magnetic Stress Decomposition).</strong> The Lorentz force per unit volume can be decomposed as
+
 \[
 \mathbf{J} \times \mathbf{B} = \frac{1}{\mu_0}(\mathbf{B} \cdot \nabla)\mathbf{B} - \nabla\left(\frac{B^2}{2\mu_0}\right).
 \]
@@ -164,6 +177,7 @@ The first term represents <em>magnetic tension</em> (a restoring force along cur
 
 <div class="proof">
 <strong>Proof.</strong> Using the vector identity \((\nabla \times \mathbf{B}) \times \mathbf{B} = (\mathbf{B} \cdot \nabla)\mathbf{B} - \nabla(B^2/2)\), we divide by \(\mu_0\):
+
 \[
 \frac{1}{\mu_0}(\nabla \times \mathbf{B}) \times \mathbf{B} = \frac{1}{\mu_0}(\mathbf{B} \cdot \nabla)\mathbf{B} - \nabla\left(\frac{B^2}{2\mu_0}\right). \quad \square
 \]
@@ -173,6 +187,7 @@ The magnetic tension term \((\mathbf{B} \cdot \nabla)\mathbf{B}/\mu_0\) acts lik
 
 <div class="definition">
 <strong>Definition 2.1 (Plasma Beta).</strong> The <em>plasma beta</em> is the ratio of gas pressure to magnetic pressure:
+
 \[
 \beta = \frac{p}{B^2/(2\mu_0)} = \frac{2\mu_0 p}{B^2}.
 \]
@@ -183,6 +198,7 @@ It is often useful to express the Lorentz force in terms of the Maxwell stress t
 
 <div class="definition">
 <strong>Definition 2.6 (Maxwell Stress Tensor).</strong> The <em>Maxwell stress tensor</em> in MHD is the symmetric tensor
+
 \[
 M_{ij} = \frac{1}{\mu_0}\left(B_i B_j - \frac{1}{2}B^2 \delta_{ij}\right).
 \]
@@ -197,15 +213,19 @@ Combining the Navier-Stokes equations with the Lorentz force and the induction e
 
 <div class="definition">
 <strong>Definition 2.2 (Resistive MHD Equations).</strong> The <em>resistive MHD equations</em> are:
+
 \[
 \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{u}) = 0 \quad \text{(continuity)},
 \]
+
 \[
 \rho\left(\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla)\mathbf{u}\right) = -\nabla p + \frac{1}{\mu_0}(\nabla \times \mathbf{B}) \times \mathbf{B} + \rho\nu\nabla^2\mathbf{u} \quad \text{(momentum)},
 \]
+
 \[
 \frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{u} \times \mathbf{B}) + \eta\nabla^2\mathbf{B} \quad \text{(induction)},
 \]
+
 \[
 \nabla \cdot \mathbf{B} = 0 \quad \text{(solenoidal constraint)},
 \]
@@ -222,9 +242,11 @@ This system of equations is the starting point for nearly all of classical MHD. 
 
 <div class="definition">
 <strong>Definition 2.3 (Ideal MHD).</strong> The <em>ideal MHD</em> equations are obtained from the resistive system by setting \(\eta = 0\) and \(\nu = 0\):
+
 \[
 \rho\left(\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla)\mathbf{u}\right) = -\nabla p + \frac{1}{\mu_0}(\mathbf{B} \cdot \nabla)\mathbf{B} - \nabla\left(\frac{B^2}{2\mu_0}\right),
 \]
+
 \[
 \frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{u} \times \mathbf{B}).
 \]
@@ -239,10 +261,12 @@ A beautiful symmetry of incompressible MHD emerges when we introduce the Elsasse
 
 <div class="definition">
 <strong>Definition 2.4 (Elsasser Variables).</strong> Define the <em>Elsasser variables</em>
+
 \[
 \mathbf{z}^\pm = \mathbf{u} \pm \frac{\mathbf{B}}{\sqrt{\mu_0 \rho}}.
 \]
 For incompressible ideal MHD with a uniform background field \(\mathbf{B}_0\), the equations become
+
 \[
 \frac{\partial \mathbf{z}^\pm}{\partial t} \mp (\mathbf{v}_A \cdot \nabla)\mathbf{z}^\pm + (\mathbf{z}^\mp \cdot \nabla)\mathbf{z}^\pm = -\nabla P,
 \]
@@ -257,10 +281,12 @@ The total energy of the MHD system has three contributions: kinetic, thermal, an
 
 <div class="theorem">
 <strong>Theorem 2.2 (MHD Energy Conservation).</strong> In ideal, compressible MHD the total energy density
+
 \[
 e = \frac{1}{2}\rho u^2 + \frac{p}{\gamma - 1} + \frac{B^2}{2\mu_0}
 \]
 satisfies a conservation law
+
 \[
 \frac{\partial e}{\partial t} + \nabla \cdot \left[\left(\frac{1}{2}\rho u^2 + \frac{\gamma p}{\gamma - 1}\right)\mathbf{u} + \frac{1}{\mu_0}\mathbf{B} \times (\mathbf{u} \times \mathbf{B})\right] = 0.
 \]
@@ -272,6 +298,7 @@ In addition to energy, ideal MHD conserves two further quadratic invariants that
 
 <div class="definition">
 <strong>Definition 2.5 (Cross-Helicity).</strong> The <em>cross-helicity</em> is defined as
+
 \[
 H_C = \int_V \mathbf{u} \cdot \mathbf{B}\,dV.
 \]
@@ -299,6 +326,7 @@ One of the most striking features of MHD is its support for wave-like disturbanc
 ### 3.1 Linearization About a Uniform Equilibrium
 
 Consider a uniform equilibrium with constant density \(\rho_0\), pressure \(p_0\), zero velocity, and a uniform magnetic field \(\mathbf{B}_0 = B_0 \hat{\mathbf{z}}\). We perturb all quantities:
+
 \[
 \rho = \rho_0 + \rho_1, \quad \mathbf{u} = \mathbf{u}_1, \quad \mathbf{B} = \mathbf{B}_0 + \mathbf{B}_1, \quad p = p_0 + p_1,
 \]
@@ -307,9 +335,11 @@ with \(|\rho_1| \ll \rho_0\), etc. Substituting into the ideal, compressible MHD
 \[
 \rho_0 \frac{\partial \mathbf{u}_1}{\partial t} = -\nabla p_1 + \frac{1}{\mu_0}(\nabla \times \mathbf{B}_1) \times \mathbf{B}_0,
 \]
+
 \[
 \frac{\partial \mathbf{B}_1}{\partial t} = \nabla \times (\mathbf{u}_1 \times \mathbf{B}_0),
 \]
+
 \[
 \frac{\partial \rho_1}{\partial t} + \rho_0 \nabla \cdot \mathbf{u}_1 = 0, \quad p_1 = c_s^2 \rho_1,
 \]
@@ -322,6 +352,7 @@ Hannes Alfvén predicted in 1942 that a conducting fluid threaded by a magnetic 
 
 <div class="theorem">
 <strong>Theorem 3.1 (Alfvén Waves).</strong> The linearised ideal MHD equations support incompressible, transverse wave solutions of the form \(\mathbf{u}_1 = \hat{\mathbf{x}}\, u_0 e^{i(kz - \omega t)}\), \(\mathbf{B}_1 = -\hat{\mathbf{x}}\, B_0 (u_0/v_A) e^{i(kz - \omega t)}\), with the dispersion relation
+
 \[
 \omega = \pm k v_A, \quad v_A = \frac{B_0}{\sqrt{\mu_0 \rho_0}}.
 \]
@@ -330,6 +361,7 @@ The quantity \(v_A\) is the <em>Alfvén speed</em>.
 
 <div class="proof">
 <strong>Proof.</strong> Seek solutions where \(\nabla \cdot \mathbf{u}_1 = 0\) (incompressible) and the perturbation is transverse to \(\mathbf{B}_0\). Taking \(\mathbf{u}_1 = u_1(z,t)\hat{\mathbf{x}}\), the linearised induction equation gives \(\partial B_{1x}/\partial t = B_0 \partial u_1/\partial z\). The linearised momentum equation (with \(\nabla p_1 = 0\) for an incompressible mode) gives \(\rho_0 \partial u_1/\partial t = (B_0/\mu_0)\partial B_{1x}/\partial z\). Combining these two equations by cross-differentiation yields
+
 \[
 \frac{\partial^2 u_1}{\partial t^2} = v_A^2 \frac{\partial^2 u_1}{\partial z^2},
 \]
@@ -348,6 +380,7 @@ When compressibility is included, the linearised MHD equations support two addit
 
 <div class="theorem">
 <strong>Theorem 3.2 (Magnetosonic Dispersion Relation).</strong> The phase speeds of the compressible MHD wave modes are given by
+
 \[
 v_\text{ph}^2 = \frac{1}{2}\left(v_A^2 + c_s^2\right) \pm \frac{1}{2}\sqrt{(v_A^2 + c_s^2)^2 - 4 v_A^2 c_s^2 \cos^2\theta},
 \]
@@ -376,6 +409,7 @@ When the background is not uniform — for instance, in a gravitationally strati
 
 <div class="example">
 <strong>Example 3.2 (Magneto-Gravity Waves).</strong> In a stratified atmosphere with horizontal magnetic field, the linearised equations yield modes whose frequencies satisfy a combined relation coupling the Brunt-Väisälä frequency \(N\), the Alfvén frequency \(\omega_A = k_\parallel v_A\), and the sound frequency. In the incompressible limit, the coupling between buoyancy and magnetic tension gives a modified dispersion relation
+
 \[
 \omega^2 = \frac{k_\parallel^2 v_A^2 k^2 + N^2 k_h^2}{k^2},
 \]
@@ -408,10 +442,12 @@ In a static MHD equilibrium with no flow (\(\mathbf{u} = \mathbf{0}\)), the mome
 
 <div class="definition">
 <strong>Definition 4.1 (MHD Force Balance).</strong> A <em>magnetostatic equilibrium</em> satisfies
+
 \[
 \nabla p = \mathbf{J} \times \mathbf{B} = \frac{1}{\mu_0}(\nabla \times \mathbf{B}) \times \mathbf{B},
 \]
 together with \(\nabla \cdot \mathbf{B} = 0\). Equivalently,
+
 \[
 \nabla\left(p + \frac{B^2}{2\mu_0}\right) = \frac{1}{\mu_0}(\mathbf{B} \cdot \nabla)\mathbf{B}.
 \]
@@ -431,6 +467,7 @@ For axisymmetric equilibria, which are the basis of tokamak design, the magnetic
 
 <div class="definition">
 <strong>Definition 4.2 (Poloidal Flux Function).</strong> In cylindrical coordinates \((R, \phi, Z)\), an axisymmetric magnetic field can be written as
+
 \[
 \mathbf{B} = \frac{1}{R}\nabla\psi \times \hat{\boldsymbol{\phi}} + B_\phi(R,Z)\hat{\boldsymbol{\phi}},
 \]
@@ -441,6 +478,7 @@ Substituting this representation into the force balance equation and using the a
 
 <div class="theorem">
 <strong>Theorem 4.1 (Grad-Shafranov Equation).</strong> In an axisymmetric equilibrium, the poloidal flux function \(\psi(R,Z)\) satisfies
+
 \[
 R \frac{\partial}{\partial R}\left(\frac{1}{R}\frac{\partial \psi}{\partial R}\right) + \frac{\partial^2 \psi}{\partial Z^2} = -\mu_0 R^2 \frac{dp}{d\psi} - F\frac{dF}{d\psi},
 \]
@@ -467,6 +505,7 @@ In astrophysical contexts, particularly in the solar corona and magnetosphere, t
 
 <div class="definition">
 <strong>Definition 4.3 (Force-Free Field).</strong> A magnetic field is <em>force-free</em> if
+
 \[
 \nabla \times \mathbf{B} = \alpha(\mathbf{x})\mathbf{B},
 \]
@@ -477,6 +516,7 @@ Taking the divergence of the force-free equation and using \(\nabla \cdot \mathb
 
 <div class="example">
 <strong>Example 4.2 (Lundquist's Force-Free Cylinder).</strong> The simplest force-free equilibrium in cylindrical geometry is the Lundquist solution (1950), in which \(\alpha\) is constant and the field has the form
+
 \[
 B_z(r) = B_0 J_0(\alpha r), \quad B_\phi(r) = B_0 J_1(\alpha r),
 \]
@@ -493,6 +533,7 @@ Magnetic helicity is a topological invariant of ideal MHD that measures the link
 
 <div class="definition">
 <strong>Definition 4.4 (Magnetic Helicity).</strong> The <em>magnetic helicity</em> of a field \(\mathbf{B} = \nabla \times \mathbf{A}\) contained in a volume \(V\) with \(\mathbf{B} \cdot \hat{\mathbf{n}} = 0\) on \(\partial V\) is
+
 \[
 H = \int_V \mathbf{A} \cdot \mathbf{B}\;dV.
 \]
@@ -503,6 +544,7 @@ The conservation of helicity in ideal MHD was proved by Woltjer (1958), who also
 
 <div class="theorem">
 <strong>Theorem 4.2 (Woltjer's Theorem).</strong> Among all divergence-free magnetic fields in a simply connected volume \(V\) with \(\mathbf{B} \cdot \hat{\mathbf{n}} = 0\) on \(\partial V\), the field of minimum magnetic energy \(\int B^2/(2\mu_0)\,dV\) at fixed magnetic helicity \(H\) satisfies
+
 \[
 \nabla \times \mathbf{B} = \alpha \mathbf{B},
 \]
@@ -511,6 +553,7 @@ where \(\alpha\) is a constant (the Lagrange multiplier associated with the heli
 
 <div class="proof">
 <strong>Proof.</strong> We minimise the magnetic energy \(W = \int B^2/(2\mu_0)\,dV\) subject to the constraint that the helicity \(H = \int \mathbf{A} \cdot \mathbf{B}\,dV\) is fixed. Using the calculus of variations with Lagrange multiplier \(\alpha/(2\mu_0)\), the first variation gives
+
 \[
 \delta W - \frac{\alpha}{2\mu_0}\delta H = \frac{1}{\mu_0}\int (\mathbf{B} - \alpha\mathbf{A}) \cdot \delta\mathbf{B}\,dV + \text{boundary terms} = 0.
 \]
@@ -545,6 +588,7 @@ where \(\mathbf{F}\) is the force operator, a linear operator acting on \(\bolds
 
 <div class="definition">
 <strong>Definition 5.1 (MHD Force Operator).</strong> The <em>force operator</em> for ideal MHD perturbations about a static equilibrium is
+
 \[
 \mathbf{F}(\boldsymbol{\xi}) = \nabla(\boldsymbol{\xi} \cdot \nabla p_0 + \gamma p_0 \nabla \cdot \boldsymbol{\xi}) + \frac{1}{\mu_0}(\nabla \times \mathbf{B}_0) \times \mathbf{Q} + \frac{1}{\mu_0}(\nabla \times \mathbf{Q}) \times \mathbf{B}_0,
 \]
@@ -557,6 +601,7 @@ A fundamental property of this operator, proved by Bernstein, Frieman, Kruskal, 
 
 <div class="theorem">
 <strong>Theorem 5.1 (Energy Principle, Bernstein et al. 1958).</strong> The force operator \(\mathbf{F}\) is self-adjoint with respect to the inner product \(\langle \boldsymbol{\eta}, \boldsymbol{\xi} \rangle = \int \boldsymbol{\eta}^* \cdot \boldsymbol{\xi} \,\rho_0\, dV\). Consequently, all eigenvalues \(\omega^2\) are real. The equilibrium is stable if and only if the potential energy functional
+
 \[
 \delta W(\boldsymbol{\xi}) = -\frac{1}{2}\int_V \boldsymbol{\xi}^* \cdot \mathbf{F}(\boldsymbol{\xi})\,dV \geq 0
 \]
@@ -579,6 +624,7 @@ where \(\delta W_p\) is the plasma contribution, \(\delta W_s\) the surface cont
 
 <div class="theorem">
 <strong>Theorem 5.2 (Plasma Potential Energy).</strong> The plasma contribution to \(\delta W\) is
+
 \[
 \delta W_p = \frac{1}{2}\int_V \left[\frac{|\mathbf{Q}|^2}{\mu_0} + \gamma p_0 |\nabla \cdot \boldsymbol{\xi}|^2 + (\boldsymbol{\xi} \cdot \nabla p_0)(\nabla \cdot \boldsymbol{\xi}^*) - \boldsymbol{\xi}^* \cdot (\mathbf{J}_0 \times \mathbf{Q})\right] dV.
 \]
@@ -589,6 +635,7 @@ This decomposition is the basis for understanding all MHD instabilities in terms
 
 <div class="lemma">
 <strong>Lemma 5.1 (Suydam's Criterion).</strong> In a cylindrical plasma with circular magnetic surfaces labelled by \(r\), the necessary condition for stability against localised interchange modes (perturbations concentrated near a resonant surface) is
+
 \[
 \frac{r}{4}\left(\frac{q'}{q}\right)^2 + \frac{2\mu_0 p'}{r B_z^2} \geq 0,
 \]
@@ -607,6 +654,7 @@ The interchange instability is the MHD analogue of the Rayleigh-Taylor instabili
 
 <div class="definition">
 <strong>Definition 5.2 (Interchange Modes).</strong> An <em>interchange</em> perturbation swaps neighbouring flux tubes without bending the field lines (i.e., \(\mathbf{Q}_\perp \approx 0\)). The stability criterion for interchange modes in a magnetic configuration with curvature vector \(\boldsymbol{\kappa} = (\hat{\mathbf{b}} \cdot \nabla)\hat{\mathbf{b}}\) is
+
 \[
 \nabla p \cdot \boldsymbol{\kappa} < 0 \quad \text{(stable)}, \quad \nabla p \cdot \boldsymbol{\kappa} > 0 \quad \text{(unstable)}.
 \]
@@ -623,6 +671,7 @@ The kink instability is a current-driven instability that occurs in cylindrical 
 
 <div class="theorem">
 <strong>Theorem 5.3 (Kruskal-Shafranov Criterion).</strong> A cylindrical plasma column of radius \(a\) carrying axial current \(I\) in an axial field \(B_z\), with safety factor
+
 \[
 q(a) = \frac{2\pi a B_z}{\mu_0 I},
 \]
@@ -647,6 +696,7 @@ The ballooning stability limit provides the most stringent constraint on the ach
 
 <div class="example">
 <strong>Example 5.5 (Troyon Limit).</strong> The maximum achievable normalised beta in a tokamak, as determined by a combination of kink and ballooning stability limits, satisfies the empirical Troyon scaling:
+
 \[
 \beta_{\max}(\%) \approx \beta_N \frac{I_p(\text{MA})}{a(\text{m})\,B_T(\text{T})},
 \]
@@ -659,6 +709,7 @@ The classical hydrodynamic instabilities of Rayleigh-Taylor (heavy fluid over li
 
 <div class="theorem">
 <strong>Theorem 5.4 (Rayleigh-Taylor in MHD).</strong> Consider a horizontal interface separating a fluid of density \(\rho_1\) (above) from \(\rho_2\) (below) with gravity \(\mathbf{g} = -g\hat{\mathbf{z}}\) and a horizontal magnetic field \(\mathbf{B}_0 = B_0 \hat{\mathbf{x}}\). The dispersion relation for perturbations with wavevector \(\mathbf{k} = k_x \hat{\mathbf{x}} + k_y \hat{\mathbf{y}}\) is
+
 \[
 \omega^2 = -\frac{(\rho_1 - \rho_2) g k}{(\rho_1 + \rho_2)} + \frac{2 k_x^2 B_0^2}{\mu_0(\rho_1 + \rho_2)},
 \]
@@ -677,6 +728,7 @@ The Kelvin-Helmholtz instability arises at a shear layer between two fluid strea
 
 <div class="example">
 <strong>Example 5.4 (Kelvin-Helmholtz with Magnetic Field).</strong> For the Kelvin-Helmholtz instability at an interface with velocity jump \(\Delta U\) and aligned magnetic field \(B_0\), the growth rate is
+
 \[
 \omega^2 = -\frac{\rho_1 \rho_2}{(\rho_1 + \rho_2)^2}(k \cdot \Delta\mathbf{U})^2 + \frac{(\mathbf{k} \cdot \mathbf{B}_0)^2}{\mu_0(\rho_1 + \rho_2)}.
 \]
@@ -699,6 +751,7 @@ The fundamental problem of reconnection theory is one of scale separation. Consi
 
 <div class="definition">
 <strong>Definition 6.1 (Lundquist Number).</strong> The <em>Lundquist number</em> is the magnetic Reynolds number based on the Alfvén speed:
+
 \[
 S = \frac{v_A L}{\eta},
 \]
@@ -713,10 +766,12 @@ The first quantitative model of reconnection was developed independently by Pete
 
 <div class="theorem">
 <strong>Theorem 6.1 (Sweet-Parker Reconnection Rate).</strong> In the Sweet-Parker model, the inflow velocity \(v_i\), outflow velocity \(v_o\), and layer width \(\delta\) satisfy:
+
 \[
 v_o \sim v_A, \quad \delta \sim \frac{L}{\sqrt{S}}, \quad v_i \sim \frac{v_A}{\sqrt{S}},
 \]
 and the dimensionless reconnection rate is
+
 \[
 M_A = \frac{v_i}{v_A} \sim S^{-1/2}.
 \]
@@ -742,6 +797,7 @@ Harry Petschek (1964) proposed that the reconnection layer need not extend over 
 
 <div class="theorem">
 <strong>Theorem 6.2 (Petschek Reconnection Rate).</strong> In Petschek's model, the reconnection rate is
+
 \[
 M_A \sim \frac{\pi}{8\ln S},
 \]
@@ -760,6 +816,7 @@ Even when reconnection is not being driven externally, a current sheet can be sp
 
 <div class="theorem">
 <strong>Theorem 6.3 (Tearing Mode Growth Rate).</strong> A Harris current sheet \(\mathbf{B} = B_0 \tanh(y/a)\hat{\mathbf{x}}\) of half-width \(a\) is unstable to perturbations with wavenumber \(k < 1/a\). The growth rate scales as
+
 \[
 \gamma \sim \frac{v_A}{a}\left(\frac{a}{L_\eta}\right)^{3/5}(ka)^{2/5} \sim \tau_A^{-3/5}\tau_\eta^{-2/5},
 \]
@@ -778,6 +835,7 @@ In weakly collisional plasmas (the solar wind, magnetosphere, solar corona), the
 
 <div class="definition">
 <strong>Definition 6.2 (Hall MHD Reconnection).</strong> In <em>Hall MHD</em>, the generalised Ohm's law includes the Hall term:
+
 \[
 \mathbf{E} + \mathbf{u} \times \mathbf{B} = \frac{1}{ne}\mathbf{J} \times \mathbf{B} - \frac{1}{ne}\nabla \cdot \mathsf{P}_e + \eta\mathbf{J}.
 \]
@@ -810,6 +868,7 @@ In the kinematic dynamo problem, we study the evolution of the magnetic field un
 
 <div class="definition">
 <strong>Definition 7.1 (Kinematic Dynamo).</strong> A velocity field \(\mathbf{u}(\mathbf{x}, t)\) is a <em>kinematic dynamo</em> if the solution of the induction equation
+
 \[
 \frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{u} \times \mathbf{B}) + \eta \nabla^2 \mathbf{B}
 \]
@@ -850,6 +909,7 @@ Real astrophysical flows are turbulent, and we cannot hope to track the magnetic
 
 <div class="definition">
 <strong>Definition 7.2 (Mean-Field Decomposition).</strong> Decompose the velocity and magnetic fields into mean and fluctuating parts:
+
 \[
 \mathbf{u} = \overline{\mathbf{u}} + \mathbf{u}', \quad \mathbf{B} = \overline{\mathbf{B}} + \mathbf{B}',
 \]
@@ -866,6 +926,7 @@ where \(\boldsymbol{\mathcal{E}} = \overline{\mathbf{u}' \times \mathbf{B}'}\) i
 
 <div class="theorem">
 <strong>Theorem 7.3 (Alpha Effect).</strong> For turbulence that is statistically homogeneous and isotropic but lacks mirror symmetry (i.e., has nonzero helicity), the mean emf can be expanded as
+
 \[
 \boldsymbol{\mathcal{E}} = \alpha \overline{\mathbf{B}} - \beta \nabla \times \overline{\mathbf{B}} + \cdots,
 \]
@@ -897,6 +958,7 @@ The \(\alpha\Omega\)-dynamo model, when applied to the Sun, naturally produces o
 
 <div class="theorem">
 <strong>Theorem 7.4 (Dynamo Wave Dispersion Relation).</strong> For the \(\alpha\Omega\)-dynamo in a Cartesian slab with \(\alpha = \alpha_0 = \text{const}\) and uniform shear \(G = R\,d\Omega/dr\), the mean-field equations for the toroidal field \(B\) and poloidal potential \(A\) yield travelling-wave solutions with complex frequency
+
 \[
 \omega = (1 + i)\left(\frac{\alpha_0 G k}{2\eta_T}\right)^{1/2} - i\eta_T k^2.
 \]
@@ -911,6 +973,7 @@ A dynamo is called "fast" if its growth rate remains bounded away from zero as \
 
 <div class="definition">
 <strong>Definition 7.4 (Fast Dynamo).</strong> A kinematic dynamo is <em>fast</em> if the maximal growth rate \(p_{\max}\) of the magnetic field satisfies
+
 \[
 \liminf_{\mathrm{Rm} \to \infty} \text{Re}(p_{\max}) > 0.
 \]
@@ -959,6 +1022,7 @@ The fundamental kinetic description of a collisionless plasma is the Vlasov-Maxw
 
 <div class="definition">
 <strong>Definition 8.1 (Vlasov Equation).</strong> The <em>Vlasov equation</em> for species \(s\) (electrons or ions) with mass \(m_s\) and charge \(q_s\) is
+
 \[
 \frac{\partial f_s}{\partial t} + \mathbf{v} \cdot \nabla f_s + \frac{q_s}{m_s}(\mathbf{E} + \mathbf{v} \times \mathbf{B}) \cdot \frac{\partial f_s}{\partial \mathbf{v}} = 0,
 \]
@@ -973,13 +1037,16 @@ When collisions are rare but the Larmor radius is small compared to the macrosco
 
 <div class="theorem">
 <strong>Theorem 8.1 (CGL Equations).</strong> In the CGL double-adiabatic theory, the pressure tensor is
+
 \[
 \mathsf{P} = p_\perp \mathsf{I} + (p_\parallel - p_\perp)\hat{\mathbf{b}}\hat{\mathbf{b}},
 \]
 where \(\hat{\mathbf{b}} = \mathbf{B}/B\) is the unit vector along the magnetic field, and \(p_\parallel\), \(p_\perp\) are the pressures parallel and perpendicular to \(\mathbf{B}\). In the absence of heat fluxes, the two adiabatic invariants are:
+
 \[
 \frac{d}{dt}\left(\frac{p_\perp}{\rho B}\right) = 0 \quad \text{(conservation of magnetic moment)},
 \]
+
 \[
 \frac{d}{dt}\left(\frac{p_\parallel B^2}{\rho^3}\right) = 0 \quad \text{(conservation of the parallel adiabatic invariant)}.
 \]
@@ -1007,6 +1074,7 @@ For many plasma physics applications, including turbulence in fusion devices and
 
 <div class="definition">
 <strong>Definition 8.2 (Gyrokinetic Ordering).</strong> The <em>gyrokinetic ordering</em> assumes
+
 \[
 \frac{\omega}{\Omega_i} \sim \frac{k_\parallel}{k_\perp} \sim \frac{\delta B}{B} \sim \frac{\delta n}{n} \sim \epsilon \ll 1,
 \]
@@ -1029,10 +1097,12 @@ One of the most important kinetic effects absent from fluid MHD is Landau dampin
 
 <div class="theorem">
 <strong>Theorem 8.2 (Landau Damping).</strong> Consider an electrostatic wave with frequency \(\omega\) and wavenumber \(k\) in a Vlasov plasma with equilibrium distribution \(f_0(v)\). The dispersion relation has a complex frequency
+
 \[
 \omega = \omega_r + i\gamma,
 \]
 where the damping rate for weak damping (\(|\gamma| \ll \omega_r\)) is
+
 \[
 \gamma = -\frac{\pi \omega_r^3}{2 k^2} \frac{q^2}{m \varepsilon_0} \left.\frac{\partial f_0}{\partial v}\right|_{v = \omega_r/k}.
 \]
@@ -1075,6 +1145,7 @@ As a final example of MHD physics beyond the classical topics, we briefly discus
 
 <div class="theorem">
 <strong>Theorem 8.4 (Magnetorotational Instability, Balbus and Hawley 1991).</strong> A differentially rotating, conducting fluid with angular velocity \(\Omega(R)\) decreasing outward (\(d\Omega^2/dR < 0\)) is unstable in the presence of a weak vertical magnetic field \(\mathbf{B} = B_z \hat{\mathbf{z}}\), provided
+
 \[
 \frac{d\Omega^2}{d\ln R} < 0.
 \]

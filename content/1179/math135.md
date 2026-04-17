@@ -126,7 +126,10 @@ A <strong>direct proof</strong> of \(A \Rightarrow B\) assumes \(A\) is true and
 <div class="definition">
 
 <strong>Definition 7.2.3 (Set-builder Notation).</strong> If \(S\) has defining property \(P(x)\), then
-\[S = \{x \in U : P(x)\}.\]
+
+\[
+S = \{x \in U : P(x)\}.
+\]
 The part after the colon is the defining property of the set.
 
 </div>
@@ -208,8 +211,14 @@ The part after the colon is the defining property of the set.
 ## Section 2.3: Quantifiers
 
 The <strong>universal quantifier</strong> \(\forall\) means "for all"; the <strong>existential quantifier</strong> \(\exists\) means "there exists". Negation rules:
-\[\neg[\forall x \in S,\, P(x)] \equiv \exists x \in S,\, \neg P(x)\]
-\[\neg[\exists x \in S,\, P(x)] \equiv \forall x \in S,\, \neg P(x)\]
+
+\[
+\neg[\forall x \in S,\, P(x)] \equiv \exists x \in S,\, \neg P(x)
+\]
+
+\[
+\neg[\exists x \in S,\, P(x)] \equiv \forall x \in S,\, \neg P(x)
+\]
 
 <div class="definition">
 
@@ -278,7 +287,10 @@ To prove a statement \(C\) by contradiction, assume \(\neg C\) and derive a cont
 <div class="proposition">
 
 <strong>Proposition (Division Algorithm).</strong> If \(a\) and \(b\) are integers with \(b > 0\), then there exist unique integers \(q\) (quotient) and \(r\) (remainder) such that
-\[a = qb + r \quad\text{where } 0 \leq r < b.\]
+
+\[
+a = qb + r \quad\text{where } 0 \leq r < b.
+\]
 
 </div>
 
@@ -475,7 +487,10 @@ Also known as the <strong>Fundamental Theorem of Arithmetic</strong>.
 <div class="proposition">
 
 <strong>Proposition (GCD From Prime Factorization, GCD PF).</strong> If \(a = p_1^{\alpha_1} \cdots p_k^{\alpha_k}\) and \(b = p_1^{\beta_1} \cdots p_k^{\beta_k}\), then
-\[\gcd(a,b) = p_1^{d_1} \cdots p_k^{d_k} \quad\text{where } d_i = \min\{\alpha_i, \beta_i\}.\]
+
+\[
+\gcd(a,b) = p_1^{d_1} \cdots p_k^{d_k} \quad\text{where } d_i = \min\{\alpha_i, \beta_i\}.
+\]
 
 </div>
 
@@ -498,7 +513,10 @@ Also known as the <strong>Fundamental Theorem of Arithmetic</strong>.
 <div class="theorem">
 
 <strong>Theorem (LDET 2).</strong> Let \(\gcd(a,b) = d\) where both \(a,b\) are not zero. If \(x = x_0, y = y_0\) is one particular solution to \(ax + by = c\), then the complete solution is
-\[x = x_0 + \frac{b}{d}\,n, \quad y = y_0 - \frac{a}{d}\,n, \quad \text{for all } n \in \mathbb{Z}.\]
+
+\[
+x = x_0 + \frac{b}{d}\,n, \quad y = y_0 - \frac{a}{d}\,n, \quad \text{for all } n \in \mathbb{Z}.
+\]
 
 </div>
 
@@ -557,7 +575,10 @@ As a corollary, if \(a \equiv b \pmod{m}\), then \(a^n \equiv b^n \pmod{m}\) for
 <div class="theorem">
 
 <strong>Theorem (Linear Congruence Theorem, Version 1, LCT 1).</strong> Let \(d = \gcd(a,m)\). The congruence \(ax \equiv c \pmod{m}\) has a solution iff \(d \mid c\). If \(x_0\) is one solution, the complete solution is
-\[x \equiv x_0 \pmod{\frac{m}{d}}\]
+
+\[
+x \equiv x_0 \pmod{\frac{m}{d}}
+\]
 which gives \(d\) distinct solutions modulo \(m\).
 
 </div>
@@ -601,7 +622,10 @@ which gives \(d\) distinct solutions modulo \(m\).
 <div class="definition">
 
 <strong>Definition 26.2.1 (Congruence Class).</strong> The congruence class modulo \(m\) of the integer \(a\) is
-\[[a] = \{x \in \mathbb{Z} \mid x \equiv a \pmod{m}\}.\]
+
+\[
+[a] = \{x \in \mathbb{Z} \mid x \equiv a \pmod{m}\}.
+\]
 
 </div>
 
@@ -656,7 +680,10 @@ In \(\mathbb{Z}_m\), the additive identity is \([0]\), the multiplicative identi
 <div class="theorem">
 
 <strong>Theorem (Chinese Remainder Theorem, CRT).</strong> If \(\gcd(m_1, m_2) = 1\), then the simultaneous congruences
-\[n \equiv a_1 \pmod{m_1}, \quad n \equiv a_2 \pmod{m_2}\]
+
+\[
+n \equiv a_1 \pmod{m_1}, \quad n \equiv a_2 \pmod{m_2}
+\]
 have a unique solution modulo \(m_1 m_2\).
 
 </div>
@@ -670,7 +697,10 @@ have a unique solution modulo \(m_1 m_2\).
 <div class="theorem">
 
 <strong>Theorem (Splitting Modulus, SM).</strong> Let \(m_1, m_2\) be coprime positive integers. Then
-\[x \equiv a \pmod{m_1 m_2} \iff \begin{cases} x \equiv a \pmod{m_1} \\ x \equiv a \pmod{m_2} \end{cases}\]
+
+\[
+x \equiv a \pmod{m_1 m_2} \iff \begin{cases} x \equiv a \pmod{m_1} \\ x \equiv a \pmod{m_2} \end{cases}
+\]
 
 </div>
 
@@ -807,7 +837,10 @@ The proof uses Fermat's Little Theorem modulo \(p\) and modulo \(q\) separately,
 <div class="proposition">
 
 <strong>Proposition (Polar Multiplication, PMCN).</strong> If \(z_1 = r_1(\cos\theta_1 + i\sin\theta_1)\) and \(z_2 = r_2(\cos\theta_2 + i\sin\theta_2)\), then
-\[z_1 z_2 = r_1 r_2(\cos(\theta_1+\theta_2) + i\sin(\theta_1+\theta_2)).\]
+
+\[
+z_1 z_2 = r_1 r_2(\cos(\theta_1+\theta_2) + i\sin(\theta_1+\theta_2)).
+\]
 
 </div>
 
@@ -816,7 +849,10 @@ The proof uses Fermat's Little Theorem modulo \(p\) and modulo \(q\) separately,
 <div class="theorem">
 
 <strong>Theorem (De Moivre's Theorem, DMT).</strong> For \(\theta \in \mathbb{R}\) and \(n \in \mathbb{Z}\),
-\[(\cos\theta + i\sin\theta)^n = \cos(n\theta) + i\sin(n\theta).\]
+
+\[
+(\cos\theta + i\sin\theta)^n = \cos(n\theta) + i\sin(n\theta).
+\]
 
 </div>
 
@@ -853,7 +889,10 @@ Setting \(\theta = \pi\) yields Euler's identity: \(e^{i\pi} + 1 = 0\).
 <div class="theorem">
 
 <strong>Theorem (Complex \(n\)-th Roots Theorem, CNRT).</strong> If \(a = r(\cos\theta + i\sin\theta)\), the solutions to \(z^n = a\) are
-\[\sqrt[n]{r}\left(\cos\frac{\theta+2k\pi}{n} + i\sin\frac{\theta+2k\pi}{n}\right) \quad\text{for } k = 0,1,\ldots,n-1.\]
+
+\[
+\sqrt[n]{r}\left(\cos\frac{\theta+2k\pi}{n} + i\sin\frac{\theta+2k\pi}{n}\right) \quad\text{for } k = 0,1,\ldots,n-1.
+\]
 
 </div>
 
@@ -890,7 +929,10 @@ Every nonzero complex number has exactly \(n\) distinct \(n\)-th roots, uniforml
 <div class="proposition">
 
 <strong>Proposition (Division Algorithm for Polynomials, DAP).</strong> If \(f(x), g(x) \in F[x]\) and \(g(x)\) is not the zero polynomial, then there exist unique \(q(x), r(x) \in F[x]\) such that
-\[f(x) = q(x)g(x) + r(x)\]
+
+\[
+f(x) = q(x)g(x) + r(x)
+\]
 where \(r(x)\) is zero or \(\deg r(x) < \deg g(x)\).
 
 </div>
@@ -948,7 +990,10 @@ where \(r(x)\) is zero or \(\deg r(x) < \deg g(x)\).
 <div class="proposition">
 
 <strong>Proposition (CPN).</strong> If \(f(z)\) is a complex polynomial of degree \(n \geq 1\), then there exist \(c_1, \ldots, c_n \in \mathbb{C}\) and \(c \neq 0\) such that
-\[f(z) = c(z - c_1)(z - c_2)\cdots(z - c_n).\]
+
+\[
+f(z) = c(z - c_1)(z - c_2)\cdots(z - c_n).
+\]
 
 </div>
 

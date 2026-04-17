@@ -37,11 +37,15 @@ Key concepts from probability that carry over: expectation \( E[Y_t] = \mu_t \),
 
 The **autocovariance function (ACVF)** of a weakly stationary process:
 
-\[ \gamma(h) = \text{Cov}(Y_t, Y_{t-h}) = E[(Y_t - \mu)(Y_{t-h} - \mu)] \]
+\[
+\gamma(h) = \text{Cov}(Y_t, Y_{t-h}) = E[(Y_t - \mu)(Y_{t-h} - \mu)]
+\]
 
 The **autocorrelation function (ACF)** is:
 
-\[ \rho(h) = \frac{\gamma(h)}{\gamma(0)} = \text{Corr}(Y_t, Y_{t-h}) \in [-1, 1] \]
+\[
+\rho(h) = \frac{\gamma(h)}{\gamma(0)} = \text{Corr}(Y_t, Y_{t-h}) \in [-1, 1]
+\]
 
 Properties: \( \rho(0) = 1 \), \( \rho(h) = \rho(-h) \), and \( |\rho(h)| \leq 1 \). The sample ACF \( \hat{\rho}(h) \) is computed from the data and compared to the Bartlett \( \pm 1.96/\sqrt{T} \) confidence bands to identify significant autocorrelation.
 
@@ -82,7 +86,9 @@ The simplest time series model is **white noise**: \( \{\varepsilon_t\} \sim WN(
 
 A **Moving Average process of order q** — MA(\( q \)) — is a linear filter applied to white noise:
 
-\[ Y_t = \mu + \varepsilon_t + \theta_1\varepsilon_{t-1} + \theta_2\varepsilon_{t-2} + \cdots + \theta_q\varepsilon_{t-q} \]
+\[
+Y_t = \mu + \varepsilon_t + \theta_1\varepsilon_{t-1} + \theta_2\varepsilon_{t-2} + \cdots + \theta_q\varepsilon_{t-q}
+\]
 
 In lag operator notation, \( Y_t = \mu + \Theta(L)\varepsilon_t \) where \( \Theta(L) = 1 + \theta_1 L + \cdots + \theta_q L^q \) and \( L^k Y_t = Y_{t-k} \).
 
@@ -97,7 +103,9 @@ Properties of MA(\( q \)):
 
 An **Autoregressive process of order p** — AR(\( p \)) — expresses the current value as a linear combination of past values plus white noise:
 
-\[ Y_t = c + \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_p Y_{t-p} + \varepsilon_t \]
+\[
+Y_t = c + \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_p Y_{t-p} + \varepsilon_t
+\]
 
 or compactly \( \Phi(L)Y_t = c + \varepsilon_t \) where \( \Phi(L) = 1 - \phi_1 L - \cdots - \phi_p L^p \).
 
@@ -107,7 +115,9 @@ or compactly \( \Phi(L)Y_t = c + \varepsilon_t \) where \( \Phi(L) = 1 - \phi_1 
 
 Properties of AR(1), \( Y_t = \phi Y_{t-1} + \varepsilon_t \), \( |\phi| < 1 \):
 
-\[ \mu = 0, \quad \gamma(0) = \frac{\sigma^2}{1-\phi^2}, \quad \rho(h) = \phi^{|h|} \]
+\[
+\mu = 0, \quad \gamma(0) = \frac{\sigma^2}{1-\phi^2}, \quad \rho(h) = \phi^{|h|}
+\]
 
 The ACF of a stationary AR(\( p \)) decays geometrically (or sinusoidally for complex roots); the PACF cuts off after lag \( p \). This mirrors the MA pattern with ACF and PACF roles reversed.
 
@@ -115,9 +125,13 @@ The ACF of a stationary AR(\( p \)) decays geometrically (or sinusoidally for co
 
 The **ARMA(\( p, q \))** model combines AR and MA components:
 
-\[ \Phi(L)Y_t = c + \Theta(L)\varepsilon_t \]
+\[
+\Phi(L)Y_t = c + \Theta(L)\varepsilon_t
+\]
 
-\[ Y_t - \phi_1 Y_{t-1} - \cdots - \phi_p Y_{t-p} = c + \varepsilon_t + \theta_1\varepsilon_{t-1} + \cdots + \theta_q\varepsilon_{t-q} \]
+\[
+Y_t - \phi_1 Y_{t-1} - \cdots - \phi_p Y_{t-p} = c + \varepsilon_t + \theta_1\varepsilon_{t-1} + \cdots + \theta_q\varepsilon_{t-q}
+\]
 
 Stationarity requires roots of \( \Phi(z) \) outside the unit circle; invertibility requires roots of \( \Theta(z) \) outside the unit circle. The **Wold decomposition theorem** states that every covariance-stationary process can be written as MA(\( \infty \)), justifying ARMA as a flexible approximation class.
 
@@ -133,13 +147,17 @@ Stationarity requires roots of \( \Phi(z) \) outside the unit circle; invertibil
 
 ARMA parameters are most commonly estimated by **MLE**, assuming normal errors:
 
-\[ \ell(\boldsymbol{\phi}, \boldsymbol{\theta}, \sigma^2) = -\frac{T}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2}\sum_{t=1}^T (Y_t - \hat{Y}_t)^2 \]
+\[
+\ell(\boldsymbol{\phi}, \boldsymbol{\theta}, \sigma^2) = -\frac{T}{2}\ln(2\pi\sigma^2) - \frac{1}{2\sigma^2}\sum_{t=1}^T (Y_t - \hat{Y}_t)^2
+\]
 
 where \( \hat{Y}_t = E[Y_t \mid Y_{t-1}, Y_{t-2}, \ldots] \) is the one-step-ahead forecast.
 
 Model order is selected by information criteria. For ARMA(\( p, q \)) with \( k = p + q + 1 \) parameters:
 
-\[ \text{AIC}(p,q) = -2\ell + 2k, \qquad \text{BIC}(p,q) = -2\ell + k\ln T \]
+\[
+\text{AIC}(p,q) = -2\ell + 2k, \qquad \text{BIC}(p,q) = -2\ell + k\ln T
+\]
 
 Choose \( (p,q) \) minimizing AIC or BIC. BIC is consistent for the true order; AIC tends to overfit in large samples.
 
@@ -151,17 +169,23 @@ Choose \( (p,q) \) minimizing AIC or BIC. BIC is consistent for the true order; 
 
 The **minimum mean squared error (MMSE) forecast** of \( Y_{T+h} \) given information \( \mathcal{F}_T = \{Y_T, Y_{T-1}, \ldots\} \) is the conditional expectation:
 
-\[ \hat{Y}_{T+h|T} = E[Y_{T+h} \mid \mathcal{F}_T] \]
+\[
+\hat{Y}_{T+h|T} = E[Y_{T+h} \mid \mathcal{F}_T]
+\]
 
 For AR(1): \( \hat{Y}_{T+h|T} = \phi^h Y_T \). The forecast converges to the mean as \( h \to \infty \) (since \( |\phi| < 1 \)).
 
 The \( h \)-step-ahead **forecast error** is \( e_{T+h|T} = Y_{T+h} - \hat{Y}_{T+h|T} \), with variance:
 
-\[ \text{Var}(e_{T+h|T}) = \sigma^2\sum_{j=0}^{h-1}\psi_j^2 \]
+\[
+\text{Var}(e_{T+h|T}) = \sigma^2\sum_{j=0}^{h-1}\psi_j^2
+\]
 
 where \( \psi_j \) are the MA(\( \infty \)) coefficients. A \( 95\% \) forecast interval is:
 
-\[ \hat{Y}_{T+h|T} \pm 1.96\,\hat{\sigma}\sqrt{\sum_{j=0}^{h-1}\hat{\psi}_j^2} \]
+\[
+\hat{Y}_{T+h|T} \pm 1.96\,\hat{\sigma}\sqrt{\sum_{j=0}^{h-1}\hat{\psi}_j^2}
+\]
 
 ## 4.2 Forecast Evaluation
 
@@ -179,9 +203,13 @@ where \( \psi_j \) are the MA(\( \infty \)) coefficients. A \( 95\% \) forecast 
 
 Engle (1982) introduced the **Autoregressive Conditional Heteroskedasticity (ARCH)** model to capture the stylized fact that large return innovations cluster in time. Define the conditional variance \( h_t = \text{Var}(\varepsilon_t \mid \mathcal{F}_{t-1}) \). The ARCH(\( q \)) model:
 
-\[ \varepsilon_t = \sqrt{h_t}\, z_t, \quad z_t \sim \text{i.i.d.}(0,1) \]
+\[
+\varepsilon_t = \sqrt{h_t}\, z_t, \quad z_t \sim \text{i.i.d.}(0,1)
+\]
 
-\[ h_t = \omega + \alpha_1\varepsilon_{t-1}^2 + \alpha_2\varepsilon_{t-2}^2 + \cdots + \alpha_q\varepsilon_{t-q}^2 \]
+\[
+h_t = \omega + \alpha_1\varepsilon_{t-1}^2 + \alpha_2\varepsilon_{t-2}^2 + \cdots + \alpha_q\varepsilon_{t-q}^2
+\]
 
 Stationarity requires \( \omega > 0 \), \( \alpha_j \geq 0 \), and \( \sum_{j=1}^q \alpha_j < 1 \). The unconditional variance is \( \sigma^2 = \omega / (1 - \sum_j\alpha_j) \). ARCH generates heavy-tailed unconditional distributions even when \( z_t \sim N(0,1) \).
 
@@ -189,11 +217,15 @@ Stationarity requires \( \omega > 0 \), \( \alpha_j \geq 0 \), and \( \sum_{j=1}
 
 Bollerslev (1986) extended ARCH with lagged conditional variance terms — the **Generalized ARCH (GARCH(\( p,q \)))** model:
 
-\[ h_t = \omega + \sum_{i=1}^q \alpha_i\varepsilon_{t-i}^2 + \sum_{j=1}^p \beta_j h_{t-j} \]
+\[
+h_t = \omega + \sum_{i=1}^q \alpha_i\varepsilon_{t-i}^2 + \sum_{j=1}^p \beta_j h_{t-j}
+\]
 
 The GARCH(1,1) is by far the most widely used volatility model:
 
-\[ h_t = \omega + \alpha\varepsilon_{t-1}^2 + \beta h_{t-1} \]
+\[
+h_t = \omega + \alpha\varepsilon_{t-1}^2 + \beta h_{t-1}
+\]
 
 <div class="theorem">
 <strong>GARCH(1,1) Properties:</strong>
@@ -211,13 +243,17 @@ When \( \alpha + \beta = 1 \), the IGARCH (Integrated GARCH) model obtains: shoc
 
 **EGARCH (Exponential GARCH — Nelson 1991):** Models the log of conditional variance, naturally ensuring \( h_t > 0 \) without sign constraints. Captures the **leverage effect** (asymmetric response to positive vs. negative shocks):
 
-\[ \ln h_t = \omega + \beta\ln h_{t-1} + \gamma\frac{\varepsilon_{t-1}}{\sqrt{h_{t-1}}} + \alpha\!\left(\frac{|\varepsilon_{t-1}|}{\sqrt{h_{t-1}}} - \sqrt{2/\pi}\right) \]
+\[
+\ln h_t = \omega + \beta\ln h_{t-1} + \gamma\frac{\varepsilon_{t-1}}{\sqrt{h_{t-1}}} + \alpha\!\left(\frac{|\varepsilon_{t-1}|}{\sqrt{h_{t-1}}} - \sqrt{2/\pi}\right)
+\]
 
 A negative \( \gamma < 0 \) captures the leverage effect: negative returns raise volatility more than positive returns.
 
 **GJR-GARCH (Glosten-Jagannathan-Runkle 1993):**
 
-\[ h_t = \omega + \alpha\varepsilon_{t-1}^2 + \gamma\varepsilon_{t-1}^2\mathbf{1}(\varepsilon_{t-1} < 0) + \beta h_{t-1} \]
+\[
+h_t = \omega + \alpha\varepsilon_{t-1}^2 + \gamma\varepsilon_{t-1}^2\mathbf{1}(\varepsilon_{t-1} < 0) + \beta h_{t-1}
+\]
 
 Stationarity requires \( \alpha + \gamma/2 + \beta < 1 \). If \( \gamma > 0 \), negative shocks raise volatility disproportionately.
 
@@ -225,7 +261,9 @@ Stationarity requires \( \alpha + \gamma/2 + \beta < 1 \). If \( \gamma > 0 \), 
 
 GARCH parameters are estimated by **Quasi-MLE (QMLE)** assuming conditional normality:
 
-\[ \ell(\boldsymbol{\theta}) = \sum_{t=1}^T \left[-\frac{1}{2}\ln h_t - \frac{\varepsilon_t^2}{2h_t}\right] \]
+\[
+\ell(\boldsymbol{\theta}) = \sum_{t=1}^T \left[-\frac{1}{2}\ln h_t - \frac{\varepsilon_t^2}{2h_t}\right]
+\]
 
 QMLE is consistent and asymptotically normal even if the true conditional distribution is non-normal (provided it has finite fourth moments), with a sandwich standard error correction. For heavy-tailed series, QMLE with Student-\( t \) innovations (with estimated degrees of freedom \( \nu \)) is more efficient.
 
@@ -237,7 +275,9 @@ QMLE is consistent and asymptotically normal even if the true conditional distri
 
 The **random walk** is the simplest non-stationary process:
 
-\[ Y_t = Y_{t-1} + \varepsilon_t, \quad \varepsilon_t \sim WN(0, \sigma^2) \]
+\[
+Y_t = Y_{t-1} + \varepsilon_t, \quad \varepsilon_t \sim WN(0, \sigma^2)
+\]
 
 This is an AR(1) with \( \phi = 1 \) — a **unit root**. Key properties: \( E[Y_t] = Y_0 \) (no mean reversion), \( \text{Var}(Y_t) = t\sigma^2 \) (growing over time), autocorrelations \( \rho(h) \approx 1 \) for small \( h/t \).
 
@@ -247,7 +287,9 @@ A **random walk with drift** is \( Y_t = \mu + Y_{t-1} + \varepsilon_t \), produ
 
 An **ARIMA(\( p, d, q \))** model applies differencing to achieve stationarity:
 
-\[ \Phi(L)(1-L)^d Y_t = c + \Theta(L)\varepsilon_t \]
+\[
+\Phi(L)(1-L)^d Y_t = c + \Theta(L)\varepsilon_t
+\]
 
 The **first difference** \( \Delta Y_t = Y_t - Y_{t-1} = (1-L)Y_t \) removes a stochastic trend. Most macroeconomic and financial series are I(1) — integrated of order 1 — requiring one difference to achieve stationarity. ARIMA(0,1,0) is the random walk; ARIMA(1,1,0) is a differenced AR(1).
 
@@ -255,13 +297,17 @@ The **first difference** \( \Delta Y_t = Y_t - Y_{t-1} = (1-L)Y_t \) removes a s
 
 The **Dickey-Fuller (DF) test** tests \( H_0: \phi = 1 \) (unit root, non-stationarity) against \( H_1: |\phi| < 1 \) (stationarity). Rewrite the AR(1):
 
-\[ \Delta Y_t = \delta Y_{t-1} + \varepsilon_t, \quad \delta = \phi - 1 \]
+\[
+\Delta Y_t = \delta Y_{t-1} + \varepsilon_t, \quad \delta = \phi - 1
+\]
 
 \( H_0: \delta = 0 \) vs. \( H_1: \delta < 0 \). The OLS t-statistic for \( \delta \) does **not** follow a standard t-distribution under \( H_0 \) — it converges to a non-standard **Dickey-Fuller distribution** derived from functionals of Brownian motion. Critical values are more negative than standard t critical values.
 
 The **Augmented Dickey-Fuller (ADF) test** adds lagged differences to control for serial correlation:
 
-\[ \Delta Y_t = \alpha + \beta t + \delta Y_{t-1} + \sum_{j=1}^{p-1}\gamma_j \Delta Y_{t-j} + \varepsilon_t \]
+\[
+\Delta Y_t = \alpha + \beta t + \delta Y_{t-1} + \sum_{j=1}^{p-1}\gamma_j \Delta Y_{t-j} + \varepsilon_t
+\]
 
 The lag length \( p-1 \) is chosen by AIC/BIC. Three variants: no constant, constant only, constant and trend — critical values differ across variants.
 
@@ -277,7 +323,9 @@ The **KPSS test** reverses the null: \( H_0 \) is stationarity, \( H_1 \) is a u
 
 A **Vector Autoregression (VAR(\( p \)))** extends the univariate AR to a system of \( K \) variables:
 
-\[ \mathbf{y}_t = \mathbf{c} + \mathbf{A}_1\mathbf{y}_{t-1} + \mathbf{A}_2\mathbf{y}_{t-2} + \cdots + \mathbf{A}_p\mathbf{y}_{t-p} + \boldsymbol{\varepsilon}_t \]
+\[
+\mathbf{y}_t = \mathbf{c} + \mathbf{A}_1\mathbf{y}_{t-1} + \mathbf{A}_2\mathbf{y}_{t-2} + \cdots + \mathbf{A}_p\mathbf{y}_{t-p} + \boldsymbol{\varepsilon}_t
+\]
 
 where \( \mathbf{y}_t \) is a \( K \times 1 \) vector, \( \mathbf{A}_j \) are \( K \times K \) coefficient matrices, and \( \boldsymbol{\varepsilon}_t \sim WN(\mathbf{0}, \boldsymbol{\Sigma}) \) with \( \boldsymbol{\Sigma} \) the \( K \times K \) error covariance matrix.
 
@@ -297,7 +345,9 @@ Test by regressing \( Y_t \) on lags of \( Y_t \) and lags of \( X_t \), and tes
 
 An **impulse response function (IRF)** traces the dynamic response of each variable in a VAR to a one-unit shock in one variable's error. Write the VAR in MA(\( \infty \)) form:
 
-\[ \mathbf{y}_t = \boldsymbol{\mu} + \sum_{j=0}^{\infty}\boldsymbol{\Psi}_j\boldsymbol{\varepsilon}_{t-j} \]
+\[
+\mathbf{y}_t = \boldsymbol{\mu} + \sum_{j=0}^{\infty}\boldsymbol{\Psi}_j\boldsymbol{\varepsilon}_{t-j}
+\]
 
 The matrix \( \boldsymbol{\Psi}_j \) gives the impulse response at horizon \( j \): the \( (i,k) \) element is the response of variable \( i \) at time \( t+j \) to a shock in variable \( k \) at time \( t \).
 
@@ -322,7 +372,9 @@ Two I(1) series \( X_t \) and \( Y_t \) are **cointegrated** (CI(1,1)) if there 
 1. **Step 1:** Regress \( Y_t \) on \( X_t \) (the **cointegrating regression**) and test whether the residuals \( \hat{e}_t = Y_t - \hat{\beta}X_t \) are stationary (using ADF on \( \hat{e}_t \) with Engle-Granger critical values, which are more negative than standard ADF values).
 2. **Step 2:** If cointegration is not rejected, estimate the **Error Correction Model (ECM)**:
 
-\[ \Delta Y_t = \alpha\hat{e}_{t-1} + \gamma_1\Delta Y_{t-1} + \cdots + \gamma_q\Delta X_{t-1} + \cdots + \nu_t \]
+\[
+\Delta Y_t = \alpha\hat{e}_{t-1} + \gamma_1\Delta Y_{t-1} + \cdots + \gamma_q\Delta X_{t-1} + \cdots + \nu_t
+\]
 
 The error-correction term \( \hat{e}_{t-1} \) captures the speed of adjustment back to the long-run equilibrium. The coefficient \( \alpha < 0 \) for stability — when \( Y \) is above its long-run value, the EC term pulls it back down.
 
@@ -330,7 +382,9 @@ The error-correction term \( \hat{e}_{t-1} \) captures the speed of adjustment b
 
 For systems with more than two I(1) variables, the **Johansen (1988) cointegration test** is preferred. The VECM (Vector Error Correction Model) for a \( K \)-variable system with \( r \) cointegrating vectors:
 
-\[ \Delta\mathbf{y}_t = \boldsymbol{\Pi}\mathbf{y}_{t-1} + \sum_{j=1}^{p-1}\boldsymbol{\Gamma}_j\Delta\mathbf{y}_{t-j} + \boldsymbol{\varepsilon}_t \]
+\[
+\Delta\mathbf{y}_t = \boldsymbol{\Pi}\mathbf{y}_{t-1} + \sum_{j=1}^{p-1}\boldsymbol{\Gamma}_j\Delta\mathbf{y}_{t-j} + \boldsymbol{\varepsilon}_t
+\]
 
 where \( \boldsymbol{\Pi} = \boldsymbol{\alpha}\boldsymbol{\beta}^{\top} \) has rank \( r \) (the cointegrating rank), \( \boldsymbol{\beta} \) contains the \( r \) cointegrating vectors, and \( \boldsymbol{\alpha} \) contains the adjustment coefficients.
 
@@ -344,17 +398,23 @@ The **trace test** and **maximum eigenvalue test** test \( H_0: \text{rank}(\bol
 
 **Value-at-Risk (VaR)** at confidence level \( (1-\alpha) \) and horizon \( h \) is the quantile of the loss distribution:
 
-\[ \text{VaR}_\alpha^h = -Q_\alpha(R_{T+h}) = \inf\{v : P(R_{T+h} < -v) \leq \alpha\} \]
+\[
+\text{VaR}_\alpha^h = -Q_\alpha(R_{T+h}) = \inf\{v : P(R_{T+h} < -v) \leq \alpha\}
+\]
 
 For a GARCH(1,1) model, the one-step VaR is:
 
-\[ \text{VaR}_\alpha^1 = -\hat{\mu}_{T+1} + \sqrt{\hat{h}_{T+1}} \cdot z_\alpha \]
+\[
+\text{VaR}_\alpha^1 = -\hat{\mu}_{T+1} + \sqrt{\hat{h}_{T+1}} \cdot z_\alpha
+\]
 
 where \( z_\alpha \) is the \( \alpha \)-quantile of the standardized innovation distribution.
 
 **Conditional VaR (CVaR) / Expected Shortfall (ES):** The expected loss given that the loss exceeds VaR:
 
-\[ ES_\alpha = E[-R_{T+1} \mid -R_{T+1} \geq \text{VaR}_\alpha] \]
+\[
+ES_\alpha = E[-R_{T+1} \mid -R_{T+1} \geq \text{VaR}_\alpha]
+\]
 
 CVaR is a coherent risk measure (satisfies sub-additivity); VaR is not.
 
@@ -362,7 +422,9 @@ CVaR is a coherent risk measure (satisfies sub-additivity); VaR is not.
 
 For a portfolio with weight vector \( \mathbf{w} \) over \( K \) assets with expected returns \( \boldsymbol{\mu} \) and covariance matrix \( \boldsymbol{\Sigma} \):
 
-\[ E[R_p] = \mathbf{w}^{\top}\boldsymbol{\mu}, \qquad \text{Var}(R_p) = \mathbf{w}^{\top}\boldsymbol{\Sigma}\mathbf{w} \]
+\[
+E[R_p] = \mathbf{w}^{\top}\boldsymbol{\mu}, \qquad \text{Var}(R_p) = \mathbf{w}^{\top}\boldsymbol{\Sigma}\mathbf{w}
+\]
 
 The **minimum variance frontier** traces out the set of portfolios minimizing variance for each level of expected return. The **efficient frontier** is the upper portion. A time-varying \( \boldsymbol{\Sigma}_t \) from a multivariate GARCH model (DCC-GARCH) allows dynamic portfolio optimization.
 

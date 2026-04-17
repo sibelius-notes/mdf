@@ -20,6 +20,7 @@ In linear algebra we view elements of \(\mathbb{R}^n\) as column vectors \(\vec{
 <div class="definition">
 
 <strong>Definition (Vector Addition and Scalar Multiplication).</strong> Let \(\vec{x}, \vec{y} \in \mathbb{R}^n\) and \(c \in \mathbb{R}\). We define
+
 \[
 \vec{x} + \vec{y} = \begin{pmatrix} x_1 + y_1 \\ \vdots \\ x_n + y_n \end{pmatrix}, \qquad c\vec{x} = \begin{pmatrix} cx_1 \\ \vdots \\ cx_n \end{pmatrix}.
 \]

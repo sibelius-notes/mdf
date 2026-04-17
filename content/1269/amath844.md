@@ -15,6 +15,7 @@ Many problems in science and engineering involve phenomena occurring simultaneou
 
 <div class="example">
 <strong>Example 1.1.</strong> Consider steady heat conduction in a composite material occupying a domain \(\Omega \subset \mathbb{R}^d\). The thermal conductivity varies rapidly on a scale \(\varepsilon \ll 1\), and the temperature \(u_\varepsilon\) satisfies
+
 \[
 -\nabla \cdot \bigl( A(x/\varepsilon) \nabla u_\varepsilon \bigr) = f \quad \text{in } \Omega, \qquad u_\varepsilon = 0 \quad \text{on } \partial\Omega,
 \]
@@ -25,6 +26,7 @@ This example is the prototypical problem in homogenization theory. As we shall d
 
 <div class="example">
 <strong>Example 1.2.</strong> Fluid flow through a porous medium provides another fundamental multiscale problem. Consider Stokes flow in a domain \(\Omega_\varepsilon\) obtained by removing a periodic array of solid obstacles of size \(\varepsilon\) from a region \(\Omega\). The velocity \(u_\varepsilon\) and pressure \(p_\varepsilon\) satisfy
+
 \[
 -\mu \Delta u_\varepsilon + \nabla p_\varepsilon = f, \quad \nabla \cdot u_\varepsilon = 0 \quad \text{in } \Omega_\varepsilon, \qquad u_\varepsilon = 0 \quad \text{on } \partial\Omega_\varepsilon.
 \]
@@ -33,6 +35,7 @@ As \(\varepsilon \to 0\), the pore-scale Stokes equations are replaced by Darcy'
 
 <div class="example">
 <strong>Example 1.3.</strong> In linear elasticity, composite structures such as fiber-reinforced polymers or laminated plates have elastic moduli that oscillate on a fine scale. The displacement \(u_\varepsilon\) satisfies
+
 \[
 -\nabla \cdot \bigl( C(x/\varepsilon) : e(u_\varepsilon) \bigr) = f \quad \text{in } \Omega,
 \]
@@ -53,6 +56,7 @@ The essential structural assumption in classical homogenization is that of scale
 
 <div class="definition">
 <strong>Definition 1.4 (Two-Scale Ansatz).</strong> The <em>two-scale asymptotic expansion</em> for \(u_\varepsilon\) is the formal series
+
 \[
 u_\varepsilon(x) = u_0(x, x/\varepsilon) + \varepsilon \, u_1(x, x/\varepsilon) + \varepsilon^2 \, u_2(x, x/\varepsilon) + \cdots,
 \]
@@ -60,6 +64,7 @@ where each \(u_j(x,y)\) is \(Y\)-periodic in the fast variable \(y \in Y = [0,1)
 </div>
 
 The idea is both simple and powerful. Under the chain rule, a gradient applied to a function of both \(x\) and \(y = x/\varepsilon\) splits as
+
 \[
 \nabla = \nabla_x + \frac{1}{\varepsilon} \nabla_y.
 \]
@@ -111,16 +116,19 @@ We now develop the theory of periodic homogenization for the model elliptic prob
 
 <div class="definition">
 <strong>Definition 2.1 (Oscillatory Elliptic Problem).</strong> Let \(A(y) = (a_{ij}(y))_{1 \le i,j \le d}\) be a symmetric matrix-valued function that is \(Y\)-periodic (with \(Y = [0,1)^d\)) and satisfies the <em>uniform ellipticity condition</em>: there exist constants \(0 < \lambda \le \Lambda < \infty\) such that
+
 \[
 \lambda |\xi|^2 \le \xi^T A(y) \xi \le \Lambda |\xi|^2 \quad \text{for all } \xi \in \mathbb{R}^d, \; y \in Y.
 \]
 The oscillatory elliptic problem is: given \(f \in H^{-1}(\Omega)\), find \(u_\varepsilon \in H^1_0(\Omega)\) such that
+
 \[
 -\nabla \cdot \bigl( A(x/\varepsilon) \nabla u_\varepsilon \bigr) = f \quad \text{in } \Omega.
 \]
 </div>
 
 By the Lax-Milgram theorem, for each \(\varepsilon > 0\) there exists a unique weak solution \(u_\varepsilon \in H^1_0(\Omega)\) satisfying
+
 \[
 \int_\Omega A(x/\varepsilon) \nabla u_\varepsilon \cdot \nabla v \, dx = \langle f, v \rangle \quad \text{for all } v \in H^1_0(\Omega).
 \]
@@ -135,14 +143,17 @@ Note that weak convergence in \(H^1_0(\Omega)\) does not, by itself, identify th
 ### 2.2 Two-Scale Asymptotic Expansion
 
 We now carry out the formal derivation. Substituting the ansatz
+
 \[
 u_\varepsilon(x) = u_0(x,y) + \varepsilon \, u_1(x,y) + \varepsilon^2 \, u_2(x,y) + \cdots, \quad y = x/\varepsilon,
 \]
 into the equation \(-\nabla \cdot (A(y) \nabla u_\varepsilon) = f\), and using \(\nabla = \nabla_x + \varepsilon^{-1} \nabla_y\), the differential operator expands as
+
 \[
 -\nabla \cdot (A \nabla) = \varepsilon^{-2} \mathcal{L}_0 + \varepsilon^{-1} \mathcal{L}_1 + \varepsilon^0 \mathcal{L}_2,
 \]
 where
+
 \[
 \mathcal{L}_0 = -\nabla_y \cdot (A(y) \nabla_y), \quad \mathcal{L}_1 = -\nabla_y \cdot (A(y) \nabla_x) - \nabla_x \cdot (A(y) \nabla_y), \quad \mathcal{L}_2 = -\nabla_x \cdot (A(y) \nabla_x).
 \]
@@ -152,10 +163,12 @@ Collecting powers of \(\varepsilon\), we obtain the following hierarchy of equat
 At order \(\varepsilon^{-2}\): \(\mathcal{L}_0 u_0 = 0\). Since \(A\) is uniformly elliptic and we require \(u_0\) to be \(Y\)-periodic in \(y\), the maximum principle (or, more precisely, the Poincare-Wirtinger inequality and the coercivity of \(\mathcal{L}_0\) on mean-zero periodic functions) implies that the only solutions are constants in \(y\): \(u_0 = u_0(x)\). This is the first key conclusion — the leading-order term does not oscillate.
 
 At order \(\varepsilon^{-1}\): \(\mathcal{L}_0 u_1 = -\mathcal{L}_1 u_0\). Since \(u_0\) depends only on \(x\), this becomes
+
 \[
 -\nabla_y \cdot \bigl( A(y) \nabla_y u_1 \bigr) = \nabla_y \cdot \bigl( A(y) \nabla_x u_0 \bigr) = \sum_{j=1}^d \frac{\partial u_0}{\partial x_j} \nabla_y \cdot (A(y) e_j),
 \]
 where \(e_j\) is the \(j\)-th standard basis vector. By linearity, we seek \(u_1\) in the form
+
 \[
 u_1(x,y) = \sum_{j=1}^d \frac{\partial u_0}{\partial x_j}(x) \, \chi_j(y),
 \]
@@ -163,10 +176,12 @@ where each \(\chi_j\) solves the cell problem below.
 
 <div class="definition">
 <strong>Definition 2.2 (Cell Problem).</strong> For each \(j = 1, \ldots, d\), the <em>cell problem</em> is: find \(\chi_j \in H^1_{\mathrm{per}}(Y)/\mathbb{R}\) such that
+
 \[
 -\nabla_y \cdot \bigl( A(y) (\nabla_y \chi_j + e_j) \bigr) = 0 \quad \text{in } Y,
 \]
 or equivalently, in weak form,
+
 \[
 \int_Y A(y) (\nabla_y \chi_j + e_j) \cdot \nabla_y \varphi \, dy = 0 \quad \text{for all } \varphi \in H^1_{\mathrm{per}}(Y).
 \]
@@ -185,6 +200,7 @@ At order \(\varepsilon^0\): \(\mathcal{L}_0 u_2 + \mathcal{L}_1 u_1 + \mathcal{L
 
 <div class="definition">
 <strong>Definition 2.3 (Effective Coefficients).</strong> The <em>homogenized</em> (or <em>effective</em>) coefficient matrix \(A^* = (a^*_{ij})\) is defined by
+
 \[
 a^*_{ij} = \int_Y A(y) (e_j + \nabla_y \chi_j) \cdot e_i \, dy = \int_Y a_{ik}(y) \Bigl( \delta_{kj} + \frac{\partial \chi_j}{\partial y_k} \Bigr) dy,
 \]
@@ -195,6 +211,7 @@ The solvability condition at order \(\varepsilon^0\) yields the following result
 
 <div class="theorem">
 <strong>Theorem 2.4 (Homogenized Equation).</strong> Under the two-scale expansion ansatz, the leading-order term \(u_0 \in H^1_0(\Omega)\) satisfies the homogenized equation
+
 \[
 -\nabla \cdot (A^* \nabla u_0) = f \quad \text{in } \Omega, \qquad u_0 = 0 \quad \text{on } \partial\Omega,
 \]
@@ -213,10 +230,12 @@ The matrix \(A^*\) is symmetric and uniformly elliptic, with \(\lambda \le \xi^T
 
 <div class="example">
 <strong>Example 2.6.</strong> In one dimension with \(\Omega = (0,1)\), let \(a(y)\) be 1-periodic and piecewise constant:
+
 \[
 a(y) = \begin{cases} a_1 & \text{if } 0 \le y < \theta, \\ a_2 & \text{if } \theta \le y < 1, \end{cases}
 \]
 with \(a_1, a_2 > 0\) and \(\theta \in (0,1)\). The cell problem is \(-(a(y)(\chi' + 1))' = 0\), which gives \(a(y)(\chi'(y) + 1) = \text{const}\). The effective coefficient is
+
 \[
 a^* = \left( \frac{\theta}{a_1} + \frac{1-\theta}{a_2} \right)^{-1},
 \]
@@ -229,6 +248,7 @@ The effective coefficients admit a useful variational characterization that make
 
 <div class="theorem">
 <strong>Theorem 2.7 (Variational Characterization of \(A^*\)).</strong> For any \(\xi \in \mathbb{R}^d\),
+
 \[
 \xi^T A^* \xi = \min_{\varphi \in H^1_{\mathrm{per}}(Y)} \int_Y (\xi + \nabla_y \varphi)^T A(y) (\xi + \nabla_y \varphi) \, dy.
 \]
@@ -245,10 +265,12 @@ There is also a complementary (dual) variational characterization in terms of fl
 
 <div class="theorem">
 <strong>Theorem 2.9 (Dual Variational Principle).</strong> For any \(\xi \in \mathbb{R}^d\),
+
 \[
 \xi^T A^* \xi = \min_{\sigma \in L^2_{\mathrm{per}}(Y; \mathbb{R}^d)} \left\{ \int_Y \sigma^T A^{-1}(y) \sigma \, dy : \nabla_y \cdot \sigma = 0, \; \int_Y \sigma \, dy = A^* \xi \right\}.
 \]
 Equivalently, in terms of the "stress" formulation:
+
 \[
 \xi^T (A^*)^{-1} \xi = \min_{\tau \in L^2_{\mathrm{per}}(Y; \mathbb{R}^d), \, \nabla_y \cdot \tau = 0, \, \langle \tau \rangle = \xi} \int_Y \tau^T A^{-1}(y) \tau \, dy.
 \]
@@ -262,6 +284,7 @@ The two-scale expansion provides not only the leading-order behavior \(u_0\) but
 
 <div class="definition">
 <strong>Definition 2.8 (First-Order Corrector).</strong> The <em>first-order corrector</em> is
+
 \[
 u_\varepsilon^{(1)}(x) = u_0(x) + \varepsilon \sum_{j=1}^d \frac{\partial u_0}{\partial x_j}(x) \, \chi_j(x/\varepsilon).
 \]
@@ -275,10 +298,12 @@ The corrector captures the oscillatory part of the solution. Without the correct
 
 <div class="theorem">
 <strong>Theorem 2.9 (Corrector Estimate).</strong> Suppose \(u_0 \in H^2(\Omega)\) and the cell correctors \(\chi_j\) are Lipschitz. Then
+
 \[
 \| u_\varepsilon - u_\varepsilon^{(1)} \|_{H^1(\Omega)} \le C \varepsilon^{1/2},
 \]
 where \(C\) depends on \(\Omega\), \(A\), and \(\|u_0\|_{H^2(\Omega)}\) but not on \(\varepsilon\). In particular,
+
 \[
 \| \nabla u_\varepsilon - \nabla u_0 - \nabla_y u_1(\cdot, \cdot/\varepsilon) \|_{L^2(\Omega)} \le C \varepsilon^{1/2}.
 \]
@@ -300,10 +325,12 @@ The most general framework is that of H-convergence, introduced by Murat and Tar
 
 <div class="definition">
 <strong>Definition 3.1 (H-Convergence, Murat-Tartar).</strong> Let \(A_\varepsilon\) be a sequence of matrix-valued functions in \(L^\infty(\Omega; \mathbb{R}^{d \times d})\) satisfying the uniform ellipticity condition with constants \(\lambda, \Lambda\) independent of \(\varepsilon\). We say that \(A_\varepsilon\) <em>H-converges</em> to \(A^*\) (written \(A_\varepsilon \xrightarrow{H} A^*\)) if, for every \(f \in H^{-1}(\Omega)\), the solutions \(u_\varepsilon\) of
+
 \[
 -\nabla \cdot (A_\varepsilon \nabla u_\varepsilon) = f, \quad u_\varepsilon \in H^1_0(\Omega),
 \]
 satisfy
+
 \[
 u_\varepsilon \rightharpoonup u_0 \text{ weakly in } H^1_0(\Omega), \quad A_\varepsilon \nabla u_\varepsilon \rightharpoonup A^* \nabla u_0 \text{ weakly in } L^2(\Omega; \mathbb{R}^d),
 \]
@@ -324,6 +351,7 @@ For the periodic case \(A_\varepsilon(x) = A(x/\varepsilon)\), H-convergence rec
 
 <div class="example">
 <strong>Example 3.3.</strong> Consider the sequence \(A_\varepsilon(x) = (2 + \sin(2\pi x_1/\varepsilon)) I\) in \(\Omega = (0,1)^2\). This is periodic with period \(\varepsilon\) in \(x_1\) and constant in \(x_2\). The H-limit is the diagonal matrix \(A^* = \mathrm{diag}(a^*_1, a^*_2)\), where
+
 \[
 a^*_1 = \left( \int_0^1 \frac{1}{2 + \sin(2\pi y)} \, dy \right)^{-1} = \sqrt{3}, \qquad a^*_2 = \int_0^1 (2 + \sin(2\pi y)) \, dy = 2.
 \]
@@ -354,6 +382,7 @@ The method of two-scale convergence, introduced by Nguetseng (1989) and systemat
 
 <div class="definition">
 <strong>Definition 3.5 (Two-Scale Convergence, Nguetseng-Allaire).</strong> A sequence \(u_\varepsilon \in L^2(\Omega)\) is said to <em>two-scale converge</em> to \(u_0(x,y) \in L^2(\Omega \times Y)\) if, for every smooth \(Y\)-periodic test function \(\psi(x,y)\),
+
 \[
 \lim_{\varepsilon \to 0} \int_\Omega u_\varepsilon(x) \, \psi\!\left(x, \frac{x}{\varepsilon}\right) dx = \int_\Omega \int_Y u_0(x,y) \, \psi(x,y) \, dy \, dx.
 \]
@@ -378,6 +407,7 @@ The two-scale convergence framework becomes particularly powerful when applied t
 
 <div class="theorem">
 <strong>Theorem 3.10 (Two-Scale Convergence of Gradients, Allaire 1992).</strong> Let \(u_\varepsilon\) be bounded in \(H^1(\Omega)\). Then, up to a subsequence,
+
 \[
 u_\varepsilon \xrightarrow{2s} u_0(x), \qquad \nabla u_\varepsilon \xrightarrow{2s} \nabla_x u_0(x) + \nabla_y u_1(x,y),
 \]
@@ -394,6 +424,7 @@ We now use two-scale convergence to rigorously derive the homogenized equation f
 
 <div class="theorem">
 <strong>Theorem 3.11 (Homogenization of Periodic Elliptic Equations).</strong> Let \(A(y)\) be symmetric, uniformly elliptic, and \(Y\)-periodic. Let \(u_\varepsilon \in H^1_0(\Omega)\) solve \(-\nabla \cdot (A(x/\varepsilon) \nabla u_\varepsilon) = f\). Then \(u_\varepsilon \rightharpoonup u_0\) weakly in \(H^1_0(\Omega)\), where \(u_0\) is the unique solution of the homogenized problem
+
 \[
 -\nabla \cdot (A^* \nabla u_0) = f \quad \text{in } \Omega, \qquad u_0 = 0 \quad \text{on } \partial\Omega,
 \]
@@ -402,14 +433,17 @@ with \(A^*\) given by Definition 2.3. Moreover, the convergence holds for the en
 
 <div class="proof">
 <strong>Proof.</strong> By a priori estimates, \(u_\varepsilon\) is bounded in \(H^1_0(\Omega)\). By Theorem 3.10, there exist \(u_0 \in H^1_0(\Omega)\) and \(u_1 \in L^2(\Omega; H^1_{\mathrm{per}}(Y)/\mathbb{R})\) such that (along a subsequence)
+
 \[
 u_\varepsilon \xrightarrow{2s} u_0, \quad \nabla u_\varepsilon \xrightarrow{2s} \nabla_x u_0 + \nabla_y u_1.
 \]
 Take the test function \(v_\varepsilon(x) = \varphi(x) + \varepsilon \varphi(x) \psi(x/\varepsilon)\) with \(\varphi \in C^\infty_c(\Omega)\) and \(\psi \in C^\infty_{\mathrm{per}}(Y)\) in the weak formulation
+
 \[
 \int_\Omega A(x/\varepsilon) \nabla u_\varepsilon \cdot \nabla v_\varepsilon \, dx = \int_\Omega f v_\varepsilon \, dx.
 \]
 Passing to the two-scale limit (using the definition of two-scale convergence for the left-hand side and strong convergence for the right-hand side) yields
+
 \[
 \int_\Omega \int_Y A(y) (\nabla_x u_0 + \nabla_y u_1) \cdot (\nabla_x \varphi + \varphi \nabla_y \psi) \, dy \, dx = \int_\Omega f \varphi \, dx.
 \]
@@ -422,6 +456,7 @@ The div-curl lemma, a cornerstone of compensated compactness theory, plays a key
 
 <div class="theorem">
 <strong>Theorem 3.12 (Div-Curl Lemma, Murat-Tartar, 1978).</strong> Let \(E_\varepsilon \rightharpoonup E\) weakly in \(L^2(\Omega; \mathbb{R}^d)\) and \(D_\varepsilon \rightharpoonup D\) weakly in \(L^2(\Omega; \mathbb{R}^d)\). Suppose that \(\{\nabla \times E_\varepsilon\}\) is precompact in \(H^{-1}_{\mathrm{loc}}(\Omega)\) and \(\{\nabla \cdot D_\varepsilon\}\) is precompact in \(H^{-1}_{\mathrm{loc}}(\Omega)\). Then
+
 \[
 E_\varepsilon \cdot D_\varepsilon \rightharpoonup E \cdot D \quad \text{in the sense of distributions.}
 \]
@@ -439,6 +474,7 @@ The convergence of the energy functional is a fundamental result that connects t
 
 <div class="theorem">
 <strong>Theorem 3.14 (Energy Convergence).</strong> Under the hypotheses of Theorem 3.8,
+
 \[
 \lim_{\varepsilon \to 0} \int_\Omega A(x/\varepsilon) \nabla u_\varepsilon \cdot \nabla u_\varepsilon \, dx = \int_\Omega A^* \nabla u_0 \cdot \nabla u_0 \, dx.
 \]
@@ -464,6 +500,7 @@ We now extend the theory to time-dependent problems, beginning with the heat equ
 
 <div class="definition">
 <strong>Definition 4.1 (Oscillatory Parabolic Problem).</strong> Let \(A(y)\) be as in Definition 2.1. The oscillatory heat equation is
+
 \[
 \frac{\partial u_\varepsilon}{\partial t} - \nabla \cdot \bigl( A(x/\varepsilon) \nabla u_\varepsilon \bigr) = f \quad \text{in } \Omega \times (0,T),
 \]
@@ -474,6 +511,7 @@ The formal two-scale expansion proceeds exactly as in the elliptic case, with th
 
 <div class="theorem">
 <strong>Theorem 4.2 (Homogenization of the Heat Equation).</strong> Let \(u_\varepsilon\) solve the oscillatory heat equation (Definition 4.1). Then \(u_\varepsilon \rightharpoonup u_0\) weakly in \(L^2(0,T; H^1_0(\Omega))\), where \(u_0\) solves
+
 \[
 \frac{\partial u_0}{\partial t} - \nabla \cdot (A^* \nabla u_0) = f \quad \text{in } \Omega \times (0,T), \qquad u_0(x,0) = g(x),
 \]
@@ -496,6 +534,7 @@ A subtler question arises when one considers the long-time behavior of solutions
 
 <div class="definition">
 <strong>Definition 4.3 (Burnett Coefficients).</strong> The <em>Burnett coefficients</em> \(D^*_{ijkl}\) arise in the fourth-order correction to the homogenized equation on long time scales:
+
 \[
 \frac{\partial u}{\partial t} - a^*_{ij} \frac{\partial^2 u}{\partial x_i \partial x_j} + \varepsilon^2 D^*_{ijkl} \frac{\partial^4 u}{\partial x_i \partial x_j \partial x_k \partial x_l} = f + O(\varepsilon^4).
 \]
@@ -512,6 +551,7 @@ The homogenization of wave equations presents fundamentally new phenomena compar
 
 <div class="definition">
 <strong>Definition 4.5 (Oscillatory Wave Equation).</strong> Let \(\rho(y)\) be a \(Y\)-periodic density satisfying \(0 < \rho_{\min} \le \rho(y) \le \rho_{\max}\), and let \(A(y)\) be as before. The oscillatory wave equation is
+
 \[
 \rho(x/\varepsilon) \frac{\partial^2 u_\varepsilon}{\partial t^2} - \nabla \cdot \bigl( A(x/\varepsilon) \nabla u_\varepsilon \bigr) = f \quad \text{in } \Omega \times (0,T).
 \]
@@ -519,6 +559,7 @@ The homogenization of wave equations presents fundamentally new phenomena compar
 
 <div class="theorem">
 <strong>Theorem 4.6 (Homogenization of the Wave Equation).</strong> Under appropriate regularity assumptions, \(u_\varepsilon \rightharpoonup u_0\) weakly-\(*\) in \(L^\infty(0,T; H^1_0(\Omega))\), where \(u_0\) solves
+
 \[
 \rho^* \frac{\partial^2 u_0}{\partial t^2} - \nabla \cdot (A^* \nabla u_0) = f,
 \]
@@ -529,6 +570,7 @@ The effective density is the arithmetic mean, while the effective stiffness is t
 
 <div class="remark">
 <strong>Remark 4.7.</strong> The effective wave speed in the homogenized medium is \(c^* = \sqrt{A^*/\rho^*}\) (interpreted appropriately for the matrix case). In one dimension, this gives
+
 \[
 c^* = \left( \int_0^1 \rho(y) \, dy \cdot \int_0^1 \frac{1}{a(y)} \, dy \right)^{-1/2},
 \]
@@ -537,6 +579,7 @@ which is generally different from both the arithmetic and harmonic means of the 
 
 <div class="example">
 <strong>Example 4.8.</strong> Consider a one-dimensional layered medium with alternating layers: \(a(y) = 1, \rho(y) = 1\) for \(0 \le y < 1/2\) and \(a(y) = 4, \rho(y) = 4\) for \(1/2 \le y < 1\). Each layer has wave speed \(c = 1\). However, the homogenized wave speed is
+
 \[
 c^* = \left( \frac{5}{2} \cdot \frac{5}{8} \right)^{-1/2} = \left( \frac{25}{16} \right)^{-1/2} = \frac{4}{5},
 \]
@@ -549,6 +592,7 @@ Beyond the leading-order homogenization, the wave equation in periodic media exh
 
 <div class="definition">
 <strong>Definition 4.9 (Bloch Eigenvalue Problem).</strong> For a wave vector \(k \in Y^* = [0, 2\pi)^d\), the <em>Bloch eigenvalue problem</em> is: find \(\omega_n(k)\) and \(\phi_n(y;k)\) (\(Y\)-periodic in \(y\)) such that
+
 \[
 -(\nabla_y + ik) \cdot \bigl( A(y) (\nabla_y + ik) \phi_n \bigr) = \rho(y) \omega_n(k)^2 \phi_n \quad \text{in } Y.
 \]
@@ -559,6 +603,7 @@ For small \(|k|\), the first Bloch branch satisfies \(\omega_1(k) \approx c^*|k|
 
 <div class="theorem">
 <strong>Theorem 4.10 (Bloch Expansion and Homogenization).</strong> Let \(\omega_1(k)\) be the first Bloch eigenvalue and \(\phi_1(y; k)\) the corresponding eigenfunction, normalized so that \(\phi_1(y; 0) = 1\). Then for \(|k|\) small,
+
 \[
 \omega_1(k)^2 = a^*_{ij} k_i k_j + O(|k|^4),
 \]
@@ -597,10 +642,12 @@ The qualitative theory establishes that homogenization occurs almost surely, wit
 
 <div class="theorem">
 <strong>Theorem 5.3 (Qualitative Stochastic Homogenization, Papanicolaou-Varadhan, 1979; Kozlov, 1979).</strong> Let \(A(\omega, x)\) be a stationary ergodic coefficient field satisfying the uniform ellipticity condition. For \(\mathbb{P}\)-almost every \(\omega\), the solutions \(u_\varepsilon\) of
+
 \[
 -\nabla \cdot \bigl( A(\omega, x/\varepsilon) \nabla u_\varepsilon \bigr) = f \quad \text{in } \Omega, \qquad u_\varepsilon \in H^1_0(\Omega),
 \]
 converge weakly in \(H^1_0(\Omega)\) to \(u_0\), the solution of the deterministic homogenized equation
+
 \[
 -\nabla \cdot (A^* \nabla u_0) = f \quad \text{in } \Omega,
 \]
@@ -615,10 +662,12 @@ The effective matrix \(A^*\) is determined by a corrector equation analogous to 
 
 <div class="definition">
 <strong>Definition 5.5 (Corrector in the Random Setting).</strong> For each \(j = 1, \ldots, d\), the <em>corrector</em> \(\phi_j(\omega, x)\) satisfies (in a distributional sense on \(\mathbb{R}^d\), \(\mathbb{P}\)-a.s.)
+
 \[
 -\nabla \cdot \bigl( A(\omega, x)(e_j + \nabla \phi_j) \bigr) = 0,
 \]
 with \(\nabla \phi_j\) stationary and \(\mathbb{E}[\nabla \phi_j] = 0\). The effective coefficients are
+
 \[
 a^*_{ij} = \mathbb{E}\!\left[ \int_Y A(\omega, y)(e_j + \nabla \phi_j(\omega, y)) \cdot e_i \, dy \right].
 \]
@@ -634,14 +683,17 @@ A major advance of the last two decades has been the development of quantitative
 
 <div class="theorem">
 <strong>Theorem 5.6 (Quantitative Corrector Estimates, Gloria-Neukamm-Otto, 2014).</strong> Suppose \(A(\omega, x)\) satisfies a unit range of dependence: the values of \(A\) in disjoint unit cubes are independent. Then the corrector \(\phi_j\) satisfies the estimate
+
 \[
 \left( \frac{1}{|B_R|} \int_{B_R} |\nabla \phi_j|^2 \, dx \right)^{1/2} \le C,
 \]
 and the fluctuations of spatial averages satisfy
+
 \[
 \mathrm{Var}\!\left( \frac{1}{|B_R|} \int_{B_R} \nabla \phi_j \, dx \right) \le \frac{C}{R^d}.
 \]
 Moreover, for \(d \ge 2\),
+
 \[
 \| u_\varepsilon - u_0 \|_{L^2(\Omega)} \le C \varepsilon \quad \mathbb{P}\text{-a.s.},
 \]
@@ -652,6 +704,7 @@ The key insight of Gloria, Neukamm, and Otto is to use a spectral gap (or logari
 
 <div class="definition">
 <strong>Definition 5.7 (Spectral Gap Inequality).</strong> A random ensemble \(A(\omega, \cdot)\) satisfies a <em>spectral gap inequality</em> if there exists \(\rho > 0\) such that for every square-integrable random variable \(F(\omega)\),
+
 \[
 \mathrm{Var}(F) \le \frac{1}{\rho} \sum_{z \in \mathbb{Z}^d} \mathbb{E}\!\left[ \left( \frac{\partial F}{\partial A|_{z + Y}} \right)^2 \right],
 \]
@@ -666,6 +719,7 @@ The quantitative theory relies heavily on regularity estimates for the Green's f
 
 <div class="theorem">
 <strong>Theorem 5.7 (Green's Function Estimates, Gloria-Neukamm-Otto).</strong> Let \(G_\varepsilon(x,y)\) be the Green's function for \(-\nabla \cdot (A(\omega, x/\varepsilon) \nabla \cdot)\) on \(\mathbb{R}^d\), \(d \ge 3\). Then, \(\mathbb{P}\)-a.s., for \(|x - y| \ge \varepsilon\),
+
 \[
 |G_\varepsilon(x,y)| \le \frac{C}{|x-y|^{d-2}}, \qquad |\nabla_x G_\varepsilon(x,y)| \le \frac{C}{|x-y|^{d-1}},
 \]
@@ -682,6 +736,7 @@ To convert the averaged estimates into almost-sure bounds, one employs concentra
 
 <div class="theorem">
 <strong>Theorem 5.9 (Concentration of the Homogenization Error).</strong> Under a finite range of dependence assumption, for any \(\delta > 0\) there exists \(C(\delta)\) such that
+
 \[
 \mathbb{P}\!\left( \| u_\varepsilon - u_0 \|_{H^1(\Omega)} \ge C \varepsilon^{1/2 - \delta} \right) \le C \exp\!\left( -c \varepsilon^{-d + \delta} \right).
 \]
@@ -714,10 +769,12 @@ The simplest and most classical bounds are the Voigt (upper) and Reuss (lower) b
 
 <div class="theorem">
 <strong>Theorem 6.1 (Voigt-Reuss Bounds).</strong> For any \(\xi \in \mathbb{R}^d\),
+
 \[
 \xi^T \langle A^{-1} \rangle^{-1} \xi \le \xi^T A^* \xi \le \xi^T \langle A \rangle \xi,
 \]
 where \(\langle \cdot \rangle = \int_Y \cdot \, dy\) denotes the volume average. In the notation of a two-phase composite with phases \(A_1 = a_1 I\) and \(A_2 = a_2 I\) in volume fractions \(\theta\) and \(1 - \theta\):
+
 \[
 \left( \frac{\theta}{a_1} + \frac{1-\theta}{a_2} \right)^{-1} \le a^* \le \theta a_1 + (1-\theta) a_2.
 \]
@@ -725,10 +782,12 @@ where \(\langle \cdot \rangle = \int_Y \cdot \, dy\) denotes the volume average.
 
 <div class="proof">
 <strong>Proof.</strong> The upper bound follows from the variational characterization (Theorem 2.7) by testing with \(\varphi = 0\):
+
 \[
 \xi^T A^* \xi = \min_{\varphi \in H^1_{\mathrm{per}}(Y)} \int_Y (\xi + \nabla \varphi)^T A (\xi + \nabla \varphi) \, dy \le \int_Y \xi^T A(y) \xi \, dy = \xi^T \langle A \rangle \xi.
 \]
 The lower bound follows from the dual (complementary energy) variational principle: defining \(\sigma = A(y)(\xi + \nabla \varphi)\) as the optimal flux, one has
+
 \[
 \xi^T A^* \xi = \max_{\sigma \in L^2_{\mathrm{per}}(Y), \, \nabla \cdot \sigma = 0, \, \langle \sigma \rangle = A^* \xi} \left\{ 2 \xi \cdot \langle \sigma \rangle - \int_Y \sigma^T A^{-1} \sigma \, dy \right\}.
 \]
@@ -751,6 +810,7 @@ Significantly tighter bounds were obtained by Hashin and Shtrikman (1962) using 
 
 <div class="theorem">
 <strong>Theorem 6.2 (Hashin-Shtrikman Bounds, 1962).</strong> For an isotropic two-phase composite in \(d\) dimensions with conductivities \(0 < a_1 \le a_2\) in volume fractions \(\theta\) and \(1-\theta\), the effective conductivity satisfies
+
 \[
 a_1 + \frac{\theta(a_2 - a_1)}{1 + \frac{(1-\theta)(a_2 - a_1)}{d \, a_1}} \le a^* \le a_2 - \frac{(1-\theta)(a_2 - a_1)}{1 + \frac{\theta(a_2 - a_1)}{d \, a_2}}.
 \]
@@ -777,6 +837,7 @@ The optimality of the Hashin-Shtrikman bounds is a deep result. The extremal mic
 
 <div class="theorem">
 <strong>Theorem 6.6 (Wiener Bounds for Anisotropic Media).</strong> For a general (possibly anisotropic) two-phase composite, the eigenvalues \(\lambda_1^*, \ldots, \lambda_d^*\) of \(A^*\) satisfy
+
 \[
 \left( \frac{\theta}{a_1} + \frac{1-\theta}{a_2} \right)^{-1} \le \lambda_i^* \le \theta a_1 + (1-\theta) a_2, \qquad i = 1, \ldots, d.
 \]
@@ -789,6 +850,7 @@ The bounds above are instances of a deeper question: given partial information a
 
 <div class="definition">
 <strong>Definition 6.4 (G-Closure).</strong> Let \(\mathcal{U}\) be a set of admissible coefficient fields (e.g., all \(Y\)-periodic \(A(y)\) taking values in a given set). The <em>G-closure</em> \(G\mathcal{U}\) is the set of all matrices \(A^*\) that arise as effective tensors of elements of \(\mathcal{U}\):
+
 \[
 G\mathcal{U} = \{ A^* : A \in \mathcal{U}, \; A \xrightarrow{H} A^* \}.
 \]
@@ -796,6 +858,7 @@ G\mathcal{U} = \{ A^* : A \in \mathcal{U}, \; A \xrightarrow{H} A^* \}.
 
 <div class="theorem">
 <strong>Theorem 6.5 (Characterization of the G-Closure for Isotropic Two-Phase Composites).</strong> For an isotropic composite of two isotropic phases with conductivities \(a_1 < a_2\) in prescribed volume fractions, the G-closure is the set of all symmetric positive definite matrices \(A^*\) whose eigenvalues \(\lambda_1^*, \ldots, \lambda_d^*\) satisfy the Hashin-Shtrikman bounds and the trace constraints
+
 \[
 \sum_{i=1}^d \frac{1}{\lambda_i^* - a_1} \le \frac{d - 1 + \theta}{a_{\mathrm{HS}}^+ - a_1}, \qquad \sum_{i=1}^d \frac{1}{a_2 - \lambda_i^*} \le \frac{d - 1 + (1-\theta)}{a_2 - a_{\mathrm{HS}}^-},
 \]
@@ -840,10 +903,12 @@ The HMM philosophy is to avoid resolving the fine scale globally. Instead, one s
 
 <div class="theorem">
 <strong>Theorem 7.3 (HMM Error Estimate, E-Engquist-Li-Ren-Vanden-Eijnden).</strong> Let \(u_H\) denote the HMM approximation on a coarse mesh of size \(H\) with microscopic cell problems solved on domains of size \(\delta\) using a mesh of size \(h\). Then
+
 \[
 \| u_0 - u_H \|_{H^1(\Omega)} \le C \left( H^k + e_{\mathrm{HMM}} \right),
 \]
 where \(H^k\) is the macroscopic FEM error (with \(k\) depending on the polynomial degree) and
+
 \[
 e_{\mathrm{HMM}} = \left( \frac{h}{\varepsilon} \right)^{2q} + \left( \frac{\varepsilon}{\delta} \right)^p
 \]
@@ -860,6 +925,7 @@ The Multiscale Finite Element Method, introduced by Hou and Wu (1997), takes a d
 
 <div class="definition">
 <strong>Definition 7.4 (MsFEM Basis Functions).</strong> On each coarse element \(K\) of a coarse mesh with mesh size \(H\), define the <em>multiscale basis function</em> \(\phi_i^K\) as the solution of the local problem
+
 \[
 -\nabla \cdot \bigl( A(x/\varepsilon) \nabla \phi_i^K \bigr) = 0 \quad \text{in } K,
 \]
@@ -874,6 +940,7 @@ The multiscale basis functions automatically encode the oscillatory behavior of 
 
 <div class="theorem">
 <strong>Theorem 7.5 (MsFEM Error Estimate, Hou-Wu-Cai).</strong> Assume that the oscillatory solution \(u_\varepsilon\) has the two-scale expansion structure. Then the MsFEM approximation \(u_H\) satisfies
+
 \[
 \| u_\varepsilon - u_H \|_{H^1(\Omega)} \le C \left( H + \sqrt{\varepsilon/H} \right).
 \]
@@ -890,6 +957,7 @@ The Localized Orthogonal Decomposition method, introduced by Malqvist and Peters
 
 <div class="definition">
 <strong>Definition 7.7 (LOD Method).</strong> Let \(V_H\) be a standard finite element space on a coarse mesh and let \(\mathcal{C}: V_H \to H^1_0(\Omega)\) be the <em>corrector operator</em> defined by: for \(v_H \in V_H\), find \(\mathcal{C} v_H \in H^1_0(\Omega) \ominus V_H\) (the \(A\)-orthogonal complement) such that
+
 \[
 \int_\Omega A(x/\varepsilon) \nabla (\mathcal{C} v_H) \cdot \nabla w \, dx = -\int_\Omega A(x/\varepsilon) \nabla v_H \cdot \nabla w \, dx \quad \text{for all } w \in H^1_0(\Omega) \ominus V_H.
 \]
@@ -900,6 +968,7 @@ The corrector \(\mathcal{C} v_H\) decays exponentially away from the support of 
 
 <div class="theorem">
 <strong>Theorem 7.8 (LOD Error Estimate, Malqvist-Peterseim, 2014).</strong> Let \(u_\varepsilon\) be the exact solution and \(u_H^{\mathrm{LOD}}\) the LOD approximation with localization parameter \(k\) (the patch extends \(k\) layers of elements). Then
+
 \[
 \| u_\varepsilon - u_H^{\mathrm{LOD}} \|_{H^1(\Omega)} \le C \left( H + e^{-ck} \right) \| f \|_{L^2(\Omega)},
 \]
@@ -934,6 +1003,7 @@ Composite materials — fiber-reinforced polymers, ceramic matrix composites, co
 
 <div class="example">
 <strong>Example 8.1.</strong> A unidirectional fiber-reinforced composite consists of parallel circular fibers of radius \(r\) arranged in a periodic array (square or hexagonal) within a matrix material. Let the fiber conductivity be \(a_f\) and the matrix conductivity \(a_m\). For a square array with fiber volume fraction \(\theta = \pi r^2\), the cell problem is a two-dimensional elliptic problem on the unit cell with a circular inclusion. The effective transverse conductivity can be computed numerically by solving the cell problem with a finite element method on the unit cell. For dilute fiber fractions (\(\theta \ll 1\)), the classical Maxwell-Garnett formula gives
+
 \[
 a^* \approx a_m \frac{a_f + a_m + \theta(a_f - a_m)}{a_f + a_m - \theta(a_f - a_m)}.
 \]
@@ -944,10 +1014,12 @@ For elasticity, the situation is richer due to the tensorial nature of the probl
 
 <div class="definition">
 <strong>Definition 8.2 (Elasticity Cell Problem).</strong> For each pair of indices \((k,l)\) with \(1 \le k \le l \le d\), the <em>elasticity cell problem</em> is: find \(\chi^{kl} \in H^1_{\mathrm{per}}(Y; \mathbb{R}^d)/\mathbb{R}^d\) such that
+
 \[
 -\nabla_y \cdot \bigl( C(y) : (e_y(\chi^{kl}) + E^{kl}) \bigr) = 0 \quad \text{in } Y,
 \]
 where \(E^{kl} = \frac{1}{2}(e_k \otimes e_l + e_l \otimes e_k)\) is the macroscopic strain loading and \(e_y(\cdot)\) denotes the symmetrized gradient in \(y\). The effective elasticity tensor is
+
 \[
 C^*_{ijkl} = \int_Y C(y) : (E^{kl} + e_y(\chi^{kl})) : E^{ij} \, dy.
 \]
@@ -963,10 +1035,12 @@ The derivation of Darcy's law from the Stokes equations is a landmark applicatio
 
 <div class="theorem">
 <strong>Theorem 8.3 (Darcy's Law from Stokes, Tartar 1980, Allaire 1989).</strong> Consider Stokes flow in a periodic porous medium \(\Omega_\varepsilon\) with solid obstacles of size \(\varepsilon\). As \(\varepsilon \to 0\), the velocity field \(u_\varepsilon\) (extended by zero in the solid) satisfies
+
 \[
 \varepsilon^{-2} u_\varepsilon \rightharpoonup u_0 = -\frac{1}{\mu} K \nabla p_0 \quad \text{weakly in } L^2(\Omega; \mathbb{R}^d),
 \]
 where \(p_0\) solves the Darcy equation
+
 \[
 -\nabla \cdot (K \nabla p_0) = f, \qquad u_0 = -\frac{1}{\mu} K \nabla p_0,
 \]
@@ -975,10 +1049,12 @@ and \(K\) is the symmetric positive definite <em>permeability tensor</em>, defin
 
 <div class="definition">
 <strong>Definition 8.4 (Permeability Tensor).</strong> For each \(j = 1, \ldots, d\), let \((w_j, q_j)\) solve the Stokes cell problem
+
 \[
 -\mu \Delta_y w_j + \nabla_y q_j = e_j, \quad \nabla_y \cdot w_j = 0 \quad \text{in } Y_f, \qquad w_j = 0 \quad \text{on } \partial Y_s,
 \]
 where \(Y_f\) is the fluid region and \(Y_s\) the solid region within the unit cell. The permeability tensor is
+
 \[
 K_{ij} = \int_{Y_f} (w_j)_i \, dy.
 \]
@@ -1018,6 +1094,7 @@ This high-contrast regime produces qualitatively new behavior: the homogenized m
 
 <div class="example">
 <strong>Example 8.9.</strong> Electromagnetic metamaterials with negative effective permeability and permittivity can be designed using split-ring resonators and thin wires. The homogenized Maxwell equations for such a medium have the form
+
 \[
 \nabla \times E = -\mu_{\mathrm{eff}}(\omega) \frac{\partial H}{\partial t}, \qquad \nabla \times H = \varepsilon_{\mathrm{eff}}(\omega) \frac{\partial E}{\partial t},
 \]
@@ -1032,9 +1109,11 @@ Biological tissues are natural composite materials with complex, hierarchical mi
 <strong>Example 8.8.</strong> Cardiac tissue is a composite of muscle fibers (cardiomyocytes) embedded in an extracellular matrix, permeated by a vascular network. The electrical conductivity tensor of cardiac tissue is anisotropic, with higher conductivity along the fiber direction than transverse to it. A homogenization model represents the tissue as a bidomain: an intracellular domain (inside the cells) and an extracellular domain (between the cells), coupled through the cell membranes. The effective intracellular and extracellular conductivity tensors \(\sigma_i^*\) and \(\sigma_e^*\) are obtained by solving cell problems on a unit cell containing one or more cardiomyocytes.
 
 The bidomain equations, governing the transmembrane potential \(V_m\) and extracellular potential \(\phi_e\), are
+
 \[
 \nabla \cdot (\sigma_i^* \nabla V_m) + \nabla \cdot (\sigma_i^* \nabla \phi_e) = \beta \left( C_m \frac{\partial V_m}{\partial t} + I_{\mathrm{ion}}(V_m) \right),
 \]
+
 \[
 \nabla \cdot ((\sigma_i^* + \sigma_e^*) \nabla \phi_e) = -\nabla \cdot (\sigma_i^* \nabla V_m),
 \]
@@ -1055,6 +1134,7 @@ Many applications involve nonlinear constitutive laws, and the extension of homo
 
 <div class="definition">
 <strong>Definition 8.11 (Nonlinear Monotone Operator).</strong> Consider the nonlinear elliptic problem
+
 \[
 -\nabla \cdot a(x/\varepsilon, \nabla u_\varepsilon) = f \quad \text{in } \Omega,
 \]
@@ -1063,10 +1143,12 @@ where \(a(y, \xi): Y \times \mathbb{R}^d \to \mathbb{R}^d\) is \(Y\)-periodic in
 
 <div class="theorem">
 <strong>Theorem 8.12 (Nonlinear Periodic Homogenization).</strong> Under the above monotonicity and growth conditions, the solutions \(u_\varepsilon\) converge weakly in \(H^1_0(\Omega)\) to \(u_0\), where \(u_0\) solves
+
 \[
 -\nabla \cdot a^*(\nabla u_0) = f,
 \]
 and the effective operator \(a^*(\xi) = \int_Y a(y, \xi + \nabla_y \chi(y; \xi)) \, dy\), with \(\chi(\cdot; \xi)\) solving the nonlinear cell problem
+
 \[
 -\nabla_y \cdot a(y, \xi + \nabla_y \chi) = 0, \quad \chi \in H^1_{\mathrm{per}}(Y)/\mathbb{R}.
 \]

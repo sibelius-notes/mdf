@@ -20,10 +20,12 @@ Consider a system of \(N\) identical point particles in \(\mathbb{R}^3\), each w
 </div>
 
 The particles interact through a pair potential \(\Phi: \mathbb{R}^3 \to \mathbb{R}\). The Hamiltonian of the system is
+
 \[
 H_N(Z_N) = \sum_{i=1}^N \frac{|p_i|^2}{2m} + \sum_{1 \le i < j \le N} \Phi(q_i - q_j).
 \]
 Hamilton's equations of motion then read
+
 \[
 \dot{q}_i = \frac{\partial H_N}{\partial p_i} = \frac{p_i}{m}, \qquad \dot{p}_i = -\frac{\partial H_N}{\partial q_i} = -\sum_{j \ne i} \nabla \Phi(q_i - q_j).
 \]
@@ -41,10 +43,12 @@ The evolution of \(F_N\) is governed by the requirement that probability is cons
 
 <div class="theorem">
 <strong>Theorem 1.3 (Liouville's Theorem).</strong> Let \(F_N(Z_N, t)\) be the \(N\)-particle distribution function evolving under the Hamiltonian flow. Then \(F_N\) satisfies
+
 \[
 \frac{\partial F_N}{\partial t} + \{F_N, H_N\} = 0,
 \]
 where \(\{F_N, H_N\} = \sum_{i=1}^N \left(\frac{\partial F_N}{\partial q_i} \cdot \frac{\partial H_N}{\partial p_i} - \frac{\partial F_N}{\partial p_i} \cdot \frac{\partial H_N}{\partial q_i}\right)\) is the Poisson bracket. Equivalently,
+
 \[
 \frac{\partial F_N}{\partial t} + \sum_{i=1}^N \frac{p_i}{m} \cdot \nabla_{q_i} F_N - \sum_{i=1}^N \sum_{j \ne i} \nabla \Phi(q_i - q_j) \cdot \nabla_{p_i} F_N = 0.
 \]
@@ -52,6 +56,7 @@ where \(\{F_N, H_N\} = \sum_{i=1}^N \left(\frac{\partial F_N}{\partial q_i} \cdo
 
 <div class="proof">
 <strong>Proof.</strong> Let \(Z_N(t)\) be a trajectory of the Hamiltonian system. Define \(g(t) = F_N(Z_N(t), t)\). Then
+
 \[
 \frac{dg}{dt} = \frac{\partial F_N}{\partial t} + \sum_{i=1}^N \left(\dot{q}_i \cdot \nabla_{q_i} F_N + \dot{p}_i \cdot \nabla_{p_i} F_N\right) = \frac{\partial F_N}{\partial t} + \{F_N, H_N\}.
 \]
@@ -66,6 +71,7 @@ The key idea for reducing the Liouville equation is to integrate out most of the
 
 <div class="definition">
 <strong>Definition 1.4 (Marginal Distributions).</strong> The <em>\(s\)-particle marginal distribution</em> (\(1 \le s \le N\)) is defined by
+
 \[
 f_N^{(s)}(z_1, \ldots, z_s, t) = \frac{N!}{(N-s)!} \int_{\Gamma_{N-s}} F_N(z_1, \ldots, z_s, z_{s+1}, \ldots, z_N, t) \, dz_{s+1} \cdots dz_N,
 \]
@@ -78,6 +84,7 @@ Integrating the Liouville equation over the variables \(z_{s+1}, \ldots, z_N\), 
 
 <div class="theorem">
 <strong>Theorem 1.5 (BBGKY Hierarchy).</strong> The marginal distributions satisfy, for \(1 \le s \le N-1\),
+
 \[
 \frac{\partial f_N^{(s)}}{\partial t} + \sum_{i=1}^s \frac{p_i}{m} \cdot \nabla_{q_i} f_N^{(s)} - \sum_{1 \le i < j \le s} \left(\nabla \Phi(q_i - q_j) \cdot (\nabla_{p_i} - \nabla_{p_j})\right) f_N^{(s)} = (N - s) \sum_{i=1}^s \int \nabla \Phi(q_i - q_{s+1}) \cdot \nabla_{p_i} f_N^{(s+1)} \, dz_{s+1}.
 \]
@@ -91,6 +98,7 @@ The passage from the BBGKY hierarchy to the Boltzmann equation requires a specif
 
 <div class="definition">
 <strong>Definition 1.6 (Boltzmann-Grad Scaling).</strong> For particles interacting via a hard-sphere potential of diameter \(\varepsilon > 0\), the <em>Boltzmann-Grad limit</em> is the regime
+
 \[
 N \to \infty, \quad \varepsilon \to 0, \quad N \varepsilon^{d-1} = \ell^{-1} = \text{const},
 \]
@@ -109,6 +117,7 @@ The crucial hypothesis that allows the closure of the hierarchy is Boltzmann's a
 
 <div class="definition">
 <strong>Definition 1.8 (Molecular Chaos / Stosszahlansatz).</strong> The \(N\)-particle system is said to be in a state of <em>molecular chaos</em> (German: Stosszahlansatz) if the two-particle marginal factorizes as a product of one-particle marginals:
+
 \[
 f_N^{(2)}(x_1, v_1, x_2, v_2, t) \approx f_N^{(1)}(x_1, v_1, t) \, f_N^{(1)}(x_2, v_2, t)
 \]
@@ -132,6 +141,7 @@ Lanford's theorem is a landmark result, but the time restriction to roughly one-
 Applying the molecular chaos assumption to the first equation of the BBGKY hierarchy, and taking the Boltzmann-Grad limit, one arrives at a closed equation for the one-particle distribution function \(f(x, v, t)\). The interaction between pairs of particles is encoded in the collision geometry: two particles with velocities \(v\) and \(v_*\) collide, producing post-collisional velocities \(v'\) and \(v_*'\) determined by conservation of momentum and energy together with the scattering angle.
 
 For elastic hard-sphere collisions, the post-collisional velocities are
+
 \[
 v' = v - ((v - v_*) \cdot \omega)\,\omega, \qquad v_*' = v_* + ((v - v_*) \cdot \omega)\,\omega,
 \]
@@ -139,6 +149,7 @@ where \(\omega \in S^2\) is the unit vector along the line of centers at the mom
 
 <div class="theorem">
 <strong>Theorem 1.10 (Boltzmann Equation).</strong> Under the Boltzmann-Grad limit with molecular chaos, the one-particle distribution function \(f(x, v, t) \ge 0\) satisfies the <em>Boltzmann equation</em>
+
 \[
 \frac{\partial f}{\partial t} + v \cdot \nabla_x f = Q(f, f),
 \]
@@ -159,10 +170,12 @@ The heart of the Boltzmann equation is the collision operator \(Q(f,f)\), a bili
 
 <div class="definition">
 <strong>Definition 2.1 (Boltzmann Collision Operator).</strong> The <em>Boltzmann collision operator</em> is defined by
+
 \[
 Q(f,f)(v) = \int_{\mathbb{R}^3} \int_{S^2} B(|v - v_*|, \cos\theta) \left[f(v')f(v_*') - f(v)f(v_*)\right] d\omega \, dv_*,
 \]
 where \(\cos\theta = \frac{(v - v_*) \cdot \omega}{|v - v_*|}\), the post-collisional velocities \(v'\) and \(v_*'\) are given by
+
 \[
 v' = \frac{v + v_*}{2} + \frac{|v - v_*|}{2}\omega, \qquad v_*' = \frac{v + v_*}{2} - \frac{|v - v_*|}{2}\omega,
 \]
@@ -170,6 +183,7 @@ and \(B(|v - v_*|, \cos\theta) \ge 0\) is the <em>collision kernel</em> (or coll
 </div>
 
 The collision operator has a natural decomposition \(Q(f,f) = Q^+(f,f) - Q^-(f,f)\), where the gain term \(Q^+\) accounts for particles scattered into velocity \(v\) and the loss term \(Q^-\) accounts for particles scattered out of velocity \(v\). Explicitly,
+
 \[
 Q^+(f,f)(v) = \int_{\mathbb{R}^3} \int_{S^2} B \, f(v') f(v_*') \, d\omega \, dv_*, \qquad Q^-(f,f)(v) = f(v) \int_{\mathbb{R}^3} \int_{S^2} B \, f(v_*) \, d\omega \, dv_*.
 \]
@@ -183,6 +197,7 @@ The classification of collision kernels by the exponent \(\gamma\) is physically
 
 <div class="example">
 <strong>Example 2.3a.</strong> For the Coulomb interaction \(\Phi(r) = e^2/(4\pi\varepsilon_0 r)\), the formal inverse-power exponent is \(p = 2\), giving \(\gamma = -3\) in three dimensions. However, the Coulomb cross-section diverges logarithmically due to grazing collisions, and the Boltzmann collision operator must be replaced by the Landau (or Fokker-Planck-Landau) collision operator, which arises as the grazing collision limit of the Boltzmann operator. The Landau operator reads
+
 \[
 Q_L(f,f)(v) = \nabla_v \cdot \int_{\mathbb{R}^3} \Psi(v - v_*)\left[f(v_*)\nabla_v f(v) - f(v)\nabla_{v_*}f(v_*)\right] dv_*,
 \]
@@ -199,6 +214,7 @@ The collision operator satisfies fundamental conservation properties that reflec
 
 <div class="definition">
 <strong>Definition 2.4 (Collision Invariant).</strong> A measurable function \(\psi: \mathbb{R}^3 \to \mathbb{R}\) is a <em>collision invariant</em> if
+
 \[
 \psi(v') + \psi(v_*') = \psi(v) + \psi(v_*)
 \]
@@ -209,6 +225,7 @@ The functional equation in Definition 2.4 states that the total value of \(\psi\
 
 <div class="theorem">
 <strong>Theorem 2.5 (Classification of Collision Invariants).</strong> Under mild regularity assumptions, the collision invariants are precisely the functions of the form
+
 \[
 \psi(v) = a + b \cdot v + c|v|^2,
 \]
@@ -223,13 +240,16 @@ The conservation laws follow immediately: multiplying the Boltzmann equation by 
 
 <div class="theorem">
 <strong>Theorem 2.6 (Conservation Laws).</strong> Let \(f\) be a sufficiently regular solution of the Boltzmann equation. Define the macroscopic fields
+
 \[
 \rho = \int f \, dv, \quad \rho u = \int v f \, dv, \quad \frac{3}{2}\rho T + \frac{1}{2}\rho|u|^2 = \frac{1}{2}\int |v|^2 f \, dv,
 \]
 where \(\rho\) is the mass density, \(u\) the bulk velocity, and \(T\) the temperature (in units where Boltzmann's constant \(k_B = 1\)). Then these fields satisfy the local conservation laws:
+
 \[
 \frac{\partial \rho}{\partial t} + \nabla_x \cdot (\rho u) = 0, \qquad \frac{\partial (\rho u)}{\partial t} + \nabla_x \cdot \left(\int v \otimes v \, f \, dv\right) = 0,
 \]
+
 \[
 \frac{\partial}{\partial t}\left(\frac{1}{2}\int |v|^2 f \, dv\right) + \nabla_x \cdot \left(\frac{1}{2}\int |v|^2 v \, f \, dv\right) = 0.
 \]
@@ -247,10 +267,12 @@ Boltzmann's H-theorem is the kinetic-theory avatar of the second law of thermody
 
 <div class="definition">
 <strong>Definition 2.7 (Boltzmann H-Functional).</strong> The <em>Boltzmann H-functional</em> (or negative of the kinetic entropy) for a spatially homogeneous distribution is
+
 \[
 H(f) = \int_{\mathbb{R}^3} f(v) \log f(v) \, dv.
 \]
 For the spatially inhomogeneous case on a domain \(\Omega \subseteq \mathbb{R}^3\),
+
 \[
 H(f) = \int_\Omega \int_{\mathbb{R}^3} f(x, v, t) \log f(x, v, t) \, dv \, dx.
 \]
@@ -260,10 +282,12 @@ The functional \(H(f)\) is the negative of the physical entropy. Boltzmann showe
 
 <div class="theorem">
 <strong>Theorem 2.8 (Boltzmann's H-Theorem, 1872).</strong> Let \(f(v,t)\) be a sufficiently regular solution of the spatially homogeneous Boltzmann equation \(\partial_t f = Q(f,f)\). Then
+
 \[
 \frac{dH}{dt} = \int_{\mathbb{R}^3} Q(f,f) \log f \, dv = -D(f) \le 0,
 \]
 where the entropy production (or dissipation) functional is
+
 \[
 D(f) = \frac{1}{4} \int_{\mathbb{R}^3} \int_{\mathbb{R}^3} \int_{S^2} B(|v - v_*|, \cos\theta)\left(f'f_*' - ff_*\right)\log\frac{f'f_*'}{ff_*} \, d\omega \, dv_* \, dv \ge 0,
 \]
@@ -272,10 +296,12 @@ using the shorthand \(f = f(v)\), \(f_* = f(v_*)\), \(f' = f(v')\), \(f_*' = f(v
 
 <div class="proof">
 <strong>Proof.</strong> Multiply the Boltzmann equation by \((\log f + 1)\) and integrate over \(v\). For the collision term, use the symmetry properties of the collision operator. The key identity is that for any test function \(\psi(v)\),
+
 \[
 \int Q(f,f)\psi \, dv = \frac{1}{4}\int\!\!\int\!\!\int B(f'f_*' - ff_*)\left(\psi + \psi_* - \psi' - \psi_*'\right) d\omega \, dv_* \, dv.
 \]
 With \(\psi = \log f\), this gives
+
 \[
 \frac{dH}{dt} = \frac{1}{4}\int\!\!\int\!\!\int B(f'f_*' - ff_*)\log\frac{ff_*}{f'f_*'} \, d\omega \, dv_* \, dv.
 \]
@@ -292,6 +318,7 @@ The H-theorem identifies the equilibrium distributions: they are precisely the s
 
 <div class="definition">
 <strong>Definition 2.9 (Maxwellian Distribution).</strong> A <em>Maxwellian</em> (or Maxwell-Boltzmann distribution) is a distribution of the form
+
 \[
 \mathcal{M}_{\rho, u, T}(v) = \frac{\rho}{(2\pi T)^{3/2}} \exp\left(-\frac{|v - u|^2}{2T}\right),
 \]
@@ -306,6 +333,7 @@ The Maxwellian is the unique distribution that maximizes the entropy \(-H(f)\) s
 
 <div class="proof">
 <strong>Proof.</strong> This is a constrained optimization problem. The Lagrangian is
+
 \[
 \mathcal{L}[f] = -\int f \log f \, dv - \lambda_0 \int f \, dv - \lambda \cdot \int v f \, dv - \lambda_4 \int \tfrac{1}{2}|v|^2 f \, dv.
 \]
@@ -318,6 +346,7 @@ A natural and deep question is: how fast do solutions of the Boltzmann equation 
 
 <div class="theorem">
 <strong>Theorem 2.11 (Cercignani's Conjecture, Villani, 2003).</strong> For Maxwell molecules with Grad's angular cutoff, there exists a constant \(\lambda > 0\) (depending on the mass, energy, and entropy of \(f\)) such that
+
 \[
 D(f) \ge \lambda \left(H(f) - H(\mathcal{M})\right),
 \]
@@ -340,10 +369,12 @@ The full Boltzmann collision operator is a five-dimensional integral (over \(v_*
 
 <div class="definition">
 <strong>Definition 3.1 (BGK Model).</strong> The <em>BGK equation</em> is
+
 \[
 \frac{\partial f}{\partial t} + v \cdot \nabla_x f = \frac{1}{\tau}\left(\mathcal{M}[f] - f\right),
 \]
 where \(\tau > 0\) is the relaxation time (related to the mean free time) and \(\mathcal{M}[f] = \mathcal{M}_{\rho, u, T}\) is the local Maxwellian computed from the moments of \(f\):
+
 \[
 \rho = \int f \, dv, \qquad \rho u = \int v f \, dv, \qquad \frac{3}{2}\rho T = \frac{1}{2}\int |v - u|^2 f \, dv.
 \]
@@ -362,10 +393,12 @@ Despite its simplicity, the BGK model is nonlinear because \(\mathcal{M}[f]\) de
 
 <div class="proof">
 <strong>Proof.</strong> Conservation follows immediately from the fact that \(\mathcal{M}[f]\) has the same mass, momentum, and energy as \(f\). The characterization of equilibria is clear: \(f = \mathcal{M}[f]\) means \(f\) is Maxwellian with its own moments, hence Maxwellian. For the H-theorem, compute
+
 \[
 \int Q_{\mathrm{BGK}}(f)\log f \, dv = \frac{1}{\tau}\int (\mathcal{M}[f] - f)\log f \, dv.
 \]
 Since \(\mathcal{M}[f]\) maximizes entropy with the same moments, we have \(\int \mathcal{M}[f]\log\mathcal{M}[f] \, dv \le \int f \log f \, dv\) (wait — the sign requires care). More precisely, by the Gibbs inequality (or equivalently the non-negativity of the Kullback-Leibler divergence), \(\int g \log(g/h) \, dv \ge 0\) for any probability densities \(g, h\). Applying this with \(g = f/\rho\) and \(h = \mathcal{M}[f]/\rho\) after appropriate normalization yields
+
 \[
 \int (\mathcal{M}[f] - f)\log f \, dv \le \int (\mathcal{M}[f] - f)\log \mathcal{M}[f] \, dv = 0,
 \]
@@ -378,14 +411,17 @@ A significant deficiency of the standard BGK model is that it produces an incorr
 
 <div class="definition">
 <strong>Definition 3.3 (ES-BGK Model).</strong> The <em>ES-BGK equation</em> is
+
 \[
 \frac{\partial f}{\partial t} + v \cdot \nabla_x f = \frac{1}{\tau}\left(\mathcal{G}[f] - f\right),
 \]
 where \(\mathcal{G}[f]\) is the <em>anisotropic Gaussian</em>
+
 \[
 \mathcal{G}[f](v) = \frac{\rho}{\sqrt{(2\pi)^3 \det \mathcal{T}}} \exp\left(-\frac{1}{2}(v - u)^\top \mathcal{T}^{-1}(v - u)\right),
 \]
 with the temperature tensor
+
 \[
 \mathcal{T} = (1 - \nu)T\mathbf{I} + \nu \Theta, \qquad \Theta_{ij} = \frac{1}{\rho}\int (v_i - u_i)(v_j - u_j) f \, dv,
 \]
@@ -427,6 +463,7 @@ The main computational advantages of BGK-type models are: (i) the collision oper
 The connection between kinetic theory and fluid dynamics is established through asymptotic analysis in the small parameter \(\varepsilon = \mathrm{Kn}\), the Knudsen number (ratio of mean free path to macroscopic length scale). Hilbert (1912) proposed a formal expansion of the solution of the Boltzmann equation in powers of \(\varepsilon\).
 
 Rescaling the Boltzmann equation by introducing \(x' = \varepsilon x\) (or equivalently, measuring lengths in units of the mean free path), the Boltzmann equation becomes
+
 \[
 \varepsilon\left(\frac{\partial f}{\partial t} + v \cdot \nabla_x f\right) = Q(f, f).
 \]
@@ -434,6 +471,7 @@ This is the Boltzmann equation in the diffusive (or hydrodynamic) scaling. The f
 
 <div class="definition">
 <strong>Definition 4.1 (Hilbert Expansion).</strong> The <em>Hilbert expansion</em> is the formal ansatz
+
 \[
 f = f_0 + \varepsilon f_1 + \varepsilon^2 f_2 + \cdots,
 \]
@@ -441,6 +479,7 @@ where each \(f_n\) depends on \(x, v, t\). Substituting into the scaled Boltzman
 </div>
 
 At order \(\varepsilon^{-1}\) (the leading order), one finds \(Q(f_0, f_0) = 0\), which by the characterization of equilibria implies \(f_0 = \mathcal{M}_{\rho, u, T}\) is a local Maxwellian. The macroscopic fields \(\rho(x,t)\), \(u(x,t)\), \(T(x,t)\) are as yet undetermined. At order \(\varepsilon^0\), one finds the linearized equation
+
 \[
 \partial_t f_0 + v \cdot \nabla_x f_0 = L_{f_0}(f_1) + Q(f_0, f_0) = L_{f_0}(f_1),
 \]
@@ -452,10 +491,12 @@ To proceed with the asymptotic expansion, we need properties of the linearized c
 
 <div class="definition">
 <strong>Definition 4.2 (Linearized Collision Operator).</strong> Writing \(f = \mathcal{M}(1 + \varepsilon g)\) and expanding the collision operator to first order in \(\varepsilon\), one obtains
+
 \[
 Q(\mathcal{M}(1 + \varepsilon g), \mathcal{M}(1 + \varepsilon g)) = \varepsilon \mathcal{M} Lg + O(\varepsilon^2),
 \]
 where the <em>linearized collision operator</em> is
+
 \[
 Lg(v) = \int_{\mathbb{R}^3}\int_{S^2} B \, \mathcal{M}(v_*)\left[g(v') + g(v_*') - g(v) - g(v_*)\right] d\omega \, dv_*.
 \]
@@ -475,6 +516,7 @@ The spectral gap is essential for the solvability of the Chapman-Enskog equation
 
 <div class="example">
 <strong>Example 4.3a.</strong> For Maxwell molecules, the linearized operator \(L\) can be diagonalized explicitly. The eigenfunctions are products of Sonine (generalized Laguerre) polynomials and spherical harmonics:
+
 \[
 \phi_{n,l,m}(c) = S_n^{(l+1/2)}\!\left(\frac{|c|^2}{2}\right)|c|^l Y_{lm}(\hat{c}),
 \]
@@ -487,6 +529,7 @@ The Chapman-Enskog method differs from the Hilbert expansion in a subtle but cru
 
 <div class="definition">
 <strong>Definition 4.4 (Chapman-Enskog Ansatz).</strong> Write \(f = \mathcal{M}[f](1 + \Phi)\), where \(\mathcal{M}[f]\) is the local Maxwellian with the same mass, momentum, and energy as \(f\), and \(\Phi\) is the non-equilibrium perturbation satisfying the constraints
+
 \[
 \int \mathcal{M}[f]\Phi \, \psi(v) \, dv = 0 \quad \text{for all collision invariants } \psi.
 \]
@@ -501,12 +544,15 @@ At zeroth order in \(\varepsilon\), the distribution function is the local Maxwe
 
 <div class="theorem">
 <strong>Theorem 4.5 (Euler Equations from Kinetic Theory).</strong> At zeroth order in the Chapman-Enskog expansion, the macroscopic fields \(\rho, u, T\) satisfy the compressible Euler equations:
+
 \[
 \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho u) = 0,
 \]
+
 \[
 \frac{\partial (\rho u)}{\partial t} + \nabla \cdot (\rho u \otimes u) + \nabla p = 0,
 \]
+
 \[
 \frac{\partial}{\partial t}\left(\frac{1}{2}\rho|u|^2 + \frac{3}{2}\rho T\right) + \nabla \cdot \left[\left(\frac{1}{2}\rho|u|^2 + \frac{5}{2}\rho T\right)u\right] = 0,
 \]
@@ -515,10 +561,12 @@ with the equation of state \(p = \rho T\) (ideal gas law with \(k_B/m = 1\)).
 
 <div class="proof">
 <strong>Proof.</strong> For a Maxwellian \(\mathcal{M}_{\rho, u, T}\), the stress tensor is isotropic:
+
 \[
 \int (v_i - u_i)(v_j - u_j)\mathcal{M} \, dv = \rho T \delta_{ij},
 \]
 so the momentum flux is \(\int v_i v_j \mathcal{M} \, dv = \rho u_i u_j + \rho T \delta_{ij}\). Similarly, the energy flux is
+
 \[
 \frac{1}{2}\int |v|^2 v \mathcal{M} \, dv = \left(\frac{1}{2}\rho|u|^2 + \frac{5}{2}\rho T\right)u.
 \]
@@ -531,6 +579,7 @@ The rigorous justification of this formal limit is a deep mathematical problem. 
 
 <div class="theorem">
 <strong>Theorem 4.5a (Caflisch, 1980).</strong> For smooth solutions of the compressible Euler equations on a time interval \([0, T^*)\) (before shock formation), there exist solutions of the scaled Boltzmann equation \(\varepsilon(\partial_t f^\varepsilon + v \cdot \nabla_x f^\varepsilon) = Q(f^\varepsilon, f^\varepsilon)\) such that
+
 \[
 \sup_{0 \le t < T^*} \left\|f^\varepsilon(\cdot, \cdot, t) - \mathcal{M}_{\rho(t), u(t), T(t)}\right\|_{L^\infty_{x,v}} = O(\varepsilon),
 \]
@@ -543,16 +592,20 @@ At first order, the perturbation \(\Phi_1\) satisfies a linear equation involvin
 
 <div class="theorem">
 <strong>Theorem 4.6 (Navier-Stokes Equations from Kinetic Theory).</strong> At first order in the Chapman-Enskog expansion, the macroscopic fields satisfy the compressible Navier-Stokes-Fourier equations:
+
 \[
 \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho u) = 0,
 \]
+
 \[
 \rho\left(\frac{\partial u}{\partial t} + u \cdot \nabla u\right) + \nabla p = \nabla \cdot \boldsymbol{\sigma},
 \]
+
 \[
 \frac{3}{2}\rho\left(\frac{\partial T}{\partial t} + u \cdot \nabla T\right) + p \nabla \cdot u = \boldsymbol{\sigma} : \nabla u - \nabla \cdot \mathbf{q},
 \]
 where the viscous stress tensor and heat flux are
+
 \[
 \boldsymbol{\sigma} = \mu\left(\nabla u + (\nabla u)^\top - \frac{2}{3}(\nabla \cdot u)\mathbf{I}\right), \qquad \mathbf{q} = -\kappa \nabla T.
 \]
@@ -562,6 +615,7 @@ The transport coefficients \(\mu\) (dynamic viscosity) and \(\kappa\) (thermal c
 
 <div class="example">
 <strong>Example 4.7.</strong> For hard-sphere molecules of diameter \(\sigma\) and mass \(m\), the first-order Chapman-Enskog expansion gives
+
 \[
 \mu = \frac{5}{16\sigma^2}\sqrt{\frac{mk_B T}{\pi}}, \qquad \kappa = \frac{75 k_B}{64\sigma^2}\sqrt{\frac{k_B T}{\pi m}},
 \]
@@ -578,6 +632,7 @@ Continuing the Chapman-Enskog expansion to second order yields the Burnett equat
 
 <div class="definition">
 <strong>Definition 4.9 (Burnett Equations).</strong> The <em>Burnett equations</em> are the fluid-dynamic equations obtained at second order in the Chapman-Enskog expansion (\(O(\varepsilon^2)\) or equivalently \(O(\mathrm{Kn}^2)\)). They include terms involving second derivatives of the macroscopic fields in the stress tensor and heat flux:
+
 \[
 \boldsymbol{\sigma} = \boldsymbol{\sigma}_{\mathrm{NS}} + \varepsilon \boldsymbol{\sigma}_{\mathrm{Burnett}}, \qquad \mathbf{q} = \mathbf{q}_{\mathrm{NS}} + \varepsilon \mathbf{q}_{\mathrm{Burnett}},
 \]
@@ -608,6 +663,7 @@ When the dominant interactions are long-range, the appropriate kinetic equation 
 
 <div class="definition">
 <strong>Definition 5.1 (Vlasov Equation).</strong> The <em>Vlasov equation</em> for a distribution function \(f(x, v, t)\) with self-consistent force field \(F[f]\) is
+
 \[
 \frac{\partial f}{\partial t} + v \cdot \nabla_x f + F[f](x, t) \cdot \nabla_v f = 0.
 \]
@@ -622,9 +678,11 @@ The most important coupled system in plasma physics is the Vlasov-Poisson system
 
 <div class="definition">
 <strong>Definition 5.2 (Vlasov-Poisson System).</strong> The <em>Vlasov-Poisson system</em> for a single species of particles with charge \(q\) and mass \(m\) in the presence of a uniform neutralizing background is
+
 \[
 \frac{\partial f}{\partial t} + v \cdot \nabla_x f + \frac{q}{m}E(x,t) \cdot \nabla_v f = 0,
 \]
+
 \[
 E = -\nabla_x \phi, \qquad -\Delta_x \phi = \frac{q}{\varepsilon_0}\left(\int f \, dv - n_0\right),
 \]
@@ -647,13 +705,16 @@ For a fully electromagnetic treatment of plasmas, the Poisson equation is replac
 
 <div class="definition">
 <strong>Definition 5.4 (Vlasov-Maxwell System).</strong> The <em>Vlasov-Maxwell system</em> for a plasma of species \(\alpha\) (with charges \(q_\alpha\) and masses \(m_\alpha\)) is
+
 \[
 \frac{\partial f_\alpha}{\partial t} + v \cdot \nabla_x f_\alpha + \frac{q_\alpha}{m_\alpha}(E + v \times B) \cdot \nabla_v f_\alpha = 0,
 \]
 coupled to Maxwell's equations:
+
 \[
 \nabla \times E = -\frac{\partial B}{\partial t}, \qquad \nabla \times B = \mu_0 J + \mu_0 \varepsilon_0 \frac{\partial E}{\partial t},
 \]
+
 \[
 \nabla \cdot E = \frac{\rho_c}{\varepsilon_0}, \qquad \nabla \cdot B = 0,
 \]
@@ -682,6 +743,7 @@ One of the most striking phenomena in plasma physics is Landau damping: the deca
 
 <div class="definition">
 <strong>Definition 5.8 (Linearized Vlasov-Poisson System).</strong> Linearizing around a spatially homogeneous equilibrium \(f_0(v)\) (with \(E_0 = 0\)), writing \(f = f_0(v) + \varepsilon f_1(x, v, t)\) and \(E = \varepsilon E_1(x, t)\), the linearized system is
+
 \[
 \frac{\partial f_1}{\partial t} + v \cdot \nabla_x f_1 + \frac{q}{m}E_1 \cdot \nabla_v f_0 = 0, \qquad -\Delta\phi_1 = \frac{q}{\varepsilon_0}\int f_1 \, dv.
 \]
@@ -691,10 +753,12 @@ For a single Fourier mode \(f_1, \phi_1 \propto e^{ikx}\) in one dimension, defi
 
 <div class="theorem">
 <strong>Theorem 5.9 (Landau, 1946).</strong> Consider the linearized one-dimensional Vlasov-Poisson system with equilibrium \(f_0(v)\). The electric field associated with a Fourier mode of wave number \(k\) evolves as \(E_k(t) \sim e^{-i\omega t}\), where \(\omega\) is determined by the dispersion relation
+
 \[
 \varepsilon(k, \omega) = 1 - \frac{\omega_p^2}{k^2}\int_{-\infty}^\infty \frac{f_0'(v)}{v - \omega/k} \, dv = 0,
 \]
 with \(\omega_p = \sqrt{n_0 q^2/(m\varepsilon_0)}\) the plasma frequency. The integral is evaluated as a principal value plus a residue (Landau's prescription), yielding complex \(\omega\). For a Maxwellian equilibrium \(f_0(v) = (2\pi v_{th}^2)^{-1/2}e^{-v^2/(2v_{th}^2)}\), the damping rate for \(k \lambda_D \ll 1\) is
+
 \[
 \gamma = -\mathrm{Im}(\omega) \approx -\sqrt{\frac{\pi}{8}}\frac{\omega_p}{(k\lambda_D)^3}\exp\left(-\frac{1}{2k^2\lambda_D^2} - \frac{3}{2}\right),
 \]
@@ -705,6 +769,7 @@ The physical mechanism is wave-particle resonance: particles with velocities nea
 
 <div class="example">
 <strong>Example 5.9a.</strong> For a Maxwellian equilibrium \(f_0(v) = n_0(2\pi v_{th}^2)^{-1/2}\exp(-v^2/(2v_{th}^2))\), the dispersion relation can be expressed in terms of the plasma dispersion function \(Z(\zeta) = \pi^{-1/2}\int_{-\infty}^\infty \frac{e^{-s^2}}{s - \zeta} \, ds\) (with Landau's contour convention) as
+
 \[
 1 - \frac{\omega_p^2}{k^2 v_{th}^2}\left[1 + \zeta Z(\zeta)\right] = 0, \qquad \zeta = \frac{\omega}{k\sqrt{2}v_{th}}.
 \]
@@ -717,6 +782,7 @@ The question of when the linearized Vlasov-Poisson system is stable is answered 
 
 <div class="theorem">
 <strong>Theorem 5.10 (Penrose, 1960).</strong> The homogeneous equilibrium \(f_0(v)\) of the one-dimensional Vlasov-Poisson system is linearly stable (no growing modes) if and only if, for every \(v_0\) such that \(f_0'(v_0) = 0\) and \(f_0''(v_0) > 0\) (i.e., every local minimum of \(f_0\)),
+
 \[
 \text{P.V.}\int_{-\infty}^\infty \frac{f_0(v) - f_0(v_0)}{(v - v_0)^2} \, dv > 0.
 \]
@@ -738,6 +804,7 @@ Extending Landau damping from the linearized to the full nonlinear Vlasov-Poisso
 <li>the perturbation is small in a suitable analytic norm.</li>
 </ol>
 Then the solution \(f(x, v, t)\) exists globally, and the electric field decays exponentially:
+
 \[
 \|E(t)\|_{L^\infty} \lesssim e^{-\lambda t}
 \]
@@ -758,6 +825,7 @@ The moment approach has a long history, going back to the work of Grad (1949) an
 
 <div class="definition">
 <strong>Definition 6.1 (Velocity Moments).</strong> The <em>moments</em> of the distribution function \(f(x, v, t)\) are the integrals
+
 \[
 m_\alpha(x, t) = \int_{\mathbb{R}^3} v^\alpha f(x, v, t) \, dv,
 \]
@@ -768,6 +836,7 @@ Multiplying the Boltzmann equation by monomials in \(v\) and integrating over ve
 
 <div class="theorem">
 <strong>Theorem 6.2 (Moment Hierarchy).</strong> Let \(f\) satisfy the Boltzmann equation. Then for any smooth function \(\psi(v)\),
+
 \[
 \frac{\partial}{\partial t}\int \psi f \, dv + \nabla_x \cdot \int v \psi f \, dv = \int \psi \, Q(f,f) \, dv.
 \]
@@ -780,6 +849,7 @@ The first systematic closure beyond the Navier-Stokes level was proposed by Haro
 
 <div class="definition">
 <strong>Definition 6.3 (Grad's 13-Moment Approximation).</strong> The <em>Grad 13-moment distribution</em> is
+
 \[
 f_{\mathrm{G13}} = \mathcal{M}_{\rho, u, T}\left(1 + \frac{\sigma_{ij}}{2\rho T^2}(c_i c_j - \tfrac{1}{3}|c|^2\delta_{ij}) + \frac{q_i c_i}{\rho T^2}\left(\frac{|c|^2}{5T} - 1\right)\right),
 \]
@@ -792,9 +862,11 @@ The truncation at 13 moments is not unique. One can equally well use 20 moments 
 
 <div class="theorem">
 <strong>Theorem 6.4 (Grad's 13-Moment Equations).</strong> Under the Grad closure, the deviatoric stress and heat flux satisfy evolution equations of the form
+
 \[
 \frac{\partial \sigma_{ij}}{\partial t} + \nabla_k(\sigma_{ij}u_k) + \frac{4}{5}\nabla_{\langle i}q_{j\rangle} + 2\rho T \nabla_{\langle i}u_{j\rangle} + \cdots = -\frac{1}{\tau}\sigma_{ij},
 \]
+
 \[
 \frac{\partial q_i}{\partial t} + \nabla_j(q_i u_j) + \frac{5}{2}\rho T \nabla_i T + T\nabla_j \sigma_{ij} + \cdots = -\frac{2}{3\tau}q_i,
 \]
@@ -811,6 +883,7 @@ The idea of maximum entropy closure is to determine the distribution function by
 
 <div class="definition">
 <strong>Definition 6.6 (Maximum Entropy Closure).</strong> Given a set of moment constraints \(\int \psi_\alpha(v) f \, dv = m_\alpha\) for \(\alpha = 1, \ldots, M\), the <em>maximum entropy distribution</em> is the minimizer of \(H(f) = \int f \log f \, dv\) subject to these constraints. By the method of Lagrange multipliers, the solution has the form
+
 \[
 f_{\mathrm{ME}} = \exp\left(\sum_{\alpha=1}^M \lambda_\alpha \psi_\alpha(v)\right),
 \]
@@ -876,6 +949,7 @@ The DSMC method converges to the Boltzmann equation in the limit \(N_p \to \inft
 
 <div class="theorem">
 <strong>Theorem 7.2 (Wagner, 1992).</strong> The DSMC method, in the limit \(N_p \to \infty\) with appropriate time and cell refinement, converges (in the sense of empirical measures) to the solution of the Boltzmann equation. Specifically, for any test function \(\varphi\),
+
 \[
 \frac{1}{N_p}\sum_{i=1}^{N_p} \varphi(x_i(t), v_i(t)) \to \int \varphi(x, v) f(x, v, t) \, dx \, dv
 \]
@@ -892,6 +966,7 @@ An alternative to stochastic methods is to discretize the velocity space directl
 
 <div class="definition">
 <strong>Definition 7.4 (Discrete Velocity Method).</strong> A <em>discrete velocity model</em> replaces \(f(x, v, t)\) by a finite collection \(\{f_k(x, t)\}_{k=1}^{N_v}\), where \(v_k \in \mathbb{R}^3\) is a prescribed set of discrete velocities. The Boltzmann equation becomes the system
+
 \[
 \frac{\partial f_k}{\partial t} + v_k \cdot \nabla_x f_k = Q_k(\{f_j\}),
 \]
@@ -908,6 +983,7 @@ The most efficient deterministic approaches to evaluating the Boltzmann collisio
 
 <div class="theorem">
 <strong>Theorem 7.6 (Fourier Structure, Bobylev 1975, Pareschi-Russo 2000).</strong> For Maxwell molecules (\(\gamma = 0\)), the Boltzmann collision operator has a convolution structure in Fourier space: if \(\hat{f}(\xi) = \int e^{-iv \cdot \xi} f(v) \, dv\), then
+
 \[
 \widehat{Q(f,f)}(\xi) = \int_{S^2} b(\cos\theta)\left[\hat{f}(\xi^+)\hat{f}(\xi^-) - \hat{f}(\xi)\hat{f}(0)\right] d\omega,
 \]
@@ -936,6 +1012,7 @@ The AP property ensures that the scheme works uniformly across all Knudsen numbe
 
 <div class="example">
 <strong>Example 7.9.</strong> Consider the one-dimensional BGK equation with IMEX time discretization:
+
 \[
 f^{n+1} = f^n - \frac{\Delta t}{\varepsilon}v \partial_x f^n + \frac{\Delta t}{\varepsilon^2}(\mathcal{M}[f^{n+1}] - f^{n+1}).
 \]
@@ -948,6 +1025,7 @@ A closely related approach to the multi-scale problem is the micro-macro decompo
 
 <div class="definition">
 <strong>Definition 7.10 (Micro-Macro Decomposition).</strong> Write
+
 \[
 f = \mathcal{M}[f] + g,
 \]
@@ -987,6 +1065,7 @@ The Knudsen number \(\mathrm{Kn} = \ell / L\), where \(\ell\) is the mean free p
 The transition regime is the most challenging both theoretically and computationally. Applications include flows in microelectromechanical systems (MEMS), atmospheric re-entry vehicles, and spacecraft plume interactions, where local Knudsen numbers can span several orders of magnitude. It is precisely in the transition regime that kinetic theory is indispensable: neither the simplicity of fluid dynamics nor the simplicity of free-molecular flow is available, and the full apparatus of the Boltzmann equation (or its moment and BGK approximations) is required.
 
 In the slip-flow regime, the Navier-Stokes equations remain valid in the bulk of the flow, but the boundary conditions must be modified. The standard no-slip condition is replaced by the Maxwell slip condition
+
 \[
 u_{\text{wall}} - u_{\text{gas}} = \frac{2 - \sigma_T}{\sigma_T}\ell\frac{\partial u}{\partial n}\bigg|_{\text{wall}} + \frac{3}{4}\frac{\mu}{\rho T}\frac{\partial T}{\partial s}\bigg|_{\text{wall}},
 \]
@@ -1002,6 +1081,7 @@ The Boltzmann transport equation (BTE) is the fundamental model for charge carri
 
 <div class="definition">
 <strong>Definition 8.3 (Semiconductor Boltzmann Transport Equation).</strong> The BTE for the electron distribution function \(f(x, k, t)\) in a semiconductor is
+
 \[
 \frac{\partial f}{\partial t} + v(k) \cdot \nabla_x f + \frac{qE}{\hbar} \cdot \nabla_k f = Q(f),
 \]
@@ -1011,6 +1091,7 @@ where \(k\) is the crystal momentum (replacing velocity as the kinetic variable)
 The semiconductor BTE differs from the classical Boltzmann equation in several important ways. First, the kinetic variable is crystal momentum \(k\) (living in the Brillouin zone, a compact set) rather than velocity (living in \(\mathbb{R}^3\)). Second, the dispersion relation \(\mathcal{E}(k)\) is not the simple parabola \(\frac{1}{2}m|v|^2\) but a complicated function reflecting the band structure (for silicon, the conduction band minima lie along the \(\langle 100 \rangle\) directions, giving an anisotropic effective mass tensor). Third, quantum statistics (Fermi-Dirac) replaces classical statistics (Maxwell-Boltzmann), introducing the Pauli blocking factors.
 
 The collision operator for semiconductor transport is typically linear (for phonon and impurity scattering, where the scatterers are in thermal equilibrium) and has the form
+
 \[
 Q(f)(k) = \int_{BZ} \left[S(k', k)f(k')(1 - f(k)) - S(k, k')f(k)(1 - f(k'))\right] dk',
 \]
@@ -1026,6 +1107,7 @@ The kinetic theory of photon transport leads to the radiative transfer equation 
 
 <div class="definition">
 <strong>Definition 8.5 (Radiative Transfer Equation).</strong> The <em>radiative transfer equation</em> for the specific intensity \(I(x, \omega, \nu, t)\) at position \(x\), direction \(\omega \in S^2\), and frequency \(\nu\) is
+
 \[
 \frac{1}{c}\frac{\partial I}{\partial t} + \omega \cdot \nabla_x I = -\kappa_a I - \kappa_s I + \kappa_a B(\nu, T) + \kappa_s \int_{S^2} p(\omega, \omega') I(x, \omega', \nu, t) \, d\omega',
 \]
@@ -1048,6 +1130,7 @@ The transport of neutrons in a nuclear reactor or shielding material is governed
 
 <div class="definition">
 <strong>Definition 8.7 (Neutron Transport Equation).</strong> The <em>neutron transport equation</em> for the angular flux \(\psi(x, \omega, E, t)\) of neutrons at position \(x\), direction \(\omega \in S^2\), and energy \(E\) is
+
 \[
 \frac{1}{v}\frac{\partial \psi}{\partial t} + \omega \cdot \nabla_x \psi + \Sigma_t(x, E)\psi = \int_0^\infty \int_{S^2} \Sigma_s(x, E' \to E, \omega' \to \omega)\psi(x, \omega', E', t) \, d\omega' \, dE' + S,
 \]
@@ -1056,6 +1139,7 @@ where \(v = \sqrt{2E/m_n}\) is the neutron speed, \(\Sigma_t\) is the total macr
 
 <div class="example">
 <strong>Example 8.8.</strong> The criticality problem for a nuclear reactor asks: for what geometric and material configurations is the neutron population self-sustaining? Mathematically, this is an eigenvalue problem. In the time-independent, monoenergetic, isotropic-scattering case, the transport equation reduces to
+
 \[
 \omega \cdot \nabla \psi + \Sigma_t \psi = \frac{c\Sigma_t}{4\pi}\int_{S^2}\psi \, d\omega' + \frac{1}{k_{\mathrm{eff}}}\frac{\nu\Sigma_f}{4\pi}\int_{S^2}\psi \, d\omega',
 \]
@@ -1068,6 +1152,7 @@ Kinetic theory has found a perhaps surprising application in the modeling of veh
 
 <div class="definition">
 <strong>Definition 8.9 (Kinetic Traffic Model — Prigogine-Herman, 1971).</strong> The <em>Prigogine-Herman model</em> for the distribution function \(f(x, v, t)\) of vehicles at position \(x\) with speed \(v \ge 0\) is
+
 \[
 \frac{\partial f}{\partial t} + v \frac{\partial f}{\partial x} = -f \int_0^v (v - w)f(x, w, t) \, dw + \frac{1}{\tau}\left(f_d(v; \rho) - f\right),
 \]
@@ -1078,6 +1163,7 @@ The structure of this model mirrors the Boltzmann and BGK equations. The interac
 
 <div class="example">
 <strong>Example 8.10.</strong> Taking velocity moments of the Prigogine-Herman model yields macroscopic traffic equations. The zeroth moment gives the conservation of vehicles:
+
 \[
 \frac{\partial \rho}{\partial t} + \frac{\partial (\rho u)}{\partial x} = 0,
 \]
@@ -1092,6 +1178,7 @@ The structure of the kinetic traffic model also admits an H-theorem: an entropy 
 
 <div class="theorem">
 <strong>Theorem 8.12 (Fluid Limit of Kinetic Traffic Models).</strong> In the relaxation limit \(\tau \to 0\) of the Prigogine-Herman model, the distribution function converges to the desired distribution \(f_d(v; \rho)\), and the conservation of vehicles reduces to the scalar conservation law
+
 \[
 \frac{\partial \rho}{\partial t} + \frac{\partial}{\partial x}\left(\rho V_e(\rho)\right) = 0,
 \]

@@ -53,10 +53,12 @@ We now present several classical inverse problems that will serve as recurring e
 
 <div class="example">
 <strong>Example 1.5 (Backward Heat Equation).</strong> Consider the heat equation on \([0,\pi]\) with homogeneous Dirichlet boundary conditions:
+
 \[
 \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2}, \quad u(0,t) = u(\pi,t) = 0, \quad u(x,0) = f(x).
 \]
 The forward problem is: given \(f\), find \(u(x,T)\) for some \(T > 0\). The solution is
+
 \[
 u(x,T) = \sum_{n=1}^{\infty} f_n e^{-n^2 T} \sin(nx), \quad \text{where } f_n = \frac{2}{\pi}\int_0^\pi f(x)\sin(nx)\,dx.
 \]
@@ -67,6 +69,7 @@ The backward heat equation illustrates how smoothing operators — operators who
 
 <div class="example">
 <strong>Example 1.6 (X-ray Tomography and the Radon Transform).</strong> In computed tomography (CT), one measures the attenuation of X-rays passing through a body. If \(f(x)\) denotes the attenuation coefficient at position \(x \in \mathbb{R}^2\), the measurement along a line \(L\) is modeled by the <em>Radon transform</em>:
+
 \[
 (\mathcal{R}f)(s,\theta) = \int_L f(x)\,d\ell = \int_{-\infty}^{\infty} f(s\omega + t\omega^\perp)\,dt,
 \]
@@ -75,6 +78,7 @@ where \(\omega = (\cos\theta, \sin\theta)\), \(\omega^\perp = (-\sin\theta, \cos
 
 <div class="example">
 <strong>Example 1.7 (Parameter Identification in an Elliptic PDE).</strong> Consider the elliptic boundary value problem
+
 \[
 -\nabla \cdot (a(x) \nabla u) = f \quad \text{in } \Omega, \qquad u = 0 \quad \text{on } \partial\Omega,
 \]
@@ -101,6 +105,7 @@ The degree of ill-posedness determines the fundamental limits of reconstruction 
 
 <div class="example">
 <strong>Example 1.10 (Integral Equation of the First Kind).</strong> The Fredholm integral equation of the first kind,
+
 \[
 (Af)(t) = \int_0^1 k(t,s) f(s)\,ds = g(t), \quad t \in [0,1],
 \]
@@ -127,6 +132,7 @@ Compact operators are the natural setting for infinite-dimensional inverse probl
 
 <div class="theorem">
 <strong>Theorem 2.2 (Singular Value Decomposition).</strong> Let \(A: X \to Y\) be a compact operator between separable Hilbert spaces. Then there exist orthonormal systems \(\{v_n\}_{n=1}^\infty \subset X\) and \(\{u_n\}_{n=1}^\infty \subset Y\), and a sequence \(\sigma_1 \geq \sigma_2 \geq \cdots > 0\) with \(\sigma_n \to 0\), such that
+
 \[
 Ax = \sum_{n=1}^{\infty} \sigma_n \langle x, v_n \rangle_X \, u_n \quad \text{for all } x \in X.
 \]
@@ -138,6 +144,7 @@ The numbers \(\sigma_n\) are called the <em>singular values</em> of \(A\), and t
 </div>
 
 The SVD reveals the mechanism of ill-posedness with crystalline clarity. The equation \(Ax = y\) has the formal solution
+
 \[
 x = \sum_{n=1}^{\infty} \frac{1}{\sigma_n} \langle y, u_n \rangle_Y \, v_n,
 \]
@@ -150,6 +157,7 @@ which converges if and only if the Picard condition \(\sum_{n=1}^\infty \sigma_n
 </div>
 
 When \(A\) is compact and injective, \(A^\dagger\) exists on \(\mathcal{R}(A) \oplus \mathcal{R}(A)^\perp = Y\) but is unbounded — the hallmark of ill-posedness. In terms of the SVD, the Moore-Penrose inverse acts as
+
 \[
 A^\dagger y = \sum_{n=1}^{\infty} \frac{1}{\sigma_n} \langle y, u_n \rangle_Y \, v_n,
 \]
@@ -157,6 +165,7 @@ defined on the domain of all \(y\) for which this series converges.
 
 <div class="theorem">
 <strong>Theorem 2.4 (Picard Criterion).</strong> Let \(A: X \to Y\) be compact with singular system \((\sigma_n, v_n, u_n)\). An element \(y \in Y\) belongs to the range \(\mathcal{R}(A)\) if and only if
+
 \[
 \sum_{n=1}^{\infty} \frac{|\langle y, u_n\rangle_Y|^2}{\sigma_n^2} < \infty.
 \]
@@ -174,6 +183,7 @@ Before presenting specific regularization methods, we introduce the general fram
 
 <div class="definition">
 <strong>Definition 2.6 (Regularization Method).</strong> A family of continuous operators \(\{R_\alpha: Y \to X\}_{\alpha > 0}\) is a <em>regularization method</em> (or <em>regularization strategy</em>) for the operator equation \(Ax = y\) if, for every \(y \in \mathcal{R}(A)\),
+
 \[
 \lim_{\alpha \to 0} R_\alpha y = A^\dagger y.
 \]
@@ -188,6 +198,7 @@ The idea of stabilizing an ill-posed problem by adding a penalty term was introd
 
 <div class="definition">
 <strong>Definition 2.7 (Tikhonov Regularization).</strong> Given the operator equation \(Ax = y^\delta\) with noisy data \(y^\delta\), the <em>Tikhonov regularized solution</em> is
+
 \[
 x_\alpha^\delta = \arg\min_{x \in X} \left\{ \|Ax - y^\delta\|_Y^2 + \alpha \|x\|_X^2 \right\},
 \]
@@ -195,6 +206,7 @@ where \(\alpha > 0\) is the <em>regularization parameter</em>.
 </div>
 
 The regularized solution admits the explicit representation
+
 \[
 x_\alpha^\delta = (A^*A + \alpha I)^{-1} A^* y^\delta = \sum_{n=1}^{\infty} \frac{\sigma_n}{\sigma_n^2 + \alpha} \langle y^\delta, u_n \rangle_Y \, v_n.
 \]
@@ -202,6 +214,7 @@ The filter factors \(q_n(\alpha) = \sigma_n^2/(\sigma_n^2 + \alpha)\) smoothly i
 
 <div class="theorem">
 <strong>Theorem 2.8 (Convergence of Tikhonov Regularization).</strong> Let \(A: X \to Y\) be a compact injective operator, let \(x^\dagger = A^\dagger y\), and let \(y^\delta\) satisfy \(\|y^\delta - y\| \leq \delta\). If the regularization parameter is chosen such that \(\alpha(\delta) \to 0\) and \(\delta^2/\alpha(\delta) \to 0\) as \(\delta \to 0\), then
+
 \[
 \|x_{\alpha(\delta)}^\delta - x^\dagger\|_X \to 0 \quad \text{as } \delta \to 0.
 \]
@@ -209,10 +222,12 @@ The filter factors \(q_n(\alpha) = \sigma_n^2/(\sigma_n^2 + \alpha)\) smoothly i
 
 <div class="proof">
 <strong>Proof.</strong> We decompose the error as
+
 \[
 x_\alpha^\delta - x^\dagger = (R_\alpha A - I)x^\dagger + R_\alpha(y^\delta - y),
 \]
 where \(R_\alpha = (A^*A + \alpha I)^{-1}A^*\) is the Tikhonov reconstruction operator. For the first term (the bias or approximation error), using the SVD representation one shows that \(\|(R_\alpha A - I)x^\dagger\| \to 0\) as \(\alpha \to 0\) for any \(x^\dagger \in X\). For the second term (the variance or propagated noise error), one has \(\|R_\alpha\| = \sup_n \sigma_n/(\sigma_n^2 + \alpha) \leq 1/(2\sqrt{\alpha})\), so
+
 \[
 \|R_\alpha(y^\delta - y)\| \leq \frac{\delta}{2\sqrt{\alpha}}.
 \]
@@ -223,6 +238,7 @@ The convergence rate depends critically on the smoothness of the true solution. 
 
 <div class="theorem">
 <strong>Theorem 2.9 (Convergence Rates under Source Conditions).</strong> Suppose \(x^\dagger = (A^*A)^\nu w\) for some \(w \in X\) with \(\|w\| \leq \rho\) (a source condition of order \(\nu > 0\)). With the a priori parameter choice \(\alpha \sim (\delta/\rho)^{2/(2\nu+1)}\), the Tikhonov regularized solution satisfies
+
 \[
 \|x_\alpha^\delta - x^\dagger\| = O\!\left(\delta^{2\nu/(2\nu+1)}\right) \quad \text{as } \delta \to 0.
 \]
@@ -237,6 +253,7 @@ In many applications, one has additional prior information about the solution �
 
 <div class="definition">
 <strong>Definition 2.11 (Generalized Tikhonov Regularization).</strong> Given a bounded linear operator \(L: X \to Z\) (the <em>regularization operator</em>), the <em>generalized Tikhonov regularized solution</em> is
+
 \[
 x_\alpha^\delta = \arg\min_{x \in X} \left\{ \|Ax - y^\delta\|_Y^2 + \alpha \|Lx\|_Z^2 \right\}.
 \]
@@ -251,6 +268,7 @@ An alternative to Tikhonov regularization is to simply truncate the SVD expansio
 
 <div class="definition">
 <strong>Definition 2.12 (Truncated SVD, TSVD).</strong> Given the operator equation \(Ax = y^\delta\) and a truncation level \(N \in \mathbb{N}\), the <em>truncated SVD solution</em> is
+
 \[
 x_N^\delta = \sum_{n=1}^{N} \frac{1}{\sigma_n} \langle y^\delta, u_n \rangle_Y \, v_n.
 \]
@@ -260,6 +278,7 @@ The TSVD uses the sharp filter \(q_n = 1\) for \(n \leq N\) and \(q_n = 0\) for 
 
 <div class="theorem">
 <strong>Theorem 2.13 (TSVD Convergence Rates).</strong> Under the source condition \(x^\dagger = (A^*A)^\nu w\), with the parameter choice \(N = N(\delta)\) determined by \(\sigma_{N+1} \sim (\delta/\rho)^{1/(2\nu+1)}\), the TSVD solution achieves the same optimal convergence rate as Tikhonov regularization:
+
 \[
 \|x_{N(\delta)}^\delta - x^\dagger\| = O\!\left(\delta^{2\nu/(2\nu+1)}\right).
 \]
@@ -271,6 +290,7 @@ The practical effectiveness of any regularization method hinges on the choice of
 
 <div class="definition">
 <strong>Definition 2.14 (Morozov Discrepancy Principle).</strong> Given a noise level \(\delta > 0\) and a constant \(\tau > 1\), the <em>Morozov discrepancy principle</em> selects the regularization parameter \(\alpha = \alpha(\delta)\) as the solution of
+
 \[
 \|A x_\alpha^\delta - y^\delta\|_Y = \tau \delta.
 \]
@@ -305,6 +325,7 @@ While Tikhonov regularization and TSVD produce the regularized solution in one s
 
 <div class="definition">
 <strong>Definition 3.1 (Landweber Iteration).</strong> Given the operator equation \(Ax = y^\delta\), the <em>Landweber iteration</em> is the fixed-point iteration
+
 \[
 x_{k+1}^\delta = x_k^\delta + \omega A^*(y^\delta - Ax_k^\delta), \quad k = 0, 1, 2, \ldots,
 \]
@@ -312,6 +333,7 @@ with initial guess \(x_0^\delta = 0\) and relaxation parameter \(0 < \omega < 2/
 </div>
 
 The Landweber iteration is a steepest descent method applied to the normal equation \(A^*Ax = A^*y^\delta\), with step size \(\omega\). The iteration has the SVD representation
+
 \[
 x_k^\delta = \sum_{n=1}^{\infty} \frac{1 - (1 - \omega\sigma_n^2)^k}{\sigma_n} \langle y^\delta, u_n\rangle_Y \, v_n,
 \]
@@ -319,6 +341,7 @@ with filter factors \(q_n^{(k)} = 1 - (1-\omega\sigma_n^2)^k\). For small singul
 
 <div class="theorem">
 <strong>Theorem 3.2 (Convergence of Landweber Iteration).</strong> Let \(A: X \to Y\) be compact and injective, and let \(y = Ax^\dagger\). For exact data (\(\delta = 0\)), the iterates \(x_k\) converge to \(x^\dagger\) as \(k \to \infty\). For noisy data, the iterates first approach \(x^\dagger\) and then diverge (the <em>semi-convergence</em> phenomenon). Under the source condition \(x^\dagger = (A^*A)^\nu w\) with \(\|w\| \leq \rho\), stopping at iteration \(k^* \sim (\rho/\delta)^{2/(2\nu+1)}\) yields the optimal rate
+
 \[
 \|x_{k^*}^\delta - x^\dagger\| = O\!\left(\delta^{2\nu/(2\nu+1)}\right).
 \]
@@ -336,6 +359,7 @@ The Landweber iteration converges slowly because it uses only gradient informati
 
 <div class="definition">
 <strong>Definition 3.3 (CGLS — Conjugate Gradients for Least Squares).</strong> The <em>CGLS method</em> applies the conjugate gradient algorithm to the normal equations \(A^*Ax = A^*y^\delta\). Starting from \(x_0 = 0\), \(r_0 = A^*y^\delta\), \(p_0 = r_0\), the iterates are:
+
 \[
 \alpha_k = \frac{\|r_k\|^2}{\|Ap_k\|^2}, \quad x_{k+1} = x_k + \alpha_k p_k, \quad r_{k+1} = r_k - \alpha_k A^*A p_k, \quad \beta_k = \frac{\|r_{k+1}\|^2}{\|r_k\|^2}, \quad p_{k+1} = r_{k+1} + \beta_k p_k.
 \]
@@ -357,6 +381,7 @@ In many practical inverse problems, the data consists of multiple measurements, 
 
 <div class="definition">
 <strong>Definition 3.6 (Kaczmarz Method).</strong> Suppose the data consists of \(m\) measurements: \(A_i x = y_i^\delta\) for \(i = 1, \ldots, m\), where each \(A_i: X \to Y_i\) is a bounded linear operator. The <em>Kaczmarz iteration</em> performs cyclic projections:
+
 \[
 x_{k+1}^\delta = x_k^\delta + \omega A_{[k]}^* (A_{[k]} A_{[k]}^*)^{-1}(y_{[k]}^\delta - A_{[k]} x_k^\delta),
 \]
@@ -375,6 +400,7 @@ The preceding sections show that, for iterative methods applied to ill-posed pro
 
 <div class="definition">
 <strong>Definition 3.8 (Discrepancy Principle for Iterative Methods).</strong> Given a noise level \(\delta\) and a constant \(\tau > 1\), the <em>discrepancy principle</em> terminates the iteration at the first index \(k^*\) such that
+
 \[
 \|Ax_{k^*}^\delta - y^\delta\|_Y \leq \tau \delta.
 \]
@@ -419,6 +445,7 @@ Most physically important inverse problems are nonlinear: the forward operator \
 
 <div class="definition">
 <strong>Definition 4.1 (Fréchet Derivative).</strong> Let \(X\) and \(Y\) be Banach spaces and \(F: \mathcal{D}(F) \subseteq X \to Y\). The operator \(F\) is <em>Fréchet differentiable</em> at \(x \in \mathcal{D}(F)\) if there exists a bounded linear operator \(F'(x): X \to Y\) such that
+
 \[
 \lim_{\|h\| \to 0} \frac{\|F(x+h) - F(x) - F'(x)h\|_Y}{\|h\|_X} = 0.
 \]
@@ -429,10 +456,12 @@ The Fréchet derivative is the infinite-dimensional generalization of the Jacobi
 
 <div class="example">
 <strong>Example 4.2 (Fréchet Derivative for an Elliptic Coefficient Problem).</strong> Consider the forward operator \(F: a \mapsto u\), where \(u\) solves
+
 \[
 -\nabla \cdot (a \nabla u) = f \quad \text{in } \Omega, \quad u = 0 \quad \text{on } \partial\Omega.
 \]
 Let \(a_0 \in L^\infty(\Omega)\) with \(a_0 \geq c > 0\), and let \(u_0 = F(a_0)\). The Fréchet derivative \(F'(a_0): L^\infty(\Omega) \to H^1_0(\Omega)\) at \(a_0\) in the direction \(h\) is \(F'(a_0)h = w\), where \(w\) solves the sensitivity equation
+
 \[
 -\nabla \cdot (a_0 \nabla w) = \nabla \cdot (h \nabla u_0) \quad \text{in } \Omega, \quad w = 0 \quad \text{on } \partial\Omega.
 \]
@@ -445,6 +474,7 @@ The classical Newton method for solving the nonlinear equation \(F(x) = y\) gene
 
 <div class="definition">
 <strong>Definition 4.3 (Gauss-Newton Method).</strong> The <em>Gauss-Newton method</em> for the nonlinear least-squares problem \(\min_x \|F(x) - y^\delta\|^2\) generates iterates via
+
 \[
 x_{k+1} = x_k + s_k, \quad \text{where } s_k = \arg\min_s \|F'(x_k)s - (y^\delta - F(x_k))\|_Y^2.
 \]
@@ -453,6 +483,7 @@ When \(F'(x_k)\) is compact (as it is for most PDE-based problems), the lineariz
 
 <div class="definition">
 <strong>Definition 4.4 (Levenberg-Marquardt Method).</strong> The <em>Levenberg-Marquardt method</em> applies Tikhonov regularization to each Gauss-Newton subproblem:
+
 \[
 s_k = \arg\min_s \left\{ \|F'(x_k)s - (y^\delta - F(x_k))\|_Y^2 + \alpha_k \|s\|_X^2 \right\},
 \]
@@ -463,10 +494,12 @@ The Levenberg-Marquardt method interpolates between the Gauss-Newton method (\(\
 
 <div class="definition">
 <strong>Definition 4.5 (Iteratively Regularized Gauss-Newton Method, IRGNM).</strong> The <em>IRGNM</em> generates iterates via
+
 \[
 x_{k+1} = x_k + (F'(x_k)^*F'(x_k) + \alpha_k I)^{-1}\big(F'(x_k)^*(y^\delta - F(x_k)) - \alpha_k(x_k - x_0)\big),
 \]
 where \(\alpha_k\) is a decreasing sequence with \(\alpha_k \to 0\), and \(x_0\) is an initial guess. Equivalently, \(x_{k+1}\) minimizes
+
 \[
 \|F'(x_k)(x - x_k) - (y^\delta - F(x_k))\|_Y^2 + \alpha_k \|x - x_0\|_X^2.
 \]
@@ -476,6 +509,7 @@ The IRGNM was introduced by Bakushinskii (1992) and has become one of the most s
 
 <div class="theorem">
 <strong>Theorem 4.6 (Convergence of IRGNM, Bakushinskii).</strong> Let \(F: \mathcal{D}(F) \subseteq X \to Y\) be Fréchet differentiable, and suppose the <em>tangential cone condition</em>
+
 \[
 \|F(x) - F(\tilde{x}) - F'(x)(x - \tilde{x})\|_Y \leq \eta \|F(x) - F(\tilde{x})\|_Y
 \]
@@ -492,6 +526,7 @@ Convergence rates for nonlinear inverse problems require nonlinear source condit
 
 <div class="definition">
 <strong>Definition 4.8 (Nonlinear Source Condition).</strong> The true solution \(x^\dagger\) satisfies a <em>source condition</em> if
+
 \[
 x_0 - x^\dagger = F'(x^\dagger)^* \omega \quad \text{for some } \omega \in Y \text{ with } \|\omega\| \leq \rho.
 \]
@@ -500,6 +535,7 @@ This is the analogue of the linear condition \(x^\dagger \in \mathcal{R}(A^*)\) 
 
 <div class="theorem">
 <strong>Theorem 4.9 (Convergence Rates for IRGNM).</strong> Under the tangential cone condition, the source condition of Definition 4.8, and the a priori parameter choice \(\alpha_k = \alpha_0 q^k\), the IRGNM with discrepancy principle stopping achieves
+
 \[
 \|x_{k^*}^\delta - x^\dagger\| = O(\delta^{1/2}).
 \]
@@ -516,10 +552,12 @@ All Newton-type methods for nonlinear inverse problems require the evaluation of
 
 <div class="theorem">
 <strong>Theorem 4.11 (Adjoint Gradient Formula).</strong> Consider the misfit functional \(\mathcal{J}(x) = \frac{1}{2}\|F(x) - y^\delta\|^2\), where \(F(x) = C(u(x))\) for a PDE state \(u(x)\) and observation operator \(C\). Suppose \(u(x)\) satisfies the state equation \(E(x, u) = 0\). Then the gradient of \(\mathcal{J}\) is
+
 \[
 \nabla \mathcal{J}(x) = -\left(\frac{\partial E}{\partial x}\right)^* p,
 \]
 where \(p\) is the <em>adjoint state</em> satisfying the adjoint equation
+
 \[
 \left(\frac{\partial E}{\partial u}\right)^* p = C^*(C u - y^\delta).
 \]
@@ -554,6 +592,7 @@ Before developing the full Bayesian framework, we consider two point estimators 
 
 <div class="definition">
 <strong>Definition 5.2 (Likelihood Function).</strong> Given the observation model \(y = F(x) + \eta\) with \(\eta \sim \mathcal{N}(0, \Gamma)\), the <em>likelihood function</em> is
+
 \[
 \mathcal{L}(x; y) = \pi(y | x) \propto \exp\!\left(-\frac{1}{2}\|y - F(x)\|_\Gamma^2\right),
 \]
@@ -562,6 +601,7 @@ where \(\|z\|_\Gamma^2 = \langle z, \Gamma^{-1}z \rangle\).
 
 <div class="definition">
 <strong>Definition 5.3 (Maximum Likelihood Estimator).</strong> The <em>maximum likelihood estimator</em> (MLE) is
+
 \[
 x_{\text{MLE}} = \arg\max_x \mathcal{L}(x; y) = \arg\min_x \|y - F(x)\|_\Gamma^2.
 \]
@@ -571,12 +611,14 @@ In the linear case \(F(x) = Ax\) with \(\Gamma = \sigma^2 I\), the MLE is simply
 
 <div class="definition">
 <strong>Definition 5.4 (Maximum a Posteriori Estimator).</strong> Given a prior density \(\pi_0(x)\), the <em>MAP estimator</em> is
+
 \[
 x_{\text{MAP}} = \arg\max_x \pi(x|y) = \arg\min_x \left\{ \frac{1}{2}\|y - F(x)\|_\Gamma^2 - \log\pi_0(x) \right\}.
 \]
 </div>
 
 With a Gaussian prior \(x \sim \mathcal{N}(x_0, \alpha^{-1} C_0)\), the MAP estimator becomes
+
 \[
 x_{\text{MAP}} = \arg\min_x \left\{ \|y - F(x)\|_\Gamma^2 + \alpha \|x - x_0\|_{C_0^{-1}}^2 \right\},
 \]
@@ -595,14 +637,17 @@ We now present the Bayesian framework for infinite-dimensional inverse problems,
 </div>
 
 By Bayes' theorem (in its measure-theoretic form), the posterior measure \(\mu^y\) is absolutely continuous with respect to the prior \(\mu_0\), with Radon-Nikodym derivative
+
 \[
 \frac{d\mu^y}{d\mu_0}(x) = \frac{1}{Z(y)} \exp\!\left(-\Phi(x; y)\right),
 \]
 where the *potential* (or *negative log-likelihood*) is
+
 \[
 \Phi(x; y) = \frac{1}{2}\|y - F(x)\|_\Gamma^2,
 \]
 and the normalizing constant is
+
 \[
 Z(y) = \int_X \exp\!\left(-\Phi(x; y)\right)\,d\mu_0(x).
 \]
@@ -618,32 +663,40 @@ A central question is whether the posterior measure is well-defined and depends 
 <ol>
 <li>\(\Phi\) is \(\mu_0\)-measurable for each \(y\).</li>
 <li>There exist constants \(c_1, c_2 > 0\) and \(r \geq 0\) such that for all \(x \in X\), \(y \in \mathbb{R}^m\):
+
 \[
 0 \leq \Phi(x;y) \leq c_1 + c_2\left(\|x\|_X^r + \|y\|^r\right).
-\]</li>
+\]
+</li>
 <li>For every \(\varepsilon > 0\) there exists \(M = M(\varepsilon) > 0\) such that, for all \(y_1, y_2\) with \(\max(\|y_1\|, \|y_2\|) \leq M\):
+
 \[
 |\Phi(x; y_1) - \Phi(x; y_2)| \leq C(1 + \|x\|_X^r)\|y_1 - y_2\|.
-\]</li>
+\]
+</li>
 </ol>
 Then:
 <ol>
 <li>The posterior measure \(\mu^y\) is well-defined (i.e., \(Z(y) > 0\)).</li>
 <li>The posterior depends Lipschitz continuously on the data \(y\) in the Hellinger metric on probability measures:
+
 \[
 d_{\text{Hell}}(\mu^{y_1}, \mu^{y_2}) \leq C \|y_1 - y_2\|.
-\]</li>
+\]
+</li>
 </ol>
 </div>
 
 <div class="proof">
 <strong>Proof.</strong> The proof of well-definedness reduces to showing \(Z(y) > 0\). Since \(\Phi(x;y) \leq c_1 + c_2(\|x\|_X^r + \|y\|^r)\), we have
+
 \[
 Z(y) = \int_X \exp(-\Phi(x;y))\,d\mu_0(x) \geq \exp(-(c_1 + c_2\|y\|^r)) \int_X \exp(-c_2\|x\|_X^r)\,d\mu_0(x).
 \]
 The last integral is finite and positive by the Fernique theorem (Gaussian measures have finite exponential moments of \(\|x\|^2\), hence of \(\|x\|^r\) for any \(r\)), giving \(Z(y) > 0\).
 
 For the Lipschitz stability in the Hellinger metric, one writes
+
 \[
 d_{\text{Hell}}^2(\mu^{y_1}, \mu^{y_2}) = \int_X \left(\sqrt{\frac{d\mu^{y_1}}{d\mu_0}} - \sqrt{\frac{d\mu^{y_2}}{d\mu_0}}\right)^2 d\mu_0.
 \]
@@ -660,10 +713,12 @@ In the special case of a linear forward operator and Gaussian prior and noise, t
 
 <div class="theorem">
 <strong>Theorem 5.9 (Gaussian Posterior for Linear Problems).</strong> Consider the observation model \(y = Ax + \eta\), where \(x \sim \mathcal{N}(m_0, C_0)\) and \(\eta \sim \mathcal{N}(0, \Gamma)\) are independent. Then the posterior distribution of \(x\) given \(y\) is Gaussian: \(x | y \sim \mathcal{N}(m_{\text{post}}, C_{\text{post}})\), where
+
 \[
 C_{\text{post}} = (C_0^{-1} + A^*\Gamma^{-1}A)^{-1}, \qquad m_{\text{post}} = C_{\text{post}}(C_0^{-1}m_0 + A^*\Gamma^{-1}y).
 \]
 Equivalently, using the Woodbury identity:
+
 \[
 C_{\text{post}} = C_0 - C_0 A^*(AC_0A^* + \Gamma)^{-1}AC_0, \qquad m_{\text{post}} = m_0 + C_0 A^*(AC_0A^* + \Gamma)^{-1}(y - Am_0).
 \]
@@ -671,6 +726,7 @@ C_{\text{post}} = C_0 - C_0 A^*(AC_0A^* + \Gamma)^{-1}AC_0, \qquad m_{\text{post
 
 <div class="proof">
 <strong>Proof.</strong> Using Bayes' theorem for Gaussian distributions, the log-posterior density (up to constants) is
+
 \[
 -\frac{1}{2}\|y - Ax\|_\Gamma^2 - \frac{1}{2}\|x - m_0\|_{C_0}^2.
 \]
@@ -689,6 +745,7 @@ The choice of prior measure is perhaps the most consequential modeling decision 
 
 <div class="definition">
 <strong>Definition 5.11 (Matérn Covariance).</strong> The <em>Matérn covariance function</em> on \(\mathbb{R}^d\) is
+
 \[
 C_\nu(r) = \frac{\tau^2}{2^{\nu-1}\Gamma(\nu)}\left(\frac{\sqrt{2\nu}\,r}{\ell}\right)^\nu K_\nu\!\left(\frac{\sqrt{2\nu}\,r}{\ell}\right),
 \]
@@ -696,6 +753,7 @@ where \(r = |x - x'|\), \(\tau^2\) is the marginal variance, \(\ell > 0\) is the
 </div>
 
 The Matérn class is the most commonly used family of covariance functions in spatial statistics and Bayesian inverse problems. The smoothness parameter \(\nu\) controls the regularity of the prior samples: \(\nu = 1/2\) gives the exponential covariance (rough, Markovian samples), \(\nu \to \infty\) recovers the squared exponential (infinitely smooth samples), and \(\nu = k + 1/2\) for integer \(k\) gives an explicit expression involving a polynomial times an exponential. The connection to PDEs is particularly elegant: Whittle (1963) showed that a Gaussian field with Matérn covariance in \(\mathbb{R}^d\) is the stationary solution of the stochastic PDE
+
 \[
 \left(\kappa^2 - \Delta\right)^{(\nu + d/2)/2} u = \mathcal{W},
 \]
@@ -718,6 +776,7 @@ For nonlinear or non-Gaussian problems, the posterior measure cannot be computed
 <ol>
 <li><em>Propose:</em> Draw a candidate \(x' \sim q(\cdot | x^{(k)})\) from a proposal distribution \(q\).</li>
 <li><em>Accept/Reject:</em> Set \(x^{(k+1)} = x'\) with probability
+
 \[
 \alpha(x^{(k)}, x') = \min\!\left(1, \frac{\pi(x') q(x^{(k)} | x')}{\pi(x^{(k)}) q(x' | x^{(k)})}\right),
 \]
@@ -733,10 +792,12 @@ The breakthrough insight of Cotter, Roberts, Stuart, and White (2013) was to des
 
 <div class="definition">
 <strong>Definition 6.2 (Preconditioned Crank-Nicolson, pCN).</strong> Given a prior \(\mu_0 = \mathcal{N}(0, C_0)\) and a posterior of the form \(\frac{d\mu^y}{d\mu_0}(x) \propto \exp(-\Phi(x))\), the <em>pCN algorithm</em> generates proposals via
+
 \[
 x' = \sqrt{1 - \beta^2}\, x^{(k)} + \beta \xi, \quad \xi \sim \mathcal{N}(0, C_0),
 \]
 where \(\beta \in (0, 1]\). The acceptance probability is
+
 \[
 \alpha(x^{(k)}, x') = \min\!\left(1, \exp\!\left(\Phi(x^{(k)}) - \Phi(x')\right)\right).
 \]
@@ -767,10 +828,12 @@ While MCMC methods provide asymptotically exact samples from the posterior, they
 
 <div class="definition">
 <strong>Definition 6.6 (Ensemble Kalman Inversion).</strong> Given an ensemble of \(J\) particles \(\{x_j^{(k)}\}_{j=1}^J\), the <em>EKI update</em> is:
+
 \[
 x_j^{(k+1)} = x_j^{(k)} + C_{xF}^{(k)} (C_{FF}^{(k)} + h^{-1}\Gamma)^{-1}(y - F(x_j^{(k)}) + \zeta_j^{(k)}),
 \]
 where \(\zeta_j^{(k)} \sim \mathcal{N}(0, h^{-1}\Gamma)\), \(h > 0\) is a step size parameter, and
+
 \[
 C_{xF}^{(k)} = \frac{1}{J-1}\sum_{j=1}^J (x_j^{(k)} - \bar{x}^{(k)})(F(x_j^{(k)}) - \overline{F(x^{(k)})})^T, \quad C_{FF}^{(k)} = \frac{1}{J-1}\sum_{j=1}^J (F(x_j^{(k)}) - \overline{F(x^{(k)})})(F(x_j^{(k)}) - \overline{F(x^{(k)})})^T.
 \]
@@ -780,6 +843,7 @@ The EKI can be interpreted as a derivative-free approximate Newton method: the e
 
 <div class="theorem">
 <strong>Theorem 6.7 (Continuous-Time Limit of EKI, Schillings-Stuart, 2017).</strong> In the continuous-time limit \(h \to 0\), the EKI ensemble evolves according to the system of coupled ODEs:
+
 \[
 \dot{x}_j(t) = C_{xF}(t)\Gamma^{-1}(y - F(x_j(t))), \quad j = 1, \ldots, J.
 \]
@@ -796,10 +860,12 @@ Importance sampling provides an alternative to MCMC for computing posterior expe
 
 <div class="definition">
 <strong>Definition 6.9 (Importance Sampling).</strong> Let \(\mu^y\) be the posterior measure and \(\nu\) be a tractable <em>importance distribution</em>. For any \(\mu^y\)-integrable function \(f\),
+
 \[
 \mathbb{E}_{\mu^y}[f(x)] = \frac{\mathbb{E}_\nu[f(x) w(x)]}{\mathbb{E}_\nu[w(x)]},
 \]
 where \(w(x) = \frac{d\mu^y}{d\nu}(x)\) is the importance weight. Given i.i.d. samples \(x_1, \ldots, x_N \sim \nu\), the self-normalized importance sampling estimator is
+
 \[
 \hat{I}_N = \frac{\sum_{j=1}^N f(x_j) w(x_j)}{\sum_{j=1}^N w(x_j)}.
 \]
@@ -817,6 +883,7 @@ Sequential Monte Carlo (SMC) methods, also known as particle filters, provide a 
 
 <div class="definition">
 <strong>Definition 6.11 (SMC Sampler for Inverse Problems).</strong> Define a sequence of intermediate distributions \(\mu_t\) for \(t = 0, 1, \ldots, T\) by
+
 \[
 \frac{d\mu_t}{d\mu_0}(x) \propto \exp\!\left(-\beta_t \Phi(x; y)\right),
 \]
@@ -847,6 +914,7 @@ Data assimilation is the process of combining a dynamical model with time-distri
 
 <div class="definition">
 <strong>Definition 7.1 (Data Assimilation Problem).</strong> Consider a discrete-time dynamical system
+
 \[
 x_{k+1} = \mathcal{M}_k(x_k) + \xi_k, \quad y_k = H_k(x_k) + \eta_k, \quad k = 0, 1, 2, \ldots,
 \]
@@ -861,20 +929,24 @@ The Kalman filter (Kalman, 1960) is the optimal sequential estimator for linear 
 
 <div class="theorem">
 <strong>Theorem 7.2 (Kalman Filter).</strong> Consider the linear Gaussian system
+
 \[
 x_{k+1} = M_k x_k + \xi_k, \quad y_k = H_k x_k + \eta_k,
 \]
 with \(\xi_k \sim \mathcal{N}(0, Q_k)\), \(\eta_k \sim \mathcal{N}(0, R_k)\), and \(x_0 \sim \mathcal{N}(\hat{x}_0, P_0)\). The conditional distribution of \(x_k\) given \(y_1, \ldots, y_k\) is Gaussian: \(x_k | y_{1:k} \sim \mathcal{N}(\hat{x}_k^a, P_k^a)\), where the analysis (update) and forecast steps are:
 
 <em>Forecast:</em>
+
 \[
 \hat{x}_k^f = M_{k-1}\hat{x}_{k-1}^a, \quad P_k^f = M_{k-1}P_{k-1}^a M_{k-1}^T + Q_{k-1}.
 \]
 
 <em>Analysis:</em>
+
 \[
 K_k = P_k^f H_k^T (H_k P_k^f H_k^T + R_k)^{-1},
 \]
+
 \[
 \hat{x}_k^a = \hat{x}_k^f + K_k(y_k - H_k \hat{x}_k^f), \quad P_k^a = (I - K_k H_k)P_k^f.
 \]
@@ -883,6 +955,7 @@ The matrix \(K_k\) is the <em>Kalman gain</em>, and \(d_k = y_k - H_k\hat{x}_k^f
 
 <div class="proof">
 <strong>Proof.</strong> The proof proceeds by induction. At time \(k\), assume \(x_{k-1}|y_{1:k-1} \sim \mathcal{N}(\hat{x}_{k-1}^a, P_{k-1}^a)\). The forecast distribution is
+
 \[
 x_k | y_{1:k-1} \sim \mathcal{N}(M_{k-1}\hat{x}_{k-1}^a, M_{k-1}P_{k-1}^a M_{k-1}^T + Q_{k-1}) = \mathcal{N}(\hat{x}_k^f, P_k^f).
 \]
@@ -893,6 +966,7 @@ The Kalman filter is optimal for linear Gaussian systems in the sense that it mi
 
 <div class="example">
 <strong>Example 7.3 (Tracking a Falling Object).</strong> Consider tracking the height \(h\) and velocity \(v\) of a falling object under gravity with noisy position measurements. The state is \(x_k = (h_k, v_k)^T\), the dynamics are
+
 \[
 x_{k+1} = \begin{pmatrix} 1 & \Delta t \\ 0 & 1 \end{pmatrix} x_k + \begin{pmatrix} -\frac{1}{2}g(\Delta t)^2 \\ -g\Delta t \end{pmatrix} + \xi_k,
 \]
@@ -907,6 +981,7 @@ For nonlinear or non-Gaussian systems, the Kalman filter must be modified. Two c
 <strong>Definition 7.3 (Extended Kalman Filter, EKF).</strong> The <em>EKF</em> linearizes the model and observation operators about the current estimate:
 
 <em>Forecast:</em>
+
 \[
 \hat{x}_k^f = \mathcal{M}_{k-1}(\hat{x}_{k-1}^a), \quad P_k^f = M_{k-1} P_{k-1}^a M_{k-1}^T + Q_{k-1}, \quad M_{k-1} = \mathcal{M}_{k-1}'(\hat{x}_{k-1}^a).
 \]
@@ -916,6 +991,7 @@ For nonlinear or non-Gaussian systems, the Kalman filter must be modified. Two c
 
 <div class="definition">
 <strong>Definition 7.4 (Unscented Kalman Filter, UKF).</strong> The <em>UKF</em> (Julier and Uhlmann, 1997) replaces the linearization of the EKF with a deterministic sampling strategy. Given a mean \(\hat{x}\) and covariance \(P\) in \(\mathbb{R}^n\), the UKF generates \(2n+1\) <em>sigma points</em>:
+
 \[
 \chi_0 = \hat{x}, \quad \chi_i = \hat{x} + \sqrt{(n+\lambda)P}\,\big|_i, \quad \chi_{n+i} = \hat{x} - \sqrt{(n+\lambda)P}\,\big|_i, \quad i = 1, \ldots, n,
 \]
@@ -934,15 +1010,18 @@ The ensemble Kalman filter (EnKF), introduced by Evensen (1994), is the dominant
 <strong>Definition 7.6 (Ensemble Kalman Filter, EnKF).</strong> Given an ensemble \(\{x_j^{a,k-1}\}_{j=1}^J\) at time \(k-1\):
 
 <em>Forecast:</em> Propagate each ensemble member through the model:
+
 \[
 x_j^{f,k} = \mathcal{M}_{k-1}(x_j^{a,k-1}) + \xi_j^{k-1}, \quad \xi_j^{k-1} \sim \mathcal{N}(0, Q_{k-1}).
 \]
 
 <em>Analysis:</em> Compute ensemble statistics:
+
 \[
 \bar{x}^{f,k} = \frac{1}{J}\sum_{j=1}^J x_j^{f,k}, \quad P_k^f \approx \frac{1}{J-1}\sum_{j=1}^J (x_j^{f,k} - \bar{x}^{f,k})(x_j^{f,k} - \bar{x}^{f,k})^T.
 \]
 Update each member using perturbed observations:
+
 \[
 x_j^{a,k} = x_j^{f,k} + K_k(y_k + \zeta_j^k - H_k(x_j^{f,k})), \quad \zeta_j^k \sim \mathcal{N}(0, R_k),
 \]
@@ -953,6 +1032,7 @@ The EnKF is a Monte Carlo approximation to the Kalman filter. For linear Gaussia
 
 <div class="theorem">
 <strong>Theorem 7.7 (Convergence of EnKF for Linear Systems).</strong> For the linear Gaussian system \(x_{k+1} = M_k x_k + \xi_k\), \(y_k = H_k x_k + \eta_k\), let \(\hat{x}_k^{a,J}\) and \(P_k^{a,J}\) denote the EnKF ensemble mean and covariance with ensemble size \(J\). Then, as \(J \to \infty\):
+
 \[
 \hat{x}_k^{a,J} \to \hat{x}_k^a, \quad P_k^{a,J} \to P_k^a \quad \text{almost surely},
 \]
@@ -984,10 +1064,12 @@ Variational data assimilation formulates the state estimation problem as the min
 
 <div class="definition">
 <strong>Definition 7.10 (3D-Var).</strong> The <em>three-dimensional variational</em> (3D-Var) analysis finds the state \(x^a\) that minimizes:
+
 \[
 J(x) = \frac{1}{2}\|x - x^f\|_{B^{-1}}^2 + \frac{1}{2}\|y - H(x)\|_{R^{-1}}^2,
 \]
 where \(x^f\) is the forecast (background), \(B\) is the background error covariance, and \(R\) is the observation error covariance. For linear \(H\), the minimizer is
+
 \[
 x^a = x^f + BH^T(HBH^T + R)^{-1}(y - Hx^f),
 \]
@@ -998,6 +1080,7 @@ The 3D-Var method is a single-time analysis: it does not use the dynamical model
 
 <div class="definition">
 <strong>Definition 7.11 (4D-Var).</strong> Given observations \(y_k\) at times \(t_k\) for \(k = 0, \ldots, K\), the <em>4D-Var</em> method finds the initial condition \(x_0\) that minimizes:
+
 \[
 J(x_0) = \frac{1}{2}\|x_0 - x^b\|_{B^{-1}}^2 + \frac{1}{2}\sum_{k=0}^{K} \|y_k - H_k(\mathcal{M}_{0 \to k}(x_0))\|_{R_k^{-1}}^2,
 \]
@@ -1010,6 +1093,7 @@ where \(\mathcal{M}_{0 \to k}\) denotes the model integration from time \(t_0\) 
 
 <div class="proof">
 <strong>Proof.</strong> For a linear system \(x_{k+1} = M_k x_k\) and \(y_k = H_k x_k + \eta_k\), the 4D-Var cost is
+
 \[
 J(x_0) = \frac{1}{2}(x_0 - x^b)^T B^{-1}(x_0 - x^b) + \frac{1}{2}\sum_{k=0}^K (y_k - H_k M_{0:k} x_0)^T R_k^{-1}(y_k - H_k M_{0:k} x_0),
 \]
@@ -1024,6 +1108,7 @@ The duality between sequential (filtering) and variational (optimization) approa
 
 <div class="example">
 <strong>Example 7.14 (Lorenz '63 System).</strong> The Lorenz system
+
 \[
 \dot{x}_1 = \sigma(x_2 - x_1), \quad \dot{x}_2 = x_1(\rho - x_3) - x_2, \quad \dot{x}_3 = x_1 x_2 - \beta x_3,
 \]
@@ -1050,6 +1135,7 @@ Electrical impedance tomography (EIT) is a medical and industrial imaging techni
 
 <div class="definition">
 <strong>Definition 8.1 (Calderón Problem).</strong> Let \(\Omega \subset \mathbb{R}^d\) be a bounded domain and \(\sigma: \Omega \to \mathbb{R}_{>0}\) be the conductivity. For a given boundary voltage \(f \in H^{1/2}(\partial\Omega)\), the potential \(u\) satisfies
+
 \[
 \nabla \cdot (\sigma \nabla u) = 0 \quad \text{in } \Omega, \quad u = f \quad \text{on } \partial\Omega.
 \]
@@ -1063,6 +1149,7 @@ The <em>Dirichlet-to-Neumann (DtN) map</em> is \(\Lambda_\sigma: f \mapsto \sigm
 The proof of the Sylvester-Uhlmann theorem uses the construction of *complex geometric optics (CGO) solutions* — solutions of the conductivity equation that oscillate at a prescribed complex frequency and are used to recover the Fourier transform of \(\sigma\). In two dimensions, the uniqueness question was resolved by Nachman (1996) for \(\sigma \in W^{2,p}\) and by Astala and Päivärinta (2006) for \(\sigma \in L^\infty\).
 
 Although uniqueness holds, the stability of the reconstruction is extremely poor. Alessandrini (1988) proved the following conditional stability estimate: if \(\sigma_1, \sigma_2\) are two conductivities in a bounded a priori class (with uniform bounds on their \(H^2\) norms), then
+
 \[
 \|\sigma_1 - \sigma_2\|_{L^\infty} \leq C \left|\log\|\Lambda_{\sigma_1} - \Lambda_{\sigma_2}\|\right|^{-\gamma}
 \]
@@ -1082,6 +1169,7 @@ X-ray computed tomography, as introduced in Example 1.6, is the most successful 
 
 <div class="theorem">
 <strong>Theorem 8.5 (Fourier Slice Theorem).</strong> Let \(f \in L^1(\mathbb{R}^2)\) and let \(\hat{f}\) denote its two-dimensional Fourier transform. Then the one-dimensional Fourier transform of the Radon transform \((\mathcal{R}f)(\cdot, \theta)\) with respect to the first variable equals the restriction of \(\hat{f}\) to the line through the origin in direction \(\omega = (\cos\theta, \sin\theta)\):
+
 \[
 \widehat{(\mathcal{R}f)}(\xi, \theta) = \hat{f}(\xi\cos\theta, \xi\sin\theta).
 \]
@@ -1091,6 +1179,7 @@ The Fourier Slice Theorem provides the theoretical basis for CT reconstruction: 
 
 <div class="definition">
 <strong>Definition 8.6 (Filtered Backprojection).</strong> The <em>filtered backprojection</em> formula for inverting the Radon transform is:
+
 \[
 f(x) = \frac{1}{2}\int_0^\pi \left[(\mathcal{R}f)(\cdot, \theta) * h\right](x \cdot \omega)\,d\theta,
 \]
@@ -1107,6 +1196,7 @@ Seismic inversion is the process of inferring subsurface geological structure fr
 
 <div class="example">
 <strong>Example 8.8 (Full Waveform Inversion).</strong> In full waveform inversion (FWI), one seeks to recover the velocity field \(c(x)\) in the acoustic wave equation
+
 \[
 \frac{1}{c(x)^2}\frac{\partial^2 u}{\partial t^2} - \Delta u = s(x,t) \quad \text{in } \mathbb{R}^3 \times (0,T),
 \]
@@ -1143,10 +1233,12 @@ We conclude with an inverse source problem that brings together many of the them
 
 <div class="example">
 <strong>Example 8.13 (Heat Source Identification).</strong> Consider the heat equation
+
 \[
 \frac{\partial u}{\partial t} - \Delta u = q(x) \quad \text{in } \Omega \times (0,T), \quad u = 0 \text{ on } \partial\Omega \times (0,T), \quad u(\cdot, 0) = 0,
 \]
 where \(q(x)\) is an unknown time-independent heat source. The forward operator \(F: q \mapsto u(\cdot, T)\) maps the source to the temperature distribution at time \(T\). By the linearity of the heat equation and the spectral expansion, if \(\{\varphi_n, \lambda_n\}\) are the Dirichlet eigenpairs of \(-\Delta\) on \(\Omega\), then
+
 \[
 (Fq)(x) = \sum_{n=1}^\infty \frac{1 - e^{-\lambda_n T}}{\lambda_n} \langle q, \varphi_n\rangle \, \varphi_n(x).
 \]

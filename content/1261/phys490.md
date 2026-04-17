@@ -287,6 +287,7 @@ S_{\text{pp}} = -mc \int d\tau\, \sqrt{-\dot{X}^\mu \dot{X}_\mu}.
 
 <div class="definition">
 <strong>Definition (Proper-time action).</strong> The proper-time action for a relativistic point particle of mass <em>m</em> in <em>D</em>-dimensional Minkowski spacetime is
+
 \[
 S_{\text{pp}} = -mc \int d\tau\, \sqrt{-\dot{X}^\mu \dot{X}_\mu},
 \]
@@ -320,6 +321,7 @@ We see that the integrand simply re-expresses itself in terms of the new paramet
 
 <div class="example">
 <strong>Example (Non-relativistic limit).</strong> To check that the proper-time action gives sensible physics, let us take the non-relativistic limit. Choose \(\tau = t = X^0/c\) (coordinate time as the parameter). Then \(\dot{X}^0 = c\) and \(\dot{X}^i = v^i\) (the ordinary velocity). The integrand becomes
+
 \[
 \sqrt{-\dot{X}^\mu \dot{X}_\mu} = \sqrt{c^2 - v^2} = c\sqrt{1 - v^2/c^2}.
 \]
@@ -358,6 +360,7 @@ S_{\text{ein}} = \frac{1}{2}\int d\tau\, \left(e^{-1}\dot{X}^\mu \dot{X}_\mu - e
 
 <div class="definition">
 <strong>Definition (Einbein action).</strong> The einbein action for a relativistic point particle is
+
 \[
 S_{\text{ein}} = \frac{1}{2}\int d\tau\, \left(e^{-1}\dot{X}^2 - e\, m^2 c^2\right),
 \]
@@ -396,6 +399,7 @@ e = \frac{1}{mc}\sqrt{-\dot{X}^2}.
 
 <div class="example">
 <strong>Example (Explicit substitution back).</strong> Let us substitute this solution for \(e\) back into the einbein action and verify that we recover the proper-time action. We need to compute each term:
+
 \[
 e^{-1}\dot{X}^2 = \frac{mc}{\sqrt{-\dot{X}^2}}\cdot \dot{X}^2 = -mc\sqrt{-\dot{X}^2},
 \]
@@ -468,6 +472,7 @@ so the free relativistic particle moves on a straight line in spacetime. This is
 
 <div class="example">
 <strong>Example (Explicit solution).</strong> The general solution to \(\ddot{X}^\mu = 0\) is
+
 \[
 X^\mu(\tau) = x^\mu + p^\mu \tau,
 \]
@@ -521,6 +526,7 @@ p^2 + m^2 c^2 = 0.
 
 <div class="theorem">
 <strong>Mass-shell constraint.</strong> The canonical momentum of the relativistic point particle satisfies
+
 \[
 p^\mu p_\mu + m^2 c^2 = 0.
 \]
@@ -643,6 +649,7 @@ is the **string tension**.
 
 <div class="definition">
 <strong>Definition (Nambu-Goto action).</strong> For a string propagating in <em>D</em>-dimensional Minkowski spacetime, the Nambu-Goto action is
+
 \[
 S_{\text{NG}} = -T \int d\tau\, d\sigma\, \sqrt{-\det \gamma_{ab}},
 \]
@@ -672,6 +679,7 @@ S_P = -\frac{T}{2}\int d\tau\, d\sigma\, \sqrt{-h}\, h^{ab}\, \partial_a X^\mu\,
 
 <div class="definition">
 <strong>Definition (Polyakov action).</strong> The Polyakov action for a string in <em>D</em>-dimensional Minkowski spacetime is
+
 \[
 S_P = -\frac{T}{2}\int d\tau\, d\sigma\, \sqrt{-h}\, h^{ab}\, \partial_a X^\mu\, \partial_b X_\mu,
 \]
@@ -877,6 +885,7 @@ This is a remarkably simple action. It describes \(D\) free massless scalar fiel
 
 <div class="remark">
 <strong>Remark (Analogy with the vibrating string).</strong> In non-relativistic physics, a vibrating string of tension \(T_0\) and linear mass density \(\mu\) has the action
+
 \[
 S = \frac{1}{2}\int dt\, dx\, \left(\mu\, \dot{y}^2 - T_0\, y'^2\right),
 \]
@@ -923,6 +932,7 @@ or equivalently,
 
 <div class="theorem">
 <strong>Equations of motion (conformal gauge).</strong> In conformal gauge, the equations of motion for the string embedding fields are
+
 \[
 \Box\, X^\mu(\tau, \sigma) = 0,
 \]
@@ -949,6 +959,7 @@ as a constraint. These are the **Virasoro constraints**.
 
 <div class="definition">
 <strong>Definition (Virasoro constraints).</strong> The Virasoro constraints are the conditions
+
 \[
 T_{ab} = 0,
 \]
@@ -965,6 +976,7 @@ The diagonal components are:
 \[
 T_{00} = \dot{X}^2 - \frac{1}{2}(-1)(-\dot{X}^2 + X'^2) = \dot{X}^2 - \frac{1}{2}(\dot{X}^2 - X'^2) = \frac{1}{2}(\dot{X}^2 + X'^2),
 \]
+
 \[
 T_{11} = X'^2 - \frac{1}{2}(+1)(-\dot{X}^2 + X'^2) = X'^2 + \frac{1}{2}\dot{X}^2 - \frac{1}{2}X'^2 = \frac{1}{2}(\dot{X}^2 + X'^2).
 \]
@@ -980,6 +992,7 @@ Therefore the Virasoro constraints \(T_{ab} = 0\) are:
 \[
 T_{00} = T_{11} = \frac{1}{2}(\dot{X}^2 + X'^2) = 0,
 \]
+
 \[
 T_{01} = T_{10} = \dot{X} \cdot X' = 0.
 \]
@@ -1015,6 +1028,7 @@ which is the standard factored form of the two-dimensional wave equation.
 
 <div class="example">
 <strong>Example (Deriving the factored wave equation).</strong> Starting from the chain rule:
+
 \[
 \partial_\tau = \partial_+ + \partial_-, \qquad \partial_\sigma = \partial_+ - \partial_-.
 \]
@@ -1023,6 +1037,7 @@ Therefore:
 \[
 \partial_\tau^2 = (\partial_+ + \partial_-)^2 = \partial_+^2 + 2\partial_+\partial_- + \partial_-^2,
 \]
+
 \[
 \partial_\sigma^2 = (\partial_+ - \partial_-)^2 = \partial_+^2 - 2\partial_+\partial_- + \partial_-^2.
 \]
@@ -1048,6 +1063,7 @@ we compute:
 \[
 \partial_+ X \cdot \partial_+ X = \frac{1}{4}(\dot{X} + X')^2 = \frac{1}{4}(\dot{X}^2 + 2\dot{X}\cdot X' + X'^2),
 \]
+
 \[
 \partial_- X \cdot \partial_- X = \frac{1}{4}(\dot{X} - X')^2 = \frac{1}{4}(\dot{X}^2 - 2\dot{X}\cdot X' + X'^2).
 \]
@@ -1064,12 +1080,14 @@ The Virasoro constraints in lightcone coordinates are:
 \[
 T_{++} = \partial_+ X \cdot \partial_+ X = 0,
 \]
+
 \[
 T_{--} = \partial_- X \cdot \partial_- X = 0.
 \]
 
 <div class="theorem">
 <strong>Virasoro constraints (lightcone form).</strong> In worldsheet lightcone coordinates \(\sigma^\pm = \tau \pm \sigma\), the Virasoro constraints take the form
+
 \[
 (\partial_+ X)^2 = 0, \qquad (\partial_- X)^2 = 0.
 \]
@@ -1096,6 +1114,7 @@ This decomposition is the starting point for the mode expansion. For an open str
 \[
 X_L^\mu(\sigma^+) = \frac{1}{2}x^\mu + \frac{\alpha'}{2}p^\mu \sigma^+ + i\sqrt{\frac{\alpha'}{2}}\sum_{n \neq 0}\frac{1}{n}\,\tilde{\alpha}_n^\mu\, e^{-in\sigma^+},
 \]
+
 \[
 X_R^\mu(\sigma^-) = \frac{1}{2}x^\mu + \frac{\alpha'}{2}p^\mu \sigma^- + i\sqrt{\frac{\alpha'}{2}}\sum_{n \neq 0}\frac{1}{n}\,\alpha_n^\mu\, e^{-in\sigma^-},
 \]
@@ -1459,6 +1478,7 @@ Let us explain every piece of this expression.
 
 <div class="example">
 <strong>Example (First few modes of the closed string).</strong> Let us write out the mode expansion keeping only the first few terms (\( n = \pm 1, \pm 2 \)):
+
 \[
 X^\mu(\tau, \sigma) = x^\mu + 2\alpha' p^\mu \tau + i\sqrt{\frac{\alpha'}{2}} \left[ \alpha_1^\mu \, e^{-i(\tau-\sigma)} - \alpha_{-1}^\mu \, e^{i(\tau-\sigma)} + \frac{1}{2}\alpha_2^\mu \, e^{-2i(\tau-\sigma)} - \frac{1}{2}\alpha_{-2}^\mu \, e^{2i(\tau-\sigma)} + (\text{left-movers}) \right].
 \]
@@ -1508,6 +1528,7 @@ Let us understand the structure:
 
 <div class="example">
 <strong>Example (First two modes of the open NN string).</strong> Consider an open string in flat spacetime, with only the first two modes excited. In a particular spatial direction (suppressing the index \( \mu \)):
+
 \[
 X(\tau, \sigma) = x + 2\alpha' p \, \tau + i\sqrt{2\alpha'} \left[ \frac{\alpha_1}{1} e^{-i\tau} \cos\sigma + \frac{\alpha_2}{2} e^{-2i\tau} \cos(2\sigma) + \text{c.c.} \right].
 \]
@@ -1653,6 +1674,7 @@ This is the classical mass formula for the open string: the mass-squared is prop
 
 <div class="remark">
 <strong>Remark (Quantum correction).</strong> In the quantum theory, the ordering of operators matters. Because each oscillator \( \alpha_{-n} \cdot \alpha_n \) must be normal-ordered, there is a zero-point energy contribution — the sum \( \frac{D-2}{2}\sum_{n=1}^\infty n \) — which is formally divergent but can be regularized (e.g., via zeta-function regularization) to give a finite shift. The quantum mass formula becomes
+
 \[
 m^2 = \frac{1}{\alpha'}(N - a),
 \]
@@ -1664,6 +1686,7 @@ where \( a \) is the <strong>normal-ordering constant</strong>. For the open bos
 \[
 L_0: \qquad -\frac{\alpha'}{4} m^2 + N = 0,
 \]
+
 \[
 \tilde{L}_0: \qquad -\frac{\alpha'}{4} m^2 + \tilde{N} = 0,
 \]
@@ -1726,6 +1749,7 @@ Total: \( (D-2) + \frac{(D-2)(D-1)}{2} = \frac{(D-2)(D+1)}{2} \) states. The mas
 
 <div class="example">
 <strong>Example (Explicit state count for D = 26).</strong> For the critical dimension \( D = 26 \), the transverse directions number 24. At level \( N = 2 \):
+
 \[
 \text{Number of states} = \frac{24 \times 27}{2} = 324.
 \]
@@ -1856,6 +1880,7 @@ where \( T = 1/(2\pi\alpha') \) is the string tension. This is physically obviou
 
 <div class="example">
 <strong>Example (Mass of a stretched string).</strong> Let \( d = 10 \ell_s \) where \( \ell_s = \sqrt{\alpha'} \) is the string length. Then the minimum mass of a string stretching between the two branes is:
+
 \[
 m_{\min} = \frac{d}{2\pi\alpha'} = \frac{10\ell_s}{2\pi\ell_s^2} = \frac{10}{2\pi\ell_s} \approx \frac{1.6}{\ell_s}.
 \]
@@ -2163,6 +2188,7 @@ We define the quantum Virasoro generators by normal ordering:
 \[
 L_n = \frac{1}{2}\sum_{m=-\infty}^{\infty} :\alpha_{n-m}\cdot\alpha_m: \qquad (n \neq 0),
 \]
+
 \[
 L_0 = \frac{1}{2}\alpha_0^2 + \sum_{m=1}^{\infty}\alpha_{-m}\cdot\alpha_m.
 \]
@@ -2183,6 +2209,7 @@ The Virasoro operators satisfy a remarkable algebra. Let us derive it. We wish t
 
 <div class="theorem">
 <strong>Derivation.</strong> We compute
+
 \[
 [L_m, \alpha_n^\mu] = \frac{1}{2}\sum_p [\alpha_{m-p}\cdot\alpha_p,\, \alpha_n^\mu].
 \]
@@ -2222,6 +2249,7 @@ However, when we shifted the summation and combined terms, we implicitly reorder
 
 <div class="definition">
 <strong>The Virasoro Algebra.</strong>
+
 \[
 [L_m, L_n] = (m-n)\,L_{m+n} + \frac{c}{12}\,m(m^2-1)\,\delta_{m+n,0},
 \]
@@ -2237,6 +2265,7 @@ Let us verify the central extension for small values. Consider \([L_1, L_{-1}]\)
 \[
 L_1 = \sum_{m} \frac{1}{2}\alpha_{1-m}\cdot\alpha_m = \alpha_0\cdot\alpha_1 + \frac{1}{2}\alpha_{-1}\cdot\alpha_2 + \cdots
 \]
+
 \[
 L_{-1} = \alpha_{-1}\cdot\alpha_0 + \frac{1}{2}\alpha_{-2}\cdot\alpha_1 + \cdots
 \]
@@ -2251,6 +2280,7 @@ Physical states \(|\psi\rangle\) must satisfy the quantum version of the Virasor
 \[
 L_n|\psi\rangle = 0 \qquad \text{for } n > 0,
 \]
+
 \[
 (L_0 - a)|\psi\rangle = 0.
 \]
@@ -2261,6 +2291,7 @@ For closed strings, both the left-moving and right-moving Virasoro constraints m
 \[
 L_n|\psi\rangle = \tilde L_n|\psi\rangle = 0 \qquad (n > 0),
 \]
+
 \[
 (L_0 - a)|\psi\rangle = (\tilde L_0 - a)|\psi\rangle = 0.
 \]
@@ -2303,6 +2334,7 @@ In the covariant approach, the same result emerges after properly accounting for
 
 <div class="theorem">
 <strong>Normal-ordering constant.</strong> For the open bosonic string,
+
 \[
 a = \frac{D-2}{24}.
 \]
@@ -2392,6 +2424,7 @@ with \(\hat{N}_n = \sum_{i=1}^{D-2}(a_n^i)^\dagger a_n^i\) counting the number o
 
 <div class="definition">
 <strong>Open string mass formula.</strong>
+
 \[
 \alpha' m^2 = N_\perp - a = N_\perp - \frac{D-2}{24}.
 \]
@@ -2408,6 +2441,7 @@ Let us enumerate the lightest states.
 
 <div class="example">
 <strong>Example: The tachyon (\(N_\perp = 0\)).</strong> The ground state has no oscillator excitations:
+
 \[
 |0;p\rangle, \qquad \alpha' m^2 = 0 - 1 = -1, \qquad m^2 = -\frac{1}{\alpha'}.
 \]
@@ -2416,6 +2450,7 @@ This state has <em>negative mass-squared</em> and is called the <strong>tachyon<
 
 <div class="example">
 <strong>Example: The massless vector (\(N_\perp = 1\)).</strong> The first excited level is
+
 \[
 \alpha_{-1}^i|0;p\rangle, \qquad i = 1,\dots, D-2 = 24.
 \]
@@ -2429,9 +2464,11 @@ These are <em>massless</em> states carrying a transverse vector index. A massive
 
 <div class="example">
 <strong>Example: The first massive level (\(N_\perp = 2\)).</strong> There are two types of states at this level:
+
 \[
 \alpha_{-2}^i|0;p\rangle \qquad (24 \text{ states}),
 \]
+
 \[
 \alpha_{-1}^i\alpha_{-1}^j|0;p\rangle \qquad \left(\binom{24+1}{2} = 300 \text{ states}\right).
 \]
@@ -2458,6 +2495,7 @@ N_\perp = \tilde N_\perp.
 
 <div class="example">
 <strong>Example: The closed-string tachyon (\(N_\perp = \tilde N_\perp = 0\)).</strong>
+
 \[
 |0;p\rangle, \qquad \alpha' m^2 = 2(0+0-2) = -4, \qquad m^2 = -\frac{4}{\alpha'}.
 \]
@@ -2465,6 +2503,7 @@ N_\perp = \tilde N_\perp.
 
 <div class="example">
 <strong>Example: The massless closed-string states (\(N_\perp = \tilde N_\perp = 1\)).</strong> The states are
+
 \[
 \alpha_{-1}^i\,\tilde\alpha_{-1}^j|0;p\rangle, \qquad i,j = 1,\dots,24.
 \]
@@ -2529,12 +2568,14 @@ For Lorentz invariance, we need \(\Delta_m = 0\) for all \(m \geq 1\). Since the
 \[
 \frac{26 - D}{12} = 0 \quad \Longrightarrow \quad D = 26,
 \]
+
 \[
 \frac{D - 26}{12} + 2(1 - a) = 0 \quad \Longrightarrow \quad a = 1.
 \]
 
 <div class="theorem">
 <strong>Critical dimension of the bosonic string.</strong> Lorentz invariance of the lightcone-quantized bosonic string requires
+
 \[
 D = 26, \qquad a = 1.
 \]
@@ -2637,6 +2678,7 @@ Note that momentum and winding couple to the level-matching condition: a state w
 
 <div class="example">
 <strong>Example: Pure momentum and winding states.</strong> Consider states with \(N_L = N_R = 0\), so that the mass comes entirely from momentum and winding:
+
 \[
 m^2 = \frac{n^2}{R^2} + \frac{w^2 R^2}{\alpha'^2} - \frac{4}{\alpha'}.
 \]
@@ -2668,6 +2710,7 @@ In terms of the left- and right-moving momenta:
 \[
 p_L = \frac{n}{R} + \frac{wR}{\alpha'} \quad \xrightarrow{T} \quad \frac{w}{\alpha'/R} + \frac{n(\alpha'/R)}{\alpha'} = \frac{n}{R} + \frac{wR}{\alpha'} = p_L,
 \]
+
 \[
 p_R = \frac{n}{R} - \frac{wR}{\alpha'} \quad \xrightarrow{T} \quad \frac{w}{\alpha'/R} - \frac{n(\alpha'/R)}{\alpha'} = -\left(\frac{n}{R} - \frac{wR}{\alpha'}\right) = -p_R.
 \]
@@ -2690,6 +2733,7 @@ The dual coordinate \(\tilde X^{25}\) lives on a circle of radius \(\tilde R = \
 
 <div class="definition">
 <strong>T-duality.</strong> The closed bosonic string compactified on a circle of radius \(R\) is physically identical to the closed bosonic string compactified on a circle of radius \(\alpha'/R\), with momentum and winding exchanged. The mapping is
+
 \[
 R \leftrightarrow \frac{\alpha'}{R}, \qquad n \leftrightarrow w, \qquad X_R^{25} \to -X_R^{25}.
 \]
@@ -2718,6 +2762,7 @@ At the self-dual radius \(R = \sqrt{\alpha'}\), the theory has enhanced gauge sy
 
 <div class="example">
 <strong>Example.</strong> Consider the state with \(n = 2, w = 0, N_L = N_R = 0\) at radius \(R\). Its mass is
+
 \[
 m^2 = \frac{4}{R^2} - \frac{4}{\alpha'}.
 \]
@@ -2772,6 +2817,7 @@ For the open string, decompose \(X^{25}\) into left- and right-movers. At the op
 \[
 \partial_\tau X^{25} = \partial_\tau X_L^{25} + \partial_\tau X_R^{25},
 \]
+
 \[
 \partial_\sigma X^{25} = -\partial_\tau X_L^{25} + \partial_\tau X_R^{25}.
 \]
@@ -2791,6 +2837,7 @@ Conversely, the Neumann condition \(\partial_\sigma \tilde X^{25} = \partial_\ta
 
 <div class="theorem">
 <strong>T-duality exchanges boundary conditions.</strong>
+
 \[
 \text{Neumann} \quad \xleftrightarrow{\quad T\text{-duality}\quad} \quad \text{Dirichlet}.
 \]
@@ -3045,6 +3092,7 @@ n_i(\mathbf{r}) = n_i^{(0)} \exp\!\left(-\frac{z_i e\, \phi(\mathbf{r})}{k_B T}\
 
 <div class="definition">
 <strong>Boltzmann distribution for ions.</strong> In thermal equilibrium at temperature \( T \), the local number density of ionic species \( i \) with charge \( z_i e \) in an external potential \( \phi(\mathbf{r}) \) is
+
 \[
 n_i(\mathbf{r}) = n_i^{(0)} \exp\!\left(-\frac{z_i e\, \phi(\mathbf{r})}{k_B T}\right),
 \]
@@ -3113,6 +3161,7 @@ We now define the **inverse Debye length** \(\kappa_D\) through
 
 <div class="definition">
 <strong>Debye length.</strong> The Debye screening length is defined as
+
 \[
 \lambda_D = \frac{1}{\kappa_D} = \left(\frac{\epsilon_0 k_B T}{\sum_i (z_i e)^2\, n_i^{(0)}}\right)^{1/2}.
 \]
@@ -3167,6 +3216,7 @@ Since \(e^{-\kappa_D r} \to 1\) as \(r \to 0\), we read off \(A = Q/(4\pi\epsilo
 
 <div class="example">
 <strong>The screened Coulomb (Yukawa) potential.</strong> A test charge \( Q \) in an electrolyte or plasma at temperature \( T \) creates the potential
+
 \[
 \phi(r) = \frac{Q}{4\pi\epsilon_0 r}\, e^{-r/\lambda_D},
 \]
@@ -3268,6 +3318,7 @@ Since \(E\) is close to \(E_1\) or \(E_2\) and both are much less than \(E_3\), 
 \[
 QVP = g_1 |3\rangle\langle 1| + g_2 |3\rangle\langle 2|,
 \]
+
 \[
 PVQ = g_1 |1\rangle\langle 3| + g_2 |2\rangle\langle 3|.
 \]
@@ -3392,6 +3443,7 @@ Substituting \(t = 1 - r\):
 \[
 (1 - r) - (1 + r) = \lambda\, ik\, (1-r),
 \]
+
 \[
 -2r = \lambda\, ik\, (1-r).
 \]
@@ -3561,6 +3613,7 @@ The rate at which the coupling changes with scale is encoded in the **beta funct
 
 <div class="definition">
 <strong>Beta function.</strong> For a coupling \( g \) defined at scale \( \mu \), the beta function is
+
 \[
 \beta(g) = \mu\,\frac{dg}{d\mu}.
 \]
@@ -3594,6 +3647,7 @@ There are two important types:
 
 <div class="example">
 <strong>Example: QCD coupling.</strong> In quantum chromodynamics with \( N_f \) light quark flavors, the one-loop beta function is
+
 \[
 \beta(g) = -\frac{g^3}{16\pi^2}\left(11 - \frac{2N_f}{3}\right).
 \]
@@ -3959,6 +4013,7 @@ K(x_f,T;\,x_i,0) = \lim_{N\to\infty}\left(\frac{m}{2\pi i\hbar\epsilon}\right)^{
 
 <div class="definition">
 <strong>Definition (Path integral).</strong> The <strong>Feynman path integral</strong> for the propagator is defined as the continuum limit of the time-sliced expression:
+
 \[
 K(x_f,T;\,x_i,0) = \int_{x(0)=x_i}^{x(T)=x_f}\mathcal{D}x(t)\;\exp\!\left[\frac{i}{\hbar}S[x]\right],
 \]
@@ -4106,6 +4161,7 @@ K(x_f,T;\,x_i,0) = \sqrt{\frac{m}{2\pi i\hbar T}}\;\exp\!\left[\frac{im(x_f - x_
 
 <div class="definition">
 <strong>Definition (Free-particle propagator).</strong> The exact propagator for a free particle of mass \(m\) is
+
 \[
 K_{\text{free}}(x_f,T;\,x_i,0) = \sqrt{\frac{m}{2\pi i\hbar T}}\;\exp\!\left[\frac{im(x_f-x_i)^2}{2\hbar T}\right].
 \]
@@ -4141,6 +4197,7 @@ which is the free-particle Schrödinger equation in the variable \(x_f\).
 
 <div class="example">
 <strong>Example.</strong> Consider a Gaussian wave packet at \(t = 0\):
+
 \[
 \psi(x,0) = \left(\frac{1}{2\pi\sigma^2}\right)^{1/4}\exp\!\left[-\frac{x^2}{4\sigma^2}\right].
 \]
@@ -4318,6 +4375,7 @@ Combining the classical action with the fluctuation prefactor:
 
 <div class="definition">
 <strong>Definition (Harmonic oscillator propagator).</strong> The exact propagator for the one-dimensional harmonic oscillator is
+
 \[
 K_{\text{HO}}(x_f,T;\,x_i,0) = \sqrt{\frac{m\omega}{2\pi i\hbar\sin\omega T}}\;\exp\!\left[\frac{im\omega}{2\hbar\sin\omega T}\bigl((x_f^2+x_i^2)\cos\omega T - 2x_i x_f\bigr)\right].
 \]
@@ -4337,6 +4395,7 @@ This is the **Van Vleck–Morette formula** (or simply the **Van Vleck determina
 
 <div class="example">
 <strong>Example (verification for the oscillator).</strong> For the harmonic oscillator, the classical action is
+
 \[
 S_{\text{cl}} = \frac{m\omega}{2\sin\omega T}\bigl[(x_f^2+x_i^2)\cos\omega T - 2x_i x_f\bigr].
 \]
@@ -4418,6 +4477,7 @@ e^{iS/\hbar} = e^{i \cdot iS_E/\hbar} = e^{-S_E/\hbar}.
 
 <div class="definition">
 <strong>Definition (Euclidean path integral).</strong> The <strong>Euclidean propagator</strong> (or <strong>Euclidean kernel</strong>) is
+
 \[
 K_E(x_f,\tau_f;\,x_i,\tau_i) = \int_{x(\tau_i)=x_i}^{x(\tau_f)=x_f}\mathcal{D}x(\tau)\;e^{-S_E[x]/\hbar},
 \]
@@ -4474,6 +4534,7 @@ where the path integral is now over **periodic paths** \(x(0) = x(\beta\hbar)\),
 
 <div class="remark">
 <strong>Remark.</strong> This is one of the most important results in theoretical physics: the quantum partition function at finite temperature is a Euclidean path integral with periodic imaginary time. The period is \(\beta\hbar = \hbar/(k_B T_{\text{temp}})\). In the zero-temperature limit \(\beta\to\infty\), the path integral is dominated by the ground state energy:
+
 \[
 Z(\beta) \xrightarrow{\beta\to\infty} e^{-\beta E_0},
 \]
@@ -4558,6 +4619,7 @@ These are generated by functional differentiation of \(Z[J]\):
 
 <div class="remark">
 <strong>Remark.</strong> The functional derivative is defined by
+
 \[
 \frac{\delta J(t)}{\delta J(t')} = \delta(t - t').
 \]
@@ -4626,6 +4688,7 @@ where \(G_E\) is the Euclidean Green function. This simple formula is the starti
 
 <div class="definition">
 <strong>Definition (Generating functional, free theory).</strong> For a quadratic (free) theory, the generating functional is a Gaussian in the source:
+
 \[
 Z[J] = Z[0]\;\exp\!\left[\frac{i}{2\hbar}\int dt\int dt'\;J(t)\,G_F(t,t')\,J(t')\right],
 \]
@@ -4670,6 +4733,7 @@ This is a sum over all **pairings** (or **contractions**) of the four time argum
 
 <div class="definition">
 <strong>Definition (Wick's theorem).</strong> For a Gaussian (free) theory, the \(2n\)-point function decomposes into a sum over all distinct pairings of the \(2n\) points:
+
 \[
 \langle x(t_1)\cdots x(t_{2n})\rangle = \sum_{\text{pairings}}\prod_{\text{pairs}(i,j)}G_F(t_i,t_j).
 \]
@@ -4840,6 +4904,7 @@ x_{\text{inst}}(\tau) = a\,\tanh\!\left[\frac{\omega}{2}(\tau - \tau_0)\right].
 
 <div class="definition">
 <strong>Definition (Instanton).</strong> The <strong>instanton</strong> is the finite-action solution to the Euclidean equation of motion connecting the two degenerate minima:
+
 \[
 x_{\text{inst}}(\tau) = a\,\tanh\!\left[\frac{\omega}{2}(\tau - \tau_0)\right].
 \]
@@ -5038,6 +5103,7 @@ The tunnelling splitting is therefore
 
 <div class="definition">
 <strong>Definition (Tunnelling splitting).</strong> In the dilute instanton gas approximation, the splitting between the two lowest energy levels of the double-well potential is
+
 \[
 \Delta E = 2\hbar\kappa = 2\hbar\,K\,e^{-S_E^{\text{inst}}/\hbar},
 \]
@@ -5186,6 +5252,7 @@ The most immediate dynamical consequence of the SUSY algebra is that the energy 
 
 <div class="theorem">
 <strong>Theorem (Positivity of the SUSY Hamiltonian).</strong> For any state \(|\psi\rangle\) in the Hilbert space,
+
 \[
 \langle \psi | H | \psi \rangle \geq 0.
 \]
@@ -5424,6 +5491,7 @@ AA^\dagger\psi = -\psi'' + W'\psi + W\psi' - W\psi' + W^2\psi = -\psi'' + (W^2 +
 
 <div class="definition">
 <strong>Definition (Partner Potentials).</strong> Given a superpotential \(W(x)\), the <em>partner potentials</em> are
+
 \[
 V_-(x) = W(x)^2 - W'(x), \qquad V_+(x) = W(x)^2 + W'(x).
 \]
@@ -5474,6 +5542,7 @@ This is normalizable under the opposite asymptotic conditions. Therefore, at mos
 
 <div class="remark">
 <strong>Remark.</strong> The intertwining relations can be written compactly as
+
 \[
 AH_- = H_+ A, \qquad A^\dagger H_+ = H_- A^\dagger.
 \]
@@ -5615,6 +5684,7 @@ where \(a_0\) denotes the original set of parameters, \(a_1 = f(a_0)\) is a shif
 
 <div class="definition">
 <strong>Definition (Shape Invariance).</strong> A superpotential \(W(x; a)\) depending on a parameter \(a\) is called <em>shape invariant</em> if
+
 \[
 W(x; a)^2 + W'(x; a) = W(x; f(a))^2 - W'(x; f(a)) + R(a)
 \]
@@ -5627,6 +5697,7 @@ When shape invariance holds, the entire spectrum can be obtained algebraically w
 
 <div class="theorem">
 <strong>Theorem (Spectrum from Shape Invariance).</strong> If the partner potentials are shape invariant with \(V_+(x; a_0) = V_-(x; a_1) + R(a_0)\), and if the ground-state energy of \(H_-(a_s)\) is zero for each \(a_s\) in the sequence \(a_s = f^{(s)}(a_0)\), then the eigenvalues of \(H_-(a_0)\) are
+
 \[
 E_n = \sum_{k=0}^{n-1} R(a_k), \qquad n = 0, 1, 2, \ldots
 \]
@@ -5713,6 +5784,7 @@ where \((-1)^F\) is the fermion number operator, \(\beta > 0\) is an arbitrary p
 
 <div class="definition">
 <strong>Definition (Witten Index).</strong> The <em>Witten index</em> of a supersymmetric quantum mechanics is
+
 \[
 \mathcal{I}_W = \mathrm{Tr}\!\left[(-1)^F e^{-\beta H}\right] = n_B^{(0)} - n_F^{(0)},
 \]
@@ -6004,6 +6076,7 @@ which is precisely the **Hodge Laplacian** (also called the Laplace-de Rham oper
 
 <div class="definition">
 <strong>Definition (Hodge Laplacian).</strong> The <em>Hodge Laplacian</em> on a compact Riemannian manifold \((M, g)\) is the operator
+
 \[
 \Delta = dd^\dagger + d^\dagger d
 \]
@@ -6024,6 +6097,7 @@ Let us recall the basic definitions from algebraic topology.
 
 <div class="definition">
 <strong>Definition (De Rham Cohomology).</strong> The <em>\(k\)-th de Rham cohomology group</em> of \(M\) is
+
 \[
 H^k_{\mathrm{dR}}(M) = \frac{\ker(d: \Omega^k \to \Omega^{k+1})}{\mathrm{Im}(d: \Omega^{k-1} \to \Omega^k)}.
 \]
@@ -6044,6 +6118,7 @@ The central result connecting analysis (the Laplacian) to topology (cohomology) 
 
 <div class="theorem">
 <strong>Theorem (Hodge).</strong> On a compact Riemannian manifold \(M\), every de Rham cohomology class contains a unique harmonic representative. In other words,
+
 \[
 H^k_{\mathrm{dR}}(M) \cong \mathcal{H}^k(M) \equiv \ker(\Delta|_{\Omega^k}),
 \]
@@ -6072,6 +6147,7 @@ where \(\chi(M)\) is the **Euler characteristic** of \(M\).
 
 <div class="theorem">
 <strong>Theorem.</strong> For SQM on a compact Riemannian manifold \(M\), the Witten index equals the Euler characteristic:
+
 \[
 \mathcal{I}_W = \mathrm{Tr}\!\left[(-1)^F e^{-\beta\Delta}\right] = \chi(M).
 \]
@@ -6142,6 +6218,7 @@ Let \(c_k\) denote the number of critical points of \(h\) with Morse index \(k\)
 
 <div class="theorem">
 <strong>Theorem (Weak Morse Inequalities).</strong> For any Morse function \(h\) on a compact manifold \(M\),
+
 \[
 c_k \geq b_k \qquad \text{for all } k = 0, 1, \ldots, n.
 \]
@@ -6154,6 +6231,7 @@ There are also **strong Morse inequalities**, which take the alternating-sum str
 
 <div class="theorem">
 <strong>Theorem (Strong Morse Inequalities).</strong> For any Morse function \(h\) on a compact manifold \(M\),
+
 \[
 \sum_{k=0}^{p}(-1)^{p-k}c_k \geq \sum_{k=0}^{p}(-1)^{p-k}b_k \qquad \text{for all } p = 0, 1, \ldots, n.
 \]
@@ -6192,6 +6270,7 @@ where \(n(p,q)\) is the signed count of gradient flow lines from \(p\) to \(q\).
 
 <div class="theorem">
 <strong>Theorem (Witten, Morse-Witten Complex).</strong> The operator \(\partial\) satisfies \(\partial^2 = 0\), and the resulting homology is isomorphic to the singular homology of \(M\):
+
 \[
 H_k(C_\bullet, \partial) \cong H_k(M; \mathbb{R}).
 \]

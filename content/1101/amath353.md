@@ -258,6 +258,7 @@ c(x)\rho(x) \frac{\partial u}{\partial t} = -\frac{\partial \phi}{\partial x} + 
 <strong>Step 4: Fourier's law.</strong> From experiment, heat flows from hotter regions to colder regions, at a rate proportional to the temperature gradient:
 
 <div class="definition"><strong>Definition (Fourier's Law of Heat Conduction).</strong>
+
 \[
 \phi = -K_0(x) \frac{\partial u}{\partial x},
 \]
@@ -500,6 +501,7 @@ Applying the Divergence Theorem to the surface integral, and using the Du Bois-R
 \]
 
 <div class="theorem"><strong>Theorem (Gauss Divergence Theorem).</strong> For a vector field \( \mathbf{F} \) and a region \( D \) bounded by a closed surface \( S \),
+
 \[
 \iint_S \mathbf{F} \cdot \hat{n}\, dS = \iiint_D \nabla \cdot \mathbf{F}\, dV.
 \]
@@ -702,6 +704,7 @@ u(r,\theta) = \frac{a^2 - r^2}{2\pi} \int_{-\pi}^{\pi} \frac{f(\theta')}{a^2 - 2
 The kernel \( P(r, \theta - \theta') = (a^2 - r^2) / (a^2 - 2ar\cos(\theta-\theta') + r^2) \) is called the <strong>Poisson kernel</strong>.
 
 <div class="theorem"><strong>Theorem (Mean Value Property).</strong> If \( u \) is harmonic on a disk of radius \( a \) centred at the origin, then the value of \( u \) at the centre equals the average of \( u \) over the boundary circle:
+
 \[
 u(0) = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(\theta)\, d\theta.
 \]
@@ -736,9 +739,11 @@ This is the <strong>regular Sturm-Liouville eigenvalue problem</strong>, provide
 <li>There are infinitely many eigenvalues: \( \lambda_1 < \lambda_2 < \cdots \), with \( \lambda_n \to \infty \).</li>
 <li>The eigenfunction \( \phi_n \) associated with \( \lambda_n \) has exactly \( n-1 \) zeros in \( (a,b) \).</li>
 <li>The eigenfunctions are orthogonal with weight \( \sigma(x) \):
+
 \[
 \int_a^b \phi_m(x) \phi_n(x) \sigma(x)\, dx = 0 \quad \text{for } m \ne n.
-\]</li>
+\]
+</li>
 <li>The eigenfunctions form a complete set (basis) for \( L^2_\sigma[a,b] \).</li>
 </ol>
 </div>
@@ -760,6 +765,7 @@ For the general Sturm-Liouville equation, the Rayleigh quotient is
 \]
 
 <div class="theorem"><strong>Theorem (Variational Characterisation).</strong> The lowest eigenvalue \( \lambda_1 \) is the minimum of the Rayleigh quotient over all admissible functions:
+
 \[
 \lambda_1 = \min\!\left\{\,\text{RQ}(u) \;\Big|\; u \text{ piecewise } C^1, \text{ satisfies BCs}\right\}.
 \]
@@ -866,6 +872,7 @@ u_{mn}(r,\theta,t) = J_m\!\left(\frac{z_{mn}}{a} r\right) (a_m \cos m\theta + b_
 **Modes with angular dependence (\( m \ge 1 \)):** The factor \( \cos(m\theta) \) introduces \( m \) nodal lines (diameters). For example, \( m = 1 \), \( n = 1 \) gives one nodal diameter, dividing the drum into two halves.
 
 <div class="theorem"><strong>Theorem (Orthogonality of Bessel Functions).</strong> For fixed \( m \), the functions \( J_m(z_{mn} r/a) \) are orthogonal on \( [0,a] \) with weight \( r \):
+
 \[
 \int_0^a J_m\!\left(\frac{z_{mn} r}{a}\right) J_m\!\left(\frac{z_{mk} r}{a}\right) r\, dr = 0 \quad \text{for } n \ne k.
 \]
@@ -1174,6 +1181,7 @@ c_g = \frac{d\omega}{dk} = \frac{c^2 k}{\sqrt{c^2k^2 + \alpha^2}} = \frac{c^2}{c
 is subluminal. Since \(c_g\) is the velocity of energy and information propagation, special relativity is not violated.
 
 <div class="definition"><strong>Definition (Group Velocity).</strong> For a dispersive wave with dispersion relation \(\omega = \omega(k)\), the <em>group velocity</em> is
+
 \[
 c_g = \frac{d\omega}{dk}.
 \]
@@ -1241,6 +1249,7 @@ so \(\langle \phi_m, \phi_n \rangle_\sigma = 0\) whenever \(\lambda_m \ne \lambd
 The adjoint governs not just eigenvalue theory but the solvability of inhomogeneous equations. The central result is:
 
 <div class="theorem"><strong>Theorem (Fredholm Alternative).</strong> Let \(L\) be a linear operator with adjoint \(L^*\). The equation \(Lu = f\) has a solution if and only if
+
 \[
 \langle v, f \rangle = 0
 \]
@@ -1317,6 +1326,7 @@ f(\xi) = \frac{U}{2}\,\mathrm{sech}^2\!\left(\frac{\sqrt{U}}{2}\,\xi\right).
 \]
 
 <div class="theorem"><strong>Theorem (KdV One-Soliton).</strong> For any speed \(U > 0\), the function
+
 \[
 u(x,t) = \frac{U}{2}\,\mathrm{sech}^2\!\!\left(\frac{\sqrt{U}}{2}(x - Ut)\right)
 \]

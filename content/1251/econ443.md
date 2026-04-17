@@ -152,7 +152,9 @@ The social cost of rent-seeking extends beyond the direct lobbying expenditure: 
 
 The equilibrium characterization: for any organized sector \( i \), the equilibrium tariff satisfies:
 
-\[ \frac{t_i}{1 + t_i} = \frac{a_i - \alpha_L}{e_i \alpha_L} \cdot \frac{X_i}{M_i} \]
+\[
+\frac{t_i}{1 + t_i} = \frac{a_i - \alpha_L}{e_i \alpha_L} \cdot \frac{X_i}{M_i}
+\]
 
 where \( a_i \) is an indicator of whether the sector is organized, \( \alpha_L \) is the weight on aggregate welfare in the government's objective, \( e_i \) is the import demand elasticity, \( X_i \) is domestic production, and \( M_i \) is imports. Organized sectors receive protection while unorganized sectors may face negative effective protection. Empirical tests (Goldberg and Maggi 1999, Gawande and Bandyopadhyay 2000) find support for the model's predictions.
 

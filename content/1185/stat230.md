@@ -42,7 +42,10 @@ The collection \(\{P(a_i)\}\) is called a probability distribution on \(S\).
 <div class="definition">
 
 <strong>Definition 4 (Probability of an Event).</strong> The probability \(P(A)\) of an event \(A\) is the sum of the probabilities of all the simple events that make up \(A\):
-\[P(A) = \sum_{a \in A} P(a).\]
+
+\[
+P(A) = \sum_{a \in A} P(a).
+\]
 
 </div>
 
@@ -81,7 +84,9 @@ Starting with \(n\) distinct symbols:
 
 The number of subsets of size \(k\) chosen from \(n\) objects is
 
-\[\binom{n}{k} = \frac{n!}{k!(n-k)!} = \frac{n^{(k)}}{k!}.\]
+\[
+\binom{n}{k} = \frac{n!}{k!(n-k)!} = \frac{n^{(k)}}{k!}.
+\]
 
 Key properties include \(\binom{n}{k} = \binom{n}{n-k}\) and \(\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}\) (Pascal's identity).
 
@@ -91,7 +96,9 @@ Key properties include \(\binom{n}{k} = \binom{n}{n-k}\) and \(\binom{n}{k} = \b
 
 If we have \(n\) symbols total with \(n_i\) of type \(i\) (for \(i = 1, 2, \ldots, k\)) where \(n_1 + n_2 + \cdots + n_k = n\), the number of distinct arrangements is
 
-\[\frac{n!}{n_1! \, n_2! \cdots n_k!}.\]
+\[
+\frac{n!}{n_1! \, n_2! \cdots n_k!}.
+\]
 
 ---
 
@@ -136,21 +143,30 @@ The basic rules of probability follow directly from the definitions:
 <div class="theorem">
 
 <strong>Rule 4a (Addition Law / Inclusion-Exclusion for Two Events).</strong>
-\[P(A \cup B) = P(A) + P(B) - P(A \cap B).\]
+
+\[
+P(A \cup B) = P(A) + P(B) - P(A \cap B).
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Rule 4b (Inclusion-Exclusion for Three Events).</strong>
-\[P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(AB) - P(AC) - P(BC) + P(ABC).\]
+
+\[
+P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(AB) - P(AC) - P(BC) + P(ABC).
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Rule 4c (Inclusion-Exclusion for \(n\) Events).</strong>
-\[P\!\left(\bigcup_{i=1}^n A_i\right) = \sum_i P(A_i) - \sum_{i<j} P(A_i A_j) + \sum_{i<j<k} P(A_i A_j A_k) - \cdots\]
+
+\[
+P\!\left(\bigcup_{i=1}^n A_i\right) = \sum_i P(A_i) - \sum_{i<j} P(A_i A_j) + \sum_{i<j<k} P(A_i A_j A_k) - \cdots
+\]
 
 </div>
 
@@ -189,7 +205,10 @@ The basic rules of probability follow directly from the definitions:
 <div class="definition">
 
 <strong>Definition 8 (Mutual Independence).</strong> Events \(A_1, A_2, \ldots, A_n\) are mutually independent if and only if
-\[P(A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_k}) = P(A_{i_1})P(A_{i_2}) \cdots P(A_{i_k})\]
+
+\[
+P(A_{i_1} \cap A_{i_2} \cap \cdots \cap A_{i_k}) = P(A_{i_1})P(A_{i_2}) \cdots P(A_{i_k})
+\]
 for every subset \(\{i_1, i_2, \ldots, i_k\}\) of distinct indices from \(\{1, 2, \ldots, n\}\).
 
 </div>
@@ -201,7 +220,10 @@ Mutual independence requires checking all \(2^n - n - 1\) subset conditions, not
 <div class="definition">
 
 <strong>Definition 9 (Conditional Probability).</strong> The conditional probability of event \(A\), given event \(B\), is
-\[P(A \mid B) = \frac{P(A \cap B)}{P(B)}, \quad \text{provided } P(B) > 0.\]
+
+\[
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}, \quad \text{provided } P(B) > 0.
+\]
 
 </div>
 
@@ -218,9 +240,18 @@ If \(A\) and \(B\) are independent, then \(P(A \mid B) = P(A)\).
 <div class="theorem">
 
 <strong>Rule 7 (Product Rules).</strong> For events \(A, B, C, D, \ldots\) with appropriate positive probabilities:
-\[P(AB) = P(A)P(B \mid A),\]
-\[P(ABC) = P(A)P(B \mid A)P(C \mid AB),\]
-\[P(ABCD) = P(A)P(B \mid A)P(C \mid AB)P(D \mid ABC),\]
+
+\[
+P(AB) = P(A)P(B \mid A),
+\]
+
+\[
+P(ABC) = P(A)P(B \mid A)P(C \mid AB),
+\]
+
+\[
+P(ABCD) = P(A)P(B \mid A)P(C \mid AB)P(D \mid ABC),
+\]
 and so on.
 
 </div>
@@ -228,7 +259,10 @@ and so on.
 <div class="theorem">
 
 <strong>Rule 8 (Law of Total Probability).</strong> Let \(A_1, A_2, \ldots, A_k\) be a partition of \(S\) (i.e., mutually exclusive events whose union is \(S\)). For any event \(B\),
-\[P(B) = \sum_{i=1}^k P(B \mid A_i) P(A_i).\]
+
+\[
+P(B) = \sum_{i=1}^k P(B \mid A_i) P(A_i).
+\]
 
 </div>
 
@@ -273,9 +307,15 @@ and so on.
 <div class="theorem">
 
 <strong>Bayes' Theorem.</strong> Suppose \(P(B) > 0\). Then
-\[P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)} = \frac{P(B \mid A)P(A)}{P(B \mid A)P(A) + P(B \mid \bar{A})P(\bar{A})}.\]
+
+\[
+P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)} = \frac{P(B \mid A)P(A)}{P(B \mid A)P(A) + P(B \mid \bar{A})P(\bar{A})}.
+\]
 More generally, if \(A_1, \ldots, A_k\) partition \(S\),
-\[P(A_i \mid B) = \frac{P(B \mid A_i)P(A_i)}{\sum_{j=1}^k P(B \mid A_j)P(A_j)}.\]
+
+\[
+P(A_i \mid B) = \frac{P(B \mid A_i)P(A_i)}{\sum_{j=1}^k P(B \mid A_j)P(A_j)}.
+\]
 
 </div>
 
@@ -307,7 +347,10 @@ Random variables are classified as **discrete** (taking values in a countable se
 <div class="definition">
 
 <strong>Definition 12 (Probability Function).</strong> Let \(X\) be a discrete random variable with \(\text{range}(X) = A\). The probability function (p.f.) of \(X\) is
-\[f(x) = P(X = x), \quad \text{defined for all } x \in A.\]
+
+\[
+f(x) = P(X = x), \quad \text{defined for all } x \in A.
+\]
 The set of pairs \(\{(x, f(x)) : x \in A\}\) is called the probability distribution of \(X\). Every probability function satisfies: (1) \(f(x) \ge 0\) for all \(x \in A\), and (2) \(\sum_{x \in A} f(x) = 1\).
 
 </div>
@@ -315,7 +358,10 @@ The set of pairs \(\{(x, f(x)) : x \in A\}\) is called the probability distribut
 <div class="definition">
 
 <strong>Definition 13 (Cumulative Distribution Function).</strong> The cumulative distribution function (c.d.f.) of \(X\) is
-\[F(x) = P(X \le x) = \sum_{u \le x} f(u), \quad \text{defined for all } x \in \mathbb{R}.\]
+
+\[
+F(x) = P(X \le x) = \sum_{u \le x} f(u), \quad \text{defined for all } x \in \mathbb{R}.
+\]
 Properties: (1) \(F(x)\) is non-decreasing, (2) \(0 \le F(x) \le 1\), (3) \(\lim_{x \to -\infty} F(x) = 0\) and \(\lim_{x \to \infty} F(x) = 1\).
 
 </div>
@@ -329,7 +375,10 @@ For integer-valued random variables, \(f(x) = F(x) - F(x-1)\).
 <div class="definition">
 
 <strong>Discrete Uniform Distribution.</strong> If \(X \sim \text{Uniform}\{a, a+1, \ldots, b\}\), then
-\[f(x) = \frac{1}{b - a + 1}, \quad x = a, a+1, \ldots, b.\]
+
+\[
+f(x) = \frac{1}{b - a + 1}, \quad x = a, a+1, \ldots, b.
+\]
 
 </div>
 
@@ -340,7 +389,10 @@ For integer-valued random variables, \(f(x) = F(x) - F(x-1)\).
 <div class="definition">
 
 <strong>Hypergeometric Distribution.</strong>
-\[f(x) = P(X = x) = \frac{\binom{r}{x}\binom{N-r}{n-x}}{\binom{N}{n}}, \quad x = \max(0, n - N + r), \ldots, \min(n, r).\]
+
+\[
+f(x) = P(X = x) = \frac{\binom{r}{x}\binom{N-r}{n-x}}{\binom{N}{n}}, \quad x = \max(0, n - N + r), \ldots, \min(n, r).
+\]
 
 </div>
 
@@ -353,7 +405,10 @@ For integer-valued random variables, \(f(x) = F(x) - F(x-1)\).
 <div class="definition">
 
 <strong>Binomial Distribution.</strong>
-\[f(x) = P(X = x) = \binom{n}{x} p^x (1-p)^{n-x}, \quad x = 0, 1, 2, \ldots, n.\]
+
+\[
+f(x) = P(X = x) = \binom{n}{x} p^x (1-p)^{n-x}, \quad x = 0, 1, 2, \ldots, n.
+\]
 
 </div>
 
@@ -366,7 +421,10 @@ For integer-valued random variables, \(f(x) = F(x) - F(x-1)\).
 <div class="definition">
 
 <strong>Negative Binomial Distribution.</strong>
-\[f(x) = P(X = x) = \binom{x+k-1}{x} p^k (1-p)^x, \quad x = 0, 1, 2, \ldots\]
+
+\[
+f(x) = P(X = x) = \binom{x+k-1}{x} p^k (1-p)^x, \quad x = 0, 1, 2, \ldots
+\]
 
 </div>
 
@@ -379,7 +437,10 @@ For integer-valued random variables, \(f(x) = F(x) - F(x-1)\).
 <div class="definition">
 
 <strong>Geometric Distribution.</strong>
-\[f(x) = P(X = x) = p(1-p)^x, \quad x = 0, 1, 2, \ldots\]
+
+\[
+f(x) = P(X = x) = p(1-p)^x, \quad x = 0, 1, 2, \ldots
+\]
 
 </div>
 
@@ -392,7 +453,10 @@ The Poisson distribution arises as a limit of \(\text{Binomial}(n, p)\) when \(n
 <div class="definition">
 
 <strong>Poisson Distribution.</strong> If \(X \sim \text{Poisson}(\mu)\), then
-\[f(x) = P(X = x) = \frac{e^{-\mu} \mu^x}{x!}, \quad x = 0, 1, 2, \ldots\]
+
+\[
+f(x) = P(X = x) = \frac{e^{-\mu} \mu^x}{x!}, \quad x = 0, 1, 2, \ldots
+\]
 where \(\mu > 0\).
 
 </div>
@@ -447,19 +511,28 @@ The Poisson process also applies to events in space (area or volume), with \(\mu
 <div class="definition">
 
 <strong>Definition 16 (Expected Value).</strong> Let \(X\) be a discrete random variable with \(\text{range}(X) = A\) and probability function \(f(x)\). The expected value (mean, expectation) of \(X\) is
-\[E(X) = \mu = \sum_{x \in A} x \, f(x).\]
+
+\[
+E(X) = \mu = \sum_{x \in A} x \, f(x).
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Theorem 17 (Expected Value of a Function).</strong> Let \(X\) be a discrete random variable. The expected value of a function \(g(X)\) is
-\[E[g(X)] = \sum_{x \in A} g(x) f(x).\]
+
+\[
+E[g(X)] = \sum_{x \in A} g(x) f(x).
+\]
 
 </div>
 
 **Linearity of Expectation:** For constants \(a\) and \(b\),
-\[E[ag(X) + b] = aE[g(X)] + b.\]
+
+\[
+E[ag(X) + b] = aE[g(X)] + b.
+\]
 
 More generally, \(E[ag_1(X) + bg_2(X)] = aE[g_1(X)] + bE[g_2(X)]\).
 
@@ -470,7 +543,10 @@ Note that in general \(E[g(X)] \ne g(E[X])\) for nonlinear \(g\).
 <div class="definition">
 
 <strong>Definition 18 (Variance).</strong> The variance of a random variable \(X\) is
-\[\sigma^2 = \text{Var}(X) = E[(X - \mu)^2].\]
+
+\[
+\sigma^2 = \text{Var}(X) = E[(X - \mu)^2].
+\]
 
 </div>
 
@@ -481,12 +557,18 @@ Two useful computational formulas:
 <div class="definition">
 
 <strong>Definition 19 (Standard Deviation).</strong>
-\[\sigma = \text{sd}(X) = \sqrt{\text{Var}(X)}.\]
+
+\[
+\sigma = \text{sd}(X) = \sqrt{\text{Var}(X)}.
+\]
 
 </div>
 
 **Properties of Mean and Variance under linear transformation:** If \(Y = aX + b\), then
-\[E(Y) = aE(X) + b, \qquad \text{Var}(Y) = a^2 \text{Var}(X).\]
+
+\[
+E(Y) = aE(X) + b, \qquad \text{Var}(Y) = a^2 \text{Var}(X).
+\]
 
 ### Derivations of Mean and Variance for Key Distributions
 
@@ -509,12 +591,18 @@ Two useful computational formulas:
 For continuous random variables, \(P(X = x) = 0\) for every individual value \(x\); probabilities are assigned to intervals.
 
 The **cumulative distribution function** \(F(x) = P(X \le x)\) has the same properties as in the discrete case: non-decreasing, \(\lim_{x \to -\infty} F(x) = 0\), \(\lim_{x \to \infty} F(x) = 1\). Since \(P(X = a) = 0\),
-\[P(a < X < b) = P(a \le X \le b) = F(b) - F(a).\]
+
+\[
+P(a < X < b) = P(a \le X \le b) = F(b) - F(a).
+\]
 
 <div class="definition">
 
 <strong>Definition 20 (Probability Density Function).</strong> The probability density function (p.d.f.) \(f(x)\) for a continuous random variable \(X\) is
-\[f(x) = \frac{dF(x)}{dx}\]
+
+\[
+f(x) = \frac{dF(x)}{dx}
+\]
 where \(F(x)\) is the cumulative distribution function.
 
 </div>
@@ -534,7 +622,10 @@ Note that \(f(x) \ne P(X = x)\), but \(f(x)\,\Delta x \approx P(x - \Delta x/2 \
 <div class="definition">
 
 <strong>Definition 22 (Expectation for Continuous Random Variables).</strong>
-\[E[g(X)] = \int_{-\infty}^{\infty} g(x) f(x)\,dx.\]
+
+\[
+E[g(X)] = \int_{-\infty}^{\infty} g(x) f(x)\,dx.
+\]
 In particular, \(\mu = E(X) = \int_{-\infty}^{\infty} x f(x)\,dx\) and \(\text{Var}(X) = E(X^2) - \mu^2\).
 
 </div>
@@ -548,8 +639,14 @@ All earlier properties of expectation and variance carry over to continuous rand
 <div class="definition">
 
 <strong>Continuous Uniform Distribution.</strong>
-\[f(x) = \frac{1}{b-a}, \quad a \le x \le b; \qquad F(x) = \frac{x - a}{b - a}, \quad a \le x \le b.\]
-\[E(X) = \frac{a+b}{2}, \qquad \text{Var}(X) = \frac{(b-a)^2}{12}.\]
+
+\[
+f(x) = \frac{1}{b-a}, \quad a \le x \le b; \qquad F(x) = \frac{x - a}{b - a}, \quad a \le x \le b.
+\]
+
+\[
+E(X) = \frac{a+b}{2}, \qquad \text{Var}(X) = \frac{(b-a)^2}{12}.
+\]
 
 </div>
 
@@ -560,15 +657,24 @@ All earlier properties of expectation and variance carry over to continuous rand
 <div class="definition">
 
 <strong>Exponential Distribution.</strong> If \(X \sim \text{Exponential}(\theta)\), then
-\[f(x) = \frac{1}{\theta} e^{-x/\theta}, \quad x > 0; \qquad F(x) = 1 - e^{-x/\theta}, \quad x > 0.\]
-\[E(X) = \theta, \qquad \text{Var}(X) = \theta^2.\]
+
+\[
+f(x) = \frac{1}{\theta} e^{-x/\theta}, \quad x > 0; \qquad F(x) = 1 - e^{-x/\theta}, \quad x > 0.
+\]
+
+\[
+E(X) = \theta, \qquad \text{Var}(X) = \theta^2.
+\]
 
 </div>
 
 <div class="definition">
 
 <strong>Definition 23 (Gamma Function).</strong>
-\[\Gamma(\alpha) = \int_0^{\infty} y^{\alpha - 1} e^{-y}\,dy, \quad \alpha > 0.\]
+
+\[
+\Gamma(\alpha) = \int_0^{\infty} y^{\alpha - 1} e^{-y}\,dy, \quad \alpha > 0.
+\]
 Key properties: \(\Gamma(\alpha) = (\alpha - 1)\Gamma(\alpha - 1)\) for \(\alpha > 1\), \(\Gamma(n+1) = n!\) for non-negative integers, \(\Gamma(1/2) = \sqrt{\pi}\).
 
 </div>
@@ -594,8 +700,14 @@ This is the standard method for generating non-uniform random variables from uni
 <div class="definition">
 
 <strong>Normal Distribution.</strong> If \(X \sim N(\mu, \sigma^2)\), then
-\[f(x) = \frac{1}{\sqrt{2\pi}\,\sigma} \exp\!\left(-\frac{1}{2}\left(\frac{x - \mu}{\sigma}\right)^2\right), \quad x \in \mathbb{R}.\]
-\[E(X) = \mu, \qquad \text{Var}(X) = \sigma^2.\]
+
+\[
+f(x) = \frac{1}{\sqrt{2\pi}\,\sigma} \exp\!\left(-\frac{1}{2}\left(\frac{x - \mu}{\sigma}\right)^2\right), \quad x \in \mathbb{R}.
+\]
+
+\[
+E(X) = \mu, \qquad \text{Var}(X) = \sigma^2.
+\]
 
 </div>
 
@@ -604,7 +716,10 @@ The **standard Normal** distribution is \(Z \sim N(0, 1)\), with p.d.f. \(\phi(z
 <div class="theorem">
 
 <strong>Theorem 25 (Standardization).</strong> If \(X \sim N(\mu, \sigma^2)\) and \(Z = (X - \mu)/\sigma\), then \(Z \sim N(0, 1)\) and
-\[P(X \le x) = P\!\left(Z \le \frac{x - \mu}{\sigma}\right).\]
+
+\[
+P(X \le x) = P\!\left(Z \le \frac{x - \mu}{\sigma}\right).
+\]
 
 </div>
 
@@ -627,7 +742,10 @@ By symmetry of the standard Normal: \(P(Z \le -z) = P(Z \ge z) = 1 - P(Z \le z)\
 ## 9.1 Basic Terminology and Techniques
 
 For two discrete random variables \(X\) and \(Y\), the **joint probability function** is \(f(x, y) = P(X = x, Y = y)\). The **marginal probability functions** are
-\[f_1(x) = \sum_y f(x, y), \qquad f_2(y) = \sum_x f(x, y).\]
+
+\[
+f_1(x) = \sum_y f(x, y), \qquad f_2(y) = \sum_x f(x, y).
+\]
 
 <div class="definition">
 
@@ -638,7 +756,10 @@ For two discrete random variables \(X\) and \(Y\), the **joint probability funct
 <div class="definition">
 
 <strong>Definition 27 (Mutual Independence).</strong> \(X_1, X_2, \ldots, X_n\) are independent random variables if and only if
-\[f(x_1, x_2, \ldots, x_n) = f_1(x_1) f_2(x_2) \cdots f_n(x_n)\]
+
+\[
+f(x_1, x_2, \ldots, x_n) = f_1(x_1) f_2(x_2) \cdots f_n(x_n)
+\]
 for all \((x_1, \ldots, x_n)\).
 
 </div>
@@ -646,7 +767,10 @@ for all \((x_1, \ldots, x_n)\).
 <div class="definition">
 
 <strong>Definition 28 (Conditional Probability Function).</strong> The conditional probability function of \(X\) given \(Y = y\) is
-\[f_1(x \mid y) = \frac{f(x, y)}{f_2(y)}, \quad \text{provided } f_2(y) > 0.\]
+
+\[
+f_1(x \mid y) = \frac{f(x, y)}{f_2(y)}, \quad \text{provided } f_2(y) > 0.
+\]
 
 </div>
 
@@ -655,27 +779,39 @@ for all \((x_1, \ldots, x_n)\).
 <div class="theorem">
 
 <strong>Theorem 29.</strong> If \(X \sim \text{Poisson}(\mu_1)\) and \(Y \sim \text{Poisson}(\mu_2)\) independently, then
-\[T = X + Y \sim \text{Poisson}(\mu_1 + \mu_2).\]
+
+\[
+T = X + Y \sim \text{Poisson}(\mu_1 + \mu_2).
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Theorem 30.</strong> If \(X \sim \text{Binomial}(n, p)\) and \(Y \sim \text{Binomial}(m, p)\) independently, then
-\[T = X + Y \sim \text{Binomial}(n + m, p).\]
+
+\[
+T = X + Y \sim \text{Binomial}(n + m, p).
+\]
 
 </div>
 
 ## 9.2 Multinomial Distribution
 
 The **Multinomial distribution** generalizes the Binomial to \(k\) categories. If each of \(n\) independent trials results in outcome \(i\) with probability \(p_i\) (\(i = 1, \ldots, k\), \(\sum p_i = 1\)), and \(X_i\) counts the number of type-\(i\) outcomes, then
-\[P(X_1 = x_1, \ldots, X_k = x_k) = \frac{n!}{x_1! x_2! \cdots x_k!} p_1^{x_1} p_2^{x_2} \cdots p_k^{x_k}\]
+
+\[
+P(X_1 = x_1, \ldots, X_k = x_k) = \frac{n!}{x_1! x_2! \cdots x_k!} p_1^{x_1} p_2^{x_2} \cdots p_k^{x_k}
+\]
 where \(\sum x_i = n\).
 
 ## 9.3 Markov Chains
 
 A **Markov chain** is a sequence of random variables \(X_0, X_1, X_2, \ldots\) taking values in a finite state space, such that
-\[P(X_{n+1} = j \mid X_n = i, X_{n-1}, \ldots, X_0) = P(X_{n+1} = j \mid X_n = i) = p_{ij}.\]
+
+\[
+P(X_{n+1} = j \mid X_n = i, X_{n-1}, \ldots, X_0) = P(X_{n+1} = j \mid X_n = i) = p_{ij}.
+\]
 The matrix \(P = (p_{ij})\) is called the **transition matrix**. The \(n\)-step transition probabilities are given by \(P^n\).
 
 <div class="definition">
@@ -695,19 +831,27 @@ The matrix \(P = (p_{ij})\) is called the **transition matrix**. The \(n\)-step 
 <div class="definition">
 
 <strong>Definition 33 (Expected Value of a Function of Two Variables).</strong>
-\[E[g(X, Y)] = \sum_x \sum_y g(x, y) f(x, y).\]
+
+\[
+E[g(X, Y)] = \sum_x \sum_y g(x, y) f(x, y).
+\]
 
 </div>
 
 ### Results for Means
 
-\[E(aX + bY) = aE(X) + bE(Y)\]
+\[
+E(aX + bY) = aE(X) + bE(Y)
+\]
 for any constants \(a, b\). This extends to any linear combination of random variables, whether independent or not.
 
 <div class="definition">
 
 <strong>Definition 34 (Covariance).</strong>
-\[\text{Cov}(X, Y) = E[(X - \mu_X)(Y - \mu_Y)] = E(XY) - E(X)E(Y).\]
+
+\[
+\text{Cov}(X, Y) = E[(X - \mu_X)(Y - \mu_Y)] = E(XY) - E(X)E(Y).
+\]
 
 </div>
 
@@ -722,7 +866,10 @@ The converse is not true in general: zero covariance does not imply independence
 <div class="theorem">
 
 <strong>Theorem 36.</strong> If \(X\) and \(Y\) are independent random variables, then for any functions \(g_1\) and \(g_2\),
-\[E[g_1(X) g_2(Y)] = E[g_1(X)] \cdot E[g_2(Y)].\]
+
+\[
+E[g_1(X) g_2(Y)] = E[g_1(X)] \cdot E[g_2(Y)].
+\]
 
 </div>
 
@@ -735,7 +882,10 @@ The converse is not true in general: zero covariance does not imply independence
 <div class="definition">
 
 <strong>Definition 37 (Correlation Coefficient).</strong>
-\[\rho = \text{Corr}(X, Y) = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y}\]
+
+\[
+\rho = \text{Corr}(X, Y) = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y}
+\]
 where \(-1 \le \rho \le 1\). If \(\rho = 0\), the variables are said to be uncorrelated.
 
 </div>
@@ -746,10 +896,15 @@ where \(-1 \le \rho \le 1\). If \(\rho = 0\), the variables are said to be uncor
 
 For \(T = a_1 X_1 + a_2 X_2 + \cdots + a_n X_n\):
 
-\[\text{Var}(T) = \sum_{i=1}^n a_i^2 \text{Var}(X_i) + 2 \sum_{i < j} a_i a_j \text{Cov}(X_i, X_j).\]
+\[
+\text{Var}(T) = \sum_{i=1}^n a_i^2 \text{Var}(X_i) + 2 \sum_{i < j} a_i a_j \text{Cov}(X_i, X_j).
+\]
 
 If \(X_1, \ldots, X_n\) are independent, the covariance terms vanish:
-\[\text{Var}(T) = \sum_{i=1}^n a_i^2 \text{Var}(X_i).\]
+
+\[
+\text{Var}(T) = \sum_{i=1}^n a_i^2 \text{Var}(X_i).
+\]
 
 In particular, for the sample mean \(\bar{X} = \frac{1}{n}\sum X_i\) of i.i.d. random variables with mean \(\mu\) and variance \(\sigma^2\): \(E(\bar{X}) = \mu\) and \(\text{Var}(\bar{X}) = \sigma^2/n\).
 
@@ -760,9 +915,15 @@ In particular, for the sample mean \(\bar{X} = \frac{1}{n}\sum X_i\) of i.i.d. r
 <strong>Theorem 38 (Linear Combinations of Normal R.V.s).</strong>
 1. If \(X \sim N(\mu, \sigma^2)\) and \(Y = aX + b\), then \(Y \sim N(a\mu + b, a^2\sigma^2)\).
 2. If \(X_i \sim N(\mu_i, \sigma_i^2)\) independently for \(i = 1, \ldots, n\), and \(a_1, \ldots, a_n\) are constants, then
-\[\sum_{i=1}^n a_i X_i \sim N\!\left(\sum_{i=1}^n a_i \mu_i,\; \sum_{i=1}^n a_i^2 \sigma_i^2\right).\]
+
+\[
+\sum_{i=1}^n a_i X_i \sim N\!\left(\sum_{i=1}^n a_i \mu_i,\; \sum_{i=1}^n a_i^2 \sigma_i^2\right).
+\]
 3. In particular, if \(X_1, \ldots, X_n\) are i.i.d. \(N(\mu, \sigma^2)\), then
-\[\bar{X} = \frac{1}{n}\sum_{i=1}^n X_i \sim N(\mu, \sigma^2/n).\]
+
+\[
+\bar{X} = \frac{1}{n}\sum_{i=1}^n X_i \sim N(\mu, \sigma^2/n).
+\]
 
 </div>
 
@@ -779,7 +940,10 @@ An **indicator random variable** \(I_A\) takes value 1 if event \(A\) occurs and
 <div class="theorem">
 
 <strong>Theorem 39 (Central Limit Theorem).</strong> Let \(X_1, X_2, \ldots, X_n\) be independent random variables all having the same distribution with mean \(\mu\) and variance \(\sigma^2\). Then as \(n \to \infty\), the cumulative distribution function of the standardized variable
-\[Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} = \frac{\sum_{i=1}^n X_i - n\mu}{\sigma\sqrt{n}}\]
+
+\[
+Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} = \frac{\sum_{i=1}^n X_i - n\mu}{\sigma\sqrt{n}}
+\]
 converges to the \(N(0, 1)\) cumulative distribution function.
 
 </div>
@@ -791,7 +955,10 @@ This is arguably the most important theorem in probability and statistics. It sa
 <div class="theorem">
 
 <strong>Theorem 40 (Normal Approximation to Poisson).</strong> If \(X \sim \text{Poisson}(\mu)\), then for large \(\mu\), the standardized variable
-\[Z = \frac{X - \mu}{\sqrt{\mu}}\]
+
+\[
+Z = \frac{X - \mu}{\sqrt{\mu}}
+\]
 is approximately \(N(0, 1)\).
 
 </div>
@@ -799,7 +966,10 @@ is approximately \(N(0, 1)\).
 <div class="theorem">
 
 <strong>Theorem 41 (Normal Approximation to Binomial).</strong> If \(X \sim \text{Binomial}(n, p)\), then for large \(n\), the standardized variable
-\[Z = \frac{X - np}{\sqrt{np(1-p)}}\]
+
+\[
+Z = \frac{X - np}{\sqrt{np(1-p)}}
+\]
 is approximately \(N(0, 1)\).
 
 </div>
@@ -809,7 +979,10 @@ is approximately \(N(0, 1)\).
 <div class="definition">
 
 <strong>Definition 42 (Moment Generating Function — Discrete Case).</strong> For a discrete random variable \(X\) with probability function \(f(x)\),
-\[M(t) = E(e^{tX}) = \sum_x e^{tx} f(x)\]
+
+\[
+M(t) = E(e^{tX}) = \sum_x e^{tx} f(x)
+\]
 provided this sum converges for \(t\) in some interval \((-\delta, \delta)\) with \(\delta > 0\).
 
 </div>
@@ -817,7 +990,10 @@ provided this sum converges for \(t\) in some interval \((-\delta, \delta)\) wit
 <div class="theorem">
 
 <strong>Theorem 43.</strong> If \(X\) has moment generating function \(M(t)\), then
-\[E(X^k) = M^{(k)}(0) \quad \text{for } k = 1, 2, \ldots\]
+
+\[
+E(X^k) = M^{(k)}(0) \quad \text{for } k = 1, 2, \ldots
+\]
 
 </div>
 
@@ -830,7 +1006,10 @@ provided this sum converges for \(t\) in some interval \((-\delta, \delta)\) wit
 <div class="definition">
 
 <strong>Definition 45 (M.G.F. — Continuous Case).</strong> For a continuous random variable \(X\) with p.d.f. \(f(x)\),
-\[M(t) = E(e^{tX}) = \int_{-\infty}^{\infty} e^{tx} f(x)\,dx.\]
+
+\[
+M(t) = E(e^{tX}) = \int_{-\infty}^{\infty} e^{tx} f(x)\,dx.
+\]
 
 </div>
 
@@ -848,21 +1027,30 @@ provided this sum converges for \(t\) in some interval \((-\delta, \delta)\) wit
 <div class="definition">
 
 <strong>Definition 46 (Joint M.G.F.).</strong> The joint moment generating function of \((X, Y)\) is
-\[M(s, t) = E(e^{sX + tY}).\]
+
+\[
+M(s, t) = E(e^{sX + tY}).
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Theorem 47.</strong> The moment generating function of the sum of independent random variables is the product of the individual moment generating functions:
-\[M_{X+Y}(t) = M_X(t) \cdot M_Y(t).\]
+
+\[
+M_{X+Y}(t) = M_X(t) \cdot M_Y(t).
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Theorem 48.</strong> If \(X_i \sim N(\mu_i, \sigma_i^2)\) independently for \(i = 1, \ldots, n\) and \(a_1, \ldots, a_n\) are constants, then
-\[\sum_{i=1}^n a_i X_i \sim N\!\left(\sum_{i=1}^n a_i \mu_i,\; \sum_{i=1}^n a_i^2 \sigma_i^2\right).\]
+
+\[
+\sum_{i=1}^n a_i X_i \sim N\!\left(\sum_{i=1}^n a_i \mu_i,\; \sum_{i=1}^n a_i^2 \sigma_i^2\right).
+\]
 
 </div>
 

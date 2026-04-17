@@ -16,7 +16,10 @@ Before we can speak about complex functions, limits, or differentiability, we ne
 
 <div class="definition" markdown="1">
 <strong>Definition 1.2.1 (Open Disc).</strong> For \( z_0 \in \mathbb{C} \) and \( r > 0 \), the <em>open disc</em> of radius \( r \) centred at \( z_0 \) is
-\[ D(z_0, r) = \{ z \in \mathbb{C} : |z - z_0| < r \}. \]
+
+\[
+D(z_0, r) = \{ z \in \mathbb{C} : |z - z_0| < r \}.
+\]
 The <em>closed disc</em> is \( \overline{D}(z_0, r) = \{ z : |z - z_0| \leq r \} \).
 </div>
 
@@ -54,7 +57,10 @@ The non-self-intersection condition in the Jordan Curve Theorem is essential: it
 
 <div class="definition" markdown="1">
 <strong>Definition 1.3.3 (Arclength).</strong> The <em>arclength</em> of a piecewise smooth curve \( \gamma \) is
-\[ \ell(\gamma) = \int_a^b |\gamma'(t)|\, dt = \int_a^b \sqrt{x'(t)^2 + y'(t)^2}\, dt. \]
+
+\[
+\ell(\gamma) = \int_a^b |\gamma'(t)|\, dt = \int_a^b \sqrt{x'(t)^2 + y'(t)^2}\, dt.
+\]
 </div>
 
 <div class="definition" markdown="1">
@@ -67,7 +73,10 @@ Line integrals allow us to integrate a vector field along a curve, measuring the
 
 <div class="definition" markdown="1">
 <strong>Definition 1.4.1 (Line Integral of a Vector Field).</strong> Let \( \mathbf{F} = (P, Q) \) be a continuous vector field on a domain \( D \) and \( \gamma: [a,b] \to D \) a piecewise smooth curve. The <em>line integral</em> of \( \mathbf{F} \) along \( \gamma \) is
-\[ \int_\gamma \mathbf{F} \cdot d\mathbf{s} = \int_\gamma P\, dx + Q\, dy = \int_a^b \bigl[P(\gamma(t)) x'(t) + Q(\gamma(t)) y'(t)\bigr]\, dt. \]
+
+\[
+\int_\gamma \mathbf{F} \cdot d\mathbf{s} = \int_\gamma P\, dx + Q\, dy = \int_a^b \bigl[P(\gamma(t)) x'(t) + Q(\gamma(t)) y'(t)\bigr]\, dt.
+\]
 </div>
 
 <div class="proposition" markdown="1">
@@ -80,7 +89,10 @@ Line integrals allow us to integrate a vector field along a curve, measuring the
 
 <div class="theorem" markdown="1">
 <strong>Theorem 1.4.3 (Independence of Path / Fundamental Theorem).</strong> If \( \mathbf{F} = \nabla u \) is a gradient vector field on a domain \( D \), then for any piecewise smooth curve \( \gamma \) in \( D \) from \( z_0 \) to \( z_1 \),
-\[ \int_\gamma \mathbf{F} \cdot d\mathbf{s} = u(z_1) - u(z_0). \]
+
+\[
+\int_\gamma \mathbf{F} \cdot d\mathbf{s} = u(z_1) - u(z_0).
+\]
 In particular, the integral around any closed curve is zero.
 </div>
 
@@ -90,11 +102,17 @@ Green's theorem is the engine that drives the early results of complex analysis.
 
 <div class="theorem" markdown="1">
 <strong>Theorem 1.5.1 (Green's Theorem).</strong> Let \( \Omega \) be a Jordan domain with piecewise smooth boundary \( \partial\Omega \) oriented counterclockwise. If \( P, Q \in C^1(\overline{\Omega}) \), then
-\[ \oint_{\partial\Omega} P\, dx + Q\, dy = \iint_\Omega \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dA. \]
+
+\[
+\oint_{\partial\Omega} P\, dx + Q\, dy = \iint_\Omega \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dA.
+\]
 </div>
 
 <div class="corollary" markdown="1">
-<strong>Corollary 1.5.2 (Area Formula).</strong> \( \text{Area}(\Omega) = \dfrac{1}{2} \oint_{\partial\Omega} x\, dy - y\, dx. \]
+<strong>Corollary 1.5.2 (Area Formula).</strong>
+\[
+\text{Area}(\Omega) = \dfrac{1}{2} \oint_{\partial\Omega} x\, dy - y\, dx.
+\]
 </div>
 
 <div class="proposition" markdown="1">
@@ -111,7 +129,10 @@ Harmonic functions — solutions to Laplace's equation \( \Delta u = 0 \) — ap
 
 <div class="definition" markdown="1">
 <strong>Definition 2.1.1 (Harmonic Function).</strong> A function \( u: D \to \mathbb{R} \) of class \( C^2 \) on a domain \( D \subseteq \mathbb{R}^2 \) is <em>harmonic</em> if
-\[ \Delta u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0. \]
+
+\[
+\Delta u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0.
+\]
 </div>
 
 <div class="example" markdown="1">
@@ -128,7 +149,10 @@ The Inside-Outside Theorem (also known as Gauss's divergence theorem in two dime
 
 <div class="theorem" markdown="1">
 <strong>Theorem 2.2.1 (Inside-Outside Theorem).</strong> Let \( \Omega \) be a Jordan domain with piecewise smooth boundary, and let \( u \in C^2(\overline{\Omega}) \). Then
-\[ \oint_{\partial\Omega} \frac{\partial u}{\partial \mathbf{n}}\, ds = \iint_\Omega \Delta u\, dA, \]
+
+\[
+\oint_{\partial\Omega} \frac{\partial u}{\partial \mathbf{n}}\, ds = \iint_\Omega \Delta u\, dA,
+\]
 where \( \mathbf{n} \) is the outward unit normal and \( \frac{\partial u}{\partial \mathbf{n}} = \nabla u \cdot \mathbf{n} \) is the normal derivative.
 </div>
 
@@ -146,29 +170,44 @@ The mean value property is perhaps the most characteristic feature of harmonic f
 
 <div class="definition" markdown="1">
 <strong>Definition 2.3.1 (Scalar Line Integral).</strong> For a continuous function \( f \) and piecewise smooth curve \( \gamma: [a,b] \to \mathbb{C} \),
-\[ \int_\gamma f\, ds = \int_a^b f(\gamma(t)) |\gamma'(t)|\, dt. \]
+
+\[
+\int_\gamma f\, ds = \int_a^b f(\gamma(t)) |\gamma'(t)|\, dt.
+\]
 </div>
 
 <div class="theorem" markdown="1">
 <strong>Theorem 2.3.2 (Circumferential Mean Value Theorem).</strong> Let \( u \) be harmonic on a domain \( D \) and suppose \( \overline{D}(z_0, r) \subseteq D \). Then
-\[ u(z_0) = \frac{1}{2\pi} \int_0^{2\pi} u(z_0 + re^{i\theta})\, d\theta. \]
+
+\[
+u(z_0) = \frac{1}{2\pi} \int_0^{2\pi} u(z_0 + re^{i\theta})\, d\theta.
+\]
 That is, the value at the centre equals the average value on any circle.
 </div>
 
 <div class="proof" markdown="1">
 <em>Proof.</em> Define \( \varphi(\rho) = \frac{1}{2\pi}\int_0^{2\pi} u(z_0 + \rho e^{i\theta})\, d\theta \) for \( 0 \leq \rho \leq r \). Differentiating under the integral sign:
-\[ \varphi'(\rho) = \frac{1}{2\pi}\int_0^{2\pi} \nabla u(z_0 + \rho e^{i\theta}) \cdot e^{i\theta}\, d\theta = \frac{1}{2\pi\rho} \oint_{C_\rho} \frac{\partial u}{\partial \mathbf{n}}\, ds = \frac{1}{2\pi\rho}\iint_{D(z_0,\rho)} \Delta u\, dA = 0. \]
+
+\[
+\varphi'(\rho) = \frac{1}{2\pi}\int_0^{2\pi} \nabla u(z_0 + \rho e^{i\theta}) \cdot e^{i\theta}\, d\theta = \frac{1}{2\pi\rho} \oint_{C_\rho} \frac{\partial u}{\partial \mathbf{n}}\, ds = \frac{1}{2\pi\rho}\iint_{D(z_0,\rho)} \Delta u\, dA = 0.
+\]
 So \( \varphi \) is constant. Since \( \lim_{\rho \to 0} \varphi(\rho) = u(z_0) \) by continuity, we have \( \varphi(\rho) = u(z_0) \) for all \( \rho \). \( \square \)
 </div>
 
 <div class="theorem" markdown="1">
 <strong>Theorem 2.3.3 (Solid Mean Value Theorem).</strong> Under the same hypotheses,
-\[ u(z_0) = \frac{1}{\pi r^2} \iint_{D(z_0,r)} u\, dA. \]
+
+\[
+u(z_0) = \frac{1}{\pi r^2} \iint_{D(z_0,r)} u\, dA.
+\]
 </div>
 
 <div class="proof" markdown="1">
 <em>Proof.</em> Integrate the Circumferential MVT over \( \rho \in [0, r] \): multiply both sides by \( 2\pi\rho \) and integrate:
-\[ \int_0^r u(z_0) \cdot 2\pi\rho\, d\rho = \int_0^r \int_0^{2\pi} u(z_0 + \rho e^{i\theta})\rho\, d\theta\, d\rho. \]
+
+\[
+\int_0^r u(z_0) \cdot 2\pi\rho\, d\rho = \int_0^r \int_0^{2\pi} u(z_0 + \rho e^{i\theta})\rho\, d\theta\, d\rho.
+\]
 Left side: \( u(z_0) \cdot \pi r^2 \). Right side: \( \iint_{D(z_0,r)} u\, dA \) in polar coordinates. Divide by \( \pi r^2 \). \( \square \)
 </div>
 
@@ -180,7 +219,10 @@ The maximum principle is a striking rigidity result: a non-constant harmonic fun
 <strong>Theorem 2.4.1 (Maximum Principle for Harmonic Functions).</strong> Let \( u \) be harmonic on a domain \( D \).
 1. <em>(Local version)</em> If \( u \) attains a local maximum or minimum at any interior point, then \( u \) is constant on \( D \).
 2. <em>(Global version)</em> If \( D \) is bounded and \( u \) extends continuously to \( \partial D \), then
-\[ \max_{\overline{D}} u = \max_{\partial D} u \quad \text{and} \quad \min_{\overline{D}} u = \min_{\partial D} u. \]
+
+\[
+\max_{\overline{D}} u = \max_{\partial D} u \quad \text{and} \quad \min_{\overline{D}} u = \min_{\partial D} u.
+\]
 </div>
 
 <div class="proof" markdown="1">
@@ -193,12 +235,18 @@ While the maximum principle controls when a harmonic function is constant, Harna
 
 <div class="theorem" markdown="1">
 <strong>Theorem 2.5.1 (Harnack's Inequality).</strong> Let \( u \) be harmonic and non-negative on \( D(z_0, R) \). For any \( z \) with \( |z - z_0| = r < R \),
-\[ \frac{R-r}{R+r} u(z_0) \leq u(z) \leq \frac{R+r}{R-r} u(z_0). \]
+
+\[
+\frac{R-r}{R+r} u(z_0) \leq u(z) \leq \frac{R+r}{R-r} u(z_0).
+\]
 </div>
 
 <div class="proof" markdown="1">
 <em>Proof.</em> By the Circumferential MVT and the Poisson formula (or direct estimation from the MVT):
-\[ u(z) = \frac{1}{2\pi}\int_0^{2\pi} \frac{R^2 - r^2}{R^2 - 2Rr\cos(\theta - \phi) + r^2} u(z_0 + Re^{i\theta})\, d\theta. \]
+
+\[
+u(z) = \frac{1}{2\pi}\int_0^{2\pi} \frac{R^2 - r^2}{R^2 - 2Rr\cos(\theta - \phi) + r^2} u(z_0 + Re^{i\theta})\, d\theta.
+\]
 Since \( \frac{R-r}{R+r} \leq \frac{R^2 - r^2}{R^2 - 2Rr\cos\alpha + r^2} \leq \frac{R+r}{R-r} \) and the MVT gives \( u(z_0) = \frac{1}{2\pi}\int_0^{2\pi} u(z_0 + Re^{i\theta})\, d\theta \), the result follows. \( \square \)
 </div>
 
@@ -222,7 +270,10 @@ The machinery of Chapters 1 and 2 was entirely real. We now introduce the algebr
 
 <div class="definition" markdown="1">
 <strong>Definition 3.1.1 (Complex Numbers).</strong> The <em>complex numbers</em> \( \mathbb{C} \) are pairs \( (x, y) \in \mathbb{R}^2 \) with componentwise addition and multiplication defined by
-\[ (x_1, y_1)(x_2, y_2) = (x_1 x_2 - y_1 y_2,\; x_1 y_2 + x_2 y_1). \]
+
+\[
+(x_1, y_1)(x_2, y_2) = (x_1 x_2 - y_1 y_2,\; x_1 y_2 + x_2 y_1).
+\]
 Writing \( z = x + iy \) with \( i = (0,1) \), we have \( i^2 = -1 \). Complex numbers form a field under these operations.
 </div>
 
@@ -273,15 +324,24 @@ The geometric realization of \( \hat{\mathbb{C}} \) is given by **stereographic 
 
 <div class="definition" markdown="1">
 <strong>Definition 3.3.2 (Stereographic Projection).</strong> The <em>stereographic projection</em> \( \pi: S^2 \setminus \{N\} \to \mathbb{C} \) maps each point \( (x_1, x_2, x_3) \neq N \) on \( S^2 \) to the intersection of the line through \( N \) and \( (x_1, x_2, x_3) \) with the plane \( x_3 = 0 \):
-\[ \pi(x_1, x_2, x_3) = \frac{x_1 + ix_2}{1 - x_3} \in \mathbb{C}. \]
+
+\[
+\pi(x_1, x_2, x_3) = \frac{x_1 + ix_2}{1 - x_3} \in \mathbb{C}.
+\]
 Extending by \( \pi(N) = \infty \) gives a homeomorphism \( S^2 \xrightarrow{\sim} \hat{\mathbb{C}} \). The inverse is
-\[ \pi^{-1}(z) = \left(\frac{2\operatorname{Re}z}{1+|z|^2},\; \frac{2\operatorname{Im}z}{1+|z|^2},\; \frac{|z|^2-1}{|z|^2+1}\right). \]
+
+\[
+\pi^{-1}(z) = \left(\frac{2\operatorname{Re}z}{1+|z|^2},\; \frac{2\operatorname{Im}z}{1+|z|^2},\; \frac{|z|^2-1}{|z|^2+1}\right).
+\]
 </div>
 
 Stereographic projection is **conformal**: it preserves angles between smooth curves. More strikingly, it maps *circles and lines* in \( \mathbb{C} \) bijectively to *circles on \( S^2 \)* — straight lines correspond to circles through \( N \) (passing through \( \infty \)). This **circles-go-to-circles** property is the geometric content underlying Möbius transformations: viewed as self-maps of \( \hat{\mathbb{C}} \), they correspond under stereographic projection to conformal automorphisms of \( S^2 \), which necessarily send circles to circles.
 
 The **chordal metric** on \( \hat{\mathbb{C}} \) measures the Euclidean distance between the corresponding points on \( S^2 \):
-\[ \chi(z,w) = \frac{2|z-w|}{\sqrt{(1+|z|^2)(1+|w|^2)}}, \qquad \chi(z,\infty) = \frac{2}{\sqrt{1+|z|^2}}. \]
+
+\[
+\chi(z,w) = \frac{2|z-w|}{\sqrt{(1+|z|^2)(1+|w|^2)}}, \qquad \chi(z,\infty) = \frac{2}{\sqrt{1+|z|^2}}.
+\]
 This turns \( \hat{\mathbb{C}} \) into a compact metric space, and convergence in \( \chi \) agrees with the topology defined above.
 
 <div class="remark" markdown="1">
@@ -300,7 +360,10 @@ This chapter is where the subject begins in earnest. The central observation is 
 
 <div class="definition" markdown="1">
 <strong>Definition 4.1.1 (Complex Derivative).</strong> Let \( f: D \to \mathbb{C} \) on an open set \( D \). The <em>complex derivative</em> of \( f \) at \( z_0 \in D \) is
-\[ f'(z_0) = \lim_{h \to 0} \frac{f(z_0 + h) - f(z_0)}{h}, \quad h \in \mathbb{C} \setminus \{0\}. \]
+
+\[
+f'(z_0) = \lim_{h \to 0} \frac{f(z_0 + h) - f(z_0)}{h}, \quad h \in \mathbb{C} \setminus \{0\}.
+\]
 If this limit exists, \( f \) is <em>differentiable</em> (or <em>holomorphic</em>) at \( z_0 \).
 </div>
 
@@ -320,15 +383,24 @@ The Cauchy–Riemann equations (CRE) are the analytic expression of the geometri
 
 <div class="theorem" markdown="1">
 <strong>Theorem 4.2.1 (CR Equations — Necessary Condition).</strong> If \( f = u + iv \) is differentiable at \( z_0 = x_0 + iy_0 \), then the partial derivatives \( u_x, u_y, v_x, v_y \) all exist at \( (x_0, y_0) \) and satisfy the <em>Cauchy–Riemann equations</em> (CRE):
-\[ \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \qquad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}. \]
+
+\[
+\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \qquad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}.
+\]
 Moreover, \( f'(z_0) = u_x(x_0, y_0) + iv_x(x_0, y_0) \).
 </div>
 
 <div class="proof" markdown="1">
 <em>Proof.</em> Since the limit defining \( f'(z_0) \) exists, it must equal the limit along any path. Taking \( h = t \in \mathbb{R} \setminus\{0\} \):
-\[ f'(z_0) = \lim_{t\to 0} \frac{u(x_0+t, y_0) - u(x_0,y_0)}{t} + i\frac{v(x_0+t,y_0) - v(x_0,y_0)}{t} = u_x + iv_x. \]
+
+\[
+f'(z_0) = \lim_{t\to 0} \frac{u(x_0+t, y_0) - u(x_0,y_0)}{t} + i\frac{v(x_0+t,y_0) - v(x_0,y_0)}{t} = u_x + iv_x.
+\]
 Taking \( h = it \in i\mathbb{R} \setminus\{0\} \):
-\[ f'(z_0) = \lim_{t\to 0} \frac{u(x_0, y_0+t) - u(x_0,y_0)}{it} + i\frac{v(x_0,y_0+t) - v(x_0,y_0)}{it} = \frac{u_y}{i} + v_y = v_y - iu_y. \]
+
+\[
+f'(z_0) = \lim_{t\to 0} \frac{u(x_0, y_0+t) - u(x_0,y_0)}{it} + i\frac{v(x_0,y_0+t) - v(x_0,y_0)}{it} = \frac{u_y}{i} + v_y = v_y - iu_y.
+\]
 Equating: \( u_x = v_y \) and \( v_x = -u_y \). \( \square \)
 </div>
 
@@ -340,7 +412,10 @@ The CRE are necessary but not sufficient on their own — differentiability of \
 
 <div class="proof" markdown="1">
 <em>Proof.</em> Continuous partials imply real differentiability:
-\[ f(z_0 + h) - f(z_0) = \begin{pmatrix} u_x & u_y \\ v_x & v_y \end{pmatrix}\begin{pmatrix} h_1 \\ h_2 \end{pmatrix} + o(|h|) \]
+
+\[
+f(z_0 + h) - f(z_0) = \begin{pmatrix} u_x & u_y \\ v_x & v_y \end{pmatrix}\begin{pmatrix} h_1 \\ h_2 \end{pmatrix} + o(|h|)
+\]
 where \( h = h_1 + ih_2 \). Using the CRE, the Jacobian matrix is \( \begin{pmatrix} u_x & -v_x \\ v_x & u_x \end{pmatrix} \), which corresponds to multiplication by the complex number \( u_x + iv_x \). Thus \( \frac{f(z_0+h) - f(z_0)}{h} \to u_x + iv_x \). \( \square \)
 </div>
 
@@ -378,7 +453,10 @@ The converse question — given a harmonic function \( u \), can we find an anal
 
 <div class="proof" markdown="1">
 <em>Proof.</em> Define
-\[ v(z) = \int_{\gamma_z} -u_y\, dx + u_x\, dy \]
+
+\[
+v(z) = \int_{\gamma_z} -u_y\, dx + u_x\, dy
+\]
 where \( \gamma_z \) is any piecewise smooth path in \( D \) from a fixed basepoint \( z_0 \) to \( z \). The vector field \( (-u_y, u_x) \) satisfies \( \partial(-u_y)/\partial y = -u_{yy} = u_{xx} = \partial(u_x)/\partial x \) (using harmonicity), so it is irrotational. On a simply connected domain, irrotational fields are conservative (by the Bump Principle), so \( v \) is well-defined. Computing: \( v_x = -u_y \) and \( v_y = u_x \), which are the CRE. \( \square \)
 </div>
 
@@ -392,7 +470,10 @@ Having established the framework of analytic functions, we now build up the stan
 
 <div class="definition" markdown="1">
 <strong>Definition 5.1.1 (Complex Exponential).</strong> For \( z = x + iy \), define
-\[ e^z = e^x(\cos y + i\sin y). \]
+
+\[
+e^z = e^x(\cos y + i\sin y).
+\]
 This extends the real exponential. It is entire with \( (e^z)' = e^z \) and satisfies \( e^{z+w} = e^z e^w \) for all \( z, w \in \mathbb{C} \). Note \( |e^z| = e^x \) and \( e^z \) is periodic with period \( 2\pi i \).
 </div>
 
@@ -406,8 +487,14 @@ The complex trigonometric functions are defined via the exponential, which shows
 
 <div class="definition" markdown="1">
 <strong>Definition 5.2.1.</strong> Define
-\[ \cos z = \frac{e^{iz} + e^{-iz}}{2}, \quad \sin z = \frac{e^{iz} - e^{-iz}}{2i}, \]
-\[ \cosh z = \frac{e^z + e^{-z}}{2}, \quad \sinh z = \frac{e^z - e^{-z}}{2}. \]
+
+\[
+\cos z = \frac{e^{iz} + e^{-iz}}{2}, \quad \sin z = \frac{e^{iz} - e^{-iz}}{2i},
+\]
+
+\[
+\cosh z = \frac{e^z + e^{-z}}{2}, \quad \sinh z = \frac{e^z - e^{-z}}{2}.
+\]
 These are entire. Key identities: \( \cos^2 z + \sin^2 z = 1 \), \( \cosh^2 z - \sinh^2 z = 1 \), \( \cos(iz) = \cosh z \), \( \sin(iz) = i\sinh z \).
 </div>
 
@@ -417,9 +504,15 @@ The complex logarithm is the inverse of \( e^z \), but since \( e^z \) is period
 
 <div class="definition" markdown="1">
 <strong>Definition 5.3.1 (Complex Logarithm).</strong> For \( z \neq 0 \), any \( w \) with \( e^w = z \) is a <em>logarithm</em> of \( z \). Writing \( z = re^{i\theta} \), all logarithms are
-\[ \log z = \ln r + i(\theta + 2\pi k), \quad k \in \mathbb{Z}. \]
+
+\[
+\log z = \ln r + i(\theta + 2\pi k), \quad k \in \mathbb{Z}.
+\]
 The <em>principal logarithm</em> on \( D^* = \mathbb{C} \setminus (-\infty, 0] \) is
-\[ \operatorname{Log}(z) = \ln|z| + i\operatorname{Arg}(z). \]
+
+\[
+\operatorname{Log}(z) = \ln|z| + i\operatorname{Arg}(z).
+\]
 </div>
 
 <div class="proposition" markdown="1">
@@ -430,7 +523,10 @@ The branch cut is not an intrinsic feature of the logarithm — it is an artifac
 
 <div class="definition" markdown="1">
 <strong>Definition 5.3.3 (Branch of the Logarithm).</strong> For any \( \tau \in \mathbb{R} \), define \( \arg_\tau(z) \in (\tau, \tau + 2\pi) \) as the unique argument in that range. The <em>branch</em>
-\[ L_\tau(z) = \ln|z| + i\arg_\tau(z) \]
+
+\[
+L_\tau(z) = \ln|z| + i\arg_\tau(z)
+\]
 is analytic on \( \mathbb{C} \) minus the ray \( \{re^{i\tau} : r \geq 0\} \). Note \( \operatorname{Log} = L_{-\pi} \).
 </div>
 
@@ -446,7 +542,10 @@ is analytic on \( \mathbb{C} \) minus the ray \( \{re^{i\tau} : r \geq 0\} \). N
 
 <div class="example" markdown="1">
 <strong>Example 5.4.2 (n-th Roots).</strong> The \( n \)-th roots of \( z = re^{i\theta} \) are
-\[ z^{1/n} = r^{1/n} e^{i(\theta + 2\pi k)/n}, \quad k = 0, 1, \ldots, n-1. \]
+
+\[
+z^{1/n} = r^{1/n} e^{i(\theta + 2\pi k)/n}, \quad k = 0, 1, \ldots, n-1.
+\]
 These are \( n \) equally spaced points on a circle of radius \( r^{1/n} \).
 </div>
 
@@ -462,20 +561,29 @@ This chapter is the heart of the course. We define contour integrals — integra
 
 <div class="definition" markdown="1">
 <strong>Definition 6.1.1 (Contour Integral).</strong> Let \( \gamma: [a,b] \to \mathbb{C} \) be piecewise smooth and \( f: \operatorname{Im}(\gamma) \to \mathbb{C} \) continuous. The <em>contour integral</em> is
-\[ \int_\gamma f(z)\, dz = \int_a^b f(\gamma(t))\gamma'(t)\, dt. \]
+
+\[
+\int_\gamma f(z)\, dz = \int_a^b f(\gamma(t))\gamma'(t)\, dt.
+\]
 Writing \( f = u + iv \) and \( dz = dx + i\, dy \): \( \int_\gamma f\, dz = \int_\gamma u\, dx - v\, dy + i\int_\gamma v\, dx + u\, dy \).
 </div>
 
 <div class="proposition" markdown="1">
 <strong>Proposition 6.1.2 (ML-Inequality).</strong> If \( |f(z)| \leq M \) for all \( z \in \operatorname{Im}(\gamma) \) and \( \ell(\gamma) = L \), then
-\[ \left|\int_\gamma f(z)\, dz\right| \leq ML. \]
+
+\[
+\left|\int_\gamma f(z)\, dz\right| \leq ML.
+\]
 </div>
 
 The ML-inequality is the workhorse estimate of the theory. It will be used repeatedly to show that integrals over "large" arcs (like the semicircle in the residue calculation for real integrals) vanish as the radius tends to infinity.
 
 <div class="example" markdown="1">
 <strong>Example 6.1.3.</strong> Compute \( \oint_{|z|=r} \frac{1}{z}\, dz \). Parametrize: \( \gamma(t) = re^{it} \), \( t \in [0, 2\pi] \), \( \gamma'(t) = ire^{it} \).
-\[ \oint_{|z|=r} \frac{1}{z}\, dz = \int_0^{2\pi} \frac{1}{re^{it}} \cdot ire^{it}\, dt = \int_0^{2\pi} i\, dt = 2\pi i. \]
+
+\[
+\oint_{|z|=r} \frac{1}{z}\, dz = \int_0^{2\pi} \frac{1}{re^{it}} \cdot ire^{it}\, dt = \int_0^{2\pi} i\, dt = 2\pi i.
+\]
 More generally, \( \oint_{|z-z_0|=r} (z-z_0)^n\, dz = \begin{cases} 2\pi i & n = -1 \\ 0 & n \neq -1 \end{cases} \).
 </div>
 
@@ -489,7 +597,10 @@ The antiderivative theorem is the complex analogue of the Fundamental Theorem of
 
 <div class="theorem" markdown="1">
 <strong>Theorem 6.2.1 (Antiderivative Theorem).</strong> Let \( f \) be analytic on a domain \( D \) with antiderivative \( F \) (so \( F' = f \). Then for any piecewise smooth \( \gamma \) in \( D \) from \( z_0 \) to \( z_1 \):
-\[ \int_\gamma f(z)\, dz = F(z_1) - F(z_0). \]
+
+\[
+\int_\gamma f(z)\, dz = F(z_1) - F(z_0).
+\]
 </div>
 
 <div class="theorem" markdown="1">
@@ -505,12 +616,18 @@ Cauchy's theorem is the central result of complex analysis. Its statement is dec
 
 <div class="theorem" markdown="1">
 <strong>Theorem 6.3.1 (Cauchy's Integral Theorem).</strong> Let \( f \) be analytic on a simply connected domain \( D \). Then for any closed piecewise smooth curve \( \gamma \) in \( D \),
-\[ \oint_\gamma f(z)\, dz = 0. \]
+
+\[
+\oint_\gamma f(z)\, dz = 0.
+\]
 </div>
 
 <div class="proof" markdown="1">
 <em>Proof (assuming \( f' \) continuous).</em> Write \( \int_\gamma f\, dz = \int_\gamma u\, dx - v\, dy + i\int_\gamma v\, dx + u\, dy \). By Green's theorem applied to a Jordan domain bounded by \( \gamma \):
-\[ \oint_\gamma u\, dx - v\, dy = \iint (-v_x - u_y)\, dA = 0, \quad \oint_\gamma v\, dx + u\, dy = \iint (u_x - v_y)\, dA = 0 \]
+
+\[
+\oint_\gamma u\, dx - v\, dy = \iint (-v_x - u_y)\, dA = 0, \quad \oint_\gamma v\, dx + u\, dy = \iint (u_x - v_y)\, dA = 0
+\]
 using the CRE. \( \square \)
 </div>
 
@@ -520,7 +637,10 @@ using the CRE. \( \square \)
 
 <div class="theorem" markdown="1">
 <strong>Theorem 6.3.3 (Deformation Principle).</strong> If \( f \) is analytic on a domain \( D \) and \( \gamma_0, \gamma_1 \) are homotopic closed curves in \( D \) (one can be continuously deformed into the other within \( D \), then
-\[ \oint_{\gamma_0} f\, dz = \oint_{\gamma_1} f\, dz. \]
+
+\[
+\oint_{\gamma_0} f\, dz = \oint_{\gamma_1} f\, dz.
+\]
 </div>
 
 The Deformation Principle makes topology visible in analysis. Two curves contribute the same integral not because of any arithmetic coincidence but because the analytic function has no "source" or "sink" in the region swept out by the deformation. When a singularity is present, a deformation that must pass through it is obstructed — and the difference in the two integrals is \( 2\pi i \) times the residue at that singularity.
@@ -531,12 +651,18 @@ Cauchy's Integral Formula (CIF) is genuinely surprising: it says the value of an
 
 <div class="theorem" markdown="1">
 <strong>Theorem 6.4.1 (Cauchy's Integral Formula — CIF).</strong> Let \( f \) be analytic on a domain \( D \) and let \( \gamma \) be a simple closed piecewise smooth curve in \( D \) oriented counterclockwise, enclosing a simply connected region in \( D \). For any \( z_0 \) inside \( \gamma \):
-\[ f(z_0) = \frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z - z_0}\, dz. \]
+
+\[
+f(z_0) = \frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z - z_0}\, dz.
+\]
 </div>
 
 <div class="proof" markdown="1">
 <em>Proof.</em> By the Deformation Principle, deform \( \gamma \) to a small circle \( C_\varepsilon: |z - z_0| = \varepsilon \):
-\[ \frac{1}{2\pi i}\oint_{C_\varepsilon} \frac{f(z)}{z-z_0}\, dz = \frac{1}{2\pi i}\oint_{C_\varepsilon} \frac{f(z_0)}{z-z_0}\, dz + \frac{1}{2\pi i}\oint_{C_\varepsilon} \frac{f(z)-f(z_0)}{z-z_0}\, dz = f(z_0) + E_\varepsilon. \]
+
+\[
+\frac{1}{2\pi i}\oint_{C_\varepsilon} \frac{f(z)}{z-z_0}\, dz = \frac{1}{2\pi i}\oint_{C_\varepsilon} \frac{f(z_0)}{z-z_0}\, dz + \frac{1}{2\pi i}\oint_{C_\varepsilon} \frac{f(z)-f(z_0)}{z-z_0}\, dz = f(z_0) + E_\varepsilon.
+\]
 The first integral is \( f(z_0) \) by Example 6.1.3. For \( E_\varepsilon \): since \( f \) is continuous at \( z_0 \), \( |f(z) - f(z_0)| \leq \delta(\varepsilon) \to 0 \) on \( C_\varepsilon \), so \( |E_\varepsilon| \leq \delta(\varepsilon) \to 0 \). \( \square \)
 </div>
 
@@ -544,7 +670,10 @@ Differentiating the CIF with respect to the parameter \( z_0 \) yields an equall
 
 <div class="theorem" markdown="1">
 <strong>Theorem 6.4.2 (Higher Derivatives Formula).</strong> Under the same hypotheses, \( f \) has complex derivatives of all orders, and
-\[ f^{(n)}(z_0) = \frac{n!}{2\pi i} \oint_\gamma \frac{f(z)}{(z-z_0)^{n+1}}\, dz. \]
+
+\[
+f^{(n)}(z_0) = \frac{n!}{2\pi i} \oint_\gamma \frac{f(z)}{(z-z_0)^{n+1}}\, dz.
+\]
 </div>
 
 <div class="proof" markdown="1">
@@ -561,7 +690,10 @@ The consequences of the CIF come quickly and are far stronger than anything avai
 
 <div class="proof" markdown="1">
 <em>Proof.</em> Let \( |f| \leq M \). Apply the higher derivatives formula with \( n = 1 \) on a circle \( C_R \) of radius \( R \):
-\[ |f'(z_0)| = \left|\frac{1}{2\pi i}\oint_{C_R} \frac{f(z)}{(z-z_0)^2}\, dz\right| \leq \frac{1}{2\pi}\cdot\frac{M}{(R - |z_0|)^2}\cdot 2\pi R \to 0 \text{ as } R\to\infty. \]
+
+\[
+|f'(z_0)| = \left|\frac{1}{2\pi i}\oint_{C_R} \frac{f(z)}{(z-z_0)^2}\, dz\right| \leq \frac{1}{2\pi}\cdot\frac{M}{(R - |z_0|)^2}\cdot 2\pi R \to 0 \text{ as } R\to\infty.
+\]
 So \( f' = 0 \), hence \( f \) is constant. \( \square \)
 </div>
 
@@ -585,7 +717,10 @@ The **winding number** (or **index**) of a closed curve around a point is the fu
 
 <div class="definition" markdown="1">
 <strong>Definition 6.6.1 (Winding Number).</strong> Let \( \gamma: [a,b] \to \mathbb{C} \) be a closed piecewise smooth curve and let \( z_0 \notin \gamma([a,b]) \). The <em>winding number</em> (or <em>index</em>) of \( \gamma \) around \( z_0 \) is
-\[ n(\gamma, z_0) = \frac{1}{2\pi i} \oint_\gamma \frac{dz}{z - z_0}. \]
+
+\[
+n(\gamma, z_0) = \frac{1}{2\pi i} \oint_\gamma \frac{dz}{z - z_0}.
+\]
 </div>
 
 That \( n(\gamma, z_0) \) is always an integer is far from obvious from the integral formula. The proof tracks the argument of \( \gamma(t) - z_0 \) as \( t \) traverses \( [a,b] \): since \( \gamma \) is closed, the argument returns to its starting value modulo \( 2\pi \), so the total change is \( 2\pi \) times an integer.
@@ -606,14 +741,20 @@ With the winding number in hand, the Cauchy Integral Formula admits a clean gene
 
 <div class="theorem" markdown="1">
 <strong>Theorem 6.6.4 (General Cauchy Integral Formula).</strong> Let \( f \) be analytic on a domain \( D \), and let \( \gamma \) be a closed piecewise smooth curve in \( D \) with \( n(\gamma, z_0) = 0 \) for all \( z_0 \notin D \). Then for any \( w \in D \setminus \gamma([a,b]) \):
-\[ \frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z - w}\, dz = n(\gamma, w)\, f(w). \]
+
+\[
+\frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z - w}\, dz = n(\gamma, w)\, f(w).
+\]
 </div>
 
 The condition "\( n(\gamma, z_0) = 0 \) for all \( z_0 \notin D \)" is the general substitute for "simply connected domain" — it says topologically that \( \gamma \) does not wind around any point outside \( D \), so there are no singularities trapped inside the curve. For a simple closed Jordan curve bounding a region entirely inside \( D \), the winding number is \( \pm 1 \) for interior points, recovering Theorem 6.4.1.
 
 <div class="remark" markdown="1">
 <strong>Remark (Winding numbers and the Argument Principle).</strong> The Argument Principle (§9.4) can be rephrased elegantly using winding numbers: for a meromorphic function \( f \) and a suitable closed curve \( \gamma \),
-\[ n(f \circ \gamma,\, 0) = Z - P, \]
+
+\[
+n(f \circ \gamma,\, 0) = Z - P,
+\]
 where \( Z, P \) count zeros and poles inside \( \gamma \) with multiplicity. The winding number of the <em>image curve</em> \( f \circ \gamma \) around the origin equals the net zero-pole count — a beautiful incarnation of the principle that analytic functions carry topological information.
 </div>
 
@@ -645,13 +786,19 @@ Uniform convergence is critical because it allows interchange of limits with int
 
 <div class="definition" markdown="1">
 <strong>Definition 7.2.1 (Power Series and Radius of Convergence).</strong> A <em>power series</em> centred at \( z_0 \) is \( \sum_{n=0}^\infty c_n(z-z_0)^n \). The <em>radius of convergence</em> is
-\[ R = \frac{1}{\limsup_{n\to\infty} |c_n|^{1/n}} \in [0, +\infty]. \]
+
+\[
+R = \frac{1}{\limsup_{n\to\infty} |c_n|^{1/n}} \in [0, +\infty].
+\]
 The series converges absolutely on \( D(z_0, R) \), diverges for \( |z-z_0| > R \), and converges uniformly on any compact subset of \( D(z_0,R) \).
 </div>
 
 <div class="theorem" markdown="1">
 <strong>Theorem 7.2.2 (Analyticity of Power Series).</strong> A power series \( f(z) = \sum_{n=0}^\infty c_n(z-z_0)^n \) with radius of convergence \( R > 0 \) is analytic on \( D(z_0, R) \) with
-\[ f'(z) = \sum_{n=1}^\infty nc_n(z-z_0)^{n-1}, \]
+
+\[
+f'(z) = \sum_{n=1}^\infty nc_n(z-z_0)^{n-1},
+\]
 and this series also has radius of convergence \( R \). Moreover, the series can be integrated term by term on any curve in \( D(z_0, R) \).
 </div>
 
@@ -661,13 +808,19 @@ Taylor's theorem in the complex setting is sharper than its real counterpart in 
 
 <div class="theorem" markdown="1">
 <strong>Theorem 7.3.1 (Taylor's Theorem).</strong> Let \( f \) be analytic on \( D(z_0, R) \). Then \( f \) equals its Taylor series on this disc:
-\[ f(z) = \sum_{n=0}^\infty \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n. \]
+
+\[
+f(z) = \sum_{n=0}^\infty \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n.
+\]
 The radius of convergence of this series is at least \( R \) (and equals the distance from \( z_0 \) to the nearest singularity of \( f \).
 </div>
 
 <div class="proof" markdown="1">
 <em>Proof.</em> For \( z \in D(z_0, R) \), choose \( r \) with \( |z-z_0| < r < R \). By CIF on \( C_r \):
-\[ f(z) = \frac{1}{2\pi i}\oint_{C_r} \frac{f(w)}{w-z}\, dw. \]
+
+\[
+f(z) = \frac{1}{2\pi i}\oint_{C_r} \frac{f(w)}{w-z}\, dw.
+\]
 Write \( \frac{1}{w-z} = \frac{1}{(w-z_0)(1-(z-z_0)/(w-z_0))} = \sum_{n=0}^\infty \frac{(z-z_0)^n}{(w-z_0)^{n+1}} \), which converges uniformly on \( C_r \) since \( |z-z_0|/r < 1 \). Integrating term by term and using the higher derivatives formula gives \( f(z) = \sum_{n=0}^\infty \frac{f^{(n)}(z_0)}{n!}(z-z_0)^n \). \( \square \)
 </div>
 
@@ -684,14 +837,19 @@ Write \( \frac{1}{w-z} = \frac{1}{(w-z_0)(1-(z-z_0)/(w-z_0))} = \sum_{n=0}^\inft
 <strong>Example 7.3.3.</strong> Find the Taylor series of \( f(z) = e^{3z^2} \) at \( z_0 = 0 \).
 
 Substitute \( z \mapsto 3z^2 \) in the series for \( e^z \):
-\[ e^{3z^2} = \sum_{n=0}^\infty \frac{(3z^2)^n}{n!} = \sum_{n=0}^\infty \frac{3^n z^{2n}}{n!} = 1 + 3z^2 + \frac{9}{2}z^4 + \frac{9}{2}z^6 + \cdots \]
+
+\[
+e^{3z^2} = \sum_{n=0}^\infty \frac{(3z^2)^n}{n!} = \sum_{n=0}^\infty \frac{3^n z^{2n}}{n!} = 1 + 3z^2 + \frac{9}{2}z^4 + \frac{9}{2}z^6 + \cdots
+\]
 with radius of convergence \( R = \infty \).
 </div>
 
 <div class="example" markdown="1">
 <strong>Example 7.3.4.</strong> Find the Taylor series of \( \operatorname{Log}\, z \) at \( z_0 = 2 \).
 
-\[ \operatorname{Log}\, z = \operatorname{Log}\, 2 + \operatorname{Log}(1 + (z-2)/2) = \operatorname{Log}\, 2 + \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}\left(\frac{z-2}{2}\right)^n \]
+\[
+\operatorname{Log}\, z = \operatorname{Log}\, 2 + \operatorname{Log}(1 + (z-2)/2) = \operatorname{Log}\, 2 + \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}\left(\frac{z-2}{2}\right)^n
+\]
 with radius of convergence \( R = 2 \) (distance from \( z_0 = 2 \) to the nearest singularity at \( z = 0 \).
 </div>
 
@@ -723,9 +881,15 @@ Taylor series describe an analytic function near a point where it is well-behave
 
 <div class="theorem" markdown="1">
 <strong>Theorem 8.1.1 (Laurent Series Theorem).</strong> Let \( f \) be analytic on the annulus \( A = A(z_0; r, R) = \{z : r < |z-z_0| < R\} \) (with \( 0 \leq r < R \leq \infty \). Then \( f \) has a unique <em>Laurent series representation</em>:
-\[ f(z) = \sum_{n=-\infty}^\infty c_n(z-z_0)^n = \sum_{n=0}^\infty c_n(z-z_0)^n + \sum_{n=1}^\infty \frac{c_{-n}}{(z-z_0)^n}, \]
+
+\[
+f(z) = \sum_{n=-\infty}^\infty c_n(z-z_0)^n = \sum_{n=0}^\infty c_n(z-z_0)^n + \sum_{n=1}^\infty \frac{c_{-n}}{(z-z_0)^n},
+\]
 converging absolutely and uniformly on compact subsets of \( A \), where for any \( \rho \in (r, R) \):
-\[ c_n = \frac{1}{2\pi i}\oint_{|z-z_0|=\rho} \frac{f(z)}{(z-z_0)^{n+1}}\, dz. \]
+
+\[
+c_n = \frac{1}{2\pi i}\oint_{|z-z_0|=\rho} \frac{f(z)}{(z-z_0)^{n+1}}\, dz.
+\]
 </div>
 
 <div class="definition" markdown="1">
@@ -738,10 +902,16 @@ converging absolutely and uniformly on compact subsets of \( A \), where for any
 The singularities are at \( z = 0 \) and \( z = 1 \). Three annular regions:
 
 <strong>(a) \( 0 < |z| < 1 \):</strong> Use partial fractions \( f = -\frac{1}{z} + \frac{1}{z-1} = -\frac{1}{z} - \frac{1}{1-z} \):
-\[ f(z) = -\frac{1}{z} - \sum_{n=0}^\infty z^n = -z^{-1} - 1 - z - z^2 - \cdots \]
+
+\[
+f(z) = -\frac{1}{z} - \sum_{n=0}^\infty z^n = -z^{-1} - 1 - z - z^2 - \cdots
+\]
 
 <strong>(b) \( 1 < |z| < \infty \):</strong> \( \frac{1}{z-1} = \frac{1}{z}\cdot\frac{1}{1-1/z} = \frac{1}{z}\sum_{n=0}^\infty z^{-n} \):
-\[ f(z) = -\frac{1}{z} + \frac{1}{z}\sum_{n=0}^\infty \frac{1}{z^n} = \sum_{n=0}^\infty \frac{1}{z^{n+2}} = z^{-2} + z^{-3} + \cdots \]
+
+\[
+f(z) = -\frac{1}{z} + \frac{1}{z}\sum_{n=0}^\infty \frac{1}{z^n} = \sum_{n=0}^\infty \frac{1}{z^{n+2}} = z^{-2} + z^{-3} + \cdots
+\]
 </div>
 
 ## 8.2 Classification of Isolated Singularities
@@ -775,7 +945,10 @@ The residue is the single coefficient \( c_{-1} \) in the Laurent expansion. Fro
 
 <div class="definition" markdown="1">
 <strong>Definition 9.1.1 (Residue).</strong> The <em>residue</em> of \( f \) at an isolated singularity \( z_0 \) is
-\[ \operatorname{Res}(f, z_0) = c_{-1} = \frac{1}{2\pi i}\oint_{C_\varepsilon} f(z)\, dz \]
+
+\[
+\operatorname{Res}(f, z_0) = c_{-1} = \frac{1}{2\pi i}\oint_{C_\varepsilon} f(z)\, dz
+\]
 where \( C_\varepsilon \) is any small circle around \( z_0 \).
 </div>
 
@@ -786,26 +959,38 @@ In practice, computing residues by expanding Laurent series is often unnecessary
 1. <em>Simple pole</em>: \( \operatorname{Res}(f, z_0) = \lim_{z\to z_0}(z-z_0)f(z) \).
 2. <em>Simple pole of \( g/h \)</em>: if \( g(z_0) \neq 0 \), \( h(z_0) = 0 \), \( h'(z_0) \neq 0 \), then \( \operatorname{Res}(g/h, z_0) = g(z_0)/h'(z_0) \).
 3. <em>Pole of order \( m \)</em>:
-\[ \operatorname{Res}(f, z_0) = \frac{1}{(m-1)!}\lim_{z\to z_0}\frac{d^{m-1}}{dz^{m-1}}\bigl[(z-z_0)^m f(z)\bigr]. \]
+
+\[
+\operatorname{Res}(f, z_0) = \frac{1}{(m-1)!}\lim_{z\to z_0}\frac{d^{m-1}}{dz^{m-1}}\bigl[(z-z_0)^m f(z)\bigr].
+\]
 </div>
 
 <div class="example" markdown="1">
 <strong>Example 9.1.3.</strong> Compute \( \operatorname{Res}\!\left(\frac{z^2}{(z-1)^2(z+2)}, 1\right) \).
 
 Pole of order 2 at \( z = 1 \):
-\[ \operatorname{Res} = \lim_{z\to 1}\frac{d}{dz}\left[\frac{z^2}{z+2}\right] = \lim_{z\to 1}\frac{2z(z+2) - z^2}{(z+2)^2} = \frac{2\cdot 3 - 1}{9} = \frac{5}{9}. \]
+
+\[
+\operatorname{Res} = \lim_{z\to 1}\frac{d}{dz}\left[\frac{z^2}{z+2}\right] = \lim_{z\to 1}\frac{2z(z+2) - z^2}{(z+2)^2} = \frac{2\cdot 3 - 1}{9} = \frac{5}{9}.
+\]
 </div>
 
 ## 9.2 The Residue Theorem
 
 <div class="theorem" markdown="1">
 <strong>Theorem 9.2.1 (Residue Theorem).</strong> Let \( f \) be analytic on a domain \( D \) except at finitely many isolated singularities \( z_1, \ldots, z_k \). Let \( \gamma \) be a simple closed piecewise smooth curve in \( D \) oriented counterclockwise, enclosing all the singularities (and with its interior in \( D \). Then
-\[ \oint_\gamma f(z)\, dz = 2\pi i \sum_{j=1}^k \operatorname{Res}(f, z_j). \]
+
+\[
+\oint_\gamma f(z)\, dz = 2\pi i \sum_{j=1}^k \operatorname{Res}(f, z_j).
+\]
 </div>
 
 <div class="proof" markdown="1">
 <em>Proof.</em> By the Deformation Principle, deform \( \gamma \) to small disjoint circles \( C_j \) around each \( z_j \):
-\[ \oint_\gamma f\, dz = \sum_{j=1}^k \oint_{C_j} f\, dz = 2\pi i \sum_{j=1}^k \operatorname{Res}(f, z_j). \quad \square \]
+
+\[
+\oint_\gamma f\, dz = \sum_{j=1}^k \oint_{C_j} f\, dz = 2\pi i \sum_{j=1}^k \operatorname{Res}(f, z_j). \quad \square
+\]
 </div>
 
 The Residue Theorem is remarkable for what it ignores: the shape of the contour, the behavior of \( f \) far from the singularities, the exact values of \( f \) anywhere away from the poles. The entire integral depends only on the residues — purely local algebraic data at the singularities. This reduction of a global analytic question to local algebraic data is the hallmark of complex analysis.
@@ -816,18 +1001,27 @@ The Residue Theorem is remarkable for what it ignores: the shape of the contour,
 
 <div class="example" markdown="1">
 <strong>Example 9.3.1 (Rational Functions).</strong> To evaluate \( \int_{-\infty}^\infty P(x)/Q(x)\, dx \) where \( \deg Q \geq \deg P + 2 \) and \( Q \) has no real roots: integrate over a semicircular contour in the upper half-plane. As \( R \to \infty \), the semicircle contributes 0 (ML-inequality). Thus
-\[ \int_{-\infty}^\infty \frac{P(x)}{Q(x)}\, dx = 2\pi i \sum_{\operatorname{Im}(z_j) > 0} \operatorname{Res}\!\left(\frac{P}{Q}, z_j\right). \]
+
+\[
+\int_{-\infty}^\infty \frac{P(x)}{Q(x)}\, dx = 2\pi i \sum_{\operatorname{Im}(z_j) > 0} \operatorname{Res}\!\left(\frac{P}{Q}, z_j\right).
+\]
 </div>
 
 <div class="proposition" markdown="1">
 <strong>Proposition 9.3.2 (Jordan's Lemma).</strong> Let \( f \) be analytic for \( \operatorname{Im}(z) \geq 0, |z| \geq R_0 \), with \( \max_{|z|=R, \operatorname{Im}(z)\geq 0}|f(z)| \to 0 \) as \( R \to \infty \). Then for \( \lambda > 0 \):
-\[ \lim_{R\to\infty} \int_{\Gamma_R} f(z)e^{i\lambda z}\, dz = 0 \]
+
+\[
+\lim_{R\to\infty} \int_{\Gamma_R} f(z)e^{i\lambda z}\, dz = 0
+\]
 where \( \Gamma_R \) is the upper semicircle of radius \( R \). This enables evaluation of \( \int_{-\infty}^\infty f(x)\sin(\lambda x)\, dx \) and \( \int_{-\infty}^\infty f(x)\cos(\lambda x)\, dx \).
 </div>
 
 <div class="example" markdown="1">
 <strong>Example 9.3.3 (Trigonometric Integrals).</strong> To evaluate \( \int_0^{2\pi} R(\cos\theta, \sin\theta)\, d\theta \), substitute \( z = e^{i\theta} \):
-\[ \cos\theta = \frac{z + z^{-1}}{2}, \quad \sin\theta = \frac{z - z^{-1}}{2i}, \quad d\theta = \frac{dz}{iz}. \]
+
+\[
+\cos\theta = \frac{z + z^{-1}}{2}, \quad \sin\theta = \frac{z - z^{-1}}{2i}, \quad d\theta = \frac{dz}{iz}.
+\]
 The integral becomes \( \oint_{|z|=1} (\cdots)\, dz \), evaluated by the Residue Theorem.
 </div>
 
@@ -837,7 +1031,10 @@ The Argument Principle links a contour integral to a topological quantity: the n
 
 <div class="theorem" markdown="1">
 <strong>Theorem 9.4.1 (Argument Principle).</strong> Let \( f \) be meromorphic on a domain containing a simple closed curve \( \gamma \) and its interior, with no zeros or poles on \( \gamma \). Then
-\[ \frac{1}{2\pi i}\oint_\gamma \frac{f'(z)}{f(z)}\, dz = Z - P \]
+
+\[
+\frac{1}{2\pi i}\oint_\gamma \frac{f'(z)}{f(z)}\, dz = Z - P
+\]
 where \( Z \) = number of zeros (counted with multiplicity) and \( P \) = number of poles (counted with order) inside \( \gamma \). The left side equals the winding number \( n(f\circ\gamma, 0) \).
 </div>
 
@@ -853,9 +1050,15 @@ where \( Z \) = number of zeros (counted with multiplicity) and \( P \) = number
 <strong>Example 9.4.3.</strong> Show all roots of \( z^7 - 4z^3 + z - 1 = 0 \) lie in \( D(0,2) \).
 
 Let \( f(z) = -4z^3 \) and \( g(z) = z^7 - 4z^3 + z - 1 \). On \( |z| = 2 \):
-\[ |f(z) - g(z)| = |z^7 + z - 1| \leq 128 + 2 + 1 = 131, \quad |f(z)| = 4\cdot 8 = 32. \]
+
+\[
+|f(z) - g(z)| = |z^7 + z - 1| \leq 128 + 2 + 1 = 131, \quad |f(z)| = 4\cdot 8 = 32.
+\]
 Hmm, this fails. Alternatively, let \( f(z) = z^7 \):
-\[ |g(z) - f(z)| = |{-4z^3 + z - 1}| \leq 4\cdot 8 + 2 + 1 = 35 < 128 = |f(z)| \text{ on } |z|=2. \]
+
+\[
+|g(z) - f(z)| = |{-4z^3 + z - 1}| \leq 4\cdot 8 + 2 + 1 = 35 < 128 = |f(z)| \text{ on } |z|=2.
+\]
 So \( g \) has 7 zeros in \( D(0,2) \) = all of them.
 </div>
 
@@ -905,7 +1108,10 @@ Möbius transformations (also called linear fractional transformations) are the 
 
 <div class="definition" markdown="1">
 <strong>Definition 10.3.1 (Möbius Transformation / LFT).</strong> A <em>Möbius transformation</em> is
-\[ T(z) = \frac{az + b}{cz + d}, \quad ad - bc \neq 0. \]
+
+\[
+T(z) = \frac{az + b}{cz + d}, \quad ad - bc \neq 0.
+\]
 These are conformal bijections of the Riemann sphere \( \hat{\mathbb{C}} = \mathbb{C} \cup \{\infty\} \) (with \( T(\infty) = a/c \) if \( c \neq 0 \) and \( T(-d/c) = \infty \).
 </div>
 
@@ -920,13 +1126,19 @@ These are conformal bijections of the Riemann sphere \( \hat{\mathbb{C}} = \math
 
 <div class="example" markdown="1">
 <strong>Example 10.3.3 (Upper Half-Plane to Disc).</strong> The LFT
-\[ f(z) = \frac{z - i}{z + i} \]
+
+\[
+f(z) = \frac{z - i}{z + i}
+\]
 maps the upper half-plane \( \{z: \operatorname{Im}(z) > 0\} \) conformally onto the unit disc \( \mathbb{D} \), with \( f(i) = 0 \) and \( f(\mathbb{R}) = \partial\mathbb{D} \).
 </div>
 
 <div class="example" markdown="1">
 <strong>Example 10.3.4 (Disc Automorphisms).</strong> Every conformal bijection of \( \mathbb{D} \) onto itself is
-\[ f(z) = e^{i\theta}\frac{z - a}{1 - \bar{a}z}, \quad a \in \mathbb{D},\; \theta \in \mathbb{R}. \]
+
+\[
+f(z) = e^{i\theta}\frac{z - a}{1 - \bar{a}z}, \quad a \in \mathbb{D},\; \theta \in \mathbb{R}.
+\]
 </div>
 
 ## 10.4 The Riemann Mapping Theorem

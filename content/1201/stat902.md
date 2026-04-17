@@ -21,6 +21,7 @@ The measurability requirement is the bridge between the abstract probability spa
 
 <div class="definition">
 <strong>Definition 1.2 (Distribution).</strong> The <strong>distribution</strong> (or <strong>law</strong>) of a random variable \(X\) is the Borel probability measure \(\mu_X\) on \((\mathbb{R}, \mathcal{B}(\mathbb{R}))\) defined by
+
 \[
 \mu_X(B) = \mathbb{P}(X^{-1}(B)) = \mathbb{P}(X \in B), \qquad B \in \mathcal{B}(\mathbb{R}).
 \]
@@ -39,9 +40,11 @@ Conditional expectation is the single most important construction in the theory 
 <ol>
 <li>\(Z\) is \(\mathcal{G}\)-measurable, and</li>
 <li>for every \(A \in \mathcal{G}\),
+
 \[
 \int_A X \, d\mathbb{P} = \int_A Z \, d\mathbb{P}.
-\]</li>
+\]
+</li>
 </ol>
 We write \(Z = \mathbb{E}[X \mid \mathcal{G}]\) and call it the <strong>conditional expectation</strong> of \(X\) given \(\mathcal{G}\).
 </div>
@@ -59,26 +62,36 @@ The power of conditional expectation lies in the rich collection of algebraic an
 
 <ol>
 <li><strong>Linearity.</strong> For constants \(a, b \in \mathbb{R}\),
+
 \[
 \mathbb{E}[aX + bY \mid \mathcal{G}] = a\,\mathbb{E}[X \mid \mathcal{G}] + b\,\mathbb{E}[X \mid \mathcal{G}].
-\]</li>
+\]
+</li>
 <li><strong>Pulling out known factors.</strong> If \(Y\) is \(\mathcal{G}\)-measurable and \(XY \in L^1\), then
+
 \[
 \mathbb{E}[XY \mid \mathcal{G}] = Y \cdot \mathbb{E}[X \mid \mathcal{G}].
-\]</li>
+\]
+</li>
 <li><strong>Tower property.</strong> If \(\mathcal{H} \subseteq \mathcal{G} \subseteq \mathcal{F}\), then
+
 \[
 \mathbb{E}\bigl[\mathbb{E}[X \mid \mathcal{G}] \mid \mathcal{H}\bigr] = \mathbb{E}[X \mid \mathcal{H}].
-\]</li>
+\]
+</li>
 <li><strong>Independence.</strong> If \(\sigma(X)\) is independent of \(\mathcal{G}\), then
+
 \[
 \mathbb{E}[X \mid \mathcal{G}] = \mathbb{E}[X].
-\]</li>
+\]
+</li>
 <li><strong>Monotonicity.</strong> If \(X \ge 0\) a.s., then \(\mathbb{E}[X \mid \mathcal{G}] \ge 0\) a.s.</li>
 <li><strong>Jensen's inequality.</strong> If \(\varphi\) is convex and \(\varphi(X) \in L^1\), then
+
 \[
 \varphi\bigl(\mathbb{E}[X \mid \mathcal{G}]\bigr) \le \mathbb{E}[\varphi(X) \mid \mathcal{G}].
-\]</li>
+\]
+</li>
 </ol>
 </div>
 
@@ -98,6 +111,7 @@ A stochastic process can be viewed from two complementary perspectives. Fixing \
 
 <div class="definition">
 <strong>Definition 1.6 (Finite-Dimensional Distributions).</strong> The <strong>distribution</strong> of a stochastic process \(\{X_t\}_{t \in T}\) is the collection of all finite-dimensional distributions, that is, the family of probability measures
+
 \[
 \mu_{t_1, \ldots, t_n}(B) = \mathbb{P}\bigl((X_{t_1}, \ldots, X_{t_n}) \in B\bigr), \qquad B \in \mathcal{B}(\mathbb{R}^n),
 \]
@@ -122,15 +136,19 @@ When are two stochastic processes "the same"? The answer depends on how much we 
 
 <ol>
 <li><strong>Same distribution.</strong> \(X\) and \(Y\) have the same distribution if for every \(n \ge 1\) and \(t_1, \ldots, t_n \in T\),
+
 \[
 (X_{t_1}, \ldots, X_{t_n}) \overset{d}{=} (Y_{t_1}, \ldots, Y_{t_n}).
-\]</li>
+\]
+</li>
 <li><strong>Modification.</strong> \(Y\) is a <strong>modification</strong> (or <strong>version</strong>) of \(X\) if for every \(t \in T\),
+
 \[
 \mathbb{P}(X_t = Y_t) = 1.
 \]
 That is, for each fixed time the two processes agree almost surely, but the exceptional null set may depend on \(t\).</li>
 <li><strong>Indistinguishable.</strong> \(X\) and \(Y\) are <strong>indistinguishable</strong> if
+
 \[
 \mathbb{P}\bigl(\{\omega : X_t(\omega) = Y_t(\omega) \text{ for all } t \in T\}\bigr) = 1.
 \]
@@ -146,6 +164,7 @@ The following example, drawn from Rutar's notes, demonstrates that the gap betwe
 
 <div class="theorem">
 <strong>Example 1.8.</strong> Let \(\{X_t\}_{t \ge 0}\) be a continuous stochastic process (that is, \(t \mapsto X_t(\omega)\) is continuous for every \(\omega\)). Let \(N\) be a Poisson random variable independent of \(X\), and define
+
 \[
 Y_t(\omega) =
 \begin{cases}
@@ -158,6 +177,7 @@ Then \(Y\) is a modification of \(X\) but \(X\) and \(Y\) are <strong>not</stron
 
 <div class="proof">
 <strong>Proof.</strong> Fix any \(t \ge 0\). Then
+
 \[
 \mathbb{P}(X_t \ne Y_t) = \mathbb{P}(N = t) = \frac{e^{-\lambda} \lambda^t}{t!} \cdot \mathbf{1}_{t \in \mathbb{N}_0}.
 \]
@@ -176,6 +196,7 @@ Stochastic calculus is fundamentally a theory about the **flow of information ov
 
 <div class="definition">
 <strong>Definition 1.9 (Filtration).</strong> A <strong>filtration</strong> on \((\Omega, \mathcal{F}, \mathbb{P})\) is a non-decreasing family \(\{\mathcal{F}_t\}_{t \in T}\) of sub-\(\sigma\)-algebras of \(\mathcal{F}\):
+
 \[
 s \le t \implies \mathcal{F}_s \subseteq \mathcal{F}_t \subseteq \mathcal{F}.
 \]
@@ -188,6 +209,7 @@ The most canonical way to produce a filtration is to let a process generate one.
 
 <div class="definition">
 <strong>Definition 1.10 (Generated Filtration).</strong> Given a stochastic process \(\{X_t\}_{t \ge 0}\), its <strong>natural</strong> (or <strong>generated</strong>) filtration is
+
 \[
 \mathcal{F}_t^X = \sigma(X_s : 0 \le s \le t),
 \]
@@ -212,9 +234,11 @@ In continuous-time probability, raw filtrations are often technically inconvenie
 <ol>
 <li><strong>Completeness.</strong> \(\mathcal{F}_0\) contains all \(\mathbb{P}\)-null sets of \(\mathcal{F}\). That is, if \(A \in \mathcal{F}\) with \(\mathbb{P}(A) = 0\), then \(A \in \mathcal{F}_0\).</li>
 <li><strong>Right-continuity.</strong> The filtration is right-continuous:
+
 \[
 \mathcal{F}_t = \mathcal{F}_{t+} := \bigcap_{s > t} \mathcal{F}_s \qquad \text{for all } t \ge 0.
-\]</li>
+\]
+</li>
 </ol>
 </div>
 
@@ -1063,6 +1087,7 @@ We begin by specifying the natural domain for the Itô integral.
 1. \(f\) is \(\mathcal{B}([a,b]) \otimes \mathcal{F}\)-measurable (jointly measurable),
 2. \(f\) is \(\mathcal{F}_t\)-adapted: for each \(t \in [a, b]\), the map \(\omega \mapsto f(t, \omega)\) is \(\mathcal{F}_t\)-measurable,
 3. \(f\) satisfies the square-integrability condition:
+
 \[
 \|f\|_V^2 := E\left(\int_a^b f(t, \omega)^2 \, dt\right) < \infty.
 \]

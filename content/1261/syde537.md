@@ -451,7 +451,9 @@ The Schema Theorem states that short, low-order, above-average schemata receive 
 <div class="theorem">
 <strong>Schema Theorem (Holland)</strong>: The expected number of strings matching schema <em>H</em> in generation <em>t+1</em> satisfies:
 
-\[ m(H, t+1) \geq m(H,t) \cdot \frac{f(H)}{\bar{f}} \cdot \left[1 - p_c \frac{\delta(H)}{L-1} - o(H) \cdot p_m\right] \]
+\[
+m(H, t+1) \geq m(H,t) \cdot \frac{f(H)}{\bar{f}} \cdot \left[1 - p_c \frac{\delta(H)}{L-1} - o(H) \cdot p_m\right]
+\]
 
 where <em>f(H)</em> is the average fitness of strings matching <em>H</em>, \(\bar{f}\) is the population mean fitness, <em>p_c</em> is the crossover rate, <em>p_m</em> is the mutation rate per bit, and <em>L</em> is the chromosome length. Schemata with above-average fitness, short defining length, and low order receive exponentially increasing representation.
 </div>

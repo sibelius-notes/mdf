@@ -70,7 +70,10 @@ The SMR is then:
 
 <div class="definition">
 <strong>Standardized Mortality Ratio (SMR)</strong>:
-\[ \text{SMR}_i = \frac{O_i}{E_i} \]
+
+\[
+\text{SMR}_i = \frac{O_i}{E_i}
+\]
 where \( O_i \) is the observed count and \( E_i \) is the expected count under the reference rates. An SMR \(> 1\) indicates excess mortality; an SMR \(< 1\) indicates a deficit.
 </div>
 
@@ -209,6 +212,7 @@ For log-relative risks \(\phi_i = \log\theta_i\), a normal prior can be used:
 \[
 \log(\text{SMR}_i) \approx \phi_i + \epsilon_i, \quad \epsilon_i \sim \mathcal{N}(0, \sigma_i^2)
 \]
+
 \[
 \phi_i \sim \mathcal{N}(\mu, \tau^2)
 \]
@@ -226,6 +230,7 @@ The BYM model (Besag, York & Mollié 1991) is the dominant approach in Bayesian 
 \[
 O_i \mid \theta_i \sim \text{Poisson}(E_i \theta_i)
 \]
+
 \[
 \log \theta_i = \mu + u_i + v_i
 \]
@@ -426,6 +431,7 @@ A **spatial correlogram** plots Moran's I as a function of distance lag \(d\), a
 
 <div class="definition">
 <strong>Geary's C</strong> focuses on squared differences between neighbouring values:
+
 \[
 C = \frac{(n-1)\sum_i\sum_j w_{ij}(y_i - y_j)^2}{2 S_0 \sum_i (y_i - \bar y)^2}
 \]
@@ -945,6 +951,7 @@ This effectively controls for spatially varying confounders by removing the spat
 \[
 O_i \sim \text{Poisson}(E_i \theta_i)
 \]
+
 \[
 \log\theta_i = \mu + \beta \cdot \text{Townsend}_i + u_i + v_i
 \]
@@ -987,6 +994,7 @@ C(s_1, s_2) = \text{Cov}(Z(s_1), Z(s_2))
 
 <div class="definition">
 <strong>Second-order stationarity</strong>: the covariance depends only on the separation vector \(\mathbf{h} = s_1 - s_2\), not on the absolute locations:
+
 \[
 C(s_1, s_2) = C(\mathbf{h})
 \]
@@ -994,6 +1002,7 @@ C(s_1, s_2) = C(\mathbf{h})
 
 <div class="definition">
 <strong>Isotropy</strong>: the covariance depends only on the distance \(h = \|s_1 - s_2\|\), not on the direction:
+
 \[
 C(s_1, s_2) = C(h)
 \]
@@ -1142,6 +1151,7 @@ INLA (Rue, Martino & Chopin 2009) exploits the **latent Gaussian model** (LGM) s
 \[
 y_i \mid \mathbf{x}, \boldsymbol{\psi} \sim p(y_i \mid x_i, \boldsymbol{\psi})
 \]
+
 \[
 \mathbf{x} \mid \boldsymbol{\psi} \sim \mathcal{N}(\boldsymbol{\mu}(\boldsymbol{\psi}),\ \mathbf{Q}(\boldsymbol{\psi})^{-1})
 \]
@@ -1302,6 +1312,7 @@ inla.smarginal(marg)                   # Summarize marginal
 \[
 O_i \sim \text{Poisson}(E_i e^{\mu + u_i + v_i})
 \]
+
 \[
 p(\mathbf{u}) \propto \exp\!\left(-\frac{1}{2\sigma_u^2}\sum_{i \sim j}(u_i - u_j)^2\right), \quad v_i \overset{iid}{\sim} \mathcal{N}(0, \sigma_v^2)
 \]

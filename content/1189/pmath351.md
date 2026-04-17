@@ -172,6 +172,7 @@ In fact, one can show that \(|\mathbb{R}| = |2^{\mathbb{N}}| = |\mathcal{P}(\mat
 
 <div class="remark">
 <strong>Remark (Cardinality hierarchy of common sets).</strong> In summary, the set-theoretic landscape is:
+
 \[
 |\emptyset| = 0 < |S_n| = n < |\mathbb{N}| = |\mathbb{Z}| = |\mathbb{Q}| = \aleph_0 < |\mathbb{R}| = |C| = |[0,1]| = |\mathcal{P}(\mathbb{N})| = 2^{\aleph_0} = \mathfrak{c},
 \]
@@ -224,6 +225,7 @@ A slightly exotic example illuminates the concept: let \(\omega + 7 = \{1, 2, 3,
 
 <div class="theorem">
 <strong>Theorem 1.14c (Principle of Transfinite Induction).</strong> Let \((X, \le)\) be a well-ordered set and \(S \subseteq X\). Suppose that for every \(x \in X\),
+
 \[
 \{y \in X : y < x\} \subseteq S \implies x \in S.
 \]
@@ -250,6 +252,7 @@ The three statements AC, ZL, and WO stated in §1.5 are equivalent in Zermelo–
 
 <div class="definition">
 <strong>Definition 1.14d (Initial Segment).</strong> Let \((X, \le)\) be a poset, \(C \subseteq X\) a chain, and \(d \in C\). The <em>initial segment of \(C\) at \(d\)</em> is
+
 \[
 P(C, d) = \{c \in C : c < d\}.
 \]
@@ -292,6 +295,7 @@ Using the Cantor--Schroeder--Bernstein Theorem (Theorem 1.11) and the closure pr
 
 <div class="definition">
 <strong>Definition 1.16 (Cardinal Arithmetic).</strong> For cardinals \(\kappa\) and \(\lambda\), define:
+
 \[
 \kappa + \lambda = |(\kappa \times \{0\}) \cup (\lambda \times \{1\})|, \quad \kappa \cdot \lambda = |\kappa \times \lambda|, \quad \kappa^\lambda = |\kappa^\lambda| \text{ (the set of functions } \lambda \to \kappa\text{)}.
 \]
@@ -358,6 +362,7 @@ Every inner product space is a normed vector space via \(\|x\| = \langle x, x\ra
 
 <div class="theorem">
 <strong>Theorem 2.3 (Cauchy--Schwarz Inequality).</strong> Let \(U\) be an inner product space. For all \(u, v \in U\):
+
 \[
 |\langle u, v\rangle| \le \|u\| \|v\|,
 \]
@@ -366,6 +371,7 @@ with equality if and only if \(\{u, v\}\) is linearly dependent.
 
 <div class="proof">
 <strong>Proof.</strong> If \(\{u, v\}\) is linearly dependent, say \(v = tu\), then \(|\langle u, v\rangle| = |t| \|u\|^2 = \|u\| \|tu\| = \|u\| \|v\|\). Now suppose \(\{u, v\}\) is linearly independent. Then \(v - \frac{\langle v, u\rangle}{\|u\|^2} u \ne 0\), so
+
 \[
 0 < \left\|v - \frac{\langle v, u\rangle}{\|u\|^2} u\right\|^2 = \|v\|^2 - \frac{|\langle u, v\rangle|^2}{\|u\|^2},
 \]
@@ -376,6 +382,7 @@ The Cauchy--Schwarz inequality yields the triangle inequality: \(\|u+v\|^2 = \|u
 
 <div class="example">
 <strong>Example 2.4 (\(\ell^p\) norms on \(\mathbb{R}^n\)).</strong> For \(1 \le p < \infty\), the \(p\)-norm on \(\mathbb{R}^n\) is
+
 \[
 \|x\|_p = \left(\sum_{i=1}^n |x_i|^p\right)^{1/p}.
 \]
@@ -399,6 +406,7 @@ That \(\|\cdot\|_p\) satisfies the triangle inequality for \(1 < p < \infty\) is
 
 <div class="theorem">
 <strong>Theorem 2.7 (Hölder's Inequality).</strong> Let \(1 < p < \infty\) and \(\frac{1}{p} + \frac{1}{q} = 1\). For \(f, g \in C[a,b]\) (or sequences in \(\ell^p\) and \(\ell^q\)):
+
 \[
 \sum |x_i y_i| \le \|x\|_p \|y\|_q, \quad \text{or} \quad \int |fg| \le \|f\|_p \|g\|_q.
 \]
@@ -406,6 +414,7 @@ That \(\|\cdot\|_p\) satisfies the triangle inequality for \(1 < p < \infty\) is
 
 <div class="theorem">
 <strong>Theorem 2.8 (Minkowski's Inequality).</strong> For \(1 < p < \infty\) and \(f, g \in C[a,b]\) (or in \(\ell^p\)):
+
 \[
 \|f + g\|_p \le \|f\|_p + \|g\|_p,
 \]
@@ -414,6 +423,7 @@ with equality if and only if \(f\) and \(g\) are proportional.
 
 <div class="proof">
 <strong>Proof of Hölder's inequality.</strong> The key ingredient is <em>Young's inequality</em>: for \(a, b \ge 0\) and conjugate exponents \(1/p + 1/q = 1\),
+
 \[
 ab \le \frac{a^p}{p} + \frac{b^q}{q},
 \]
@@ -429,6 +439,7 @@ Summing over \(i\): \(\sum |x_i y_i| / (\|x\|_p \|y\|_q) \le 1/p + 1/q = 1\), gi
 
 <div class="proof">
 <strong>Proof of Minkowski's inequality.</strong> For \(p = 1\) this is the ordinary triangle inequality. For \(1 < p < \infty\), write
+
 \[
 |x_i + y_i|^p = |x_i + y_i| \cdot |x_i + y_i|^{p-1} \le (|x_i| + |y_i|) |x_i + y_i|^{p-1}.
 \]
@@ -475,6 +486,7 @@ The relationship between these structures is strict: every inner product space i
 
 <div class="example">
 <strong>Example 2.12 (Hausdorff metric).</strong> Let \(X\) be a closed subset of \(\mathbb{R}^n\) and let \(\mathcal{H}(X)\) denote the collection of all nonempty closed bounded subsets of \(X\). For \(A \in \mathcal{H}(X)\) and \(b \in X\), let \(d(b, A) = \inf_{a \in A} \|a - b\|\). The <em>Hausdorff metric</em> on \(\mathcal{H}(X)\) is
+
 \[
 d_H(A, B) = \max\left\{\sup_{a \in A} d(a, B),\; \sup_{b \in B} d(b, A)\right\}.
 \]
@@ -483,6 +495,7 @@ Equivalently, \(d_H(A,B) = \inf\{r \ge 0 : A \subseteq B_r \text{ and } B \subse
 
 <div class="example">
 <strong>Example 2.13 (p-adic metric).</strong> Fix a prime \(p\). For \(x \in \mathbb{Q}\), \(x \ne 0\), write \(x = p^a \frac{r}{s}\) where \(\gcd(r,p) = \gcd(s,p) = 1\) and define \(|x|_p = p^{-a}\), with \(|0|_p = 0\). Then \(d_p(x,y) = |x - y|_p\) is a metric on \(\mathbb{Q}\). Remarkably, this metric satisfies the <em>ultrametric</em> (strong) triangle inequality:
+
 \[
 d_p(x,z) \le \max\{d_p(x,y), d_p(y,z)\}.
 \]
@@ -505,6 +518,7 @@ In this metric, the sequence \(p^n \to 0\) as \(n \to \infty\). Ultrametric spac
 
 <div class="example">
 <strong>Example 2.14 (Product metric).</strong> If \((X, d)\) and \((Y, \rho)\) are metric spaces, we define a metric on \(X \times Y\) by
+
 \[
 D\big((x_1,y_1), (x_2,y_2)\big) = \max\{d(x_1,x_2),\, \rho(y_1,y_2)\}.
 \]
@@ -518,6 +532,7 @@ which hold because \(\max\{a,b\} \le (a^2 + b^2)^{1/2} \le a + b \le 2\max\{a,b\
 
 <div class="remark">
 <strong>Remark.</strong> The product metric construction extends to countable products. For a sequence of metric spaces \((X_n, d_n)\), define a metric on \(\prod_{n=1}^\infty X_n\) by
+
 \[
 D\big((x_n), (y_n)\big) = \sum_{n=1}^\infty \frac{1}{2^n} \min\{d_n(x_n, y_n), 1\}.
 \]
@@ -566,6 +581,7 @@ A set \(A \subseteq X\) is <em>bounded</em> if \(A \subseteq B(a, r)\) for some 
 
 <div class="theorem">
 <strong>Theorem 2.21.</strong> On \(\mathbb{R}^n\), the metrics \(d_1\), \(d_2\), and \(d_\infty\) are all equivalent, since
+
 \[
 d_\infty(x,y) \le d_2(x,y) \le d_1(x,y) \le n \cdot d_\infty(x,y).
 \]
@@ -717,6 +733,7 @@ The corresponding properties for closed sets are dual: \(\emptyset\) and \(X\) a
 
 <div class="proof">
 <strong>Proof.</strong> For each \(x \in U\), define the <em>component interval</em>
+
 \[
 I_x = \bigl(\inf\{a : (a,x) \subseteq U\},\; \sup\{b : (x,b) \subseteq U\}\bigr).
 \]
@@ -761,6 +778,7 @@ A remarkable consequence is that the Borel \(\sigma\)-algebra on \(\mathbb{R}\) 
 
 <div class="definition">
 <strong>Definition 3.12a (Subsequences, limsup, liminf).</strong> A <em>subsequence</em> of \((x_n)\) is a sequence \((x_{n_k})\) where \(n_1 < n_2 < \cdots\). A <em>cluster point</em> (or subsequential limit) of \((x_n)\) in a metric space is a point \(a\) such that some subsequence converges to \(a\). For real-valued sequences:
+
 \[
 \limsup_{n \to \infty} x_n = \lim_{n \to \infty} \sup_{k \ge n} x_k, \quad \liminf_{n \to \infty} x_n = \lim_{n \to \infty} \inf_{k \ge n} x_k.
 \]
@@ -815,6 +833,7 @@ One of the powerful consequences of the distance function is the ability to sepa
 
 <div class="proof">
 <strong>Proof.</strong> Define
+
 \[
 f(x) = \frac{d(x, A)}{d(x, A) + d(x, B)}.
 \]
@@ -831,6 +850,7 @@ This is well-defined since \(d(x, A) + d(x, B) > 0\) for all \(x\) (if both were
 
 <div class="remark">
 <strong>Remark.</strong> The Tietze Extension Theorem is a cornerstone of topology. For metric spaces, an explicit extension formula exists: the McShane--Whitney extension. Given \(f: A \to \mathbb{R}\) Lipschitz with constant \(L\), define
+
 \[
 \tilde{f}(x) = \inf_{a \in A}\{f(a) + L \cdot d(x,a)\}.
 \]
@@ -839,6 +859,7 @@ One checks that \(\tilde{f}|_A = f\), \(\tilde{f}\) is Lipschitz with the same c
 
 <div class="example">
 <strong>Example 3.14a (Cantor set topology).</strong> In the relative topology on the Cantor set \(C \subseteq [0,1]\), we have
+
 \[
 C \cap [0, 1/3] = C_1 \quad \text{and} \quad C \cap [2/3, 1] = C_2
 \]
@@ -974,6 +995,7 @@ Topological properties --- connectedness, compactness, separability, the Hausdor
 
 <div class="proof">
 <strong>Proof (products).</strong> Let \(f, g: X \to \mathbb{R}\) be continuous at \(a\). Write \(f(x)g(x) - f(a)g(a) = f(x)(g(x) - g(a)) + g(a)(f(x) - f(a))\). Given \(\varepsilon > 0\), choose \(\delta_1\) with \(|f(x) - f(a)| < 1\) for \(d(x,a) < \delta_1\), so \(|f(x)| \le |f(a)| + 1 =: M\). Choose \(\delta_2\) with \(|g(x) - g(a)| < \varepsilon/(2M)\) and \(\delta_3\) with \(|f(x) - f(a)| < \varepsilon/(2|g(a)| + 1)\). Then for \(d(x,a) < \min\{\delta_1, \delta_2, \delta_3\}\):
+
 \[
 |f(x)g(x) - f(a)g(a)| \le M \cdot \frac{\varepsilon}{2M} + |g(a)| \cdot \frac{\varepsilon}{2|g(a)| + 1} < \varepsilon.
 \]
@@ -1059,6 +1081,7 @@ Hölder spaces arise naturally in PDEs: the solution of Laplace's equation with 
 
 <div class="definition">
 <strong>Definition 4.13 (Operator Norm).</strong> For a continuous linear map \(F: U \to V\) between normed spaces, the <em>operator norm</em> is
+
 \[
 \|F\| = \sup_{\|u\| \le 1} \|F(u)\| = \sup_{\|u\| = 1} \|F(u)\| = \sup_{u \ne 0} \frac{\|F(u)\|}{\|u\|}.
 \]
@@ -1209,6 +1232,7 @@ Completeness --- the property that every Cauchy sequence converges --- is arguab
 
 <div class="example">
 <strong>Example 5.2b (The Baire space).</strong> The <em>Baire space</em> \(\mathbb{N}^{\mathbb{N}}\) is the set of all sequences of natural numbers, equipped with the metric
+
 \[
 d(\alpha, \beta) = \begin{cases} 0 & \text{if } \alpha = \beta, \\ 2^{-\min\{n : \alpha(n) \ne \beta(n)\}} & \text{otherwise.} \end{cases}
 \]
@@ -1282,6 +1306,7 @@ This strategy is used repeatedly in functional analysis whenever proving complet
 <strong>Step 1 (Coordinatewise convergence):</strong> For each fixed \(k\), \(|a^{(n)}_k - a^{(m)}_k| \le \|a^{(n)} - a^{(m)}\|_p \to 0\), so \(b_k := \lim_n a^{(n)}_k\) exists.
 
 <strong>Step 2 (Membership):</strong> Fix \(\varepsilon > 0\) and choose \(N\) with \(\|a^{(n)} - a^{(m)}\|_p < \varepsilon\) for \(n, m \ge N\). For any finite \(K\):
+
 \[
 \left(\sum_{k=1}^K |a^{(n)}_k - b_k|^p\right)^{1/p} = \lim_{m \to \infty} \left(\sum_{k=1}^K |a^{(n)}_k - a^{(m)}_k|^p\right)^{1/p} \le \varepsilon.
 \]
@@ -1313,6 +1338,7 @@ Both are closed subspaces of \(\ell^\infty\) (the sup-norm limit of convergent s
 
 <div class="example">
 <strong>Example 5.7c (Incompleteness under \(d_1\) and \(d_2\)).</strong> The space \(C[-1,1]\) under the \(d_1\) metric is not complete. Consider the sequence of continuous functions
+
 \[
 f_n(x) = \begin{cases} -1, & x \le -1/n, \\ nx, & -1/n \le x \le 1/n, \\ 1, & x \ge 1/n. \end{cases}
 \]
@@ -1647,6 +1673,7 @@ In finite dimensions, Heine--Borel tells us compactness equals closed and bounde
 <em>Step 1 (Diagonal argument):</em> Since \(X\) is compact, hence separable, pick a countable dense subset \(\{q_1, q_2, \ldots\}\). The sequence \((f_n(q_1))\) is bounded, so extract a convergent subsequence \((f_{1,k})\). From this, extract a further subsequence \((f_{2,k})\) such that \((f_{2,k}(q_2))\) converges. Continue, and take the diagonal subsequence \(g_k = f_{k,k}\). Then \((g_k(q_j))\) converges for every \(j\).
 
 <em>Step 2 (Equicontinuity upgrades pointwise to uniform):</em> Fix \(\varepsilon > 0\). Choose \(\delta > 0\) from equicontinuity. Cover \(X\) by \(B(q_{j_1}, \delta), \ldots, B(q_{j_p}, \delta)\). Choose \(N\) so that \(|g_k(q_{j_i}) - g_\ell(q_{j_i})| < \varepsilon/3\) for all \(k, \ell \ge N\) and all \(i\). For any \(x \in X\), choose \(q_{j_i}\) with \(d(x, q_{j_i}) < \delta\). Then:
+
 \[
 |g_k(x) - g_\ell(x)| \le |g_k(x) - g_k(q_{j_i})| + |g_k(q_{j_i}) - g_\ell(q_{j_i})| + |g_\ell(q_{j_i}) - g_\ell(x)| < \varepsilon.
 \]
@@ -1685,6 +1712,7 @@ The Cantor set is one of the most remarkable objects in mathematics --- simultan
 
 <div class="proposition">
 <strong>Proposition 6.18a (Ternary expansion characterization).</strong> A point \(x \in [0,1]\) belongs to the Cantor set \(C\) if and only if \(x\) has a ternary (base 3) expansion using only the digits 0 and 2:
+
 \[
 C = \left\{x = \sum_{n=1}^\infty \frac{a_n}{3^n} : a_n \in \{0, 2\} \text{ for all } n\right\}.
 \]
@@ -2033,6 +2061,7 @@ Every closed set is \(G_\delta\) (in a metric space, \(A = \bigcap_{n=1}^\infty 
 
 <div class="definition">
 <strong>Definition 8.6 (Oscillation).</strong> For \(f: X \to Y\) and \(x \in X\), define the oscillation of \(f\) at \(x\):
+
 \[
 \omega_f(x) = \inf_{\delta > 0} \sup_{y,z \in B(x,\delta)} d_Y(f(y), f(z)).
 \]
@@ -2041,6 +2070,7 @@ Then \(f\) is continuous at \(x\) if and only if \(\omega_f(x) = 0\).
 
 <div class="theorem">
 <strong>Theorem 8.7.</strong> For any \(\varepsilon > 0\), the set \(\{x \in X : \omega_f(x) < \varepsilon\}\) is open. Therefore the set of points of continuity of \(f\) is a \(G_\delta\) set:
+
 \[
 \{x : f \text{ is continuous at } x\} = \bigcap_{n=1}^\infty \{x : \omega_f(x) < 1/n\}.
 \]
@@ -2117,6 +2147,7 @@ The Baire Category Theorem has deep applications in functional analysis, even at
 
 <div class="proof">
 <strong>Proof.</strong> Suppose \(\mathbb{Q} = \bigcap_{n=1}^\infty G_n\) with each \(G_n\) open. Since \(\mathbb{Q}\) is dense, each \(G_n\) is dense and open. Write \(\mathbb{Q} = \{q_1, q_2, \ldots\}\) and set \(V_n = \mathbb{R} \setminus \{q_n\}\), which is also dense and open. Then
+
 \[
 \bigcap_{n=1}^\infty G_n \cap \bigcap_{n=1}^\infty V_n = \mathbb{Q} \cap (\mathbb{R} \setminus \mathbb{Q}) = \emptyset.
 \]
@@ -2143,6 +2174,7 @@ While the BCT gives an existential proof, Weierstrass gave an explicit example:
 
 <div class="example">
 <strong>Example 8.11 (Weierstrass function).</strong> The function
+
 \[
 f(x) = \sum_{k=1}^\infty 2^{-k} \cos(10^k \pi x)
 \]
@@ -2155,6 +2187,7 @@ is continuous everywhere (by the Weierstrass M-test, since \(\sum 2^{-k} < \inft
 
 <div class="remark">
 <strong>Remark (Historical significance and generalizations).</strong> Weierstrass's 1872 construction shocked the mathematical community, which had previously assumed continuous functions must be differentiable "almost everywhere" (a belief encouraged by the earlier work of Ampère). The general form of the Weierstrass function is
+
 \[
 f(x) = \sum_{n=0}^\infty a^n \cos(b^n \pi x)
 \]
@@ -2204,6 +2237,7 @@ Every contraction is (uniformly) continuous, and strictly decreases distances be
 
 <div class="proof">
 <strong>Proof.</strong> Fix \(x_0 \in X\) and define \(x_n = T(x_{n-1})\). By induction, \(d(x_{n+1}, x_n) \le c^n d(x_1, x_0)\). For \(n < m\):
+
 \[
 d(x_n, x_m) \le \sum_{i=n}^{m-1} d(x_{i+1}, x_i) \le c^n d(x_1, x_0) \sum_{j=0}^{m-n-1} c^j \le \frac{c^n}{1-c} d(x_1, x_0).
 \]
@@ -2234,6 +2268,7 @@ Newton's method is a prime application of the contraction mapping principle. The
 
 <div class="example">
 <strong>Example 9.3 (Newton's method).</strong> To solve \(g(x) = 0\), define \(T(x) = x - g(x)/g'(x)\). If \(x^<em>\) is a simple root with \(g'(x^</em>) \ne 0\) and \(g\) is \(C^2\), then
+
 \[
 T'(x) = 1 - \frac{(g'(x))^2 - g(x)g''(x)}{(g'(x))^2} = \frac{g(x)g''(x)}{(g'(x))^2},
 \]
@@ -2262,6 +2297,7 @@ A beautiful application of the Contraction Mapping Principle is to iterated func
 
 <div class="lemma">
 <strong>Lemma 9.6.</strong> For compact sets \(A_1, \ldots, A_n\) and \(B_1, \ldots, B_n\) in a metric space,
+
 \[
 d_H\left(\bigcup_{i=1}^n A_i,\, \bigcup_{i=1}^n B_i\right) \le \max_{1 \le i \le n} d_H(A_i, B_i).
 \]
@@ -2300,6 +2336,7 @@ The attractor can be approximated starting from any compact set \(K_0\): the ite
 
 <div class="remark">
 <strong>Remark (Hausdorff dimension of IFS attractors).</strong> For an IFS \(\{T_1, \ldots, T_k\}\) where each \(T_i\) is a similarity (not just a contraction) with ratio \(r_i\), and the maps satisfy the <em>open set condition</em> (there exists a nonempty bounded open set \(V\) with \(\bigcup T_i(V) \subseteq V\) and the images pairwise disjoint), the Hausdorff dimension of the attractor \(K^*\) is the unique \(s \ge 0\) satisfying
+
 \[
 \sum_{i=1}^k r_i^s = 1
 \]
@@ -2318,6 +2355,7 @@ The fact that these dimensions are non-integer is what makes fractals "fractiona
 
 <div class="proof">
 <strong>Proof.</strong> This is a direct consequence of the Banach Fixed-Point error estimate. Since \(\mathcal{T}\) is a contraction with constant \(c\) on the complete space \(\mathcal{H}(X)\), and \(K^<em> = \mathcal{T}(K^</em>)\):
+
 \[
 d_H(K_0, K^*) \le \frac{d_H(K_0, \mathcal{T}(K_0))}{1 - c} \le \frac{\varepsilon}{1 - c}.
 \]
@@ -2343,6 +2381,7 @@ The central result of this section asserts that every metric space can be "compl
 
 <div class="proof">
 <strong>Proof.</strong> Fix \(a \in X\). For each \(x \in X\), define \(f_x: X \to \mathbb{R}\) by \(f_x(t) = d(t,x) - d(t,a)\). By the triangle inequality, \(|f_x(t)| \le d(x,a)\), so \(f_x\) is bounded. Also \(f_x\) is Lipschitz: \(|f_x(s) - f_x(t)| \le 2d(s,t)\). The map \(F: X \to C_b(X)\) defined by \(F(x) = f_x\) is an isometry:
+
 \[
 \|f_x - f_y\|_\infty = \sup_{t \in X} |d(t,x) - d(t,y)| = d(x,y),
 \]
@@ -2458,6 +2497,7 @@ More generally, Hensel's lemma provides a p-adic analogue of Newton's method: if
 
 <div class="example">
 <strong>Example 10.8b (The p-adic integers as inverse limit).</strong> The quotient maps \(\pi_n: \mathbb{Z}_p \to \mathbb{Z}/p^n\mathbb{Z}\) sending \(x = \sum \alpha_i p^i\) to \(\sum_{i=0}^{n-1} \alpha_i p^i \pmod{p^n}\) satisfy \(\pi_{n+1} \circ \pi_n = \pi_n\). This exhibits \(\mathbb{Z}_p\) as the <em>inverse limit</em> (or projective limit) of the finite rings \(\mathbb{Z}/p^n\mathbb{Z}\):
+
 \[
 \mathbb{Z}_p = \varprojlim \mathbb{Z}/p^n\mathbb{Z} = \left\{(a_n)_{n \ge 1} \in \prod_{n \ge 1} \mathbb{Z}/p^n\mathbb{Z} : a_{n+1} \equiv a_n \pmod{p^n}\right\}.
 \]
@@ -2541,6 +2581,7 @@ A natural question arising from the metric completion is: how large must a "univ
 
 <div class="proof">
 <strong>Proof.</strong> Let \(\{q_1, q_2, \ldots\}\) be a countable dense subset of \(X\). Fix a basepoint \(a \in X\) and define \(\varphi: X \to \ell^\infty\) by
+
 \[
 \varphi(x) = \bigl(d(x, q_1) - d(a, q_1),\; d(x, q_2) - d(a, q_2),\; \ldots\bigr).
 \]
@@ -2576,6 +2617,7 @@ The most elegant proof of the Weierstrass Approximation Theorem uses Bernstein p
 
 <div class="definition">
 <strong>Definition 11.1 (Bernstein Polynomials).</strong> For \(f \in C[0,1]\) and \(n \ge 1\), the \(n\)-th <em>Bernstein polynomial</em> of \(f\) is
+
 \[
 B_n(f)(x) = \sum_{k=0}^n f\left(\frac{k}{n}\right) \binom{n}{k} x^k (1-x)^{n-k}.
 \]
@@ -2585,6 +2627,7 @@ The Bernstein operator has remarkable properties: it is linear, positive (\(f \g
 
 <div class="lemma">
 <strong>Lemma 11.2.</strong>
+
 \[
 B_n(x^2) = \frac{n-1}{n}x^2 + \frac{x}{n} = x^2 + \frac{x - x^2}{n}.
 \]
@@ -2601,6 +2644,7 @@ Consequently, \(B_n((x-a)^2)(a) = \frac{a - a^2}{n} \le \frac{1}{4n}\) for \(a \
 
 <div class="proof">
 <strong>Proof (for \([0,1]\)).</strong> Fix \(f \in C[0,1]\) and \(\varepsilon > 0\). By uniform continuity, choose \(\delta > 0\) with \(|f(x) - f(a)| \le \varepsilon\) when \(|x - a| \le \delta\). For \(|x - a| \ge \delta\), we have \(|f(x) - f(a)| \le 2\|f\|_\infty \le \frac{2\|f\|_\infty}{\delta^2}(x-a)^2\). So for all \(x, a\):
+
 \[
 |f(x) - f(a)| \le \varepsilon + \frac{2\|f\|_\infty}{\delta^2}(x-a)^2.
 \]
@@ -2682,6 +2726,7 @@ This proof is more than a curiosity: the construction \(f \mapsto f <em> Q_n\) i
 
 <div class="proof">
 <strong>Proof (Hilbert space case, uniqueness).</strong> Suppose \(k_1, k_2 \in K\) both minimize \(\|x - k\|\), with minimum value \(\delta\). By convexity, \(\bar{k} = (k_1 + k_2)/2 \in K\). By the parallelogram law:
+
 \[
 \|x - \bar{k}\|^2 = \left\|\frac{(x - k_1) + (x - k_2)}{2}\right\|^2 = \frac{1}{2}\|x - k_1\|^2 + \frac{1}{2}\|x - k_2\|^2 - \frac{1}{4}\|k_1 - k_2\|^2 = \delta^2 - \frac{\|k_1 - k_2\|^2}{4}.
 \]
@@ -2694,6 +2739,7 @@ The Weierstrass theorem guarantees that polynomials can approximate any continuo
 
 <div class="definition">
 <strong>Definition 11.6a (Equioscillation).</strong> A function \(g \in C_{\mathbb{R}}[a,b]\) has <em>equioscillation of degree \(n\)</em> if there exist points \(a \le x_1 < x_2 < \cdots < x_{n+2} \le b\) such that
+
 \[
 g(x_i) = (-1)^i \|g\|_\infty \quad \text{or} \quad g(x_i) = (-1)^{i+1}\|g\|_\infty
 \]
@@ -2702,6 +2748,7 @@ for all \(1 \le i \le n+2\). That is, the function alternately attains its maxim
 
 <div class="theorem">
 <strong>Theorem 11.6b (Existence of best polynomial approximation).</strong> For every \(f \in C_{\mathbb{R}}[a,b]\) and every \(n \ge 0\), there exists a polynomial \(p^* \in \mathcal{P}_n[a,b]\) of degree at most \(n\) such that
+
 \[
 \|f - p^*\|_\infty = \operatorname{dist}(f, \mathcal{P}_n) := \inf_{p \in \mathcal{P}_n} \|f - p\|_\infty.
 \]
@@ -2717,6 +2764,7 @@ for all \(1 \le i \le n+2\). That is, the function alternately attains its maxim
 
 <div class="proof">
 <strong>Proof.</strong> Suppose for contradiction that there exists \(q \in \mathcal{P}_n\) with \(\|f - q\|_\infty < \|f - p\|_\infty\). Let \(r = p - q \in \mathcal{P}_n\) and \(g = f - p\). At the equioscillation points \(x_1, \ldots, x_{n+2}\):
+
 \[
 |g(x_i) - r(x_i)| = |(f - q)(x_i)| \le \|f - q\|_\infty < \|g\|_\infty = |g(x_i)|.
 \]
@@ -2729,6 +2777,7 @@ This forces \(r(x_i)\) to have the same sign as \(g(x_i)\), which alternates. Th
 
 <div class="proof">
 <strong>Proof (Uniqueness).</strong> Suppose \(p\) and \(q\) both attain the minimum distance \(D\). Then \(\bar{p} = (p+q)/2 \in \mathcal{P}_n\) satisfies
+
 \[
 \|f - \bar{p}\|_\infty = \left\|\frac{(f-p) + (f-q)}{2}\right\|_\infty \le \frac{1}{2}\|f-p\|_\infty + \frac{1}{2}\|f-q\|_\infty = D,
 \]
@@ -2853,6 +2902,7 @@ which is more amenable to fixed-point methods because the integral operator is a
 
 <div class="proof">
 <strong>Proof.</strong> Choose \(r > 0\) with \(\overline{B}((a,b), r) \subseteq U\) and let \(K = \max |\Phi|\) on this ball. Choose \(\delta < \min\{r/(K+1), 1/L\}\) so that the rectangle \(R = [a-\delta, a+\delta] \times [b - K\delta, b + K\delta]\) lies in the ball. Let \(\mathcal{X} = \{f \in C[a-\delta, a+\delta] : \text{graph}(f) \subseteq R\}\), which is a closed (hence complete) subset of \(C[a-\delta, a+\delta]\). Define the <em>Picard operator</em>
+
 \[
 (Tf)(x) = b + \int_a^x \Phi(t, f(t))\, dt.
 \]
@@ -2872,6 +2922,7 @@ The <em>Picard iterates</em> \(f_{n+1} = Tf_n\) starting from \(f_0(x) = b\) con
 
 <div class="example">
 <strong>Example 12.3a (Picard iterates for \(y' = 1 + x - y\)).</strong> Consider the IVP \(y' = 1 + x - y\), \(y(0) = 1\) on \(|x| \le 1/2\). The integral equation formulation is
+
 \[
 y(x) = 1 + \int_0^x [1 + t - y(t)]\, dt = 1 + x + \frac{x^2}{2} - \int_0^x y(t)\, dt.
 \]
@@ -2887,9 +2938,11 @@ Computing the iterates starting from \(f_0(x) = 1\):
 \[
 f_1(x) = 1 + x + \frac{x^2}{2} - x = 1 + \frac{x^2}{2},
 \]
+
 \[
 f_2(x) = 1 + x + \frac{x^2}{2} - \int_0^x \left(1 + \frac{t^2}{2}\right) dt = 1 + \frac{x^2}{2} - \frac{x^3}{6},
 \]
+
 \[
 f_3(x) = 1 - x + x - \frac{x^2}{2} + \frac{x^2}{2} - \frac{x^3}{6} + \frac{x^4}{24} + \cdots
 \]
@@ -2928,6 +2981,7 @@ The idea is to repeatedly apply the local existence theorem to extend the soluti
 
 <div class="theorem">
 <strong>Theorem 12.6 (Gronwall's Inequality).</strong> If \(u, v: [a,b] \to [0,\infty)\) are continuous with \(u(t) \le \alpha + \int_a^t u(s) v(s)\, ds\) for all \(t \in [a,b]\) and some \(\alpha \ge 0\), then
+
 \[
 u(t) \le \alpha \exp\left(\int_a^t v(s)\, ds\right).
 \]
@@ -2935,6 +2989,7 @@ u(t) \le \alpha \exp\left(\int_a^t v(s)\, ds\right).
 
 <div class="proof">
 <strong>Proof.</strong> Define \(U(t) = \int_a^t u(s) v(s)\, ds\), so \(U'(t) = u(t) v(t) \le (\alpha + U(t)) v(t)\). This gives
+
 \[
 U'(t) - U(t) v(t) \le \alpha v(t).
 \]
@@ -2953,6 +3008,7 @@ hence \(U(t) \le \alpha\left(e^{\int_a^t v} - 1\right)\). Since \(u(t) \le \alph
 
 <div class="theorem">
 <strong>Theorem 12.6a (Continuous Dependence on Initial Conditions).</strong> Let \(\Phi\) satisfy a Lipschitz condition with constant \(L\) and let \(y, z\) be solutions of \(y' = \Phi(x, y)\) on \([a,b]\). Then
+
 \[
 \|y(t) - z(t)\| \le \|y(a) - z(a)\| \cdot e^{L(t-a)}.
 \]
@@ -2960,6 +3016,7 @@ hence \(U(t) \le \alpha\left(e^{\int_a^t v} - 1\right)\). Since \(u(t) \le \alph
 
 <div class="proof">
 <strong>Proof.</strong> Let \(u(t) = \|y(t) - z(t)\|\). From the integral equation formulation:
+
 \[
 u(t) = \left\|y(a) - z(a) + \int_a^t [\Phi(s, y(s)) - \Phi(s, z(s))]\, ds\right\| \le u(a) + \int_a^t L \cdot u(s)\, ds.
 \]
@@ -2974,6 +3031,7 @@ This shows that solutions of Lipschitz ODEs depend continuously on initial condi
 
 <div class="proof">
 <strong>Proof.</strong> Let \(y = y_{\lambda_0}\) and \(z = y_\lambda\). Write \(u(t) = \|y(t) - z(t)\|\). Then
+
 \[
 u(t) \le \int_a^t \|\Phi_{\lambda_0}(s, y(s)) - \Phi_\lambda(s, z(s))\|\, ds \le \int_a^t [L \cdot u(s) + \varepsilon(\lambda)]\, ds,
 \]
@@ -2995,12 +3053,14 @@ This justifies using numerical ODEs to study sensitivity to model parameters ---
 <strong>Proof.</strong> Let \(M = \|\Phi\|_\infty = \sup |\Phi|\) and \(h = \min\{b-a, R/M\}\). We construct approximate solutions and extract a convergent subsequence.
 
 <strong>Step 1 (Euler polygons):</strong> For each \(n \ge 1\), define the Euler approximation \(F_n\) inductively on the partition \(t_k = a + kh/n\), \(k = 0, 1, \ldots, n\):
+
 \[
 F_n(t_k) = \Gamma, \quad F_n(t_{k+1}) = F_n(t_k) + \frac{h}{n}\Phi(t_k, F_n(t_k)),
 \]
 and extend linearly between partition points. Each \(F_n\) is continuous, and \(\|F_n(t) - \Gamma\| \le M(t-a) \le Mh \le R\), so \(F_n(t) \in \overline{B}_R(\Gamma)\) for all \(t\).
 
 <strong>Step 2 (Equicontinuity):</strong> For any \(s, t \in [a, a+h]\),
+
 \[
 \|F_n(t) - F_n(s)\| \le M|t - s|,
 \]
@@ -3011,6 +3071,7 @@ since the slope of \(F_n\) on each subinterval is bounded by \(M\). Thus \(\{F_n
 <strong>Step 4 (Arzela--Ascoli):</strong> By the Arzela--Ascoli Theorem (Theorem 6.17), there exists a subsequence \(F_{n_k} \to F\) uniformly on \([a, a+h]\).
 
 <strong>Step 5 (Passing to the limit):</strong> The Euler polygon \(F_n\) satisfies
+
 \[
 F_n(t) = \Gamma + \int_a^t \Phi_n(s)\, ds
 \]
@@ -3058,6 +3119,7 @@ The progression from Picard to Peano mirrors a general pattern in analysis: weak
 
 <div class="example">
 <strong>Example 12.7a (Reduction of higher-order ODE).</strong> The second-order equation \(y'' + y = 0\), \(y(0) = 0\), \(y'(0) = 1\) is equivalent to the first-order system:
+
 \[
 \begin{pmatrix} y \\ z \end{pmatrix}' = \begin{pmatrix} z \\ -y \end{pmatrix}, \quad \begin{pmatrix} y(0) \\ z(0) \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \end{pmatrix},
 \]
@@ -3107,6 +3169,7 @@ This reduces the multidimensional stability problem to the Banach Fixed-Point Th
 
 <div class="proof">
 <strong>Proof (Sketch).</strong> Write \(\mathbf{f}(\mathbf{y}) = A\mathbf{y} + \mathbf{r}(\mathbf{y})\) where \(\|\mathbf{r}(\mathbf{y})\|/\|\mathbf{y}\| \to 0\) as \(\mathbf{y} \to 0\). If all eigenvalues of \(A\) have negative real part, there exists \(\mu > 0\) and \(C > 0\) with \(\|e^{At}\| \le C e^{-\mu t}\) for \(t \ge 0\). By the variation of constants formula, solutions of the nonlinear system satisfy
+
 \[
 \mathbf{y}(t) = e^{At}\mathbf{y}(0) + \int_0^t e^{A(t-s)} \mathbf{r}(\mathbf{y}(s))\, ds.
 \]

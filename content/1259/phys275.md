@@ -35,14 +35,23 @@ The motion of planets around the Sun was one of the great puzzles of early moder
 An ellipse is defined geometrically as the locus of all points for which the sum of distances to two fixed points — the foci — is constant. If the semi-major axis (half the longest diameter) is \(a\) and the semi-minor axis (half the shortest diameter) is \(b\), then the sum of distances from any point on the ellipse to the two foci equals \(2a\).
 
 The shape of an ellipse is characterized by its **eccentricity** \(e\), where:
-\[e = \sqrt{1 - \frac{b^2}{a^2}}\]
+
+\[
+e = \sqrt{1 - \frac{b^2}{a^2}}
+\]
 
 Eccentricity ranges from 0 (a perfect circle) to 1 (a parabola, the degenerate limit). For most planetary orbits, \(e\) is small: Earth's eccentricity is 0.017, making its orbit very nearly circular. Mars has \(e = 0.093\), while Mercury, the most eccentric major planet, has \(e = 0.206\). Comets, by contrast, often have eccentricities very close to 1 or even slightly greater.
 
 In polar coordinates centered on the focus where the Sun resides, the equation of the ellipse is:
-\[r = \frac{a(1-e^2)}{1 + e\cos\theta}\]
+
+\[
+r = \frac{a(1-e^2)}{1 + e\cos\theta}
+\]
 where \(r\) is the planet-Sun distance and \(\theta\) is the **true anomaly** — the angle measured from **perihelion** (the point of closest approach). The maximum distance, **aphelion**, occurs at \(\theta = \pi\):
-\[r_\mathrm{aph} = a(1+e), \qquad r_\mathrm{per} = a(1-e)\]
+
+\[
+r_\mathrm{aph} = a(1+e), \qquad r_\mathrm{per} = a(1-e)
+\]
 
 ### The Second Law: Equal Areas in Equal Times
 
@@ -51,15 +60,24 @@ where \(r\) is the planet-Sun distance and \(\theta\) is the **true anomaly** �
 This law is a direct consequence of the conservation of angular momentum, as Newton later showed. For a central force (one that acts along the line connecting the two bodies), there is no torque and hence no change in angular momentum. The areal velocity — the rate at which area is swept — equals \(L/(2m)\), where \(L\) is the orbital angular momentum and \(m\) is the planet's mass, and is therefore constant.
 
 Quantitatively, if the planet is at distance \(r\) and moving with velocity component \(v_\perp\) perpendicular to the radius vector:
-\[\frac{dA}{dt} = \frac{1}{2}r v_\perp = \frac{L}{2m} = \text{const}\]
+
+\[
+\frac{dA}{dt} = \frac{1}{2}r v_\perp = \frac{L}{2m} = \text{const}
+\]
 
 ### The Third Law: The Harmonic Law
 
 **Kepler's Third Law** states that the square of the orbital period is proportional to the cube of the semi-major axis:
-\[T^2 \propto a^3\]
+
+\[
+T^2 \propto a^3
+\]
 
 In units where \(T\) is in years and \(a\) is in astronomical units (AU, the Earth-Sun distance), the constant of proportionality is exactly 1 for solar system planets. Newton showed that the precise relationship is:
-\[T^2 = \frac{4\pi^2}{G(M_\odot + m)} a^3\]
+
+\[
+T^2 = \frac{4\pi^2}{G(M_\odot + m)} a^3
+\]
 
 For planets, \(m \ll M_\odot\), so the period depends almost entirely on the solar mass and the semi-major axis. This law is immensely practical: measuring a planet's period immediately gives its orbital radius, and vice versa.
 
@@ -70,11 +88,17 @@ For planets, \(m \ll M_\odot\), so the period depends almost entirely on the sol
 ## Newton's Law of Gravitation and the Two-Body Problem
 
 Newton generalized Kepler's laws by identifying the underlying force: gravity. **Newton's Law of Universal Gravitation** states that every pair of masses \(M\) and \(m\) separated by distance \(r\) attracts each other with a force:
-\[\mathbf{F} = -\frac{GMm}{r^2}\hat{r}\]
+
+\[
+\mathbf{F} = -\frac{GMm}{r^2}\hat{r}
+\]
 where \(G = 6.674 \times 10^{-11}\) N m\(^2\) kg\(^{-2}\) is the gravitational constant.
 
 To solve the two-body problem rigorously, one transforms to the center-of-mass frame. Let \(M\) and \(m\) be the two masses. Their center of mass is fixed (or moving at constant velocity) in an inertial frame, and the relative coordinate \(\mathbf{r} = \mathbf{r}_1 - \mathbf{r}_2\) satisfies:
-\[\mu \ddot{\mathbf{r}} = -\frac{GMm}{r^2}\hat{r}\]
+
+\[
+\mu \ddot{\mathbf{r}} = -\frac{GMm}{r^2}\hat{r}
+\]
 where \(\mu = Mm/(M+m)\) is the **reduced mass**. This is formally equivalent to a one-body problem: a particle of mass \(\mu\) moving in a fixed gravitational potential sourced by a point mass \(M+m\) at the origin.
 
 The solution to this equation yields exactly the conic sections of Kepler's first law. The orbit type depends on the total mechanical energy:
@@ -87,33 +111,57 @@ The solution to this equation yields exactly the conic sections of Kepler's firs
 ### Orbital Energy
 
 The total mechanical energy of a two-body gravitational system is:
-\[E = \frac{1}{2}\mu v^2 - \frac{GMm}{r}\]
+
+\[
+E = \frac{1}{2}\mu v^2 - \frac{GMm}{r}
+\]
 where \(v = |\dot{\mathbf{r}}|\) is the relative speed. For a bound elliptical orbit, one can show (using the geometry of the ellipse and conservation laws) that:
-\[E = -\frac{GMm}{2a}\]
+
+\[
+E = -\frac{GMm}{2a}
+\]
 
 This is the **vis-viva equation** expressed as total energy. More commonly encountered is the orbital speed form — the vis-viva equation itself:
-\[v^2 = GM\left(\frac{2}{r} - \frac{1}{a}\right)\]
+
+\[
+v^2 = GM\left(\frac{2}{r} - \frac{1}{a}\right)
+\]
 
 This equation is extraordinarily useful. It gives the orbital speed at any point in the orbit given only \(r\) and \(a\). At perihelion \(r = a(1-e)\) and at aphelion \(r = a(1+e)\), so:
-\[v_\mathrm{per} = \sqrt{\frac{GM}{a}\cdot\frac{1+e}{1-e}}, \qquad v_\mathrm{aph} = \sqrt{\frac{GM}{a}\cdot\frac{1-e}{1+e}}\]
+
+\[
+v_\mathrm{per} = \sqrt{\frac{GM}{a}\cdot\frac{1+e}{1-e}}, \qquad v_\mathrm{aph} = \sqrt{\frac{GM}{a}\cdot\frac{1-e}{1+e}}
+\]
 
 The **escape velocity** from a distance \(r\) is obtained by setting \(E = 0\) (parabolic orbit, \(a \to \infty\)):
-\[v_\mathrm{esc} = \sqrt{\frac{2GM}{r}}\]
+
+\[
+v_\mathrm{esc} = \sqrt{\frac{2GM}{r}}
+\]
 From Earth's surface, \(v_\mathrm{esc} \approx 11.2\) km/s.
 
 ### Angular Momentum
 
 The angular momentum per unit reduced mass is:
-\[\ell = r v_\perp = r^2 \dot{\theta}\]
+
+\[
+\ell = r v_\perp = r^2 \dot{\theta}
+\]
 and it is conserved for any central force. In terms of orbital elements:
-\[\ell = \sqrt{GMa(1-e^2)}\]
+
+\[
+\ell = \sqrt{GMa(1-e^2)}
+\]
 
 The direction of \(\boldsymbol{\ell}\) is perpendicular to the orbital plane and defines the orbit's orientation. Conservation of \(\ell\) accounts for Kepler's second law, as noted above.
 
 ### Orbital Transfers and the Hohmann Orbit
 
 To move a spacecraft from one circular orbit to another requires changing its energy. The most fuel-efficient two-burn transfer is the **Hohmann transfer orbit**: an ellipse whose perihelion touches the inner orbit and whose aphelion touches the outer orbit. The semi-major axis of the transfer ellipse is:
-\[a_\mathrm{transfer} = \frac{r_1 + r_2}{2}\]
+
+\[
+a_\mathrm{transfer} = \frac{r_1 + r_2}{2}
+\]
 where \(r_1\) and \(r_2\) are the radii of the two circular orbits. The total \(\Delta v\) (velocity change, a measure of propellant needed) is minimized for this transfer.
 
 ## Tides and Tidal Forces
@@ -123,14 +171,20 @@ where \(r_1\) and \(r_2\) are the radii of the two circular orbits. The total \(
 Gravity is not uniform across a finite body. The side of a planet facing the Moon is pulled more strongly toward the Moon than the planet's center, which is in turn pulled more strongly than the far side. These differential gravitational forces are **tidal forces**.
 
 Consider a body of mass \(M\) at distance \(d\) from a planet of mass \(m\) and radius \(R\). The tidal acceleration across the planet — the difference in gravitational acceleration between the near side and far side — is approximately:
-\[a_\mathrm{tidal} \approx \frac{2GMR}{d^3}\]
+
+\[
+a_\mathrm{tidal} \approx \frac{2GMR}{d^3}
+\]
 
 This scales as \(d^{-3}\), much more steeply than the direct gravitational acceleration \(\propto d^{-2}\). Thus tidal forces are important at small distances and diminish rapidly with increasing separation.
 
 ### Tidal Deformation and the Roche Limit
 
 A satellite orbiting a planet is subject to the planet's tidal force. If the tidal force exceeds the satellite's self-gravity, the satellite will be torn apart. The distance at which these forces balance is the **Roche limit**:
-\[d_\mathrm{Roche} \approx 2.46 \, R_p \left(\frac{\rho_p}{\rho_s}\right)^{1/3}\]
+
+\[
+d_\mathrm{Roche} \approx 2.46 \, R_p \left(\frac{\rho_p}{\rho_s}\right)^{1/3}
+\]
 where \(R_p\) is the planet's radius and \(\rho_p\), \(\rho_s\) are the densities of planet and satellite, respectively. The numerical coefficient 2.46 applies for fluid bodies; rigid bodies have a somewhat smaller Roche limit.
 
 Saturn's rings lie almost entirely within the Roche limit for icy bodies (at about 2.5 Saturn radii), which explains why ring material cannot accumulate into a moon. Conversely, the Moon orbits Earth well outside the Roche limit, which is why it maintains its integrity.
@@ -140,7 +194,10 @@ Saturn's rings lie almost entirely within the Roche limit for icy bodies (at abo
 Tides raised on a body dissipate energy and transfer angular momentum. Over time, this causes the rotation rate of a satellite to synchronize with its orbital period — a state called **synchronous rotation** or **tidal locking**. The Moon is tidally locked to Earth, always presenting the same face. Most large moons in the solar system are tidally locked to their parent planets.
 
 The timescale for tidal locking scales roughly as:
-\[\tau_\mathrm{lock} \propto \frac{a^6 R_s \mu_s}{M_p^2 m_s}\]
+
+\[
+\tau_\mathrm{lock} \propto \frac{a^6 R_s \mu_s}{M_p^2 m_s}
+\]
 where \(\mu_s\) is the rigidity of the satellite and other variables are as defined above. The strong dependence on \(a\) means close-in satellites lock much faster.
 
 Tidal dissipation also causes orbital evolution. If the satellite orbits faster than the planet rotates (as with Phobos around Mars), tides extract angular momentum from the orbit and the satellite spirals inward. If the satellite is outside the synchronous orbit radius (as is Earth's Moon), tidal torques transfer angular momentum from the planet's spin to the orbit, causing the orbit to expand. The Moon is currently receding from Earth at approximately 3.8 cm/year.
@@ -166,31 +223,55 @@ Representative values: the Moon has \(A \approx 0.12\), Mars \(A \approx 0.25\),
 ### Blackbody Radiation
 
 A **blackbody** is an idealized perfect emitter and absorber. Its emission spectrum is given by the **Planck function**:
-\[B_\lambda(T) = \frac{2hc^2}{\lambda^5} \cdot \frac{1}{\exp(hc/\lambda k_B T) - 1}\]
+
+\[
+B_\lambda(T) = \frac{2hc^2}{\lambda^5} \cdot \frac{1}{\exp(hc/\lambda k_B T) - 1}
+\]
 where \(h = 6.626 \times 10^{-34}\) J s is Planck's constant, \(c\) is the speed of light, \(k_B = 1.381 \times 10^{-23}\) J K\(^{-1}\) is Boltzmann's constant, and \(\lambda\) is wavelength. The total power per unit area radiated by a blackbody is given by the **Stefan-Boltzmann law**:
-\[F = \sigma T^4\]
+
+\[
+F = \sigma T^4
+\]
 where \(\sigma = 5.670 \times 10^{-8}\) W m\(^{-2}\) K\(^{-4}\).
 
 The wavelength of peak emission is given by **Wien's displacement law**:
-\[\lambda_\mathrm{max} T = 2.898 \times 10^{-3} \text{ m K}\]
+
+\[
+\lambda_\mathrm{max} T = 2.898 \times 10^{-3} \text{ m K}
+\]
 The Sun, with surface temperature ~5778 K, peaks at ~500 nm (visible light). Earth, at ~255 K, peaks at ~11 \(\mu\)m (mid-infrared).
 
 ### Equilibrium Temperature
 
 A planet in thermal equilibrium absorbs solar radiation at the same rate it emits thermal radiation. The solar flux at distance \(d\) from the Sun (solar luminosity \(L_\odot\)) is:
-\[F_\odot = \frac{L_\odot}{4\pi d^2}\]
+
+\[
+F_\odot = \frac{L_\odot}{4\pi d^2}
+\]
 
 The power intercepted by a planet of radius \(R_p\) is \(\pi R_p^2 F_\odot\). A fraction \(A\) is reflected, so the power absorbed is:
-\[P_\mathrm{abs} = \pi R_p^2 F_\odot (1 - A)\]
+
+\[
+P_\mathrm{abs} = \pi R_p^2 F_\odot (1 - A)
+\]
 
 Assuming the planet radiates as a blackbody at uniform temperature \(T_\mathrm{eq}\) from its entire surface:
-\[P_\mathrm{emit} = 4\pi R_p^2 \sigma T_\mathrm{eq}^4\]
+
+\[
+P_\mathrm{emit} = 4\pi R_p^2 \sigma T_\mathrm{eq}^4
+\]
 
 Setting \(P_\mathrm{abs} = P_\mathrm{emit}\):
-\[T_\mathrm{eq} = \left[\frac{L_\odot (1-A)}{16\pi \sigma d^2}\right]^{1/4}\]
+
+\[
+T_\mathrm{eq} = \left[\frac{L_\odot (1-A)}{16\pi \sigma d^2}\right]^{1/4}
+\]
 
 This can also be written:
-\[T_\mathrm{eq} = T_\odot \left(\frac{R_\odot}{2d}\right)^{1/2} (1-A)^{1/4}\]
+
+\[
+T_\mathrm{eq} = T_\odot \left(\frac{R_\odot}{2d}\right)^{1/2} (1-A)^{1/4}
+\]
 
 For Earth at 1 AU with \(A = 0.30\): \(T_\mathrm{eq} \approx 255\) K. Earth's actual mean surface temperature is ~288 K, about 33 K warmer — the difference is the **greenhouse effect**, caused by absorption and re-emission of outgoing infrared radiation by greenhouse gases (CO\(_2\), H\(_2\)O, CH\(_4\)).
 
@@ -256,7 +337,10 @@ The current belt is far less massive than the solid material originally present 
 ### Asteroid Sizes and the Size-Frequency Distribution
 
 Asteroid sizes span an enormous range, from Ceres at ~945 km diameter down to meter-scale and smaller objects. The size-frequency distribution (SFD) of asteroids is well described by a power law:
-\[\frac{dN}{dD} \propto D^{-q}\]
+
+\[
+\frac{dN}{dD} \propto D^{-q}
+\]
 where \(N\) is the cumulative number of asteroids larger than diameter \(D\) and \(q \approx 3.5\) for the collisional steady-state population (the Dohnanyi slope). The actual distribution shows "waves" or kinks at certain sizes reflecting the transition between strength-dominated and gravity-dominated fragmentation regimes, as well as the signatures of specific families.
 
 Asteroid diameters are inferred from:
@@ -318,18 +402,33 @@ The **Kuiper Belt** extends from ~30 to ~50 AU beyond Neptune's orbit and contai
 ### The Equation of Hydrostatic Equilibrium
 
 The interior of a planet is in **hydrostatic equilibrium**: at each depth, the pressure gradient force balances gravity. Consider a thin shell of thickness \(dr\) at radius \(r\) within a spherical planet of total mass \(M(r)\) inside radius \(r\). The downward gravitational force per unit area is:
-\[dP = -\rho(r) g(r) \, dr\]
+
+\[
+dP = -\rho(r) g(r) \, dr
+\]
 where \(\rho(r)\) is the local density and:
-\[g(r) = \frac{GM(r)}{r^2}\]
+
+\[
+g(r) = \frac{GM(r)}{r^2}
+\]
 
 This gives the **equation of hydrostatic equilibrium**:
-\[\frac{dP}{dr} = -\rho g = -\frac{G M(r) \rho(r)}{r^2}\]
+
+\[
+\frac{dP}{dr} = -\rho g = -\frac{G M(r) \rho(r)}{r^2}
+\]
 
 Combined with the mass continuity equation:
-\[\frac{dM}{dr} = 4\pi r^2 \rho(r)\]
+
+\[
+\frac{dM}{dr} = 4\pi r^2 \rho(r)
+\]
 
 and an **equation of state** relating pressure to density (and temperature), these equations determine the internal structure. For incompressible bodies (\(\rho = \text{const}\)), the central pressure is:
-\[P_c = \frac{3GM^2}{8\pi R^4}\]
+
+\[
+P_c = \frac{3GM^2}{8\pi R^4}
+\]
 
 For Earth this gives \(P_c \approx 170\) GPa, consistent with seismic measurements (~360 GPa, the discrepancy due to compression of material at depth).
 
@@ -347,15 +446,27 @@ Evidence for internal layering comes from several sources:
 ### The Scale Height and Atmospheric Profile
 
 For an ideal gas in hydrostatic equilibrium at temperature \(T\) with mean molecular mass \(\bar{m}\):
-\[P = \frac{\rho k_B T}{\bar{m}}\]
+
+\[
+P = \frac{\rho k_B T}{\bar{m}}
+\]
 
 Substituting into the hydrostatic equation (treating \(g\) as constant near the surface):
-\[\frac{dP}{dr} = -\frac{\bar{m} g}{k_B T} P\]
+
+\[
+\frac{dP}{dr} = -\frac{\bar{m} g}{k_B T} P
+\]
 
 This gives an exponential pressure profile:
-\[P(z) = P_0 \exp\left(-\frac{z}{H}\right)\]
+
+\[
+P(z) = P_0 \exp\left(-\frac{z}{H}\right)
+\]
 where \(z\) is altitude above the surface and:
-\[H = \frac{k_B T}{\bar{m} g}\]
+
+\[
+H = \frac{k_B T}{\bar{m} g}
+\]
 is the **scale height** — the altitude over which pressure decreases by a factor of \(e\). For Earth's atmosphere: \(T \approx 250\) K, \(\bar{m} = 29 \times 1.67 \times 10^{-27}\) kg, \(g = 9.8\) m/s\(^2\), giving \(H \approx 8.5\) km.
 
 The scale height is physically important because it sets the thickness of the atmosphere relative to the planet's radius, controls the duration of transit signals in exoplanet atmospheres, and determines the depth of the limb in occultation experiments.
@@ -369,7 +480,10 @@ Earth's atmosphere is divided into regions by the sign of the temperature gradie
 - **Thermosphere** (>85 km): temperature rises steeply due to absorption of EUV and X-rays.
 
 The **dry adiabatic lapse rate** (the rate at which a parcel cools as it rises without exchanging heat) is:
-\[\Gamma_\mathrm{dry} = -\frac{dT}{dz}\bigg|_\mathrm{ad} = \frac{g}{c_p}\]
+
+\[
+\Gamma_\mathrm{dry} = -\frac{dT}{dz}\bigg|_\mathrm{ad} = \frac{g}{c_p}
+\]
 where \(c_p\) is the specific heat at constant pressure. For Earth's troposphere, \(\Gamma_\mathrm{dry} \approx 9.8\) K/km.
 
 ### Atmospheric Escape
@@ -377,7 +491,10 @@ where \(c_p\) is the specific heat at constant pressure. For Earth's troposphere
 Atmospheres can be lost over time by several mechanisms. The most fundamental is **Jeans escape** (thermal evaporation): the Maxwell-Boltzmann velocity distribution has a high-velocity tail extending beyond the escape velocity \(v_\mathrm{esc}\). Gas molecules in the exosphere (the uppermost, collisionless layer) moving faster than \(v_\mathrm{esc}\) can escape.
 
 The rate of Jeans escape is governed by the parameter:
-\[\lambda = \frac{v_\mathrm{esc}^2}{v_\mathrm{th}^2} = \frac{G M \bar{m}}{r_\mathrm{exo} k_B T_\mathrm{exo}}\]
+
+\[
+\lambda = \frac{v_\mathrm{esc}^2}{v_\mathrm{th}^2} = \frac{G M \bar{m}}{r_\mathrm{exo} k_B T_\mathrm{exo}}
+\]
 where \(v_\mathrm{th} = (2k_B T/\bar{m})^{1/2}\) is the thermal speed. Escape is efficient when \(\lambda \lesssim 3\text{–}4\). Mars (low gravity, high exospheric temperature from solar UV) loses hydrogen rapidly. The Moon (even lower gravity) has lost essentially all its atmosphere.
 
 **Non-thermal escape** processes include sputtering by solar wind ions, photochemical escape (dissociation produces fast particles), and hydrodynamic escape (a wind of hydrogen can drag along heavier gases).
@@ -389,7 +506,10 @@ where \(v_\mathrm{th} = (2k_B T/\bar{m})^{1/2}\) is the thermal speed. Escape is
 To model a planetary interior, one needs an equation of state (EOS) linking pressure, density, and temperature for the relevant materials (iron, silicate minerals, ices, hydrogen/helium). At the extreme pressures in giant planet interiors (tens of Mbar), hydrogen undergoes a transition to **metallic hydrogen** — a fluid conductor that produces the strong magnetic fields of Jupiter and Saturn. This transition is not a sharp phase boundary but rather a gradual ionization of hydrogen as pressure increases.
 
 The **polytropic EOS** is a useful approximation:
-\[P = K \rho^\gamma\]
+
+\[
+P = K \rho^\gamma
+\]
 where \(K\) is a constant and \(\gamma\) is the polytropic exponent. Combined with hydrostatic equilibrium, this gives the **Lane-Emden equation**, which has closed-form solutions for \(\gamma = 5/3\) and other special cases.
 
 ### Earth's Interior
@@ -429,14 +549,23 @@ A key mystery: Uranus emits essentially no internal heat (heat flux essentially 
 Heat is transported in planetary interiors by three mechanisms:
 
 **Thermal conduction** transports heat through molecular collisions according to Fourier's law:
-\[\mathbf{q} = -k \nabla T\]
+
+\[
+\mathbf{q} = -k \nabla T
+\]
 where \(k\) is the thermal conductivity and \(\mathbf{q}\) is the heat flux. Conduction is efficient in solids but too slow in the bulk of planetary mantles and envelopes.
 
 **Convection** occurs when a fluid parcel displaced upward is less dense than its surroundings and continues to rise. The criterion for convective instability is that the actual temperature gradient exceeds the adiabatic gradient:
-\[\left|\frac{dT}{dr}\right|_\mathrm{actual} > \left|\frac{dT}{dr}\right|_\mathrm{adiabatic}\]
+
+\[
+\left|\frac{dT}{dr}\right|_\mathrm{actual} > \left|\frac{dT}{dr}\right|_\mathrm{adiabatic}
+\]
 
 The **Rayleigh number** characterizes the vigor of convection:
-\[Ra = \frac{\alpha g \Delta T d^3}{\nu \kappa}\]
+
+\[
+Ra = \frac{\alpha g \Delta T d^3}{\nu \kappa}
+\]
 where \(\alpha\) is thermal expansivity, \(\Delta T\) is the temperature difference driving convection, \(d\) is the layer depth, \(\nu\) is kinematic viscosity, and \(\kappa\) is thermal diffusivity. Convection occurs when \(Ra\) exceeds a critical value (~1000 for a horizontal layer). In Earth's mantle, \(Ra \sim 10^7\), implying vigorous convection even though the mantle is solid rock — because over geological timescales, rock flows as a very viscous fluid.
 
 **Radiative transport** dominates where the medium is transparent to radiation. In stellar interiors radiative diffusion is important; in planetary interiors it is generally subdominant, though it matters in thin atmospheres.
@@ -463,7 +592,10 @@ The cratering process occurs in three stages:
 **Simple craters** (small, bowl-shaped) form when the transient crater is smaller than a threshold diameter \(D^*\), which depends on gravity and target properties. For lunar conditions, \(D^* \approx 15\) km. **Complex craters** (larger, with central peaks or peak rings) form when the transient crater collapses substantially — central peaks form by elastic rebound of the crater floor.
 
 The scaling law relating crater diameter \(D\) to impactor size \(d\), velocity \(v\), densities \(\rho_i\) and \(\rho_t\), and surface gravity \(g\):
-\[D \propto \left(\frac{\rho_i}{\rho_t}\right)^{1/3} \left(\frac{v^2}{g}\right)^{0.22} d^{0.78}\]
+
+\[
+D \propto \left(\frac{\rho_i}{\rho_t}\right)^{1/3} \left(\frac{v^2}{g}\right)^{0.22} d^{0.78}
+\]
 (Pi-scaling law). The dependence on \(g^{-0.22}\) means that for the same impactor on a lower-gravity body, the crater is larger.
 
 The **age of a planetary surface** can be estimated by crater counting. The crater size-frequency distribution on a geologically young surface increases over time. Absolute ages are calibrated from lunar samples returned by Apollo, which constrain the lunar cratering rate. The **Late Heavy Bombardment** (LHB) at ~3.9 Ga was a period of elevated impact rates inferred from clustering of impact-reset ages in lunar highland samples — though the reality of a distinct LHB "spike" versus a declining tail of accretion is debated.
@@ -568,12 +700,21 @@ The challenge of detecting exoplanets is one of contrast: a Sun-like star is rou
 A planet orbiting a star causes the star to wobble around the center of mass of the star-planet system. This stellar motion is reflected as a periodic Doppler shift in the star's spectral lines. The technique detects the **line-of-sight** (radial) component of the stellar velocity.
 
 For a circular orbit, the stellar radial velocity varies as:
-\[v_r(t) = K \cos(2\pi t/P + \phi_0) + \gamma\]
+
+\[
+v_r(t) = K \cos(2\pi t/P + \phi_0) + \gamma
+\]
 where \(\gamma\) is the system velocity and the **semi-amplitude** \(K\) is:
-\[K = \frac{m_p \sin i}{(M_* + m_p)^{2/3}} \left(\frac{2\pi G}{P}\right)^{1/3} \frac{1}{\sqrt{1-e^2}}\]
+
+\[
+K = \frac{m_p \sin i}{(M_* + m_p)^{2/3}} \left(\frac{2\pi G}{P}\right)^{1/3} \frac{1}{\sqrt{1-e^2}}
+\]
 
 Here \(i\) is the orbital inclination (angle between orbital plane normal and line of sight). For small \(m_p/M_*\):
-\[K \approx \left(\frac{2\pi G}{P}\right)^{1/3} \frac{m_p \sin i}{M_*^{2/3}} \frac{1}{\sqrt{1-e^2}}\]
+
+\[
+K \approx \left(\frac{2\pi G}{P}\right)^{1/3} \frac{m_p \sin i}{M_*^{2/3}} \frac{1}{\sqrt{1-e^2}}
+\]
 
 The **minimum mass** \(m_p \sin i\) is directly measurable; the true mass requires knowing \(i\). Jupiter induces a solar RV amplitude of ~12.5 m/s; Earth induces ~0.09 m/s. Current state-of-the-art spectrographs (ESPRESSO, HARPS) achieve precision of ~0.3 m/s, sufficient to detect Neptune-mass planets but not Earth-mass planets in the habitable zone.
 
@@ -582,7 +723,10 @@ The RV method is most sensitive to massive planets in short-period orbits (where
 ### Astrometry
 
 Rather than measuring the line-of-sight velocity of the star, astrometry measures its transverse position shift — the actual wobble of the star's position on the sky. The angular semi-amplitude of the stellar wobble is:
-\[a_* = \frac{m_p}{M_*} \cdot a \cdot \frac{1}{d}\]
+
+\[
+a_* = \frac{m_p}{M_*} \cdot a \cdot \frac{1}{d}
+\]
 where \(d\) is the distance to the system. For a Jupiter-analog at 5 AU around a Sun-like star at 10 pc, the astrometric signal is ~0.5 milliarcseconds (mas). This is challenging but achievable with Gaia (microarcsecond precision for bright stars). Gaia's astrometric planet search is expected to detect thousands of giant planets in multi-AU orbits, complementary to the RV method's preference for short periods.
 
 ### Pulsar Timing
@@ -592,16 +736,25 @@ The first extrasolar planets confirmed were found by **pulsar timing**: measurin
 ### Transit Photometry
 
 When a planet crosses the face of its star along our line of sight — a **transit** — it blocks a small fraction of the star's light. The **transit depth**:
-\[\delta = \left(\frac{R_p}{R_*}\right)^2\]
+
+\[
+\delta = \left(\frac{R_p}{R_*}\right)^2
+\]
 
 For a Jupiter around a Sun-like star, \(\delta = (0.1\, R_\odot/R_\odot)^2 = 10^{-2}\) (1% depth). For an Earth, \(\delta = (R_\oplus/R_\odot)^2 \approx 84\) ppm. Detecting Earth-size planets requires space-based photometry with very stable systematics; ground-based transit surveys are efficient for hot Jupiters.
 
 The transit duration is:
-\[t_\mathrm{transit} \approx \frac{P}{\pi} \cdot \frac{\sqrt{R_*^2 - (a\cos i)^2}}{a} \approx \frac{R_*}{v_\mathrm{orb}}\]
+
+\[
+t_\mathrm{transit} \approx \frac{P}{\pi} \cdot \frac{\sqrt{R_*^2 - (a\cos i)^2}}{a} \approx \frac{R_*}{v_\mathrm{orb}}
+\]
 For a central transit (\(i = 90°\)). Typical hot Jupiter transit durations are 1–3 hours; Earth's transit across the Sun lasts ~13 hours.
 
 The **transit probability** (geometric) is:
-\[P_\mathrm{transit} = \frac{R_* + R_p}{a} \approx \frac{R_*}{a}\]
+
+\[
+P_\mathrm{transit} = \frac{R_* + R_p}{a} \approx \frac{R_*}{a}
+\]
 For Earth at 1 AU: \(P_\mathrm{transit} \approx 0.5\%\). The Kepler space telescope observed ~170,000 stars simultaneously, finding ~2700 confirmed planets and ~4000 candidates. Kepler (2009–2018) transformed exoplanet demographics: the planet occurrence rate, the distribution of sizes, and the prevalence of multi-planet systems.
 
 The **Rossiter-McLaughlin effect** occurs during a transit: as the planet crosses the stellar disc, it blocks different parts of the rotating stellar surface (which contribute different Doppler shifts). This causes an anomalous RV signal whose shape encodes the **spin-orbit alignment** — whether the planetary orbit is prograde, retrograde, or tilted relative to the stellar equator.
@@ -615,7 +768,10 @@ The **angular resolution** required to resolve a planet from its star at separat
 ### Microlensing
 
 When a foreground star (the lens) passes precisely in front of a background star (the source), the gravitational field of the lens acts as a gravitational lens, briefly amplifying the source's apparent brightness. A **planetary microlensing event** occurs when the lens star harbors a planet; the planet causes an additional short-duration spike superimposed on the main lensing event. The amplification \(A\) depends on the impact parameter \(u\) (in units of the Einstein radius):
-\[A = \frac{u^2 + 2}{u\sqrt{u^2 + 4}}\]
+
+\[
+A = \frac{u^2 + 2}{u\sqrt{u^2 + 4}}
+\]
 
 Microlensing probes planets at ~1–10 AU around stars in the galactic bulge and disk; it is the only method sensitive to Earth-mass planets at a few AU around distant (kpc) stars. The statistical surveys (OGLE, MOA, KMTNet) have constrained the frequency of cold planets and discovered a population of free-floating planetary-mass objects.
 
@@ -660,10 +816,16 @@ The **interstellar medium** (ISM) is the gas, dust, plasma, and radiation that f
 ### Molecular Cloud Collapse and the Jeans Criterion
 
 Stars form when a molecular cloud (or a region within one) becomes gravitationally unstable and collapses. The **Jeans criterion** compares thermal support against gravity. A cloud of mass \(M\), radius \(R\), temperature \(T\), and mean molecular mass \(\bar{m}\) is unstable against collapse if its mass exceeds the **Jeans mass**:
-\[M_J = \left(\frac{5 k_B T}{G \bar{m}}\right)^{3/2} \left(\frac{3}{4\pi \rho}\right)^{1/2}\]
+
+\[
+M_J = \left(\frac{5 k_B T}{G \bar{m}}\right)^{3/2} \left(\frac{3}{4\pi \rho}\right)^{1/2}
+\]
 
 Equivalently, scales larger than the **Jeans length**:
-\[\lambda_J = \sqrt{\frac{15 k_B T}{4\pi G \rho \bar{m}}}\]
+
+\[
+\lambda_J = \sqrt{\frac{15 k_B T}{4\pi G \rho \bar{m}}}
+\]
 are gravitationally unstable. For typical molecular cloud conditions (\(T = 15\) K, \(n = 10^4\) cm\(^{-3}\)), \(M_J \approx 1\, M_\odot\) and \(\lambda_J \approx 0.1\) pc.
 
 Collapse is triggered by turbulence, cloud-cloud collisions, supernova shocks compressing a cloud edge, or simply by slow cooling increasing density until the Jeans criterion is met.
@@ -675,7 +837,10 @@ Conservation of angular momentum during collapse means a slowly rotating cloud c
 The accretion disk (**protoplanetary disk**, or **proplyd**) is where planets form. T Tauri stars (young, pre-main-sequence solar-type stars) are surrounded by protoplanetary disks of gas and dust, visible as optically thick structures in the near-infrared and at millimeter wavelengths. ALMA observations have revealed remarkable substructure — rings, gaps, spirals — in many protoplanetary disks, some of which may be created by forming planets.
 
 The **minimum mass solar nebula** (MMSN) is the minimum amount of gas needed to form the observed solar system planets, obtained by augmenting each planet's mass to solar composition and spreading it over the annulus between neighboring planets:
-\[\Sigma_\mathrm{MMSN} \approx 1700 \left(\frac{r}{1\, \mathrm{AU}}\right)^{-3/2} \text{ g cm}^{-2}\]
+
+\[
+\Sigma_\mathrm{MMSN} \approx 1700 \left(\frac{r}{1\, \mathrm{AU}}\right)^{-3/2} \text{ g cm}^{-2}
+\]
 for the solid component. The total disk mass in the MMSN is ~0.01–0.05 \(M_\odot\).
 
 ## From Dust to Planetesimals
@@ -683,7 +848,10 @@ for the solid component. The total disk mass in the MMSN is ~0.01–0.05 \(M_\od
 ### Dust Settling and Growth
 
 In the early disk, sub-micron dust grains sediment toward the disk midplane while growing through collisions. The settling timescale versus the orbital timescale gives a **Stokes number**:
-\[St = \frac{\pi}{2} \frac{\rho_s a_\mathrm{grain}}{\Sigma_\mathrm{gas}}\]
+
+\[
+St = \frac{\pi}{2} \frac{\rho_s a_\mathrm{grain}}{\Sigma_\mathrm{gas}}
+\]
 where \(\rho_s\) is the grain material density and \(a_\mathrm{grain}\) is grain radius. Small particles (St \(\ll 1\)) are well-coupled to the gas; large particles (St \(\gg 1\)) decouple and settle rapidly.
 
 As dust settles and grains collide, they grow from sub-micron to millimeter to centimeter sizes by relatively gentle hit-and-stick collisions, forming **fluffy aggregates**. Laboratory experiments and numerical simulations show growth proceeds well in this regime.
@@ -692,7 +860,10 @@ As dust settles and grains collide, they grow from sub-micron to millimeter to c
 
 At roughly meter-scale, growth faces a serious obstacle — the **meter-size barrier** (also called the "bouncing/fragmentation barrier"). Two problems occur simultaneously:
 1. **Radial drift**: gas in the disk orbits slightly slower than Keplerian speed due to radial pressure support. Solid particles orbit at Keplerian speed and therefore feel a headwind that drains their angular momentum, causing them to spiral inward. The radial drift velocity is maximized near meter-size:
-\[v_\mathrm{drift} \approx -2 St \cdot \frac{\Delta v_K}{\left(St + St^{-1}\right)}\]
+
+\[
+v_\mathrm{drift} \approx -2 St \cdot \frac{\Delta v_K}{\left(St + St^{-1}\right)}
+\]
 where \(\Delta v_K\) is the deviation from Keplerian velocity. Meter-sized bodies spiral into the star on ~100-orbit timescales — too fast for growth.
 2. **Fragmentation**: at these sizes, collision velocities exceed the fragmentation threshold (~10 m/s for silicates), so collisions break rocks rather than growing them.
 
@@ -709,17 +880,26 @@ Planetesimals born from streaming instability have sizes of roughly 100–1000 k
 ### Runaway and Oligarchic Growth
 
 Once a sea of planetesimals exists, gravitational focusing accelerates growth. The collision cross-section exceeds the geometric cross-section by the **gravitational focusing factor**:
-\[f_\mathrm{grav} = 1 + \left(\frac{v_\mathrm{esc}}{v_\infty}\right)^2\]
+
+\[
+f_\mathrm{grav} = 1 + \left(\frac{v_\mathrm{esc}}{v_\infty}\right)^2
+\]
 where \(v_\infty\) is the approach velocity at infinity and \(v_\mathrm{esc}\) is the escape velocity of the target.
 
 Initially, the velocity dispersion of the swarm is low (near-circular orbits), so \(f_\mathrm{grav} \gg 1\) for the largest bodies. The most massive bodies accrete at the highest rate and grow fastest — **runaway growth**. The largest "planetary embryos" grow to Moon-to-Mars mass within ~0.1–1 Myr, while the swarm of smaller planetesimals grows slowly.
 
 As embryos grow, they stir up the velocities of surrounding planetesimals through gravitational scattering, reducing their own focusing factors and transitioning to **oligarchic growth**: a small number of roughly equal-mass embryos grow at similar rates, each dominating its own "feeding zone" of width ~\(10\, r_H\) where:
-\[r_H = a\left(\frac{m}{3M_*}\right)^{1/3}\]
+
+\[
+r_H = a\left(\frac{m}{3M_*}\right)^{1/3}
+\]
 is the Hill radius (the radius within which a planet's gravity dominates over the star's tidal force).
 
 The **isolation mass** — the mass at which an embryo has consumed its feeding zone — is:
-\[M_\mathrm{iso} \approx \left(\frac{8\pi a^2 \Sigma_\mathrm{solid}}{3M_*^{1/2}}\right)^{3/2} \cdot M_*^{1/2} \cdot (10\sqrt{3})^3\]
+
+\[
+M_\mathrm{iso} \approx \left(\frac{8\pi a^2 \Sigma_\mathrm{solid}}{3M_*^{1/2}}\right)^{3/2} \cdot M_*^{1/2} \cdot (10\sqrt{3})^3
+\]
 
 At 1 AU in the MMSN, \(M_\mathrm{iso} \approx 0.07\, M_\oplus\) — a Mars-mass body. At 5 AU, \(M_\mathrm{iso} \approx 10\, M_\oplus\) — enough for giant planet core formation.
 
@@ -736,7 +916,10 @@ The critical core mass depends on the opacity and cooling rate of the envelope; 
 ### Disk Instability Model
 
 An alternative formation model for giant planets is **gravitational instability** (GI): if the disk is massive and cold enough, it fragments directly into gravitationally bound clumps of ~1–10 Jupiter masses. The criterion for GI is the **Toomre Q parameter**:
-\[Q = \frac{c_s \kappa}{\pi G \Sigma} < 1\]
+
+\[
+Q = \frac{c_s \kappa}{\pi G \Sigma} < 1
+\]
 where \(c_s\) is the sound speed, \(\kappa\) is the epicyclic frequency (approximately the orbital angular velocity), and \(\Sigma\) is the disk surface density. GI is favored in the outer disk (\(>50\) AU) where the disk is massive and cold. The directly imaged planets at wide separations (\(>50\) AU) around young stars (HR 8799, Beta Pic) may have formed by GI.
 
 ## Orbital Migration
@@ -744,13 +927,19 @@ where \(c_s\) is the sound speed, \(\kappa\) is the epicyclic frequency (approxi
 ### Type I Migration
 
 Planetary embryos and super-Earths (below the gap-opening mass) undergo **Type I migration** due to asymmetric torques from the disk. The outer spiral density wave excited by the planet receives more angular momentum than the inner wave (the differential Lindblad torque); the net Lindblad torque causes inward migration:
-\[\dot{a} \approx -\frac{m_p \Sigma a^2 \Omega}{M_*^2} h^{-2}\]
+
+\[
+\dot{a} \approx -\frac{m_p \Sigma a^2 \Omega}{M_*^2} h^{-2}
+\]
 where \(h = H/r\) is the disk aspect ratio. Type I migration timescale for an Earth-mass planet at 1 AU is ~10\(^5\) years — dangerously fast. The **corotation torque** can partially or fully reverse this inward migration in regions of outward entropy gradients, creating **convergence zones** where migration stalls. These zones may correspond to preferred locations for assembly of planetary systems.
 
 ### Type II Migration
 
 When a planet opens a deep gap in the disk (requiring the Hill radius to exceed the disk scale height: \(r_H > H\)), it couples to the viscous evolution of the disk and migrates inward with it — **Type II migration**. This is the mechanism that produces hot Jupiters. The migration timescale is the disk viscous timescale:
-\[\tau_\mathrm{II} \sim \frac{r^2}{\nu} = \frac{1}{\alpha h^2 \Omega}\]
+
+\[
+\tau_\mathrm{II} \sim \frac{r^2}{\nu} = \frac{1}{\alpha h^2 \Omega}
+\]
 where \(\alpha\) is the Shakura-Sunyaev disk viscosity parameter. For typical parameters, this is ~10\(^5\)–10\(^6\) years.
 
 ### The Nice Model and the Late Heavy Bombardment
@@ -771,7 +960,10 @@ The **habitable zone** (HZ) is conventionally defined as the range of orbital di
 - **Outer edge** ("maximum greenhouse limit"): CO\(_2\) clouds at low temperatures can increase albedo, and at the maximum CO\(_2\) greenhouse effect, liquid water cannot be maintained. For the Sun, this is ~1.67 AU (conservative) or ~1.7–2.0 AU (optimistic).
 
 The HZ scales with stellar luminosity:
-\[d_\mathrm{HZ} \propto L_*^{1/2}\]
+
+\[
+d_\mathrm{HZ} \propto L_*^{1/2}
+\]
 For M dwarfs (\(L_* \sim 0.01\, L_\odot\)), the HZ is at ~0.1 AU — where tidal locking is expected, creating extreme day-night temperature differences that may or may not preclude habitability.
 
 The **continuously habitable zone** (CHZ) is the region that remains habitable for the entire main-sequence lifetime of the star (as the star brightens over time, the HZ migrates outward). The CHZ for the Sun over 5 Gyr spans roughly 0.95–1.15 AU.
@@ -816,7 +1008,10 @@ A biosphere alters a planet's atmospheric composition in ways that might be dete
 The **Search for Extraterrestrial Intelligence** (SETI) looks for signatures of technologically advanced life: artificial radio signals, laser pulses, or anomalous stellar brightness variations (megastructures). Project OZMA (1960) and subsequent programs have searched millions of radio frequencies around thousands of stars without confirmed success.
 
 The **Drake equation** (Frank Drake, 1961) factors the number of communicating civilizations in the Galaxy \(N\) as:
-\[N = R_* \cdot f_p \cdot n_e \cdot f_l \cdot f_i \cdot f_c \cdot L\]
+
+\[
+N = R_* \cdot f_p \cdot n_e \cdot f_l \cdot f_i \cdot f_c \cdot L
+\]
 where:
 - \(R_*\) = rate of star formation in the Galaxy (~3 yr\(^{-1}\))
 - \(f_p\) = fraction of stars with planets (~1, from Kepler)

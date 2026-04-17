@@ -29,7 +29,8 @@ Formally, there are two players, Suspect 1 and Suspect 2, each choosing from {Qu
 \[\begin{aligned}
 u_1(F,Q) &amp;> u_1(Q,Q) > u_1(F,F) > u_1(Q,F) \\
 u_2(Q,F) &amp;> u_2(Q,Q) > u_2(F,F) > u_2(F,Q)
-\end{aligned}\]
+\end{aligned}
+\]
 
 We represent these preferences compactly in a **payoff table**, where each cell shows the payoffs (Suspect 1, Suspect 2):
 
@@ -349,7 +350,9 @@ The key insight comes from thinking about equilibrium beliefs. Consider <strong>
 
 The action profile \(a^*\) in a strategic game with ordinal preferences is a <strong>Nash Equilibrium</strong> if, for every player \(i\) and every action \(a_i\) of player \(i\), the equilibrium profile is at least as good for player \(i\) as any unilateral deviation:
 
-\[u_i(a^<em>) \geq u_i(a_i, a_{-i}^</em>) \quad \forall\ i \in N, \quad \forall\ a_i \in A_i\]
+\[
+u_i(a^<em>) \geq u_i(a_i, a_{-i}^</em>) \quad \forall\ i \in N, \quad \forall\ a_i \in A_i
+\]
 
 where \(a_{-i}^*\) denotes the equilibrium actions of all players other than \(i\), and \(N = \{1, \ldots, n\}\) is the set of players. The notation \(a_{-i}\) always refers to "the action profile with player \(i\)'s action removed."
 
@@ -435,7 +438,9 @@ Neither (Hawk, Hawk) nor (Dove, Dove) is a symmetric NE when \(c > v\). Playing 
 
 A player's <strong>best response function</strong> answers the question: given what the others are doing, what is my best action? Formally, for player \(i\), the best response function \(B_i(a_{-i})\) maps each list of opponents' actions to the set of payoff-maximizing actions for player \(i\):
 
-\[B_i(a_{-i}) = \left\{ a_i \in A_i \;\middle|\; u_i(a_i, a_{-i}) \geq u_i(a_i', a_{-i}) \quad \forall\ a_i' \in A_i \right\}\]
+\[
+B_i(a_{-i}) = \left\{ a_i \in A_i \;\middle|\; u_i(a_i, a_{-i}) \geq u_i(a_i', a_{-i}) \quad \forall\ a_i' \in A_i \right\}
+\]
 
 Each element of \(B_i(a_{-i})\) is a best response of player \(i\) to the opponents' action list \(a_{-i}\): given that every other player chooses their action in \(a_{-i}\), player \(i\) can do no better than to pick some element of \(B_i(a_{-i})\).
 
@@ -443,11 +448,15 @@ Each element of \(B_i(a_{-i})\) is a best response of player \(i\) to the oppone
 
 The best response function gives a clean characterization of Nash Equilibrium. An action profile \(a^*\) is a Nash Equilibrium if and only if every player's action is a best response to the others':
 
-\[a_i^<em> \in B_i(a_{-i}^</em>) \quad \forall\ i \in N\]
+\[
+a_i^<em> \in B_i(a_{-i}^</em>) \quad \forall\ i \in N
+\]
 
 This is exactly the NE definition restated: at equilibrium, no player can do better by deviating, which means each player is playing a best response. When each player has a <em>unique</em> best response to every action list, this becomes a system of \(n\) equations in \(n\) unknowns:
 
-\[a_i^<em> = b_i(a_{-i}^</em>) \quad \forall\ i \in N\]
+\[
+a_i^<em> = b_i(a_{-i}^</em>) \quad \forall\ i \in N
+\]
 
 where \(b_i\) is the single-valued best response. Solving this system yields the Nash Equilibrium.
 
@@ -461,23 +470,31 @@ In the two-player version of the 2/3-of-average game with action sets \(A_i = \{
 
 Best response functions are especially powerful for games with continuous action sets, where we can use calculus. Consider two players each choosing an effort level \(a_i \geq 0\) to invest in a relationship. Player \(i\)'s payoff is:
 
-\[u_i(a_i, a_j) = a_i(c + a_j - a_i)\]
+\[
+u_i(a_i, a_j) = a_i(c + a_j - a_i)
+\]
 
 where \(c > 0\) is a parameter capturing the baseline value of the relationship. Two features stand out. First, there is <strong>complementarity</strong> between the players' efforts: a higher \(a_j\) increases the return to player \(i\)'s own effort — investing in a relationship matters more when your partner also invests. Second, the \(-a_i^2\) term introduces diminishing returns, ensuring an interior optimum exists.
 
 To find the best response, we maximize player \(i\)'s quadratic payoff over \(a_i\). Since the payoff is concave in \(a_i\), there is a unique maximum for any \(a_j\):
 
-\[b_i(a_j) = \frac{1}{2}(c + a_j)\]
+\[
+b_i(a_j) = \frac{1}{2}(c + a_j)
+\]
 
 Both players have identical best response functions: optimal effort is half the sum of the baseline value and the partner's effort. This directly captures the complementarity — the harder your partner works, the harder you should work too.
 
 The Nash Equilibrium satisfies:
 
-\[a_1^<em> = \frac{1}{2}(c + a_2^</em>) \quad \text{and} \quad a_2^<em> = \frac{1}{2}(c + a_1^</em>)\]
+\[
+a_1^<em> = \frac{1}{2}(c + a_2^</em>) \quad \text{and} \quad a_2^<em> = \frac{1}{2}(c + a_1^</em>)
+\]
 
 By symmetry, suppose \(a_1^<em> = a_2^</em> = a^*\). Substituting into either equation:
 
-\[a^<em> = \frac{1}{2}(c + a^</em>) \implies 2a^<em> = c + a^</em> \implies a^* = c\]
+\[
+a^<em> = \frac{1}{2}(c + a^</em>) \implies 2a^<em> = c + a^</em> \implies a^* = c
+\]
 
 The unique Nash Equilibrium is \((c, c)\) — both players exert effort equal to the baseline relationship value. The geometry confirms this: the two best response lines (each with slope \(\frac{1}{2}\) and intercept \(\frac{c}{2}\) cross exactly at \((c, c)\).
 
@@ -491,7 +508,9 @@ Best response functions identify <em>optimal</em> actions. An equally useful ide
 
 Formally, in a strategic game, player \(i\)'s action \(a_i''\) <strong>strictly dominates</strong> action \(a_i'\) if:
 
-\[u_i(a_i'', a_{-i}) > u_i(a_i', a_{-i}) \quad \forall\ a_{-i}\]
+\[
+u_i(a_i'', a_{-i}) > u_i(a_i', a_{-i}) \quad \forall\ a_{-i}
+\]
 
 The action \(a_i'\) is then said to be <strong>strictly dominated</strong>. Since a strictly dominated action is never a best response to <em>any</em> action list, and Nash Equilibrium actions are always best responses to the opponents' NE actions, it follows immediately that <strong>strictly dominated actions are never used in any Nash Equilibrium</strong>. We can therefore safely delete them before searching for NE.
 
@@ -501,7 +520,9 @@ More powerfully, we can iterate. After eliminating a strictly dominated action, 
 
 <strong>Weak domination</strong> relaxes the strictness condition. Player \(i\)'s action \(a_i''\) <strong>weakly dominates</strong> action \(a_i'\) if:
 
-\[u_i(a_i'', a_{-i}) \geq u_i(a_i', a_{-i}) \quad \forall\ a_{-i}\]
+\[
+u_i(a_i'', a_{-i}) \geq u_i(a_i', a_{-i}) \quad \forall\ a_{-i}
+\]
 
 with at least one strict inequality. The key difference: <strong>weakly dominated actions can appear in Nash Equilibria</strong>, so we cannot simply discard them.
 
@@ -537,7 +558,9 @@ The <strong>actions</strong> available to each firm \(i\) constitute the set of 
 
 The <strong>preferences</strong> of each firm are represented by its profit. Firms are assumed to be profit-maximizing, so each firm \(i\) has a payoff function equal to revenues minus costs:
 
-\[\pi_i(q_1, \ldots, q_n) = q_i \, P(q_1 + \cdots + q_n) - C_i(q_i)\]
+\[
+\pi_i(q_1, \ldots, q_n) = q_i \, P(q_1 + \cdots + q_n) - C_i(q_i)
+\]
 
 Here \(C_i(q_i)\) is the total cost function for firm \(i\), which is increasing in \(q_i\) — the more you produce, the higher your costs. The term \(P(q_1 + \cdots + q_n)\) is the <strong>inverse demand function</strong>, which gives the equilibrium market price as a function of the total quantity produced across all firms. We call it an inverse demand function because, while a conventional demand function tells us how much consumers will buy at a given price, this function inverts that relationship and tells us what price will prevail given total market output. Crucially, this price is decreasing in total output: the more all firms collectively produce, the lower the market price — as long as price remains above zero.
 
@@ -547,7 +570,9 @@ The strategic tension in this model is immediate. Each firm wants to produce mor
 
 To make the model tractable, we work through a specific case in detail. We assume \(n = 2\), so we have a <strong>duopoly</strong>. The cost function is linear with a constant <strong>unit cost</strong> \(c\), so \(C_i(q_i) = c q_i\) for each firm. The inverse demand function is linear:
 
-\[P(q_1 + q_2) = \begin{cases} \alpha - q_1 - q_2 &amp;\text{if } q_1 + q_2 \leq \alpha \\ 0 &amp;\text{if } q_1 + q_2 &gt; \alpha \end{cases}\]
+\[
+P(q_1 + q_2) = \begin{cases} \alpha - q_1 - q_2 &amp;\text{if } q_1 + q_2 \leq \alpha \\ 0 &amp;\text{if } q_1 + q_2 &gt; \alpha \end{cases}
+\]
 
 The parameter \(\alpha &gt; 0\) is the maximum price this market can sustain — the price at which consumers would demand nothing, so it is the intercept of the demand curve. We require \(c &gt; 0\) as a basic economic assumption, and we require \(c &lt; \alpha\). This second condition deserves a moment's explanation: if \(c \geq \alpha\), the market price could never exceed the unit cost of production, and no firm would ever find it worthwhile to produce anything. The case \(c &lt; \alpha\) is therefore the only situation worth analyzing.
 
@@ -555,7 +580,9 @@ The parameter \(\alpha &gt; 0\) is the maximum price this market can sustain —
 
 Substituting the linear inverse demand and the unit cost into the profit function, firm \(i\)'s payoff is:
 
-\[\pi_i(q_1, q_2) = \begin{cases} q_i(\alpha - c - q_1 - q_2) &amp;\text{if } q_1 + q_2 \leq \alpha \\ -c q_i &amp;\text{if } q_1 + q_2 &gt; \alpha \end{cases}\]
+\[
+\pi_i(q_1, q_2) = \begin{cases} q_i(\alpha - c - q_1 - q_2) &amp;\text{if } q_1 + q_2 \leq \alpha \\ -c q_i &amp;\text{if } q_1 + q_2 &gt; \alpha \end{cases}
+\]
 
 When total output exceeds \(\alpha\), the market price is zero and firm \(i\)'s only cash flow is the negative cost \(-c q_i\). In that region the firm clearly maximizes its payoff by choosing \(q_i = 0\). Since both firms would choose zero output there, neither will ever find it optimal to push output so high that it exceeds \(\alpha\) in equilibrium. Our analysis therefore focuses on the interior case where \(q_1 + q_2 \leq \alpha\), and we will verify that the equilibrium quantities we find do indeed satisfy this condition.
 
@@ -565,15 +592,21 @@ When total output exceeds \(\alpha\), the market price is zero and firm \(i\)'s 
 
 To find each firm's best response, we proceed as follows. Firm 1 takes \(q_2\) as given — it cannot control what the other firm produces — and chooses \(q_1\) to maximize its profit. This profit function is quadratic in \(q_1\):
 
-\[\pi_1(q_1, q_2) = q_1(\alpha - c - q_1 - q_2)\]
+\[
+\pi_1(q_1, q_2) = q_1(\alpha - c - q_1 - q_2)
+\]
 
 Taking the derivative with respect to \(q_1\) and setting it equal to zero gives the <strong>first-order condition</strong>:
 
-\[\frac{\partial \pi_1}{\partial q_1} = \alpha - c - 2q_1 - q_2 = 0\]
+\[
+\frac{\partial \pi_1}{\partial q_1} = \alpha - c - 2q_1 - q_2 = 0
+\]
 
 Solving for \(q_1\):
 
-\[q_1 = \frac{1}{2}(\alpha - c - q_2)\]
+\[
+q_1 = \frac{1}{2}(\alpha - c - q_2)
+\]
 
 This is the interior solution. It says that firm 1's optimal output is decreasing in \(q_2\): the more the rival produces, the less firm 1 wants to produce. This negative slope is the hallmark of <strong>strategic substitutes</strong> — quantities are strategic substitutes because each firm's best response calls for less of the good when its rival chooses more.
 
@@ -587,11 +620,15 @@ We must be careful, however. Quantities must be non-negative. If \(q_2\) is larg
 
 Combining the interior and corner cases, firm 1's <strong>best response function</strong> is:
 
-\[b_1(q_2) = \begin{cases} \dfrac{1}{2}(\alpha - c - q_2) &amp;\text{if } q_2 \leq \alpha - c \\[6pt] 0 &amp;\text{if } q_2 &gt; \alpha - c \end{cases}\]
+\[
+b_1(q_2) = \begin{cases} \dfrac{1}{2}(\alpha - c - q_2) &amp;\text{if } q_2 \leq \alpha - c \\[6pt] 0 &amp;\text{if } q_2 &gt; \alpha - c \end{cases}
+\]
 
 Because firm 2 has the same cost function, its best response function is obtained by symmetry — simply interchange the labels 1 and 2:
 
-\[b_2(q_1) = \begin{cases} \dfrac{1}{2}(\alpha - c - q_1) &amp;\text{if } q_1 \leq \alpha - c \\[6pt] 0 &amp;\text{if } q_1 &gt; \alpha - c \end{cases}\]
+\[
+b_2(q_1) = \begin{cases} \dfrac{1}{2}(\alpha - c - q_1) &amp;\text{if } q_1 \leq \alpha - c \\[6pt] 0 &amp;\text{if } q_1 &gt; \alpha - c \end{cases}
+\]
 
 ## The Best Response Function Graph
 
@@ -609,15 +646,21 @@ The two interior segments intersect at a single point. That intersection is the 
 
 The Nash equilibrium is found by solving the two best response functions simultaneously. Setting each firm's output equal to its best response to the other's output:
 
-\[\begin{aligned} q_1 &amp;= \tfrac{1}{2}(\alpha - c - q_2) \\ q_2 &amp;= \tfrac{1}{2}(\alpha - c - q_1) \end{aligned}\]
+\[
+\begin{aligned} q_1 &amp;= \tfrac{1}{2}(\alpha - c - q_2) \\ q_2 &amp;= \tfrac{1}{2}(\alpha - c - q_1) \end{aligned}
+\]
 
 By the symmetry of the system, we can guess — and then verify — that \(q_1^<em> = q_2^</em>\). Substituting \(q_2^<em> = q_1^</em>\) into the first equation:
 
-\[q_1^<em> = \frac{1}{2}(\alpha - c - q_1^</em>) \implies \frac{3}{2}q_1^<em> = \frac{\alpha - c}{2} \implies q_1^</em> = \frac{\alpha - c}{3}\]
+\[
+q_1^<em> = \frac{1}{2}(\alpha - c - q_1^</em>) \implies \frac{3}{2}q_1^<em> = \frac{\alpha - c}{2} \implies q_1^</em> = \frac{\alpha - c}{3}
+\]
 
 The unique <strong>Nash equilibrium</strong> of the linear Cournot duopoly is therefore the <strong>symmetric Nash equilibrium</strong>:
 
-\[(q_1^<em>, q_2^</em>) = \left(\frac{\alpha - c}{3},\ \frac{\alpha - c}{3}\right)\]
+\[
+(q_1^<em>, q_2^</em>) = \left(\frac{\alpha - c}{3},\ \frac{\alpha - c}{3}\right)
+\]
 
 We can now verify our earlier assumption: total output is \(q_1^<em> + q_2^</em> = \frac{2}{3}(\alpha - c)\), which is less than \(\alpha\) since \(c &gt; 0\). The assumption \(q_1 + q_2 \leq \alpha\) is confirmed.
 
@@ -625,7 +668,9 @@ We can now verify our earlier assumption: total output is \(q_1^<em> + q_2^</em>
 
 With both firms producing \(\frac{\alpha - c}{3}\), the equilibrium market price is:
 
-\[P^<em> = \alpha - q_1^</em> - q_2^* = \alpha - \frac{2}{3}(\alpha - c) = \frac{\alpha}{3} + \frac{2c}{3}\]
+\[
+P^<em> = \alpha - q_1^</em> - q_2^* = \alpha - \frac{2}{3}(\alpha - c) = \frac{\alpha}{3} + \frac{2c}{3}
+\]
 
 This price is strictly positive (since \(c &gt; 0\) and \(\alpha &gt; 0\), confirming that we are in the valid region of the demand function.
 
@@ -655,7 +700,9 @@ This analysis explains precisely why competition authorities prohibit collusive 
 
 One of the most powerful applications of the Cournot model is to ask what happens to the equilibrium price as the number of competing firms grows. With \(n\) symmetric firms each facing a unit cost of \(c\) and the same linear inverse demand, the symmetric Nash equilibrium output per firm is \(\frac{\alpha - c}{n+1}\), so the equilibrium price is:
 
-\[P^*(n) = \frac{\alpha + nc}{n+1}\]
+\[
+P^*(n) = \frac{\alpha + nc}{n+1}
+\]
 
 As \(n \to \infty\), this expression approaches \(c\). In other words, as the number of firms in the industry grows without bound, the equilibrium price converges to the <strong>marginal cost</strong> of production. Firms will never sell goods below their cost — doing so would mean choosing to incur a loss — but with increasing competition they are driven ever closer to that lower bound.
 
@@ -665,7 +712,9 @@ This result is both intuitive and reassuring. More competition keeps prices low 
 
 The Cournot model turns out to capture something much more general than firms competing in a market. Notice that each firm's profit can be written in the form:
 
-\[\pi_i = f_i(q_i,\ q_1 + q_2 + \cdots + q_n)\]
+\[
+\pi_i = f_i(q_i,\ q_1 + q_2 + \cdots + q_n)
+\]
 
 where \(f_i\) is decreasing in its second argument. The payoff to any one player falls as the total aggregate action of all players rises, while each player controls only their own contribution to that aggregate. This structure captures any situation in which players compete to exploit a piece of <strong>common property</strong> whose value to each individual diminishes with total use.
 
@@ -699,7 +748,9 @@ Formalised as a strategic game:
 - <strong>Actions:</strong> each firm \(i\) chooses a price \(p_i \geq 0\). Importantly, prices are treated as continuous — not restricted to whole cents — and this continuity assumption will matter when we derive best response functions.
 - <strong>Preferences:</strong> each firm's preferences are represented by its profit \(\pi_i\). If firm \(i\) is one of \(m\) firms that jointly set the lowest price, then each receives \(1/m\) of total demand and earns
 
-\[ \pi_i = p_i \cdot \frac{D(p_i)}{m} - C_i\!\left(\frac{D(p_i)}{m}\right). \]
+\[
+\pi_i = p_i \cdot \frac{D(p_i)}{m} - C_i\!\left(\frac{D(p_i)}{m}\right).
+\]
 
 If some other firm has set a strictly lower price, firm \(i\) sells nothing and earns \(\pi_i = 0\).
 
@@ -709,7 +760,9 @@ If some other firm has set a strictly lower price, firm \(i\) sells nothing and 
 
 As with Cournot, a specific functional form makes the analysis concrete. Take \(n = 2\) firms. Each firm has a <strong>constant unit cost</strong> \(c > 0\), so that \(C_i(q_i) = c \, q_i\). The demand function is linear:
 
-\[ D(p) = \begin{cases} \alpha - p &amp; \text{if } p \leq \alpha \\ 0 &amp; \text{if } p > \alpha, \end{cases} \]
+\[
+D(p) = \begin{cases} \alpha - p &amp; \text{if } p \leq \alpha \\ 0 &amp; \text{if } p > \alpha, \end{cases}
+\]
 
 where \(\alpha > 0\) is the intercept of demand (the quantity demanded if price were zero) and \(\alpha\) also serves as the <strong>choke price</strong> beyond which no consumer is willing to buy. The parameter restriction \(c &lt; \alpha\) ensures that production is worthwhile: if \(c \geq \alpha\), demand would be zero at every price at or above the unit cost, so the market would be economically vacuous.
 
@@ -717,7 +770,9 @@ where \(\alpha > 0\) is the intercept of demand (the quantity demanded if price 
 
 With two firms the profit for firm \(i\) (where \(j\) denotes the other firm) takes three forms depending on how the prices compare:
 
-\[ \pi_i(p_1, p_2) = \begin{cases} (p_i - c)(\alpha - p_i) &amp; \text{if } p_i &lt; p_j \\ \frac{1}{2}(p_i - c)(\alpha - p_i) &amp; \text{if } p_i = p_j \\ 0 &amp; \text{if } p_i > p_j. \end{cases} \]
+\[
+\pi_i(p_1, p_2) = \begin{cases} (p_i - c)(\alpha - p_i) &amp; \text{if } p_i &lt; p_j \\ \frac{1}{2}(p_i - c)(\alpha - p_i) &amp; \text{if } p_i = p_j \\ 0 &amp; \text{if } p_i > p_j. \end{cases}
+\]
 
 When firm \(i\) charges the strictly lower price it captures all demand \(\alpha - p_i\) and earns \(p_i - c\) on each unit. When both prices are equal they split the market. When firm \(i\) charges more it is priced out entirely.
 
@@ -725,7 +780,9 @@ When firm \(i\) charges the strictly lower price it captures all demand \(\alpha
 
 Before deriving best responses it is useful to define the <strong>monopoly price</strong> \(p^M\) as the value of \(p\) that maximises the expression \((p - c)(\alpha - p)\). Why is this the monopoly price? Imagine a single firm in the market. It would choose \(p\) to maximise profit \((p - c) \cdot D(p) = (p - c)(\alpha - p)\). That maximising price is precisely \(p^M\). The expression is quadratic in \(p\) and concave, so there is a unique interior maximum. Setting the derivative to zero gives
 
-\[ p^M = \frac{\alpha + c}{2}. \]
+\[
+p^M = \frac{\alpha + c}{2}.
+\]
 
 No firm would ever voluntarily set a price above \(p^M\), because doing so would reduce profit relative to charging \(p^M\) even when capturing the whole market. This ceiling will organise the case analysis below.
 
@@ -741,7 +798,9 @@ Suppose the rival firm has set a price strictly below the common marginal cost. 
 
 Zero beats any negative number, so the best response here is to <strong>lose the price war intentionally</strong> — to set any price strictly above \(p_j\):
 
-\[ B_i(p_j) = \{p_i : p_i > p_j\} \quad \text{if } p_j &lt; c. \]
+\[
+B_i(p_j) = \{p_i : p_i > p_j\} \quad \text{if } p_j &lt; c.
+\]
 
 ### Case 2: \(p_j = c\)
 
@@ -753,7 +812,9 @@ Now suppose the rival prices exactly at marginal cost.
 
 Both \(p_i = c\) and any \(p_i > c\) yield zero profit, which is the best achievable. The best response set is therefore all prices at or above \(c\):
 
-\[ B_i(p_j) = \{p_i : p_i \geq c\} \quad \text{if } p_j = c. \]
+\[
+B_i(p_j) = \{p_i : p_i \geq c\} \quad \text{if } p_j = c.
+\]
 
 ### Case 3: \(c &lt; p_j \leq p^M\)
 
@@ -761,7 +822,9 @@ This is the most subtle case. The rival's price is above cost but no higher than
 
 The picture is of a profit function that climbs steadily as \(p_i\) approaches \(p_j\) from below, then drops sharply at \(p_j\), then remains at zero. Firm \(i\) wants to get as close to \(p_j\) as possible without actually reaching it — but because prices are drawn from a continuum, there is no such closest point. For any candidate price \(p_j - \varepsilon\) one can always find \(p_j - \varepsilon/2\), which is even better. Consequently, <strong>the best response set is empty</strong>:
 
-\[ B_i(p_j) = \emptyset \quad \text{if } c &lt; p_j \leq p^M. \]
+\[
+B_i(p_j) = \emptyset \quad \text{if } c &lt; p_j \leq p^M.
+\]
 
 This empty best response would not arise if prices were restricted to a discrete grid (say, whole cents). In that discrete setting the best response would simply be to charge one cent below \(p_j\). The textbook exercise 67.2 asks you to work through that case explicitly.
 
@@ -769,13 +832,17 @@ This empty best response would not arise if prices were restricted to a discrete
 
 If the rival prices strictly above the monopoly price it has effectively removed itself from competition. Consumers will never buy from a firm charging above \(p^M\) when firm \(i\) can do better. From firm \(i\)'s perspective it is as though there is no rival at all. The profit-maximising response is simply to act as a monopolist and charge \(p^M\):
 
-\[ B_i(p_j) = \{p^M\} \quad \text{if } p_j > p^M. \]
+\[
+B_i(p_j) = \{p^M\} \quad \text{if } p_j > p^M.
+\]
 
 ### Summary of the Best Response Function
 
 Combining the four cases:
 
-\[ B_i(p_j) = \begin{cases} \{p_i : p_i > p_j\} &amp; \text{if } p_j &lt; c \\ \{p_i : p_i \geq c\} &amp; \text{if } p_j = c \\ \emptyset &amp; \text{if } c &lt; p_j \leq p^M \\ \{p^M\} &amp; \text{if } p_j > p^M. \end{cases} \]
+\[
+B_i(p_j) = \begin{cases} \{p_i : p_i > p_j\} &amp; \text{if } p_j &lt; c \\ \{p_i : p_i \geq c\} &amp; \text{if } p_j = c \\ \emptyset &amp; \text{if } c &lt; p_j \leq p^M \\ \{p^M\} &amp; \text{if } p_j > p^M. \end{cases}
+\]
 
 Notice two distinctive features of this best response correspondence. For some values of \(p_j\) (cases 1 and 2) there are multiple best responses; for others (case 3) there is no best response at all. This is a set-valued, and in places empty-valued, correspondence — qualitatively different from the smooth best response functions encountered in Cournot.
 
@@ -787,7 +854,9 @@ When we superimpose the best response graph of firm 1 (plotting the best respons
 
 The <strong>unique Nash equilibrium</strong> of the Bertrand duopoly game is therefore:
 
-\[ (p_1^<em>, p_2^</em>) = (c, c). \]
+\[
+(p_1^<em>, p_2^</em>) = (c, c).
+\]
 
 ## Verification by Profitable Deviation
 
@@ -900,25 +969,35 @@ To find candidate 1's best response function, we fix candidate 2's position \( x
 
 <strong>Case 1: \( x_2 &lt; m \).</strong> Suppose candidate 2 has positioned herself strictly to the left of the median. If candidate 1 also positions to the left of \( x_2 \), then candidate 2 attracts all voters to her right — a set that, since \( x_2 &lt; m \), contains more than 50% of the electorate. Candidate 1 loses. On the other hand, if candidate 1 moves to the right of \( x_2 \), she begins winning votes. She wins as long as the dividing midpoint \( \frac{1}{2}(x_1 + x_2) \) lies to the left of \( m \), which means that candidate 1 holds a majority. The constraint for candidate 1 to win is:
 
-\[ \frac{1}{2}(x_1 + x_2) &lt; m \]
+\[
+\frac{1}{2}(x_1 + x_2) &lt; m
+\]
 
 Rearranging, this requires \( x_1 &lt; 2m - x_2 \). The point \( 2m - x_2 \) is the mirror image of \( x_2 \) reflected through \( m \). Candidate 1's best response is therefore the open interval of all positions strictly between \( x_2 \) and \( 2m - x_2 \):
 
-\[ B_1(x_2) = \{ x_1 : x_2 &lt; x_1 &lt; 2m - x_2 \} \quad \text{if } x_2 &lt; m \]
+\[
+B_1(x_2) = \{ x_1 : x_2 &lt; x_1 &lt; 2m - x_2 \} \quad \text{if } x_2 &lt; m
+\]
 
 Any position in this interval secures a win; any position outside it results in a loss or a tie.
 
 <strong>Case 2: \( x_2 &gt; m \).</strong> This case is perfectly symmetric. Candidate 2 is now to the right of the median, so any position to the right of \( x_2 \) causes candidate 1 to lose. For candidate 1 to win, she must be to the left of \( x_2 \), and the midpoint \( \frac{1}{2}(x_1 + x_2) \) must lie to the right of \( m \), which requires \( x_1 &gt; 2m - x_2 \). The best response is:
 
-\[ B_1(x_2) = \{ x_1 : 2m - x_2 &lt; x_1 &lt; x_2 \} \quad \text{if } x_2 &gt; m \]
+\[
+B_1(x_2) = \{ x_1 : 2m - x_2 &lt; x_1 &lt; x_2 \} \quad \text{if } x_2 &gt; m
+\]
 
 <strong>Case 3: \( x_2 = m \).</strong> When candidate 2 sits exactly at the median, any deviation by candidate 1 to either side results in a loss. If candidate 1 moves to the right of \( m \), the midpoint between the two positions lies to the right of \( m \), meaning candidate 2 captures more than half the electorate. The same logic applies if candidate 1 moves to the left. The only option that does not result in a loss is to match candidate 2 exactly at \( m \), which produces a tie. Since a tie is strictly better than a loss:
 
-\[ B_1(x_2) = \{ m \} \quad \text{if } x_2 = m \]
+\[
+B_1(x_2) = \{ m \} \quad \text{if } x_2 = m
+\]
 
 Putting the three cases together, candidate 1's complete best response function is:
 
-\[ B_1(x_2) = \begin{cases} \{ x_1 : x_2 &lt; x_1 &lt; 2m - x_2 \} &amp;amp; \text{if } x_2 &lt; m \\ \{ m \} &amp;amp; \text{if } x_2 = m \\ \{ x_1 : 2m - x_2 &lt; x_1 &lt; x_2 \} &amp;amp; \text{if } x_2 &gt; m \end{cases} \]
+\[
+B_1(x_2) = \begin{cases} \{ x_1 : x_2 &lt; x_1 &lt; 2m - x_2 \} &amp;amp; \text{if } x_2 &lt; m \\ \{ m \} &amp;amp; \text{if } x_2 = m \\ \{ x_1 : 2m - x_2 &lt; x_1 &lt; x_2 \} &amp;amp; \text{if } x_2 &gt; m \end{cases}
+\]
 
 Candidate 2 faces entirely symmetric incentives and has an identical best response function with the roles of \( x_1 \) and \( x_2 \) exchanged.
 
@@ -928,7 +1007,9 @@ Graphing the two best response functions reveals two triangular regions in the \
 
 Superimposing the two best response functions, the game has a <strong>unique Nash equilibrium</strong> in which both candidates choose the voters' median position:
 
-\[ (x_1^<em>, x_2^</em>) = (m, m) \]
+\[
+(x_1^<em>, x_2^</em>) = (m, m)
+\]
 
 ### Method 2: Direct Enumeration of Cases
 
@@ -1022,7 +1103,9 @@ Throughout our formal analysis we adopt two working assumptions. First, every bi
 
 We denote the number of bidders by \( n \) where \( n \geq 2 \), and we write \( v_i \) for the value player \( i \) attaches to the object. We label players so that valuations are strictly ordered:
 
-\[ v_1 > v_2 > v_3 > \cdots > v_n > 0 \]
+\[
+v_1 > v_2 > v_3 > \cdots > v_n > 0
+\]
 
 That is, player 1 is whoever values the object most, player 2 values it second most, and so on. If player \( i \) wins the object at price \( p \), their payoff is \( v_i - p \); if they lose, their payoff is zero. In the event of a tied highest bid, we break the tie in favor of the player with the smallest index — equivalently, the tied bidder who values the object most.
 
@@ -1069,19 +1152,27 @@ To derive the Nash Equilibrium bid in the first-price auction we introduce a ric
 
 If all other bidders use the strategy \( b(v) \), bidder \( i \) with valuation \( v_i \) who submits bid \( x \) wins if and only if \( x \) exceeds every other bidder's bid. Because the bidding function is increasing, this is equivalent to \( v_i \) being the highest valuation, which happens with probability \( x^{n-1} \) when \( x = b(v_i) \). The expected payoff to bidder \( i \) from submitting bid \( x \) is:
 
-\[ \pi(x, v_i) = (v_i - x) \cdot x^{n-1} \]
+\[
+\pi(x, v_i) = (v_i - x) \cdot x^{n-1}
+\]
 
 Maximizing over \( x \) and imposing the equilibrium condition \( x = b(v_i) \) yields the first-order condition:
 
-\[ \frac{d\pi}{dx} = x^{n-1} - (v_i - x)(n-1)x^{n-2} = 0 \]
+\[
+\frac{d\pi}{dx} = x^{n-1} - (v_i - x)(n-1)x^{n-2} = 0
+\]
 
 Dividing through by \( x^{n-2} \) and rearranging:
 
-\[ x - (v_i - x)(n-1) = 0 \implies x \cdot n = v_i (n-1) \implies x = \frac{n-1}{n} v_i \]
+\[
+x - (v_i - x)(n-1) = 0 \implies x \cdot n = v_i (n-1) \implies x = \frac{n-1}{n} v_i
+\]
 
 The symmetric Nash Equilibrium bidding strategy is therefore:
 
-\[ b_i = \frac{n-1}{n} \, v_i \]
+\[
+b_i = \frac{n-1}{n} \, v_i
+\]
 
 Every bidder shades their bid to a fraction \( (n-1)/n \) of their true valuation. As the number of bidders \( n \) grows, this fraction approaches 1 and bids converge toward true valuations — competition disciplines bid shading. With only two bidders (\( n = 2 \), each bids exactly half their valuation. With ten bidders, each bids 90% of their valuation.
 
@@ -1200,7 +1291,9 @@ To see why, consider two games. In both, the payoffs represent the ordinal ranki
 
 To handle preferences over lotteries, we adopt the framework of <strong>von Neumann–Morgenstern (vNM) preferences</strong>. We say a player has vNM preferences if there exists a <strong>Bernoulli payoff function</strong> \( u_i \) over deterministic outcomes such that the player's preferences over lotteries are represented by the expected value of that function. Formally, given two lotteries \( P \) and \( Q \) that yield outcomes \( a_1, a_2, \ldots, a_k \) with probabilities \( p_1, \ldots, p_k \) and \( q_1, \ldots, q_k \) respectively, player \( i \) prefers \( P \) to \( Q \) if and only if:
 
-\[ \sum_{j} p_j \, u_i(a_j) \;&gt;\; \sum_{j} q_j \, u_i(a_j) \]
+\[
+\sum_{j} p_j \, u_i(a_j) \;&gt;\; \sum_{j} q_j \, u_i(a_j)
+\]
 
 In other words, the player simply computes the expected Bernoulli payoff of each lottery and chooses the higher one. This is the natural thing to do — it just requires that the numbers inside the payoff boxes carry cardinal meaning, not merely ordinal ranking.
 
@@ -1218,7 +1311,9 @@ A <strong>strategic game with vNM preferences</strong> has the same formal struc
 
 We write \( \alpha_i \) for player \( i \)'s mixed strategy, and \( \alpha_i(a_i) \) for the probability that \( \alpha_i \) assigns to action \( a_i \). A <strong>profile</strong> of mixed strategies is denoted \( \alpha = (\alpha_1, \alpha_2, \ldots) \), where each \( \alpha_i \) is a probability distribution over \( A_i \). Formally:
 
-\[ \alpha = \bigl((\alpha_1(a_1), \alpha_1(a_2), \ldots),\; (\alpha_2(a_1), \alpha_2(a_2), \ldots),\; \ldots\bigr) \]
+\[
+\alpha = \bigl((\alpha_1(a_1), \alpha_1(a_2), \ldots),\; (\alpha_2(a_1), \alpha_2(a_2), \ldots),\; \ldots\bigr)
+\]
 
 A mixed strategy that assigns probability 1 to a single action is called a <strong>pure strategy</strong>. The world we lived in before this chapter was the world of pure strategies — a special case of mixed strategies. By expanding to allow probability distributions over actions, we are strictly generalizing our earlier framework.
 
@@ -1228,7 +1323,9 @@ For convenience, when a player has only two actions, we write a mixed strategy a
 
 Player \( i \)'s expected payoff to a mixed strategy profile \( \alpha \) is:
 
-\[ U_i(\alpha) \;=\; \sum_{a_i \in A_i} \alpha_i(a_i) \cdot E_i(a_i,\, \alpha_{-i}) \]
+\[
+U_i(\alpha) \;=\; \sum_{a_i \in A_i} \alpha_i(a_i) \cdot E_i(a_i,\, \alpha_{-i})
+\]
 
 where \( E_i(a_i, \alpha_{-i}) \) is player \( i \)'s expected payoff when she plays the pure strategy \( a_i \) and the other players use their mixed strategies \( \alpha_{-i} \). This is a weighted average of the expected payoffs to each of her actions, with weights given by the probabilities in \( \alpha_i \). The critical observation is that player \( i \) does not control \( E_i(a_i, \alpha_{-i}) \) — that depends on what others do. The only thing player \( i \) controls is the weight \( \alpha_i(a_i) \) she places on each action.
 
@@ -1236,7 +1333,9 @@ where \( E_i(a_i, \alpha_{-i}) \) is player \( i \)'s expected payoff when she p
 
 <strong>Definition.</strong> A mixed strategy profile \( \alpha^* \) in a strategic game with vNM preferences is a <strong>mixed strategy Nash equilibrium (MSNE)</strong> if for each player \( i \):
 
-\[ U_i(\alpha^<em>) \;\geq\; U_i(\alpha_i,\, \alpha^</em>_{-i}) \quad \text{for every mixed strategy } \alpha_i \text{ of player } i \]
+\[
+U_i(\alpha^<em>) \;\geq\; U_i(\alpha_i,\, \alpha^</em>_{-i}) \quad \text{for every mixed strategy } \alpha_i \text{ of player } i
+\]
 
 where \( U_i(\alpha) \) is player \( i \)'s expected payoff to the mixed strategy profile \( \alpha \).
 
@@ -1281,19 +1380,27 @@ Consider the mixed strategy profile \( \alpha = ((\,0.4,\, 0.6\,),\; (\,0.2,\, 0
 
 Let \( p \) denote the probability Player 1's mixed strategy assigns to Heads, and \( q \) the probability Player 2's mixed strategy assigns to Heads. Given Player 2's strategy, Player 1's expected payoffs are:
 
-\[ E_1(\text{H},\, q) \;=\; q \cdot 1 + (1-q) \cdot (-1) \;=\; 2q - 1 \]
+\[
+E_1(\text{H},\, q) \;=\; q \cdot 1 + (1-q) \cdot (-1) \;=\; 2q - 1
+\]
 
-\[ E_1(\text{T},\, q) \;=\; q \cdot (-1) + (1-q) \cdot 1 \;=\; 1 - 2q \]
+\[
+E_1(\text{T},\, q) \;=\; q \cdot (-1) + (1-q) \cdot 1 \;=\; 1 - 2q
+\]
 
 Player 1 strictly prefers Heads when \( 2q - 1 > 1 - 2q \), i.e., when \( q > {\textstyle\frac{1}{2}} \); strictly prefers Tails when \( q &lt; {\textstyle\frac{1}{2}} \); and is indifferent — willing to play any mix — when \( q = {\textstyle\frac{1}{2}} \). Therefore:
 
-\[ B_1(q) \;=\; \begin{cases} (0, 1) &amp; \text{if } q &lt; {\textstyle\frac{1}{2}} \\[4pt] (p,\, 1-p) \text{ for all } 0 \leq p \leq 1 &amp; \text{if } q = {\textstyle\frac{1}{2}} \\[4pt] (1, 0) &amp; \text{if } q > {\textstyle\frac{1}{2}} \end{cases} \]
+\[
+B_1(q) \;=\; \begin{cases} (0, 1) &amp; \text{if } q &lt; {\textstyle\frac{1}{2}} \\[4pt] (p,\, 1-p) \text{ for all } 0 \leq p \leq 1 &amp; \text{if } q = {\textstyle\frac{1}{2}} \\[4pt] (1, 0) &amp; \text{if } q > {\textstyle\frac{1}{2}} \end{cases}
+\]
 
 By symmetry, Player 2's best response function satisfies \( B_2(p) \): play \( q = 0 \) (always Tails) when \( p > {\textstyle\frac{1}{2}} \), play \( q = 1 \) (always Heads) when \( p &lt; {\textstyle\frac{1}{2}} \), and mix freely when \( p = {\textstyle\frac{1}{2}} \).
 
 When these two best response functions are plotted — with \( p \) on the horizontal axis and \( q \) on the vertical axis — they cross at exactly one point: \( p = {\textstyle\frac{1}{2}}, q = {\textstyle\frac{1}{2}} \). This is the unique MSNE:
 
-\[ \alpha^* \;=\; \Bigl(\Bigl({\textstyle\frac{1}{2}},\, {\textstyle\frac{1}{2}}\Bigr),\; \Bigl({\textstyle\frac{1}{2}},\, {\textstyle\frac{1}{2}}\Bigr)\Bigr) \]
+\[
+\alpha^* \;=\; \Bigl(\Bigl({\textstyle\frac{1}{2}},\, {\textstyle\frac{1}{2}}\Bigr),\; \Bigl({\textstyle\frac{1}{2}},\, {\textstyle\frac{1}{2}}\Bigr)\Bigr)
+\]
 
 ### Example: Battle of the Sexes — Best Response Approach
 
@@ -1319,16 +1426,25 @@ Recall the <strong>Battle of the Sexes (BoS)</strong> game, in which a couple wa
 
 Let \( p \) be the probability Player 1 plays B and \( q \) be the probability Player 2 plays B. Player 1's expected payoffs are:
 
-\[ E_1(B, q) = 2q + 0 \cdot (1-q) = 2q \]
-\[ E_1(S, q) = 0 \cdot q + 1 \cdot (1-q) = 1 - q \]
+\[
+E_1(B, q) = 2q + 0 \cdot (1-q) = 2q
+\]
+
+\[
+E_1(S, q) = 0 \cdot q + 1 \cdot (1-q) = 1 - q
+\]
 
 Player 1 is indifferent when \( 2q = 1 - q \), giving \( q = {\textstyle\frac{1}{3}} \). So:
 
-\[ B_1(q) \;=\; \begin{cases} (0, 1) &amp; \text{if } q &lt; {\textstyle\frac{1}{3}} \\[4pt] (p,\, 1-p) \text{ for all } 0 \leq p \leq 1 &amp; \text{if } q = {\textstyle\frac{1}{3}} \\[4pt] (1, 0) &amp; \text{if } q > {\textstyle\frac{1}{3}} \end{cases} \]
+\[
+B_1(q) \;=\; \begin{cases} (0, 1) &amp; \text{if } q &lt; {\textstyle\frac{1}{3}} \\[4pt] (p,\, 1-p) \text{ for all } 0 \leq p \leq 1 &amp; \text{if } q = {\textstyle\frac{1}{3}} \\[4pt] (1, 0) &amp; \text{if } q > {\textstyle\frac{1}{3}} \end{cases}
+\]
 
 For Player 2, \( E_2(B, p) = p \) and \( E_2(S, p) = 2(1-p) \). Player 2 is indifferent when \( p = 2(1-p) \), giving \( p = {\textstyle\frac{2}{3}} \). So:
 
-\[ B_2(p) \;=\; \begin{cases} (0, 1) &amp; \text{if } p &lt; {\textstyle\frac{2}{3}} \\[4pt] (q,\, 1-q) \text{ for all } 0 \leq q \leq 1 &amp; \text{if } p = {\textstyle\frac{2}{3}} \\[4pt] (1, 0) &amp; \text{if } p > {\textstyle\frac{2}{3}} \end{cases} \]
+\[
+B_2(p) \;=\; \begin{cases} (0, 1) &amp; \text{if } p &lt; {\textstyle\frac{2}{3}} \\[4pt] (q,\, 1-q) \text{ for all } 0 \leq q \leq 1 &amp; \text{if } p = {\textstyle\frac{2}{3}} \\[4pt] (1, 0) &amp; \text{if } p > {\textstyle\frac{2}{3}} \end{cases}
+\]
 
 When plotted, the two best response functions cross at <strong>three</strong> points, giving three MSNE:
 
@@ -1348,27 +1464,37 @@ We look for a MSNE in which both players mix strictly between B and S, so that \
 
 <strong>Step 1.</strong> By Condition 1 of Proposition 116.2, Player 1 must be indifferent between B and S. Her expected payoffs are:
 
-\[ E_1(B, q) = 2q \quad \text{and} \quad E_1(S, q) = 1 - q \]
+\[
+E_1(B, q) = 2q \quad \text{and} \quad E_1(S, q) = 1 - q
+\]
 
 Setting these equal:
 
-\[ 2q = 1 - q \;\implies\; 3q = 1 \;\implies\; q = {\textstyle\frac{1}{3}} \]
+\[
+2q = 1 - q \;\implies\; 3q = 1 \;\implies\; q = {\textstyle\frac{1}{3}}
+\]
 
 So Player 2 must play B with probability \( \frac{1}{3} \) — that is the mix that makes Player 1 indifferent.
 
 <strong>Step 2.</strong> Player 2 must be indifferent between B and S. Her expected payoffs are:
 
-\[ E_2(B, p) = p \quad \text{and} \quad E_2(S, p) = 2(1-p) \]
+\[
+E_2(B, p) = p \quad \text{and} \quad E_2(S, p) = 2(1-p)
+\]
 
 Setting these equal:
 
-\[ p = 2 - 2p \;\implies\; 3p = 2 \;\implies\; p = {\textstyle\frac{2}{3}} \]
+\[
+p = 2 - 2p \;\implies\; 3p = 2 \;\implies\; p = {\textstyle\frac{2}{3}}
+\]
 
 So Player 1 must play B with probability \( \frac{2}{3} \).
 
 <strong>Result.</strong> The unique fully mixed MSNE is:
 
-\[ \alpha^* \;=\; \Bigl(\Bigl({\textstyle\frac{2}{3}},\, {\textstyle\frac{1}{3}}\Bigr),\; \Bigl({\textstyle\frac{1}{3}},\, {\textstyle\frac{2}{3}}\Bigr)\Bigr) \]
+\[
+\alpha^* \;=\; \Bigl(\Bigl({\textstyle\frac{2}{3}},\, {\textstyle\frac{1}{3}}\Bigr),\; \Bigl({\textstyle\frac{1}{3}},\, {\textstyle\frac{2}{3}}\Bigr)\Bigr)
+\]
 
 Combined with the two pure-strategy MSNE, there are exactly three MSNE in BoS.
 
@@ -1473,7 +1599,9 @@ In earlier chapters we found that strictly dominated actions are never played in
 
 <strong>Definition 120.1.</strong> In a strategic game with vNM preferences, player \( i \)'s mixed strategy \( \alpha_i \) <strong>strictly dominates</strong> her action \( a'_i \) if:
 
-\[ U_i(\alpha_i,\, a_{-i}) \;&gt;\; u_i(a'_i,\, a_{-i}) \quad \text{for every action list } a_{-i} \]
+\[
+U_i(\alpha_i,\, a_{-i}) \;&gt;\; u_i(a'_i,\, a_{-i}) \quad \text{for every action list } a_{-i}
+\]
 
 We say that action \( a'_i \) is <strong>strictly dominated</strong> (by a mixed strategy).
 
@@ -1516,7 +1644,9 @@ None of M or B strictly dominates T as a pure strategy. But the mixed strategy t
 
 <strong>Definition.</strong> Player \( i \)'s mixed strategy \( \alpha_i \) <strong>weakly dominates</strong> her action \( a'_i \) if:
 
-\[ U_i(\alpha_i,\, a_{-i}) \;\geq\; u_i(a'_i,\, a_{-i}) \quad \text{for every } a_{-i} \]
+\[
+U_i(\alpha_i,\, a_{-i}) \;\geq\; u_i(a'_i,\, a_{-i}) \quad \text{for every } a_{-i}
+\]
 
 and additionally \( U_i(\alpha_i, a_{-i}) > u_i(a'_i, a_{-i}) \) for at least one \( a_{-i} \). Weak domination permits elimination in some contexts but requires more care: iterative elimination of weakly dominated strategies can remove equilibria, whereas iterative elimination of strictly dominated strategies never does.
 
@@ -1587,7 +1717,9 @@ For the <strong>customer</strong>, the analogous logic applies. When the expert 
 
 Throughout we assume:
 
-\[ I &lt; I' &lt; E &lt; E' \]
+\[
+I &lt; I' &lt; E &lt; E'
+\]
 
 ### The Strategic Game
 
@@ -1653,43 +1785,61 @@ We focus on Case 2 where \(E &gt; rE' + (1-r)I'\).
 
 <strong>Expert's indifference condition.</strong> For the expert to mix between Honest and Dishonest, he must be indifferent between them. His expected payoff to Honest is:
 
-\[ q \cdot \pi + (1-q) \cdot (1-r)\pi \]
+\[
+q \cdot \pi + (1-q) \cdot (1-r)\pi
+\]
 
 With probability \(q\) the customer accepts and the honest expert earns \(\pi\). With probability \(1-q\) the customer rejects; since the honest expert only earns anything when the problem is minor (probability \(1-r\), his payoff is \((1-r)\pi\). His expected payoff to Dishonest is:
 
-\[ q \cdot (r\pi + (1-r)\pi') + (1-q) \cdot 0 \]
+\[
+q \cdot (r\pi + (1-r)\pi') + (1-q) \cdot 0
+\]
 
 When the customer accepts, the dishonest expert earns the weighted average \(r\pi + (1-r)\pi'\). When the customer rejects, the dishonest expert always gets zero (every customer told about a major repair walks away). Setting these equal:
 
-\[ q\pi + (1-q)(1-r)\pi = q(r\pi + (1-r)\pi') \]
+\[
+q\pi + (1-q)(1-r)\pi = q(r\pi + (1-r)\pi')
+\]
 
 Expanding the left side: \(q\pi + (1-r)\pi - q(1-r)\pi\). Expanding the right side: \(qr\pi + q(1-r)\pi'\). After simplification (terms involving \(qr\pi\) cancel on both sides along with the non-\(q\) terms), we arrive at:
 
-\[ q^* = \frac{\pi}{\pi'} \]
+\[
+q^* = \frac{\pi}{\pi'}
+\]
 
 This is the equilibrium probability with which the customer must accept in order to keep the expert indifferent. Notice that it depends only on the expert's own profit parameters — not on the customer's costs or on \(r\).
 
 <strong>Customer's indifference condition.</strong> For the customer to mix, she must be indifferent between Accept and Reject. Her expected payoff (as a cost) to Accepting is:
 
-\[ p(-rE - (1-r)I) - (1-p)E \]
+\[
+p(-rE - (1-r)I) - (1-p)E
+\]
 
 Her expected payoff to Rejecting is:
 
-\[ p(-rE' - (1-r)I) + (1-p)(-rE' - (1-r)I') \]
+\[
+p(-rE' - (1-r)I) + (1-p)(-rE' - (1-r)I')
+\]
 
 Setting these equal and solving for \(p\) yields:
 
-\[ p^* = \frac{E - [rE' + (1-r)I']}{(1-r)(E - I')} \]
+\[
+p^* = \frac{E - [rE' + (1-r)I']}{(1-r)(E - I')}
+\]
 
 One can verify that this is positive whenever \(E &gt; rE' + (1-r)I'\) (our Case 2 assumption) and less than one whenever \(E &lt; E'\), which holds by assumption. So \(p^* \in (0,1)\) is a valid mixing probability.
 
 <strong>The unique MSNE.</strong> When \(E &gt; rE' + (1-r)I'\), there is a unique mixed strategy Nash equilibrium:
 
-\[ \bigl((p^<em>,\, 1-p^</em>),\, (q^<em>,\, 1-q^</em>)\bigr) \]
+\[
+\bigl((p^<em>,\, 1-p^</em>),\, (q^<em>,\, 1-q^</em>)\bigr)
+\]
 
 where
 
-\[ p^<em> = \frac{E - [rE' + (1-r)I']}{(1-r)(E - I')}, \qquad q^</em> = \frac{\pi}{\pi'} \]
+\[
+p^<em> = \frac{E - [rE' + (1-r)I']}{(1-r)(E - I')}, \qquad q^</em> = \frac{\pi}{\pi'}
+\]
 
 <strong>The boundary case.</strong> When \(E = rE' + (1-r)I'\), the customer is exactly indifferent between Accept and Reject whenever the expert is dishonest. In this case, the best response functions overlap along a line segment, and there is a continuum of MSNE: all profiles \(((0,1),\,(q^<em>,\,1-q^</em>))\) with \(q^* \in [\pi/\pi',\,1]\) are equilibria — the expert is always dishonest and the customer mixes with any acceptance probability above the threshold \(\pi/\pi'\).
 
@@ -1699,7 +1849,9 @@ The payoff of game theory is not just finding equilibria but understanding how t
 
 <strong>Major problems become less common (\(r\) falls).</strong> One might expect that as major problems become rarer, a rational customer would trust the expert less — after all, any given "major" diagnosis is now more likely to be a lie. Intuition says the customer should reject more, so \(q^<em>\) should fall. But look at the formula: \(q^</em> = \pi/\pi'\) contains no \(r\). The acceptance probability does not change at all. The resolution is that this partial reasoning ignores how the expert responds. To see what actually adjusts, rewrite \(p^*\) as:
 
-\[ p^* = 1 - \frac{r(E' - E)}{(1-r)(E - I')} \]
+\[
+p^* = 1 - \frac{r(E' - E)}{(1-r)(E - I')}
+\]
 
 As \(r\) falls, \(p^<em>\) rises — the expert becomes </em>more* honest. The mechanism: when major problems are rare, the customer has less at stake when rejecting (she is unlikely to be driving away from a truly dangerous repair). To keep the customer indifferent — a necessary condition for the customer to ever accept in equilibrium — the expert must compensate by being honest more often. A more honest expert is one with whom the customer is again willing to engage. The customer's strategy stays put; the expert's strategy adjusts.
 
@@ -1761,19 +1913,31 @@ Since this is a zero-sum game with no dominant strategies, there is no pure stra
 
 Let \(q\) be the probability that the goalkeeper dives Left. The kicker mixes only if he is indifferent between Left and Right:
 
-\[ 70q + 95(1-q) = 92q + 58(1-q) \]
+\[
+70q + 95(1-q) = 92q + 58(1-q)
+\]
 
-\[ 95 - 25q = 58 + 34q \]
+\[
+95 - 25q = 58 + 34q
+\]
 
-\[ 59q = 37 \implies q^* = 62.7\% \]
+\[
+59q = 37 \implies q^* = 62.7\%
+\]
 
 Now let \(p\) be the probability that the kicker shoots Left. The goalkeeper mixes only if he is indifferent between diving Left and diving Right (where his payoffs are negatives of the kicker's):
 
-\[ -70p - 92(1-p) = -95p - 58(1-p) \]
+\[
+-70p - 92(1-p) = -95p - 58(1-p)
+\]
 
-\[ -92 + 22p = -58 - 37p \]
+\[
+-92 + 22p = -58 - 37p
+\]
 
-\[ 59p = 34 \implies p^* = 57.6\% \]
+\[
+59p = 34 \implies p^* = 57.6\%
+\]
 
 The unique MSNE is: kicker shoots Left with probability 57.6% and Right with probability 42.4%; goalkeeper dives Left with probability 62.7% and Right with probability 37.3%.
 
@@ -1868,23 +2032,33 @@ In a symmetric MSNE, every person calls with the same probability \(p\) and does
 
 <strong>Expected payoff to not calling:</strong> The person gets \(v\) if at least one of the other \(n-1\) people calls, and 0 if none of the others call. The probability that none of the other \(n-1\) people call is \((1-p)^{n-1}\) (since each person independently does not call with probability \(1-p\). Therefore:
 
-\[ \text{Expected payoff to Not Call} = v \cdot \bigl(1 - (1-p)^{n-1}\bigr) + 0 \cdot (1-p)^{n-1} = v\bigl(1-(1-p)^{n-1}\bigr) \]
+\[
+\text{Expected payoff to Not Call} = v \cdot \bigl(1 - (1-p)^{n-1}\bigr) + 0 \cdot (1-p)^{n-1} = v\bigl(1-(1-p)^{n-1}\bigr)
+\]
 
 Setting the two payoffs equal:
 
-\[ v - c = v\bigl(1 - (1-p)^{n-1}\bigr) \]
+\[
+v - c = v\bigl(1 - (1-p)^{n-1}\bigr)
+\]
 
-\[ \frac{c}{v} = (1-p)^{n-1} \]
+\[
+\frac{c}{v} = (1-p)^{n-1}
+\]
 
 This is the <strong>equilibrium condition</strong>: the probability that none of the other \(n-1\) people call must equal the ratio \(c/v\). Solving for \(p\):
 
-\[ p^* = 1 - \left(\frac{c}{v}\right)^{1/(n-1)} \]
+\[
+p^* = 1 - \left(\frac{c}{v}\right)^{1/(n-1)}
+\]
 
 Since \(0 &lt; c/v &lt; 1\), we have \(0 &lt; (c/v)^{1/(n-1)} &lt; 1\), so \(p^* \in (0,1)\) — a valid mixing probability.
 
 The symmetric MSNE is the strategy profile in which each of the \(n\) people calls with probability:
 
-\[ p^* = 1 - \left(\frac{c}{v}\right)^{1/(n-1)} \]
+\[
+p^* = 1 - \left(\frac{c}{v}\right)^{1/(n-1)}
+\]
 
 ### The Bystander Effect: Equilibrium and Group Size
 
@@ -1894,11 +2068,15 @@ But is the <em>overall</em> probability that the crime gets reported higher or l
 
 The probability that <strong>no one</strong> calls is:
 
-\[ \Pr[\text{no one calls}] = (1-p^*)^n = \left(\frac{c}{v}\right)^{n/(n-1)} \]
+\[
+\Pr[\text{no one calls}] = (1-p^*)^n = \left(\frac{c}{v}\right)^{n/(n-1)}
+\]
 
 Note that \(n/(n-1)\) is a decreasing function of \(n\): it starts at 2 when \(n=2\) and decreases toward 1 as \(n \to \infty\). Since \(c/v &lt; 1\), raising it to a smaller exponent makes it larger. Therefore:
 
-\[ \frac{d}{dn}\left(\frac{c}{v}\right)^{n/(n-1)} &gt; 0 \]
+\[
+\frac{d}{dn}\left(\frac{c}{v}\right)^{n/(n-1)} &gt; 0
+\]
 
 <strong>The probability that the crime goes unreported strictly increases with the number of witnesses.</strong> A group of 37 neighbors is less likely to call the police than a group of 2, in equilibrium. This is the bystander effect derived as a theorem, not merely observed as a behavioral tendency.
 
@@ -1999,7 +2177,9 @@ We adapt the definition of Nash equilibrium from strategic games to extensive ga
 
 <strong>Definition 161.2.</strong> The strategy profile \( s^* \) in an extensive game with perfect information is a Nash equilibrium if, for every player \( i \) and every strategy \( r_i \) of player \( i \):
 
-\[ u_i\!\left(O(s^<em>)\right) \;\geq\; u_i\!\left(O(r_i,\, s^</em>_{-i})\right) \]
+\[
+u_i\!\left(O(s^<em>)\right) \;\geq\; u_i\!\left(O(r_i,\, s^</em>_{-i})\right)
+\]
 
 where \( u_i \) is a payoff function representing player \( i \)'s preferences over terminal histories and \( O(\cdot) \) is the outcome function. In other words, no player can make a profitable deviation, given the other players' strategies.
 
@@ -2095,7 +2275,9 @@ Before stating the formal definition, we introduce notation for the outcome of a
 
 <strong>Definition 166.1.</strong> The strategy profile \( s^* \) in an extensive game with perfect information is a <strong>subgame perfect equilibrium (SPE)</strong> if, for every player \( i \), every history \( h \) after which it is player \( i \)'s turn to move, and every strategy \( r_i \) of player \( i \):
 
-\[ u_i\!\left(O_h(s^<em>)\right) \;\geq\; u_i\!\left(O_h(r_i,\, s^</em>_{-i})\right) \]
+\[
+u_i\!\left(O_h(s^<em>)\right) \;\geq\; u_i\!\left(O_h(r_i,\, s^</em>_{-i})\right)
+\]
 
 In plain language: in every subgame, the player who moves first at the start of that subgame cannot profitably deviate from \( s^<em> \), given that all other players adhere to \( s^</em> \). Crucially, this must hold in every subgame — not only in subgames that are actually reached under \( s^* \).
 
@@ -2107,7 +2289,9 @@ Every subgame perfect equilibrium is a Nash equilibrium, but not every Nash equi
 
 The set of SPE is a subset of the set of NE:
 
-\[ \text{SPE} \;\subseteq\; \text{NE} \]
+\[
+\text{SPE} \;\subseteq\; \text{NE}
+\]
 
 SPE is described as a <strong>refinement</strong> of NE because it retains only those NE that survive the additional requirement of optimality off the equilibrium path.
 
@@ -2219,7 +2403,9 @@ Since player 2 is indifferent in two of the three length-1 subgames, all four co
 
 The game therefore has <strong>six subgame perfect equilibria</strong> in total:
 
-\[ (C,\,FHK),\quad (C,\,FIK),\quad (D,\,GIK),\quad (C,\,GHK),\quad (D,\,GHK),\quad (E,\,GHK) \]
+\[
+(C,\,FHK),\quad (C,\,FIK),\quad (D,\,GIK),\quad (C,\,GHK),\quad (D,\,GHK),\quad (E,\,GHK)
+\]
 
 This example illustrates the general rule: whenever backward induction reveals a player indifferent between actions at some node, every combination of those optimal actions — together with the optimal continuations in all other subgames — constitutes a distinct SPE.
 
@@ -2261,11 +2447,15 @@ The game has a finite horizon; we find the SPE by backward induction.
 
 In the subgame following history \(q_1\), Firm 2 maximizes its profit:
 
-\[\pi_2(q_1, q_2) = q_2(\alpha - c - q_1 - q_2)\]
+\[
+\pi_2(q_1, q_2) = q_2(\alpha - c - q_1 - q_2)
+\]
 
 This is exactly the Cournot best response problem. The solution is:
 
-\[b_2(q_1) = \frac{1}{2}(\alpha - c - q_1) \quad \text{for } q_1 \leq \alpha - c\]
+\[
+b_2(q_1) = \frac{1}{2}(\alpha - c - q_1) \quad \text{for } q_1 \leq \alpha - c
+\]
 
 In any SPE, Firm 2's strategy is this function \(b_2\).
 
@@ -2273,11 +2463,15 @@ In any SPE, Firm 2's strategy is this function \(b_2\).
 
 Given that Firm 2 will use strategy \(b_2\), Firm 1 substitutes to find its own optimal output. Firm 1's effective profit is:
 
-\[\pi_1 = q_1 \cdot (\alpha - c - q_1 - b_2(q_1)) = q_1\left(\alpha - c - q_1 - \frac{\alpha - c - q_1}{2}\right) = \frac{1}{2}q_1(\alpha - c - q_1)\]
+\[
+\pi_1 = q_1 \cdot (\alpha - c - q_1 - b_2(q_1)) = q_1\left(\alpha - c - q_1 - \frac{\alpha - c - q_1}{2}\right) = \frac{1}{2}q_1(\alpha - c - q_1)
+\]
 
 Maximizing over \(q_1\):
 
-\[\frac{d\pi_1}{dq_1} = \frac{1}{2}(\alpha - c - 2q_1) = 0 \implies q_1^* = \frac{1}{2}(\alpha - c)\]
+\[
+\frac{d\pi_1}{dq_1} = \frac{1}{2}(\alpha - c - 2q_1) = 0 \implies q_1^* = \frac{1}{2}(\alpha - c)
+\]
 
 Firm 2 then produces \(q_2^<em> = b_2(q_1^</em>) = \frac{1}{4}(\alpha - c)\).
 
@@ -2504,17 +2698,23 @@ A stationary strategy for Player 1 is therefore specified by two objects: the pr
 
 From finite-horizon games we know that in every SPE, every proposal is accepted immediately. We conjecture the same holds here, which means the proposer never offers more than the other player's cutoff — offering strictly more would be leaving money on the table. This pins down:
 
-\[ x_2^<em> = w_2^</em> \quad \text{and} \quad z_1^<em> = y_1^</em>, \]
+\[
+x_2^<em> = w_2^</em> \quad \text{and} \quad z_1^<em> = y_1^</em>,
+\]
 
 where \( w_2^<em> \) is Player 2's acceptance cutoff and \( z_1^</em> \) is the share Player 2 offers to Player 1. After substituting, we need to find only \( x_1^<em>, x_2^</em>, y_1^<em>, y_2^</em> \).
 
 Consider the <strong>subgame starting with Player 2 responding</strong> to Player 1's proposal \( x \). If Player 2 rejects, her stationary strategy calls for her to propose \( y^<em> \), which Player 1 accepts (since what Player 2 offers Player 1 exactly equals Player 1's cutoff \( y_1^</em> \). So rejecting yields Player 2 a payoff of \( y_2^<em> \), but with a one-period delay, worth \( \delta_2 y_2^</em> \) today. Player 2 will reject if offered less than \( \delta_2 y_2^* \). For Player 1 to optimally offer exactly Player 2's cutoff:
 
-\[ x_2^<em> = \delta_2 y_2^</em>. \]
+\[
+x_2^<em> = \delta_2 y_2^</em>.
+\]
 
 By a symmetric argument, considering the <strong>subgame starting with Player 1 responding</strong> to Player 2's proposal, Player 1 will reject if offered less than \( \delta_1 x_1^* \) (the discounted value of what Player 1 gets next period after Player 2 rejects and the game continues with Player 1 proposing). Player 2 therefore offers exactly:
 
-\[ y_1^<em> = \delta_1 x_1^</em>. \]
+\[
+y_1^<em> = \delta_1 x_1^</em>.
+\]
 
 We now have <strong>four equations in four unknowns</strong>:
 
@@ -2630,11 +2830,15 @@ In a repeated game players receive a payoff in each period. A dollar (or a unit 
 
 Given a stream of payoffs \( (v_1, v_2, v_3, \ldots) \), the <strong>discounted sum</strong> is
 
-\[ \sum_{t=1}^{\infty} \delta^{t-1} v_t \]
+\[
+\sum_{t=1}^{\infty} \delta^{t-1} v_t
+\]
 
 This is the present value of the entire payoff stream. Because sums grow without bound as the game goes on, it is often more convenient to work with the <strong>discounted average payoff</strong>, defined as the constant per-period payoff that the player would need to receive in order to be indifferent between that constant stream and the original stream. If a player receives the constant value \( c \) in every period, her discounted sum is \( c \sum_{t=0}^{\infty} \delta^t = c/(1-\delta) \). Setting this equal to the discounted sum of the original stream and solving for \( c \) gives:
 
-\[ \text{Discounted average} = (1-\delta) \sum_{t=0}^{\infty} \delta^t v_{t+1} \]
+\[
+\text{Discounted average} = (1-\delta) \sum_{t=0}^{\infty} \delta^t v_{t+1}
+\]
 
 The factor \( (1-\delta) \) normalises the expression so that a constant stream of value \( v \) in every period has a discounted average of exactly \( v \). This makes discounted averages directly comparable to one-shot payoffs, which is why they are the natural measure of welfare in repeated games. Throughout this chapter we assume all players share the same discount factor \( \delta \).
 
@@ -2642,11 +2846,15 @@ The factor \( (1-\delta) \) normalises the expression so that a constant stream 
 
 One formula will be used repeatedly. For \( \delta \in (0,1) \):
 
-\[ \sum_{t=0}^{\infty} \delta^t = \frac{1}{1-\delta} \]
+\[
+\sum_{t=0}^{\infty} \delta^t = \frac{1}{1-\delta}
+\]
 
 A related formula handles finite sums. For any non-negative integer \( T \):
 
-\[ \sum_{t=0}^{T} \delta^t = \frac{1 - \delta^{T+1}}{1 - \delta} \]
+\[
+\sum_{t=0}^{T} \delta^t = \frac{1 - \delta^{T+1}}{1 - \delta}
+\]
 
 These two results are workhorses of the analysis that follows.
 
@@ -2747,15 +2955,21 @@ First, consider the strategy pair in which each player plays D after every histo
 
 <em>If Player 2 deviates</em>, she plays D in the current period, earning 3 (since Player 1 is still playing C). Player 1 then switches to D forever. Player 2's best response to Player 1 playing D forever is to also play D forever (since D dominates C in the stage game). So Player 2's payoff stream from the period of deviation forward is \( (3, 1, 1, 1, \ldots) \). The discounted average of this stream is:
 
-\[ (1-\delta)(3 + \delta + \delta^2 + \cdots) = (1-\delta)\left(3 + \frac{\delta}{1-\delta}\right) = 3(1-\delta) + \delta \]
+\[
+(1-\delta)(3 + \delta + \delta^2 + \cdots) = (1-\delta)\left(3 + \frac{\delta}{1-\delta}\right) = 3(1-\delta) + \delta
+\]
 
 Player 2 cannot profitably deviate if and only if the cooperation payoff is at least as large as the defection payoff:
 
-\[ 3(1-\delta) + \delta \leq 2 \]
+\[
+3(1-\delta) + \delta \leq 2
+\]
 
 Expanding: \( 3 - 3\delta + \delta \leq 2 \), so \( 3 - 2\delta \leq 2 \), giving:
 
-\[ \delta \geq \frac{1}{2} \]
+\[
+\delta \geq \frac{1}{2}
+\]
 
 By symmetry the same condition applies to Player 1. Any strategy that always plays C in response to the grim trigger is a best response (not just grim trigger itself), but grim trigger is one such strategy. Since each player is playing a best response to the other, the grim trigger pair is a Nash Equilibrium when \( \delta \geq \frac{1}{2} \). The equilibrium outcome is (C, C) in every period — the cooperative outcome we were looking for.
 
@@ -2773,19 +2987,27 @@ What happens? Player 1 punishes by playing D from period \( t+1 \) through perio
 
 The only relevant comparison is over the \( k+1 \) periods from \( t \) through \( t+k \). If Player 2 deviates and plays D throughout these periods, her discounted average payoff over this window is:
 
-\[ (1-\delta)(3 + \delta + \delta^2 + \cdots + \delta^k) = 3(1-\delta) + \delta(1-\delta^k) \]
+\[
+(1-\delta)(3 + \delta + \delta^2 + \cdots + \delta^k) = 3(1-\delta) + \delta(1-\delta^k)
+\]
 
 If instead Player 2 cooperates throughout (sticking to \( s^P(k) \) and playing C every period), her discounted average payoff over these same \( k+1 \) periods is:
 
-\[ (1-\delta)(2 + 2\delta + 2\delta^2 + \cdots + 2\delta^k) = 2(1-\delta^{k+1}) \]
+\[
+(1-\delta)(2 + 2\delta + 2\delta^2 + \cdots + 2\delta^k) = 2(1-\delta^{k+1})
+\]
 
 The strategy \( s^P(k) \) is a best response to itself if and only if the cooperation payoff is at least as large as the deviation payoff:
 
-\[ 3(1-\delta) + \delta(1-\delta^k) \leq 2(1-\delta^{k+1}) \]
+\[
+3(1-\delta) + \delta(1-\delta^k) \leq 2(1-\delta^{k+1})
+\]
 
 After algebraic simplification this reduces to:
 
-\[ \delta^{k+1} - 2\delta + 1 \leq 0 \]
+\[
+\delta^{k+1} - 2\delta + 1 \leq 0
+\]
 
 Consider the cases:
 
@@ -2817,17 +3039,23 @@ These are the two extreme deviations; any mixture of them is also possible, but 
 
 <strong>Alternating (D, C, D, C, ...) deviation:</strong> The discounted average of \( (3, 0, 3, 0, \ldots) \) is:
 
-\[ (1-\delta) \cdot \frac{3}{1-\delta^2} = \frac{3(1-\delta)}{(1-\delta)(1+\delta)} = \frac{3}{1+\delta} \]
+\[
+(1-\delta) \cdot \frac{3}{1-\delta^2} = \frac{3(1-\delta)}{(1-\delta)(1+\delta)} = \frac{3}{1+\delta}
+\]
 
 (Here we used the fact that \( \sum_{t=0}^{\infty} \delta^{2t} = 1/(1-\delta^2) \).)
 
 <strong>Always D deviation:</strong> The discounted average of \( (3, 1, 1, 1, \ldots) \) is:
 
-\[ (1-\delta)\left(3 + \frac{\delta}{1-\delta}\right) = 3(1-\delta) + \delta = 3 - 2\delta \]
+\[
+(1-\delta)\left(3 + \frac{\delta}{1-\delta}\right) = 3(1-\delta) + \delta = 3 - 2\delta
+\]
 
 For tit-for-tat to be a best response to tit-for-tat, neither deviation must be profitable:
 
-\[ 2 \geq \frac{3}{1+\delta} \quad \text{and} \quad 2 \geq 3 - 2\delta \]
+\[
+2 \geq \frac{3}{1+\delta} \quad \text{and} \quad 2 \geq 3 - 2\delta
+\]
 
 Both conditions simplify to \( \delta \geq \frac{1}{2} \). (If the two conditions had given different cutoffs, the binding constraint would be the more demanding one.)
 

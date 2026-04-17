@@ -24,7 +24,10 @@ The **cumulative distribution function** (CDF) is defined as \( F(x) = P(X \leq 
 
 <div class="definition">
 <strong>Expected Value:</strong> The population mean of a random variable <em>X</em> is
-\[ \mu = E[X] = \int_{-\infty}^{\infty} x\, f(x)\,dx \]
+
+\[
+\mu = E[X] = \int_{-\infty}^{\infty} x\, f(x)\,dx
+\]
 for continuous <em>X</em>, or <strong>\( \mu = \sum_x x \cdot P(X=x) \)</strong> for discrete <em>X</em>.
 </div>
 
@@ -39,7 +42,9 @@ Key moments of a distribution:
 
 The **normal distribution** \( X \sim N(\mu, \sigma^2) \) has density
 
-\[ f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) \]
+\[
+f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+\]
 
 The **standard normal** \( Z \sim N(0,1) \) is obtained via the standardization \( Z = (X - \mu)/\sigma \). Econometrics relies heavily on the normal because of the **Central Limit Theorem (CLT)**: for i.i.d. random variables with mean \( \mu \) and variance \( \sigma^2 \), the standardized sample mean converges in distribution to \( N(0,1) \) as the sample size grows.
 
@@ -63,11 +68,15 @@ The **chi-squared**, **t**, and **F** distributions are foundational for hypothe
 
 For two random variables \( X \) and \( Y \):
 
-\[ \text{Cov}(X, Y) = E\left[(X - E[X])(Y - E[Y])\right] = E[XY] - E[X]E[Y] \]
+\[
+\text{Cov}(X, Y) = E\left[(X - E[X])(Y - E[Y])\right] = E[XY] - E[X]E[Y]
+\]
 
 The **correlation coefficient** is a scale-free measure:
 
-\[ \rho_{XY} = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\,\text{Var}(Y)}} \in [-1, 1] \]
+\[
+\rho_{XY} = \frac{\text{Cov}(X,Y)}{\sqrt{\text{Var}(X)\,\text{Var}(Y)}} \in [-1, 1]
+\]
 
 Independence of \( X \) and \( Y \) implies \( \rho_{XY} = 0 \), but the converse does not hold in general (zero correlation does not imply independence unless the joint distribution is normal).
 
@@ -79,7 +88,9 @@ Independence of \( X \) and \( Y \) implies \( \rho_{XY} = 0 \), but the convers
 
 A **simple linear regression model** postulates a linear relationship between a scalar dependent variable \( y \) and a single explanatory variable \( x \):
 
-\[ y = \beta_0 + \beta_1 x + u \]
+\[
+y = \beta_0 + \beta_1 x + u
+\]
 
 Here \( \beta_0 \) is the **intercept**, \( \beta_1 \) is the **slope** (the marginal effect of \( x \) on \( y \)), and \( u \) is the **error term** (disturbance), which captures all factors other than \( x \) that affect \( y \).
 
@@ -99,13 +110,19 @@ Assumption SLR.4 is the **key identification condition**. It implies that \( x \
 
 **Ordinary Least Squares (OLS)** minimizes the sum of squared residuals:
 
-\[ \min_{\beta_0, \beta_1} \sum_{i=1}^n \left(y_i - \beta_0 - \beta_1 x_i\right)^2 \]
+\[
+\min_{\beta_0, \beta_1} \sum_{i=1}^n \left(y_i - \beta_0 - \beta_1 x_i\right)^2
+\]
 
 Taking first-order conditions and solving yields the closed-form estimators:
 
-\[ \hat{\beta}_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} = \frac{\widehat{\text{Cov}}(x,y)}{\widehat{\text{Var}}(x)} \]
+\[
+\hat{\beta}_1 = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2} = \frac{\widehat{\text{Cov}}(x,y)}{\widehat{\text{Var}}(x)}
+\]
 
-\[ \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x} \]
+\[
+\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}
+\]
 
 The **fitted values** are \( \hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i \) and the **OLS residuals** are \( \hat{u}_i = y_i - \hat{y}_i \). By construction, \( \sum_{i=1}^n \hat{u}_i = 0 \) and \( \sum_{i=1}^n x_i \hat{u}_i = 0 \).
 
@@ -113,11 +130,15 @@ The **fitted values** are \( \hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i \) an
 
 The total variation in \( y \) decomposes as:
 
-\[ \underbrace{\sum_{i=1}^n (y_i - \bar{y})^2}_{\text{SST}} = \underbrace{\sum_{i=1}^n (\hat{y}_i - \bar{y})^2}_{\text{SSE}} + \underbrace{\sum_{i=1}^n \hat{u}_i^2}_{\text{SSR}} \]
+\[
+\underbrace{\sum_{i=1}^n (y_i - \bar{y})^2}_{\text{SST}} = \underbrace{\sum_{i=1}^n (\hat{y}_i - \bar{y})^2}_{\text{SSE}} + \underbrace{\sum_{i=1}^n \hat{u}_i^2}_{\text{SSR}}
+\]
 
 The **R-squared** (coefficient of determination) measures the fraction of variation in \( y \) explained by \( x \):
 
-\[ R^2 = \frac{\text{SSE}}{\text{SST}} = 1 - \frac{\text{SSR}}{\text{SST}} \in [0, 1] \]
+\[
+R^2 = \frac{\text{SSE}}{\text{SST}} = 1 - \frac{\text{SSR}}{\text{SST}} \in [0, 1]
+\]
 
 A higher \( R^2 \) indicates a better in-sample fit, but it should not be the sole criterion for model selection — a model with many irrelevant regressors will mechanically have a high \( R^2 \).
 
@@ -127,13 +148,17 @@ Under assumptions SLR.1–SLR.4, OLS is **unbiased**: \( E[\hat{\beta}_0] = \bet
 
 Adding **SLR.5** (homoskedasticity: \( \text{Var}(u \mid x) = \sigma^2 \)) gives the sampling variances:
 
-\[ \text{Var}(\hat{\beta}_1) = \frac{\sigma^2}{\text{SST}_x}, \qquad \text{Var}(\hat{\beta}_0) = \frac{\sigma^2 n^{-1} \sum x_i^2}{\text{SST}_x} \]
+\[
+\text{Var}(\hat{\beta}_1) = \frac{\sigma^2}{\text{SST}_x}, \qquad \text{Var}(\hat{\beta}_0) = \frac{\sigma^2 n^{-1} \sum x_i^2}{\text{SST}_x}
+\]
 
 The **Gauss-Markov Theorem** (for simple regression) states that under SLR.1–SLR.5, the OLS estimators are **BLUE** — Best Linear Unbiased Estimators — in the class of linear unbiased estimators.
 
 An unbiased estimator of \( \sigma^2 \) is the sample variance of residuals:
 
-\[ \hat{\sigma}^2 = \frac{1}{n-2} \sum_{i=1}^n \hat{u}_i^2 \]
+\[
+\hat{\sigma}^2 = \frac{1}{n-2} \sum_{i=1}^n \hat{u}_i^2
+\]
 
 Division by \( n-2 \) (not \( n \)) accounts for the two estimated parameters \( \hat{\beta}_0, \hat{\beta}_1 \).
 
@@ -145,7 +170,9 @@ Division by \( n-2 \) (not \( n \)) accounts for the two estimated parameters \(
 
 In practice, \( y \) depends on many factors simultaneously. The **multiple linear regression (MLR)** model is:
 
-\[ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_k x_k + u \]
+\[
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_k x_k + u
+\]
 
 <div class="definition">
 <strong>Gauss-Markov Assumptions MLR.1–MLR.5:</strong>
@@ -162,13 +189,18 @@ In practice, \( y \) depends on many factors simultaneously. The **multiple line
 
 Each slope coefficient \( \beta_j \) measures the partial effect of \( x_j \) on \( y \) **holding all other regressors fixed**:
 
-\[ \beta_j = \frac{\partial E[y \mid x_1, \ldots, x_k]}{\partial x_j} \]
+\[
+\beta_j = \frac{\partial E[y \mid x_1, \ldots, x_k]}{\partial x_j}
+\]
 
 This ceteris paribus interpretation is the central advantage of multiple over simple regression. Including relevant control variables reduces **omitted variable bias**.
 
 <div class="remark">
 <strong>Omitted Variable Bias:</strong> Suppose the true model includes \( x_2 \) but we omit it and regress <em>y</em> only on \( x_1 \). The simple regression estimator has expectation:
-\[ E[\tilde{\beta}_1] = \beta_1 + \beta_2 \tilde{\delta}_1 \]
+
+\[
+E[\tilde{\beta}_1] = \beta_1 + \beta_2 \tilde{\delta}_1
+\]
 where \( \tilde{\delta}_1 \) is the slope from regressing \( x_2 \) on \( x_1 \). Bias arises whenever \( \beta_2 \neq 0 \) and \( x_1 \) and \( x_2 \) are correlated.
 </div>
 
@@ -176,7 +208,9 @@ where \( \tilde{\delta}_1 \) is the slope from regressing \( x_2 \) on \( x_1 \)
 
 In matrix notation with \( n \) observations: \( \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \mathbf{u} \), where \( \mathbf{X} \) is \( n \times (k+1) \) with a column of ones. OLS minimizes \( \mathbf{u}^{\top}\mathbf{u} \), yielding:
 
-\[ \hat{\boldsymbol{\beta}} = (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{y} \]
+\[
+\hat{\boldsymbol{\beta}} = (\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{X}^{\top}\mathbf{y}
+\]
 
 Under MLR.1–MLR.5, the **Gauss-Markov Theorem** guarantees that \( \hat{\boldsymbol{\beta}} \) is BLUE.
 
@@ -188,7 +222,9 @@ A useful algebraic result is the **Frisch-Waugh-Lovell (FWL) theorem**: the OLS 
 
 The standard \( R^2 \) never decreases when a variable is added, even if it is irrelevant. The **adjusted R-squared** penalizes for additional parameters:
 
-\[ \bar{R}^2 = 1 - \frac{\text{SSR}/(n-k-1)}{\text{SST}/(n-1)} \]
+\[
+\bar{R}^2 = 1 - \frac{\text{SSR}/(n-k-1)}{\text{SST}/(n-1)}
+\]
 
 \( \bar{R}^2 \) can decrease if the added variable contributes little explanatory power relative to the degrees-of-freedom cost. Additional model-selection criteria include the **Akaike Information Criterion (AIC)** and **Bayesian Information Criterion (BIC)**, which trade off fit against model complexity.
 
@@ -202,7 +238,9 @@ Adding assumption **MLR.6** (normality: \( u \mid \mathbf{x} \sim N(0, \sigma^2)
 
 The **t-statistic** for testing \( H_0: \beta_j = c \) is:
 
-\[ t = \frac{\hat{\beta}_j - c}{\text{se}(\hat{\beta}_j)} \sim t(n - k - 1) \quad \text{under } H_0 \]
+\[
+t = \frac{\hat{\beta}_j - c}{\text{se}(\hat{\beta}_j)} \sim t(n - k - 1) \quad \text{under } H_0
+\]
 
 where \( \text{se}(\hat{\beta}_j) = \hat{\sigma}\sqrt{[(X^{\top}X)^{-1}]_{jj}} \).
 
@@ -210,7 +248,9 @@ where \( \text{se}(\hat{\beta}_j) = \hat{\sigma}\sqrt{[(X^{\top}X)^{-1}]_{jj}} \
 
 A \( (1-\alpha) \times 100\% \) confidence interval for \( \beta_j \) is:
 
-\[ \hat{\beta}_j \pm t_{\alpha/2,\, n-k-1} \cdot \text{se}(\hat{\beta}_j) \]
+\[
+\hat{\beta}_j \pm t_{\alpha/2,\, n-k-1} \cdot \text{se}(\hat{\beta}_j)
+\]
 
 The correct interpretation: if the experiment were repeated many times, \( (1-\alpha) \times 100\% \) of such intervals would contain the true \( \beta_j \).
 
@@ -218,7 +258,9 @@ The correct interpretation: if the experiment were repeated many times, \( (1-\a
 
 To test \( q \) joint linear restrictions \( H_0: R\boldsymbol{\beta} = \mathbf{r} \), the **F-statistic** is:
 
-\[ F = \frac{(\text{SSR}_r - \text{SSR}_{ur})/q}{\text{SSR}_{ur}/(n-k-1)} \sim F(q,\, n-k-1) \quad \text{under } H_0 \]
+\[
+F = \frac{(\text{SSR}_r - \text{SSR}_{ur})/q}{\text{SSR}_{ur}/(n-k-1)} \sim F(q,\, n-k-1) \quad \text{under } H_0
+\]
 
 where subscripts \( r \) and \( ur \) denote restricted and unrestricted models. The **overall F-test** (\( H_0: \beta_1 = \cdots = \beta_k = 0 \)) tests whether any regressor explains \( y \).
 
@@ -226,7 +268,9 @@ where subscripts \( r \) and \( ur \) denote restricted and unrestricted models.
 
 Under MLR.1–MLR.5 without normality, OLS remains unbiased and consistent. The **asymptotic normality** of OLS follows from the CLT: as \( n \to \infty \),
 
-\[ \sqrt{n}(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}) \xrightarrow{d} N\!\left(\mathbf{0},\, \sigma^2 \mathbf{Q}^{-1}\right) \]
+\[
+\sqrt{n}(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}) \xrightarrow{d} N\!\left(\mathbf{0},\, \sigma^2 \mathbf{Q}^{-1}\right)
+\]
 
 where \( \mathbf{Q} = \text{plim}\left(n^{-1}\mathbf{X}^{\top}\mathbf{X}\right) \). This justifies using t and F critical values in large samples even without the normality assumption MLR.6.
 
@@ -242,19 +286,26 @@ where \( \mathbf{Q} = \text{plim}\left(n^{-1}\mathbf{X}^{\top}\mathbf{X}\right) 
 
 Economic relationships frequently exhibit non-linearity in levels but approximate linearity in logarithms. The **log-log model** (constant elasticity form) is:
 
-\[ \ln y = \beta_0 + \beta_1 \ln x + u \]
+\[
+\ln y = \beta_0 + \beta_1 \ln x + u
+\]
 
-Here \( \beta_1 \) is the **elasticity** of \( y \) with respect to \( x \): a 1% increase in \( x \) leads to a \( \beta_1 \% \) change in \( y $.
+Here \( \beta_1 \) is the **elasticity** of \( y \) with respect to \( x \): a 1% increase in \( x \) leads to a \( \beta_1 \% \) change in \( y \).
 
 The **log-linear (semi-log) model** is:
 
-\[ \ln y = \beta_0 + \beta_1 x + u \]
+\[
+\ln y = \beta_0 + \beta_1 x + u
+\]
 
 Here \( 100 \cdot \beta_1 \) is the approximate percentage change in \( y \) for a one-unit increase in \( x \). More precisely, the exact percentage change is \( 100(e^{\beta_1} - 1) \).
 
 <div class="example">
 <strong>Wage Equation:</strong> The regression
-\[ \ln(\text{wage}) = \beta_0 + \beta_1 \,\text{educ} + \beta_2 \,\text{exper} + u \]
+
+\[
+\ln(\text{wage}) = \beta_0 + \beta_1 \,\text{educ} + \beta_2 \,\text{exper} + u
+\]
 gives the return to an additional year of education as approximately \( 100\hat{\beta}_1 \) percent (the Mincer equation).
 </div>
 
@@ -262,13 +313,17 @@ gives the return to an additional year of education as approximately \( 100\hat{
 
 Non-linear relationships in \( x \) can be accommodated with polynomial terms. The **quadratic specification** is:
 
-\[ y = \beta_0 + \beta_1 x + \beta_2 x^2 + u \]
+\[
+y = \beta_0 + \beta_1 x + \beta_2 x^2 + u
+\]
 
 The marginal effect of \( x \) on \( y \) is \( \partial y / \partial x = \beta_1 + 2\beta_2 x \), which depends on the level of \( x \). The turning point (maximum or minimum) is at \( x^* = -\beta_1 / (2\beta_2) \).
 
 **Interaction terms** capture how the effect of one variable depends on the level of another:
 
-\[ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 (x_1 \cdot x_2) + u \]
+\[
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 (x_1 \cdot x_2) + u
+\]
 
 The marginal effect of \( x_1 \) is \( \beta_1 + \beta_3 x_2 \), varying with \( x_2 \).
 
@@ -276,7 +331,9 @@ The marginal effect of \( x_1 \) is \( \beta_1 + \beta_3 x_2 \), varying with \(
 
 Given a new observation \( \mathbf{x}_0 \), the **point prediction** of \( y_0 \) is \( \hat{y}_0 = \mathbf{x}_0^{\top}\hat{\boldsymbol{\beta}} \). The **prediction error** \( \hat{e}_0 = y_0 - \hat{y}_0 \) has variance:
 
-\[ \text{Var}(\hat{e}_0) = \sigma^2\!\left(1 + \mathbf{x}_0^{\top}(\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{x}_0\right) \]
+\[
+\text{Var}(\hat{e}_0) = \sigma^2\!\left(1 + \mathbf{x}_0^{\top}(\mathbf{X}^{\top}\mathbf{X})^{-1}\mathbf{x}_0\right)
+\]
 
 A \( 95\% \) prediction interval accounts for both parameter uncertainty and the irreducible error variance \( \sigma^2 \), making it wider than a confidence interval for the conditional mean \( E[y_0 \mid \mathbf{x}_0] \).
 
@@ -284,7 +341,9 @@ A \( 95\% \) prediction interval accounts for both parameter uncertainty and the
 
 When comparing non-nested models or models with different sets of regressors:
 
-\[ \text{AIC} = \ln\!\left(\frac{\text{SSR}}{n}\right) + \frac{2(k+1)}{n}, \qquad \text{BIC} = \ln\!\left(\frac{\text{SSR}}{n}\right) + \frac{(k+1)\ln n}{n} \]
+\[
+\text{AIC} = \ln\!\left(\frac{\text{SSR}}{n}\right) + \frac{2(k+1)}{n}, \qquad \text{BIC} = \ln\!\left(\frac{\text{SSR}}{n}\right) + \frac{(k+1)\ln n}{n}
+\]
 
 Lower values indicate a preferred model. BIC penalizes extra parameters more heavily than AIC when \( n \geq 8 \) (since \( \ln n > 2 \)), and BIC is consistent for the true model order under regularity conditions.
 
@@ -296,7 +355,9 @@ Lower values indicate a preferred model. BIC penalizes extra parameters more hea
 
 Many economically relevant variables are qualitative: sex, race, employment status, geographic region, and so on. A **dummy variable** (indicator variable) takes value 1 if a condition is satisfied and 0 otherwise. Including a dummy \( D_i \) in a regression shifts the intercept:
 
-\[ y_i = \beta_0 + \delta D_i + \beta_1 x_i + u_i \]
+\[
+y_i = \beta_0 + \delta D_i + \beta_1 x_i + u_i
+\]
 
 Here \( \delta \) measures the average difference in \( y \) between the \( D=1 \) and \( D=0 \) groups, holding \( x \) constant. The **base category** (group with \( D=0 \)) determines the reference intercept \( \beta_0 \).
 
@@ -312,7 +373,9 @@ If a categorical variable has \( m \) categories, one should include at most \( 
 
 An interaction between a dummy \( D \) and a continuous regressor \( x \) allows the slope to differ between groups:
 
-\[ y_i = \beta_0 + \delta D_i + \beta_1 x_i + \beta_2 (D_i \cdot x_i) + u_i \]
+\[
+y_i = \beta_0 + \delta D_i + \beta_1 x_i + \beta_2 (D_i \cdot x_i) + u_i
+\]
 
 For \( D=0 \): \( E[y] = \beta_0 + \beta_1 x \); for \( D=1 \): \( E[y] = (\beta_0 + \delta) + (\beta_1 + \beta_2) x \). This is a **Chow-style decomposition**: the two groups may have different intercepts and slopes.
 
@@ -320,7 +383,9 @@ For \( D=0 \): \( E[y] = \beta_0 + \beta_1 x \); for \( D=1 \): \( E[y] = (\beta
 
 When the dependent variable is binary (\( y \in \{0, 1\} \)), OLS applied directly gives the **linear probability model (LPM)**:
 
-\[ P(y = 1 \mid \mathbf{x}) = \mathbf{x}^{\top}\boldsymbol{\beta} \]
+\[
+P(y = 1 \mid \mathbf{x}) = \mathbf{x}^{\top}\boldsymbol{\beta}
+\]
 
 The OLS coefficient \( \beta_j \) measures the change in probability for a unit increase in \( x_j \). Limitations include predicted probabilities outside \([0,1]\) and inherent heteroskedasticity (since \( \text{Var}(y \mid \mathbf{x}) = p(1-p) \) depends on \( \mathbf{x} \)).
 
@@ -345,7 +410,9 @@ The OLS coefficient \( \beta_j \) measures the change in probability for a unit 
 
 **Breusch-Pagan (BP) test:** Regress squared residuals \( \hat{u}_i^2 \) on the regressors and test the joint significance of all slopes using an LM statistic:
 
-\[ LM = n \cdot R^2_{\hat{u}^2} \xrightarrow{d} \chi^2(k) \quad \text{under } H_0 \text{ (homoskedasticity)} \]
+\[
+LM = n \cdot R^2_{\hat{u}^2} \xrightarrow{d} \chi^2(k) \quad \text{under } H_0 \text{ (homoskedasticity)}
+\]
 
 **White test:** Similar, but includes squares and cross-products of all regressors in the auxiliary regression, detecting more general forms of heteroskedasticity.
 
@@ -353,7 +420,9 @@ The OLS coefficient \( \beta_j \) measures the change in probability for a unit 
 
 The simplest remedy is to use **heteroskedasticity-robust (HC) standard errors** (Eicker-Huber-White sandwich estimator):
 
-\[ \widehat{\text{Var}}_{HC}(\hat{\boldsymbol{\beta}}) = (\mathbf{X}^{\top}\mathbf{X})^{-1} \left(\sum_{i=1}^n \hat{u}_i^2\, \mathbf{x}_i \mathbf{x}_i^{\top}\right) (\mathbf{X}^{\top}\mathbf{X})^{-1} \]
+\[
+\widehat{\text{Var}}_{HC}(\hat{\boldsymbol{\beta}}) = (\mathbf{X}^{\top}\mathbf{X})^{-1} \left(\sum_{i=1}^n \hat{u}_i^2\, \mathbf{x}_i \mathbf{x}_i^{\top}\right) (\mathbf{X}^{\top}\mathbf{X})^{-1}
+\]
 
 This estimator is consistent regardless of the form of heteroskedasticity, so t and F statistics formed with these standard errors are valid asymptotically.
 
@@ -361,7 +430,9 @@ This estimator is consistent regardless of the form of heteroskedasticity, so t 
 
 If the heteroskedastic structure is known — say \( \text{Var}(u_i \mid \mathbf{x}_i) = \sigma^2 h_i(\mathbf{x}_i) \) — **Weighted Least Squares (WLS)** achieves efficiency by minimizing the weighted sum of squares:
 
-\[ \sum_{i=1}^n \frac{1}{h_i}(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})^2 \]
+\[
+\sum_{i=1}^n \frac{1}{h_i}(y_i - \mathbf{x}_i^{\top}\boldsymbol{\beta})^2
+\]
 
 This is equivalent to dividing the observation \( (y_i, \mathbf{x}_i) \) by \( \sqrt{h_i} \) and applying OLS to the transformed data. Under correct specification of \( h_i \), WLS is BLUE.
 
@@ -379,7 +450,9 @@ Even with no measurement problems, a model can be misspecified by omitting relev
 
 The **RESET test** (Ramsey Regression Equation Specification Error Test) checks functional form by adding fitted-value polynomials to the regression:
 
-\[ y = \mathbf{x}^{\top}\boldsymbol{\beta} + \delta_1 \hat{y}^2 + \delta_2 \hat{y}^3 + \text{error} \]
+\[
+y = \mathbf{x}^{\top}\boldsymbol{\beta} + \delta_1 \hat{y}^2 + \delta_2 \hat{y}^3 + \text{error}
+\]
 
 Rejection of \( H_0: \delta_1 = \delta_2 = 0 \) suggests functional form misspecification. The test does not, however, point to a particular remedy.
 
@@ -391,11 +464,15 @@ If the dependent variable is measured with classical error — \( y^* = y + e_0 
 
 This case is more damaging. Suppose \( x_1^* = x_1 + e_1 \) is the mismeasured version of the true regressor \( x_1 \), where \( e_1 \) is classical measurement error (independent of \( x_1 \) and \( u \)). Substituting into the simple regression:
 
-\[ y = \beta_0 + \beta_1 x_1^* + (u - \beta_1 e_1) = \beta_0 + \beta_1 x_1^* + v \]
+\[
+y = \beta_0 + \beta_1 x_1^* + (u - \beta_1 e_1) = \beta_0 + \beta_1 x_1^* + v
+\]
 
 The composite error \( v = u - \beta_1 e_1 \) is correlated with \( x_1^* = x_1 + e_1 \) because \( e_1 \) appears in both. This is the **errors-in-variables** or **attenuation bias** problem:
 
-\[ \text{plim}(\hat{\beta}_1) = \beta_1 \cdot \frac{\sigma_{x_1}^2}{\sigma_{x_1}^2 + \sigma_{e_1}^2} \]
+\[
+\text{plim}(\hat{\beta}_1) = \beta_1 \cdot \frac{\sigma_{x_1}^2}{\sigma_{x_1}^2 + \sigma_{e_1}^2}
+\]
 
 The factor \( \sigma_{x_1}^2 / (\sigma_{x_1}^2 + \sigma_{e_1}^2) < 1 \) is the **reliability ratio**. OLS attenuates the estimated effect toward zero. Instrumental variables (covered in ECON 323) provide a remedy.
 

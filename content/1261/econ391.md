@@ -24,7 +24,9 @@ Let there be \( I \) consumers and \( L \) goods. Consumer \( i \) is endowed wi
 
 An **allocation** is a collection \( (x_1, \ldots, x_I) \) specifying each consumer's consumption bundle. An allocation is **feasible** if it does not use more than the available endowment:
 
-\[ \sum_{i=1}^I x_{i\ell} \leq \sum_{i=1}^I \omega_{i\ell} \quad \forall \ell = 1, \ldots, L. \]
+\[
+\sum_{i=1}^I x_{i\ell} \leq \sum_{i=1}^I \omega_{i\ell} \quad \forall \ell = 1, \ldots, L.
+\]
 
 ## 1.2 Competitive Equilibrium in Exchange Economies
 
@@ -42,7 +44,9 @@ Consumers sell their endowments at market prices and use the revenue to purchase
 
 A fundamental identity: at any prices \( p \), the total value of excess demand equals zero:
 
-\[ \sum_{\ell=1}^L p_\ell \left( \sum_{i=1}^I x_{i\ell}(p) - \sum_{i=1}^I \omega_{i\ell} \right) = 0. \]
+\[
+\sum_{\ell=1}^L p_\ell \left( \sum_{i=1}^I x_{i\ell}(p) - \sum_{i=1}^I \omega_{i\ell} \right) = 0.
+\]
 
 This follows because each consumer satisfies their budget constraint with equality (by monotonicity). **Walras's law** implies that if \( L-1 \) markets clear, the \( L \)-th market clears automatically. Thus only \( L-1 \) prices need to be determined; one good can serve as **numeraire** (its price normalized to 1).
 
@@ -81,7 +85,9 @@ The key normative concept in welfare economics is **Pareto efficiency** — an a
 
 In the Edgeworth box, the set of all Pareto-efficient allocations forms the **contract curve** (or Pareto set). An interior allocation is Pareto efficient if and only if the indifference curves of the two consumers are tangent, i.e.,
 
-\[ MRS_A = MRS_B. \]
+\[
+MRS_A = MRS_B.
+\]
 
 If \( MRS_A \neq MRS_B \), there exist mutually beneficial trades that can reallocate consumption and increase both consumers' utility. The contract curve runs from corner to corner of the Edgeworth box.
 
@@ -126,7 +132,9 @@ The First Welfare Theorem establishes that markets are efficient; the Second add
 
 A **lump-sum tax** (a fixed payment independent of behavior) does not distort relative prices and hence does not create deadweight loss. By contrast, a **commodity tax** \( t \) on good \( x \) drives a wedge between the consumer price \( P + t \) and the producer price \( P \), creating a distortion:
 
-\[ MRS = \frac{p_x + t}{p_y} \neq \frac{p_x}{p_y} = MRTS. \]
+\[
+MRS = \frac{p_x + t}{p_y} \neq \frac{p_x}{p_y} = MRTS.
+\]
 
 The consumer's marginal willingness to trade goods is misaligned with the production rate of transformation, generating inefficiency. This result motivates using lump-sum taxes over commodity taxes from a pure efficiency standpoint, although lump-sum taxes are practically difficult to implement.
 
@@ -165,7 +173,9 @@ The welfare theorems extend to economies with production under the same conditio
 
 In a competitive equilibrium, all three conditions hold because firms and consumers all face the same prices:
 
-\[ MRS_i = \frac{p_x}{p_y} = MRT \quad \forall i. \]
+\[
+MRS_i = \frac{p_x}{p_y} = MRT \quad \forall i.
+\]
 
 ## 3.3 General vs. Partial Equilibrium
 
@@ -201,15 +211,21 @@ Competitive equilibrium in an Arrow-Debreu economy is formally identical to a st
 
 Let there be two states \( s \in \{G, B\} \) (good and bad) with probabilities \( \pi_G \) and \( \pi_B = 1 - \pi_G \). Consumer \( i \) has endowment \( (\omega_{Gi}, \omega_{Bi}) \) in the two states and maximizes expected utility
 
-\[ EU_i = \pi_G \, u_i(c_{Gi}) + \pi_B \, u_i(c_{Bi}). \]
+\[
+EU_i = \pi_G \, u_i(c_{Gi}) + \pi_B \, u_i(c_{Bi}).
+\]
 
 The optimality conditions are:
 
-\[ \frac{MU_G}{MU_B} = \frac{\pi_G \, u'_i(c_{Gi})}{\pi_B \, u'_i(c_{Bi})} = \frac{p_G}{p_B}. \]
+\[
+\frac{MU_G}{MU_B} = \frac{\pi_G \, u'_i(c_{Gi})}{\pi_B \, u'_i(c_{Bi})} = \frac{p_G}{p_B}.
+\]
 
 At an efficient allocation, the **ratio of state prices equals the ratio of probabilities** (since all consumers have the same marginal utilities when consumption is equalized across states):
 
-\[ \frac{p_G}{p_B} = \frac{\pi_G}{\pi_B}. \]
+\[
+\frac{p_G}{p_B} = \frac{\pi_G}{\pi_B}.
+\]
 
 ### 4.2.1 Application: Insurance against Aggregate and Idiosyncratic Risk
 

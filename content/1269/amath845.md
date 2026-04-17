@@ -19,21 +19,25 @@ We consider a mixture of \(N\) chemical species with mass fractions \(Y_i\), \(i
 <strong>Definition 1.1 (Conservation Equations for Reactive Flow).</strong> The governing equations for a compressible reactive mixture are:
 
 <em>Mass conservation:</em>
+
 \[
 \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{u}) = 0.
 \]
 
 <em>Momentum conservation:</em>
+
 \[
 \frac{\partial (\rho \mathbf{u})}{\partial t} + \nabla \cdot (\rho \mathbf{u} \otimes \mathbf{u}) = -\nabla p + \nabla \cdot \boldsymbol{\tau} + \rho \mathbf{g}.
 \]
 
 <em>Species transport:</em>
+
 \[
 \frac{\partial (\rho Y_i)}{\partial t} + \nabla \cdot (\rho Y_i \mathbf{u}) = -\nabla \cdot \mathbf{J}_i + \dot{\omega}_i, \quad i = 1, \ldots, N.
 \]
 
 <em>Energy conservation:</em>
+
 \[
 \frac{\partial (\rho e)}{\partial t} + \nabla \cdot (\rho e \mathbf{u}) = -\nabla \cdot \mathbf{q} - p \nabla \cdot \mathbf{u} + \boldsymbol{\tau} : \nabla \mathbf{u} + \dot{Q},
 \]
@@ -48,6 +52,7 @@ The chemical source term \(\dot{\omega}_i\) is what distinguishes combustion fro
 
 <div class="definition">
 <strong>Definition 1.2 (Arrhenius Reaction Rate).</strong> For a single-step irreversible reaction with fuel mass fraction \(Y_F\) and oxidizer mass fraction \(Y_O\), the <em>Arrhenius reaction rate</em> is
+
 \[
 \dot{\omega} = B \rho^{n} Y_F^{a} Y_O^{b} \exp\left(-\frac{E_a}{R_u T}\right),
 \]
@@ -58,6 +63,7 @@ The exponential factor \(\exp(-E_a / R_u T)\) is extraordinarily sensitive to te
 
 <div class="definition">
 <strong>Definition 1.3 (Damköhler Number).</strong> The <em>Damköhler number</em> is the ratio of the flow time scale \(\tau_{\text{flow}}\) to the chemical time scale \(\tau_{\text{chem}}\):
+
 \[
 \text{Da} = \frac{\tau_{\text{flow}}}{\tau_{\text{chem}}}.
 \]
@@ -76,6 +82,7 @@ When a premixed fuel-air mixture burns in an adiabatic, constant-pressure proces
 
 <div class="definition">
 <strong>Definition 1.5 (Adiabatic Flame Temperature).</strong> For a premixed mixture initially at temperature \(T_u\), the <em>adiabatic flame temperature</em> \(T_{ad}\) is defined by the energy balance
+
 \[
 T_{ad} = T_u + \frac{Q Y_{F,u}}{c_p},
 \]
@@ -86,6 +93,7 @@ For a stoichiometric methane-air mixture at standard conditions, \(T_{ad} \appro
 
 <div class="example">
 <strong>Example 1.6 (Computing \(T_{ad}\) for Lean Methane-Air).</strong> Consider a lean methane-air mixture with equivalence ratio \(\phi = 0.7\). At standard conditions, stoichiometric methane-air has \(Y_{F,u}^{\text{st}} \approx 0.055\) and \(Q \approx 50\) MJ/kg of fuel, with \(c_p \approx 1.2\) kJ/(kg\(\cdot\)K) and \(T_u = 300\) K. For a lean mixture, the fuel mass fraction scales as \(Y_{F,u} = \phi \, Y_{F,u}^{\text{st}} \approx 0.0385\). Then
+
 \[
 T_{ad} = 300 + \frac{50{,}000 \times 0.0385}{1.2} \approx 300 + 1604 = 1904 \text{ K}.
 \]
@@ -102,10 +110,12 @@ A remarkable simplification of the reactive flow equations arises when the Lewis
 
 <div class="definition">
 <strong>Definition 1.8 (Shvab-Zeldovich Variables).</strong> Define the <em>coupling functions</em> (or Shvab-Zeldovich variables) by
+
 \[
 \beta_1 = \frac{T - T_u}{T_{ad} - T_u} + \frac{Y_F}{Y_{F,u}}, \qquad \beta_2 = \frac{Y_O}{\nu Y_{F,u}} - \frac{Y_F}{Y_{F,u}},
 \]
 where \(\nu\) is the stoichiometric mass ratio of oxidizer to fuel. When \(\text{Le} = 1\), both \(\beta_1\) and \(\beta_2\) satisfy the sourceless convection-diffusion equation
+
 \[
 \rho \frac{\partial \beta}{\partial t} + \rho \mathbf{u} \cdot \nabla \beta = \nabla \cdot (\rho D \nabla \beta).
 \]
@@ -115,9 +125,11 @@ The physical content of the Shvab-Zeldovich formulation is that the chemical sou
 
 <div class="example">
 <strong>Example 1.9 (Dimensionless One-Step Model).</strong> Consider a one-dimensional, steady, premixed flame with constant density, unit Lewis number, and a single irreversible reaction. Nondimensionalize temperature as \(\theta = (T - T_u)/(T_{ad} - T_u)\) and fuel mass fraction as \(y = Y_F / Y_{F,u}\). The steady equations in the flame-attached frame become
+
 \[
 \frac{d\theta}{dx} = \frac{d^2\theta}{dx^2} + \text{Da} \cdot y \exp\left(\frac{-\beta(1 - \theta)}{1 - \alpha(1 - \theta)}\right),
 \]
+
 \[
 \frac{dy}{dx} = \frac{d^2 y}{dx^2} - \text{Da} \cdot y \exp\left(\frac{-\beta(1 - \theta)}{1 - \alpha(1 - \theta)}\right),
 \]
@@ -146,10 +158,12 @@ The existence and speed of such traveling waves is one of the classical problems
 
 <div class="definition">
 <strong>Definition 2.1 (Premixed Flame as Traveling Wave).</strong> A <em>premixed laminar flame</em> is a traveling wave solution \(\theta(x - S_L t)\) of the reaction-diffusion equation
+
 \[
 \frac{\partial \theta}{\partial t} = \kappa \frac{\partial^2 \theta}{\partial x^2} + f(\theta),
 \]
 where \(\theta\) is the nondimensional temperature, \(\kappa\) is the thermal diffusivity, and \(f(\theta)\) is the reaction rate. In the traveling wave frame \(\xi = x - S_L t\), the equation becomes
+
 \[
 \kappa \theta'' + S_L \theta' + f(\theta) = 0,
 \]
@@ -164,6 +178,7 @@ The connection between combustion and mathematical biology deserves a brief digr
 
 <div class="theorem">
 <strong>Theorem 2.2 (KPP Minimum Speed Selection).</strong> For the reaction-diffusion equation \(\theta_t = \kappa \theta_{xx} + f(\theta)\) with \(f\) of KPP type (i.e., \(f(0) = 0\), \(f(1) = 0\), \(f(\theta) > 0\) for \(0 < \theta < 1\), and \(f(\theta) \leq f'(0)\theta\)), traveling wave solutions \(\theta(\xi) = \theta(x - S_L t)\) connecting \(\theta = 0\) to \(\theta = 1\) exist if and only if
+
 \[
 S_L \geq S_{\min} = 2\sqrt{\kappa f'(0)}.
 \]
@@ -172,6 +187,7 @@ Moreover, compactly supported initial data evolve toward the traveling wave with
 
 <div class="proof">
 <strong>Proof.</strong> (Sketch.) In the traveling wave ODE \(\kappa \theta'' + S_L \theta' + f(\theta) = 0\), linearize near the cold boundary \(\theta = 0\) by setting \(f(\theta) \approx f'(0)\theta\). The characteristic equation is \(\kappa r^2 + S_L r + f'(0) = 0\), with roots
+
 \[
 r = \frac{-S_L \pm \sqrt{S_L^2 - 4\kappa f'(0)}}{2\kappa}.
 \]
@@ -190,6 +206,7 @@ The first successful determination of the laminar flame speed was achieved indep
 
 <div class="definition">
 <strong>Definition 2.4 (Zeldovich Number).</strong> The <em>Zeldovich number</em> is the dimensionless activation energy
+
 \[
 \beta = \frac{E_a (T_{ad} - T_u)}{R_u T_{ad}^2}.
 \]
@@ -200,10 +217,12 @@ The Zeldovich number is the large parameter in the asymptotic expansion. When \(
 
 <div class="theorem">
 <strong>Theorem 2.5 (ZFK Flame Speed Formula).</strong> In the limit \(\beta \to \infty\) with all other parameters fixed, the laminar flame speed for the one-step irreversible Arrhenius model satisfies
+
 \[
 S_L^2 = \frac{2 \kappa B}{\beta^2} \exp\left(-\frac{E_a}{R_u T_{ad}}\right) \cdot I(\alpha, n),
 \]
 where \(I(\alpha, n)\) is an order-one integral that depends on the heat release parameter \(\alpha\) and the reaction order \(n\). For a first-order reaction with \(\alpha = O(1)\),
+
 \[
 S_L^2 \sim \frac{2 \kappa B}{\beta^2} \exp\left(-\frac{E_a}{R_u T_{ad}}\right).
 \]
@@ -217,18 +236,22 @@ S_L^2 \sim \frac{2 \kappa B}{\beta^2} \exp\left(-\frac{E_a}{R_u T_{ad}}\right).
 <em>Outer region (burned gas):</em> For \(\xi > 0\) (behind the flame), all fuel is consumed and \(\theta = 1\).
 
 <em>Inner region (reaction zone):</em> Introduce the stretched coordinate \(\eta = \beta \xi / \delta\), where \(\delta\) is the (unknown) reaction zone thickness. Set \(\theta = 1 - \phi / \beta\), where \(\phi = O(1)\) measures the temperature deficit from the adiabatic flame temperature. The reaction rate becomes
+
 \[
 f(\theta) = \text{Da} \cdot \frac{\phi}{\beta} \exp\left(-\frac{\beta(1/\beta)\phi}{1 - \alpha\phi/\beta}\right) \approx \text{Da} \cdot \frac{\phi}{\beta} \exp(-\phi),
 \]
 at leading order. The inner equation, after balancing terms, is
+
 \[
 \frac{d^2\phi}{d\eta^2} = -\Lambda \phi \, e^{-\phi},
 \]
 where \(\Lambda\) is a rescaled Damköhler number. Multiplying by \(d\phi/d\eta\) and integrating from \(\eta = -\infty\) (where \(\phi = 0\), \(d\phi/d\eta = 0\) from the burned side) to \(\eta = +\infty\) (matching onto the preheat zone), one obtains
+
 \[
 \frac{1}{2}\left(\frac{d\phi}{d\eta}\right)^2\bigg|_{\eta \to +\infty} = \Lambda \int_0^\infty \phi \, e^{-\phi} \, d\phi = \Lambda.
 \]
 Matching the inner gradient to the outer preheat-zone slope \(S_L / \kappa\) yields
+
 \[
 \frac{S_L}{\kappa} = \frac{\beta}{\delta} \sqrt{2\Lambda},
 \]
@@ -257,6 +280,7 @@ This monotonicity is a consequence of the maximum principle for parabolic equati
 
 <div class="example">
 <strong>Example 2.9 (Effect of Pressure on Flame Speed).</strong> The ZFK formula predicts the pressure dependence of the laminar flame speed. For a second-order reaction (\(n = 2\)), the pre-exponential factor scales as \(B \rho^2 \propto p^2\), while the thermal diffusivity scales as \(\kappa \propto 1/p\) (since \(\kappa = \lambda / (\rho c_p)\) and \(\lambda\) is nearly pressure-independent). Therefore
+
 \[
 S_L^2 \propto \kappa \cdot B \rho^n \propto p^{-1} \cdot p^2 = p,
 \]
@@ -273,6 +297,7 @@ The formal construction of the ZFK solution illustrates the method of matched as
 
 <div class="example">
 <strong>Example 2.11 (Comparison of ZFK Prediction with Experiment).</strong> For a stoichiometric methane-air flame at 1 atm, the ZFK formula (Theorem 2.5) with parameters \(\kappa = 0.22\) cm\(^2\)/s, \(B = 2.1 \times 10^{14}\) s\(^{-1}\), \(E_a/R_u = 24{,}400\) K, and \(T_{ad} = 2230\) K gives
+
 \[
 S_L = \sqrt{\frac{2 \times 0.22 \times 2.1 \times 10^{14}}{10^2} \exp(-24{,}400/2230)} \approx \sqrt{9.24 \times 10^{9} \times 1.85 \times 10^{-5}} \approx 41 \text{ cm/s}.
 \]
@@ -328,10 +353,12 @@ We now carry out the formal asymptotic expansion for a general one-dimensional s
 
 <div class="theorem">
 <strong>Theorem 3.5 (Outer Solution Structure).</strong> Consider the steady reaction-diffusion equation
+
 \[
 \theta'' + c \, \theta' + \text{Da} \cdot (1 - \theta) \exp\left(\frac{-\beta(1-\theta)}{1 - \alpha(1-\theta)}\right) = 0,
 \]
 on \(-\infty < x < \infty\) with \(\theta(-\infty) = 0\), \(\theta(+\infty) = 1\). In the limit \(\beta \to \infty\), the outer solution (away from the reaction zone at \(x = 0\)) is, to all algebraic orders in \(\beta\),
+
 \[
 \theta^{(-)}_{\text{outer}}(x) = e^{cx}, \quad x < 0, \qquad \theta^{(+)}_{\text{outer}}(x) = 1, \quad x > 0.
 \]
@@ -346,10 +373,12 @@ The outer solution has a discontinuous first derivative at \(x = 0\): the slope 
 
 <div class="example">
 <strong>Example 3.6 (Matching at the Reaction Sheet).</strong> To illustrate the matching procedure concretely, consider the outer preheat-zone solution \(\theta^{(-)}(x) = e^{cx}\) for \(x < 0\). As \(x \to 0^-\), we have \(\theta^{(-)} \to 1\) and \(d\theta^{(-)}/dx \to c\). In the inner zone, set \(\eta = \beta x\) and \(\theta = 1 - \phi/\beta\). The inner temperature deficit \(\phi\) must satisfy \(\phi \to 0\) as \(\eta \to -\infty\) (matching onto the burned side) and
+
 \[
 \frac{d\phi}{d\eta} \to -\frac{c}{\beta} \quad \text{as} \quad \eta \to +\infty,
 \]
 which, after rescaling, becomes the condition that the inner gradient matches the outer preheat-zone slope. This matching condition is what determines the eigenvalue \(c\) (and hence the flame speed \(S_L\)) in terms of the Damköhler number and activation energy. The inner equation itself,
+
 \[
 \frac{d^2\phi}{d\eta^2} = -\Lambda \phi \, e^{-\phi},
 \]
@@ -366,6 +395,7 @@ At leading order in the large-\(\beta\) limit, the flame reduces to a surface (a
 
 <div class="definition">
 <strong>Definition 3.8 (Flame Sheet Approximation).</strong> In the flame sheet approximation, the governing equations outside the reaction zone are the source-free transport equations, and the effect of the reaction is captured by jump conditions across the flame sheet \(\Sigma\):
+
 \[
 [\theta]_{\Sigma} = 0, \qquad \left[\frac{\partial \theta}{\partial n}\right]_{\Sigma} = -\frac{S_L}{\kappa},
 \]
@@ -382,6 +412,7 @@ Amable Liñán's 1974 analysis of the counterflow diffusion flame is one of the 
 
 <div class="theorem">
 <strong>Theorem 3.10 (Liñán's Canonical Inner Problem).</strong> In the diffusion flame regime with \(\beta \gg 1\), the inner reaction-zone equation, after appropriate stretching and nondimensionalization, takes the canonical form
+
 \[
 \frac{d^2\phi}{d\eta^2} = \delta_L(\phi - \gamma|\eta|) \exp(-\phi),
 \]
@@ -392,10 +423,12 @@ The parameter \(\delta_L\) (Liñán's reduced Damköhler number) serves as the b
 
 <div class="example">
 <strong>Example 3.11 (Symmetric Diffusion Flame, \(\gamma = 0\)).</strong> When \(\gamma = 0\) (equal diffusivities and stoichiometric symmetry), Liñán's equation simplifies to
+
 \[
 \frac{d^2\phi}{d\eta^2} = \delta_L \, \phi \, \exp(-\phi).
 \]
 This is equivalent (by the substitution \(\psi = d\phi/d\eta\)) to the phase-plane system \(\phi' = \psi\), \(\psi' = \delta_L \phi e^{-\phi}\). The extinction condition is obtained by requiring that the integral
+
 \[
 \int_0^{\phi_{\max}} \phi \, e^{-\phi} \, d\phi = \frac{1}{2\delta_L}\left(\frac{d\phi}{d\eta}\bigg|_{\eta \to \infty}\right)^2
 \]
@@ -414,6 +447,7 @@ S.P. Burke and T.E.W. Schumann introduced this model in 1928 in their pioneering
 
 <div class="definition">
 <strong>Definition 4.1 (Mixture Fraction).</strong> The <em>mixture fraction</em> \(Z\) is a conserved scalar defined so that \(Z = 1\) in pure fuel and \(Z = 0\) in pure oxidizer. For a one-step reaction with \(\text{Le} = 1\), it satisfies the source-free equation
+
 \[
 \rho \frac{\partial Z}{\partial t} + \rho \mathbf{u} \cdot \nabla Z = \nabla \cdot (\rho D \nabla Z).
 \]
@@ -422,6 +456,7 @@ The mixture fraction is related to the Shvab-Zeldovich variable \(\beta_2\) by a
 
 <div class="definition">
 <strong>Definition 4.2 (Stoichiometric Surface).</strong> The <em>stoichiometric surface</em> is the level set
+
 \[
 Z(\mathbf{x}, t) = Z_{st},
 \]
@@ -432,6 +467,7 @@ The mixture fraction formulation is the foundation of modern computational appro
 
 <div class="example">
 <strong>Example 4.3 (Computing the Stoichiometric Mixture Fraction).</strong> For methane (\(\text{CH}_4\)) burning in air, the stoichiometric reaction is \(\text{CH}_4 + 2\text{O}_2 \to \text{CO}_2 + 2\text{H}_2\text{O}\). The stoichiometric mass ratio is \(\nu = 2 \times 32 / 16 = 4\) (4 kg of \(\text{O}_2\) per kg of \(\text{CH}_4\)). With air containing 23.2% oxygen by mass, the stoichiometric air-to-fuel ratio is \(4 / 0.232 \approx 17.2\). The stoichiometric mixture fraction is
+
 \[
 Z_{st} = \frac{1}{1 + \nu Y_{F,\infty}/Y_{O,\infty}} = \frac{1}{1 + 4 \times 1 / 0.232} \approx 0.055.
 \]
@@ -440,12 +476,15 @@ This small value means that the flame sits close to the oxidizer side of the mix
 
 <div class="theorem">
 <strong>Theorem 4.4 (Burke-Schumann Solution).</strong> In the limit \(\text{Da} \to \infty\) with \(\text{Le} = 1\), the temperature and species fields are piecewise linear functions of the mixture fraction:
+
 \[
 \theta(Z) = \begin{cases} \dfrac{Z}{Z_{st}}, & 0 \leq Z \leq Z_{st}, \\[6pt] \dfrac{1 - Z}{1 - Z_{st}}, & Z_{st} \leq Z \leq 1, \end{cases}
 \]
+
 \[
 Y_F(Z) = \begin{cases} 0, & 0 \leq Z \leq Z_{st}, \\[6pt] Y_{F,\infty} \dfrac{Z - Z_{st}}{1 - Z_{st}}, & Z_{st} \leq Z \leq 1, \end{cases}
 \]
+
 \[
 Y_O(Z) = \begin{cases} Y_{O,\infty} \dfrac{Z_{st} - Z}{Z_{st}}, & 0 \leq Z \leq Z_{st}, \\[6pt] 0, & Z_{st} \leq Z \leq 1. \end{cases}
 \]
@@ -460,10 +499,12 @@ The piecewise-linear structure in \(Z\)-space corresponds to a smooth field in p
 
 <div class="example">
 <strong>Example 4.5 (Burke-Schumann Flame Height in a Co-Flow Jet).</strong> Consider a round fuel jet of radius \(R\) issuing into a co-flowing air stream. In the Burke-Schumann limit, the flame sits on the surface \(Z(r, x) = Z_{st}\), where \(x\) is the axial distance and \(r\) is the radial coordinate. For a uniform velocity \(U\) and constant diffusivity \(D\), the mixture fraction satisfies
+
 \[
 U \frac{\partial Z}{\partial x} = D \left(\frac{\partial^2 Z}{\partial r^2} + \frac{1}{r}\frac{\partial Z}{\partial r}\right),
 \]
 whose solution is a series of Bessel functions. The flame height — the axial distance at which \(Z = Z_{st}\) on the centerline \(r = 0\) — scales as
+
 \[
 L_f \sim \frac{U R^2}{D} \cdot \frac{1}{\ln(1/Z_{st})}.
 \]
@@ -480,6 +521,7 @@ The counterflow configuration is the most important canonical geometry for study
 
 <div class="definition">
 <strong>Definition 4.7 (Counterflow Configuration).</strong> In the <em>counterflow diffusion flame</em>, fuel and oxidizer approach from opposite sides of a stagnation plane with strain rate \(a\) (units s\(^{-1}\)). The flow field is \(\mathbf{u} = (-ax, ay)\) in two dimensions (or the axisymmetric analogue). The mixture fraction satisfies
+
 \[
 -ax \frac{dZ}{dx} = D \frac{d^2Z}{dx^2},
 \]
@@ -494,6 +536,7 @@ The strain rate \(a\) controls the Damköhler number: \(\text{Da} \sim (B/a) \ex
 
 <div class="example">
 <strong>Example 4.9 (Extinction Strain Rate).</strong> For a methane-air counterflow flame, typical parameters give an extinction strain rate of \(a_{\text{ext}} \approx 400\) s\(^{-1}\), corresponding to \(\text{Da}_{\text{ext}} = O(1)\) (in the appropriately rescaled sense). Using Liñán's analysis from Chapter 3 with \(\beta \approx 10\), the extinction condition is \(\delta_L = \delta_E(\gamma)\), which translates to
+
 \[
 a_{\text{ext}} \sim \frac{B}{\beta^3} \exp\left(-\frac{E_a}{R_u T_{ad}}\right) \cdot g(\gamma, Z_{st}),
 \]
@@ -532,10 +575,12 @@ The theory of thermal explosions predates modern combustion theory and addresses
 
 <div class="definition">
 <strong>Definition 5.1 (Semenov Model).</strong> The <em>Semenov model</em> of thermal explosion considers a spatially uniform reactive system with Newtonian heat loss:
+
 \[
 \rho c_v \frac{dT}{dt} = Q B \exp\left(-\frac{E_a}{R_u T}\right) - \frac{hS}{V}(T - T_w),
 \]
 where \(h\) is the heat transfer coefficient, \(S/V\) is the surface-to-volume ratio, and \(T_w\) is the wall temperature. Steady states satisfy
+
 \[
 Q B \exp\left(-\frac{E_a}{R_u T}\right) = \frac{hS}{V}(T - T_w).
 \]
@@ -545,10 +590,12 @@ Nikolai Semenov's (1928) analysis of this algebraic equation is elegant in its s
 
 <div class="theorem">
 <strong>Theorem 5.2 (Semenov Criticality Condition).</strong> In the large activation energy limit, the critical condition for thermal explosion in the Semenov model is
+
 \[
 \delta_{\text{cr}} = \frac{1}{e},
 \]
 where the Semenov number is
+
 \[
 \delta = \frac{Q B V E_a}{h S R_u T_w^2} \exp\left(-\frac{E_a}{R_u T_w}\right).
 \]
@@ -563,6 +610,7 @@ The Semenov analysis assumes spatial uniformity — the entire reactive mass is 
 
 <div class="example">
 <strong>Example 5.3 (Semenov Criticality for a Batch Reactor).</strong> Consider a well-stirred batch reactor of volume \(V = 1\) L containing a reactive gas at \(T_w = 600\) K, with heat transfer coefficient \(h = 100\) W/(m\(^2\cdot\)K) and surface area \(S = 0.06\) m\(^2\) (approximately a 10 cm sphere). Taking \(Q B = 10^{12}\) W/m\(^3\), \(E_a / R_u = 15{,}000\) K, the Semenov number is
+
 \[
 \delta = \frac{Q B V E_a}{h S R_u T_w^2} \exp\left(-\frac{E_a}{R_u T_w}\right) = \frac{10^{12} \times 10^{-3} \times 15{,}000}{100 \times 0.06 \times 600^2} \exp(-25).
 \]
@@ -573,10 +621,12 @@ Computing: the prefactor is \(15 \times 10^{12} / (2.16 \times 10^6) \approx 6.9
 
 <div class="definition">
 <strong>Definition 5.4 (Frank-Kamenetskii Problem).</strong> The <em>Frank-Kamenetskii problem</em> is the steady-state heat equation in a bounded domain \(\Omega\) with Dirichlet boundary conditions and Arrhenius heat release:
+
 \[
 \lambda \nabla^2 T + Q B \exp\left(-\frac{E_a}{R_u T}\right) = 0 \quad \text{in } \Omega, \qquad T = T_w \quad \text{on } \partial\Omega.
 \]
 In the Frank-Kamenetskii approximation (\(\varepsilon = R_u T_w / E_a \ll 1\)), with \(\theta = E_a(T - T_w)/(R_u T_w^2)\), this becomes
+
 \[
 \nabla^2 \theta + \delta_{FK} \, e^{\theta} = 0 \quad \text{in } \Omega, \qquad \theta = 0 \quad \text{on } \partial\Omega,
 \]
@@ -587,6 +637,7 @@ This is a semilinear elliptic PDE with exponential nonlinearity — the Bratu-Ge
 
 <div class="theorem">
 <strong>Theorem 5.5 (Critical Frank-Kamenetskii Parameters).</strong> The critical values \(\delta_{\text{cr}}\) for the Frank-Kamenetskii problem depend on the geometry of \(\Omega\):
+
 \[
 \delta_{\text{cr}} = \begin{cases} 0.878 & \text{infinite slab (1D)}, \\ 2.000 & \text{infinite cylinder (2D)}, \\ 3.322 & \text{sphere (3D)}. \end{cases}
 \]
@@ -595,6 +646,7 @@ For the slab, the exact solution can be written in terms of hyperbolic functions
 
 <div class="proof">
 <strong>Proof.</strong> (Slab case.) In one dimension, \(\theta'' + \delta e^{\theta} = 0\) on \([-1, 1]\) with \(\theta(\pm 1) = 0\). By symmetry, \(\theta'(0) = 0\) and \(\theta(0) = \theta_m\) (the maximum). Multiplying by \(\theta'\) and integrating from \(0\) to \(x\),
+
 \[
 \frac{1}{2}(\theta')^2 = \delta(e^{\theta_m} - e^{\theta}).
 \]
@@ -607,6 +659,7 @@ With the substitution \(u = e^{(\theta_m - \theta)/2}\), one obtains \(\theta(x)
 
 <div class="example">
 <strong>Example 5.7 (Critical Size of a Reactive Stockpile).</strong> Consider a spherical stockpile of organic material (e.g., wood chips) at ambient temperature \(T_w = 300\) K, with thermal conductivity \(\lambda = 0.1\) W/(m\(\cdot\)K), heat of reaction \(Q = 5 \times 10^5\) J/kg, pre-exponential factor \(B = 10^8\) s\(^{-1}\), activation energy \(E_a/R_u = 10{,}000\) K, and density \(\rho = 500\) kg/m\(^3\). The Frank-Kamenetskii parameter is
+
 \[
 \delta_{FK} = \frac{\rho Q B E_a}{\lambda R_u T_w^2} R^2 \exp\left(-\frac{E_a}{R_u T_w}\right) = \frac{500 \times 5 \times 10^5 \times 10^8 \times 10{,}000}{0.1 \times 300^2} \, R^2 \, e^{-33.3}.
 \]
@@ -623,6 +676,7 @@ Ignition is a transient phenomenon: a reactive mixture at low temperature evolve
 
 <div class="definition">
 <strong>Definition 5.9 (Ignition Delay).</strong> The <em>ignition delay</em> \(t_{\text{ign}}\) is the time required for a homogeneous reactive mixture at initial temperature \(T_0\) to reach thermal runaway. In the Semenov model,
+
 \[
 t_{\text{ign}} = \frac{\rho c_v R_u T_0^2}{Q B E_a} \exp\left(\frac{E_a}{R_u T_0}\right) \cdot g(\delta),
 \]
@@ -659,6 +713,7 @@ The connection between the S-curve turning point and the dynamic flame response 
 
 <div class="theorem">
 <strong>Theorem 5.14 (Extinction Criterion).</strong> For a counterflow diffusion flame in the large activation energy limit, extinction occurs when the reduced Damköhler number
+
 \[
 \delta_L = \frac{4\text{Da}}{\beta^3} \cdot F(Z_{st})
 \]
@@ -706,6 +761,7 @@ David Chapman (1899) and Émile Jouguet (1905) independently proposed a criterio
 
 <div class="proof">
 <strong>Proof.</strong> The Rayleigh line passing through \((v_0, p_0)\) with slope \(-m^2\) is \(p - p_0 = -m^2(v - v_0)\). The Hugoniot curve \(H(v, p; q) = 0\) relates final states consistent with conservation. At a tangency point, the Rayleigh line touches the Hugoniot, so
+
 \[
 \frac{dp}{dv}\bigg|_H = \frac{dp}{dv}\bigg|_R = -m^2.
 \]
@@ -720,6 +776,7 @@ For a stoichiometric hydrogen-air mixture, the CJ detonation velocity is approxi
 
 <div class="example">
 <strong>Example 6.4 (CJ Detonation Velocity for an Ideal Gas).</strong> For an ideal gas with constant \(\gamma\), the CJ detonation velocity can be obtained in closed form. Let \(\tilde{q} = 2(\gamma^2 - 1)q / (c_0^2)\) where \(c_0 = \sqrt{\gamma p_0 / \rho_0}\) is the initial sound speed. Then
+
 \[
 \frac{D_{CJ}}{c_0} = \sqrt{1 + \frac{\tilde{q}}{2}} + \sqrt{\frac{\tilde{q}}{2}}.
 \]
@@ -738,6 +795,7 @@ The Chapman-Jouguet theory treats the detonation as a discontinuity and says not
 <li>A <strong>reaction zone</strong> where the reaction progress variable \(\lambda\) increases from 0 to 1 and the state slides along the Rayleigh line from the von Neumann point to the CJ point.</li>
 </ol>
 The governing equations in the shock-attached frame are
+
 \[
 m \frac{dv}{dx} = \frac{dp}{dx}, \qquad m \frac{du}{dx} = -\frac{dp}{dx}, \qquad m \frac{d\lambda}{dx} = \dot{\omega}(\rho, T, \lambda),
 \]
@@ -746,6 +804,7 @@ supplemented by the energy equation and an equation of state.
 
 <div class="theorem">
 <strong>Theorem 6.6 (Thermicity and Sonic Plane).</strong> Within the ZND reaction zone, the flow Mach number relative to the wave satisfies
+
 \[
 \frac{1 - M^2}{M^2} \frac{dM^2}{dx} = (\gamma + 1) \sigma \dot{\omega},
 \]
@@ -800,6 +859,7 @@ The stability analysis of detonation waves was carried out by Erpenbeck (1964) u
 
 <div class="example">
 <strong>Example 6.13 (Detonation Cell Sizes for Common Fuels).</strong> Measured detonation cell sizes in stoichiometric fuel-air mixtures at standard conditions provide a practical database for safety engineering:
+
 \[
 \begin{aligned}
 \text{Hydrogen-air:} \quad &\lambda_c \approx 1.5 \text{ cm}, \\
@@ -822,6 +882,7 @@ A planar premixed flame is unconditionally unstable to long-wavelength perturbat
 
 <div class="theorem">
 <strong>Theorem 7.1 (Darrieus-Landau Instability).</strong> Consider a planar premixed flame separating unburned gas (density \(\rho_u\)) from burned gas (density \(\rho_b < \rho_u\)). Subject the flame to a small sinusoidal perturbation with wavenumber \(k\). Treating the flame as a discontinuity propagating at the constant laminar burning velocity \(S_L\) relative to the unburned gas, the growth rate of the perturbation is
+
 \[
 \sigma = k S_L \left(\frac{-r + \sqrt{r^3 + r^2 - r}}{r + 1}\right),
 \]
@@ -838,6 +899,7 @@ The Darrieus-Landau instability has a simple physical mechanism: when the flame 
 
 <div class="example">
 <strong>Example 7.2 (Growth Rate of the Darrieus-Landau Instability).</strong> For a stoichiometric methane-air flame with \(r = \rho_u/\rho_b \approx 6\) and \(S_L = 40\) cm/s, the Darrieus-Landau growth rate for a perturbation with wavelength \(\lambda = 1\) cm (wavenumber \(k = 2\pi/\lambda \approx 628\) m\(^{-1}\)) is
+
 \[
 \sigma = k S_L \left(\frac{-6 + \sqrt{6^3 + 6^2 - 6}}{6 + 1}\right) = 628 \times 0.4 \times \left(\frac{-6 + \sqrt{246}}{7}\right).
 \]
@@ -854,6 +916,7 @@ A second fundamental instability of premixed flames arises from differential dif
 
 <div class="theorem">
 <strong>Theorem 7.4 (Thermal-Diffusive Instability).</strong> In the limit of large activation energy \(\beta \gg 1\) and constant density (eliminating the Darrieus-Landau mechanism), a planar premixed flame is unstable to perturbations with wavenumber \(k\) when
+
 \[
 \text{Le} < \text{Le}_{\text{cr}} = 1 - \frac{2}{\beta} + O(\beta^{-2}).
 \]
@@ -862,6 +925,7 @@ The instability is oscillatory (pulsating) when it first appears if the effectiv
 
 <div class="proof">
 <strong>Proof.</strong> (Sketch.) Perturb the flame position and the inner reaction-zone solution of the ZFK analysis. The perturbation \(\hat{\xi} e^{iky + \sigma t}\) modifies the curvature of the flame sheet, which changes the local burning velocity through the Markstein effect. In the inner zone, the temperature perturbation satisfies a modified version of Liñán's canonical equation with a term proportional to \(k^2 (1 - \text{Le})\). The solvability condition for the inner problem gives the dispersion relation
+
 \[
 \sigma = S_L^2 k^2 \delta_f \left(\frac{\beta(\text{Le}_{\text{cr}} - \text{Le})}{2} - k^2 \delta_f^2\right) + O(\beta^{-1}).
 \]
@@ -870,6 +934,7 @@ The flame is unstable (\(\sigma > 0\)) when \(\text{Le} < \text{Le}_{\text{cr}}\
 
 <div class="example">
 <strong>Example 7.5 (Critical Lewis Number for Hydrogen-Air).</strong> For a lean hydrogen-air flame with \(\beta \approx 8\), the critical Lewis number from Theorem 7.4 is
+
 \[
 \text{Le}_{\text{cr}} = 1 - \frac{2}{8} = 0.75.
 \]
@@ -884,10 +949,12 @@ The Markstein length \(\mathcal{L}\) characterizes the linear response of the la
 
 <div class="definition">
 <strong>Definition 7.6 (Markstein Length).</strong> The local burning velocity \(S_n\) of a weakly curved and strained flame is related to the unstretched burning velocity \(S_L\) by
+
 \[
 S_n = S_L - \mathcal{L} \kappa - \mathcal{L}_s \frac{1}{A}\frac{dA}{dt},
 \]
 where \(\kappa = \nabla \cdot \mathbf{n}\) is the flame curvature (with \(\mathbf{n}\) the normal pointing toward the unburned gas), \(dA/dt\) is the rate of change of flame surface area (stretch), and \(\mathcal{L}\), \(\mathcal{L}_s\) are the curvature and strain Markstein lengths, respectively. In the large activation energy limit,
+
 \[
 \mathcal{L} = \delta_f \left(\frac{\beta(\text{Le} - 1)}{2} + C(r)\right),
 \]
@@ -898,10 +965,12 @@ The combined effects of hydrodynamic instability, thermal-diffusive instability,
 
 <div class="theorem">
 <strong>Theorem 7.7 (Sivashinsky Equation).</strong> In the limit of weak thermal expansion (\(r - 1 = O(\varepsilon)\), \(\varepsilon \ll 1\)), the flame front position \(\xi(y, t)\) evolves according to the <em>Michelson-Sivashinsky equation</em>:
+
 \[
 \frac{\partial \xi}{\partial t} + \frac{1}{2}|\nabla \xi|^2 = \nu \nabla^2 \xi + \mathcal{I}[\xi],
 \]
 where \(\nu\) is an effective Markstein diffusivity and \(\mathcal{I}[\xi]\) is the Landau-Darrieus operator, a nonlocal pseudo-differential operator whose Fourier symbol is \(|k|\):
+
 \[
 \widehat{\mathcal{I}[\xi]}(k) = |k| \hat{\xi}(k).
 \]
@@ -919,6 +988,7 @@ When the flow is turbulent, the flame front is wrinkled by turbulent eddies acro
 
 <div class="definition">
 <strong>Definition 7.9 (Turbulent Flame Speed).</strong> The <em>turbulent flame speed</em> \(S_T\) is defined as the volume of unburned gas consumed per unit time per unit area of the mean flame surface:
+
 \[
 S_T = \frac{1}{A_{\text{mean}}} \int_{\text{flame}} S_L \, dA,
 \]
@@ -929,11 +999,13 @@ where the integral is over the wrinkled flame surface and \(A_{\text{mean}}\) is
 <strong>Theorem 7.10 (Damköhler's Scaling Laws).</strong> Gerhard Damköhler (1940) proposed two limiting scaling laws for the turbulent flame speed:
 <ol>
 <li><strong>Large-scale turbulence</strong> (turbulent eddies much larger than the flame thickness): the flame is wrinkled but locally retains its laminar structure. The turbulent flame speed is
+
 \[
 \frac{S_T}{S_L} \approx 1 + \frac{u'}{S_L},
 \]
 where \(u'\) is the turbulent velocity fluctuation (rms). The wrinkling increases the flame area by a factor \(\sim u'/S_L\).</li>
 <li><strong>Small-scale turbulence</strong> (turbulent eddies much smaller than the flame thickness): the eddies enhance the effective diffusivity within the flame. The turbulent flame speed is
+
 \[
 \frac{S_T}{S_L} \approx \sqrt{1 + \frac{D_T}{D}},
 \]
@@ -945,6 +1017,7 @@ These scaling laws, while approximate, frame the problem correctly. The first re
 
 <div class="definition">
 <strong>Definition 7.11 (Flamelet Model).</strong> The <em>flamelet model</em> (Peters, 1984) assumes that the turbulent flame consists of an ensemble of thin, locally one-dimensional, laminar flame structures embedded in the turbulent flow. In the flamelet regime, the species and temperature fields are parameterized by the mixture fraction \(Z\) and the scalar dissipation rate \(\chi = 2D|\nabla Z|^2\):
+
 \[
 \rho \frac{\partial Y_i}{\partial t} = \frac{\rho \chi}{2} \frac{\partial^2 Y_i}{\partial Z^2} + \dot{\omega}_i.
 \]
@@ -965,6 +1038,7 @@ The numerical simulation of combustion flows is challenging primarily because of
 
 <div class="definition">
 <strong>Definition 8.1 (Stiffness in Chemical Kinetics).</strong> A system of ODEs \(d\mathbf{c}/dt = \mathbf{R}(\mathbf{c})\), where \(\mathbf{c} = (c_1, \ldots, c_N)^T\) is the vector of species concentrations and \(\mathbf{R}\) is the vector of net production rates, is <em>stiff</em> if the Jacobian \(J = \partial \mathbf{R}/\partial \mathbf{c}\) has eigenvalues \(\lambda_i\) with \(\text{Re}(\lambda_i) < 0\) and
+
 \[
 S = \frac{\max_i |\text{Re}(\lambda_i)|}{\min_i |\text{Re}(\lambda_i)|} \gg 1.
 \]
@@ -1026,6 +1100,7 @@ For turbulent combustion simulations where the chemistry must be integrated mill
 
 <div class="definition">
 <strong>Definition 8.9 (Quasi-Steady-State Approximation).</strong> A species \(c_i\) is in <em>quasi-steady state</em> (QSS) if its net production rate is much smaller than its individual production and consumption rates:
+
 \[
 |\dot{\omega}_i| \ll \dot{\omega}_i^+ \quad \text{and} \quad |\dot{\omega}_i| \ll |\dot{\omega}_i^-|,
 \]
@@ -1044,6 +1119,7 @@ The systematic construction of reduced mechanisms from detailed ones is a major 
 
 <div class="example">
 <strong>Example 8.12 (Four-Step Reduced Mechanism for Methane).</strong> Peters's four-step reduced mechanism for methane-air combustion replaces the 53-species GRI-Mech with four global steps:
+
 \[
 \begin{aligned}
 &\text{I:} \quad \text{CH}_4 + 2\text{H} + \text{H}_2\text{O} \to \text{CO} + 4\text{H}_2, \\
@@ -1061,6 +1137,7 @@ Direct numerical simulation (DNS) resolves all scales of the turbulent reactive 
 
 <div class="theorem">
 <strong>Theorem 8.13 (Cost Scaling of Reactive DNS).</strong> For a turbulent premixed flame in a cubic domain of side \(L\) with integral-scale Reynolds number \(\text{Re} = u' L / \nu\), the number of grid points required scales as
+
 \[
 N \sim \left(\frac{L}{\eta}\right)^3 = \text{Re}^{9/4},
 \]
@@ -1077,6 +1154,7 @@ We close by connecting the theoretical flamelet concept from Chapter 7 to its co
 
 <div class="definition">
 <strong>Definition 8.15 (Flamelet Table).</strong> A <em>flamelet table</em> (or flamelet library) is a pre-computed database of flame structure solutions indexed by the mixture fraction \(Z\) and scalar dissipation rate \(\chi_{st}\) (the scalar dissipation evaluated at the stoichiometric surface). For each value of \(\chi_{st}\), the steady flamelet equations
+
 \[
 \frac{\rho \chi}{2} \frac{d^2 Y_i}{dZ^2} + \dot{\omega}_i = 0, \qquad \frac{\rho \chi}{2} \frac{d^2 T}{dZ^2} - \frac{1}{c_p}\sum_i h_i \dot{\omega}_i = 0,
 \]
@@ -1085,6 +1163,7 @@ are solved with detailed or reduced chemistry to obtain \(Y_i(Z; \chi_{st})\) an
 
 <div class="remark">
 <strong>Remark 8.16.</strong> The flamelet table approach separates the chemistry (solved once, offline, with detailed mechanisms) from the turbulent flow (solved online, without chemistry). The CFD solver transports only the mixture fraction \(Z\) and its variance \(\widetilde{Z''^2}\), from which a presumed PDF (typically a beta function) for \(Z\) is constructed. The mean species mass fractions and temperature are then obtained by integrating the flamelet table against the PDF:
+
 \[
 \widetilde{Y}_i = \int_0^1 Y_i(Z; \chi_{st}) \tilde{P}(Z) \, dZ.
 \]

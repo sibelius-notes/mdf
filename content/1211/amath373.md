@@ -18,21 +18,29 @@ Classical mechanics admits two equivalent formulations: the Lagrangian, which de
 
 For a particle of mass \(m\) moving in a potential \(U(x)\), the **Hamiltonian** is the total mechanical energy expressed as a function of position \(x\) and momentum \(p\):
 
-\[H(x,p) = \frac{p^2}{2m} + U(x).\]
+\[
+H(x,p) = \frac{p^2}{2m} + U(x).
+\]
 
 Hamilton's equations of motion then determine how \(x\) and \(p\) evolve in time:
 
-\[\dot{x} = \frac{\partial H}{\partial p} = \frac{p}{m}, \qquad \dot{p} = -\frac{\partial H}{\partial x} = -\frac{dU}{dx}.\]
+\[
+\dot{x} = \frac{\partial H}{\partial p} = \frac{p}{m}, \qquad \dot{p} = -\frac{\partial H}{\partial x} = -\frac{dU}{dx}.
+\]
 
 The first equation identifies momentum as \(p = m\dot{x}\), and the second is Newton's second law \(\dot{p} = F = -dU/dx\). The Hamiltonian framework thus reproduces Newtonian mechanics while simultaneously making the momentum \(p\) an independent dynamical variable on equal footing with the position \(x\).
 
 The **Poisson bracket** of two phase-space functions \(f(x,p)\) and \(g(x,p)\) is defined as
 
-\[\{f, g\} = \frac{\partial f}{\partial x}\frac{\partial g}{\partial p} - \frac{\partial f}{\partial p}\frac{\partial g}{\partial x}.\]
+\[
+\{f, g\} = \frac{\partial f}{\partial x}\frac{\partial g}{\partial p} - \frac{\partial f}{\partial p}\frac{\partial g}{\partial x}.
+\]
 
 In this language, Hamilton's equations take the compact form \(\dot{x} = \{x, H\}\) and \(\dot{p} = \{p, H\}\), and more generally any dynamical variable \(f\) satisfies \(\dot{f} = \{f, H\}\). The fundamental Poisson brackets of position and momentum are
 
-\[\{x, p\} = 1, \qquad \{x, x\} = 0, \qquad \{p, p\} = 0.\]
+\[
+\{x, p\} = 1, \qquad \{x, x\} = 0, \qquad \{p, p\} = 0.
+\]
 
 A quantity is **conserved** if and only if its Poisson bracket with the Hamiltonian vanishes: \(\{f, H\} = 0\). In particular, the energy \(H\) itself satisfies \(\{H, H\} = 0\), so total energy is conserved whenever \(H\) does not depend explicitly on time.
 
@@ -44,7 +52,9 @@ By the end of the nineteenth century, classical physics appeared triumphant. Max
 
 **Light as a wave.** Maxwell's equations predict that electromagnetic waves in vacuum satisfy the wave equation
 
-\[\frac{\partial^2 E}{\partial x^2} - \frac{1}{c^2}\frac{\partial^2 E}{\partial t^2} = 0,\]
+\[
+\frac{\partial^2 E}{\partial x^2} - \frac{1}{c^2}\frac{\partial^2 E}{\partial t^2} = 0,
+\]
 
 with plane-wave solutions \(E \propto e^{i(kx - \omega t)}\) obeying the linear dispersion relation \(\omega = ck\). Here \(k = 2\pi/\lambda\) is the wave number, \(\omega = 2\pi f\) is the angular frequency, and \(c \approx 3\times 10^8\) m/s is the speed of light. Because the dispersion is linear, all frequencies travel at the same speed: a light pulse maintains its shape indefinitely in vacuum.
 
@@ -60,13 +70,17 @@ The photon also carries momentum. Since photons are massless and travel at speed
 
 **Matter waves and de Broglie.** In 1924, de Broglie made a bold conjecture: if light — traditionally a wave — behaves like a particle, then perhaps matter — traditionally a particle — should also exhibit wave-like behaviour. He proposed that a particle of momentum \(p\) is associated with a wave of wavelength
 
-\[\lambda = \frac{h}{p}, \quad \text{or equivalently} \quad p = \hbar k.\]
+\[
+\lambda = \frac{h}{p}, \quad \text{or equivalently} \quad p = \hbar k.
+\]
 
 This hypothesis was confirmed experimentally by Davisson and Germer in 1927, who observed diffraction of electrons from a crystalline nickel surface. The diffraction pattern was exactly what one would predict for a wave with the de Broglie wavelength corresponding to the electron's momentum.
 
 **Dispersion for matter waves.** A free non-relativistic particle of mass \(m\) has kinetic energy \(E = p^2/(2m) = \hbar^2 k^2/(2m)\). Since \(E = \hbar\omega\), this gives the **quadratic dispersion relation**
 
-\[\omega(k) = \frac{\hbar k^2}{2m}.\]
+\[
+\omega(k) = \frac{\hbar k^2}{2m}.
+\]
 
 This is fundamentally different from the linear dispersion \(\omega = ck\) of light. As we will see in Chapter 2, the quadratic dispersion causes wave packets of matter to spread in time — a purely quantum-mechanical effect with no classical analogue.
 
@@ -74,7 +88,9 @@ This is fundamentally different from the linear dispersion \(\omega = ck\) of li
 
 Before diving into quantum mechanics, it is instructive to understand how wave packets behave in classical physics. A monochromatic plane wave \(e^{i(kx-\omega t)}\) is spatially delocalized — it extends to infinity in both directions and carries no information about the position of a particle. To describe a localized object, we form a **wave packet** by superposing plane waves with a range of wave numbers:
 
-\[\Psi(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \Phi(k)\, e^{i(kx-\omega(k)t)}\, dk.\]
+\[
+\Psi(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \Phi(k)\, e^{i(kx-\omega(k)t)}\, dk.
+\]
 
 The function \(\Phi(k)\) is the Fourier transform of the initial profile \(\Psi(x,0)\) and determines how much each wave number contributes to the packet. A narrow packet in position space requires a broad spread of wave numbers (and vice versa), anticipating the Heisenberg uncertainty principle.
 
@@ -88,25 +104,35 @@ For electromagnetic waves with \(\omega = ck\), consider a wave packet peaked ar
 
 Given the de Broglie hypothesis, how do we interpret the wave function \(\Psi(x,t)\) that describes a quantum particle? The answer — provided by Max Born in 1926 — is that \(\Psi\) is a **probability amplitude**: the probability of finding the particle in the interval \([x, x+dx]\) at time \(t\) is
 
-\[dP = |\Psi(x,t)|^2\, dx.\]
+\[
+dP = |\Psi(x,t)|^2\, dx.
+\]
 
 The quantity \(\rho(x,t) = |\Psi(x,t)|^2\) is the **probability density**. For this interpretation to be consistent, the wave function must be normalizable:
 
-\[\int_{-\infty}^{\infty} |\Psi(x,t)|^2\, dx = 1.\]
+\[
+\int_{-\infty}^{\infty} |\Psi(x,t)|^2\, dx = 1.
+\]
 
 A wave function is written as a superposition of momentum eigenstates (plane waves) via the Fourier transform:
 
-\[\Psi(x,t) = \frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty} \tilde{\phi}(p,t)\, e^{ipx/\hbar}\, dp,\]
+\[
+\Psi(x,t) = \frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty} \tilde{\phi}(p,t)\, e^{ipx/\hbar}\, dp,
+\]
 
 where \(\tilde{\phi}(p,t)\) is the **momentum-space wave function**. By Parseval's theorem (proved below), the normalization in position space equals the normalization in momentum space:
 
-\[\int_{-\infty}^{\infty} |\Psi(x,t)|^2\, dx = \int_{-\infty}^{\infty} |\tilde{\phi}(p,t)|^2\, \frac{dp}{\hbar} = 1.\]
+\[
+\int_{-\infty}^{\infty} |\Psi(x,t)|^2\, dx = \int_{-\infty}^{\infty} |\tilde{\phi}(p,t)|^2\, \frac{dp}{\hbar} = 1.
+\]
 
 So \(D(p) = |\tilde{\phi}(p,t)|^2/\hbar\) plays the role of a probability density for momentum, and the probability of measuring momentum in \([p, p+dp]\) is \(D(p)\,dp = |\tilde{\phi}(p,t)|^2\, dp/\hbar\).
 
 In terms of wave number \(k = p/\hbar\), we write
 
-\[\Psi(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \Phi(k,t)\, e^{ikx}\, dk, \qquad \Phi(k,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \Psi(x,t)\, e^{-ikx}\, dx.\]
+\[
+\Psi(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \Phi(k,t)\, e^{ikx}\, dk, \qquad \Phi(k,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \Psi(x,t)\, e^{-ikx}\, dx.
+\]
 
 The Fourier transform is its own inverse (up to sign), and Parseval's theorem guarantees that \(\int|\Psi|^2\,dx = \int|\Phi|^2\,dk\).
 
@@ -114,7 +140,9 @@ The Fourier transform is its own inverse (up to sign), and Parseval's theorem gu
 
 The Dirac delta \(\delta(x)\) is not a function in the ordinary sense but a **distribution** — a linear functional on the space of smooth test functions. It is defined by its sampling property:
 
-\[\int_{-\infty}^{\infty} f(x)\, \delta(x - a)\, dx = f(a)\]
+\[
+\int_{-\infty}^{\infty} f(x)\, \delta(x - a)\, dx = f(a)
+\]
 
 for any continuous function \(f\). One way to understand \(\delta(x)\) is as the limit of a family of peaked functions that become progressively taller and narrower while maintaining unit area. Several useful representations include:
 
@@ -127,7 +155,9 @@ for any continuous function \(f\). One way to understand \(\delta(x)\) is as the
 
 The Fourier representation is particularly important: the plane waves \(e^{ikx}/\sqrt{2\pi}\) form a complete orthonormal set with delta-function normalization, encoding the identity
 
-\[\delta(x - x') = \frac{1}{2\pi}\int_{-\infty}^{\infty} e^{ik(x-x')}\, dk.\]
+\[
+\delta(x - x') = \frac{1}{2\pi}\int_{-\infty}^{\infty} e^{ik(x-x')}\, dk.
+\]
 
 Several key properties of the delta function follow from its definition:
 
@@ -138,33 +168,47 @@ Several key properties of the delta function follow from its definition:
 
 **Parseval's theorem.** Using the sinc representation of the delta function, one can show that
 
-\[\int_{-\infty}^{\infty} |\Psi(x)|^2\, dx = \int_{-\infty}^{\infty} |\Phi(k)|^2\, dk.\]
+\[
+\int_{-\infty}^{\infty} |\Psi(x)|^2\, dx = \int_{-\infty}^{\infty} |\Phi(k)|^2\, dk.
+\]
 
 *Proof.* Expand \(|\Psi|^2 = \Psi^*\Psi\) using the inverse Fourier transform and use the identity \(\int e^{i(k-k')x}\,dx = 2\pi\delta(k-k')\):
 
-\[\int|\Psi|^2\,dx = \frac{1}{2\pi}\int\!\!\int\!\!\int \Phi^*(k')\Phi(k)\,e^{i(k-k')x}\,dk\,dk'\,dx = \int\!\!\int \Phi^*(k')\Phi(k)\,\delta(k-k')\,dk\,dk' = \int|\Phi|^2\,dk.\]
+\[
+\int|\Psi|^2\,dx = \frac{1}{2\pi}\int\!\!\int\!\!\int \Phi^*(k')\Phi(k)\,e^{i(k-k')x}\,dk\,dk'\,dx = \int\!\!\int \Phi^*(k')\Phi(k)\,\delta(k-k')\,dk\,dk' = \int|\Phi|^2\,dk.
+\]
 
 **Example: Window function.** Consider the rectangular wave function
 
-\[\psi(x) = A e^{i\alpha} \mathbf{1}_{|x| \le L/2}, \quad A = \frac{1}{\sqrt{L}},\]
+\[
+\psi(x) = A e^{i\alpha} \mathbf{1}_{|x| \le L/2}, \quad A = \frac{1}{\sqrt{L}},
+\]
 
 representing a particle uniformly distributed over an interval of length \(L\). The position uncertainty is \(\Delta x = L/\sqrt{12}\) (the standard deviation of a uniform distribution on \([-L/2, L/2]\)). The Fourier transform gives
 
-\[\Phi(k) = A\sqrt{L}\, e^{i\alpha}\, \text{sinc}\!\left(\frac{kL}{2}\right),\]
+\[
+\Phi(k) = A\sqrt{L}\, e^{i\alpha}\, \text{sinc}\!\left(\frac{kL}{2}\right),
+\]
 
 so the momentum probability density is \(D(p) \propto \text{sinc}^2(pL/2\hbar)\). The momentum spread scales as \(\Delta p \sim \hbar/L\), consistent with the uncertainty principle.
 
 **Example: Gaussian wave packet.** The Gaussian wave packet is the most important example in quantum mechanics because it saturates the Heisenberg uncertainty relation. Take
 
-\[\psi(x) = \left(\frac{1}{2\pi d^2}\right)^{1/4} \exp\!\left(-\frac{x^2}{4d^2}\right),\]
+\[
+\psi(x) = \left(\frac{1}{2\pi d^2}\right)^{1/4} \exp\!\left(-\frac{x^2}{4d^2}\right),
+\]
 
 normalized so that \(\int|\psi|^2\,dx = 1\). The position uncertainty is \(\Delta x = d/\sqrt{2}\). The Fourier transform is also a Gaussian:
 
-\[\Phi(k) = \left(\frac{2d^2}{\pi}\right)^{1/4}\exp(-d^2 k^2),\]
+\[
+\Phi(k) = \left(\frac{2d^2}{\pi}\right)^{1/4}\exp(-d^2 k^2),
+\]
 
 giving momentum uncertainty \(\Delta p = \hbar/({\sqrt{2}\,d})\). Therefore
 
-\[\Delta x\,\Delta p = \frac{d}{\sqrt{2}}\cdot\frac{\hbar}{\sqrt{2}\,d} = \frac{\hbar}{2},\]
+\[
+\Delta x\,\Delta p = \frac{d}{\sqrt{2}}\cdot\frac{\hbar}{\sqrt{2}\,d} = \frac{\hbar}{2},
+\]
 
 which is the minimum value allowed by the Heisenberg uncertainty relation. The Gaussian wave packet is thus the **minimum-uncertainty state** of position and momentum.
 
@@ -172,37 +216,51 @@ which is the minimum value allowed by the Heisenberg uncertainty relation. The G
 
 How do we compute the expectation value of momentum from the position-space wave function? The momentum operator in the position representation is
 
-\[\hat{p} = \frac{\hbar}{i}\frac{\partial}{\partial x}.\]
+\[
+\hat{p} = \frac{\hbar}{i}\frac{\partial}{\partial x}.
+\]
 
 To see why, note that the expectation value of momentum should be
 
-\[\langle p \rangle = \int_{-\infty}^{\infty} p\, |\Phi(k)|^2\, dk = \int_{-\infty}^{\infty} \hbar k\, |\Phi(k)|^2\, dk.\]
+\[
+\langle p \rangle = \int_{-\infty}^{\infty} p\, |\Phi(k)|^2\, dk = \int_{-\infty}^{\infty} \hbar k\, |\Phi(k)|^2\, dk.
+\]
 
 Translating back to position space via the Fourier transform and integrating by parts, one finds
 
-\[\langle p \rangle = \int_{-\infty}^{\infty} \Psi^*(x)\left(\frac{\hbar}{i}\frac{\partial}{\partial x}\right)\Psi(x)\, dx,\]
+\[
+\langle p \rangle = \int_{-\infty}^{\infty} \Psi^*(x)\left(\frac{\hbar}{i}\frac{\partial}{\partial x}\right)\Psi(x)\, dx,
+\]
 
 which identifies \(\hat{p} = \frac{\hbar}{i}\partial_x\) as the momentum operator in position space. Similarly, position is simply multiplication: \(\hat{x} = x\). The Hamiltonian operator is then
 
-\[\hat{H} = \frac{\hat{p}^2}{2m} + U(\hat{x}) = -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + U(x).\]
+\[
+\hat{H} = \frac{\hat{p}^2}{2m} + U(\hat{x}) = -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + U(x).
+\]
 
 ### 2.4 Phase Velocity, Group Velocity, and Wave Packet Spreading
 
 For a plane wave \(e^{i(kx-\omega t)}\), the **phase velocity** is the speed at which a surface of constant phase moves:
 
-\[v_{ph} = \frac{\omega}{k}.\]
+\[
+v_{ph} = \frac{\omega}{k}.
+\]
 
 For a free quantum particle, \(\omega = \hbar k^2/(2m)\), so \(v_{ph} = \hbar k/(2m) = p/(2m)\), which is *half* the classical particle velocity. This might seem alarming, but individual phase fronts are not physically observable — what matters is the speed of the wave packet as a whole.
 
 The **group velocity** of a wave packet peaked at wave number \(k_0\) is
 
-\[v_{gr} = \left.\frac{d\omega}{dk}\right|_{k_0}.\]
+\[
+v_{gr} = \left.\frac{d\omega}{dk}\right|_{k_0}.
+\]
 
 For a free particle, \(v_{gr} = \hbar k_0/m = p_0/m = v\), which is the classical velocity. The wave packet thus moves at the correct classical speed, even though individual phase fronts move at half that speed.
 
 However, the quadratic dispersion \(\omega \propto k^2\) causes **wave packet spreading**. For the Gaussian packet with initial width \(\Delta x(0) = d/\sqrt{2}\), the width at time \(t\) is
 
-\[\Delta x(t) = \frac{d}{\sqrt{2}}\sqrt{1 + \left(\frac{\hbar t}{md^2}\right)^2} = \frac{d}{\sqrt{2}}\sqrt{1 + (t/\tau)^2},\]
+\[
+\Delta x(t) = \frac{d}{\sqrt{2}}\sqrt{1 + \left(\frac{\hbar t}{md^2}\right)^2} = \frac{d}{\sqrt{2}}\sqrt{1 + (t/\tau)^2},
+\]
 
 where \(\tau = md^2/\hbar\) is the **spreading time scale**. For an electron in a hydrogen atom, \(d \sim 0.5\) Å and \(\tau \sim 10^{-17}\) s — the packet spreads on an atomic timescale. For a macroscopic particle (say, a billiard ball with \(m \sim 0.1\) kg and \(d \sim 1\) mm), we get \(\tau \sim 10^{26}\) s, far larger than the age of the universe. Wave packet spreading is therefore a purely quantum phenomenon that is negligible for macroscopic objects but crucial at the atomic scale.
 
@@ -227,21 +285,29 @@ The spreading is irreversible: once the wave packet spreads, the particle's posi
 
 The central equation of quantum mechanics is the **time-dependent Schrödinger equation** (TDSE):
 
-\[i\hbar\frac{\partial\Psi}{\partial t} = \hat{H}\Psi = \left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + U(x)\right)\Psi.\]
+\[
+i\hbar\frac{\partial\Psi}{\partial t} = \hat{H}\Psi = \left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + U(x)\right)\Psi.
+\]
 
 This is a first-order partial differential equation in time and second-order in space. It is linear, so any superposition of solutions is also a solution. The factor of \(i\) on the left-hand side is crucial: it ensures that probability is conserved (as we will prove in §3.5).
 
 The TDSE is amenable to separation of variables whenever the potential \(U(x)\) does not depend on time. Suppose \(\Psi(x,t) = \psi(x)T(t)\). Substituting and dividing by \(\psi T\):
 
-\[i\hbar\frac{\dot{T}}{T} = \frac{\hat{H}\psi}{\psi} = E,\]
+\[
+i\hbar\frac{\dot{T}}{T} = \frac{\hat{H}\psi}{\psi} = E,
+\]
 
 where \(E\) is the separation constant, which will turn out to be the energy eigenvalue. The time equation gives \(T(t) = e^{-iEt/\hbar}\), and the spatial equation is the **time-independent Schrödinger equation** (TISE):
 
-\[\hat{H}\psi = E\psi, \qquad \text{i.e.,} \qquad -\frac{\hbar^2}{2m}\psi'' + U(x)\psi = E\psi.\]
+\[
+\hat{H}\psi = E\psi, \qquad \text{i.e.,} \qquad -\frac{\hbar^2}{2m}\psi'' + U(x)\psi = E\psi.
+\]
 
 A solution \(\Psi_n(x,t) = \psi_n(x)e^{-iE_nt/\hbar}\) is called a **stationary state** because its probability density \(|\Psi_n|^2 = |\psi_n|^2\) is time-independent. Every observable computed from a stationary state is also time-independent. The general solution to the TDSE is a superposition of stationary states:
 
-\[\Psi(x,t) = \sum_n C_n\,\psi_n(x)\,e^{-iE_nt/\hbar},\]
+\[
+\Psi(x,t) = \sum_n C_n\,\psi_n(x)\,e^{-iE_nt/\hbar},
+\]
 
 where the coefficients \(C_n\) are determined by the initial condition \(\Psi(x,0)\).
 
@@ -285,15 +351,21 @@ This mixed spectrum appears in the hydrogen atom, where discrete bound states ex
 
 For a free particle (\(U=0\)), the TISE becomes \(-\frac{\hbar^2}{2m}\psi'' = E\psi\), with solutions \(\psi_p(x) = Ae^{ipx/\hbar}\) for energy \(E = p^2/(2m)\). These momentum eigenstates are not normalizable in the ordinary sense — they extend over all space. The correct normalization uses a delta function:
 
-\[\psi_p(x) = \frac{1}{\sqrt{2\pi\hbar}}e^{ipx/\hbar}, \qquad \int_{-\infty}^{\infty}\psi_{p'}^*(x)\psi_p(x)\,dx = \delta(p-p').\]
+\[
+\psi_p(x) = \frac{1}{\sqrt{2\pi\hbar}}e^{ipx/\hbar}, \qquad \int_{-\infty}^{\infty}\psi_{p'}^*(x)\psi_p(x)\,dx = \delta(p-p').
+\]
 
 This **delta-function normalization** replaces the Kronecker delta of the discrete case. The **Dirac notation** (bra-ket notation) provides an elegant way to write these relations:
 
-\[\langle x'|x\rangle = \delta(x'-x), \qquad \langle p'|p\rangle = \delta(p'-p), \qquad \langle x|p\rangle = \frac{1}{\sqrt{2\pi\hbar}}e^{ipx/\hbar}.\]
+\[
+\langle x'|x\rangle = \delta(x'-x), \qquad \langle p'|p\rangle = \delta(p'-p), \qquad \langle x|p\rangle = \frac{1}{\sqrt{2\pi\hbar}}e^{ipx/\hbar}.
+\]
 
 Completeness relations (resolution of the identity) take the form
 
-\[\int |x\rangle\langle x|\,dx = \hat{1}, \qquad \int |p\rangle\langle p|\,dp = \hat{1}.\]
+\[
+\int |x\rangle\langle x|\,dx = \hat{1}, \qquad \int |p\rangle\langle p|\,dp = \hat{1}.
+\]
 
 These relations allow us to insert complete sets of states anywhere in an inner product, a technique that pervades the calculations of Chapter 6.
 
@@ -307,7 +379,9 @@ At a boundary where the potential is **infinitely hard** (a hard wall), only \(\
 
 **The particle in a box (PIB)** is the prototypical quantum system. A particle of mass \(m\) is confined to \(0 \le x \le L\) by infinite walls: \(U=0\) inside and \(U=\infty\) outside. The BCs \(\psi(0)=\psi(L)=0\) select the stationary solutions
 
-\[\psi_n(x) = \sqrt{\frac{2}{L}}\sin\!\left(\frac{n\pi x}{L}\right), \qquad E_n = \frac{\hbar^2}{2m}\left(\frac{n\pi}{L}\right)^2 = \frac{n^2\pi^2\hbar^2}{2mL^2},\]
+\[
+\psi_n(x) = \sqrt{\frac{2}{L}}\sin\!\left(\frac{n\pi x}{L}\right), \qquad E_n = \frac{\hbar^2}{2m}\left(\frac{n\pi}{L}\right)^2 = \frac{n^2\pi^2\hbar^2}{2mL^2},
+\]
 
 for \(n = 1, 2, 3, \ldots\) The ground state (\(n=1\)) has energy \(E_1 = \pi^2\hbar^2/(2mL^2) > 0\) — the particle cannot be at rest, reflecting the zero-point energy demanded by the uncertainty principle. The energy levels scale as \(n^2\), so the spacing between adjacent levels grows with \(n\).
 
@@ -327,15 +401,21 @@ for \(n = 1, 2, 3, \ldots\) The ground state (\(n=1\)) has energy \(E_1 = \pi^2\
 
 Multiply the TDSE by \(\Psi^*\) and subtract the complex conjugate equation multiplied by \(\Psi\):
 
-\[i\hbar(\Psi^*\partial_t\Psi - \Psi\partial_t\Psi^*) = -\frac{\hbar^2}{2m}(\Psi^*\Psi'' - \Psi\Psi^{''*}) = -\frac{\hbar^2}{2m}\partial_x(\Psi^*\Psi' - \Psi\Psi'^*).\]
+\[
+i\hbar(\Psi^*\partial_t\Psi - \Psi\partial_t\Psi^*) = -\frac{\hbar^2}{2m}(\Psi^*\Psi'' - \Psi\Psi^{''*}) = -\frac{\hbar^2}{2m}\partial_x(\Psi^*\Psi' - \Psi\Psi'^*).
+\]
 
 Dividing by \(i\hbar\) and rearranging yields the **continuity equation**:
 
-\[\frac{\partial\rho}{\partial t} + \frac{\partial j}{\partial x} = 0,\]
+\[
+\frac{\partial\rho}{\partial t} + \frac{\partial j}{\partial x} = 0,
+\]
 
 where \(\rho = |\Psi|^2\) is the probability density and
 
-\[j(x,t) = \frac{\hbar}{m}\,\text{Im}\!\left[\Psi^*\frac{\partial\Psi}{\partial x}\right] = \frac{\hbar}{2mi}\left(\Psi^*\frac{\partial\Psi}{\partial x} - \Psi\frac{\partial\Psi^*}{\partial x}\right)\]
+\[
+j(x,t) = \frac{\hbar}{m}\,\text{Im}\!\left[\Psi^*\frac{\partial\Psi}{\partial x}\right] = \frac{\hbar}{2mi}\left(\Psi^*\frac{\partial\Psi}{\partial x} - \Psi\frac{\partial\Psi^*}{\partial x}\right)
+\]
 
 is the **probability current** (probability flux). The continuity equation expresses local conservation of probability: if probability density decreases in some region, probability must be flowing out of that region. Integrating over all space and using vanishing BCs, we get \(\frac{d}{dt}\int|\Psi|^2\,dx = 0\), so the total probability is conserved.
 
@@ -371,25 +451,35 @@ is the **probability current** (probability flux). The continuity equation expre
 
 The expectation value of an observable \(\hat{A}\) in state \(\Psi\) is
 
-\[\langle\hat{A}\rangle = \int\Psi^*\hat{A}\Psi\,dx = \langle\Psi|\hat{A}|\Psi\rangle.\]
+\[
+\langle\hat{A}\rangle = \int\Psi^*\hat{A}\Psi\,dx = \langle\Psi|\hat{A}|\Psi\rangle.
+\]
 
 For the PIB with \(\Psi(x,0) = \sum_n C_n\psi_n(x)\), the expectation value of energy is
 
-\[\langle H\rangle = \sum_n |C_n|^2 E_n,\]
+\[
+\langle H\rangle = \sum_n |C_n|^2 E_n,
+\]
 
 which is conserved in time since the \(|C_n|^2\) are time-independent (only the phases rotate).
 
 The **matrix element** of operator \(\hat{A}\) between eigenstates \(\psi_m\) and \(\psi_n\) is
 
-\[\langle m|\hat{A}|n\rangle = \int_0^L \psi_m^*(x)\hat{A}\psi_n(x)\,dx.\]
+\[
+\langle m|\hat{A}|n\rangle = \int_0^L \psi_m^*(x)\hat{A}\psi_n(x)\,dx.
+\]
 
 For the PIB, the matrix elements of \(\hat{x}\) and \(\hat{p}\) can be evaluated explicitly:
 
-\[\langle n|\hat{x}|n\rangle = \frac{L}{2}, \qquad \langle n|\hat{p}|n\rangle = 0, \qquad \langle n|\hat{x}^2|n\rangle = L^2\left(\frac{1}{3} - \frac{1}{2n^2\pi^2}\right).\]
+\[
+\langle n|\hat{x}|n\rangle = \frac{L}{2}, \qquad \langle n|\hat{p}|n\rangle = 0, \qquad \langle n|\hat{x}^2|n\rangle = L^2\left(\frac{1}{3} - \frac{1}{2n^2\pi^2}\right).
+\]
 
 From these, the position and momentum uncertainties for the \(n\)-th PIB state are
 
-\[\Delta x_n = \frac{L}{2\pi n}\sqrt{\frac{\pi^2 n^2}{3} - 2}, \qquad \Delta p_n = \frac{n\pi\hbar}{L},\]
+\[
+\Delta x_n = \frac{L}{2\pi n}\sqrt{\frac{\pi^2 n^2}{3} - 2}, \qquad \Delta p_n = \frac{n\pi\hbar}{L},
+\]
 
 giving \(\Delta x_n\Delta p_n > \hbar/2\) for all \(n \ge 1\), consistent with the Heisenberg uncertainty relation (with equality only in the limit \(n\to\infty\) up to corrections).
 
@@ -401,7 +491,9 @@ giving \(\Delta x_n\Delta p_n > \hbar/2\) for all \(n \ge 1\), consistent with t
 
 For unbounded motion with a potential \(U(x)\) that is asymptotically constant as \(x\to\pm\infty\), we seek stationary scattering solutions. The probability current \(j(x,t) = j(x)\) is time-independent for a stationary state, and the continuity equation reduces to \(\partial_x j = 0\), meaning the current is **constant** throughout space. In particular, the probability flux to the left of the potential equals the flux to the right:
 
-\[j_L = j_R.\]
+\[
+j_L = j_R.
+\]
 
 This simple but profound statement is the basis for defining transmission and reflection coefficients.
 
@@ -409,15 +501,21 @@ This simple but profound statement is the basis for defining transmission and re
 
 Consider a particle incident from the left with wave number \(k_L\) (energy \(E = \hbar^2 k_L^2/(2m)\) above the left-region potential \(U_L\)) and wave number \(k_R\) in the right region. The general form of the wave function is
 
-\[\psi(x) = \begin{cases} Ae^{ik_L x} + Be^{-ik_L x} & x < 0\text{ (left region)}\\ Ce^{ik_R x} + De^{-ik_R x} & x > 0\text{ (right region)} \end{cases}\]
+\[
+\psi(x) = \begin{cases} Ae^{ik_L x} + Be^{-ik_L x} & x < 0\text{ (left region)}\\ Ce^{ik_R x} + De^{-ik_R x} & x > 0\text{ (right region)} \end{cases}
+\]
 
 Setting \(D = 0\) (no wave incident from the right), \(A\) is the amplitude of the incident wave, \(B\) is the reflected amplitude, and \(C\) is the transmitted amplitude. The fluxes are
 
-\[j_{\text{inc}} = \frac{\hbar k_L}{m}|A|^2, \quad j_{\text{ref}} = \frac{\hbar k_L}{m}|B|^2, \quad j_{\text{trans}} = \frac{\hbar k_R}{m}|C|^2.\]
+\[
+j_{\text{inc}} = \frac{\hbar k_L}{m}|A|^2, \quad j_{\text{ref}} = \frac{\hbar k_L}{m}|B|^2, \quad j_{\text{trans}} = \frac{\hbar k_R}{m}|C|^2.
+\]
 
 The **transmission probability** and **reflection probability** are defined as
 
-\[T = \frac{j_{\text{trans}}}{j_{\text{inc}}} = \frac{k_R}{k_L}\left|\frac{C}{A}\right|^2, \qquad R = \frac{j_{\text{ref}}}{j_{\text{inc}}} = \left|\frac{B}{A}\right|^2.\]
+\[
+T = \frac{j_{\text{trans}}}{j_{\text{inc}}} = \frac{k_R}{k_L}\left|\frac{C}{A}\right|^2, \qquad R = \frac{j_{\text{ref}}}{j_{\text{inc}}} = \left|\frac{B}{A}\right|^2.
+\]
 
 Conservation of probability flux requires \(T + R = 1\).
 
@@ -425,7 +523,9 @@ Conservation of probability flux requires \(T + R = 1\).
 
 The potential step is the simplest non-trivial scattering problem:
 
-\[U(x) = \begin{cases} 0 & x < 0\\ V_0 & x > 0 \end{cases}\]
+\[
+U(x) = \begin{cases} 0 & x < 0\\ V_0 & x > 0 \end{cases}
+\]
 
 ```
     U
@@ -438,7 +538,9 @@ The potential step is the simplest non-trivial scattering problem:
 
 **Case 1: \(E > V_0\) (above the step).** Both regions admit oscillatory solutions. The matching conditions give
 
-\[T = \frac{4k_1 k_2}{(k_1+k_2)^2}, \qquad R = \frac{(k_1-k_2)^2}{(k_1+k_2)^2},\]
+\[
+T = \frac{4k_1 k_2}{(k_1+k_2)^2}, \qquad R = \frac{(k_1-k_2)^2}{(k_1+k_2)^2},
+\]
 
 where \(k_1 = \sqrt{2mE}/\hbar\) and \(k_2 = \sqrt{2m(E-V_0)}/\hbar\). Note that \(T < 1\) even when \(E > V_0\): a quantum particle is partially reflected by a step even when it has enough energy to surmount it. This has no classical analogue and is a direct consequence of wave mechanics.
 
@@ -448,7 +550,9 @@ where \(k_1 = \sqrt{2mE}/\hbar\) and \(k_2 = \sqrt{2m(E-V_0)}/\hbar\). Note that
 
 The rectangular barrier is the paradigmatic tunneling problem:
 
-\[U(x) = \begin{cases} 0 & x < 0\\ U_0 & 0 \le x \le L\\ 0 & x > L \end{cases}\]
+\[
+U(x) = \begin{cases} 0 & x < 0\\ U_0 & 0 \le x \le L\\ 0 & x > L \end{cases}
+\]
 
 ```
     U
@@ -461,11 +565,15 @@ The rectangular barrier is the paradigmatic tunneling problem:
 
 For \(E < U_0\), the classically forbidden region \(0 \le x \le L\) admits solutions \(e^{\pm\kappa x}\) with \(\kappa = \sqrt{2m(U_0-E)}/\hbar\). By matching all four boundary conditions (continuity of \(\psi\) and \(\psi'\) at \(x=0\) and \(x=L\)), the transmission coefficient is
 
-\[T = \frac{1}{\cosh^2(\kappa L) + \frac{(\kappa^2-k^2)^2}{4\kappa^2 k^2}\sinh^2(\kappa L)},\]
+\[
+T = \frac{1}{\cosh^2(\kappa L) + \frac{(\kappa^2-k^2)^2}{4\kappa^2 k^2}\sinh^2(\kappa L)},
+\]
 
 where \(k = \sqrt{2mE}/\hbar\). For an **opaque barrier** (\(\kappa L \gg 1\)), \(\cosh(\kappa L) \approx \sinh(\kappa L) \approx e^{\kappa L}/2\), so
 
-\[T \approx \frac{16k^2\kappa^2}{(k^2+\kappa^2)^2}e^{-2\kappa L}.\]
+\[
+T \approx \frac{16k^2\kappa^2}{(k^2+\kappa^2)^2}e^{-2\kappa L}.
+\]
 
 The dominant factor \(e^{-2\kappa L}\) shows that tunneling is exponentially suppressed by both the barrier width \(L\) and the barrier height (which enters through \(\kappa\)). This exponential sensitivity explains why tunneling is dramatically important in some contexts (nuclear alpha decay, scanning tunnelling microscopy) but negligible in others (a billiard ball passing through a wall).
 
@@ -473,13 +581,17 @@ The dominant factor \(e^{-2\kappa L}\) shows that tunneling is exponentially sup
 
 **Resonant transmission.** For \(E > U_0\), both regions have oscillatory solutions. The transmission is now \(T \le 1\), with \(T = 1\) (perfect transmission) at resonance energies
 
-\[k'L = n\pi, \quad n = 1, 2, \ldots, \qquad \text{where } k' = \sqrt{2m(E-U_0)}/\hbar.\]
+\[
+k'L = n\pi, \quad n = 1, 2, \ldots, \qquad \text{where } k' = \sqrt{2m(E-U_0)}/\hbar.
+\]
 
 This **Ramsauer-Townsend effect** is the quantum analogue of anti-reflection coating in optics: at certain energies, the reflected waves from the two interfaces cancel exactly.
 
 **The delta-function barrier.** In the limit \(L\to 0\), \(U_0\to\infty\) with \(U_0 L = \alpha/m\) fixed, the barrier becomes a delta function \(U(x) = \frac{\hbar^2\alpha}{2m}\delta(x)\). The transmission is
 
-\[T = \frac{1}{1+\beta^2}, \qquad \beta = \frac{m\alpha}{\hbar^2 k},\]
+\[
+T = \frac{1}{1+\beta^2}, \qquad \beta = \frac{m\alpha}{\hbar^2 k},
+\]
 
 where \(\beta\) is a dimensionless measure of the barrier strength relative to the particle's kinetic energy.
 
@@ -489,13 +601,17 @@ For a sequence of piecewise-constant potentials, matching boundary conditions at
 
 In each region with wave number \(k\), the wave function is \(Ae^{ikx} + Be^{-ikx}\). A **transfer matrix** \(\underline{M}\) relates the amplitudes on the right to those on the left:
 
-\[\begin{pmatrix}A_R\\B_R\end{pmatrix} = \underline{M}\begin{pmatrix}A_L\\B_L\end{pmatrix}.\]
+\[
+\begin{pmatrix}A_R\\B_R\end{pmatrix} = \underline{M}\begin{pmatrix}A_L\\B_L\end{pmatrix}.
+\]
 
 The transfer matrix satisfies \(\det\underline{M} = 1\), and its elements obey \(M_{11}=M_{22}^*\), \(M_{12}=M_{21}^*\). The **scattering matrix** \(\underline{S}\) is unitary and symmetric, relating incoming to outgoing amplitudes.
 
 For the **Kronig-Penney model** — a periodic array of identical barriers separated by free regions — Bloch's theorem states that solutions must satisfy \(\psi(x+d) = e^{i\theta}\psi(x)\) for some phase \(\theta\). The propagator matrix over one period has trace
 
-\[\text{Tr}(\underline{P}) = 2\left[\cos(kL) + \frac{\gamma}{kL}\sin(kL)\right],\]
+\[
+\text{Tr}(\underline{P}) = 2\left[\cos(kL) + \frac{\gamma}{kL}\sin(kL)\right],
+\]
 
 where \(L\) is the period and \(\gamma\) parametrizes the barrier strength. Bloch solutions exist only when \(|\text{Tr}(\underline{P})| \le 2\) (since \(\theta\) must be real). This condition is satisfied for certain ranges of energy — the **allowed energy bands** — and violated for others — the **energy gaps** (band gaps).
 
@@ -517,15 +633,21 @@ The Kronig-Penney model is the quantum mechanical basis for understanding the el
 
 The finite potential well is more realistic than the infinite square well:
 
-\[U(x) = \begin{cases} U_1 & x < 0 \\ 0 & 0 \le x \le L\\ U_2 & x > L \end{cases}\]
+\[
+U(x) = \begin{cases} U_1 & x < 0 \\ 0 & 0 \le x \le L\\ U_2 & x > L \end{cases}
+\]
 
 For \(0 < E < \min(U_1, U_2)\), we seek bound states. Inside the well, the solution oscillates; outside it decays exponentially. Matching boundary conditions at both interfaces gives a transcendental equation for the allowed energies. For the **symmetric well** (\(U_1 = U_2 = U_0\)):
 
-\[kL = n\pi - \arcsin\!\left(\frac{\hbar k}{\sqrt{2mU_0}}\right) - \arcsin\!\left(\frac{\hbar k}{\sqrt{2mU_0}}\right), \quad n = 1, 2, \ldots\]
+\[
+kL = n\pi - \arcsin\!\left(\frac{\hbar k}{\sqrt{2mU_0}}\right) - \arcsin\!\left(\frac{\hbar k}{\sqrt{2mU_0}}\right), \quad n = 1, 2, \ldots
+\]
 
 The number of bound states is finite, given approximately by
 
-\[n_{\max} = \left\lceil\frac{\sqrt{2mU_0}\,L}{\pi\hbar}\right\rceil.\]
+\[
+n_{\max} = \left\lceil\frac{\sqrt{2mU_0}\,L}{\pi\hbar}\right\rceil.
+\]
 
 As \(U_0\to\infty\), the well becomes infinitely deep and we recover the particle-in-a-box levels. For a finite well, the wave function has **tails** that extend into the classically forbidden regions — the particle has a non-zero probability of being found outside the well.
 

@@ -69,6 +69,7 @@ Given an oriented link of two components \(K_1\) and \(K_2\), we can define a fu
 
 <div class="definition">
 Let \(D\) be a diagram of an oriented 2-component link \(K_1 \cup K_2\). At each crossing where one strand belongs to \(K_1\) and the other to \(K_2\), assign a sign: \(+1\) if the crossing is positive (right-handed) and \(-1\) if negative (left-handed). The <strong>linking number</strong> is
+
 \[
 \mathrm{lk}(K_1, K_2) = \frac{1}{2} \sum_{\text{mixed crossings}} \varepsilon(c),
 \]
@@ -88,6 +89,7 @@ For the <strong>Hopf link</strong>, consisting of two circles linked once, the l
 </div>
 
 The linking number has a beautiful topological interpretation: \(\mathrm{lk}(K_1, K_2)\) equals the algebraic intersection number of \(K_1\) with any Seifert surface for \(K_2\). It can also be computed via the Gauss integral formula:
+
 \[
 \mathrm{lk}(K_1, K_2) = \frac{1}{4\pi} \oint_{K_1} \oint_{K_2} \frac{\mathbf{r}_1 - \mathbf{r}_2}{|\mathbf{r}_1 - \mathbf{r}_2|^3} \cdot (d\mathbf{r}_1 \times d\mathbf{r}_2),
 \]
@@ -95,6 +97,7 @@ one of the earliest connections between topology and analysis, discovered by Gau
 
 <div class="definition">
 The <strong>writhe</strong> of an oriented knot diagram \(D\) is
+
 \[
 w(D) = \sum_{\text{all crossings}} \varepsilon(c).
 \]
@@ -173,10 +176,12 @@ The proof uses the Seifert-van Kampen theorem applied to a decomposition of \(S^
 
 <div class="example">
 <strong>The trefoil knot group.</strong> The standard diagram of the trefoil \(3_1\) has three arcs \(a, b, c\) and three crossings. The Wirtinger presentation gives:
+
 \[
 \pi_1(S^3 \setminus 3_1) = \langle a, b, c \mid aba^{-1} = c, \; bcb^{-1} = a, \; cac^{-1} = b \rangle.
 \]
 Eliminating \(c = aba^{-1}\) and using the second relation, we obtain:
+
 \[
 \pi_1(S^3 \setminus 3_1) = \langle a, b \mid aba = bab \rangle.
 \]
@@ -185,6 +190,7 @@ This is the <em>braid group on 3 strands</em> \(B_3\), a fact intimately connect
 
 <div class="example">
 <strong>The figure-eight knot group.</strong> For the figure-eight knot \(4_1\), a Wirtinger presentation from the standard 4-crossing diagram yields (after simplification):
+
 \[
 \pi_1(S^3 \setminus 4_1) = \langle a, b \mid a^{-1}bab^{-1}a = ba^{-1}bab^{-1} \rangle.
 \]
@@ -225,6 +231,7 @@ The Seifert surface carries rich algebraic information captured by the Seifert m
 
 <div class="definition">
 Let \(\Sigma\) be a Seifert surface of genus \(g\) for a knot \(K\). Choose a basis \(\{a_1, \ldots, a_{2g}\}\) for \(H_1(\Sigma; \mathbb{Z}) \cong \mathbb{Z}^{2g}\). The <strong>Seifert matrix</strong> \(V = (v_{ij})\) is the \(2g \times 2g\) integer matrix defined by
+
 \[
 v_{ij} = \mathrm{lk}(a_i, a_j^+),
 \]
@@ -249,6 +256,7 @@ The Alexander polynomial, introduced by J.W. Alexander in 1928, was the first po
 
 <div class="definition">
 The <strong>Alexander polynomial</strong> of a knot \(K\) with Seifert matrix \(V\) is
+
 \[
 \Delta_K(t) = \det(t^{1/2} V - t^{-1/2} V^T).
 \]
@@ -265,10 +273,12 @@ We must check invariance under the two S-equivalence moves. Under \(V \mapsto PV
 
 <div class="example">
 <strong>Alexander polynomial of the trefoil.</strong> From the standard Seifert surface, the trefoil has Seifert matrix
+
 \[
 V = \begin{pmatrix} -1 & 1 \\ 0 & -1 \end{pmatrix}.
 \]
 Then:
+
 \[
 \Delta_{3_1}(t) = \det\begin{pmatrix} -t^{1/2} - (-t^{-1/2}) & t^{1/2} - 0 \\ 0 - t^{-1/2} & -t^{1/2} - (-t^{-1/2}) \end{pmatrix} = \det\begin{pmatrix} -t^{1/2}+t^{-1/2} & t^{1/2} \\ -t^{-1/2} & -t^{1/2}+t^{-1/2} \end{pmatrix}.
 \]
@@ -277,6 +287,7 @@ Computing: \((-t^{1/2}+t^{-1/2})^2 + t^{1/2} \cdot t^{-1/2} = t - 2 + t^{-1} + 1
 
 <div class="example">
 <strong>Alexander polynomial of the figure-eight knot.</strong> The Seifert matrix is
+
 \[
 V = \begin{pmatrix} -1 & 1 \\ 0 & 1 \end{pmatrix}.
 \]
@@ -315,10 +326,12 @@ The Fox calculus approach reveals that the Alexander polynomial is fundamentally
 
 <div class="definition">
 The <strong>signature</strong> of a knot \(K\) with Seifert matrix \(V\) is
+
 \[
 \sigma(K) = \mathrm{signature}(V + V^T),
 \]
 where \(\mathrm{signature}\) denotes the signature (number of positive eigenvalues minus number of negative eigenvalues) of the symmetric bilinear form. The <strong>determinant</strong> of \(K\) is
+
 \[
 \det(K) = |\det(V + V^T)| = |\Delta_K(-1)|.
 \]
@@ -338,6 +351,7 @@ The vanishing of the signature of the figure-eight knot reflects its amphicheira
 
 <div class="definition">
 The <strong>genus</strong> \(g(K)\) of a knot \(K\) is the minimum genus over all Seifert surfaces for \(K\):
+
 \[
 g(K) = \min\{g(\Sigma) : \Sigma \text{ is a Seifert surface for } K\}.
 \]
@@ -381,6 +395,7 @@ Let \(D\) be an unoriented link diagram. The <strong>Kauffman bracket</strong> \
 <br>(1) \(\langle \bigcirc \rangle = 1\) (the bracket of the unknot diagram with no crossings is 1).
 <br>(2) \(\langle D \sqcup \bigcirc \rangle = (-A^2 - A^{-2}) \langle D \rangle\) (adding a disjoint unknotted circle multiplies by \(d = -A^2 - A^{-2}\)).
 <br>(3) At each crossing, the bracket satisfies the <strong>skein relation</strong>:
+
 \[
 \langle \,\raisebox{-2pt}{\text{crossing}}\, \rangle = A \langle \,\raisebox{-2pt}{\text{0-smoothing}}\, \rangle + A^{-1} \langle \,\raisebox{-2pt}{\text{1-smoothing}}\, \rangle,
 \]
@@ -395,6 +410,7 @@ The bracket can be computed as a state sum. A <em>state</em> \(s\) of a diagram 
 
 <div class="proposition">
 <strong>Proposition 3.1.</strong> The Kauffman bracket is invariant under Reidemeister moves R2 and R3, but under R1 it satisfies:
+
 \[
 \langle D \text{ with positive curl} \rangle = -A^3 \langle D \text{ without curl} \rangle, \qquad \langle D \text{ with negative curl} \rangle = -A^{-3} \langle D \text{ without curl} \rangle.
 \]
@@ -410,10 +426,12 @@ The failure of the bracket under R1 is precisely corrected by the writhe.
 
 <div class="definition">
 Let \(D\) be an oriented link diagram with writhe \(w(D)\). The <strong>Jones polynomial</strong> of the oriented link \(L\) represented by \(D\) is
+
 \[
 V_L(t) = \left((-A)^{-3w(D)} \langle D \rangle\right)\bigg|_{A^2 = t^{-1/2}},
 \]
 or equivalently, with the substitution \(A = t^{-1/4}\):
+
 \[
 V_L(t) = (-1)^{w(D)} t^{3w(D)/4} \langle D \rangle\bigg|_{A = t^{-1/4}}.
 \]
@@ -430,6 +448,7 @@ By Proposition 3.1, the bracket \(\langle D \rangle\) is invariant under R2 and 
 
 <div class="theorem">
 <strong>Theorem 3.3 (Skein Relation).</strong> The Jones polynomial satisfies the skein relation:
+
 \[
 t^{-1} V_{L_+}(t) - t \, V_{L_-}(t) = (t^{1/2} - t^{-1/2}) V_{L_0}(t),
 \]
@@ -440,10 +459,12 @@ This skein relation, together with the normalization \(V_{\text{unknot}}(t) = 1\
 
 <div class="example">
 <strong>Jones polynomial of the trefoil.</strong> Using the skein relation applied to the standard diagram of the left-handed trefoil (or by direct bracket computation), one obtains:
+
 \[
 V_{3_1}(t) = -t^{-4} + t^{-3} + t^{-1}
 \]
 for the left-handed trefoil, and
+
 \[
 V_{\overline{3_1}}(t) = -t^4 + t^3 + t
 \]
@@ -452,6 +473,7 @@ for the right-handed trefoil. Since \(V_{3_1}(t) \neq V_{\overline{3_1}}(t)\), t
 
 <div class="example">
 <strong>Jones polynomial of the figure-eight knot.</strong> The figure-eight knot is amphicheiral, and its Jones polynomial is:
+
 \[
 V_{4_1}(t) = t^2 - t + 1 - t^{-1} + t^{-2}.
 \]
@@ -460,6 +482,7 @@ One can verify that \(V_{4_1}(t) = V_{4_1}(t^{-1})\), consistent with amphicheir
 
 <div class="example">
 <strong>Jones polynomial of the Hopf link.</strong> For the positive Hopf link with two components:
+
 \[
 V_{\text{Hopf}}(t) = -(t^{1/2} + t^{5/2}).
 \]
@@ -492,6 +515,7 @@ The <strong>HOMFLY-PT polynomial</strong> \(P_L(v, z)\) is the unique invariant 
 </div>
 
 The HOMFLY-PT polynomial specializes to both the Alexander and Jones polynomials:
+
 \[
 P_L(1, z)\bigg|_{z = t^{1/2} - t^{-1/2}} = \Delta_L(t), \qquad P_L(t^{-1}, t^{1/2} - t^{-1/2}) = V_L(t).
 \]
@@ -517,6 +541,7 @@ Jones's original construction of his polynomial came from his study of subfactor
 
 <div class="theorem">
 <strong>Theorem 3.5 (Yang-Baxter Equation).</strong> The Jones polynomial arises from solutions to the Yang-Baxter equation
+
 \[
 R_{12} R_{13} R_{23} = R_{23} R_{13} R_{12},
 \]
@@ -540,6 +565,7 @@ The proper categorical framework for this construction is that of <strong>ribbon
 </div>
 
 The deepest interpretation of these invariants comes from Edward Witten's 1988 observation that the Jones polynomial arises as the expectation value of a Wilson loop operator in Chern-Simons gauge theory with gauge group \(\mathrm{SU}(2)\):
+
 \[
 V_K(t) = \left\langle \mathrm{tr}\, \mathcal{P} \exp\left(\oint_K A\right) \right\rangle_{CS},
 \]
@@ -562,6 +588,7 @@ This is the <strong>Artin presentation</strong>, named after Emil Artin who intr
 </div>
 
 Geometrically, \(B_n\) is the fundamental group of the configuration space of \(n\) unordered points in the plane:
+
 \[
 B_n = \pi_1\left(\frac{\mathbb{C}^n \setminus \Delta}{S_n}\right),
 \]
@@ -635,6 +662,7 @@ The Burau representation is faithful for \(n \leq 3\) (Birman, 1974) but was sho
 
 <div class="theorem">
 <strong>Theorem 4.4 (Bigelow, 2001; Krammer, 2002).</strong> The <strong>Lawrence-Krammer representation</strong>
+
 \[
 \rho : B_n \to \mathrm{GL}\left(\binom{n}{2}, \mathbb{Z}[q^{\pm 1}, t^{\pm 1}]\right)
 \]
@@ -647,6 +675,7 @@ This theorem was a landmark result. Bigelow's proof was topological (using the a
 
 <div class="definition">
 The <strong>braid index</strong> \(b(L)\) of a link \(L\) is the minimum number of strands over all braids whose closure is \(L\):
+
 \[
 b(L) = \min\{n : L = \hat{\beta} \text{ for some } \beta \in B_n\}.
 \]
@@ -654,6 +683,7 @@ b(L) = \min\{n : L = \hat{\beta} \text{ for some } \beta \in B_n\}.
 
 <div class="theorem">
 <strong>Theorem 4.5 (Morton-Williams-Franks, 1986).</strong> The braid index satisfies
+
 \[
 b(L) \geq \frac{1}{2}(\mathrm{span}_v P_L(v,z)) + 1,
 \]
@@ -752,6 +782,7 @@ Three-manifolds admit canonical decomposition theorems analogous to the prime fa
 
 <div class="theorem">
 <strong>Theorem 5.4 (Kneser, 1929; Milnor, 1962).</strong> Every compact, orientable, irreducible 3-manifold either has finite fundamental group or is aspherical (i.e., its universal cover is contractible). More importantly for our purposes: every closed orientable 3-manifold \(M\) admits a unique (up to order) decomposition
+
 \[
 M \cong M_1 \mathbin{\#} M_2 \mathbin{\#} \cdots \mathbin{\#} M_k \mathbin{\#} (S^2 \times S^1)^{\mathbin{\#} \ell},
 \]
@@ -824,6 +855,7 @@ Six of the eight geometries (\(\mathbb{E}^3, S^3, \mathbb{H}^2 \times \mathbb{R}
 
 <div class="proof">
 <em>Proof outline.</em> Perelman's proof uses Richard Hamilton's Ricci flow
+
 \[
 \frac{\partial g}{\partial t} = -2 \mathrm{Ric}(g),
 \]
@@ -852,6 +884,7 @@ Mostow rigidity is a remarkable phenomenon without analogue in dimension 2 (wher
 
 <div class="definition">
 The <strong>hyperbolic volume</strong> of a hyperbolic 3-manifold \(M = \mathbb{H}^3 / \Gamma\) is
+
 \[
 \mathrm{vol}(M) = \int_M dV_{\mathbb{H}^3},
 \]
@@ -877,6 +910,7 @@ The figure-eight knot \(4_1\) is the simplest hyperbolic knot and provides a bea
 
 <div class="theorem">
 <strong>Theorem 6.5 (Thurston).</strong> The complement of the figure-eight knot admits a complete hyperbolic structure, obtained by gluing two regular ideal tetrahedra in \(\mathbb{H}^3\). Its hyperbolic volume is
+
 \[
 \mathrm{vol}(S^3 \setminus 4_1) = 6 \cdot \Lambda(\pi/3) = 3 \cdot V_{\text{oct}} \approx 2.0298832,
 \]
@@ -922,6 +956,7 @@ Before introducing the modern homological invariants, we describe a fundamental 
 
 <div class="theorem">
 <strong>Theorem 7.1 (Surgery Exact Triangle).</strong> Let \(K \subset Y\) be a knot in a closed 3-manifold. Let \(Y_0\) and \(Y_1\) denote the manifolds obtained by 0-surgery and 1-surgery on \(K\), respectively. Then for Heegaard Floer homology (and similarly for other Floer theories), there is an exact triangle:
+
 \[
 \cdots \to \widehat{HF}(Y) \to \widehat{HF}(Y_0) \to \widehat{HF}(Y_1) \to \widehat{HF}(Y) \to \cdots
 \]
@@ -935,17 +970,21 @@ In 1999, Mikhail Khovanov constructed a bigraded homology theory for links whose
 
 <div class="definition">
 Let \(D\) be an oriented link diagram with \(n\) crossings. For each state \(s\) (assignment of 0 or 1 to each crossing, i.e., a vertex of the hypercube \(\{0,1\}^n\)), let \(D_s\) be the complete smoothing. Let \(k(s) = |s|\) be the number of circles in \(D_s\). To each circle, assign a copy of the graded vector space \(V = \mathbb{Q}\{v_+, v_-\}\) (with \(\deg v_+ = 1\), \(\deg v_- = -1\)), and set
+
 \[
 \mathcal{C}(D_s) = V^{\otimes k(s)}.
 \]
 The <strong>Khovanov chain complex</strong> is the bigraded complex
+
 \[
 CKh^{i,j}(D) = \bigoplus_{|s| = i + n_-} \mathcal{C}(D_s)^j,
 \]
 where \(n_-\) is the number of negative crossings, \(|s| = \sum_{c} s(c)\) is the total number of 1-smoothings, and the differential \(d : CKh^{i,j} \to CKh^{i+1,j}\) is defined using a multiplication \(m : V \otimes V \to V\) (merging circles) and a comultiplication \(\Delta : V \to V \otimes V\) (splitting circles), where
+
 \[
 m(v_+ \otimes v_+) = v_+, \quad m(v_+ \otimes v_-) = m(v_- \otimes v_+) = v_-, \quad m(v_- \otimes v_-) = 0,
 \]
+
 \[
 \Delta(v_+) = v_+ \otimes v_- + v_- \otimes v_+, \quad \Delta(v_-) = v_- \otimes v_-.
 \]
@@ -954,6 +993,7 @@ These operations make \(V\) into a Frobenius algebra, and the differential \(d\)
 
 <div class="definition">
 <strong>Khovanov homology</strong> is the bigraded homology
+
 \[
 Kh^{i,j}(L) = H^{i,j}(CKh(D), d).
 \]
@@ -963,6 +1003,7 @@ Kh^{i,j}(L) = H^{i,j}(CKh(D), d).
 <strong>Theorem 7.2 (Khovanov, 1999).</strong>
 <br>(a) \(Kh^{i,j}(L)\) is an invariant of the oriented link \(L\), independent of the choice of diagram.
 <br>(b) The graded Euler characteristic recovers the Jones polynomial:
+
 \[
 V_L(t) = \sum_{i,j} (-1)^i t^j \dim_{\mathbb{Q}} Kh^{i,j}(L) \bigg|_{t = q^2},
 \]
@@ -979,6 +1020,7 @@ after an appropriate normalization and substitution.
 
 <div class="example">
 <strong>Khovanov homology of the trefoil.</strong> A careful computation using the standard 3-crossing diagram of the right-handed trefoil yields:
+
 \[
 Kh^{0,1}(3_1) \cong \mathbb{Q}, \quad Kh^{0,3}(3_1) \cong \mathbb{Q}, \quad Kh^{-2,3}(3_1) \cong \mathbb{Q}, \quad Kh^{-2,5}(3_1) \cong \mathbb{Q}, \quad Kh^{-3,9}(3_1) \cong \mathbb{Q}.
 \]
@@ -1003,6 +1045,7 @@ Let \(K \subset S^3\) be a knot represented by a doubly-pointed Heegaard diagram
 
 <div class="definition">
 <strong>Knot Floer homology</strong> is the homology of the associated graded complex:
+
 \[
 \widehat{HFK}(K, s) = H_*(\widehat{CFK}(K, s)),
 \]
@@ -1013,6 +1056,7 @@ where \(s \in \mathbb{Z}\) is the <strong>Alexander grading</strong>. This is a 
 <strong>Theorem 7.4 (Ozsvath-Szabo, 2004).</strong>
 <br>(a) \(\widehat{HFK}(K, s)\) is a knot invariant.
 <br>(b) The graded Euler characteristic recovers the Alexander polynomial:
+
 \[
 \Delta_K(t) = \sum_{s} \left(\sum_d (-1)^d \dim \widehat{HFK}_d(K, s)\right) t^s.
 \]
@@ -1025,6 +1069,7 @@ Knot Floer homology has spectacular detection properties.
 
 <div class="theorem">
 <strong>Theorem 7.5 (Ozsvath-Szabo, 2004).</strong> Knot Floer homology detects the genus of a knot:
+
 \[
 g(K) = \max\{s : \widehat{HFK}(K, s) \neq 0\}.
 \]
@@ -1044,6 +1089,7 @@ These detection results are far stronger than anything available from the classi
 
 <div class="example">
 <strong>Knot Floer homology of the trefoil.</strong> The right-handed trefoil \(3_1\) has:
+
 \[
 \widehat{HFK}_d(3_1, s) \cong \begin{cases} \mathbb{F} & (d, s) \in \{(0, 1), (-1, 0), (-2, -1)\}, \\ 0 & \text{otherwise}. \end{cases}
 \]
@@ -1052,10 +1098,12 @@ The maximum Alexander grading with nonvanishing homology is \(s = 1\), confirmin
 
 <div class="example">
 <strong>Knot Floer homology of the figure-eight knot.</strong> The figure-eight knot \(4_1\) has:
+
 \[
 \widehat{HFK}_d(4_1, s) \cong \begin{cases} \mathbb{F} & (d, s) \in \{(0, 1), (-1, 0)^{\oplus 2} \text{ via a grading shift}, (-1, -1)\}, \\ 0 & \text{otherwise}, \end{cases}
 \]
 More precisely:
+
 \[
 \widehat{HFK}_{-1}(4_1, 1) \cong \mathbb{F}, \quad \widehat{HFK}_{-1}(4_1, 0) \cong \mathbb{F}, \quad \widehat{HFK}_{-2}(4_1, 0) \cong \mathbb{F}, \quad \widehat{HFK}_{-2}(4_1, -1) \cong \mathbb{F}.
 \]
@@ -1114,6 +1162,7 @@ The deepest results in knot theory and low-dimensional topology draw on gauge th
 
 <div class="definition">
 Let \(Y\) be a closed oriented 3-manifold. <strong>Instanton Floer homology</strong> \(I_*(Y)\) is defined (following Floer, 1988) as the Morse homology of the Chern-Simons functional
+
 \[
 CS(A) = \frac{1}{8\pi^2} \int_Y \mathrm{tr}\left(A \wedge dA + \frac{2}{3} A \wedge A \wedge A\right)
 \]
@@ -1140,6 +1189,7 @@ We conclude with a survey of the major open problems that continue to drive rese
 <strong>2. Slice-ribbon conjecture (Fox, 1962).</strong> Is every slice knot a ribbon knot? (A ribbon knot bounds an immersed disk in \(S^3\) with only ribbon singularities, which lift to an embedded disk in \(B^4\).) Lisca (2007) proved this for 2-bridge knots, and there has been recent work on the conjecture for certain families, but the general case remains wide open.
 <br><br>
 <strong>3. The volume conjecture (Kashaev, 1997; Murakami-Murakami, 2001).</strong> For a hyperbolic knot \(K\), the asymptotic behavior of the colored Jones polynomial determines the hyperbolic volume:
+
 \[
 \lim_{N \to \infty} \frac{2\pi \log |J_N(K; e^{2\pi i/N})|}{N} = \mathrm{vol}(S^3 \setminus K).
 \]

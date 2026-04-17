@@ -40,6 +40,7 @@ The **algebraic definition** is more intrinsic. A smooth function near \(p\) is 
 
 <div class="definition">
 <strong>Definition 1.3 (Tangent vector as derivation).</strong> A <em>tangent vector</em> at \(p\) is an \(\mathbb{R}\)-linear map \(v : C^\infty_p \to \mathbb{R}\) satisfying the Leibniz rule
+
 \[
 v(fg) = f(p)\, v(g) + g(p)\, v(f).
 \]
@@ -71,6 +72,7 @@ A **smooth vector field** on \(M\) is a smooth assignment \(X : M \to TM\) with 
 
 <div class="definition">
 <strong>Definition 1.6 (Lie bracket).</strong> The <em>Lie bracket</em> of vector fields \(X, Y\) is the vector field \([X, Y]\) defined by
+
 \[
 [X, Y](f) = X(Y(f)) - Y(X(f)).
 \]
@@ -191,6 +193,7 @@ For matrix Lie groups, this bracket is the matrix commutator. We now derive this
 
 <div class="proof">
 <strong>Proof.</strong> For \(G = GL(n, \mathbb{R})\): left-multiplication \(\ell_P : X \mapsto PX\) is linear, so \(D\ell_P(X) = \ell_P\) as a linear map. Thus \((X_A)_P = D\ell_P(I) \cdot A = PA\). For the bracket: the left-invariant field \(X_A\) corresponds to the map \(P \mapsto PA = R_A(P)\) (right-multiplication), so \(D(X_A)_P = R_A\) as a constant map. Then
+
 \[
 [X_A, X_B](P) = D(X_B)(P) \cdot (X_A)_P - D(X_A)(P) \cdot (X_B)_P = R_B(PA) - R_A(PB) = PAB - PBA,
 \]
@@ -248,6 +251,7 @@ converges absolutely for every \(A \in M_n(\mathbb{F})\): if \(m = \max_{ij} |A_
 
 <div class="theorem">
 <strong>Theorem 3.3 (det = exp tr).</strong> For \(A \in M_n(\mathbb{F})\),
+
 \[
 \det(e^A) = e^{\operatorname{tr}(A)}.
 \]
@@ -255,6 +259,7 @@ converges absolutely for every \(A \in M_n(\mathbb{F})\): if \(m = \max_{ij} |A_
 
 <div class="proof">
 <strong>Proof (ODE method).</strong> Let \(g(t) = \det(e^{tA})\). Differentiating using \(d(\det)_X(H) = \det(X)\operatorname{tr}(X^{-1}H)\):
+
 \[
 g'(t) = \det(e^{tA}) \cdot \operatorname{tr}(e^{-tA} \cdot e^{tA} A) = \det(e^{tA}) \cdot \operatorname{tr}(A) = \operatorname{tr}(A) \cdot g(t).
 \]
@@ -279,6 +284,7 @@ When \(A\) and \(B\) commute, \(e^A e^B = e^{A+B}\). In general, the product \(e
 
 <div class="theorem">
 <strong>Theorem 3.5 (Baker-Campbell-Hausdorff).</strong> For \(A, B\) sufficiently small,
+
 \[
 \log(e^A e^B) = A + B + \tfrac{1}{2}[A, B] + \tfrac{1}{12}\bigl([A, [A, B]] - [B, [A, B]]\bigr) - \tfrac{1}{24}[B, [A, [A, B]]] + \cdots
 \]
@@ -293,6 +299,7 @@ The BCH formula has a profound consequence: **the local group structure of \(G\)
 
 <div class="theorem">
 <strong>Theorem 3.6 (Naturality of exp).</strong> If \(\varphi : H \to G\) is a Lie group homomorphism, then the following diagram commutes:
+
 \[
 \begin{array}{ccc}
 \mathfrak{h} & \xrightarrow{\ d\varphi_e\ } & \mathfrak{g} \\
@@ -342,6 +349,7 @@ A smooth map \(p : \tilde{M} \to M\) is a **covering map** if every \(x \in M\) 
 
 <div class="theorem">
 <strong>Theorem 4.4 (Lie's correspondence for simply connected groups).</strong> If \(H\) is simply connected, then for any Lie group \(G\) there is a bijection
+
 \[
 \{\text{Lie group homomorphisms } \varphi : H \to G\} \xrightarrow{\;\sim\;} \{\text{Lie algebra homomorphisms } \psi : \mathfrak{h} \to \mathfrak{g}\},
 \]
@@ -413,6 +421,7 @@ The map \(\Phi\) is constructed as follows. Identify \(\mathbb{R}^3\) with the t
 
 <div class="proof">
 <strong>Proof.</strong> \((\Rightarrow)\) If \(G\) is abelian, then for all \(A, B \in \mathfrak{g}\) and all \(s, t \in \mathbb{R}\):
+
 \[
 \exp(sA)\exp(tB) = \exp(tB)\exp(sA).
 \]
@@ -449,12 +458,14 @@ One of the most useful structural theorems in Lie theory converts an algebraic c
 <strong>Proof.</strong> Define \(\mathfrak{h} = \{A \in \mathfrak{g} : e^{tA} \in H \text{ for all } t \in \mathbb{R}\}\).
 
 <em>Step 1: \(\mathfrak{h}\) is a subspace.</em> Scalar multiples: obvious. Sums: if \(A, B \in \mathfrak{h}\), then by the Lie product (Trotter) formula
+
 \[
 e^{t(A+B)} = \lim_{n\to\infty}\bigl(e^{tA/n}e^{tB/n}\bigr)^n.
 \]
 Each factor \(e^{tA/n}e^{tB/n} \in H\) (since \(H\) is a group), so \((e^{tA/n}e^{tB/n})^n \in H\). Since \(H\) is closed, the limit \(e^{t(A+B)} \in H\), so \(A+B \in \mathfrak{h}\).
 
 <em>Step 2: \(\mathfrak{h}\) is a Lie subalgebra.</em> For \(A, B \in \mathfrak{h}\), the commutator formula gives
+
 \[
 [A, B] = \lim_{n\to\infty} n^2\bigl(e^{A/n}e^{B/n}e^{-A/n}e^{-B/n} - I\bigr).
 \]
@@ -491,6 +502,7 @@ The maximal tori in the classical compact Lie groups are:
 
 <div class="proof">
 <strong>Proof sketch.</strong> Fix an \(\mathrm{Ad}\)-invariant inner product on \(\mathfrak{g}\) (obtained by averaging any inner product over \(G\)). Choose \(B \in \mathfrak{t}\) with \(\mathfrak{t} = \mathfrak{z}_\mathfrak{g}(B) = \{X \in \mathfrak{g} : [B,X]=0\}\) (such a <em>regular element</em> \(B\) exists by a dimension-counting argument). For any \(A \in \mathfrak{g}\), consider \(f(P) = (B, \mathrm{Ad}(P)A) = (B, PAP^{-1})\) as a function on the compact group \(G\). At a maximum \(P_0\): for all \(X \in \mathfrak{g}\),
+
 \[
 0 = \frac{d}{dt}\bigg|_{t=0} f(e^{tX}P_0) = \bigl(B, [X, P_0 A P_0^{-1}]\bigr) = -\bigl([B, X], P_0AP_0^{-1}\bigr).
 \]
@@ -563,6 +575,7 @@ So \(W\) is \(\rho(Y)\)-invariant. Since \(\mathbb{C}\) is algebraically closed,
 
 <div class="definition">
 <strong>Definition 7.6 (Killing form).</strong> The <em>Killing form</em> of \(\mathfrak{g}\) is the symmetric bilinear form
+
 \[
 B(X, Y) = \operatorname{tr}(\mathrm{ad}(X) \circ \mathrm{ad}(Y)),
 \]
@@ -589,6 +602,7 @@ A Lie algebra is **semisimple** if its radical (the largest solvable ideal) is z
 
 <div class="definition">
 <strong>Definition 7.10 (Casimir element).</strong> Let \(\rho : \mathfrak{g} \to \mathfrak{gl}(V)\) be a faithful representation of a semisimple algebra \(\mathfrak{g}\) such that the induced bilinear form \(B_\rho(X,Y) = \mathrm{tr}(\rho(X)\rho(Y))\) is non-degenerate. Let \(\{X_i\}\) be a basis of \(\mathfrak{g}\) with dual basis \(\{X^i\}\) (so \(B_\rho(X_i, X^j) = \delta_{ij}\)). The <em>Casimir element</em> is
+
 \[
 C_\rho = \sum_i \rho(X_i)\rho(X^i) \in \mathfrak{gl}(V).
 \]
@@ -637,6 +651,7 @@ The nilpotency \(d^2=0\) is the algebraic heart of de Rham cohomology.
 
 <div class="definition">
 <strong>Definition 8.2 (Pullback).</strong> For a smooth map \(f: M \to N\) and \(\alpha \in \Omega^k(N)\), the <em>pullback</em> \(f^*\alpha \in \Omega^k(M)\) is defined by
+
 \[
 (f^*\alpha)_p(v_1, \ldots, v_k) = \alpha_{f(p)}(df_p(v_1), \ldots, df_p(v_k)).
 \]
@@ -683,6 +698,7 @@ In particular, the space of left-invariant \(n\)-forms is one-dimensional (since
 
 <div class="proof">
 <strong>Proof.</strong> <em>Part (1).</em> Fix any nonzero \(\omega_e \in \bigwedge^n T_e^* G\). For each \(a \in G\), define \(\omega_a = (\ell_{a^{-1}})^* \omega_e\). This assignment is smooth in \(a\) and nonzero everywhere (since \(\ell_{a^{-1}}\) is a diffeomorphism), so \(\omega\) is a volume form. Left-invariance: for any \(a, b \in G\),
+
 \[
 (\ell_a^* \omega)_b = \ell_a^*(\omega_{ab}) = \ell_a^*\!\left((\ell_{(ab)^{-1}})^* \omega_e\right) = (\ell_{(ab)^{-1}} \circ \ell_a)^* \omega_e = (\ell_{b^{-1}})^* \omega_e = \omega_b.
 \]
@@ -697,6 +713,7 @@ For inversion: \(\nu = \iota\) satisfies \(\ell_a \circ \nu = \nu \circ r_{a^{-1
 
 <div class="definition">
 <strong>Definition 8.5 (Haar measure).</strong> For a compact Lie group \(G\), the <em>Haar measure</em> is the unique Borel probability measure \(\mu\) on \(G\) that is left-invariant (equivalently bi-invariant, by Theorem 8.4(3)). We write
+
 \[
 \int_G f(x)\, dx \quad \text{or} \quad \int_G f(g)\, dg
 \]
@@ -705,6 +722,7 @@ for the integral of a continuous function \(f: G \to \mathbb{C}\) against \(\mu\
 
 <div class="corollary">
 <strong>Corollary 8.6 (Invariance properties of Haar measure).</strong> Let \(G\) be a compact Lie group and \(f: G \to \mathbb{R}\) integrable. For all \(a \in G\):
+
 \[
 \int_G f(ax)\, dx = \int_G f(xa)\, dx = \int_G f(x^{-1})\, dx = \int_G f(x)\, dx.
 \]
@@ -811,6 +829,7 @@ The compactness of \(G\) — via the Haar averaging trick — is precisely what 
 
 <div class="proof">
 <strong>Proof.</strong> <em>Part (1) — Averaging trick.</em> Choose any Hermitian inner product \(\langle \cdot, \cdot \rangle\) on \(V\). Define
+
 \[
 (u, v) = \int_G \langle x \cdot u,\, x \cdot v \rangle\, dx.
 \]
@@ -822,6 +841,7 @@ This integral converges (the integrand is continuous on the compact group \(G\))
 using the substitution \(y = xa\) and right-invariance of Haar measure.
 
 <em>Part (3).</em> Let \(W \subseteq V\) be a \(G\)-invariant subspace. Equip \(V\) with the \(G\)-invariant inner product from (1). We claim \(W^\perp\) is also \(G\)-invariant: for any \(w^\perp \in W^\perp\) and \(u \in W\),
+
 \[
 (a \cdot w^\perp, u) = (a \cdot w^\perp, a \cdot (a^{-1} \cdot u)) = (w^\perp, a^{-1} \cdot u).
 \]
@@ -836,6 +856,7 @@ Let \(\hat{G}\) denote a set of representatives for the isomorphism classes of i
 
 <div class="definition">
 <strong>Definition 9.7 (Isotypical component).</strong> For a finite-dimensional \(G\)-module \(V\) and \(\sigma \in \hat{G}\), the <em>\(\sigma\)-isotypical component</em> of \(V\) is
+
 \[
 V_\sigma = \sum \{U \subseteq V : U \text{ is a } G\text{-submodule of } V,\ U \cong E_\sigma\}.
 \]
@@ -853,6 +874,7 @@ The <em>multiplicity</em> of \(\sigma\) in \(V\) is \(m_\sigma(V) = \dim \mathrm
 
 <div class="proof">
 <strong>Proof of (2).</strong> Define \(F: \mathrm{Hom}_G(E_\sigma, V) \otimes E_\sigma \to V_\sigma\) by \(F(L \otimes u) = L(u)\) (extended linearly). \(G\)-equivariance: \(F(a \cdot (L \otimes u)) = F(L \otimes (a \cdot u)) = L(a \cdot u) = a \cdot L(u) = a \cdot F(L \otimes u)\), using the fact that \(G\) acts trivially on \(\mathrm{Hom}_G(E_\sigma, V)\) (since each \(L\) is a \(G\)-map, \(a \cdot L = L\)). Surjectivity: any element of \(V_\sigma\) lies in some copy \(L: E_\sigma \hookrightarrow V\) of \(E_\sigma\), and is in the image of \(F\). Injectivity follows by dimension: by Schur's Lemma,
+
 \[
 \dim \mathrm{Hom}_G(E_\sigma, V) = \dim \mathrm{Hom}_G\!\left(E_\sigma, \bigoplus_\tau E_\tau^{\oplus m_\tau}\right) = m_\sigma,
 \]
@@ -871,6 +893,7 @@ The Peter-Weyl theorem is the central analytic theorem of the representation the
 
 <div class="definition">
 <strong>Definition 10.1 (Matrix coefficients).</strong> Let \(\rho: G \to \mathrm{GL}(V)\) be a finite-dimensional unitary representation, with Hermitian inner product \((\cdot, \cdot)\). For fixed \(u, v \in V\), the function
+
 \[
 \varphi_{u,v}: G \to \mathbb{C}, \quad \varphi_{u,v}(a) = (\rho(a)u, v)
 \]
@@ -887,11 +910,13 @@ The orthogonality of matrix coefficients from different irreducible representati
 <strong>Theorem 10.2 (Schur orthogonality relations).</strong> Let \(G\) be a compact Lie group with normalised Haar measure. Let \(V\) and \(W\) be irreducible unitary \(G\)-modules.
 <ol>
 <li>If \(V \not\cong W\): for all \(u, u' \in V\) and \(w, w' \in W\),
+
 \[
 \int_G (\rho_V(a)u,\, u')\, \overline{(\rho_W(a)w,\, w')}\, da = 0.
 \]
 </li>
 <li>If \(V = W\): for all \(u, u', v, v' \in V\),
+
 \[
 \int_G (\rho(a)u,\, u')\, \overline{(\rho(a)v,\, v')}\, da = \frac{1}{\dim V}(u, v)\, \overline{(u', v')}.
 \]
@@ -901,6 +926,7 @@ In matrix form: \(\int_G \rho_{ij}(a)\, \overline{\rho_{kl}(a)}\, da = \frac{1}{
 
 <div class="proof">
 <strong>Proof sketch.</strong> Define, for any linear map \(A: W \to V\), the average
+
 \[
 \tilde{A} = \int_G \rho_V(a)\, A\, \rho_W(a)^{-1}\, da.
 \]
@@ -920,6 +946,7 @@ using the substitution \(a' = ba\).
 
 <div class="definition">
 <strong>Definition 10.3 (Character).</strong> For a finite-dimensional representation \(\rho: G \to \mathrm{GL}(V)\), the <em>character</em> is the class function
+
 \[
 \chi_V: G \to \mathbb{C}, \quad \chi_V(a) = \operatorname{tr}(\rho(a)).
 \]
@@ -935,6 +962,7 @@ Characters enjoy several fundamental properties:
 
 <div class="corollary">
 <strong>Corollary 10.4 (Orthonormality of characters).</strong> For irreducible \(G\)-modules \(V, W\),
+
 \[
 \int_G \chi_V(a)\, \overline{\chi_W(a)}\, da = \delta_{VW} := \begin{cases} 1 & V \cong W \\ 0 & V \not\cong W. \end{cases}
 \]
@@ -942,6 +970,7 @@ Characters enjoy several fundamental properties:
 
 <div class="proof">
 <strong>Proof.</strong> This follows by summing the Schur orthogonality relation (Theorem 10.2) over a diagonal:
+
 \[
 \int_G \chi_V \overline{\chi_W}\, da = \sum_{i,j} \int_G \rho_{ii}^V(a) \overline{\rho_{jj}^W(a)}\, da.
 \]
@@ -950,6 +979,7 @@ In the case \(V \not\cong W\), each term vanishes. In the case \(V = W\), the su
 
 <div class="corollary">
 <strong>Corollary 10.5 (Character inner product formula).</strong> For finite-dimensional \(G\)-modules \(V, W\):
+
 \[
 \langle \chi_V, \chi_W \rangle := \int_G \chi_V(a)\, \overline{\chi_W(a)}\, da = \dim \mathrm{Hom}_G(V, W).
 \]
@@ -957,6 +987,7 @@ In the case \(V \not\cong W\), each term vanishes. In the case \(V = W\), the su
 
 <div class="proof">
 <strong>Proof.</strong> Write \(V = \bigoplus_\sigma E_\sigma^{\oplus m_\sigma}\) and \(W = \bigoplus_\tau E_\tau^{\oplus n_\tau}\). Then \(\chi_V = \sum_\sigma m_\sigma \chi_\sigma\), and
+
 \[
 \langle \chi_V, \chi_W \rangle = \sum_{\sigma, \tau} m_\sigma n_\tau \langle \chi_\sigma, \chi_\tau \rangle = \sum_\sigma m_\sigma n_\sigma.
 \]
@@ -971,12 +1002,14 @@ The regular representation of \(G\) on \(L^2(G)\) is the representation by left 
 <strong>Theorem 10.6 (Peter-Weyl).</strong> Let \(G\) be a compact Lie group. Then:
 <ol>
 <li><em>(Matrix coefficient basis).</em> The matrix coefficients of all irreducible representations, after appropriate normalisation, form an orthonormal basis for \(L^2(G)\). More precisely,
+
 \[
 L^2(G) \cong \widehat{\bigoplus}_{\sigma \in \hat{G}}\, E_\sigma \otimes E_\sigma^*
 \]
 as unitary \(G \times G\)-modules (left \(G\) acts on the \(E_\sigma\) factor by \(\rho_\sigma\), right \(G\) acts on \(E_\sigma^*\) by \(\rho_\sigma^*\)).</li>
 <li><em>(Character basis).</em> The characters \(\{\chi_\sigma : \sigma \in \hat{G}\}\) form an orthonormal basis for the Hilbert space \(L^2(G)^G\) of square-integrable class functions on \(G\).</li>
 <li><em>(Fourier expansion).</em> Every \(f \in L^2(G)^G\) has a Fourier expansion
+
 \[
 f = \sum_{\sigma \in \hat{G}} \langle f, \chi_\sigma \rangle\, \chi_\sigma,
 \]
@@ -986,6 +1019,7 @@ convergent in \(L^2\).</li>
 
 <div class="proof">
 <strong>Proof sketch.</strong> The key tool is the spectral theory of compact operators. For \(f \in L^2(G)\), the convolution operator \(T_f: L^2(G) \to L^2(G)\) defined by
+
 \[
 (T_f \varphi)(a) = \int_G f(b)\, \varphi(b^{-1}a)\, db
 \]
@@ -1039,6 +1073,7 @@ the space of complex homogeneous polynomials of degree \(n\) in two variables. T
 \[
 A = \begin{pmatrix} a & b \\ -\bar{b} & \bar{a} \end{pmatrix} \in \mathrm{SU}(2),
 \]
+
 \[
 (A \cdot f)(x, y) = f(\bar{a}x + \bar{b}y,\ -bx + ay).
 \]
@@ -1048,6 +1083,7 @@ Setting \(v_k = x^{n-k}y^k\) for \(k = 0, 1, \ldots, n\), the differentiated act
 
 <div class="definition">
 <strong>Definition 11.1 (Action of \(\mathfrak{sl}(2,\mathbb{C})\) on \(V_n\)).</strong> With the basis \(\{v_k = x^{n-k}y^k : 0 \leq k \leq n\}\):
+
 \[
 H \cdot v_k = (n - 2k)\, v_k, \qquad E \cdot v_k = -k\, v_{k-1}, \qquad F \cdot v_k = -(n-k)\, v_{k+1},
 \]
@@ -1072,6 +1108,7 @@ Now use \(LE = EL\). Applying both sides to \(v_k\) (for \(k \geq 1\)):
 \[
 L(E \cdot v_k) = L(-k\, v_{k-1}) = -k\, c_{k-1}\, v_{k-1},
 \]
+
 \[
 E(L \cdot v_k) = E(c_k\, v_k) = c_k\, E(v_k) = -k\, c_k\, v_{k-1}.
 \]
@@ -1114,6 +1151,7 @@ Having classified the irreducibles, the next natural question is: how does the t
 
 <div class="theorem">
 <strong>Theorem 11.5 (Clebsch-Gordan decomposition).</strong> As \(\mathrm{SU}(2)\)-modules,
+
 \[
 V_m \otimes V_n \cong V_{m+n} \oplus V_{m+n-2} \oplus \cdots \oplus V_{|m-n|}.
 \]
@@ -1140,6 +1178,7 @@ The representation theory of Chapter 11 relied on the structure of a single elem
 
 <div class="definition">
 <strong>Definition 12.1 (Complexification).</strong> For a real Lie algebra \(\mathfrak{g}\), the <em>complexification</em> is
+
 \[
 \mathfrak{g}_\mathbb{C} = \mathfrak{g} \otimes_\mathbb{R} \mathbb{C} = \mathfrak{g} \oplus i\mathfrak{g},
 \]
@@ -1152,6 +1191,7 @@ Fix a **maximal torus** \(T \subseteq G\) with Lie algebra \(\mathfrak{t} \subse
 
 <div class="definition">
 <strong>Definition 12.2 (Weights).</strong> A <em>weight</em> of the representation \(\rho: G \to \mathrm{GL}(V)\) is a linear functional \(\alpha \in \mathfrak{t}_\mathbb{C}^*\) such that the <em>weight space</em>
+
 \[
 V_\alpha = \{v \in V : \rho_*(B)v = \alpha(B)v \text{ for all } B \in \mathfrak{t}_\mathbb{C}\}
 \]
@@ -1170,6 +1210,7 @@ The fundamental mechanism connecting roots and weights is:
 
 <div class="proposition">
 <strong>Proposition 12.5 (Root vectors shift weights).</strong> Let \(\alpha\) be a root with root space \(\mathfrak{g}_\alpha\) (defined below), and let \(\beta\) be a weight of a representation \(\rho\) with \(v \in V_\beta\). For any \(A \in \mathfrak{g}_\alpha\),
+
 \[
 \rho_*(A)v \in V_{\alpha + \beta}.
 \]
@@ -1177,6 +1218,7 @@ The fundamental mechanism connecting roots and weights is:
 
 <div class="proof">
 <strong>Proof.</strong> For \(B \in \mathfrak{t}_\mathbb{C}\):
+
 \[
 \rho_*(B)(\rho_*(A)v) = \rho_*([B,A])v + \rho_*(A)(\rho_*(B)v) = \alpha(B)\rho_*(A)v + \beta(B)\rho_*(A)v = (\alpha+\beta)(B)\rho_*(A)v. \quad \square
 \]
@@ -1186,6 +1228,7 @@ The fundamental mechanism connecting roots and weights is:
 
 <div class="definition">
 <strong>Definition 12.6 (Root decomposition).</strong> The <em>roots</em> of \(G\) are the nonzero weights of the adjoint representation \(\mathrm{Ad}: G \to \mathrm{GL}(\mathfrak{g}_\mathbb{C})\). Explicitly, \(\alpha \in \mathfrak{t}_\mathbb{C}^* \setminus \{0\}\) is a root if
+
 \[
 \mathfrak{g}_\alpha = \{A \in \mathfrak{g}_\mathbb{C} : [B, A] = \alpha(B) A \text{ for all } B \in \mathfrak{t}_\mathbb{C}\} \neq 0.
 \]
@@ -1207,6 +1250,7 @@ The set of all roots is \(R \subseteq i\mathfrak{t}^*\). The zero weight space o
 
 <div class="example">
 <strong>Example 12.8 (Roots of \(\mathrm{U}(n)\)).</strong> The Lie algebra is \(\mathfrak{g}_\mathbb{C} = \mathfrak{gl}(n,\mathbb{C}) = M_n(\mathbb{C})\), and \(\mathfrak{t}_\mathbb{C} = \{\operatorname{diag}(c_1,\ldots,c_n)\}\). For \(k \neq l\), let \(E_{kl}\) denote the matrix with 1 in position \((k,l)\) and 0 elsewhere. Then
+
 \[
 [B, E_{kl}] = (c_k - c_l) E_{kl} = (\varepsilon_k - \varepsilon_l)(B) E_{kl}
 \]
@@ -1268,6 +1312,7 @@ The <em>Cartan matrix</em> of a root system is the \(\ell \times \ell\) integer 
 
 <div class="theorem">
 <strong>Theorem 12.14 (Weyl group as a group quotient).</strong> For a connected compact Lie group \(G\) with maximal torus \(T\), the Weyl group is
+
 \[
 W = N_G(T)/T,
 \]
@@ -1296,6 +1341,7 @@ The weight lattice is the natural indexing set for representations.
 
 <div class="definition">
 <strong>Definition 13.1 (Weight lattice and dominant integral weights).</strong> The <em>weight lattice</em> is
+
 \[
 \Lambda = \{\lambda \in \mathfrak{t}^*_\mathbb{C} : \langle \lambda, \alpha^\vee \rangle \in \mathbb{Z} \text{ for all } \alpha \in R\}.
 \]
@@ -1336,6 +1382,7 @@ Thus, \(\hat{G} \cong \Lambda^+\) as sets.
 <em>Part (2).</em> The highest weight vector generates \(V\) by applying lowering operators \(F_\alpha\). Since \(V\) is irreducible, the submodule generated by the highest weight vector is all of \(V\). Two irreducibles with the same highest weight \(\lambda_0\) have isomorphic generating submodules, hence are isomorphic.
 
 <em>Part (3) — Existence.</em> For each \(\lambda \in \Lambda^+\), one constructs the <em>Verma module</em>
+
 \[
 M(\lambda) = U(\mathfrak{g}_\mathbb{C})\big/I_\lambda,
 \]
@@ -1348,6 +1395,7 @@ The Weyl character formula gives an explicit closed form for the character of an
 
 <div class="definition">
 <strong>Definition 13.6 (Weyl vector).</strong> The <em>Weyl vector</em> (or <em>rho vector</em>) is
+
 \[
 \rho = \frac{1}{2} \sum_{\alpha \in R^+} \alpha,
 \]
@@ -1358,6 +1406,7 @@ The Weyl vector satisfies \(\langle \rho, \alpha_i^\vee \rangle = 1\) for all si
 
 <div class="theorem">
 <strong>Theorem 13.7 (Weyl Character Formula).</strong> For a dominant integral weight \(\lambda \in \Lambda^+\), the character of the irreducible representation \(V(\lambda)\) is given by
+
 \[
 \chi_\lambda = \frac{\sum_{w \in W} \varepsilon(w)\, e^{w(\lambda + \rho)}}{\sum_{w \in W} \varepsilon(w)\, e^{w(\rho)}},
 \]
@@ -1375,6 +1424,7 @@ where:
 
 <div class="theorem">
 <strong>Theorem 13.8 (Weyl Dimension Formula).</strong> For \(\lambda \in \Lambda^+\),
+
 \[
 \dim V(\lambda) = \prod_{\alpha \in R^+} \frac{\langle \lambda + \rho, \alpha \rangle}{\langle \rho, \alpha \rangle}.
 \]
@@ -1388,6 +1438,7 @@ where:
 
 <div class="example">
 <strong>Example 13.9 (\(\mathrm{SU}(2)\)).</strong> With \(R^+ = \{\alpha\}\), \(\rho = \alpha/2\), \(W = \{1, s_\alpha\}\), \(\varepsilon(1)=1\), \(\varepsilon(s_\alpha)=-1\). For highest weight \(\lambda = n\alpha/2\):
+
 \[
 \chi_n = \frac{e^{(n+1)\alpha/2} - e^{-(n+1)\alpha/2}}{e^{\alpha/2} - e^{-\alpha/2}} = e^{n\alpha/2} + e^{(n-2)\alpha/2} + \cdots + e^{-n\alpha/2},
 \]
@@ -1396,6 +1447,7 @@ the sum of all weights of \(V_n\) (each with multiplicity 1). Dimension: \(\dim 
 
 <div class="example">
 <strong>Example 13.10 (\(\mathrm{SU}(3)\)).</strong> With \(R^+ = \{\alpha_1, \alpha_2, \alpha_1+\alpha_2\}\) and fundamental weights \(\omega_1, \omega_2\) (so \(\rho = \omega_1 + \omega_2\)), the Weyl dimension formula for \(\lambda = a\omega_1 + b\omega_2\) gives
+
 \[
 \dim V(a\omega_1 + b\omega_2) = \frac{(a+1)(b+1)(a+b+2)}{2}.
 \]
@@ -1423,6 +1475,7 @@ The Weyl integration formula is an analogue of the change-of-variables formula f
 
 <div class="theorem">
 <strong>Theorem 14.1 (Weyl Integration Formula).</strong> Let \(G\) be a connected compact semisimple Lie group with maximal torus \(T\), root system \(R\), positive roots \(R^+\), and Weyl group \(W\). For any continuous class function \(f: G \to \mathbb{C}\),
+
 \[
 \int_G f(g)\, dg = \frac{1}{|W|} \int_T f(t)\, |D(t)|^2\, dt,
 \]
@@ -1440,6 +1493,7 @@ is the <em>Weyl denominator squared</em>. Here the torus integral uses the norma
 
 <div class="example">
 <strong>Example 14.2 (\(\mathrm{SU}(2)\)).</strong> With \(T = \{\operatorname{diag}(e^{i\theta}, e^{-i\theta})\}\), \(R^+ = \{\alpha\}\), \(e^\alpha(t) = e^{2i\theta}\), and \(|W| = 2\):
+
 \[
 |D(t)|^2 = |e^{i\theta} - e^{-i\theta}|^2 = 4\sin^2\theta.
 \]
@@ -1459,6 +1513,7 @@ The Weyl integration formula has a fundamental application to the character inne
 
 <div class="proof">
 <strong>Proof.</strong> Using the Weyl integration formula and the explicit form of the Weyl character formula, the inner product \(\langle \chi_\lambda, \chi_\mu \rangle\) reduces to an integral of the form
+
 \[
 \frac{1}{|W|} \int_T A_{\lambda+\rho}(t)\, \overline{A_{\mu+\rho}(t)}\, dt,
 \]
@@ -1471,6 +1526,7 @@ Given the classification theorem, a natural problem is to decompose tensor produ
 
 <div class="theorem">
 <strong>Theorem 14.4 (Tensor product decomposition).</strong> For dominant integral weights \(\lambda, \mu \in \Lambda^+\),
+
 \[
 V(\lambda) \otimes V(\mu) \cong \bigoplus_{\nu \in \Lambda^+} m(\lambda, \mu; \nu)\, V(\nu),
 \]
@@ -1498,6 +1554,7 @@ The following theorem collects the main results of the course into a single stat
 <li><em>(Existence and uniqueness of Haar measure.)</em> There is a unique bi-invariant probability measure \(dg\) on \(G\).</li>
 <li><em>(Complete reducibility.)</em> Every finite-dimensional representation of \(G\) decomposes as a direct sum of irreducibles.</li>
 <li><em>(Classification.)</em> There is a bijection
+
 \[
 \hat{G} \longleftrightarrow \Lambda^+, \quad V(\lambda) \longleftrightarrow \lambda,
 \]
@@ -1505,6 +1562,7 @@ where \(\hat{G}\) denotes the set of isomorphism classes of irreducible finite-d
 <li><em>(Character formula.)</em> The character of \(V(\lambda)\) is given by the Weyl character formula (Theorem 13.7).</li>
 <li><em>(Dimension formula.)</em> The dimension of \(V(\lambda)\) is given by the Weyl dimension formula (Theorem 13.8).</li>
 <li><em>(Peter-Weyl.)</em> There is an isometric \(G \times G\)-equivariant decomposition
+
 \[
 L^2(G) \cong \widehat{\bigoplus}_{\lambda \in \Lambda^+}\, V(\lambda) \otimes V(\lambda)^*,
 \]
@@ -1567,6 +1625,7 @@ The modern approach to representation theory — geometric representation theory
 
 <div class="theorem">
 <strong>Theorem 14.6 (Borel-Weil).</strong> Let \(G\) be a compact semisimple group and \(\lambda \in \Lambda^+\) a dominant integral weight. The irreducible representation \(V(\lambda)^*\) (the dual) is isomorphic to the space of holomorphic sections of the line bundle \(\mathcal{L}_\lambda\) on the flag variety \(G_\mathbb{C}/B\):
+
 \[
 V(\lambda)^* \cong H^0(G_\mathbb{C}/B,\, \mathcal{L}_\lambda),
 \]

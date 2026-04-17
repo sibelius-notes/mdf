@@ -38,7 +38,9 @@ A dollar today is worth more than a dollar tomorrow because today's dollar can b
 
 If you invest \( PV \) dollars at rate \( r \) per period for \( n \) periods, the **future value** is
 
-\[ FV_n = PV \cdot (1 + r)^n \]
+\[
+FV_n = PV \cdot (1 + r)^n
+\]
 
 This is **compound interest**: the interest earned in period one itself earns interest in period two, and so on. By contrast, **simple interest** pays \( PV \cdot r \) each period on the original principal only, giving \( FV_n = PV \cdot (1 + r \cdot n) \). Simple interest is used in some money-market quoting conventions, but compound interest is the correct framework for any multi-period analysis.
 
@@ -50,7 +52,9 @@ This is **compound interest**: the interest earned in period one itself earns in
 
 Rearranging the compounding formula gives the **present value** of a single future cash flow:
 
-\[ PV = \frac{FV_n}{(1 + r)^n} \]
+\[
+PV = \frac{FV_n}{(1 + r)^n}
+\]
 
 The rate \( r \) used here is called a **discount rate** when we move backward in time. Discounting is the central operation of finance. Every valuation model — bond pricing, stock pricing, project appraisal, option pricing — is at bottom a weighted sum of discounted cash flows, where the weights are probabilities and the discount rates reflect time and risk.
 
@@ -58,7 +62,9 @@ The rate \( r \) used here is called a **discount rate** when we move backward i
 
 The single-cash-flow equation has four variables; given any three, the fourth follows. Solving for \( r \) gives the compound growth rate required to turn \( PV \) into \( FV \) over \( n \) periods:
 
-\[ r = \left(\frac{FV_n}{PV}\right)^{1/n} - 1 \]
+\[
+r = \left(\frac{FV_n}{PV}\right)^{1/n} - 1
+\]
 
 Solving for \( n \) gives the number of periods required to reach a target, which underlies rules such as the **Rule of 72**: at rate \( r \), a sum roughly doubles in \( 72/r \) periods (with \( r \) expressed as a percent). At 8 percent, doubling takes about nine years.
 
@@ -74,11 +80,15 @@ Most real cash-flow streams are not single lumps but sequences: mortgage payment
 
 An **ordinary annuity** pays \( C \) at the end of each of \( n \) periods. Its present value is
 
-\[ PV = C \cdot \frac{1 - (1 + r)^{-n}}{r} \]
+\[
+PV = C \cdot \frac{1 - (1 + r)^{-n}}{r}
+\]
 
 and its future value is
 
-\[ FV = C \cdot \frac{(1 + r)^n - 1}{r} \]
+\[
+FV = C \cdot \frac{(1 + r)^n - 1}{r}
+\]
 
 An **annuity due** shifts each payment to the beginning of the period and is worth \( (1 + r) \) times the corresponding ordinary annuity.
 
@@ -90,11 +100,15 @@ An **annuity due** shifts each payment to the beginning of the period and is wor
 
 A **perpetuity** pays \( C \) forever. Although there are infinitely many cash flows, the geometric series collapses to
 
-\[ PV = \frac{C}{r} \]
+\[
+PV = \frac{C}{r}
+\]
 
 A **growing perpetuity** pays \( C \) one period from now and grows at constant rate \( g < r \) thereafter:
 
-\[ PV = \frac{C}{r - g} \]
+\[
+PV = \frac{C}{r - g}
+\]
 
 This is the **Gordon growth model**, and it is the seed of the dividend discount model used for stock valuation in Chapter 10. A **growing annuity** applies the same logic over a finite horizon.
 
@@ -102,7 +116,9 @@ This is the **Gordon growth model**, and it is the seed of the dividend discount
 
 Rates in Canada are usually quoted as **annual percentage rates** (APR) with a stated compounding frequency. The **effective annual rate** (EAR) translates such a quote into the single rate that, compounded once a year, produces the same year-end balance:
 
-\[ EAR = \left(1 + \frac{APR}{m}\right)^{m} - 1 \]
+\[
+EAR = \left(1 + \frac{APR}{m}\right)^{m} - 1
+\]
 
 where \( m \) is the number of compounding periods per year. A credit card quoting 18 percent APR compounded monthly has an EAR of about 19.56 percent; the gap widens with higher rates and more frequent compounding. In the continuous-compounding limit \( EAR = e^{APR} - 1 \). Canadian mortgages are unusual: by law they are quoted with semi-annual compounding rather than monthly, so a 5 percent posted rate has an EAR of about 5.0625 percent and a monthly-equivalent rate of roughly 0.4124 percent.
 
@@ -140,7 +156,9 @@ A typical bond has a **face value** (or par value) of 1,000, a **coupon rate** t
 
 A bond's price is the present value of its promised cash flows, discounted at the **yield to maturity** (YTM) — the single rate that equates price and cash flows. For an annual-coupon bond:
 
-\[ P = \sum_{t=1}^{n} \frac{C}{(1 + y)^t} + \frac{F}{(1 + y)^n} \]
+\[
+P = \sum_{t=1}^{n} \frac{C}{(1 + y)^t} + \frac{F}{(1 + y)^n}
+\]
 
 The coupon stream is an annuity; the face value is a single cash flow. If the coupon rate exceeds the YTM, the bond trades at a **premium** (above par); if it is lower, at a **discount**; if equal, at par.
 
@@ -184,7 +202,9 @@ Investors can buy on **margin**, borrowing part of the purchase price from a bro
 
 A share's price is set by supply and demand in the secondary market, but finance theory holds that in equilibrium the price equals the present value of expected future dividends. The **constant-growth dividend discount model** is a direct application of the growing perpetuity formula from Chapter 3:
 
-\[ P_0 = \frac{D_1}{r - g} \]
+\[
+P_0 = \frac{D_1}{r - g}
+\]
 
 where \( D_1 \) is next year's dividend, \( r \) the required return on equity, and \( g \) the long-run dividend growth rate. For firms that reinvest most earnings, analysts use free-cash-flow or relative-valuation models instead, but the logic is the same — price is discounted future cash.
 
@@ -224,7 +244,9 @@ To form an investment opinion you must read the firm's three main reports: the b
 
 The **balance sheet** is a snapshot at one date of what the firm owns and owes. It obeys the identity
 
-\[ \text{Assets} = \text{Liabilities} + \text{Shareholders' Equity} \]
+\[
+\text{Assets} = \text{Liabilities} + \text{Shareholders' Equity}
+\]
 
 **Assets** are split into current (cash, receivables, inventory, prepaids — expected to convert to cash within a year) and non-current (property, plant and equipment, intangibles, goodwill, long-term investments). **Liabilities** are similarly split into current (payables, short-term debt, current portion of long-term debt) and long-term. **Shareholders' equity** is the residual — share capital raised plus retained earnings minus treasury shares and accumulated other comprehensive income.
 
@@ -268,7 +290,9 @@ Raw financial statements are hard to compare across firms of different sizes and
 
 The **DuPont decomposition** unpacks ROE into three drivers:
 
-\[ ROE = \frac{\text{Net Income}}{\text{Sales}} \cdot \frac{\text{Sales}}{\text{Assets}} \cdot \frac{\text{Assets}}{\text{Equity}} \]
+\[
+ROE = \frac{\text{Net Income}}{\text{Sales}} \cdot \frac{\text{Sales}}{\text{Assets}} \cdot \frac{\text{Assets}}{\text{Equity}}
+\]
 
 — profit margin, asset turnover, and equity multiplier (leverage). Two firms can reach the same ROE through very different mixes: a supermarket (thin margin, high turnover, modest leverage) and a luxury brand (fat margin, slow turnover, low leverage).
 
@@ -356,7 +380,9 @@ A **call option** gives the holder the right, but not the obligation, to **buy**
 
 At expiration, a long call is worth
 
-\[ C_T = \max(S_T - K, 0) \]
+\[
+C_T = \max(S_T - K, 0)
+\]
 
 where \( S_T \) is the underlying price at expiration. A long put is worth \( \max(K - S_T, 0) \). Plotted against \( S_T \), these give the famous hockey-stick diagrams: a call pays off linearly once \( S_T \) exceeds \( K \) and nothing otherwise, while a put pays off as \( S_T \) falls below \( K \). Short positions mirror these: the writer of a call faces unlimited loss if the stock rockets, and the writer of a put faces loss equal to the strike price minus zero if the stock collapses.
 

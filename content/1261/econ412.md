@@ -37,7 +37,10 @@ The key departure from complete-information games is that a strategy must specif
 
 <div class="definition">
 <strong>Bayes-Nash Equilibrium (BNE):</strong> A strategy profile (s<sub>1</sub>*, ..., s<sub>n</sub>*) is a Bayes-Nash equilibrium if, for every player <em>i</em> and every type θ<sub>i</sub> ∈ Θ<sub>i</sub>,
-\[ s_i^*(\theta_i) \in \arg\max_{a_i \in A_i} E_{\theta_{-i}}\left[ u_i(a_i, s_{-i}^*(\theta_{-i}), \theta_i, \theta_{-i}) \mid \theta_i \right]. \]
+
+\[
+s_i^*(\theta_i) \in \arg\max_{a_i \in A_i} E_{\theta_{-i}}\left[ u_i(a_i, s_{-i}^*(\theta_{-i}), \theta_i, \theta_{-i}) \mid \theta_i \right].
+\]
 Each player maximizes their <em>expected</em> payoff given their own type and their beliefs about opponents' types and strategies.
 </div>
 
@@ -47,7 +50,9 @@ BNE generalizes Nash equilibrium to incomplete information: at equilibrium, no p
 
 Two bidders each have a private valuation \( v_i \sim U[0,1] \), i.i.d. Each submits a bid \( b_i \). The higher bidder wins and pays their own bid (**first-price rule**). A BNE strategy is a bidding function \( b_i(v_i) \). It can be shown that the unique symmetric BNE is
 
-\[ b^*(v) = \frac{v}{2}. \]
+\[
+b^*(v) = \frac{v}{2}.
+\]
 
 Each bidder **shades their bid** below their valuation (by half) to trade off the probability of winning against the payment made. This is a key result in auction theory — different auction formats lead to different bidding strategies.
 
@@ -127,7 +132,9 @@ This is the **screening problem**: the principal "screens" agent types through t
 
 Two types: high type \( \theta_H \) (high valuation) and low type \( \theta_L \) (low valuation), with \( \theta_H > \theta_L > 0 \) and prior probabilities \( \lambda \) and \( 1-\lambda \). The agent's utility is
 
-\[ U_i = \theta_i q - t, \]
+\[
+U_i = \theta_i q - t,
+\]
 
 where \( q \) is the quantity (or quality) of the good and \( t \) is the payment. The principal's profit is \( \pi = t - C(q) \) (where \( C(q) \) is cost).
 
@@ -136,11 +143,20 @@ where \( q \) is the quantity (or quality) of the good and \( t \) is the paymen
 **Second-best (private information):** The principal cannot observe \( \theta \). Constraints:
 
 1. **Participation constraints (PC):**
-   \[ \theta_H q_H - t_H \geq \bar{u}, \quad \theta_L q_L - t_L \geq \bar{u}. \]
+
+\[
+\theta_H q_H - t_H \geq \bar{u}, \quad \theta_L q_L - t_L \geq \bar{u}.
+\]
 
 2. **Incentive compatibility constraints (IC):**
-   \[ \theta_H q_H - t_H \geq \theta_H q_L - t_L \quad (IC_H), \]
-   \[ \theta_L q_L - t_L \geq \theta_L q_H - t_H \quad (IC_L). \]
+
+\[
+\theta_H q_H - t_H \geq \theta_H q_L - t_L \quad (IC_H),
+\]
+
+\[
+\theta_L q_L - t_L \geq \theta_L q_H - t_H \quad (IC_L).
+\]
 
 <div class="theorem">
 <strong>Standard Screening Results:</strong> In the two-type optimal screening problem:
@@ -155,11 +171,15 @@ where \( q \) is the quantity (or quality) of the good and \( t \) is the paymen
 
 With a continuum of types \( \theta \sim F(\theta) \) on \( [\underline{\theta}, \bar{\theta}] \), the optimal mechanism is characterized by the **virtual type** or **virtual valuation**:
 
-\[ \psi(\theta) = \theta - \frac{1 - F(\theta)}{f(\theta)}, \]
+\[
+\psi(\theta) = \theta - \frac{1 - F(\theta)}{f(\theta)},
+\]
 
 where \( f(\theta) = F'(\theta) \) is the density. The optimal quantity rule is to serve type \( \theta \) at the quantity satisfying
 
-\[ \psi(\theta) = C'(q(\theta)), \]
+\[
+\psi(\theta) = C'(q(\theta)),
+\]
 
 and types with \( \psi(\theta) < 0 \) are excluded (receive zero quantity). This is the foundation of **Myerson's optimal auction design**, revisited in Chapter 6.
 
@@ -196,7 +216,10 @@ A **principal** contracts with an **agent** to perform a task. The agent's effor
 
 <div class="theorem">
 <strong>Borch Rule (Risk-Sharing):</strong> Under the optimal contract with hidden action, the ratio of the principal's marginal utility to the agent's marginal utility is constant across outcomes in the first-best, but varies with output in the second-best. The second-best contract is characterized by: w*(x) satisfies
-\[ \frac{u'(w^*(x))}{v'(w^*(x))} = \lambda + \mu \frac{f_e(x, e^*)}{f(x, e^*)}, \]
+
+\[
+\frac{u'(w^*(x))}{v'(w^*(x))} = \lambda + \mu \frac{f_e(x, e^*)}{f(x, e^*)},
+\]
 where λ and μ are Lagrange multipliers on the PC and IC, and f<sub>e</sub>/f is the <strong>likelihood ratio</strong>.
 </div>
 
@@ -204,7 +227,9 @@ where λ and μ are Lagrange multipliers on the PC and IC, and f<sub>e</sub>/f i
 
 In the **Holmstrom-Milgrom (1987)** model with exponential utility, a risk-neutral principal, and a linear technology, the optimal contract is linear: \( w = \alpha + \beta x \). The parameter \( \beta \in [0,1] \) is the **incentive intensity**. The optimal \( \beta \) balances:
 
-\[ \beta^* = \frac{1}{1 + r \sigma^2 c''}, \]
+\[
+\beta^* = \frac{1}{1 + r \sigma^2 c''},
+\]
 
 where \( r \) is the agent's coefficient of absolute risk aversion, \( \sigma^2 \) is the variance of noise, and \( c'' \) measures the curvature of effort cost. Higher risk (larger \( \sigma^2 \)), higher risk aversion (\( r \)), or flatter effort cost (small \( c'' \)) all lead to lower-powered incentives.
 
@@ -240,7 +265,9 @@ Hence bidding \( b_i = v_i \) weakly dominates any other strategy. This **incent
 
 In a **first-price auction** with \( n \) symmetric buyers with \( v_i \sim U[0,1] \), the unique symmetric BNE has each bidder shading their bid by a factor of \( (n-1)/n \):
 
-\[ b^*(v) = \frac{n-1}{n} v. \]
+\[
+b^*(v) = \frac{n-1}{n} v.
+\]
 
 Revenue equivalence confirms: expected revenue from first-price = expected revenue from second-price = \( \frac{n-1}{n+1} \) (for uniform valuations with \( n \) bidders).
 
@@ -252,13 +279,18 @@ When the seller is revenue-maximizing, the revenue equivalence theorem identifie
 
 With buyers having private values \( v_i \sim F_i \) (independent but potentially asymmetric), the seller's expected revenue from any direct incentive-compatible mechanism can be written as
 
-\[ E[\text{Revenue}] = E\left[\sum_i \psi_i(v_i) q_i(v) \right] - \text{constants}, \]
+\[
+E[\text{Revenue}] = E\left[\sum_i \psi_i(v_i) q_i(v) \right] - \text{constants},
+\]
 
 where \( q_i(v) \) is the probability that buyer \( i \) gets the object and \( \psi_i(v_i) = v_i - (1-F_i(v_i))/f_i(v_i) \) is buyer \( i \)'s **virtual valuation**.
 
 <div class="theorem">
 <strong>Myerson's Optimal Auction:</strong> The revenue-maximizing auction allocates the good to the buyer with the highest non-negative virtual valuation:
-\[ q_i^*(v) = \mathbf{1}\left[\psi_i(v_i) \geq \max\left\{0, \max_{j \neq i} \psi_j(v_j)\right\}\right]. \]
+
+\[
+q_i^*(v) = \mathbf{1}\left[\psi_i(v_i) \geq \max\left\{0, \max_{j \neq i} \psi_j(v_j)\right\}\right].
+\]
 If all \( \psi_i(v_i) < 0 \), the seller retains the good (a <em>reserve price</em>). When buyers are symmetric, the optimal mechanism is a Vickrey auction with a reservation price r* satisfying \( \psi(r^*) = 0 \).
 </div>
 
@@ -364,7 +396,9 @@ Hatfield and Milgrom (2005) extended matching theory to settings where agents ar
 
 **Nash bargaining** (Nash 1950) axiomatizes the outcome of bilateral bargaining. The Nash bargaining solution maximizes the Nash product of surplus over the disagreement point:
 
-\[ (x^*, y^*) = \arg\max (x - d_1)^{\alpha} (y - d_2)^{1-\alpha}, \]
+\[
+(x^*, y^*) = \arg\max (x - d_1)^{\alpha} (y - d_2)^{1-\alpha},
+\]
 
 where \( d_1, d_2 \) are disagreement payoffs and \( \alpha \) reflects bargaining power. This satisfies axioms of efficiency, symmetry (when \( \alpha = 1/2 \)), scale invariance, and IIA.
 

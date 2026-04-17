@@ -19,7 +19,10 @@ subjects: "PHYS"
 A **classical bit** stores one of two values: 0 or 1. It is deterministic; operations are classical logic gates.
 
 A **qubit** (quantum bit) is a two-level quantum system that can exist in a **superposition** of \( |0\rangle \) and \( |1\rangle \):
-\[ |\psi\rangle = \alpha |0\rangle + \beta |1\rangle, \quad |\alpha|^2 + |\beta|^2 = 1 \]
+
+\[
+|\psi\rangle = \alpha |0\rangle + \beta |1\rangle, \quad |\alpha|^2 + |\beta|^2 = 1
+\]
 
 where \( \alpha, \beta \in \mathbb{C} \) are **amplitudes**. The probabilities of measuring 0 or 1 are \( |\alpha|^2 \) and \( |\beta|^2 \) respectively.
 
@@ -30,7 +33,10 @@ A qubit does not store "both 0 and 1 at once" — it is in a superposition state
 ## 1.2 The Bloch Sphere
 
 A single qubit state (up to global phase) can be parameterized as:
-\[ |\psi\rangle = \cos(\theta/2)|0\rangle + e^{i\varphi}\sin(\theta/2)|1\rangle \]
+
+\[
+|\psi\rangle = \cos(\theta/2)|0\rangle + e^{i\varphi}\sin(\theta/2)|1\rangle
+\]
 with \( \theta \in [0, \pi] \), \( \varphi \in [0, 2\pi) \). This maps each qubit state to a point on the **Bloch sphere** (unit 2-sphere in 3D). The north pole is \( |0\rangle \), south pole is \( |1\rangle \); equatorial points are equal superpositions with various phases.
 
 Single-qubit gates are **rotations** of the Bloch sphere.
@@ -38,16 +44,31 @@ Single-qubit gates are **rotations** of the Bloch sphere.
 ## 1.3 Multiple Qubits and Entanglement
 
 An \( n \)-qubit system lives in a \( 2^n \)-dimensional Hilbert space \( \mathcal{H} = (\mathbb{C}^2)^{\otimes n} \). A general state:
-\[ |\psi\rangle = \sum_{x \in \{0,1\}^n} c_x |x\rangle, \quad \sum_x |c_x|^2 = 1 \]
+
+\[
+|\psi\rangle = \sum_{x \in \{0,1\}^n} c_x |x\rangle, \quad \sum_x |c_x|^2 = 1
+\]
 
 **Entanglement**: A bipartite state is **entangled** if it cannot be written as a product state \( |\psi\rangle = |\psi_A\rangle \otimes |\psi_B\rangle \).
 
 <div class="definition">
 The <strong>Bell states</strong> (maximally entangled two-qubit states):
-\[|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)\]
-\[|\Phi^-\rangle = \frac{1}{\sqrt{2}}(|00\rangle - |11\rangle)\]
-\[|\Psi^+\rangle = \frac{1}{\sqrt{2}}(|01\rangle + |10\rangle)\]
-\[|\Psi^-\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)\]
+
+\[
+|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)
+\]
+
+\[
+|\Phi^-\rangle = \frac{1}{\sqrt{2}}(|00\rangle - |11\rangle)
+\]
+
+\[
+|\Psi^+\rangle = \frac{1}{\sqrt{2}}(|01\rangle + |10\rangle)
+\]
+
+\[
+|\Psi^-\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)
+\]
 Entanglement enables quantum teleportation, superdense coding, and quantum key distribution.
 </div>
 
@@ -83,7 +104,10 @@ Plus (for quantum communication):
 The state of a quantum system is a normalized vector in a complex Hilbert space \( \mathcal{H} \). **Dirac notation**: kets \( |\psi\rangle \) for state vectors, bras \( \langle\psi| \) for their duals (complex conjugate transpose), inner product \( \langle\phi|\psi\rangle \in \mathbb{C} \).
 
 **Orthonormal basis**: \( \{|e_i\rangle\} \) with \( \langle e_i | e_j \rangle = \delta_{ij} \). For qubits, the computational basis is \( \{|0\rangle, |1\rangle\} \):
-\[ |0\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad |1\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \]
+
+\[
+|0\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad |1\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+\]
 
 **Operators**: linear maps on \( \mathcal{H} \). Observables are Hermitian: \( A = A^\dagger \). Unitary operators (\( U^\dagger U = I \)) describe reversible quantum evolution.
 
@@ -101,7 +125,10 @@ Single-qubit gates are \( 2\times 2 \) unitary matrices. Key gates:
 | **T gate** | \( \begin{pmatrix} 1 & 0 \\ 0 & e^{i\pi/4} \end{pmatrix} \) | π/4 rotation about z-axis |
 
 General rotation about axis \( \hat{n} \) by angle \( \theta \):
-\[ R_{\hat{n}}(\theta) = e^{-i\theta\hat{n}\cdot\vec{\sigma}/2} = \cos(\theta/2)I - i\sin(\theta/2)(\hat{n}\cdot\vec{\sigma}) \]
+
+\[
+R_{\hat{n}}(\theta) = e^{-i\theta\hat{n}\cdot\vec{\sigma}/2} = \cos(\theta/2)I - i\sin(\theta/2)(\hat{n}\cdot\vec{\sigma})
+\]
 
 where \( \vec{\sigma} = (X, Y, Z) \) are the Pauli matrices.
 
@@ -122,7 +149,10 @@ A **quantum circuit** is a sequence of quantum gates applied to a set of qubits.
 ## 2.4 Density Matrices and Mixed States
 
 For systems in **mixed states** (statistical ensembles of pure states) or when describing part of an entangled system, we use the **density matrix** formalism:
-\[ \rho = \sum_i p_i |\psi_i\rangle\langle\psi_i|, \quad \text{Tr}(\rho) = 1, \quad \rho \geq 0 \]
+
+\[
+\rho = \sum_i p_i |\psi_i\rangle\langle\psi_i|, \quad \text{Tr}(\rho) = 1, \quad \rho \geq 0
+\]
 
 For a pure state: \( \rho = |\psi\rangle\langle\psi| \), \( \rho^2 = \rho \), \( \text{Tr}(\rho^2) = 1 \).
 For a mixed state: \( \text{Tr}(\rho^2) < 1 \).
@@ -136,15 +166,24 @@ For a mixed state: \( \text{Tr}(\rho^2) < 1 \).
 ## 3.1 Time-Dependent Hamiltonians and Interaction Picture
 
 In quantum computing, qubits are controlled by time-dependent fields (microwave pulses, laser pulses). The total Hamiltonian:
-\[ H(t) = H_0 + H_{drive}(t) \]
+
+\[
+H(t) = H_0 + H_{drive}(t)
+\]
 
 where \( H_0 \) is the free qubit Hamiltonian (energy splitting) and \( H_{drive}(t) \) is the control.
 
 **Interaction picture** (Dirac picture): transform to a frame rotating at the qubit's natural frequency \( \omega_0 \). Define:
-\[ |\tilde{\psi}(t)\rangle = e^{iH_0 t/\hbar}|\psi(t)\rangle \]
+
+\[
+|\tilde{\psi}(t)\rangle = e^{iH_0 t/\hbar}|\psi(t)\rangle
+\]
 
 The state evolves under the **interaction Hamiltonian** alone:
-\[ i\hbar\frac{d}{dt}|\tilde{\psi}\rangle = \tilde{H}_{drive}(t)|\tilde{\psi}\rangle \]
+
+\[
+i\hbar\frac{d}{dt}|\tilde{\psi}\rangle = \tilde{H}_{drive}(t)|\tilde{\psi}\rangle
+\]
 where \( \tilde{H}_{drive} = e^{iH_0 t/\hbar} H_{drive} e^{-iH_0 t/\hbar} \).
 
 ## 3.2 Rotating Wave Approximation (RWA)
@@ -154,7 +193,10 @@ When the drive is resonant or near-resonant with the qubit (\( \omega_{drive} \a
 For a qubit driven at frequency \( \omega_{drive} \), the drive contains terms oscillating at \( \omega_0 - \omega_{drive} \) (slowly rotating, resonant) and \( \omega_0 + \omega_{drive} \) (rapidly oscillating, "counter-rotating"). The RWA drops the rapidly oscillating terms, which time-average to zero.
 
 Result: in the rotating frame, the effective Hamiltonian is time-independent:
-\[ \tilde{H} = \frac{\hbar}{2}\begin{pmatrix} -\Delta & \Omega \\ \Omega & \Delta \end{pmatrix} \]
+
+\[
+\tilde{H} = \frac{\hbar}{2}\begin{pmatrix} -\Delta & \Omega \\ \Omega & \Delta \end{pmatrix}
+\]
 where \( \Delta = \omega_{drive} - \omega_0 \) is the **detuning** and \( \Omega \) is the **Rabi frequency** (proportional to drive amplitude).
 
 **On resonance** (\( \Delta = 0 \)): the state undergoes **Rabi oscillations** between \( |0\rangle \) and \( |1\rangle \) at frequency \( \Omega \). A π-pulse (\( \Omega t = \pi \)) performs a NOT operation.
@@ -182,7 +224,10 @@ Key insight: the **no-cloning theorem** prevents copying quantum states, but QEC
 </div>
 
 **Qubit**: nuclear spin-1/2 (\( ^1\text{H} \), \( ^{13}\text{C} \), \( ^{19}\text{F} \)). In a static magnetic field \( B_0 \hat{z} \), the spin-1/2 Hamiltonian is:
-\[ H_0 = -\gamma \hbar B_0 I_z = -\hbar\omega_L I_z \]
+
+\[
+H_0 = -\gamma \hbar B_0 I_z = -\hbar\omega_L I_z
+\]
 where \( \gamma \) is the **gyromagnetic ratio** and \( \omega_L = \gamma B_0 \) is the **Larmor frequency** (typically 100–1000 MHz for \( B_0 \sim 2–20 \) T).
 
 The two energy eigenstates \( |\uparrow\rangle \equiv |0\rangle \) and \( |\downarrow\rangle \equiv |1\rangle \) are split by \( \hbar\omega_L \).
@@ -198,7 +243,10 @@ The rotation axis is controlled by the RF pulse **phase**: x-rotations from x-ph
 ## 4.3 Two-Qubit Gates via J-Coupling
 
 **J-coupling** (scalar coupling): indirect coupling of nuclear spins through bonding electrons. Coupling Hamiltonian:
-\[ H_J = 2\pi J_{12} I_z^{(1)} I_z^{(2)} \]
+
+\[
+H_J = 2\pi J_{12} I_z^{(1)} I_z^{(2)}
+\]
 
 where \( J_{12} \) (Hz) is the coupling constant. This coupling shifts the resonance frequency of one spin depending on the state of its coupled partner, enabling conditional operations.
 
@@ -310,7 +358,10 @@ Ions in the trap interact via their collective motional modes (phonons of the Co
 3. The gate disentangles from the motional mode at the end → the motional mode is used but not permanently entangled.
 
 The MS gate generates the maximally entangling operation:
-\[ \text{MS}(\chi) = \exp\!\left(-i\chi X\otimes X\right) \]
+
+\[
+\text{MS}(\chi) = \exp\!\left(-i\chi X\otimes X\right)
+\]
 At \( \chi = \pi/4 \), it produces Bell states.
 
 Gate time: ~50–200 μs. Fidelities > 99.9% on 2 qubits; ~99% on 30+ qubits.
@@ -343,18 +394,30 @@ Commercial leaders: IonQ, Quantinuum (formerly Honeywell Quantum), Oxford Ionics
 </div>
 
 **Josephson junction**: two superconductors separated by a thin insulating barrier. Cooper pairs tunnel through the barrier. Key relations:
-\[ I = I_c \sin\varphi \quad \text{(Josephson current-phase relation)} \]
-\[ \frac{d\varphi}{dt} = \frac{2eV}{\hbar} \quad \text{(Josephson voltage-phase relation)} \]
+
+\[
+I = I_c \sin\varphi \quad \text{(Josephson current-phase relation)}
+\]
+
+\[
+\frac{d\varphi}{dt} = \frac{2eV}{\hbar} \quad \text{(Josephson voltage-phase relation)}
+\]
 
 where \( \varphi \) is the phase difference across the junction, \( I_c \) is the critical current.
 
 **Josephson inductance**: The Josephson junction acts as a nonlinear inductor \( L_J = \Phi_0/(2\pi I_c \cos\varphi) \) where \( \Phi_0 = h/(2e) \) is the superconducting flux quantum. The nonlinearity makes the oscillator anharmonic → qubit.
 
 **LC circuit quantization**: treat an LC circuit quantum mechanically. The charge \( Q \) and flux \( \Phi \) are conjugate variables: \( [Q, \Phi] = i\hbar \). The circuit Hamiltonian is:
-\[ H = \frac{Q^2}{2C} + \frac{\Phi^2}{2L} \quad \text{(harmonic oscillator)} \]
+
+\[
+H = \frac{Q^2}{2C} + \frac{\Phi^2}{2L} \quad \text{(harmonic oscillator)}
+\]
 
 With a Josephson junction replacing the linear inductor:
-\[ H = \frac{Q^2}{2C} - E_J\cos\varphi = 4E_C n^2 - E_J\cos\varphi \]
+
+\[
+H = \frac{Q^2}{2C} - E_J\cos\varphi = 4E_C n^2 - E_J\cos\varphi
+\]
 where \( E_C = e^2/(2C) \) is the charging energy, \( E_J = \Phi_0 I_c/(2\pi) \) is the Josephson energy, and \( n \) is the Cooper pair number operator.
 
 ## 7.2 The Transmon Qubit
@@ -377,7 +440,10 @@ Transmon qubits are controlled by microwave pulses (\( \sim 5 \) GHz) applied vi
 ## 7.4 Two-Qubit Gates
 
 **Capacitive coupling**: Two transmons coupled via a coupling capacitor or a tunable coupling element (coupler). The coupling Hamiltonian:
-\[ H_{int} = g (a_1^\dagger a_2 + a_1 a_2^\dagger) \]
+
+\[
+H_{int} = g (a_1^\dagger a_2 + a_1 a_2^\dagger)
+\]
 
 **Cross-resonance (CR) gate** (IBM): Drive transmon 1 at the frequency of transmon 2 → mediated by ZX coupling → CNOT with echo pulses. All-microwave (fixed-frequency qubits).
 

@@ -79,7 +79,9 @@ Implication: the government should not use output subsidies or taxes to distort 
 
 The efficient provision of a public good \( G \) alongside a private good \( x \) requires:
 
-\[ \sum_{i=1}^{n} MRS_i^{G,x} = MRT^{G,x} \]
+\[
+\sum_{i=1}^{n} MRS_i^{G,x} = MRT^{G,x}
+\]
 
 The social marginal benefit (sum of individual MRS values) equals the social marginal cost (MRT). Because the public good is non-rival, the aggregate demand schedule is obtained by vertical summation of individual demand curves — contrasting with the horizontal summation used for private goods.
 
@@ -89,7 +91,9 @@ Graphically: the social demand for the public good at quantity \( G \) is \( \su
 
 In a Nash equilibrium of voluntary public good provision, each consumer \( i \) chooses their contribution \( g_i \) to maximise utility, taking others' contributions as fixed. The Nash provision satisfies:
 
-\[ MRS_i^{G,x} = MRT^{G,x} \quad \forall i \]
+\[
+MRS_i^{G,x} = MRT^{G,x} \quad \forall i
+\]
 
 But the Samuelson optimum requires the *sum* of MRS values to equal MRT. The Nash equilibrium equates only each individual's MRS to MRT — ignoring others' positive valuations. The result is systematic under-provision: in the Nash equilibrium, \( G^{Nash} < G^{Samuelson} \).
 
@@ -118,9 +122,13 @@ Cost-benefit analysis of government policies requires measuring welfare changes 
 
 Let \( e(p, u) \) be the expenditure function — the minimum income needed to achieve utility \( u \) at prices \( p \). When prices change from \( p^0 \) to \( p^1 \):
 
-\[ CV = e(p^1, u^0) - e(p^0, u^0) = e(p^1, u^0) - m \]
+\[
+CV = e(p^1, u^0) - e(p^0, u^0) = e(p^1, u^0) - m
+\]
 
-\[ EV = e(p^1, u^1) - e(p^0, u^1) = m - e(p^0, u^1) \]
+\[
+EV = e(p^1, u^1) - e(p^0, u^1) = m - e(p^0, u^1)
+\]
 
 CV is the income change (at new prices) that leaves the consumer at the original utility. EV is the income change (at old prices) that is equivalent to the policy change. For a price increase, both CV and EV are positive; for a price decrease, both are negative.
 
@@ -132,7 +140,9 @@ CV is the income change (at new prices) that leaves the consumer at the original
 
 A public project is socially desirable if the aggregate welfare gains exceed the aggregate welfare losses. The standard rule:
 
-\[ \sum_i CV_i > 0 \]
+\[
+\sum_i CV_i > 0
+\]
 
 (or equivalently, aggregate EV > 0 using Hicks-Kaldor compensation test). Note that this does not require that losers be compensated — it is a potential Pareto improvement, not an actual one.
 
@@ -148,7 +158,9 @@ A public project is socially desirable if the aggregate welfare gains exceed the
 
 Arthur Pigou (1920) proposed that the government correct negative externalities by taxing the activity at a rate equal to the marginal external cost at the social optimum:
 
-\[ t^* = MEC(Q^*) \]
+\[
+t^* = MEC(Q^*)
+\]
 
 The tax internalises the external cost, shifting the supply curve (marginal private cost + tax) to the social marginal cost curve, thereby achieving the efficient output \( Q^* \).
 
@@ -186,7 +198,9 @@ Cap-and-trade systems set a cap on total emissions (a quantity standard) and dis
 
 Cost-benefit analysis of long-lived public investments (infrastructure, environmental protection, pensions) requires discounting future benefits and costs to present values. The **social discount rate** \( r_s \) reflects:
 
-\[ r_s = \rho + \eta \cdot g \]
+\[
+r_s = \rho + \eta \cdot g
+\]
 
 where \( \rho \) is pure time preference, \( \eta \) is the elasticity of marginal utility of consumption, and \( g \) is the expected growth rate of consumption (Ramsey rule). If \( \rho = 1\%, \eta = 2, g = 2\% \), then \( r_s = 5\% \).
 
@@ -209,7 +223,9 @@ Many public goods and externalities lack market prices. Valuation methods:
 
 The government must raise a fixed revenue \( R \) by taxing \( n \) commodities, and wishes to minimise the total deadweight loss. This is the **Ramsey (1927) optimal tax problem**. Assuming separable demand and no income effects, the optimal tax rates satisfy the **inverse elasticity rule**:
 
-\[ \frac{t_i}{q_i} = -\frac{\lambda}{\varepsilon_i} \]
+\[
+\frac{t_i}{q_i} = -\frac{\lambda}{\varepsilon_i}
+\]
 
 where \( t_i \) is the per-unit tax on good \( i \), \( q_i \) is the consumer price, \( \varepsilon_i \) is the own-price elasticity of demand, and \( \lambda \) is the Lagrange multiplier on the revenue constraint (the marginal cost of public funds).
 
@@ -217,7 +233,9 @@ The inverse elasticity rule says: to minimise deadweight loss, tax goods with in
 
 **Ramsey rule in relative terms:** Equivalently, the Ramsey rule requires that taxes reduce all compensated demands by the same proportional amount:
 
-\[ \frac{\Delta x_i^c}{x_i^c} = -\mu \quad \forall i \]
+\[
+\frac{\Delta x_i^c}{x_i^c} = -\mu \quad \forall i
+\]
 
 where \( \Delta x_i^c \) is the change in compensated demand and \( \mu \) is a common constant (the Ramsey proportionality condition). This is also called the **equal-proportional reduction rule**.
 
@@ -225,7 +243,9 @@ where \( \Delta x_i^c \) is the change in compensated demand and \( \mu \) is a 
 
 The Ramsey rule ignores distributional concerns. If poor households spend a larger share of income on necessities (food, heating fuel), taxing necessities more heavily (because they are price-inelastic) is regressive. The **distributional extension** of the Ramsey rule (Diamond, 1975) introduces distributional weights:
 
-\[ \frac{t_i}{q_i} = -\frac{\lambda - \sum_h \mu_h x_i^h / \lambda}{\varepsilon_i} \]
+\[
+\frac{t_i}{q_i} = -\frac{\lambda - \sum_h \mu_h x_i^h / \lambda}{\varepsilon_i}
+\]
 
 Goods disproportionately consumed by high-income households receive higher distributional weights, partially offsetting the inverse elasticity rule. In practice, Canada and most OECD countries zero-rate food and basic necessities under GST/VAT, reflecting distributional concerns.
 
@@ -253,11 +273,15 @@ Each worker has ability \( \theta \) drawn from distribution \( F(\theta) \). A 
 
 The worker maximises:
 
-\[ U(c, l) = c - v(l) \]
+\[
+U(c, l) = c - v(l)
+\]
 
 where \( c = z - T(z) \) is consumption (income minus tax) and \( v(l) \) is the disutility of effort. The government maximises:
 
-\[ \int W(U(c(\theta), l(\theta))) f(\theta) d\theta \]
+\[
+\int W(U(c(\theta), l(\theta))) f(\theta) d\theta
+\]
 
 subject to revenue sufficiency and incentive compatibility (the **IC constraint**): each type \( \theta \) prefers the bundle \( (c(\theta), l(\theta)) \) intended for them over any bundle intended for a different type.
 
@@ -273,7 +297,9 @@ subject to revenue sufficiency and incentive compatibility (the **IC constraint*
 
 The **optimal marginal tax rate** formula (Saez, 2001 reformulation in terms of observables):
 
-\[ T'(z^*) = \frac{1 - G(z^*)}{1 - G(z^*) + \alpha \cdot e \cdot \frac{z^*}{1 - T'(z^*)}} \cdot \frac{1}{1+e} \]
+\[
+T'(z^*) = \frac{1 - G(z^*)}{1 - G(z^*) + \alpha \cdot e \cdot \frac{z^*}{1 - T'(z^*)}} \cdot \frac{1}{1+e}
+\]
 
 where \( G(z^*) \) is the average social welfare weight for individuals above income \( z^* \), \( e \) is the elasticity of earnings with respect to the net-of-tax rate, and \( \alpha \) is a measure of the thickness of the top income distribution. Higher elasticity \( e \) reduces optimal top rates; thinner top income distribution (sharper Pareto tails) increases optimal top rates.
 
@@ -283,13 +309,17 @@ where \( G(z^*) \) is the average social welfare weight for individuals above in
 
 The key behavioural parameter for optimal income tax design is the **elasticity of taxable income (ETI)** — the percentage change in reported taxable income in response to a one-percent increase in the net-of-tax rate \( (1 - t) \):
 
-\[ e_{TI} = \frac{\partial \ln z}{\partial \ln(1-t)} \]
+\[
+e_{TI} = \frac{\partial \ln z}{\partial \ln(1-t)}
+\]
 
 The ETI captures all margins of behavioural response: labour supply, avoidance, evasion, and income shifting. Feldstein (1995) found ETIs of 1–3 for high-income US taxpayers; more recent credible estimates (Chetty, 2012) find ETIs of 0.1–0.5, suggesting the revenue-maximising rate is relatively high.
 
 **Revenue-maximising tax rate (Laffer peak):**
 
-\[ t^* = \frac{1}{1 + a \cdot e_{TI}} \]
+\[
+t^* = \frac{1}{1 + a \cdot e_{TI}}
+\]
 
 where \( a \) is the Pareto parameter of the top income distribution. With \( a = 1.5 \) and \( e_{TI} = 0.25 \), \( t^* = 73\% \).
 
@@ -301,7 +331,9 @@ where \( a \) is the Pareto parameter of the top income distribution. With \( a 
 
 A **Negative Income Tax (NIT)** provides a guaranteed basic income \( G \) and reduces benefits at rate \( t \) for every dollar earned:
 
-\[ \text{Transfer} = G - t \cdot \text{Earned Income} \]
+\[
+\text{Transfer} = G - t \cdot \text{Earned Income}
+\]
 
 The NIT becomes a positive income tax once earnings exceed \( G/t \) (the break-even income). Milton Friedman (1962) advocated the NIT as a replacement for categorical welfare programmes, arguing it would reduce poverty while preserving work incentives more effectively than programmes with very high implicit marginal tax rates (100% BRRs).
 
@@ -352,7 +384,9 @@ The optimal design of EI involves balancing two forces:
 
 **Baily (1978) – Chetty (2006) formula:**
 
-\[ \frac{b^*}{w - b^*} = \frac{\gamma \cdot \Delta c / c}{\varepsilon_{1-e, b}} \]
+\[
+\frac{b^*}{w - b^*} = \frac{\gamma \cdot \Delta c / c}{\varepsilon_{1-e, b}}
+\]
 
 where \( b^* \) is the optimal benefit, \( w \) is the wage, \( \gamma \) is the coefficient of relative risk aversion, \( \Delta c / c \) is the proportional consumption drop upon unemployment (the consumption-smoothing benefit of EI), and \( \varepsilon_{1-e, b} \) is the elasticity of employment with respect to the benefit level (the moral hazard cost).
 

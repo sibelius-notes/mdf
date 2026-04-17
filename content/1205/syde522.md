@@ -562,7 +562,10 @@ Also introduce a dummy variable: \(y _ i = \begin{cases}
 +1 & \text{for }\oplus  \\
   -1 & \text{for } \ominus
 \end{cases} \). Thus for all \(\oplus, \ominus \),
-\[y _ i (w\cdot w + b)-1\ge 0 \]
+
+\[
+y _ i (w\cdot w + b)-1\ge 0
+\]
 Best classification: the largest margin!
 
 \[
@@ -617,6 +620,7 @@ Other cluster validity measures:
 - Calinski-Harbusz Index \(CH = \dfrac{SSB / (M-1)}{SSW/(N_M)} \)
 - Hartigen Index \(H = \left(\dfrac{SSW _ M}{SSW _ {M+1}}-1\right)(N-M-1) \) or \(H = \log _ 2 \dfrac{SSB}{SSW} \)
 - Dunn's Index
+
 \[
     D = {
 \min _ {i=1} ^M \min _ {j=i+1}^M d(c _ i,c _ j) \over
@@ -673,6 +677,7 @@ How do we measure fuzziness?
 FCM
 1. Initialize (# of clusters \(M \), fuzzifier \(m \), membership function \(\mu \)
 2. Cluster Centers
+
 \[
     C _ i = {
         \sum _ {k=1}^n (\mu _ {ik})^m x _ k\over
@@ -680,12 +685,14 @@ FCM
     }
 \]
 3. Update Memberships
+
 \[
     \mu _ {ik} = {1\over
 \sum _ {j=1}^M \left(d _ {ik}\over d _ {jk}\right)^{2\over m-1}
     }
 \]
 4. Stopping criterion
+
 \[
     \&#124; \underbrace{U^{current}} _ {\text{Fuzzy Partition}} - U^{before}\&#124;
 \]

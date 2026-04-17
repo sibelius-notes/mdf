@@ -294,6 +294,7 @@ The Riemann theory of integration extends naturally to functions taking values i
 <div class="definition">
 
 <strong>Definition (Banach-Valued Riemann Sums).</strong> Let \(X\) be a Banach space and \(f : [a,b] \to X\). A <em>partition</em> of \([a,b]\) is a finite set \(P = \{a = t_0 < t_1 < \cdots < t_n = b\}\) with <em>mesh</em> \(\|P\| = \max_i(t_i - t_{i-1})\). A <em>Riemann sum</em> associated to \(P\) and sample points \(t_i^* \in [t_{i-1}, t_i]\) is
+
 \[
 S(f, P) = \sum_{i=1}^n f(t_i^*)(t_i - t_{i-1}) \in X.
 \]
@@ -304,6 +305,7 @@ A partition \(Q\) is a <em>refinement</em> of \(P\) if \(P \subseteq Q\) as sets
 <div class="definition">
 
 <strong>Definition (Banach-Valued Riemann Integrability).</strong> The function \(f : [a,b] \to X\) is <em>Riemann integrable</em> if there exists \(x \in X\) such that for every \(\varepsilon > 0\) there is a partition \(\bar{P}\) such that for every refinement \(P \supseteq \bar{P}\) and every choice of sample points,
+
 \[
 \|S(f, P) - x\| < \varepsilon.
 \]
@@ -316,6 +318,7 @@ The use of refinements rather than mesh-to-zero is essential: it requires the Ri
 <div class="theorem">
 
 <strong>Theorem (Cauchy Criterion).</strong> A function \(f : [a,b] \to X\) is Riemann integrable if and only if for every \(\varepsilon > 0\) there exists a partition \(\bar{Q}\) such that for any two refinements \(P, Q \supseteq \bar{Q}\) (with any choice of sample points in each),
+
 \[
 \|S(f, P) - S(f, Q)\| < \varepsilon.
 \]
@@ -327,6 +330,7 @@ The proof is an immediate application of completeness: the Cauchy condition ensu
 <div class="lemma">
 
 <strong>Lemma.</strong> Suppose \(f : [a,b] \to X\) is continuous. For every \(\varepsilon > 0\) there exists \(\delta > 0\) such that for any partition \(P\) with \(\|P\| < \delta\) and any refinement \(P_1 \supseteq P\),
+
 \[
 \|S(f, P) - S(f, P_1)\| < \varepsilon.
 \]
@@ -348,6 +352,7 @@ The proof is an immediate application of completeness: the Cauchy condition ensu
 <div class="proof">
 
 <strong>Proof.</strong> Given \(\varepsilon > 0\), choose \(\delta > 0\) from the Lemma. For any two partitions \(P, Q\) both of mesh less than \(\delta\), let \(R = P \cup Q\) be their common refinement. Then
+
 \[
 \|S(f,P) - S(f,Q)\| \le \|S(f,P) - S(f,R)\| + \|S(f,R) - S(f,Q)\| < 2\varepsilon.
 \]
@@ -583,6 +588,7 @@ Pointwise convergence and uniform convergence are very different in general: a s
 <div class="theorem">
 
 <strong>Theorem 3.5.1 (Egoroff).</strong> Let \(E\) be a measurable set with \(\lambda(E) < \infty\). Let \((f_n)\) be a sequence of measurable real-valued functions on \(E\) that converges pointwise on \(E\) to a real-valued function \(f\). Then for every \(\varepsilon > 0\) there is a closed set \(F \subseteq E\) such that
+
 \[
 f_n \to f \text{ uniformly on } F \quad \text{and} \quad \lambda(E \setminus F) < \varepsilon.
 \]
@@ -598,6 +604,7 @@ While Egoroff's theorem addresses convergence, Lusin's theorem addresses the str
 <div class="lemma">
 
 <strong>Lemma 3.5.2.</strong> Let \(f : [a,b] \to \mathbb{R}\) be measurable and \(\varepsilon > 0\). There exists a continuous function \(h : [a,b] \to \mathbb{R}\) such that
+
 \[
 \lambda\{x \in [a,b] : |f(x) - h(x)| \geq \varepsilon\} < \varepsilon.
 \]
@@ -646,6 +653,7 @@ Fubini's theorem answers the fundamental question: when can a double integral be
 <div class="theorem">
 
 <strong>Theorem 3.5.7 (Fubini).</strong> Suppose \(f : \mathbb{R}^2 \to \mathbb{R}\) is Borel measurable and satisfies
+
 \[
 \int_{\mathbb{R}} \int_{\mathbb{R}} |f(x,y)| \, dx \, dy < \infty.
 \]
@@ -653,6 +661,7 @@ Then:
 1. For almost every \(x\), the function \(y \mapsto f(x,y)\) is integrable.
 2. For almost every \(y\), the function \(x \mapsto f(x,y)\) is integrable.
 3. The iterated integrals are equal:
+
 \[
 \int_{\mathbb{R}} \left(\int_{\mathbb{R}} f(x,y) \, dy\right) dx = \int_{\mathbb{R}} \left(\int_{\mathbb{R}} f(x,y) \, dx\right) dy.
 \]
@@ -665,6 +674,7 @@ The absolute integrability hypothesis \(\iint |f| < \infty\) is crucial: without
 <div class="theorem">
 
 <strong>Theorem 3.5.8 (Tonelli).</strong> If \(f : \mathbb{R}^2 \to [0,\infty]\) is Borel measurable and non-negative, then
+
 \[
 \int_{\mathbb{R}} \left(\int_{\mathbb{R}} f(x,y) \, dy\right) dx = \int_{\mathbb{R}} \left(\int_{\mathbb{R}} f(x,y) \, dx\right) dy = \iint_{\mathbb{R}^2} f \, d(\lambda \times \lambda)
 \]
@@ -952,6 +962,7 @@ Before addressing convergence, we develop the algebraic framework. The convoluti
 <div class="definition">
 
 <strong>Definition 6.1 (Convolution on \(\mathbb{T}\)).</strong> For \(f, g \in L^1(\mathbb{T})\), the <em>convolution</em> is
+
 \[
 (f * g)(x) = \frac{1}{2\pi} \int_\mathbb{T} f(t)\, g(x - t) \, dt.
 \]
@@ -994,6 +1005,7 @@ A summability kernel is <em>positive</em> if additionally \(K_n \geq 0\), in whi
 <div class="theorem">
 
 <strong>Theorem 6.5 (Fejér Kernel is a Positive Summability Kernel).</strong> The Fejér kernel
+
 \[
 F_N(t) = \sum_{n=-N}^{N} \left(1 - \frac{|n|}{N+1}\right) e^{int} = \frac{1}{N+1}\left(\frac{\sin\frac{(N+1)t}{2}}{\sin\frac{t}{2}}\right)^2
 \]
@@ -1103,6 +1115,7 @@ Despite the existence of divergent Fourier series for continuous functions, ther
 <div class="theorem">
 
 <strong>Theorem 6.14 (Jordan's Theorem).</strong> Suppose \(f \in L^1(\mathbb{T})\) has a jump discontinuity at \(a\), i.e., both one-sided limits \(f(a^+) = \lim_{t \to 0^+} f(a+t)\) and \(f(a^-) = \lim_{t \to 0^+} f(a-t)\) exist, and there are constants \(c, \delta > 0\) such that
+
 \[
 |f(a+t) - f(a^+)| \leq c|t|, \quad |f(a-t) - f(a^-)| \leq c|t| \quad \text{for all } 0 < t < \delta.
 \]
@@ -1131,6 +1144,7 @@ The deepest convergence result is that Fourier series converge in \(L^p\) norm f
 <div class="definition">
 
 <strong>Definition 6.16 (Hilbert Transform on Trigonometric Polynomials).</strong> For a trigonometric polynomial \(f \in \mathrm{Trig}(\mathbb{T})\), the <em>Hilbert transform</em> \(H(f)\) is defined by
+
 \[
 \widehat{H(f)}(n) = (-i)\operatorname{sgn}(n)\hat{f}(n),
 \]
@@ -1147,6 +1161,7 @@ The Hilbert transform multiplies positive Fourier modes by \(-i\) and negative F
 <div class="theorem">
 
 <strong>Proposition 6.17.</strong> For any trigonometric polynomial \(f\),
+
 \[
 f + iH(f) = \hat{f}(0) + 2\sum_{j=1}^\infty \hat{f}(j)e^{ijt}.
 \]
@@ -1193,6 +1208,7 @@ For \(1 < p < 2\): use the adjoint argument. Define \(H^*\) by \(\int H^*(f)\bar
 <div class="theorem">
 
 <strong>Corollary 6.21 (\(L^p\) Convergence of Fourier Series).</strong> For every \(1 < p < \infty\) and every \(f \in L^p(\mathbb{T})\),
+
 \[
 \|S_N(f) - f\|_p \to 0 \quad \text{as } N \to \infty.
 \]

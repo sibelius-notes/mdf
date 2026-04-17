@@ -16,7 +16,10 @@ A parallel motivation comes from the relationship between displacement and veloc
 <div class="definition">
 
 <strong>Definition (Riemann Sum).</strong> Given a bounded function \(f\) on \([a,b]\), a partition \(P\): \(a = t_0 < t_1 < \cdots < t_n = b\), and points \(c_i \in [t_{i-1}, t_i]\), a Riemann sum for \(f\) with respect to \(P\) is
-\[S = \sum_{i=1}^n f(c_i)\,\Delta t_i.\]
+
+\[
+S = \sum_{i=1}^n f(c_i)\,\Delta t_i.
+\]
 
 </div>
 
@@ -29,7 +32,10 @@ A parallel motivation comes from the relationship between displacement and veloc
 <div class="definition">
 
 <strong>Definition (Right-hand Riemann Sum).</strong> The right-hand Riemann sum for \(f\) with respect to \(P\) is obtained by choosing \(c_i = t_i\):
-\[R = \sum_{i=1}^n f(t_i)\,\Delta t_i.\]
+
+\[
+R = \sum_{i=1}^n f(t_i)\,\Delta t_i.
+\]
 For the regular \(n\)-partition, \(R_n = \sum_{i=1}^n f\!\left(a + i\frac{b-a}{n}\right)\frac{b-a}{n}\).
 
 </div>
@@ -37,21 +43,30 @@ For the regular \(n\)-partition, \(R_n = \sum_{i=1}^n f\!\left(a + i\frac{b-a}{n
 <div class="definition">
 
 <strong>Definition (Left-hand Riemann Sum).</strong> The left-hand Riemann sum is obtained by choosing \(c_i = t_{i-1}\):
-\[L = \sum_{i=1}^n f(t_{i-1})\,\Delta t_i.\]
+
+\[
+L = \sum_{i=1}^n f(t_{i-1})\,\Delta t_i.
+\]
 
 </div>
 
 <div class="definition">
 
 <strong>Definition (Definite Integral).</strong> A bounded function \(f\) is integrable on \([a,b]\) if there exists a unique number \(I \in \mathbb{R}\) such that whenever \(\{P_n\}\) is a sequence of partitions with \(\lim_{n\to\infty}\|P_n\| = 0\) and \(\{S_n\}\) is any associated sequence of Riemann sums, we have \(\lim_{n\to\infty} S_n = I\). We write
-\[I = \int_a^b f(t)\,dt.\]
+
+\[
+I = \int_a^b f(t)\,dt.
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Theorem 1 (Integrability Theorem for Continuous Functions).</strong> Let \(f\) be continuous on \([a,b]\). Then \(f\) is integrable on \([a,b]\). Moreover,
-\[\int_a^b f(t)\,dt = \lim_{n\to\infty} R_n = \lim_{n\to\infty} L_n\]
+
+\[
+\int_a^b f(t)\,dt = \lim_{n\to\infty} R_n = \lim_{n\to\infty} L_n
+\]
 where \(R_n\) and \(L_n\) are the right- and left-hand Riemann sums for the regular \(n\)-partition.
 
 </div>
@@ -97,7 +112,10 @@ This theorem also holds if \(f\) is bounded and has finitely many discontinuitie
 <div class="theorem">
 
 <strong>Theorem 3 (Integrals over Subintervals).</strong> If \(f\) is integrable on an interval \(I\) containing \(a\), \(b\), and \(c\), then
-\[\int_a^b f(t)\,dt = \int_a^c f(t)\,dt + \int_c^b f(t)\,dt.\]
+
+\[
+\int_a^b f(t)\,dt = \int_a^c f(t)\,dt + \int_c^b f(t)\,dt.
+\]
 
 </div>
 
@@ -110,14 +128,20 @@ If \(f(x) \ge 0\) on \([a,b]\), then \(\int_a^b f(x)\,dx\) equals the area under
 <div class="definition">
 
 <strong>Definition (Average Value).</strong> If \(f\) is continuous on \([a,b]\), the average value of \(f\) on \([a,b]\) is
-\[\frac{1}{b-a}\int_a^b f(t)\,dt.\]
+
+\[
+\frac{1}{b-a}\int_a^b f(t)\,dt.
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Theorem 4 (Mean Value Theorem for Integrals).</strong> If \(f\) is continuous on \([a,b]\), then there exists \(c \in [a,b]\) such that
-\[f(c) = \frac{1}{b-a}\int_a^b f(t)\,dt.\]
+
+\[
+f(c) = \frac{1}{b-a}\int_a^b f(t)\,dt.
+\]
 
 </div>
 
@@ -128,14 +152,20 @@ The integral function \(G(x) = \int_a^x f(t)\,dt\) computes the accumulated area
 <div class="theorem">
 
 <strong>Theorem 5 (Fundamental Theorem of Calculus, Part 1).</strong> Assume \(f\) is continuous on an open interval \(I\) containing \(a\). Let \(G(x) = \int_a^x f(t)\,dt\). Then \(G\) is differentiable at each \(x \in I\) and
-\[G'(x) = \frac{d}{dx}\int_a^x f(t)\,dt = f(x).\]
+
+\[
+G'(x) = \frac{d}{dx}\int_a^x f(t)\,dt = f(x).
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Theorem 6 (Extended FTC).</strong> If \(f\) is continuous and \(g\), \(h\) are differentiable, and \(H(x) = \int_{g(x)}^{h(x)} f(t)\,dt\), then
-\[H'(x) = f(h(x))\,h'(x) - f(g(x))\,g'(x).\]
+
+\[
+H'(x) = f(h(x))\,h'(x) - f(g(x))\,g'(x).
+\]
 
 </div>
 
@@ -154,7 +184,10 @@ The indefinite integral \(\int f(x)\,dx\) denotes the family of all antiderivati
 <div class="theorem">
 
 <strong>Theorem 7 (Power Rule for Antiderivatives).</strong> If \(\alpha \ne -1\), then
-\[\int x^\alpha\,dx = \frac{x^{\alpha+1}}{\alpha+1} + C.\]
+
+\[
+\int x^\alpha\,dx = \frac{x^{\alpha+1}}{\alpha+1} + C.
+\]
 
 </div>
 
@@ -163,7 +196,10 @@ The indefinite integral \(\int f(x)\,dx\) denotes the family of all antiderivati
 <div class="theorem">
 
 <strong>Theorem 8 (Fundamental Theorem of Calculus, Part 2).</strong> If \(f\) is continuous and \(F\) is any antiderivative of \(f\), then
-\[\int_a^b f(t)\,dt = F(b) - F(a).\]
+
+\[
+\int_a^b f(t)\,dt = F(b) - F(a).
+\]
 
 </div>
 
@@ -172,7 +208,10 @@ The indefinite integral \(\int f(x)\,dx\) denotes the family of all antiderivati
 <div class="theorem">
 
 <strong>Theorem 9 (Change of Variables).</strong> If \(g'(x)\) is continuous on \([a,b]\) and \(f(u)\) is continuous on \(g([a,b])\), then
-\[\int_{x=a}^{x=b} f(g(x))\,g'(x)\,dx = \int_{u=g(a)}^{u=g(b)} f(u)\,du.\]
+
+\[
+\int_{x=a}^{x=b} f(g(x))\,g'(x)\,dx = \int_{u=g(a)}^{u=g(b)} f(u)\,du.
+\]
 
 </div>
 
@@ -199,14 +238,20 @@ For example, using \(x = \sin(u)\) one can show \(\int_{-1}^{1}\sqrt{1-x^2}\,dx 
 <div class="definition">
 
 <strong>Definition (Integration by Parts Formula).</strong>
-\[\int f(x)\,g'(x)\,dx = f(x)\,g(x) - \int f'(x)\,g(x)\,dx.\]
+
+\[
+\int f(x)\,g'(x)\,dx = f(x)\,g(x) - \int f'(x)\,g(x)\,dx.
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Theorem 1 (Integration by Parts for Definite Integrals).</strong> If \(f'\) and \(g'\) are continuous on an interval containing \(a\) and \(b\), then
-\[\int_a^b f(x)\,g'(x)\,dx = f(x)\,g(x)\Big|_a^b - \int_a^b f'(x)\,g(x)\,dx.\]
+
+\[
+\int_a^b f(x)\,g'(x)\,dx = f(x)\,g(x)\Big|_a^b - \int_a^b f'(x)\,g(x)\,dx.
+\]
 
 </div>
 
@@ -240,14 +285,20 @@ Integration by Parts is suited for integrals of the types \(\int x^n\cos x\,dx\)
 <div class="definition">
 
 <strong>Definition (Type I Partial Fraction Decomposition).</strong> If \(f(x) = \frac{p(x)}{q(x)}\) where \(\deg(p) < \deg(q) = k\) and \(q(x) = a(x-a_1)(x-a_2)\cdots(x-a_k)\) with distinct roots, then
-\[f(x) = \frac{1}{a}\left[\frac{A_1}{x-a_1} + \frac{A_2}{x-a_2} + \cdots + \frac{A_k}{x-a_k}\right].\]
+
+\[
+f(x) = \frac{1}{a}\left[\frac{A_1}{x-a_1} + \frac{A_2}{x-a_2} + \cdots + \frac{A_k}{x-a_k}\right].
+\]
 
 </div>
 
 <div class="theorem">
 
 <strong>Theorem 2 (Integration of Type I Partial Fractions).</strong> Under the conditions above,
-\[\int f(x)\,dx = \frac{1}{a}[A_1\ln|x-a_1| + A_2\ln|x-a_2| + \cdots + A_k\ln|x-a_k|] + C.\]
+
+\[
+\int f(x)\,dx = \frac{1}{a}[A_1\ln|x-a_1| + A_2\ln|x-a_2| + \cdots + A_k\ln|x-a_k|] + C.
+\]
 
 </div>
 
@@ -364,27 +415,42 @@ Integration by parts yields the recurrence \(\Gamma(x+1) = x\,\Gamma(x)\). Since
 ## 3.1 Areas Between Curves
 
 If \(f\) and \(g\) are continuous on \([a,b]\), the area of the region between their graphs is
-\[A = \int_a^b |g(t) - f(t)|\,dt.\]
+
+\[
+A = \int_a^b |g(t) - f(t)|\,dt.
+\]
 When \(f(t) \le g(t)\) on \([a,b]\), this simplifies to \(\int_a^b (g(t)-f(t))\,dt\). When the curves cross, one must split the integral at each crossing point.
 
 ## 3.2 Volumes of Revolution: Disk Method
 
 If \(f\) is continuous on \([a,b]\) with \(f(x) \ge 0\), the volume obtained by rotating the region under \(f\) around the \(x\)-axis is
-\[V = \int_a^b \pi\,[f(x)]^2\,dx.\]
+
+\[
+V = \int_a^b \pi\,[f(x)]^2\,dx.
+\]
 More generally, if \(0 \le f(x) \le g(x)\), rotating the region between \(f\) and \(g\) gives
-\[V = \int_a^b \pi\left[(g(x))^2 - (f(x))^2\right]dx.\]
+
+\[
+V = \int_a^b \pi\left[(g(x))^2 - (f(x))^2\right]dx.
+\]
 
 For example, the volume of a sphere of radius \(r\) is derived by rotating \(f(x) = \sqrt{r^2-x^2}\), yielding \(V = \frac{4}{3}\pi r^3\).
 
 ## 3.3 Volumes of Revolution: Shell Method
 
 If \(a \ge 0\) and \(f(x) \le g(x)\) on \([a,b]\), the volume obtained by rotating the region between \(f\) and \(g\) around the \(y\)-axis is
-\[V = \int_a^b 2\pi x\,(g(x)-f(x))\,dx.\]
+
+\[
+V = \int_a^b 2\pi x\,(g(x)-f(x))\,dx.
+\]
 
 ## 3.4 Arc Length
 
 If \(f\) is continuously differentiable on \([a,b]\), the arc length of its graph is
-\[S = \int_a^b \sqrt{1 + (f'(x))^2}\,dx.\]
+
+\[
+S = \int_a^b \sqrt{1 + (f'(x))^2}\,dx.
+\]
 
 ---
 
@@ -425,7 +491,10 @@ To solve a separable DE: (1) identify \(f(x)\) and \(g(y)\); (2) find equilibriu
 <div class="theorem">
 
 <strong>Theorem 1 (Solving FOLDEs).</strong> The solutions to \(y' = f(x)\,y + g(x)\) are
-\[y = \frac{\int g(x)\,I(x)\,dx}{I(x)}\]
+
+\[
+y = \frac{\int g(x)\,I(x)\,dx}{I(x)}
+\]
 where the integrating factor is \(I(x) = e^{-\int f(x)\,dx}\).
 
 </div>
@@ -461,7 +530,10 @@ If \(T(t)\) is the temperature of an object and \(T_e\) is the environment tempe
 ## 4.8 Logistic Growth
 
 The logistic equation \(P' = kP(1 - P/M)\) models population growth with carrying capacity \(M\). The equilibrium solutions are \(P = 0\) and \(P = M\). The explicit solution is
-\[P(t) = \frac{MP_0}{P_0 + (M - P_0)e^{-kt}}.\]
+
+\[
+P(t) = \frac{MP_0}{P_0 + (M - P_0)e^{-kt}}.
+\]
 
 ---
 
@@ -738,7 +810,10 @@ The interval of convergence may or may not include the endpoints.
 <div class="theorem">
 
 <strong>Theorem 5 (Term-by-Term Differentiation).</strong> If \(\sum a_n(x-a)^n\) has radius \(R > 0\) and \(f(x) = \sum_{n=0}^\infty a_n(x-a)^n\) for \(|x-a| < R\), then \(f\) is differentiable on \((a-R, a+R)\) and
-\[f'(x) = \sum_{n=1}^\infty n\,a_n(x-a)^{n-1}.\]
+
+\[
+f'(x) = \sum_{n=1}^\infty n\,a_n(x-a)^{n-1}.
+\]
 
 </div>
 
@@ -751,7 +826,10 @@ As an important application, since \(g(x) = \sum_{n=0}^\infty \frac{x^n}{n!}\) s
 <div class="theorem">
 
 <strong>Theorem 6 (Term-by-Term Integration).</strong> If \(f(x) = \sum_{n=0}^\infty a_n(x-a)^n\) with radius \(R > 0\), then for \(|x-a| < R\),
-\[\int f(x)\,dx = C + \sum_{n=0}^\infty a_n\frac{(x-a)^{n+1}}{n+1}.\]
+
+\[
+\int f(x)\,dx = C + \sum_{n=0}^\infty a_n\frac{(x-a)^{n+1}}{n+1}.
+\]
 
 </div>
 
@@ -766,7 +844,10 @@ As an important application, since \(g(x) = \sum_{n=0}^\infty \frac{x^n}{n!}\) s
 <div class="definition">
 
 <strong>Definition (Taylor Polynomial).</strong> Assume \(f\) is \(n\)-times differentiable at \(x = a\). The \(n\)-th degree Taylor polynomial centered at \(a\) is
-\[T_{n,a}(x) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k.\]
+
+\[
+T_{n,a}(x) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k.
+\]
 
 </div>
 
@@ -787,7 +868,10 @@ As an important application, since \(g(x) = \sum_{n=0}^\infty \frac{x^n}{n!}\) s
 <div class="theorem">
 
 <strong>Theorem 8 (Taylor's Theorem).</strong> If \(f\) is \((n+1)\)-times differentiable on an interval \(I\) containing \(a\), then for each \(x \in I\) there exists \(c\) between \(x\) and \(a\) such that
-\[R_{n,a}(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}.\]
+
+\[
+R_{n,a}(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}.
+\]
 
 </div>
 
@@ -796,7 +880,10 @@ When \(n=0\), this reduces to the Mean Value Theorem. Taylor's Theorem is the ke
 <div class="theorem">
 
 <strong>Theorem 9 (Taylor's Approximation Theorem).</strong> If \(f^{(k+1)}\) is continuous on \([-1,1]\), there exists \(M > 0\) such that
-\[|f(x) - T_{k,0}(x)| \le M|x|^{k+1}\]
+
+\[
+|f(x) - T_{k,0}(x)| \le M|x|^{k+1}
+\]
 for all \(x \in [-1,1]\).
 
 </div>
@@ -814,13 +901,19 @@ for all \(x \in [-1,1]\).
 <div class="theorem">
 
 <strong>Theorem 10 (Convergence Theorem for Taylor Series).</strong> If \(f\) has derivatives of all orders on \(I\) containing \(a\), and there exists \(M\) with \(|f^{(k)}(x)| \le M\) for all \(k\) and \(x \in I\), then
-\[f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n\]
+
+\[
+f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n
+\]
 for all \(x \in I\).
 
 </div>
 
 Key Taylor series (valid for all \(x \in \mathbb{R}\)):
-\[e^x = \sum_{n=0}^\infty \frac{x^n}{n!}, \quad \cos(x) = \sum_{k=0}^\infty (-1)^k\frac{x^{2k}}{(2k)!}, \quad \sin(x) = \sum_{k=0}^\infty (-1)^k\frac{x^{2k+1}}{(2k+1)!}.\]
+
+\[
+e^x = \sum_{n=0}^\infty \frac{x^n}{n!}, \quad \cos(x) = \sum_{k=0}^\infty (-1)^k\frac{x^{2k}}{(2k)!}, \quad \sin(x) = \sum_{k=0}^\infty (-1)^k\frac{x^{2k+1}}{(2k+1)!}.
+\]
 
 ![Taylor partial sums for sin(x): n=1,3,5,7](/pics/math138/taylor_sin.png)
 
@@ -829,14 +922,20 @@ Key Taylor series (valid for all \(x \in \mathbb{R}\)):
 <div class="theorem">
 
 <strong>Theorem 11 (Binomial Theorem).</strong> For \(a \in \mathbb{R}\) and \(n \in \mathbb{N}\),
-\[(a+x)^n = \sum_{k=0}^n \binom{n}{k}a^{n-k}x^k.\]
+
+\[
+(a+x)^n = \sum_{k=0}^n \binom{n}{k}a^{n-k}x^k.
+\]
 
 </div>
 
 <div class="definition">
 
 <strong>Definition (Generalized Binomial Coefficients and Series).</strong> For \(\alpha \in \mathbb{R}\) and \(k \in \{0,1,2,\ldots\}\),
-\[\binom{\alpha}{k} = \frac{\alpha(\alpha-1)(\alpha-2)\cdots(\alpha-k+1)}{k!}\]
+
+\[
+\binom{\alpha}{k} = \frac{\alpha(\alpha-1)(\alpha-2)\cdots(\alpha-k+1)}{k!}
+\]
 with \(\binom{\alpha}{0} = 1\). The generalized binomial series is \(\sum_{k=0}^\infty \binom{\alpha}{k}x^k\).
 
 </div>
@@ -844,14 +943,20 @@ with \(\binom{\alpha}{0} = 1\). The generalized binomial series is \(\sum_{k=0}^
 <div class="theorem">
 
 <strong>Theorem 12 (Generalized Binomial Theorem).</strong> For \(\alpha \in \mathbb{R}\) and \(|x| < 1\),
-\[(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k}x^k.\]
+
+\[
+(1+x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k}x^k.
+\]
 
 </div>
 
 ## 6.10 Additional Applications
 
 Important derived series (for \(|x| \le 1\)):
-\[\arctan(x) = \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}\]
+
+\[
+\arctan(x) = \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}
+\]
 which yields Leibniz's formula \(\pi = 4\left(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots\right)\).
 
 ---
@@ -893,7 +998,10 @@ A vector-valued function \(\vec{F}(t): I \subseteq \mathbb{R} \to \mathbb{R}^2\)
 <div class="definition">
 
 <strong>Definition (Instantaneous Velocity).</strong> If \(\vec{F}(t)\) is the position at time \(t\), the instantaneous velocity is
-\[\vec{v} = \lim_{\Delta t \to 0}\frac{\vec{F}(t_0+\Delta t) - \vec{F}(t_0)}{\Delta t}.\]
+
+\[
+\vec{v} = \lim_{\Delta t \to 0}\frac{\vec{F}(t_0+\Delta t) - \vec{F}(t_0)}{\Delta t}.
+\]
 
 </div>
 
@@ -902,14 +1010,20 @@ A vector-valued function \(\vec{F}(t): I \subseteq \mathbb{R} \to \mathbb{R}^2\)
 <div class="definition">
 
 <strong>Definition (Derivative of a Vector-Valued Function).</strong>
-\[\vec{F}'(t_0) = \lim_{\Delta t \to 0}\frac{\vec{F}(t_0+\Delta t) - \vec{F}(t_0)}{\Delta t}.\]
+
+\[
+\vec{F}'(t_0) = \lim_{\Delta t \to 0}\frac{\vec{F}(t_0+\Delta t) - \vec{F}(t_0)}{\Delta t}.
+\]
 
 </div>
 
 <div class="definition">
 
 <strong>Definition (Tangent Line).</strong> If \(\vec{F}'(t_0) \ne (0,0)\), the tangent line to \(\vec{F}\) at \(t_0\) is
-\[\vec{w} = \vec{F}(t_0) + \alpha\,\vec{F}'(t_0).\]
+
+\[
+\vec{w} = \vec{F}(t_0) + \alpha\,\vec{F}'(t_0).
+\]
 
 </div>
 
@@ -926,7 +1040,10 @@ A curve is smooth at \(t_0\) if \(\vec{F}'(t_0)\) exists and \(\vec{F}'(t_0) \ne
 <div class="definition">
 
 <strong>Definition (Linear Approximation).</strong> If \(\vec{F}(t)\) is differentiable at \(t_0\) with \(\vec{F}'(t_0) \ne (0,0)\), the linear approximation is
-\[\vec{L}_{t_0}(t) = \vec{F}(t_0) + (t - t_0)\,\vec{F}'(t_0).\]
+
+\[
+\vec{L}_{t_0}(t) = \vec{F}(t_0) + (t - t_0)\,\vec{F}'(t_0).
+\]
 
 </div>
 
@@ -935,6 +1052,9 @@ This satisfies \(\vec{L}_{t_0}(t_0) = \vec{F}(t_0)\) and \(\vec{L}'_{t_0}(t_0) =
 ## 7.6 Arc Length of a Curve
 
 For a continuously differentiable \(\vec{F}(t) = (x(t), y(t))\), the arc length over \([a,b]\) is
-\[S = \int_a^b \|\vec{F}'(t)\|\,dt = \int_a^b \sqrt{(x'(t))^2 + (y'(t))^2}\,dt.\]
+
+\[
+S = \int_a^b \|\vec{F}'(t)\|\,dt = \int_a^b \sqrt{(x'(t))^2 + (y'(t))^2}\,dt.
+\]
 
 Since \(\|\vec{F}'(t)\|\) is the speed, this says distance = \(\int\)(speed)\(\,dt\). For curves of the form \(\vec{F}(t) = (t, f(t))\), this reduces to the arc length formula \(\int_a^b \sqrt{1+(f'(t))^2}\,dt\).

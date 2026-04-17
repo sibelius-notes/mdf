@@ -30,13 +30,15 @@ Why do workers earn different wages? One answer points to productivity differenc
 
 Let each worker have potential log-earnings \( (w_1, w_2) \) in sectors 1 and 2, jointly normally distributed:
 
-\[ \begin{pmatrix} w_1 \\ w_2 \end{pmatrix} \sim \mathcal{N} \left( \begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix},\, \begin{pmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{pmatrix} \right) \]
+\[
+\begin{pmatrix} w_1 \\ w_2 \end{pmatrix} \sim \mathcal{N} \left( \begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix},\, \begin{pmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{pmatrix} \right)
+\]
 
 A worker selects into sector 1 if \( w_1 > w_2 \), i.e., if \( w_1 - w_2 > 0 \).
 
 **Positive selection into sector 1** occurs when \( \rho \) is high and \( \sigma_1 > \sigma_2 \): workers who earn highly in sector 1 also tend to earn highly in sector 2, but the dispersion of skill in sector 1 is greater. Workers sort into sector 1 if they are in the upper tail of the joint distribution — the sector 1 workforce is positively selected (above average in both).
 
-**Negative selection** occurs when \( \rho $ is low and \( \sigma_1 < \sigma_2 \): workers who do well in sector 1 tend to do badly in sector 2. Sector 1 attracts those with low sector-2 potential — a refuge sector for low-skill workers.
+**Negative selection** occurs when \(\rho\) is low and \( \sigma_1 < \sigma_2 \): workers who do well in sector 1 tend to do badly in sector 2. Sector 1 attracts those with low sector-2 potential — a refuge sector for low-skill workers.
 
 <div class="remark">
 <strong>Immigration as a Roy Model application:</strong> Borjas (1987, 1991) applied the Roy model to immigrant selection. Immigrants from countries with high earnings inequality (high <em>σ</em>) select positively — they tend to be high-skill workers who find the US skill premium attractive. Immigrants from egalitarian countries select negatively. Empirically, immigrant earnings relative to natives deteriorate over cohorts in the US during the 1970s–80s, consistent with declining positive selection.
@@ -64,7 +66,9 @@ Equilibrium is a wage-risk schedule \( w(x) \) that simultaneously:
 
 The equilibrium schedule satisfies:
 
-\[ \frac{dw}{dx} = MRS_{w,x}^{worker} = MRT_{w,x}^{firm} \]
+\[
+\frac{dw}{dx} = MRS_{w,x}^{worker} = MRT_{w,x}^{firm}
+\]
 
 At each traded risk level, the slope of the hedonic wage schedule equals the worker's marginal willingness to accept risk and the firm's marginal cost of reducing risk.
 
@@ -92,17 +96,25 @@ The **spatial equilibrium** concept (Rosen, 1974; Roback, 1982) extends hedonic 
 
 Let city \( j \) have wage \( w_j \), rent \( r_j \), and amenity level \( s_j \). Workers maximise utility:
 
-\[ U(w_j - r_j \cdot h, s_j) = \bar{U} \quad \forall j \]
+\[
+U(w_j - r_j \cdot h, s_j) = \bar{U} \quad \forall j
+\]
 
 where \( h \) is housing consumption. Firms minimise cost per unit output:
 
-\[ C(w_j, r_j, s_j) = \bar{C} \quad \forall j \]
+\[
+C(w_j, r_j, s_j) = \bar{C} \quad \forall j
+\]
 
 Totally differentiating:
 
-\[ \frac{dw}{ds} = -\frac{U_s / U_w}{1} \quad \text{(worker condition)} \]
+\[
+\frac{dw}{ds} = -\frac{U_s / U_w}{1} \quad \text{(worker condition)}
+\]
 
-\[ \frac{dw}{ds}\bigg|_{firm} = -\frac{C_s / C_w}{1} \quad \text{(firm condition)} \]
+\[
+\frac{dw}{ds}\bigg|_{firm} = -\frac{C_s / C_w}{1} \quad \text{(firm condition)}
+\]
 
 If amenities raise firm productivity (\( C_s < 0 \)), firms bid up wages in amenity-rich cities. If amenities benefit only workers (\( C_s = 0 \)), wages fall in amenity-rich cities (workers accept a wage discount). The net effect on rents is unambiguous — rents rise in amenity-rich cities because workers and/or firms are willing to pay more to locate there.
 
@@ -128,11 +140,15 @@ The dominant explanation for rising inequality is **skill-biased technological c
 
 If the aggregate production function is CES in skilled \( H \) and unskilled \( L \) labour:
 
-\[ Y = \left[ \alpha (A_H H)^{\rho} + (1-\alpha)(A_L L)^{\rho} \right]^{1/\rho} \]
+\[
+Y = \left[ \alpha (A_H H)^{\rho} + (1-\alpha)(A_L L)^{\rho} \right]^{1/\rho}
+\]
 
 where \( A_H \) is skill-augmenting technology and \( A_L \) is unskill-augmenting technology, the skill premium satisfies:
 
-\[ \frac{w_H}{w_L} = \frac{\alpha}{1-\alpha} \cdot \left( \frac{A_H}{A_L} \right)^{\rho} \cdot \left( \frac{H}{L} \right)^{\rho - 1} \]
+\[
+\frac{w_H}{w_L} = \frac{\alpha}{1-\alpha} \cdot \left( \frac{A_H}{A_L} \right)^{\rho} \cdot \left( \frac{H}{L} \right)^{\rho - 1}
+\]
 
 When \( \rho < 1 \) (elasticity of substitution \( \sigma = 1/(1-\rho) > 1 \)), skilled and unskilled labour are imperfect substitutes. Rising \( A_H / A_L \) (SBTC) raises the skill premium. Rising supply \( H/L \) reduces it.
 
@@ -174,11 +190,15 @@ Rising inequality driven by technology poses different policy challenges than in
 
 At any point in time, the unemployed stock \( U \) evolves according to:
 
-\[ \frac{dU}{dt} = s \cdot E - f \cdot U \]
+\[
+\frac{dU}{dt} = s \cdot E - f \cdot U
+\]
 
 where \( s \) is the separation rate (flows from employment to unemployment) and \( f \) is the job-finding rate (flows from unemployment to employment). In steady state:
 
-\[ U = \frac{s \cdot E}{f} \quad \Rightarrow \quad u = \frac{s}{s + f} \]
+\[
+U = \frac{s \cdot E}{f} \quad \Rightarrow \quad u = \frac{s}{s + f}
+\]
 
 Shimer (2005) decomposed the variance of US unemployment into the contributions of \( s \) and \( f \). Remarkably, the job-finding rate \( f \) accounts for about 75% of unemployment variation, and the separation rate \( s \) accounts for about 25%. Recessions are primarily times when workers find it harder to get jobs — not times of mass layoffs (contra the conventional Keynesian view).
 
@@ -192,8 +212,13 @@ Shimer (2005) noted that standard **Mortensen-Pissarides (MP) search-and-matchin
 
 The matching function \( M(U, V) = m U^\alpha V^{1-\alpha} \) determines the flow of matches as a function of the unemployment pool \( U \) and vacancy stock \( V \). Define labour market tightness \( \theta = V/U \). Then:
 
-\[ f(\theta) = m \theta^{1-\alpha} \quad \text{(job-finding rate)} \]
-\[ q(\theta) = m \theta^{-\alpha} \quad \text{(vacancy-filling rate)} \]
+\[
+f(\theta) = m \theta^{1-\alpha} \quad \text{(job-finding rate)}
+\]
+
+\[
+q(\theta) = m \theta^{-\alpha} \quad \text{(vacancy-filling rate)}
+\]
 
 Free entry of vacancies pins down the value of a vacancy at zero. The surplus from a match is split between worker and firm through Nash bargaining. Shimer showed that under plausible parameter values, productivity shocks generate much less unemployment volatility than observed — the model needs sticky wages (Hall, 2005) or match-specific heterogeneity to match the data.
 
@@ -262,11 +287,15 @@ The 2021–23 inflation surge was extraordinary: the US CPI rose above 9% (year-
 
 The standard framework treats wage-price dynamics through the **New Keynesian Phillips Curve**:
 
-\[ \pi_t = \pi_t^e + \kappa \hat{y}_t + u_t \]
+\[
+\pi_t = \pi_t^e + \kappa \hat{y}_t + u_t
+\]
 
 where \( \pi_t \) is inflation, \( \pi_t^e \) is expected inflation, \( \hat{y}_t \) is the output gap, and \( u_t \) captures cost shocks. Wage Phillips Curves link nominal wage growth to unemployment:
 
-\[ \Delta w_t = \pi_t^e - \gamma (u_t - u^*) + \text{productivity growth} \]
+\[
+\Delta w_t = \pi_t^e - \gamma (u_t - u^*) + \text{productivity growth}
+\]
 
 In 2021–22, both the output gap and cost shocks (\( u_t \)) were positive simultaneously — an unusual combination. Bernanke and Blanchard estimate that roughly 40% of peak inflation was attributable to supply bottlenecks and commodity shocks, 30% to the tightness of the labour market, and 30% to the interaction effects.
 
@@ -290,7 +319,9 @@ Goldin (2014) argues that the remaining gender earnings gap — roughly 18–20%
 
 In occupations where a 60-hour week pays more than twice a 30-hour week (law, finance, consulting), workers who cannot commit to long, flexible hours face a disproportionate earnings penalty. Since women disproportionately bear childcare and elder-care responsibilities, they are more likely to work part-time or request schedule flexibility — and pay a wage penalty that exceeds proportional hours differences.
 
-\[ \frac{w_{60}}{w_{30}} > 2 \quad \Rightarrow \quad \text{non-linear returns to hours} \]
+\[
+\frac{w_{60}}{w_{30}} > 2 \quad \Rightarrow \quad \text{non-linear returns to hours}
+\]
 
 **Policy implication:** Equal pay legislation and diversity hiring cannot close the remaining gap if the underlying cause is the structure of hours premiums. Policies that reduce the premium to long hours — subsidised child care, parental leave mandates (including for fathers), technological facilitation of remote work — are more targeted remedies.
 

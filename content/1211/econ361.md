@@ -14,7 +14,9 @@ Imagine a government debating whether to spend $10 billion on a new high-speed r
 
 At its core, CBA is a systematic methodology for evaluating whether a policy or project produces net benefits for society. The central idea is disarmingly simple: add up everything a project gives to society, subtract everything it takes away, and check whether the result is positive. We call this the **net social benefit (NSB)**:
 
-\[ \text{NSB} = \text{Total Social Benefits} - \text{Total Social Costs} \]
+\[
+\text{NSB} = \text{Total Social Benefits} - \text{Total Social Costs}
+\]
 
 If NSB > 0, the project is worth doing in principle. If NSB < 0, the resources involved could be put to better use elsewhere. But as we will see, the devil is entirely in the details of measuring those benefits and costs — especially when they involve human health, the environment, or future generations.
 
@@ -50,13 +52,17 @@ Conducting a rigorous CBA involves navigating a well-defined process. The textbo
 
 **Stage 6: Discount costs and benefits to obtain present values.** A dollar received ten years from now is worth less than a dollar today. The **present value (PV)** formula adjusts for this:
 
-\[ PV = \frac{FV}{(1+r)^t} \]
+\[
+PV = \frac{FV}{(1+r)^t}
+\]
 
 where \(FV\) is the future value, \(r\) is the discount rate, and \(t\) is the number of years in the future.
 
 **Stage 7: Apply the NPV criterion.** The **net present value (NPV)** sums all discounted benefits and costs:
 
-\[ NPV = \sum_{t=0}^{T} \frac{B_t - C_t}{(1+r)^t} \]
+\[
+NPV = \sum_{t=0}^{T} \frac{B_t - C_t}{(1+r)^t}
+\]
 
 Accept the project if NPV > 0. Among mutually exclusive alternatives, choose the one with the highest NPV.
 
@@ -136,7 +142,9 @@ When the government imposes a tax, removes a subsidy, or builds infrastructure t
 
 Graphically, consumer surplus is the area below the demand curve and above the price line. When price rises from \(P_0\) to \(P_1\), consumer surplus falls by a trapezoidal area. For small price changes, this loss can be approximated using the **demand elasticity formula**:
 
-\[ \Delta CS \approx -Q_0 \cdot \Delta P \left(1 - \frac{\varepsilon_d \cdot \Delta P}{2 P_0}\right) \]
+\[
+\Delta CS \approx -Q_0 \cdot \Delta P \left(1 - \frac{\varepsilon_d \cdot \Delta P}{2 P_0}\right)
+\]
 
 where \(Q_0\) is the initial quantity, \(\Delta P = P_1 - P_0\) is the price change, \(P_0\) is the initial price, and \(\varepsilon_d\) is the **own-price elasticity of demand** (expressed as a positive number for a downward-sloping demand curve).
 
@@ -154,7 +162,9 @@ This is not just a theoretical abstraction. When Canada imposes a $0.10/litre ca
 
 On the supply side, **producer surplus (PS)** is the difference between what sellers receive and the minimum they would have accepted. It equals revenue minus variable costs of production:
 
-\[ PS = TR - TVC \]
+\[
+PS = TR - TVC
+\]
 
 where \(TR\) is total revenue and \(TVC\) is total variable cost.
 
@@ -178,7 +188,9 @@ Governments are not passive bystanders in markets. When a government collects a 
 
 When a policy changes prices in a market, the total **net social benefit** is:
 
-\[ NSB = \Delta CS + \Delta PS + \Delta GS \]
+\[
+NSB = \Delta CS + \Delta PS + \Delta GS
+\]
 
 This additive formula holds because these three measures together exhaust all welfare impacts in a competitive market. Any dollar gained by one party was either gained from another (a transfer, netting to zero in the aggregate) or represents a genuine net social gain or loss.
 
@@ -188,7 +200,7 @@ Consider a tariff on imported steel. Domestic consumers pay higher prices (ΔCS 
 
 ### The Marginal Cost of Public Funds
 
-Raising $1 in public revenue does not cost society exactly $1. It costs society \(1 + \lambda\) dollars, where \lambda\) is the **marginal cost of public funds (MCPF)** — the deadweight loss per dollar of tax revenue collected.
+Raising $1 in public revenue does not cost society exactly $1. It costs society \(1 + \lambda\) dollars, where \(\lambda\) is the **marginal cost of public funds (MCPF)** — the deadweight loss per dollar of tax revenue collected.
 
 In Canada, the Treasury Board Secretariat estimated the MCPF at approximately **1.18**. This means that every dollar the government spends requires collecting $1.18 worth of taxes, and the extra $0.18 is pure deadweight loss — inefficiency created by the distortions of the tax system. This has a direct implication for CBA: public project benefits must exceed not just their dollar costs, but their dollar costs multiplied by the MCPF. A program that generates $1.05 in benefits per dollar of government spending is actually a **net loss** to society once you account for the cost of raising that dollar.
 
@@ -224,7 +236,7 @@ Two functional forms dominate applied work:
 
 **Linear demand**: \( Q = a + b \cdot P + c \cdot X \), where \(X\) represents other demand-shifters (income, population, prices of substitutes). The price elasticity varies along a linear demand curve: it is large (in absolute value) at high prices and small at low prices.
 
-**Log-linear (constant elasticity) demand**: \( \ln Q = a + \varepsilon_d \cdot \ln P + \beta \cdot \ln X \). The coefficient on \ln P\) directly gives the price elasticity, which is constant across all price levels. This functional form is very convenient for applied work because elasticities are constant and the equation is linear in parameters (after log transformation).
+**Log-linear (constant elasticity) demand**: \( \ln Q = a + \varepsilon_d \cdot \ln P + \beta \cdot \ln X \). The coefficient on \(\ln P\) directly gives the price elasticity, which is constant across all price levels. This functional form is very convenient for applied work because elasticities are constant and the equation is linear in parameters (after log transformation).
 
 Which functional form is "correct"? Neither, strictly speaking — they are both approximations. The choice should be guided by economic theory and empirical fit. For small price changes, both forms give similar results. For large changes, the choice can matter substantially.
 
@@ -242,7 +254,9 @@ When only two data points are available (perhaps a before/after comparison or a 
 
 Consider a simple example: suppose price rises from $2 to $3 and quantity falls from 100 to 80. The implied arc elasticity is:
 
-\[ \varepsilon_d = \frac{(80 - 100)/90}{(3 - 2)/2.5} = \frac{-0.222}{0.400} \approx -0.56 \]
+\[
+\varepsilon_d = \frac{(80 - 100)/90}{(3 - 2)/2.5} = \frac{-0.222}{0.400} \approx -0.56
+\]
 
 (using the midpoint formula). A linear demand curve through these two points has slope \(-20\) and implies a different elasticity at other points. The choice of functional form matters for welfare analysis, especially if we wish to predict behaviour outside the range of observed data.
 
@@ -372,23 +386,31 @@ Money has time value. A dollar available today can be invested to produce more t
 
 The relationship between present and future values is:
 
-\[ FV = PV \cdot (1 + r)^t \]
+\[
+FV = PV \cdot (1 + r)^t
+\]
 
 Equivalently, a future payment of \(FV\) received \(t\) years from now has a present value of:
 
-\[ PV = \frac{FV}{(1 + r)^t} \]
+\[
+PV = \frac{FV}{(1 + r)^t}
+\]
 
 For a stream of annual payments \(B_t\) over \(T\) years, the NPV is:
 
-\[ NPV = \sum_{t=0}^{T} \frac{B_t - C_t}{(1 + r)^t} \]
+\[
+NPV = \sum_{t=0}^{T} \frac{B_t - C_t}{(1 + r)^t}
+\]
 
 ### Annuities and Perpetuities
 
 When a project generates a constant annual net benefit \(A\) for \(T\) years, the NPV simplifies to:
 
-\[ NPV = A \cdot \frac{1 - (1+r)^{-T}}{r} \]
+\[
+NPV = A \cdot \frac{1 - (1+r)^{-T}}{r}
+\]
 
-The term \frac{1-(1+r)^{-T}}{r}\) is the **annuity factor**. When \(T \to \infty\), this becomes the **perpetuity formula**: \(NPV = A / r\). Interestingly, even for long-lived projects, the annuity factor converges quickly. A 5% discount rate makes a 50-year perpetuity worth only 10% more than a 30-year annuity — the distant future has minimal present value.
+The term \(\frac{1-(1+r)^{-T}}{r}\) is the **annuity factor**. When \(T \to \infty\), this becomes the **perpetuity formula**: \(NPV = A / r\). Interestingly, even for long-lived projects, the annuity factor converges quickly. A 5% discount rate makes a 50-year perpetuity worth only 10% more than a 30-year annuity — the distant future has minimal present value.
 
 ### Alternative Decision Criteria
 
@@ -398,7 +420,9 @@ The term \frac{1-(1+r)^{-T}}{r}\) is the **annuity factor**. When \(T \to \infty
 
 **Equivalent Annual Net Benefit (EANB)**: converts NPV into an equivalent uniform annual flow. Two projects with different lifespans can be compared by their EANBs even without using the roll-over method:
 
-\[ EANB = NPV \cdot \frac{r}{1 - (1+r)^{-T}} \]
+\[
+EANB = NPV \cdot \frac{r}{1 - (1+r)^{-T}}
+\]
 
 **Payback Period**: the number of years required to recover the initial investment from net benefits. Despite its simplicity and popularity in business, the payback criterion ignores all cash flows after the payback date and fails to account for the time value of money. It should not be used as a primary decision criterion in public CBA.
 
@@ -416,7 +440,9 @@ The price level is typically measured by the **Consumer Price Index (CPI)**, whi
 
 When performing CBA in nominal terms, use the **nominal discount rate** \(i\). When working in real terms (constant dollars), use the **real discount rate** \(r\). The relationship between them is given by the **Fisher equation**:
 
-\[ r = \frac{i - m}{1 + m} \]
+\[
+r = \frac{i - m}{1 + m}
+\]
 
 where \(m\) is the inflation rate. For small inflation rates, this approximates to \(r \approx i - m\).
 
@@ -446,9 +472,11 @@ The **marginal rate of time preference (MRTP)** is the premium individuals requi
 
 The standard decomposition (Ramsey formula) is:
 
-\[ r = \delta + \eta \cdot g \]
+\[
+r = \delta + \eta \cdot g
+\]
 
-where \delta\) is the "pure rate of time preference" (impatience), \eta\) is the elasticity of marginal utility of consumption, and \(g\) is the expected growth rate of per capita consumption. This formula says: if the economy is growing (g > 0), future people will be richer and therefore each additional dollar of consumption is worth less to them than it is to present consumers — justifying a positive discount rate even with zero pure impatience.
+where \(\delta\) is the "pure rate of time preference" (impatience), \(\eta\) is the elasticity of marginal utility of consumption, and \(g\) is the expected growth rate of per capita consumption. This formula says: if the economy is growing (g > 0), future people will be richer and therefore each additional dollar of consumption is worth less to them than it is to present consumers — justifying a positive discount rate even with zero pure impatience.
 
 ### The Arrow-Lind Theorem
 
@@ -482,7 +510,9 @@ This distinction matters enormously for policy. Treating genuine uncertainty as 
 
 When probabilities are known, the standard decision criterion is **expected value (EV)**: the probability-weighted average of all possible outcomes. A project with outcomes \(V_i\) occurring with probabilities \(p_i\) has expected value:
 
-\[ EV = \sum_i p_i \cdot V_i \]
+\[
+EV = \sum_i p_i \cdot V_i
+\]
 
 An **expected net social benefit** criterion says: accept the project if the expected NSB is positive.
 
@@ -492,7 +522,9 @@ Expected value analysis implicitly assumes **risk neutrality** — the decision-
 
 Risk aversion is captured by a **concave utility function** \(U(W)\), where \(U''(W) < 0\). A concave utility function implies that the marginal utility of wealth decreases as wealth increases — an extra dollar is worth more to someone who has little money than to someone who is wealthy. Under risk aversion:
 
-\[ E[U(W)] < U(E[W]) \]
+\[
+E[U(W)] < U(E[W])
+\]
 
 That is, the expected utility of a gamble is less than the utility of the expected value of the gamble. Decision-makers maximize expected utility, not expected monetary value.
 
@@ -536,9 +568,11 @@ This criterion is intuitively appealing because it captures the psychological re
 
 The **Hurwicz criterion** is a compromise between maximin and maximax. The analyst chooses a **coefficient of optimism** \(\alpha \in [0, 1]\) and computes a weighted average of each option's best and worst outcomes:
 
-\[ H = \alpha \cdot (\text{best outcome}) + (1 - \alpha) \cdot (\text{worst outcome}) \]
+\[
+H = \alpha \cdot (\text{best outcome}) + (1 - \alpha) \cdot (\text{worst outcome})
+\]
 
-With \alpha = 0\), this reduces to maximin. With \alpha = 1\), it becomes maximax. The analyst's subjective degree of optimism determines \alpha\). This criterion is flexible but relies on a subjective parameter that is hard to defend in public analysis.
+With \(\alpha = 0\), this reduces to maximin. With \(\alpha = 1\), it becomes maximax. The analyst's subjective degree of optimism determines \(\alpha\). This criterion is flexible but relies on a subjective parameter that is hard to defend in public analysis.
 
 ---
 
@@ -646,7 +680,9 @@ The demand curve for recreation visits represents WTP for the site's services. T
 
 The natural environment provides a far richer array of values than those captured by market prices or even by travel costs and hedonic regressions. To capture the full social value of an ecosystem, resource, or environmental policy, CBA practitioners use the **Total Economic Value (TEV)** framework:
 
-\[ TEV = UV + OV + NUV \]
+\[
+TEV = UV + OV + NUV
+\]
 
 where:
 - \(UV\) = **Use value** (value derived from direct or indirect use)
@@ -798,7 +834,7 @@ A **social welfare function (SWF)** maps individual utility levels into a social
 
 - **Utilitarian SWF**: \(W = \sum_i U_i\). Sum individual utilities. With DMUI, this favours redistribution to low-income individuals, but does not fully prioritize equality.
 - **Rawlsian (Maximin) SWF**: \(W = \min_i U_i\). Maximize the utility of the worst-off individual. This is extremely egalitarian.
-- **Iso-elastic SWF**: \(W = \sum_i \frac{U_i^{1-\sigma}}{1-\sigma}\). A parameterized family; \sigma = 0\) gives utilitarianism, \sigma \to \infty\) approaches Rawls.
+- **Iso-elastic SWF**: \(W = \sum_i \frac{U_i^{1-\sigma}}{1-\sigma}\). A parameterized family; \(\sigma = 0\) gives utilitarianism, \(\sigma \to \infty\) approaches Rawls.
 
 ---
 
@@ -808,7 +844,9 @@ A **social welfare function (SWF)** maps individual utility levels into a social
 
 Distributional weighting modifies the standard NPV formula to give greater weight to impacts on lower-income groups:
 
-\[ NPV_{weighted} = \sum_j w_j \cdot NPV_j \]
+\[
+NPV_{weighted} = \sum_j w_j \cdot NPV_j
+\]
 
 where \(w_j\) is the distributional weight for group \(j\) and \(NPV_j\) is the (unweighted) net present value accruing to group \(j\).
 
@@ -834,27 +872,33 @@ Project A is now clearly preferred on distributional grounds, even though they w
 
 The most widely used utility specification for computing distributional weights is the **iso-elastic (constant relative risk aversion) utility function**:
 
-\[ U(Y) = \frac{Y^{1-\eta}}{1 - \eta} \]
+\[
+U(Y) = \frac{Y^{1-\eta}}{1 - \eta}
+\]
 
-where \eta > 0\) is the **elasticity of marginal utility of income**. With this utility function, marginal utility is:
+where \(\eta > 0\) is the **elasticity of marginal utility of income**. With this utility function, marginal utility is:
 
-\[ U'(Y) = Y^{-\eta} \]
+\[
+U'(Y) = Y^{-\eta}
+\]
 
-which decreases with income at a rate governed by \eta\). The distributional weight for a household with income \(Y_j\) relative to a reference income \(\bar{Y}\) is:
+which decreases with income at a rate governed by \(\eta\). The distributional weight for a household with income \(Y_j\) relative to a reference income \(\bar{Y}\) is:
 
-\[ w_j = \left(\frac{\bar{Y}}{Y_j}\right)^{\eta} \]
+\[
+w_j = \left(\frac{\bar{Y}}{Y_j}\right)^{\eta}
+\]
 
 ### The Value of η
 
-Empirical estimates of \eta\) typically fall in the range of **1.2 to 1.34** for Canada, derived from analysis of income tax structures (what implicit redistribution does the tax code reveal about society's preferences?). These estimates suggest moderate but meaningful concern for distributional equity.
+Empirical estimates of \(\eta\) typically fall in the range of **1.2 to 1.34** for Canada, derived from analysis of income tax structures (what implicit redistribution does the tax code reveal about society's preferences?). These estimates suggest moderate but meaningful concern for distributional equity.
 
-At \eta = 1.2\), a household with half the average income receives a distributional weight of approximately 2.3. A household with double the average income receives a weight of approximately 0.44.
+At \(\eta = 1.2\), a household with half the average income receives a distributional weight of approximately 2.3. A household with double the average income receives a weight of approximately 0.44.
 
 ### Internal vs. External Distributional Weights
 
 An important distinction:
 
-**External distributional weights** are specified by the analyst based on the chosen utility function. These are consistent and transparent but require a value judgment about \eta\).
+**External distributional weights** are specified by the analyst based on the chosen utility function. These are consistent and transparent but require a value judgment about \(\eta\).
 
 **Internal distributional weights** are implied by the decision-maker's revealed choices: if the government chose project X over project Y even though X had lower unweighted NPV, the implied distributional weights are those that make project X preferred. Working backwards from past decisions reveals the government's *de facto* distributional preferences, even if these have never been explicitly stated.
 
@@ -872,7 +916,9 @@ The World Bank has a long history with distributional weighting in project appra
 
 The **cost-effectiveness (CE) ratio** is:
 
-\[ CE = \frac{C}{E} \]
+\[
+CE = \frac{C}{E}
+\]
 
 where \(C\) is the cost and \(E\) is the effectiveness measure (e.g., lives saved, test score points gained, tonnes of CO₂ reduced). A lower CE ratio means more effectiveness per dollar spent.
 
@@ -880,7 +926,9 @@ where \(C\) is the cost and \(E\) is the effectiveness measure (e.g., lives save
 
 When comparing two programs that both achieve positive effectiveness, the **incremental cost-effectiveness (ICE) ratio** measures the *additional* cost of additional effectiveness:
 
-\[ ICE = \frac{C_2 - C_1}{E_2 - E_1} \]
+\[
+ICE = \frac{C_2 - C_1}{E_2 - E_1}
+\]
 
 where Program 2 is more effective (and more expensive) than Program 1. This answers: "Is it worth paying more for the better program?"
 
@@ -910,7 +958,9 @@ A **QALY** is a measure of health outcome that combines:
 - The *quantity* of life (years of survival)
 - The *quality* of those years (a utility weight between 0 and 1)
 
-\[ QALY = \text{Years of life} \times \text{Quality weight} \]
+\[
+QALY = \text{Years of life} \times \text{Quality weight}
+\]
 
 A year in perfect health has a QALY value of 1. Death has a QALY value of 0. A year spent with a chronic condition reducing health-related quality of life to 0.7 contributes 0.7 QALYs.
 

@@ -43,7 +43,9 @@ The forex market has several segments:
 
 The *forward premium* on foreign currency is:
 
-\[ fp = \frac{F - E}{E} \]
+\[
+fp = \frac{F - E}{E}
+\]
 
 where \( F \) is the forward rate and \( E \) is the spot rate. A positive forward premium means the foreign currency is trading at a premium — expected to appreciate, or equivalently, the domestic interest rate exceeds the foreign rate.
 
@@ -51,11 +53,15 @@ where \( F \) is the forward rate and \( E \) is the spot rate. A positive forwa
 
 Covered interest parity is a no-arbitrage condition that links the spot rate, forward rate, and interest rates in two countries. It states:
 
-\[ (1 + i) = \frac{(1 + i^*)F}{E} \]
+\[
+(1 + i) = \frac{(1 + i^*)F}{E}
+\]
 
 Or in approximate form:
 
-\[ i \approx i^* + \frac{F - E}{E} = i^* + fp \]
+\[
+i \approx i^* + \frac{F - E}{E} = i^* + fp
+\]
 
 CIP is essentially an accounting identity enforced by arbitrage between the spot market, forward market, and money markets. It holds very tightly (within a few basis points) in normal times for major currency pairs, though it broke down during the 2008–2009 financial crisis due to balance sheet constraints at banks.
 
@@ -63,7 +69,9 @@ CIP is essentially an accounting identity enforced by arbitrage between the spot
 
 If investors are risk-neutral and have rational expectations, they are indifferent between holding domestic and foreign currency assets when:
 
-\[ i = i^* + \frac{E^e - E}{E} \]
+\[
+i = i^* + \frac{E^e - E}{E}
+\]
 
 where \( E^e \) is the expected future spot rate. This is *uncovered interest parity* (UIP): the domestic interest rate equals the foreign rate plus the expected rate of depreciation.
 
@@ -89,13 +97,17 @@ Modern exchange rate theory treats the exchange rate as the relative price of tw
 
 In each country, the nominal interest rate is determined by money market equilibrium:
 
-\[ \frac{M^s}{P} = L(i, Y) \]
+\[
+\frac{M^s}{P} = L(i, Y)
+\]
 
 where \( M^s \) is the money supply, \( P \) the price level, \( i \) the interest rate, and \( Y \) real income. Money demand \( L \) is increasing in \( Y \) (more transactions demand) and decreasing in \( i \) (higher opportunity cost of holding money).
 
 Solving for the interest rate as a function of real money balances and income:
 
-\[ i = i\!\left(\frac{M}{P}, Y\right), \quad \frac{\partial i}{\partial (M/P)} < 0, \quad \frac{\partial i}{\partial Y} > 0 \]
+\[
+i = i\!\left(\frac{M}{P}, Y\right), \quad \frac{\partial i}{\partial (M/P)} < 0, \quad \frac{\partial i}{\partial Y} > 0
+\]
 
 ## 2.3 Short-Run Equilibrium in the Forex Market
 
@@ -140,7 +152,9 @@ The Dornbusch (1976) model reconciles two empirical observations: (1) exchange r
 
 Formally, if the long-run equilibrium exchange rate is \( \bar{E} \) and the adjustment speed of prices is \( \theta \), the short-run overshooting is:
 
-\[ E_0 - \bar{E} = -\frac{1}{\theta \lambda}(M/P - \overline{M/P}) \]
+\[
+E_0 - \bar{E} = -\frac{1}{\theta \lambda}(M/P - \overline{M/P})
+\]
 
 where \( \lambda \) is the interest semi-elasticity of money demand. Slower price adjustment (smaller \( \theta \)) implies greater overshooting.
 
@@ -192,7 +206,9 @@ PPP: \( E = P/P^* \)
 
 Combining:
 
-\[ E = \frac{M}{M^*} \cdot \frac{L(i^*, Y^*)}{L(i, Y)} \]
+\[
+E = \frac{M}{M^*} \cdot \frac{L(i^*, Y^*)}{L(i, Y)}
+\]
 
 **Predictions:**
 - A 10% increase in the domestic money supply relative to foreign → 10% long-run depreciation (money neutrality)
@@ -203,11 +219,15 @@ Combining:
 
 The Fisher equation links nominal interest rates to real rates and expected inflation:
 
-\[ i = r + \pi^e \]
+\[
+i = r + \pi^e
+\]
 
 where \( r \) is the real interest rate and \( \pi^e \) is expected inflation. The *real interest parity* condition (combining UIP with relative PPP) states that real interest rates are equalized across countries:
 
-\[ r = r^* \]
+\[
+r = r^*
+\]
 
 This follows because UIP gives \( i - i^* = \Delta E^e/E \) and relative PPP gives \( \Delta E^e/E = \pi^e - \pi^{e*} \), so \( (i - \pi^e) = (i^* - \pi^{e*}) \), i.e., \( r = r^* \).
 
@@ -248,11 +268,15 @@ A <strong>current account surplus</strong> means the country is a net exporter o
 
 **Accounting identity:** By double-entry bookkeeping, the BOP always sums to zero:
 
-\[ CA + KA + FA = 0 \]
+\[
+CA + KA + FA = 0
+\]
 
 or equivalently (ignoring the tiny capital account):
 
-\[ CA + FA = 0 \]
+\[
+CA + FA = 0
+\]
 
 A current account deficit (\( CA < 0 \)) must be financed by a net capital inflow (\( FA > 0 \)) — the country is borrowing from the rest of the world (or drawing down its reserves).
 
@@ -260,7 +284,9 @@ A current account deficit (\( CA < 0 \)) must be financed by a net capital inflo
 
 The intertemporal approach (Obstfeld and Rogoff 1995) treats the current account as the outcome of forward-looking saving and investment decisions:
 
-\[ CA = S - I \]
+\[
+CA = S - I
+\]
 
 where \( S \) is national saving and \( I \) is domestic investment. A current account deficit arises when domestic investment exceeds domestic saving — the country is borrowing from abroad to finance more investment than it can fund domestically, or to smooth consumption in the face of a temporary income shock.
 
@@ -273,7 +299,9 @@ where \( S \) is national saving and \( I \) is domestic investment. A current a
 
 The current account equals output minus domestic absorption:
 
-\[ CA = Y - A = Y - (C + I + G) \]
+\[
+CA = Y - A = Y - (C + I + G)
+\]
 
 where \( A = C + I + G \) is domestic absorption. This links the current account to domestic expenditure decisions. Policy implications:
 
@@ -309,7 +337,9 @@ Under a fixed exchange rate regime, the central bank commits to maintaining \( E
 
 The central bank's balance sheet identity:
 
-\[ M = \mu \cdot (D + F) \]
+\[
+M = \mu \cdot (D + F)
+\]
 
 where \( D \) is domestic credit (claims on government and banks), \( F \) is foreign reserves (at domestic currency value), and \( \mu \) is the money multiplier.
 
@@ -360,13 +390,22 @@ The Mundell-Fleming (MF) model extends the closed-economy IS-LM model to an open
 **Model equations:**
 
 IS curve (goods market):
-\[ Y = C(Y-T) + I(i) + G + NX(E, Y, Y^*) \]
+
+\[
+Y = C(Y-T) + I(i) + G + NX(E, Y, Y^*)
+\]
 
 LM curve (money market):
-\[ \frac{M}{P} = L(i, Y) \]
+
+\[
+\frac{M}{P} = L(i, Y)
+\]
 
 Balance of payments (capital flow):
-\[ i = i^* \quad \text{(with perfect capital mobility)} \]
+
+\[
+i = i^* \quad \text{(with perfect capital mobility)}
+\]
 
 ## 6.2 Mundell-Fleming Under Flexible Exchange Rates
 
@@ -553,7 +592,9 @@ Calvo and Reinhart (2002) documented that many countries that officially claim t
 
 Central banks in advanced economies typically follow inflation-targeting frameworks. The Taylor rule describes the interest rate response to inflation and output gaps:
 
-\[ i = i^* + \phi_\pi (\pi - \pi^{target}) + \phi_Y (Y - Y^{potential}) \]
+\[
+i = i^* + \phi_\pi (\pi - \pi^{target}) + \phi_Y (Y - Y^{potential})
+\]
 
 In an open economy, exchange rate movements transmit through to import prices and inflation, creating additional channels for monetary policy:
 

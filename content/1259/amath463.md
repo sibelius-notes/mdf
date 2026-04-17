@@ -22,6 +22,7 @@ The fundamental conservation laws are most naturally stated for a **material vol
 
 <div class="theorem">
 <strong>Reynolds Transport Theorem.</strong> Let \(\mathcal{V}(t)\) be a material volume moving with velocity \(\mathbf{u}\), and let \(f(\mathbf{x},t)\) be any smooth scalar field. Then:
+
 \[
 \frac{d}{dt}\int_{\mathcal{V}(t)} f\, dV = \int_{\mathcal{V}(t)} \frac{\partial f}{\partial t}\, dV + \oint_{\partial\mathcal{V}(t)} f\, \mathbf{u} \cdot d\mathbf{S}
 \]
@@ -55,6 +56,7 @@ Newton's second law for a material volume, combined with Cauchy's theorem for th
 
 <div class="theorem">
 <strong>Navier–Stokes Equations.</strong>
+
 \[
 \nabla \cdot \mathbf{u} = 0, \qquad \rho\,\frac{D\mathbf{u}}{Dt} = -\nabla p + \mu\,\nabla^2\mathbf{u} + \rho\mathbf{g}
 \]
@@ -106,6 +108,7 @@ we use the vector identity \((\mathbf{u}\cdot\nabla)\mathbf{u} = \nabla(\tfrac{1
 
 <div class="theorem">
 <strong>Vorticity Transport Equation.</strong> For a viscous fluid (Navier–Stokes),
+
 \[
 \frac{D\boldsymbol{\omega}}{Dt} = (\boldsymbol{\omega}\cdot\nabla)\mathbf{u} - \boldsymbol{\omega}(\nabla\cdot\mathbf{u}) + \frac{\nabla\rho \times \nabla p}{\rho^2} + \nu\nabla^2\boldsymbol{\omega}.
 \]
@@ -148,6 +151,7 @@ The key question is how \(\Gamma\) evolves when the loop \(\mathcal{C}(t)\) is a
 
 <div class="theorem">
 <strong>Kelvin's Circulation Theorem.</strong> For an inviscid, barotropic fluid (so that the pressure is a function of density alone) subject to conservative body forces, the circulation around any material loop is conserved:
+
 \[
 \frac{D\Gamma}{Dt} = 0.
 \]
@@ -209,6 +213,7 @@ The solenoidal condition \(\nabla\cdot\boldsymbol{\omega} = 0\) allows us to wri
 
 <div class="theorem">
 <strong>Biot–Savart Law.</strong> Given a vorticity field \(\boldsymbol{\omega}(\mathbf{x}')\) in an unbounded domain, the velocity field is
+
 \[
 \mathbf{u}(\mathbf{x}) = \frac{1}{4\pi}\int \frac{\boldsymbol{\omega}(\mathbf{x}') \times (\mathbf{x} - \mathbf{x}')}{|\mathbf{x} - \mathbf{x}'|^3}\, dV'.
 \]
@@ -286,6 +291,7 @@ For **shallow-water flow** of depth \(H(\mathbf{x},t)\) in a rotating frame, com
 
 <div class="theorem">
 <strong>Shallow-Water Potential Vorticity.</strong> The <strong>potential vorticity</strong>
+
 \[
 q = \frac{\zeta + f}{H}
 \]
@@ -343,6 +349,7 @@ For a body in a potential flow, the net force per unit length can be computed fr
 
 <div class="theorem">
 <strong>Blasius Theorem.</strong> The force \((X, Y)\) per unit span on a body in a 2D potential flow is:
+
 \[
 X - iY = \frac{i\rho}{2}\oint_C \left(\frac{dw}{dz}\right)^2 dz
 \]
@@ -394,6 +401,7 @@ Combining the two free-surface conditions:
 
 <div class="theorem">
 <strong>Dispersion Relation for Finite-Depth Water Waves.</strong>
+
 \[
 \omega^2 = gk\tanh(kH)
 \]
@@ -639,9 +647,11 @@ Prandtl derived simplified equations valid inside the boundary layer by scaling 
 
 <div class="theorem">
 <strong>Prandtl Boundary Layer Equations.</strong>
+
 \[
 \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0
 \]
+
 \[
 u\frac{\partial u}{\partial x} + v\frac{\partial u}{\partial y} = U\frac{dU}{dx} + \nu\frac{\partial^2 u}{\partial y^2}
 \]
@@ -793,6 +803,7 @@ where \(\overline{u'_i} = 0\) by definition of the mean. Substituting into the N
 
 <div class="theorem">
 <strong>Reynolds-Averaged Navier–Stokes (RANS) Equations.</strong>
+
 \[
 \frac{\partial\overline{u}_i}{\partial x_i} = 0, \qquad \overline{u}_j\frac{\partial\overline{u}_i}{\partial x_j} = -\frac{1}{\rho}\frac{\partial\overline{p}}{\partial x_i} + \nu\frac{\partial^2\overline{u}_i}{\partial x_j^2} - \frac{\partial}{\partial x_j}\overline{u'_i u'_j}
 \]
@@ -969,6 +980,7 @@ The dynamics of Earth's atmosphere and oceans cannot be understood without accou
 
 <div class="theorem">
 <strong>Momentum Equation in a Rotating Frame.</strong>
+
 \[
 \frac{D\mathbf{u}}{Dt} + 2\boldsymbol{\Omega}\times\mathbf{u} = -\frac{1}{\rho}\nabla p - \nabla\Phi + \nu\nabla^2\mathbf{u}
 \]
@@ -997,6 +1009,7 @@ is small. To leading order in \(Ro\), the Coriolis force balances the pressure g
 
 <div class="theorem">
 <strong>Geostrophic Balance (horizontal components).</strong>
+
 \[
 f\mathbf{u}_g = \hat{z}\times\frac{1}{\rho}\nabla_h p \qquad \implies \qquad u_g = -\frac{1}{\rho f}\frac{\partial p}{\partial y}, \quad v_g = \frac{1}{\rho f}\frac{\partial p}{\partial x}
 \]
@@ -1011,6 +1024,7 @@ A remarkable consequence of rotation concerns three-dimensional flow at small Ro
 
 <div class="theorem">
 <strong>Taylor–Proudman Theorem.</strong> In steady, inviscid, rapidly rotating flow (\(Ro \ll 1\)):
+
 \[
 (\boldsymbol{\Omega}\cdot\nabla)\mathbf{u} = 0
 \]
@@ -1027,6 +1041,7 @@ Considering linearised perturbations about a state of rest with barotropic (dept
 
 <div class="theorem">
 <strong>Rossby Wave Dispersion Relation.</strong>
+
 \[
 \omega = -\frac{\beta k}{k^2 + l^2 + f_0^2/c^2}
 \]
@@ -1115,6 +1130,7 @@ c^2 = \left.\frac{\partial p}{\partial \rho}\right|_s = \frac{\gamma p}{\rho} = 
 
 <div class="theorem">
 <strong>Speed of Sound.</strong> The adiabatic speed of sound in an ideal gas is
+
 \[
 c = \sqrt{\frac{\gamma p}{\rho}} = \sqrt{\gamma R T}.
 \]
@@ -1131,12 +1147,15 @@ For an inviscid compressible gas, conservation of mass, momentum, and energy giv
 
 <div class="theorem">
 <strong>Compressible Euler Equations.</strong>
+
 \[
 \frac{\partial \rho}{\partial t} + \nabla\cdot(\rho\mathbf{u}) = 0,
 \]
+
 \[
 \frac{\partial(\rho\mathbf{u})}{\partial t} + \nabla\cdot(\rho\mathbf{u}\otimes\mathbf{u}) = -\nabla p,
 \]
+
 \[
 \frac{\partial}{\partial t}\left(\rho e + \frac{1}{2}\rho|\mathbf{u}|^2\right) + \nabla\cdot\left[\left(\rho e + \frac{1}{2}\rho|\mathbf{u}|^2 + p\right)\mathbf{u}\right] = 0.
 \]
@@ -1158,6 +1177,7 @@ We linearise the compressible Euler equations about a **uniform rest state** \((
 \[
 \frac{\partial \rho'}{\partial t} + \rho_0\nabla\cdot\mathbf{u}' = 0,
 \]
+
 \[
 \rho_0\frac{\partial \mathbf{u}'}{\partial t} = -\nabla p'.
 \]
@@ -1169,6 +1189,7 @@ For isentropic perturbations, \(p' = c_0^2\rho'\) where \(c_0^2 = \gamma p_0/\rh
 
 <div class="theorem">
 <strong>Acoustic Wave Equation.</strong> The pressure perturbation in a small-amplitude sound wave satisfies
+
 \[
 \frac{\partial^2 p'}{\partial t^2} = c_0^2\nabla^2 p'.
 \]
@@ -1278,12 +1299,15 @@ Consider a **normal shock** — a shock perpendicular to the incoming flow — w
 
 <div class="theorem">
 <strong>Rankine–Hugoniot Relations (Normal Shock).</strong>
+
 \[
 \rho_1 u_1 = \rho_2 u_2 \qquad \text{(mass)},
 \]
+
 \[
 p_1 + \rho_1 u_1^2 = p_2 + \rho_2 u_2^2 \qquad \text{(momentum)},
 \]
+
 \[
 h_1 + \frac{1}{2}u_1^2 = h_2 + \frac{1}{2}u_2^2 \qquad \text{(energy, with } h = c_p T\text{)}.
 \]
@@ -1602,6 +1626,7 @@ Consider a 2D parallel shear flow \(\overline{\mathbf{u}} = (U(y), 0)\) — plan
 
 <div class="theorem">
 <strong>Orr–Sommerfeld Equation.</strong>
+
 \[
 (U - c)(\phi'' - k^2\phi) - U''\phi = \frac{1}{ikRe}(\phi'''' - 2k^2\phi'' + k^4\phi)
 \]
@@ -1632,6 +1657,7 @@ The **Kelvin–Helmholtz (KH) instability** arises at the interface between two 
 
 <div class="theorem">
 <strong>Kelvin–Helmholtz Dispersion Relation.</strong>
+
 \[
 \omega = k\frac{\rho_1 U_1 + \rho_2 U_2}{\rho_1 + \rho_2} \pm \sqrt{gk\frac{\rho_1-\rho_2}{\rho_1+\rho_2} - k^2\frac{\rho_1\rho_2(U_1-U_2)^2}{(\rho_1+\rho_2)^2}}
 </div>
@@ -1678,6 +1704,7 @@ where \(\alpha\) is the thermal expansion coefficient, \(\kappa\) the thermal di
 
 <div class="theorem">
 <strong>Onset of Convection (Linear Theory).</strong> Rayleigh–Bénard convection first becomes unstable at a critical Rayleigh number \(Ra_c\). For stress-free (slip) boundaries:
+
 \[
 Ra_c = \frac{27\pi^4}{4} \approx 657.5
 \]
@@ -1722,6 +1749,7 @@ The inviscid stability criterion was derived by Lord Rayleigh (1916) using an el
 
 <div class="theorem">
 <strong>Rayleigh's Circulation Criterion.</strong> An inviscid rotating flow \(V(r)\) is stable to axisymmetric perturbations if and only if the <strong>Rayleigh discriminant</strong>
+
 \[
 \Phi(r) = \frac{1}{r^3}\frac{d}{dr}(rV)^2
 \]
@@ -1752,6 +1780,7 @@ This generalises the Rayleigh equation of §11.3 by replacing the vorticity grad
 
 <div class="theorem">
 <strong>Rayleigh–Kuo Necessary Condition.</strong> A necessary condition for barotropic instability of a zonal flow \(\overline{U}(y)\) on a \(\beta\)-plane is that the meridional gradient of absolute vorticity
+
 \[
 q_y = \beta - \frac{\partial^2\overline{U}}{\partial y^2}
 \]
@@ -1774,6 +1803,7 @@ Seeking normal mode solutions \(\psi' \propto e^{ik(x-ct)}\), the dispersion rel
 
 <div class="theorem">
 <strong>Eady Growth Rate.</strong> The complex phase speed for the Eady model satisfies:
+
 \[
 c = \frac{\Lambda H}{2} \pm \frac{\Lambda H}{2\mu}\sqrt{\left(\mu\coth\frac{\mu}{2} - 2\right)\!\left(2 - \mu\tanh\frac{\mu}{2}\right)}
 \]

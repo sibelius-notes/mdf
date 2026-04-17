@@ -12,7 +12,9 @@ Lenders are willing to lend money because the borrower pays them a fee called **
 
 The **accumulation function**, denoted \(a(t)\), gives the accumulated value at time \(t\) of an investment of $1 made at time 0. By definition, \(a(0) \equiv 1\), and for positive interest rates the function is increasing. The **amount function**, \(A(t)\), gives the accumulated value at time \(t\) of an initial investment of \(K\) (called the **principal**):
 
-\[ A(t) = K \cdot a(t) \]
+\[
+A(t) = K \cdot a(t)
+\]
 
 The **interest earned** between times \(t_1\) and \(t_2\) is simply the change in the amount function: \(A(t_2) - A(t_1)\). In particular, the interest earned in the \(n\)-th year is \(A(n) - A(n-1)\).
 
@@ -22,7 +24,9 @@ The **interest earned** between times \(t_1\) and \(t_2\) is simply the change i
 
 Under **simple interest**, the accumulation function is linear:
 
-\[ a(t) = 1 + it \]
+\[
+a(t) = 1 + it
+\]
 
 where \(i\) is the annual rate of interest. Simple interest is most often used over short time periods. When counting days, there are three conventions: the **exact** method uses 365 days per year; the **ordinary** method approximates each month as 30 days (360 per year); and the **Banker's rule** counts exact days but divides by 360. In all cases, only one of the start or end date is counted, not both.
 
@@ -36,13 +40,17 @@ A key feature of simple interest is that the annual interest earned is constant 
 
 Under **compound interest**, the accumulation function is exponential:
 
-\[ a(t) = (1+i)^t \]
+\[
+a(t) = (1+i)^t
+\]
 
 Here interest is earned on both the principal and on the accumulated interest — "interest on interest." Over short periods \((0 < t < 1)\), simple interest actually exceeds compound interest: \(1 + it > (1+i)^t\). For \(t > 1\) the relationship reverses, and compound interest grows faster.
 
 The **present value function** (or discount function) is the reciprocal of the accumulation function:
 
-\[ v(t) = \frac{1}{a(t)} \]
+\[
+v(t) = \frac{1}{a(t)}
+\]
 
 Under compound interest, \(v(t) = (1+i)^{-t}\). The factor \(v = (1+i)^{-1}\) is called the **annual discount factor** and is ubiquitous in actuarial notation. To find the present value of an amount \(X\) due at time \(t\), we compute \(X \cdot v(t)\).
 
@@ -56,17 +64,23 @@ The three conditions give \((1+i)^A = 2\), \((1+i)^B = 3/2\), \((1+i)^C = 5\). W
 
 The **annual effective rate of interest** in the \(n\)-th year measures growth relative to the beginning-of-year balance:
 
-\[ i_n = \frac{A(n) - A(n-1)}{A(n-1)} = \frac{a(n) - a(n-1)}{a(n-1)} \]
+\[
+i_n = \frac{A(n) - A(n-1)}{A(n-1)} = \frac{a(n) - a(n-1)}{a(n-1)}
+\]
 
 Under compound interest this is constant: \(i_n = i\) for all years. Under simple interest, \(i_n = i/(1 + i(n-1))\), a decreasing function — later years earn proportionally less.
 
 The **effective rate of discount**, by contrast, measures the interest relative to the *end-of-period* balance:
 
-\[ d_n = \frac{A(n) - A(n-1)}{A(n)} \]
+\[
+d_n = \frac{A(n) - A(n-1)}{A(n)}
+\]
 
 Think of it this way: if you borrow $1000 for a year and the interest of $43 is collected upfront at time 0, you actually receive $957 but repay $1000. The discount rate \(d = 43/1000 = 4.3\%\), while the interest rate is \(i = 43/957 \approx 4.49\%\). Under compound interest these are related by:
 
-\[ d = \frac{i}{1+i}, \qquad i = \frac{d}{1-d}, \qquad 1-d = \frac{1}{1+i} = v \]
+\[
+d = \frac{i}{1+i}, \qquad i = \frac{d}{1-d}, \qquad 1-d = \frac{1}{1+i} = v
+\]
 
 The compound interest accumulation function can be written in terms of \(d\) as \(a(t) = (1-d)^{-t}\). Note that for the same underlying transaction, \(d < i\) always.
 
@@ -80,13 +94,17 @@ For \(d_4\): interest in year 4 is \(a(4) - a(3) = (0.16+0.12+1) - (0.09+0.09+1)
 
 **Simple discount** uses a linear present value (discount) function:
 
-\[ v(t) = 1 - dt, \quad 0 \le t < \frac{1}{d} \]
+\[
+v(t) = 1 - dt, \quad 0 \le t < \frac{1}{d}
+\]
 
 giving the accumulation function \(a(t) = 1/(1-dt)\), which is nonlinear and only valid until \(t = 1/d\). Unlike simple interest (where the effective rate decreases over time), under simple discount the effective interest rate <em>increases</em>: \(i_n = d/(1-dn)\).
 
 **Compound discount** uses an exponential discount function:
 
-\[ v(t) = (1-d)^t \]
+\[
+v(t) = (1-d)^t
+\]
 
 so \(a(t) = (1-d)^{-t}\). This is simply compound interest reparameterized using the effective rate of discount. There is no structural difference between compound interest and compound discount — they are two descriptions of the same exponential accumulation.
 
@@ -103,27 +121,37 @@ Under simple interest or simple discount, the current value depends on the origi
 
 **Example.** Under simple interest with \(i = 6\%\), if the balance at time 4.5 is $1350, the balance at time 7 is:
 
-\[ 1350 \cdot \frac{1 + 0.06 \times 7}{1 + 0.06 \times 4.5} = \$1{,}509.45 \]
+\[
+1350 \cdot \frac{1 + 0.06 \times 7}{1 + 0.06 \times 4.5} = \$1{,}509.45
+\]
 
 ## Nominal Rates of Interest and Discount
 
 In practice, interest is often quoted as an **annual nominal rate** but compounded more frequently. The **annual nominal rate of interest compounded \(m\) times per year**, denoted \(i^{(m)}\), means that \(i^{(m)}/m\) is the effective rate per \(1/m\) of a year. The accumulation function becomes:
 
-\[ a(t) = \left(1 + \frac{i^{(m)}}{m}\right)^{mt} \]
+\[
+a(t) = \left(1 + \frac{i^{(m)}}{m}\right)^{mt}
+\]
 
 Common values are \(m = 2\) (semiannual), \(m = 4\) (quarterly), \(m = 12\) (monthly). The annual effective rate is found by:
 
-\[ 1 + i = \left(1 + \frac{i^{(m)}}{m}\right)^m \]
+\[
+1 + i = \left(1 + \frac{i^{(m)}}{m}\right)^m
+\]
 
 To compare rates with different compounding frequencies, convert them all to annual effective rates. When converting between two nominal rates \(i^{(m)}\) and \(i^{(k)}\), use:
 
-\[ \left(1 + \frac{i^{(m)}}{m}\right)^m = \left(1 + \frac{i^{(k)}}{k}\right)^k \]
+\[
+\left(1 + \frac{i^{(m)}}{m}\right)^m = \left(1 + \frac{i^{(k)}}{k}\right)^k
+\]
 
 Similarly, the **nominal rate of discount compounded \(m\) times per year**, \(d^{(m)}\), gives the discount function \(v(t) = (1 - d^{(m)}/m)^{mt}\).
 
 As \(m\) increases (more frequent compounding), the nominal rates approach the **force of interest** \(\delta\) from above for interest and below for discount. For a given effective rate \(i\):
 
-\[ d < d^{(2)} < d^{(4)} < \cdots < \delta < \cdots < i^{(4)} < i^{(2)} < i \]
+\[
+d < d^{(2)} < d^{(4)} < \cdots < \delta < \cdots < i^{(4)} < i^{(2)} < i
+\]
 
 All these rates are equivalent — they produce the same accumulation.
 
@@ -135,23 +163,33 @@ Convert both to annual effective rates. For (a): \(1 + i = (1 + 0.03/12)^{12} = 
 
 The **force of interest** is the instantaneous relative rate of change in the accumulation function:
 
-\[ \delta_t = \frac{d}{dt} \ln a(t) = \frac{a'(t)}{a(t)} \]
+\[
+\delta_t = \frac{d}{dt} \ln a(t) = \frac{a'(t)}{a(t)}
+\]
 
 The subscript \(t\) reminds us that the force can vary with time. The accumulation function can be recovered from the force of interest by integration:
 
-\[ a(t) = e^{\int_0^t \delta_s\, ds} \]
+\[
+a(t) = e^{\int_0^t \delta_s\, ds}
+\]
 
 Under simple interest, \(\delta_t = i/(1+it)\), a decreasing function. Under simple discount, \(\delta_t = d/(1-dt)\), an increasing function. Under **compound interest**, the force of interest is constant:
 
-\[ \delta = \ln(1+i) = i^{(\infty)} \]
+\[
+\delta = \ln(1+i) = i^{(\infty)}
+\]
 
 This is also called the **constant force of interest**, or equivalently the annual nominal rate with continuous compounding. The compound interest accumulation function can then be written as \(a(t) = e^{\delta t}\). The full hierarchy of compound interest parameterizations is:
 
-\[ a(t) = (1+i)^t = (1-d)^{-t} = \left(1 + \frac{i^{(m)}}{m}\right)^{mt} = \left(1 - \frac{d^{(m)}}{m}\right)^{-mt} = e^{\delta t} \]
+\[
+a(t) = (1+i)^t = (1-d)^{-t} = \left(1 + \frac{i^{(m)}}{m}\right)^{mt} = \left(1 - \frac{d^{(m)}}{m}\right)^{-mt} = e^{\delta t}
+\]
 
 **Example.** Given a non-constant force of interest \(\delta_t = 0.03\sqrt{t}\), the value of $100 invested at time \(t = 1\) grown to time \(t = 4\) is:
 
-\[ 100 \cdot e^{\int_1^4 0.03\sqrt{s}\, ds} = 100 \cdot e^{0.03 \cdot \frac{2}{3}[s^{3/2}]_1^4} = 100 \cdot e^{0.02(8-1)} = 100e^{0.14} \]
+\[
+100 \cdot e^{\int_1^4 0.03\sqrt{s}\, ds} = 100 \cdot e^{0.03 \cdot \frac{2}{3}[s^{3/2}]_1^4} = 100 \cdot e^{0.02(8-1)} = 100e^{0.14}
+\]
 
 **Key derivatives** (useful in later modules):
 - \(\frac{d}{di} v = -v^2\)
@@ -170,18 +208,25 @@ First build \(a(t)\): \(a(t) = \exp\!\left(\int_0^t \frac{0.02}{1-0.01x}\,dx\rig
 
 When prices change over time, we distinguish between the **nominal rate of interest** \(i\) and the **real rate of interest** \(\tilde{i}\). If prices grow according to an inflation rate \(r\), the real accumulation function is the nominal accumulation divided by the price index:
 
-\[ \tilde{a}(t) = \frac{a(t)}{p(t)} = \frac{(1+i)^t}{(1+r)^t} \]
+\[
+\tilde{a}(t) = \frac{a(t)}{p(t)} = \frac{(1+i)^t}{(1+r)^t}
+\]
 
 The **real annual effective rate** is therefore:
 
-\[ \tilde{i} = \frac{i - r}{1 + r} \]
+\[
+\tilde{i} = \frac{i - r}{1 + r}
+\]
 
 This formula applies when both rates are effective with the same units. For monthly rates, replace \(i\) and \(r\) with \(i^{(12)}/12\) and \(r^{(12)}/12\) respectively. With continuous compounding, the formula simplifies beautifully: \(\tilde{\delta} = \delta - r^{(\infty)}\).
 
 **Worked Example: Real Rate with Different Compounding Frequencies.** The interest rate is 8% per annum compounded semi-annually and the inflation rate is 3% per annum compounded monthly. Find the real rate compounded monthly.
 
 First convert the 8% semi-annual rate to an effective monthly rate: \(j_{\text{int}} = (1 + 0.08/2)^{2/12} - 1 = 1.04^{1/6} - 1 = 0.655820\%\) per month. The inflation rate is already monthly: \(j_{\text{inf}} = 3\%/12 = 0.25\%\) per month. The real rate per month is:
-\[ \tilde{j} = \frac{j_{\text{int}} - j_{\text{inf}}}{1 + j_{\text{inf}}} = \frac{0.655820\% - 0.25\%}{1.0025} = 0.4057\% \text{ per month} \]
+
+\[
+\tilde{j} = \frac{j_{\text{int}} - j_{\text{inf}}}{1 + j_{\text{inf}}} = \frac{0.655820\% - 0.25\%}{1.0025} = 0.4057\% \text{ per month}
+\]
 Annualizing: \(i^{(12)} = 12 \times 0.4057\% = 4.87\%\). This is plausible — with 8% nominal interest and 3% inflation, the real rate is roughly 5%.
 
 ## Equations of Value
@@ -190,14 +235,21 @@ An **equation of value** states that two sets of cash flows have the same value 
 
 For multiple cash flows, the present value of a stream with payments \(C_k\) at times \(t_k\) is:
 
-\[ PV = \sum_k C_k \cdot v^{t_k} = \sum_k C_k (1+i)^{-t_k} \]
+\[
+PV = \sum_k C_k \cdot v^{t_k} = \sum_k C_k (1+i)^{-t_k}
+\]
 
 **Example.** A loan of $2000 is repaid by $750 after 1 year, $X after 1.5 years, and $1000 after 2 years with \(i^{(12)} = 6\%\). Setting the present value of payments equal to the loan:
 
-\[ 2000 = 750 \cdot 1.005^{-12} + X \cdot 1.005^{-18} + 1000 \cdot 1.005^{-24} \implies X = \$444.56 \]
+\[
+2000 = 750 \cdot 1.005^{-12} + X \cdot 1.005^{-18} + 1000 \cdot 1.005^{-24} \implies X = \$444.56
+\]
 
 **Worked Example: Present Value with a Quadratic in \(v^2\).** You owe $200 in 2 years and $500 in 4 years, using \(i^{(4)} = 3\%\). The effective rate per quarter is 0.75%, so:
-\[ PV = 200(1.0075)^{-8} + 500(1.0075)^{-16} = \$632.05 \]
+
+\[
+PV = 200(1.0075)^{-8} + 500(1.0075)^{-16} = \$632.05
+\]
 Now find the semiannual nominal rate \(i^{(2)}\) such that the PV is $600. Writing \(X = v^2\) (where \(v = (1+i^{(2)}/2)^{-1}\), the equation \(500X^2 + 200X = 600\) simplifies to \(5X^2 + 2X - 6 = 0\). The positive root is \(X = 0.91355\). Since \(X = (1 + i^{(2)}/2)^{-2}\), solving gives \(i^{(2)} = 4.57\%\). Always use the full precision of \(X\) when solving for the rate — rounding intermediate results introduces error.
 
 **Worked Example: Equation of Value as a Quadratic.** Brent deposits $5,000 at time 0 and $3,000 at time 9 months. After 18 months his balance is $10,726.51. Find the annual nominal rate compounded monthly. Let \(j\) be the monthly effective rate; letting \(X = (1+j)^9\), the equation of value at 18 months is \(5000X^2 + 3000X = 10{,}726.51\). The positive root is \(X = 1.195093\), so \(j = 1.195093^{1/9} - 1 = 2.00\%\) per month, giving \(i^{(12)} = 24.00\%\).
@@ -206,13 +258,17 @@ Now find the semiannual nominal rate \(i^{(2)}\) such that the PV is $600. Writi
 
 The **net present value (NPV)** of an investment is the present value of all net cash flows (positive for inflows, negative for outflows):
 
-\[ NPV(i) = C_0 + C_1 v + C_2 v^2 + \cdots + C_n v^n \]
+\[
+NPV(i) = C_0 + C_1 v + C_2 v^2 + \cdots + C_n v^n
+\]
 
 The **internal rate of return (IRR)** is the interest rate \(i\) that makes the NPV equal to zero. It represents the yield earned by the investor.
 
 For a simple loan (lend then receive repayments), the cash flows are initially negative (outflow) followed by positive. The balance at time \(t\) under the IRR is:
 
-\[ B_t = \sum_{k=0}^{t} C_k (1+i)^{t-k} \]
+\[
+B_t = \sum_{k=0}^{t} C_k (1+i)^{t-k}
+\]
 
 **Uniqueness theorem:** If the balance \(B_t > 0\) for all \(t = 0, 1, \ldots, n-1\) and \(B_n = 0\), then the IRR is unique. Economically, this means the roles of borrower and lender remain fixed throughout — the investor is always in a net lending position.
 
@@ -238,7 +294,9 @@ The key relationships in this module are:
 
 A **geometric progression** is a sequence where each term is a constant multiple of the previous: \(\{a, ar, ar^2, \ldots\}\). The sum of the first \(n\) terms is:
 
-\[ \sum_{t=1}^n ar^{t-1} = \frac{a(1-r^n)}{1-r}, \quad r \ne 1 \]
+\[
+\sum_{t=1}^n ar^{t-1} = \frac{a(1-r^n)}{1-r}, \quad r \ne 1
+\]
 
 This formula underlies virtually every annuity formula in this module. A regular series of level payments is an annuity; its present value is the sum of a geometric progression where each term is \(v = 1/(1+i)\) times the previous.
 
@@ -246,22 +304,31 @@ This formula underlies virtually every annuity formula in this module. A regular
 
 An **annuity-immediate** (also called an **ordinary annuity**) consists of payments of $1 at the *end* of each period for \(n\) periods. The **present value** (valued one period *before* the first payment) uses actuarial notation \(a_{\overline{n}|}\):
 
-\[ a_{\overline{n}|} = v + v^2 + \cdots + v^n = \frac{1 - v^n}{i}, \quad i \ne 0 \]
+\[
+a_{\overline{n}|} = v + v^2 + \cdots + v^n = \frac{1 - v^n}{i}, \quad i \ne 0
+\]
 
 The **accumulated value** (at the time of the last payment) uses \(s_{\overline{n}|}\):
 
-\[ s_{\overline{n}|} = a_{\overline{n}|} \cdot (1+i)^n = \frac{(1+i)^n - 1}{i}, \quad i \ne 0 \]
+\[
+s_{\overline{n}|} = a_{\overline{n}|} \cdot (1+i)^n = \frac{(1+i)^n - 1}{i}, \quad i \ne 0
+\]
 
 
 For a payment amount of $R, multiply each formula by $R. The key equation linking PV and AV is:
 
-\[ s_{\overline{n}|} = a_{\overline{n}|} \cdot (1+i)^n \]
+\[
+s_{\overline{n}|} = a_{\overline{n}|} \cdot (1+i)^n
+\]
 
 
 **Worked Example: Counting Payments Carefully.** On July 10, 2010, Susan buys an annuity paying $1,000 every 3 months, with the first payment on October 10, 2010, and the final payment on April 10, 2019, priced at \(i^{(4)} = 5.2\%\). How much does she pay?
 
 To count payments, set July 10, 2010 as time 0. Each quarter advances by 1 period. July dates occur at times \(4(Y - 2010)\), so July 2018 is time 32. The final payment (April 2019) is at time 35, meaning there are **35 payments**. The quarterly effective rate is \(j = 5.2\%/4 = 1.3\%\). The price (one period before the first payment) is:
-\[ P = 1000 \cdot a_{\overline{35}|1.3\%} = 1000 \cdot \frac{1 - 1.013^{-35}}{0.013} = \$27{,}976.08 \]
+
+\[
+P = 1000 \cdot a_{\overline{35}|1.3\%} = 1000 \cdot \frac{1 - 1.013^{-35}}{0.013} = \$27{,}976.08
+\]
 The total paid is $35,000 but the present value is much less because of discounting.
 
 **Worked Example: Calculating Accumulated Value with Changing Rates.** Heather deposits $925 at the end of each quarter for 10 years. For the first 2 years the rate is 1% compounded quarterly; starting year 3 it rises to 2% compounded quarterly. The effective quarterly rates are \(j_1 = 0.25\%\) and \(j_2 = 0.5\%\).
@@ -272,15 +339,21 @@ The total paid is $35,000 but the present value is much less because of discount
 
 An **annuity-due** consists of payments at the *beginning* of each period. The **present value** (at the time of the first payment) uses \(\ddot{a}_{\overline{n}|}\):
 
-\[ \ddot{a}_{\overline{n}|} = 1 + v + v^2 + \cdots + v^{n-1} = \frac{1 - v^n}{d}, \quad i \ne 0 \]
+\[
+\ddot{a}_{\overline{n}|} = 1 + v + v^2 + \cdots + v^{n-1} = \frac{1 - v^n}{d}, \quad i \ne 0
+\]
 
 The **accumulated value** (one period after the last payment) uses \(\ddot{s}_{\overline{n}|}\):
 
-\[ \ddot{s}_{\overline{n}|} = \frac{(1+i)^n - 1}{d} \]
+\[
+\ddot{s}_{\overline{n}|} = \frac{(1+i)^n - 1}{d}
+\]
 
 The annuity-due and annuity-immediate are related by exactly one period of interest:
 
-\[ \ddot{a}_{\overline{n}|} = (1+i) \cdot a_{\overline{n}|}, \qquad \ddot{s}_{\overline{n}|} = (1+i) \cdot s_{\overline{n}|} \]
+\[
+\ddot{a}_{\overline{n}|} = (1+i) \cdot a_{\overline{n}|}, \qquad \ddot{s}_{\overline{n}|} = (1+i) \cdot s_{\overline{n}|}
+\]
 
 Intuitively, payments at the beginning of each period are each worth one period of interest more than the equivalent end-of-period payments.
 
@@ -288,15 +361,21 @@ Intuitively, payments at the beginning of each period are each worth one period 
 
 A **perpetuity** is an annuity with infinitely many payments. The present value of a **perpetuity-immediate** (first payment in one period) is:
 
-\[ a_{\overline{\infty}|} = \lim_{n \to \infty} a_{\overline{n}|} = \frac{1}{i}, \quad i > 0 \]
+\[
+a_{\overline{\infty}|} = \lim_{n \to \infty} a_{\overline{n}|} = \frac{1}{i}, \quad i > 0
+\]
 
 For a **perpetuity-due** (first payment now):
 
-\[ \ddot{a}_{\overline{\infty}|} = \frac{1+i}{i} = \frac{1}{d} \]
+\[
+\ddot{a}_{\overline{\infty}|} = \frac{1+i}{i} = \frac{1}{d}
+\]
 
 When the first payment is not exactly one full period away, adjust the perpetuity value by accumulating or discounting to the correct starting point. If the first payment is in \(k\) periods from now and the payment amount is $R:
 
-\[ PV = \frac{R}{i} \cdot v^{k-1} \]
+\[
+PV = \frac{R}{i} \cdot v^{k-1}
+\]
 
 (discount the perpetuity-immediate value back \(k-1\) periods to today).
 
@@ -315,7 +394,9 @@ When the first payment is not exactly one full period away, adjust the perpetuit
 
 An **\(m\)-year deferred, \(n\)-year annuity-immediate** pays $R at the end of years \(m+1, m+2, \ldots, m+n\). The present value (at time 0) is:
 
-\[ PV = v^m \cdot a_{\overline{n}|} = a_{\overline{m+n}|} - a_{\overline{m}|} \quad (m \text{ a positive integer}) \]
+\[
+PV = v^m \cdot a_{\overline{n}|} = a_{\overline{m+n}|} - a_{\overline{m}|} \quad (m \text{ a positive integer})
+\]
 
 The second formula interprets the deferred annuity as the difference of two annuities starting now. A similarly useful identity: the value of an annuity \(m\) periods after its last payment is \((1+i)^m s_{\overline{n}|} = s_{\overline{m+n}|} - s_{\overline{m}|}\).
 
@@ -332,47 +413,70 @@ When payment amounts vary, we decompose them into a sum of level annuities or ha
 **Worked Example: Nonlevel Payments — Two Methods.** An annuity pays $200/month for 2 years, $300/month for 1 year, then $400/month for 2 years at \(i^{(12)} = 10\%\). Let \(j = 10\%/12 = 0.8\overline{3}\%\) per month.
 
 *Method 1 — deferred annuities:*
-\[ PV = 200a_{\overline{24}|j} + 300v^{24}a_{\overline{12}|j} + 400v^{36}a_{\overline{24}|j} = \$13{,}559.94 \]
+
+\[
+PV = 200a_{\overline{24}|j} + 300v^{24}a_{\overline{12}|j} + 400v^{36}a_{\overline{24}|j} = \$13{,}559.94
+\]
 
 *Method 2 — telescoping:* Start with 60 monthly payments of $400, then subtract 36 payments of $100 (since months 1–36 should be $100 less), then subtract another 24 payments of $100 (months 1–24 should be $100 less again):
-\[ PV = 400a_{\overline{60}|j} - 100a_{\overline{36}|j} - 100a_{\overline{24}|j} = \$13{,}559.94 \]
+
+\[
+PV = 400a_{\overline{60}|j} - 100a_{\overline{36}|j} - 100a_{\overline{24}|j} = \$13{,}559.94
+\]
 Method 2 avoids deferred annuities and is often faster on a financial calculator.
 
 ## Payments in Geometric Progression
 
 When payments grow at a constant rate \(g\) per period, the first payment being $P, the present value (for a finite \(n\)-period annuity-immediate) is:
 
-\[ PV = \frac{P}{1+g} \cdot a_{\overline{n}|i^*}, \quad \text{where } i^* = \frac{i - g}{1 + g} \]
+\[
+PV = \frac{P}{1+g} \cdot a_{\overline{n}|i^*}, \quad \text{where } i^* = \frac{i - g}{1 + g}
+\]
 
 This is the **real rate of interest** applied to an ordinary annuity of amount \(P/(1+g)\). Alternatively, write it directly as a geometric series:
 
-\[ PV = P \cdot v + P(1+g) \cdot v^2 + \cdots + P(1+g)^{n-1} \cdot v^n = \frac{P}{1+i} \cdot \frac{1 - \left(\frac{1+g}{1+i}\right)^n}{1 - \frac{1+g}{1+i}} \]
+\[
+PV = P \cdot v + P(1+g) \cdot v^2 + \cdots + P(1+g)^{n-1} \cdot v^n = \frac{P}{1+i} \cdot \frac{1 - \left(\frac{1+g}{1+i}\right)^n}{1 - \frac{1+g}{1+i}}
+\]
 
 When \(n \to \infty\) and \(g < i\), this converges to the **Gordon growth model**: \(PV = P/(i-g)\), which reappears in Module 5 for stock valuation.
 
 **Worked Example: Inflation-Adjusted Annuity.** An annuity pays $20,000 at end of year 1, each subsequent payment 5% higher for 10 years total, at \(i = 6\%\). The PV is a geometric series with first term \(20000v\) and ratio \(1.05v = 1.05/1.06\):
-\[ PV = \frac{20000v\left(1-(1.05v)^{10}\right)}{1-1.05v} = \$180{,}867.50 \]
+
+\[
+PV = \frac{20000v\left(1-(1.05v)^{10}\right)}{1-1.05v} = \$180{,}867.50
+\]
 Alternatively, observe that the real rate \(j^* = (i-g)/(1+g) = 0.01/1.05 \approx 0.9524\%\), and rewrite as \(PV = (20000/1.05) \cdot a_{\overline{10}|j^*}\) — this converts the growing annuity into a level annuity at the real rate, which is especially convenient with a financial calculator.
 
 ## Payments in Arithmetic Progression (P–Q Formula)
 
 For an annuity-immediate where the first payment is $P and each subsequent payment increases by $Q, the present value is:
 
-\[ PV = P \cdot a_{\overline{n}|} + Q \cdot \frac{a_{\overline{n}|} - n v^n}{i} \]
+\[
+PV = P \cdot a_{\overline{n}|} + Q \cdot \frac{a_{\overline{n}|} - n v^n}{i}
+\]
 
 This is called the **P–Q formula**. For an annuity-due, multiply by \((1+i)\). Special case when \(P = Q = 1\) defines the increasing annuity \((Ia)_{\overline{n}|}\):
 
-\[ (Ia)_{\overline{n}|} = \frac{\ddot{a}_{\overline{n}|} - nv^n}{i} \]
+\[
+(Ia)_{\overline{n}|} = \frac{\ddot{a}_{\overline{n}|} - nv^n}{i}
+\]
 
 
 **Worked Example: P–Q Formula in Practice.** Olga buys a 5-year increasing annuity: $2 at end of month 1, $4 at end of month 2, …, increasing by $2 each month. Nominal rate 9% compounded quarterly. First convert to a monthly rate: \(j = (1 + 0.09/4)^{1/3} - 1 = 0.744444\%\) per month (store all digits). With \(P = 2\), \(Q = 2\), \(n = 60\) months:
-\[ X = 2 a_{\overline{60}|j} + \frac{2}{j}\left(a_{\overline{60}|j} - 60v^{60}\right) = \$2{,}729.21 \]
+
+\[
+X = 2 a_{\overline{60}|j} + \frac{2}{j}\left(a_{\overline{60}|j} - 60v^{60}\right) = \$2{,}729.21
+\]
 Rounding \(j\) to fewer decimal places at an intermediate step will produce a noticeably wrong final answer because \(j\) appears raised to the 60th power.
 
 **Worked Example: Arithmetic Increasing Perpetuity.** A perpetuity-immediate has first payment $3 and each subsequent payment $2 larger. The PV is $406.81. Find \(i\).
 
 Taking \(n \to \infty\) in the P–Q formula: \(PV = P/i + Q/i^2 = 3/i + 2/i^2\). Setting this equal to 406.81 and multiplying through by \(i^2\):
-\[ 406.81i^2 - 3i - 2 = 0 \]
+
+\[
+406.81i^2 - 3i - 2 = 0
+\]
 The positive root is \(i = (3 + \sqrt{9 + 4 \times 406.81 \times 2})/(2 \times 406.81) = 7.39\%\). The negative root is discarded since a perpetuity requires \(i > 0\).
 
 **Example (ladder payments).** An annuity paying $n at end of year \(n\) for \(n = 1, 2, \ldots, 50\) and $(100−n) for \(n = 51, \ldots, 99\) has a neat closed form. Multiplying the PV by \(v\) and subtracting gives \(PV(1-v) = a_{\overline{50}|} - v^{50} a_{\overline{50}|}\), so \(PV = (1+i)(a_{\overline{50}|})^2\).
@@ -383,7 +487,9 @@ Given a present or accumulated value and a set of payments, finding the interest
 
 For a loan with payment \(R\) and present value \(L\):
 
-\[ L = R \cdot a_{\overline{n}|i} \implies a_{\overline{n}|i} = L/R \]
+\[
+L = R \cdot a_{\overline{n}|i} \implies a_{\overline{n}|i} = L/R
+\]
 
 Solve for \(i\) numerically.
 
@@ -396,41 +502,61 @@ When solving for the number of payments \(n\), the solution is typically non-int
 
 For an annuity-immediate with target value \(FV\):
 
-\[ n = \frac{\ln(FV \cdot i / R + 1)}{\ln(1+i)} \quad \text{(accumulated value)} \]
+\[
+n = \frac{\ln(FV \cdot i / R + 1)}{\ln(1+i)} \quad \text{(accumulated value)}
+\]
 
-\[ n = \frac{-\ln(1 - L \cdot i / R)}{\ln(1+i)} \quad \text{(present value)} \]
+\[
+n = \frac{-\ln(1 - L \cdot i / R)}{\ln(1+i)} \quad \text{(present value)}
+\]
 
 
 **Worked Example: Finding the Term and Smaller Final Payment.** You borrow $10,000 repaid by level end-of-year payments of $1,000 at \(i = 4\%\). Find the number of full payments and the smaller final payment.
 
 Solve \(10 = a_{\overline{n}|4\%}\): \(v^n = 1 - 0.04 \times 10 = 0.6\), so \(n = \ln(0.6)/\ln(1/1.04) = 13.02\). There are 13 full payments, plus a smaller 14th payment. The residual balance after 13 payments (prospective) is \(1000a_{\overline{13}|4\%}\), and the final payment at time 14 is:
-\[ x = (10{,}000 - 1000 a_{\overline{13}|4\%}) \times 1.04^{14} = \$24.85 \]
+
+\[
+x = (10{,}000 - 1000 a_{\overline{13}|4\%}) \times 1.04^{14} = \$24.85
+\]
 A quick sanity check: \(n = 13.02\) is just 0.02 beyond 13, so we expect the final payment to be roughly \(0.02 \times 1000 = \$20\), and indeed $24.85 is in that vicinity.
 
 **Worked Example: Annuity with Extra Deposits.** Chuck wants $500 in his account after 10 years. He deposits $20 at the beginning of each of the first 6 years, and extra \(X\) dollars at the beginning of years 5, 6, and 7. Annual effective rate is 10%. Setting accumulated values equal to $500:
-\[ 20\ddot{s}_{\overline{6}|} \cdot 1.1^5 + X\ddot{s}_{\overline{3}|} \cdot 1.1^4 = 500 \]
+
+\[
+20\ddot{s}_{\overline{6}|} \cdot 1.1^5 + X\ddot{s}_{\overline{3}|} \cdot 1.1^4 = 500
+\]
 (The annuity-due accumulated value is placed one period after the last payment, then grown to time 10.) Solving: \(X = \$51.89\).
 
 ## Annuities Using a General Accumulation Function
 
 For a general accumulation function \(a(t)\) (not necessarily compound interest), the annuity formulas generalize as:
 
-\[ a_{\overline{n}|} = v(1) + v(2) + \cdots + v(n), \quad s_{\overline{n}|} = a(n) \cdot a_{\overline{n}|} = \frac{a(n)}{a(1)} + \frac{a(n)}{a(2)} + \cdots + 1 \]
+\[
+a_{\overline{n}|} = v(1) + v(2) + \cdots + v(n), \quad s_{\overline{n}|} = a(n) \cdot a_{\overline{n}|} = \frac{a(n)}{a(1)} + \frac{a(n)}{a(2)} + \cdots + 1
+\]
 
 **Example.** A fund with year-by-year returns 5.2%, 4.8%, 3.8%, 6.1%, 5.5% and deposits of $100 at the start of each year: the balance at end of year 5 is computed by growing each deposit forward using the product of the relevant year-by-year accumulation factors.
 
 **Worked Example: Deposits Every 4 Years.** Catherine deposits $100 at the beginning of each 4-year period for 40 years at annual effective rate \(i\). The amount at year 40 is 5 times the amount at year 20. Find the amount at year 40.
 
 Let \(j = (1+i)^4 - 1\) be the 4-year effective rate. At year 40 there are 10 deposits, at year 20 there are 5. The condition is:
-\[ \frac{100\ddot{s}_{\overline{10}|j}}{100\ddot{s}_{\overline{5}|j}} = 5 \]
+
+\[
+\frac{100\ddot{s}_{\overline{10}|j}}{100\ddot{s}_{\overline{5}|j}} = 5
+\]
 The discount denominators cancel and the numerator factors as \([(1+j)^{10}-1]/[(1+j)^5-1] = (1+j)^5 + 1 = 5\), giving \((1+j)^5 = 4\). Now:
-\[ X = 100\ddot{s}_{\overline{10}|j} = 100 \cdot \frac{(1+j)^{10}-1}{1-(1+j)^{-1}} = 100 \cdot \frac{4^2 - 1}{1 - 4^{-1/5}} = \$6{,}194.72 \]
+
+\[
+X = 100\ddot{s}_{\overline{10}|j} = 100 \cdot \frac{(1+j)^{10}-1}{1-(1+j)^{-1}} = 100 \cdot \frac{4^2 - 1}{1 - 4^{-1/5}} = \$6{,}194.72
+\]
 
 ## Payment Frequency
 
 When the payment frequency does not match the interest conversion frequency, always convert the interest rate to match the payment frequency. If payments are \(k\) times per year and the given rate is \(i^{(m)}\), the effective rate per payment period is:
 
-\[ j = \left(1 + \frac{i^{(m)}}{m}\right)^{m/k} - 1 \]
+\[
+j = \left(1 + \frac{i^{(m)}}{m}\right)^{m/k} - 1
+\]
 
 Then proceed with the standard annuity formulas using \(j\) as the rate per period and the total number of payments as \(n\).
 
@@ -438,45 +564,63 @@ Then proceed with the standard annuity formulas using \(j\) as the rate per peri
 
 As the payment frequency \(m \to \infty\), the present value of an annuity converges to the **continuous annuity** formula. An \(n\)-year annuity paying at a continuous rate of $1 per year has present value:
 
-\[ \bar{a}_{\overline{n}|} = \frac{1 - v^n}{\delta} \]
+\[
+\bar{a}_{\overline{n}|} = \frac{1 - v^n}{\delta}
+\]
 
 where \(\delta = \ln(1+i)\) is the force of interest. The corresponding accumulated value is \(\bar{s}_{\overline{n}|} = (e^{\delta n} - 1)/\delta\).
 
 Continuous annuities can also be interpreted via integration: for a fund paying continuously at rate \(1\) per year:
 
-\[ \bar{a}_{\overline{n}|} = \int_0^n v^t\, dt = \int_0^n e^{-\delta t}\, dt \]
+\[
+\bar{a}_{\overline{n}|} = \int_0^n v^t\, dt = \int_0^n e^{-\delta t}\, dt
+\]
 
 This integral representation is especially useful when the discount function is non-standard (e.g., simple discount).
 
 **Worked Example: Continuous Withdrawal Rate.** A fund of $43,000 accumulates at \(i = 4\%\) with money withdrawn continuously at $X per year. The fund is exhausted in 15.5 years. Then:
-\[ 43{,}000 = X \bar{a}_{\overline{15.5}|} = X \cdot \frac{1 - v^{15.5}}{\delta} \]
+
+\[
+43{,}000 = X \bar{a}_{\overline{15.5}|} = X \cdot \frac{1 - v^{15.5}}{\delta}
+\]
 where \(\delta = \ln(1.04)\). Solving: \(X = 43{,}000\delta/(1 - 1.04^{-15.5}) = \$3{,}702.35\) per year.
 
 **Worked Example: Time to Exhaust a Fund.** A fund of $1,600 accumulates at \(\delta = 5.5\%\) (continuously compounded) with continuous withdrawals of $150/year. Find when the fund is exhausted.
 
-\[ 1600 = 150 \cdot \frac{1 - e^{-0.055n}}{0.055} \implies e^{-0.055n} = 1 - \frac{1600 \times 0.055}{150} = 0.4133 \implies n = 16.064 \text{ years} \]
+\[
+1600 = 150 \cdot \frac{1 - e^{-0.055n}}{0.055} \implies e^{-0.055n} = 1 - \frac{1600 \times 0.055}{150} = 0.4133 \implies n = 16.064 \text{ years}
+\]
 
 ## Continuously Varying Continuous Annuities
 
 For an annuity paying continuously at a *varying* rate \(r(t)\) per year at time \(t\), the present value is:
 
-\[ PV = \int_0^n r(t) \cdot v(t)\, dt \]
+\[
+PV = \int_0^n r(t) \cdot v(t)\, dt
+\]
 
 where \(v(t) = 1/a(t)\) is the discount function. Under compound interest, \(v(t) = e^{-\delta t}\).
 
 An important special case is the **increasing continuous annuity** paying at rate \(r(t) = t\):
 
-\[ \bar{(I\bar{a})}_{\overline{n}|} = \int_0^n t e^{-\delta t}\, dt = \frac{\bar{a}_{\overline{n}|} - nv^n}{\delta} \]
+\[
+\bar{(I\bar{a})}_{\overline{n}|} = \int_0^n t e^{-\delta t}\, dt = \frac{\bar{a}_{\overline{n}|} - nv^n}{\delta}
+\]
 
 **Worked Example: Varying Payment Rate with Non-Constant Force of Interest.** Deposits flow into an account at rate \((7k + tk)\) dollars per year at time \(t\), with force of interest \(\delta_t = 1/(7+t)\). After 10 years the account is worth $20,000. Find \(k\).
 
 The accumulation function: \(a(t) = e^{\int_0^t 1/(7+x)\,dx} = (7+t)/7\) — a simple interest function. The discount function is \(v(t) = 7/(7+t)\). The present value is:
-\[ PV = \int_0^{10} k(7+t) \cdot \frac{7}{7+t}\,dt = \int_0^{10} 7k\,dt = 70k \]
+
+\[
+PV = \int_0^{10} k(7+t) \cdot \frac{7}{7+t}\,dt = \int_0^{10} 7k\,dt = 70k
+\]
 The accumulated value at time 10 is \(70k \cdot a(10) = 70k \cdot 17/7 = 170k = 20{,}000\), so \(k = \$117.65\).
 
 **Key derivatives** of annuity factors (useful in immunization, Module 6):
 
-\[ \frac{d}{di} a_{\overline{n}|} = -v\left(a_{\overline{n}|} + \frac{nv^n}{i}\right), \qquad \frac{d}{d\delta} \bar{a}_{\overline{n}|} = -\bar{(I\bar{a})}_{\overline{n}|}, \qquad \frac{d}{dn} \bar{a}_{\overline{n}|} = v^n, \qquad \frac{d}{dn} \bar{s}_{\overline{n}|} = e^{\delta n} \]
+\[
+\frac{d}{di} a_{\overline{n}|} = -v\left(a_{\overline{n}|} + \frac{nv^n}{i}\right), \qquad \frac{d}{d\delta} \bar{a}_{\overline{n}|} = -\bar{(I\bar{a})}_{\overline{n}|}, \qquad \frac{d}{dn} \bar{a}_{\overline{n}|} = v^n, \qquad \frac{d}{dn} \bar{s}_{\overline{n}|} = e^{\delta n}
+\]
 
 ## Annuities Summary
 
@@ -501,19 +645,29 @@ Key relationship between due and immediate: \(\ddot{a}_{\overline{n}|} = (1+i) a
 
 Consider a loan of amount \(L\) repaid by \(n\) level payments of \(R\) at the end of each period with effective rate \(i\) per period. The initial condition is:
 
-\[ L = R \cdot a_{\overline{n}|} \]
+\[
+L = R \cdot a_{\overline{n}|}
+\]
 
 At any time \(t\) during repayment, the **outstanding loan balance** can be computed by two equivalent methods:
 
 **Retrospective method** (looks backward):
-\[ B_t = L(1+i)^t - R \cdot s_{\overline{t}|} \]
+
+\[
+B_t = L(1+i)^t - R \cdot s_{\overline{t}|}
+\]
 
 **Prospective method** (looks forward):
-\[ B_t = R \cdot a_{\overline{n-t}|} \]
+
+\[
+B_t = R \cdot a_{\overline{n-t}|}
+\]
 
 Both give the same answer when payments are exactly level. If payments are rounded (e.g., to the nearest cent), the retrospective method is more accurate for intermediate balances; the prospective method gives the correct value only if we adjust the final payment. With a slightly smaller final payment \(R^*\), the prospective formula is:
 
-\[ B_t = R \cdot a_{\overline{n-t-1}|} + R^* (1+i)^{-(n-t)} \]
+\[
+B_t = R \cdot a_{\overline{n-t-1}|} + R^* (1+i)^{-(n-t)}
+\]
 
 **Mortgage example.** A $480,000 mortgage at \(i^{(2)} = 7.6\%\) over 25 years has a bi-weekly effective rate of \(j = (1 + 0.076/2)^{1/13} - 1 = 0.2873\%\) and bi-weekly payment \(R = \$1{,}631.88\). Choosing a shorter amortization period (20 or 15 years) dramatically reduces total interest paid — from $580,722 (25yr) to $318,736 (15yr).
 
@@ -531,7 +685,9 @@ Under the **amortization method**, each payment \(R\) splits into interest and p
 
 The principal repaid grows geometrically: each period the principal portion increases by a factor of \((1+i)\):
 
-\[ P_{t+1} = (1+i) P_t \]
+\[
+P_{t+1} = (1+i) P_t
+\]
 
 The complete amortization schedule:
 
@@ -548,11 +704,15 @@ Total interest paid = \(nR - L\).
 
 Given any two adjacent rows of an amortization table, the interest rate can be recovered. Since \(P_{t+1} = (1+i) P_t\):
 
-\[ i = \frac{P_{t+1}}{P_t} - 1 \]
+\[
+i = \frac{P_{t+1}}{P_t} - 1
+\]
 
 Given the interest paid at time \(t+1\), the balance at time \(t\) is:
 
-\[ B_t = \frac{I_{t+1}}{i} \]
+\[
+B_t = \frac{I_{t+1}}{i}
+\]
 
 These relationships allow reconstruction of a full amortization table from partial information. For mortgages, the principal in the 25<sup>th</sup> payment and the 37<sup>th</sup> payment differ by 12 periods of compounding: \(P_{37} = P_{25}(1+i)^{12}\), allowing us to solve for the effective rate.
 
@@ -577,11 +737,15 @@ Kenny can refinance at \(i^{(12)} = 8.4\%\) (\(j^* = 0.7\%\)/month) but must pay
 
 With the **sinking fund method**, the borrower pays only interest each period to the lender, then repays all principal in one lump sum at the end. To fund the final payment, the borrower makes regular deposits into a separate **sinking fund** earning rate \(j\):
 
-\[ D = \frac{L}{s_{\overline{n}|j}} \]
+\[
+D = \frac{L}{s_{\overline{n}|j}}
+\]
 
 The total cost per period is the interest payment plus the sinking fund deposit:
 
-\[ iL + D = iL + \frac{L}{s_{\overline{n}|j}} \]
+\[
+iL + D = iL + \frac{L}{s_{\overline{n}|j}}
+\]
 
 When \(j = i\), this equals \(L/a_{\overline{n}|}\) — exactly the same as the amortization method payment. When the sinking fund earns less than the loan rate \((j < i)\), the sinking fund method costs more. The outstanding "principal" at time \(t\) is the original loan minus the sinking fund balance: \(L - Ds_{\overline{t}|j}\).
 
@@ -609,19 +773,26 @@ A **bond** is a loan where the borrower (issuer) promises to pay:
 
 The **yield to maturity** \(j\) is the effective rate per coupon period. The **bond price** is the present value of all payments at this yield:
 
-\[ P = Fr \cdot a_{\overline{n}|j} + C v^n \]
+\[
+P = Fr \cdot a_{\overline{n}|j} + C v^n
+\]
 
 This **basic bond price formula** contains five quantities: \(P, Fr, n, C, j\). Given any four, the fifth can be found. For semiannual bonds, the annual yield is quoted as \(i^{(2)} = 2j\).
 
 **Worked Example: Bond with Changing Coupon Rates.** A 20-year $1,000 par bond with semi-annual coupons is redeemable at par. Coupon rate: 8% for the first 5 years, 9% for the next 5, 10% for the final 10 years. Amy purchases to yield \(i^{(2)} = 9.2\%\), so \(j = 4.6\%\). The coupons are $40 (first 10 periods), $45 (next 10), and $50 (last 20). The price uses deferred annuities:
-\[ P = 40a_{\overline{10}|j} + 45v^{10}a_{\overline{10}|j} + 50v^{20}a_{\overline{20}|j} + 1000v^{40} = \$968.72 \]
+
+\[
+P = 40a_{\overline{10}|j} + 45v^{10}a_{\overline{10}|j} + 50v^{20}a_{\overline{20}|j} + 1000v^{40} = \$968.72
+\]
 Since the weighted average coupon rate (about 9.25%) is close to the yield (9.2%), the price is near par.
 
 ## Premium and Discount Pricing Formula
 
 Using the identity \(v^n = 1 - ja_{\overline{n}|}\), the basic formula rewrites as the **premium/discount formula**:
 
-\[ P = C + (Fr - Cj) a_{\overline{n}|} \]
+\[
+P = C + (Fr - Cj) a_{\overline{n}|}
+\]
 
 - **Premium bond:** \(Fr > Cj \implies P > C\). For par bonds (\(C = F\): \(r > j \implies P > F\)
 - **Discount bond:** \(Fr < Cj \implies P < C\). For par bonds: \(r < j \implies P < F\)
@@ -632,23 +803,33 @@ The amount of premium is \(P - C = (Fr - Cj)a_{\overline{n}|}\). The amount of d
 **Worked Example: Using the Premium/Discount Formula.** A 28-year $1,200 par bond pays annual coupons at rate \(r = 2i\) (double the yield). Bart pays $1,968. Find the sale price after 7 years.
 
 From the premium/discount formula: \(1968 = 1200 + 1200(2i - i)a_{\overline{28}|}\). Since \(i \cdot a_{\overline{28}|} = 1 - v^{28}\):
-\[ 1968 = 1200 + 1200(1 - v^{28}) \implies v^{28} = 0.36 \]
+
+\[
+1968 = 1200 + 1200(1 - v^{28}) \implies v^{28} = 0.36
+\]
 At time 7 with 21 coupons remaining: \(B_7 = 1200 + 1200(1 - v^{21}) = 2400 - 1200 \times 0.36^{21/28} = \$1{,}842.29\). The key trick: the premium/discount formula absorbs the interest rate into \(v^n\), letting us solve without explicitly finding \(i\).
 
 ## Bond Amortization
 
 A bond is analogous to a loan from the bondholder's perspective. The **book value** at time \(t\) is the present value of remaining payments at the original yield:
 
-\[ B_t = Fr \cdot a_{\overline{n-t}|j} + C v^{n-t} = C + (Fr - Cj) a_{\overline{n-t}|j} \]
+\[
+B_t = Fr \cdot a_{\overline{n-t}|j} + C v^{n-t} = C + (Fr - Cj) a_{\overline{n-t}|j}
+\]
 
 At each coupon date, the **interest earned** is \(I_t = j B_{t-1} = Fr - (Fr - Cj)v^{n-t+1}\), and the **book value adjustment** (amount written down or up) is:
 
-\[ P_t = Fr - I_t = (Fr - Cj) v^{n-t+1} \]
+\[
+P_t = Fr - I_t = (Fr - Cj) v^{n-t+1}
+\]
 
 Book value adjustments grow geometrically: \(P_{t+1} = (1+j) P_t\). For a **premium bond**, book values decrease toward \(C\) (**writing down** the premium). For a **discount bond**, book values increase toward \(C\) (**writing up** the discount).
 
 **Worked Example: Interest Portion of the 7th Coupon.** A $10,000 par 10-year bond with 8% annual coupons is bought at a premium to yield 6%. The coupon is $800. To find the interest earned in the 7th coupon, first compute the book value at time 6 (4 coupons remaining):
-\[ B_6 = 800a_{\overline{4}|6\%} + 10000(1.06)^{-4} = \$10{,}693.02 \]
+
+\[
+B_6 = 800a_{\overline{4}|6\%} + 10000(1.06)^{-4} = \$10{,}693.02
+\]
 The interest portion of the 7th coupon is \(I_7 = 0.06 \times 10{,}693.02 = \$641.58\). The remaining \(800 - 641.58 = \$158.42\) is the premium writedown (principal adjustment).
 
 ## Book Value Between Coupon Dates
@@ -657,18 +838,25 @@ Between coupon dates, two price concepts apply:
 
 **Dirty price** (actual purchase price): accumulate the most recent coupon-date price for fraction \(f\) of a period:
 
-\[ P_f = (1+j)^f P_0 \]
+\[
+P_f = (1+j)^f P_0
+\]
 
 where \(P_0\) is the price at the last coupon date (using current market yield \(j\) and \(f = \text{days since last coupon}/\text{days in coupon period}\).
 
 **Semi-practical clean price** (used for quoting): subtract the accrued coupon:
 
-\[ \text{Clean price} = P_f - f \cdot Fr \]
+\[
+\text{Clean price} = P_f - f \cdot Fr
+\]
 
 Bond quotes are the clean price per $100 of face value. The clean price removes the effect of where we are in the coupon cycle, making bonds with the same yield but different coupon dates more comparable.
 
 **Alternative clean price (linear interpolation):**
-\[ B_{t+f} = (1-f) B_t + f B_{t+1} \]
+
+\[
+B_{t+f} = (1-f) B_t + f B_{t+1}
+\]
 
 **Worked Example: Dirty and Clean Price.** A $1,000 par bond redeemable December 1, 2021, with 7% semi-annual coupons. Find the dirty and clean price on August 8, 2010, to yield \(i^{(2)} = 6\%\) (\(j = 3\%\). Coupon = $35.
 
@@ -718,11 +906,15 @@ Corporations raise capital through bonds, **preferred stock**, and **common stoc
 
 For **preferred stock** with fixed dividends of $D per period:
 
-\[ P = \frac{D}{i} \]
+\[
+P = \frac{D}{i}
+\]
 
 (a perpetuity). For **common stock** with dividends growing at rate \(g\) per period:
 
-\[ P = \frac{D_1}{i - g}, \quad i > g \]
+\[
+P = \frac{D_1}{i - g}, \quad i > g
+\]
 
 where \(D_1\) is the next dividend. This is the **Gordon Growth Model**. Given the price and next dividend, the implied growth rate is \(g = i - D_1/P\).
 
@@ -730,7 +922,9 @@ where \(D_1\) is the next dividend. This is the **Gordon Growth Model**. Given t
 
 The **net present value** and **internal rate of return** from Module 1 generalize to arbitrary investment cash flows. An investment with net cash flows \(C_0, C_1, \ldots, C_n\) has:
 
-\[ NPV(i) = \sum_{t=0}^n C_t v^t \]
+\[
+NPV(i) = \sum_{t=0}^n C_t v^t
+\]
 
 The IRR is the solution to \(NPV(i) = 0\). Multiple IRRs can exist; the **uniqueness theorem** guarantees a unique positive IRR if the retrospective balance \(B_t > 0\) for all \(t = 0, \ldots, n-1\). When the balance changes sign (the investor sometimes receives more than they've invested), multiple valid yield rates can exist.
 
@@ -740,13 +934,17 @@ The IRR is the solution to \(NPV(i) = 0\). Multiple IRRs can exist; the **unique
 
 For a fund with opening balance \(A\), closing balance \(B\), and net contributions \(C_{t_k}\) at times \(t_k \in (0,1)\), the **approximate dollar-weighted yield** over one year is:
 
-\[ i \approx \frac{I}{A + \sum_{k} C_{t_k}(1 - t_k)} \]
+\[
+i \approx \frac{I}{A + \sum_{k} C_{t_k}(1 - t_k)}
+\]
 
 where the interest earned is \(I = B - A - \sum_k C_{t_k}\). The denominator is the "exposure" — the opening balance plus each deposit weighted by the fraction of the year it was in the fund.
 
 Over a \(T\)-year period, the nominal rate approximation is:
 
-\[ j \approx \frac{I}{TA + \sum_k C_{t_k}(T - t_k)} \]
+\[
+j \approx \frac{I}{TA + \sum_k C_{t_k}(T - t_k)}
+\]
 
 with annual effective rate \(i = (1 + jT)^{1/T} - 1\).
 
@@ -754,11 +952,15 @@ with annual effective rate \(i = (1 + jT)^{1/T} - 1\).
 
 The **time-weighted yield** removes the effect of the timing of deposits and withdrawals, measuring the fund's performance independently of investor cash flows. Between consecutive contribution dates \(t_{k-1}\) and \(t_k\), the sub-period accumulation factor is:
 
-\[ 1 + i_k = \frac{B_{t_k}}{B_{t_{k-1}} + C_{t_{k-1}}} \]
+\[
+1 + i_k = \frac{B_{t_k}}{B_{t_{k-1}} + C_{t_{k-1}}}
+\]
 
 (balance just before the contribution at \(t_k\), divided by balance just after the contribution at \(t_{k-1}\). The time-weighted annual effective yield is:
 
-\[ (1+i)^T = \prod_{k=1}^m (1 + i_k) \]
+\[
+(1+i)^T = \prod_{k=1}^m (1 + i_k)
+\]
 
 **Key insight:** Dollar-weighted yield rewards (or penalizes) investors for the *timing* of their contributions. The time-weighted yield is a property of the fund manager, independent of when investors enter or exit.
 
@@ -766,17 +968,23 @@ The **time-weighted yield** removes the effect of the timing of deposits and wit
 
 The **yield curve** plots bond yields against time to maturity. A **zero-coupon bond** (strip bond) pays only a redemption amount at maturity. The **\(n\)-year spot rate** \(r_n\) is the annual effective yield on an \(n\)-year zero-coupon bond:
 
-\[ r_n = \left(\frac{F}{P}\right)^{1/n} - 1 \]
+\[
+r_n = \left(\frac{F}{P}\right)^{1/n} - 1
+\]
 
 A coupon bond can be priced using spot rates by discounting each cash flow at its own maturity's spot rate:
 
-\[ P = Fr(1+r_1)^{-1} + Fr(1+r_2)^{-2} + \cdots + (Fr + C)(1+r_n)^{-n} \]
+\[
+P = Fr(1+r_1)^{-1} + Fr(1+r_2)^{-2} + \cdots + (Fr + C)(1+r_n)^{-n}
+\]
 
 **Bootstrapping:** Given a sequence of coupon bonds with increasing maturities, extract spot rates recursively. Use the 1-year bond to find \(r_1\), then solve for \(r_2\) using the 2-year bond and known \(r_1\), and so on.
 
 **Forward rates:** The \(n\)-year deferred, \(m\)-year forward rate \(f_{[n,n+m]}\) is the rate used to move value between times \(n\) and \(n+m\), consistent with the spot rates:
 
-\[ (1+r_n)^n \cdot (1 + f_{[n,n+m]})^m = (1+r_{n+m})^{n+m} \]
+\[
+(1+r_n)^n \cdot (1 + f_{[n,n+m]})^m = (1+r_{n+m})^{n+m}
+\]
 
 so \(f_{[n,n+m]} = \left(\frac{(1+r_{n+m})^{n+m}}{(1+r_n)^n}\right)^{1/m} - 1\).
 
@@ -799,11 +1007,15 @@ so \(f_{[n,n+m]} = \left(\frac{(1+r_{n+m})^{n+m}}{(1+r_n)^n}\right)^{1/m} - 1\).
 
 **Duration** measures the interest-rate sensitivity of a portfolio of cash flows. Intuitively, it is the weighted average time of payment, where the weights are the present values of each cash flow. For cash flows \(C_t\) at times \(t \ge 0\) with present value \(P(i) = \sum_t C_t v^t\), the **Macaulay duration** is:
 
-\[ D^{(\infty)}(i) = \frac{\sum_{t \ge 0} t C_t v^t}{P(i)} \]
+\[
+D^{(\infty)}(i) = \frac{\sum_{t \ge 0} t C_t v^t}{P(i)}
+\]
 
 An equivalent calculus-based definition: Macaulay duration is the negative of the relative rate of change of present value with respect to the force of interest:
 
-\[ D^{(\infty)}(i) = -\frac{d}{d\delta} \ln P(i) \]
+\[
+D^{(\infty)}(i) = -\frac{d}{d\delta} \ln P(i)
+\]
 
 **Properties:**
 - For a zero-coupon bond maturing at time \(n\): \(D^{(\infty)} = n\) (independent of yield)
@@ -813,17 +1025,23 @@ An equivalent calculus-based definition: Macaulay duration is the negative of th
 
 For a **coupon bond**, use the P–Q formula to evaluate the numerator sum:
 
-\[ \sum_{t=1}^n t \cdot Fr \cdot v^t + n \cdot C v^n = Fr \cdot (Ia)_{\overline{n}|} + n C v^n = Fr \cdot \frac{\ddot{a}_{\overline{n}|} - nv^n}{i} + n C v^n \]
+\[
+\sum_{t=1}^n t \cdot Fr \cdot v^t + n \cdot C v^n = Fr \cdot (Ia)_{\overline{n}|} + n C v^n = Fr \cdot \frac{\ddot{a}_{\overline{n}|} - nv^n}{i} + n C v^n
+\]
 
 ## Modified Duration
 
 While Macaulay duration measures sensitivity to changes in \(\delta\) (force of interest), **modified duration** measures sensitivity to changes in the annual nominal rate \(i^{(m)}\):
 
-\[ D^{(m)}(i) = -\frac{d}{di^{(m)}} \ln P(i) = \frac{\sum_{t \ge 0} t C_t v^{t + 1/m}}{P(i)} \]
+\[
+D^{(m)}(i) = -\frac{d}{di^{(m)}} \ln P(i) = \frac{\sum_{t \ge 0} t C_t v^{t + 1/m}}{P(i)}
+\]
 
 Modified duration is related to Macaulay duration by discounting one period:
 
-\[ D^{(m)}(i) = v^{1/m} D^{(\infty)}(i) = \left(1 + \frac{i^{(m)}}{m}\right)^{-1} D^{(\infty)}(i) \]
+\[
+D^{(m)}(i) = v^{1/m} D^{(\infty)}(i) = \left(1 + \frac{i^{(m)}}{m}\right)^{-1} D^{(\infty)}(i)
+\]
 
 For annual payments (\(m = 1\), we write \(D(i) = vD^{(\infty)}(i)\).
 
@@ -833,15 +1051,21 @@ For annual payments (\(m = 1\), we write \(D(i) = vD^{(\infty)}(i)\).
 
 Duration provides a first-order approximation. The **convexity** captures the second-order (curvature) effect. The **Macaulay convexity** is:
 
-\[ C^{(\infty)}(i) = \frac{\sum_{t \ge 0} t^2 C_t v^t}{P(i)} \]
+\[
+C^{(\infty)}(i) = \frac{\sum_{t \ge 0} t^2 C_t v^t}{P(i)}
+\]
 
 The **modified convexity** (for annual payments, \(m = 1\) is:
 
-\[ C(i) = \frac{P''(i)}{P(i)} = \frac{\sum_{t \ge 0} t(t+1) C_t v^{t+2}}{P(i)} \]
+\[
+C(i) = \frac{P''(i)}{P(i)} = \frac{\sum_{t \ge 0} t(t+1) C_t v^{t+2}}{P(i)}
+\]
 
 Using a Taylor expansion, the **approximate relative price change** when the yield moves from \(i_0\) to \(i_0 + \varepsilon\) is:
 
-\[ \frac{P(i_0 + \varepsilon) - P(i_0)}{P(i_0)} \approx -D(i_0) \cdot \varepsilon + C(i_0) \cdot \frac{\varepsilon^2}{2} \]
+\[
+\frac{P(i_0 + \varepsilon) - P(i_0)}{P(i_0)} \approx -D(i_0) \cdot \varepsilon + C(i_0) \cdot \frac{\varepsilon^2}{2}
+\]
 
 The duration term gives the linear (first-order) change; convexity adds a positive second-order correction. This means that for a given duration, higher convexity is preferred — the bond loses less when rates rise and gains more when rates fall.
 
@@ -852,7 +1076,9 @@ The duration term gives the linear (first-order) change; convexity adds a positi
 
 **Asset-liability management** (ALM) balances a fund's inflows (assets) against its outflows (liabilities). Define:
 
-\[ P_A(i) = \sum_t A_t v^t, \quad P_L(i) = \sum_t L_t v^t, \quad S(i) = P_A(i) - P_L(i) \]
+\[
+P_A(i) = \sum_t A_t v^t, \quad P_L(i) = \sum_t L_t v^t, \quad S(i) = P_A(i) - P_L(i)
+\]
 
 **Exact matching** (cash flow matching) sets \(A_t = L_t\) for all \(t\). This is the safest approach — the surplus is zero regardless of interest rate.
 
