@@ -1882,7 +1882,7 @@ The following reference compiles the most important formulas and computational r
 |--------|--------------------|-----------------------------|
 | Irrational rotation \( T_\alpha \) on \( \mathbb{T} \) | \( 0 \) | \( 0 \) |
 | Doubling map \( T(x) = 2x \pmod{1} \) | \( \log 2 \) | \( \log 2 \) |
-| Full \( k \)-shift \( \sigma \) on \( A^{\mathbb{Z}} \), \( |A| = k \) | \( \log k \) | \( \log k \) (uniform) |
+| Full \( k \)-shift \( \sigma \) on \( A^{\mathbb{Z}} \), \( \vert A\vert = k \) | \( \log k \) | \( \log k \) (uniform) |
 | Bernoulli shift \( (p_0, \ldots, p_{k-1}) \) | \( \log k \) (for uniform) | \( -\sum p_i \log p_i \) |
 | Arnold cat map \( A = \begin{pmatrix}2&1\\1&1\end{pmatrix} \) | \( \log\frac{3+\sqrt{5}}{2} \) | \( \log\frac{3+\sqrt{5}}{2} \) |
 | Golden mean shift | \( \log \phi \) (\( \phi = \frac{1+\sqrt{5}}{2} \)) | \( = h_{\mathrm{top}} \) (Markov) |

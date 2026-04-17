@@ -1606,7 +1606,7 @@ This appendix summarises the main theorems of the course in a compact, accessibl
 | Theorem | Hypothesis | Conclusion | Key Application |
 |---|---|---|---|
 | Stationarity | \(T\) stable; \(M \models T\) a model; \(p \in S(M)\) | \(p\) has a unique non-forking extension to any \(B \supseteq M\) | Canonical extensions; forking calculus |
-| Independence Theorem | \(T\) stable; \(a \mathop{\smile\!\!\!\!|}_M b\) | Non-forking extensions can be amalgamated | Constructing independent tuples |
+| Independence Theorem | \(T\) stable; \(a \mathop{\smile\!\!\!\!\vert }_M b\) | Non-forking extensions can be amalgamated | Constructing independent tuples |
 | Stability from Categoricity | \(T\) uncountably categorical | \(T\) is \(\omega\)-stable | Foundation of Morley's theorem |
 | Zilber Trichotomy (DCF\(_0\)) | \(D\) strongly minimal, definable in DCF\(_0\) | \(D\) is disintegrated, locally modular, or field-like | Mordell–Lang conjecture |
 

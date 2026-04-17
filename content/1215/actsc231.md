@@ -626,13 +626,13 @@ The accumulated value at time 10 is \(70k \cdot a(10) = 70k \cdot 17/7 = 170k = 
 
 | Annuity Type | Present Value | Accumulated Value |
 |---|---|---|
-| Immediate | \(a_{\overline{n}|} = (1-v^n)/i\) | \(s_{\overline{n}|} = ((1+i)^n-1)/i\) |
-| Due | \(\ddot{a}_{\overline{n}|} = (1-v^n)/d\) | \(\ddot{s}_{\overline{n}|} = ((1+i)^n-1)/d\) |
-| Continuous | \(\bar{a}_{\overline{n}|} = (1-v^n)/\delta\) | \(\bar{s}_{\overline{n}|} = (e^{\delta n}-1)/\delta\) |
+| Immediate | \(a_{\overline{n}\vert } = (1-v^n)/i\) | \(s_{\overline{n}\vert } = ((1+i)^n-1)/i\) |
+| Due | \(\ddot{a}_{\overline{n}\vert } = (1-v^n)/d\) | \(\ddot{s}_{\overline{n}\vert } = ((1+i)^n-1)/d\) |
+| Continuous | \(\bar{a}_{\overline{n}\vert } = (1-v^n)/\delta\) | \(\bar{s}_{\overline{n}\vert } = (e^{\delta n}-1)/\delta\) |
 | Perpetuity-immediate | \(1/i\) | — |
 | Perpetuity-due | \((1+i)/i = 1/d\) | — |
-| \(m\)-deferred \(n\)-immediate | \(v^m a_{\overline{n}|} = a_{\overline{m+n}|} - a_{\overline{m}|}\) | — |
-| P–Q (arith. progression) | \(Pa_{\overline{n}|} + Q(a_{\overline{n}|}-nv^n)/i\) | multiply by \((1+i)^n\) |
+| \(m\)-deferred \(n\)-immediate | \(v^m a_{\overline{n}\vert } = a_{\overline{m+n}\vert } - a_{\overline{m}\vert }\) | — |
+| P–Q (arith. progression) | \(Pa_{\overline{n}\vert } + Q(a_{\overline{n}\vert }-nv^n)/i\) | multiply by \((1+i)^n\) |
 | Geom. growth (\(P, g\) | \(\frac{P}{i-g}(1-((1+g)/(1+i))^n)\) | — |
 
 Key relationship between due and immediate: \(\ddot{a}_{\overline{n}|} = (1+i) a_{\overline{n}|}\) and \(\ddot{a}_{\overline{n}|} = 1 + a_{\overline{n-1}|}\).
@@ -693,9 +693,9 @@ The complete amortization schedule:
 
 | Time | Payment | Interest | Principal | Balance |
 |------|---------|---------|---------|---------|
-| 0 | — | — | — | \(Ra_{\overline{n}|}\) |
-| 1 | \(R\) | \(R(1-v^n)\) | \(Rv^n\) | \(Ra_{\overline{n-1}|}\) |
-| \(t\) | \(R\) | \(R(1-v^{n-t+1})\) | \(Rv^{n-t+1}\) | \(Ra_{\overline{n-t}|}\) |
+| 0 | — | — | — | \(Ra_{\overline{n}\vert }\) |
+| 1 | \(R\) | \(R(1-v^n)\) | \(Rv^n\) | \(Ra_{\overline{n-1}\vert }\) |
+| \(t\) | \(R\) | \(R(1-v^{n-t+1})\) | \(Rv^{n-t+1}\) | \(Ra_{\overline{n-t}\vert }\) |
 | \(n\) | \(R\) | \(R(1-v)\) | \(Rv\) | 0 |
 
 Total interest paid = \(nR - L\).
@@ -888,9 +888,9 @@ For a **premium bond** (\(Fr > Cj\), the earlier call date typically produces th
 
 | Formula | Expression |
 |---------|-----------|
-| Basic price | \(P = Fra_{\overline{n}|j} + Cv^n\) |
-| Premium/discount | \(P = C + (Fr - Cj)a_{\overline{n}|j}\) |
-| Book value at time \(t\) | \(B_t = C + (Fr - Cj)a_{\overline{n-t}|j}\) |
+| Basic price | \(P = Fra_{\overline{n}\vert j} + Cv^n\) |
+| Premium/discount | \(P = C + (Fr - Cj)a_{\overline{n}\vert j}\) |
+| Book value at time \(t\) | \(B_t = C + (Fr - Cj)a_{\overline{n-t}\vert j}\) |
 | Book value adjustment | \(P_t = (Fr - Cj)v^{n-t+1}\), grows as \(P_{t+1} = (1+j)P_t\) |
 | Dirty price | \(P_f = (1+j)^f P_0\) |
 | Clean price | \(P_f - fFr\) |

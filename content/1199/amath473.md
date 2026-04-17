@@ -3126,8 +3126,8 @@ The comparison between the classical random walk (§20.2) and the quantum propag
 |---|---|---|
 | Object | Probability \( p \geq 0 \) | Probability amplitude \( c \in \mathbb{C} \) |
 | Alternatives | \( p_1 + p_2 \) | \( c_1 + c_2 \) |
-| Conditionals | \( p_A \cdot p_{B|A} \) | \( c_A \cdot c_{B|A} \) |
-| Interference | None: \( |c_1|^2 + |c_2|^2 \) | Yes: \( |c_1 + c_2|^2 \) |
+| Conditionals | \( p_A \cdot p_{B\vert A} \) | \( c_A \cdot c_{B\vert A} \) |
+| Interference | None: \( \vert c_1\vert ^2 + \vert c_2\vert ^2 \) | Yes: \( \vert c_1 + c_2\vert ^2 \) |
 | Classical limit | Always obeyed | Stationary phase \( \Rightarrow \delta S = 0 \) |
 
 The transition between quantum and classical behaviour is therefore not a matter of size per se, but of **which paths can interfere**. When the environment continuously measures (or is able in principle to measure) which path a particle took, the interference terms are washed out — decoherence has occurred — and the particle behaves classically. When the particle is genuinely unobserved, all paths contribute coherently and interference is real.

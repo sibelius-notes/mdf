@@ -1614,7 +1614,7 @@ The angular-frequency convention (\(\tilde{f}(\omega) = \int f(t)e^{i\omega t}dt
 
 | \(f(t)\) | \(\tilde{f}(\nu)\) |
 |---|---|
-| \(\text{rect}(t/T) = \begin{cases}1,&|t|<T/2\\0,&\text{otherwise}\end{cases}\) | \(T\,\text{sinc}(\nu T)\) |
+| \(\text{rect}(t/T) = \begin{cases}1,&\vert t\vert <T/2\\0,&\text{otherwise}\end{cases}\) | \(T\,\text{sinc}(\nu T)\) |
 | \(\text{sinc}(Bt)\) | \(\frac{1}{B}\text{rect}(\nu/B)\) |
 | \(e^{-t^2/(2\sigma^2)}\) | \(\sigma\sqrt{2\pi}\,e^{-2\pi^2\sigma^2\nu^2}\) |
 | \(e^{-\alpha t}u(t)\) | \(\frac{1}{\alpha + 2\pi i\nu}\) |

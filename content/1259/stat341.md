@@ -231,7 +231,7 @@ Different choices of \(\rho\) yield different estimators:
 | Loss function \(\rho(r)\) | \(\psi(r) = \rho'(r)\) | Estimator |
 |---|---|---|
 | \(r^2\) | \(2r\) | Sample mean |
-| \(|r|\) | \(\text{sign}(r)\) | Sample median |
+| \(\vert r\vert \) | \(\text{sign}(r)\) | Sample median |
 | Huber loss | Huber \(\psi\) | Huber M-estimator |
 
 ### The Huber Loss

@@ -691,14 +691,14 @@ Conversely, if \(\hat{f}(n)\) decays rapidly, then \(f\) is smooth. For \(C^\inf
 
 **The regularity ladder:** The smooth-function theorem gives us a precise dictionary between function regularity and Fourier coefficient decay:
 
-| Regularity of \(f\) | Decay of \(|\hat{f}(n)|\) | Convergence |
+| Regularity of \(f\) | Decay of \(\vert \hat{f}(n)\vert \) | Convergence |
 |---|---|---|
 | \(f \in L^1(\mathbb{T})\) | \(o(1)\) (R-L lemma) | No pointwise guarantee |
 | \(f\) Hölder \(C^{0,\alpha}\) | \(O(n^{-\alpha})\) | Uniform |
 | \(f \in C^1(\mathbb{T})\) | \(O(1/n)\) | Absolute + uniform |
-| \(f \in C^k(\mathbb{T})\) | \(O(n^{-k})\) | Absolutely \(\sum n^{k-1}|\hat{f}(n)| < \infty\) |
+| \(f \in C^k(\mathbb{T})\) | \(O(n^{-k})\) | Absolutely \(\sum n^{k-1}\vert \hat{f}(n)\vert < \infty\) |
 | \(f \in C^\infty(\mathbb{T})\) | Faster than any \(n^{-k}\) | Absolutely and rapidly |
-| \(f\) real-analytic | Exponential \(O(r^{-|n|})\), \(r > 1\) | Absolutely and exponentially |
+| \(f\) real-analytic | Exponential \(O(r^{-\vert n\vert })\), \(r > 1\) | Absolutely and exponentially |
 
 This table encodes the fundamental insight: *smoothness in the spatial domain corresponds to decay in the frequency domain.* The Fourier transform is a "microscope" that reveals the regularity of functions through their frequency content.
 
@@ -1397,7 +1397,7 @@ For \(f \in L^1(\mathbb{T})\) with Fourier coefficients \(\hat{f}(n) = \frac{1}{
 
 | Identity | Formula |
 |---|---|
-| Parseval | \(\|f\|_{L^2}^2 = \sum_n |\hat{f}(n)|^2\) |
+| Parseval | \(\|f\|_{L^2}^2 = \sum_n \vert \hat{f}(n)\vert ^2\) |
 | Convolution | \(\widehat{f*g}(n) = \hat{f}(n)\hat{g}(n)\) |
 | Differentiation | \(\widehat{f'}(n) = in\hat{f}(n)\) |
 | Translation | \(\widehat{f(\cdot-a)}(n) = e^{-ina}\hat{f}(n)\) |
@@ -1410,7 +1410,7 @@ For \(f \in L^1(\mathbb{T})\) with Fourier coefficients \(\hat{f}(n) = \frac{1}{
 |---|---|
 | \(f(x) = x\) (sawtooth) | \(\hat{f}(0) = 0\), \(\hat{f}(n) = \frac{i(-1)^n}{n}\) for \(n\neq 0\) |
 | \(f(x) = x^2\) (parabola) | \(\hat{f}(0) = \frac{\pi^2}{3}\), \(\hat{f}(n) = \frac{2(-1)^n}{n^2}\) |
-| \(f(x) = |x|\) (triangle) | \(\hat{f}(0) = \frac{\pi}{2}\), \(\hat{f}(n) = \frac{(-1)^n-1}{\pi n^2}\) |
+| \(f(x) = \vert x\vert \) (triangle) | \(\hat{f}(0) = \frac{\pi}{2}\), \(\hat{f}(n) = \frac{(-1)^n-1}{\pi n^2}\) |
 | \(f(x) = \text{sgn}(x)\) (square) | \(\hat{f}(n) = \frac{1-(-1)^n}{\pi in}\) (odd \(n\): \(\frac{2}{\pi in}\)) |
 | \(f(x) = e^{ax}\), \(a \notin i\mathbb{Z}\) | \(\hat{f}(n) = \frac{e^{a\pi}-e^{-a\pi}}{2\pi(a-in)}\) |
 
@@ -1422,7 +1422,7 @@ For \(f \in L^1(\mathbb{T})\) with Fourier coefficients \(\hat{f}(n) = \frac{1}{
 | \(\sum_{n=1}^\infty \frac{1}{n^4} = \frac{\pi^4}{90}\) | Parseval for \(f(x)=x^2\) |
 | \(\sum_{n=0}^\infty \frac{1}{(2n+1)^2} = \frac{\pi^2}{8}\) | Parseval for square wave |
 | \(\sum_{n=0}^\infty \frac{(-1)^n}{2n+1} = \frac{\pi}{4}\) | Leibniz formula, from \(f(x)=x\) at \(x=\pi/2\) |
-| \(\sum_{n=1}^\infty \frac{1}{(2n-1)^4} = \frac{\pi^4}{96}\) | Parseval for \(f(x)=|x|\) |
+| \(\sum_{n=1}^\infty \frac{1}{(2n-1)^4} = \frac{\pi^4}{96}\) | Parseval for \(f(x)=\vert x\vert \) |
 
 ## Fourier Transform Formulas on \(\mathbb{R}\)
 
@@ -1431,7 +1431,7 @@ Convention: \(\hat{f}(\xi) = \int_\mathbb{R} f(x)e^{-2\pi ix\xi}\,dx\).
 | Function \(f(x)\) | Fourier transform \(\hat{f}(\xi)\) |
 |---|---|
 | \(e^{-\pi x^2}\) (Gaussian) | \(e^{-\pi\xi^2}\) (self-dual!) |
-| \(e^{-a|x|}\), \(a > 0\) | \(\frac{2a}{a^2+4\pi^2\xi^2}\) |
+| \(e^{-a\vert x\vert }\), \(a > 0\) | \(\frac{2a}{a^2+4\pi^2\xi^2}\) |
 | \(\mathbf{1}_{[-a,a]}(x)\) (box) | \(\frac{\sin(2\pi a\xi)}{\pi\xi} = 2a\,\text{sinc}(2a\xi)\) |
 | \(\text{sinc}(x) = \frac{\sin(\pi x)}{\pi x}\) | \(\mathbf{1}_{[-1/2,1/2]}(\xi)\) |
 | \(H_t(x) = \frac{1}{\sqrt{4\pi t}}e^{-x^2/4t}\) | \(e^{-4\pi^2\xi^2 t}\) |
@@ -1835,12 +1835,12 @@ Beyond the examples computed, here are additional important Fourier transform pa
 | \(f(x)\) | \(\hat{f}(\xi)\) | Notes |
 |---|---|---|
 | \(e^{-\pi x^2}\) | \(e^{-\pi\xi^2}\) | Self-dual Gaussian |
-| \(e^{-a|x|}\), \(a>0\) | \(\frac{2a}{a^2+4\pi^2\xi^2}\) | Two-sided exponential |
-| \(\frac{a}{\pi(a^2+x^2)}\) | \(e^{-2\pi a|\xi|}\) | Cauchy / Lorentzian |
+| \(e^{-a\vert x\vert }\), \(a>0\) | \(\frac{2a}{a^2+4\pi^2\xi^2}\) | Two-sided exponential |
+| \(\frac{a}{\pi(a^2+x^2)}\) | \(e^{-2\pi a\vert \xi\vert }\) | Cauchy / Lorentzian |
 | \(\mathbf{1}_{[-a,a]}\) | \(2a\,\text{sinc}(2a\xi)\) | Rectangle / sinc |
 | \(\text{sinc}(x)\) | \(\mathbf{1}_{[-1/2,1/2]}(\xi)\) | Sinc / rectangle |
-| \((1 - |x/a|)^+\) | \(a\,\text{sinc}^2(a\xi)\) | Triangle / sinc² |
-| \(\text{sinc}^2(x)\) | \((1-|\xi|)^+\) | Sinc² / triangle |
+| \((1 - \vert x/a\vert )^+\) | \(a\,\text{sinc}^2(a\xi)\) | Triangle / sinc² |
+| \(\text{sinc}^2(x)\) | \((1-\vert \xi\vert )^+\) | Sinc² / triangle |
 | \(H_t(x) = \frac{e^{-x^2/4t}}{\sqrt{4\pi t}}\) | \(e^{-4\pi^2\xi^2 t}\) | Heat kernel |
 | \(\delta(x-a)\) | \(e^{-2\pi ia\xi}\) | Shifted Dirac delta |
 | \(e^{2\pi iax}\) | \(\delta(\xi-a)\) | Pure tone |

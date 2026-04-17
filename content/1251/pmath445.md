@@ -1520,16 +1520,16 @@ The following table summarizes the main structural facts proved in this course.
 
 | Theorem | Statement | Key Tool |
 |---|---|---|
-| Maschke (1898) | Every rep in char 0 (or \(\mathrm{char}\nmid |G|\)) is semisimple | Averaging projector |
+| Maschke (1898) | Every rep in char 0 (or \(\mathrm{char}\nmid \vert G\vert \)) is semisimple | Averaging projector |
 | Schur's Lemma | \(\mathrm{Hom}_G(V,W) = 0\) or isomorphisms only; End\(_G(V) \cong F\) | Kernel/image are \(G\)-invariant |
 | 1st Orthogonality | \(\langle \chi_i, \chi_j \rangle = \delta_{ij}\) | Schur + averaging |
-| 2nd Orthogonality | \(\sum_i \chi_i(g)\overline{\chi_i(h)} = |C_G(g)|\delta_{[g],[h]}\) | Unitarity of character table |
+| 2nd Orthogonality | \(\sum_i \chi_i(g)\overline{\chi_i(h)} = \vert C_G(g)\vert \delta_{[g],[h]}\) | Unitarity of character table |
 | Dimension formula | \(\vert G\vert = \sum_i (\dim V_i)^2\) | Regular rep decomposition |
 | \(\#\mathrm{Irr} = \#\mathrm{conj. classes}\) | \(r = h(G)\) | \(\dim Z(\mathbb{C}G) = r = h(G)\) |
 | Artin-Wedderburn | \(\mathbb{C}G \cong \prod_i M_{n_i}(\mathbb{C})\) | Semisimplicity + Schur |
 | Frobenius reciprocity | \(\langle \chi_W\uparrow, \chi_V \rangle_G = \langle \chi_W, \chi_V\downarrow\rangle_H\) | Adjunction of Ind/Res |
 | Burnside \(p^aq^b\) | Groups of order \(p^aq^b\) are solvable | Algebraic integers + characters |
-| Dim divisibility | \(\dim V \mid |G|\) for irr. \(V\) | Algebraic integers |
+| Dim divisibility | \(\dim V \mid \vert G\vert \) for irr. \(V\) | Algebraic integers |
 | Hook length formula | \(\dim S^\lambda = n!/\prod h(i,j)\) | Young symmetrizers |
 
 ## A Final Word: Why Character Tables Are So Powerful

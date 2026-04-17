@@ -255,8 +255,8 @@ where \(\alpha = a\Delta t/\Delta x\) is the CFL number. The parameter \(\beta\)
 
 | Scheme | \(\beta\) | Character |
 |--------|-----------|-----------|
-| Central | \(0\) | Unstable: \(|M_k|^2 = 1 + \alpha^2\sin^2\theta > 1\) |
-| Upwind | \(|\alpha|\) | Stable for \(|\alpha| \le 1\) |
+| Central | \(0\) | Unstable: \(\vert M_k\vert ^2 = 1 + \alpha^2\sin^2\theta > 1\) |
+| Upwind | \(\vert \alpha\vert \) | Stable for \(\vert \alpha\vert \le 1\) |
 | Lax–Friedrichs | \(1\) | Dissipates high-frequency modes heavily |
 | Lax–Wendroff | \(\alpha^2\) | Least dissipative among stable schemes |
 

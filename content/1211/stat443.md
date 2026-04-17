@@ -805,7 +805,7 @@ Let \( e_t = X_t - \hat{X}_{t \mid t-h} \) denote the \( h \)-step-ahead forecas
 |---|---|
 | MAE | \( T^{-1}\sum \|e_t\| \) |
 | RMSE | \( \sqrt{T^{-1}\sum e_t^2} \) |
-| MAPE | \( T^{-1}\sum |e_t/X_t| \times 100\% \) |
+| MAPE | \( T^{-1}\sum \vert e_t/X_t\vert \times 100\% \) |
 | MASE | MAE / (in-sample MAE of naïve method) |
 
 MASE (mean absolute scaled error, Hyndman & Koehler 2006) is unit-free and avoids the instability of MAPE when \( X_t \) is near zero.

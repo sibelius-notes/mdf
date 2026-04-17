@@ -148,7 +148,7 @@ for any continuous function \(f\). One way to understand \(\delta(x)\) is as the
 
 | Representation | Expression |
 |---|---|
-| Rectangular | \(\delta(x) = \lim_{\epsilon\to 0} \frac{1}{2\epsilon}\mathbf{1}_{|x| \le \epsilon}\) |
+| Rectangular | \(\delta(x) = \lim_{\epsilon\to 0} \frac{1}{2\epsilon}\mathbf{1}_{\vert x\vert \le \epsilon}\) |
 | Gaussian | \(\delta(x) = \lim_{\sigma\to 0} \frac{1}{\sigma\sqrt{2\pi}}e^{-x^2/(2\sigma^2)}\) |
 | Lorentzian | \(\delta(x) = \lim_{\epsilon\to 0} \frac{1}{\pi}\frac{\epsilon}{x^2+\epsilon^2}\) |
 | Sinc | \(\delta(x) = \lim_{L\to\infty} \frac{\sin(Lx)}{\pi x} = \lim_{L\to\infty}\frac{L}{\pi}\text{sinc}(Lx/\pi)\) |
@@ -1374,4 +1374,4 @@ The quality of variational estimates improves dramatically when we use trial fun
 | Order | Energy | Wavefunction |
 |-------|--------|--------------|
 | 0th | \(E_n^{(0)}\) | \(\psi_n^{(0)}\) |
-| 1st | \(E_n^{(1)} = \langle n|\hat{H}_1|n\rangle\) | \(\psi_n^{(1)} = \sum_{k\ne n}\frac{\langle k|\hat{H}_1|n\rangle}{E_n^{(0)}-E_k^{(0)}}\psi_k^{(0)}\) |
+| 1st | \(E_n^{(1)} = \langle n\vert\hat{H}_1\vert n\rangle\) | \(\psi_n^{(1)} = \sum_{k\ne n}\frac{\langle k\vert\hat{H}_1\vert n\rangle}{E_n^{(0)}-E_k^{(0)}}\psi_k^{(0)}\) |

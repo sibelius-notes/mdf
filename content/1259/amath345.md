@@ -266,7 +266,7 @@ Common activation functions:
 | Activation | Formula | Properties |
 |---|---|---|
 | **ReLU** | \(\max(0, x)\) | Sparse, no vanishing gradient for \(x>0\), not differentiable at 0 |
-| **Sigmoid** | \(1/(1+e^{-x})\) | Output in \((0,1)\), vanishing gradient for large \(|x|\) |
+| **Sigmoid** | \(1/(1+e^{-x})\) | Output in \((0,1)\), vanishing gradient for large \(\vert x\vert \) |
 | **Tanh** | \((e^x - e^{-x})/(e^x + e^{-x})\) | Output in \((-1,1)\), zero-centered |
 | **GELU** | \(x\,\Phi(x)\) | Smooth approximation to ReLU, used in transformers |
 

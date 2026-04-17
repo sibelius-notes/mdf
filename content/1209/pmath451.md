@@ -1172,7 +1172,7 @@ This is an immediate consequence of the definition of the integral applied to th
 | **Monotone Convergence (MCT)** | \(f_n \nearrow f \Rightarrow \int f_n \nearrow \int f\) | Lecture 10 |
 | **Fatou's Lemma** | \(\int \liminf f_n \le \liminf \int f_n\) | Lecture 12 |
 | **LDCT** | Dominated pointwise convergence implies L¹ convergence | Lecture 12 |
-| **Hölder's Inequality** | \(\int |fg| \le \|f\|_p \|g\|_q\) for conjugate \(p,q\) | Lecture 13 |
+| **Hölder's Inequality** | \(\int \vert fg\vert \le \|f\|_p \|g\|_q\) for conjugate \(p,q\) | Lecture 13 |
 | **Minkowski's Inequality** | \(\|f+g\|_p \le \|f\|_p + \|g\|_p\) | Lecture 13 |
 | **Riesz-Fischer** | \(L^p(\mu)\) is a Banach space for \(1 \le p \le \infty\) | Lecture 14 |
 | **Riesz Representation (L²)** | Every bounded linear functional on \(L^2\) is an inner product | Lecture 15 |

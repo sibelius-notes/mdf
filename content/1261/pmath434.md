@@ -1738,7 +1738,7 @@ The following chronological table traces the development of set theory from its 
 | 1874 | Cantor proves the reals are uncountable (first uncountability proof, using a nested interval argument) |
 | 1878 | Cantor conjectures the Continuum Hypothesis in a letter to Dedekind |
 | 1879–1884 | Cantor develops transfinite ordinals and cardinals in a series of papers |
-| 1891 | Cantor's diagonal argument; proves \(|X| < |\mathcal{P}(X)|\) for any set \(X\) |
+| 1891 | Cantor's diagonal argument; proves \(\vert X\vert < \vert \mathcal{P}(X)\vert \) for any set \(X\) |
 | 1895–1897 | Cantor publishes the *Beiträge*, his systematic treatment of cardinals and ordinals |
 | 1897 | Burali-Forti paradox: the collection of all ordinals is not a set |
 | 1899 | Cantor discovers the paradox of the set of all sets (in correspondence with Dedekind) |
@@ -2508,7 +2508,7 @@ The following table collects the principal notation used throughout these notes.
 | \(V_\alpha\) | The \(\alpha\)-th level of the von Neumann hierarchy |
 | \(L_\alpha\) | The \(\alpha\)-th level of the constructible hierarchy |
 | \(\text{cf}(\alpha)\) | Cofinality of the ordinal/cardinal \(\alpha\) |
-| \(|X|\) | Cardinality of \(X\) |
+| \(\vert X\vert \) | Cardinality of \(X\) |
 | \(\kappa^+\) | Successor cardinal of \(\kappa\) |
 | \(\beth_\alpha\) | The \(\alpha\)-th beth number (\(\beth_0 = \aleph_0\), \(\beth_{\alpha+1} = 2^{\beth_\alpha}\)) |
 | \(\mathfrak{c}\) | Cardinality of the continuum \(= 2^{\aleph_0}\) |
@@ -2549,7 +2549,7 @@ The following index lists the major theorems, lemmas, and definitions of these n
 | Transfinite Recursion | Ch.2 | Definitions by recursion over ordinals |
 | Cantor Normal Form | Ch.2 | Unique base-\(\omega\) expansion for ordinals |
 | Schröder–Bernstein | Ch.3 | Two injections imply bijection |
-| Cantor's Theorem | Ch.3 | \(|X| < |\mathcal{P}(X)|\) for all \(X\) |
+| Cantor's Theorem | Ch.3 | \(\vert X\vert < \vert \mathcal{P}(X)\vert \) for all \(X\) |
 | Cantor Diagonal Argument | Ch.3 | \(2^\omega\) is uncountable |
 | König's Theorem | Ch.3 | \(\sum \kappa_i < \prod \lambda_i\) when \(\kappa_i < \lambda_i\) |
 | Zorn's Lemma | Ch.5 | Equivalent to AC: maximal elements exist |

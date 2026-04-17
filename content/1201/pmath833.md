@@ -2249,7 +2249,7 @@ The transition from abstract to geometric harmonic analysis is not a sharp break
 | Haar measure on \(G\) | Lebesgue measure is the Haar measure on \(\mathbb{R}^n\) | Lebesgue measure on \(\mathbb{R}^n\) |
 | Characters \(\sigma \in \hat{G}\) | \(e^{ix \cdot \xi}\) for \(\xi \in \mathbb{R}^n\) | Plane waves |
 | Homogeneous space \(G/H\) | \(S^{n-1} = \mathrm{O}(n)/\mathrm{O}(n-1)\) | Sphere \(S^{n-1}\) with surface measure \(d\sigma\) |
-| Spectral synthesis in \(A(G)\) | Restriction \(\phi \mapsto \phi|_{S^{n-1}}\) | Restriction conjecture |
+| Spectral synthesis in \(A(G)\) | Restriction \(\phi \mapsto \phi\vert _{S^{n-1}}\) | Restriction conjecture |
 | Uncertainty principle on \(\mathbb{R}^n\) | \(\Delta x \cdot \Delta\xi \gtrsim 1\) → tubes | Wave packet \(\leftrightarrow\) cap on \(S^{n-1}\) |
 
 **The surface measure as Haar measure.** The unit sphere \(S^{n-1} \subset \mathbb{R}^n\) is a homogeneous space for the orthogonal group \(\mathrm{O}(n)\): for any two unit vectors \(e_1, e_2 \in S^{n-1}\), there exists a rotation \(R \in \mathrm{O}(n)\) with \(Re_1 = e_2\). The stabilizer of the north pole \(e_n = (0,\ldots,0,1)\) is \(\mathrm{O}(n-1)\), so \(S^{n-1} \cong \mathrm{O}(n)/\mathrm{O}(n-1)\).

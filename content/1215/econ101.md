@@ -226,7 +226,7 @@ Because of the law of supply, \(\varepsilon_S\) is always positive. Supply is el
 
 | Elasticity | Formula | Interpretation |
 |---|---|---|
-| Price elasticity of demand | \(|\varepsilon_D|\) | Responsiveness of \(Q_D\) to own price |
+| Price elasticity of demand | \(\vert \varepsilon_D\vert \) | Responsiveness of \(Q_D\) to own price |
 | Income elasticity | \(\varepsilon_M\) | Normal (\(>0\)) vs. inferior (\(<0\)) good |
 | Cross elasticity | \(\varepsilon_{XY}\) | Substitute (\(>0\)) vs. complement (\(<0\)) |
 | Elasticity of supply | \(\varepsilon_S\) | Responsiveness of \(Q_S\) to own price |

@@ -1333,7 +1333,7 @@ The connection to Shannon information is more subtle. The Fisher information for
 | Neyman-Fisher | \(T\) sufficient \(\Leftrightarrow\) \(f_\theta = g(T;\theta)h(x)\) | None |
 | Minimal sufficiency | LR const. in \(\theta \Leftrightarrow\) same min. suf. class | None |
 | Basu | Complete suf. \(T\) \(\perp\) ancillary \(U\) | \(T\) complete sufficient |
-| Rao-Blackwell | \(\operatorname{Var}(E[W|T]) \leq \operatorname{Var}(W)\) | \(T\) sufficient, \(W\) unbiased |
+| Rao-Blackwell | \(\operatorname{Var}(E[W\vert T]) \leq \operatorname{Var}(W)\) | \(T\) sufficient, \(W\) unbiased |
 | Lehmann-Scheffé | Complete suf. + unbiased \(\Rightarrow\) UMVUE | \(T\) complete sufficient |
 | Cramér-Rao | \(\operatorname{Var}(T) \geq [\tau']^2/\mathcal{I}\) | Regular model, \(T\) unbiased |
 | CRLB attainment | Equality iff regular exp. family | Regular model |

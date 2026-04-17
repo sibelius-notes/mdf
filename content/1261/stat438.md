@@ -459,7 +459,7 @@ where \( P(A) \) is the marginal probability of receiving treatment \( A_i \). F
 
 **IPTW calculation example**: Suppose 4 individuals with \( P(A=1 \mid L) \) values:
 
-| \( i \) | \( A \) | \( \hat{e}(\mathbf{L}_i) \) | \( W_i = 1/P(A_i|\mathbf{L}_i) \) | \( W_i^s \) (with \( P(A=1)=0.5 \)) |
+| \( i \) | \( A \) | \( \hat{e}(\mathbf{L}_i) \) | \( W_i = 1/P(A_i\vert \mathbf{L}_i) \) | \( W_i^s \) (with \( P(A=1)=0.5 \)) |
 |---|---|---|---|---|
 | 1 | 1 | 0.8 | \( 1/0.8 = 1.25 \) | \( 0.5/0.8 = 0.625 \) |
 | 2 | 0 | 0.8 | \( 1/0.2 = 5.00 \) | \( 0.5/0.2 = 2.500 \) |

@@ -1269,7 +1269,7 @@ These tools allow practitioners to audit model behaviour, identify spurious corr
 |---|---|
 | Bayes | \(\arg\max_k P(Y=k\mid\mathbf{x})\) |
 | LDA | \(\arg\max_k \mathbf{x}^\top \hat{\Sigma}^{-1}\hat{\boldsymbol{\mu}}_k - \tfrac{1}{2}\hat{\boldsymbol{\mu}}_k^\top\hat{\Sigma}^{-1}\hat{\boldsymbol{\mu}}_k + \log\hat{\pi}_k\) |
-| QDA | \(\arg\max_k -\tfrac{1}{2}\log|\hat{\Sigma}_k| - \tfrac{1}{2}(\mathbf{x}-\hat{\boldsymbol{\mu}}_k)^\top\hat{\Sigma}_k^{-1}(\mathbf{x}-\hat{\boldsymbol{\mu}}_k)+\log\hat{\pi}_k\) |
+| QDA | \(\arg\max_k -\tfrac{1}{2}\log\vert \hat{\Sigma}_k\vert - \tfrac{1}{2}(\mathbf{x}-\hat{\boldsymbol{\mu}}_k)^\top\hat{\Sigma}_k^{-1}(\mathbf{x}-\hat{\boldsymbol{\mu}}_k)+\log\hat{\pi}_k\) |
 | Naive Bayes | \(\arg\max_k \log\hat{\pi}_k + \sum_j \log\hat{f}_{kj}(x_j)\) |
 | Logistic (binary) | \(\hat{y} = \mathbf{1}[\hat{\sigma}(\boldsymbol{\beta}^\top\tilde{\mathbf{x}}) \geq \tau]\) |
 | \(k\)-NN | majority vote in \(\mathcal{N}_k(\mathbf{x})\) |
