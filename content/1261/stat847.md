@@ -150,7 +150,7 @@ models |> map_dbl(function(m) summary(m)[["r.squared"]])
 
 R Markdown integrates prose, code, and output into a single document. The YAML header specifies the output format; code chunks use fenced backtick syntax with `{r}` as the engine specifier. Chunk options such as `echo`, `eval`, `warning`, and `fig.width` control what appears in the rendered document.
 
-```
+~~~
 ---
 title: "EDA Report"
 output: html_document
@@ -165,7 +165,7 @@ knitr::opts_chunk[["set"]](echo = TRUE, warning = FALSE)
 ```{r summary}
 summary(airquality)
 ```
-```
+~~~
 
 Quarto (`.qmd`) is the next-generation successor to R Markdown, supporting Python, Julia, and Observable in the same document framework.
 
