@@ -420,3 +420,106 @@ PHIL 145 teaches the tools; PHIL 145c applies them to cases where the emotional 
 {{< /lightning >}}
 
 ---
+
+## Rotating-Topics Composites (-rest)
+
+The `-rest` notes below are not single courses. Each is a synthetic composite that stitches together several offerings of a UW rotating-topics graduate course — one whose subject matter changes every term — into one coherent textbook-style document. The courses themselves exist; the unified narrative, the chapter-by-chapter compression, and the cross-references between offerings are invented here. For any given term, only one of the chapters in a `-rest` file corresponds to the course as actually taught; the other chapters describe what was taught in other terms. These notes are written for the reader who wants a map of the subject's rotation across recent years, not for the reader studying for a specific final.
+
+### [CO 739: Topics in Combinatorics](/1261/co739-rest/)
+Seven instances synthesized: stable polynomials, combinatorics of Feynman diagrams, Hopf algebras and renormalization, topological combinatorics, information theory, combinatorial algebraic geometry, and a pointer to the Yeats orthogonal-polynomials offering.
+
+{{< lightning >}}
+CO 739 has rotated across a strikingly wide spectrum in the past decade. A single student will see one offering; a single composite lets a reader see the full arc — which is where the subject's connections to algebra, geometry, and probability become visible.
+{{< /lightning >}}
+
+---
+
+### [CO 749: Topics in Graph Theory](/1249/co749-rest/)
+Geelen's Fall 2016 lecture course on the Robertson–Seymour graph minors structure theorem, together with a pointer to the Fall 2024 follow-up for which no public outline was archived.
+
+{{< lightning >}}
+Geelen's F16 was one of only two recent CO 749 offerings with a recoverable outline; the composite treats it at length and uses the F24 pointer to survey directions the follow-up would likely have taken (matroid minors, structural graph theory, induced-subgraph analogues).
+{{< /lightning >}}
+
+---
+
+### [CO 759: Topics in Discrete Optimization](/1189/co759-rest/)
+Six instances synthesized: Cheriyan's Spring 2014 on spectral methods, Cook's Winter 2015 on computational discrete optimization, Fukasawa's Winter 2016 on integer programming, Cook's Winter 2018 on deep learning from an optimization perspective, Fall 2019 on optimization under uncertainty, and Spring 2024 on approximation algorithms and hardness.
+
+{{< lightning >}}
+The reference model for every other `-rest` file in this chapter. Six offerings, six chapters, each at textbook depth with definitions, theorems, and worked examples from the standard public references for that topic.
+{{< /lightning >}}
+
+---
+
+### [CO 769: Topics in Continuous Optimization](/1261/co769-rest/)
+Two deeply developed instances: Wolkowicz's Winter 2016 course on facial reduction in semidefinite programming, and optimal transport (following the modern Villani / Santambrogio / Peyré–Cuturi literature).
+
+{{< lightning >}}
+CO 769 offerings are rarer than the other rotating topics courses, so the composite compensates with dense per-chapter treatment (125–130 lines each). Either chapter stands on its own as a first introduction to its subfield.
+{{< /lightning >}}
+
+---
+
+### [CO 781: Topics in Quantum Information](/1241/co781-rest/)
+Two Debbie Leung offerings on quantum error correction and fault-tolerant quantum computation, developed through the standard public literature (Nielsen–Chuang, Gottesman, Kitaev, Fowler–Mariantoni–Martinis–Cleland, Terhal, Watrous).
+
+{{< lightning >}}
+CO 781 rotates among several quantum-information topics; Leung's quantum-error-correction offerings share enough overlap that a combined treatment is more coherent than two separate ones.
+{{< /lightning >}}
+
+---
+
+### [PMATH 930: Topics in Logic](/1231/pmath930-rest/)
+Six instances synthesized across the Moosa / Willard / Zucker offerings: model theory of fields with operators, difference fields, universal algebra, countably infinite Ramsey theory, differential fields II, and the Fall 2025 geometric stability theory offering.
+
+{{< lightning >}}
+PMATH 930 rotates across model theory, universal algebra, and combinatorics. The composite presents each as a motivational first-lecture tour so that a student scanning the chapters can decide which offering fits their research interests.
+{{< /lightning >}}
+
+---
+
+### [PMATH 940: Topics in Number Theory](/1261/pmath940-rest/)
+Seven instances: Wang's elliptic curves, three Stewart offerings (Diophantine equations, geometric number theory, Diophantine geometry), Rubinstein's analytic number theory, Liu's analytic Diophantine geometry, and the Winter 2026 Fermat's Last Theorem course.
+
+{{< lightning >}}
+The composite traces how UW's number theory curriculum rotates between algebraic, geometric, and analytic threads, with Stewart's repeated appearances as the unifying presence in the Diophantine geometry lineage.
+{{< /lightning >}}
+
+---
+
+### [PMATH 945: Topics in Algebra](/1269/pmath945-rest/)
+Seven instances: Jason Bell (algebraic constructions / rings / category theory), Slofstra (non-local games), Paulsen (operator-algebraic QIT), Karigiannis (Clifford algebras and spin geometry), and the Fall 2026 arithmetic-dynamics course.
+
+{{< lightning >}}
+PMATH 945 illustrates how broadly "algebra" stretches at UW — from categorical foundations to quantum information to dynamical systems. The composite is written so each chapter reads as a first-lecture tour of its subfield.
+{{< /lightning >}}
+
+---
+
+### [PMATH 950: Topics in Analysis](/1251/pmath950-rest/)
+Seven instances on tensor products of C\*-algebras, operator algebras and dynamics, quantum representation theory, convex geometric analysis, II₁ factors and subfactor theory, Choquet theory, and operator systems.
+
+{{< lightning >}}
+The strands of PMATH 950 most visible in recent years have been analytic: operator algebras, free probability, and their geometric counterparts. The composite stitches these into a single coherent pass through the Paulsen / Kennedy / Brannan orbit of offerings.
+{{< /lightning >}}
+
+---
+
+### [PMATH 965: Topics in Geometry and Topology](/1269/pmath965-rest/)
+Nine instances: holonomy groups, deformation theory, algebraic stacks, rational homotopy theory, harmonic maps, spin geometry, higher and derived stacks, gauge theory, and motivic integration.
+
+{{< lightning >}}
+PMATH 965 spans the widest topic range of any `-rest` file — nine chapters covering everything from Berger's classification to Donaldson–Seiberg–Witten four-manifold theory to Kontsevich's motivic integration. Each chapter is written as a standalone introduction.
+{{< /lightning >}}
+
+---
+
+### [PMATH 990: Topics in Pure Mathematics](/1231/pmath990-rest/)
+Three densely developed instances: Paulsen's Winter 2021 course on functional analysis methods for quantum information, Slofstra's Winter 2022 course on MIP\* and quantum complexity, and Nica's Winter 2023 course on non-commutative random variables and free probability.
+
+{{< lightning >}}
+PMATH 990 is the most open-ended rotating-topics course in the PMATH curriculum. The three chapters cover the operator-algebraic, complexity-theoretic, and free-probabilistic corners of what "pure mathematics" currently means at UW.
+{{< /lightning >}}
+
+---
