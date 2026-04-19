@@ -168,7 +168,13 @@ Wigner identifies two specific phenomena as puzzling. First, mathematical concep
 <div class="example">
 <strong>Example — complex numbers in quantum mechanics:</strong> Complex numbers were introduced to solve algebraic equations like \( x^2 + 1 = 0 \). There is no obvious sense in which physical quantities should be complex-valued. Yet quantum mechanics requires the wavefunction \( \psi \) to be a complex-valued function, and the interference phenomena that result — which have been experimentally confirmed to extraordinary precision — depend essentially on the complex phase. The complex number \( e^{i\theta} \) is not a mere notational convenience; it does physical work.
 
-<strong>Example — non-Euclidean geometry in general relativity:</strong> Riemannian geometry was developed in the nineteenth century as pure mathematics, exploring the logical consequences of relaxing Euclid's parallel postulate. Einstein found, four decades later, that Riemannian geometry is precisely the right tool for describing a curved spacetime. The curvature tensor \[ R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu} \] had been lying in wait, as it were, for a physical application.
+<strong>Example — non-Euclidean geometry in general relativity:</strong> Riemannian geometry was developed in the nineteenth century as pure mathematics, exploring the logical consequences of relaxing Euclid's parallel postulate. Einstein found, four decades later, that Riemannian geometry is precisely the right tool for describing a curved spacetime. The curvature tensor
+
+\[
+R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}
+\]
+
+had been lying in wait, as it were, for a physical application.
 </div>
 
 ## 3.2 Diagnosing the Puzzle
@@ -220,7 +226,13 @@ Let \( M = \langle D_M, R_M \rangle \) be a mathematical structure with domain \
 The partiality is essential: we do not require a full isomorphism, because mathematical models are always idealized. The model of a projectile as a point mass moving in a uniform gravitational field does not perfectly represent any actual projectile, but it captures enough structural features to generate accurate predictions within certain ranges.
 
 <div class="example">
-<strong>The heat equation:</strong> Consider Fourier's model of heat conduction. The mathematical structure is given by the partial differential equation \[ \frac{\partial T}{\partial t} = \alpha \nabla^2 T \] where \( T \) is temperature and \( \alpha \) is thermal diffusivity. The mapping assigns mathematical variables to measurable physical quantities (temperature at each point), and the equation's solutions map onto the temporal evolution of the temperature field. The mapping is partial because the equation assumes a continuous, homogeneous medium — an idealization no real material satisfies exactly.
+<strong>The heat equation:</strong> Consider Fourier's model of heat conduction. The mathematical structure is given by the partial differential equation
+
+\[
+\frac{\partial T}{\partial t} = \alpha \nabla^2 T
+\]
+
+where \( T \) is temperature and \( \alpha \) is thermal diffusivity. The mapping assigns mathematical variables to measurable physical quantities (temperature at each point), and the equation's solutions map onto the temporal evolution of the temperature field. The mapping is partial because the equation assumes a continuous, homogeneous medium — an idealization no real material satisfies exactly.
 </div>
 
 ## 4.3 The Varieties of Mathematical Representation
@@ -268,10 +280,22 @@ The key insight is that many physical explanations proceed not by identifying th
 ## 5.2 Asymptotic Reasoning and Emergence
 
 <div class="definition">
-An <strong>asymptotic expansion</strong> of a function \( f(\epsilon) \) as \( \epsilon \to 0 \) is a formal series \[ f(\epsilon) \sim \sum_{n=0}^{\infty} a_n \epsilon^n \] that need not converge, but whose partial sums provide increasingly accurate approximations for small \( \epsilon \).
+An <strong>asymptotic expansion</strong> of a function \( f(\epsilon) \) as \( \epsilon \to 0 \) is a formal series
+
+\[
+f(\epsilon) \sim \sum_{n=0}^{\infty} a_n \epsilon^n
+\]
+
+that need not converge, but whose partial sums provide increasingly accurate approximations for small \( \epsilon \).
 </div>
 
-Batterman's central example is the phenomenon of **universality** in critical phenomena. Near a phase transition (say, the liquid-gas transition), many different physical systems exhibit the same scaling behavior, characterized by **critical exponents** (临界指数). The correlation length \( \xi \) diverges as \[ \xi \sim |T - T_c|^{-\nu} \] where \( \nu \) is a critical exponent that takes the same value across a vast **universality class** of physically very different systems — different fluids, different magnets, even biological systems.
+Batterman's central example is the phenomenon of **universality** in critical phenomena. Near a phase transition (say, the liquid-gas transition), many different physical systems exhibit the same scaling behavior, characterized by **critical exponents** (临界指数). The correlation length \( \xi \) diverges as
+
+\[
+\xi \sim |T - T_c|^{-\nu}
+\]
+
+where \( \nu \) is a critical exponent that takes the same value across a vast **universality class** of physically very different systems — different fluids, different magnets, even biological systems.
 
 The explanation of universality proceeds via the **renormalization group** (重整化群). The basic idea is to analyze how the behavior of a statistical mechanical system changes as we coarse-grain — averaging over short-distance degrees of freedom to obtain an effective description at longer length scales. Formally, the renormalization group transformation \( \mathcal{R} \) maps a Hamiltonian \( H \) (a specification of the system's interactions at a given scale) to a new Hamiltonian \( H' = \mathcal{R}(H) \) at a coarser scale. Under repeated application of \( \mathcal{R} \), trajectories in Hamiltonian space flow toward **fixed points** \( H^* \) satisfying \( \mathcal{R}(H^*) = H^* \). Different systems that flow to the same fixed point exhibit identical critical behavior — this is the mathematical explanation of why universality holds.
 
@@ -384,7 +408,13 @@ The **indispensability argument** (不可缺少性论证) for mathematical Plato
 
 Quine's holism is grounded in his philosophy of language, particularly his views on the **web of belief**: all of our beliefs form an interconnected network, and experience impinges on the network at its periphery (the observational claims), causing adjustments that propagate inward to increasingly theoretical claims. No statement is immune from revision in response to experience — not even the laws of logic — but by the same token, no statement (including a mathematical statement) is confirmable or disconfirmable in isolation. When quantum mechanics is confirmed by experiment, every statement in the theory — including the statement that there exist Hilbert spaces — is, to that degree, confirmed.
 
-Putnam adds that mathematics is **indispensable** to science: scientific theories cannot be stated, let alone confirmed, without the mathematical apparatus they employ. We cannot state Newton's law of gravitation \[ F = G \frac{m_1 m_2}{r^2} \] without employing real numbers, and we cannot confirm the law without treating those numbers as genuinely referring. Therefore, by Quinean naturalism and holism, we are committed to the existence of real numbers.
+Putnam adds that mathematics is **indispensable** to science: scientific theories cannot be stated, let alone confirmed, without the mathematical apparatus they employ. We cannot state Newton's law of gravitation
+
+\[
+F = G \frac{m_1 m_2}{r^2}
+\]
+
+without employing real numbers, and we cannot confirm the law without treating those numbers as genuinely referring. Therefore, by Quinean naturalism and holism, we are committed to the existence of real numbers.
 
 ## 7.2 The Standard Formulation
 
@@ -454,7 +484,13 @@ Field's most impressive technical achievement is a nominalization of Newtonian g
 Using Hilbert's axioms for geometry and Adolf Grünbaum's work on intrinsic spacetime structure, Field constructs a theory in which the content of Newton's gravitational theory is expressed using only variables ranging over spacetime points and regions, and predicates expressing betweenness, congruence, and their analogues for the gravitational potential field.
 
 <div class="example">
-Where Newton writes \[ \nabla^2 \phi = 4\pi G \rho \] quantifying over real-valued functions \( \phi \) and \( \rho \), Field's nominalized version expresses the same content using intrinsic spacetime relations: instead of saying that the gravitational potential at a point has a certain real-valued gradient, one says that certain spacetime regions stand in certain comparative potential relations that are geometrically expressible.
+Where Newton writes
+
+\[
+\nabla^2 \phi = 4\pi G \rho
+\]
+
+quantifying over real-valued functions \( \phi \) and \( \rho \), Field's nominalized version expresses the same content using intrinsic spacetime relations: instead of saying that the gravitational potential at a point has a certain real-valued gradient, one says that certain spacetime regions stand in certain comparative potential relations that are geometrically expressible.
 </div>
 
 ## 8.4 Challenges to Field's Program
@@ -493,7 +529,13 @@ Abstract philosophical arguments about applicability must be tested against the 
 
 ## 9.2 Case Study I: Quantum Field Theory and Renormalization
 
-Quantum field theory (QFT) is the most empirically successful physical theory ever developed. Quantum electrodynamics (QED) predicts the anomalous magnetic moment of the electron as \[ a_e = \frac{g-2}{2} \approx 1.001\,159\,652\,181\,643 \] in perfect agreement with experiment to twelve significant figures. Yet QFT is mathematically problematic in ways that raise deep philosophical issues.
+Quantum field theory (QFT) is the most empirically successful physical theory ever developed. Quantum electrodynamics (QED) predicts the anomalous magnetic moment of the electron as
+
+\[
+a_e = \frac{g-2}{2} \approx 1.001\,159\,652\,181\,643
+\]
+
+in perfect agreement with experiment to twelve significant figures. Yet QFT is mathematically problematic in ways that raise deep philosophical issues.
 
 The **ultraviolet divergences** of QFT — the appearance of infinite quantities in perturbative calculations — are handled by the procedure of **renormalization** (重整化). In its original form, renormalization involves subtracting infinities from infinities to get finite, experimentally confirmed answers. This procedure troubled even its creators: Dirac called it "just not sensible mathematics."
 
@@ -501,11 +543,23 @@ The **ultraviolet divergences** of QFT — the appearance of infinite quantities
 The philosophical puzzle is multi-layered. First, if QFT in its unrenormalized form is mathematically ill-defined, in what sense does it represent anything? Second, the success of renormalized QFT is perhaps the strongest existing example of mathematical application yielding knowledge — yet it rests on mathematical procedures that are, strictly speaking, illegitimate. Batterman's notion of explanatory idealization is directly relevant here.
 </div>
 
-The **renormalization group** (重整化群), developed by Wilson and others, provides a more principled understanding: the divergences arise because QFT is an effective field theory valid only up to some energy scale \( \Lambda \), and renormalization amounts to specifying how the theory's parameters depend on the choice of scale. Concretely, when we compute the one-loop correction to the electron propagator, we encounter an integral of the form \[ \int_0^\infty \frac{d^4 k}{k^2 - m^2} \] which diverges at large \( k \) (the ultraviolet region). The renormalization procedure introduces a cutoff \( \Lambda \), computes the integral up to \( \Lambda \), and absorbs the \( \Lambda \)-dependent terms into redefined (renormalized) parameters — the physical electron mass \( m_{\text{phys}} \) and charge \( e_{\text{phys}} \) — whose values are taken from experiment rather than derived from the theory. The mathematics of fixed points and universality classes (from Chapter 5) reappears here: different choices of \( \Lambda \) define different effective theories that are related by the renormalization group transformation, and the physical predictions are those that lie on the renormalization group trajectory — independent of the arbitrary cutoff. The deep philosophical point is that the mathematical mechanism of renormalization is not ad hoc but reflects a genuine physical fact: the physics at the scale of atomic structure is effectively decoupled from the physics at the Planck scale.
+The **renormalization group** (重整化群), developed by Wilson and others, provides a more principled understanding: the divergences arise because QFT is an effective field theory valid only up to some energy scale \( \Lambda \), and renormalization amounts to specifying how the theory's parameters depend on the choice of scale. Concretely, when we compute the one-loop correction to the electron propagator, we encounter an integral of the form
+
+\[
+\int_0^\infty \frac{d^4 k}{k^2 - m^2}
+\]
+
+which diverges at large \( k \) (the ultraviolet region). The renormalization procedure introduces a cutoff \( \Lambda \), computes the integral up to \( \Lambda \), and absorbs the \( \Lambda \)-dependent terms into redefined (renormalized) parameters — the physical electron mass \( m_{\text{phys}} \) and charge \( e_{\text{phys}} \) — whose values are taken from experiment rather than derived from the theory. The mathematics of fixed points and universality classes (from Chapter 5) reappears here: different choices of \( \Lambda \) define different effective theories that are related by the renormalization group transformation, and the physical predictions are those that lie on the renormalization group trajectory — independent of the arbitrary cutoff. The deep philosophical point is that the mathematical mechanism of renormalization is not ad hoc but reflects a genuine physical fact: the physics at the scale of atomic structure is effectively decoupled from the physics at the Planck scale.
 
 ## 9.3 Case Study II: Population Genetics and Hardy-Weinberg
 
-In biology, the **Hardy-Weinberg law** provides a foundational example of mathematical modeling. For a population with two alleles \( A \) and \( a \) at frequencies \( p \) and \( q = 1 - p \), the Hardy-Weinberg law states that under idealized conditions (random mating, no selection, no mutation, no genetic drift, infinite population), the genotype frequencies \( AA, Aa, aa \) are given by \[ p^2, \quad 2pq, \quad q^2 \] and remain constant across generations.
+In biology, the **Hardy-Weinberg law** provides a foundational example of mathematical modeling. For a population with two alleles \( A \) and \( a \) at frequencies \( p \) and \( q = 1 - p \), the Hardy-Weinberg law states that under idealized conditions (random mating, no selection, no mutation, no genetic drift, infinite population), the genotype frequencies \( AA, Aa, aa \) are given by
+
+\[
+p^2, \quad 2pq, \quad q^2
+\]
+
+and remain constant across generations.
 
 The idealization is extreme: no real population is infinite, no mating is perfectly random, and selection is ubiquitous. Yet the Hardy-Weinberg law is not empirically useless — real populations approximate it when departures from idealization are small, and deviations from it signal the presence of evolutionary forces worth investigating.
 
@@ -524,7 +578,13 @@ EU(A) = \sum_i p_i \cdot u(x_i)
 \]
 where \( p_i \) are probabilities of outcomes \( x_i \) under action \( A \), and \( u \) is a utility function. This theory is the basis of rational choice theory and much of economic modeling.
 
-The mathematical apparatus — real-valued utility functions, subjective probability measures, the expectation operator — is essential to the theory's formulation. The von Neumann-Morgenstern representation theorem provides the mathematical foundation: if a preference relation \( \succsim \) over lotteries satisfies four axioms (completeness, transitivity, continuity, and independence), then there exists a utility function \( u \) such that \[ A \succsim B \iff EU(A) \geq EU(B) \] The function \( u \) is unique up to positive affine transformation. This is a purely mathematical result — it establishes the representability of rational preferences by a real-valued function given the axioms — and its applicability in economics rests on the assumption that rational agents' preferences satisfy the axioms.
+The mathematical apparatus — real-valued utility functions, subjective probability measures, the expectation operator — is essential to the theory's formulation. The von Neumann-Morgenstern representation theorem provides the mathematical foundation: if a preference relation \( \succsim \) over lotteries satisfies four axioms (completeness, transitivity, continuity, and independence), then there exists a utility function \( u \) such that
+
+\[
+A \succsim B \iff EU(A) \geq EU(B)
+\]
+
+The function \( u \) is unique up to positive affine transformation. This is a purely mathematical result — it establishes the representability of rational preferences by a real-valued function given the axioms — and its applicability in economics rests on the assumption that rational agents' preferences satisfy the axioms.
 
 Yet the empirical record is mixed: the Allais paradox, the Ellsberg paradox, and a wealth of behavioral economics results show that actual human agents systematically violate the axioms of expected utility theory. The Allais paradox demonstrates that subjects' choices between lotteries violate the independence axiom in predictable ways. The Ellsberg paradox shows that agents prefer bets on known probabilities over structurally equivalent bets on unknown probabilities — a phenomenon called ambiguity aversion that EUT cannot accommodate.
 

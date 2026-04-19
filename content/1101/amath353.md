@@ -1253,7 +1253,7 @@ The adjoint governs not just eigenvalue theory but the solvability of inhomogene
 \[
 \langle v, f \rangle = 0
 \]
-for every \(v\) in the null space of \(L^<em>\) (i.e., every \(v\) with \(L^</em>v = 0\)).</div>
+for every \(v\) in the null space of \(L^*\) (i.e., every \(v\) with \(L^*v = 0\)).</div>
 
 In words: the right-hand side \(f\) must be orthogonal to all solutions of the homogeneous adjoint problem. This is the PDE analogue of the familiar linear algebra result: the system \(A\mathbf{x} = \mathbf{b}\) has a solution if and only if \(\mathbf{b}\) is orthogonal to the null space of \(A^T\). The Fredholm alternative controls when Green's functions exist and when resonance phenomena occur (the forcing \(f\) excites a natural mode of the system, leading to the absence of bounded solutions).
 

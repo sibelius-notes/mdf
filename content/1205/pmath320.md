@@ -1307,11 +1307,11 @@ Isometries combine in non-obvious ways. Here are some key composition rules:
 <div class="example">
 <strong>Example (Composition of reflections).</strong>
 
-1. **Two reflections across parallel lines** at distance \(d\): the composition is a translation by \(2d\) perpendicular to the lines.
+1. <strong>Two reflections across parallel lines</strong> at distance \(d\): the composition is a translation by \(2d\) perpendicular to the lines.
 
-2. **Two reflections across intersecting lines** meeting at angle \(\theta\): the composition is a rotation by \(2\theta\) about the point of intersection.
+2. <strong>Two reflections across intersecting lines</strong> meeting at angle \(\theta\): the composition is a rotation by \(2\theta\) about the point of intersection.
 
-3. **Three reflections**: the composition of three reflections is a glide reflection (or a single reflection if two of the three axes are parallel and the third is perpendicular to them).
+3. <strong>Three reflections</strong>: the composition of three reflections is a glide reflection (or a single reflection if two of the three axes are parallel and the third is perpendicular to them).
 
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 420 220" width="420" height="220" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">
@@ -1944,13 +1944,13 @@ The challenge Viazovska solved was constructing an explicit "magic function" \(f
 <div class="remark">
 <strong>Remark (Why dimensions 8 and 24 are special).</strong> The exceptional nature of dimensions 8 and 24 has several intertwined explanations:
 
-- **Lattice theory**: \(E_8\) and \(\Lambda_{24}\) are the only even unimodular lattices in dimensions 8 and 24, respectively (up to isometry). Even unimodular lattices exist only in dimensions divisible by 8, and the first two cases (dimensions 8 and 24) happen to be optimal for packing.
+- <strong>Lattice theory</strong>: \(E_8\) and \(\Lambda_{24}\) are the only even unimodular lattices in dimensions 8 and 24, respectively (up to isometry). Even unimodular lattices exist only in dimensions divisible by 8, and the first two cases (dimensions 8 and 24) happen to be optimal for packing.
 
-- **Root systems**: \(E_8\) is the root system of the exceptional simple Lie algebra \(E_8\), one of the five "exceptional" Lie algebras that appear in the classification of simple Lie groups. The other exceptional algebras (\(G_2, F_4, E_6, E_7\)) are related to octonions and other non-associative division algebras — reflecting deeper arithmetic specialness of these dimensions.
+- <strong>Root systems</strong>: \(E_8\) is the root system of the exceptional simple Lie algebra \(E_8\), one of the five "exceptional" Lie algebras that appear in the classification of simple Lie groups. The other exceptional algebras (\(G_2, F_4, E_6, E_7\)) are related to octonions and other non-associative division algebras — reflecting deeper arithmetic specialness of these dimensions.
 
-- **Error-correcting codes**: The Leech lattice \(\Lambda_{24}\) is closely related to the **Golay code**, a perfect binary error-correcting code of length 24. The Golay code achieves the theoretical maximum error-correction for a binary linear code of its parameters, and the Leech lattice is constructed from it.
+- <strong>Error-correcting codes</strong>: The Leech lattice \(\Lambda_{24}\) is closely related to the <strong>Golay code</strong>, a perfect binary error-correcting code of length 24. The Golay code achieves the theoretical maximum error-correction for a binary linear code of its parameters, and the Leech lattice is constructed from it.
 
-- **Sporadic simple groups**: The symmetry group of \(\Lambda_{24}\) contains the Conway group \(Co_0\), which in turn contains \(Co_1, Co_2, Co_3\) and many other sporadic simple groups — the "happy family" of 20 of the 26 sporadic simple groups. The Monster group itself (the largest sporadic simple group) is connected to the Leech lattice through the theory of vertex operator algebras and monstrous moonshine. So the sphere packing problem in dimension 24 is connected to some of the deepest structure in finite group theory.
+- <strong>Sporadic simple groups</strong>: The symmetry group of \(\Lambda_{24}\) contains the Conway group \(Co_0\), which in turn contains \(Co_1, Co_2, Co_3\) and many other sporadic simple groups — the "happy family" of 20 of the 26 sporadic simple groups. The Monster group itself (the largest sporadic simple group) is connected to the Leech lattice through the theory of vertex operator algebras and monstrous moonshine. So the sphere packing problem in dimension 24 is connected to some of the deepest structure in finite group theory.
 </div>
 
 ## 6.6 Known Kissing Numbers
@@ -2565,7 +2565,7 @@ The 230 **space groups** classify all possible discrete symmetry groups of \(\ma
 Crystallographers use space groups to classify crystal structures: every crystal belongs to one of the 230 space groups. The Nacl (table salt) crystal has space group \(Fm\bar{3}m\) (number 225), one of the cubic space groups. Diamond has space group \(Fd\bar{3}m\) (number 227).
 
 <div class="remark">
-<strong>Remark (Space groups and protein crystallography).</strong> In X-ray crystallography of proteins, knowing the space group of the crystal is the first step in determining the three-dimensional structure of the protein. Since proteins are chiral molecules (they consist of L-amino acids only), protein crystals can only belong to one of the 65 **chiral space groups** (those without improper symmetry elements like reflections or roto-inversions). The most common space groups for protein crystals are \(P2_1 2_1 2_1\) (orthorhombic) and \(P2_1\) (monoclinic). Understanding the symmetry of the crystal allows crystallographers to solve the structure from diffraction data.
+<strong>Remark (Space groups and protein crystallography).</strong> In X-ray crystallography of proteins, knowing the space group of the crystal is the first step in determining the three-dimensional structure of the protein. Since proteins are chiral molecules (they consist of L-amino acids only), protein crystals can only belong to one of the 65 <strong>chiral space groups</strong> (those without improper symmetry elements like reflections or roto-inversions). The most common space groups for protein crystals are \(P2_1 2_1 2_1\) (orthorhombic) and \(P2_1\) (monoclinic). Understanding the symmetry of the crystal allows crystallographers to solve the structure from diffraction data.
 </div>
 
 ---
@@ -2591,7 +2591,7 @@ The shortest vectors (minimal length \(\sqrt{2}\)) are the **roots** of the \(E_
 
 Total: \(112 + 128 = 240\). ✓
 
-The 240 roots form a highly symmetric arrangement: the symmetry group of \(E_8\) (the Weyl group \(W(E_8)\)) has order \(696,729,600\). Each root is perpendicular to 56 others and at \(60°\) to 126 others. The roots span \(\mathbb{R}^8\) and their convex hull is the **421 polytope**, one of the exceptional uniform polytopes discovered by Gosset.
+The 240 roots form a highly symmetric arrangement: the symmetry group of \(E_8\) (the Weyl group \(W(E_8)\)) has order \(696,729,600\). Each root is perpendicular to 56 others and at \(60°\) to 126 others. The roots span \(\mathbb{R}^8\) and their convex hull is the <strong>421 polytope</strong>, one of the exceptional uniform polytopes discovered by Gosset.
 </div>
 
 <div style="text-align:center; margin: 1em 0;">
@@ -2677,7 +2677,7 @@ Not all sphere packings are lattice packings. **Random packings** arise naturall
 The gap between random (\(\approx 64\%\)) and crystalline (\(\approx 74\%\)) packings is significant. A key question in materials science is: why do some materials crystallize (achieving nearly optimal packing) while others form glasses (disordered packings)? The answer involves the kinetics of crystallization as well as the thermodynamics, and is still not fully understood.
 
 <div class="remark">
-<strong>Remark (Sphere packings and error-correcting codes).</strong> There is a profound analogy between sphere packing in \(\mathbb{R}^n\) and coding theory. In coding theory, we want binary codewords of length \(n\) that are well-separated (large Hamming distance), so that received messages corrupted by noise can be corrected. The codewords live in \(\{0,1\}^n\) (a discrete analog of \(\mathbb{R}^n\)), and the Hamming balls around each codeword must not overlap (analogous to sphere packing). The **Hamming bound** on code size parallels the sphere packing density bound.
+<strong>Remark (Sphere packings and error-correcting codes).</strong> There is a profound analogy between sphere packing in \(\mathbb{R}^n\) and coding theory. In coding theory, we want binary codewords of length \(n\) that are well-separated (large Hamming distance), so that received messages corrupted by noise can be corrected. The codewords live in \(\{0,1\}^n\) (a discrete analog of \(\mathbb{R}^n\)), and the Hamming balls around each codeword must not overlap (analogous to sphere packing). The <strong>Hamming bound</strong> on code size parallels the sphere packing density bound.
 
 The Golay code (a perfect binary \([24, 12, 8]\) code) is the discrete analog of the Leech lattice: it has the maximum possible number of codewords (\(2^{12}\)) given its parameters, just as the Leech lattice achieves the optimal packing density in \(\mathbb{R}^{24}\). The algebraic construction of the Leech lattice from the Golay code illustrates the deep connection between these two problems.
 </div>
@@ -2777,7 +2777,7 @@ By Menelaus: \((BD/DC)(CE/EA)(AF/FB) = -1\). We have \(BD/DC = 1\) (midpoint) an
 ### S6.3 The Simson Line
 
 <div class="theorem">
-<strong>Simson's Theorem (Robert Simson, 1750; actually due to William Wallace, 1797).</strong> Let \(\triangle ABC\) be inscribed in a circle and let \(P\) be any point on the circle (distinct from \(A, B, C\)). The feet of the perpendiculars from \(P\) to the three sides (or their extensions) \(BC, CA, AB\) are collinear. The line through these three feet is the **Simson line** (or **Wallace line**) of \(P\).
+<strong>Simson's Theorem (Robert Simson, 1750; actually due to William Wallace, 1797).</strong> Let \(\triangle ABC\) be inscribed in a circle and let \(P\) be any point on the circle (distinct from \(A, B, C\)). The feet of the perpendiculars from \(P\) to the three sides (or their extensions) \(BC, CA, AB\) are collinear. The line through these three feet is the <strong>Simson line</strong> (or <strong>Wallace line</strong>) of \(P\).
 </div>
 
 The Simson line is one of the most beautiful theorems in elementary geometry. As \(P\) moves around the circumcircle, its Simson line rotates. If \(P\) moves by an arc of \(2\alpha\), the Simson line rotates by \(\alpha\).
@@ -2942,7 +2942,7 @@ This section provides worked problems at the level of the course, illustrating t
 
 <em>Solution.</em> Gauss's theorem states that the regular \(n\)-gon is constructible iff \(n = 2^a p_1 \cdots p_k\) where each \(p_i\) is a distinct Fermat prime. Since \(17 = 2^{2^2} + 1\) is a Fermat prime (with \(m = 2\)), the regular 17-gon is constructible.
 
-More explicitly: \(\cos(2\pi/17)\) is a root of the **minimal polynomial** of a primitive 17th root of unity over \(\mathbb{Q}\), which is the cyclotomic polynomial \(\Phi_{17}(x) = x^{16} + x^{15} + \cdots + x + 1\). Gauss showed this splits into quadratics and can be solved by nested square roots:
+More explicitly: \(\cos(2\pi/17)\) is a root of the <strong>minimal polynomial</strong> of a primitive 17th root of unity over \(\mathbb{Q}\), which is the cyclotomic polynomial \(\Phi_{17}(x) = x^{16} + x^{15} + \cdots + x + 1\). Gauss showed this splits into quadratics and can be solved by nested square roots:
 
 \[
 \cos\frac{2\pi}{17} = \frac{-1 + \sqrt{17} + \sqrt{34 - 2\sqrt{17}} + 2\sqrt{17 + 3\sqrt{17} - \sqrt{34 - 2\sqrt{17}} - 2\sqrt{34 + 2\sqrt{17}}}}{16}.
@@ -2953,9 +2953,9 @@ This explicit formula involves only \(+, -, \times, \div, \sqrt{\phantom{x}}\) a
 <div class="example">
 <strong>Problem 2.</strong> Is the regular 9-gon constructible? What about the regular 15-gon?
 
-<em>Solution.</em> The regular 9-gon requires \(\cos(40°)\). Now \(9 = 3^2\), which is a power of a Fermat prime but includes a factor \(3^2 > 3 = p_1\) — the Gauss condition requires only **distinct** Fermat primes raised to the first power. Since \(9\) includes \(3^2\), the regular 9-gon is **not** constructible. (Equivalently, trisecting a \(120°\) angle to get \(40°\) is a cube-root operation, not achievable by straightedge and compass.)
+<em>Solution.</em> The regular 9-gon requires \(\cos(40°)\). Now \(9 = 3^2\), which is a power of a Fermat prime but includes a factor \(3^2 > 3 = p_1\) — the Gauss condition requires only <strong>distinct</strong> Fermat primes raised to the first power. Since \(9\) includes \(3^2\), the regular 9-gon is <strong>not</strong> constructible. (Equivalently, trisecting a \(120°\) angle to get \(40°\) is a cube-root operation, not achievable by straightedge and compass.)
 
-For the regular 15-gon: \(15 = 3 \times 5\). Since 3 and 5 are both distinct Fermat primes, the regular 15-gon **is** constructible. Explicit construction: construct a regular triangle \(\{3\}\) inscribed in a circle (arc \(= 120°\)) and a regular pentagon \(\{5\}\) inscribed in the same circle (arc \(= 72°\)). The difference of arcs is \(120° - 72° = 48°\), and half of that is \(24°\). But more directly, \(\gcd(3, 5) = 1\) and \(3 + 5 = 8\), so by Bezout one can achieve arc \(= 1 \times 120° - 1 \times 72° = 48°\), then divide... more cleanly: arc \(360°/15 = 24°\). The construction proceeds by finding arc \(= 72° - 48° = 24°\). \(\square\)
+For the regular 15-gon: \(15 = 3 \times 5\). Since 3 and 5 are both distinct Fermat primes, the regular 15-gon <strong>is</strong> constructible. Explicit construction: construct a regular triangle \(\{3\}\) inscribed in a circle (arc \(= 120°\)) and a regular pentagon \(\{5\}\) inscribed in the same circle (arc \(= 72°\)). The difference of arcs is \(120° - 72° = 48°\), and half of that is \(24°\). But more directly, \(\gcd(3, 5) = 1\) and \(3 + 5 = 8\), so by Bezout one can achieve arc \(= 1 \times 120° - 1 \times 72° = 48°\), then divide... more cleanly: arc \(360°/15 = 24°\). The construction proceeds by finding arc \(= 72° - 48° = 24°\). \(\square\)
 </div>
 
 <div class="example">
@@ -3091,9 +3091,9 @@ The formula is \(E = \frac{2}{\frac{2}{p} - 1 + \frac{2}{q}} = \frac{2pq}{2q - p
 
 <em>Solution.</em> The wallpaper groups with 6-fold rotational symmetry (rotation by \(60°\)) are exactly two: \(p6\) and \(p6mm\).
 
-- **\(p6\)**: Generated by a \(60°\) rotation and the lattice translations. The fundamental domain is a \(60°\)-sector of the hexagonal lattice cell — a rhombus divided into six congruent pieces. The group \(p6\) has no reflections or glide reflections.
+- <strong>\(p6\)</strong>: Generated by a \(60°\) rotation and the lattice translations. The fundamental domain is a \(60°\)-sector of the hexagonal lattice cell — a rhombus divided into six congruent pieces. The group \(p6\) has no reflections or glide reflections.
 
-- **\(p6mm\)** (the highest-symmetry wallpaper group): Generated by \(60°\) rotation and reflections. It includes all 12 elements of the \(D_6\) point group combined with translations. The hexagonal tiling \(\{6,3\}\) has symmetry group \(p6mm\). The fundamental domain is a right triangle (1/12 of the hexagonal cell).
+- <strong>\(p6mm\)</strong> (the highest-symmetry wallpaper group): Generated by \(60°\) rotation and reflections. It includes all 12 elements of the \(D_6\) point group combined with translations. The hexagonal tiling \(\{6,3\}\) has symmetry group \(p6mm\). The fundamental domain is a right triangle (1/12 of the hexagonal cell).
 
 <div style="text-align:center; margin: 1em 0;">
 <svg viewBox="0 0 380 180" width="380" height="180" xmlns="http://www.w3.org/2000/svg" font-family="serif" font-size="11">

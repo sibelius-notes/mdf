@@ -240,7 +240,7 @@ An equally remarkable example is <strong>James' space</strong> \( J \), the subs
 \[
 \sup_{n_1 < n_2 < \cdots < n_k} \left[(x_{n_1} - x_{n_2})^2 + (x_{n_2} - x_{n_3})^2 + \cdots + (x_{n_{k-1}} - x_{n_k})^2\right]^{1/2} < \infty.
 \]
-James' space is isometrically isomorphic to its own double dual \( J^{<strong>} \), yet is <em>not reflexive</em> — it sits as a proper closed subspace of codimension one in \( J^{</strong>} \). This answered (negatively) the conjecture that isomorphic identification with the double dual forces reflexivity.
+James' space is isometrically isomorphic to its own double dual \( J^{**} \), yet is <em>not reflexive</em> — it sits as a proper closed subspace of codimension one in \( J^{**} \). This answered (negatively) the conjecture that isomorphic identification with the double dual forces reflexivity.
 </div>
 
 ## Bounded Linear Operators
@@ -313,11 +313,11 @@ x = \sum_{n=1}^\infty x_n e_n, \quad x_n \in \mathbb{K}.
 </div>
 
 <div class="example">
-<strong>Example 1.H (Dual of \( c_0 \)).</strong> The space \( c_0^<em> \) is isometrically isomorphic to \( \ell^1(\mathbb{N}) \) via the map \( \Theta : \ell^1 \to c_0^</em> \), \( \Theta(z) = \varphi_z \), where \( \varphi_z(x) = \sum_{n \geq 1} x_n z_n \).
+<strong>Example 1.H (Dual of \( c_0 \)).</strong> The space \( c_0^* \) is isometrically isomorphic to \( \ell^1(\mathbb{N}) \) via the map \( \Theta : \ell^1 \to c_0^* \), \( \Theta(z) = \varphi_z \), where \( \varphi_z(x) = \sum_{n \geq 1} x_n z_n \).
 </div>
 
 <div class="definition">
-<strong>Definition 1.I (Canonical embedding and reflexivity).</strong> Let \( X \) be a normed linear space. For \( z \in X \), define \( \hat{z} : X^<em> \to \mathbb{K} \) by \( \hat{z}(x^</em>) = x^*(z) \). The map \( J : X \to X^{<strong>} \), \( J(z) = \hat{z} \), is the <strong>canonical embedding</strong> of \( X \) into its double dual. The map \( J \) is a linear isometry (after the Hahn-Banach Theorem is established). If \( J \) is surjective (an isometric bijection onto \( X^{</strong>} \)), then \( X \) is called <strong>reflexive</strong>.
+<strong>Definition 1.I (Canonical embedding and reflexivity).</strong> Let \( X \) be a normed linear space. For \( z \in X \), define \( \hat{z} : X^* \to \mathbb{K} \) by \( \hat{z}(x^*) = x^*(z) \). The map \( J : X \to X^{**} \), \( J(z) = \hat{z} \), is the <strong>canonical embedding</strong> of \( X \) into its double dual. The map \( J \) is a linear isometry (after the Hahn-Banach Theorem is established). If \( J \) is surjective (an isometric bijection onto \( X^{**} \)), then \( X \) is called <strong>reflexive</strong>.
 </div>
 
 Reflexivity is a powerful structural property: reflexive Banach spaces have weakly compact unit balls (by the Banach-Alaoglu Theorem), which enables many compactness arguments. The spaces \( \ell^p \) for \( 1 < p < \infty \) are reflexive; \( \ell^1 \), \( \ell^\infty \), and \( c_0 \) are not.
@@ -1281,11 +1281,11 @@ The classical Hahn-Banach theorems extend dominated or bounded linear functional
 </div>
 
 <div class="theorem">
-<strong>Theorem 7.10 (Hahn-Banach III — norm-preserving extension).</strong> Let \( (X, \|\cdot\|) \) be a normed linear space, \( M \subseteq X \) a linear manifold, and \( f \in M^<em> \). There exists \( g \in X^</em> \) with \( g|_M = f \) and \( \|g\| = \|f\| \).
+<strong>Theorem 7.10 (Hahn-Banach III — norm-preserving extension).</strong> Let \( (X, \|\cdot\|) \) be a normed linear space, \( M \subseteq X \) a linear manifold, and \( f \in M^* \). There exists \( g \in X^* \) with \( g|_M = f \) and \( \|g\| = \|f\| \).
 </div>
 
 <div class="corollary">
-<strong>Corollary 7.11 (Extension in locally convex spaces).</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( W \subseteq V \) a linear manifold. Then every \( f \in W^<em> \) extends to some \( g \in V^</em> \).
+<strong>Corollary 7.11 (Extension in locally convex spaces).</strong> Let \( (V, \mathcal{T}) \) be a locally convex space and \( W \subseteq V \) a linear manifold. Then every \( f \in W^* \) extends to some \( g \in V^* \).
 </div>
 
 <div class="corollary">
@@ -1306,11 +1306,11 @@ The classical Hahn-Banach theorems extend dominated or bounded linear functional
 \[
 \overline{W} = \bigcap \{ \ker f : f \in V^*, \; W \subseteq \ker f \}.
 \]
-In particular: (a) \( W \) is dense iff \( f \in V^* \) and \( f|_W = 0 \) implies \( f = 0 \); (b) the canonical embedding \( J : X \to X^{**} \) is an isometry (so \( \|x\| = \sup\{|x^<em>(x)| : x^</em> \in X^<em>, \|x^</em>\| \leq 1\} \)).
+In particular: (a) \( W \) is dense iff \( f \in V^* \) and \( f|_W = 0 \) implies \( f = 0 \); (b) the canonical embedding \( J : X \to X^{**} \) is an isometry (so \( \|x\| = \sup\{|x^*(x)| : x^* \in X^*, \|x^*\| \leq 1\} \)).
 </div>
 
 <div class="corollary">
-<strong>Corollary 7.15.</strong> Let \( (X, \|\cdot\|) \) be a normed linear space and \( Y \subseteq X \) a closed subspace. For any \( z \in X \setminus Y \), setting \( d = d(z, Y) \), there exists \( x^<em> \in X^</em> \) with \( \|x^<em>\| = 1 \), \( x^</em>|_Y = 0 \), and \( x^*(z) = d \).
+<strong>Corollary 7.15.</strong> Let \( (X, \|\cdot\|) \) be a normed linear space and \( Y \subseteq X \) a closed subspace. For any \( z \in X \setminus Y \), setting \( d = d(z, Y) \), there exists \( x^* \in X^* \) with \( \|x^*\| = 1 \), \( x^*|_Y = 0 \), and \( x^*(z) = d \).
 </div>
 
 ## The Separation Theorems
@@ -1350,7 +1350,7 @@ This chapter develops the theory of weak topologies in the context of Banach spa
 For a locally convex space \( (V, \mathcal{T}) \), the pair \( (V, V^*) \) is a dual pair. The weak topology \( \sigma(V, V^*) \) is the coarsest topology making every \( f \in V^* \) continuous; a net \( (x_\lambda) \) converges weakly to \( x \) iff \( f(x_\lambda) \to f(x) \) for all \( f \in V^* \). It follows that \( \sigma(V, V^*) \subseteq \mathcal{T} \), so norm convergence implies weak convergence.
 
 <div class="definition">
-<strong>Definition 8.2 (Weak\( ^<em> \) topology).</strong> For a locally convex space \( (V, \mathcal{T}) \) and its dual \( V^</em> \), identify each \( x \in V \) with the functional \( \hat{x} : V^<em> \to \mathbb{K} \), \( \hat{x}(\rho) = \rho(x) \). The pair \( (V^</em>, \hat{V}) \) is a dual pair, and the <strong>weak\( ^<em> \) topology</strong> \( \sigma(V^</em>, \hat{V}) \) on \( V^<em> \) is the coarsest topology making each \( \hat{x} \) continuous. A net \( (\rho_\lambda) \) converges weak\( ^</em> \) to \( \rho \) iff \( \rho_\lambda(x) \to \rho(x) \) for every \( x \in V \).
+<strong>Definition 8.2 (Weak\( ^* \) topology).</strong> For a locally convex space \( (V, \mathcal{T}) \) and its dual \( V^* \), identify each \( x \in V \) with the functional \( \hat{x} : V^* \to \mathbb{K} \), \( \hat{x}(\rho) = \rho(x) \). The pair \( (V^*, \hat{V}) \) is a dual pair, and the <strong>weak\( ^* \) topology</strong> \( \sigma(V^*, \hat{V}) \) on \( V^* \) is the coarsest topology making each \( \hat{x} \) continuous. A net \( (\rho_\lambda) \) converges weak\( ^* \) to \( \rho \) iff \( \rho_\lambda(x) \to \rho(x) \) for every \( x \in V \).
 </div>
 
 <div class="theorem">
@@ -1374,7 +1374,7 @@ This is a profound result: for convex sets, norm closure and weak closure agree.
 </div>
 
 <div class="corollary">
-<strong>Corollary 8.7.</strong> Let \( X \) be a Banach space. (a) A set \( S \subseteq X \) is bounded iff \( \sup_{s \in S} |x^<em>(s)| < \infty \) for all \( x^</em> \in X^<em> \). (b) A set \( G \subseteq X^</em> \) is bounded iff \( \sup_{s^<em> \in G} |s^</em>(x)| < \infty \) for all \( x \in X \).
+<strong>Corollary 8.7.</strong> Let \( X \) be a Banach space. (a) A set \( S \subseteq X \) is bounded iff \( \sup_{s \in S} |x^*(s)| < \infty \) for all \( x^* \in X^* \). (b) A set \( G \subseteq X^* \) is bounded iff \( \sup_{s^* \in G} |s^*(x)| < \infty \) for all \( x \in X \).
 </div>
 
 <div class="theorem">
@@ -1382,11 +1382,11 @@ This is a profound result: for convex sets, norm closure and weak closure agree.
 </div>
 
 <div class="corollary">
-<strong>Corollary 8.9.</strong> If \( (x_n)_n \) converges weakly to \( x \) in a Banach space \( X \), then \( \sup_n \|x_n\| < \infty \) and \( \|x\| \leq \liminf_n \|x_n\| \). Similarly if \( (y_n^<em>)_n \to y^</em> \) in the weak\( ^<em> \) topology on \( X^</em> \).
+<strong>Corollary 8.9.</strong> If \( (x_n)_n \) converges weakly to \( x \) in a Banach space \( X \), then \( \sup_n \|x_n\| < \infty \) and \( \|x\| \leq \liminf_n \|x_n\| \). Similarly if \( (y_n^*)_n \to y^* \) in the weak\( ^* \) topology on \( X^* \).
 </div>
 
 <div class="theorem">
-<strong>Theorem 8.10 (Goldstein's Theorem).</strong> Let \( X \) be a Banach space and \( J : X \to X^{<strong>} \) the canonical embedding. Then \( J(X_1) \) is weak\( ^<em> \)-dense in \( X_1^{</strong>} \) (where \( X_1, X_1^{<strong>} \) denote the respective closed unit balls). Consequently, \( J(X) \) is weak\( ^</em> \)-dense in \( X^{</strong>} \).
+<strong>Theorem 8.10 (Goldstein's Theorem).</strong> Let \( X \) be a Banach space and \( J : X \to X^{**} \) the canonical embedding. Then \( J(X_1) \) is weak\( ^* \)-dense in \( X_1^{**} \) (where \( X_1, X_1^{**} \) denote the respective closed unit balls). Consequently, \( J(X) \) is weak\( ^* \)-dense in \( X^{**} \).
 </div>
 
 <div class="proposition">
@@ -1398,11 +1398,11 @@ This is a profound result: for convex sets, norm closure and weak closure agree.
 Although weak and weak\( ^* \) topologies are not metrizable in general, their restrictions to bounded sets can be.
 
 <div class="theorem">
-<strong>Theorem 8.12.</strong> Let \( X \) be a Banach space. Then \( X_1^<em> \) is weak\( ^</em> \)-metrizable if and only if \( X \) is separable.
+<strong>Theorem 8.12.</strong> Let \( X \) be a Banach space. Then \( X_1^* \) is weak\( ^* \)-metrizable if and only if \( X \) is separable.
 </div>
 
 <div class="corollary">
-<strong>Corollary 8.13.</strong> If \( X \) is a separable Banach space, then \( X_1^<em> \) is separable in the weak\( ^</em> \) topology (in fact sequentially compact and compact).
+<strong>Corollary 8.13.</strong> If \( X \) is a separable Banach space, then \( X_1^* \) is separable in the weak\( ^* \) topology (in fact sequentially compact and compact).
 </div>
 
 <div class="theorem">
@@ -1415,12 +1415,12 @@ Although weak and weak\( ^* \) topologies are not metrizable in general, their r
 <strong>Definition 8.15 (Annihilator and pre-annihilator).</strong> Let \( X \) be a Banach space, \( M \subseteq X \), \( N \subseteq X^* \). The <strong>annihilator</strong> of \( M \) is
 
 \[
-M^\perp = \{x^<em> \in X^</em> : x^*(m) = 0 \text{ for all } m \in M\}.
+M^\perp = \{x^* \in X^* : x^*(m) = 0 \text{ for all } m \in M\}.
 \]
 The <strong>pre-annihilator</strong> of \( N \) is
 
 \[
-{}^\perp N = \{x \in X : n^<em>(x) = 0 \text{ for all } n^</em> \in N\}.
+{}^\perp N = \{x \in X : n^*(x) = 0 \text{ for all } n^* \in N\}.
 \]
 </div>
 
@@ -1429,18 +1429,18 @@ The <strong>pre-annihilator</strong> of \( N \) is
 </div>
 
 <div class="theorem">
-<strong>Theorem 8.17.</strong> Let \( X \) be a Banach space and \( M \subseteq X \) a closed subspace. The map \( \Theta : X^<em>/M^\perp \to M^</em> \), \( x^<em> + M^\perp \mapsto x^</em>|_M \), is an isometric isomorphism.
+<strong>Theorem 8.17.</strong> Let \( X \) be a Banach space and \( M \subseteq X \) a closed subspace. The map \( \Theta : X^*/M^\perp \to M^* \), \( x^* + M^\perp \mapsto x^*|_M \), is an isometric isomorphism.
 </div>
 
 <div class="theorem">
-<strong>Theorem 8.18 (Riesz Representation for \( C_0(X)^<em> \)).</strong> Let \( X \) be a locally compact Hausdorff space and \( \mathcal{M}(X) \) the space of \( \mathbb{K} \)-valued finite regular Borel measures on \( X \) with the total variation norm \( \|\mu\| = |\mu|(X) \). The map \( \Theta : \mathcal{M}(X) \to C_0(X, \mathbb{K})^</em> \), \( \mu \mapsto \beta_\mu \) where \( \beta_\mu(f) = \int_X f \, d\mu \), is an isometric linear isomorphism.
+<strong>Theorem 8.18 (Riesz Representation for \( C_0(X)^* \)).</strong> Let \( X \) be a locally compact Hausdorff space and \( \mathcal{M}(X) \) the space of \( \mathbb{K} \)-valued finite regular Borel measures on \( X \) with the total variation norm \( \|\mu\| = |\mu|(X) \). The map \( \Theta : \mathcal{M}(X) \to C_0(X, \mathbb{K})^* \), \( \mu \mapsto \beta_\mu \) where \( \beta_\mu(f) = \int_X f \, d\mu \), is an isometric linear isomorphism.
 </div>
 
 <div class="corollary">
 <strong>Corollary 8.19 (Banach-Alaoglu consequences).</strong>
 <ol>
 <li>Every Banach space \( X \) is isometrically isomorphic to a subspace of \( (C(L, \mathbb{K}), \|\cdot\|_\infty) \) for some compact Hausdorff space \( L \).</li>
-<li>If \( A \subseteq X^<em> \) is weak\( ^</em> \)-closed and bounded, then \( A \) is weak\( ^* \)-compact.</li>
+<li>If \( A \subseteq X^* \) is weak\( ^* \)-closed and bounded, then \( A \) is weak\( ^* \)-compact.</li>
 </ol>
 </div>
 
@@ -1497,7 +1497,7 @@ The Krein-Milman Theorem is proved by the repeated application of Lemma 9.5: any
 </div>
 
 <div class="corollary">
-<strong>Corollary 9.9.</strong> Let \( X \) be a Banach space and \( A \subseteq X^<em> \) weak\( ^</em> \)-closed and bounded. Then \( A \) is weak\( ^<em> \)-compact. If \( A \) is also convex, then \( A = \overline{\operatorname{conv}}^{w^</em>}(\operatorname{Ext}(A)) \).
+<strong>Corollary 9.9.</strong> Let \( X \) be a Banach space and \( A \subseteq X^* \) weak\( ^* \)-closed and bounded. Then \( A \) is weak\( ^* \)-compact. If \( A \) is also convex, then \( A = \overline{\operatorname{conv}}^{w^*}(\operatorname{Ext}(A)) \).
 </div>
 
 ---
@@ -1552,25 +1552,25 @@ This chapter develops the theory of compact operators on Banach and Hilbert spac
 For a bounded operator between Banach spaces, the adjoint acts on the dual spaces. Unlike the Hilbert space adjoint (which lands in the same space), the Banach space adjoint is a map between the dual spaces.
 
 <div class="definition">
-<strong>Definition 11.1 (Banach space adjoint).</strong> Let \( X, Y \) be Banach spaces and \( T \in B(X, Y) \). For \( y^<em> \in Y^</em> \), the map \( x \mapsto y^<em>(Tx) \) defines an element \( T^</em> y^<em> \in X^</em> \). The <strong>Banach space adjoint</strong> of \( T \) is the map \( T^<em> : Y^</em> \to X^<em> \), \( T^</em> y^<em>(x) = y^</em>(Tx) \). We have \( \|T^*\| = \|T\| \).
+<strong>Definition 11.1 (Banach space adjoint).</strong> Let \( X, Y \) be Banach spaces and \( T \in B(X, Y) \). For \( y^* \in Y^* \), the map \( x \mapsto y^*(Tx) \) defines an element \( T^* y^* \in X^* \). The <strong>Banach space adjoint</strong> of \( T \) is the map \( T^* : Y^* \to X^* \), \( T^* y^*(x) = y^*(Tx) \). We have \( \|T^*\| = \|T\| \).
 </div>
 
 <div class="proposition">
-<strong>Proposition 11.2.</strong> Let \( X, Y, Z \) be Banach spaces, \( S, T \in B(X,Y) \), and \( R \in B(Y,Z) \). Then \( (k_1 S + k_2 T)^<em> = k_1 S^</em> + k_2 T^<em> \) and \( (R \circ T)^</em> = T^<em> \circ R^</em> \).
+<strong>Proposition 11.2.</strong> Let \( X, Y, Z \) be Banach spaces, \( S, T \in B(X,Y) \), and \( R \in B(Y,Z) \). Then \( (k_1 S + k_2 T)^* = k_1 S^* + k_2 T^* \) and \( (R \circ T)^* = T^* \circ R^* \).
 </div>
 
 <div class="proposition">
-<strong>Proposition 11.3.</strong> Let \( X \) be an \( n \)-dimensional Banach space with Hamel basis \( E = \{e_i : i \in [n]\} \) and let \( [A] = [a_{ij}] \) be the matrix of \( A \in B(X) \) relative to \( E \). The matrix of the Banach space adjoint \( A^<em> \) relative to the dual basis \( E^</em> \) is the transpose \( [A]^T = [a_{ji}] \).
+<strong>Proposition 11.3.</strong> Let \( X \) be an \( n \)-dimensional Banach space with Hamel basis \( E = \{e_i : i \in [n]\} \) and let \( [A] = [a_{ij}] \) be the matrix of \( A \in B(X) \) relative to \( E \). The matrix of the Banach space adjoint \( A^* \) relative to the dual basis \( E^* \) is the transpose \( [A]^T = [a_{ji}] \).
 </div>
 
 The Hilbert space adjoint defined in Chapter 2 is related: for \( T \in B(H) \) with \( H \) a Hilbert space, identifying \( H \cong H^* \) via the Riesz Representation Theorem converts the Banach space adjoint \( T^* : H^* \to H^* \) into the Hilbert space adjoint \( T^* : H \to H \).
 
 <div class="theorem">
-<strong>Theorem 11.4.</strong> Let \( H \) be a Hilbert space and \( T \in B(H) \). Then \( (T^<em>)^</em> = T \), \( \|T\| = \|T^<em>\| \), and \( \|T^</em> T\| = \|T\|^2 \) (the \( C^<em> \)-equation). A norm-closed subalgebra of \( B(H) \) that is closed under the adjoint operation is a <strong>concrete \( C^</em> \)-algebra</strong>.
+<strong>Theorem 11.4.</strong> Let \( H \) be a Hilbert space and \( T \in B(H) \). Then \( (T^*)^* = T \), \( \|T\| = \|T^*\| \), and \( \|T^* T\| = \|T\|^2 \) (the \( C^* \)-equation). A norm-closed subalgebra of \( B(H) \) that is closed under the adjoint operation is a <strong>concrete \( C^* \)-algebra</strong>.
 </div>
 
 <div class="proposition">
-<strong>Proposition 11.5.</strong> Let \( H \) be a Hilbert space and \( T \in B(H) \). Then \( (\operatorname{Im} T)^\perp = \ker T^<em> \). Consequently: (a) \( \overline{\operatorname{Im} T} = (\ker T^</em>)^\perp \); (b) \( \operatorname{Im} T \) is not dense in \( H \) iff \( \ker T^* \neq \{0\} \).
+<strong>Proposition 11.5.</strong> Let \( H \) be a Hilbert space and \( T \in B(H) \). Then \( (\operatorname{Im} T)^\perp = \ker T^* \). Consequently: (a) \( \overline{\operatorname{Im} T} = (\ker T^*)^\perp \); (b) \( \operatorname{Im} T \) is not dense in \( H \) iff \( \ker T^* \neq \{0\} \).
 </div>
 
 ## Compact Operators on Banach Spaces
@@ -1611,7 +1611,7 @@ The Hilbert space adjoint defined in Chapter 2 is related: for \( T \in B(H) \) 
 </div>
 
 <div class="theorem">
-<strong>Theorem 11.12 (Compactness passes to adjoint).</strong> If \( X, Y \) are Banach spaces and \( K \in K(X, Y) \), then \( K^<em> \in K(Y^</em>, X^*) \).
+<strong>Theorem 11.12 (Compactness passes to adjoint).</strong> If \( X, Y \) are Banach spaces and \( K \in K(X, Y) \), then \( K^* \in K(Y^*, X^*) \).
 </div>
 
 <div class="theorem">
@@ -1628,11 +1628,11 @@ The Hilbert space adjoint defined in Chapter 2 is related: for \( T \in B(H) \) 
 <div class="definition">
 <strong>Definition 11.14 (Normal, self-adjoint, unitary).</strong> Let \( H \) be a Hilbert space and \( T \in B(H) \). We say \( T \) is:
 <ul>
-<li><strong>Normal</strong> if \( TT^<em> = T^</em>T \).</li>
+<li><strong>Normal</strong> if \( TT^* = T^*T \).</li>
 <li><strong>Self-adjoint</strong> if \( T^* = T \).</li>
-<li><strong>Unitary</strong> if \( T^<em>T = TT^</em> = I \).</li>
+<li><strong>Unitary</strong> if \( T^*T = TT^* = I \).</li>
 </ul>
-Every self-adjoint operator is normal. The adjoint operation \( <em> : B(H) \to B(H) \) satisfies: \( (\alpha A)^</em> = \bar\alpha A^<em> \), \( (A+B)^</em> = A^<em> + B^</em> \), \( (AB)^<em> = B^</em>A^<em> \), \( (A^</em>)^* = A \).
+Every self-adjoint operator is normal. The adjoint operation \( * : B(H) \to B(H) \) satisfies: \( (\alpha A)^* = \bar\alpha A^* \), \( (A+B)^* = A^* + B^* \), \( (AB)^* = B^*A^* \), \( (A^*)^* = A \).
 </div>
 
 <div class="definition">
@@ -1728,7 +1728,7 @@ To prove non-emptiness of the spectrum, we need Liouville's theorem for Banach-s
 </div>
 
 <div class="proof">
-<strong>Proof.</strong> For each \( x^<em> \in X^</em> \), the scalar function \( z \mapsto x^<em>(f(z)) \) is bounded and entire, hence constant by the classical Liouville theorem. Since \( X^</em> \) separates points of \( X \) (Hahn-Banach), \( f \) is constant. \( \square \)
+<strong>Proof.</strong> For each \( x^* \in X^* \), the scalar function \( z \mapsto x^*(f(z)) \) is bounded and entire, hence constant by the classical Liouville theorem. Since \( X^* \) separates points of \( X \) (Hahn-Banach), \( f \) is constant. \( \square \)
 </div>
 
 <div class="theorem">
@@ -1788,7 +1788,7 @@ In particular, the limit exists.
 \operatorname{spr}(a) \leq \|a^n\|^{1/n} \qquad \text{for all } n \geq 1.
 \]
 
-<em>Upper bound.</em> Fix \( \lambda \in \mathbb{C} \) with \( |\lambda| > \operatorname{spr}(a) \). By Theorem 11.23, the Neumann expansion \( R(\mu, a) = \sum_{n \geq 0} a^n/\mu^{n+1} \) holds for \( |\mu| > \|a\| \). Since \( R(\cdot, a) \) is analytic on the larger open set \( \{|\mu| > \operatorname{spr}(a)\} \), this Laurent series extends to converge absolutely there. In particular, for any \( \varphi \in A^<em> \), the scalar series \( \sum_{n \geq 0} \varphi(a^n)/\lambda^{n+1} \) converges, so \( \varphi(a^n)/\lambda^{n+1} \to 0 \). Hence the sequence \( \{a^n/\lambda^{n+1}\}_{n \geq 0} \) is pointwise bounded by every functional in \( A^</em> \). By the Uniform Boundedness Principle (Theorem 1.35), there exists \( M_\lambda > 0 \) with \( \|a^n\| \leq M_\lambda\,|\lambda|^{n+1} \) for all \( n \). Taking \( n \)-th roots:
+<em>Upper bound.</em> Fix \( \lambda \in \mathbb{C} \) with \( |\lambda| > \operatorname{spr}(a) \). By Theorem 11.23, the Neumann expansion \( R(\mu, a) = \sum_{n \geq 0} a^n/\mu^{n+1} \) holds for \( |\mu| > \|a\| \). Since \( R(\cdot, a) \) is analytic on the larger open set \( \{|\mu| > \operatorname{spr}(a)\} \), this Laurent series extends to converge absolutely there. In particular, for any \( \varphi \in A^* \), the scalar series \( \sum_{n \geq 0} \varphi(a^n)/\lambda^{n+1} \) converges, so \( \varphi(a^n)/\lambda^{n+1} \to 0 \). Hence the sequence \( \{a^n/\lambda^{n+1}\}_{n \geq 0} \) is pointwise bounded by every functional in \( A^* \). By the Uniform Boundedness Principle (Theorem 1.35), there exists \( M_\lambda > 0 \) with \( \|a^n\| \leq M_\lambda\,|\lambda|^{n+1} \) for all \( n \). Taking \( n \)-th roots:
 
 \[
 \limsup_{n \to \infty} \|a^n\|^{1/n} \leq |\lambda|.
@@ -1808,9 +1808,9 @@ The proof beautifully intertwines the Uniform Boundedness Principle (real analys
 <strong>Proof.</strong> We claim \( \|N^{2^k}\| = \|N\|^{2^k} \) for all \( k \geq 0 \). The case \( k = 0 \) is trivial. For the inductive step, suppose \( M = N^{2^k} \) is normal. Since \( N \) is normal, \( \|Ny\| = \|N^* y\| \) for all \( y \in H \) (Proposition 11.16), so for any \( x \in H \):
 
 \[
-\|M^2 x\| = \|M(Mx)\| = \|M^<em>(Mx)\| = \|M^</em>Mx\|.
+\|M^2 x\| = \|M(Mx)\| = \|M^*(Mx)\| = \|M^*Mx\|.
 \]
-Therefore \( \|M^2\| = \sup_{\|x\|=1} \|M^<em>Mx\| \geq \sup_{\|x\|=1} |\langle M^</em>Mx, x\rangle| = \sup_{\|x\|=1} \|Mx\|^2 = \|M\|^2 \), and the reverse inequality \( \|M^2\| \leq \|M\|^2 \) follows from submultiplicativity. Hence \( \|N^{2^{k+1}}\| = \|N^{2^k}\|^2 = \|N\|^{2^{k+1}} \). By Theorem 11.28,
+Therefore \( \|M^2\| = \sup_{\|x\|=1} \|M^*Mx\| \geq \sup_{\|x\|=1} |\langle M^*Mx, x\rangle| = \sup_{\|x\|=1} \|Mx\|^2 = \|M\|^2 \), and the reverse inequality \( \|M^2\| \leq \|M\|^2 \) follows from submultiplicativity. Hence \( \|N^{2^{k+1}}\| = \|N^{2^k}\|^2 = \|N\|^{2^{k+1}} \). By Theorem 11.28,
 
 \[
 \operatorname{spr}(N) = \lim_{k \to \infty} \|N^{2^k}\|^{1/2^k} = \lim_{k \to \infty} \|N\|^{2^k / 2^k} = \|N\|. \quad \square

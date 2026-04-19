@@ -2533,7 +2533,7 @@ where the supremum is over all balls centered at \(x\). The function \(Mf(x)\) m
 </div>
 
 <div class="proof">
-<strong>Proof sketch.</strong> The weak \((1,1)\) bound follows from the **Vitali covering lemma**: if \(E = \{Mf > \lambda\}\), then for every \(x \in E\), there exists a ball \(B_x\) centered at \(x\) with \(|B_x|^{-1}\int_{B_x}|f| > \lambda\). The collection \(\{B_x\}_{x \in E}\) covers \(E\). By Vitali, there is a disjoint subcollection \(\{B_{x_j}\}\) with \(|E| \leq 5^n \sum_j |B_{x_j}| \leq 5^n \lambda^{-1} \sum_j \int_{B_{x_j}} |f| \leq 5^n \lambda^{-1} \|f\|_{L^1}\).
+<strong>Proof sketch.</strong> The weak \((1,1)\) bound follows from the <strong>Vitali covering lemma</strong>: if \(E = \{Mf > \lambda\}\), then for every \(x \in E\), there exists a ball \(B_x\) centered at \(x\) with \(|B_x|^{-1}\int_{B_x}|f| > \lambda\). The collection \(\{B_x\}_{x \in E}\) covers \(E\). By Vitali, there is a disjoint subcollection \(\{B_{x_j}\}\) with \(|E| \leq 5^n \sum_j |B_{x_j}| \leq 5^n \lambda^{-1} \sum_j \int_{B_{x_j}} |f| \leq 5^n \lambda^{-1} \|f\|_{L^1}\).
 
 The strong \(L^p\) bound for \(p > 1\) follows from the weak \((1,1)\) bound and the weak \((\infty, \infty)\) bound \(\|Mf\|_{L^\infty} \leq \|f\|_{L^\infty}\) by the Marcinkiewicz interpolation theorem.
 </div>
@@ -3922,7 +3922,7 @@ On minor arcs, where \(q > N^{1/2}\): \(\displaystyle\left|\frac{1}{N}\sum_{n=1}
 </div>
 
 <div class="remark">
-<strong>Remark 15.4.2 (van der Corput philosophy in two settings).</strong> The van der Corput lemma (§10.2) bounds \(\int_a^b e^{i\phi(t)}\,dt\) when \(|\phi'| \geq \lambda\) by integration by parts, giving \(O(\lambda^{-1})\). Weyl differencing does the same for sums: \(|S|^2 = \sum_h r(h) e^{2\pi i h \cdot (\text{linear in } n)}\), reducing to a linear sum bounded by \(\min(N, \|2h\alpha\|^{-1})\). In both cases, the key is reducing degree by one differentiation/differencing step; iterating \(d-1\) times for a degree-\(d\) polynomial reduces to the linear case, where the bound is immediate. This is the **method of Weyl differencing**, the arithmetic counterpart of van der Corput's iterated integration by parts.
+<strong>Remark 15.4.2 (van der Corput philosophy in two settings).</strong> The van der Corput lemma (§10.2) bounds \(\int_a^b e^{i\phi(t)}\,dt\) when \(|\phi'| \geq \lambda\) by integration by parts, giving \(O(\lambda^{-1})\). Weyl differencing does the same for sums: \(|S|^2 = \sum_h r(h) e^{2\pi i h \cdot (\text{linear in } n)}\), reducing to a linear sum bounded by \(\min(N, \|2h\alpha\|^{-1})\). In both cases, the key is reducing degree by one differentiation/differencing step; iterating \(d-1\) times for a degree-\(d\) polynomial reduces to the linear case, where the bound is immediate. This is the <strong>method of Weyl differencing</strong>, the arithmetic counterpart of van der Corput's iterated integration by parts.
 </div>
 
 ### 15.5 The \(\ell^2\) Oscillation Bound

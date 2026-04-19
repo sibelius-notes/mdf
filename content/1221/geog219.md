@@ -154,15 +154,15 @@ Families were hard hit. With children being schooled at home and both parents wo
 
 ## Housing
 
-Housing prices increased astronomically during the pandemic. People living in dense urban condominiums, now working from home with no backyard, started moving outward and buying up houses in surrounding areas. Stories of houses selling sight unseen, for twice the asking price, filled the press. In Hamilton-Burlington, a townhouse that was under $500,000 in January 2019 had climbed well over $600,000 by January 2021; two-storey houses approached $900,000 to a million dollars.
+Housing prices increased astronomically during the pandemic. People living in dense urban condominiums, now working from home with no backyard, started moving outward and buying up houses in surrounding areas. Stories of houses selling sight unseen, for twice the asking price, filled the press. In Hamilton-Burlington, a townhouse that was under \$500,000 in January 2019 had climbed well over \$600,000 by January 2021; two-storey houses approached \$900,000 to a million dollars.
 
 With rental accommodation becoming extremely scarce, homeless encampments proliferated in public parks across Toronto. The City noted that encampment sites had increased at a concerning rate since March 2020. The CDC guidance was stark: "If individual housing options are not available, allow people who are living unsheltered or in encampments to remain where they are. Clearing encampments can cause people to disperse throughout the community and break connections with service providers." An estimated 1,000–2,000 people lived in encampments across Toronto, with an over-representation of Indigenous persons among them.
 
 ## Government Supports and Global Impacts
 
-At the state level, Canada created the <strong>Canadian Emergency Response Benefit</strong> (CERB) for those who lost jobs due to COVID-19, the <strong>Canadian Emergency Student Benefit</strong> for students who couldn't work, and small business loans. The total amount spent by the Canadian government by August 2021 was approximately 350 billion dollars. The total cost to the Canadian economy: more than $1.5 billion per day.
+At the state level, Canada created the <strong>Canadian Emergency Response Benefit</strong> (CERB) for those who lost jobs due to COVID-19, the <strong>Canadian Emergency Student Benefit</strong> for students who couldn't work, and small business loans. The total amount spent by the Canadian government by August 2021 was approximately 350 billion dollars. The total cost to the Canadian economy: more than \$1.5 billion per day.
 
-At the global level, shortages of basic supplies like toilet paper and hand sanitizer were dramatic. Supply chain disruptions caused tariffs and boycotts. The US exerted power to limit Canada's access to face masks. Early estimates predicted that most major economies would lose at least 2.9% of their GDP over 2020 — a number revised to 4.5%. With global GDP estimated at around $87.55 trillion USD in 2019, a 4.5% drop represents nearly $3.94 trillion USD of lost economic output.
+At the global level, shortages of basic supplies like toilet paper and hand sanitizer were dramatic. Supply chain disruptions caused tariffs and boycotts. The US exerted power to limit Canada's access to face masks. Early estimates predicted that most major economies would lose at least 2.9% of their GDP over 2020 — a number revised to 4.5%. With global GDP estimated at around \$87.55 trillion USD in 2019, a 4.5% drop represents nearly \$3.94 trillion USD of lost economic output.
 
 <strong>Watch:</strong>
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/pnKsrKuUfBc?rel=0" frameborder="0" allowfullscreen></iframe></div>
@@ -295,7 +295,7 @@ In the US, where employment is often tied to health insurance coverage, losing y
 
 An indicator of rising poverty was the dramatic increase in <strong>food bank use</strong>. In Ontario, about 540,000 people accessed food banks between April 2019 and March 2020 — already up 5% over the prior year. With the onset of COVID-19, food banks saw a 26% increase in first-time visitors between March and June 2020. One out of two food bank visitors reported being worried about eviction or defaulting on their mortgage in the next two to six months; 93% had borrowed money from friends and family, accessed payday loans (at very high interest rates), or used a credit card to pay for monthly necessities.
 
-Evictions were another dimension. The Ontario Landlord and Tenant Board continued to hear eviction applications, but enforcement was postponed during the Provincial Declaration of Emergency. Ontario invested $510 million through the Social Services Relief Fund to protect the health and safety of vulnerable people during COVID-19.
+Evictions were another dimension. The Ontario Landlord and Tenant Board continued to hear eviction applications, but enforcement was postponed during the Provincial Declaration of Emergency. Ontario invested \$510 million through the Social Services Relief Fund to protect the health and safety of vulnerable people during COVID-19.
 
 ## Gender
 
@@ -451,7 +451,7 @@ Two words explain why vaccines are critical: <strong>herd immunity</strong>. Whe
 
 ## Vaccine Hesitancy
 
-Vaccine hesitancy was a significant challenge and had historical precedents. In the mid-1950s, Elvis Presley was vaccinated against polio on live television on the Ed Sullivan Show in 1958, demonstrating to young people that vaccines were safe. During COVID-19, Dolly Parton — who donated $1 million to COVID-19 vaccine development funds — receiving her vaccine publicly encouraged many people to get vaccinated. In Alberta, the government offered $100 cash to those who showed up to get vaccinated. In parts of the US, incentives included free tuition, free concert tickets, and free Budweiser beer.
+Vaccine hesitancy was a significant challenge and had historical precedents. In the mid-1950s, Elvis Presley was vaccinated against polio on live television on the Ed Sullivan Show in 1958, demonstrating to young people that vaccines were safe. During COVID-19, Dolly Parton — who donated \$1 million to COVID-19 vaccine development funds — receiving her vaccine publicly encouraged many people to get vaccinated. In Alberta, the government offered \$100 cash to those who showed up to get vaccinated. In parts of the US, incentives included free tuition, free concert tickets, and free Budweiser beer.
 
 <strong>Key terms for this module:</strong>
 

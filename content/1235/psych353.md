@@ -572,7 +572,7 @@ attention-demanding task while stimuli appeared in the periphery. Thirsty partic
 likely to notice water-related stimuli than motivationally irrelevant stimuli, suggesting that
 motivational states affect not just interpretation but attentional selection.
 <br><br>
-<em>Study 4</em>: Participants estimated physical distances to objects. Desirable objects (a $100 bill, a bottle of water when thirsty) were estimated as physically closer than neutral objects of
+<em>Study 4</em>: Participants estimated physical distances to objects. Desirable objects (a \$100 bill, a bottle of water when thirsty) were estimated as physically closer than neutral objects of
 equal distance. This suggests that wanting something makes it seem more reachable -- a finding with
 implications for understanding approach motivation at a basic perceptual level.
 <br><br>

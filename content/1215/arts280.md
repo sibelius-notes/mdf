@@ -473,7 +473,7 @@ For a large-sample confidence interval for the population mean \(\mu\):
 
 where \(z^*\) is the critical value from the standard normal distribution (1.96 for 95% confidence, 2.576 for 99% confidence).
 
-For a small-sample confidence interval for \(\mu\), replace \(z^<em>\) with \(t^</em>\), the critical value from the t-distribution with \(n-1\) degrees of freedom:
+For a small-sample confidence interval for \(\mu\), replace \(z^*\) with \(t^*\), the critical value from the t-distribution with \(n-1\) degrees of freedom:
 
 \[
 \bar{x} \pm t^* \cdot \frac{s}{\sqrt{n}}

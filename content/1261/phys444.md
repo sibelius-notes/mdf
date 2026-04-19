@@ -236,7 +236,7 @@ T^{\mu\nu} = \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)} \partial^\
 
 Conservation of \(T^{\mu\nu}\) yields four conserved charges: the total energy \(E = \int d^3x\, T^{00}\) and the three components of total momentum \(P^i = \int d^3x\, T^{0i}\).
 
-For a global internal symmetry \(\phi \to e^{i\alpha}\phi\) (with \(\alpha\) constant), the Noether current is the <strong>electromagnetic current</strong> \(j^\mu = i(\phi^<em> \partial^\mu \phi - \phi \partial^\mu \phi^</em>)\), and the conserved charge is the electric charge \(Q = \int d^3x\, j^0\).
+For a global internal symmetry \(\phi \to e^{i\alpha}\phi\) (with \(\alpha\) constant), the Noether current is the <strong>electromagnetic current</strong> \(j^\mu = i(\phi^* \partial^\mu \phi - \phi \partial^\mu \phi^*)\), and the conserved charge is the electric charge \(Q = \int d^3x\, j^0\).
 
 ## Conservation Laws in Particle Physics
 
@@ -913,7 +913,7 @@ Baryons (\(qqq\)) live in
 \mathbf{3} \otimes \mathbf{3} \otimes \mathbf{3} = \mathbf{10} \oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}.
 \]
 
-The spin-3/2 baryon <strong>decuplet</strong> contains the \(\Delta(1232)\) resonances, \(\Sigma^<em>(1385)\), \(\Xi^</em>(1530)\), and the \(\Omega^-\) (all three quarks strange, spin 3/2). Gell-Mann's prediction of the \(\Omega^-\) from the missing corner of the decuplet (1961), confirmed experimentally in 1964, was a decisive triumph of the \(SU(3)\) classification.
+The spin-3/2 baryon <strong>decuplet</strong> contains the \(\Delta(1232)\) resonances, \(\Sigma^*(1385)\), \(\Xi^*(1530)\), and the \(\Omega^-\) (all three quarks strange, spin 3/2). Gell-Mann's prediction of the \(\Omega^-\) from the missing corner of the decuplet (1961), confirmed experimentally in 1964, was a decisive triumph of the \(SU(3)\) classification.
 
 ## Gell-Mann-Okubo Mass Formula
 
@@ -979,7 +979,7 @@ In the quark sector, the weak charged current couples the up-type quarks to the 
 
 The CKM matrix is unitary (\(V^\dagger V = 1\)) and can be parameterized by three mixing angles and one CP-violating phase. Experimentally, the matrix is nearly diagonal (quarks prefer to mix within generations), with the off-diagonal elements suppressed by powers of the <strong>Cabibbo angle</strong> \(\theta_C \approx 13°\) (or \(\lambda \approx 0.225\) in the Wolfenstein parameterization).
 
-The CP-violating phase is responsible for all CP violation observed in meson systems within the Standard Model. The <strong>unitarity triangle</strong> — a geometric representation of one of the unitarity conditions \(V_{ud}V_{ub}^<em> + V_{cd}V_{cb}^</em> + V_{td}V_{tb}^* = 0\) — has been measured with precision at the B factories (BaBar, Belle) and is consistent with a single CKM phase, placing stringent constraints on new physics.
+The CP-violating phase is responsible for all CP violation observed in meson systems within the Standard Model. The <strong>unitarity triangle</strong> — a geometric representation of one of the unitarity conditions \(V_{ud}V_{ub}^* + V_{cd}V_{cb}^* + V_{td}V_{tb}^* = 0\) — has been measured with precision at the B factories (BaBar, Belle) and is consistent with a single CKM phase, placing stringent constraints on new physics.
 
 # Chapter 13: Electroweak Unification
 

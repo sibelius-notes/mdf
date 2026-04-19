@@ -241,7 +241,7 @@ where \( O_{ij} \) is the observed count in cell \( (i, j) \) and \( E_{ij} = (\
 <div class="example">
 <strong>Case Study: 2019 Flooding of Offutt Air Force Base</strong>
 
-In a broader study of flood events in the Missouri River basin (2000–2024), analysts categorize 25 major flood events (those exceeding the 10-year discharge threshold) by whether they occurred during La Niña years (above-average precipitation tendency in the Northern Plains) or neutral/El Niño years, and by whether they caused significant infrastructure damage (>$1 million). The observed counts in a 2×2 contingency table are:
+In a broader study of flood events in the Missouri River basin (2000–2024), analysts categorize 25 major flood events (those exceeding the 10-year discharge threshold) by whether they occurred during La Niña years (above-average precipitation tendency in the Northern Plains) or neutral/El Niño years, and by whether they caused significant infrastructure damage (>\$1 million). The observed counts in a 2×2 contingency table are:
 
 |  | Infrastructure Damage | No Significant Damage | Row Total |
 |--|--|--|--|

@@ -2042,7 +2042,7 @@ Cantor's diagonal argument is the most elegant proof in all of mathematics. It d
 </div>
 
 <div class="proof">
-Suppose for contradiction that \(2^\omega\) is countable: enumerate it as \(f_0, f_1, f_2, \ldots\) Define the **diagonal sequence** \(d: \omega \to \{0,1\}\) by
+Suppose for contradiction that \(2^\omega\) is countable: enumerate it as \(f_0, f_1, f_2, \ldots\) Define the <strong>diagonal sequence</strong> \(d: \omega \to \{0,1\}\) by
 
 \[
 d(n) = 1 - f_n(n).
@@ -2252,7 +2252,7 @@ The failure of \(\square_\kappa\) has large cardinal strength: if \(\square_\kap
 The **core model** \(K\) (or **Dodd–Jensen core model**) is a canonical inner model that extends \(L\) to accommodate measurable cardinals and beyond.
 
 <div class="definition">
-The <strong>core model</strong> \(K\) is (informally) the largest canonical inner model that does not contain too many large cardinals. More precisely, \(K\) is constructed from an **extender sequence** — a coherent system of ultrafilters encoding the large cardinal structure below some threshold.
+The <strong>core model</strong> \(K\) is (informally) the largest canonical inner model that does not contain too many large cardinals. More precisely, \(K\) is constructed from an <strong>extender sequence</strong> — a coherent system of ultrafilters encoding the large cardinal structure below some threshold.
 </div>
 
 The core model has several key properties:
@@ -2312,7 +2312,7 @@ Every ccc forcing is proper (trivially), and every countably closed forcing (\(\
 </div>
 
 <div class="example">
-<strong>Sacks forcing is proper.</strong> Sacks forcing \(\mathbb{S}\) consists of all perfect trees \(T \subseteq 2^{<\omega}\) (every node has two extensions), ordered by inclusion (smaller tree = stronger condition). A generic filter \(G\) over \(\mathbb{S}\) determines a real \(r = \bigcap_{T \in G} [T]\) (the unique branch through all trees in \(G\)). Sacks forcing is proper: given a countable model \(M \prec H(\theta)\) and a Sacks condition \(T \in M\), one can construct a "fusion sequence" (a decreasing sequence of trees in \(M\) whose intersection is a perfect tree that is \((M, \mathbb{S})\)-generic). The resulting real \(r\) is a **Sacks real** or **minimal real**: it generates no intermediate degrees — any real definable from \(r\) over \(M\) is either already in \(M\) or computes \(r\).
+<strong>Sacks forcing is proper.</strong> Sacks forcing \(\mathbb{S}\) consists of all perfect trees \(T \subseteq 2^{<\omega}\) (every node has two extensions), ordered by inclusion (smaller tree = stronger condition). A generic filter \(G\) over \(\mathbb{S}\) determines a real \(r = \bigcap_{T \in G} [T]\) (the unique branch through all trees in \(G\)). Sacks forcing is proper: given a countable model \(M \prec H(\theta)\) and a Sacks condition \(T \in M\), one can construct a "fusion sequence" (a decreasing sequence of trees in \(M\) whose intersection is a perfect tree that is \((M, \mathbb{S})\)-generic). The resulting real \(r\) is a <strong>Sacks real</strong> or <strong>minimal real</strong>: it generates no intermediate degrees — any real definable from \(r\) over \(M\) is either already in \(M\) or computes \(r\).
 </div>
 
 ## Section 25.3: Forcing and Stationary Sets
@@ -2606,7 +2606,7 @@ We write \(j: M \prec N\) to indicate that \(j\) is an elementary embedding.
 </div>
 
 <div class="example">
-<strong>Elementary chains.</strong> Suppose \(M_0 \prec M_1 \prec M_2 \prec \cdots\) is an elementary chain of transitive models of ZFC. Then the union \(M_\omega = \bigcup_{n < \omega} M_n\) is also a model of ZFC, and \(M_n \prec M_\omega\) for each \(n\). This is the **Elementary Chain Lemma** and is used, for example, to build "long" forcing iterations: at limit stages, take the union of the elementary chain of ground models and intermediate extensions.
+<strong>Elementary chains.</strong> Suppose \(M_0 \prec M_1 \prec M_2 \prec \cdots\) is an elementary chain of transitive models of ZFC. Then the union \(M_\omega = \bigcup_{n < \omega} M_n\) is also a model of ZFC, and \(M_n \prec M_\omega\) for each \(n\). This is the <strong>Elementary Chain Lemma</strong> and is used, for example, to build "long" forcing iterations: at limit stages, take the union of the elementary chain of ground models and intermediate extensions.
 </div>
 
 ## Section 28.2: The Compactness Theorem and Its Set-Theoretic Uses
@@ -2658,7 +2658,7 @@ M \models \varphi(a_{i_1}, \ldots, a_{i_n}) \iff M \models \varphi(a_{j_1}, \ldo
 </div>
 
 <div class="example">
-<strong>Silver indiscernibles and \(0^\#\).</strong> In the theory of \(L\), the **Silver indiscernibles** are an uncountable set \(I \subset \mathbf{Ord}\) such that: for any formula \(\varphi(x_1, \ldots, x_n)\) and increasing sequences from \(I\), \(L \models \varphi(a_{i_1}, \ldots, a_{i_n})\) iff \(L \models \varphi(a_{j_1}, \ldots, a_{j_n})\). The existence of Silver indiscernibles for \(L\) is equivalent to the existence of \(0^\#\) (zero-sharp). The set of formulas true of increasing indiscernibles in \(L\) is the complete theory of the Silver indiscernibles, encoded as a real — this is \(0^\#\). Its existence implies \(V \neq L\) (since \(L\) cannot define its own indiscernibles).
+<strong>Silver indiscernibles and \(0^\#\).</strong> In the theory of \(L\), the <strong>Silver indiscernibles</strong> are an uncountable set \(I \subset \mathbf{Ord}\) such that: for any formula \(\varphi(x_1, \ldots, x_n)\) and increasing sequences from \(I\), \(L \models \varphi(a_{i_1}, \ldots, a_{i_n})\) iff \(L \models \varphi(a_{j_1}, \ldots, a_{j_n})\). The existence of Silver indiscernibles for \(L\) is equivalent to the existence of \(0^\#\) (zero-sharp). The set of formulas true of increasing indiscernibles in \(L\) is the complete theory of the Silver indiscernibles, encoded as a real — this is \(0^\#\). Its existence implies \(V \neq L\) (since \(L\) cannot define its own indiscernibles).
 </div>
 
 ---
@@ -2668,7 +2668,7 @@ M \models \varphi(a_{i_1}, \ldots, a_{i_n}) \iff M \models \varphi(a_{j_1}, \ldo
 ## Section 29.1: Algebra — Whitehead Groups and Shelah's Theorem
 
 <div class="definition">
-An abelian group \(A\) is a <strong>Whitehead group</strong> if \(\text{Ext}^1(A, \mathbb{Z}) = 0\), i.e., every short exact sequence \(0 \to \mathbb{Z} \to B \to A \to 0\) splits. Free abelian groups are Whitehead. The **Whitehead Problem** asks: is every Whitehead group free?
+An abelian group \(A\) is a <strong>Whitehead group</strong> if \(\text{Ext}^1(A, \mathbb{Z}) = 0\), i.e., every short exact sequence \(0 \to \mathbb{Z} \to B \to A \to 0\) splits. Free abelian groups are Whitehead. The <strong>Whitehead Problem</strong> asks: is every Whitehead group free?
 </div>
 
 <div class="theorem">

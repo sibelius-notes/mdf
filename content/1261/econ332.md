@@ -20,7 +20,7 @@ subjects: "ECON"
 
 ## 1.1 Exchange Rate Basics
 
-The foreign exchange (forex) market is the world's largest financial market — daily turnover exceeded $7.5 trillion in 2022 according to the BIS Triennial Survey. It is a decentralized, over-the-counter market operating around the clock across time zones.
+The foreign exchange (forex) market is the world's largest financial market — daily turnover exceeded \$7.5 trillion in 2022 according to the BIS Triennial Survey. It is a decentralized, over-the-counter market operating around the clock across time zones.
 
 <div class="definition">
 <strong>Nominal Exchange Rate:</strong> The price of one currency in terms of another. We denote the exchange rate \( E_{d/f} \) as units of domestic currency per unit of foreign currency (the "price" of foreign currency in domestic currency terms). Example: if \( E_{CAD/USD} = 1.37 \), one US dollar buys 1.37 Canadian dollars.
@@ -29,7 +29,9 @@ The foreign exchange (forex) market is the world's largest financial market — 
 Convention matters: if \( E \) rises (more domestic currency per unit of foreign), the domestic currency has *depreciated*. If \( E \) falls, the domestic currency has *appreciated*.
 
 <div class="definition">
-<strong>Real Exchange Rate (RER):</strong> \[ q = E \cdot \frac{P^*}{P} \] where \( P^* \) is the foreign price level and \( P \) is the domestic price level, both measured in their own currencies. The RER measures the relative price of the foreign consumption basket in terms of the domestic basket. A rise in \( q \) is a real depreciation (foreign goods become more expensive relative to domestic goods).
+<strong>Real Exchange Rate (RER):</strong>
+\[ q = E \cdot \frac{P^*}{P} \]
+where \( P^* \) is the foreign price level and \( P \) is the domestic price level, both measured in their own currencies. The RER measures the relative price of the foreign consumption basket in terms of the domestic basket. A rise in \( q \) is a real depreciation (foreign goods become more expensive relative to domestic goods).
 </div>
 
 ## 1.2 The Spot and Forward Markets
@@ -177,7 +179,9 @@ The long-run anchor for exchange rates is the *law of one price* and its aggrega
 </div>
 
 <div class="theorem">
-<strong>Relative PPP:</strong> The rate of change of the exchange rate equals the difference in inflation rates: \[ \frac{\Delta E}{E} = \pi - \pi^* \] where \( \pi \) and \( \pi^* \) are domestic and foreign inflation rates.
+<strong>Relative PPP:</strong> The rate of change of the exchange rate equals the difference in inflation rates:
+\[ \frac{\Delta E}{E} = \pi - \pi^* \]
+where \( \pi \) and \( \pi^* \) are domestic and foreign inflation rates.
 </div>
 
 **Evidence:** Absolute PPP performs poorly in the short run — the "Penn effect" shows that rich countries have systematically higher price levels (the Balassa-Samuelson effect, explained below). Relative PPP holds better over long horizons (5–10 years) and for high-inflation episodes.
@@ -528,7 +532,7 @@ The global financial crisis originated in the US subprime mortgage market and sp
 
 ## 7.5 Reserve Accumulation and "Bretton Woods II"
 
-Following the Asian crisis, many emerging market economies (especially in East Asia) dramatically increased their foreign reserve holdings as self-insurance against sudden stops. China, for example, accumulated reserves exceeding $4 trillion at peak.
+Following the Asian crisis, many emerging market economies (especially in East Asia) dramatically increased their foreign reserve holdings as self-insurance against sudden stops. China, for example, accumulated reserves exceeding \$4 trillion at peak.
 
 Dooley, Folkerts-Landau, and Garber (2003) argued this represented a new "Bretton Woods II" — emerging markets deliberately undervalued their currencies (accumulating reserves) to sustain export-led growth strategies, while the United States provided the global reserve currency and absorbed global demand.
 

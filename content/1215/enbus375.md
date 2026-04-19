@@ -18,7 +18,7 @@ A useful way to begin thinking about fashion is with the ordinary contents of a 
 
 <div class="definition"><strong>Fashion:</strong> A popular or culturally accepted style, particularly in clothing, that is subject to change over time and serves as a vehicle for self-expression, social signaling, and identity construction.</div>
 
-The fashion industry itself is enormous. As of 2019 the global fashion market was valued at approximately $531 billion USD. It encompasses design, raw material production (fiber, textile manufacture), garment manufacturing, logistics, retail, and end-of-life disposal. It employs hundreds of millions of people worldwide, with the heaviest manufacturing concentrated in South and Southeast Asia. The industry is deeply interconnected with questions of labor rights, environmental impact, and cultural expression.
+The fashion industry itself is enormous. As of 2019 the global fashion market was valued at approximately \$531 billion USD. It encompasses design, raw material production (fiber, textile manufacture), garment manufacturing, logistics, retail, and end-of-life disposal. It employs hundreds of millions of people worldwide, with the heaviest manufacturing concentrated in South and Southeast Asia. The industry is deeply interconnected with questions of labor rights, environmental impact, and cultural expression.
 
 ## COVID-19 and Fashion Trends (2020-2021)
 
@@ -60,7 +60,7 @@ The initial scarcity of manufactured masks in North America created a community-
 
 ### The Fashion Industry Under COVID: Economic Impacts
 
-The pandemic's economic impact on the fashion industry was severe. The global market, valued at $531 billion in 2019, was expected to decline to approximately $485 billion — a drop of nearly $50 billion. Retail stores closed. Supply chains were disrupted at multiple points. Orders from brands to manufacturers were cancelled, often after production had already begun, leaving factory workers in Bangladesh, Cambodia, Vietnam, and other major producing countries without income or recourse. Fashion Revolution, a global advocacy organization, documented these supply chain ruptures and the human cost to garment workers.
+The pandemic's economic impact on the fashion industry was severe. The global market, valued at \$531 billion in 2019, was expected to decline to approximately \$485 billion — a drop of nearly \$50 billion. Retail stores closed. Supply chains were disrupted at multiple points. Orders from brands to manufacturers were cancelled, often after production had already begun, leaving factory workers in Bangladesh, Cambodia, Vietnam, and other major producing countries without income or recourse. Fashion Revolution, a global advocacy organization, documented these supply chain ruptures and the human cost to garment workers.
 
 At the same time, <strong>e-commerce</strong> accelerated dramatically. Online fashion retail accounted for almost 30% of all fashion retail sales in the United States during the pandemic period. This structural shift — from physical to digital retail — had implications for how fashion is presented, sold, and experienced, and for the sustainability of the logistics networks (particularly last-mile delivery and returns) that underpin online retail.
 
@@ -144,7 +144,7 @@ Oldenburg's work was simultaneously absurd and accurate. The scale of his object
 
 The course grounds this historical analysis in contemporary statistics that reveal the current scale of fashion consumption:
 
-We consume (purchase) approximately <strong>400% more clothing</strong> than we did two decades ago. Financial planners today recommend budgeting about 5% of household income for clothing, and the average person spends approximately $160 per month. The average woman has 103 items of clothing in her wardrobe, yet 21% of those items are identified as unwearable, 33% are too tight, 24% are too loose, and 12% have never been worn — leaving only about 10% of the wardrobe in active rotation. A comparable survey reported by Esquire found that men wear only about 13% of the items in their closets.
+We consume (purchase) approximately <strong>400% more clothing</strong> than we did two decades ago. Financial planners today recommend budgeting about 5% of household income for clothing, and the average person spends approximately \$160 per month. The average woman has 103 items of clothing in her wardrobe, yet 21% of those items are identified as unwearable, 33% are too tight, 24% are too loose, and 12% have never been worn — leaving only about 10% of the wardrobe in active rotation. A comparable survey reported by Esquire found that men wear only about 13% of the items in their closets.
 
 A comparison across the past century tells a striking story. In the 1900s, clothing accounted for approximately 15% of a typical household's income. Today we spend around 5% of income on clothing — yet we own dramatically more garments. The explanation is that the price of clothing has fallen dramatically while incomes have risen. We spend three times less on clothing as a percentage of income, but buy far more items. The implication is that clothes have become cheaper, less durable, and more disposable.
 
@@ -190,7 +190,7 @@ As a companion to the history-of-consumption lecture, Week 2 also includes a sli
 
 <strong>The Little Black Dress.</strong> Coco Chanel's 1926 introduction of the little black dress is conventionally cited as a democratizing moment in fashion: a simple, versatile, affordable garment that could be dressed up or down, worn by women of different classes and body types, and adapted for many occasions. The American edition of Vogue, on its 1926 publication, compared the LBD to a Ford — meaning it would become a universal fashion staple. The LBD's significance for this course lies partly in what it says about <strong>wardrobe minimalism</strong>: a single, well-chosen, durable garment can serve more social functions than a wardrobe of disposable fast-fashion items.
 
-<strong>The Hermes Kelly and Birkin Bags.</strong> The Hermes Kelly bag (named for Grace Kelly) and the Birkin bag (designed in 1984 for actress Jane Birkin) are among the most valuable fashion accessories in the world. A new Birkin bag can cost between $9,000 and $500,000 depending on material and configuration; secondary market prices often exceed retail. They exemplify the economics of <strong>artificial scarcity</strong> — Hermes controls supply to maintain desirability — and of <strong>investment-grade fashion</strong>, in which clothing and accessories function as asset classes.
+<strong>The Hermes Kelly and Birkin Bags.</strong> The Hermes Kelly bag (named for Grace Kelly) and the Birkin bag (designed in 1984 for actress Jane Birkin) are among the most valuable fashion accessories in the world. A new Birkin bag can cost between \$9,000 and \$500,000 depending on material and configuration; secondary market prices often exceed retail. They exemplify the economics of <strong>artificial scarcity</strong> — Hermes controls supply to maintain desirability — and of <strong>investment-grade fashion</strong>, in which clothing and accessories function as asset classes.
 
 <div class="definition"><strong>Veblen goods:</strong> Goods for which demand increases as price increases, because the high price is itself part of the product's appeal as a status signal. Named after economist Thorstein Veblen. Luxury fashion items including the Hermes Birkin bag are commonly cited examples.</div>
 
@@ -296,7 +296,7 @@ The course includes a guest podcast by <strong>Amaryah DeGroot</strong> on the c
 
 ## The Beauty Industry and Sustainability
 
-The cosmetics and personal care industry is closely intertwined with the fashion system and shares many of its environmental and ethical tensions. The global cosmetics market is valued at over $500 billion USD.
+The cosmetics and personal care industry is closely intertwined with the fashion system and shares many of its environmental and ethical tensions. The global cosmetics market is valued at over \$500 billion USD.
 
 <strong>Ingredient concerns</strong> in cosmetics include: <strong>microbeads</strong> (tiny plastic spheres used as exfoliants, now banned in many jurisdictions), <strong>palm oil</strong> and its derivatives (linked to deforestation in Southeast Asia), synthetic musks and other chemicals with endocrine-disrupting potential, <strong>parabens</strong> (preservatives whose safety has been debated), and heavy metals in pigments.
 
@@ -358,7 +358,7 @@ The <strong>6Rs</strong> framework provides a systematic vocabulary for thinking
 
 <div class="definition"><strong>6Rs (sustainability framework):</strong> A design and consumption framework encompassing Rethink, Refuse, Reduce, Reuse, Repair, and Recycle, providing a hierarchy of interventions for reducing the environmental impact of material goods, including clothing.</div>
 
-The <strong>"If I had $500"</strong> assignment in this week challenges students to practice what the course has taught: curating a selection of sustainable fashion or cosmetics items within a budget, applying criteria learned over the term about materials, labeling, supply chain responsibility, durability, and personal need.
+The <strong>"If I had \$500"</strong> assignment in this week challenges students to practice what the course has taught: curating a selection of sustainable fashion or cosmetics items within a budget, applying criteria learned over the term about materials, labeling, supply chain responsibility, durability, and personal need.
 
 ---
 

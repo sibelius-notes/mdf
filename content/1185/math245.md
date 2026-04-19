@@ -261,10 +261,10 @@ Existence is guaranteed by the Riesz representation lemma: for each fixed \(\mat
 
 <strong>Theorem 3.10 (Properties of the Adjoint).</strong> For linear maps \(S, T : V \to W\) and \(\alpha \in \mathbb{F}\):
 <ol>
-  <li>\((S + T)^<em> = S^</em> + T^*\).</li>
-  <li>\((\alpha T)^<em> = \bar{\alpha} T^</em>\).</li>
-  <li>\((T^<em>)^</em> = T\).</li>
-  <li>\((ST)^<em> = T^</em> S^*\).</li>
+  <li>\((S + T)^* = S^* + T^*\).</li>
+  <li>\((\alpha T)^* = \bar{\alpha} T^*\).</li>
+  <li>\((T^*)^* = T\).</li>
+  <li>\((ST)^* = T^* S^*\).</li>
   <li>\(\ker T^* = (\operatorname{Range} T)^\perp\).</li>
 </ol>
 
@@ -285,8 +285,8 @@ The spectral theorem is the centrepiece of linear algebra: under the right condi
 <strong>Definition 4.1.</strong> Let \(T : V \to V\) be a linear operator on a finite-dimensional inner product space.
 <ul>
   <li>\(T\) is <em>self-adjoint</em> (Hermitian) if \(T^* = T\).</li>
-  <li>\(T\) is <em>unitary</em> (or <em>orthogonal</em> over \(\mathbb{R}\)) if \(T^<em> T = TT^</em> = I\).</li>
-  <li>\(T\) is <em>normal</em> if \(TT^<em> = T^</em>T\).</li>
+  <li>\(T\) is <em>unitary</em> (or <em>orthogonal</em> over \(\mathbb{R}\)) if \(T^* T = TT^* = I\).</li>
+  <li>\(T\) is <em>normal</em> if \(TT^* = T^*T\).</li>
 </ul>
 
 </div>
@@ -393,7 +393,7 @@ Before the full spectral theorem, we need Schur's triangularization, which holds
 
 <strong>Theorem 4.6 (Spectral Theorem for Normal Operators).</strong> Let \(V\) be a finite-dimensional complex inner product space and \(T : V \to V\) a linear operator. The following are equivalent:
 <ol>
-  <li>\(T\) is normal (\(TT^<em> = T^</em>T\)).</li>
+  <li>\(T\) is normal (\(TT^* = T^*T\)).</li>
   <li>\(V\) has an orthonormal basis of eigenvectors of \(T\).</li>
   <li>\(T\) is unitarily diagonalizable: there exists a unitary \(U\) such that \(U^{-1}TU\) is diagonal.</li>
 </ol>

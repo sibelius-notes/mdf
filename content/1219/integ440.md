@@ -252,7 +252,7 @@ To collect all pages of results, use a `while` loop that checks the total number
 
 When data is not available through an API, researchers can **scrape** it directly from websites by parsing their HTML source code. The golden rule: study the source code before writing any scraping code.
 
-<strong>HTML basics:</strong> Websites are built with HTML tags. `<h1>` is a top-level heading; `<p>` is a paragraph; `<a href="url">` is a link; `<div id="name">` and `<span class="name">` are containers. The <strong>Document Object Model (DOM)</strong> is the tree structure of these elements.
+<strong>HTML basics:</strong> Websites are built with HTML tags. `<h1>` is a top-level heading; `<p>` is a paragraph; `<a href="url">` is a link; `div` and `span` tags are containers. The <strong>Document Object Model (DOM)</strong> is the tree structure of these elements.
 
 The Python `BeautifulSoup` package parses HTML:
 

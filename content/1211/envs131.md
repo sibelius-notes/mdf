@@ -131,7 +131,7 @@ The lecture introduced **strategic communications** as an umbrella concept encom
 
 # Entrepreneurship, Advertising Types, and Strategic Channels
 
-This lecture featured a guest speaker: **Carly from Concept**, the University of Waterloo's entrepreneurship accelerator program. Carly described the **Concept 5K** competition, in which student teams develop solutions to environmental or social problems and compete for $5,000 in seed funding. She also explained the **Climate Innovation Discovery Stream**, a specific track within the program that focuses on climate-related solutions. For students in the A or A+ pathway, participation in one of these programs serves as the pitch component of the course. Students were reminded that the external program deadlines operate independently of the course calendar and must be tracked separately.
+This lecture featured a guest speaker: **Carly from Concept**, the University of Waterloo's entrepreneurship accelerator program. Carly described the **Concept 5K** competition, in which student teams develop solutions to environmental or social problems and compete for \$5,000 in seed funding. She also explained the **Climate Innovation Discovery Stream**, a specific track within the program that focuses on climate-related solutions. For students in the A or A+ pathway, participation in one of these programs serves as the pitch component of the course. Students were reminded that the external program deadlines operate independently of the course calendar and must be tracked separately.
 
 Three types of advertising were analyzed and mapped onto the ethos/logos/pathos framework:
 

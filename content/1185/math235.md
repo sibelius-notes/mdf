@@ -1080,10 +1080,10 @@ The Gram-Schmidt procedure works for Hermitian inner products as well.
 
 <strong>Theorem 11.4.9.</strong> For \(A, B \in M_{m \times n}(\mathbb{C})\) and \(\alpha \in \mathbb{C}\):
 (1) \(\langle A\vec{z}, \vec{w} \rangle = \langle \vec{z}, A^* \vec{w} \rangle\);
-(2) \((A^<em>)^</em> = A\);
-(3) \((A + B)^<em> = A^</em> + B^*\);
-(4) \((\alpha A)^<em> = \bar{\alpha} A^</em>\);
-(5) \((AB)^<em> = B^</em> A^*\).
+(2) \((A^*)^* = A\);
+(3) \((A + B)^* = A^* + B^*\);
+(4) \((\alpha A)^* = \bar{\alpha} A^*\);
+(5) \((AB)^* = B^* A^*\).
 
 </div>
 
@@ -1147,7 +1147,7 @@ The proof follows from Schur's Theorem: \(U^* AU = T\) upper triangular, but \(A
 
 <div class="definition">
 
-<strong>Definition (Normal Matrix).</strong> An \(n \times n\) matrix \(A\) is called normal if \(AA^<em> = A^</em>A\).
+<strong>Definition (Normal Matrix).</strong> An \(n \times n\) matrix \(A\) is called normal if \(AA^* = A^*A\).
 
 </div>
 

@@ -115,13 +115,13 @@ For a non-trivial solution, the determinant must vanish:
 \det\left(\boldsymbol{\sigma} - \sigma \mathbf{I}\right) = 0
 \]
 
-Expanding this \(3 \times 3\) determinant gives the **characteristic equation**:
+Expanding this \(3 \times 3\) determinant gives the <strong>characteristic equation</strong>:
 
 \[
 \sigma^3 - I_1 \sigma^2 + I_2 \sigma - I_3 = 0
 \]
 
-where the three **stress invariants** are:
+where the three <strong>stress invariants</strong> are:
 
 \[
 I_1 = \sigma_{xx} + \sigma_{yy} + \sigma_{zz} = \text{tr}(\boldsymbol{\sigma}) = \sigma_1 + \sigma_2 + \sigma_3
@@ -219,7 +219,7 @@ Eliminating \(\theta\) by squaring and adding:
 \left(\sigma_n - \frac{\sigma_1 + \sigma_3}{2}\right)^2 + \tau^2 = \left(\frac{\sigma_1 - \sigma_3}{2}\right)^2
 \]
 
-This is the equation of a **circle** in the \((\sigma_n, \tau)\) plane, centred at \(\left(\frac{\sigma_1 + \sigma_3}{2}, 0\right)\) with radius \(R = \frac{\sigma_1 - \sigma_3}{2}\). This is the **Mohr circle**. As \(\theta\) varies from 0 to \(\pi/2\), the representative point traces the full circle. \(\square\)
+This is the equation of a <strong>circle</strong> in the \((\sigma_n, \tau)\) plane, centred at \(\left(\frac{\sigma_1 + \sigma_3}{2}, 0\right)\) with radius \(R = \frac{\sigma_1 - \sigma_3}{2}\). This is the <strong>Mohr circle</strong>. As \(\theta\) varies from 0 to \(\pi/2\), the representative point traces the full circle. \(\square\)
 </div>
 
 The Mohr circle construction applies for 3D stress states too, yielding three circles (for each pair of principal stresses). The admissible stress states on planes within the 3D body correspond to points in the region bounded by the outer circle and exterior to the two inner circles.
@@ -315,7 +315,7 @@ Inverting to give stress in terms of strain:
 \sigma_{ij} = \frac{E\nu}{(1+\nu)(1-2\nu)}\varepsilon_{kk}\delta_{ij} + \frac{E}{1+\nu}\varepsilon_{ij}
 \]
 
-or equivalently \(\sigma_{ij} = \lambda \varepsilon_{kk} \delta_{ij} + 2\mu \varepsilon_{ij}\), where the **Lamé parameters** are:
+or equivalently \(\sigma_{ij} = \lambda \varepsilon_{kk} \delta_{ij} + 2\mu \varepsilon_{ij}\), where the <strong>Lamé parameters</strong> are:
 
 \[
 \lambda = \frac{E\nu}{(1+\nu)(1-2\nu)}, \qquad \mu = G = \frac{E}{2(1+\nu)}
@@ -442,7 +442,7 @@ The Mohr-Coulomb criterion is the foundational failure criterion for geomaterial
 |\tau| = c + \sigma_n \tan\phi
 \]
 
-where \(c\) is **cohesion** (shear strength at zero normal stress) and \(\phi\) is the **friction angle** (angle of internal friction). Using the Mohr circle results from Chapter 2, the stress on a plane at angle \(\theta\) to \(\sigma_3\) in the principal stress plane is:
+where \(c\) is <strong>cohesion</strong> (shear strength at zero normal stress) and \(\phi\) is the <strong>friction angle</strong> (angle of internal friction). Using the Mohr circle results from Chapter 2, the stress on a plane at angle \(\theta\) to \(\sigma_3\) in the principal stress plane is:
 
 \[
 \sigma_n = \frac{\sigma_1 + \sigma_3}{2} + \frac{\sigma_1 - \sigma_3}{2}\cos 2\theta, \qquad \tau = \frac{\sigma_1 - \sigma_3}{2}\sin 2\theta
@@ -468,7 +468,7 @@ Rearranging to express \(\sigma_1\) in terms of \(\sigma_3\):
 \sigma_1 = \sigma_3 \frac{1 + \sin\phi}{1 - \sin\phi} + \frac{2c\cos\phi}{1 - \sin\phi}
 \]
 
-Defining \(N_\phi = (1+\sin\phi)/(1-\sin\phi) = \tan^2(45° + \phi/2)\) and the **uniaxial compressive strength** \(\sigma_{ci} = 2c\cos\phi/(1-\sin\phi) = 2c\sqrt{N_\phi}\):
+Defining \(N_\phi = (1+\sin\phi)/(1-\sin\phi) = \tan^2(45° + \phi/2)\) and the <strong>uniaxial compressive strength</strong> \(\sigma_{ci} = 2c\cos\phi/(1-\sin\phi) = 2c\sqrt{N_\phi}\):
 
 \[
 \boxed{\sigma_1 = N_\phi \sigma_3 + \sigma_{ci}}
@@ -492,7 +492,7 @@ The Mohr-Coulomb strength at \(\sigma_3 = 15\) MPa is:
 \sigma_1^{\text{fail}} = 3.70 \times 15 + 30.8 = 55.5 + 30.8 = 86.3 \text{ MPa}
 \]
 
-Since the actual \(\sigma_1 = 50\) MPa \(< 86.3\) MPa, the rock is **not at failure**. The factor of safety against shear failure is approximately \(86.3/50 = 1.73\).
+Since the actual \(\sigma_1 = 50\) MPa \(< 86.3\) MPa, the rock is <strong>not at failure</strong>. The factor of safety against shear failure is approximately \(86.3/50 = 1.73\).
 </div>
 
 ## 6.3 The Griffith Fracture Criterion
@@ -516,7 +516,7 @@ The surface energy to create two crack surfaces of length \(2a\) is \(U_s = 4a\g
 \sigma_c = \sqrt{\frac{2E'\gamma_s}{\pi a}}
 \]
 
-This is the **Griffith tensile strength**: smaller flaws give higher strength. In compression, the crack tip stress analysis modified for biaxial loading gives the parabolic Griffith criterion:
+This is the <strong>Griffith tensile strength</strong>: smaller flaws give higher strength. In compression, the crack tip stress analysis modified for biaxial loading gives the parabolic Griffith criterion:
 
 \[
 (\sigma_1 - \sigma_3)^2 = 8T_0(\sigma_1 + \sigma_3), \quad \text{when} \quad \sigma_1 + 3\sigma_3 > 0
@@ -547,7 +547,7 @@ where:
 - \(m_b\) is the reduced value of the Hoek-Brown constant \(m_i\) for the rock mass: \(m_b = m_i \exp\left(\frac{\text{GSI} - 100}{28 - 14D}\right)\)
 - \(s\) is a constant reflecting the degree of fracturing: \(s = \exp\left(\frac{\text{GSI} - 100}{9 - 3D}\right)\)
 - \(a\) is an exponent: \(a = \frac{1}{2} + \frac{1}{6}\left(e^{-\text{GSI}/15} - e^{-20/3}\right)\)
-- GSI is the **Geological Strength Index** (0–100) representing rock mass quality
+- GSI is the <strong>Geological Strength Index</strong> (0–100) representing rock mass quality
 - \(D\) is a disturbance factor (0–1) accounting for blast damage
 
 For intact rock, GSI = 100, \(D = 0\), giving \(m_b = m_i\), \(s = 1\), \(a = 0.5\), and the criterion reduces to:
@@ -598,7 +598,7 @@ The problem is solved using **Airy stress functions** in polar coordinates.
 \sigma_{r\theta} = -\frac{\partial}{\partial r}\left(\frac{1}{r}\frac{\partial \Phi}{\partial \theta}\right)
 \]
 
-The compatibility condition (in terms of \(\Phi\)) becomes the **biharmonic equation**:
+The compatibility condition (in terms of \(\Phi\)) becomes the <strong>biharmonic equation</strong>:
 
 \[
 \nabla^4 \Phi = \nabla^2(\nabla^2 \Phi) = 0
@@ -754,7 +754,7 @@ However, Terzaghi argued (and subsequent experiments confirmed) that the deforma
 \sigma'_{ij} = \sigma_{ij} - p_f \delta_{ij}
 \]
 
-where \(\sigma'_{ij}\) is the **effective stress tensor**. In scalar form for normal stresses:
+where \(\sigma'_{ij}\) is the <strong>effective stress tensor</strong>. In scalar form for normal stresses:
 
 \[
 \sigma'_n = \sigma_n - p_f
@@ -945,7 +945,7 @@ A rock with RQD of 100% has no fractures within 10 cm; RQD of 0% is completely d
 \text{RQD} = 100 e^{-0.1\lambda}(0.1\lambda + 1)
 \]
 
-This arises because the probability of a core piece being longer than threshold \(t = 10$ cm in a Poisson fracture process is \(P(l > t) = e^{-\lambda t}\), giving \(E[\text{RQD}] = 100\int_{t}^{\infty} \lambda x e^{-\lambda x} dx / 1\).
+This arises because the probability of a core piece being longer than threshold \(t = 10\) cm in a Poisson fracture process is \(P(l > t) = e^{-\lambda t}\), giving \(E[\text{RQD}] = 100\int_{t}^{\infty} \lambda x e^{-\lambda x} dx / 1\).
 
 ## 11.3 Statistical Description of Fractures
 
@@ -994,7 +994,7 @@ Equilibrium along the slope:
 F = \frac{S_r}{T} = \frac{c_j A + (W\cos\psi_p - U)\tan\phi_j}{W\sin\psi_p}
 \]
 
-With a **tension crack** at the crest, filled with water to depth \(z_w\), additional water forces modify the driving and resisting forces:
+With a <strong>tension crack</strong> at the crest, filled with water to depth \(z_w\), additional water forces modify the driving and resisting forces:
 - \(V = \frac{1}{2}\rho_w g z_w^2\) (horizontal water force in tension crack, acting on the back of the block)
 - \(U = \frac{1}{2}\rho_w g z_w \ell_w\) (uplift on the base, where \(\ell_w\) is the wetted length of the base)
 
@@ -1061,7 +1061,7 @@ The Monte Carlo method estimates the distribution of \(F\) by:
 2. Evaluate \(F^{(k)} = f(x_1^{(k)}, \ldots, x_n^{(k)})\) for each sample.
 3. The empirical distribution of \(\{F^{(k)}\}\) approximates the true distribution of \(F\).
 
-The **probability of failure** is:
+The <strong>probability of failure</strong> is:
 
 \[
 P_f = P(F < 1) \approx \frac{\text{number of samples with } F^{(k)} < 1}{N}
@@ -1125,7 +1125,7 @@ where \(N(\geq m)\) is the number of earthquakes with magnitude \(\geq m\) in a 
 <div class="theorem">
 <strong>Physical Basis and b-value Estimation.</strong> The GR law is equivalent to saying that earthquake moment \(M_0\) follows a power-law distribution. Since moment magnitude \(m_w = (2/3)\log_{10} M_0 - 6.07\), the GR law implies \(P(M_0 > m_0) \propto m_0^{-2b/3}\) — a Pareto distribution.
 
-The b-value is estimated from a catalogue by the **maximum likelihood estimator**:
+The b-value is estimated from a catalogue by the <strong>maximum likelihood estimator</strong>:
 
 \[
 \hat{b} = \frac{\log_{10} e}{\overline{m} - m_c}
@@ -1191,7 +1191,7 @@ where \(\alpha_p = \alpha(1 - 2\nu)/(1 - \nu)\) is the poroelastic expansion coe
 \Delta\sigma_h = \frac{\alpha_p E}{1 - \nu} \Delta p_f = \alpha\frac{1 - 2\nu}{1 - \nu}\Delta p_f
 \]
 
-The ratio \(C_{\text{res}} = \Delta\sigma_h / \Delta p_f = \alpha(1 - 2\nu)/(1 - \nu)\) is the **reservoir stress path coefficient**. For typical reservoir rocks, \(C_{\text{res}} \approx 0.5\)–\(0.7\). \(\square\)
+The ratio \(C_{\text{res}} = \Delta\sigma_h / \Delta p_f = \alpha(1 - 2\nu)/(1 - \nu)\) is the <strong>reservoir stress path coefficient</strong>. For typical reservoir rocks, \(C_{\text{res}} \approx 0.5\)–\(0.7\). \(\square\)
 </div>
 
 As reservoir pressure depletes, horizontal stress decreases (by about 0.5–0.7 times the pressure decrease), while vertical stress remains approximately constant. This narrows the horizontal-to-vertical stress difference, potentially changing the fracture orientation regime and making hydraulic fractures easier to initiate.
@@ -1670,7 +1670,7 @@ The equivalent permeability of the fracture is \(k_f = e^2/12\). A fracture with
 e = e_0 \exp\left(-\frac{\sigma'_n}{K_{n0} e_0}\right)
 \]
 
-Shear displacement dilates fractures (by the dilation angle \(\psi_d$), increasing aperture and permeability. This coupling between stress and flow is the physical basis for enhanced geothermal system stimulation and for the permeability increase observed following hydraulic fracturing.
+Shear displacement dilates fractures (by the dilation angle \(\psi_d\)), increasing aperture and permeability. This coupling between stress and flow is the physical basis for enhanced geothermal system stimulation and for the permeability increase observed following hydraulic fracturing.
 
 ## 26.2 Pore Pressure Diffusion
 
@@ -1928,7 +1928,7 @@ where \(\sigma'_{3n} = \sigma'_{3,\max}/\sigma_{ci}\) and \(\sigma'_{3,\max}\) i
 - Disturbance factor: \(D = 0.7\) (production blasting)
 - Rock density: \(\rho = 2700\) kg/m³
 
-**Step 1:** Compute Hoek-Brown parameters:
+<strong>Step 1:</strong> Compute Hoek-Brown parameters:
 
 \[
 m_b = 32\exp\!\left(\frac{55-100}{28-14 \times 0.7}\right) = 32\exp(-45/18.2) = 32 \times e^{-2.47} = 32 \times 0.0846 = 2.71
@@ -1942,7 +1942,7 @@ s = \exp\!\left(\frac{55-100}{9-3\times 0.7}\right) = \exp(-45/6.9) = e^{-6.52} 
 a = 0.5 + \frac{1}{6}(e^{-55/15} - e^{-20/3}) = 0.5 + \frac{1}{6}(e^{-3.67} - e^{-6.67}) = 0.5 + \frac{1}{6}(0.0255 - 0.00127) = 0.504
 \]
 
-**Step 2:** Maximum confining stress for slope (Hoek et al., 2002):
+<strong>Step 2:</strong> Maximum confining stress for slope (Hoek et al., 2002):
 
 \[
 \sigma'_{3,\max} = 0.25\sigma_{ci}\left(\frac{\sigma_{ci}}{\gamma H}\right)^{-0.91} \times \frac{H}{100}
@@ -1960,7 +1960,7 @@ a = 0.5 + \frac{1}{6}(e^{-55/15} - e^{-20/3}) = 0.5 + \frac{1}{6}(e^{-3.67} - e^
 \sigma'_{3n} = 1.77/180 = 0.00983
 \]
 
-**Step 3:** Equivalent friction angle and cohesion using the linearization formulas. At \(\sigma'_{3n} = 0.00983\) with \(a = 0.504\), \(m_b = 2.71\), \(s = 0.00148\):
+<strong>Step 3:</strong> Equivalent friction angle and cohesion using the linearization formulas. At \(\sigma'_{3n} = 0.00983\) with \(a = 0.504\), \(m_b = 2.71\), \(s = 0.00148\):
 
 \[
 (s + m_b\sigma'_{3n})^{a-1} = (0.00148 + 2.71 \times 0.00983)^{0.504-1} = (0.00148 + 0.02664)^{-0.496}
@@ -2385,7 +2385,7 @@ The resulting **anisotropy curve** (strength versus \(\beta\)) has a characteris
 \dot{\varepsilon}_s = A (\sigma_e)^n
 \]
 
-where \(\sigma_e = (\sigma_1 - \sigma_3)\) is the differential stress (von Mises equivalent), \(A = 0.64 \times 10^{-6}\) MPa\(^{-n}\)/day, and \(n = 5$ for Asse mine salt.
+where \(\sigma_e = (\sigma_1 - \sigma_3)\) is the differential stress (von Mises equivalent), \(A = 0.64 \times 10^{-6}\) MPa\(^{-n}\)/day, and \(n = 5\) for Asse mine salt.
 
 A spherical cavern of radius \(a = 30\) m at depth 700 m in salt (\(\rho = 2200\) kg/m³) is maintained at internal gas pressure \(p_c = 10\) MPa. The far-field stress is approximately hydrostatic at \(p_0 = \rho g z = 2200 \times 9.81 \times 700 \times 10^{-6} = 15.1\) MPa.
 
@@ -2461,7 +2461,7 @@ This convergence of methods — not reliance on any single approach — is the h
 <div class="example">
 <strong>Example 35.2: Integrated Tunnel Design.</strong> A horizontal access tunnel of 5 m diameter is to be driven at 400 m depth in a limestone rock mass. The following data are available from site investigation:
 
-**Rock mass characterization:**
+<strong>Rock mass characterization:</strong>
 - Intact UCS: \(\sigma_{ci} = 100\) MPa, \(m_i = 10\) (limestone)
 - RQD = 70%, joint sets: 3, joint condition: slightly rough, slightly weathered, aperture \(<0.1\) mm, no fill
 - Groundwater: damp walls
@@ -2469,20 +2469,20 @@ This convergence of methods — not reliance on any single approach — is the h
 - \(J_n = 9\), \(J_r = 1.5\), \(J_a = 1.0\), \(J_w = 1.0\), SRF = 2.5 (medium stress)
 - \(Q = (70/9)(1.5/1.0)(1.0/2.5) = 7.78 \times 1.5 \times 0.4 = 4.67\)
 
-**In-situ stresses:**
+<strong>In-situ stresses:</strong>
 - \(S_v = 2700 \times 9.81 \times 400 \times 10^{-6} = 10.6\) MPa
 - \(S_H = 15\) MPa (NE-SW), \(S_h = 8\) MPa (NW-SE)
 - Tunnel axis oriented E-W → \(P = S_h = 8\) MPa (perpendicular to axis in horizontal plane), \(Q_s = S_v = 10.6\) MPa (vertical)
 
 Wait — for the 2D Kirsch solution applied to a horizontal tunnel, the far-field stresses in the plane perpendicular to the tunnel axis are the horizontal stress perpendicular to the tunnel (\(S_H\) or \(S_h\) depending on orientation) and the vertical stress. With an E-W tunnel: perpendicular horizontal stress = N-S component = \(S_h = 8\) MPa; vertical = \(S_v = 10.6\) MPa. So \(P = 8\) MPa (horizontal), \(Q_s = 10.6\) MPa (vertical).
 
-**Kirsch stress check:**
+<strong>Kirsch stress check:</strong>
 - Hoop stress at crown and invert (\(\theta = 90°\) from \(S_h\) direction — vertical): \(\sigma_{\theta\theta} = 3(8) - 10.6 = 13.4\) MPa
 - Hoop stress at springline (\(\theta = 0°\) — horizontal): \(\sigma_{\theta\theta} = 3(10.6) - 8 = 23.8\) MPa
 
 Maximum hoop stress is 23.8 MPa at the springlines (side walls). Is this within the elastic limit?
 
-**Hoek-Brown rock mass strength** (GSI estimated from RMR: \(\text{GSI} \approx \text{RMR} - 5 = 57\)):
+<strong>Hoek-Brown rock mass strength</strong> (GSI estimated from RMR: \(\text{GSI} \approx \text{RMR} - 5 = 57\)):
 
 \[
 m_b = 10 \times \exp\!\left(\frac{57-100}{28}\right) = 10 \times e^{-1.536} = 10 \times 0.215 = 2.15
@@ -2494,9 +2494,9 @@ s = \exp\!\left(\frac{57-100}{9}\right) = e^{-4.78} = 0.0084
 
 Rock mass UCS (at \(\sigma_3 = 0\)): \(\sigma_{ci}\sqrt{s} = 100\sqrt{0.0084} = 100 \times 0.0917 = 9.17\) MPa.
 
-Since maximum hoop stress (23.8 MPa) \(> 9.17\) MPa (rock mass UCS), **yielding will occur** at the tunnel springlines.
+Since maximum hoop stress (23.8 MPa) \(> 9.17\) MPa (rock mass UCS), <strong>yielding will occur</strong> at the tunnel springlines.
 
-**Estimate of plastic zone radius** using \(c' = 0.92\) MPa, \(\phi' = 52°\) (from Hoek-Brown linearization at typical stress range):
+<strong>Estimate of plastic zone radius</strong> using \(c' = 0.92\) MPa, \(\phi' = 52°\) (from Hoek-Brown linearization at typical stress range):
 
 \[
 N_\phi = (1 + \sin 52°)/(1 - \sin 52°) = 1.788/0.212 = 8.43
@@ -2528,7 +2528,7 @@ r_p = a\left[\frac{2p_0 - \sigma_{ci}'/(N_\phi - 1)}{(1+N_\phi)\cdot(0 + \sigma_
 
 The plastic zone extends 2.87 m from the tunnel centre (beyond the 2.5 m radius), so approximately 0.37 m of plastic zone — manageable with rock bolts.
 
-**Q-system support recommendation:** \(Q = 4.67\), ESR = 1.6 (permanent underground excavations), \(D_e = 5.0/1.6 = 3.13\) m. From the Q-chart, this falls in the "reinforced shotcrete + systematic bolting" zone: 50–90 mm shotcrete, 2.5–3.0 m long bolts at 1.5–2.0 m spacing. This is consistent with the computed plastic zone depth.
+<strong>Q-system support recommendation:</strong> \(Q = 4.67\), ESR = 1.6 (permanent underground excavations), \(D_e = 5.0/1.6 = 3.13\) m. From the Q-chart, this falls in the "reinforced shotcrete + systematic bolting" zone: 50–90 mm shotcrete, 2.5–3.0 m long bolts at 1.5–2.0 m spacing. This is consistent with the computed plastic zone depth.
 </div>
 
 This integrated example illustrates the essential rock mechanics workflow: classify the rock mass → measure/estimate stresses → apply analytical solutions to check stability → refine with empirical methods → design support. Every step requires judgment about which simplifications are acceptable, and the design is validated by monitoring during construction.

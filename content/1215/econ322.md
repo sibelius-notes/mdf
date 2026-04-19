@@ -260,7 +260,7 @@ It is important to remember that this inference is only valid if the model has b
 A <strong>confidence interval</strong> for a regression coefficient provides a range of plausible values for the population parameter, rather than just a single point estimate. A \(95\%\) confidence interval for \(\beta_P\) is constructed as:
 
 \[
-\left[\hat{\beta}^<em> - t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS}), \quad \hat{\beta}^</em> + t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS})\right]
+\left[\hat{\beta}^* - t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS}), \quad \hat{\beta}^* + t_{\alpha/2, \, n-k} \cdot \widehat{SE}(\hat{\beta}_{OLS})\right]
 \]
 
 where \(t_{\alpha/2, \, n-k}\) is the \((1 - \alpha/2)\) percentile (i.e., the 97.5th percentile for a 95% interval) of the t-distribution with \(n - k\) degrees of freedom. The choice of the 97.5th percentile arises because the two tails each contribute \(2.5\%\) probability, totalling the \(5\%\) outside the 95% region.
@@ -1054,7 +1054,7 @@ Once a regression has been estimated, it can be used for prediction. There are t
 
 <div class="definition"><strong>Confidence interval for the average prediction:</strong> Gives a range for the expected value \(\mathbb{E}[Y \mid X = X^*]\). This is tighter because it concerns only the uncertainty about the regression line itself.</div>
 
-<div class="definition"><strong>Prediction interval for a single new observation:</strong> Gives a range for a new individual realisation \(Y^<em> = \hat{Y}^</em> + u^<em>\). This is wider because it adds the variance of the idiosyncratic error \(u^</em>\).</div>
+<div class="definition"><strong>Prediction interval for a single new observation:</strong> Gives a range for a new individual realisation \(Y^* = \hat{Y}^* + u^*\). This is wider because it adds the variance of the idiosyncratic error \(u^*\).</div>
 
 Formally, the prediction interval is:
 
@@ -1223,7 +1223,7 @@ If the form of heteroskedasticity is known — say, \(\text{Var}(u_i \mid X_i) =
 
 The WLS estimator is BLUE under the correctly specified heteroskedastic model.
 
-When the form of \(h\) is unknown, it must be estimated. <strong>Feasible GLS (FGLS)</strong> estimates \(h\) in a first stage by regressing \(\log(\hat{u}_i^2)\) on the regressors, exponentiating the fitted values to get \(\hat{h}_i\), and then running WLS with weights \(1/\hat{h}_i$.
+When the form of \(h\) is unknown, it must be estimated. <strong>Feasible GLS (FGLS)</strong> estimates \(h\) in a first stage by regressing \(\log(\hat{u}_i^2)\) on the regressors, exponentiating the fitted values to get \(\hat{h}_i\), and then running WLS with weights \(1/\hat{h}_i\).
 
 ```r
 lu2 <- log(residuals(res)^2)
@@ -1344,11 +1344,11 @@ t = \frac{\bar{x} - c}{s/\sqrt{n}}
 3. For each bootstrap sample \(b\), compute the bootstrap test statistic:
 
 \[
-t^<em>_b = \frac{\bar{x}^</em>_b - \bar{x}}{s^*_b/\sqrt{n}}
+t^*_b = \frac{\bar{x}^*_b - \bar{x}}{s^*_b/\sqrt{n}}
 \]
 Note: the null value \(c\) is replaced by \(\bar{x}\), so the distribution of \(t^*\) is centred under what the data imply.
 
-4. Use the empirical 2.5th and 97.5th percentiles of \(\{t^<em>_1, \ldots, t^</em>_B\}\) as the bootstrap critical values. Reject if \(t\) falls outside this range.
+4. Use the empirical 2.5th and 97.5th percentiles of \(\{t^*_1, \ldots, t^*_B\}\) as the bootstrap critical values. Reject if \(t\) falls outside this range.
 
 ```r
 set.seed(112233)

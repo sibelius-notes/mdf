@@ -10,7 +10,7 @@ subjects: "ECON"
 
 ## 1.1 What Is Cost-Benefit Analysis?
 
-Imagine a government debating whether to spend $10 billion on a new high-speed rail corridor between Toronto and Windsor. Politicians argue about jobs and growth. Engineers debate safety standards. Environmentalists worry about wetland disruption. Who is right? More importantly, *how do we even decide*? This is precisely the problem that **cost-benefit analysis (CBA)** was designed to solve.
+Imagine a government debating whether to spend \$10 billion on a new high-speed rail corridor between Toronto and Windsor. Politicians argue about jobs and growth. Engineers debate safety standards. Environmentalists worry about wetland disruption. Who is right? More importantly, *how do we even decide*? This is precisely the problem that **cost-benefit analysis (CBA)** was designed to solve.
 
 At its core, CBA is a systematic methodology for evaluating whether a policy or project produces net benefits for society. The central idea is disarmingly simple: add up everything a project gives to society, subtract everything it takes away, and check whether the result is positive. We call this the **net social benefit (NSB)**:
 
@@ -32,7 +32,7 @@ An **in-media res CBA** (literally "in the middle of things") is conducted *whil
 
 An **ex-post CBA** is conducted *after* a project is completed. This is the honest reckoning: did the project actually deliver what was promised? Ex-post CBAs are invaluable for improving future decision-making, even though there is very little appetite to do them (governments are rarely eager to audit their own past mistakes).
 
-A famous example of the gap between ex-ante optimism and ex-post reality: the **Boston Big Dig**, a massive highway tunnel project completed in 2007. The original 1985 estimate was $2.8 billion. The final construction cost was $14.6 billion, and once interest payments are included the true bill reached **$24 billion** — a nearly 9-fold overrun. A Boston Globe investigation found that $1.1 billion of the overruns stemmed from Bechtel's own design errors. An honest ex-post CBA would have made for deeply uncomfortable reading. The project also induced additional demand — downtown Boston traffic improved, but congestion worsened at the fringes — illustrating how infrastructure CBAs routinely miss induced-demand effects.
+A famous example of the gap between ex-ante optimism and ex-post reality: the **Boston Big Dig**, a massive highway tunnel project completed in 2007. The original 1985 estimate was \$2.8 billion. The final construction cost was \$14.6 billion, and once interest payments are included the true bill reached **\$24 billion** — a nearly 9-fold overrun. A Boston Globe investigation found that \$1.1 billion of the overruns stemmed from Bechtel's own design errors. An honest ex-post CBA would have made for deeply uncomfortable reading. The project also induced additional demand — downtown Boston traffic improved, but congestion worsened at the fringes — illustrating how infrastructure CBAs routinely miss induced-demand effects.
 
 ---
 
@@ -88,7 +88,7 @@ Two errors trip up CBA practitioners repeatedly.
 
 **Double-counting** occurs when the same benefit or cost is counted more than once under different labels. A classic example: suppose a highway project reduces commute times (a real benefit), and also increases nearby property values (because shorter commute times make those locations more attractive). If you count both the travel-time savings *and* the property value increases, you are counting the same benefit twice. Property value increases are typically the *capitalized* value of all local amenity improvements; they do not represent additional benefits on top of those improvements.
 
-**The jobs fallacy** — treating employment created by a project as a pure benefit — is perhaps the most pervasive error in applied CBA. Before examining it, it is worth noting the most notorious example of the opposite error: the Ford Pinto scandal. In the 1970s, Ford engineers discovered that the Pinto's fuel tank would rupture in rear-end collisions. The fix cost **$11 per car**. Ford's internal memo explicitly ran a CBA: it valued each expected death at **$200,000** and each major burn injury at **$67,000**. Total benefit of the safety fix: roughly $49.5 million. Total cost of the fix: roughly $137 million. Conclusion: cheaper to pay the lawsuits. Ford did not make the fix — and subsequently faced a $125 million punitive damages award in the *Grimshaw v. Ford* case (later reduced to $3.5 million on appeal). The scandal became the defining cautionary tale for why monetizing human life, done carelessly and without ethical reflection, can be morally catastrophic even when the arithmetic is technically correct CBA. When an analyst claims "this project will create 500 jobs, each worth $60,000/year, generating $30 million in annual economic benefit," they are almost certainly making an error. In a well-functioning labour market, the workers employed on this project give up their previous work (or their leisure). The *opportunity cost* of their labour must be subtracted from the wage benefit. In aggregate, job creation is a transfer, not a net social benefit. The exception is when the labour market is distorted — specifically when workers are unemployed due to cyclical or structural slack, in which case the opportunity cost of their labour is below the market wage.
+**The jobs fallacy** — treating employment created by a project as a pure benefit — is perhaps the most pervasive error in applied CBA. Before examining it, it is worth noting the most notorious example of the opposite error: the Ford Pinto scandal. In the 1970s, Ford engineers discovered that the Pinto's fuel tank would rupture in rear-end collisions. The fix cost **\$11 per car**. Ford's internal memo explicitly ran a CBA: it valued each expected death at **\$200,000** and each major burn injury at **\$67,000**. Total benefit of the safety fix: roughly \$49.5 million. Total cost of the fix: roughly \$137 million. Conclusion: cheaper to pay the lawsuits. Ford did not make the fix — and subsequently faced a \$125 million punitive damages award in the *Grimshaw v. Ford* case (later reduced to \$3.5 million on appeal). The scandal became the defining cautionary tale for why monetizing human life, done carelessly and without ethical reflection, can be morally catastrophic even when the arithmetic is technically correct CBA. When an analyst claims "this project will create 500 jobs, each worth \$60,000/year, generating \$30 million in annual economic benefit," they are almost certainly making an error. In a well-functioning labour market, the workers employed on this project give up their previous work (or their leisure). The *opportunity cost* of their labour must be subtracted from the wage benefit. In aggregate, job creation is a transfer, not a net social benefit. The exception is when the labour market is distorted — specifically when workers are unemployed due to cyclical or structural slack, in which case the opportunity cost of their labour is below the market wage.
 
 ---
 
@@ -154,7 +154,7 @@ This formula is handy because it allows analysts to estimate welfare changes wit
 
 When a tax is imposed, society loses more consumer surplus than the government collects in revenue. The gap is the **deadweight loss (DWL)** — the inefficiency created because some mutually beneficial transactions no longer occur at the higher price. Deadweight loss represents a pure social cost, the triangular area in a supply-and-demand diagram that nobody collects.
 
-This is not just a theoretical abstraction. When Canada imposes a $0.10/litre carbon tax on gasoline, it raises revenue but also causes some drivers to reduce their mileage, cancel trips, or shift to public transit. The surplus destroyed in those foregone trips exceeds the revenue collected from the remaining trips. The DWL is the social cost of using the tax system to raise revenue — which is why economists emphasize designing taxes to minimize DWL (taxing relatively inelastic goods).
+This is not just a theoretical abstraction. When Canada imposes a \$0.10/litre carbon tax on gasoline, it raises revenue but also causes some drivers to reduce their mileage, cancel trips, or shift to public transit. The surplus destroyed in those foregone trips exceeds the revenue collected from the remaining trips. The DWL is the social cost of using the tax system to raise revenue — which is why economists emphasize designing taxes to minimize DWL (taxing relatively inelastic goods).
 
 ---
 
@@ -200,9 +200,9 @@ Consider a tariff on imported steel. Domestic consumers pay higher prices (ΔCS 
 
 ### The Marginal Cost of Public Funds
 
-Raising $1 in public revenue does not cost society exactly $1. It costs society \(1 + \lambda\) dollars, where \(\lambda\) is the **marginal cost of public funds (MCPF)** — the deadweight loss per dollar of tax revenue collected.
+Raising \$1 in public revenue does not cost society exactly \$1. It costs society \(1 + \lambda\) dollars, where \(\lambda\) is the **marginal cost of public funds (MCPF)** — the deadweight loss per dollar of tax revenue collected.
 
-In Canada, the Treasury Board Secretariat estimated the MCPF at approximately **1.18**. This means that every dollar the government spends requires collecting $1.18 worth of taxes, and the extra $0.18 is pure deadweight loss — inefficiency created by the distortions of the tax system. This has a direct implication for CBA: public project benefits must exceed not just their dollar costs, but their dollar costs multiplied by the MCPF. A program that generates $1.05 in benefits per dollar of government spending is actually a **net loss** to society once you account for the cost of raising that dollar.
+In Canada, the Treasury Board Secretariat estimated the MCPF at approximately **1.18**. This means that every dollar the government spends requires collecting \$1.18 worth of taxes, and the extra \$0.18 is pure deadweight loss — inefficiency created by the distortions of the tax system. This has a direct implication for CBA: public project benefits must exceed not just their dollar costs, but their dollar costs multiplied by the MCPF. A program that generates \$1.05 in benefits per dollar of government spending is actually a **net loss** to society once you account for the cost of raising that dollar.
 
 Not all taxes are equally distortionary. Research by Bev Dahlby (University of Calgary) and Ergete Ferede finds that the **corporate income tax** has the highest MCPF — a 1 percentage point increase shrinks the corporate tax base by roughly 3.67% in the short run as firms shift activity or avoid the tax. Sales taxes have lower MCPFs. This has implications for public finance: governments should fund projects using the least-distortionary taxes available.
 
@@ -252,7 +252,7 @@ This practice is widespread and pragmatic, but it carries risks. An elasticity e
 
 When only two data points are available (perhaps a before/after comparison or a comparison of two cities), it is possible to fit either a linear or log-linear demand curve. The two approaches yield different slope estimates and different welfare calculations.
 
-Consider a simple example: suppose price rises from $2 to $3 and quantity falls from 100 to 80. The implied arc elasticity is:
+Consider a simple example: suppose price rises from \$2 to \$3 and quantity falls from 100 to 80. The implied arc elasticity is:
 
 \[
 \varepsilon_d = \frac{(80 - 100)/90}{(3 - 2)/2.5} = \frac{-0.222}{0.400} \approx -0.56
@@ -284,7 +284,7 @@ Beyond the statistical issues, CBA estimates are subject to several systematic b
 
 **Confirmation bias**: Once a project has political momentum, analysts may unconsciously seek evidence that supports the project and discount evidence against it.
 
-**Scope insensitivity**: People's stated WTP often fails to scale with the magnitude of the benefit. A study might find that people are willing to pay $80 to clean up pollution in one lake, $85 to clean up pollution in two lakes, and $87 to clean up all lakes in a region — even though the benefits clearly differ by an order of magnitude. This psychological phenomenon (related to "mental accounting") poses serious problems for benefit aggregation.
+**Scope insensitivity**: People's stated WTP often fails to scale with the magnitude of the benefit. A study might find that people are willing to pay \$80 to clean up pollution in one lake, \$85 to clean up pollution in two lakes, and \$87 to clean up all lakes in a region — even though the benefits clearly differ by an order of magnitude. This psychological phenomenon (related to "mental accounting") poses serious problems for benefit aggregation.
 
 ### The Delphi Method
 
@@ -312,7 +312,7 @@ Analysts working on projects in concentrated industries must be careful to captu
 
 When markets fail due to **externalities**, market prices no longer reflect true social values. A factory that pollutes a river imposes costs on downstream users that are not reflected in the price of its output. In such cases, the analyst must use **shadow prices** — adjustments to market prices that account for external effects.
 
-The most prominent application of this concept today is the **social cost of carbon** — an estimate of the damage caused by one additional tonne of CO₂ emitted into the atmosphere. The U.S. Environmental Protection Agency estimated the social cost of carbon at roughly US$51 per tonne in 2021; more recent estimates from the Biden administration pushed this figure above US$190 per tonne, reflecting updated climate damage models. Any CBA involving fossil fuel use should ideally use the social cost of carbon as a shadow price adjustment to energy costs.
+The most prominent application of this concept today is the **social cost of carbon** — an estimate of the damage caused by one additional tonne of CO₂ emitted into the atmosphere. The U.S. Environmental Protection Agency estimated the social cost of carbon at roughly US\$51 per tonne in 2021; more recent estimates from the Biden administration pushed this figure above US\$190 per tonne, reflecting updated climate damage models. Any CBA involving fossil fuel use should ideally use the social cost of carbon as a shadow price adjustment to energy costs.
 
 **Pigouvian taxes**, named after the economist Arthur Pigou, are designed to align market prices with shadow prices by making producers internalize their external costs. A carbon tax is the classic Pigouvian instrument. When a Pigouvian tax is set correctly, the market price with the tax equals the social shadow price, and no adjustment is needed in CBA — the market price already reflects social costs.
 
@@ -368,7 +368,7 @@ The key principle: **include secondary market impacts only when those markets co
 
 ### The Multiplier Effect Fallacy
 
-Politicians and project proponents are fond of claiming that every dollar of public investment generates multiple dollars of economic activity through "multiplier effects." The claim usually looks something like this: "This stadium will create $500 million in direct spending, plus 3× that in multiplier effects, for a total economic impact of $2 billion."
+Politicians and project proponents are fond of claiming that every dollar of public investment generates multiple dollars of economic activity through "multiplier effects." The claim usually looks something like this: "This stadium will create \$500 million in direct spending, plus 3× that in multiplier effects, for a total economic impact of \$2 billion."
 
 From a CBA perspective, **multiplier effects typically should not be added to primary benefits**. Here is why: multiplier effects describe how spending ripples through an economy via income effects. But this spending involves resources that have opportunity costs — they could have been used elsewhere. Unless the economy is operating well below capacity (significant unemployment of resources), the multiplier merely redistributes activity from one part of the economy to another. It does not represent a net addition to social welfare.
 
@@ -464,7 +464,7 @@ Two schools of thought have dominated the policy debate:
 
 **The descriptive approach** argues that the social discount rate should reflect *how society actually trades off present against future*, as revealed by market interest rates. Nordhaus (2008) criticized the Stern Review for using an unrealistically low discount rate and argued for rates of 5–6%, which substantially reduces the present value of future climate damages and implies a more gradual approach to emissions reduction.
 
-The Stern–Nordhaus debate is not merely academic. At Stern's 1.4% consumption discount rate, a $100 benefit arriving in 100 years is worth **$24.90 today**. At Nordhaus's higher rate (~4.3%), the same future benefit is worth only roughly **$1.48 today** — a 16-fold difference that drives entirely different policy conclusions. Stern's policy prescription: cut emissions roughly 3% per year immediately, with an optimal carbon price of ~$85/tonne. Nordhaus's prescription: go slowly, with an optimal carbon price of ~$7.40/tonne rising gradually. Neither position is purely technical — both embed deep ethical judgments about intergenerational equity that no model can resolve. As Arrow's impossibility theorem would predict, there is no neutral, preference-aggregating procedure for making these judgments.
+The Stern–Nordhaus debate is not merely academic. At Stern's 1.4% consumption discount rate, a \$100 benefit arriving in 100 years is worth **\$24.90 today**. At Nordhaus's higher rate (~4.3%), the same future benefit is worth only roughly **\$1.48 today** — a 16-fold difference that drives entirely different policy conclusions. Stern's policy prescription: cut emissions roughly 3% per year immediately, with an optimal carbon price of ~\$85/tonne. Nordhaus's prescription: go slowly, with an optimal carbon price of ~\$7.40/tonne rising gradually. Neither position is purely technical — both embed deep ethical judgments about intergenerational equity that no model can resolve. As Arrow's impossibility theorem would predict, there is no neutral, preference-aggregating procedure for making these judgments.
 
 ### The Marginal Rate of Time Preference
 
@@ -518,7 +518,7 @@ An **expected net social benefit** criterion says: accept the project if the exp
 
 ### Risk Aversion and Utility Theory
 
-Expected value analysis implicitly assumes **risk neutrality** — the decision-maker is indifferent between a certain $50 and a 50-50 gamble between $0 and $100. Most people are not risk neutral: they prefer certainty and are willing to pay a **risk premium** to avoid variance. This is **risk aversion**.
+Expected value analysis implicitly assumes **risk neutrality** — the decision-maker is indifferent between a certain \$50 and a 50-50 gamble between \$0 and \$100. Most people are not risk neutral: they prefer certainty and are willing to pay a **risk premium** to avoid variance. This is **risk aversion**.
 
 Risk aversion is captured by a **concave utility function** \(U(W)\), where \(U''(W) < 0\). A concave utility function implies that the marginal utility of wealth decreases as wealth increases — an extra dollar is worth more to someone who has little money than to someone who is wealthy. Under risk aversion:
 
@@ -639,14 +639,14 @@ The core insight of revealed preference methods is that even when a good (like c
 
 **Value of Travel Time Savings (VTS)**: When people choose between transportation modes — driving (faster but costly) versus transit (slower but cheap) — their choices reveal how they value time. Empirical studies typically find VTS in the range of 40–60% of the hourly wage, depending on the quality of travel time and trip purpose.
 
-**Value of Statistical Life (VSL)**: This is perhaps the most important and controversial parameter in all of CBA. The VSL is not the value placed on any specific person's life — it is derived from WTP for *small* reductions in mortality risk. If a thousand people each pay $600 for a safety device that reduces their annual mortality risk by 1-in-1000, then collectively they pay $600,000 to prevent 1 expected death, implying a VSL of $600,000.
+**Value of Statistical Life (VSL)**: This is perhaps the most important and controversial parameter in all of CBA. The VSL is not the value placed on any specific person's life — it is derived from WTP for *small* reductions in mortality risk. If a thousand people each pay \$600 for a safety device that reduces their annual mortality risk by 1-in-1000, then collectively they pay \$600,000 to prevent 1 expected death, implying a VSL of \$600,000.
 
 Methods for estimating VSL include:
 - **Forgone earnings approach**: value a life at the present value of lifetime earnings. This is theoretically weak (ignores WTP over and above financial contributions) and ethically problematic (implies rich lives are worth more than poor lives).
 - **Consumer purchases of safety**: revealed WTP for safety products (car airbags, smoke detectors, safety equipment).
-- **Labour market studies (hedonic wage studies)**: workers in riskier occupations demand a wage premium. This wage-risk tradeoff identifies VSL. Modern estimates typically yield VSLs of $6–$14 million (USD, 2020 prices) for working-age adults in developed countries.
+- **Labour market studies (hedonic wage studies)**: workers in riskier occupations demand a wage premium. This wage-risk tradeoff identifies VSL. Modern estimates typically yield VSLs of \$6–\$14 million (USD, 2020 prices) for working-age adults in developed countries.
 
-The U.S. Department of Transportation uses a VSL of approximately **USD$13.7 million** (2024 base year). Canada's Treasury Board guidance recommends around CAD$6–7 million, but a 2022 meta-analysis by Chestnut and de Civita — using preferred studies with representative samples — found a weighted mean of **CAD$13 million (2020 dollars)**, which is 43% higher than the government's current recommended figure. This gap is consequential: government agencies using the older, lower number are systematically under-investing in life-saving regulations. The variation reflects genuine methodological differences but also political and bureaucratic inertia — updating VSL estimates is a technically uncontroversial step that somehow always gets delayed.
+The U.S. Department of Transportation uses a VSL of approximately **USD\$13.7 million** (2024 base year). Canada's Treasury Board guidance recommends around CAD\$6–7 million, but a 2022 meta-analysis by Chestnut and de Civita — using preferred studies with representative samples — found a weighted mean of **CAD\$13 million (2020 dollars)**, which is 43% higher than the government's current recommended figure. This gap is consequential: government agencies using the older, lower number are systematically under-investing in life-saving regulations. The variation reflects genuine methodological differences but also political and bureaucratic inertia — updating VSL estimates is a technically uncontroversial step that somehow always gets delayed.
 
 ### Intermediate Good Method
 
@@ -654,7 +654,7 @@ When a natural resource or environmental good is an **intermediate input** into 
 
 ### Defensive Expenditures
 
-People and firms sometimes spend money to *protect themselves* from an environmental bad — buying air purifiers, bottled water, sound-proofing. These **defensive expenditures** provide a lower bound on the WTP to avoid the bad: if you spend $300/year on air filters, you are willing to pay at least $300 to have clean air (otherwise you would not buy the filters).
+People and firms sometimes spend money to *protect themselves* from an environmental bad — buying air purifiers, bottled water, sound-proofing. These **defensive expenditures** provide a lower bound on the WTP to avoid the bad: if you spend \$300/year on air filters, you are willing to pay at least \$300 to have clean air (otherwise you would not buy the filters).
 
 ### Asset Valuation
 
@@ -745,7 +745,7 @@ The **contingent valuation method (CVM)** is the most widely used technique for 
 - **Open-ended**: "What is the maximum you would pay?" Simple but produces many zero and extreme responses.
 - **Payment card**: present a range of dollar values and ask the respondent to indicate the maximum they would pay. Anchoring effects are a concern.
 - **Bidding game**: start with a trial bid, adjust up or down based on yes/no responses. Anchoring is a major problem.
-- **Referendum (dichotomous choice)**: "Would you pay $X for this policy?" — where $X varies randomly across respondents. This format mimics real market decisions and is considered theoretically superior. Endorsed by the NOAA Blue Ribbon Panel (1993) after the Exxon Valdez disaster.
+- **Referendum (dichotomous choice)**: "Would you pay \$X for this policy?" — where \$X varies randomly across respondents. This format mimics real market decisions and is considered theoretically superior. Endorsed by the NOAA Blue Ribbon Panel (1993) after the Exxon Valdez disaster.
 
 **Step 4: Estimate the bid curve.** Use regression analysis to relate stated WTP to the bid amount (for referendum format) or to respondent characteristics (for open-ended format).
 
@@ -755,9 +755,9 @@ The **contingent valuation method (CVM)** is the most widely used technique for 
 
 The CVM's biggest moment in the public spotlight came after the 1989 Exxon Valdez oil spill, which released 11 million gallons of crude oil into Prince William Sound, Alaska. The U.S. government commissioned a CVM study to estimate the non-use (existence) value of the damaged ecosystem as part of the damages case against Exxon.
 
-The study (Carson et al., 1992) produced an estimate of **$2.8 billion in non-use (passive use) damages** — the loss to American households of knowing that a pristine Alaskan wilderness had been contaminated. Exxon responded by funding its own team of economists to attack the methodology; the resulting debates produced two entire academic edited volumes and some of the most methodologically important papers in environmental economics. Paul Diamond and Jerry Hausman published a devastating 1994 critique concluding that "*no number is better than a CVM number*" — their core complaint was the "embedding effect": survey respondents gave essentially the same WTP to save 2,000 birds as to save 200,000 birds, suggesting they were expressing "moral satisfaction" rather than measuring genuine welfare changes.
+The study (Carson et al., 1992) produced an estimate of **\$2.8 billion in non-use (passive use) damages** — the loss to American households of knowing that a pristine Alaskan wilderness had been contaminated. Exxon responded by funding its own team of economists to attack the methodology; the resulting debates produced two entire academic edited volumes and some of the most methodologically important papers in environmental economics. Paul Diamond and Jerry Hausman published a devastating 1994 critique concluding that "*no number is better than a CVM number*" — their core complaint was the "embedding effect": survey respondents gave essentially the same WTP to save 2,000 birds as to save 200,000 birds, suggesting they were expressing "moral satisfaction" rather than measuring genuine welfare changes.
 
-The actual legal settlement: Exxon paid **$1 billion** in damages and restitution — well below the $2.8 billion CV estimate, but still one of the largest environmental damage payments in history.
+The actual legal settlement: Exxon paid **\$1 billion** in damages and restitution — well below the \$2.8 billion CV estimate, but still one of the largest environmental damage payments in history.
 
 The NOAA Panel (1993), chaired by Nobel laureates Kenneth Arrow and Robert Solow, concluded that CVM could produce reliable estimates *if* conducted according to best practices — especially using the referendum format, in-person interviews, careful scenario description, and including follow-up debriefing questions. The "NOAA guidelines" remain the gold standard for CVM practice.
 
@@ -785,7 +785,7 @@ CVM studies are susceptible to a long list of potential biases that can distort 
 
 Theory predicts that for small income changes, **WTP** (what you would pay to gain a good) and **WTA** (willingness to accept compensation to give up a good) should be approximately equal. In practice, WTA is consistently and substantially larger than WTP — often by a factor of 2–5 for environmental goods.
 
-This gap, known as the **endowment effect** or **loss aversion**, was identified experimentally by Kahneman and Tversky and is a cornerstone of **behavioural economics**. People feel losses more acutely than equivalent gains — a loss of $100 causes about twice as much psychological pain as a gain of $100 causes pleasure. This asymmetry means that the welfare measure used in CBA matters:
+This gap, known as the **endowment effect** or **loss aversion**, was identified experimentally by Kahneman and Tversky and is a cornerstone of **behavioural economics**. People feel losses more acutely than equivalent gains — a loss of \$100 causes about twice as much psychological pain as a gain of \$100 causes pleasure. This asymmetry means that the welfare measure used in CBA matters:
 
 - **WTP** is appropriate when the baseline scenario is that the good does not exist, and the policy would create it ("gains" framing).
 - **WTA** is appropriate when the baseline is that the good already exists, and the policy would destroy it ("losses" framing).
@@ -800,7 +800,7 @@ For environmental goods that already exist (existing wilderness, existing specie
 
 Standard CBA aggregates benefits and costs across all affected parties without weighting them by income. A dollar's benefit to a billionaire counts the same as a dollar's benefit to someone in poverty. This is the Kaldor-Hicks criterion in action: if aggregate benefits exceed aggregate costs, the project passes — regardless of who bears the costs and who reaps the benefits.
 
-The implications can be disturbing. Consider a policy that takes $1 million from 10,000 low-income households (averaging $100 each) and delivers $1.5 million to 10 wealthy households ($150,000 each). This policy has a positive NPV of $500,000 and would pass standard CBA. Most people's moral intuitions rebel against this outcome — but standard CBA cannot see the problem.
+The implications can be disturbing. Consider a policy that takes \$1 million from 10,000 low-income households (averaging \$100 each) and delivers \$1.5 million to 10 wealthy households (\$150,000 each). This policy has a positive NPV of \$500,000 and would pass standard CBA. Most people's moral intuitions rebel against this outcome — but standard CBA cannot see the problem.
 
 ### Three Responses
 
@@ -820,7 +820,7 @@ Analysts faced with this critique can take three approaches:
 
 Standard CBA implements an implicit "one dollar, one vote" rule: those with higher WTP have more influence on whether a project passes. Critics argue that a democratic society committed to "one person, one vote" should be uncomfortable with this principle.
 
-The yacht excise tax example illustrates the tension. In 1991, the U.S. Congress imposed a 10% luxury tax on yachts priced above $100,000. The intent was progressive redistribution: make the wealthy pay more. The actual outcome: the domestic yacht industry collapsed as wealthy buyers purchased abroad, shipyard workers lost jobs, and the tax was repealed in 1993. A CBA of the yacht tax might find negative net benefits, even though the intent was redistributive. This illustrates that well-intentioned redistributive policies can have perverse efficiency consequences.
+The yacht excise tax example illustrates the tension. In 1991, the U.S. Congress imposed a 10% luxury tax on yachts priced above \$100,000. The intent was progressive redistribution: make the wealthy pay more. The actual outcome: the domestic yacht industry collapsed as wealthy buyers purchased abroad, shipyard workers lost jobs, and the tax was repealed in 1993. A CBA of the yacht tax might find negative net benefits, even though the intent was redistributive. This illustrates that well-intentioned redistributive policies can have perverse efficiency consequences.
 
 ### Diminishing Marginal Utility of Income (DMUI)
 
@@ -855,12 +855,12 @@ The weights are typically set relative to a reference income group (often the av
 ### Comparing Weighted and Unweighted Analysis
 
 Distributional weighting can change project rankings significantly. Consider two projects:
-- Project A: $100 benefit to 1,000 low-income families, $0 to wealthy families. Unweighted NPV = $100,000.
-- Project B: $50 benefit to 1,000 low-income families, $100 benefit to 500 wealthy families. Unweighted NPV = $100,000.
+- Project A: \$100 benefit to 1,000 low-income families, \$0 to wealthy families. Unweighted NPV = \$100,000.
+- Project B: \$50 benefit to 1,000 low-income families, \$100 benefit to 500 wealthy families. Unweighted NPV = \$100,000.
 
 Both projects have the same unweighted NPV. But if low-income families receive weight 2 and wealthy families receive weight 0.5:
-- Weighted NPV of Project A = $200,000
-- Weighted NPV of Project B = $125,000
+- Weighted NPV of Project A = \$200,000
+- Weighted NPV of Project B = \$125,000
 
 Project A is now clearly preferred on distributional grounds, even though they were indistinguishable under standard CBA.
 
@@ -1004,7 +1004,7 @@ The **Health Utilities Index (HUI)**, developed at McMaster University, is a sta
 
 EIA's signature concept is the **multiplier effect**: an initial injection of spending creates additional rounds of income and spending as the initial recipients spend their earnings, and so on. In input-output models, this cascade of spending is represented by the **Leontief inverse matrix**, which captures the total (direct + indirect + induced) effects of a demand shock.
 
-A multiplier of 2 means that every $1 of initial spending generates $2 in total economic activity. Regional multipliers are typically in the range of 1.5–2.5, depending on how "leaky" the regional economy is (how much spending leaves the region).
+A multiplier of 2 means that every \$1 of initial spending generates \$2 in total economic activity. Regional multipliers are typically in the range of 1.5–2.5, depending on how "leaky" the regional economy is (how much spending leaves the region).
 
 ### Why EIA Is Not CBA
 
@@ -1034,7 +1034,7 @@ Academic economists have been devastating critics of EIA as applied to public sp
 
 The most rigorous empirical literature on sports arena economics is almost unanimous: professional sports teams generate far less economic activity for their host cities than the impact studies commissioned by teams and leagues claim. Victor Matheson of Holy Cross College and others have documented that independent academic studies find near-zero or even negative net impacts from professional sports subsidies, while industry-commissioned studies find large positive impacts. The divergence is almost entirely due to the industry studies' failure to account for substitution, displacement, and the opportunity cost of public funds.
 
-The scale of the problem is staggering. Between 1970 and 2020, U.S. and Canadian governments spent approximately **$33 billion** in public funds subsidizing major-league venues. The Brookings Institution found that cities that invested heavily in sports venues experienced **slower income growth on average** than comparable cities that did not. The mechanism: fans attending a hockey game spend money they would have spent somewhere else in the same city. There is no net new spending — just rearranged spending within the local economy. Even where localized benefits exist, they tend to be small and confined to a tight geographic radius around the venue. Why do cities keep doing it? Because promoters routinely commission economic impact studies that use inflated multiplier effects, and there is an entire consulting industry that reliably produces the numbers that stadium advocates need to justify the subsidies.
+The scale of the problem is staggering. Between 1970 and 2020, U.S. and Canadian governments spent approximately **\$33 billion** in public funds subsidizing major-league venues. The Brookings Institution found that cities that invested heavily in sports venues experienced **slower income growth on average** than comparable cities that did not. The mechanism: fans attending a hockey game spend money they would have spent somewhere else in the same city. There is no net new spending — just rearranged spending within the local economy. Even where localized benefits exist, they tend to be small and confined to a tight geographic radius around the venue. Why do cities keep doing it? Because promoters routinely commission economic impact studies that use inflated multiplier effects, and there is an entire consulting industry that reliably produces the numbers that stadium advocates need to justify the subsidies.
 
 ---
 
@@ -1044,9 +1044,9 @@ The scale of the problem is staggering. Between 1970 and 2020, U.S. and Canadian
 
 The final module applies the analytical framework of the entire course to a real-world infrastructure investment: the **Trans Labrador Highway** project in Labrador, Canada, studied by P.J. Townley (1998).
 
-The Trans Labrador Highway (TLH) is a 1,149-kilometre corridor connecting communities across Labrador that previously had no year-round road access. The project was enormously important for remote communities that faced extremely high transportation costs — goods had to be flown in or transported by seasonal ice roads. The paving of the entire highway was **completed in July 2022**, after more than 40 years of construction. Total investment: approximately **$1 billion** — roughly **$870,000 per kilometre** through some of the most remote and challenging terrain in eastern Canada.
+The Trans Labrador Highway (TLH) is a 1,149-kilometre corridor connecting communities across Labrador that previously had no year-round road access. The project was enormously important for remote communities that faced extremely high transportation costs — goods had to be flown in or transported by seasonal ice roads. The paving of the entire highway was **completed in July 2022**, after more than 40 years of construction. Total investment: approximately **\$1 billion** — roughly **\$870,000 per kilometre** through some of the most remote and challenging terrain in eastern Canada.
 
-The cost overruns were severe. Newfoundland and Labrador's Auditor General reported in 2012 that Phase I alone was originally budgeted at **$290 million** but had consumed **$501 million** by 2011, with a further $428 million forecast for completion — a total projected Phase I cost of $929 million against the original $290 million budget, a **220% overrun**. Causes included non-competitive contract extensions, unresolved historical payment claims (a $1.5 million claim from 2001 was only settled in 2010), and inadequate oversight of bridge inspections. The population served was small.
+The cost overruns were severe. Newfoundland and Labrador's Auditor General reported in 2012 that Phase I alone was originally budgeted at **\$290 million** but had consumed **\$501 million** by 2011, with a further \$428 million forecast for completion — a total projected Phase I cost of \$929 million against the original \$290 million budget, a **220% overrun**. Causes included non-competitive contract extensions, unresolved historical payment claims (a \$1.5 million claim from 2001 was only settled in 2010), and inadequate oversight of bridge inspections. The population served was small.
 
 ### The CBA Framework Applied
 

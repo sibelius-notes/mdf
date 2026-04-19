@@ -276,7 +276,7 @@ Foliated rocks are classified by the type and degree of foliation, which records
 
 ## The Challenge of Deep Time
 
-Geological time resists human intuition. The history of Earth extends back approximately 4.6 billion years — nine zeros. To make this tangible: if you saved $100 every day, it would take 27,000 years to accumulate $1 billion. If each stride you walked were one meter, a billion paces would carry you around the equator 25 times. If you stacked 4.6 billion sheets of paper, the pile would reach nearly into the upper atmosphere.
+Geological time resists human intuition. The history of Earth extends back approximately 4.6 billion years — nine zeros. To make this tangible: if you saved \$100 every day, it would take 27,000 years to accumulate \$1 billion. If each stride you walked were one meter, a billion paces would carry you around the equator 25 times. If you stacked 4.6 billion sheets of paper, the pile would reach nearly into the upper atmosphere.
 
 Yet this is the currency in which geoscientists work. Understanding <strong>deep time</strong> — the vast expanse of Earth's history — is essential to making sense of slow geological processes: the assembly and fragmentation of supercontinents, the rise and erosion of mountain ranges, the evolution of life from single-celled organisms to complex ecosystems. Processes that occur at millimeters per year, sustained over hundreds of millions of years, produce continental collisions and kilometer-high mountain ranges.
 

@@ -1028,7 +1028,7 @@ A counterintuitive result: the 3D Sierpinski gasket, a fractal living in \(\math
 
 ## Hausdorff Dimension
 
-The **Hausdorff dimension** is a more mathematically rigorous notion that agrees with the box-counting dimension for most natural fractals but is better-behaved theoretically. For a set \(A \subset \mathbb{R}^k\), define the $d$-dimensional Hausdorff measure:
+The **Hausdorff dimension** is a more mathematically rigorous notion that agrees with the box-counting dimension for most natural fractals but is better-behaved theoretically. For a set \(A \subset \mathbb{R}^k\), define the \(d\)-dimensional Hausdorff measure:
 
 \[
 \mathcal{H}^d(A) = \lim_{\varepsilon \to 0} \inf\left\{ \sum_i |U_i|^d : A \subset \bigcup_i U_i, |U_i| \leq \varepsilon \right\}.

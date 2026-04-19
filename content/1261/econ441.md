@@ -148,7 +148,7 @@ A public project is socially desirable if the aggregate welfare gains exceed the
 
 **Shadow prices:** When markets are distorted (taxes, monopoly, externalities), market prices do not equal social opportunity costs. Shadow prices correct for these distortions. For a taxed good, the shadow price is between the consumer price and producer price; for a rationed good (e.g., congested roads), the shadow price includes the congestion cost.
 
-**Marginal cost of public funds (MCPF):** Raising one additional dollar of tax revenue costs more than one dollar in welfare because taxes distort behaviour. The MCPF measures this ratio. If the MCPF is 1.25, any public project must generate at least $1.25 in social benefits per dollar of government expenditure. Canadian estimates of the MCPF range from 1.1 to 1.5, depending on the tax used.
+**Marginal cost of public funds (MCPF):** Raising one additional dollar of tax revenue costs more than one dollar in welfare because taxes distort behaviour. The MCPF measures this ratio. If the MCPF is 1.25, any public project must generate at least \$1.25 in social benefits per dollar of government expenditure. Canadian estimates of the MCPF range from 1.1 to 1.5, depending on the tax used.
 
 ---
 
@@ -488,4 +488,4 @@ Three emerging areas reshape optimal tax policy:
 
 2. **Top income concentration:** The dramatic rise of top incomes in Canada and the US since the 1980s (driven by technology, globalisation, and declining unionisation) raises the social marginal utility of redistribution. Diamond and Saez (2011) argue this justifies higher top marginal rates; opponents emphasise potentially large behavioural responses.
 
-3. **Carbon pricing:** Optimal externality correction requires carbon prices of $150–$250/tonne CO₂e by 2030 (IPCC estimates). Canada's federal carbon price trajectory reaches $170/tonne by 2030. Integration with the income tax system (revenue recycling) determines the distributional impact.
+3. **Carbon pricing:** Optimal externality correction requires carbon prices of \$150–\$250/tonne CO₂e by 2030 (IPCC estimates). Canada's federal carbon price trajectory reaches \$170/tonne by 2030. Integration with the income tax system (revenue recycling) determines the distributional impact.

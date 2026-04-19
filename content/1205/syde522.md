@@ -281,7 +281,8 @@ However, \(D (p \&#124; q) \ne D(q \&#124; p) \). Therefore, KL divergence is no
 
 Relation to entropy \(H(X) \).
 
-\[H(X)=\sum _ {x\in X}p(x)\log {1\over p(x)}
+\[
+H(X)=\sum _ {x\in X}p(x)\log {1\over p(x)}
 = \log N - D(\underbrace{p(x)} _ {\text{true dist'n}} \&#124; p _ U(x))
 \]
 where \(U \): uniform.

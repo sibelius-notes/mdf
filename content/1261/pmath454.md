@@ -1085,7 +1085,7 @@ Equivalently, \(\|xf\|_{L^2} \cdot \|\xi\hat{f}\|_{L^2} \geq \frac{1}{4\pi}\|f\|
 <div class="proof">
 <strong>Proof (complete).</strong> We prove the equivalent form. Assume \(f \in \mathcal{S}(\mathbb{R})\) first.
 
-**Step 1: Integration by parts.** Compute:
+<strong>Step 1: Integration by parts.</strong> Compute:
 
 \[
 \int_\mathbb{R} x(|f(x)|^2)'\ dx = \int_\mathbb{R} x(f\bar{f})'\ dx = \int_\mathbb{R} x(f'\bar{f} + f\bar{f}')\ dx = \int_\mathbb{R} x \cdot 2\text{Re}(f'(x)\overline{f(x)})\ dx.
@@ -1097,16 +1097,16 @@ Integration by parts (boundary term vanishes for \(f \in \mathcal{S}\)):
 \]
 Thus \(\text{Re}\int_\mathbb{R} xf'(x)\overline{f(x)}\,dx = -\frac{1}{2}\|f\|_2^2\).
 
-**Step 2: Cauchy–Schwarz.** By Cauchy–Schwarz:
+<strong>Step 2: Cauchy–Schwarz.</strong> By Cauchy–Schwarz:
 
 \[
 \left|\int_\mathbb{R} xf'(x)\overline{f(x)}\,dx\right| \leq \|xf\|_2\|f'\|_2.
 \]
 Taking real parts: \(\frac{1}{2}\|f\|_2^2 \leq \|xf\|_2\|f'\|_2\).
 
-**Step 3: Fourier identity.** Using \(\widehat{f'}(\xi) = 2\pi i\xi\hat{f}(\xi)\) and Plancherel: \(\|f'\|_2 = \|\widehat{f'}\|_2 = 2\pi\|\xi\hat{f}\|_2\).
+<strong>Step 3: Fourier identity.</strong> Using \(\widehat{f'}(\xi) = 2\pi i\xi\hat{f}(\xi)\) and Plancherel: \(\|f'\|_2 = \|\widehat{f'}\|_2 = 2\pi\|\xi\hat{f}\|_2\).
 
-**Step 4: Combine.** Substituting:
+<strong>Step 4: Combine.</strong> Substituting:
 
 \[
 \frac{1}{2}\|f\|_2^2 \leq \|xf\|_2 \cdot 2\pi\|\xi\hat{f}\|_2,
@@ -2172,7 +2172,7 @@ Wavelets provide a multi-resolution decomposition that adapts to the local featu
 ## The Continuous Wavelet Transform
 
 <div class="definition">
-<strong>Definition (Continuous Wavelet Transform).</strong> Let \(\psi \in L^2(\mathbb{R})\) be a **mother wavelet**, satisfying the **admissibility condition**:
+<strong>Definition (Continuous Wavelet Transform).</strong> Let \(\psi \in L^2(\mathbb{R})\) be a <strong>mother wavelet</strong>, satisfying the <strong>admissibility condition</strong>:
 
 \[
 C_\psi = \int_\mathbb{R} \frac{|\hat{\psi}(\xi)|^2}{|\xi|}\,d\xi < \infty,

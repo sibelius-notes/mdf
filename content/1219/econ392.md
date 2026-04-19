@@ -48,7 +48,7 @@ Games can be analyzed along two key dimensions: the **order of moves** (do playe
 
 In a **strategic form** (or normal form) game with complete information, players either move simultaneously or, equivalently, they move without observing what the others have chosen. Each player knows the payoff functions of all other players. The key modeling challenge is that each player must formulate a strategy based on what they expect others to do, without observing their actual choices.
 
-**The Investment Game.** Arya has $100 to invest. She may put it in bonds (certain 10% return) or a risky venture that requires $200 total to succeed. There is exactly one other potential investor, Zoey, in an identical situation. If both invest in the venture it succeeds and each gets $120; if only one invests, that investor gets her $100 back while the other keeps $110 from bonds. If both choose bonds, each earns $110.
+**The Investment Game.** Arya has \$100 to invest. She may put it in bonds (certain 10% return) or a risky venture that requires \$200 total to succeed. There is exactly one other potential investor, Zoey, in an identical situation. If both invest in the venture it succeeds and each gets \$120; if only one invests, that investor gets her \$100 back while the other keeps \$110 from bonds. If both choose bonds, each earns \$110.
 
 |  | **Bonds (Zoey)** | **Venture (Zoey)** |
 |---|---|---|
@@ -663,7 +663,7 @@ A pure strategy in an extensive form game is not simply an action — it must sp
 
 **Definition.** A pure strategy of player \( i \) is a function that assigns an action \( a_i \in A_i(x) \) to every node \( x \) where it is \( i \)'s turn to move.
 
-**Example: Bargaining game.** Buyer (player 1) moves first by offering either $100 or $500 for an object she values at $600 (seller values it at $50). Seller responds by accepting (A) or rejecting (R).
+**Example: Bargaining game.** Buyer (player 1) moves first by offering either \$100 or \$500 for an object she values at \$600 (seller values it at \$50). Seller responds by accepting (A) or rejecting (R).
 
 - Buyer's strategies: {100, 500} — just the offer
 - Seller's strategies: {AA, AR, RA, RR} — must specify a response to *each* possible offer, even the one the buyer doesn't make
@@ -723,7 +723,7 @@ In the entry game's strategic form, (Out, F) is a Nash equilibrium: the entrant 
 3. Move to the penultimate decision nodes and repeat.
 4. Continue until reaching the initial node.
 
-**Bargaining example.** Buyer offers $100 or $500; seller accepts or rejects. Working backwards: seller accepts $100 (gets $100 − $50 = $50 net gain) and accepts $500 (even better). Given the seller accepts any offer, the buyer offers $100 to maximize her own payoff. The **backward induction equilibrium** is (100, AA) and the outcome is (100, A).
+**Bargaining example.** Buyer offers \$100 or \$500; seller accepts or rejects. Working backwards: seller accepts \$100 (gets \$100 − \$50 = \$50 net gain) and accepts \$500 (even better). Given the seller accepts any offer, the buyer offers \$100 to maximize her own payoff. The **backward induction equilibrium** is (100, AA) and the outcome is (100, A).
 
 ## Subgame Perfect Equilibrium (SPE)
 
@@ -811,7 +811,7 @@ The intuition: by moving first and committing to a large quantity, the leader re
 
 ## Bargaining Situations
 
-A **bargaining situation** arises whenever two players have a mutual interest in cooperating but conflicting interests over the exact terms of cooperation. Consider: an owner values a house at $500,000 (her minimum selling price) and a buyer values it at $700,000 (her maximum buying price). Any price between $500k and $700k makes both better off — but both prefer the price to favor themselves.
+A **bargaining situation** arises whenever two players have a mutual interest in cooperating but conflicting interests over the exact terms of cooperation. Consider: an owner values a house at \$500,000 (her minimum selling price) and a buyer values it at \$700,000 (her maximum buying price). Any price between \$500k and \$700k makes both better off — but both prefer the price to favor themselves.
 
 More generally, a bargaining situation requires a set of possible agreements that both parties prefer to disagreement, combined with conflicting preferences over which agreement to reach.
 

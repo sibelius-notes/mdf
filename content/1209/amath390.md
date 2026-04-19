@@ -39,7 +39,8 @@ y(t) = A\cos(\omega t) + B\sin(\omega t). \tag{1.4}
 
 This can be verified by direct substitution:
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 y'(t) &= -A\omega\sin(\omega t) + B\omega\cos(\omega t), \\
 y''(t) &= -A\omega^2\cos(\omega t) - B\omega^2\sin(\omega t) \\
 &= -\omega^2 y(t).
@@ -124,7 +125,8 @@ Define
 
 and use the sum formula (1.5) to write
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 y(t) &= \sin(\bar{\omega}t - \Delta t) + \sin(\bar{\omega}t + \Delta t) \\
 &= 2\cos(\Delta t)\sin(\bar{\omega}t).
 \end{aligned}
@@ -152,7 +154,8 @@ y'' + 2\xi\omega y' + \omega^2 y = 0, \quad 0 < \xi < 1. \tag{1.16}
 
 Equation (1.16) has solution
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 y(t) &= e^{-\xi\omega t}\left(A\cos\left(\sqrt{1-\xi^2}\,\omega t\right) + B\sin\left(\sqrt{1-\xi^2}\,\omega t\right)\right) \\
 &= Ce^{-\xi\omega t}\sin\left(\sqrt{1-\xi^2}\,\omega t + \phi\right)
 \end{aligned}
@@ -192,7 +195,8 @@ Substituting this into the left-hand-side of (1.18) yields the expressions
 
 For this to equal the right-hand-side of (1.18),
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 F &= (\omega^2 - \alpha^2)a + (-2\xi\omega\alpha)b \\
 0 &= (2\xi\omega\alpha)a + (\omega^2 - \alpha^2)b.
 \end{aligned}
@@ -206,7 +210,8 @@ a = \frac{(\omega^2 - \alpha^2)F}{(\omega^2 - \alpha^2)^2 + (2\xi\omega\alpha)^2
 
 Writing \(\omega_0 = \sqrt{1 - \xi^2}\,\omega\), any solution to (1.18) is of the form
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 y(t) &= e^{-\xi\omega t}(A\sin(\omega_0 t) + B\cos(\omega_0 t)) + a\sin(\alpha t) + b\cos(\alpha t) \\
 &= e^{-\xi\omega t}C\sin(\omega_0 t + \phi) + M\sin(\alpha t + \phi_f).
 \end{aligned}
@@ -314,7 +319,8 @@ Rearranging,
 
 Since the left-side depends only on time \(t\) and the right-side depends only on space \(x\), each side must be a constant. Call this constant \(-\lambda\). This yields two **ordinary** differential equations
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 M''(x) &= -\lambda M(x), \tag{2.7} \\
 N'' &= -c^2\lambda N. \tag{2.8}
 \end{aligned}
@@ -452,7 +458,8 @@ Thus, for piecewise smooth functions, the Fourier series equals the function in 
 
 The coefficients of the sine series for \(f(x)\) are
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 \frac{L}{2}B_k &= \int_0^L f(x)\sin\left(\frac{k\pi x}{L}\right)\,dx \\
 &= \int_0^L x\sin\left(\frac{k\pi x}{L}\right)\,dx \\
 &= \frac{L}{\pi^2 k^2}\left[L\sin\left(\frac{k\pi x}{L}\right) - k\pi x\cos\left(\frac{k\pi x}{L}\right)\right]_0^L \\
@@ -535,7 +542,8 @@ u_p(x,t) = \sum_{k=1}^{\infty} A_k \cos\left(\frac{k\pi ct}{\ell}\right)\sin\lef
 
 Since the coefficients \(A_k\) depend on the point \(x_0\) at which the string is plucked, this implies that the sound of a plucked stringed instrument (guitar, harp, harpsichord, and others) depends heavily on the position at which the string is plucked. This is why some harpsichords employ a mechanism (called a stop) to pluck the strings at different lengths away from the keyboard. This changes the sound of the instrument. Notice in particular that if \(x_0 = \frac{\ell}{2}\),
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 A_{2k} &= \frac{2L^2}{\pi^2 x_0(L - x_0)}\frac{\sin\left(\frac{(2k)\pi x_0}{L}\right)}{(2k)^2} \\
 &= \frac{2L^2}{\pi^2 \frac{L}{2}(L - \frac{L}{2})}\frac{\sin\left(\frac{(2k)\pi\frac{L}{2}}{L}\right)}{(2k)^2} \\
 &= \frac{2}{\pi^2}\frac{\sin(k\pi)}{k^2} \\
@@ -563,7 +571,8 @@ and since \(A_k = 0\),
 
 Solving for \(B_k\) and using the Fourier series for the hat function calculated in (2.14),
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 B_k &= A_k \frac{\ell}{\pi k c} \\
 &= \frac{2\ell^3}{\pi^3 c x_0(\ell - x_0)}\frac{\sin\left(\frac{k\pi x_0}{\ell}\right)}{k^3}.
 \end{aligned}
@@ -617,7 +626,8 @@ The sound in many instruments, such as the clarinet and flute, is made by blowin
 
 Consider particles at position \(x\) when undisturbed and denote displacement from the "usual" location \(x\) by \(u(x,t)\). (Think of a slinky.) Denote similarly pressure \(P(x,t)\), density \(\rho(x,t)\). Let \(P_0 = 0\) be the pressure of the undisturbed air and \(\rho_0\) the density. Assume that only motion in the \(x\)-direction is present; then from Newton's Law on a section \([x, x + \Delta x]\), letting cross-sectional area be \(A\),
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 ma &= F \\
 \rho_0 A(x)\Delta x \frac{\partial^2 u}{\partial t^2} &= A(x)P(x,t) - A(x + \Delta x)P(x + \Delta x, t)
 \end{aligned}

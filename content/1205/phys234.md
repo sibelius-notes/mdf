@@ -349,7 +349,7 @@ The ket \(|\psi\rangle\) belongs to a <strong>Hilbert space</strong>: a complete
 The <strong>bra</strong> \(\langle\psi|\) is the conjugate transpose (Hermitian transpose) of \(|\psi\rangle\):
 
 \[
-\langle\psi| = (|\psi\rangle)^\dagger = a^<em>\langle{+}| + b^</em>\langle{-}|
+\langle\psi| = (|\psi\rangle)^\dagger = a^*\langle{+}| + b^*\langle{-}|
 \]
 
 The <strong>inner product</strong> \(\langle\phi|\psi\rangle\) measures the projection of \(|\phi\rangle\) onto \(|\psi\rangle\). The basis vectors satisfy:
@@ -385,7 +385,7 @@ The normalization constant \(C\) for a state \(|\psi\rangle = 3|{+}\rangle + 2i|
 ### Matrix Notation
 
 \[
-|{+}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \quad |{-}\rangle = \begin{pmatrix}0\\1\end{pmatrix}, \quad |\psi\rangle = \begin{pmatrix}a\\b\end{pmatrix}, \quad \langle\psi| = \begin{pmatrix}a^<em> & b^</em>\end{pmatrix}
+|{+}\rangle = \begin{pmatrix}1\\0\end{pmatrix}, \quad |{-}\rangle = \begin{pmatrix}0\\1\end{pmatrix}, \quad |\psi\rangle = \begin{pmatrix}a\\b\end{pmatrix}, \quad \langle\psi| = \begin{pmatrix}a^* & b^*\end{pmatrix}
 \]
 
 ---
@@ -738,7 +738,7 @@ The <strong>density operator</strong> (or <strong>density matrix</strong>) \(\ha
 \hat{\rho} = \begin{cases} |\psi\rangle\langle\psi| & \text{pure state} \\[4pt] \displaystyle\sum_k p_k|\psi_k\rangle\langle\psi_k| & \text{mixed state, with } \sum_k p_k = 1 \end{cases}
 \]
 
-The density operator is always <strong>Hermitian</strong> (\(\hat{\rho} = \hat{\rho}^\dagger\)), which can be verified directly: \(\rho_{ij}^<em> = \langle j|\hat{\rho}|i\rangle^</em> = \langle i|\hat{\rho}^\dagger|j\rangle = \rho_{ji}\).
+The density operator is always <strong>Hermitian</strong> (\(\hat{\rho} = \hat{\rho}^\dagger\)), which can be verified directly: \(\rho_{ij}^* = \langle j|\hat{\rho}|i\rangle^* = \langle i|\hat{\rho}^\dagger|j\rangle = \rho_{ji}\).
 
 ### Formal Properties
 

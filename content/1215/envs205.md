@@ -224,7 +224,7 @@ Plastic pollution illustrates the tragedy of the commons in a particularly stark
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/O1EAeNdTFHU?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
-<strong>State-led approaches</strong> include mandatory bottle deposit systems (Norway achieves 97% bottle recycling through deposits as high as USD $0.32), plastic bag fees and bans, extended producer responsibility regulations, and investment in waste management infrastructure. Financial incentives for repair rather than disposal reduce the volume of plastic discarded.
+<strong>State-led approaches</strong> include mandatory bottle deposit systems (Norway achieves 97% bottle recycling through deposits as high as USD \$0.32), plastic bag fees and bans, extended producer responsibility regulations, and investment in waste management infrastructure. Financial incentives for repair rather than disposal reduce the volume of plastic discarded.
 
 <strong>Grassroots approaches</strong> include artist-activist projects that render ocean pollution visible and emotionally resonant — such as artist Angela Haseltine Pozzi's "Washed Ashore" project, which creates large sculptures from ocean-collected plastic — and individual actions like beach clean-ups, reducing single-use plastic purchases, and political advocacy for stronger regulation.
 

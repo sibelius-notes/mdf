@@ -216,7 +216,7 @@ C = \overline{\mathrm{conv}}(\mathrm{ext}(C)).
 This theorem, proven in Chapter 7 in the context of integral representations, shows that extreme points completely determine compact convex sets. It is a deep result: it says that for any compact convex body, no matter how "round" and featureless it appears, it is always built from its most rigid, irreducible elements.
 
 <div class="remark">
-<strong>Why Krein–Milman is surprising.</strong> At first glance, the theorem seems like it might be trivially true (just take the convex hull of all the "corner" points), but the content is precisely that every compact convex set *has* extreme points and that those extreme points suffice to recover the entire set. Consider the closed unit ball \(\mathbb{B}^n\): its extreme points form the entire sphere \(\mathbb{S}^{n-1}\), which is a set of measure zero in the ball, yet the ball is the closed convex hull of this sphere. This is geometrically obvious once stated, but the theorem asserts the same thing in infinite-dimensional spaces where intuition fails. In the space \(L^\infty([0,1])\), for instance, the unit ball has extreme points that are genuinely difficult to describe explicitly — yet the theorem guarantees they exist and generate the ball.
+<strong>Why Krein–Milman is surprising.</strong> At first glance, the theorem seems like it might be trivially true (just take the convex hull of all the "corner" points), but the content is precisely that every compact convex set <em>has</em> extreme points and that those extreme points suffice to recover the entire set. Consider the closed unit ball \(\mathbb{B}^n\): its extreme points form the entire sphere \(\mathbb{S}^{n-1}\), which is a set of measure zero in the ball, yet the ball is the closed convex hull of this sphere. This is geometrically obvious once stated, but the theorem asserts the same thing in infinite-dimensional spaces where intuition fails. In the space \(L^\infty([0,1])\), for instance, the unit ball has extreme points that are genuinely difficult to describe explicitly — yet the theorem guarantees they exist and generate the ball.
 
 For a simplex (triangle in 2D, tetrahedron in 3D, \(n\)-simplex in \(\mathbb{R}^n\)): the extreme points are exactly the \(n+1\) vertices, and Carathéodory's theorem tells us every point in the simplex is a convex combination of at most \(n+1\) vertices — exactly the Krein–Milman content for this case. For the hypercube \([-1,1]^n\): the extreme points are the \(2^n\) vertices \((\pm 1, \ldots, \pm 1)\), and their convex hull is the entire cube. For the unit ball: the sphere generates the ball. The content of Krein–Milman is that this always works, no matter how "smooth" or "round" the set is, and even in infinite dimensions.
 </div>
@@ -276,7 +276,7 @@ The Minkowski sum of two polytopes is again a polytope. The vertices of \(P + Q\
 <div class="example">
 <strong>Worked Example: Minkowski sum of two squares.</strong> Let \(A = [-1,1]^2\) and \(B = [-r,r]^2\) be two squares in \(\mathbb{R}^2\) (a scaled copy). Their Minkowski sum is \(A + B = [-(1+r), 1+r]^2\), just a larger square. More interesting: let \(A = [-1,1]^2\) (a square) and \(B = \overline{\mathbb{B}^2}\) (the unit disk). Their Minkowski sum \(A + B\) is the "rounded square" — the square with corners smoothed by arcs of the unit circle. Specifically, each straight edge of \(A\) gets shifted outward by 1 (contributing a straight edge of \(A + B\)), and each corner contributes a quarter-circle arc of radius 1. The resulting set is convex.
 
-This operation — adding a ball to "smooth" a polytope — is called taking the **parallel body** of \(A\) at radius 1. It is precisely the set of points within distance 1 of \(A\). The Steiner formula (Chapter 4) expresses the volume of this parallel body as a polynomial in the radius.
+This operation — adding a ball to "smooth" a polytope — is called taking the <strong>parallel body</strong> of \(A\) at radius 1. It is precisely the set of points within distance 1 of \(A\). The Steiner formula (Chapter 4) expresses the volume of this parallel body as a polynomial in the radius.
 </div>
 
 The Minkowski sum is the fundamental operation of convex geometry. It appears in the Steiner formula for the volume of dilated convex bodies, in the definition of mixed volumes, and in the Brunn–Minkowski inequality.
@@ -398,7 +398,7 @@ Helly's theorem has beautiful combinatorial applications. Suppose \(n\) people g
 <div class="remark">
 <strong>The logical structure of Carathéodory, Radon, and Helly.</strong> These three theorems are not merely three independent results — they form a logical chain. Carathéodory's theorem bounds the "complexity" of a single point in a convex hull (at most \(n+1\) generators). Radon's theorem uses a dimension-counting argument to force an intersection between two complementary subsets. Helly's theorem uses Radon's theorem as its key inductive step. In this sense, Helly is a "global" consequence of the "local" geometry captured by Radon.
 
-There is a fourth theorem in this family worth knowing: **Tverberg's theorem** (1966), which generalizes Radon. It states that any set of \((r-1)(n+1)+1\) points in \(\mathbb{R}^n\) can be partitioned into \(r\) subsets whose convex hulls have a common point. For \(r=2\) this is exactly Radon's theorem (\(n+2\) points, partition into 2). Tverberg's theorem is the starting point for an active modern area (topological Tverberg theorems and their combinatorial consequences).
+There is a fourth theorem in this family worth knowing: <strong>Tverberg's theorem</strong> (1966), which generalizes Radon. It states that any set of \((r-1)(n+1)+1\) points in \(\mathbb{R}^n\) can be partitioned into \(r\) subsets whose convex hulls have a common point. For \(r=2\) this is exactly Radon's theorem (\(n+2\) points, partition into 2). Tverberg's theorem is the starting point for an active modern area (topological Tverberg theorems and their combinatorial consequences).
 
 Together, these results illustrate a deep principle: in convex geometry, dimension bounds "what can happen." In \(\mathbb{R}^n\), the threshold is always \(n+1\) or \(n+2\) — the number of points that can be in general position, and the number at which linear dependence is forced.
 </div>
@@ -1297,9 +1297,9 @@ At the origin \((0,0)\): any subgradient \((g_1, g_2)\) must satisfy \(|x_1| + |
 In one direction: if \(0 \in \partial f(x^*)\), then by definition, \(f(x) \geq f(x^*) + \langle 0, x - x^* \rangle = f(x^*)\) for all \(x\) — so \(x^*\) is a global minimum. In the other direction: if \(x^*\) is a global minimum, then for any direction \(d\), the directional derivative \(f'(x^*; d) = \lim_{t \downarrow 0} (f(x^* + td) - f(x^*))/t \geq 0\) (since \(x^*\) is a minimum). For a convex function, this means the zero vector is a subgradient.
 
 This principle unifies all of calculus optimization:
-- **Smooth unconstrained:** \(0 = \nabla f(x^*)\) (since \(\partial f = \{\nabla f\}\) when differentiable).
-- **Non-smooth unconstrained:** \(0 \in \partial f(x^*)\), e.g., \(f(x) = |x|\) is minimized at \(x^* = 0\) since \(0 \in [-1,1] = \partial|x|(0)\).
-- **Constrained optimization:** For \(\min f(x)\) subject to \(x \in C\), define \(f_C(x) = f(x) + \mathbf{1}_C(x)\) (adding \(+\infty\) outside \(C\)). Then \(0 \in \partial f_C(x^*) = \partial f(x^*) + N_C(x^*)\), where \(N_C(x^*)\) is the normal cone to \(C\) at \(x^*\). This is the generalized KKT condition.
+- <strong>Smooth unconstrained:</strong> \(0 = \nabla f(x^*)\) (since \(\partial f = \{\nabla f\}\) when differentiable).
+- <strong>Non-smooth unconstrained:</strong> \(0 \in \partial f(x^*)\), e.g., \(f(x) = |x|\) is minimized at \(x^* = 0\) since \(0 \in [-1,1] = \partial|x|(0)\).
+- <strong>Constrained optimization:</strong> For \(\min f(x)\) subject to \(x \in C\), define \(f_C(x) = f(x) + \mathbf{1}_C(x)\) (adding \(+\infty\) outside \(C\)). Then \(0 \in \partial f_C(x^*) = \partial f(x^*) + N_C(x^*)\), where \(N_C(x^*)\) is the normal cone to \(C\) at \(x^*\). This is the generalized KKT condition.
 </div>
 
 <div class="remark">
@@ -1454,7 +1454,7 @@ This pattern — reduce to a symmetric case by rearrangement, then solve — app
 <strong>Hardy–Littlewood Rearrangement Inequality.</strong> For non-negative measurable functions \(f\) and \(g\) on \(\mathbb{R}^n\) vanishing at infinity:
 
 \[
-\int_{\mathbb{R}^n} f(x) g(x) \, dx \leq \int_{\mathbb{R}^n} f^*(x) g^*(x) \, dx.
+\int_{\mathbb{R}^n} f(x) g(x) \, dx \leq \int_{\mathbb{R}^n} f^<em>(x) g^</em>(x) \, dx.
 \]
 Moreover, the inner product is minimized when one function is rearranged in the reverse order of the other.
 </div>
@@ -1476,7 +1476,7 @@ For each \(s, t > 0\), the sets \(A_s = \{f > s\}\) and \(B_t = \{g > t\}\) are 
 <strong>Application: The Riesz rearrangement inequality.</strong> For non-negative functions \(f, g, h\) on \(\mathbb{R}^n\):
 
 \[
-\int \int f(x) g(x-y) h(y) \, dx\, dy \leq \int \int f^*(x) g^*(x-y) h^*(y)\, dx\, dy.
+\int \int f(x) g(x-y) h(y) \, dx\, dy \leq \int \int f^<em>(x) g^</em>(x-y) h^*(y)\, dx\, dy.
 \]
 This says: the convolution integral is maximized when all three functions are replaced by their rearrangements. The Riesz inequality implies the Hardy–Littlewood inequality (take \(g = \delta_0\)) and many classical functional inequalities (Sobolev, Hardy–Littlewood–Sobolev).
 </div>
@@ -1535,7 +1535,7 @@ The uniform distribution \(p^* = (1/n, \ldots, 1/n)\) satisfies \(p \prec p^*\) 
 </div>
 
 <div class="remark">
-<strong>Majorization in quantum mechanics: Nielsen's theorem.</strong> In quantum information theory, the state of a quantum system is described by a density matrix \(\rho$ (a positive semidefinite matrix with trace 1). The eigenvalues \(\lambda = (\lambda_1, \ldots, \lambda_n)\) of \(\rho\) form a probability vector. A quantum state \(\rho\) can be converted to another state \(\sigma\) by a unitary operation (i.e., reversible quantum operation) if and only if the eigenvalue vectors satisfy \(\lambda(\rho) = \lambda(\sigma)\). But for conversions by **LOCC** (local operations and classical communication) in bipartite systems, the condition is:
+<strong>Majorization in quantum mechanics: Nielsen's theorem.</strong> In quantum information theory, the state of a quantum system is described by a density matrix \(\rho\) (a positive semidefinite matrix with trace 1). The eigenvalues \(\lambda = (\lambda_1, \ldots, \lambda_n)\) of \(\rho\) form a probability vector. A quantum state \(\rho\) can be converted to another state \(\sigma\) by a unitary operation (i.e., reversible quantum operation) if and only if the eigenvalue vectors satisfy \(\lambda(\rho) = \lambda(\sigma)\). But for conversions by <strong>LOCC</strong> (local operations and classical communication) in bipartite systems, the condition is:
 
 Nielsen's theorem (1999): A bipartite pure quantum state \(|\psi\rangle\) can be converted to \(|\phi\rangle\) by LOCC if and only if the Schmidt coefficient vector of \(|\psi\rangle\) is majorized by that of \(|\phi\rangle\). This is the quantum mechanical manifestation of majorization — and it is proved using the Birkhoff–von Neumann theorem (doubly stochastic matrices = convex combinations of permutations) applied to the density matrix algebra.
 </div>
@@ -1813,7 +1813,7 @@ By Cauchy–Schwarz, \(\langle x, y\rangle \leq \|x\|\|y\|\). So if \(\|x\| \leq
 <div class="remark">
 <strong>Polarity reverses size and shape.</strong> The polar operation has a striking "inversion" character: sets that are large (far from the origin) have small polars, and sets that are small have large polars. Formally: if \(\lambda K = \lambda \cdot K\) for scalar \(\lambda > 0\), then \((\lambda K)^\circ = \frac{1}{\lambda} K^\circ\). This scaling relationship confirms that the polar of a "big" body (large \(\lambda\)) is a "small" body (small \(1/\lambda\)).
 
-This inversive relationship is central to John's theorem: the John ellipsoid of \(K\) (maximal volume inscribed ellipsoid) is related to the Loewner ellipsoid of \(K^\circ\) (minimal volume circumscribed ellipsoid), and the Mahler volume \(\mathrm{Vol}(K)\mathrm{Vol}(K^\circ)\) is a key affine invariant (the **Mahler conjecture** asks for its minimum, achieved by the cube and simplex in different senses, but still unresolved for non-symmetric bodies in high dimensions).
+This inversive relationship is central to John's theorem: the John ellipsoid of \(K\) (maximal volume inscribed ellipsoid) is related to the Loewner ellipsoid of \(K^\circ\) (minimal volume circumscribed ellipsoid), and the Mahler volume \(\mathrm{Vol}(K)\mathrm{Vol}(K^\circ)\) is a key affine invariant (the <strong>Mahler conjecture</strong> asks for its minimum, achieved by the cube and simplex in different senses, but still unresolved for non-symmetric bodies in high dimensions).
 </div>
 
 ## 8.2 The Legendre–Fenchel Transform
@@ -1925,7 +1925,7 @@ f^*(y) = \sup_x (\langle y,x\rangle - g(x) - h(x)).
 In general, \(f^* \neq g^* + h^*\). The correct formula involves the infimal convolution:
 
 \[
-(g + h)^*(y) = (g^* \Box h^*)(y) = \inf_{u+v=y} (g^*(u) + h^*(v)),
+(g + h)^<em>(y) = (g^</em> \Box h^<em>)(y) = \inf_{u+v=y} (g^</em>(u) + h^*(v)),
 \]
 the infimal convolution of \(g^*\) and \(h^*\). The infimal convolution is the "Minkowski sum" of the epigraphs — it is the operation on functions that corresponds to the Minkowski sum of their epigraphs.
 
@@ -1938,7 +1938,7 @@ This formula is dual to the fact that the support function of \(K + L\) is \(h_K
 <strong>Fenchel Duality Theorem.</strong> Let \(f : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}\) and \(g : \mathbb{R}^n \to \mathbb{R} \cup \{+\infty\}\) be convex functions with \(\mathrm{dom}(f) \cap \mathrm{dom}(g) \neq \emptyset\) (and a suitable constraint qualification). Then:
 
 \[
-\inf_{x \in \mathbb{R}^n} \left(f(x) + g(x)\right) = \sup_{y \in \mathbb{R}^n} \left(-f^*(-y) - g^*(y)\right),
+\inf_{x \in \mathbb{R}^n} \left(f(x) + g(x)\right) = \sup_{y \in \mathbb{R}^n} \left(-f^<em>(-y) - g^</em>(y)\right),
 \]
 and the supremum on the right is attained.
 </div>
@@ -1947,7 +1947,7 @@ and the supremum on the right is attained.
 <strong>Fenchel duality and LP duality.</strong> When \(f = \mathbf{1}_P\) (indicator of a polyhedron \(P = \{Ax \leq b\}\)) and \(g(x) = c^T x\) (a linear function), the Fenchel dual reduces to the LP dual. The primal problem \(\min_{Ax \leq b} c^T x\) and its dual are obtained by computing \(f^*\) and \(g^*\):
 
 \[
-f^*(y) = b^T \lambda,\, g^*(y) = \mathbf{1}_{c}(y),
+f^<em>(y) = b^T \lambda,\, g^</em>(y) = \mathbf{1}_{c}(y),
 \]
 and the Fenchel duality theorem gives \(\min_P c^T x = \max_{A^T \lambda = c,\, \lambda \geq 0} -b^T \lambda\), which is exactly LP strong duality. In this sense, Fenchel duality is a vast generalization of LP duality to nonlinear convex programs.
 </div>
@@ -2308,11 +2308,11 @@ The following remarks connect the duality theory of Chapter 8 with the geometric
 <div class="remark">
 <strong>Three faces of duality.</strong> In this course, we have encountered duality in three forms:
 
-1. **Set-level duality**: The polar body \(K^\circ\) is dual to \(K\). Large bodies have small polars; the ball is self-dual. The bipolar theorem \((K^\circ)^\circ = K\) shows this is a perfect involution on closed convex bodies containing the origin.
+1. <strong>Set-level duality</strong>: The polar body \(K^\circ\) is dual to \(K\). Large bodies have small polars; the ball is self-dual. The bipolar theorem \((K^\circ)^\circ = K\) shows this is a perfect involution on closed convex bodies containing the origin.
 
-2. **Function-level duality**: The Legendre–Fenchel conjugate \(f^*\) is dual to \(f\). The biconjugate theorem \(f^{**} = f\) (for convex lsc \(f\)) mirrors the bipolar theorem. The Young–Fenchel inequality \(\langle x,y\rangle \leq f(x) + f^*(y)\) mirrors the defining property of the polar body.
+2. <strong>Function-level duality</strong>: The Legendre–Fenchel conjugate \(f^*\) is dual to \(f\). The biconjugate theorem \(f^{**} = f\) (for convex lsc \(f\)) mirrors the bipolar theorem. The Young–Fenchel inequality \(\langle x,y\rangle \leq f(x) + f^*(y)\) mirrors the defining property of the polar body.
 
-3. **Norm-level duality**: The dual norm \(\|y\|_* = \sup_{\|x\|\leq 1}\langle x,y\rangle\) is the support function of the unit ball. The Cauchy–Schwarz inequality \(\langle x,y\rangle \leq \|x\|\|y\|_*\) is the Young–Fenchel inequality applied to homogeneous functions.
+3. <strong>Norm-level duality</strong>: The dual norm \(\|y\|_* = \sup_{\|x\|\leq 1}\langle x,y\rangle\) is the support function of the unit ball. The Cauchy–Schwarz inequality \(\langle x,y\rangle \leq \|x\|\|y\|_*\) is the Young–Fenchel inequality applied to homogeneous functions.
 
 These three are not separate — they are three facets of a single algebraic structure. Set-level polarity is the "indicator function" version: \(\mathbf{1}_K^\star = h_K\) (Legendre transform of indicator = support function), and \(h_K^\star = \mathbf{1}_{K}^{\circ\circ} = \mathbf{1}_K\) (the Legendre transform of a support function is the indicator of the polar body). The norm duality is the "one-homogeneous" version.
 </div>
@@ -2556,7 +2556,7 @@ V(K_1, K_2, K_3, \ldots, K_n)^2 \geq V(K_1, K_1, K_3, \ldots, K_n) \cdot V(K_2, 
 Just as the Brunn–Minkowski inequality governs Minkowski sums, there is a "dual" theory for intersection bodies.
 
 <div class="definition">
-<strong>Intersection body.</strong> For a star-shaped body \(K \subset \mathbb{R}^n$ containing the origin, the \emph{intersection body} \(IK\) is the star-shaped body whose radial function satisfies:
+<strong>Intersection body.</strong> For a star-shaped body \(K \subset \mathbb{R}^n\) containing the origin, the \emph{intersection body} \(IK\) is the star-shaped body whose radial function satisfies:
 
 \[
 \rho_{IK}(u) = \mathrm{Vol}_{n-1}(K \cap u^\perp),

@@ -412,21 +412,21 @@ One of the most striking applications of Abel summation in prime number theory i
 \]
 where \(M\) is the Meissel–Mertens constant \(M \approx 0.2615\ldots\).
 
-**Step 1.** Start from Chebyshev's result (proved in Section 3.4):
+<strong>Step 1.</strong> Start from Chebyshev's result (proved in Section 3.4):
 
 \[
 \sum_{p \leq x} \frac{\log p}{p} = \log x + R(x),
 \]
 where \(R(x) = O(1)\) (the error is bounded). Let \(A(x) = \sum_{p \leq x}(\log p)/p\), so \(A(x) = \log x + O(1)\).
 
-**Step 2.** Apply Abel summation with the sequence \(a_p = (\log p)/p\) (indexed over primes) and the function \(f(t) = 1/\log t\). The summatory function of \(a_p\) over primes up to \(x\) is \(A(x) = \log x + O(1)\). Abel's formula gives
+<strong>Step 2.</strong> Apply Abel summation with the sequence \(a_p = (\log p)/p\) (indexed over primes) and the function \(f(t) = 1/\log t\). The summatory function of \(a_p\) over primes up to \(x\) is \(A(x) = \log x + O(1)\). Abel's formula gives
 
 \[
 \sum_{p \leq x} \frac{1}{p} = \sum_{p \leq x} \frac{\log p}{p} \cdot \frac{1}{\log p} = A(x)\cdot\frac{1}{\log x} + \int_2^x A(t)\cdot\frac{1}{t(\log t)^2}\,dt + O(1/\log 2).
 \]
 (Here \(f(t) = 1/\log t\) has \(f'(t) = -1/(t(\log t)^2)\), so \(-\int A(t)f'(t)\,dt = \int A(t)/(t(\log t)^2)\,dt\).)
 
-**Step 3.** Substitute \(A(t) = \log t + O(1)\):
+<strong>Step 3.</strong> Substitute \(A(t) = \log t + O(1)\):
 
 \[
 A(x)/\log x = 1 + O(1/\log x),
@@ -438,7 +438,7 @@ and
 \]
 Now \(\int_2^x dt/(t\log t) = [\log\log t]_2^x = \log\log x - \log\log 2\).
 
-**Step 4.** Combining:
+<strong>Step 4.</strong> Combining:
 
 \[
 \sum_{p \leq x}\frac{1}{p} = 1 + O(1/\log x) + \log\log x - \log\log 2 + O(1) = \log\log x + M + O(1/\log x),
@@ -450,7 +450,7 @@ M = \gamma + \sum_p \left[\log\!\left(1-\frac{1}{p}\right) + \frac{1}{p}\right]
 \]
 comes from a more careful asymptotic analysis combining the Euler product expansion of \(\zeta(s)\) near \(s=1\).
 
-**What this tells us.** The sum \(\sum_{p \leq x}1/p\) grows like \(\log\log x\), an iterated logarithm. This is absurdly slow: the sum up to \(x = 10^{10^{10}}\) is only about \(\log\log(10^{10^{10}}) = \log(10^{10}) \approx 23\). Yet the series diverges. Euler first proved divergence in 1737 (as a consequence of the Euler product); Mertens quantified the rate in 1874.
+<strong>What this tells us.</strong> The sum \(\sum_{p \leq x}1/p\) grows like \(\log\log x\), an iterated logarithm. This is absurdly slow: the sum up to \(x = 10^{10^{10}}\) is only about \(\log\log(10^{10^{10}}) = \log(10^{10}) \approx 23\). Yet the series diverges. Euler first proved divergence in 1737 (as a consequence of the Euler product); Mertens quantified the rate in 1874.
 </div>
 
 ### Corollaries of Abel Summation
@@ -540,7 +540,7 @@ The leading terms give \(\log(n!) = n\log n - n + \frac{1}{2}\log(2\pi n) + O(1/
 \]
 the logarithmic form of Stirling's formula \(N! \sim \sqrt{2\pi N}(N/e)^N\).
 
-**Step 1: Apply Euler–Maclaurin with \(f(x) = \log x\), \(p=1\).**
+<strong>Step 1: Apply Euler–Maclaurin with \(f(x) = \log x\), \(p=1\).</strong>
 
 With \(m=1\), \(n=N\):
 
@@ -553,13 +553,13 @@ Since \(f'(x) = 1/x\) and \(B_2 = 1/6\):
 \sum_{k=1}^N \log k = [x\log x - x]_1^N + \frac{\log N}{2} + \frac{1}{12}\!\left[\frac{1}{N} - 1\right] + R_1.
 \]
 
-**Step 2: Evaluate the integral.**
+<strong>Step 2: Evaluate the integral.</strong>
 
 \[
 \int_1^N \log x\,dx = N\log N - N - (1\cdot\log 1 - 1) = N\log N - N + 1.
 \]
 
-**Step 3: Combine.**
+<strong>Step 3: Combine.</strong>
 
 \[
 \sum_{k=1}^N \log k = N\log N - N + 1 + \frac{\log N}{2} + O(1/N).
@@ -570,7 +570,7 @@ The constant term \(1 - 1/12 + \cdots\) contributes; with more Bernoulli terms o
 \log(N!) = N\log N - N + \frac{1}{2}\log(2\pi N) + \frac{1}{12N} - \frac{1}{360N^3} + \cdots
 \]
 
-**Simpler bound with Abel summation.** Using only Abel summation (as in Appendix C.2): take \(a_n = 1\), \(A(x) = \lfloor x\rfloor\), \(f(t) = \log t\). Then
+<strong>Simpler bound with Abel summation.</strong> Using only Abel summation (as in Appendix C.2): take \(a_n = 1\), \(A(x) = \lfloor x\rfloor\), \(f(t) = \log t\). Then
 
 \[
 \sum_{n \leq x}\log n = \lfloor x\rfloor\log x - \int_1^x\frac{\lfloor t\rfloor}{t}\,dt.
@@ -582,9 +582,9 @@ Write \(\lfloor t\rfloor = t - \{t\}\):
 \]
 This weaker bound is sufficient for many purposes in number theory.
 
-**When to use which method.** Abel summation gives the leading behavior quickly but misses the \(O(\log x)\)-sized constant. Euler–Maclaurin gives the full asymptotic series including the \(\frac{1}{2}\log(2\pi N)\) and subsequent terms \(1/(12N), -1/(360N^3),\ldots\). For sharp applications (like the functional equation of \(\zeta(s)\), which requires knowing \(\Gamma(s)\) to high precision), Euler–Maclaurin is essential.
+<strong>When to use which method.</strong> Abel summation gives the leading behavior quickly but misses the \(O(\log x)\)-sized constant. Euler–Maclaurin gives the full asymptotic series including the \(\frac{1}{2}\log(2\pi N)\) and subsequent terms \(1/(12N), -1/(360N^3),\ldots\). For sharp applications (like the functional equation of \(\zeta(s)\), which requires knowing \(\Gamma(s)\) to high precision), Euler–Maclaurin is essential.
 
-**Rule of thumb:** Use Abel summation when you need the main term \(+ O(\text{something})\) and the "something" is of lower order. Use Euler–Maclaurin when you need a complete asymptotic expansion, when the summand is smooth and you want all correction terms, or when you are continuing a Dirichlet series analytically.
+<strong>Rule of thumb:</strong> Use Abel summation when you need the main term \(+ O(\text{something})\) and the "something" is of lower order. Use Euler–Maclaurin when you need a complete asymptotic expansion, when the summand is smooth and you want all correction terms, or when you are continuing a Dirichlet series analytically.
 </div>
 
 ## 2.3 Poisson Summation Formula
@@ -1184,7 +1184,7 @@ The poles of \(\Gamma(s/2)\) at \(s = 0, -2, -4, \ldots\) force \(\zeta\) to hav
 
 ## 4.5 The Riemann Hypothesis
 
-The Riemann Hypothesis (RH) is the statement that all nontrivial zeros \(\rho\) of \(\zeta(s)\) satisfy \(\mathrm{Re}(\rho) = 1/2\). It is one of the Millennium Prize Problems (with a $1 million prize for a proof), and it has been verified numerically for the first \(10^{13}\) zeros (all lying on the critical line, none lying off it). But no proof is known.
+The Riemann Hypothesis (RH) is the statement that all nontrivial zeros \(\rho\) of \(\zeta(s)\) satisfy \(\mathrm{Re}(\rho) = 1/2\). It is one of the Millennium Prize Problems (with a \$1 million prize for a proof), and it has been verified numerically for the first \(10^{13}\) zeros (all lying on the critical line, none lying off it). But no proof is known.
 
 Why does RH matter for prime counting? The explicit formula (Section 5.5) states:
 
@@ -1196,7 +1196,7 @@ Each zero \(\rho = \beta + i\gamma\) contributes a term \(x^\rho/\rho = x^\beta 
 If a zero existed with \(\beta > 1/2\), it would contribute a term growing like \(x^\beta\), degrading the error estimate. The known zero-free region \(\sigma \geq 1 - c/\log t\) gives an error of \(O(x\exp(-c'\sqrt{\log x}))\) — much weaker than RH but still sufficient for many applications.
 
 <div class="remark">
-<strong>Remark 4.12 (Chebyshev bias and zeros off the real axis).</strong> The imaginary parts of the nontrivial zeros \(\rho = 1/2 + i\gamma\) encode oscillations in \(\psi(x) - x\). The zero with smallest imaginary part is at \(\gamma_1 \approx 14.134\ldots\), contributing an oscillation of wavelength \(\approx 2\pi/\gamma_1 \approx 0.44\) on the \(\log x\) scale. The interplay between the imaginary parts of zeros and the distribution of primes in residue classes gives rise to the **Chebyshev bias**: primes are more often in "non-square" residue classes than in "square" residue classes (e.g., more primes \(\equiv 3 \pmod 4\) than \(\equiv 1 \pmod 4\) in the range \([2, x]\) for "most" \(x\)). This phenomenon is explained by the explicit formula and the distribution of zeros.
+<strong>Remark 4.12 (Chebyshev bias and zeros off the real axis).</strong> The imaginary parts of the nontrivial zeros \(\rho = 1/2 + i\gamma\) encode oscillations in \(\psi(x) - x\). The zero with smallest imaginary part is at \(\gamma_1 \approx 14.134\ldots\), contributing an oscillation of wavelength \(\approx 2\pi/\gamma_1 \approx 0.44\) on the \(\log x\) scale. The interplay between the imaginary parts of zeros and the distribution of primes in residue classes gives rise to the <strong>Chebyshev bias</strong>: primes are more often in "non-square" residue classes than in "square" residue classes (e.g., more primes \(\equiv 3 \pmod 4\) than \(\equiv 1 \pmod 4\) in the range \([2, x]\) for "most" \(x\)). This phenomenon is explained by the explicit formula and the distribution of zeros.
 </div>
 
 ## 4.6 Newman's Tauberian Theorem
@@ -1960,7 +1960,7 @@ Since the right side \( \to \infty \), there are infinitely many primes \( \equi
 <div class="remark">
 <strong>Remark 9.4 (Equidistribution and natural density).</strong> The theorem says that the "natural density" of primes \(p \equiv \ell \pmod k\) among all primes is \(1/\varphi(k)\), regardless of which specific residue class \(\ell\) we choose (as long as \(\gcd(\ell,k)=1\)). This is a striking uniformity. The \(\varphi(k)\) admissible residue classes share the prime "pie" equally.
 
-However, while the *asymptotic density* is equal, finite computations reveal a consistent bias: the **Chebyshev bias** phenomenon. For example, among primes up to \(x\), there are usually slightly more primes \(\equiv 3 \pmod 4\) than \(\equiv 1 \pmod 4\). This bias is explained by the explicit formula: the contribution of the zeros of \(L(s,\chi)\) creates a persistent but oscillating imbalance that favors certain residue classes on average.
+However, while the *asymptotic density* is equal, finite computations reveal a consistent bias: the <strong>Chebyshev bias</strong> phenomenon. For example, among primes up to \(x\), there are usually slightly more primes \(\equiv 3 \pmod 4\) than \(\equiv 1 \pmod 4\). This bias is explained by the explicit formula: the contribution of the zeros of \(L(s,\chi)\) creates a persistent but oscillating imbalance that favors certain residue classes on average.
 </div>
 
 ## 9.6 Siegel Zeros and Effective Bounds
@@ -2683,7 +2683,7 @@ This expression is **symmetric under \(s \mapsto 1-s\)**: swapping \(s\) and \(1
 \[
 \zeta(-2k) = 0 \text{ for all } k = 1, 2, 3, \ldots
 \]
-These are the **trivial zeros**. They are "trivial" in the sense that their existence is forced by the Gamma factor in the functional equation — they are not the "interesting" zeros that encode information about the primes.
+These are the <strong>trivial zeros</strong>. They are "trivial" in the sense that their existence is forced by the Gamma factor in the functional equation — they are not the "interesting" zeros that encode information about the primes.
 
 Similarly, the functional equation forces \(\zeta(s) = 0\) at \(s = 0\) (since \(\Gamma(s/2)\) has a simple pole at \(s=0\) but \(\Lambda(0)\) must be finite — actually \(\Lambda(s) = \Lambda(1-s)\) and \(\Lambda(1)\) has a pole, so \(\Lambda(0)\) also has a pole, meaning \(\zeta(0) \neq 0\)). In fact, from the functional equation one deduces \(\zeta(0) = -1/2\) using the Laurent expansion at \(s=1\).
 </div>
@@ -2796,20 +2796,20 @@ We now establish the classical zero-free region due to de la Vallée Poussin (18
 \[
 \sigma \geq 1 - \frac{c}{\log(|t|+2)}.
 \]
-\end{theorem>
+</div>
 
 <div class="proof">
 <strong>Proof.</strong> We use the inequality \(|\zeta(\sigma)|^3|\zeta(\sigma+it)|^4|\zeta(\sigma+2it)| \geq 1\) for \(\sigma > 1\) (Lemma 4.7 and Theorem 4.6), now in a quantitative form.
 
-**Step 1: Quantitative bounds near \(s=1\).** Near \(s=1\), \(\zeta(\sigma) \sim 1/(\sigma-1)\) as \(\sigma \to 1^+\), so \(|\zeta(\sigma)| \leq A/(\sigma-1)\) for some absolute constant \(A > 0\).
+<strong>Step 1: Quantitative bounds near \(s=1\).</strong> Near \(s=1\), \(\zeta(\sigma) \sim 1/(\sigma-1)\) as \(\sigma \to 1^+\), so \(|\zeta(\sigma)| \leq A/(\sigma-1)\) for some absolute constant \(A > 0\).
 
-**Step 2: Upper bound on \(|\zeta(\sigma+it)|\).** For \(\sigma\) close to 1 and \(|t| \geq 2\), the Euler product gives \(\log|\zeta(\sigma+it)| \leq \sum_p \sum_k \frac{1}{kp^{k\sigma}}\). For \(\sigma = 1 + 1/\log|t|\), one shows \(|\zeta(\sigma+it)| = O(\log|t|)\). By the Hadamard product and zero counting, for \(\sigma \in [1/2, 2]\) and \(|t| \geq 2\):
+<strong>Step 2: Upper bound on \(|\zeta(\sigma+it)|\).</strong> For \(\sigma\) close to 1 and \(|t| \geq 2\), the Euler product gives \(\log|\zeta(\sigma+it)| \leq \sum_p \sum_k \frac{1}{kp^{k\sigma}}\). For \(\sigma = 1 + 1/\log|t|\), one shows \(|\zeta(\sigma+it)| = O(\log|t|)\). By the Hadamard product and zero counting, for \(\sigma \in [1/2, 2]\) and \(|t| \geq 2\):
 
 \[
 -\mathrm{Re}\frac{\zeta'(\sigma+it)}{\zeta(\sigma+it)} \leq \sum_\rho \frac{\sigma - \beta}{(\sigma-\beta)^2 + (t-\gamma)^2} + O(\log|t|).
 \]
 
-**Step 3: The key inequality.** Suppose for contradiction that \(\zeta(\beta_0 + it_0) = 0\) for some \(\beta_0 > 1 - c/\log t_0\) (with \(t_0 \geq 2\) and \(c\) to be determined). From the inequality:
+<strong>Step 3: The key inequality.</strong> Suppose for contradiction that \(\zeta(\beta_0 + it_0) = 0\) for some \(\beta_0 > 1 - c/\log t_0\) (with \(t_0 \geq 2\) and \(c\) to be determined). From the inequality:
 
 \[
 |\zeta(\sigma)|^3|\zeta(\sigma+it_0)|^4|\zeta(\sigma+2it_0)| \geq 1.
@@ -2967,7 +2967,7 @@ By inclusion-exclusion (Legendre's formula):
 \[
 S(\mathcal{A}, \mathcal{P}, z) = \sum_{d \mid \mathcal{P}(z)} \mu(d) \cdot \#\{n \in \mathcal{A} : d \mid n\} = \sum_{d \mid \mathcal{P}(z)} \mu(d) A(d),
 \]
-where \(A(d) = \#\{n \in \mathcal{A} : d \mid n\}\). If \(\mathcal{A} = \{1,\ldots,N\}\$, then \(A(d) = \lfloor N/d\rfloor = N/d + O(1)\).
+where \(A(d) = \#\{n \in \mathcal{A} : d \mid n\}\). If \(\mathcal{A} = \{1,\ldots,N\}\), then \(A(d) = \lfloor N/d\rfloor = N/d + O(1)\).
 
 **The problem: too many error terms.** The number of divisors of \(\mathcal{P}(z)\) is \(2^{\pi(z)}\). For \(z = (\log x)^2\), this is \(2^{O(\log x / \log\log x)}\) — exponential in \(\log x\), far too many terms to control. The Legendre sieve fails because the error terms overwhelm the main term for any useful value of \(z\).
 
@@ -3179,7 +3179,7 @@ The large sieve is a powerful analytic inequality that bounds sums of the form \
 \]
 </div>
 
-**Consequence: Zero-density estimates.** Let \(N(\sigma, T)$ denote the number of zeros \(\rho = \beta + i\gamma\) of \(\zeta(s)\) with \(\beta \geq \sigma\) and \(|\gamma| \leq T\). The large sieve gives:
+**Consequence: Zero-density estimates.** Let \(N(\sigma, T)\) denote the number of zeros \(\rho = \beta + i\gamma\) of \(\zeta(s)\) with \(\beta \geq \sigma\) and \(|\gamma| \leq T\). The large sieve gives:
 
 <div class="theorem">
 <strong>Theorem 17.5 (Ingham's zero-density estimate).</strong> For \(1/2 \leq \sigma \leq 1\) and \(T \geq 2\):
@@ -3218,28 +3218,28 @@ More directly (as in Section 2.1, Example 2.2): use Abel summation with \(a_n = 
 \sum_{n \leq x}\frac{1}{n} = \frac{\lfloor x \rfloor}{x} + \int_1^x \frac{\lfloor t \rfloor}{t^2}\,dt.
 \]
 
-**Step 1.** Write \(\lfloor t \rfloor = t - \{t\}\):
+<strong>Step 1.</strong> Write \(\lfloor t \rfloor = t - \{t\}\):
 
 \[
 \sum_{n \leq x}\frac{1}{n} = 1 - \frac{\{x\}}{x} + \int_1^x \frac{1}{t}\,dt - \int_1^x \frac{\{t\}}{t^2}\,dt = 1 - \frac{\{x\}}{x} + \log x - \int_1^x \frac{\{t\}}{t^2}\,dt.
 \]
 
-**Step 2.** Split the integral at \(\infty\): write \(\int_1^x = \int_1^\infty - \int_x^\infty\):
+<strong>Step 2.</strong> Split the integral at \(\infty\): write \(\int_1^x = \int_1^\infty - \int_x^\infty\):
 
 \[
 \sum_{n \leq x}\frac{1}{n} = \log x + \underbrace{\left(1 - \int_1^\infty\frac{\{t\}}{t^2}\,dt\right)}_{\gamma} + \int_x^\infty \frac{\{t\}}{t^2}\,dt - \frac{\{x\}}{x}.
 \]
 
-**Step 3.** The integral \(\int_1^\infty \{t\}/t^2\,dt\) converges since \(|\{t\}/t^2| \leq 1/t^2\) and \(\int_1^\infty 1/t^2\,dt = 1\). This defines Euler's constant \(\gamma = 1 - \int_1^\infty\{t\}/t^2\,dt \approx 0.5772\).
+<strong>Step 3.</strong> The integral \(\int_1^\infty \{t\}/t^2\,dt\) converges since \(|\{t\}/t^2| \leq 1/t^2\) and \(\int_1^\infty 1/t^2\,dt = 1\). This defines Euler's constant \(\gamma = 1 - \int_1^\infty\{t\}/t^2\,dt \approx 0.5772\).
 
-**Step 4.** Bound the error:
+<strong>Step 4.</strong> Bound the error:
 
 \[
 \left|\int_x^\infty\frac{\{t\}}{t^2}\,dt\right| \leq \int_x^\infty \frac{dt}{t^2} = \frac{1}{x}, \qquad \left|\frac{\{x\}}{x}\right| \leq \frac{1}{x}.
 \]
 So the total error is \(O(1/x)\), giving \(\sum_{n \leq x} 1/n = \log x + \gamma + O(1/x)\). \(\square\)
 
-**Numerical check.** For \(x = 100\): \(\sum_{n=1}^{100}1/n = 5.18737...\), while \(\log 100 + \gamma = 4.60517 + 0.57722 = 5.18239...\). The error is \(5.18737 - 5.18239 = 0.00498 \approx 1/200 = 0.005\), consistent with \(O(1/x)\).
+<strong>Numerical check.</strong> For \(x = 100\): \(\sum_{n=1}^{100}1/n = 5.18737...\), while \(\log 100 + \gamma = 4.60517 + 0.57722 = 5.18239...\). The error is \(5.18737 - 5.18239 = 0.00498 \approx 1/200 = 0.005\), consistent with \(O(1/x)\).
 </div>
 
 ## F.2 Problem 2: The Divisor Sum and Hyperbola Method
@@ -3262,20 +3262,20 @@ D(x) = \sum_{a \leq u}\left\lfloor\frac{x}{a}\right\rfloor + \sum_{b \leq u}\lef
 \]
 (The first two sums count pairs with \(a \leq u\) and pairs with \(b \leq u\); the last term subtracts the double-counted pairs with \(a \leq u\) and \(b \leq u\), i.e., both \(\leq u\), which is the \(u \times u\) square.)
 
-**Step 1: Estimate \(\sum_{a \leq u}\lfloor x/a\rfloor\).** Write \(\lfloor x/a\rfloor = x/a - \{x/a\}\):
+<strong>Step 1: Estimate \(\sum_{a \leq u}\lfloor x/a\rfloor\).</strong> Write \(\lfloor x/a\rfloor = x/a - \{x/a\}\):
 
 \[
 \sum_{a \leq u}\left\lfloor\frac{x}{a}\right\rfloor = x\sum_{a \leq u}\frac{1}{a} - \sum_{a \leq u}\left\{\frac{x}{a}\right\} = x(\log u + \gamma + O(1/u)) + O(u),
 \]
 using \(\sum_{n \leq N} 1/n = \log N + \gamma + O(1/N)\) and \(|\{x/a\}| \leq 1\).
 
-**Step 2: Substitute \(u = \sqrt{x}\).** Then \(\log u = \frac{1}{2}\log x\) and \(O(1/u) = O(1/\sqrt{x})\):
+<strong>Step 2: Substitute \(u = \sqrt{x}\).</strong> Then \(\log u = \frac{1}{2}\log x\) and \(O(1/u) = O(1/\sqrt{x})\):
 
 \[
 \sum_{a \leq \sqrt{x}}\left\lfloor\frac{x}{a}\right\rfloor = x\!\left(\frac{1}{2}\log x + \gamma + O(x^{-1/2})\right) + O(\sqrt{x}) = \frac{x\log x}{2} + \gamma x + O(\sqrt{x}).
 \]
 
-**Step 3: Combine.** Using \(u^2 = \lfloor\sqrt{x}\rfloor^2 = x + O(\sqrt{x})\):
+<strong>Step 3: Combine.</strong> Using \(u^2 = \lfloor\sqrt{x}\rfloor^2 = x + O(\sqrt{x})\):
 
 \[
 D(x) = 2\!\left(\frac{x\log x}{2} + \gamma x + O(\sqrt{x})\right) - x + O(\sqrt{x}) = x\log x + (2\gamma - 1)x + O(\sqrt{x}). \quad \square
@@ -3314,7 +3314,7 @@ At \(s=1\): \(L(1,\chi_{-4}) = \pi/4\). Let's verify numerically with a partial 
 \]
 This should converge to \(\pi/4 \approx 0.7854\). The partial product already captures the main features.
 
-**Connection to Gaussian integers.** The Euler product for \(L(s,\chi_{-4})\) can also be understood through the arithmetic of Gaussian integers \(\mathbb{Z}[i]\): a prime \(p \equiv 1 \pmod 4\) splits as \(p = \pi\bar\pi\) in \(\mathbb{Z}[i]\), contributing two factors, while \(p \equiv 3 \pmod 4\) remains inert (stays prime in \(\mathbb{Z}[i]\)), contributing one factor. The product formula for the Dedekind zeta \(\zeta_{\mathbb{Q}(i)}(s) = \zeta(s)L(s,\chi_{-4})\) encodes precisely this splitting behavior.
+<strong>Connection to Gaussian integers.</strong> The Euler product for \(L(s,\chi_{-4})\) can also be understood through the arithmetic of Gaussian integers \(\mathbb{Z}[i]\): a prime \(p \equiv 1 \pmod 4\) splits as \(p = \pi\bar\pi\) in \(\mathbb{Z}[i]\), contributing two factors, while \(p \equiv 3 \pmod 4\) remains inert (stays prime in \(\mathbb{Z}[i]\)), contributing one factor. The product formula for the Dedekind zeta \(\zeta_{\mathbb{Q}(i)}(s) = \zeta(s)L(s,\chi_{-4})\) encodes precisely this splitting behavior.
 </div>
 
 ## F.4 Problem 4: ζ(2) = π²/6 from the Product Formula
@@ -3331,23 +3331,23 @@ This should converge to \(\pi/4 \approx 0.7854\). The partial product already ca
 \]
 (The pairing of \(+n\) and \(-n\) zeros into factors \((1-x/n)(1+x/n) = 1-x^2/n^2\) avoids the need for exponential convergence factors.)
 
-**Step 1: Taylor expand both sides.** The Taylor expansion of \(\sin(\pi x)/(\pi x)\) around \(x=0\):
+<strong>Step 1: Taylor expand both sides.</strong> The Taylor expansion of \(\sin(\pi x)/(\pi x)\) around \(x=0\):
 
 \[
 \frac{\sin(\pi x)}{\pi x} = \frac{1}{\pi x}\left(\pi x - \frac{(\pi x)^3}{6} + \frac{(\pi x)^5}{120} - \cdots\right) = 1 - \frac{\pi^2 x^2}{6} + \frac{\pi^4 x^4}{120} - \cdots
 \]
 The coefficient of \(x^2\) is \(-\pi^2/6\).
 
-**Step 2: Expand the product.** Taking the logarithm:
+<strong>Step 2: Expand the product.</strong> Taking the logarithm:
 
 \[
 \log\prod_{n=1}^\infty\left(1-\frac{x^2}{n^2}\right) = \sum_{n=1}^\infty\log\left(1-\frac{x^2}{n^2}\right) = -\sum_{n=1}^\infty\sum_{k=1}^\infty\frac{x^{2k}}{kn^{2k}} = -\sum_{k=1}^\infty\frac{\zeta(2k)}{k}x^{2k}.
 \]
 Alternatively, directly expand the product: the coefficient of \(x^2\) in \(\prod_{n=1}^\infty(1-x^2/n^2)\) is \(-\sum_{n=1}^\infty 1/n^2 = -\zeta(2)\).
 
-**Step 3: Compare coefficients.** The coefficient of \(x^2\) on the left is \(-\pi^2/6\) and on the right is \(-\zeta(2)\). Therefore \(\zeta(2) = \pi^2/6\). \(\square\)
+<strong>Step 3: Compare coefficients.</strong> The coefficient of \(x^2\) on the left is \(-\pi^2/6\) and on the right is \(-\zeta(2)\). Therefore \(\zeta(2) = \pi^2/6\). \(\square\)
 
-**Generalization.** The coefficient of \(x^{2k}\) on the left is the \((2k)\)-th Taylor coefficient of \(\sin(\pi x)/(\pi x)\), which equals \((-1)^k\pi^{2k}/(2k+1)!\). The coefficient on the right involves \(\zeta(2k)\) and lower-order terms (elementary symmetric polynomials of \(\{1/n^2\}\)). By Newton's identity relating power sums to elementary symmetric polynomials, one can extract \(\zeta(2k)\) for all \(k\), giving the general formula \(\zeta(2k) = (-1)^{k+1}(2\pi)^{2k}B_{2k}/(2(2k)!)\).
+<strong>Generalization.</strong> The coefficient of \(x^{2k}\) on the left is the \((2k)\)-th Taylor coefficient of \(\sin(\pi x)/(\pi x)\), which equals \((-1)^k\pi^{2k}/(2k+1)!\). The coefficient on the right involves \(\zeta(2k)\) and lower-order terms (elementary symmetric polynomials of \(\{1/n^2\}\)). By Newton's identity relating power sums to elementary symmetric polynomials, one can extract \(\zeta(2k)\) for all \(k\), giving the general formula \(\zeta(2k) = (-1)^{k+1}(2\pi)^{2k}B_{2k}/(2(2k)!)\).
 </div>
 
 ## F.5 Problem 5: Bertrand's Postulate via von Mangoldt
@@ -3359,7 +3359,7 @@ Alternatively, directly expand the product: the coefficient of \(x^2\) in \(\pro
 <div class="proof">
 <strong>Solution.</strong> We use the central binomial coefficient argument (Section 1.3a), enhanced with the von Mangoldt function.
 
-**Key bound.** For any prime power \(p^k\) with \(p^k \leq 2n\), the \(p\)-adic valuation of \(\binom{2n}{n}\) satisfies
+<strong>Key bound.</strong> For any prime power \(p^k\) with \(p^k \leq 2n\), the \(p\)-adic valuation of \(\binom{2n}{n}\) satisfies
 
 \[
 v_p\!\left(\binom{2n}{n}\right) = \sum_{j=1}^\infty\left(\left\lfloor\frac{2n}{p^j}\right\rfloor - 2\left\lfloor\frac{n}{p^j}\right\rfloor\right) \leq \log_p(2n).
@@ -3368,28 +3368,28 @@ v_p\!\left(\binom{2n}{n}\right) = \sum_{j=1}^\infty\left(\left\lfloor\frac{2n}{p
 
 So \(p^{v_p(\binom{2n}{n})} \leq p^{\log_p(2n)} = 2n\) for each prime \(p\).
 
-**Step 1.** We have \(4^n = (1+1)^{2n} \leq (2n+1)\binom{2n}{n}\) (since \(\binom{2n}{n}\) is the largest of the \(2n+1\) binomial coefficients), giving \(\binom{2n}{n} \geq 4^n/(2n+1)\).
+<strong>Step 1.</strong> We have \(4^n = (1+1)^{2n} \leq (2n+1)\binom{2n}{n}\) (since \(\binom{2n}{n}\) is the largest of the \(2n+1\) binomial coefficients), giving \(\binom{2n}{n} \geq 4^n/(2n+1)\).
 
-**Step 2.** If there is no prime in \((n, 2n]\), then every prime factor of \(\binom{2n}{n}\) satisfies \(p \leq n\) (since primes \(> n\) can't divide \(\binom{2n}{n}\) when there are none in \((n,2n]\); actually a prime \(p\) with \(n < p \leq 2n\) divides \(\binom{2n}{n}\) once since \(\lfloor 2n/p\rfloor = 1\) and \(\lfloor n/p\rfloor = 0\), giving \(v_p = 1\)). So assuming no prime in \((n,2n]\):
+<strong>Step 2.</strong> If there is no prime in \((n, 2n]\), then every prime factor of \(\binom{2n}{n}\) satisfies \(p \leq n\) (since primes \(> n\) can't divide \(\binom{2n}{n}\) when there are none in \((n,2n]\); actually a prime \(p\) with \(n < p \leq 2n\) divides \(\binom{2n}{n}\) once since \(\lfloor 2n/p\rfloor = 1\) and \(\lfloor n/p\rfloor = 0\), giving \(v_p = 1\)). So assuming no prime in \((n,2n]\):
 
 \[
 \binom{2n}{n} = \prod_{p \leq n} p^{v_p(\binom{2n}{n})} \leq \prod_{p \leq n} 2n \leq (2n)^{\pi(n)}.
 \]
 
-**Step 3.** By Chebyshev's upper bound, \(\pi(n) \leq 2n\log 2/\log n\) (from \(\psi(n) \leq 2n\log 2\) and \(\psi(n) \geq \theta(n) = \pi(n)\log\sqrt{n}\)). More precisely, using the much cruder bound \(\pi(n) \leq n\) (trivially):
+<strong>Step 3.</strong> By Chebyshev's upper bound, \(\pi(n) \leq 2n\log 2/\log n\) (from \(\psi(n) \leq 2n\log 2\) and \(\psi(n) \geq \theta(n) = \pi(n)\log\sqrt{n}\)). More precisely, using the much cruder bound \(\pi(n) \leq n\) (trivially):
 
 \[
 \binom{2n}{n} \leq (2n)^n.
 \]
 
-**Step 4.** But we also have \(\binom{2n}{n} \geq 4^n/(2n+1)\). So we need
+<strong>Step 4.</strong> But we also have \(\binom{2n}{n} \geq 4^n/(2n+1)\). So we need
 
 \[
 \frac{4^n}{2n+1} \leq (2n)^n,
 \]
 i.e., \(4^n \leq (2n)^n(2n+1) = (2n+1)(2n)^n\). For \(n \geq 3\): \((2n)^n \geq 6^3 = 216 < 4^3 = 64\)... wait, \((2\cdot 3)^3 = 216 > 64\). Actually \((2n)^n > 4^n\) would require \(2n > 4\), i.e., \(n > 2\). But \((2n)^n > 4^n \iff (2n)^n/4^n = (n/2)^n > 1 \iff n > 2\). So for \(n > 2\), \((2n)^n > 4^n\), and the bound \(\binom{2n}{n} \leq (2n)^n\) is consistent with \(\binom{2n}{n} \geq 4^n/(2n+1)\) — this approach doesn't immediately give a contradiction.
 
-**Sharper argument.** We instead use the fact that if \(p > \sqrt{2n}\), then \(v_p(\binom{2n}{n}) \leq 1\) (since \(p^2 > 2n\)), so such primes contribute at most \(p \leq 2n\) to the product. Primes \(p \leq \sqrt{2n}\) contribute at most \((2n)^{\pi(\sqrt{2n})}\). So
+<strong>Sharper argument.</strong> We instead use the fact that if \(p > \sqrt{2n}\), then \(v_p(\binom{2n}{n}) \leq 1\) (since \(p^2 > 2n\)), so such primes contribute at most \(p \leq 2n\) to the product. Primes \(p \leq \sqrt{2n}\) contribute at most \((2n)^{\pi(\sqrt{2n})}\). So
 
 \[
 \binom{2n}{n} \leq (2n)^{\pi(\sqrt{2n})} \cdot \prod_{\sqrt{2n} < p \leq n} p \leq (2n)^{\sqrt{2n}} \cdot e^{\theta(n)}.
@@ -3401,7 +3401,7 @@ Using \(\theta(n) \leq n\log 4 = 2n\log 2\) (Chebyshev):
 \]
 This gives \((2n+1) \geq (2n)^{-\sqrt{2n}}\), which is valid but vacuous.
 
-**Direct approach.** The cleanest proof (Erdős's version): One uses the specific fact that any prime \(p\) with \(2n/3 < p \leq n\) satisfies \(v_p(\binom{2n}{n}) = 0\) (since \(\lfloor 2n/p\rfloor = 2\) and \(\lfloor n/p\rfloor = 1\), giving \(v_p = 0\); actually \(\lfloor 2n/p\rfloor - 2\lfloor n/p\rfloor = 2-2 = 0\)). So primes in \((2n/3, n]\) do NOT divide \(\binom{2n}{n}\). And primes in \((n,2n]\) each divide \(\binom{2n}{n}\) exactly once (as computed above). Therefore if no prime in \((n,2n]\):
+<strong>Direct approach.</strong> The cleanest proof (Erdős's version): One uses the specific fact that any prime \(p\) with \(2n/3 < p \leq n\) satisfies \(v_p(\binom{2n}{n}) = 0\) (since \(\lfloor 2n/p\rfloor = 2\) and \(\lfloor n/p\rfloor = 1\), giving \(v_p = 0\); actually \(\lfloor 2n/p\rfloor - 2\lfloor n/p\rfloor = 2-2 = 0\)). So primes in \((2n/3, n]\) do NOT divide \(\binom{2n}{n}\). And primes in \((n,2n]\) each divide \(\binom{2n}{n}\) exactly once (as computed above). Therefore if no prime in \((n,2n]\):
 
 \[
 \binom{2n}{n} \leq \prod_{p \leq 2n/3} p^{v_p(\binom{2n}{n})} \leq \prod_{p \leq 2n/3}(2n).
@@ -3418,7 +3418,7 @@ A careful induction shows this leads to \(4^n/(2n+1) \leq (2n)^{\pi(2n/3)}\), an
 <div class="proof">
 <strong>Solution.</strong> We use Abel summation with the "summatory function" of the von Mangoldt function. Recall \(\psi(x) = \sum_{n \leq x}\Lambda(n)\). By Chebyshev (Theorem 1.9), \(\psi(x) \leq 2x\log 2\), so \(\psi(x) = O(x)\).
 
-**Step 1.** Write
+<strong>Step 1.</strong> Write
 
 \[
 \sum_{p \leq x}\frac{\log p}{p} = \sum_{p \leq x}\frac{\Lambda(p)}{p}
@@ -3432,13 +3432,13 @@ A careful induction shows this leads to \(4^n/(2n+1) \leq (2n)^{\pi(2n/3)}\), an
 
 So it suffices to show \(\sum_{n \leq x}\Lambda(n)/n = \log x + O(1)\).
 
-**Step 2.** Apply Abel summation with \(a_n = \Lambda(n)\) (so \(A(x) = \psi(x)\)) and \(f(t) = 1/t\):
+<strong>Step 2.</strong> Apply Abel summation with \(a_n = \Lambda(n)\) (so \(A(x) = \psi(x)\)) and \(f(t) = 1/t\):
 
 \[
 \sum_{n \leq x}\frac{\Lambda(n)}{n} = \frac{\psi(x)}{x} + \int_1^x \frac{\psi(t)}{t^2}\,dt.
 \]
 
-**Step 3.** From Chebyshev, \(\psi(x) = O(x)\), so \(\psi(x)/x = O(1)\). For the integral:
+<strong>Step 3.</strong> From Chebyshev, \(\psi(x) = O(x)\), so \(\psi(x)/x = O(1)\). For the integral:
 
 \[
 \int_1^x\frac{\psi(t)}{t^2}\,dt = \int_1^x\frac{\psi(t)}{t^2}\,dt.
@@ -3449,14 +3449,14 @@ Write \(\psi(t) = t + E(t)\) where \(E(t) = \psi(t) - t = O(t)\) (Chebyshev's re
 \int_1^x\frac{\psi(t)}{t^2}\,dt = \int_1^x \frac{1}{t}\,dt + \int_1^x\frac{E(t)}{t^2}\,dt = \log x + \int_1^x\frac{E(t)}{t^2}\,dt.
 \]
 
-**Step 4.** It remains to show \(\int_1^x E(t)/t^2\,dt = O(1)\). From \(|E(t)| \leq Ct\) (Chebyshev):
+<strong>Step 4.</strong> It remains to show \(\int_1^x E(t)/t^2\,dt = O(1)\). From \(|E(t)| \leq Ct\) (Chebyshev):
 
 \[
 \left|\int_1^x\frac{E(t)}{t^2}\,dt\right| \leq C\int_1^x \frac{1}{t}\,dt = C\log x.
 \]
 This is too weak! We need a better bound. The key is that \(E(t)/t = \psi(t)/t - 1\) changes sign and the integral of \(E(t)/t^2\) is bounded. This requires the Chebyshev-level bound \(|E(t)| \leq (c_2-1)t\) on one side and \(|E(t)| \leq (1-c_1)t\) on the other, but neither of these alone gives the integral bounded — we need a more careful argument.
 
-**Sharper approach.** Use the identity \(\sum_{n \leq x}\Lambda(n)/n = -\zeta'(1^+)/\zeta(1^+)\), which we interpret as follows: from the Laurent expansion \(\zeta(s) = 1/(s-1) + \gamma + O(s-1)\) and \(-\zeta'(s)/\zeta(s) = \sum \Lambda(n)/n^s\), partial summation gives (for \(s = 1+\varepsilon\)):
+<strong>Sharper approach.</strong> Use the identity \(\sum_{n \leq x}\Lambda(n)/n = -\zeta'(1^+)/\zeta(1^+)\), which we interpret as follows: from the Laurent expansion \(\zeta(s) = 1/(s-1) + \gamma + O(s-1)\) and \(-\zeta'(s)/\zeta(s) = \sum \Lambda(n)/n^s\), partial summation gives (for \(s = 1+\varepsilon\)):
 
 \[
 \sum_{n=1}^\infty \frac{\Lambda(n)}{n^{1+\varepsilon}} = \frac{1}{\varepsilon} + C + O(\varepsilon)
@@ -3465,7 +3465,7 @@ for some constant \(C\). As \(\varepsilon \to 0^+\), the main term \(1/\varepsil
 
 More elementarily: from \(\sum_{n \leq x}\Lambda(n)\log n = (\log x)\psi(x) - \int_1^x(\psi(t)/t)\,dt\) (Abel summation applied differently), one can bootstrap from the crude \(O(x)\) bound on \(\psi\) to get the \(\log x + O(1)\) result. \(\square\)
 
-**Remark.** The precise constant in Mertens' second theorem is 0: the exact statement is \(\sum_{p \leq x}(\log p)/p = \log x + O(1)\), where the error is indeed bounded (not merely of size \(\log\log x\) or similar). Chebyshev established this in 1852. The proof above makes the boundedness plausible; a complete proof requires knowing that \(\int_1^\infty E(t)/t^2\,dt\) converges, which follows once one knows \(\psi(t)/t \to 1\) (PNT) or from more elementary estimates.
+<strong>Remark.</strong> The precise constant in Mertens' second theorem is 0: the exact statement is \(\sum_{p \leq x}(\log p)/p = \log x + O(1)\), where the error is indeed bounded (not merely of size \(\log\log x\) or similar). Chebyshev established this in 1852. The proof above makes the boundedness plausible; a complete proof requires knowing that \(\int_1^\infty E(t)/t^2\,dt\) converges, which follows once one knows \(\psi(t)/t \to 1\) (PNT) or from more elementary estimates.
 </div>
 
 ---

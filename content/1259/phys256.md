@@ -862,7 +862,7 @@ This can be written as the **Airy function**:
 \[
 \mathcal{T}(\delta) = \frac{I_T}{I_0} = \frac{1}{1 + \mathcal{F}\sin^2(\delta/2)}
 \]
-where the **coefficient of finesse** is \(\mathcal{F} = 4R/(1-R)^2\).
+where the <strong>coefficient of finesse</strong> is \(\mathcal{F} = 4R/(1-R)^2\).
 </div>
 
 The Airy function has transmission maxima of unity at \(\delta = 2m\pi\) (i.e., whenever \(2nd\cos\theta = m\lambda\)) and minima of \(1/(1+\mathcal{F})\) at \(\delta = (2m+1)\pi\). For high reflectivity (\(R \to 1\), \(\mathcal{F} \to \infty\)), the minima approach zero and the maxima become extremely sharp — needle-like transmission peaks separated by broad dark regions.
@@ -1336,7 +1336,7 @@ A concept of profound importance in practical optics — often neglected in intr
 
 Étendue is **conserved** by any lossless optical system. This is the optical analogue of the Liouville theorem in classical mechanics — the phase-space volume occupied by a beam of light cannot be reduced by any combination of lenses, mirrors, or other optical elements. Only light absorbers or scatterers can increase it (by spreading rays into new directions). This places a fundamental limit on **concentration of light**: no optical system can focus sunlight to an intensity exceeding the surface brightness of the Sun. Practical concentration systems (solar furnaces, concentrating photovoltaic collectors) must have an acceptance solid angle large enough to match the étendue of the sunlight they are trying to collect.
 
-**Non-imaging optics** — the design of optical systems optimised for light collection rather than image formation — exploits étendue to design compound parabolic concentrators (CPCs), Winston cones, and other devices that approach the thermodynamic concentration limit. A CPC can concentrate light from an acceptance half-angle \(\theta$ by a factor of \(1/\sin^2\theta\) in two dimensions — the theoretical maximum given by étendue conservation.
+**Non-imaging optics** — the design of optical systems optimised for light collection rather than image formation — exploits étendue to design compound parabolic concentrators (CPCs), Winston cones, and other devices that approach the thermodynamic concentration limit. A CPC can concentrate light from an acceptance half-angle \(\theta\) by a factor of \(1/\sin^2\theta\) in two dimensions — the theoretical maximum given by étendue conservation.
 
 ---
 

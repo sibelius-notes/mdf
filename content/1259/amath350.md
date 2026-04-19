@@ -75,7 +75,7 @@ Separating variables: \(\frac{dA}{A} = r\,dt\). Integrating both sides: \(\ln|A|
 </div>
 
 <div class="example">
-<strong>Example — Logistic population growth</strong>: The exponential growth model \(dP/dt = rP\) predicts unbounded growth, which is unrealistic. The **logistic model** introduces a carrying capacity \(K\):
+<strong>Example — Logistic population growth</strong>: The exponential growth model \(dP/dt = rP\) predicts unbounded growth, which is unrealistic. The <strong>logistic model</strong> introduces a carrying capacity \(K\):
 
 \[
 \frac{dP}{dt} = rP\!\left(1 - \frac{P}{K}\right), \quad P(0) = P_0.
@@ -503,7 +503,7 @@ This decays to zero faster than the overdamped case (for the same \(\omega_0\)) 
 \[
 y(t) = e^{-t}\!\left(A\cos\!\sqrt{3}\,t + B\sin\!\sqrt{3}\,t\right).
 \]
-The solution oscillates at frequency \(\omega_d = \sqrt{\omega_0^2 - \gamma^2} = \sqrt{3} \approx 1.73\) (the **damped natural frequency**), with exponentially decaying amplitude \(e^{-t}\).
+The solution oscillates at frequency \(\omega_d = \sqrt{\omega_0^2 - \gamma^2} = \sqrt{3} \approx 1.73\) (the <strong>damped natural frequency</strong>), with exponentially decaying amplitude \(e^{-t}\).
 </div>
 
 <em>Economic interpretation (Cobweb model)</em>: In the cobweb model of agricultural markets, suppliers make production decisions based on last period's price. The second-order ODE analogy captures the oscillatory price dynamics: overdamped markets have sluggish convergence (e.g., housing markets with slow supply response); underdamped markets exhibit price cycles (e.g., hog cycles in agricultural economics); critically damped markets would represent the ideal — fastest convergence without overshoot. The damping parameter \(\gamma\) is related to the relative slopes of supply and demand.
@@ -1110,7 +1110,7 @@ d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)(T-t)}{\sigma\sqrt{T-t}}, \qquad d_2 = d_
 \]
 
 <div class="remark">
-<strong>Remark (The heat kernel as a pricing kernel)</strong>: In the Black-Scholes framework, the heat kernel \(G(x-y,\tau)\) plays the role of the **risk-neutral transition density**: the probability density (under the risk-neutral measure) that the log-price \(\ln S_T\) equals \(y\) given that it is currently \(x\). The option price is literally the expected payoff under this density, discounted at the risk-free rate. The Gaussian shape of the kernel reflects the log-normal distribution of stock prices under Geometric Brownian Motion, and the spreading of the kernel with \(\sqrt{\tau}\) reflects increasing uncertainty with longer time to expiry. This is why options with longer maturities command higher prices: the heat kernel is wider, meaning more probability weight in the tails where the payoff is large.
+<strong>Remark (The heat kernel as a pricing kernel)</strong>: In the Black-Scholes framework, the heat kernel \(G(x-y,\tau)\) plays the role of the <strong>risk-neutral transition density</strong>: the probability density (under the risk-neutral measure) that the log-price \(\ln S_T\) equals \(y\) given that it is currently \(x\). The option price is literally the expected payoff under this density, discounted at the risk-free rate. The Gaussian shape of the kernel reflects the log-normal distribution of stock prices under Geometric Brownian Motion, and the spreading of the kernel with \(\sqrt{\tau}\) reflects increasing uncertainty with longer time to expiry. This is why options with longer maturities command higher prices: the heat kernel is wider, meaning more probability weight in the tails where the payoff is large.
 </div>
 
 ---
@@ -1442,7 +1442,7 @@ It represents the expected number of secondary infections produced by a single i
 - \(\beta SI = 0\) requires \(S = 0\) or \(I = 0\).
 - \(\beta SI - \gamma I = I(\beta S - \gamma) = 0\) requires \(I = 0\) or \(S = \gamma/\beta\).
 
-The only equilibria with \(I \geq 0\) and \(S \geq 0\) are the **disease-free equilibria** \((S^*, 0)\) for any \(0 \leq S^* \leq N\). (There is no interior equilibrium with \(I > 0\) that is a fixed point; the epidemic must end at some \(S^* < N\).)
+The only equilibria with \(I \geq 0\) and \(S \geq 0\) are the <strong>disease-free equilibria</strong> \((S^*, 0)\) for any \(0 \leq S^* \leq N\). (There is no interior equilibrium with \(I > 0\) that is a fixed point; the epidemic must end at some \(S^* < N\).)
 
 <em>Jacobian</em>: At a disease-free equilibrium \((S^*, 0)\):
 

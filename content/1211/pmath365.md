@@ -632,7 +632,7 @@ The following classical theorems are all special cases of a single unified theor
 
 \[
 \iint_\Sigma (\nabla \times F) \cdot dA = \oint_{\partial \Sigma} F \cdot dL.
-\)
+\]
 
 ### Simplices, Chains, and the Boundary Operator
 

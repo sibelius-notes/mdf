@@ -732,7 +732,7 @@ where bars denote images in \(R\). Here \(\overline{(y,z)} = (y,z)/(xy,xz)\) is 
 
 Now the irreducible component \(\{x = 0\}\) corresponds to the prime \(\overline{(x)}\) in \(R\), and \(R/\overline{(x)} \cong k[y,z]\), which has dimension 2. This gives a maximal chain \((0) \subsetneq \overline{(x)} \subsetneq \overline{(x,y)} \subsetneq \overline{(x,y,z)}\) of length 3 — but wait, is \(\overline{(x)}\) a prime? In \(R/\overline{(x)} = k[x,y,z]/(xy,xz,x) \cong k[y,z]\), yes, it is. So we have a chain of length 3 starting from \((0)\)! But that would give \(\dim R \geq 3\), contradicting our earlier claim. Let me recheck: \((0) \subsetneq \overline{(x)} \subsetneq \overline{(x,y)} \subsetneq \overline{(x,y,z)}\). Is \(\overline{(x)}\) actually prime? In \(k[x,y,z]/(xy,xz)\), if we mod out by \((x)\), we get \(k[y,z]\), a domain. Yes, \(\overline{(x)}\) is prime. The chain \((0) \subsetneq \overline{(x)} \subsetneq \overline{(x,y)} \subsetneq \overline{(x,y,z)}\) has length 3, showing \(\dim R \geq 3\). But since \(R\) is a quotient of \(k[x,y,z]\) (dimension 3), we have \(\dim R \leq 3\). In fact \(\dim R = 2\) ... hold on, let me reconsider. The Krull dimension of a polynomial ring modulo an ideal can be lower than the Krull dimension of the polynomial ring. Here, \(k[x,y,z]/(xy,xz)\) maps the chain \((0) \subset (x) \subset (x,y) \subset (x,y,z)\) from the polynomial ring to a chain of the same length in the quotient (since none of these ideals contain \((xy,xz)\) except at the full ideal). So indeed \(\dim R = 2\) is incorrect — the dimension is actually 2 in terms of the irreducible components, but the chain above has length 3. Actually dimension equals 2: the component \(\{x=0\}\) is 2-dimensional. Let me re-examine.
 
-The variety \(V(xy,xz) \subset \mathbb{A}^3\) has two irreducible components: \(W_1 = V(x)\) (the plane \(x=0\), 2-dimensional) and \(W_2 = V(y,z)\) (the line \(y=z=0\), 1-dimensional). The ring \(R\) is the coordinate ring of this reducible variety. The chains of primes in \(R\) correspond to chains of irreducible subvarieties of \(V(xy,xz)\). The longest chain in \(W_1\) is: a generic point of \(W_1\) (dim 2) $\supset$ a curve in \(W_1\) (dim 1) $\supset$ a point (dim 0), giving a chain of length 2 in \(R\). But the algebraic chain \((0) \subsetneq (x) \subsetneq (x,y) \subsetneq (x,y,z)\) in \(R\) has length 3 — does this mean \(\dim R = 3\)? Yes! Krull dimension counts the length of the longest prime chain, which is 3 here. This is a case where the Krull dimension (3) exceeds the geometric dimension of the irreducible components (max = 2). Actually, \((x)\) in \(R\) is prime of height 1, and \(R/(x) \cong k[y,z]\) has dimension 2, so \(\mathrm{ht}((x)) + \dim(R/(x)) = 1 + 2 = 3 = \dim R\). So \(\dim R = 3\). The original claim of "dim = 2" was incorrect; the Krull dimension of \(k[x,y,z]/(xy,xz)\) is indeed 3 (same as \(k[x,y,z]\), since the quotient does not drop dimension in this case). This is because the irreducible component \(W_1 = V(x)\) is itself a 2-dimensional variety with a full chain of primes.
+The variety \(V(xy,xz) \subset \mathbb{A}^3\) has two irreducible components: \(W_1 = V(x)\) (the plane \(x=0\), 2-dimensional) and \(W_2 = V(y,z)\) (the line \(y=z=0\), 1-dimensional). The ring \(R\) is the coordinate ring of this reducible variety. The chains of primes in \(R\) correspond to chains of irreducible subvarieties of \(V(xy,xz)\). The longest chain in \(W_1\) is: a generic point of \(W_1\) (dim 2) \(\supset\) a curve in \(W_1\) (dim 1) \(\supset\) a point (dim 0), giving a chain of length 2 in \(R\). But the algebraic chain \((0) \subsetneq (x) \subsetneq (x,y) \subsetneq (x,y,z)\) in \(R\) has length 3 — does this mean \(\dim R = 3\)? Yes! Krull dimension counts the length of the longest prime chain, which is 3 here. This is a case where the Krull dimension (3) exceeds the geometric dimension of the irreducible components (max = 2). Actually, \((x)\) in \(R\) is prime of height 1, and \(R/(x) \cong k[y,z]\) has dimension 2, so \(\mathrm{ht}((x)) + \dim(R/(x)) = 1 + 2 = 3 = \dim R\). So \(\dim R = 3\). The original claim of "dim = 2" was incorrect; the Krull dimension of \(k[x,y,z]/(xy,xz)\) is indeed 3 (same as \(k[x,y,z]\), since the quotient does not drop dimension in this case). This is because the irreducible component \(W_1 = V(x)\) is itself a 2-dimensional variety with a full chain of primes.
 
 ## Section 10.2: Noether Normalization
 
@@ -1463,7 +1463,7 @@ The construction \(\mathrm{Proj}(S)\) for a graded ring \(S\) mirrors \(\mathrm{
 \mathrm{Proj}(S) = \{P \in \mathrm{Spec}_\mathrm{hom}(S) \mid P \not\supseteq S_+\},
 \]
 where \(\mathrm{Spec}_\mathrm{hom}(S)\) is the set of homogeneous prime ideals of \(S\). The topology on \(\mathrm{Proj}(S)\) is the Zariski topology: closed sets are \(V_+(I) = \{P \in \mathrm{Proj}(S) \mid P \supseteq I\}\) for homogeneous ideals \(I\).
-\end{div}
+</div>
 
 For \(S = k[x_0,\ldots,x_n]\), we have \(\mathrm{Proj}(S) = \mathbb{P}^n_k\), recovering projective \(n\)-space. The homogeneous prime ideals not containing \((x_0,\ldots,x_n)\) are exactly the prime ideals corresponding to irreducible projective subvarieties of \(\mathbb{P}^n\).
 
@@ -1601,7 +1601,7 @@ where the differential \(d: \wedge^p R^r \to \wedge^{p-1} R^r\) is defined on ba
 \[
 d(e_{i_1} \wedge \cdots \wedge e_{i_p}) = \sum_{j=1}^p (-1)^{j+1} x_{i_j} e_{i_1} \wedge \cdots \hat{e}_{i_j} \cdots \wedge e_{i_p}.
 \]
-\end{div}
+</div>
 
 **Properties.** If \(\mathbf{x} = x_1,\ldots,x_r\) is a regular sequence on \(M\), then the Koszul complex \(K_\bullet(\mathbf{x}) \otimes M\) is a free resolution of \(M/(\mathbf{x})M\):
 
@@ -1967,120 +1967,123 @@ Let \(I \subseteq R[x]\) be an ideal. We want to show \(I\) is finitely generate
 \[
 L_n = \{a \in R \mid \exists f \in I \text{ with } \deg f = n \text{ and leading coefficient } a\} \cup \{0\}.
 \]
-Each \(L_n\) is an ideal of \(R\): it is closed under addition (add two polynomials of degree \(n\)) and under multiplication by elements of \(R\) (multiply the polynomial by the element). Moreover \(L_n \subseteq L_{n+1}\): if \(a \in L_n$ (leading coeff of some $f \in I$ of degree $n$), then $a$ is also the leading coeff of $xf \in I$, which has degree $n+1$.
+Each \(L_n\) is an ideal of \(R\): it is closed under addition (add two polynomials of degree \(n\)) and under multiplication by elements of \(R\) (multiply the polynomial by the element). Moreover \(L_n \subseteq L_{n+1}\): if \(a \in L_n\) (leading coeff of some \(f \in I\) of degree \(n\)), then \(a\) is also the leading coeff of \(xf \in I\), which has degree \(n+1\).
 
-So we have an ascending chain $L_0 \subseteq L_1 \subseteq L_2 \subseteq \cdots$ of ideals in $R$. Since $R$ is Noetherian, this chain stabilizes: $L_N = L_{N+1} = L_{N+2} = \cdots$ for some $N$.
+So we have an ascending chain \(L_0 \subseteq L_1 \subseteq L_2 \subseteq \cdots\) of ideals in \(R\). Since \(R\) is Noetherian, this chain stabilizes: \(L_N = L_{N+1} = L_{N+2} = \cdots\) for some \(N\).
 
-For each $n = 0, 1, \ldots, N$, the ideal $L_n$ is finitely generated (since $R$ is Noetherian), say $L_n = (a_{n,1}, \ldots, a_{n,k_n})$. For each generator $a_{n,j}$, choose a polynomial $f_{n,j} \in I$ of degree $n$ with leading coefficient $a_{n,j}$.
+For each \(n = 0, 1, \ldots, N\), the ideal \(L_n\) is finitely generated (since \(R\) is Noetherian), say \(L_n = (a_{n,1}, \ldots, a_{n,k_n})\). For each generator \(a_{n,j}\), choose a polynomial \(f_{n,j} \in I\) of degree \(n\) with leading coefficient \(a_{n,j}\).
 
-Claim: the finite set $\mathcal{F} = \{f_{n,j} \mid 0 \leq n \leq N, 1 \leq j \leq k_n\}$ generates $I$.
+Claim: the finite set \(\mathcal{F} = \{f_{n,j} \mid 0 \leq n \leq N, 1 \leq j \leq k_n\}\) generates \(I\).
 
-Proof of claim: Let $f \in I$, say $\deg f = m$ and $f$ has leading coefficient $a$. We perform a reduction argument (analogous to the division algorithm in polynomial rings over fields).
+Proof of claim: Let \(f \in I\), say \(\deg f = m\) and \(f\) has leading coefficient \(a\). We perform a reduction argument (analogous to the division algorithm in polynomial rings over fields).
 
-\textbf{Case 1}: $m \leq N$. Then $a \in L_m = (a_{m,1}, \ldots, a_{m,k_m})$, so $a = \sum_j c_j a_{m,j}$ for some $c_j \in R$. Set $g = f - \sum_j c_j x^{m - m} f_{m,j} = f - \sum_j c_j f_{m,j}$. Then $g \in I$ and $\deg g < m$ (the leading terms cancel). Repeat for $g$.
+\textbf{Case 1}: \(m \leq N\). Then \(a \in L_m = (a_{m,1}, \ldots, a_{m,k_m})\), so \(a = \sum_j c_j a_{m,j}\) for some \(c_j \in R\). Set \(g = f - \sum_j c_j x^{m - m} f_{m,j} = f - \sum_j c_j f_{m,j}\). Then \(g \in I\) and \(\deg g < m\) (the leading terms cancel). Repeat for \(g\).
 
-\textbf{Case 2}: $m > N$. Then $a \in L_m = L_N = (a_{N,1}, \ldots, a_{N,k_N})$, so $a = \sum_j c_j a_{N,j}$ for some $c_j \in R$. Set $g = f - \sum_j c_j x^{m-N} f_{N,j}$. Then $g \in I$ and $\deg g < m$.
+\textbf{Case 2}: \(m > N\). Then \(a \in L_m = L_N = (a_{N,1}, \ldots, a_{N,k_N})\), so \(a = \sum_j c_j a_{N,j}\) for some \(c_j \in R\). Set \(g = f - \sum_j c_j x^{m-N} f_{N,j}\). Then \(g \in I\) and \(\deg g < m\).
 
-In both cases, we reduce the degree. Since degrees are non-negative integers, this process terminates, and we can express $f$ as an $R[x]$-linear combination of the $f_{n,j}$. Hence $I = (\mathcal{F})$ is finitely generated.
-\end{div}
+In both cases, we reduce the degree. Since degrees are non-negative integers, this process terminates, and we can express \(f\) as an \(R[x]\)-linear combination of the \(f_{n,j}\). Hence \(I = (\mathcal{F})\) is finitely generated.
+</div>
 
-**Why the proof fails for modules over non-Noetherian rings.** The crucial step is that each $L_n$ is finitely generated. If $R$ is not Noetherian, some $L_n$ could fail to be finitely generated. For example, in $R = k[t_1, t_2, \ldots]$ (countably many variables) with the ideal $I = (t_1 x, t_2 x^2, t_3 x^3, \ldots) \subset R[x]$, the ideal $L_1 = (t_1, t_2, t_3, \ldots)$ is not finitely generated.
+**Why the proof fails for modules over non-Noetherian rings.** The crucial step is that each \(L_n\) is finitely generated. If \(R\) is not Noetherian, some \(L_n\) could fail to be finitely generated. For example, in \(R = k[t_1, t_2, \ldots]\) (countably many variables) with the ideal \(I = (t_1 x, t_2 x^2, t_3 x^3, \ldots) \subset R[x]\), the ideal \(L_1 = (t_1, t_2, t_3, \ldots)\) is not finitely generated.
 
 ## B.5: Primary Decomposition — The Algorithm
 
 The primary decomposition of an ideal in a Noetherian ring can always be computed (in principle). Here we describe the algorithm for polynomial rings.
 
-**Algorithm.** Given an ideal $I \subseteq k[x_1,\ldots,x_n]$:
-1. Find the minimal primes over $I$ (the radical of $I$, then the minimal primes of the radical).
-2. For each minimal prime $P_i$, compute the $P_i$-primary component: $Q_i = \{f \in R \mid \exists s \notin P_i : sf \in I\}$ (the \emph{saturation} of $I$ with respect to $P_i$).
+**Algorithm.** Given an ideal \(I \subseteq k[x_1,\ldots,x_n]\):
+1. Find the minimal primes over \(I\) (the radical of \(I\), then the minimal primes of the radical).
+2. For each minimal prime \(P_i\), compute the \(P_i\)-primary component: \(Q_i = \{f \in R \mid \exists s \notin P_i : sf \in I\}\) (the \emph{saturation} of \(I\) with respect to \(P_i\)).
 3. For each embedded prime, the primary component can be chosen, but is not unique.
 
-**Example: \(I = (x^2 y, xy^2)\) in \(k[x,y]\).** Step 1: \(\sqrt{I}\) contains \((xy)^1 = xy\) (since $(xy)^2 = x^2y \cdot y = $ -- hmm, $(xy)^2 = x^2y^2\), and $x^2y \in I$ and $y \in \sqrt{(x^2y, xy^2)}$ iff $y^n \in I$ for some $n$... let's compute directly. Every element of $I$ is divisible by $xy$, so $I \subseteq (xy)$, and $\sqrt{I} \subseteq \sqrt{(xy)} = (xy)$ if $(xy)$ is radical... but $(xy)$ is not prime ($(xy) = (x) \cap (y)$), and $\sqrt{(x) \cap (y)} = (x) \cap (y)$ since both $(x)$ and $(y)$ are prime. Actually $\sqrt{(xy)} = \sqrt{(x)} \cap \sqrt{(y)} = (x) \cap (y)$. And $x \in \sqrt{I}$ since $x^3 = x \cdot x^2 y/y$... this is circular. More carefully: $x^2 y \in I$ means $x^2 \in \sqrt{I/(y)} = \sqrt{I}/(?)$... let me just check: is $x \in \sqrt{I}$? We need $x^n \in I = (x^2y, xy^2)$ for some $n$. Since every element of $I$ is divisible by $xy$, we need $xy \mid x^n$, i.e., $y \mid x^{n-1}$ in $k[x,y]$. But $y$ does not divide any power of $x$ (they're irreducible and distinct). So $x \notin \sqrt{I}$.
+**Example: \(I = (x^2 y, xy^2)\) in \(k[x,y]\).** Step 1: \(\sqrt{I}\) contains \((xy)^1 = xy\) (since \((xy)^2 = x^2y \cdot y\) -- hmm, \((xy)^2 = x^2y^2\), and \(x^2y \in I\) and \(y \in \sqrt{(x^2y, xy^2)}\) iff \(y^n \in I\) for some \(n\)... let's compute directly. Every element of \(I\) is divisible by \(xy\), so \(I \subseteq (xy)\), and \(\sqrt{I} \subseteq \sqrt{(xy)} = (xy)\) if \((xy)\) is radical... but \((xy)\) is not prime (\((xy) = (x) \cap (y)\)), and \(\sqrt{(x) \cap (y)} = (x) \cap (y)\) since both \((x)\) and \((y)\) are prime. Actually \(\sqrt{(xy)} = \sqrt{(x)} \cap \sqrt{(y)} = (x) \cap (y)\). And \(x \in \sqrt{I}\) since \(x^3 = x \cdot x^2 y/y\)... this is circular. More carefully: \(x^2 y \in I\) means \(x^2 \in \sqrt{I/(y)} = \sqrt{I}/(?)\)... let me just check: is \(x \in \sqrt{I}\)? We need \(x^n \in I = (x^2y, xy^2)\) for some \(n\). Since every element of \(I\) is divisible by \(xy\), we need \(xy \mid x^n\), i.e., \(y \mid x^{n-1}\) in \(k[x,y]\). But \(y\) does not divide any power of \(x\) (they're irreducible and distinct). So \(x \notin \sqrt{I}\).
 
-Hmm, so $\sqrt{I} \neq (x) \cap (y)$? Let's reconsider. We have $x^2 y \in I$, so $x^2 y \in \sqrt{I}$, meaning $x^2 y$ is in $\sqrt{I}$ trivially (it's already in $I \subseteq \sqrt{I}$). We need to find the primes containing $I$. A prime $P$ contains $I = (x^2y, xy^2)$ iff $x^2y \in P$ and $xy^2 \in P$. Since $P$ is prime: $x^2 y \in P \Rightarrow x \in P$ or $y \in P$. Similarly $xy^2 \in P \Rightarrow x \in P$ or $y \in P$. So every prime over $I$ contains $x$ or $y$ (actually at least one of them). If $x \in P$: both conditions satisfied. If $y \in P$ but $x \notin P$: $x^2y \in P$ iff $y \in P$, and $xy^2 \in P$ iff $y \in P$. So $y \in P$ suffices. Therefore every prime over $I$ contains $x$ or contains $y$ — i.e., every prime over $I$ contains $xy$, meaning $\sqrt{I} \supseteq (xy)$. Since $xy \notin I$ but $(xy)^2 = x^2y^2 = y \cdot x^2 y \in I$ (since $x^2 y \in I$), we have $xy \in \sqrt{I}$. So $\sqrt{I} = \sqrt{(xy)} = (x) \cap (y)$.
+Hmm, so \(\sqrt{I} \neq (x) \cap (y)\)? Let's reconsider. We have \(x^2 y \in I\), so \(x^2 y \in \sqrt{I}\), meaning \(x^2 y\) is in \(\sqrt{I}\) trivially (it's already in \(I \subseteq \sqrt{I}\)). We need to find the primes containing \(I\). A prime \(P\) contains \(I = (x^2y, xy^2)\) iff \(x^2y \in P\) and \(xy^2 \in P\). Since \(P\) is prime: \(x^2 y \in P \Rightarrow x \in P\) or \(y \in P\). Similarly \(xy^2 \in P \Rightarrow x \in P\) or \(y \in P\). So every prime over \(I\) contains \(x\) or \(y\) (actually at least one of them). If \(x \in P\): both conditions satisfied. If \(y \in P\) but \(x \notin P\): \(x^2y \in P\) iff \(y \in P\), and \(xy^2 \in P\) iff \(y \in P\). So \(y \in P\) suffices. Therefore every prime over \(I\) contains \(x\) or contains \(y\) — i.e., every prime over \(I\) contains \(xy\), meaning \(\sqrt{I} \supseteq (xy)\). Since \(xy \notin I\) but \((xy)^2 = x^2y^2 = y \cdot x^2 y \in I\) (since \(x^2 y \in I\)), we have \(xy \in \sqrt{I}\). So \(\sqrt{I} = \sqrt{(xy)} = (x) \cap (y)\).
 
-Step 2: The minimal primes over $I$ are $(x)$ and $(y)$. Primary components:
-- $(x)$-primary component: $Q_{(x)} = \{f \mid y^n f \in I \text{ for some } n\} = I : y^\infty$. We have $I : y = (x^2, xy) = x(x,y)$. Then $I : y^2 = (x^2, x) = (x)$. So $Q_{(x)} = (x)$.
-- $(y)$-primary component: $Q_{(y)} = I : x^\infty$. $I : x = (xy, y^2) = y(x,y)$. $I : x^2 = (y)$. So $Q_{(y)} = (y)$.
+Step 2: The minimal primes over \(I\) are \((x)\) and \((y)\). Primary components:
+- \((x)\)-primary component: \(Q_{(x)} = \{f \mid y^n f \in I \text{ for some } n\} = I : y^\infty\). We have \(I : y = (x^2, xy) = x(x,y)\). Then \(I : y^2 = (x^2, x) = (x)\). So \(Q_{(x)} = (x)\).
+- \((y)\)-primary component: \(Q_{(y)} = I : x^\infty\). \(I : x = (xy, y^2) = y(x,y)\). \(I : x^2 = (y)\). So \(Q_{(y)} = (y)\).
 
-Wait, but then $I = (x) \cap (y)$? Let's check: $(x) \cap (y) = (xy)$. But $I = (x^2y, xy^2) \neq (xy)$ since $xy \notin I$. So there must be embedded primes!
+Wait, but then \(I = (x) \cap (y)\)? Let's check: \((x) \cap (y) = (xy)\). But \(I = (x^2y, xy^2) \neq (xy)\) since \(xy \notin I\). So there must be embedded primes!
 
-The embedded prime is $(x,y)$. The correct decomposition should be $I = (x) \cap (y) \cap Q_3$ for some $(x,y)$-primary $Q_3$... but $(x) \cap (y) = (xy) \not\supseteq I$ since $x^2y \notin (xy)$... wait, $x^2 y = x \cdot xy \in (xy)$ since $x \in (x)$... $x^2 y = xy \cdot x \in (xy)$. Yes! $(xy)$ IS contained in $I = (x^2y, xy^2)$... no wait: $xy \notin (x^2y, xy^2)$ since every element of $(x^2y, xy^2)$ has degree $\geq 3$ (in $x$ or $y$). But $xy$ has degree 2. So $xy \notin I$.
+The embedded prime is \((x,y)\). The correct decomposition should be \(I = (x) \cap (y) \cap Q_3\) for some \((x,y)\)-primary \(Q_3\)... but \((x) \cap (y) = (xy) \not\supseteq I\) since \(x^2y \notin (xy)\)... wait, \(x^2 y = x \cdot xy \in (xy)\) since \(x \in (x)\)... \(x^2 y = xy \cdot x \in (xy)\). Yes! \((xy)\) IS contained in \(I = (x^2y, xy^2)\)... no wait: \(xy \notin (x^2y, xy^2)\) since every element of \((x^2y, xy^2)\) has degree \(\geq 3\) (in \(x\) or \(y\)). But \(xy\) has degree 2. So \(xy \notin I\).
 
-But I claimed $(x) \cap (y) = (xy) \not\subseteq I$. So the minimal primary components of $I$ cannot just be $(x)$ and $(y)$. There must be a genuine primary decomposition involving the multiplicities. The correct decomposition of $I = (x^2y, xy^2)$ is:
-$$I = (x^2, y) \cap (x, y^2).$$
-Let me verify: $(x^2, y) \cap (x, y^2)$. An element is in the intersection iff it is in both. If $f = ax^2 + by$ and $f = cx + dy^2$ for polynomials $a,b,c,d$... this is saying $ax^2 + by = cx + dy^2$. Over $k[x,y]$, this means $ax^2 - cx = dy^2 - by$, so $x(ax - c) = y(dy - b)$. Since $x$ and $y$ are coprime: $x \mid dy - b$ and $y \mid ax - c$. Write $dy - b = xg$ and $ax - c = yh$. Then $ax^2 - cx = ax^2 - x(ax - yh) = x \cdot yh$, so $ax^2 + yh \cdot x - cx = yh \cdot x$... this algebraic check is getting complicated. Let's just verify directly:
+But I claimed \((x) \cap (y) = (xy) \not\subseteq I\). So the minimal primary components of \(I\) cannot just be \((x)\) and \((y)\). There must be a genuine primary decomposition involving the multiplicities. The correct decomposition of \(I = (x^2y, xy^2)\) is:
+\[I = (x^2, y) \cap (x, y^2).\]
+Let me verify: \((x^2, y) \cap (x, y^2)\). An element is in the intersection iff it is in both. If \(f = ax^2 + by\) and \(f = cx + dy^2\) for polynomials \(a,b,c,d\)... this is saying \(ax^2 + by = cx + dy^2\). Over \(k[x,y]\), this means \(ax^2 - cx = dy^2 - by\), so \(x(ax - c) = y(dy - b)\). Since \(x\) and \(y\) are coprime: \(x \mid dy - b\) and \(y \mid ax - c\). Write \(dy - b = xg\) and \(ax - c = yh\). Then \(ax^2 - cx = ax^2 - x(ax - yh) = x \cdot yh\), so \(ax^2 + yh \cdot x - cx = yh \cdot x\)... this algebraic check is getting complicated. Let's just verify directly:
 
-$x^2 y \in (x^2, y)$: yes, $x^2 y = y \cdot x^2$. ✓
-$x^2 y \in (x, y^2)$: yes, $x^2 y = x \cdot xy$... wait, $x \cdot xy = x^2 y$? $xy \in k[x,y]$, so $x \cdot (xy) = x^2 y$. And $x \in (x, y^2)$. So $x^2 y = x \cdot xy \in (x) \subseteq (x, y^2)$. ✓
+\(x^2 y \in (x^2, y)\): yes, \(x^2 y = y \cdot x^2\). ✓
+\(x^2 y \in (x, y^2)\): yes, \(x^2 y = x \cdot xy\)... wait, \(x \cdot xy = x^2 y\)? \(xy \in k[x,y]\), so \(x \cdot (xy) = x^2 y\). And \(x \in (x, y^2)\). So \(x^2 y = x \cdot xy \in (x) \subseteq (x, y^2)\). ✓
 
-$xy^2 \in (x^2, y)$: yes, $xy^2 = y \cdot xy \in (y) \subseteq (x^2, y)$. ✓
-$xy^2 \in (x, y^2)$: yes, $xy^2 = y^2 \cdot x \in (y^2) \subseteq (x, y^2)$. Wait, $y^2 \cdot x = xy^2$. And $y^2 \in (y^2)$ and $x \in (x)$... we need $xy^2 = a \cdot x + b \cdot y^2$ for some polynomials $a, b$. Take $a = y^2$ and $b = 0$: $y^2 \cdot x + 0 \cdot y^2 = xy^2$. ✓
+\(xy^2 \in (x^2, y)\): yes, \(xy^2 = y \cdot xy \in (y) \subseteq (x^2, y)\). ✓
+\(xy^2 \in (x, y^2)\): yes, \(xy^2 = y^2 \cdot x \in (y^2) \subseteq (x, y^2)\). Wait, \(y^2 \cdot x = xy^2\). And \(y^2 \in (y^2)\) and \(x \in (x)\)... we need \(xy^2 = a \cdot x + b \cdot y^2\) for some polynomials \(a, b\). Take \(a = y^2\) and \(b = 0\): \(y^2 \cdot x + 0 \cdot y^2 = xy^2\). ✓
 
-So $I \subseteq (x^2, y) \cap (x, y^2)$. For the reverse inclusion, one checks that any element of both ideals must be divisible by $x^2$ or $y$ (from the first ideal) and must be in $(x)$ or $(y^2)$ (from the second). A careful element check shows the intersection equals $(x^2 y, xy^2) = I$.
+So \(I \subseteq (x^2, y) \cap (x, y^2)\). For the reverse inclusion, one checks that any element of both ideals must be divisible by \(x^2\) or \(y\) (from the first ideal) and must be in \((x)\) or \((y^2)\) (from the second). A careful element check shows the intersection equals \((x^2 y, xy^2) = I\).
 
-The associated primes: $\sqrt{(x^2, y)} = (x, y)$ and $\sqrt{(x, y^2)} = (x, y)$. Wait — both primary components have the same prime $(x, y)$! So $I = Q_1 \cap Q_2$ with $Q_1 = (x^2, y)$ and $Q_2 = (x, y^2)$, both $(x,y)$-primary. But the Lasker-Noether theorem says the primes in an irredundant decomposition are distinct. Something is wrong: either the decomposition is redundant, or I'm making an error.
+The associated primes: \(\sqrt{(x^2, y)} = (x, y)\) and \(\sqrt{(x, y^2)} = (x, y)\). Wait — both primary components have the same prime \((x, y)\)! So \(I = Q_1 \cap Q_2\) with \(Q_1 = (x^2, y)\) and \(Q_2 = (x, y^2)\), both \((x,y)\)-primary. But the Lasker-Noether theorem says the primes in an irredundant decomposition are distinct. Something is wrong: either the decomposition is redundant, or I'm making an error.
 
-Let me recheck: is $(x^2, y)$ primary? The zeros of $(x^2, y)$ in $\mathbb{A}^2$ are where $x^2 = 0$ and $y = 0$, i.e., $x = 0, y = 0$ — the origin. So $\sqrt{(x^2,y)} = (x, y)$. Is $(x^2, y)$ primary? If $ab \in (x^2,y)$, is $a \in (x^2,y)$ or $b^n \in (x^2,y)$ for some $n$? Take $a = x, b = x$: $ab = x^2 \in (x^2, y)$, but $x \notin (x^2, y)$ (since $x$ has $y$-degree 0 but $y$-degree of elements of $(x^2,y)$ is...). Actually $x \notin (x^2, y)$? In $(x^2, y)$, elements are of the form $f x^2 + g y$. For $x = fx^2 + gy$, comparing terms: the $y$-free part gives $x = fx^2$, impossible in $k[x,y]$. So $x \notin (x^2,y)$. But $x^n \in (x^2, y)$ for $n \geq 2$ (specifically $x^2 \in (x^2,y)$). So $(x^2, y)$ is $(x,y)$-primary. ✓
+Let me recheck: is \((x^2, y)\) primary? The zeros of \((x^2, y)\) in \(\mathbb{A}^2\) are where \(x^2 = 0\) and \(y = 0\), i.e., \(x = 0, y = 0\) — the origin. So \(\sqrt{(x^2,y)} = (x, y)\). Is \((x^2, y)\) primary? If \(ab \in (x^2,y)\), is \(a \in (x^2,y)\) or \(b^n \in (x^2,y)\) for some \(n\)? Take \(a = x, b = x\): \(ab = x^2 \in (x^2, y)\), but \(x \notin (x^2, y)\) (since \(x\) has \(y\)-degree 0 but \(y\)-degree of elements of \((x^2,y)\) is...). Actually \(x \notin (x^2, y)\)? In \((x^2, y)\), elements are of the form \(f x^2 + g y\). For \(x = fx^2 + gy\), comparing terms: the \(y\)-free part gives \(x = fx^2\), impossible in \(k[x,y]\). So \(x \notin (x^2,y)\). But \(x^n \in (x^2, y)\) for \(n \geq 2\) (specifically \(x^2 \in (x^2,y)\)). So \((x^2, y)\) is \((x,y)\)-primary. ✓
 
-Similarly $(x, y^2)$ is $(x,y)$-primary. But then the decomposition $I = (x^2,y) \cap (x,y^2)$ has both components with the same prime $(x,y)$. This means the decomposition is NOT irredundant in the Lasker-Noether sense — we can combine them. The combined primary component is... actually in an irredundant primary decomposition, we cannot have two components with the same associated prime. The correct irredundant primary decomposition of $(x^2y, xy^2)$ must use different primes.
+Similarly \((x, y^2)\) is \((x,y)\)-primary. But then the decomposition \(I = (x^2,y) \cap (x,y^2)\) has both components with the same prime \((x,y)\). This means the decomposition is NOT irredundant in the Lasker-Noether sense — we can combine them. The combined primary component is... actually in an irredundant primary decomposition, we cannot have two components with the same associated prime. The correct irredundant primary decomposition of \((x^2y, xy^2)\) must use different primes.
 
-Going back: the associated primes of $(x^2 y, xy^2)$ are the primes $P = \mathrm{Ann}(f + I)$ for $f \in k[x,y]$. Consider $f = x$: $\mathrm{Ann}(x + I) = \{g \in k[x,y] \mid gx \in I\}$. We need $gx \in (x^2y, xy^2) = xy(x, y)$, i.e., $g \in y(x,y) = (xy, y^2)$. So $\mathrm{Ann}(x + I) = (xy, y^2) \supseteq (x,y)$ but not equal to $(x,y)$ itself. Hmm. Let me try $f = 1$: $\mathrm{Ann}(1 + I) = \{g \mid g \in I\}$... not useful. Let me try $f = xy$: $\mathrm{Ann}(xy + I) = \{g \mid gxy \in I = (x^2y, xy^2)\}$. We need $gxy \in xy(x,y)$, i.e., $g \in (x,y)$. So $\mathrm{Ann}(xy + I) = (x,y)$. This gives the associated prime $(x,y)$.
+Going back: the associated primes of \((x^2 y, xy^2)\) are the primes \(P = \mathrm{Ann}(f + I)\) for \(f \in k[x,y]\). Consider \(f = x\): \(\mathrm{Ann}(x + I) = \{g \in k[x,y] \mid gx \in I\}\). We need \(gx \in (x^2y, xy^2) = xy(x, y)\), i.e., \(g \in y(x,y) = (xy, y^2)\). So \(\mathrm{Ann}(x + I) = (xy, y^2) \supseteq (x,y)\) but not equal to \((x,y)\) itself. Hmm. Let me try \(f = 1\): \(\mathrm{Ann}(1 + I) = \{g \mid g \in I\}\)... not useful. Let me try \(f = xy\): \(\mathrm{Ann}(xy + I) = \{g \mid gxy \in I = (x^2y, xy^2)\}\). We need \(gxy \in xy(x,y)\), i.e., \(g \in (x,y)\). So \(\mathrm{Ann}(xy + I) = (x,y)\). This gives the associated prime \((x,y)\).
 
-For $f = y$: $\mathrm{Ann}(y + I) = \{g \mid gy \in I\}$. We need $gy \in (x^2y, xy^2) = y(x^2, xy) = y \cdot x(x,y)$, i.e., $g \in x(x,y) = (x^2, xy)$. This is not a prime ideal. So $\mathrm{Ann}(y+I)$ is not prime.
+For \(f = y\): \(\mathrm{Ann}(y + I) = \{g \mid gy \in I\}\). We need \(gy \in (x^2y, xy^2) = y(x^2, xy) = y \cdot x(x,y)\), i.e., \(g \in x(x,y) = (x^2, xy)\). This is not a prime ideal. So \(\mathrm{Ann}(y+I)\) is not prime.
 
-Hmm, so the only associated prime of $I = (x^2y, xy^2)$ is $(x,y)$? That can't be right if the variety is the union of both axes...
+Hmm, so the only associated prime of \(I = (x^2y, xy^2)\) is \((x,y)\)? That can't be right if the variety is the union of both axes...
 
-Oh wait! I need to reconsider. $I = (x^2y, xy^2)$. The variety: $x^2 y = 0$ and $xy^2 = 0$. We need $xy = 0$ OR ($x = y = 0$) — actually: $x^2 y = 0$ iff $x = 0$ or $y = 0$ (in a domain). Similarly $xy^2 = 0$ iff $x = 0$ or $y = 0$. So $V(I) = V(x) \cup V(y)$ — the union of both axes. Thus $\sqrt{I} = (x) \cap (y)$ and the minimal primes over $I$ are $(x)$ and $(y)$.
+Oh wait! I need to reconsider. \(I = (x^2y, xy^2)\). The variety: \(x^2 y = 0\) and \(xy^2 = 0\). We need \(xy = 0\) OR (\(x = y = 0\)) — actually: \(x^2 y = 0\) iff \(x = 0\) or \(y = 0\) (in a domain). Similarly \(xy^2 = 0\) iff \(x = 0\) or \(y = 0\). So \(V(I) = V(x) \cup V(y)\) — the union of both axes. Thus \(\sqrt{I} = (x) \cap (y)\) and the minimal primes over \(I\) are \((x)\) and \((y)\).
 
-But then the irredundant primary decomposition must have components over $(x)$ and over $(y)$ (and possibly $(x,y)$). Let me compute correctly:
+But then the irredundant primary decomposition must have components over \((x)\) and over \((y)\) (and possibly \((x,y)\)). Let me compute correctly:
 
-$(x)$-primary component: $I : (R \setminus (x))^\infty = \{f \mid y^n f \in I \text{ for some } n\}$. 
-$y \cdot f \in I = (x^2y, xy^2)$ means $yf = ax^2y + bxy^2 = xy(ax + by)$, so $f = x(ax + by) \in (x)$... wait, $f = x(ax+by)/y \cdot y$... I'm confusing myself. Let me just compute directly.
+\((x)\)-primary component: \(I : (R \setminus (x))^\infty = \{f \mid y^n f \in I \text{ for some } n\}\). 
+\(y \cdot f \in I = (x^2y, xy^2)\) means \(yf = ax^2y + bxy^2 = xy(ax + by)\), so \(f = x(ax + by) \in (x)\)... wait, \(f = x(ax+by)/y \cdot y\)... I'm confusing myself. Let me just compute directly.
 
-$I : y = \{f \mid fy \in I\}$. If $fy \in (x^2y, xy^2)$, write $fy = gx^2y + hxy^2$ for some $g, h$. So $f = gx^2 + hxy = x(gx + hy)$, meaning $f \in (x)$. Conversely, if $f = xp$ for any $p$, then $fy = xpy$, and we need $xpy \in (x^2y, xy^2) = xy(x,y)$, i.e., $p \in (x,y)$. So $I : y = \{xp \mid p \in (x,y)\} = x(x,y) = (x^2, xy)$.
+\(I : y = \{f \mid fy \in I\}\). If \(fy \in (x^2y, xy^2)\), write \(fy = gx^2y + hxy^2\) for some \(g, h\). So \(f = gx^2 + hxy = x(gx + hy)\), meaning \(f \in (x)\). Conversely, if \(f = xp\) for any \(p\), then \(fy = xpy\), and we need \(xpy \in (x^2y, xy^2) = xy(x,y)\), i.e., \(p \in (x,y)\). So \(I : y = \{xp \mid p \in (x,y)\} = x(x,y) = (x^2, xy)\).
 
-$I : y^2 = (I : y) : y = (x^2, xy) : y$. $\{f \mid fy \in (x^2, xy)\}$. If $fy = ax^2 + bxy = x(ax + by)$, then $y \mid x(ax+by)$, so $y \mid ax + by$ (since $y$ and $x$ are coprime), meaning $y \mid a$... actually $ax + by \equiv bx \cdot 0 + a\cdot x \pmod{y}$... in $k[x,y]$, if $y \mid ax + by$ then $ay^{-1} x + b \equiv 0 \pmod y$, meaning $a \equiv 0 \pmod y$, i.e., $y \mid a$. Write $a = ya'$. Then $fy = x(ya'x + by) = xy(a'x + b)$, so $f = x(a'x + b) \in (x)$. 
+\(I : y^2 = (I : y) : y = (x^2, xy) : y\). \(\{f \mid fy \in (x^2, xy)\}\). If \(fy = ax^2 + bxy = x(ax + by)\), then \(y \mid x(ax+by)\), so \(y \mid ax + by\) (since \(y\) and \(x\) are coprime), meaning \(y \mid a\)... actually \(ax + by \equiv bx \cdot 0 + a\cdot x \pmod{y}\)... in \(k[x,y]\), if \(y \mid ax + by\) then \(ay^{-1} x + b \equiv 0 \pmod y\), meaning \(a \equiv 0 \pmod y\), i.e., \(y \mid a\). Write \(a = ya'\). Then \(fy = x(ya'x + by) = xy(a'x + b)\), so \(f = x(a'x + b) \in (x)\). 
 
-But more carefully: we want all $f$ with $fy \in (x^2, xy)$. $(x^2, xy) = x(x,y)$. So $fy \in x(x,y)$. Since $\gcd(x, y) = 1$ and $y \mid fy$, we get: $fy = xq$ for some $q \in (x,y)$. So $y \mid xq$ and since $\gcd(x,y)=1$, $y \mid q$. So $q = yr$ for some $r$. Then $fy = xyr$, so $f = xr$. We need $xr \in x(x,y)$, i.e., $r \in (x,y)$... wait, $q = yr \in (x,y)$ means $r$ can be anything. So $f = xr$ for any $r$ with $xyr \in x(x,y)$, i.e., $yr \in (x,y)$, i.e., $r \in (x) + y^{-1}(y) = ?$... 
+But more carefully: we want all \(f\) with \(fy \in (x^2, xy)\). \((x^2, xy) = x(x,y)\). So \(fy \in x(x,y)\). Since \(\gcd(x, y) = 1\) and \(y \mid fy\), we get: \(fy = xq\) for some \(q \in (x,y)\). So \(y \mid xq\) and since \(\gcd(x,y)=1\), \(y \mid q\). So \(q = yr\) for some \(r\). Then \(fy = xyr\), so \(f = xr\). We need \(xr \in x(x,y)\), i.e., \(r \in (x,y)\)... wait, \(q = yr \in (x,y)\) means \(r\) can be anything. So \(f = xr\) for any \(r\) with \(xyr \in x(x,y)\), i.e., \(yr \in (x,y)\), i.e., \(r \in (x) + y^{-1}(y) = ?\)... 
 
-I'm getting confused. Let me just state the correct result: the irredundant primary decomposition of $(x^2y, xy^2)$ is $(x^2, y^2) \cap (x, y^2) \cap \ldots$... actually, let's try a direct approach.
+I'm getting confused. Let me just state the correct result: the irredundant primary decomposition of \((x^2y, xy^2)\) is \((x^2, y^2) \cap (x, y^2) \cap \ldots\)... actually, let's try a direct approach.
 
-Claim: $(x^2y, xy^2) = (x) \cap (y) \cap (x,y)^3$. Checking: $(x) \cap (y) = (xy)$ and $(xy) \cap (x,y)^3$. Elements of $(x,y)^3 = (x^3,x^2y,xy^2,y^3)$ that are also in $(xy)$ include $x^2y, xy^2 \in (x^2y, xy^2) = I$. Hmm.
+Claim: \((x^2y, xy^2) = (x) \cap (y) \cap (x,y)^3\). Checking: \((x) \cap (y) = (xy)\) and \((xy) \cap (x,y)^3\). Elements of \((x,y)^3 = (x^3,x^2y,xy^2,y^3)\) that are also in \((xy)\) include \(x^2y, xy^2 \in (x^2y, xy^2) = I\). Hmm.
 
-This example shows that primary decomposition in practice requires careful computation. The correct answer for $(x^2 y, xy^2)$: since every element is divisible by $xy$, we have $I = xy \cdot (x, y)$ (not quite: $(x^2y, xy^2) = xy(x,y)$). Then:
-\begin{align*}
+This example shows that primary decomposition in practice requires careful computation. The correct answer for \((x^2 y, xy^2)\): since every element is divisible by \(xy\), we have \(I = xy \cdot (x, y)\) (not quite: \((x^2y, xy^2) = xy(x,y)\)). Then:
+
+\[
+\begin{aligned}
 I = xy(x,y) &= (x) \cdot y(x,y) = (x) \cdot (xy, y^2).
-\end{align*}
-The associated primes of $I$ are the minimal primes $(x)$ and $(y)$, and possibly the embedded prime $(x,y)$. The primary decomposition:
+\end{aligned}
+\]
+The associated primes of \(I\) are the minimal primes \((x)\) and \((y)\), and possibly the embedded prime \((x,y)\). The primary decomposition:
 
 \[
 (x^2y, xy^2) = (x^2, y) \cap (x, y^2).
 \]
 Wait, I showed earlier this might not be right. Let me verify from scratch.
 
-$(x^2, y) \cap (x, y^2)$: take $f = x^2$ — is it in $(x,y^2)$? Yes, $x^2 = x \cdot x$, and $x \in (x, y^2)$. So $x^2 \in (x,y^2)$. Is $x^2 \in (x^2, y)$? Yes. So $x^2 \in (x^2,y) \cap (x,y^2)$. But $x^2 \notin I = (x^2y, xy^2)$ (since every element of $I$ is divisible by $xy$, but $x^2$ is not divisible by $y$). So $(x^2,y) \cap (x,y^2) \not\subseteq I$, and the decomposition $I = (x^2,y) \cap (x,y^2)$ is WRONG.
+\((x^2, y) \cap (x, y^2)\): take \(f = x^2\) — is it in \((x,y^2)\)? Yes, \(x^2 = x \cdot x\), and \(x \in (x, y^2)\). So \(x^2 \in (x,y^2)\). Is \(x^2 \in (x^2, y)\)? Yes. So \(x^2 \in (x^2,y) \cap (x,y^2)\). But \(x^2 \notin I = (x^2y, xy^2)\) (since every element of \(I\) is divisible by \(xy\), but \(x^2\) is not divisible by \(y\)). So \((x^2,y) \cap (x,y^2) \not\subseteq I\), and the decomposition \(I = (x^2,y) \cap (x,y^2)\) is WRONG.
 
-The correct primary decomposition of $I = (x^2y, xy^2) = xy(x,y)$. By the formula for products of ideals and primary decomposition theory, one can show:
+The correct primary decomposition of \(I = (x^2y, xy^2) = xy(x,y)\). By the formula for products of ideals and primary decomposition theory, one can show:
 
 \[
 I = (x,y^2) \cdot (x^2,y) / \text{adjustments}.
 \]
 
-Actually, the simplest correct statement is: $I = (x^2y, xy^2) = (x) \cap (y) \cap (x^2, xy, y^2) $? No...
+Actually, the simplest correct statement is: \(I = (x^2y, xy^2) = (x) \cap (y) \cap (x^2, xy, y^2) \)? No...
 
-Let me just accept: primary decomposition for $I = (x^2y, xy^2)$ is genuinely non-trivial, and the correct answer (which requires Gröbner basis methods or systematic algorithm) is:
+Let me just accept: primary decomposition for \(I = (x^2y, xy^2)\) is genuinely non-trivial, and the correct answer (which requires Gröbner basis methods or systematic algorithm) is:
 
 \[
 (x^2y, xy^2) = (x^2, xy, y^2) \cap (x) \cap (y)?
 \]
-No: $(x^2,xy,y^2) = (x,y)^2$ and $(x) \cap (y) = (xy)$. Then $(x,y)^2 \cap (xy) = (x,y)^2 \cdot (xy) / ((x,y)^2 + (xy)) = $... this intersection is the set of elements in both $(x,y)^2$ and $(xy)$. Elements of $(xy)$ divisible by everything in $(x,y)^2$: $x^2y, xy^2, x^2y^2, \ldots$. Hmm, $(x^2y, xy^2) \subseteq (xy) \cap (x,y)^2$. Does every element of $(xy) \cap (x,y)^2$ lie in $(x^2y, xy^2)$? An element of $(xy) \cap (x,y)^2$ is divisible by $xy$ (from $(xy)$) and lies in $(x^2,xy,y^2)$ (from $(x,y)^2$). So it's $xy \cdot f$ where $xy f \in (x^2,xy,y^2)$. Since $xyf \in (x,y)^2$, and $xy \in (x,y)^2$, this is automatic. And $xyf \in (xy)$ for any $f$. So every element of $(xy) \cap (x,y)^2$ is divisible by $xy$... but is it in $(x^2y, xy^2)$? For example, $x^2y = xy \cdot x \in (x^2y, xy^2)$. And $xy^2 \in (x^2y, xy^2)$. What about $xy \cdot xy = x^2y^2 = x \cdot xy^2 \in (xy^2) \subseteq I$. ✓ What about $xy \cdot (x+y) = x^2y + xy^2 \in I$. ✓ So $(xy) \cap (x,y)^2 = (x^2y, xy^2) = I$. 
+No: \((x^2,xy,y^2) = (x,y)^2\) and \((x) \cap (y) = (xy)\). Then \((x,y)^2 \cap (xy) = (x,y)^2 \cdot (xy) / ((x,y)^2 + (xy)) = \)... this intersection is the set of elements in both \((x,y)^2\) and \((xy)\). Elements of \((xy)\) divisible by everything in \((x,y)^2\): \(x^2y, xy^2, x^2y^2, \ldots\). Hmm, \((x^2y, xy^2) \subseteq (xy) \cap (x,y)^2\). Does every element of \((xy) \cap (x,y)^2\) lie in \((x^2y, xy^2)\)? An element of \((xy) \cap (x,y)^2\) is divisible by \(xy\) (from \((xy)\)) and lies in \((x^2,xy,y^2)\) (from \((x,y)^2\)). So it's \(xy \cdot f\) where \(xy f \in (x^2,xy,y^2)\). Since \(xyf \in (x,y)^2\), and \(xy \in (x,y)^2\), this is automatic. And \(xyf \in (xy)\) for any \(f\). So every element of \((xy) \cap (x,y)^2\) is divisible by \(xy\)... but is it in \((x^2y, xy^2)\)? For example, \(x^2y = xy \cdot x \in (x^2y, xy^2)\). And \(xy^2 \in (x^2y, xy^2)\). What about \(xy \cdot xy = x^2y^2 = x \cdot xy^2 \in (xy^2) \subseteq I\). ✓ What about \(xy \cdot (x+y) = x^2y + xy^2 \in I\). ✓ So \((xy) \cap (x,y)^2 = (x^2y, xy^2) = I\). 
 
 So the correct primary decomposition is:
-$$I = (x^2y, xy^2) = (xy) \cap (x,y)^2,$$
-where $(xy) = (x) \cap (y)$ (itself a non-primary intersection, so we should decompose further). The irredundant primary decomposition is:
-$$I = (x) \cap (y) \cap (x,y)^2.$$
-Let us verify: $(x) \cap (y) \cap (x,y)^2$. We have $(x) \cap (y) = (xy)$ and $(xy) \cap (x,y)^2 = I$ (as just shown). So the chain of intersections gives $I$. ✓ The associated primes are $(x)$, $(y)$ (minimal), and $(x,y)$ (embedded, from $(x,y)^2$ which is $(x,y)$-primary since $\sqrt{(x,y)^2} = (x,y)$). ✓
+\[I = (x^2y, xy^2) = (xy) \cap (x,y)^2,\]
+where \((xy) = (x) \cap (y)\) (itself a non-primary intersection, so we should decompose further). The irredundant primary decomposition is:
+\[I = (x) \cap (y) \cap (x,y)^2.\]
+Let us verify: \((x) \cap (y) \cap (x,y)^2\). We have \((x) \cap (y) = (xy)\) and \((xy) \cap (x,y)^2 = I\) (as just shown). So the chain of intersections gives \(I\). ✓ The associated primes are \((x)\), \((y)\) (minimal), and \((x,y)\) (embedded, from \((x,y)^2\) which is \((x,y)\)-primary since \(\sqrt{(x,y)^2} = (x,y)\)). ✓
 
 This completes the decomposition. We see that primary decomposition can be quite non-trivial even for "simple" ideals.
 
@@ -2298,7 +2301,7 @@ Equivalently, a polynomial \(g\) vanishes on all of \(V(I)\) if and only if some
 </div>
 
 <div class="proof">
-The inclusion \(\sqrt{I} \subseteq \mathcal{I}(V(I))\) is clear (if \(g^N \in I\), then \(g^N\) vanishes on \(V(I)\), so \(g\) vanishes on \(V(I)\)). For the reverse, we use the **Rabinowitsch trick**: suppose \(g\) vanishes on \(V(I)\). Introduce a new variable \(y\) and consider the ideal \(J = I + (1 - gy) \subseteq k[x_1,\ldots,x_n,y]\).
+The inclusion \(\sqrt{I} \subseteq \mathcal{I}(V(I))\) is clear (if \(g^N \in I\), then \(g^N\) vanishes on \(V(I)\), so \(g\) vanishes on \(V(I)\)). For the reverse, we use the <strong>Rabinowitsch trick</strong>: suppose \(g\) vanishes on \(V(I)\). Introduce a new variable \(y\) and consider the ideal \(J = I + (1 - gy) \subseteq k[x_1,\ldots,x_n,y]\).
 
 Claim: \(V(J) = \emptyset\). If \((\mathbf{a},b) \in V(J)\), then \(\mathbf{a} \in V(I)\) (from the \(I\) part) and \(1 - g(\mathbf{a})b = 0\) (from \(1 - gy\)). But \(g(\mathbf{a}) = 0\) since \(\mathbf{a} \in V(I)\) and \(g\) vanishes on \(V(I)\). So \(1 = g(\mathbf{a}) b = 0\) — contradiction. Hence \(V(J) = \emptyset\).
 
@@ -2462,7 +2465,7 @@ Lift to mod \(5^2 = 25\): Set \(a_1 = a_0 - f(a_0)/f'(a_0)\). We have \(f(2) = 5
 
 Lift to mod \(5^3 = 125\): \(f(7) = 50\), \(f'(7) = 14\). \(14^{-1} \pmod{125}\): \(14 \cdot 9 = 126 \equiv 1 \pmod{125}\), so \(14^{-1} \equiv 9 \pmod{125}\). Then \(a_2 = 7 - 50 \cdot 9 = 7 - 450 \equiv 7 - 450 + 4 \cdot 125 = 7 - 450 + 500 = 57 \pmod{125}\). Check: \(57^2 + 1 = 3249 + 1 = 3250 = 26 \cdot 125 \equiv 0 \pmod{125}\). \(\checkmark\)
 
-The sequence \(2, 7, 57, \ldots\) converges in \(\mathbb{Z}_5\) to the element \(\sqrt{-1} \in \mathbb{Z}_5\) (one of the two square roots; the other is \(-2, -7, -57, \ldots = 3, 18, 68, \ldots$).
+The sequence \(2, 7, 57, \ldots\) converges in \(\mathbb{Z}_5\) to the element \(\sqrt{-1} \in \mathbb{Z}_5\) (one of the two square roots; the other is \(-2, -7, -57, \ldots = 3, 18, 68, \ldots\)).
 
 **Why this works over \(\mathbb{Z}_5\) but not \(\mathbb{Z}_3\).** We need \(-1\) to be a square modulo \(p\). By the theory of quadratic residues, \(-1 \equiv \square \pmod p\) if and only if \(p \equiv 1 \pmod 4\) (for odd primes \(p\)). Since \(5 \equiv 1 \pmod 4\), we have \(-1\) is a square mod 5. Since \(3 \equiv 3 \pmod 4\), \(-1 \equiv 2\) is not a square mod 3 (\(1^2 = 1\) and \(2^2 = 4 \equiv 1\), so the squares mod 3 are \(\{0, 1\}\), and \(2 \notin \{0,1\}\)). Therefore \(\sqrt{-1} \notin \mathbb{Z}_3\).
 

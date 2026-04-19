@@ -292,6 +292,7 @@ This lift ends at \( m + n \). So \( \Phi([\gamma][\delta]) = m+n = \Phi([\gamma
 | \( \mathbb{CP}^n \) | 0 | Cells only in even dimensions |
 | \( S^1 \vee S^1 \) | \( F_2 \) | Van Kampen |
 | Klein bottle | \( \langle a,b \mid abab^{-1} \rangle \) | Van Kampen |
+</div>
 
 <div class="example">
 <strong>Example (Simply Connected Spaces):</strong> A path-connected space \( X \) is <em>simply connected</em> if \( \pi_1(X) = 0 \). The following spaces are simply connected:
@@ -830,6 +831,7 @@ In general, there is a correction term involving \( \mathrm{Tor} \), but for spa
 H_k(T^n) = H_k((S^1)^n) \cong \bigoplus_{j_1 + \cdots + j_n = k,\, j_i \in \{0,1\}} H_{j_1}(S^1) \otimes \cdots \otimes H_{j_n}(S^1) \cong \mathbb{Z}^{\binom{n}{k}},
 \]
 since each factor \( H_{j_i}(S^1) \) is \( \mathbb{Z} \) (for \( j_i = 0 \) or \( 1 \)) and we are choosing which of the \( n \) circles contribute a 1-dimensional factor.
+</div>
 
 <div class="remark">
 <strong>Remark (Euler Characteristic via Homology):</strong> For any finite CW complex, \( \chi(X) = \sum_n (-1)^n \mathrm{rank}(H_n(X;\mathbb{Z})) \). This follows from the fact that in any finite chain complex, the alternating sum of ranks of chain groups equals the alternating sum of ranks of homology groups (a consequence of the rank-nullity theorem applied to the boundary maps in the chain complex). This formula confirms that both the cellular definition (alternating sum of cell counts) and the algebraic definition (alternating sum of Betti numbers) give the same number, and will be used in Chapter 5 in the proof of the Lefschetz fixed-point theorem.

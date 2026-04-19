@@ -429,7 +429,7 @@ Starting from an initial deposit \(\Delta D_0\), with required reserve ratio \(r
 \Delta \text{Deposits (total)} = \frac{1}{rr} \times \Delta D_0
 \]
 
-This is the **simple deposit multiplier**. With a 10% reserve ratio, a $100 initial deposit ultimately supports $1,000 in total deposits.
+This is the **simple deposit multiplier**. With a 10% reserve ratio, a \$100 initial deposit ultimately supports \$1,000 in total deposits.
 
 <div class="remark">
 <strong>Caveat — The Simple Multiplier's Limitations:</strong> The simple multiplier assumes banks lend out all excess reserves and the public holds no currency. In practice, currency leakage and excess reserve holding reduce the actual multiplier. In Canada, there are no statutory reserve requirements (abolished in 1992), so the amount of reserves held is determined by liquidity management needs and central bank policy.

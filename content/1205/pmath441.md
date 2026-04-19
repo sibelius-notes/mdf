@@ -2315,7 +2315,7 @@ Conversely, if \(N(\alpha) = \pm 1\), then \(\prod_{i=1}^n \sigma_i(\alpha) = \p
 
 The proof of Dirichlet's Unit Theorem rests on converting the multiplicative structure of the unit group into an additive one using logarithms. The key construction is the logarithmic map.
 
-<div class="definition"><strong>Definition 10.4 (Logarithmic Embedding).</strong> Let \(K\) be a number field with signature \((r_1, r_2)\) and Minkowski embedding \(\sigma : K \hookrightarrow V_K = \mathbb{R}^{r_1} \times \mathbb{C}^{r_2}\). Let \(V_K^<em> = (\mathbb{R}^</em>)^{r_1} \times (\mathbb{C}^*)^{r_2}\) be the subset where no coordinate vanishes. The <em>logarithmic map</em> is
+<div class="definition"><strong>Definition 10.4 (Logarithmic Embedding).</strong> Let \(K\) be a number field with signature \((r_1, r_2)\) and Minkowski embedding \(\sigma : K \hookrightarrow V_K = \mathbb{R}^{r_1} \times \mathbb{C}^{r_2}\). Let \(V_K^* = (\mathbb{R}^*)^{r_1} \times (\mathbb{C}^*)^{r_2}\) be the subset where no coordinate vanishes. The <em>logarithmic map</em> is
 
 \[
 L : V_K^* \to \mathbb{R}^{r_1 + r_2}
@@ -2346,7 +2346,7 @@ The map \(L\) is a group homomorphism from the multiplicative group \(V_K^*\) to
 <div class="theorem"><strong>Theorem 10.5.</strong> Let \(\mu_K\) denote the group of roots of unity in \(K\). Then \(\mu_K = \ker(L \circ \sigma|_{\mathcal{O}_K^*})\).
 </div>
 
-<div class="proof"><strong>Proof.</strong> The kernel of \(L\) restricted to the image of \(\mathcal{O}_K^<em>\) consists of elements \(\alpha \in \mathcal{O}_K^</em>\) with \(|\sigma_i(\alpha)| = 1\) for all \(i\). Every root of unity clearly has this property.
+<div class="proof"><strong>Proof.</strong> The kernel of \(L\) restricted to the image of \(\mathcal{O}_K^*\) consists of elements \(\alpha \in \mathcal{O}_K^*\) with \(|\sigma_i(\alpha)| = 1\) for all \(i\). Every root of unity clearly has this property.
 
 Conversely, suppose \(\alpha \in \mathcal{O}_K\) with \(|\sigma_i(\alpha)| \le 1\) for all \(i\). The set of such elements is a bounded subset of the lattice \(\sigma(\mathcal{O}_K)\), hence finite. Now if \(\alpha \in \mathcal{O}_K^*\) lies in the kernel, then every power \(\alpha^k\) also satisfies \(|\sigma_i(\alpha^k)| = 1\) for all \(i\), so the powers \(\alpha^k\) lie in a finite set. Therefore \(\alpha^j = \alpha^k\) for some \(j \neq k\), giving \(\alpha^{j-k} = 1\), so \(\alpha\) is a root of unity. <span class="qed">∎</span>
 </div>
@@ -2362,7 +2362,7 @@ Conversely, suppose \(\alpha \in \mathcal{O}_K\) with \(|\sigma_i(\alpha)| \le 1
 
 The proof proceeds in several steps. We must show that \(L(\sigma(\mathcal{O}_K^*))\) is a full-rank lattice in the hyperplane \(H\).
 
-<div class="proof"><strong>Proof.</strong> Let \(U = \sigma(\mathcal{O}_K^<em>) \subseteq V_K^</em>\). We write the proof in three claims.
+<div class="proof"><strong>Proof.</strong> Let \(U = \sigma(\mathcal{O}_K^*) \subseteq V_K^*\). We write the proof in three claims.
 
 <strong>Step 1: \(L(U)\) is a discrete subgroup of \(H\).</strong>
 
@@ -2372,7 +2372,7 @@ Since \(L(U)\) is a discrete subgroup of the \((r_1+r_2-1)\)-dimensional space \
 
 <strong>Step 2: \(G/U\) is compact, where \(G = \{v \in V_K^* \mid |N(v)| = 1\}\).</strong>
 
-Consider \(G = \{v \in V_K^<em> \mid |N(v)| = 1\}\), which is a closed subgroup of \(V_K^</em>\). For any \(v \in G\), multiplication by \(v\) preserves the Lebesgue measure of regions in \(V_K\) (since \(|N(v)| = 1\) and \(v\) acts as a linear map with determinant \(\pm N(v)\)).
+Consider \(G = \{v \in V_K^* \mid |N(v)| = 1\}\), which is a closed subgroup of \(V_K^*\). For any \(v \in G\), multiplication by \(v\) preserves the Lebesgue measure of regions in \(V_K\) (since \(|N(v)| = 1\) and \(v\) acts as a linear map with determinant \(\pm N(v)\)).
 
 Let \(C \subseteq G\) be any compact, symmetric, convex region with \(\mu(C) \ge 2^n \cdot d(\sigma(\mathcal{O}_K))\). For any \(g \in G\), the translated region \(g^{-1}C\) has the same measure and is still symmetric, compact, and convex. By Minkowski's theorem, there exists \(0 \neq \alpha \in \mathcal{O}_K\) with \(\sigma(\alpha) \in g^{-1}C\).
 
@@ -2389,13 +2389,13 @@ The map \(L : G \to H \cong \mathbb{R}^{r_1+r_2-1}\) is continuous and surjectiv
 \[
 \mathcal{O}_K^*/\mu_K \cong L(U) \cong \mathbb{Z}^{r_1+r_2-1}.
 \]
-Since \(\mu_K\) is finite, the sequence \(1 \to \mu_K \to \mathcal{O}_K^<em> \to \mathbb{Z}^{r_1+r_2-1} \to 0\) splits (as \(\mathbb{Z}^{r_1+r_2-1}\) is free), giving \(\mathcal{O}_K^</em> \cong \mu_K \times \mathbb{Z}^{r_1+r_2-1}\). <span class="qed">∎</span>
+Since \(\mu_K\) is finite, the sequence \(1 \to \mu_K \to \mathcal{O}_K^* \to \mathbb{Z}^{r_1+r_2-1} \to 0\) splits (as \(\mathbb{Z}^{r_1+r_2-1}\) is free), giving \(\mathcal{O}_K^* \cong \mu_K \times \mathbb{Z}^{r_1+r_2-1}\). <span class="qed">∎</span>
 </div>
 
 <div class="remark"><strong>Remark.</strong> A set of units \(\epsilon_1, \ldots, \epsilon_{r_1+r_2-1}\) whose images under \(L \circ \sigma\) form a basis for the lattice \(L(U)\) is called a <em>system of fundamental units</em> for \(K\).
 </div>
 
-<div class="example"><strong>Example.</strong> Let \(K = \mathbb{Q}(\sqrt{d})\) with \(d > 0\). Then \(r_1 = 2\), \(r_2 = 0\), \(\mu_K = \{\pm 1\}\), and \(\mathcal{O}_K^<em> \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}\). The single fundamental unit generates the free part. For \(K = \mathbb{Q}(\sqrt{2}, \sqrt{3})\), we have \(r_1 = 4\), \(r_2 = 0\), and \(\mathcal{O}_K^</em> = \{\pm 1\} \times \mathbb{Z}^3\).
+<div class="example"><strong>Example.</strong> Let \(K = \mathbb{Q}(\sqrt{d})\) with \(d > 0\). Then \(r_1 = 2\), \(r_2 = 0\), \(\mu_K = \{\pm 1\}\), and \(\mathcal{O}_K^* \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}\). The single fundamental unit generates the free part. For \(K = \mathbb{Q}(\sqrt{2}, \sqrt{3})\), we have \(r_1 = 4\), \(r_2 = 0\), and \(\mathcal{O}_K^* = \{\pm 1\} \times \mathbb{Z}^3\).
 </div>
 
 ## Showing an Ideal Is Not Principal Using the Unit Group
@@ -2497,7 +2497,7 @@ where \(p^* = (-1)^{(p-1)/2} p\).
 \[
 \left(\frac{q}{p}\right) = 1 \iff q \text{ splits in } K_p = \mathbb{Q}(\sqrt{p^*}).
 \]
-By the theory of splitting in quadratic fields, the prime \(q\) splits in \(\mathbb{Q}(\sqrt{p^<em>})\) if and only if \(p^</em>\) is a square modulo \(q\), i.e., \(\left(\frac{p^*}{q}\right) = 1\). Therefore
+By the theory of splitting in quadratic fields, the prime \(q\) splits in \(\mathbb{Q}(\sqrt{p^*})\) if and only if \(p^*\) is a square modulo \(q\), i.e., \(\left(\frac{p^*}{q}\right) = 1\). Therefore
 
 \[
 \left(\frac{q}{p}\right) = \left(\frac{p^*}{q}\right) = \left(\frac{(-1)^{(p-1)/2} p}{q}\right) = \left(\frac{-1}{q}\right)^{(p-1)/2} \left(\frac{p}{q}\right) = (-1)^{\frac{(p-1)(q-1)}{4}} \left(\frac{p}{q}\right).

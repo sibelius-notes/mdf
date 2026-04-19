@@ -105,7 +105,7 @@ Note that \(\rho_3 = \overline{\rho_1}\) (complex conjugate). Since \(C_4\) is a
 <div class="example">
 <strong>Example (The sign representation of \(S_n\): faithful vs unfaithful).</strong> The symmetric group \(S_n\) acts on \(\{1, \ldots, n\}\), and every permutation has a sign \(\pm 1\). The <strong>sign representation</strong> is \(\mathrm{sgn} : S_n \to \{+1, -1\} \subset \mathbb{C}^\times\), with \(\mathrm{sgn}(\sigma) = (-1)^{\text{number of transpositions in any factorization of } \sigma}\). This is a well-defined group homomorphism (it doesn't matter how you factor \(\sigma\) into transpositions — the parity is always the same).
 
-The sign representation is *not faithful* for \(n \geq 2\): the alternating group \(A_n = \ker(\mathrm{sgn})\) contains more than just the identity. For example, \(\mathrm{sgn}((123)) = +1\) even though \((123) \neq e\). The kernel of the representation is \(A_n\), so the representation "cannot see" any element of \(A_n\) — it treats all even permutations identically.
+The sign representation is <em>not faithful</em> for \(n \geq 2\): the alternating group \(A_n = \ker(\mathrm{sgn})\) contains more than just the identity. For example, \(\mathrm{sgn}((123)) = +1\) even though \((123) \neq e\). The kernel of the representation is \(A_n\), so the representation "cannot see" any element of \(A_n\) — it treats all even permutations identically.
 
 By contrast, the standard representation of \(S_n\) on \(V_\mathrm{std} = \{(z_1,\ldots,z_n) : \sum z_i = 0\} \subset \mathbb{C}^n\) is faithful for \(n \geq 3\): if \(\sigma \neq e\) then there exists some vector in \(V_\mathrm{std}\) that \(\sigma\) moves (one can check this directly). Thus faithfulness depends delicately on the representation.
 
@@ -306,7 +306,7 @@ These are all the irreducible complex representations of \(S_3\). One can verify
 </div>
 
 <div class="example">
-<strong>Example (\(\mathrm{Irr}_\mathbb{C}(\mathbb{Z}/n\mathbb{Z})\)).</strong> The cyclic group \(C_n = \mathbb{Z}/n\mathbb{Z}\) is abelian with \(n\) elements and \(n\) conjugacy classes. All irreducible complex representations are one-dimensional (by Schur's Lemma for abelian groups, proved in Chapter 5). They are \(\rho_k : m \mapsto e^{2\pi i mk/n}\) for \(k = 0, 1, \ldots, n-1\). The character table is the \(n \times n\) **DFT matrix**:
+<strong>Example (\(\mathrm{Irr}_\mathbb{C}(\mathbb{Z}/n\mathbb{Z})\)).</strong> The cyclic group \(C_n = \mathbb{Z}/n\mathbb{Z}\) is abelian with \(n\) elements and \(n\) conjugacy classes. All irreducible complex representations are one-dimensional (by Schur's Lemma for abelian groups, proved in Chapter 5). They are \(\rho_k : m \mapsto e^{2\pi i mk/n}\) for \(k = 0, 1, \ldots, n-1\). The character table is the \(n \times n\) <strong>DFT matrix</strong>:
 
 \[
 \chi_{V_k}(m) = e^{2\pi i mk/n} = \omega^{mk}, \quad \omega = e^{2\pi i/n}.
@@ -360,25 +360,25 @@ The key ingredient in the proof of Maschke's theorem is the **averaging trick** 
 <div class="proof">
 <strong>Proof of Maschke's Theorem (detailed).</strong> We prove: every submodule \(U \subseteq V\) has a \(G\)-invariant complement.
 
-**Step 1 (Choose any complement, then average it).** Since \(U\) is a subspace of the vector space \(V\), there exists a linear projection \(P_0 : V \to V\) with image \(U\) (i.e., \(P_0^2 = P_0\) and \(\mathrm{im}(P_0) = U\)). Such a projection exists because any subspace of a vector space is a direct summand as a vector space. However, \(P_0\) need not be \(G\)-equivariant. We fix this by averaging:
+<strong>Step 1 (Choose any complement, then average it).</strong> Since \(U\) is a subspace of the vector space \(V\), there exists a linear projection \(P_0 : V \to V\) with image \(U\) (i.e., \(P_0^2 = P_0\) and \(\mathrm{im}(P_0) = U\)). Such a projection exists because any subspace of a vector space is a direct summand as a vector space. However, \(P_0\) need not be \(G\)-equivariant. We fix this by averaging:
 
 \[
 \widetilde{P} = \frac{1}{|G|} \sum_{g \in G} \rho(g) \circ P_0 \circ \rho(g)^{-1}.
 \]
 The factor \(1/|G|\) requires \(|G| \neq 0\) in \(F\), which is our hypothesis.
 
-**Step 2 (\(\widetilde{P}\) is a projection onto \(U\)).** For any \(v \in V\), \(\widetilde{P}(v)\) is in \(U\): each term \(\rho(g)P_0\rho(g)^{-1}v\) lies in \(\rho(g)(U)\), and since \(U\) is \(G\)-invariant, \(\rho(g)(U) \subseteq U\). So \(\widetilde{P}(v) \in U\) for all \(v\).
+<strong>Step 2 (\(\widetilde{P}\) is a projection onto \(U\)).</strong> For any \(v \in V\), \(\widetilde{P}(v)\) is in \(U\): each term \(\rho(g)P_0\rho(g)^{-1}v\) lies in \(\rho(g)(U)\), and since \(U\) is \(G\)-invariant, \(\rho(g)(U) \subseteq U\). So \(\widetilde{P}(v) \in U\) for all \(v\).
 
 For \(u \in U\): \(\rho(g)^{-1}u \in U\) (by \(G\)-invariance of \(U\)), then \(P_0(\rho(g)^{-1}u) = \rho(g)^{-1}u\) (since \(P_0\) is the identity on \(U\)), then \(\rho(g)(\rho(g)^{-1}u) = u\). So each term in the sum equals \(u\), giving \(\widetilde{P}(u) = \frac{1}{|G|} \cdot |G| \cdot u = u\). Thus \(\widetilde{P}\) fixes \(U\) pointwise and maps \(V\) into \(U\), confirming it is a projection.
 
-**Step 3 (\(\widetilde{P}\) is \(G\)-equivariant).** For any \(h \in G\):
+<strong>Step 3 (\(\widetilde{P}\) is \(G\)-equivariant).</strong> For any \(h \in G\):
 
 \[
 \rho(h) \circ \widetilde{P} = \frac{1}{|G|}\sum_{g \in G} \rho(h)\rho(g) P_0 \rho(g)^{-1} = \frac{1}{|G|}\sum_{g \in G} \rho(hg) P_0 \rho(hg)^{-1} \cdot \rho(h).
 \]
 Substituting \(g' = hg\) (a bijection on \(G\)) gives \(\rho(h)\circ\widetilde{P} = \widetilde{P} \circ \rho(h)\).
 
-**Step 4 (\(W = \ker\widetilde{P}\) is a \(G\)-invariant complement).** Since \(\widetilde{P}^2 = \widetilde{P}\) (it is a projection), \(V = \mathrm{im}(\widetilde{P}) \oplus \ker(\widetilde{P}) = U \oplus W\). Since \(\widetilde{P}\) is \(G\)-equivariant and \(W = \ker(\widetilde{P})\), for \(w \in W\) and \(g \in G\):
+<strong>Step 4 (\(W = \ker\widetilde{P}\) is a \(G\)-invariant complement).</strong> Since \(\widetilde{P}^2 = \widetilde{P}\) (it is a projection), \(V = \mathrm{im}(\widetilde{P}) \oplus \ker(\widetilde{P}) = U \oplus W\). Since \(\widetilde{P}\) is \(G\)-equivariant and \(W = \ker(\widetilde{P})\), for \(w \in W\) and \(g \in G\):
 
 \[
 \widetilde{P}(\rho(g)w) = \rho(g)(\widetilde{P}(w)) = \rho(g)(0) = 0.
@@ -486,7 +486,7 @@ where \(m_i = \dim_F \mathrm{Hom}_G(V_i, V)\) is the <strong>multiplicity</stron
 The multiplicity formula \(m_i = \dim \mathrm{Hom}_G(V_i, V)\) is powerful. It says: to find how many times \(V_i\) appears in \(V\), count the \(G\)-linear maps from \(V_i\) into \(V\).
 
 <div class="remark">
-<strong>Remark (The isotypic component is canonical).</strong> While the decomposition \(V = V_1^{\oplus m_1} \oplus \cdots\) is not canonical (there are many ways to split a given isotypic component into a direct sum of irreducibles), the isotypic component \(V_i^{\oplus m_i}\) *itself* is canonical: it is equal to the sum of all \(G\)-submodules of \(V\) isomorphic to \(V_i\). In particular, any \(G\)-module map \(\phi : V \to V\) necessarily preserves each isotypic component. This is the representation-theoretic analogue of the fact that a linear map preserving a bilinear form must preserve the eigenspace decomposition.
+<strong>Remark (The isotypic component is canonical).</strong> While the decomposition \(V = V_1^{\oplus m_1} \oplus \cdots\) is not canonical (there are many ways to split a given isotypic component into a direct sum of irreducibles), the isotypic component \(V_i^{\oplus m_i}\) <em>itself</em> is canonical: it is equal to the sum of all \(G\)-submodules of \(V\) isomorphic to \(V_i\). In particular, any \(G\)-module map \(\phi : V \to V\) necessarily preserves each isotypic component. This is the representation-theoretic analogue of the fact that a linear map preserving a bilinear form must preserve the eigenspace decomposition.
 </div>
 
 <div class="example">
@@ -836,15 +836,15 @@ Let us work out the character table of \(C_4 = \{0, 1, 2, 3\}\) (addition mod 4)
 
 Let us verify this table systematically from scratch.
 
-**Step 1.** \(S_3\) has conjugacy classes of sizes 1, 3, 2 as above. So 3 irreducibles.
+<strong>Step 1.</strong> \(S_3\) has conjugacy classes of sizes 1, 3, 2 as above. So 3 irreducibles.
 
-**Step 2.** Dimension formula: \(d_1^2 + d_2^2 + d_3^2 = 6\). The only solution (up to ordering) with all \(d_i \geq 1\) is \((1, 1, 2)\).
+<strong>Step 2.</strong> Dimension formula: \(d_1^2 + d_2^2 + d_3^2 = 6\). The only solution (up to ordering) with all \(d_i \geq 1\) is \((1, 1, 2)\).
 
-**Step 3.** The trivial rep gives row \((1, 1, 1)\). The sign rep gives row \((1, -1, 1)\) since 2-cycles are odd permutations and 3-cycles are even.
+<strong>Step 3.</strong> The trivial rep gives row \((1, 1, 1)\). The sign rep gives row \((1, -1, 1)\) since 2-cycles are odd permutations and 3-cycles are even.
 
-**Step 4.** The 2-dimensional irrep has \(\chi(e) = 2\). Using row orthogonality with \(\chi_\mathrm{triv}\): \(\frac{1}{6}(1 \cdot 2 + 3 \cdot b + 2 \cdot c) = 0 \Rightarrow 2 + 3b + 2c = 0\). Using row orthogonality with \(\chi_\mathrm{sgn}\): \(\frac{1}{6}(1 \cdot 2 + 3 \cdot (-1) \cdot b + 2 \cdot 1 \cdot c) = 0 \Rightarrow 2 - 3b + 2c = 0\). Subtracting: \(6b = 0 \Rightarrow b = 0\). Then \(2 + 2c = 0 \Rightarrow c = -1\).
+<strong>Step 4.</strong> The 2-dimensional irrep has \(\chi(e) = 2\). Using row orthogonality with \(\chi_\mathrm{triv}\): \(\frac{1}{6}(1 \cdot 2 + 3 \cdot b + 2 \cdot c) = 0 \Rightarrow 2 + 3b + 2c = 0\). Using row orthogonality with \(\chi_\mathrm{sgn}\): \(\frac{1}{6}(1 \cdot 2 + 3 \cdot (-1) \cdot b + 2 \cdot 1 \cdot c) = 0 \Rightarrow 2 - 3b + 2c = 0\). Subtracting: \(6b = 0 \Rightarrow b = 0\). Then \(2 + 2c = 0 \Rightarrow c = -1\).
 
-**Step 5.** Verify \(\langle \chi_\mathrm{std}, \chi_\mathrm{std} \rangle = 1\): \(\frac{1}{6}(4 + 0 + 2) = 1\). ✓
+<strong>Step 5.</strong> Verify \(\langle \chi_\mathrm{std}, \chi_\mathrm{std} \rangle = 1\): \(\frac{1}{6}(4 + 0 + 2) = 1\). ✓
 
 One verifies: \(1^2 + 1^2 + 2^2 = 6 = |S_3|\). Row orthogonality: \(\langle \chi_\mathrm{std}, \chi_\mathrm{std} \rangle = \frac{1}{6}(4 + 0 + 2) = 1\). ✓
 
@@ -1006,7 +1006,8 @@ The hook length formula is a beautiful combinatorial result: despite the intrica
 
 <div class="example">
 <strong>Example (Hook lengths for \(\lambda = (3,2)\) in \(S_5\)).</strong> The Young diagram of \((3,2)\) is:
-\[\begin{array}{|c|c|c|}
+\[
+\begin{array}{|c|c|c|}
 \hline
 \phantom{0} & \phantom{0} & \phantom{0} \\
 \hline
@@ -1462,7 +1463,7 @@ The two 3-dimensional irreducibles \(\chi_1, \chi_2\) arise from the two 3-dimen
 </div>
 
 <div class="remark">
-<strong>Remark (Frobenius groups).</strong> A particularly clean application of induction is the theory of **Frobenius groups**. A finite group \(G\) is a Frobenius group with kernel \(N\) and complement \(H\) if \(H\) is a subgroup with \(H \cap H^g = \{e\}\) for all \(g \notin H\), and \(N = G \setminus \bigcup_{g \in G} (H^g \setminus \{e\})\) is a normal subgroup with \(G = NH\) and \(N \cap H = \{e\}\). The key representation-theoretic fact is that every irreducible of \(G\) is either (a) inflated from \(G/N \cong H\), or (b) induced from a non-trivial irreducible of \(N\), and all of type (b) have dimension \(|H| \cdot \dim(\text{irrep of }N)\). The Frobenius kernel \(N\) is always nilpotent — this is one of the hardest theorems in group theory, and no purely group-theoretic proof is known.
+<strong>Remark (Frobenius groups).</strong> A particularly clean application of induction is the theory of <strong>Frobenius groups</strong>. A finite group \(G\) is a Frobenius group with kernel \(N\) and complement \(H\) if \(H\) is a subgroup with \(H \cap H^g = \{e\}\) for all \(g \notin H\), and \(N = G \setminus \bigcup_{g \in G} (H^g \setminus \{e\})\) is a normal subgroup with \(G = NH\) and \(N \cap H = \{e\}\). The key representation-theoretic fact is that every irreducible of \(G\) is either (a) inflated from \(G/N \cong H\), or (b) induced from a non-trivial irreducible of \(N\), and all of type (b) have dimension \(|H| \cdot \dim(\text{irrep of }N)\). The Frobenius kernel \(N\) is always nilpotent — this is one of the hardest theorems in group theory, and no purely group-theoretic proof is known.
 </div>
 
 # Chapter 15: The Structure of the Group Algebra and Further Topics
@@ -1808,7 +1809,7 @@ Now let us verify this via the "induction and twisting" formula. There is a gene
 \[
 \mathrm{Ind}_H^G(W) \otimes V \cong \mathrm{Ind}_H^G(W \otimes \mathrm{Res}_H^G(V)).
 \]
-This is called the **projection formula** (or tensor identity). Applying it:
+This is called the <strong>projection formula</strong> (or tensor identity). Applying it:
 
 \[
 \mathrm{Ind}_{C_3}^{S_3}(\phi_1) \otimes V_\mathrm{sgn} \cong \mathrm{Ind}_{C_3}^{S_3}(\phi_1 \otimes \mathrm{Res}_{C_3}^{S_3}(V_\mathrm{sgn})).
@@ -1910,7 +1911,7 @@ These two actions commute: \(g \sigma v = \sigma g v\) for \(g \in GL_n\), \(\si
 \[
 V^{\otimes d} \cong \bigoplus_{\lambda} S^\lambda \otimes W^\lambda,
 \]
-where the sum is over all partitions \(\lambda \vdash d\) with at most \(n\) parts, \(S^\lambda\) is the Specht module (irreducible \(S_d\)-module), and \(W^\lambda\) is the corresponding irreducible \(GL_n\)-module (called a **Weyl module** or **Schur functor**).
+where the sum is over all partitions \(\lambda \vdash d\) with at most \(n\) parts, \(S^\lambda\) is the Specht module (irreducible \(S_d\)-module), and \(W^\lambda\) is the corresponding irreducible \(GL_n\)-module (called a <strong>Weyl module</strong> or <strong>Schur functor</strong>).
 </div>
 
 The key word is "multiplicity-free": each irreducible of \(S_d\) (occurring at all) appears with multiplicity exactly 1, and the corresponding \(GL_n\)-module is the "partner" \(W^\lambda\). The two representation theories are linked in a perfect duality: knowing which \(S^\lambda\) appear determines which \(W^\lambda\) appear, and vice versa.
@@ -1945,7 +1946,7 @@ The key new features:
 - **Projective indecomposable modules (PIMs)**: The indecomposable direct summands of \(FG\) as a left \(FG\)-module. These replace the simple summands of Artin-Wedderburn.
 
 <div class="example">
-<strong>Example (Modular reps of \(S_3\) in characteristic 3).</strong> Over \(\mathbb{F}_3\), the group \(S_3\) has order 6 = 2 \cdot 3, so \(3 \mid |S_3|\). The modular irreducibles are the irreducibles over \(\mathbb{F}_3\) (not over \(\mathbb{C}\)). Since \(S_3^{\mathrm{ab}} = C_2\), there are 2 one-dimensional representations over \(\mathbb{F}_3\): trivial and sign. These remain irreducible (dimension 1, trivially). The standard representation \(V_\mathrm{std}\) (2-dimensional over \(\mathbb{C}\)) reduces mod 3 to a 2-dimensional \(\mathbb{F}_3 S_3\)-module, which is still irreducible (one can check). So there are 3 modular irreducibles... but the number of irreducibles in characteristic \(p\) equals the number of \(p\)-regular conjugacy classes (classes whose elements have order coprime to \(p\)). In \(S_3\), the conjugacy classes have representatives \(e\), \((12)\), \((123)\) of orders 1, 2, 3. The 3-regular classes (order coprime to 3) are those of \(e\) and \((12)\). So there are exactly **2** modular irreducibles over \(\mathbb{F}_3\), not 3.
+<strong>Example (Modular reps of \(S_3\) in characteristic 3).</strong> Over \(\mathbb{F}_3\), the group \(S_3\) has order 6 = 2 \cdot 3, so \(3 \mid |S_3|\). The modular irreducibles are the irreducibles over \(\mathbb{F}_3\) (not over \(\mathbb{C}\)). Since \(S_3^{\mathrm{ab}} = C_2\), there are 2 one-dimensional representations over \(\mathbb{F}_3\): trivial and sign. These remain irreducible (dimension 1, trivially). The standard representation \(V_\mathrm{std}\) (2-dimensional over \(\mathbb{C}\)) reduces mod 3 to a 2-dimensional \(\mathbb{F}_3 S_3\)-module, which is still irreducible (one can check). So there are 3 modular irreducibles... but the number of irreducibles in characteristic \(p\) equals the number of \(p\)-regular conjugacy classes (classes whose elements have order coprime to \(p\)). In \(S_3\), the conjugacy classes have representatives \(e\), \((12)\), \((123)\) of orders 1, 2, 3. The 3-regular classes (order coprime to 3) are those of \(e\) and \((12)\). So there are exactly <strong>2</strong> modular irreducibles over \(\mathbb{F}_3\), not 3.
 
 The discrepancy: the standard 2-dimensional complex rep \(V_\mathrm{std}\) reduces mod 3 to an irreducible \(\mathbb{F}_3\)-module, and so does the sign rep. The trivial rep also reduces to an irreducible. But there are 3 ordinary irreducibles and only 2 modular ones — the decomposition matrix \(D\) encodes how ordinary irreducibles break up into modular composition factors.
 </div>

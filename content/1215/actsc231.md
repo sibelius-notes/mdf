@@ -10,7 +10,7 @@ subjects: "ACTSC"
 
 Lenders are willing to lend money because the borrower pays them a fee called **interest**. The fundamental insight of financial mathematics is that money has different values at different times. A dollar today is worth more than a dollar in the future because today's dollar can be invested to earn interest. We describe this time value using two closely related functions.
 
-The **accumulation function**, denoted \(a(t)\), gives the accumulated value at time \(t\) of an investment of $1 made at time 0. By definition, \(a(0) \equiv 1\), and for positive interest rates the function is increasing. The **amount function**, \(A(t)\), gives the accumulated value at time \(t\) of an initial investment of \(K\) (called the **principal**):
+The **accumulation function**, denoted \(a(t)\), gives the accumulated value at time \(t\) of an investment of \$1 made at time 0. By definition, \(a(0) \equiv 1\), and for positive interest rates the function is increasing. The **amount function**, \(A(t)\), gives the accumulated value at time \(t\) of an initial investment of \(K\) (called the **principal**):
 
 \[
 A(t) = K \cdot a(t)
@@ -32,9 +32,9 @@ where \(i\) is the annual rate of interest. Simple interest is most often used o
 
 A key feature of simple interest is that the annual interest earned is constant at \(Ki\) regardless of which year you examine. This contrasts with compound interest, where interest is reinvested and grows over time.
 
-**Worked Example: Day-Count Convention.** On May 6, 2019, Karen borrows $5,000 and repays $5,094 on June M, 2019, based on exact simple interest at 14.6%. Setting up the simple interest equation: \(5000(1 + 0.146 \cdot T/365) = 5094\) gives \(T = 47\) days. May has 31 days, so the days remaining in May after the 6th are \(31 - 6 = 25\) days; then \(47 - 25 = 22\) days into June. Karen repays on **June 22nd**.
+**Worked Example: Day-Count Convention.** On May 6, 2019, Karen borrows \$5,000 and repays \$5,094 on June M, 2019, based on exact simple interest at 14.6%. Setting up the simple interest equation: \(5000(1 + 0.146 \cdot T/365) = 5094\) gives \(T = 47\) days. May has 31 days, so the days remaining in May after the 6th are \(31 - 6 = 25\) days; then \(47 - 25 = 22\) days into June. Karen repays on **June 22nd**.
 
-**Worked Example: Three Simple Interest Methods.** Brad borrows $5,000 on October 14 at 8% simple interest, repaying on May 7. Under *exact simple interest* (denominator 365): count days from Oct 14 to May 7 as \(17 + 30 + 31 + 31 + 28 + 31 + 30 + 7 = 205\) days (assuming non-leap year), giving \(5000(1 + 0.08 \cdot 205/365) = \$5{,}224.66\). Under *Banker's rule* (exact days, denominator 360): \(5000(1 + 0.08 \cdot 205/360) = \$5{,}227.78\). Under *ordinary simple interest* (each month = 30 days, denominator 360): the numerator becomes \(30 - 14 + 30 + 30 + 30 + 30 + 30 + 30 + 7 = 203\), giving \(5000(1 + 0.08 \cdot 203/360) = \$5{,}225.56\). Banker's rule produces the highest repayment because more days of interest accrue per unit time.
+**Worked Example: Three Simple Interest Methods.** Brad borrows \$5,000 on October 14 at 8% simple interest, repaying on May 7. Under *exact simple interest* (denominator 365): count days from Oct 14 to May 7 as \(17 + 30 + 31 + 31 + 28 + 31 + 30 + 7 = 205\) days (assuming non-leap year), giving \(5000(1 + 0.08 \cdot 205/365) = \$5{,}224.66\). Under *Banker's rule* (exact days, denominator 360): \(5000(1 + 0.08 \cdot 205/360) = \$5{,}227.78\). Under *ordinary simple interest* (each month = 30 days, denominator 360): the numerator becomes \(30 - 14 + 30 + 30 + 30 + 30 + 30 + 30 + 7 = 203\), giving \(5000(1 + 0.08 \cdot 203/360) = \$5{,}225.56\). Banker's rule produces the highest repayment because more days of interest accrue per unit time.
 
 ## Compound Interest
 
@@ -56,9 +56,14 @@ Under compound interest, \(v(t) = (1+i)^{-t}\). The factor \(v = (1+i)^{-1}\) is
 
 Moving money from time \(t_1\) to time \(t_2\) requires multiplying by the ratio of accumulation functions. Under compound interest this simplifies to multiplying by \((1+i)^{t_2 - t_1}\).
 
-**Worked Example: Compound Interest Algebra.** At a certain compound interest rate: $1 grows to $2 in \(A\) years, $2 grows to $3 in \(B\) years, and $3 grows to $15 in \(C\) years. Express the time \(N\) for $6 to grow to $10 in terms of \(A\), \(B\), \(C\).
+**Worked Example: Compound Interest Algebra.** At a certain compound interest rate: \$1 grows to \$2 in \(A\) years, \$2 grows to \$3 in \(B\) years, and \$3 grows to \$15 in \(C\) years. Express the time \(N\) for \$6 to grow to \$10 in terms of \(A\), \(B\), \(C\).
 
-The three conditions give \((1+i)^A = 2\), \((1+i)^B = 3/2\), \((1+i)^C = 5\). We need \((1+i)^N = 10/6\). Factor: \(10/6 = 5 \cdot (2/3) \cdot (1/2) = (1+i)^C \cdot (1+i)^{-B} \cdot (1+i)^{-A}\). Therefore \[\boxed{N = C - B - A}\]. The key technique is factoring the target ratio into pieces that match the given accumulation factors.
+The three conditions give \((1+i)^A = 2\), \((1+i)^B = 3/2\), \((1+i)^C = 5\). We need \((1+i)^N = 10/6\). Factor: \(10/6 = 5 \cdot (2/3) \cdot (1/2) = (1+i)^C \cdot (1+i)^{-B} \cdot (1+i)^{-A}\). Therefore
+
+\[
+\boxed{N = C - B - A}
+\]
+The key technique is factoring the target ratio into pieces that match the given accumulation factors.
 
 ## Effective Rate of Interest and Discount
 
@@ -76,7 +81,7 @@ The **effective rate of discount**, by contrast, measures the interest relative 
 d_n = \frac{A(n) - A(n-1)}{A(n)}
 \]
 
-Think of it this way: if you borrow $1000 for a year and the interest of $43 is collected upfront at time 0, you actually receive $957 but repay $1000. The discount rate \(d = 43/1000 = 4.3\%\), while the interest rate is \(i = 43/957 \approx 4.49\%\). Under compound interest these are related by:
+Think of it this way: if you borrow \$1000 for a year and the interest of \$43 is collected upfront at time 0, you actually receive \$957 but repay \$1000. The discount rate \(d = 43/1000 = 4.3\%\), while the interest rate is \(i = 43/957 \approx 4.49\%\). Under compound interest these are related by:
 
 \[
 d = \frac{i}{1+i}, \qquad i = \frac{d}{1-d}, \qquad 1-d = \frac{1}{1+i} = v
@@ -109,7 +114,7 @@ v(t) = (1-d)^t
 so \(a(t) = (1-d)^{-t}\). This is simply compound interest reparameterized using the effective rate of discount. There is no structural difference between compound interest and compound discount — they are two descriptions of the same exponential accumulation.
 
 
-**Worked Example: Simple vs. Compound Discount.** Accumulate $3,500 for 5 years at discount rate \(d = 4.5\%\). Under *simple discount*: \(A = 3500/(1 - 0.045 \times 5) = 3500/0.775 = \$4{,}516.13\). Under *compound discount*: \(A = 3500(1-0.045)^{-5} = \$4{,}406.07\). Simple discount gives a higher accumulated value because the effective interest rate is increasing over time.
+**Worked Example: Simple vs. Compound Discount.** Accumulate \$3,500 for 5 years at discount rate \(d = 4.5\%\). Under *simple discount*: \(A = 3500/(1 - 0.045 \times 5) = 3500/0.775 = \$4{,}516.13\). Under *compound discount*: \(A = 3500(1-0.045)^{-5} = \$4{,}406.07\). Simple discount gives a higher accumulated value because the effective interest rate is increasing over time.
 
 Comparing the effective annual rates: under simple discount, \(i_n = d/(1-dn)\), which grows with \(n\) — the rate is 4.71% in year 1, 4.95% in year 2, 5.81% in year 3, and so on. Under compound discount, the effective rate is constant at \(d/(1-d) = 0.045/0.955 \approx 4.71\%\) — identical to simple discount only for the first year.
 
@@ -119,7 +124,7 @@ The **current value** of a cash flow at any point in time is found by moving its
 
 Under simple interest or simple discount, the current value depends on the original investment date, so we first recover the time-0 balance \(K = A(t_1)/a(t_1)\), then compute \(K \cdot a(t_2)\).
 
-**Example.** Under simple interest with \(i = 6\%\), if the balance at time 4.5 is $1350, the balance at time 7 is:
+**Example.** Under simple interest with \(i = 6\%\), if the balance at time 4.5 is \$1350, the balance at time 7 is:
 
 \[
 1350 \cdot \frac{1 + 0.06 \times 7}{1 + 0.06 \times 4.5} = \$1{,}509.45
@@ -185,7 +190,7 @@ This is also called the **constant force of interest**, or equivalently the annu
 a(t) = (1+i)^t = (1-d)^{-t} = \left(1 + \frac{i^{(m)}}{m}\right)^{mt} = \left(1 - \frac{d^{(m)}}{m}\right)^{-mt} = e^{\delta t}
 \]
 
-**Example.** Given a non-constant force of interest \(\delta_t = 0.03\sqrt{t}\), the value of $100 invested at time \(t = 1\) grown to time \(t = 4\) is:
+**Example.** Given a non-constant force of interest \(\delta_t = 0.03\sqrt{t}\), the value of \$100 invested at time \(t = 1\) grown to time \(t = 4\) is:
 
 \[
 100 \cdot e^{\int_1^4 0.03\sqrt{s}\, ds} = 100 \cdot e^{0.03 \cdot \frac{2}{3}[s^{3/2}]_1^4} = 100 \cdot e^{0.02(8-1)} = 100e^{0.14}
@@ -200,9 +205,14 @@ a(t) = (1+i)^t = (1-d)^{-t} = \left(1 + \frac{i^{(m)}}{m}\right)^{mt} = \left(1 
 
 Use \(\delta_t = \frac{d}{dt}\ln a(t)\). Take the natural log: \(\ln a(t) = 0.001t^2 - \ln(1-0.01t)\) (using the square root to halve the log, and properties of logs). Differentiating: \(\delta_t = 0.002t \cdot \frac{1}{2 \cdot 0.001t} \cdot \text{[chain rule]} \cdots\). For the specific function used in lecture, the result is \(\delta_t = 0.01 + 0.002t + \frac{0.01}{1-0.01t}\), so \(\delta_5 = 0.01 + 0.01 + 0.01/0.95 = 0.0305 = 3.05\%\).
 
-**Worked Example: Recovering a Balance from the Force of Interest.** Given \(\delta_t = 0.02/(1-0.01t)\) and a balance of $20,000 at time 10, find the balance at time 4.
+**Worked Example: Recovering a Balance from the Force of Interest.** Given \(\delta_t = 0.02/(1-0.01t)\) and a balance of \$20,000 at time 10, find the balance at time 4.
 
-First build \(a(t)\): \(a(t) = \exp\!\left(\int_0^t \frac{0.02}{1-0.01x}\,dx\right) = \exp(-2\ln(1-0.01t)) = (1-0.01t)^{-2}\). Move money from time 10 to time 4 using the ratio: \[ B_4 = 20{,}000 \cdot \frac{a(4)}{a(10)} = 20{,}000 \cdot \frac{(1-0.04)^{-2}}{(1-0.10)^{-2}} = 20{,}000 \cdot \left(\frac{0.9}{0.96}\right)^2 = \$17{,}578.13 \] The answer is less than $20,000 — as expected, since we are moving backward in time.
+First build \(a(t)\): \(a(t) = \exp\!\left(\int_0^t \frac{0.02}{1-0.01x}\,dx\right) = \exp(-2\ln(1-0.01t)) = (1-0.01t)^{-2}\). Move money from time 10 to time 4 using the ratio:
+
+\[
+B_4 = 20{,}000 \cdot \frac{a(4)}{a(10)} = 20{,}000 \cdot \frac{(1-0.04)^{-2}}{(1-0.10)^{-2}} = 20{,}000 \cdot \left(\frac{0.9}{0.96}\right)^2 = \$17{,}578.13
+\]
+The answer is less than \$20,000 — as expected, since we are moving backward in time.
 
 ## Inflation and Real Rate of Interest
 
@@ -239,20 +249,20 @@ For multiple cash flows, the present value of a stream with payments \(C_k\) at 
 PV = \sum_k C_k \cdot v^{t_k} = \sum_k C_k (1+i)^{-t_k}
 \]
 
-**Example.** A loan of $2000 is repaid by $750 after 1 year, $X after 1.5 years, and $1000 after 2 years with \(i^{(12)} = 6\%\). Setting the present value of payments equal to the loan:
+**Example.** A loan of \$2000 is repaid by \$750 after 1 year, \$X after 1.5 years, and \$1000 after 2 years with \(i^{(12)} = 6\%\). Setting the present value of payments equal to the loan:
 
 \[
 2000 = 750 \cdot 1.005^{-12} + X \cdot 1.005^{-18} + 1000 \cdot 1.005^{-24} \implies X = \$444.56
 \]
 
-**Worked Example: Present Value with a Quadratic in \(v^2\).** You owe $200 in 2 years and $500 in 4 years, using \(i^{(4)} = 3\%\). The effective rate per quarter is 0.75%, so:
+**Worked Example: Present Value with a Quadratic in \(v^2\).** You owe \$200 in 2 years and \$500 in 4 years, using \(i^{(4)} = 3\%\). The effective rate per quarter is 0.75%, so:
 
 \[
 PV = 200(1.0075)^{-8} + 500(1.0075)^{-16} = \$632.05
 \]
-Now find the semiannual nominal rate \(i^{(2)}\) such that the PV is $600. Writing \(X = v^2\) (where \(v = (1+i^{(2)}/2)^{-1}\), the equation \(500X^2 + 200X = 600\) simplifies to \(5X^2 + 2X - 6 = 0\). The positive root is \(X = 0.91355\). Since \(X = (1 + i^{(2)}/2)^{-2}\), solving gives \(i^{(2)} = 4.57\%\). Always use the full precision of \(X\) when solving for the rate — rounding intermediate results introduces error.
+Now find the semiannual nominal rate \(i^{(2)}\) such that the PV is \$600. Writing \(X = v^2\) (where \(v = (1+i^{(2)}/2)^{-1}\), the equation \(500X^2 + 200X = 600\) simplifies to \(5X^2 + 2X - 6 = 0\). The positive root is \(X = 0.91355\). Since \(X = (1 + i^{(2)}/2)^{-2}\), solving gives \(i^{(2)} = 4.57\%\). Always use the full precision of \(X\) when solving for the rate — rounding intermediate results introduces error.
 
-**Worked Example: Equation of Value as a Quadratic.** Brent deposits $5,000 at time 0 and $3,000 at time 9 months. After 18 months his balance is $10,726.51. Find the annual nominal rate compounded monthly. Let \(j\) be the monthly effective rate; letting \(X = (1+j)^9\), the equation of value at 18 months is \(5000X^2 + 3000X = 10{,}726.51\). The positive root is \(X = 1.195093\), so \(j = 1.195093^{1/9} - 1 = 2.00\%\) per month, giving \(i^{(12)} = 24.00\%\).
+**Worked Example: Equation of Value as a Quadratic.** Brent deposits \$5,000 at time 0 and \$3,000 at time 9 months. After 18 months his balance is \$10,726.51. Find the annual nominal rate compounded monthly. Let \(j\) be the monthly effective rate; letting \(X = (1+j)^9\), the equation of value at 18 months is \(5000X^2 + 3000X = 10{,}726.51\). The positive root is \(X = 1.195093\), so \(j = 1.195093^{1/9} - 1 = 2.00\%\) per month, giving \(i^{(12)} = 24.00\%\).
 
 ## Net Present Value and Internal Rate of Return
 
@@ -302,7 +312,7 @@ This formula underlies virtually every annuity formula in this module. A regular
 
 ## Annuity-Immediate
 
-An **annuity-immediate** (also called an **ordinary annuity**) consists of payments of $1 at the *end* of each period for \(n\) periods. The **present value** (valued one period *before* the first payment) uses actuarial notation \(a_{\overline{n}|}\):
+An **annuity-immediate** (also called an **ordinary annuity**) consists of payments of \$1 at the *end* of each period for \(n\) periods. The **present value** (valued one period *before* the first payment) uses actuarial notation \(a_{\overline{n}|}\):
 
 \[
 a_{\overline{n}|} = v + v^2 + \cdots + v^n = \frac{1 - v^n}{i}, \quad i \ne 0
@@ -315,23 +325,23 @@ s_{\overline{n}|} = a_{\overline{n}|} \cdot (1+i)^n = \frac{(1+i)^n - 1}{i}, \qu
 \]
 
 
-For a payment amount of $R, multiply each formula by $R. The key equation linking PV and AV is:
+For a payment amount of \$R, multiply each formula by \$R. The key equation linking PV and AV is:
 
 \[
 s_{\overline{n}|} = a_{\overline{n}|} \cdot (1+i)^n
 \]
 
 
-**Worked Example: Counting Payments Carefully.** On July 10, 2010, Susan buys an annuity paying $1,000 every 3 months, with the first payment on October 10, 2010, and the final payment on April 10, 2019, priced at \(i^{(4)} = 5.2\%\). How much does she pay?
+**Worked Example: Counting Payments Carefully.** On July 10, 2010, Susan buys an annuity paying \$1,000 every 3 months, with the first payment on October 10, 2010, and the final payment on April 10, 2019, priced at \(i^{(4)} = 5.2\%\). How much does she pay?
 
 To count payments, set July 10, 2010 as time 0. Each quarter advances by 1 period. July dates occur at times \(4(Y - 2010)\), so July 2018 is time 32. The final payment (April 2019) is at time 35, meaning there are **35 payments**. The quarterly effective rate is \(j = 5.2\%/4 = 1.3\%\). The price (one period before the first payment) is:
 
 \[
 P = 1000 \cdot a_{\overline{35}|1.3\%} = 1000 \cdot \frac{1 - 1.013^{-35}}{0.013} = \$27{,}976.08
 \]
-The total paid is $35,000 but the present value is much less because of discounting.
+The total paid is \$35,000 but the present value is much less because of discounting.
 
-**Worked Example: Calculating Accumulated Value with Changing Rates.** Heather deposits $925 at the end of each quarter for 10 years. For the first 2 years the rate is 1% compounded quarterly; starting year 3 it rises to 2% compounded quarterly. The effective quarterly rates are \(j_1 = 0.25\%\) and \(j_2 = 0.5\%\).
+**Worked Example: Calculating Accumulated Value with Changing Rates.** Heather deposits \$925 at the end of each quarter for 10 years. For the first 2 years the rate is 1% compounded quarterly; starting year 3 it rises to 2% compounded quarterly. The effective quarterly rates are \(j_1 = 0.25\%\) and \(j_2 = 0.5\%\).
 
 *Step 1:* Accumulated value of first 8 deposits at end of year 2: \(925 \cdot s_{\overline{8}|0.25\%} = \$7{,}465.07\). *Step 2:* Grow this forward 32 quarters (8 more years) at 0.5%: \(7465.07 \times 1.005^{32} = \$8{,}756.85\). *Step 3:* Accumulated value of the remaining 32 deposits at end of year 10: \(925 \cdot s_{\overline{32}|0.5\%} = \$32{,}012.98\). *Total:* \(\$8{,}756.85 + \$32{,}012.98 = \$40{,}769.83\).
 
@@ -371,7 +381,7 @@ For a **perpetuity-due** (first payment now):
 \ddot{a}_{\overline{\infty}|} = \frac{1+i}{i} = \frac{1}{d}
 \]
 
-When the first payment is not exactly one full period away, adjust the perpetuity value by accumulating or discounting to the correct starting point. If the first payment is in \(k\) periods from now and the payment amount is $R:
+When the first payment is not exactly one full period away, adjust the perpetuity value by accumulating or discounting to the correct starting point. If the first payment is in \(k\) periods from now and the payment amount is \$R:
 
 \[
 PV = \frac{R}{i} \cdot v^{k-1}
@@ -380,19 +390,19 @@ PV = \frac{R}{i} \cdot v^{k-1}
 (discount the perpetuity-immediate value back \(k-1\) periods to today).
 
 
-**Worked Example: Endowment Fund with Several Perpetuity Variants.** Emily donates $100,000 to establish annual scholarships, invested at \(i = 8\%\).
+**Worked Example: Endowment Fund with Several Perpetuity Variants.** Emily donates \$100,000 to establish annual scholarships, invested at \(i = 8\%\).
 
 *(a) First payment in one year:* This is a perpetuity-immediate. The annual scholarship is \(R = 100{,}000 \times 0.08 = \$8{,}000\).
 
 *(b) First payment immediately:* This is a perpetuity-due. Then \(100{,}000 = R/d = R(1+i)/i\), so \(R = 100{,}000 \times 0.08/1.08 = \$7{,}407.41\). Less than part (a) — the fund pays out immediately without first earning a full year of interest.
 
-*(c) First payment in 6 months:* The payments are at times \(0.5, 1.5, 2.5, \ldots\). Factoring out \(v^{-1/2}\) from the perpetuity sum yields \(PV = R(1+i)^{1/2}/i\). Setting this to $100,000: \(R = 100{,}000 \times 0.08/\sqrt{1.08} = \$7{,}698.00\). This falls between parts (a) and (b).
+*(c) First payment in 6 months:* The payments are at times \(0.5, 1.5, 2.5, \ldots\). Factoring out \(v^{-1/2}\) from the perpetuity sum yields \(PV = R(1+i)^{1/2}/i\). Setting this to \$100,000: \(R = 100{,}000 \times 0.08/\sqrt{1.08} = \$7{,}698.00\). This falls between parts (a) and (b).
 
-*(d) First payment in T years, scholarship $10,000:* The payments start at time \(T\). The present value is \(10{,}000 \cdot v^{T-1}/i = 100{,}000\), giving \(1.08^{T-1} = 1.35\), so \(T = 1 + \ln(1.35)/\ln(1.08) = 4.899\) years.
+*(d) First payment in T years, scholarship \$10,000:* The payments start at time \(T\). The present value is \(10{,}000 \cdot v^{T-1}/i = 100{,}000\), giving \(1.08^{T-1} = 1.35\), so \(T = 1 + \ln(1.35)/\ln(1.08) = 4.899\) years.
 
 ## Deferred Annuities
 
-An **\(m\)-year deferred, \(n\)-year annuity-immediate** pays $R at the end of years \(m+1, m+2, \ldots, m+n\). The present value (at time 0) is:
+An **\(m\)-year deferred, \(n\)-year annuity-immediate** pays \$R at the end of years \(m+1, m+2, \ldots, m+n\). The present value (at time 0) is:
 
 \[
 PV = v^m \cdot a_{\overline{n}|} = a_{\overline{m+n}|} - a_{\overline{m}|} \quad (m \text{ a positive integer})
@@ -406,11 +416,11 @@ The second formula interprets the deferred annuity as the difference of two annu
 
 When payment amounts vary, we decompose them into a sum of level annuities or handle each period's rate separately. Two common techniques:
 
-1. **Group by payment level**: Write the cash flows as a combination of level annuities and deferred annuities. For example, payments of $75/month for year 1, $50/month for year 2, and $25/month for year 3 can be written as three deferred annuities or as \(25a_{\overline{12}|j} + 25a_{\overline{24}|j} + 25a_{\overline{36}|j}\).
+1. **Group by payment level**: Write the cash flows as a combination of level annuities and deferred annuities. For example, payments of \$75/month for year 1, \$50/month for year 2, and \$25/month for year 3 can be written as three deferred annuities or as \(25a_{\overline{12}|j} + 25a_{\overline{24}|j} + 25a_{\overline{36}|j}\).
 
 2. **Separate by period**: When the interest rate changes midway, calculate the accumulated value of the first batch, then grow it to the end under the new rate before adding the second batch's value.
 
-**Worked Example: Nonlevel Payments — Two Methods.** An annuity pays $200/month for 2 years, $300/month for 1 year, then $400/month for 2 years at \(i^{(12)} = 10\%\). Let \(j = 10\%/12 = 0.8\overline{3}\%\) per month.
+**Worked Example: Nonlevel Payments — Two Methods.** An annuity pays \$200/month for 2 years, \$300/month for 1 year, then \$400/month for 2 years at \(i^{(12)} = 10\%\). Let \(j = 10\%/12 = 0.8\overline{3}\%\) per month.
 
 *Method 1 — deferred annuities:*
 
@@ -418,7 +428,7 @@ When payment amounts vary, we decompose them into a sum of level annuities or ha
 PV = 200a_{\overline{24}|j} + 300v^{24}a_{\overline{12}|j} + 400v^{36}a_{\overline{24}|j} = \$13{,}559.94
 \]
 
-*Method 2 — telescoping:* Start with 60 monthly payments of $400, then subtract 36 payments of $100 (since months 1–36 should be $100 less), then subtract another 24 payments of $100 (months 1–24 should be $100 less again):
+*Method 2 — telescoping:* Start with 60 monthly payments of \$400, then subtract 36 payments of \$100 (since months 1–36 should be \$100 less), then subtract another 24 payments of \$100 (months 1–24 should be \$100 less again):
 
 \[
 PV = 400a_{\overline{60}|j} - 100a_{\overline{36}|j} - 100a_{\overline{24}|j} = \$13{,}559.94
@@ -427,7 +437,7 @@ Method 2 avoids deferred annuities and is often faster on a financial calculator
 
 ## Payments in Geometric Progression
 
-When payments grow at a constant rate \(g\) per period, the first payment being $P, the present value (for a finite \(n\)-period annuity-immediate) is:
+When payments grow at a constant rate \(g\) per period, the first payment being \$P, the present value (for a finite \(n\)-period annuity-immediate) is:
 
 \[
 PV = \frac{P}{1+g} \cdot a_{\overline{n}|i^*}, \quad \text{where } i^* = \frac{i - g}{1 + g}
@@ -441,7 +451,7 @@ PV = P \cdot v + P(1+g) \cdot v^2 + \cdots + P(1+g)^{n-1} \cdot v^n = \frac{P}{1
 
 When \(n \to \infty\) and \(g < i\), this converges to the **Gordon growth model**: \(PV = P/(i-g)\), which reappears in Module 5 for stock valuation.
 
-**Worked Example: Inflation-Adjusted Annuity.** An annuity pays $20,000 at end of year 1, each subsequent payment 5% higher for 10 years total, at \(i = 6\%\). The PV is a geometric series with first term \(20000v\) and ratio \(1.05v = 1.05/1.06\):
+**Worked Example: Inflation-Adjusted Annuity.** An annuity pays \$20,000 at end of year 1, each subsequent payment 5% higher for 10 years total, at \(i = 6\%\). The PV is a geometric series with first term \(20000v\) and ratio \(1.05v = 1.05/1.06\):
 
 \[
 PV = \frac{20000v\left(1-(1.05v)^{10}\right)}{1-1.05v} = \$180{,}867.50
@@ -450,7 +460,7 @@ Alternatively, observe that the real rate \(j^* = (i-g)/(1+g) = 0.01/1.05 \appro
 
 ## Payments in Arithmetic Progression (P–Q Formula)
 
-For an annuity-immediate where the first payment is $P and each subsequent payment increases by $Q, the present value is:
+For an annuity-immediate where the first payment is \$P and each subsequent payment increases by \$Q, the present value is:
 
 \[
 PV = P \cdot a_{\overline{n}|} + Q \cdot \frac{a_{\overline{n}|} - n v^n}{i}
@@ -463,14 +473,14 @@ This is called the **P–Q formula**. For an annuity-due, multiply by \((1+i)\).
 \]
 
 
-**Worked Example: P–Q Formula in Practice.** Olga buys a 5-year increasing annuity: $2 at end of month 1, $4 at end of month 2, …, increasing by $2 each month. Nominal rate 9% compounded quarterly. First convert to a monthly rate: \(j = (1 + 0.09/4)^{1/3} - 1 = 0.744444\%\) per month (store all digits). With \(P = 2\), \(Q = 2\), \(n = 60\) months:
+**Worked Example: P–Q Formula in Practice.** Olga buys a 5-year increasing annuity: \$2 at end of month 1, \$4 at end of month 2, …, increasing by \$2 each month. Nominal rate 9% compounded quarterly. First convert to a monthly rate: \(j = (1 + 0.09/4)^{1/3} - 1 = 0.744444\%\) per month (store all digits). With \(P = 2\), \(Q = 2\), \(n = 60\) months:
 
 \[
 X = 2 a_{\overline{60}|j} + \frac{2}{j}\left(a_{\overline{60}|j} - 60v^{60}\right) = \$2{,}729.21
 \]
 Rounding \(j\) to fewer decimal places at an intermediate step will produce a noticeably wrong final answer because \(j\) appears raised to the 60th power.
 
-**Worked Example: Arithmetic Increasing Perpetuity.** A perpetuity-immediate has first payment $3 and each subsequent payment $2 larger. The PV is $406.81. Find \(i\).
+**Worked Example: Arithmetic Increasing Perpetuity.** A perpetuity-immediate has first payment \$3 and each subsequent payment \$2 larger. The PV is \$406.81. Find \(i\).
 
 Taking \(n \to \infty\) in the P–Q formula: \(PV = P/i + Q/i^2 = 3/i + 2/i^2\). Setting this equal to 406.81 and multiplying through by \(i^2\):
 
@@ -479,7 +489,7 @@ Taking \(n \to \infty\) in the P–Q formula: \(PV = P/i + Q/i^2 = 3/i + 2/i^2\)
 \]
 The positive root is \(i = (3 + \sqrt{9 + 4 \times 406.81 \times 2})/(2 \times 406.81) = 7.39\%\). The negative root is discarded since a perpetuity requires \(i > 0\).
 
-**Example (ladder payments).** An annuity paying $n at end of year \(n\) for \(n = 1, 2, \ldots, 50\) and $(100−n) for \(n = 51, \ldots, 99\) has a neat closed form. Multiplying the PV by \(v\) and subtracting gives \(PV(1-v) = a_{\overline{50}|} - v^{50} a_{\overline{50}|}\), so \(PV = (1+i)(a_{\overline{50}|})^2\).
+**Example (ladder payments).** An annuity paying \$n at end of year \(n\) for \(n = 1, 2, \ldots, 50\) and \$(100−n) for \(n = 51, \ldots, 99\) has a neat closed form. Multiplying the PV by \(v\) and subtracting gives \(PV(1-v) = a_{\overline{50}|} - v^{50} a_{\overline{50}|}\), so \(PV = (1+i)(a_{\overline{50}|})^2\).
 
 ## Determining the Interest Rate
 
@@ -497,8 +507,8 @@ Solve for \(i\) numerically.
 
 When solving for the number of payments \(n\), the solution is typically non-integer. Two methods handle this:
 
-1. **Smaller final payment**: Make \(\lfloor n \rfloor\) full payments of $R plus a smaller final payment at the same payment date.
-2. **Full final payment**: Make \(\lceil n \rceil\) payments of $R, with the last one reduced below $R.
+1. **Smaller final payment**: Make \(\lfloor n \rfloor\) full payments of \$R plus a smaller final payment at the same payment date.
+2. **Full final payment**: Make \(\lceil n \rceil\) payments of \$R, with the last one reduced below \$R.
 
 For an annuity-immediate with target value \(FV\):
 
@@ -511,16 +521,16 @@ n = \frac{-\ln(1 - L \cdot i / R)}{\ln(1+i)} \quad \text{(present value)}
 \]
 
 
-**Worked Example: Finding the Term and Smaller Final Payment.** You borrow $10,000 repaid by level end-of-year payments of $1,000 at \(i = 4\%\). Find the number of full payments and the smaller final payment.
+**Worked Example: Finding the Term and Smaller Final Payment.** You borrow \$10,000 repaid by level end-of-year payments of \$1,000 at \(i = 4\%\). Find the number of full payments and the smaller final payment.
 
 Solve \(10 = a_{\overline{n}|4\%}\): \(v^n = 1 - 0.04 \times 10 = 0.6\), so \(n = \ln(0.6)/\ln(1/1.04) = 13.02\). There are 13 full payments, plus a smaller 14th payment. The residual balance after 13 payments (prospective) is \(1000a_{\overline{13}|4\%}\), and the final payment at time 14 is:
 
 \[
 x = (10{,}000 - 1000 a_{\overline{13}|4\%}) \times 1.04^{14} = \$24.85
 \]
-A quick sanity check: \(n = 13.02\) is just 0.02 beyond 13, so we expect the final payment to be roughly \(0.02 \times 1000 = \$20\), and indeed $24.85 is in that vicinity.
+A quick sanity check: \(n = 13.02\) is just 0.02 beyond 13, so we expect the final payment to be roughly \(0.02 \times 1000 = \$20\), and indeed \$24.85 is in that vicinity.
 
-**Worked Example: Annuity with Extra Deposits.** Chuck wants $500 in his account after 10 years. He deposits $20 at the beginning of each of the first 6 years, and extra \(X\) dollars at the beginning of years 5, 6, and 7. Annual effective rate is 10%. Setting accumulated values equal to $500:
+**Worked Example: Annuity with Extra Deposits.** Chuck wants \$500 in his account after 10 years. He deposits \$20 at the beginning of each of the first 6 years, and extra \(X\) dollars at the beginning of years 5, 6, and 7. Annual effective rate is 10%. Setting accumulated values equal to \$500:
 
 \[
 20\ddot{s}_{\overline{6}|} \cdot 1.1^5 + X\ddot{s}_{\overline{3}|} \cdot 1.1^4 = 500
@@ -535,9 +545,9 @@ For a general accumulation function \(a(t)\) (not necessarily compound interest)
 a_{\overline{n}|} = v(1) + v(2) + \cdots + v(n), \quad s_{\overline{n}|} = a(n) \cdot a_{\overline{n}|} = \frac{a(n)}{a(1)} + \frac{a(n)}{a(2)} + \cdots + 1
 \]
 
-**Example.** A fund with year-by-year returns 5.2%, 4.8%, 3.8%, 6.1%, 5.5% and deposits of $100 at the start of each year: the balance at end of year 5 is computed by growing each deposit forward using the product of the relevant year-by-year accumulation factors.
+**Example.** A fund with year-by-year returns 5.2%, 4.8%, 3.8%, 6.1%, 5.5% and deposits of \$100 at the start of each year: the balance at end of year 5 is computed by growing each deposit forward using the product of the relevant year-by-year accumulation factors.
 
-**Worked Example: Deposits Every 4 Years.** Catherine deposits $100 at the beginning of each 4-year period for 40 years at annual effective rate \(i\). The amount at year 40 is 5 times the amount at year 20. Find the amount at year 40.
+**Worked Example: Deposits Every 4 Years.** Catherine deposits \$100 at the beginning of each 4-year period for 40 years at annual effective rate \(i\). The amount at year 40 is 5 times the amount at year 20. Find the amount at year 40.
 
 Let \(j = (1+i)^4 - 1\) be the 4-year effective rate. At year 40 there are 10 deposits, at year 20 there are 5. The condition is:
 
@@ -562,7 +572,7 @@ Then proceed with the standard annuity formulas using \(j\) as the rate per peri
 
 ## Continuous Annuities
 
-As the payment frequency \(m \to \infty\), the present value of an annuity converges to the **continuous annuity** formula. An \(n\)-year annuity paying at a continuous rate of $1 per year has present value:
+As the payment frequency \(m \to \infty\), the present value of an annuity converges to the **continuous annuity** formula. An \(n\)-year annuity paying at a continuous rate of \$1 per year has present value:
 
 \[
 \bar{a}_{\overline{n}|} = \frac{1 - v^n}{\delta}
@@ -578,14 +588,14 @@ Continuous annuities can also be interpreted via integration: for a fund paying 
 
 This integral representation is especially useful when the discount function is non-standard (e.g., simple discount).
 
-**Worked Example: Continuous Withdrawal Rate.** A fund of $43,000 accumulates at \(i = 4\%\) with money withdrawn continuously at $X per year. The fund is exhausted in 15.5 years. Then:
+**Worked Example: Continuous Withdrawal Rate.** A fund of \$43,000 accumulates at \(i = 4\%\) with money withdrawn continuously at \$X per year. The fund is exhausted in 15.5 years. Then:
 
 \[
 43{,}000 = X \bar{a}_{\overline{15.5}|} = X \cdot \frac{1 - v^{15.5}}{\delta}
 \]
 where \(\delta = \ln(1.04)\). Solving: \(X = 43{,}000\delta/(1 - 1.04^{-15.5}) = \$3{,}702.35\) per year.
 
-**Worked Example: Time to Exhaust a Fund.** A fund of $1,600 accumulates at \(\delta = 5.5\%\) (continuously compounded) with continuous withdrawals of $150/year. Find when the fund is exhausted.
+**Worked Example: Time to Exhaust a Fund.** A fund of \$1,600 accumulates at \(\delta = 5.5\%\) (continuously compounded) with continuous withdrawals of \$150/year. Find when the fund is exhausted.
 
 \[
 1600 = 150 \cdot \frac{1 - e^{-0.055n}}{0.055} \implies e^{-0.055n} = 1 - \frac{1600 \times 0.055}{150} = 0.4133 \implies n = 16.064 \text{ years}
@@ -607,7 +617,7 @@ An important special case is the **increasing continuous annuity** paying at rat
 \bar{(I\bar{a})}_{\overline{n}|} = \int_0^n t e^{-\delta t}\, dt = \frac{\bar{a}_{\overline{n}|} - nv^n}{\delta}
 \]
 
-**Worked Example: Varying Payment Rate with Non-Constant Force of Interest.** Deposits flow into an account at rate \((7k + tk)\) dollars per year at time \(t\), with force of interest \(\delta_t = 1/(7+t)\). After 10 years the account is worth $20,000. Find \(k\).
+**Worked Example: Varying Payment Rate with Non-Constant Force of Interest.** Deposits flow into an account at rate \((7k + tk)\) dollars per year at time \(t\), with force of interest \(\delta_t = 1/(7+t)\). After 10 years the account is worth \$20,000. Find \(k\).
 
 The accumulation function: \(a(t) = e^{\int_0^t 1/(7+x)\,dx} = (7+t)/7\) — a simple interest function. The discount function is \(v(t) = 7/(7+t)\). The present value is:
 
@@ -669,9 +679,9 @@ Both give the same answer when payments are exactly level. If payments are round
 B_t = R \cdot a_{\overline{n-t-1}|} + R^* (1+i)^{-(n-t)}
 \]
 
-**Mortgage example.** A $480,000 mortgage at \(i^{(2)} = 7.6\%\) over 25 years has a bi-weekly effective rate of \(j = (1 + 0.076/2)^{1/13} - 1 = 0.2873\%\) and bi-weekly payment \(R = \$1{,}631.88\). Choosing a shorter amortization period (20 or 15 years) dramatically reduces total interest paid — from $580,722 (25yr) to $318,736 (15yr).
+**Mortgage example.** A \$480,000 mortgage at \(i^{(2)} = 7.6\%\) over 25 years has a bi-weekly effective rate of \(j = (1 + 0.076/2)^{1/13} - 1 = 0.2873\%\) and bi-weekly payment \(R = \$1{,}631.88\). Choosing a shorter amortization period (20 or 15 years) dramatically reduces total interest paid — from \$580,722 (25yr) to \$318,736 (15yr).
 
-**Worked Example: Retrospective vs. Prospective Balance.** A $20,000 loan at \(i = 8\%\) is repaid by $2,500/year plus a smaller final payment. First find \(n\): solving \(a_{\overline{n}|8\%} = 8\) gives \(v^n = 0.36\), so \(n = -\ln(0.36)/\ln(1.08) = 13.27\). Thus 13 full payments plus a smaller 14th payment \(R^* = (20000 - 2500a_{\overline{13}|8\%}) \times 1.08^{14} = \$706.57\) (about 0.27 × $2,500, as expected from the fractional part).
+**Worked Example: Retrospective vs. Prospective Balance.** A \$20,000 loan at \(i = 8\%\) is repaid by \$2,500/year plus a smaller final payment. First find \(n\): solving \(a_{\overline{n}|8\%} = 8\) gives \(v^n = 0.36\), so \(n = -\ln(0.36)/\ln(1.08) = 13.27\). Thus 13 full payments plus a smaller 14th payment \(R^* = (20000 - 2500a_{\overline{13}|8\%}) \times 1.08^{14} = \$706.57\) (about 0.27 × \$2,500, as expected from the fractional part).
 
 The outstanding balance at end of year 6 via the **retrospective** method: \(B_6 = 20000(1.08)^6 - 2500s_{\overline{6}|8\%} = \$13{,}397.66\). Via the **prospective** method: \(B_6 = 2500a_{\overline{7}|8\%} + 706.57 \cdot 1.08^{-8} = \$13{,}397.66\). Both methods agree exactly.
 
@@ -716,7 +726,7 @@ B_t = \frac{I_{t+1}}{i}
 
 These relationships allow reconstruction of a full amortization table from partial information. For mortgages, the principal in the 25<sup>th</sup> payment and the 37<sup>th</sup> payment differ by 12 periods of compounding: \(P_{37} = P_{25}(1+i)^{12}\), allowing us to solve for the effective rate.
 
-**Worked Example: Recovering Amortization Data from Two Balances.** A 4-year loan at \(i = 8\%\) with level end-of-year payments has outstanding balance $1,076.82 at end of year 2 and $559.12 at end of year 3. Since principal portions grow geometrically, the interest in year 3 is \(I_3 = 0.08 \times 1076.82 = 86.15\). The principal in year 3 is \(P_3 = B_2 - B_3 = 1076.82 - 559.12 = 517.70\). The payment is \(R = I_3 + P_3 = \$603.85\). Since \(P_t/(1+i) = P_{t-1}\), the principal at time 1 is \(P_1 = 517.70/1.08^2 = \$443.84\).
+**Worked Example: Recovering Amortization Data from Two Balances.** A 4-year loan at \(i = 8\%\) with level end-of-year payments has outstanding balance \$1,076.82 at end of year 2 and \$559.12 at end of year 3. Since principal portions grow geometrically, the interest in year 3 is \(I_3 = 0.08 \times 1076.82 = 86.15\). The principal in year 3 is \(P_3 = B_2 - B_3 = 1076.82 - 559.12 = 517.70\). The payment is \(R = I_3 + P_3 = \$603.85\). Since \(P_t/(1+i) = P_{t-1}\), the principal at time 1 is \(P_1 = 517.70/1.08^2 = \$443.84\).
 
 ## Refinancing a Loan
 
@@ -729,9 +739,9 @@ If the new payment is lower, refinancing saves money. The total savings depend o
 
 **Canadian mortgages** are typically renegotiated every 5 years when the rate guarantee period expires. The penalty for breaking early is often 3 months' interest on the outstanding balance.
 
-**Worked Example: Should Kenny Refinance?** Kenny buys $5,000 of furniture, pays $500 down, and finances $4,500 over 5 years at \(i^{(12)} = 12\%\) (\(j = 1\%\)/month). Monthly payment: \(R = 4500/a_{\overline{60}|1\%} = \$100.10\). After 24 months, the retrospective balance is \(B_{24} = 4500(1.01)^{24} - 100.10 \cdot s_{\overline{24}|1\%} = \$3{,}013.76\).
+**Worked Example: Should Kenny Refinance?** Kenny buys \$5,000 of furniture, pays \$500 down, and finances \$4,500 over 5 years at \(i^{(12)} = 12\%\) (\(j = 1\%\)/month). Monthly payment: \(R = 4500/a_{\overline{60}|1\%} = \$100.10\). After 24 months, the retrospective balance is \(B_{24} = 4500(1.01)^{24} - 100.10 \cdot s_{\overline{24}|1\%} = \$3{,}013.76\).
 
-Kenny can refinance at \(i^{(12)} = 8.4\%\) (\(j^* = 0.7\%\)/month) but must pay a 3-month payment penalty. New loan: \(L^* = 3013.76 + 3 \times 100.10 = \$3{,}314.06\). New payment over 36 remaining months: \(R^* = 3314.06/a_{\overline{36}|0.7\%} = \$104.46\). Since $104.46 > $100.10, **refinancing is not worthwhile** — the penalty outweighs the interest savings.
+Kenny can refinance at \(i^{(12)} = 8.4\%\) (\(j^* = 0.7\%\)/month) but must pay a 3-month payment penalty. New loan: \(L^* = 3013.76 + 3 \times 100.10 = \$3{,}314.06\). New payment over 36 remaining months: \(R^* = 3314.06/a_{\overline{36}|0.7\%} = \$104.46\). Since \$104.46 > \$100.10, **refinancing is not worthwhile** — the penalty outweighs the interest savings.
 
 ## Sinking Funds
 
@@ -749,9 +759,9 @@ iL + D = iL + \frac{L}{s_{\overline{n}|j}}
 
 When \(j = i\), this equals \(L/a_{\overline{n}|}\) — exactly the same as the amortization method payment. When the sinking fund earns less than the loan rate \((j < i)\), the sinking fund method costs more. The outstanding "principal" at time \(t\) is the original loan minus the sinking fund balance: \(L - Ds_{\overline{t}|j}\).
 
-**Worked Example: Sinking Fund with Partial Amortization.** A 12-year, $8,000 loan at 8% charges interest of $640/year, but the borrower pays $800/year to the lender (partly reducing principal). At the end of 12 years, the remaining balance — computed retrospectively as \(8000(1.08)^{12} - 800s_{\overline{12}|8\%} = \$4{,}963.66\) — must be repaid via a sinking fund earning 4%. The required annual sinking fund deposit is \(X = 4963.66/s_{\overline{12}|4\%} = \$330.34\).
+**Worked Example: Sinking Fund with Partial Amortization.** A 12-year, \$8,000 loan at 8% charges interest of \$640/year, but the borrower pays \$800/year to the lender (partly reducing principal). At the end of 12 years, the remaining balance — computed retrospectively as \(8000(1.08)^{12} - 800s_{\overline{12}|8\%} = \$4{,}963.66\) — must be repaid via a sinking fund earning 4%. The required annual sinking fund deposit is \(X = 4963.66/s_{\overline{12}|4\%} = \$330.34\).
 
-**Worked Example: Mutual Fund Interest into a Bank Account.** Betty invests $10,000 in a mutual fund earning 8%. She withdraws the $800 annual interest and deposits it in a bank account earning 4%. The mutual fund balance stays at $10,000 throughout (interest is removed, not reinvested). After 10 years, the bank account holds \(800 \cdot s_{\overline{10}|4\%} = \$9{,}604.89\). Total wealth: $10,000 + $9,604 = $19,604.
+**Worked Example: Mutual Fund Interest into a Bank Account.** Betty invests \$10,000 in a mutual fund earning 8%. She withdraws the \$800 annual interest and deposits it in a bank account earning 4%. The mutual fund balance stays at \$10,000 throughout (interest is removed, not reinvested). After 10 years, the bank account holds \(800 \cdot s_{\overline{10}|4\%} = \$9{,}604.89\). Total wealth: \$10,000 + \$9,604 = \$19,604.
 
 ## Loans Summary
 
@@ -779,7 +789,7 @@ P = Fr \cdot a_{\overline{n}|j} + C v^n
 
 This **basic bond price formula** contains five quantities: \(P, Fr, n, C, j\). Given any four, the fifth can be found. For semiannual bonds, the annual yield is quoted as \(i^{(2)} = 2j\).
 
-**Worked Example: Bond with Changing Coupon Rates.** A 20-year $1,000 par bond with semi-annual coupons is redeemable at par. Coupon rate: 8% for the first 5 years, 9% for the next 5, 10% for the final 10 years. Amy purchases to yield \(i^{(2)} = 9.2\%\), so \(j = 4.6\%\). The coupons are $40 (first 10 periods), $45 (next 10), and $50 (last 20). The price uses deferred annuities:
+**Worked Example: Bond with Changing Coupon Rates.** A 20-year \$1,000 par bond with semi-annual coupons is redeemable at par. Coupon rate: 8% for the first 5 years, 9% for the next 5, 10% for the final 10 years. Amy purchases to yield \(i^{(2)} = 9.2\%\), so \(j = 4.6\%\). The coupons are \$40 (first 10 periods), \$45 (next 10), and \$50 (last 20). The price uses deferred annuities:
 
 \[
 P = 40a_{\overline{10}|j} + 45v^{10}a_{\overline{10}|j} + 50v^{20}a_{\overline{20}|j} + 1000v^{40} = \$968.72
@@ -800,7 +810,7 @@ P = C + (Fr - Cj) a_{\overline{n}|}
 
 The amount of premium is \(P - C = (Fr - Cj)a_{\overline{n}|}\). The amount of discount is \(C - P\).
 
-**Worked Example: Using the Premium/Discount Formula.** A 28-year $1,200 par bond pays annual coupons at rate \(r = 2i\) (double the yield). Bart pays $1,968. Find the sale price after 7 years.
+**Worked Example: Using the Premium/Discount Formula.** A 28-year \$1,200 par bond pays annual coupons at rate \(r = 2i\) (double the yield). Bart pays \$1,968. Find the sale price after 7 years.
 
 From the premium/discount formula: \(1968 = 1200 + 1200(2i - i)a_{\overline{28}|}\). Since \(i \cdot a_{\overline{28}|} = 1 - v^{28}\):
 
@@ -825,7 +835,7 @@ P_t = Fr - I_t = (Fr - Cj) v^{n-t+1}
 
 Book value adjustments grow geometrically: \(P_{t+1} = (1+j) P_t\). For a **premium bond**, book values decrease toward \(C\) (**writing down** the premium). For a **discount bond**, book values increase toward \(C\) (**writing up** the discount).
 
-**Worked Example: Interest Portion of the 7th Coupon.** A $10,000 par 10-year bond with 8% annual coupons is bought at a premium to yield 6%. The coupon is $800. To find the interest earned in the 7th coupon, first compute the book value at time 6 (4 coupons remaining):
+**Worked Example: Interest Portion of the 7th Coupon.** A \$10,000 par 10-year bond with 8% annual coupons is bought at a premium to yield 6%. The coupon is \$800. To find the interest earned in the 7th coupon, first compute the book value at time 6 (4 coupons remaining):
 
 \[
 B_6 = 800a_{\overline{4}|6\%} + 10000(1.06)^{-4} = \$10{,}693.02
@@ -850,7 +860,7 @@ where \(P_0\) is the price at the last coupon date (using current market yield \
 \text{Clean price} = P_f - f \cdot Fr
 \]
 
-Bond quotes are the clean price per $100 of face value. The clean price removes the effect of where we are in the coupon cycle, making bonds with the same yield but different coupon dates more comparable.
+Bond quotes are the clean price per \$100 of face value. The clean price removes the effect of where we are in the coupon cycle, making bonds with the same yield but different coupon dates more comparable.
 
 **Alternative clean price (linear interpolation):**
 
@@ -858,7 +868,7 @@ Bond quotes are the clean price per $100 of face value. The clean price removes 
 B_{t+f} = (1-f) B_t + f B_{t+1}
 \]
 
-**Worked Example: Dirty and Clean Price.** A $1,000 par bond redeemable December 1, 2021, with 7% semi-annual coupons. Find the dirty and clean price on August 8, 2010, to yield \(i^{(2)} = 6\%\) (\(j = 3\%\). Coupon = $35.
+**Worked Example: Dirty and Clean Price.** A \$1,000 par bond redeemable December 1, 2021, with 7% semi-annual coupons. Find the dirty and clean price on August 8, 2010, to yield \(i^{(2)} = 6\%\) (\(j = 3\%\). Coupon = \$35.
 
 The last coupon date is June 1, 2010 (time 0). From June 1 to December 1, 2021, there are 23 remaining coupons. The price at June 1: \(B_0 = 35a_{\overline{23}|3\%} + 1000(1.03)^{-23} = \$1{,}082.22\).
 
@@ -904,7 +914,7 @@ For a **premium bond** (\(Fr > Cj\), the earlier call date typically produces th
 
 Corporations raise capital through bonds, **preferred stock**, and **common stock**. Bondholders have priority over preferred shareholders, who in turn have priority over common shareholders. The **dividend discount model** sets the stock price equal to the present value of all future dividends.
 
-For **preferred stock** with fixed dividends of $D per period:
+For **preferred stock** with fixed dividends of \$D per period:
 
 \[
 P = \frac{D}{i}

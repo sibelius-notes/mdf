@@ -26,7 +26,7 @@ Wilke (2019) emphasizes that "all data visualizations map data values into quant
 Before choosing a visual encoding, one must characterize the nature of the data. The literature converges on five principal types:
 
 <div class="definition">
-<strong>Quantitative continuous</strong>: values that can take any real number within a range. Examples: height (1.73 m), temperature (−4.2 °C), income ($54,320). Arithmetic differences and ratios are meaningful.
+<strong>Quantitative continuous</strong>: values that can take any real number within a range. Examples: height (1.73 m), temperature (−4.2 °C), income (\$54,320). Arithmetic differences and ratios are meaningful.
 </div>
 
 <div class="definition">
@@ -166,7 +166,7 @@ The grammar enforces a discipline: to make a chart, one must explicitly state wh
 
 Wilke (Chapter 17) states the principle precisely: "The sizes of shaded areas in a visualization need to be proportional to the data values they represent." This is a direct operationalization of the idea that the visual impression should match the data.
 
-**Bar charts**: the bar's baseline must be at zero. If a bar chart of salaries starts the y-axis at $40,000, a salary of $45,000 and one of $80,000 appear to be in a roughly 1:9 ratio visually, when the true ratio is 45:80 ≈ 1:1.8. The visual impression is wildly misleading.
+**Bar charts**: the bar's baseline must be at zero. If a bar chart of salaries starts the y-axis at \$40,000, a salary of \$45,000 and one of \$80,000 appear to be in a roughly 1:9 ratio visually, when the true ratio is 45:80 ≈ 1:1.8. The visual impression is wildly misleading.
 
 **Line charts and area charts**: for shaded areas under a line (area charts), the baseline must be at zero. However, for line charts (no shading), truncated axes are acceptable because the encoding is position (the y-coordinate of the line) rather than area. Readers can judge differences in y-coordinate correctly regardless of where the axis starts, as long as the axis is labeled.
 
@@ -205,9 +205,17 @@ The choice of bin width \( h \) is the central tuning parameter. Too small: the 
 
 **Sturges' rule** (1926): \( k = \lceil \log_2 n \rceil + 1 \), so \( h = (\max - \min) / k \). Designed for unimodal symmetric distributions; performs poorly for large \( n \) or skewed distributions.
 
-**Freedman-Diaconis rule** (1981): \[ h = 2 \cdot \text{IQR}(x) \cdot n^{-1/3} \] where IQR is the interquartile range. More robust to outliers than Sturges and adapts better to heavy-tailed distributions.
+**Freedman-Diaconis rule** (1981):
 
-**Scott's rule** (1979): \[ h = 3.49 \cdot \hat{\sigma} \cdot n^{-1/3} \] where \( \hat{\sigma} \) is the sample standard deviation. Optimal for normal distributions.
+\[ h = 2 \cdot \text{IQR}(x) \cdot n^{-1/3} \]
+
+where IQR is the interquartile range. More robust to outliers than Sturges and adapts better to heavy-tailed distributions.
+
+**Scott's rule** (1979):
+
+\[ h = 3.49 \cdot \hat{\sigma} \cdot n^{-1/3} \]
+
+where \( \hat{\sigma} \) is the sample standard deviation. Optimal for normal distributions.
 
 Wilke's practical advice: "When making a histogram, always explore multiple bin widths." A single bin width can hide or create apparent features.
 
@@ -283,7 +291,11 @@ For small to moderate datasets (roughly \( n < 200 \) per group), showing the ra
 ### Empirical CDF
 
 <div class="definition">
-<strong>Empirical cumulative distribution function (ECDF)</strong>: for a sample \( x_1, \ldots, x_n \), the ECDF is \[ \hat{F}(x) = \frac{1}{n} \sum_{i=1}^{n} \mathbf{1}(x_i \leq x). \] It is a step function increasing by \( 1/n \) at each observed value.
+<strong>Empirical cumulative distribution function (ECDF)</strong>: for a sample \( x_1, \ldots, x_n \), the ECDF is
+
+\[ \hat{F}(x) = \frac{1}{n} \sum_{i=1}^{n} \mathbf{1}(x_i \leq x). \]
+
+It is a step function increasing by \( 1/n \) at each observed value.
 </div>
 
 The ECDF directly shows what fraction of the data falls below any threshold. Unlike histograms, it requires no binning and is uniquely determined by the data. It is particularly useful for comparing two distributions: if one ECDF lies entirely above another for all \( x \), then one distribution **first-order stochastically dominates** the other.
@@ -331,7 +343,11 @@ When data span multiple orders of magnitude, arithmetic axes compress most obser
 
 **Square-root transformation**: \( y' = \sqrt{y} \). Useful for count data (Poisson-like), which have variance proportional to the mean. Gentler compression than log.
 
-**Box-Cox transformation**: \[ y' = \begin{cases} (y^\lambda - 1)/\lambda & \lambda \neq 0 \\ \log(y) & \lambda = 0 \end{cases} \] A parametric family encompassing log (\(\lambda = 0\)), square root (\(\lambda = 0.5\)), and identity (\(\lambda = 1\)). The optimal \(\hat{\lambda}\) maximizes normality of the transformed data.
+**Box-Cox transformation**:
+
+\[ y' = \begin{cases} (y^\lambda - 1)/\lambda & \lambda \neq 0 \\ \log(y) & \lambda = 0 \end{cases} \]
+
+A parametric family encompassing log (\(\lambda = 0\)), square root (\(\lambda = 0.5\)), and identity (\(\lambda = 1\)). The optimal \(\hat{\lambda}\) maximizes normality of the transformed data.
 
 **Asinh transformation**: \( y' = \operatorname{arcsinh}(y/a) \approx \log(2y/a) \) for large \( |y| \) but behaves linearly near zero. Useful for data that include zeros or negative values where log fails.
 
@@ -1082,7 +1098,11 @@ When analyzing Likert-scale ratings from a visualization study, several statisti
 
 1. **Ordinal vs. interval assumption**: Likert items are ordinal. Parametric tests (t-test, ANOVA) assume interval scaling. In practice, simulation studies (Liddell and Kruschke 2018; Norman 2010) suggest that parametric tests on 5- or 7-point Likert items perform similarly to ordinal alternatives when items are approximately symmetric. However, for 3-point items or heavily skewed distributions, use ordinal logistic regression or Wilcoxon signed-rank test.
 
-2. **Rater as random effect**: because different raters may have different mean ratings (some raters are generally more positive), include rater as a random intercept in a linear mixed-effects model: \[ \text{rating}_{ij} = \mu + \alpha_j + \beta \cdot \text{chart\_type}_i + \varepsilon_{ij} \] where \( \alpha_j \sim \mathcal{N}(0, \sigma_\alpha^2) \) is the rater random effect.
+2. **Rater as random effect**: because different raters may have different mean ratings (some raters are generally more positive), include rater as a random intercept in a linear mixed-effects model:
+
+\[ \text{rating}_{ij} = \mu + \alpha_j + \beta \cdot \text{chart\_type}_i + \varepsilon_{ij} \]
+
+where \( \alpha_j \sim \mathcal{N}(0, \sigma_\alpha^2) \) is the rater random effect.
 
 3. **Multiple comparisons**: if testing \( k \) chart types against a reference, apply Bonferroni correction or use a mixed model F-test for the overall effect before pairwise comparisons.
 
@@ -1108,7 +1128,7 @@ This chapter presents a structured comparison of poor and improved visualization
 
 - 50 states + DC
 - Variable: median household income in USD
-- Range: approximately $45,000 (Mississippi) to $100,000 (Maryland)
+- Range: approximately \$45,000 (Mississippi) to \$100,000 (Maryland)
 
 ## 9.3 Version 1: Pie Chart
 
@@ -1121,10 +1141,10 @@ A 51-slice pie chart. Each slice represents one state's income. Problems:
 
 ## 9.4 Version 2: Truncated-Axis Bar Chart
 
-A horizontal bar chart sorted by state name (alphabetical), with the x-axis starting at $40,000. Problems:
+A horizontal bar chart sorted by state name (alphabetical), with the x-axis starting at \$40,000. Problems:
 - Alphabetical ordering of an unordered nominal variable (state) makes trend detection impossible.
 - Truncated axis (does not start at zero) visually exaggerates differences between states.
-- The proportional ink principle is violated: Mississippi's bar appears to have near-zero income when it actually has $45,000.
+- The proportional ink principle is violated: Mississippi's bar appears to have near-zero income when it actually has \$45,000.
 
 **Verdict**: misleading. The truncation makes the income gap look far more extreme than it is.
 
@@ -1144,7 +1164,7 @@ Remaining issues:
 
 ## 9.6 Version 4: Ranked Dot Plot (Best Choice)
 
-A horizontal dot plot with one dot per state, sorted by descending income. The x-axis spans the full range with a zero baseline shown but the axis range focused at $40,000–$110,000 using dot plot conventions (dots do not require a zero baseline). State labels on the y-axis. Color encodes Census region (Northeast, South, Midwest, West) using a 4-color qualitative palette.
+A horizontal dot plot with one dot per state, sorted by descending income. The x-axis spans the full range with a zero baseline shown but the axis range focused at \$40,000–\$110,000 using dot plot conventions (dots do not require a zero baseline). State labels on the y-axis. Color encodes Census region (Northeast, South, Midwest, West) using a 4-color qualitative palette.
 
 Improvements over all previous versions:
 - Sorted order enables immediate ranking comparison.

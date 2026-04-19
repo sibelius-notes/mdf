@@ -390,7 +390,7 @@ Nozick's **entitlement theory** (权利理论) holds that a distribution of hold
 Nozick's most famous argument against patterned theories of justice (including Rawls's) is the **Wilt Chamberlain argument** (威尔特·张伯伦论证):
 
 <div class="example">
-<strong>The Wilt Chamberlain Argument</strong>: Suppose society starts with a perfectly equal distribution (or any distribution you consider just). A million basketball fans each voluntarily pay 25 cents to watch Wilt Chamberlain play. Chamberlain now has $250,000 more than anyone else. Is this distribution unjust? Nozick argues it cannot be: each transaction was voluntary, and no one's rights were violated. But the result is a distribution that violates any patterned principle (e.g., equality, the difference principle). Therefore, maintaining a patterned distribution requires continuous interference with people's free choices -- "liberty upsets patterns."
+<strong>The Wilt Chamberlain Argument</strong>: Suppose society starts with a perfectly equal distribution (or any distribution you consider just). A million basketball fans each voluntarily pay 25 cents to watch Wilt Chamberlain play. Chamberlain now has \$250,000 more than anyone else. Is this distribution unjust? Nozick argues it cannot be: each transaction was voluntary, and no one's rights were violated. But the result is a distribution that violates any patterned principle (e.g., equality, the difference principle). Therefore, maintaining a patterned distribution requires continuous interference with people's free choices -- "liberty upsets patterns."
 </div>
 
 ## 8.4 Self-Ownership

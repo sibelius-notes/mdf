@@ -306,7 +306,7 @@ In practice, these conditions are violated: moving is costly, jurisdictions are 
 
 Hamilton (1975) showed that fiscal zoning — requiring all residents to consume a fixed level of housing — converts the property tax into a benefit tax: residents pay for exactly what they consume in local public services. The property tax is no longer distortionary (no excess burden) because the zoning constraint eliminates fiscal free-riding by those who would otherwise consume little housing but demand extensive public services.
 
-**Property tax capitalisation:** The Hamilton model predicts that local public service quality is capitalised into land values: a school district with $1,000/year in additional service value should have land values $1,000/\( r \) higher (where \( r \) is the discount rate). Oates (1969) tested this and found strong capitalisation, supporting the view that property taxes and public services are jointly valued by residents.
+**Property tax capitalisation:** The Hamilton model predicts that local public service quality is capitalised into land values: a school district with \$1,000/year in additional service value should have land values \$1,000/\( r \) higher (where \( r \) is the discount rate). Oates (1969) tested this and found strong capitalisation, supporting the view that property taxes and public services are jointly valued by residents.
 
 ## Section 9.3: Who Pays, Who Benefits? — Heim (2015)
 

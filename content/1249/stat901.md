@@ -364,20 +364,20 @@ That is, \(P^*(A)\) is the infimum of the total measure of all countable covers 
 The outer measure extends \(P\) to all subsets of \(\Omega\), but it is generally only subadditive, not countably additive. To recover full additivity, we restrict attention to those sets that "split" every other set cleanly.
 
 <div class="definition">
-<strong>Definition 1.31 (\(P^<em>\)-Measurable Set).</strong> A set \(A \subseteq \Omega\) is <strong>\(P^</em>\)-measurable</strong> if
+<strong>Definition 1.31 (\(P^*\)-Measurable Set).</strong> A set \(A \subseteq \Omega\) is <strong>\(P^*\)-measurable</strong> if
 
 \[
-P^<em>(A \cap E) + P^</em>(A^c \cap E) = P^*(E)
+P^*(A \cap E) + P^*(A^c \cap E) = P^*(E)
 \]
 for all \(E \subseteq \Omega\). This is known as <strong>Carath\'{e}odory's criterion</strong>. Intuitively, it says that the "boundary" cast by \(A\) does not interfere with the measurement of any set \(E\). We write \(\mathcal{M}\) for the class of all \(P^*\)-measurable subsets of \(\Omega\).
 </div>
 
 <div class="remark">
-<strong>Remark.</strong> One can build further intuition for Carath\'{e}odory's criterion through a covering picture. The outer measure \(P^<em>(E)\) is computed by covering \(E\) with field-sets and taking the infimum of the total measure. When \(A\) has a "clean boundary" --- meaning it belongs to the field, or more generally is \(P^</em>\)-measurable --- a cover of \(E\) can be cleanly split into a cover of \(E \cap A\) and a cover of \(E \cap A^c\) without waste. The total measure of the split covers equals the total measure of the original cover, and Carath\'{e}odory's criterion holds. By contrast, when \(A\) has a "fuzzy boundary," splitting a cover of \(E\) along \(A\) introduces overlap: the covering sets near the boundary of \(A\) contribute to both \(P^<em>(E \cap A)\) and \(P^</em>(E \cap A^c)\), leading to the strict inequality \(P^<em>(A \cap E) + P^</em>(A^c \cap E) > P^<em>(E)\). Thus, \(P^</em>\)-measurability captures exactly the sets whose boundaries are sufficiently well-behaved for consistent measurement.
+<strong>Remark.</strong> One can build further intuition for Carath\'{e}odory's criterion through a covering picture. The outer measure \(P^*(E)\) is computed by covering \(E\) with field-sets and taking the infimum of the total measure. When \(A\) has a "clean boundary" --- meaning it belongs to the field, or more generally is \(P^*\)-measurable --- a cover of \(E\) can be cleanly split into a cover of \(E \cap A\) and a cover of \(E \cap A^c\) without waste. The total measure of the split covers equals the total measure of the original cover, and Carath\'{e}odory's criterion holds. By contrast, when \(A\) has a "fuzzy boundary," splitting a cover of \(E\) along \(A\) introduces overlap: the covering sets near the boundary of \(A\) contribute to both \(P^*(E \cap A)\) and \(P^*(E \cap A^c)\), leading to the strict inequality \(P^*(A \cap E) + P^*(A^c \cap E) > P^*(E)\). Thus, \(P^*\)-measurability captures exactly the sets whose boundaries are sufficiently well-behaved for consistent measurement.
 </div>
 
 <div class="proposition">
-<strong>Proposition 1.32.</strong> The class \(\mathcal{M}\) is a \(\sigma\)-field, \(P^<em>\) is countably additive on \(\mathcal{M}\), and \(P^</em>\) is a probability measure on \(\mathcal{M}\). Therefore \((\Omega, \mathcal{M}, P^*)\) is a probability space.
+<strong>Proposition 1.32.</strong> The class \(\mathcal{M}\) is a \(\sigma\)-field, \(P^*\) is countably additive on \(\mathcal{M}\), and \(P^*\) is a probability measure on \(\mathcal{M}\). Therefore \((\Omega, \mathcal{M}, P^*)\) is a probability space.
 </div>
 
 The proof of the full \(\sigma\)-field and countable-additivity properties of \(\mathcal{M}\) is technical and is omitted. However, one can see that \(P^*(A) \geq 0\) since it is an infimum of sums of non-negative values, and \(P^*(\Omega) = P(\Omega) = 1\) since \(\Omega \in \mathcal{F}_0\) is its own smallest cover.
@@ -389,12 +389,12 @@ The crucial link between the original field and the extended \(\sigma\)-field is
 </div>
 
 <div class="proof">
-<strong>Proof.</strong> Let \(A \in \mathcal{F}_0\). For any \(E \subseteq \Omega\), we must show \(P^<em>(A \cap E) + P^</em>(A^c \cap E) = P^<em>(E)\). Let \(\varepsilon > 0\). Choose a cover \(A_1, A_2, \ldots \in \mathcal{F}_0\) of \(E\) with \(\sum_{n=1}^{\infty} P(A_n) \leq P^</em>(E) + \varepsilon\). Define \(B_n = A_n \cap A \in \mathcal{F}_0\) and \(C_n = A_n \cap A^c \in \mathcal{F}_0\). Since \(B_n\) and \(C_n\) are disjoint with \(B_n \cup C_n = A_n\), we have \(P(B_n) + P(C_n) = P(A_n)\). Moreover, \(E \cap A \subseteq \bigcup_{n=1}^{\infty} B_n\) and \(E \cap A^c \subseteq \bigcup_{n=1}^{\infty} C_n\). By Boole's inequality,
+<strong>Proof.</strong> Let \(A \in \mathcal{F}_0\). For any \(E \subseteq \Omega\), we must show \(P^*(A \cap E) + P^*(A^c \cap E) = P^*(E)\). Let \(\varepsilon > 0\). Choose a cover \(A_1, A_2, \ldots \in \mathcal{F}_0\) of \(E\) with \(\sum_{n=1}^{\infty} P(A_n) \leq P^*(E) + \varepsilon\). Define \(B_n = A_n \cap A \in \mathcal{F}_0\) and \(C_n = A_n \cap A^c \in \mathcal{F}_0\). Since \(B_n\) and \(C_n\) are disjoint with \(B_n \cup C_n = A_n\), we have \(P(B_n) + P(C_n) = P(A_n)\). Moreover, \(E \cap A \subseteq \bigcup_{n=1}^{\infty} B_n\) and \(E \cap A^c \subseteq \bigcup_{n=1}^{\infty} C_n\). By Boole's inequality,
 
 \[
-P^<em>(E \cap A) + P^</em>(E \cap A^c) \leq \sum_{n=1}^{\infty} P(B_n) + \sum_{n=1}^{\infty} P(C_n) = \sum_{n=1}^{\infty} P(A_n) \leq P^*(E) + \varepsilon.
+P^*(E \cap A) + P^*(E \cap A^c) \leq \sum_{n=1}^{\infty} P(B_n) + \sum_{n=1}^{\infty} P(C_n) = \sum_{n=1}^{\infty} P(A_n) \leq P^*(E) + \varepsilon.
 \]
-Since \(\varepsilon > 0\) was arbitrary, \(P^<em>(E \cap A) + P^</em>(E \cap A^c) \leq P^<em>(E)\). The reverse inequality holds trivially (any cover of \(E\) covers both \(E \cap A\) and \(E \cap A^c\)), so \(P^</em>(E \cap A) + P^<em>(E \cap A^c) = P^</em>(E)\), confirming \(A \in \mathcal{M}\). \(\square\)
+Since \(\varepsilon > 0\) was arbitrary, \(P^*(E \cap A) + P^*(E \cap A^c) \leq P^*(E)\). The reverse inequality holds trivially (any cover of \(E\) covers both \(E \cap A\) and \(E \cap A^c\)), so \(P^*(E \cap A) + P^*(E \cap A^c) = P^*(E)\), confirming \(A \in \mathcal{M}\). \(\square\)
 </div>
 
 ## 1.7 \(\pi\)-\(\lambda\) Systems
@@ -480,7 +480,7 @@ With the tools of outer measures and the \(\pi\)-\(\lambda\) theorem, we can now
 </div>
 
 <div class="proof">
-<strong>Proof (sketch).</strong> <em>Existence:</em> From Proposition 1.33, \(\mathcal{F}_0 \subseteq \mathcal{M}\), and since \(\mathcal{M}\) is a \(\sigma\)-field, \(\sigma(\mathcal{F}_0) \subseteq \mathcal{M}\). Since \(P^<em>\) is a probability measure on \(\mathcal{M}\), its restriction to \(\sigma(\mathcal{F}_0)\) is also a probability measure. For any \(A \in \mathcal{F}_0\), the smallest cover of \(A\) is \(A\) itself, so \(P^</em>(A) = P(A)\).
+<strong>Proof (sketch).</strong> <em>Existence:</em> From Proposition 1.33, \(\mathcal{F}_0 \subseteq \mathcal{M}\), and since \(\mathcal{M}\) is a \(\sigma\)-field, \(\sigma(\mathcal{F}_0) \subseteq \mathcal{M}\). Since \(P^*\) is a probability measure on \(\mathcal{M}\), its restriction to \(\sigma(\mathcal{F}_0)\) is also a probability measure. For any \(A \in \mathcal{F}_0\), the smallest cover of \(A\) is \(A\) itself, so \(P^*(A) = P(A)\).
 
 <em>Uniqueness:</em> Since \(\mathcal{F}_0\) is closed under finite intersection, it is a \(\pi\)-system. By Corollary 1.39, any two probability measures that agree on \(\mathcal{F}_0\) must agree on \(\sigma(\mathcal{F}_0)\). \(\square\)
 </div>
@@ -528,12 +528,12 @@ Every probability space can be completed.
 </div>
 
 <div class="proof">
-<strong>Proof.</strong> The outer measure construction provides the completion. Recall that \((\Omega, \mathcal{M}, P^<em>)\) is a probability space where \(\mathcal{M}\) is the class of all \(P^</em>\)-measurable sets. We have \(\mathcal{F} \subseteq \mathcal{M}\) and \(P^<em>\) extends \(P\). To show completeness: suppose \(P^</em>(B) = 0\) and \(A \subseteq B\). For any \(E \subseteq \Omega\),
+<strong>Proof.</strong> The outer measure construction provides the completion. Recall that \((\Omega, \mathcal{M}, P^*)\) is a probability space where \(\mathcal{M}\) is the class of all \(P^*\)-measurable sets. We have \(\mathcal{F} \subseteq \mathcal{M}\) and \(P^*\) extends \(P\). To show completeness: suppose \(P^*(B) = 0\) and \(A \subseteq B\). For any \(E \subseteq \Omega\),
 
 \[
-P^<em>(A \cap E) + P^</em>(A^c \cap E) \leq P^<em>(B) + P^</em>(E) = P^*(E),
+P^*(A \cap E) + P^*(A^c \cap E) \leq P^*(B) + P^*(E) = P^*(E),
 \]
-by the monotonicity of \(P^<em>\) (since \(A \cap E \subseteq B\)). The reverse inequality is trivial. Hence \(A \in \mathcal{M}\) and \(P^</em>(A) = 0\). \(\square\)
+by the monotonicity of \(P^*\) (since \(A \cap E \subseteq B\)). The reverse inequality is trivial. Hence \(A \in \mathcal{M}\) and \(P^*(A) = 0\). \(\square\)
 </div>
 
 ## 1.11 Conditional Probability
@@ -1031,7 +1031,7 @@ Having established the integral for simple functions, we next extend it to bound
 <strong>Proposition 28.</strong> Let \((\Omega, \mathcal{F}, \mu)\) be a measure space. Let \(f : \Omega \to \mathbb{R}\) be a bounded function such that \(f(x) = 0\) for \(x \in E^c\) for some \(E\) with \(\mu(E) < \infty\). Then
 
 \[
-\sup\left\{\int \varphi \, d\mu : \varphi \leq f \text{ and } \varphi \text{ satisfies } (<em>)\right\} = \inf\left\{\int \psi \, d\mu : \psi \geq f \text{ and } \psi \text{ satisfies } (</em>)\right\}
+\sup\left\{\int \varphi \, d\mu : \varphi \leq f \text{ and } \varphi \text{ satisfies } (*)\right\} = \inf\left\{\int \psi \, d\mu : \psi \geq f \text{ and } \psi \text{ satisfies } (*)\right\}
 \]
 where \((*)\) is the condition that \(\varphi\) (resp. \(\psi\)) is simple and \(\varphi(x) = 0\) (resp. \(\psi(x) = 0\)) for all \(x \in E^c\).
 </div>

@@ -531,7 +531,7 @@ is analytic on \( \mathbb{C} \) minus the ray \( \{re^{i\tau} : r \geq 0\} \). N
 </div>
 
 <div class="note" markdown="1">
-<strong>Note.</strong> The harmonic conjugate of \( \operatorname{Arg}(z) \) on \( D^<em> \) is \( \ln|z| \), since \( \operatorname{Log}\, z = \ln|z| + i\operatorname{Arg}(z) \) is analytic. This shows \( \operatorname{Arg} \) is harmonic on \( D^</em> \).
+<strong>Note.</strong> The harmonic conjugate of \( \operatorname{Arg}(z) \) on \( D^* \) is \( \ln|z| \), since \( \operatorname{Log}\, z = \ln|z| + i\operatorname{Arg}(z) \) is analytic. This shows \( \operatorname{Arg} \) is harmonic on \( D^* \).
 </div>
 
 ## 5.4 Complex Powers
@@ -1201,7 +1201,7 @@ The final chapter addresses a question that emerges naturally from the Identity 
 The Monodromy Theorem explains in precise terms why branch cuts exist. The logarithm \( \log z \) can be continued along any path in \( \mathbb{C}^* \), but \( \mathbb{C}^* \) is not simply connected: a loop that winds once around the origin belongs to a non-trivial homotopy class, and continuation along such a loop changes the value by \( 2\pi i \). Simple connectivity is exactly the topological condition that prevents this from happening.
 
 <div class="corollary" markdown="1">
-<strong>Corollary 11.2.2.</strong> The complex logarithm \( \log z \) cannot be analytically continued to a single-valued function on all of \( \mathbb{C}^<em> \), because \( \mathbb{C}^</em> \) is not simply connected: continuation around a loop encircling 0 changes the value by \( 2\pi i \). On any simply connected subdomain of \( \mathbb{C}^* \), however, a single-valued branch exists (by the Poincaré Lemma).
+<strong>Corollary 11.2.2.</strong> The complex logarithm \( \log z \) cannot be analytically continued to a single-valued function on all of \( \mathbb{C}^* \), because \( \mathbb{C}^* \) is not simply connected: continuation around a loop encircling 0 changes the value by \( 2\pi i \). On any simply connected subdomain of \( \mathbb{C}^* \), however, a single-valued branch exists (by the Poincaré Lemma).
 </div>
 
 ## 11.3 Riemann Surfaces
@@ -1211,7 +1211,7 @@ The Monodromy Theorem explains in precise terms why branch cuts exist. The logar
 The multi-valuedness of \( \log z \) and of algebraic functions is not a pathology — it is geometry. A Riemann surface is a space on which a multi-valued function becomes single-valued by "unfolding" the sheets of the multi-valuedness. This is the natural home for functions like \( \log z \), \( z^{1/n} \), and the roots of polynomial equations, and it connects complex analysis to algebraic geometry and topology.
 
 <div class="definition" markdown="1">
-<strong>Definition 11.3.1 (Riemann Surface of \( \log z \).</strong> Since \( \log z \) is multi-valued on \( \mathbb{C}^<em> \), we construct its </em>Riemann surface* \( \mathcal{R} \) as an infinitely-sheeted cover:
+<strong>Definition 11.3.1 (Riemann Surface of \( \log z \).</strong> Since \( \log z \) is multi-valued on \( \mathbb{C}^* \), we construct its </em>Riemann surface* \( \mathcal{R} \) as an infinitely-sheeted cover:
 - Take countably many copies \( S_k \) (\( k \in \mathbb{Z} \) of \( \mathbb{C}^* \), each slit along \( (-\infty, 0) \).
 - Glue the upper edge of the slit in \( S_k \) to the lower edge of the slit in \( S_{k+1} \).
 - On the resulting surface, define \( \log z = \ln|z| + i\theta \) where \( \theta \in (2\pi k - \pi, 2\pi k + \pi) \) on sheet \( S_k \). This is a single-valued analytic function on \( \mathcal{R} \).

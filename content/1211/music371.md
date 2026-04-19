@@ -148,7 +148,7 @@ the smallest pitch-class integer.
 The interval successions in the two versions are identical (because they are transpositionally equivalent), so it is impossible to break the tie. A set such as this is called a **transpositionally symmetrical set**, because it reproduces its own pitch-class content under one or more intervals of
 transposition.
 
-![](/mdf/pics/9-9.png)
+![](/pics/9-9.png)
 
 Pitch-class sets that are related by inversion to be equivalent. This is called
 **inversional equivalence**.
@@ -182,7 +182,7 @@ abbreviated as IC):
 To analyze a set according to its interval content, tabulate all of the ICs between
 each note in the set and all of the notes *above* it.
 Consider a set (example 9-17 in the textbook).
-![there should be a image...](/mdf/pics/9-17.png)
+![there should be a image...](/pics/9-17.png)
 
 The table below demonstrates the procedure:
 <table>
@@ -239,7 +239,7 @@ minor 3rd, a major 3rd, or a perfect 4th, exactly one pitch class will be held *
 An **inversion matrix** will allow us to predict how many PCs will be held invariant
 under inversion. For example, we convert (D, Eb, G, A) set to (2, 3, 7, 9), then
 
-![](/mdf/pics/inversion-mat.png)
+![](/pics/inversion-mat.png)
 
 Invert the set, we get (3, 5, 9, 10). This is considered the 0th transposition. If you look in the matrix, you will find
 two occurrences of the number 0, which means that two PCs will be held invariant — in this case PCs 3 and 9. There is one occurrence of the number 2, so transposing by PCI 2 will keep one PC

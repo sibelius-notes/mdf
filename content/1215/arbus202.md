@@ -420,7 +420,7 @@ But the legal responsibilities of sellers do not relieve buyers of all responsib
 
 The power of advertising lies partly in **framing** — the way in which information is presented shapes how it is perceived and evaluated.
 
-A classic demonstration: would you drive across the street to save $30 on a $70 watch? Most people say yes. Would you drive across the street to save $30 on an $865 television? Most people say no — even though the saving is identical. The absolute dollar saving is the same, but the *proportion* of the purchase price differs, and this affects how people frame the decision.
+A classic demonstration: would you drive across the street to save \$30 on a \$70 watch? Most people say yes. Would you drive across the street to save \$30 on an \$865 television? Most people say no — even though the saving is identical. The absolute dollar saving is the same, but the *proportion* of the purchase price differs, and this affects how people frame the decision.
 
 Companies routinely exploit framing effects. Pricing a product at a weekly rate rather than the total cost of ownership can make an expensive item appear affordable. Emphasizing monthly payments rather than total price obscures the true cost of credit. A payday loan company advertising short-term loans without prominently disclosing a 5,853% annual interest rate is not providing the information buyers need to make a rational decision.
 
@@ -498,7 +498,7 @@ The course examines several examples:
 
 - A biodiesel company that repeatedly shipped the same trainload of product across the Canada-US border to collect government credits was responding to **perverse incentives** — legal loopholes that made a fraudulent-spirited activity profitable. The common sentiment "just because it's legal doesn't make it okay" captures the intuition that legal compliance does not exhaust ethical obligation.
 
-- **Stephen Elop's** tenure as Nokia CEO illustrates a particularly vivid principal-agent problem. Elop was given management incentives that effectively rewarded him for driving down Nokia's share price, selling the core handset business to Microsoft (his former employer), and collecting a $25 million bonus — all while the shareholders and employees of Nokia bore the costs.
+- **Stephen Elop's** tenure as Nokia CEO illustrates a particularly vivid principal-agent problem. Elop was given management incentives that effectively rewarded him for driving down Nokia's share price, selling the core handset business to Microsoft (his former employer), and collecting a \$25 million bonus — all while the shareholders and employees of Nokia bore the costs.
 
 The ethical principle that emerges is this: **acting as a rational maximizer is ethically justified when it does not exploit asymmetric information or perverse incentives to the detriment of those who depend on you**. The principal-agent problem is, at its core, an ethics problem: it arises from the temptation to exploit informational advantages in ways that breach one's duties.
 

@@ -82,7 +82,7 @@ A financial plan is not a static document — it is built through a deliberate p
 
 Goals must be <strong>SMART</strong>: Specific, Measurable, Actionable, Realistic, and Timely. Short-term goals are to be achieved within the next year; medium-term goals fall between one and five years; long-term goals extend beyond five years. Specifying goals in SMART terms forces clarity and provides concrete benchmarks for progress.
 
-<em>Example:</em> Maeva wants to save $3,000 over two years for a trip to Europe after high school graduation. The goal is specific (a European trip), measurable ($3,000), action-oriented (she has researched costs, spoken to her manager about extra shifts, and discussed the plan with her parents), realistic (based on calculated earning capacity), and time-bound (two years). This is a textbook SMART goal.
+<em>Example:</em> Maeva wants to save \$3,000 over two years for a trip to Europe after high school graduation. The goal is specific (a European trip), measurable (\$3,000), action-oriented (she has researched costs, spoken to her manager about extra shifts, and discussed the plan with her parents), realistic (based on calculated earning capacity), and time-bound (two years). This is a textbook SMART goal.
 
 ### Step 2: Consider Your Current Financial Position
 
@@ -110,9 +110,9 @@ Spending behavior is shaped by psychological forces that are worth examining cri
 
 ## A Hypothetical Financial Plan: The Sampsons
 
-The course uses the Sampsons as a running case study. Dave and Sharon Sampson are 30 years old with two young children. Dave earns $54,000 per year; Sharon has recently started a part-time job earning $12,000 per year. They own a home valued at $250,000 with a $150,000 mortgage, carry a $2,000 credit card balance, and own two paid-off cars (one of which needs replacement soon).
+The course uses the Sampsons as a running case study. Dave and Sharon Sampson are 30 years old with two young children. Dave earns \$54,000 per year; Sharon has recently started a part-time job earning \$12,000 per year. They own a home valued at \$250,000 with a \$150,000 mortgage, carry a \$2,000 credit card balance, and own two paid-off cars (one of which needs replacement soon).
 
-Their identified goals include saving $500/month for a new car down payment of $5,000 within the next year, saving $300/month for their children's post-secondary education, and eventually saving for retirement (though they have not yet begun this). The Sampsons illustrate how real households must prioritize competing financial goals given limited income, existing debt, and a changing family situation. As course topics are introduced, the Sampsons' plan evolves to incorporate each new concept.
+Their identified goals include saving \$500/month for a new car down payment of \$5,000 within the next year, saving \$300/month for their children's post-secondary education, and eventually saving for retirement (though they have not yet begun this). The Sampsons illustrate how real households must prioritize competing financial goals given limited income, existing debt, and a changing family situation. As course topics are introduced, the Sampsons' plan evolves to incorporate each new concept.
 
 ---
 

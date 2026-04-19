@@ -585,13 +585,13 @@ One direction is trivial: if \( \Phi \) has a model \( \mathfrak{A} \), then so 
 
 A model of \( T \) is exactly a proper \( k \)-coloring of \( G \). Any finite subset \( T_0 \subseteq T \) involves only finitely many constant symbols \( c_{v_1}, \ldots, c_{v_m} \) and hence only finitely many edge constraints. The induced subgraph on \( \{v_1,\ldots,v_m\} \) is a finite subgraph of \( G \), which by assumption is \( k \)-colorable. That coloring gives a model of \( T_0 \). By compactness, \( T \) has a model — a proper \( k \)-coloring of all of \( G \). \(\square\)
 
-This result is significant: it means that for testing \( k \)-colorability, global infinite structure reduces to finitary local structure. It is equivalent to the fact that \( k \)-colorability is a **finitary** property — expressible by a first-order theory.
+This result is significant: it means that for testing \( k \)-colorability, global infinite structure reduces to finitary local structure. It is equivalent to the fact that \( k \)-colorability is a <strong>finitary</strong> property — expressible by a first-order theory.
 </div>
 
 <div class="example">
 <strong>Worked Example 2.4 (Non-standard analysis via compactness).</strong> One of the most striking applications of compactness is the construction of Abraham Robinson's non-standard real numbers.
 
-<strong>Claim.</strong> There exists an ordered field extension \( {}^*\!\mathbb{R} \supset \mathbb{R} \) satisfying all first-order sentences true in \( \mathbb{R} \) (the **transfer principle**), yet containing a positive infinitesimal \( \varepsilon \) — an element with \( 0 < \varepsilon < \frac{1}{n} \) for every \( n \in \mathbb{N} \).
+<strong>Claim.</strong> There exists an ordered field extension \( {}^*\!\mathbb{R} \supset \mathbb{R} \) satisfying all first-order sentences true in \( \mathbb{R} \) (the <strong>transfer principle</strong>), yet containing a positive infinitesimal \( \varepsilon \) — an element with \( 0 < \varepsilon < \frac{1}{n} \) for every \( n \in \mathbb{N} \).
 
 <strong>Construction via Compactness.</strong> Work in the signature \( \sigma_{\mathrm{of}} \cup \{c_r : r \in \mathbb{R}\} \cup \{\varepsilon\} \), where each \( c_r \) is a constant naming the real number \( r \), and \( \varepsilon \) is a new constant. Form the theory
 
@@ -631,7 +631,7 @@ A theory \( T \) is <strong>complete</strong> if for every sentence \( \varphi \
 </div>
 
 <div class="proof">
-We build \( B \) using a **Skolem hull** construction. Start with \( B_0 = X \cup \{f^{\mathfrak{A}}(\vec{a}) : f \in F, \vec{a} \in X^{\mathrm{ar}(f)}\} \) — the closure of \( X \) under all function symbols. Iterate: at each step \( n \), for each formula \( \varphi(x, \vec{y}) \) and each tuple \( \vec{a} \in B_n^{|\vec{y}|} \), if \( \mathfrak{A} \models \exists x\, \varphi(x, \vec{a}) \), pick a witness \( b \in A \) and add it to \( B_{n+1} \). Set \( B = \bigcup_n B_n \). The Tarski–Vaught criterion is satisfied by construction: any existential witness required is present. The size \( |B| \leq \max(|X|, |\sigma|, \aleph_0) = \kappa \) since at each step we add at most \( |\mathrm{For}(\sigma)| \cdot |B_n| = \kappa \) many elements.
+We build \( B \) using a <strong>Skolem hull</strong> construction. Start with \( B_0 = X \cup \{f^{\mathfrak{A}}(\vec{a}) : f \in F, \vec{a} \in X^{\mathrm{ar}(f)}\} \) — the closure of \( X \) under all function symbols. Iterate: at each step \( n \), for each formula \( \varphi(x, \vec{y}) \) and each tuple \( \vec{a} \in B_n^{|\vec{y}|} \), if \( \mathfrak{A} \models \exists x\, \varphi(x, \vec{a}) \), pick a witness \( b \in A \) and add it to \( B_{n+1} \). Set \( B = \bigcup_n B_n \). The Tarski–Vaught criterion is satisfied by construction: any existential witness required is present. The size \( |B| \leq \max(|X|, |\sigma|, \aleph_0) = \kappa \) since at each step we add at most \( |\mathrm{For}(\sigma)| \cdot |B_n| = \kappa \) many elements.
 </div>
 
 <div class="theorem">
@@ -986,7 +986,7 @@ This is again a primitive recursion schema, so \( m^n \) is primitive recursive.
 </div>
 
 <div class="definition">
-The class of <strong>partial recursive functions</strong> (equivalently, **Turing-computable** functions) is the smallest class extending the primitive recursive functions and closed under the \( \mu \)-operator (minimization): given total recursive \( g : \mathbb{N}^{k+1} \to \mathbb{N} \), the function \( f(\vec{n}) = \mu m\, [g(\vec{n},m)=0] \) (the least \( m \) such that \( g(\vec{n},m)=0 \), if it exists) is partial recursive.
+The class of <strong>partial recursive functions</strong> (equivalently, <strong>Turing-computable</strong> functions) is the smallest class extending the primitive recursive functions and closed under the \( \mu \)-operator (minimization): given total recursive \( g : \mathbb{N}^{k+1} \to \mathbb{N} \), the function \( f(\vec{n}) = \mu m\, [g(\vec{n},m)=0] \) (the least \( m \) such that \( g(\vec{n},m)=0 \), if it exists) is partial recursive.
 </div>
 
 **Church–Turing Thesis.** Every effectively computable function (in the informal sense) is partial recursive. This is a philosophical thesis, not a theorem, but is universally accepted.
@@ -1010,7 +1010,7 @@ Assign codes to symbols, then encode sequences by prime factorization or by pair
 (2) Enumerate all \( 2^n \) assignments.
 (3) Evaluate \( \varphi \) under each assignment (evaluation is a primitive recursive function of the formula and assignment).
 (4) Output "tautology" iff all evaluations are true.
-This is a terminating procedure — hence a total recursive algorithm. The set of Gödel numbers of propositional tautologies is **decidable** (recursive).
+This is a terminating procedure — hence a total recursive algorithm. The set of Gödel numbers of propositional tautologies is <strong>decidable</strong> (recursive).
 
 <strong>First-order validity is not decidable.</strong> Church (1936) and Turing (1936) independently proved that the set
 
@@ -1136,7 +1136,7 @@ and \( m = \ulcorner \theta(v_0) \urcorner \) is the Gödel number of the formul
 - If PA \( \vdash G \), then PA proves the formula with Gödel number \( \ulcorner G \urcorner \), so there exists a proof (a natural number \( n \) coding that proof). Hence \( \mathbb{N} \models \mathrm{Prov}(\ulcorner G \urcorner) \), and since PA is sound (every PA-provable arithmetic sentence is true in \( \mathbb{N} \)), PA \( \vdash \mathrm{Prov}(\ulcorner G \urcorner) \). But then PA \( \vdash \lnot G \) (by the biconditional), contradicting consistency.
 - If PA \( \vdash \lnot G \), then \( \mathbb{N} \models \lnot G \), meaning \( \mathbb{N} \models \mathrm{Prov}(\ulcorner G \urcorner) \), so there exists a natural number \( n \) coding a PA-proof of \( G \). But we just showed PA \( \not\vdash G \) — contradiction.
 
-Therefore PA is incomplete. Moreover, \( G \) is **true** in \( \mathbb{N} \): since PA \( \not\vdash G \), there is genuinely no proof of \( G \) in PA, so \( \mathbb{N} \models \lnot \mathrm{Prov}(\ulcorner G \urcorner) \), i.e., \( \mathbb{N} \models G \).
+Therefore PA is incomplete. Moreover, \( G \) is <strong>true</strong> in \( \mathbb{N} \): since PA \( \not\vdash G \), there is genuinely no proof of \( G \) in PA, so \( \mathbb{N} \models \lnot \mathrm{Prov}(\ulcorner G \urcorner) \), i.e., \( \mathbb{N} \models G \).
 </div>
 
 ### 5.4.2 Proof of the First Incompleteness Theorem
@@ -1184,7 +1184,7 @@ We showed in the First Incompleteness Theorem that \( T \not\vdash G \), where \
 T \vdash \mathrm{Con}(T) \to G.
 \]
 
-Specifically, the proof of "if \( T \vdash G \) then \( T \) is inconsistent" can itself be carried out in \( T \) (using the Hilbert–Bernays provability conditions, a.k.a. the **Löb conditions**):
+Specifically, the proof of "if \( T \vdash G \) then \( T \) is inconsistent" can itself be carried out in \( T \) (using the Hilbert–Bernays provability conditions, a.k.a. the <strong>Löb conditions</strong>):
 <ul>
   <li>(D1) If \( T \vdash \varphi \), then \( T \vdash \mathrm{Prov}_T(\ulcorner \varphi \urcorner) \).</li>
   <li>(D2) \( T \vdash \mathrm{Prov}_T(\ulcorner \varphi \urcorner) \land \mathrm{Prov}_T(\ulcorner \varphi \to \psi \urcorner) \to \mathrm{Prov}_T(\ulcorner \psi \urcorner) \).</li>
@@ -2058,7 +2058,7 @@ From <em>outside</em> (in the metatheory): \( M \) is a countable set. The "exte
 
 <strong>Formal statement.</strong> A set \( x \in M \) is:
 <ul>
-  <li><em>Internally countable</em> if \( (M, E) \models \exists f\, (\text{$f$ is a bijection from $\omega$ to $x$}) \).</li>
+  <li><em>Internally countable</em> if \( (M, E) \models \exists f\, (f \text{ is a bijection from } \omega \text{ to } x) \).</li>
   <li><em>Externally countable</em> if there is a bijection (in the real world) from \( \omega \) to \( \{a \in M : (a, x) \in E\} \).</li>
 </ul>
 The element \( \omega_1^M \in M \) is internally uncountable (the model proves so, since \( (M,E) \models \mathrm{ZFC} \) and ZFC proves \( \omega_1 \) is uncountable) but externally countable (a countable set \( M \) has all subsets countable from outside).
@@ -2163,7 +2163,7 @@ The full paper, "Uber formal unentscheidbare Satze der Principia Mathematica und
   <li>They do not imply that human mathematical reasoning transcends computation. The Lucas-Penrose argument for this conclusion is not accepted by most logicians.</li>
 </ul>
 
-The incompleteness theorems did not end Hilbert's program — they refined it. Gentzen's 1936 consistency proof of PA (using transfinite induction up to \( \varepsilon_0 \)) showed that a modest extension of finitistic methods is sufficient. The program of **reverse mathematics** (Friedman, Simpson) systematically determines which axioms are needed to prove which theorems — a far more refined foundational investigation than anything Hilbert originally envisioned.
+The incompleteness theorems did not end Hilbert's program — they refined it. Gentzen's 1936 consistency proof of PA (using transfinite induction up to \( \varepsilon_0 \)) showed that a modest extension of finitistic methods is sufficient. The program of <strong>reverse mathematics</strong> (Friedman, Simpson) systematically determines which axioms are needed to prove which theorems — a far more refined foundational investigation than anything Hilbert originally envisioned.
 </div>
 
 ---

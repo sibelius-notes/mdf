@@ -1660,6 +1660,7 @@ The **Kelvin–Helmholtz (KH) instability** arises at the interface between two 
 
 \[
 \omega = k\frac{\rho_1 U_1 + \rho_2 U_2}{\rho_1 + \rho_2} \pm \sqrt{gk\frac{\rho_1-\rho_2}{\rho_1+\rho_2} - k^2\frac{\rho_1\rho_2(U_1-U_2)^2}{(\rho_1+\rho_2)^2}}
+\]
 </div>
 
 The flow is unstable (\(\text{Im}(\omega) \neq 0\)) when the expression under the square root is negative:

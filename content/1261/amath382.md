@@ -145,7 +145,8 @@ E + S \underset{k_{-1}}{\stackrel{k_1}{\rightleftharpoons}} ES \xrightarrow{k_2}
 
 We have 4 species \((S, E, ES, P)\) and 3 reactions (forward binding, reverse binding, catalysis). The stoichiometric matrix (rows = species, columns = reactions \(r_1, r_{-1}, r_2\)) is:
 
-\[ S_{stoich} = \begin{pmatrix}
+\[
+S_{stoich} = \begin{pmatrix}
 -1 & 1 & 0 \\
 -1 & 1 & 1 \\
 1 & -1 & -1 \\
@@ -391,7 +392,8 @@ K_M^{app} = K_M\!\left(1 + \frac{[I]}{K_I}\right) = 2\left(1 + \frac{2}{1}\right
 
 The \(V_{max}\) is unchanged at \(10\,\mu\text{M/s}\). We now compare the rate-versus-substrate curves with and without the inhibitor at three representative substrate concentrations:
 
-\[ \begin{array}{c|c|c}
+\[
+\begin{array}{c|c|c}
 [S]\,(\text{mM}) & v \text{ (no inhibitor)} & v \text{ (with inhibitor)} \\ \hline
 2 & 10 \times 2/(2+2) = 5.00 & 10 \times 2/(6+2) = 2.50 \\
 6 & 10 \times 6/(2+6) = 7.50 & 10 \times 6/(6+6) = 5.00 \\
@@ -405,7 +407,8 @@ At \([S] = 6\,\text{mM}\) (the new \(K_M^{app}\)), the inhibited enzyme runs at 
 <div class="example">
 <strong>Example — Numerical Michaelis–Menten table</strong>: Suppose an enzyme has \(V_{max} = 10\,\mu\text{M/s}\) and \(K_M = 2\,\text{mM}\). Compute the rate \(v = V_{max}[S]/(K_M + [S])\) at several substrate concentrations:
 
-\[ \begin{array}{c|c|c}
+\[
+\begin{array}{c|c|c}
 [S]\,(\text{mM}) & v\,(\mu\text{M/s}) & \% V_{max} \\ \hline
 1 & 10 \times 1/(2+1) = 3.33 & 33\% \\
 2 & 10 \times 2/(2+2) = 5.00 & 50\% \\
@@ -460,7 +463,8 @@ More mechanistic descriptions of cooperativity are provided by the Monod–Wyman
 
 For \(n=1\): \(v = 20[S]/(5+[S])\). For \(n=2\): \(v = 20[S]^2/(25+[S]^2)\).
 
-\[ \begin{array}{c|c|c}
+\[
+\begin{array}{c|c|c}
 [S]\,(\mu\text{M}) & v \text{ (n=1)} & v \text{ (n=2)} \\ \hline
 2 & 20\times2/7 \approx 5.71 & 20\times4/29 \approx 2.76 \\
 5 & 20\times5/10 = 10.00 & 20\times25/50 = 10.00 \\
@@ -666,7 +670,7 @@ Bistability requires some form of positive feedback or cooperative nonlinearity.
 <div class="remark">
 <strong>Remark (Cell differentiation as bistability)</strong>: During embryonic development, a pluripotent stem cell must commit to one of several terminal lineages — muscle, neuron, liver cell, etc. At the molecular level, each lineage is characterised by a distinct gene expression program maintained by transcription factor networks with mutual positive feedback (e.g., two lineage-specifying factors each activate themselves and repress the other). The resulting bistable or multi-stable network means that the cell has multiple attractors, each corresponding to a different lineage.
 
-External signals (morphogens such as BMP, Wnt, or Notch ligands) act as bifurcation parameters: at low concentrations, only one attractor is accessible; as the morphogen concentration increases past a threshold (the bifurcation point), a new attractor appears and the original one destabilises. Once the cell crosses the separatrix and enters the new basin of attraction, it remains committed to that lineage even after the morphogen signal is withdrawn. This is the **epigenetic landscape** picture of Waddington (1957), now given a precise mathematical interpretation through bistability and bifurcation theory. Importantly, the irreversibility of differentiation is not a property of any single gene but of the network topology — a sobering reminder that modelling individual molecular interactions without the network context misses the essential biology.
+External signals (morphogens such as BMP, Wnt, or Notch ligands) act as bifurcation parameters: at low concentrations, only one attractor is accessible; as the morphogen concentration increases past a threshold (the bifurcation point), a new attractor appears and the original one destabilises. Once the cell crosses the separatrix and enters the new basin of attraction, it remains committed to that lineage even after the morphogen signal is withdrawn. This is the <strong>epigenetic landscape</strong> picture of Waddington (1957), now given a precise mathematical interpretation through bistability and bifurcation theory. Importantly, the irreversibility of differentiation is not a property of any single gene but of the network topology — a sobering reminder that modelling individual molecular interactions without the network context misses the essential biology.
 </div>
 
 ## 3.8 Separation of Time Scales
@@ -679,7 +683,7 @@ When a system contains processes occurring at very different rates, one can expl
 \[
 \frac{dx}{dt} = -x + y^2, \qquad \frac{dy}{dt} = -\frac{1}{\varepsilon}(y - \sin x),
 \]
-with \(\varepsilon \ll 1\) (e.g., \(\varepsilon = 0.01\)). The variable \(y\) is fast: it relaxes to \(y \approx \sin x\) on a time scale \(\varepsilon\), while \(x\) evolves slowly. Setting \(dy/dt \approx 0\) gives the **slow manifold** \(y^* = \sin x\). Substituting back: \(dx/dt \approx -x + \sin^2 x\). This single ODE governs the slow dynamics. For small \(x\), \(\sin x \approx x\), so \(dx/dt \approx -x + x^2\), a logistic-like equation with equilibria at \(x = 0\) (stable) and \(x = 1\) (unstable). The two-dimensional system has been reduced to a one-dimensional problem on the slow manifold, with a great reduction in complexity and a transparent qualitative picture.
+with \(\varepsilon \ll 1\) (e.g., \(\varepsilon = 0.01\)). The variable \(y\) is fast: it relaxes to \(y \approx \sin x\) on a time scale \(\varepsilon\), while \(x\) evolves slowly. Setting \(dy/dt \approx 0\) gives the <strong>slow manifold</strong> \(y^* = \sin x\). Substituting back: \(dx/dt \approx -x + \sin^2 x\). This single ODE governs the slow dynamics. For small \(x\), \(\sin x \approx x\), so \(dx/dt \approx -x + x^2\), a logistic-like equation with equilibria at \(x = 0\) (stable) and \(x = 1\) (unstable). The two-dimensional system has been reduced to a one-dimensional problem on the slow manifold, with a great reduction in complexity and a transparent qualitative picture.
 </div>
 
 <div class="remark">
@@ -865,7 +869,8 @@ f([L]) = \frac{[L]}{K_D + [L]} = \frac{[L]}{10 + [L]}.
 \]
 Computing at several concentrations:
 
-\[ \begin{array}{c|c}
+\[
+\begin{array}{c|c}
 [L]\,(\text{nM}) & f \\ \hline
 1 & 1/11 \approx 0.091 \\
 10 & 10/20 = 0.500 \\
@@ -1262,7 +1267,8 @@ The supercritical pitchfork models **spontaneous symmetry breaking**: for \(\mu 
 <div class="example">
 <strong>Example — Supercritical pitchfork: numerical bifurcation diagram</strong>: For \(\dot{x} = \mu x - x^3\), compute the fixed points and their stability for several values of \(\mu\):
 
-\[ \begin{array}{c|c|c}
+\[
+\begin{array}{c|c|c}
 \mu & \text{Fixed points} & \text{Stability} \\ \hline
 -2 & x^* = 0 & \text{Stable (eigenvalue } -2\text{)} \\
 -1 & x^* = 0 & \text{Stable (eigenvalue } -1\text{)} \\
@@ -1877,7 +1883,8 @@ For a network with \(m\) species and \(n\) reactions, the ODE system is \(\dot{\
 
 Given Jacobian \(J\) with \(\tau = \text{tr}(J)\) and \(\Delta = \det(J)\):
 
-\[ \begin{array}{ll}
+\[
+\begin{array}{ll}
 \Delta < 0: & \text{saddle (unstable)} \\
 \Delta > 0,\; \tau < 0,\; \tau^2 > 4\Delta: & \text{stable node} \\
 \Delta > 0,\; \tau < 0,\; \tau^2 < 4\Delta: & \text{stable spiral} \\

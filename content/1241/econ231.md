@@ -25,7 +25,7 @@ International economics examines how economic interactions between nations affec
 1. **International trade** — the exchange of goods, services, and factors of production across borders
 2. **International finance (open-economy macroeconomics)** — the exchange of financial assets across borders, balance of payments, and exchange rate determination
 
-The world economy is deeply integrated. In 2023, world merchandise exports exceeded $23 trillion. Even for large, relatively self-sufficient economies like the United States, exports and imports together constitute roughly 25–30% of GDP. For smaller, more open economies like Canada or Belgium, trade can exceed 60–80% of GDP.
+The world economy is deeply integrated. In 2023, world merchandise exports exceeded \$23 trillion. Even for large, relatively self-sufficient economies like the United States, exports and imports together constitute roughly 25–30% of GDP. For smaller, more open economies like Canada or Belgium, trade can exceed 60–80% of GDP.
 
 ## 1.2 Patterns of World Trade
 
@@ -417,7 +417,7 @@ Tariff-setting by independent governments leads to inefficiently high tariffs du
 
 ## 10.2 The Foreign Exchange Market
 
-The foreign exchange (forex) market is the largest financial market in the world by trading volume (~$7 trillion per day). Key participants:
+The foreign exchange (forex) market is the largest financial market in the world by trading volume (~\$7 trillion per day). Key participants:
 
 - **Commercial banks:** Primary dealers, facilitate transactions for clients
 - **Multinational corporations:** Hedge foreign currency exposure from trade and investment
@@ -480,7 +480,13 @@ In the long run, the exchange rate is anchored by **Purchasing Power Parity (PPP
 </div>
 
 <div class="theorem">
-<strong>Relative PPP:</strong> The rate of change of the exchange rate equals the inflation differential: \[ \frac{\dot{E}}{E} = \pi - \pi^* \] A country with higher inflation sees its currency depreciate at the same rate as its excess inflation.
+<strong>Relative PPP:</strong> The rate of change of the exchange rate equals the inflation differential:
+
+\[
+\frac{\dot{E}}{E} = \pi - \pi^*
+\]
+
+A country with higher inflation sees its currency depreciate at the same rate as its excess inflation.
 </div>
 
 PPP holds better as a long-run proposition than in the short run. Short-run deviations from PPP (real exchange rate fluctuations) are large and persistent, driven by nominal rigidities, non-traded goods, and demand shocks.
@@ -541,7 +547,7 @@ The Mundell-Fleming model extends the IS-LM framework to an open economy. Under 
 
 **Under fixed exchange rates:**
 - Monetary policy is fully ineffective: cannot sterilize; money supply adjusts endogenously to maintain the peg
-- Fiscal policy is fully effective: \( G \uparrow \to i$ upward pressure \to \text{capital inflows} \to \text{reserve accumulation} \to M \uparrow \to Y \uparrow \) — the money supply accommodates
+- Fiscal policy is fully effective: \(G \uparrow \to i \uparrow\) pressure, \(\to \text{capital inflows} \to \text{reserve accumulation} \to M \uparrow \to Y \uparrow\) — the money supply accommodates
 
 <div class="theorem">
 <strong>Mundell-Fleming Trilemma (Impossible Trinity):</strong> A country cannot simultaneously have (1) free capital mobility, (2) a fixed exchange rate, and (3) an independent monetary policy. It can choose at most two of the three.
@@ -563,7 +569,7 @@ This dynamic explains the ERM crisis of 1992 (UK, Italy), the Asian financial cr
 ## 13.1 Historical Overview
 
 - **Gold Standard (pre-1914):** Exchange rates fixed to gold. Automatic adjustment via the price-specie-flow mechanism. Limited monetary policy independence.
-- **Bretton Woods System (1944–1971):** Dollar pegged to gold at $35/oz; other currencies pegged to the dollar. IMF provided short-term balance of payments support. Collapsed when the United States could no longer maintain the gold peg.
+- **Bretton Woods System (1944–1971):** Dollar pegged to gold at \$35/oz; other currencies pegged to the dollar. IMF provided short-term balance of payments support. Collapsed when the United States could no longer maintain the gold peg.
 - **Post-Bretton Woods (1971–present):** Mixed regime. Major currencies (USD, EUR, JPY, GBP) float. Many emerging market and developing economies maintain managed floats or pegs to the dollar or euro.
 
 ## 13.2 The IMF and International Monetary Policy Coordination

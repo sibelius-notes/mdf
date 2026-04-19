@@ -754,13 +754,13 @@ The fundamental group is not just an invariant of spaces — it is **functorial*
 
 <div class="definition">
 
-<strong>Definition 6.7.</strong> A continuous map \(f: (X, a) \to (Y, b)\) (with \(f(a) = b\)) induces a group homomorphism \(f_<em>: \pi_1(X, a) \to \pi_1(Y, b)\) given by \(f_</em>([\alpha]) = [f \circ \alpha]\).
+<strong>Definition 6.7.</strong> A continuous map \(f: (X, a) \to (Y, b)\) (with \(f(a) = b\)) induces a group homomorphism \(f_*: \pi_1(X, a) \to \pi_1(Y, b)\) given by \(f_*([\alpha]) = [f \circ \alpha]\).
 
 </div>
 
 <div class="theorem">
 
-<strong>Theorem 6.8.</strong> We have \(\mathrm{id}_<em> = \mathrm{id}\) and \((g \circ f)_</em> = g_<em> \circ f_</em>\). Consequently, if \(f: (X, a) \to (Y, b)\) is a homeomorphism, then \(f_*\) is a group isomorphism.
+<strong>Theorem 6.8.</strong> We have \(\mathrm{id}_* = \mathrm{id}\) and \((g \circ f)_* = g_* \circ f_*\). Consequently, if \(f: (X, a) \to (Y, b)\) is a homeomorphism, then \(f_*\) is a group isomorphism.
 
 </div>
 
@@ -848,7 +848,7 @@ The computation \(\pi_1(S^1) \cong \mathbb{Z}\) has remarkable consequences.
 
 <div class="proof">
 
-<strong>Proof.</strong> If \(r: D^2 \to S^1\) were a retraction, then \(r_<em> \circ i_</em>: \pi_1(S^1) \to \pi_1(S^1)\) would be the identity. But \(i_<em>: \pi_1(S^1) \to \pi_1(D^2)\) maps \(\mathbb{Z}\) to \(0\), so \(r_</em> \circ i_*\) is the zero map — a contradiction. ∎
+<strong>Proof.</strong> If \(r: D^2 \to S^1\) were a retraction, then \(r_* \circ i_*: \pi_1(S^1) \to \pi_1(S^1)\) would be the identity. But \(i_*: \pi_1(S^1) \to \pi_1(D^2)\) maps \(\mathbb{Z}\) to \(0\), so \(r_* \circ i_*\) is the zero map — a contradiction. ∎
 
 </div>
 
@@ -900,7 +900,7 @@ The free product satisfies the universal property: for any group \(H\) and homom
 
 <div class="example">
 
-<strong>Example 8.2.</strong> The free product \(G <em> H\) consists of alternating strings of non-identity elements from \(G\) and \(H\): \(\emptyset, a_1, b_1, a_1 b_1, b_1 a_1, a_1 b_1 a_2, \ldots\) It is generally non-abelian even if \(G\) and \(H\) are abelian: in \(\mathbb{Z} </em> \mathbb{Z}\), the element \(ab\) is not equal to \(ba\).
+<strong>Example 8.2.</strong> The free product \(G * H\) consists of alternating strings of non-identity elements from \(G\) and \(H\): \(\emptyset, a_1, b_1, a_1 b_1, b_1 a_1, a_1 b_1 a_2, \ldots\) It is generally non-abelian even if \(G\) and \(H\) are abelian: in \(\mathbb{Z} * \mathbb{Z}\), the element \(ab\) is not equal to \(ba\).
 
 </div>
 

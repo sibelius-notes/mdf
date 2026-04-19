@@ -573,7 +573,7 @@ The shift simply discards the first symbol and advances all remaining symbols by
 <ol>
 <li><strong>Dense periodic points:</strong> The periodic sequences (sequences that eventually repeat) are dense in \( \Sigma_2 \). Any binary sequence can be approximated to arbitrary precision by a periodic binary sequence.</li>
 <li><strong>SDIC:</strong> If \( \mathbf{b} \) and \( \mathbf{c} \) differ in position \( k \), then after \( k \) shifts they differ in position 0, so \( d(S^k(\mathbf{b}), S^k(\mathbf{c})) \geq 1/2 \), regardless of how close \( \mathbf{b} \) and \( \mathbf{c} \) were initially.</li>
-<li><strong>Transitivity:</strong> There exists a single sequence \( \mathbf{b}^<em> \in \Sigma_2 \) whose orbit \( \{ S^n(\mathbf{b}^</em>) \}_{n \geq 0} \) is dense in \( \Sigma_2 \).</li>
+<li><strong>Transitivity:</strong> There exists a single sequence \( \mathbf{b}^* \in \Sigma_2 \) whose orbit \( \{ S^n(\mathbf{b}^*) \}_{n \geq 0} \) is dense in \( \Sigma_2 \).</li>
 </ol>
 </div>
 
@@ -682,13 +682,13 @@ The <strong>Newton-Raphson method</strong> for finding roots of a function \( f(
 x_{n+1} = N(x_n) = x_n - \frac{f(x_n)}{f'(x_n)}.
 \]
 
-This defines a discrete dynamical system with the iteration function \( N(x) \). The zeros \( x^<em> \) of \( f \) are precisely the fixed points of \( N \): \( N(x^</em>) = x^<em> - 0 = x^</em> \). The derivative of \( N \) at a simple zero is
+This defines a discrete dynamical system with the iteration function \( N(x) \). The zeros \( x^* \) of \( f \) are precisely the fixed points of \( N \): \( N(x^*) = x^* - 0 = x^* \). The derivative of \( N \) at a simple zero is
 
 \[
-N'(x^<em>) = 1 - \frac{(f'(x^</em>))^2 - f(x^<em>) f''(x^</em>)}{(f'(x^*))^2} = 0,
+N'(x^*) = 1 - \frac{(f'(x^*))^2 - f(x^*) f''(x^*)}{(f'(x^*))^2} = 0,
 \]
 
-showing that every simple zero of \( f \) is a <em>super-attracting</em> fixed point of \( N \) (derivative exactly zero). This is why Newton's method converges quadratically: the error at each step satisfies \( |x_{n+1} - x^<em>| \approx C |x_n - x^</em>|^2 \).
+showing that every simple zero of \( f \) is a <em>super-attracting</em> fixed point of \( N \) (derivative exactly zero). This is why Newton's method converges quadratically: the error at each step satisfies \( |x_{n+1} - x^*| \approx C |x_n - x^*|^2 \).
 
 ## Newton's Method in the Complex Plane and Julia Sets
 
@@ -808,7 +808,7 @@ d(f(x), f(y)) \leq C \cdot d(x, y)
 \]
 for all \( x, y \in X \).</div>
 
-<div class="theorem"><strong>Banach Contraction Mapping Theorem.</strong> Let \( (X, d) \) be a complete metric space, and let \( f : X \to X \) be a contraction mapping with ratio \( C < 1 \). Then \( f \) has a unique fixed point \( x^<em> \in X \), and for any starting point \( x_0 \), the iterates \( x_n = f^n(x_0) \) converge to \( x^</em> \).</div>
+<div class="theorem"><strong>Banach Contraction Mapping Theorem.</strong> Let \( (X, d) \) be a complete metric space, and let \( f : X \to X \) be a contraction mapping with ratio \( C < 1 \). Then \( f \) has a unique fixed point \( x^* \in X \), and for any starting point \( x_0 \), the iterates \( x_n = f^n(x_0) \) converge to \( x^* \).</div>
 
 ## Definition of an IFS
 

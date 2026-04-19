@@ -547,7 +547,7 @@ We also need to estimate \(\xi\), \(\beta\), and \(u\) (the threshold). Invertin
 
 **Application — S&P 500:** Using the POT method on 1955–2007 data, EVT estimates the probability of a daily loss exceeding 8% at about 0.015%, corresponding to once per roughly 6637 days (~26.5 years). Indeed, in the 53-year history shown, such an event occurred twice (Oct 19 and Oct 26, 1987).
 
-**Application — Hurricane losses:** Using 179 US hurricane/tropical storm losses since 1940 (adjusted to 2017 values, in $millions), fitting a GPD with threshold $20,000M using MLE gives \(\hat{\xi} = 0.75\) (SE 0.41) and \(\hat{\beta} = 7005\) (SE 3066). GPD-based estimates:
+**Application — Hurricane losses:** Using 179 US hurricane/tropical storm losses since 1940 (adjusted to 2017 values, in \$millions), fitting a GPD with threshold \$20,000M using MLE gives \(\hat{\xi} = 0.75\) (SE 0.41) and \(\hat{\beta} = 7005\) (SE 3066). GPD-based estimates:
 
 | \(\alpha\) | Emp. VaR | Emp. ES | GPD VaR | GPD ES |
 |-----------|----------|---------|---------|--------|

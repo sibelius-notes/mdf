@@ -23,7 +23,7 @@ subjects: "ECON"
 Before engaging with trade models, it is useful to establish the empirical regularities that any successful theory must account for.
 
 **Volume and composition:**
-- World merchandise exports exceeded $23 trillion in 2022. Manufactures dominate (~70%), followed by fuels (~12%) and agricultural products (~9%).
+- World merchandise exports exceeded \$23 trillion in 2022. Manufactures dominate (~70%), followed by fuels (~12%) and agricultural products (~9%).
 - Trade has grown faster than output for most of the post-war period, a phenomenon called *trade deepening*. The ratio of world trade to GDP roughly tripled between 1960 and 2010.
 - **Intra-industry trade** is large among high-income countries: the United States simultaneously exports and imports automobiles, chemicals, and machinery. The Grubel-Lloyd index for manufactured goods among OECD members is typically above 0.5.
 
@@ -220,7 +220,13 @@ The Heckscher-Ohlin model (H-O, 1919/1933) explains trade by differences in fact
 The HOV model extends H-O to many countries, goods, and factors. Instead of predicting which goods are traded, it predicts the *factor content of trade*:
 
 <div class="theorem">
-<strong>HOV Theorem:</strong> Let \( F_{ik} \) be the factor content of country \( k \)'s net exports (the factor inputs embodied in exports minus those in imports). Then: \[ F_{ik} = V_{ik} - s_k V_{iw} \] where \( V_{ik} \) is country \( k \)'s endowment of factor \( i \), \( s_k \) is country \( k \)'s share of world GDP, and \( V_{iw} \) is the world endowment of factor \( i \). A capital-abundant country (\( V_{Kk} > s_k V_{Kw} \)) should export capital services.
+<strong>HOV Theorem:</strong> Let \( F_{ik} \) be the factor content of country \( k \)'s net exports (the factor inputs embodied in exports minus those in imports). Then:
+
+\[
+F_{ik} = V_{ik} - s_k V_{iw}
+\]
+
+where \( V_{ik} \) is country \( k \)'s endowment of factor \( i \), \( s_k \) is country \( k \)'s share of world GDP, and \( V_{iw} \) is the world endowment of factor \( i \). A capital-abundant country (\( V_{Kk} > s_k V_{Kw} \)) should export capital services.
 </div>
 
 ## 4.3 Davis and Weinstein (2001) — Testing HOV with OECD Data

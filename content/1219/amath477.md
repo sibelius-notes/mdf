@@ -105,11 +105,11 @@ The **characteristic function** is \(\phi_X(t) = E[e^{itX}]\), which always exis
 
 The **cumulant generating function** is \(\log M_X(t) = \sum_{n=1}^\infty \kappa_n t^n/n!\). The cumulants \(\kappa_n\) are related to moments: \(\kappa_1 = E[X]\), \(\kappa_2 = \text{Var}(X)\), and higher cumulants measure departure from Gaussianity. For a Gaussian, all cumulants of order \(\ge 3\) are zero.
 
-![Characteristic functions $\varphi(t)=E[e^{itX}]$: Normal (Gaussian decay $e^{-t^2/2}$, blue) vs Cauchy (exponential decay $e^{-|t|}$, red), in linear and log scale.](/pics/amath477/characteristic_functions.png)
+![Characteristic functions phi(t)=E[e^(itX)]: Normal (Gaussian decay e^(-t^2/2), blue) vs Cauchy (exponential decay e^(-|t|), red), in linear and log scale.](/pics/amath477/characteristic_functions.png)
 
 ## Key Continuous Distributions
 
-![Standard Normal $N(0,1)$: PDF $\phi(x)$ with 68% and 95% shaded regions (left); CDF $\Phi(x)$ with key values marked (right).](/pics/amath477/normal_pdf_cdf.png)
+![Standard Normal \(N(0,1)\): PDF \(\phi(x)\) with 68% and 95% shaded regions (left); CDF \(\Phi(x)\) with key values marked (right).](/pics/amath477/normal_pdf_cdf.png)
 
 The **Exponential** distribution with rate \(\lambda > 0\) has PDF \(p(x) = \lambda e^{-\lambda x}\) for \(x \ge 0\). Its mean is \(1/\lambda\) and variance \(1/\lambda^2\).
 
@@ -309,7 +309,7 @@ P(|X_n - X| > \varepsilon) \le \frac{E[(X_n-X)^2]}{\varepsilon^2} \to 0.
 
 ## Central Limit Theorem
 
-![CLT illustration: standardized sums of $n$ Uniform$[0,1]$ variables (blue histograms) converging to $N(0,1)$ (red curve) for $n=1,4,16,64$.](/pics/amath477/clt_convergence.png)
+![CLT illustration: standardized sums of n Uniform [0,1] variables (blue histograms) converging to N(0,1) (red curve) for n=1,4,16,64.](/pics/amath477/clt_convergence.png)
 
 <div class="theorem">
 <strong>Central Limit Theorem.</strong> Let \(X_1, X_2, \ldots\) be i.i.d. with mean \(\mu\) and variance \(\sigma^2 < \infty\). Then

@@ -418,7 +418,7 @@ Estimating the SCC requires:
 3. A **damage function**: relating temperature change to economic losses.
 4. A **discount rate**: how to weigh future losses against present costs.
 
-**Discount rate controversy**: choosing a 5% vs. 1% discount rate dramatically changes the SCC. Nordhaus (2018 Nobel Prize) uses ~4%: SCC ~$40/tonne. Stern Review (2006) uses ~1.4%: SCC ~$85–$350/tonne. The choice reflects ethical judgements about intergenerational equity.
+**Discount rate controversy**: choosing a 5% vs. 1% discount rate dramatically changes the SCC. Nordhaus (2018 Nobel Prize) uses ~4%: SCC ~\$40/tonne. Stern Review (2006) uses ~1.4%: SCC ~\$85–\$350/tonne. The choice reflects ethical judgements about intergenerational equity.
 
 ## 9.2 Integrated Assessment Models (IAMs)
 

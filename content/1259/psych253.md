@@ -334,9 +334,9 @@ Leon Festinger's (1957) **cognitive dissonance theory** is one of the most gener
 <strong>Cognitive Dissonance:</strong> The discomfort experienced when holding two or more cognitions that are psychologically inconsistent or when one's behavior conflicts with one's self-image. The theory predicts that people will change attitudes, add new cognitions, or trivialize the importance of conflicting cognitions to reduce this discomfort.
 </div>
 
-The landmark empirical demonstration was Festinger and Carlsmith's (1959) **induced compliance** study. Participants performed an extremely boring task (turning pegs on a board for an hour). Afterward, half were offered $20 and the other half $1 to tell the next "participant" (a confederate) that the task had been interesting. Later, all rated their actual enjoyment of the task.
+The landmark empirical demonstration was Festinger and Carlsmith's (1959) **induced compliance** study. Participants performed an extremely boring task (turning pegs on a board for an hour). Afterward, half were offered \$20 and the other half \$1 to tell the next "participant" (a confederate) that the task had been interesting. Later, all rated their actual enjoyment of the task.
 
-Counterintuitively, $1 participants rated the task as significantly more enjoyable than $20 participants. The logic is that $20 provides sufficient external justification for lying — the large payment explains the behavior — so no dissonance arises and attitudes need not change. One dollar provides insufficient justification, creating dissonance ("I said it was fun, but I have no good reason for lying"), which is resolved by genuinely persuading oneself that the task was not so bad.
+Counterintuitively, \$1 participants rated the task as significantly more enjoyable than \$20 participants. The logic is that \$20 provides sufficient external justification for lying — the large payment explains the behavior — so no dissonance arises and attitudes need not change. One dollar provides insufficient justification, creating dissonance ("I said it was fun, but I have no good reason for lying"), which is resolved by genuinely persuading oneself that the task was not so bad.
 
 Beyond induced compliance, dissonance arises in other contexts:
 

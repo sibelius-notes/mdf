@@ -132,7 +132,7 @@ The **collective model** (Chiappori, 1988) treats the household as the result of
 Social assistance creates an implicit tax on work through the benefit reduction rate (BRR). If benefits are reduced by \$0.50 for every dollar earned, the effective wage is \( w(1 - 0.50) = 0.50w \), and the budget constraint becomes flatter once the person works.
 
 <div class="example">
-<strong>Budget Constraint with Social Assistance:</strong> Consider a person with a weekly time endowment of 100 hours, a market wage of $15/hour, and welfare benefits of $500/week (reduced at a 70% rate once earnings exceed $200/week). The budget constraint has three segments: (1) full welfare at zero hours of work; (2) a kink at $200 earnings where the BRR kicks in; (3) a flatter segment until benefits reach zero. The effective net wage on segment (2) is $15 × (1 − 0.70) = $4.50/hour. Many individuals optimise at the kink point — a <em>poverty trap</em>.
+<strong>Budget Constraint with Social Assistance:</strong> Consider a person with a weekly time endowment of 100 hours, a market wage of \$15/hour, and welfare benefits of \$500/week (reduced at a 70% rate once earnings exceed \$200/week). The budget constraint has three segments: (1) full welfare at zero hours of work; (2) a kink at \$200 earnings where the BRR kicks in; (3) a flatter segment until benefits reach zero. The effective net wage on segment (2) is \$15 × (1 − 0.70) = \$4.50/hour. Many individuals optimise at the kink point — a <em>poverty trap</em>.
 </div>
 
 The labour supply distortion of social assistance can be measured by the **elasticity of employment** with respect to the benefit level. Canadian evidence (Fortin, Truchon, and Beausejour) finds elasticities of −0.3 to −0.6: a 10% increase in welfare benefits reduces employment among eligible groups by 3–6%.
@@ -141,7 +141,7 @@ The labour supply distortion of social assistance can be measured by the **elast
 
 Employment Insurance (EI) creates two distortions: reduced search intensity while unemployed (longer unemployment spells) and altered entry and exit from seasonal employment patterns.
 
-**Benefit formula:** EI replaces 55% of insured earnings, up to a maximum of approximately $60,000 in insured earnings per year (2024 values). The minimum qualifying period is typically 420–700 hours of insurable employment, with lower thresholds in high-unemployment regions.
+**Benefit formula:** EI replaces 55% of insured earnings, up to a maximum of approximately \$60,000 in insured earnings per year (2024 values). The minimum qualifying period is typically 420–700 hours of insurable employment, with lower thresholds in high-unemployment regions.
 
 **Empirical evidence on duration:** Canadian studies (Christofides and McKenna, 1996; Fortin and Lacroix, 1997) find that hazard rates out of unemployment spike just before benefits expire — a "spike" consistent with duration dependence induced by EI. Benefit exhaustion concentrates job acceptance, suggesting that EI induces some workers to remain unemployed while benefits are available.
 
@@ -301,7 +301,7 @@ The compensating differential for fatality risk provides an estimate of the **Va
 VSL = \frac{dw/dp}{\Delta p} = \frac{\text{wage premium per unit of risk}}{\text{risk increase}}
 \]
 
-If 1,000 workers each accept a $500/year wage premium to bear a 1/1,000 increase in annual fatality risk, the VSL equals $500 × 1,000 = $500,000. More modern studies using panel data and matched worker-firm datasets find VSL estimates in the range of $5–15 million (2020 USD), forming the empirical foundation for cost-benefit analysis of safety regulations.
+If 1,000 workers each accept a \$500/year wage premium to bear a 1/1,000 increase in annual fatality risk, the VSL equals \$500 × 1,000 = \$500,000. More modern studies using panel data and matched worker-firm datasets find VSL estimates in the range of \$5–15 million (2020 USD), forming the empirical foundation for cost-benefit analysis of safety regulations.
 
 <div class="remark">
 <strong>Limitations of the compensating differentials model:</strong> The model assumes workers have full information about job risks, can freely move between jobs, and are in a competitive market. Empirical tests face severe omitted variable bias: risky jobs often have lower wages because they disproportionately employ low-skill workers. Correcting for worker heterogeneity typically eliminates or reverses the raw risk-wage correlation, making hedonic estimates sensitive to specification.

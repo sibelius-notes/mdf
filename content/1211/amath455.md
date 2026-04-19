@@ -27,7 +27,8 @@ To make this study mathematically precise, we employ **mathematical models**. Th
 
 A control system of the form
 
-\[\begin{align}
+\[
+\begin{align}
 x'(t) &= A(t)x(t) + B(t)u(t), \tag{1.1a} \\
 y(t) &= C(t)x(t) + D(t)u(t), \tag{1.1b}
 \end{align}
@@ -39,7 +40,8 @@ is called a **linear time-varying (LTV) system**. Here \(x(t) \in \mathbb{R}^n\)
 
 A special and especially important case arises when all coefficient matrices are constant. An **linear time-invariant (LTI) system** has the form
 
-\[\begin{align}
+\[
+\begin{align}
 x'(t) &= Ax(t) + Bu(t), \tag{1.2a} \\
 y(t) &= Cx(t) + Du(t), \tag{1.2b}
 \end{align}
@@ -47,7 +49,8 @@ y(t) &= Cx(t) + Du(t), \tag{1.2b}
 
 where \(A\), \(B\), \(C\), \(D\) are constant matrices of appropriate dimensions. We often write the system in the compact form
 
-\[\begin{align}
+\[
+\begin{align}
 x' &= Ax + Bu, \tag{1.3a} \\
 y &= Cx + Du, \tag{1.3b}
 \end{align}
@@ -102,7 +105,8 @@ or simply denote it by the quadruple \((A, B, C, D)\). LTI systems will be our p
 
 More generally, a continuous-time control system can be described by a system of ordinary differential equations with inputs and outputs of the form
 
-\[\begin{align}
+\[
+\begin{align}
 x' &= f(x, u), \tag{1.4a} \\
 y &= h(x, u), \tag{1.4b}
 \end{align}
@@ -120,7 +124,8 @@ are potentially nonlinear functions defining the **state equation** (1.4a) and t
 
 A general nonlinear system can be difficult to analyze directly. A standard technique is **linearization**, which aims to approximate the behavior of the nonlinear system (1.4) in some neighborhood of a given solution. Let \((\bar{x}(t), \bar{u}(t))\) be a solution to (1.4), meaning this pair of functions satisfies the state equation. The linearization of (1.4) around the trajectory \((\bar{x}(t), \bar{u}(t))\) is the LTV system
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 x' &= A(t)x + B(t)u, \\
 y &= C(t)x + D(t)u,
 \end{aligned}
@@ -148,7 +153,8 @@ The Jacobians \(\frac{\partial f}{\partial u}\), \(\frac{\partial h}{\partial x}
 
 A particularly important special case of the above is linearization around an **equilibrium point**. A pair of vectors \((x^*, u^*) \in \mathbb{R}^n \times \mathbb{R}^k\) is said to be an **equilibrium point (EP)** of the system (1.4) if \(f(x^*, u^*) = 0\). At an equilibrium, the state does not change if the input is held fixed at \(u^*\). The linearization of (1.4) around the equilibrium \((x^*, u^*)\) yields the LTI system
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 x' &= Ax + Bu, \\
 y &= Cx + Du,
 \end{aligned}
@@ -413,7 +419,8 @@ u(t) = -B^T e^{A^T(t_1-t)} W^{-1}(t_1) \left[e^{At_1}x_0 - x_1\right].
 
 Substituting into the solution formula and recalling the definition of \(W(t_1)\),
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 x(t_1) &= e^{At_1}x_0 + \int_0^{t_1} e^{A(t_1-\tau)} B \left[-B^T e^{A^T(t_1-\tau)} W^{-1}(t_1)(e^{At_1}x_0 - x_1)\right] d\tau \\
 &= e^{At_1}x_0 - \left[\int_0^{t_1} e^{A(t_1-\tau)} BB^T e^{A^T(t_1-\tau)}\,d\tau\right] W^{-1}(t_1)(e^{At_1}x_0 - x_1) \\
 &= e^{At_1}x_0 - W(t_1)W^{-1}(t_1)(e^{At_1}x_0 - x_1) = x_1.
@@ -552,7 +559,8 @@ We obtain the transformed LTI system \((PAP^{-1}, PB)\).
 
 *Proof.* Observe that
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 \mathcal{C}(PAP^{-1}, PB) &= \begin{bmatrix} PB & PAP^{-1} \cdot PB & \cdots & (PAP^{-1})^{n-1} PB \end{bmatrix} \\
 &= \begin{bmatrix} PB & PAB & \cdots & PA^{n-1}B \end{bmatrix} \\
 &= P\begin{bmatrix} B & AB & \cdots & A^{n-1}B \end{bmatrix} = P\,\mathcal{C}(A,B).
@@ -577,7 +585,8 @@ PAP^{-1} = \begin{pmatrix} A_c & A_{12} \\ 0 & A_u \end{pmatrix}, \qquad PB = \b
 
 where \(A_c \in \mathbb{R}^{n_1 \times n_1}\) and \(B_c \in \mathbb{R}^{n_1 \times k}\). Writing the new state as \(z = (z_1^T, z_2^T)^T\) with \(z_1 \in \mathbb{R}^{n_1}\) and \(z_2 \in \mathbb{R}^{n-n_1}\), the system in the new coordinates becomes
 
-\[\begin{align}
+\[
+\begin{align}
 z_1' &= A_c z_1 + A_{12} z_2 + B_c u, \tag{4.3a} \\
 z_2' &= A_u z_2. \tag{4.3b}
 \end{align}
@@ -690,7 +699,8 @@ The preceding lectures established the theory of controllability, which concerns
 
 Consider the LTI system \( (A, B, C, D) \), that is,
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 x'(t) &= Ax(t) + Bu(t) \\
 y(t) &= Cx(t) + Du(t),
 \end{aligned}
@@ -714,7 +724,8 @@ Ce^{At}x(0) = y(t) - \int_0^t Ce^{A(t-\tau)}Bu(\tau)\,d\tau - Du(t).
 
 The right-hand side is a known signal whenever \( u(\cdot) \) and \( y(\cdot) \) are known. Hence the observability problem reduces to determining \( x(0) \) from the signal \( Ce^{At}x(0) \) on the interval \( [0, t_1] \). This is entirely equivalent to observability of the autonomous system
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 x'(t) &= Ax(t) \\
 y(t) &= Cx(t),
 \end{aligned}
@@ -852,7 +863,8 @@ P = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}
 
 is invertible. Under the state transformation \( z = Px \), the LTI system \( (A, B, C, D) \) becomes
 
-\[\begin{align}
+\[
+\begin{align}
 z'(t) &= PAP^{-1}z(t) + PBu(t) \\
 y(t) &= CP^{-1}z(t) + Du(t),
 \end{aligned}\tag{5.1}
@@ -920,7 +932,8 @@ Consider a signal \( x : [0, \infty) \to \mathbb{R}^n \). The **Laplace transfor
 
 where \( s \) is a complex variable. The Laplace transform thus maps a time-domain signal to a function of the complex variable \( s \). Several standard pairs are frequently used:
 
-\[\begin{align}
+\[
+\begin{align}
 \mathcal{L}[t^k] &= \frac{k!}{s^{k+1}}, \quad k = 0, 1, 2, \ldots \\
 \mathcal{L}[e^{at}] &= \frac{1}{s-a} \\
 \mathcal{L}[\sin(\omega t)] &= \frac{\omega}{s^2 + \omega^2} \\
@@ -930,7 +943,8 @@ where \( s \) is a complex variable. The Laplace transform thus maps a time-doma
 
 The transform of derivatives, which is the key property for analyzing differential equations, is given by
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 \mathcal{L}[x'(t)] &= s\hat{x}(s) - x(0) \\
 \mathcal{L}[x''(t)] &= s^2\hat{x}(s) - s\,x(0) - x'(0).
 \end{aligned}
@@ -942,7 +956,8 @@ The appearance of the initial condition \( x(0) \) in the first formula is cruci
 
 Consider the LTI system \( (A, B, C, D) \):
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 x'(t) &= Ax(t) + Bu(t) \\
 y(t) &= Cx(t) + Du(t).
 \end{aligned}
@@ -950,7 +965,8 @@ y(t) &= Cx(t) + Du(t).
 
 Taking the Laplace transform of both equations and applying the derivative rule yields
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 s\hat{x}(s) - x(0) &= A\hat{x}(s) + B\hat{u}(s) \\
 \hat{y}(s) &= C\hat{x}(s) + D\hat{u}(s).
 \end{aligned}
@@ -1060,7 +1076,8 @@ g(t) = C\int_0^t e^{A(t-\tau)}B\,\delta(\tau)\,d\tau + D\delta(t) = Ce^{At}B + D
 
 The general output can then be interpreted as a superposition of impulse responses scaled by the input values:
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 y(t) &= C\int_0^t e^{A(t-\tau)}Bu(\tau)\,d\tau + Du(t) \\
 &= \int_0^t g(t-\tau)u(\tau)\,d\tau \\
 &= (g * u)(t).
@@ -1369,7 +1386,8 @@ u(t) = e^{st}, \quad s = \sigma + j\omega \in \mathbb{C}.
 
 Note that sinusoidal inputs are special cases; for instance, \( \cos(\omega t) = (e^{j\omega t} + e^{-j\omega t})/2 \). Starting from the variation-of-constants formula and assuming \( s \notin \lambda(A) \) (i.e., \( s \) is not an eigenvalue of \( A \), one computes the state trajectory:
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 x(t) &= e^{At}x(0) + \int_0^t e^{A(t-\tau)}Be^{s\tau}\,d\tau \\
 &= e^{At}x(0) + e^{At}(sI - A)^{-1}\left[e^{(sI-A)t} - I\right]B \\
 &= e^{At}[x(0) - (sI - A)^{-1}B] + (sI - A)^{-1}Be^{st}.
@@ -1442,7 +1460,8 @@ The frequency response can be measured experimentally by sweeping through a rang
 
 Bode plots are particularly powerful because of the following multiplicative property. For a transfer function \( G(s) = G_1(s)G_2(s)/G_3(s) \), we have
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 \log|G(j\omega)| &= \log|G_1(j\omega)| + \log|G_2(j\omega)| - \log|G_3(j\omega)| \\
 \angle G(j\omega) &= \angle G_1(j\omega) + \angle G_2(j\omega) - \angle G_3(j\omega).
 \end{aligned}
@@ -1559,7 +1578,8 @@ G(j\omega) = k \frac{(j\omega - z_1)(j\omega - z_2)\cdots(j\omega - z_r)}{(j\ome
 
 Taking logarithms and arguments, we obtain
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 \log |G(j\omega)| &= \log k + \sum_{i=1}^{r} |j\omega - z_i| - \sum_{i=1}^{n} |j\omega - p_i|, \\
 \angle G(j\omega) &= \sum_{i=1}^{r} \angle(j\omega - z_i) - \sum_{i=1}^{n} \angle(j\omega - p_i).
 \end{aligned}
@@ -1591,7 +1611,8 @@ The proof follows from the observation that if \((A_1, B_1, C_1, D_1)\) is a min
 
 Let \(u(t) = e^{st}u_0\) be an exponential input with \(u_0 \in \mathbb{R}\) and let \(s \neq \lambda(A)\) (i.e., \(s\) is not an eigenvalue of \(A\). A computation using the variation-of-parameters formula shows that if one chooses the initial condition \(x_0 = (sI - A)^{-1}Bu_0\), then
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 x(t) &= (sI - A)^{-1}B\,e^{st}u_0, \\
 y(t) &= \bigl[C(sI-A)^{-1}B + D\bigr]e^{st}u_0 = G(s)\,e^{st}u_0.
 \end{aligned}
@@ -1812,7 +1833,8 @@ P = \int_0^\infty e^{A^T t} Q\, e^{At}\,dt.
 
 Since \(A\) is Hurwitz, the integrand decays exponentially and \(P\) is well-defined and positive definite. Differentiating under the integral,
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 A^T P + PA &= \int_0^\infty \frac{d}{dt}\!\left[e^{A^T t}Q\,e^{At}\right]dt \\
 &= e^{A^T t}Q\,e^{At}\Big|_0^\infty = 0 - Q = -Q,
 \end{aligned}
@@ -1867,7 +1889,8 @@ AP + PA^T - BB^T < 0.
 
 **(6) \(\Rightarrow\) (3).** Let \(K = -\tfrac{1}{2}B^T P^{-1}\). Then
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 (A + BK)P + P(A + BK)^T &= \left(A - \tfrac{1}{2}BB^T P^{-1}\right)P + P\left(A - \tfrac{1}{2}BB^T P^{-1}\right)^T \\
 &= AP + PA^T - BB^T < 0.
 \end{aligned}
@@ -2061,7 +2084,8 @@ where \(b_0, b_1, \ldots, b_{n-1}\) are the coefficients of the characteristic p
 
 *Proof of Lemma.* Since \((A, B)\) is controllable, the columns of the controllability matrix \([B \;\; AB \;\; A^2 B \;\; \cdots \;\; A^{n-1}B]\) are linearly independent and form a square invertible matrix. Define new basis vectors
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 v_n &= B, \\
 v_{n-1} &= Av_n + b_{n-1}v_n = AB + b_{n-1}B, \\
 v_{n-2} &= Av_{n-1} + b_{n-2}v_n = A^2B + b_{n-1}AB + b_{n-2}B, \\
@@ -2072,7 +2096,8 @@ v_1 &= Av_2 + b_1 v_n = A^{n-1}B + b_{n-1}A^{n-2}B + \cdots + b_1 B.
 
 These vectors \(\{v_1, \ldots, v_n\}\) are linearly independent because they are related to \(\{B, AB, \ldots, A^{n-1}B\}\) by a triangular change of basis. Setting \(P^{-1} = [v_1 \;\; v_2 \;\; \cdots \;\; v_n]\), one has \(PB = e_n\) (the last standard basis vector). For \(PAP^{-1}\), the Cayley-Hamilton theorem gives \(A^n B = -b_0 B - b_1 AB - \cdots - b_{n-1}A^{n-1}B\), from which
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 Av_1 &= -b_0 v_n, \\
 Av_2 &= v_1 - b_1 v_n, \\
 &\vdots \\
@@ -2215,7 +2240,8 @@ x' = Ax + Bu = Ax + BK\hat{x} = Ax + BK(x + e) = (A + BK)x + BKe.
 
 Combining this with the error dynamics \( e' = (A + LC)e \) from (13.4), the closed-loop system is
 
-\[\begin{align}
+\[
+\begin{align}
 \begin{bmatrix} x' \\ e' \end{bmatrix} = \begin{bmatrix} A + BK & BK \\ 0 & A + LC \end{bmatrix} \begin{bmatrix} x \\ e \end{bmatrix}. \tag{13.6}
 \end{align}
 \]
@@ -2288,7 +2314,8 @@ These vector norms extend to signal norms for functions \( u : [0,\infty) \to \m
 
 **Definition 14.9.** Let \( u : [0,\infty) \to \mathbb{R}^k \). Define
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 \|u\|_\infty &= \sup_{t \geq 0} \|u(t)\|_\infty = \sup_{t \geq 0} \max_{1 \leq i \leq k} |u_i(t)|, \\[6pt]
 \|u\|_2 &= \sqrt{\int_0^\infty \|u(t)\|_2^2\, dt} = \sqrt{\int_0^\infty u^T(t)u(t)\, dt}, \\[6pt]
 \|u\|_1 &= \int_0^\infty \|u(t)\|_1\, dt = \int_0^\infty \sum_{i=1}^k |u_i(t)|\, dt.
@@ -2341,7 +2368,8 @@ for all \( 1 \leq i \leq m \) and \( 1 \leq j \leq k \).
 
 *Proof.* (\( \Leftarrow \) Suppose each entry of \( g \) is absolutely integrable. Then
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 \|y(t)\|_\infty &= \left\| \int_0^t g(t-\tau) u(\tau)\, d\tau \right\|_\infty \\
 &= \max_{1 \leq i \leq m} \left| \int_0^t \sum_{j=1}^k g_{ij}(t-\tau) u_j(\tau)\, d\tau \right| \\
 &\leq \max_{1 \leq i \leq m} \int_0^t \sum_{j=1}^k |g_{ij}(t-\tau)|\, |u_j(\tau)|\, d\tau \\
@@ -2468,7 +2496,8 @@ Let \( P(s) = n_p(s)/d_p(s) \) and \( C(s) = n_c(s)/d_c(s) \) where each pair is
 
 (\( \Rightarrow \) We show that every zero of \( \kappa \) is actually a pole of at least one of the four transfer functions. Writing them in terms of \( \kappa \),
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 S &= \frac{d_p d_c}{\kappa}, &\quad T &= \frac{n_p n_c}{\kappa}, \\
 PS &= \frac{n_p d_c}{\kappa}, &\quad CS &= \frac{n_c d_p}{\kappa}.
 \end{aligned}
@@ -2514,7 +2543,8 @@ p(s) = a_n s^n + a_{n-1} s^{n-1} + \cdots + a_1 s + a_0,
 
 construct the **Routh table** (also called the Routh–Hurwitz table) as follows. The first two rows are filled with alternating coefficients:
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 &\text{Row 1:} \quad a_n,\; a_{n-2},\; a_{n-4},\; \ldots \\
 &\text{Row 2:} \quad a_{n-1},\; a_{n-3},\; a_{n-5},\; \ldots
 \end{aligned}
@@ -2863,7 +2893,8 @@ The main analytic tool for computing the **steady-state error** directly in the 
 
 *Proof.* Let \(\alpha = \lim_{t\to\infty} y(t)\). For real \(s > 0\),
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 |s\hat{y}(s) - \alpha|
 &= \left|s\int_0^\infty y(t)e^{-st}\,dt - s\int_0^\infty \alpha e^{-st}\,dt\right| \\
 &= \left|s\int_0^\infty (y(t)-\alpha)e^{-st}\,dt\right| \\
@@ -2919,7 +2950,8 @@ When \(k_i = 0\) (purely proportional control), the steady-state error cannot be
 
 The frequency-domain analysis of tracking has a clean counterpart in the state-space framework. Consider the LTI system
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 x'(t) &= Ax(t) + Bu(t), \\
 y(t) &= Cx(t) + Du(t).
 \end{aligned}
@@ -2933,7 +2965,8 @@ u = r + Kx,
 
 where \(r \in \mathbb{R}\) is a constant reference. The closed-loop dynamics become
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 x' &= (A+BK)x + Br, \\
 y &= (C+DK)x + Dr.
 \end{aligned}
@@ -2971,7 +3004,8 @@ To track a unit step (\(y_d = 1\), set \(r = [G_{yr}(0)]^{-1} \cdot 1 = 2\). Wai
 
 The same principle applies when only the output is measured. Recall that a **state estimator** (observer) is constructed as
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 \hat{x}' &= A\hat{x} + Bu + L(\hat{y} - y), \\
 \hat{y} &= C\hat{x} + Du,
 \end{aligned}
@@ -3087,7 +3121,8 @@ A standard iterative procedure for PID design proceeds as follows. First, determ
 
 In this lecture we develop a more systematic frequency-domain perspective on controller design. The starting point is the **gang of four**: the four closed-loop transfer functions
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 S &= \frac{1}{1+PC} \quad \text{(sensitivity)}, \\
 T &= \frac{PC}{1+PC} \quad \text{(complementary sensitivity)}, \\
 PS &= \frac{P}{1+PC} \quad \text{(load sensitivity, from } d \text{ to } y\text{)}, \\
@@ -3183,7 +3218,8 @@ H = -\int_0^\infty \frac{d}{dt}[x(t)^T P\,x(t)]\,dt = -x(t)^T P\,x(t)\Big|_0^\in
 
 Using this lemma, introduce an arbitrary symmetric matrix \(P\) and rewrite the cost as
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 J &= H(x(\cdot),u(\cdot)) + \int_0^\infty \bigl[x^T Q x + u^T R u + (Ax+Bu)^T P x + x^T P(Ax+Bu)\bigr]\,dt \\
 &= H(x(\cdot),u(\cdot)) + \int_0^\infty \bigl[x^T(A^T P + PA + Q)x + u^T R u + 2u^T B^T P x\bigr]\,dt.
 \end{aligned}
@@ -3255,7 +3291,8 @@ x' = \begin{bmatrix}0 & 1\\0 & 0\end{bmatrix}x + \begin{bmatrix}0\\1\end{bmatrix
 
 Let \(Q = C^T C = \begin{bmatrix}1&0\\0&0\end{bmatrix}\) and \(R = r > 0\). One can verify that \((A,Q)\) is detectable and \((A,B)\) is stabilisable, so Theorem 21.3 applies. Writing \(P = \begin{bmatrix}p_1 & p_2\p_2 & p_3\end{bmatrix}\) (symmetric) and substituting into the ARE yields the system
 
-\[\begin{aligned}
+\[
+\begin{aligned}
 -\frac{1}{r}p_2^2 + 1 = 0 &\implies p_2 = \sqrt{r}, \\
 p_1 - \frac{1}{r}p_2 p_3 = 0 &\implies p_1 = \frac{1}{r}p_2 p_3 = \sqrt{2}\,r^{1/4}, \\
 2p_2 - \frac{1}{r}p_3^2 = 0 &\implies p_3 = \sqrt{2r\,p_2} = \sqrt{2}\,r^{3/4},

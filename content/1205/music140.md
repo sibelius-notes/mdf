@@ -450,7 +450,7 @@ Very shortly, we will see next generation of Rock 'n' Roll artists. They respect
 “The Golden Age of Rock and Roll.” (1954-1959). What happened in late 1950s? First, moral panic is still there. Elvis didn't write his own songs, didn't have to play an instrument, which fits him perfectly in the division of labor, he is just a song stylist, quite unlike Chuck Berry. From a strict business point of view, Rock 'n' Roll didn't make sense in the division of labor system. So major is fearful about Rock 'n' Roll. Some numbers:
 
 ```
-1954 $200 million; 1959 $600 million:
+1954 \$200 million; 1959 \$600 million:
 Pop top 10: 1955 – 15% are R ’n’ R / 1959 – 42% are R ’n’ R
 Independent share: 1955 21% / 1959 66%.
 ```
@@ -636,8 +636,8 @@ First stop is major television appearance. On Feb 9th Ed Sullivan Show, 70 Milli
 
 Extraordinary. Many young men and women watched this show and began to step into the music industry later in 1960s and 1970s. The Beatles relaunched the idea of self-contained groups. Then they took a train down to Washington DC, and they went to The Washington Coliseum which is a sport stadium on Feb 10th. [Here](https://www.youtube.com/watch?v=9AiD-02CvVE) is a video.
 
-The success of the Beatles is so great that they are going to invent the modern stadium convert. Tour lasts for two weeks – 2 million albums, $2.5 million merchandising. Everywhere they go, screaming girls. Hysteria known as “Beatlemania”
-In April 1964, 12 songs in the Billboard top 100 pop, simultaneously: including positions 1 to 5. End of 4th U.S. Tour in ’65 - $65 million dollars.
+The success of the Beatles is so great that they are going to invent the modern stadium convert. Tour lasts for two weeks – 2 million albums, \$2.5 million merchandising. Everywhere they go, screaming girls. Hysteria known as “Beatlemania”
+In April 1964, 12 songs in the Billboard top 100 pop, simultaneously: including positions 1 to 5. End of 4th U.S. Tour in ’65 - \$65 million dollars.
 
 Importance – Template for what is to follow.
 Mersey Beat: Gerry and the Pacemakers, The Searchers, The Swinging Blue Jeans. They follow the Beatles: light and precise sound, guitars.

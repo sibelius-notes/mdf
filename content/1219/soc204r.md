@@ -134,7 +134,7 @@ Côté (2014) identifies four demographic trends that have impacted the delay in
 
 ## Education at a Glance: OECD Data
 
-Canada has one of the highest participation rates in post-secondary education. The **OECD** (Organization for Economic Co-operation and Development) data indicates that 55 percent of Canadians between ages 25 and 64 have some form of post-secondary education. Notably, the OECD counts Quebec's **CEGEP** (Collège d'enseignement Général et Professionnel) programs as tertiary education, which likely skews Canada's numbers upward. Canada is much closer to the OECD average when it comes to bachelor's degrees: approximately 20 percent, slightly above the OECD average of 16 percent. Canada spends approximately $9,130 USD annually per primary school student.
+Canada has one of the highest participation rates in post-secondary education. The **OECD** (Organization for Economic Co-operation and Development) data indicates that 55 percent of Canadians between ages 25 and 64 have some form of post-secondary education. Notably, the OECD counts Quebec's **CEGEP** (Collège d'enseignement Général et Professionnel) programs as tertiary education, which likely skews Canada's numbers upward. Canada is much closer to the OECD average when it comes to bachelor's degrees: approximately 20 percent, slightly above the OECD average of 16 percent. Canada spends approximately \$9,130 USD annually per primary school student.
 
 ## The Credentialism Paradox
 

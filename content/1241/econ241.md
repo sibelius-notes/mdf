@@ -263,7 +263,7 @@ Standard indifference-curve analysis shows that cash is preferred by the recipie
 3. **Political economy** — median voters may support housing subsidies more readily than unrestricted cash
 
 <div class="example">
-<strong>Food Stamps (Canada: SNAP equivalent):</strong> A household receiving food vouchers worth $200/month can be shown on an indifference curve diagram: if the household would have spent at least $200 on food anyway (an unconstrained optimiser), the voucher is equivalent to cash — it shifts the budget constraint outward but does not change the tangency point. If the household would have spent less than $200 on food, the voucher constrains them to a corner solution, making them worse off than an equivalent cash transfer.
+<strong>Food Stamps (Canada: SNAP equivalent):</strong> A household receiving food vouchers worth \$200/month can be shown on an indifference curve diagram: if the household would have spent at least \$200 on food anyway (an unconstrained optimiser), the voucher is equivalent to cash — it shifts the budget constraint outward but does not change the tangency point. If the household would have spent less than \$200 on food, the voucher constrains them to a corner solution, making them worse off than an equivalent cash transfer.
 </div>
 
 ---

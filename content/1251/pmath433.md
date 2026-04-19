@@ -347,7 +347,7 @@ C_1 = (-\infty, -1), \quad C_2 = \{-1\}, \quad C_3 = (-1, 1), \quad C_4 = \{1\},
 
 - <em>Above \( C_1 \) and \( C_5 \)</em> (where \( |x| > 1 \)): The polynomial \( x^2 + y^2 - 1 > 0 \) for all \( y \), so \( S \) contributes nothing here. We decompose into the single band cell \( \{(x, y) : x \in C_j\} \) (the whole vertical strip), or we can do a finer decomposition, but since \( y > 0 \) adds a further split, we decompose as: \( \{y < 0\} \), \( \{y = 0\} \), \( \{y > 0\} \) (all disjoint from \( S \) since \( x^2 + y^2 \geq 1 \) there).
 
-- <em>Above \( C_2 = \{-1\} \)</em> and \( C_4 = \{1\} \)**: On \( x = \pm 1 \), we have \( x^2 + y^2 < 1 \) only if \( y^2 < 0 \), impossible. So \( S \) contributes nothing above \( x = \pm 1 \). The fibers are decomposed into \( \{y < 0\} \cup \{y = 0\} \cup \{y > 0\} \), none of which are in \( S \).
+- <em>Above \( C_2 = \{-1\} \) and \( C_4 = \{1\} \)</em>: On \( x = \pm 1 \), we have \( x^2 + y^2 < 1 \) only if \( y^2 < 0 \), impossible. So \( S \) contributes nothing above \( x = \pm 1 \). The fibers are decomposed into \( \{y < 0\} \cup \{y = 0\} \cup \{y > 0\} \), none of which are in \( S \).
 
 - <em>Above \( C_3 = (-1, 1) \)</em>: For each \( x \in (-1,1) \), let \( h(x) = \sqrt{1 - x^2} > 0 \). The constraint \( x^2 + y^2 < 1 \) becomes \( -h(x) < y < h(x) \), and we further need \( y > 0 \). So the fiber \( S_x = \{y : (x,y) \in S\} = (0, h(x)) \). We decompose the fiber \( \mathbb{R} \) above \( x \in C_3 \) into the cells:
 
@@ -381,7 +381,11 @@ This is the real analogue of Chevalley's theorem and follows immediately from QE
 **The Real Nullstellensatz.** In contrast to the complex Nullstellensatz, the ideal-theoretic description of real varieties requires accounting for the ordered structure:
 
 <div class="theorem">
-<strong>Theorem (Real Nullstellensatz).</strong> A polynomial \( f \in \mathbb{R}\left[x_1, \ldots, x_n\right] \) vanishes on the real zero set \( V_{\mathbb{R}}(f_1, \ldots, f_m) \) if and only if there exist \( g_i \in \mathbb{R}\left[x_1, \ldots, x_n\right] \) and a sum-of-squares polynomial \( s \) such that \[ f^{2k} + s = \sum_i g_i f_i \] for some integer \( k \geq 0 \).
+<strong>Theorem (Real Nullstellensatz).</strong> A polynomial \( f \in \mathbb{R}\left[x_1, \ldots, x_n\right] \) vanishes on the real zero set \( V_{\mathbb{R}}(f_1, \ldots, f_m) \) if and only if there exist \( g_i \in \mathbb{R}\left[x_1, \ldots, x_n\right] \) and a sum-of-squares polynomial \( s \) such that
+\[
+f^{2k} + s = \sum_i g_i f_i
+\]
+for some integer \( k \geq 0 \).
 </div>
 
 ---
@@ -1902,7 +1906,7 @@ We give a fully detailed proof that ACF\(_p\) is complete using Vaught's test.
 <div class="example">
 <strong>Claim: ACF\(_p\) is complete for each \(p\) (prime or 0).</strong>
 
-We apply **Vaught's test**: a theory is complete if it has no finite models and is \(\kappa\)-categorical for some cardinal \(\kappa \geq \aleph_0\) where \(\kappa \geq |T|\).
+We apply <strong>Vaught's test</strong>: a theory is complete if it has no finite models and is \(\kappa\)-categorical for some cardinal \(\kappa \geq \aleph_0\) where \(\kappa \geq |T|\).
 
 <strong>Step 1: ACF\(_p\) has no finite models.</strong> Every algebraically closed field is infinite: the polynomial \(x(x-1)(x-2)\cdots(x-n) + 1\) has degree \(n+1\) and (being monic of odd degree over... wait, this approach requires characteristic considerations). More directly: if \(K\) is algebraically closed and finite with \(|K| = q\), then every element of \(K\) satisfies \(x^q = x\) (Fermat), so every polynomial of degree \(> q\) can be reduced modulo \(x^q - x\). But then the polynomial \(x^q - x + 1\) (of degree \(q\)) must have a root in \(K\), but its roots are the elements satisfying \(x^q = x - 1\), and none of the \(q\) elements of \(K\) satisfies this (since they all satisfy \(x^q = x\)). Contradiction.
 
@@ -1947,11 +1951,11 @@ T' = T \cup \{\epsilon > 0\} \cup \{0 < \epsilon < r : r \in \mathbb{R},\, r > 0
 \]
 Every finite subset of \(T'\) is consistent: given finitely many conditions \(0 < \epsilon < r_1, \ldots, 0 < \epsilon < r_k\), we can interpret \(\epsilon\) as any positive real number smaller than \(\min(r_1, \ldots, r_k)\) — for instance, \(\min(r_1, \ldots, r_k) / 2\). By compactness, \(T'\) is consistent, and has a model \(\mathbb{R}^*\).
 
-The model \(\mathbb{R}^*\) is an ordered field (since it is a model of \(T\), which includes all ordered field axioms) and contains an element \(\epsilon = \epsilon^{\mathbb{R}^*}\) satisfying \(0 < \epsilon < r\) for every positive standard real \(r\). This \(\epsilon\) is a genuine positive element of the field \(\mathbb{R}^*\) but is smaller than every standard positive real — it is an **infinitesimal**.
+The model \(\mathbb{R}^*\) is an ordered field (since it is a model of \(T\), which includes all ordered field axioms) and contains an element \(\epsilon = \epsilon^{\mathbb{R}^*}\) satisfying \(0 < \epsilon < r\) for every positive standard real \(r\). This \(\epsilon\) is a genuine positive element of the field \(\mathbb{R}^*\) but is smaller than every standard positive real — it is an <strong>infinitesimal</strong>.
 
-By the compactness argument applied to \(1/\epsilon\), the model \(\mathbb{R}^*\) also contains \(\omega = 1/\epsilon\), which satisfies \(\omega > r\) for every standard real \(r\) — an **infinite** element.
+By the compactness argument applied to \(1/\epsilon\), the model \(\mathbb{R}^*\) also contains \(\omega = 1/\epsilon\), which satisfies \(\omega > r\) for every standard real \(r\) — an <strong>infinite</strong> element.
 
-The model \(\mathbb{R}^*\) is a non-Archimedean ordered field containing \(\mathbb{R}\) as a subfield. It is **not** a real closed field in the traditional sense (it is a non-Archimedean ordered field), but it is an elementary extension of \(\mathbb{R}\) (since \(T'\) extends \(\mathrm{Th}(\mathbb{R}, \ldots)\)). This is Robinson's non-standard analysis.
+The model \(\mathbb{R}^*\) is a non-Archimedean ordered field containing \(\mathbb{R}\) as a subfield. It is <strong>not</strong> a real closed field in the traditional sense (it is a non-Archimedean ordered field), but it is an elementary extension of \(\mathbb{R}\) (since \(T'\) extends \(\mathrm{Th}(\mathbb{R}, \ldots)\)). This is Robinson's non-standard analysis.
 
 <em>Key point for model theory:</em> The compactness theorem is what makes this possible. Without compactness, there would be no guarantee of consistency. Compactness is provable from completeness (Gödel's theorem), which is the deepest theorem of first-order logic. The non-standard model exists precisely because of the interplay between syntax (consistent finite subsets) and semantics (models).
 </div>
