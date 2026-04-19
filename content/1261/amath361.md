@@ -8,6 +8,8 @@ The primary source is the course summary prepared by Ryan Newson (Winter 2005), 
 
 ---
 
+# Part I — Constitutive Foundations
+
 # Chapter 1: One-Dimensional Viscoelasticity
 
 ## 1.1 The Principle of Fading Memory
@@ -582,6 +584,8 @@ This principle is not obvious — it rests on the fact that the boundary conditi
 
 ---
 
+# Part II — Fluid Mechanics (Continuum Branch)
+
 # Chapter 5: From Solids to Fluids — Kinematics of Flow
 
 The four preceding chapters treated materials with a preferred reference configuration: a body deforms from its natural state, and displacement measures departure from that state. A **fluid** has no such preferred configuration — it deforms continuously without limit. The appropriate kinematic variable shifts from displacement to **velocity**.
@@ -1037,6 +1041,8 @@ Prandtl's **boundary-layer theory** (1904) provided the quantitative reconciliat
 
 ---
 
+# Part III — Thermodynamics and Electromagnetic Extensions
+
 # Chapter 9: Thermodynamics and Equations of State
 
 The equations of motion developed so far — the continuity equation and the Navier–Stokes equations — govern five scalar fields: density \(\rho\), the three velocity components \((u,v,w)\), and pressure \(p\). For an incompressible fluid with given body force and viscosity these five equations (one continuity, three momentum, one incompressibility constraint) close the system. For a **compressible** fluid, however, density and pressure are not independent: we need an additional thermodynamic relation between them, an **equation of state**, together with an energy equation governing temperature. This chapter provides that closure.
@@ -1418,3 +1424,9 @@ This is the condition for **magnetostatic equilibrium**. If the field lines are 
 *Neutron star magnetospheres.* Neutron stars have surface magnetic fields of \(10^8\text{–}10^{12}\) T — \(12\) orders of magnitude stronger than Earth's field. In **pulsars**, the rotating dipole field drives a relativistic plasma wind and radiation beam that sweeps past the observer like a lighthouse. In **magnetars**, field strengths exceed \(10^{10}\) T, making magnetic energy comparable to gravitational binding energy; sudden magnetic rearrangements (starquakes) release gamma-ray bursts detectable across the Galaxy.
 
 **Closing remarks.** Magnetohydrodynamics illustrates the power of the continuum framework: by treating an electrically conducting fluid as a continuum and combining Maxwell's equations with the Navier–Stokes equations through a single constitutive relation (Ohm's law), one obtains a system that describes phenomena spanning planetary cores, stellar atmospheres, and relativistic compact objects. The key dimensionless parameter is the magnetic Reynolds number \(Rm\), which governs whether field lines are frozen into the fluid or can diffuse relative to it. When \(Rm\) is large, the fluid and field co-evolve on an equal footing, exchanging energy through Alfvén waves and storing it in large-scale ordered structures. When \(Rm\) is small, the field is a passive diagnostic of the flow. Between these limits lies the rich and largely unresolved physics of MHD turbulence, dynamo action, and magnetic reconnection — among the most active research frontiers in applied mathematics today.
+
+---
+
+# Continuation: AMATH 464 Solid Mechanics
+
+The engineering applications of solid mechanics — bending, torsion, buckling, energy methods, failure theories, plane elasticity, shells, fatigue, and fracture — are covered in **AMATH 464 Solid Mechanics** (Fall 2026). That course builds directly on Part I of these notes.

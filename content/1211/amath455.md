@@ -3414,3 +3414,385 @@ Since \(R > 0\) and \(Q \geq 0\), this forces \(Qx_1 = 0\) and \(B^T x_2 = 0\). 
 The proof of Theorem 21.3 now follows directly from Lemmas 22.9 and 22.10. Under the assumptions that \((A,B)\) is stabilisable and \((A,Q)\) is detectable, Lemma 22.10 guarantees that \(\mathcal{H}\) has no imaginary-axis eigenvalues. Lemma 22.9 then guarantees the existence, symmetry, and uniqueness of a stabilising solution \(P\) to the ARE. The positive semi-definiteness follows from Theorem 21.2. The converse (necessity of the two conditions) is immediate from Lemma 22.10.
 
 The original sufficiency result is due to Kalman (1960, 1964), who required the stronger conditions of controllability and observability. Wonham (1968) weakened these to stabilisability and detectability, and Kucera (1972) established their necessity. In MATLAB, the stabilising solution of the ARE and the optimal LQR gain are computed by the command `lqr(A, B, Q, R)`.
+
+# Part III — Classical Frequency-Domain Control (Engineering Applications)
+
+The preceding parts developed control theory in the **state-space** language: an \(n\)-dimensional first-order vector ODE \(x' = Ax + Bu\) with output \(y = Cx + Du\), analysed through eigenvalues, controllability/observability Gramians, Lyapunov functions, and optimal quadratic costs. This modern point of view originated with Kalman in the late 1950s. Before it, and still today in the overwhelming majority of industrial practice, control engineers worked in the **frequency domain**: a plant is represented by a scalar transfer function \(G(s)\), and a controller is designed by shaping loop gain, phase margin, and closed-loop poles in the complex plane.
+
+This part is written for engineering readers — students of ME 360 *System Dynamics and Control*, MTE 360 *Automatic Control Systems*, CHE 341 *Chemical Process Modelling and Control*, BME 356 *Biological Signals and Systems* at the University of Waterloo, and comparable introductory courses elsewhere. The mathematical prerequisites (Laplace transforms, linear ODEs, complex analysis on the Riemann sphere) are light compared with Parts I–II, but the material is operational: the tools below are the ones still used to tune a PID loop on a chemical reactor, design a lead compensator for a DC motor positioning stage, or certify stability margins for a flight control system. Throughout, we point back to the state-space foundations above — a transfer function is simply the frequency-domain picture of the LTI system \((A,B,C,D)\), and PID is a special (and restricted) case of the state-feedback architectures studied in Part II.
+
+## Chapter 23 — Laplace Transforms and Transfer Functions
+
+### Laplace Transform: A Working Review
+
+For a locally integrable signal \(f:[0,\infty) \to \mathbb{R}\) of at most exponential growth, the **one-sided Laplace transform** is
+\[
+F(s) = \mathcal{L}\{f\}(s) = \int_0^\infty f(t)\, e^{-st}\, dt, \qquad s \in \mathbb{C},
+\]
+which converges on some right half-plane \(\Re s > \sigma_f\). The three identities we will use without further comment are linearity, the derivative rule \(\mathcal{L}\{f'\} = sF(s) - f(0^-)\), and the convolution theorem \(\mathcal{L}\{f*g\} = F(s)G(s)\). Together these turn a linear constant-coefficient ODE with input \(u\) into an algebraic equation in \(s\).
+
+### From State Space to Transfer Function
+
+Taking the Laplace transform of the LTI system \(x' = Ax + Bu\), \(y = Cx + Du\) with \(x(0)=0\) yields \(sX(s) = AX(s) + BU(s)\), so \(X(s) = (sI-A)^{-1}BU(s)\) and
+\[
+Y(s) = G(s)\, U(s), \qquad G(s) = C(sI-A)^{-1}B + D.
+\]
+
+<div class="definition">
+**Definition 23.1 (Transfer function).** The **transfer function** of the LTI system \((A,B,C,D)\) is the rational matrix \(G(s) = C(sI-A)^{-1}B + D\). A scalar transfer function is written as a ratio of polynomials \(G(s) = N(s)/D(s)\) in lowest terms; the roots of \(N\) are the **zeros** and the roots of \(D\) are the **poles** of \(G\). The transfer function is **proper** if \(\deg N \le \deg D\) and **strictly proper** if \(\deg N < \deg D\).
+</div>
+
+Because \((sI-A)^{-1} = \operatorname{adj}(sI-A)/\det(sI-A)\), every pole of \(G\) is an eigenvalue of \(A\); the converse can fail when uncontrollable or unobservable modes cancel in the product \(C(sI-A)^{-1}B\). This is the frequency-domain shadow of the Kalman decomposition of Part II: only the controllable and observable subsystem appears in \(G(s)\).
+
+### Impulse and Step Responses
+
+The inverse Laplace transform of \(G(s)\) is the **impulse response** \(g(t) = Ce^{At}B + D\delta(t)\); the response to any input is \(y = g * u\). The **step response** is \(\mathcal{L}^{-1}\{G(s)/s\}\), and its final value (when it exists) is \(\lim_{t\to\infty} y(t) = G(0)\) by the final-value theorem, provided all poles of \(sY(s)\) lie in the open left half-plane.
+
+### First- and Second-Order Prototypes
+
+The **first-order prototype** is
+\[
+G(s) = \frac{K}{\tau s + 1},
+\]
+with DC gain \(K\) and time constant \(\tau > 0\). Its unit-step response is \(y(t) = K(1 - e^{-t/\tau})\); it reaches 63.2% of \(K\) at \(t=\tau\) and 98% by \(t = 4\tau\).
+
+The **second-order prototype** is
+\[
+G(s) = \frac{\omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2},
+\]
+with **natural frequency** \(\omega_n > 0\) and **damping ratio** \(\zeta \ge 0\). Its poles are \(s = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2-1}\), real for \(\zeta\ge 1\) and complex conjugate for \(0 \le \zeta < 1\). In the underdamped regime the step response reaches a first peak at \(t_p = \pi/(\omega_n\sqrt{1-\zeta^2})\) and the **percent overshoot** is
+\[
+\%OS = 100\,\exp\!\left(-\frac{\pi\zeta}{\sqrt{1-\zeta^2}}\right).
+\]
+A commonly used 2% **settling-time** estimate is \(t_s \approx 4/(\zeta\omega_n)\), and the 10–90% **rise time** satisfies \(t_r \approx (0.8 + 2.5\zeta)/\omega_n\) for \(0.3 \le \zeta \le 0.8\).
+
+<div class="remark">
+**Dominant-pole approximation.** If a system has two complex poles near the \(j\omega\)-axis and all other poles have real parts at least 5–10 times more negative, the slow pair dominates the transient and the higher-order system is well approximated by a second-order prototype with matched \(\zeta,\omega_n\). This is the workhorse sizing rule of undergraduate controls design.
+</div>
+
+**Worked example (ME 360, DC motor).** An armature-controlled DC motor with load inertia \(J\), viscous damping \(b\), back-EMF constant \(K_e\) and torque constant \(K_t\) (neglecting armature inductance) has transfer function from voltage \(V(s)\) to angular velocity \(\Omega(s)\)
+\[
+\frac{\Omega(s)}{V(s)} = \frac{K_t/(Rb + K_tK_e)}{\tau s + 1}, \qquad \tau = \frac{RJ}{Rb+K_tK_e}.
+\]
+This is exactly the first-order prototype; the time constant \(\tau\) and DC gain are read off directly for PI tuning in the next chapter.
+
+## Chapter 24 — Block Diagram Algebra
+
+Engineers draw systems as **block diagrams**: arrows carry Laplace-transformed signals, boxes are multiplicative transfer functions, and summing junctions perform signed addition. Three reductions suffice for most work.
+
+### Series, Parallel, Feedback
+
+<div class="theorem">
+**Theorem 24.1 (Elementary interconnections).** For scalar transfer functions \(G_1, G_2\):
+- **Series.** If \(y = G_2 G_1 u\), the equivalent block is \(G_1G_2\).
+- **Parallel.** If \(y = (G_1 + G_2)u\), the equivalent is \(G_1 + G_2\).
+- **Negative feedback.** If \(y = G_1(u - G_2 y)\), the closed-loop transfer function from \(u\) to \(y\) is
+\[
+\frac{G_1}{1 + G_1 G_2}.
+\]
+</div>
+
+The derivation of the feedback formula is a one-line algebraic manipulation after the Laplace transform; the crucial quantity is the **loop transfer function** \(L(s) = G_1(s)G_2(s)\), whose denominator \(1 + L(s)\) controls closed-loop stability.
+
+### Mason's Gain Formula
+
+For signal-flow graphs with many paths and loops, Mason's formula organises the combinatorics. Let the graph have forward paths \(P_k\) from input to output and loops indexed by sets of non-touching loops \(L_i\). Define the graph determinant
+\[
+\Delta = 1 - \sum_i L_i + \sum_{i<j\text{ non-touching}} L_i L_j - \cdots,
+\]
+and let \(\Delta_k\) be the same quantity computed with all loops touching path \(P_k\) deleted. Then
+\[
+T = \frac{1}{\Delta}\sum_k P_k \Delta_k.
+\]
+
+### Open-Loop vs Closed-Loop
+
+The standard unity-feedback configuration has controller \(C(s)\) and plant \(P(s)\). The **open-loop** (or **loop**) transfer function is \(L(s) = C(s)P(s)\); the **closed-loop** (reference-to-output) transfer function is
+\[
+T(s) = \frac{L(s)}{1 + L(s)},
+\]
+and the **sensitivity** is
+\[
+S(s) = \frac{1}{1 + L(s)}.
+\]
+
+### The Fundamental Identity \(S + T = 1\)
+
+Immediately \(S(s) + T(s) = 1\) for all \(s\). This identity is the single most consequential algebraic fact in classical control: it says that at every frequency, disturbance rejection (small \(|S|\)) and noise attenuation (small \(|T|\)) trade off against each other. Low-frequency disturbances are rejected by making \(|L|\) large, which makes \(|T| \approx 1\) and \(|S| \approx 0\); high-frequency sensor noise is attenuated by rolling off \(|L|\), which makes \(|T| \approx 0\) and \(|S| \approx 1\). The **crossover frequency** \(\omega_c\) where \(|L(j\omega_c)| = 1\) is where the transition happens, and it is the single number that a Bode-plot designer sets most deliberately.
+
+<div class="remark">
+**Relation to Part II.** Sensitivity \(S\) plays the role of a closed-loop input-to-disturbance map; in the LQR problem of Chapter 21, the analogous trade-off was encoded by the ratio between state penalty \(Q\) and input penalty \(R\). Classical \(S/T\) design and modern \(H_\infty\) design (outside our scope) are the two systematic ways to tune this trade-off.
+</div>
+
+## Chapter 25 — The Root Locus Method
+
+Given a unity-feedback system with loop gain \(KL_0(s)\) where \(K > 0\) is a free parameter, the **root locus** is the set of all closed-loop poles
+\[
+\{s \in \mathbb{C} : 1 + K L_0(s) = 0, \ K \ge 0\}.
+\]
+As \(K\) varies from \(0\) to \(\infty\), each branch traces a continuous curve starting at an open-loop pole (\(K=0\)) and ending at an open-loop zero or at infinity (\(K=\infty\)). Evans (1948) codified a set of construction rules that let the curve be sketched by hand.
+
+### Evans' Rules
+
+Write \(L_0(s) = N(s)/D(s)\) with \(n = \deg D \ge m = \deg N\).
+
+1. **Number of branches.** The locus has \(n\) branches, one per open-loop pole.
+2. **Endpoints.** Branches begin at the poles of \(L_0\) when \(K=0\) and end either at the \(m\) zeros of \(L_0\) or at infinity (\(n-m\) branches go to infinity).
+3. **Real-axis segments.** A point on the real axis lies on the locus if and only if the total count of real poles and zeros of \(L_0\) strictly to its right is **odd**.
+4. **Asymptotes.** The \(n-m\) branches going to infinity approach asymptotes centered at
+\[
+\sigma_a = \frac{\sum p_i - \sum z_i}{n - m},
+\]
+with angles
+\[
+\theta_a = \frac{(2\ell+1)\pi}{n-m}, \qquad \ell = 0,1,\dots,n-m-1.
+\]
+5. **Breakaway/break-in points.** Real-axis points where branches leave or enter the axis satisfy \(dK/ds = 0\), equivalently \(N(s)D'(s) = N'(s)D(s)\).
+6. **Departure/arrival angles.** At a complex pole \(p_k\),
+\[
+\theta_\text{dep}(p_k) = \pi + \sum_{z_i} \angle(p_k - z_i) - \sum_{p_i\ne p_k} \angle(p_k - p_i),
+\]
+with the analogous formula (with a leading minus) for arrival angles at complex zeros.
+7. **Imaginary-axis crossings.** Substitute \(s = j\omega\) into the characteristic equation \(1+KL_0(s)=0\) and solve the real and imaginary parts simultaneously for \((K,\omega)\); this gives the gain at the stability boundary.
+
+### Worked Example — P Controller for a 2nd-Order Plant
+
+Let \(P(s) = 1/[s(s+2)]\) and \(C(s) = K\). The open-loop poles are \(0, -2\); there are no zeros. Then \(n=2\), \(m=0\), so two asymptotes at angles \(\pm 90^\circ\) centered at \(\sigma_a = -1\). The real-axis segment is \([-2,0]\). A breakaway point on this segment satisfies \(\frac{d}{ds}[s(s+2)] = 2s+2 = 0\), giving \(s=-1\), breakaway gain \(K = 1\). For \(K>1\) the locus lifts vertically along \(\Re s = -1\); the system stays stable for all \(K > 0\) but becomes underdamped, with damping ratio \(\zeta = 1/\sqrt{1+\omega_d^2}\) where \(\omega_d = \sqrt{K-1}\).
+
+### Worked Example — PI Controller
+
+Adding an integrator, \(C(s) = K(s+z)/s\) with \(z>0\) small. The new open-loop pole at the origin pulls the locus toward instability, but the added zero at \(-z\) pulls it back. Choosing \(z\) just inside the slowest plant pole is the textbook **pole–zero cancellation** design for lag-dominant plants, widely used in CHE 341 process control.
+
+### Lag Compensator Design via Root-Locus Shaping
+
+A **lag compensator** \(C(s) = K\dfrac{s+z}{s+p}\) with \(0 < p < z\) adds a pole–zero pair close to the origin. Because \(z/p\) is large, the DC gain is boosted by a factor \(z/p\), improving steady-state tracking, while the branches of the root locus far from the origin are almost unchanged, preserving transient response.
+
+In MATLAB, `rlocus(L0)` plots the locus and `rlocfind` lets the user click on a desired closed-loop pole to read off the corresponding \(K\).
+
+## Chapter 26 — Frequency Response and Bode Plots
+
+### Frequency Response \(G(j\omega)\)
+
+For a stable LTI system with transfer function \(G(s)\), feeding in \(u(t) = \cos(\omega t)\) yields a steady-state output \(y(t) = |G(j\omega)|\cos(\omega t + \angle G(j\omega))\). The complex-valued function \(\omega \mapsto G(j\omega)\) is the **frequency response**; the **Bode plot** shows \(20\log_{10}|G(j\omega)|\) in dB and \(\angle G(j\omega)\) in degrees, both against \(\log_{10}\omega\).
+
+### Asymptotic Bode Rules for Elementary Factors
+
+Because \(\log|G_1G_2| = \log|G_1| + \log|G_2|\) and \(\angle(G_1G_2) = \angle G_1 + \angle G_2\), the Bode plot of a product is the sum of the individual plots. For elementary factors:
+
+- **Constant \(K>0\):** flat magnitude \(20\log_{10}K\) dB, zero phase.
+- **Integrator \(1/s\):** magnitude \(-20\) dB/decade passing through 0 dB at \(\omega=1\); phase \(-90^\circ\) everywhere.
+- **Real pole \(1/(1+s/\omega_0)\):** magnitude 0 dB for \(\omega \ll \omega_0\), then \(-20\) dB/decade for \(\omega \gg \omega_0\); phase goes from \(0^\circ\) to \(-90^\circ\), passing through \(-45^\circ\) at \(\omega = \omega_0\).
+- **Real zero \(1+s/\omega_0\):** mirror of the above with positive slope and phase.
+- **Underdamped second-order pole \(1/[(s/\omega_n)^2 + 2\zeta(s/\omega_n) + 1]\):** \(-40\) dB/decade for \(\omega \gg \omega_n\); a **resonant peak** of height
+\[
+M_r = \frac{1}{2\zeta\sqrt{1-\zeta^2}}, \quad 0 < \zeta < 1/\sqrt{2},
+\]
+at resonant frequency \(\omega_r = \omega_n\sqrt{1-2\zeta^2}\).
+
+### Gain and Phase Margins
+
+Consider the loop transfer function \(L(j\omega)\).
+
+<div class="definition">
+**Definition 26.1.** The **gain crossover frequency** \(\omega_{gc}\) satisfies \(|L(j\omega_{gc})| = 1\); the **phase crossover frequency** \(\omega_{pc}\) satisfies \(\angle L(j\omega_{pc}) = -180^\circ\). The **phase margin** is
+\[
+\mathrm{PM} = 180^\circ + \angle L(j\omega_{gc}),
+\]
+and the **gain margin** is
+\[
+\mathrm{GM} = \frac{1}{|L(j\omega_{pc})|}.
+\]
+</div>
+
+For a minimum-phase system, stability of the unity-feedback loop is equivalent to \(\mathrm{PM} > 0\) and \(\mathrm{GM} > 1\); for non-minimum-phase systems the Nyquist criterion of the next chapter is required. A practical rule of thumb relates phase margin to damping: for a dominant-second-order closed loop, \(\zeta \approx \mathrm{PM}/100\) when PM is given in degrees and \(\mathrm{PM} \lesssim 60^\circ\).
+
+### Bandwidth
+
+The **closed-loop bandwidth** \(\omega_{BW}\) is the frequency at which \(|T(j\omega)|\) drops 3 dB below its low-frequency value. Heuristically \(\omega_{BW}\) is close to the open-loop gain crossover \(\omega_{gc}\); since \(t_r \propto 1/\omega_{BW}\), bandwidth and rise time are directly linked.
+
+## Chapter 27 — The Nyquist Stability Criterion
+
+The Nyquist criterion expresses closed-loop stability in terms of a single geometric count: how many times the plot of the open-loop \(L(j\omega)\) encircles the point \(-1\).
+
+### Contour Mapping and the Argument Principle
+
+<div class="theorem">
+**Theorem 27.1 (Cauchy's argument principle).** Let \(L(s)\) be meromorphic in a simply connected region containing a simple closed contour \(\Gamma\) traversed once clockwise, with no poles or zeros of \(1+L\) on \(\Gamma\). Let \(Z\) and \(P\) be the numbers of zeros and poles of \(1+L\) inside \(\Gamma\), each counted with multiplicity. Then the image contour \((1+L)(\Gamma)\) encircles the origin
+\[
+N = Z - P
+\]
+times clockwise.
+</div>
+
+Equivalently the image of \(L(\Gamma)\) encircles the point \(-1\) exactly \(N\) times clockwise.
+
+### The Nyquist Contour
+
+Choose \(\Gamma\) to be the **Nyquist contour**: the imaginary axis from \(-j\infty\) to \(j\infty\), closed by a semicircle of infinite radius in the right half-plane, indented by small semicircles around any poles of \(L\) on the imaginary axis itself. The contour encloses the entire closed right half-plane.
+
+### The Criterion
+
+<div class="theorem">
+**Theorem 27.2 (Nyquist).** For the unity-feedback loop with \(L(s)\) having \(P\) open-loop poles in the open right half-plane and none on the imaginary axis, the closed-loop transfer function \(L/(1+L)\) has
+\[
+Z = N + P
+\]
+poles in the open right half-plane, where \(N\) is the number of clockwise encirclements of \(-1\) by the Nyquist plot of \(L\). The closed loop is stable iff \(Z=0\), i.e., iff the Nyquist plot encircles \(-1\) exactly \(-P\) times (i.e. \(P\) times counter-clockwise).
+</div>
+
+### Worked Examples
+
+**Stable open loop.** If \(L(s) = K/[(s+1)(s+2)(s+3)]\) then \(P=0\), so stability requires zero encirclements of \(-1\). The Nyquist plot starts at \(K/6\) on the positive real axis, spirals clockwise into the origin. At \(\omega_{pc} = \sqrt{11}\), \(L(j\omega_{pc}) = -K/60\); the plot crosses the negative real axis at \(-K/60\). Zero encirclements occur iff \(K/60 < 1\), giving the stability range \(0 < K < 60\).
+
+**Unstable open loop.** If \(L(s) = K/[s(s-1)]\), then \(P=1\). Stability requires exactly one counter-clockwise encirclement of \(-1\). A short computation shows the Nyquist plot does encircle \(-1\) once counter-clockwise iff \(K > 1\); so increasing \(K\) here **stabilises** the loop, an inverted-pendulum-like situation familiar from MTE 544.
+
+### Relation to Gain and Phase Margins
+
+Gain and phase margins are local measurements of how close the Nyquist plot comes to \(-1\). The **vector margin** \(\min_\omega |1 + L(j\omega)|\) is a more robust single-number measure than either GM or PM individually and equals \(\|S\|_\infty^{-1}\).
+
+## Chapter 28 — PID Control
+
+### The PID Family
+
+For error signal \(e = r - y\) the **ideal PID controller** is
+\[
+u(t) = K_p\, e(t) + K_i \int_0^t e(\tau)\,d\tau + K_d\, \frac{de}{dt}(t),
+\]
+with Laplace form
+\[
+C_\text{PID}(s) = K_p + \frac{K_i}{s} + K_d s = K_p\!\left(1 + \frac{1}{T_i s} + T_d s\right),
+\]
+where \(T_i = K_p/K_i\) is the **integral time** and \(T_d = K_d/K_p\) the **derivative time**. Setting \(K_d=0\) gives **PI**, \(K_i=0\) gives **PD**, and dropping both integral and derivative gives pure **P** control.
+
+### Effect of Each Term
+
+- **Proportional** raises loop gain, shortens rise time, reduces but does not eliminate steady-state error.
+- **Integral** adds a pole at the origin, eliminates steady-state error to step references (internal model principle), but adds \(-90^\circ\) of phase at low frequencies, eroding phase margin.
+- **Derivative** adds a zero, boosts phase at mid frequencies, improves damping and damps overshoot — but amplifies sensor noise.
+
+### Industrial Form
+
+Because pure differentiation is non-causal and noise-sensitive, real PID controllers use a **filtered derivative**:
+\[
+C(s) = K_p\!\left(1 + \frac{1}{T_i s} + \frac{T_d s}{1 + T_d s/N}\right),
+\]
+with \(N\) typically 5–20. Many industrial controllers also use **setpoint weighting** (derivative acts only on measurement \(-y\), not on \(e\)) to avoid derivative kicks on setpoint changes.
+
+### Ziegler–Nichols Tuning
+
+<div class="definition">
+**Ziegler–Nichols step-response method.** Apply a step to the open-loop plant, identify dead time \(L\) and reaction slope \(R\) on the tangent line at the inflection point (see Chapter 30), and set
+\[
+\begin{array}{lcccc}
+& K_p & T_i & T_d \\
+\text{P}  & 1/(RL) & - & - \\
+\text{PI} & 0.9/(RL) & L/0.3 & - \\
+\text{PID}& 1.2/(RL) & 2L & 0.5L
+\end{array}
+\]
+</div>
+
+<div class="definition">
+**Ziegler–Nichols ultimate-gain method.** With \(K_i=K_d=0\), raise \(K_p\) until the loop oscillates at sustained amplitude with gain \(K_u\) and period \(T_u\). Set
+\[
+\begin{array}{lccc}
+& K_p & T_i & T_d \\
+\text{P}  & 0.5 K_u & - & - \\
+\text{PI} & 0.45 K_u & 0.83 T_u & - \\
+\text{PID}& 0.6 K_u & 0.5 T_u & 0.125 T_u
+\end{array}
+\]
+</div>
+
+These rules aim for roughly 25% overshoot (a quarter-amplitude decay ratio); modern derivatives such as Tyreus–Luyben trade some speed for much better robustness.
+
+### Integral Windup and Anti-Windup
+
+When the actuator saturates, the integrator keeps accumulating, and the controller's internal state drifts far from the plant — recovery requires a large error of opposite sign to "unwind" it, causing a huge overshoot. Standard **anti-windup** schemes include:
+- **Conditional integration:** freeze the integrator while the actuator is saturated.
+- **Back-calculation:** add a term \((1/T_t)(u_\text{sat} - u)\) to the integrator input, where \(u_\text{sat}\) is the clipped control and \(T_t\) is a tracking time constant (typically \(\sqrt{T_i T_d}\)).
+
+### Connection Back to State Space
+
+PID is a fixed low-order controller structure; LQR designs, by contrast, choose a full-state feedback \(u = -Kx\) that is optimal against a quadratic cost (Chapter 21). When the plant has only one or two important modes (e.g. the DC motor of Chapter 23), the optimal LQR gain can often be implemented exactly as a PI or PID controller with appropriate parameters — a direct bridge between the two worlds. For higher-order plants PID is suboptimal but vastly preferred in practice for its operator interpretability.
+
+## Chapter 29 — Phase-Lead and Phase-Lag Compensators
+
+### The Lead Compensator
+
+A **lead compensator** has transfer function
+\[
+C(s) = K_c \, \frac{1 + s/\omega_z}{1 + s/\omega_p}, \qquad \omega_z < \omega_p,
+\]
+with zero below the pole. Its Bode magnitude rises by a factor \(\omega_p/\omega_z\) across the interval \([\omega_z,\omega_p]\) and its phase bulges positive, peaking at the geometric mean
+\[
+\omega_m = \sqrt{\omega_z\omega_p}.
+\]
+Writing \(\alpha = \omega_z/\omega_p < 1\), the **maximum phase boost** is
+\[
+\sin\phi_m = \frac{1-\alpha}{1+\alpha}, \qquad \phi_m = \arcsin\!\left(\frac{1-\alpha}{1+\alpha}\right),
+\]
+and the magnitude at \(\omega_m\) is \(K_c/\sqrt{\alpha}\). The lead compensator increases phase margin and bandwidth at the cost of amplifying high-frequency noise.
+
+### Lead Design Procedure
+
+Given a plant \(P(s)\) and specifications (desired phase margin \(\mathrm{PM}^*\) and gain-crossover \(\omega_c^*\)):
+1. Set \(K_c\) so the low-frequency gain meets steady-state specs.
+2. Evaluate \(\mathrm{PM}\) of \(K_c P(j\omega)\) at its existing crossover.
+3. Compute required phase boost \(\phi_m = \mathrm{PM}^* - \mathrm{PM}_\text{current} + \varepsilon\) (adding \(\varepsilon \approx 5^\circ\text{–}12^\circ\) for the gain bulge shifting crossover).
+4. Solve \(\alpha = (1-\sin\phi_m)/(1+\sin\phi_m)\).
+5. Place \(\omega_m = \omega_c^*\); then \(\omega_z = \omega_m\sqrt{\alpha}\), \(\omega_p = \omega_m/\sqrt{\alpha}\).
+
+### The Lag Compensator
+
+A **lag compensator**
+\[
+C(s) = K_c\, \frac{1 + s/\omega_z}{1 + s/\omega_p}, \qquad \omega_z > \omega_p,
+\]
+has pole below the zero and a large DC gain \(\omega_z/\omega_p\), reducing steady-state error without significantly altering the crossover. To avoid eroding phase margin, place \(\omega_z\) about one decade below the intended gain-crossover frequency.
+
+### Lead-Lag Combination
+
+A **lead-lag** compensator is simply the product of the two; the lead part fixes phase margin and bandwidth, the lag part fixes steady-state gain. The pole and zero pairs are placed at well-separated frequencies so they can be tuned almost independently.
+
+### Worked Design Example
+
+Let \(P(s) = 1/[s(s+1)(s+5)]\); require zero steady-state error to a ramp of \(K_v = 5\) and \(\mathrm{PM}^* = 45^\circ\).
+
+The velocity error constant \(K_v = \lim_{s\to 0} s K_c P(s) = K_c/5\), so \(K_c = 25\). The Bode plot of \(25 P(s)\) has gain crossover at roughly \(\omega_c \approx 2\) rad/s with \(\mathrm{PM}\) only about \(-10^\circ\) — unstable. A lead with \(\phi_m \approx 55^\circ+10^\circ = 65^\circ\) gives \(\alpha \approx 0.05\); placing \(\omega_m=2\) gives \(\omega_z \approx 0.45\), \(\omega_p \approx 9\). Final controller \(C(s) = 25\,(1+s/0.45)/(1+s/9)\) — a classic ME 360 lead-design worked solution.
+
+## Chapter 30 — Process Identification (Brief)
+
+Before designing a controller the engineer must have a model. In process industries the plant is usually unknown in detail, so models are fit empirically.
+
+### First-Order Plus Dead-Time (FOPDT) Models
+
+A large class of chemical-process plants are well approximated by
+\[
+G(s) = \frac{K}{\tau s + 1}\, e^{-Ls},
+\]
+with DC gain \(K\), time constant \(\tau\), and dead time \(L\). Three parameters, a handful of measurements — hence its ubiquity in CHE 341.
+
+### Reaction-Curve (Tangent-Line) Method
+
+Apply a step input of size \(\Delta u\); record the open-loop response \(y(t)\). Procedure:
+1. Measure \(\Delta y_\infty = y(\infty) - y(0)\); set \(K = \Delta y_\infty / \Delta u\).
+2. Find the **inflection point** of \(y(t)\), where the slope is maximal; call it \(t^*\), slope \(R\).
+3. Draw the tangent at \((t^*, y(t^*))\); it crosses the initial level at \(t = L\) and the final level at \(t = L + \tau_R\). The classical Ziegler–Nichols form uses **reaction rate** \(R = \Delta y_\infty/\tau_R\).
+4. Alternatively, the **two-point method** reads \(t_{28}, t_{63}\) at which the response reaches 28.3% and 63.2% of \(\Delta y_\infty\) and sets
+\[
+\tau = 1.5(t_{63} - t_{28}), \qquad L = t_{63} - \tau,
+\]
+typically giving a more robust fit than tangent-line construction.
+
+### Relay-Feedback Autotuning (Åström–Hägglund, 1984)
+
+Rather than risking open-loop testing, replace the controller by a **relay** of amplitude \(d\): when \(e > 0\), output \(+d\); when \(e < 0\), output \(-d\). Most plants will then exhibit a stable limit cycle whose period \(T_u\) and amplitude \(a\) satisfy the describing-function approximation
+\[
+K_u \approx \frac{4d}{\pi a}, \qquad T_u \approx \text{observed period},
+\]
+directly giving the ultimate-gain parameters used by Ziegler–Nichols. This test is safe (the closed loop stays bounded), fast (one period), and automatable; it is the foundation of commercial "autotune" buttons on industrial PID controllers.
+
+<div class="remark">
+**Where to go next.** Readers who have absorbed Parts I–III can move to multivariable control (Doyle, Francis, Tannenbaum, *Feedback Control Theory*), robust and \(H_\infty\) control (Zhou, Doyle, Glover), or nonlinear control (Khalil, *Nonlinear Systems*). The state-space language of Part II and the frequency-domain language of Part III are genuinely complementary: modern robust-control theory is explicitly built on their synthesis via the small-gain theorem and the Youla parametrisation.
+</div>

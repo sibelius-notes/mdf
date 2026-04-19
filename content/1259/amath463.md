@@ -8,6 +8,8 @@ The primary text is P.K. Kundu and I.M. Cohen, *Fluid Mechanics*, 3<sup>rd</sup>
 
 ---
 
+# Part I — Core Theory of Fluid Mechanics
+
 # Chapter 1: Equations of Motion
 
 ## 1.1 The Continuum Hypothesis and the Fluid Element
@@ -1878,3 +1880,542 @@ Ri = \frac{N^2}{(\partial U/\partial z)^2}
 The proof — due to Miles (1961) with the Howard semicircle theorem providing the geometric picture — follows by multiplying the Taylor–Goldstein equation (the stratified analogue of the Rayleigh equation) by an appropriate function and integrating. When \(Ri < 1/4\), the kinetic energy of the shear can overcome the work done against buoyancy in vertically displacing fluid, allowing instability. The resulting turbulent mixing (Kelvin–Helmholtz billows in stratified flow) is the primary mechanism driving irreversible diapycnal mixing in the interior of the ocean — essential for the global thermohaline circulation.
 
 At \(Ri \gg 1\), stratification strongly suppresses vertical motions. Turbulence becomes quasi-two-dimensional, with energy cascading to **larger** horizontal scales (an **inverse energy cascade**, as in 2D turbulence) rather than to smaller scales as in 3D. This two-dimensionalisation by stratification underlies the large horizontal coherence of oceanic mesoscale eddies and atmospheric jets, providing the dynamical bridge between the instabilities studied throughout this chapter and the organised large-scale structures observed in the geophysical world.
+
+# Part II — Engineering Applications of Fluid Mechanics
+
+The preceding parts developed fluid mechanics as a branch of mathematical physics: continuum kinematics, the Navier–Stokes equations as conservation laws for mass and momentum, boundary-layer asymptotics, hydrodynamic stability, geophysical dynamics, and the statistical mechanics of turbulence. That viewpoint is essential, but it is not the only one an engineer needs. When the task is to size a pump, choose a pipe diameter, design a weir, or verify that a scaled wind-tunnel model faithfully reproduces full-scale aerodynamics, the relevant questions are rarely about existence of weak solutions or spectral properties of the Orr–Sommerfeld operator — they are about dimensionless groups, empirical correlations, and similitude.
+
+This part surveys the applied toolkit taught in introductory engineering fluid-mechanics courses at the University of Waterloo (ME 351, CIVE 280, CHE 211, SYDE 383, MTE 352, ENVE 280, AE 280, GEOE 280). The material complements — rather than replaces — the rigorous continuum derivations of Parts I–VII: the Hagen–Poiseuille profile reappears here, but as the basis of the Darcy–Weisbach friction factor; Bernoulli's equation reappears, but as the working equation behind a pitot tube; boundary-layer theory reappears, but in the form of engineering drag-coefficient charts. Throughout, the style remains mathematical — theorems, definitions, derivations — but the emphasis shifts toward the correlations and design equations that engineers actually use.
+
+## Chapter 12: Engineering Dimensional Analysis
+
+### The Buckingham Pi Theorem
+
+<div class="theorem">
+<strong>Buckingham Pi Theorem.</strong> Let a physical relation involve \(n\) dimensional variables \(q_1, \ldots, q_n\) whose dimensions are expressed in terms of \(k\) independent fundamental dimensions (typically \(M, L, T\), plus \(\Theta\) when thermal effects enter). Then the relation
+\[
+f(q_1, q_2, \ldots, q_n) = 0
+\]
+can be rewritten as a relation among \(n - k\) independent dimensionless groups:
+\[
+F(\Pi_1, \Pi_2, \ldots, \Pi_{n-k}) = 0.
+\]
+</div>
+
+The \(\Pi\) groups are constructed by choosing \(k\) **repeating variables** whose dimensions span the fundamental set, and forming dimensionless products with each of the remaining variables in turn. The choice is non-unique, but any two complete sets of \(\Pi\)'s are related by invertible functions.
+
+### Standard Dimensionless Numbers
+
+<div class="definition">
+<strong>Engineering dimensionless groups.</strong>
+\[
+Re = \frac{\rho U L}{\mu}, \quad Fr = \frac{U}{\sqrt{gL}}, \quad Ma = \frac{U}{a}, \quad We = \frac{\rho U^2 L}{\sigma}, \quad Eu = \frac{\Delta p}{\rho U^2}, \quad St = \frac{f L}{U}, \quad Pr = \frac{\nu}{\alpha}.
+\]
+</div>
+
+Each group expresses the ratio of two physical effects, and the flow regime is governed by which effect dominates:
+
+- **Reynolds number** \(Re\) — inertia / viscous. Dominates in all viscous flows; controls transition to turbulence (Ch. 2, 5).
+- **Froude number** \(Fr\) — inertia / gravity. Dominates in free-surface flows: ship waves, open channels, hydraulic jumps.
+- **Mach number** \(Ma\) — flow speed / sound speed. Dominates when \(Ma \gtrsim 0.3\); compressibility becomes essential.
+- **Weber number** \(We\) — inertia / surface tension. Relevant for droplets, sprays, small-scale interfacial flows.
+- **Euler number** \(Eu\) — pressure / inertia. The dimensionless pressure drop; closely related to the loss and drag coefficients of later chapters.
+- **Strouhal number** \(St\) — characterises unsteady vortex shedding (e.g. \(St \approx 0.21\) for a cylinder at \(Re \sim 10^3\)).
+- **Prandtl number** \(Pr\) — momentum diffusivity / thermal diffusivity. Couples fluid to heat transfer.
+
+### Similitude
+
+<div class="definition">
+Two flows are in **similitude** if they satisfy, in order of increasing strength:
+<ol>
+<li><strong>Geometric similarity</strong>: model and prototype have identical shape up to a length scale \(\lambda_L\).</li>
+<li><strong>Kinematic similarity</strong>: velocity fields are identical up to a scale \(\lambda_U\) at corresponding points (requires geometric similarity plus matched streamline patterns).</li>
+<li><strong>Dynamic similarity</strong>: all relevant force ratios — i.e. all governing \(\Pi\) groups — match between model and prototype.</li>
+</ol>
+</div>
+
+Dynamic similarity is the strongest and what Pi-theorem-based model testing actually demands. Wind tunnels match \(Re\) (and \(Ma\) for high-speed aerodynamics); towing tanks match \(Fr\) (surface waves); open-channel hydraulic models match \(Fr\); scaled heat-exchanger rigs match \(Re\) and \(Pr\).
+
+### Worked Example: Ship Resistance Scaling
+
+Total ship resistance splits into **frictional** drag (boundary-layer, scales with \(Re\)) and **wave-making** drag (free-surface gravity waves, scales with \(Fr\)). A 1:25 scaled model in a towing tank cannot satisfy both simultaneously with water: matching \(Fr\) requires model speed \(U_m = U_p/\sqrt{25} = U_p/5\); matching \(Re\) would require \(U_m = 25\, U_p\). The **Froude–Reynolds conflict** is resolved by **Froude's hypothesis**:
+
+\[
+C_{T} = C_{F}(Re) + C_{W}(Fr),
+\]
+
+i.e. assume friction and wave-making decouple. One matches \(Fr\) in the tank, measures total model resistance, subtracts a computed \(C_F(Re_m)\) from the ITTC 1957 flat-plate correlation
+\[
+C_F = \frac{0.075}{(\log_{10} Re - 2)^2},
+\]
+leaving the wave coefficient \(C_W\), which is scaled directly to full size. The prototype friction is then re-added at the (much higher) full-scale \(Re\). This methodology, due to William Froude in the 1870s, remains the foundation of ship-resistance testing today.
+
+## Chapter 13: Fluid Statics — Hydrostatics and Buoyancy
+
+### The Hydrostatic Pressure Distribution
+
+In a fluid at rest the momentum equation reduces to \(\nabla p = \rho \mathbf{g}\). For a constant-density fluid in a uniform gravitational field \(\mathbf{g} = -g\hat{\mathbf{z}}\),
+
+\[
+p(z) = p_0 + \rho g (z_0 - z),
+\]
+
+so pressure increases linearly with depth. For a compressible gas under gravity with ideal-gas equation of state and isothermal atmosphere \(T = T_0\), integrating \(dp/dz = -\rho g = -p g/(R T_0)\) gives the **barometric formula** \(p(z) = p_0 \exp(-z/H)\) with scale height \(H = R T_0/g \approx 8.4~\mathrm{km}\) for Earth's atmosphere.
+
+### Force on a Plane Submerged Surface
+
+A plane surface of area \(A\) submerged in a fluid with its centroid at depth \(\bar{h}\) experiences a resultant hydrostatic force
+
+\[
+F = \rho g\, \bar{h}\, A,
+\]
+
+acting normal to the surface at the **centre of pressure**, a distance \(I_{\bar{x}\bar{x}}/(\bar{h} A)\) below the centroid (with \(I_{\bar{x}\bar{x}}\) the second moment of area about a horizontal axis through the centroid). For a curved surface one resolves into horizontal and vertical components: the horizontal force equals that on the vertical projection, and the vertical force equals the weight of the fluid column above (or virtually displaced by) the surface.
+
+### Archimedes' Principle and Stability of Floating Bodies
+
+The net pressure force on any closed surface immersed in a fluid at rest equals the weight of the displaced fluid:
+
+\[
+\mathbf{F}_{\text{buoy}} = -\int_{\partial V} p\, \hat{\mathbf{n}}\, dA = \rho_f g V\, \hat{\mathbf{z}}.
+\]
+
+This is **Archimedes' principle**. For a floating body with waterplane second moment \(I_{\mathrm{wp}}\) and submerged volume \(V_s\), the **metacentric height** is
+
+\[
+\overline{GM} = \frac{I_{\mathrm{wp}}}{V_s} - \overline{BG},
+\]
+
+where \(\overline{BG}\) is the distance from centre of buoyancy to centre of gravity. The body is stable in roll iff \(\overline{GM} > 0\) — the design criterion for ships, barges, and offshore platforms.
+
+**Remark.** Hydrostatics underlies manometry, dam design, lock gates, and the calibration of depth gauges. The limit \(\mathbf{u} \equiv 0\) makes it a trivial special case of the Navier–Stokes equations, but engineering practice demands that it be stated explicitly, since pressure-on-submerged-surfaces and stability-of-floating-bodies problems are standard content in CIVE 280, ME 351, ENVE 280 and the equivalent first courses.
+
+---
+
+## Chapter 14: Internal Flow — Pipe Flow and Friction
+
+### Regimes and Hagen–Poiseuille
+
+For flow in a straight circular pipe of diameter \(D\), the transition Reynolds number \(Re_D = \rho U D/\mu\) is conventionally taken as \(Re_D \lesssim 2300\) (laminar), \(Re_D \gtrsim 4000\) (turbulent), with a transitional range between.
+
+The laminar solution follows directly from the Navier–Stokes equations of Chapter 2. For steady, fully developed, axisymmetric flow in cylindrical \((r,\theta,z)\) coordinates with \(\mathbf{u} = u_z(r)\,\hat{\mathbf{e}}_z\), the momentum equation reduces to
+\[
+\frac{1}{r}\frac{d}{dr}\!\left(r\frac{du_z}{dr}\right) = \frac{1}{\mu}\frac{dp}{dz},
+\]
+with boundary conditions \(u_z(R) = 0\) and \(du_z/dr|_{r=0} = 0\). Integrating yields the **Hagen–Poiseuille profile**:
+
+\[
+u_z(r) = \frac{R^2}{4\mu}\!\left(-\frac{dp}{dz}\right)\!\left(1 - \frac{r^2}{R^2}\right), \qquad Q = \frac{\pi R^4}{8\mu}\!\left(-\frac{dp}{dz}\right).
+\]
+
+### Darcy–Weisbach Equation
+
+For engineering purposes, one packages the pressure drop over a length \(L\) of pipe as
+
+<div class="definition">
+<strong>Darcy–Weisbach equation.</strong>
+\[
+\Delta p = f\,\frac{L}{D}\,\frac{\rho U^2}{2}, \qquad h_f = f\,\frac{L}{D}\,\frac{U^2}{2g},
+\]
+where \(U = Q/A\) is the area-averaged velocity and \(f\) is the **Darcy friction factor**.
+</div>
+
+Comparing with the Hagen–Poiseuille result gives, for laminar flow,
+\[
+f = \frac{64}{Re_D}.
+\]
+
+### The Moody Diagram
+
+For turbulent flow, \(f\) depends on both \(Re_D\) and the **relative roughness** \(\epsilon/D\). The standard correlations are:
+
+- **Blasius (smooth, \(4\times 10^3 \le Re_D \le 10^5\)):** \(f = 0.316\, Re_D^{-1/4}\).
+- **Colebrook–White (implicit, all turbulent regimes):**
+\[
+\frac{1}{\sqrt{f}} = -2\log_{10}\!\left(\frac{\epsilon/D}{3.7} + \frac{2.51}{Re_D\sqrt{f}}\right).
+\]
+- **Swamee–Jain (explicit approximation, within 1% of Colebrook):**
+\[
+f = \frac{0.25}{\left[\log_{10}\!\left(\frac{\epsilon/D}{3.7} + \frac{5.74}{Re_D^{0.9}}\right)\right]^2}.
+\]
+- **Haaland (explicit, within 2%):**
+\[
+\frac{1}{\sqrt{f}} = -1.8\log_{10}\!\left[\left(\frac{\epsilon/D}{3.7}\right)^{1.11} + \frac{6.9}{Re_D}\right].
+\]
+
+The graphical representation of these correlations is the **Moody diagram** — a log-log plot of \(f\) versus \(Re_D\) with \(\epsilon/D\) as parameter. Three regimes are visible: the laminar line \(f=64/Re_D\); a transition region for smooth turbulent flow where \(f\) follows Blasius; and a **fully rough** regime in which \(f\) is independent of \(Re_D\) and determined by roughness alone, since the viscous sublayer becomes thinner than the roughness elements.
+
+### Minor (Local) Losses
+
+Fittings, bends, valves, and area changes introduce additional losses parameterised by loss coefficients \(K\):
+\[
+h_L = K\,\frac{U^2}{2g}.
+\]
+Representative values: sharp-edged entrance \(K \approx 0.5\); well-rounded entrance \(K \approx 0.04\); sudden expansion from area \(A_1\) to \(A_2\), \(K = (1 - A_1/A_2)^2\) (Borda–Carnot); 90\(^\circ\) elbow \(K \approx 0.3\)–\(0.9\); fully open globe valve \(K \approx 10\); gate valve \(K \approx 0.15\).
+
+<div class="remark">
+The <strong>equivalent length</strong> \(L_{eq}\) of a fitting is defined by \(K = f\,L_{eq}/D\), allowing all losses to be folded into a single effective pipe length for book-keeping in long systems.
+</div>
+
+### Non-Newtonian Pipe Flow — Power-Law and Bingham Fluids
+
+Polymer melts, slurries, blood, ketchup, drilling muds, and many food products fail the Newtonian assumption that shear stress is proportional to strain rate. Engineering practice in CHE 543 (polymer processing), CHE 564 (food processing) and BME 384 (biofluids) relies on two simple generalised-Newtonian models.
+
+The **power-law (Ostwald–de Waele) fluid** obeys
+\[
+\tau = K\, |\dot\gamma|^{n-1}\, \dot\gamma,
+\]
+with consistency index \(K\) and flow-behaviour index \(n\). The fluid is **shear-thinning** (pseudoplastic) if \(n < 1\) — the case for most polymer solutions, paints, and blood — and **shear-thickening** (dilatant) if \(n > 1\), characteristic of dense particle suspensions. Fully developed laminar flow in a circular pipe of radius \(R\) gives the velocity profile
+\[
+u(r) = \frac{n}{n+1}\left(\frac{\Delta p}{2 K L}\right)^{1/n}\!\!\left(R^{(n+1)/n} - r^{(n+1)/n}\right),
+\]
+and the volumetric flow rate
+\[
+Q = \frac{n\pi R^3}{3n+1}\left(\frac{R\, \Delta p}{2 K L}\right)^{1/n},
+\]
+which reduces to Hagen–Poiseuille at \(n = 1\), \(K = \mu\). A **generalised Reynolds number** \(Re_{\text{gen}} = \rho U^{2-n} D^n / K\,[8(3n+1)/(4n)]^{1-n}\) extends the Moody diagram by matching the laminar \(64/Re\) line exactly (Metzner–Reed correlation).
+
+The **Bingham plastic** (toothpaste, sewage sludge, fresh concrete, yield-stress slurries) resists flow until a **yield stress** \(\tau_y\) is exceeded, then flows with plastic viscosity \(\mu_p\):
+\[
+\tau = \tau_y + \mu_p\, \dot\gamma \quad\text{for } |\tau| > \tau_y,\qquad \dot\gamma = 0\ \text{otherwise}.
+\]
+In pipe flow this creates an unsheared **plug** of radius \(r_p = 2 L \tau_y/\Delta p\) moving as a rigid body surrounded by a sheared annulus — the **Buckingham–Reiner** equation gives the flow rate. The dimensionless **Bingham number** \(Bn = \tau_y D/(\mu_p U)\) measures the relative importance of yield to viscous stresses and controls whether the plug fills the pipe (no flow) or vanishes (Newtonian limit). Herschel–Bulkley (\(\tau = \tau_y + K\dot\gamma^n\)) combines both features and is the standard food-engineering model for tomato paste, chocolate, and many dairy products.
+
+---
+
+## Chapter 15: Pipe Network Analysis
+
+### Energy Equation with Losses
+
+Between two sections of a piping system, the engineering energy equation is
+\[
+\frac{p_1}{\rho g} + \frac{U_1^2}{2g} + z_1 + h_{\mathrm{pump}} = \frac{p_2}{\rho g} + \frac{U_2^2}{2g} + z_2 + h_{\mathrm{turbine}} + \sum h_f + \sum h_L,
+\]
+the Bernoulli equation of Chapter 3 augmented by mechanical work and friction.
+
+### Series and Parallel Combinations
+
+<div class="definition">
+For pipes in <strong>series</strong> carrying a common flow \(Q\):
+\[
+h_{\mathrm{total}} = \sum_i h_i, \qquad Q_1 = Q_2 = \cdots = Q.
+\]
+For pipes in <strong>parallel</strong> sharing endpoints:
+\[
+h_1 = h_2 = \cdots = h_{\mathrm{common}}, \qquad Q_{\mathrm{total}} = \sum_i Q_i.
+\]
+</div>
+
+### Hardy Cross Method
+
+For a looped network with \(n_p\) pipes, \(n_j\) junctions, and \(n_\ell\) independent loops, continuity at each junction (\(\sum Q_\text{in} = \sum Q_\text{out}\)) and head-loss closure around each loop (\(\sum_{\text{loop}} h_f = 0\), counted with sign) give \(n_p\) equations for \(n_p\) unknown pipe flows.
+
+<div class="theorem">
+<strong>Hardy Cross iteration.</strong> Assume pipe head loss of the form \(h = r Q^{n}\) (with \(n=2\) for turbulent, \(n=1\) for laminar). Starting from a guessed flow distribution satisfying continuity, in each loop apply the correction
+\[
+\Delta Q = -\frac{\sum_{\text{loop}} r_i Q_i |Q_i|^{n-1}}{n\sum_{\text{loop}} r_i |Q_i|^{n-1}},
+\]
+and add \(\Delta Q\) to every pipe in the loop (with sign). Iterate until \(|\Delta Q|\) falls below tolerance.
+</div>
+
+The method is Newton's method applied loop-by-loop to the nonlinear head-loss equations.
+
+### Worked Example: Y-Branch
+
+A three-pipe Y distributes a known inflow \(Q_0\) from node \(A\) between two reservoirs \(B\) and \(C\). Let pipe \(i\) have resistance \(r_i\) (i.e. \(h_i = r_i Q_i^2\)), and let the reservoir surface elevations be \(z_B\) and \(z_C\). With \(Q_1\) in pipe \(AJ\) (from \(A\) to junction) and \(Q_2\), \(Q_3\) in \(JB\), \(JC\), continuity gives \(Q_1 = Q_2 + Q_3\), while matching heads at the junction yields
+\[
+H_A - r_1 Q_1^2 - r_2 Q_2^2 = z_B, \qquad H_A - r_1 Q_1^2 - r_3 Q_3^2 = z_C.
+\]
+Subtracting, \(r_2 Q_2^2 - r_3 Q_3^2 = z_C - z_B\); combined with continuity, a single nonlinear equation in \(Q_2\) remains, solvable by bisection or Newton iteration.
+
+<div class="remark">
+Modern hydraulic-network solvers such as <strong>EPANET</strong> (U.S. EPA, 1993) implement the global gradient algorithm — a linearisation of the full system of junction-continuity and loop-energy equations — and supersede Hardy Cross for large networks. The underlying mathematics is identical in spirit: a sparse nonlinear Kirchhoff-type system.
+</div>
+
+## Chapter 16: Pumps and Turbomachinery Basics
+
+### Euler Turbomachine Equation
+
+Applying the angular-momentum form of the Reynolds transport theorem (Chapter 2) to a steady control volume bounded by the inlet (1) and outlet (2) of a rotating impeller:
+
+<div class="theorem">
+<strong>Euler turbomachine equation.</strong> The specific work done by the shaft on the fluid (head added, in \(\mathrm{m}\)) equals
+\[
+gH_{\mathrm{shaft}} = U_2 V_{t,2} - U_1 V_{t,1},
+\]
+where \(U_i = \omega r_i\) is the blade speed and \(V_{t,i}\) is the absolute tangential fluid velocity at station \(i\).
+</div>
+
+For a centrifugal pump with radial inflow (\(V_{t,1}=0\)), the ideal head is \(gH = U_2 V_{t,2}\).
+
+### Characteristic Curves and Operating Point
+
+A real pump has a **characteristic curve** \(H_{\mathrm{pump}}(Q)\) that decreases with \(Q\). The piping **system curve** is (from the energy equation)
+\[
+H_{\mathrm{sys}}(Q) = \Delta z + \sum (f\tfrac{L}{D} + K)\frac{U^2}{2g} = \Delta z + CQ^2,
+\]
+i.e. a static lift plus quadratic friction term. The **operating point** is the intersection \(H_{\mathrm{pump}}(Q) = H_{\mathrm{sys}}(Q)\).
+
+### Specific Speed and Selection
+
+<div class="definition">
+<strong>Specific speed (dimensional, SI):</strong>
+\[
+N_s = \frac{\omega\sqrt{Q}}{(gH)^{3/4}}.
+\]
+</div>
+
+\(N_s\) is a similarity invariant that identifies pump type: low \(N_s\) (\(< 1\)) — radial/centrifugal; mid \(N_s\) (\(1\)–\(4\)) — mixed flow; high \(N_s\) (\(>4\)) — axial.
+
+### NPSH and Cavitation
+
+**Cavitation** occurs when local pressure in the pump inlet falls below the vapour pressure \(p_v\), vaporising the liquid and causing erosion and performance loss. The margin is quantified by net positive suction head:
+\[
+\mathrm{NPSH_a} = \frac{p_{\mathrm{atm}} - p_v}{\rho g} - z_{\mathrm{suction}} - h_{f,\mathrm{suction}}
+\]
+(available, determined by the installation) versus \(\mathrm{NPSH_r}\) (required, specified by the pump manufacturer). Safe operation requires
+\[
+\mathrm{NPSH_a} \geq \mathrm{NPSH_r} + \mathrm{margin}.
+\]
+
+### Pumps in Series and Parallel; Affinity Laws
+
+For pumps in **series** at common \(Q\), heads add: \(H_{\mathrm{total}}(Q) = H_1(Q) + H_2(Q)\). For pumps in **parallel** at common \(H\), flows add: \(Q_{\mathrm{total}}(H) = Q_1(H) + Q_2(H)\).
+
+<div class="theorem">
+<strong>Affinity laws.</strong> For a given pump operating at two speeds \(\omega_1, \omega_2\) at dynamically similar operating points,
+\[
+\frac{Q_2}{Q_1} = \frac{\omega_2}{\omega_1}, \qquad \frac{H_2}{H_1} = \!\left(\frac{\omega_2}{\omega_1}\right)^{\!2}, \qquad \frac{P_2}{P_1} = \!\left(\frac{\omega_2}{\omega_1}\right)^{\!3}.
+\]
+</div>
+
+These follow from dimensional analysis of the pump-performance dimensionless groups \(C_H = gH/(\omega D)^2\), \(C_Q = Q/(\omega D^3)\), \(C_P = P/(\rho \omega^3 D^5)\).
+
+## Chapter 17: Flow Measurement
+
+### Pitot–Static Tube
+
+Along a streamline through a stagnation point, Bernoulli's equation (Chapter 3) yields
+\[
+p_0 = p + \tfrac{1}{2}\rho U^2,
+\]
+where \(p_0\) is the **stagnation** (total) pressure measured at the tube tip and \(p\) is the **static** pressure measured at side ports. Thus
+\[
+U = \sqrt{\frac{2(p_0 - p)}{\rho}}.
+\]
+For compressible flow at \(Ma > 0.3\), the isentropic-flow correction \(p_0/p = (1 + \tfrac{\gamma-1}{2}Ma^2)^{\gamma/(\gamma-1)}\) must be applied.
+
+### Differential-Pressure Flowmeters
+
+<div class="definition">
+For an <strong>obstruction meter</strong> (orifice, nozzle, Venturi) in a pipe of area \(A_1\) with throat area \(A_2\), the ideal flow (from Bernoulli plus continuity) is
+\[
+Q_{\mathrm{ideal}} = A_2\sqrt{\frac{2\,\Delta p}{\rho(1 - (A_2/A_1)^2)}},
+\]
+and the measured flow is
+\[
+Q = C_d\, Q_{\mathrm{ideal}},
+\]
+where the <strong>discharge coefficient</strong> \(C_d\) is empirically determined.
+</div>
+
+Typical values: **Venturi** \(C_d \approx 0.98\); **flow nozzle** \(C_d \approx 0.96\); **orifice plate** \(C_d \approx 0.60\)–\(0.65\) (depending on \(\beta = d/D\) and tap location). Orifice plates are cheap but dissipative; Venturis are expensive but recover most of the pressure.
+
+### Weirs (Open-Channel)
+
+For a **rectangular sharp-crested weir** of width \(b\) and head \(H\) above the crest,
+\[
+Q = C_d\,\tfrac{2}{3}b\sqrt{2g}\,H^{3/2}, \qquad C_d \approx 0.62.
+\]
+For a **V-notch weir** with total notch angle \(\theta\),
+\[
+Q = C_d\,\tfrac{8}{15}\tan(\theta/2)\sqrt{2g}\,H^{5/2}, \qquad C_d \approx 0.58.
+\]
+The \(H^{5/2}\) dependence of a V-notch gives excellent low-flow sensitivity, which is why V-notches are standard in environmental monitoring.
+
+### Electromagnetic and Ultrasonic Meters
+
+An **electromagnetic flowmeter** applies Faraday's law: a conductive fluid moving at velocity \(U\) through a transverse magnetic field \(B\) induces a voltage \(V = BUD\) across electrodes separated by the pipe diameter \(D\). **Ultrasonic transit-time** meters measure the difference in travel time of acoustic pulses sent upstream and downstream along a diagonal path; the difference is proportional to the line-averaged axial velocity.
+
+### Uncertainty Propagation
+
+If \(Q = Q(x_1,\ldots,x_n)\), the standard uncertainty-propagation formula gives
+\[
+\sigma_Q^2 = \sum_{i} \!\left(\frac{\partial Q}{\partial x_i}\right)^{\!2}\sigma_{x_i}^2,
+\]
+assuming uncorrelated errors. For an orifice meter, \(Q \propto C_d\sqrt{\Delta p}\) implies \((\sigma_Q/Q)^2 = (\sigma_{C_d}/C_d)^2 + \tfrac14(\sigma_{\Delta p}/\Delta p)^2\).
+
+## Chapter 18: Open-Channel Hydraulics
+
+### Chezy and Manning Equations
+
+For **uniform flow** in a prismatic channel of slope \(S_0\), hydraulic radius \(R_h = A/P\) (area over wetted perimeter), a momentum balance between gravity and bed friction yields
+
+<div class="definition">
+<strong>Chezy equation:</strong> \(U = C\sqrt{R_h S_0}\), where \(C\) is the Chezy coefficient.
+
+<strong>Manning equation</strong> (SI units):
+\[
+U = \frac{1}{n}R_h^{2/3}S_0^{1/2}, \qquad Q = \frac{1}{n}A R_h^{2/3} S_0^{1/2},
+\]
+where \(n\) is the Manning roughness coefficient (\(n \approx 0.013\) smooth concrete; \(n \approx 0.025\) natural earth; \(n \approx 0.035\) weedy streams).
+</div>
+
+### Specific Energy and Critical Flow
+
+<div class="definition">
+For an open-channel flow with depth \(y\) and cross-sectional mean velocity \(U\),
+\[
+E = y + \frac{U^2}{2g} = y + \frac{Q^2}{2gA^2(y)}.
+\]
+The <strong>Froude number</strong> is \(Fr = U/\sqrt{gy}\) (in a rectangular channel). Flow is <strong>subcritical</strong> if \(Fr<1\), <strong>critical</strong> if \(Fr=1\), <strong>supercritical</strong> if \(Fr>1\).
+</div>
+
+For a rectangular channel of width \(b\) and discharge per unit width \(q=Q/b\), \(E = y + q^2/(2gy^2)\). Setting \(dE/dy = 0\) yields the **critical depth**
+\[
+y_c = \!\left(\frac{q^2}{g}\right)^{\!1/3}, \qquad E_{\min} = \tfrac{3}{2}y_c.
+\]
+The \(E(y)\) curve for fixed \(q\) has two branches — the upper (subcritical, large \(y\)) and lower (supercritical, small \(y\)) — meeting at \((y_c, E_{\min})\).
+
+### Hydraulic Jump
+
+A **hydraulic jump** is an abrupt transition from supercritical to subcritical flow, the open-channel analogue of a shock. Applying the momentum equation across the jump (neglecting bed friction over the short jump length) in a rectangular channel of unit width:
+\[
+\rho q(U_2 - U_1) = \tfrac{1}{2}\rho g(y_1^2 - y_2^2),
+\]
+combined with continuity \(q = U_1 y_1 = U_2 y_2\), yields the **Bélanger equation** for sequent depths:
+\[
+\frac{y_2}{y_1} = \tfrac{1}{2}\!\left(\sqrt{1 + 8 Fr_1^2} - 1\right).
+\]
+Energy is lost in the jump:
+\[
+\Delta E = \frac{(y_2 - y_1)^3}{4 y_1 y_2}.
+\]
+Jumps are used deliberately downstream of spillways as energy dissipators.
+
+### Gradually Varied Flow
+
+Away from jumps and structures, steady nonuniform flow obeys
+\[
+\frac{dy}{dx} = \frac{S_0 - S_f}{1 - Fr^2},
+\]
+where \(S_f\) is the friction slope (from Manning). The sign of the numerator and denominator, relative to the normal depth \(y_n\) (where \(S_0 = S_f\)) and critical depth \(y_c\), classifies the **water-surface profiles**. For **M**ild slopes (\(y_n > y_c\)): M1 (\(y > y_n\)), M2 (\(y_c < y < y_n\)), M3 (\(y < y_c\)). Analogous classifications exist for **S**teep (\(y_n < y_c\)), **C**ritical (\(y_n = y_c\)), **H**orizontal (\(S_0 = 0\), no \(y_n\)), and **A**dverse (\(S_0 < 0\)) slopes.
+
+<div class="remark">
+<strong>Controls.</strong> At a subcritical-to-supercritical transition (e.g. a broad-crested weir or free overfall) critical depth \(y = y_c\) occurs, fixing the stage-discharge relation. Such sections act as boundary conditions for integrating the gradually-varied-flow ODE upstream (for subcritical) or downstream (for supercritical).
+</div>
+
+## Chapter 19: External Flow — Lift, Drag, and Boundary-Layer Engineering Data
+
+### Drag Coefficient for Standard Shapes
+
+<div class="definition">
+The <strong>drag coefficient</strong> of a body of frontal area \(A\) in a stream of density \(\rho\) and speed \(U_\infty\) is
+\[
+C_D = \frac{F_D}{\tfrac{1}{2}\rho U_\infty^2 A}.
+\]
+</div>
+
+The \(C_D(Re)\) curve for a **smooth sphere** exhibits several canonical regimes:
+
+- Stokes regime, \(Re \ll 1\): \(C_D = 24/Re\) (exact, from the creeping-flow Stokes solution).
+- Intermediate (Schiller–Naumann), \(Re \lesssim 10^3\): \(C_D \approx \tfrac{24}{Re}(1 + 0.15 Re^{0.687})\).
+- Newton regime, \(10^3 \lesssim Re \lesssim 2\times 10^5\): \(C_D \approx 0.44\), nearly constant.
+- **Drag crisis**, \(Re \sim 3\times 10^5\): boundary layer transitions from laminar to turbulent on the sphere; separation moves downstream; \(C_D\) drops sharply from \(\sim 0.47\) to \(\sim 0.1\). Roughness (dimples on a golf ball) triggers this transition earlier.
+
+For a **circular cylinder** the picture is qualitatively similar, with an additional feature: in the range \(50 \lesssim Re \lesssim 2\times 10^5\), a **Kármán vortex street** is shed with Strouhal number \(St \approx 0.21\). Resonance with structural modes drives aeroelastic phenomena (Tacoma Narrows, marine risers, chimney stacks).
+
+For a **flat plate** at zero incidence, length \(L\), the laminar-Blasius result (Chapter 4) gives \(C_D = 1.328/\sqrt{Re_L}\), and turbulent-boundary-layer correlations give \(C_D \approx 0.074/Re_L^{1/5}\) (Prandtl, \(5\times 10^5 \lesssim Re_L \lesssim 10^7\)).
+
+### Lift–Drag Polar and Stall
+
+For an airfoil at angle of attack \(\alpha\), the **lift coefficient** \(C_L\) rises nearly linearly (slope \(2\pi\) per radian for a thin airfoil, from potential-flow thin-airfoil theory of Chapter 3) until **stall**, where boundary-layer separation on the upper surface causes \(C_L\) to plummet. The **drag polar** \(C_D(C_L)\) for a finite wing of aspect ratio \(AR\) separates into profile drag and induced drag:
+\[
+C_D = C_{D,0} + \frac{C_L^2}{\pi e\, AR},
+\]
+where \(e \lesssim 1\) is the Oswald efficiency factor. Maximum \(L/D\) occurs where profile and induced drag are equal.
+
+### Reynolds Analogy
+
+For boundary-layer flow of a fluid with \(Pr \approx 1\), the similarity of the momentum and thermal-energy equations gives the **Reynolds analogy**
+\[
+\frac{C_f}{2} \approx St_H \equiv \frac{h}{\rho c_p U_\infty},
+\]
+relating the skin-friction coefficient \(C_f\) to the Stanton number \(St_H\) — a remarkable free lunch for engineers estimating convective heat transfer from friction data.
+
+### Boundary-Layer Thickness Estimates
+
+Recalling the Blasius similarity solution of Chapter 4, the 99%-velocity thickness over a flat plate is
+\[
+\frac{\delta}{x} \approx \frac{5}{\sqrt{Re_x}}, \qquad Re_x = \frac{U_\infty x}{\nu},
+\]
+and the displacement and momentum thicknesses satisfy
+\[
+\frac{\delta^*}{x} \approx \frac{1.721}{\sqrt{Re_x}}, \qquad \frac{\theta}{x} \approx \frac{0.664}{\sqrt{Re_x}}.
+\]
+Transition from laminar to turbulent typically occurs near \(Re_{x,\mathrm{tr}} \sim 5\times 10^5\) on smooth flat plates; freestream turbulence, pressure gradient, surface roughness, or a **trip wire** can drive transition forward. In turbulent flow, boundary-layer thickness grows approximately as \(\delta/x \approx 0.37\,Re_x^{-1/5}\), faster than laminar.
+
+## Chapter 20: Fluidization and Multiphase Flow
+
+### Packed-Bed Flow: Ergun Equation
+
+Consider a fluid of density \(\rho\) and viscosity \(\mu\) flowing at superficial velocity \(u_s = Q/A_{\mathrm{bed}}\) through a stationary packed bed of particles of diameter \(d_p\) with bed voidage \(\varepsilon\) (void volume fraction). The **Ergun equation** gives the pressure drop per unit bed length \(L\):
+
+<div class="theorem">
+<strong>Ergun equation.</strong>
+\[
+\frac{\Delta p}{L} = 150\,\frac{(1-\varepsilon)^2}{\varepsilon^3}\,\frac{\mu u_s}{d_p^2} \;+\; 1.75\,\frac{1-\varepsilon}{\varepsilon^3}\,\frac{\rho u_s^2}{d_p}.
+\]
+</div>
+
+The first term (viscous, Blake–Kozeny) dominates at low particle Reynolds number \(Re_p = \rho u_s d_p/\mu(1-\varepsilon) \ll 1\); the second (inertial, Burke–Plummer) dominates at \(Re_p \gg 10^3\).
+
+### Minimum Fluidization Velocity
+
+As \(u_s\) increases, the pressure drop grows until it balances the buoyant weight of the bed; at that point the particles become suspended and the bed **fluidizes**. The **minimum fluidization velocity** \(u_{mf}\) is found by equating the Ergun \(\Delta p\) to the effective bed weight per unit area:
+\[
+\Delta p = (1 - \varepsilon_{mf})(\rho_s - \rho)gL.
+\]
+Solving the resulting quadratic in \(u_{mf}\) gives, in the small-particle limit,
+\[
+u_{mf} \approx \frac{(\rho_s - \rho)g\,d_p^2}{150\mu}\cdot\frac{\varepsilon_{mf}^3}{1 - \varepsilon_{mf}}.
+\]
+
+### Fluidization Regimes
+
+Beyond \(u_{mf}\), as \(u_s\) increases further, successive regimes appear:
+1. **Fixed bed** (\(u_s < u_{mf}\)) — particles stationary; Ergun applies.
+2. **Homogeneous (bubbling)** fluidization (\(u_{mf} < u_s < u_{mb}\)) — uniform expansion for Geldart A powders; bubbles form beyond \(u_{mb}\).
+3. **Slugging** — in narrow columns with deep beds, bubbles grow to fill the column cross-section.
+4. **Turbulent fluidization** — bubbles break down; violent mixing.
+5. **Fast fluidization** — substantial particle entrainment; requires solids recycling (circulating fluidized bed).
+6. **Pneumatic transport** (\(u_s > u_t\), the terminal velocity) — dilute-phase gas-solids flow.
+
+### Terminal Settling Velocity
+
+For a single particle settling in a quiescent fluid under gravity, balancing buoyant weight and drag gives
+\[
+\tfrac{\pi}{6}d_p^3(\rho_s-\rho)g = C_D\,\tfrac{1}{2}\rho u_t^2\,\tfrac{\pi}{4}d_p^2,
+\]
+hence
+\[
+u_t = \sqrt{\frac{4(\rho_s-\rho)g d_p}{3\rho C_D(Re_p)}}.
+\]
+Two limiting regimes:
+
+- **Stokes regime** (\(Re_p < 1\), \(C_D = 24/Re_p\)): \(u_t = \dfrac{(\rho_s-\rho)g d_p^2}{18\mu}.\)
+- **Newton regime** (\(10^3 < Re_p < 2\times 10^5\), \(C_D \approx 0.44\)): \(u_t = 1.74\sqrt{\dfrac{(\rho_s-\rho)g d_p}{\rho}}.\)
+
+For intermediate \(Re_p\), \(C_D(Re_p)\) is implicit in \(u_t\); iteration or a direct correlation (e.g. Haider–Levenspiel) is used.
+
+### Gas–Liquid Two-Phase Flow
+
+In horizontal or vertical pipes carrying both gas and liquid, the flow organises into distinct **regimes** — bubbly, slug, churn, annular, stratified, wavy — parameterised on **flow-regime maps** such as Baker (horizontal) or Hewitt–Roberts (vertical), which plot gas and liquid superficial mass fluxes \(G_G\), \(G_L\) with regime boundaries drawn empirically. Pressure-drop correlations (Lockhart–Martinelli, Friedel) use a **two-phase multiplier** \(\phi^2\) applied to the equivalent single-phase frictional drop:
+\[
+\!\left(\frac{dp}{dz}\right)_{\!TP} = \phi_L^2\!\left(\frac{dp}{dz}\right)_{\!L,\mathrm{only}}, \qquad \phi_L^2 = 1 + \frac{C}{X} + \frac{1}{X^2},
+\]
+where \(X^2 = (dp/dz)_L/(dp/dz)_G\) is the Martinelli parameter and \(C\) depends on the laminar/turbulent character of each phase. These correlations are the engineering bread-and-butter of oil-and-gas pipeline, boiler, and condenser design.
+
+<div class="remark">
+The multiphase-flow material here only scratches the surface of CHE 211 / CHE 312 territory. A full continuum treatment involves volume-averaged Navier–Stokes equations (Anderson–Jackson, 1967) with interphase-momentum-exchange closures — a subject in its own right, and one where the rigorous continuum framework of Parts I–II meets the empirical correlations of this chapter head-on.
+</div>

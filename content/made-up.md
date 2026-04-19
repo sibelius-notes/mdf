@@ -311,6 +311,15 @@ Every music theory graduate student will teach; almost none receive formal pedag
 
 ## Applied Mathematics
 
+### [AMATH 464: Solid Mechanics](/1269/amath464/)
+A comprehensive engineering solid-mechanics continuation of amath361. Covers 3D stress and strain, Mohr's circle and rosettes, axial loading and thermal stress, torsion (circular, non-circular, thin-walled closed and open sections, warping), bending (symmetric, unsymmetric, composite, curved, plastic), shear stress and shear centre, beam deflections (double integration, Macaulay brackets, moment-area, conjugate beam, superposition), energy methods (Castigliano, virtual work, Maxwell-Betti, least work), statically indeterminate structures (flexibility, stiffness, three-moment), column buckling (Euler, Perry-Robertson, secant, Rayleigh-Ritz, lateral-torsional, shell), beams on elastic foundations, plane elasticity and the Airy stress function, Kirchhoff plate theory, failure criteria (Tresca, von Mises, Mohr-Coulomb, Drucker-Prager, Hill), pressure vessels and thick-walled cylinders (Lamé, autofrettage), crack-tip fields and LEFM (Westergaard, K-factors, J-integral, Paris), thermoelasticity, plasticity (flow rules, hardening, limit analysis, slip-lines, shakedown), fatigue and damage tolerance, anisotropic and composite materials (laminate theory, Tsai-Wu), experimental stress analysis (gauges, photoelasticity, DIC), finite element preview, Hertz contact mechanics, and dynamic/impact loading. Material taught across ME 220, AE 204/205, CIVE 204/205/306, BME 553, MTE 219, SYDE 286, and NE 318 at Waterloo.
+
+{{< lightning >}}
+Waterloo teaches solid mechanics across several engineering-faculty courses without a corresponding math-faculty treatment. AMATH 464 was invented to pair with amath361 (continuum) and amath463 (fluid mechanics) so a math-oriented reader has a single rigorous text covering the full classical solid-mechanics toolkit — from the flexure formula and Mohr's circle to laminate theory, fracture mechanics, and the finite element method. The exposition follows Timoshenko and Goodier, Gere and Goodno, Roark's formulas, Ugural-Fenster, and Boresi-Schmidt as primary references.
+{{< /lightning >}}
+
+---
+
 ### [AMATH 791: Inverse Problems and Data Assimilation](/1269/amath791/)
 The mathematical theory of recovering unknown parameters, initial conditions, or forcing terms from indirect, noisy observations. The notes cover regularization theory (Tikhonov, iterative methods), the Bayesian formulation of inversion (including Stuart's well-posedness theorem), MCMC methods, and data assimilation (Kalman filtering, 3D-Var, 4D-Var).
 
