@@ -36,11 +36,14 @@ for any unit normal \(\hat{\mathbf{n}}\). Symmetry \(\sigma_{ij} = \sigma_{ji}\)
 ### 1.2 Principal Stresses and Invariants
 
 <div class="theorem">
-<strong>Principal stresses.</strong> The stress tensor is diagonalisable; its three real eigenvalues \(\sigma_1 \ge \sigma_2 \ge \sigma_3\) are the <em>principal stresses</em>, and the corresponding orthonormal eigenvectors define the <em>principal directions</em> — planes on which shear vanishes. They satisfy
+<p><strong>Principal stresses.</strong> The stress tensor is diagonalisable; its three real eigenvalues \(\sigma_1 \ge \sigma_2 \ge \sigma_3\) are the <em>principal stresses</em>, and the corresponding orthonormal eigenvectors define the <em>principal directions</em> — planes on which shear vanishes. They satisfy</p>
+
 \[
 \det(\boldsymbol{\sigma} - \sigma\,\mathbf{I}) = -\sigma^3 + I_1\,\sigma^2 - I_2\,\sigma + I_3 = 0,
 \]
-with the three <em>stress invariants</em>
+
+<p>with the three <em>stress invariants</em></p>
+
 \[
 I_1 = \sigma_{kk}, \quad I_2 = \tfrac{1}{2}(\sigma_{kk}\sigma_{ll} - \sigma_{kl}\sigma_{lk}), \quad I_3 = \det\boldsymbol{\sigma}.
 \]
@@ -319,12 +322,14 @@ with peak stress at the extreme fibre \(y = \pm c\),
 The mechanical recipe: (i) compute support reactions from global equilibrium; (ii) walk along the beam from left to right, using \(\Delta V = -P\) at each point load \(P\) and \(\Delta M = M_0\) at each point couple; (iii) between discrete loads, \(dV/dx = -w\), \(dM/dx = V\); (iv) at a free end, \(V = M = 0\) (unless loads are applied there). Extrema of \(M\) occur where \(V = 0\). Singularity functions (Macaulay brackets \(\langle x-a\rangle^n\), Ch 6) streamline the algebra.
 
 <div class="example">
-<strong>Simply supported beam with central point load.</strong> Length \(L\), supports at \(x=0, L\), load \(P\) at \(x=L/2\). Reactions \(R_A = R_B = P/2\). Shear and moment:
+<p><strong>Simply supported beam with central point load.</strong> Length \(L\), supports at \(x=0, L\), load \(P\) at \(x=L/2\). Reactions \(R_A = R_B = P/2\). Shear and moment:</p>
+
 \[
 V(x) = \begin{cases} P/2, & 0<x<L/2 \\ -P/2, & L/2<x<L \end{cases}, \quad
 M(x) = \begin{cases} Px/2, & 0 \le x \le L/2 \\ P(L-x)/2, & L/2 \le x \le L \end{cases}.
 \]
-Maximum moment \(M_{\max} = PL/4\) at midspan. Integrating the beam equation with \(v(0)=v(L)=0\), \(v'(L/2^-)=v'(L/2^+)\) (continuity of slope), maximum deflection \(v_{\max} = PL^3/(48EI)\).
+
+<p>Maximum moment \(M_{\max} = PL/4\) at midspan. Integrating the beam equation with \(v(0)=v(L)=0\), \(v'(L/2^-)=v'(L/2^+)\) (continuity of slope), maximum deflection \(v_{\max} = PL^3/(48EI)\).</p>
 </div>
 
 <div class="remark">
@@ -876,11 +881,13 @@ over admissible \(v\). Choosing a trial function gives an *upper bound* for \(P_
 ### 9.7b Example: Rayleigh–Ritz for a Simply Supported Column with Axial + Self-Weight
 
 <div class="example">
-For a simply supported column under axial load \(P\) plus uniform self-weight \(\rho g A\) per unit length, the first buckling mode shape \(v = A\sin(\pi x/L)\) gives (by the Rayleigh quotient)
+<p>For a simply supported column under axial load \(P\) plus uniform self-weight \(\rho g A\) per unit length, the first buckling mode shape \(v = A\sin(\pi x/L)\) gives (by the Rayleigh quotient)</p>
+
 \[
 P_{\text{cr}} + \frac{\rho g A L}{2} = \frac{\pi^2 EI}{L^2}.
 \]
-The self-weight contributes as if it were a uniform axial load of half its total weight. For a 100 m steel chimney of diameter 3 m, wall 20 mm: \(A \approx 0.19\) m², \(I \approx 0.21\) m\(^4\), \(\rho g A L = 14.7\) MN; Euler \(P_{\text{cr}} = \pi^2 (200\text{ GPa})(0.21)/(100)^2 = 41.4\) MN. Self-weight consumes about 18% of the column's critical capacity.
+
+<p>The self-weight contributes as if it were a uniform axial load of half its total weight. For a 100 m steel chimney of diameter 3 m, wall 20 mm: \(A \approx 0.19\) m², \(I \approx 0.21\) m\(^4\), \(\rho g A L = 14.7\) MN; Euler \(P_{\text{cr}} = \pi^2 (200\text{ GPa})(0.21)/(100)^2 = 41.4\) MN. Self-weight consumes about 18% of the column's critical capacity.</p>
 </div>
 
 ### 9.7c Shell Buckling: a Dangerous Instability
@@ -1754,11 +1761,13 @@ fitted from six strengths.
 ### 19.5b Classical Lamination Example: [0/90]s Cross-Ply
 
 <div class="example">
-A symmetric cross-ply laminate [0/90/90/0] of four identical CFRP layers (each 0.125 mm; \(E_1 = 140\) GPa, \(E_2 = 10\) GPa, \(\nu_{12} = 0.3\), \(G_{12} = 5\) GPa). Reduced stiffnesses: \(Q_{11} = 140.9\), \(Q_{22} = 10.07\), \(Q_{12} = 3.02\), \(Q_{66} = 5\) (GPa). For 0° plies, \(\bar{Q}^{(0)} = Q\); for 90° plies, \(\bar{Q}^{(90)}\) has \(\bar{Q}_{11}^{(90)} = Q_{22} = 10\), \(\bar{Q}_{22}^{(90)} = Q_{11} = 141\), \(\bar{Q}_{12}^{(90)} = Q_{12} = 3\). With two 0° plies and two 90° plies, total thickness 0.5 mm:
+<p>A symmetric cross-ply laminate [0/90/90/0] of four identical CFRP layers (each 0.125 mm; \(E_1 = 140\) GPa, \(E_2 = 10\) GPa, \(\nu_{12} = 0.3\), \(G_{12} = 5\) GPa). Reduced stiffnesses: \(Q_{11} = 140.9\), \(Q_{22} = 10.07\), \(Q_{12} = 3.02\), \(Q_{66} = 5\) (GPa). For 0° plies, \(\bar{Q}^{(0)} = Q\); for 90° plies, \(\bar{Q}^{(90)}\) has \(\bar{Q}_{11}^{(90)} = Q_{22} = 10\), \(\bar{Q}_{22}^{(90)} = Q_{11} = 141\), \(\bar{Q}_{12}^{(90)} = Q_{12} = 3\). With two 0° plies and two 90° plies, total thickness 0.5 mm:</p>
+
 \[
 A_{11} = A_{22} = (141 + 10)\times 0.5/2 = 37.7 \text{ kN/mm (per unit width)}.
 \]
-Symmetric laminate: \(B = 0\). Under uniaxial \(N_x\), \(\varepsilon_x^0 = N_x/A_{11}\), \(\varepsilon_y^0 = -A_{12}N_x/(A_{11}A_{22})\). Effective laminate modulus \(E_x^{\text{lam}} \approx 75\) GPa — midway between the 0° and 90° directions, as expected for a symmetric cross-ply.
+
+<p>Symmetric laminate: \(B = 0\). Under uniaxial \(N_x\), \(\varepsilon_x^0 = N_x/A_{11}\), \(\varepsilon_y^0 = -A_{12}N_x/(A_{11}A_{22})\). Effective laminate modulus \(E_x^{\text{lam}} \approx 75\) GPa — midway between the 0° and 90° directions, as expected for a symmetric cross-ply.</p>
 </div>
 
 ### 19.5c Interlaminar Stresses and Delamination
