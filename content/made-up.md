@@ -422,7 +422,7 @@ UW has AMATH 383 (Intro to Mathematical Biology) and graduate courses on oncolog
 ## Philosophy
 
 ### [PHIL 145c: Critical Thinking — Case Studies (Chinese)](/1219/phil145c/)
-Three real Chinese internet controversies from 2025–2026 dissected using the argument-analysis tools from PHIL 145: source evaluation, reconstruction of unstated premises, fallacy identification (ad hominem, strawman, appeal to authority), and charitable interpretation.
+Written in Chinese. Several real Chinese-internet controversies (plus a cross-language elite-discourse case) from 2016–2026 dissected in great detail across multiple aspects: source provenance with timelines and stakeholder analysis, fact-check tables with verifiable citations, reconstruction of unstated premises, ARG-framework evaluation (Acceptability / Relevance / Grounds), fallacy identification at three layers (surface / structural / rhetorical-strategy), charitable interpretation, and multidisciplinary dialectical conclusions drawing on sociology, philosophy, psychology, political economy, media studies, and legal philosophy. Each case also includes an identification-and-communication section on how to recognize the embedded logical traps and how to respond constructively to interlocutors who deploy them.
 
 {{< lightning >}}
 PHIL 145 teaches the tools; PHIL 145c applies them to cases where the emotional stakes are high and the fallacies are real. Chinese internet discourse in particular offers rich material: the arguments are public, the stakes feel urgent to participants, and the logical errors are instructive precisely because they are so easy to make.
