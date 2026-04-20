@@ -174,6 +174,15 @@ Every survey course makes choices about what to centre, and centering rock neces
 
 ---
 
+### [MUSIC 144: History of Musical Theatre](/1265/music144/)
+From minstrelsy, vaudeville, operetta, and Tin Pan Alley through *Show Boat*, Rodgers and Hammerstein, Bernstein, Sondheim, rock musicals, megamusicals, Disney, and *Hamilton*, then across the Pacific to the rise of Mandarin musical theatre, *Super-Vocal*, and post-2018 original Chinese works. The notes also include synthetic chapters on musicals versus pop music, musicals versus opera, and a comparative toolkit for analyzing musical numbers.
+
+{{< lightning >}}
+UW's music offerings include popular music history, opera history, and Western art music surveys, but nothing that treats the musical as a serious historical form in its own right. That leaves a conspicuous gap. Musical theatre sits exactly at the junction of popular song, stagecraft, dance, commerce, voice, and mass media; it also became one of the key vehicles through which Broadway aesthetics entered China. MUSIC 144 fills that gap by treating the musical not as a light add-on to opera or pop, but as a hybrid art form with its own history, techniques, and global afterlife.
+{{< /lightning >}}
+
+---
+
 ### [MUSIC 272: Counterpoint and Fugue](/1269/music272/)
 Species counterpoint in two through four voices (Fux's five species), tonal counterpoint in the Bach style, invertible counterpoint, canon, and fugue — subject, answer, countersubject, exposition, episodes, stretto, and the complete fugue in C minor from WTC I as a model analysis.
 
