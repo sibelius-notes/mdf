@@ -1,6 +1,5 @@
 ---
 title: "ECON 361: Cost-Benefit Analysis"
-prof: "University of Waterloo"
 subjects: "ECON"
 ---
 

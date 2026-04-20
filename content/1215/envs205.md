@@ -1,6 +1,5 @@
 ---
 title: "ENVS 205: Environment and Sustainability"
-prof: "University of Waterloo"
 subjects: "ENVS"
 ---
 

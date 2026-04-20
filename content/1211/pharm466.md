@@ -1,6 +1,5 @@
 ---
 title: "PHARM 466: Geriatric Pharmacy"
-prof: ""
 subjects: "PHARM"
 ---
 

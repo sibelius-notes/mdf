@@ -2,7 +2,6 @@
 title: "CIVE 596: Construction Engineering"
 prof: "Fam Saeed, Sina Azizisoldouz"
 subjects: "CIVE"
-term: "1249"
 ---
 
 ## Sources and References

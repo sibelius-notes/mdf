@@ -1,6 +1,5 @@
 ---
-title: "PHYS464: Group Theory for Physicists"
-prof: ""
+title: "PHYS 464: Group Theory for Physicists"
 subjects: "PHYS"
 ---
 

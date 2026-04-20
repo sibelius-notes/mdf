@@ -1,6 +1,5 @@
 ---
-title: "EARTH281: Geological Impacts on Human Health"
-prof: ""
+title: "EARTH 281: Geological Impacts on Human Health"
 subjects: "EARTH"
 ---
 

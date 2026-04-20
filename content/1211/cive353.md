@@ -1,6 +1,5 @@
 ---
 title: "CIVE 353: Geotechnical Engineering"
-prof: ""
 subjects: "CIVE"
 ---
 

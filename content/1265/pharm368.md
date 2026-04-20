@@ -1,6 +1,5 @@
 ---
-title: "PHARM368: Advanced Drug Information and Evidence-Based Medicine"
-prof: ""
+title: "PHARM 368: Advanced Drug Information and Evidence-Based Medicine"
 subjects: "PHARM"
 ---
 

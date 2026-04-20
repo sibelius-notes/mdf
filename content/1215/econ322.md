@@ -1,8 +1,5 @@
 ---
 title: "ECON 322: Introduction to Econometrics"
-prof: "Multiple Instructors"
-term: "1215 (Spring 2021)"
-university: "University of Waterloo"
 subjects: "ECON"
 ---
 

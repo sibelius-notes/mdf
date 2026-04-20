@@ -2,7 +2,6 @@
 title: "SYDE 162: Human Factors in Design"
 prof: "Robert Hunter, PhD"
 subjects: "SYDE"
-term: "1249"
 ---
 
 ## Sources and References

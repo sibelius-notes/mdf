@@ -1,6 +1,5 @@
 ---
 title: "ARBUS 202/PHIL 215: Business Ethics"
-prof: ""
 subjects: "ARBUS"
 ---
 

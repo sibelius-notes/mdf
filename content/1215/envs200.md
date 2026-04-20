@@ -1,6 +1,5 @@
 ---
 title: "ENVS 200: Introduction to Environmental Science"
-prof: "University of Waterloo"
 subjects: "ENVS"
 ---
 

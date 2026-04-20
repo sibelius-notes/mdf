@@ -1,6 +1,5 @@
 ---
 title: "EARTH 121: Our Earth"
-prof: "University of Waterloo"
 subjects: "EARTH"
 ---
 

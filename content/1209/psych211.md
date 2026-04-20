@@ -1,6 +1,5 @@
 ---
 title: "PSYCH 211: Developmental Psychology"
-prof: ""
 subjects: "PSYCH"
 ---
 

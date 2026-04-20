@@ -1,6 +1,5 @@
 ---
-title: "BIOL212: Dinosaurs"
-prof: ""
+title: "BIOL 212: Dinosaurs"
 subjects: "BIOL"
 ---
 

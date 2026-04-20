@@ -1,6 +1,5 @@
 ---
 title: "ECON 102: Introduction to Macroeconomics"
-prof: ""
 subjects: "ECON"
 ---
 

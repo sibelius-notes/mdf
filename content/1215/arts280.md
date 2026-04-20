@@ -1,7 +1,6 @@
 ---
 title: "ARTS 280: Statistics for Arts Students"
 prof: "Warriner"
-term: "1215"
 subjects: "ARTS"
 ---
 

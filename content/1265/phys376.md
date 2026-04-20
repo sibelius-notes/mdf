@@ -1,6 +1,5 @@
 ---
-title: "PHYS376: Relativistic Physics"
-prof: ""
+title: "PHYS 376: Relativistic Physics"
 subjects: "PHYS"
 ---
 

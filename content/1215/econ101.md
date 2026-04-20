@@ -1,6 +1,5 @@
 ---
 title: "ECON 101: Principles of Microeconomics"
-prof: ""
 subjects: "ECON"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "GEOG 219: Pandemic Geographies"
-prof: "Unknown"
 subjects: "GEOG"
 ---
 

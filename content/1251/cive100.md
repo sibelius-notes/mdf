@@ -2,7 +2,6 @@
 title: "CIVE 100: Civil, Environmental and Geological Engineering Concepts"
 prof: "Dave Brush"
 subjects: "CIVE"
-term: "Winter 2025 (1251)"
 ---
 
 ## Sources and References

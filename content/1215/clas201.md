@@ -1,6 +1,5 @@
 ---
 title: "CLAS 201: Introduction to Classical Studies"
-prof: ""
 subjects: "CLAS"
 ---
 
