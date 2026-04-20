@@ -241,6 +241,17 @@ MUSIC 275 introduces recording and MIDI. MUSIC 279 goes deep: the mathematics of
 
 ---
 
+## Psychology
+
+### [PSYCH 358: Psychology of Dating](/1265/psych358/)
+A comparative psychology course on heterosexual dating across mainland Chinese and Anglosphere Western cultures. The notes treat attraction, attachment, gendered expectations, family pressure, sexual timing, jealousy, apps, breakup psychology, and the historical transition from older courtship systems to contemporary dating. Equal weight is given to Chinese and Western cases, and the emphasis stays analytical rather than tactical: not how to date, but what dating reveals about male and female psychology under changing institutions.
+
+{{< lightning >}}
+UW has close-relationship material scattered across social psychology, personality, gender, and sociology, but no course that treats dating itself as a serious psychological object. That gap matters because modern dating is one of the main places where attachment, status, family, sexuality, economics, and platform culture collide. PSYCH 358 fills that gap with a comparative framework that takes both Chinese and Western dating cultures seriously and resists turning the subject into pickup advice or online grievance ideology.
+{{< /lightning >}}
+
+---
+
 ## Sociology
 
 ### [SOC 418: Gender Conflict, Sexual Politics, and Online Public Discourse](/1265/soc418/)
