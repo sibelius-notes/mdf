@@ -238,6 +238,26 @@ MUSIC 275 introduces recording and MIDI. MUSIC 279 goes deep: the mathematics of
 ---
 
 ### [MUSIC 373: Form and Musical Analysis](/1269/music373/)
+
+---
+
+## Sociology
+
+### [SOC 418: Gender Conflict, Sexual Politics, and Online Public Discourse](/1265/soc418/)
+A sociology course built out of the kind of internet argument that PHIL 145C can diagnose but not fully explain. The notes treat online gender conflict in Chinese digital publics as a problem of gender order, social reproduction, platform governance, emotional labour, sexual scripts, moral regulation, and identity-protective cognition, with comparative chapters on South Korea, Japan, North America, and Europe. The course moves from a recognizable discourse case into a full research-driven sociology of how antagonism is produced, circulated, and normalized.
+
+{{< lightning >}}
+UW has courses on family, gender, sexuality, technology, and higher-level communication, but nothing that treats the contemporary gender war as a sociological object in its own right. That gap matters. A huge amount of public life now runs through platform-mediated conflict, and gender discourse is one of its most intense forms. SOC 418 fills that gap by taking a problem that usually appears as commentary or moral panic and reorganizing it as a rigorous, comparative sociology course.
+{{< /lightning >}}
+
+---
+
+### [SOC 431: Education, Credentialism, and Social Mobility](/1265/soc431/)
+A synthetic upper-year sociology course on educational expansion, credential inflation, family strategy, labor-market sorting, housing pressure, and the emotional life of blocked mobility. The notes are China-led but comparative, connecting gaokao competition, elite-university hierarchy, youth precarity, and "学历贬值" discourse to the wider sociology of reproduction, meritocracy, signaling, and status closure. The course asks why education remains socially indispensable even as its mobility promises become unstable.
+
+{{< lightning >}}
+UW has strong real courses on the sociology of education and higher education, but not one centered this tightly on the contradiction between the promise of schooling and the lived reality of credential competition. That contradiction now structures an enormous amount of youth discourse, family investment, and class anxiety. SOC 431 was written to fill exactly that gap: not "is college worth it?" as opinion journalism, but the full sociological analysis of why that question keeps returning and why it feels newly urgent.
+{{< /lightning >}}
 Phrase structure (sentences and periods), small forms (binary, ternary, rondo), theme and variations, sonata form using Caplin's formal functions and Hepokoski-Darcy's dialogic sonata theory, concerto form, 19th-century formal expansion, and 20th-century form from Bartók to Reich.
 
 {{< lightning >}}
