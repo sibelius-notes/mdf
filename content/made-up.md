@@ -238,37 +238,6 @@ MUSIC 275 introduces recording and MIDI. MUSIC 279 goes deep: the mathematics of
 ---
 
 ### [MUSIC 373: Form and Musical Analysis](/1269/music373/)
-
----
-
-## Psychology
-
-### [PSYCH 358: Psychology of Dating](/1265/psych358/)
-A comparative psychology course on heterosexual dating across mainland Chinese and Anglosphere Western cultures. The notes treat attraction, attachment, gendered expectations, family pressure, sexual timing, jealousy, apps, breakup psychology, and the historical transition from older courtship systems to contemporary dating. Equal weight is given to Chinese and Western cases, and the emphasis stays analytical rather than tactical: not how to date, but what dating reveals about male and female psychology under changing institutions.
-
-{{< lightning >}}
-UW has close-relationship material scattered across social psychology, personality, gender, and sociology, but no course that treats dating itself as a serious psychological object. That gap matters because modern dating is one of the main places where attachment, status, family, sexuality, economics, and platform culture collide. PSYCH 358 fills that gap with a comparative framework that takes both Chinese and Western dating cultures seriously and resists turning the subject into pickup advice or online grievance ideology.
-{{< /lightning >}}
-
----
-
-## Sociology
-
-### [SOC 418: Gender Conflict, Sexual Politics, and Online Public Discourse](/1265/soc418/)
-A sociology course built out of the kind of internet argument that PHIL 145C can diagnose but not fully explain. The notes treat online gender conflict in Chinese digital publics as a problem of gender order, social reproduction, platform governance, emotional labour, sexual scripts, moral regulation, and identity-protective cognition, with comparative chapters on South Korea, Japan, North America, and Europe. The course moves from a recognizable discourse case into a full research-driven sociology of how antagonism is produced, circulated, and normalized.
-
-{{< lightning >}}
-UW has courses on family, gender, sexuality, technology, and higher-level communication, but nothing that treats the contemporary gender war as a sociological object in its own right. That gap matters. A huge amount of public life now runs through platform-mediated conflict, and gender discourse is one of its most intense forms. SOC 418 fills that gap by taking a problem that usually appears as commentary or moral panic and reorganizing it as a rigorous, comparative sociology course.
-{{< /lightning >}}
-
----
-
-### [SOC 431: Education, Credentialism, and Social Mobility](/1265/soc431/)
-A synthetic upper-year sociology course on educational expansion, credential inflation, family strategy, labor-market sorting, housing pressure, and the emotional life of blocked mobility. The notes are China-led but comparative, connecting gaokao competition, elite-university hierarchy, youth precarity, and "学历贬值" discourse to the wider sociology of reproduction, meritocracy, signaling, and status closure. The course asks why education remains socially indispensable even as its mobility promises become unstable.
-
-{{< lightning >}}
-UW has strong real courses on the sociology of education and higher education, but not one centered this tightly on the contradiction between the promise of schooling and the lived reality of credential competition. That contradiction now structures an enormous amount of youth discourse, family investment, and class anxiety. SOC 431 was written to fill exactly that gap: not "is college worth it?" as opinion journalism, but the full sociological analysis of why that question keeps returning and why it feels newly urgent.
-{{< /lightning >}}
 Phrase structure (sentences and periods), small forms (binary, ternary, rondo), theme and variations, sonata form using Caplin's formal functions and Hepokoski-Darcy's dialogic sonata theory, concerto form, 19th-century formal expansion, and 20th-century form from Bartók to Reich.
 
 {{< lightning >}}
@@ -387,24 +356,6 @@ Real-world materials — composites, porous media, biological tissues — have s
 
 ---
 
-### [AMATH 860: Kinetic Theory and Transport Equations](/1269/amath860/)
-From particle systems to distribution functions: the Boltzmann equation, H-theorem, Chapman-Enskog expansion deriving Euler and Navier-Stokes as hydrodynamic limits, the Vlasov equation and Landau damping, moment methods and closures, and numerical methods (DSMC, spectral methods, asymptotic-preserving schemes).
-
-{{< lightning >}}
-Kinetic theory is the bridge between the microscopic world of particles and the macroscopic world of continuum mechanics — it explains *why* the Navier-Stokes equations hold and *when* they break down. The subject connects naturally to UW's fluid mechanics and PDE courses but requires its own mathematical language: the Boltzmann equation, collision operators, and the Chapman-Enskog machinery.
-{{< /lightning >}}
-
----
-
-### [AMATH 865: Geophysical Fluid Dynamics](/1269/amath865/)
-The dynamics of rotating and stratified fluids applied to the ocean and atmosphere: geostrophic balance, shallow water theory, Rossby waves, quasi-geostrophic dynamics, baroclinic and barotropic instability, Ekman layers and wind-driven ocean circulation, and equatorial wave dynamics.
-
-{{< lightning >}}
-UW has AMATH 362 (Mathematics of Climate Change) at the undergraduate level but no graduate GFD course. Geophysical fluid dynamics is a classical applied mathematics subject — it shaped the careers of people like Pedlosky, Gill, and Vallis — and is taught at MIT, Cambridge, Princeton, Oxford, and NYU Courant. The subject combines fluid mechanics, PDEs, and dynamical systems in a physically rich setting.
-{{< /lightning >}}
-
----
-
 ### [AMATH 845: Combustion Theory and Reactive Flows](/1269/amath845/)
 Reaction-diffusion equations with Arrhenius kinetics, premixed and diffusion flames, laminar flame speed via the Zeldovich-Frank-Kamenetskii analysis, activation energy asymptotics, ignition and extinction (Semenov theory, S-curve), detonation waves (Chapman-Jouguet and ZND theory), flame instabilities (Darrieus-Landau, Sivashinsky equation), and computational combustion.
 
@@ -441,6 +392,24 @@ Free boundary problems are PDE problems where the domain itself is unknown — t
 
 ---
 
+### [AMATH 860: Kinetic Theory and Transport Equations](/1269/amath860/)
+From particle systems to distribution functions: the Boltzmann equation, H-theorem, Chapman-Enskog expansion deriving Euler and Navier-Stokes as hydrodynamic limits, the Vlasov equation and Landau damping, moment methods and closures, and numerical methods (DSMC, spectral methods, asymptotic-preserving schemes).
+
+{{< lightning >}}
+Kinetic theory is the bridge between the microscopic world of particles and the macroscopic world of continuum mechanics — it explains *why* the Navier-Stokes equations hold and *when* they break down. The subject connects naturally to UW's fluid mechanics and PDE courses but requires its own mathematical language: the Boltzmann equation, collision operators, and the Chapman-Enskog machinery.
+{{< /lightning >}}
+
+---
+
+### [AMATH 865: Geophysical Fluid Dynamics](/1269/amath865/)
+The dynamics of rotating and stratified fluids applied to the ocean and atmosphere: geostrophic balance, shallow water theory, Rossby waves, quasi-geostrophic dynamics, baroclinic and barotropic instability, Ekman layers and wind-driven ocean circulation, and equatorial wave dynamics.
+
+{{< lightning >}}
+UW has AMATH 362 (Mathematics of Climate Change) at the undergraduate level but no graduate GFD course. Geophysical fluid dynamics is a classical applied mathematics subject — it shaped the careers of people like Pedlosky, Gill, and Vallis — and is taught at MIT, Cambridge, Princeton, Oxford, and NYU Courant. The subject combines fluid mechanics, PDEs, and dynamical systems in a physically rich setting.
+{{< /lightning >}}
+
+---
+
 ### [AMATH 866: Magnetohydrodynamics and Plasma Physics](/1269/amath866/)
 The mathematical theory of electrically conducting fluids: derivation and structure of the MHD equations, Alfvén's frozen-in flux theorem, MHD wave modes, the Grad-Shafranov equation for axisymmetric equilibria, the energy principle for MHD stability, magnetic reconnection (Sweet-Parker and Petschek models), dynamo theory, and kinetic corrections (CGL theory, gyrokinetics).
 
@@ -466,6 +435,37 @@ Written in Chinese. Several real Chinese-internet controversies (plus a cross-la
 
 {{< lightning >}}
 PHIL 145 teaches the tools; PHIL 145c applies them to cases where the emotional stakes are high and the fallacies are real. Chinese internet discourse in particular offers rich material: the arguments are public, the stakes feel urgent to participants, and the logical errors are instructive precisely because they are so easy to make.
+{{< /lightning >}}
+
+---
+
+## Psychology
+
+### [PSYCH 358: Psychology of Dating](/1265/psych358/)
+A comparative psychology course on heterosexual dating across mainland Chinese and Anglosphere Western cultures. The notes treat attraction, attachment, gendered expectations, family pressure, sexual timing, jealousy, apps, breakup psychology, and the historical transition from older courtship systems to contemporary dating. Equal weight is given to Chinese and Western cases, and the emphasis stays analytical rather than tactical: not how to date, but what dating reveals about male and female psychology under changing institutions.
+
+{{< lightning >}}
+UW has close-relationship material scattered across social psychology, personality, gender, and sociology, but no course that treats dating itself as a serious psychological object. That gap matters because modern dating is one of the main places where attachment, status, family, sexuality, economics, and platform culture collide. PSYCH 358 fills that gap with a comparative framework that takes both Chinese and Western dating cultures seriously and resists turning the subject into pickup advice or online grievance ideology.
+{{< /lightning >}}
+
+---
+
+## Sociology
+
+### [SOC 418: Gender Conflict, Sexual Politics, and Online Public Discourse](/1265/soc418/)
+A sociology course built out of the kind of internet argument that PHIL 145C can diagnose but not fully explain. The notes treat online gender conflict in Chinese digital publics as a problem of gender order, social reproduction, platform governance, emotional labour, sexual scripts, moral regulation, and identity-protective cognition, with comparative chapters on South Korea, Japan, North America, and Europe. The course moves from a recognizable discourse case into a full research-driven sociology of how antagonism is produced, circulated, and normalized.
+
+{{< lightning >}}
+UW has courses on family, gender, sexuality, technology, and higher-level communication, but nothing that treats the contemporary gender war as a sociological object in its own right. That gap matters. A huge amount of public life now runs through platform-mediated conflict, and gender discourse is one of its most intense forms. SOC 418 fills that gap by taking a problem that usually appears as commentary or moral panic and reorganizing it as a rigorous, comparative sociology course.
+{{< /lightning >}}
+
+---
+
+### [SOC 431: Education, Credentialism, and Social Mobility](/1265/soc431/)
+A synthetic upper-year sociology course on educational expansion, credential inflation, family strategy, labor-market sorting, housing pressure, and the emotional life of blocked mobility. The notes are China-led but comparative, connecting gaokao competition, elite-university hierarchy, youth precarity, and "学历贬值" discourse to the wider sociology of reproduction, meritocracy, signaling, and status closure. The course asks why education remains socially indispensable even as its mobility promises become unstable.
+
+{{< lightning >}}
+UW has strong real courses on the sociology of education and higher education, but not one centered this tightly on the contradiction between the promise of schooling and the lived reality of credential competition. That contradiction now structures an enormous amount of youth discourse, family investment, and class anxiety. SOC 431 was written to fill exactly that gap: not "is college worth it?" as opinion journalism, but the full sociological analysis of why that question keeps returning and why it feels newly urgent.
 {{< /lightning >}}
 
 ---
