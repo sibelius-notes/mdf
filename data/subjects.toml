@@ -21,38 +21,70 @@ name = "Applied Mathematics"
 short = "Applied Math"
 [ANTH]
 name = "Anthropology"
+[ARABIC]
+name = "Arabic"
 [ARBUS]
 name = "Arts & Business"
 [ARCH]
 name = "Architecture"
 [ARTS]
 name = "Arts"
+[ASL]
+name = "American Sign Language"
+[AVIA]
+name = "Aviation"
+[BASE]
+name = "Bridge to Academic Success in English"
 [BET]
 name = "Business, Entrepreneurship & Technology"
 [BIOL]
 name = "Biology"
+[BLKST]
+name = "Black Studies"
+[BME]
+name = "Biomedical Engineering"
+[BUS]
+name = "Businesss (Wilfrid Laurier University)"
+[CFM]
+name = "Computing and Financial Management"
 [CDNST]
 name = "Canadian Studies"
+[CHE]
+name = "Chemical Engineering"
 [CHEM]
 name = "Chemistry"
+[CHINA]
+name = "Chinese"
 [CI]
 name = "Cultural Identities"
 [CIVE]
 name = "Civil Engineering"
 [CLAS]
 name = "Classical Studies"
+[CMW]
+name = "Church Music and Worship"
 [CO]
 name = "Combinatorics & Optimization"
 short = "C&O"
+[COGSCI]
+name = "Cognitive Science"
+[COOP]
+name = "Co-operative Work Term"
 [COMM]
 name = "Commerce"
 [COMMST]
 name = "Communication Studies"
+[CROAT]
+name = "Croatian"
 [CS]
 name = "Computer Science"
 short = "Comp. Sci."
 [DAC]
 name = "Digital Arts Communication"
+[DATSC]
+name = "Data Science"
+[DUTCH]
+name = "Dutch"
 [EARTH]
 name = "Earth Sciences"
 [EASIA]
@@ -61,22 +93,40 @@ name = "East Asian Studies"
 name = "Electrical & Computer Engineering"
 [ECON]
 name = "Economics"
+[EMLS]
+name = "English for Multilingual Speakers"
 [ENBUS]
 name = "Environment & Business"
 [ENGL]
 name = "English"
+[ENVE]
+name = "Environmental Engineering"
 [ENVS]
 name = "Environment & Sustainability"
 [ERS]
 name = "Environment, Resources & Sustainability"
 [FINE]
 name = "Fine Arts"
+[FR]
+name = "French Studies"
+[GA]
+name = "Global Affairs"
 [GBDA]
 name = "Global Business & Digital Arts"
+[GDS]
+name = "Geospatial Data Science"
+[GENE]
+name = "General Engineering"
 [GEOG]
 name = "Geography & Environmental Management"
+[GEOE]
+name = "Geological Engineering"
+[GER]
+name = "German"
 [GERON]
 name = "Gerontology"
+[GRK]
+name = "Greek"
 [GSJ]
 name = "Gender & Social Justice"
 [HEALTH]
@@ -91,24 +141,52 @@ name = "Public Health Sciences"
 name = "Human Resources Management"
 [HRTS]
 name = "Human Rights"
+[HUMSC]
+name = "Human Sciences"
 [INDEV]
 name = "International Development"
 [INDG]
 name = "Indigenous Studies"
+[INDENT]
+name = "Indigenous Entrepreneurship"
 [INTEG]
 name = "Knowledge Integration"
+[INNOV]
+name = "Innovation"
+[ITAL]
+name = "Italian"
+[ITALST]
+name = "Italian Studies"
+[JAPAN]
+name = "Japanese"
+[JS]
+name = "Jewish Studies"
 [KIN]
 name = "Kinesiology"
+[KOREA]
+name = "Korean"
+[LAT]
+name = "Latin"
 [LS]
 name = "Legal Studies"
 [MATH]
 name = "Mathematics"
 short = "Math"
+[MATBUS]
+name = "Mathematical Business"
+[ME]
+name = "Mechanical Engineering"
 [MEDVL]
 name = "Medieval Studies"
+[MEDSCI]
+name = "Medical Science"
+[MENN]
+name = "Mennonite Studies"
 [MGMT]
 name = "Management Sciences"
 note = "Renamed to MSE"
+[MOHAWK]
+name = "Mohawk"
 [MNS]
 name = "Materials & Nano-Sciences"
 [MSE]
@@ -116,6 +194,10 @@ name = "Management Science & Engineering"
 [MSCI]
 name = "Management Sciences"
 note = "Renamed to MSE"
+[MTE]
+name = "Mechatronics Engineering"
+[MTHEL]
+name = "Mathematics Elective"
 [MUSIC]
 name = "Music"
 [NE]
@@ -124,6 +206,12 @@ name = "Nanotechnology Engineering"
 name = "Optometry"
 [PACS]
 name = "Peace & Conflict Studies"
+[PD]
+name = "Professional Development"
+[PDARCH]
+name = "Professional Development for Architecture Students"
+[PDPHRM]
+name = "Professional Development for Pharmacy Students"
 [PHARM]
 name = "Pharmacy"
 [PHIL]
@@ -132,6 +220,8 @@ name = "Philosophy"
 name = "Physics"
 [PLAN]
 name = "Planning"
+[PORT]
+name = "Portuguese"
 [PMATH]
 name = "Pure Mathematics"
 short = "Pure Math"
@@ -139,6 +229,8 @@ short = "Pure Math"
 name = "Political Science"
 [PSYCH]
 name = "Psychology"
+[REES]
+name = "Russian and Eastern European Studies"
 [RCS]
 name = "Religion, Culture & Spirituality"
 [REC]
@@ -146,14 +238,20 @@ name = "Recreation & Leisure Studies"
 [RS]
 name = "Religious Studies"
 note = "Renamed to RCS"
+[RUSS]
+name = "Russian"
 [SCBUS]
 name = "Science & Business"
 [SCI]
 name = "Science"
 [SDS]
 name = "Social Development Studies"
+[SE]
+name = "Software Engineering"
 [SFM]
 name = "Sustainability & Financial Management"
+[SI]
+name = "Studies in Islam"
 [SMF]
 name = "Sexuality, Marriage & Family"
 note = "Renamed to SRF"
@@ -161,6 +259,8 @@ note = "Renamed to SRF"
 name = "Sociology"
 [SOCWK]
 name = "Social Work"
+[SPAN]
+name = "Spanish"
 [SRF]
 name = "Sexualities, Relationships & Families"
 short = "Sex, Rel. & Fam"
@@ -168,9 +268,17 @@ short = "Sex, Rel. & Fam"
 name = "Statistics"
 [STV]
 name = "Society, Technology & Values"
+[SWREN]
+name = "Social Work (Bachelor of Social Work)"
 [SYDE]
 name = "Systems Design Engineering"
 [THPERF]
 name = "Theatre & Performance"
+[UCR]
+name = "Undergraduate Communications Requirement"
+[UNIV]
+name = "University"
 [VCULT]
 name = "Visual Culture"
+[WKRPT]
+name = "Work-term Report"
