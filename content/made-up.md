@@ -441,11 +441,47 @@ PHIL 145 teaches the tools; PHIL 145c applies them to cases where the emotional 
 
 ## Psychology
 
+### [PSYCH 099: The Algorithmic Self — Popular Psychology, Psychoanalysis, and Existentialism on Chinese Short-Video Platforms](/1265/psych099/)
+A first-year critical-thinking course that treats the flood of "psychology / emotion / philosophy" content on Douyin and similar Chinese short-video platforms as its primary object of study. The notes trace each popular concept — attachment types, original-family determinism, MBTI, the "high-sensitivity person", Sartrean authenticity in 60-second clips — back to its original German, French, or English source, then evaluate what survives translation into an algorithmically optimized emotional granule. Greenberg & Mitchell, Winnicott, Kohut, Jung, Adler, Kahneman, Sartre, Camus, Schopenhauer, and de Beauvoir appear in their original form alongside peer-reviewed studies on TikTok mental-health misinformation and Douyin self-presentation.
+
+{{< lightning >}}
+UW has PHIL 145 for critical thinking and introductory psychology for the substantive psychology, but no course that teaches a student to read popular-psychology short videos the way PHIL 145 teaches them to read a newspaper editorial. That is a conspicuous gap: for most Chinese-speaking undergraduates, short-video psychology is now the dominant vehicle through which ideas like "attachment style" or "existential authenticity" enter their self-understanding. PSYCH 099 fills the gap by pairing the original theoretical sources with a sober analysis of how recommendation systems reshape them.
+{{< /lightning >}}
+
+---
+
+### [PSYCH 254: Psychology of Persuasion](/1265/psych254/)
+A stand-alone course on attitude change and compliance, continuing where social psychology leaves off. The notes cover the Yale communication programme, cognitive dissonance, the elaboration likelihood and heuristic-systematic models, Cialdini's compliance principles, resistance and inoculation, narrative persuasion, and the ethics of influence. Anglophone research is read alongside the Chinese rhetorical tradition — *Guiguzi*, Confucian *renqing* and face, Legalist incentive theory, and contemporary debate-competition pedagogy (黄执中) — as a co-equal body of thinking about how one mind moves another.
+
+{{< lightning >}}
+UW teaches social psychology and consumer behaviour but has no dedicated course on persuasion as a unified subject, despite its being one of the most applied branches of social psychology and a standard upper-year offering at Ohio State (where Petty built the field), Arizona State (Cialdini's home institution), Michigan, and Annenberg. PSYCH 254 also refuses the usual Anglo-centric framing: Chinese rhetorical traditions have their own centuries-long theory of influence that is rarely placed in dialogue with the ELM or Cialdini's six principles.
+{{< /lightning >}}
+
+---
+
 ### [PSYCH 358: Psychology of Dating](/1265/psych358/)
 A comparative psychology course on heterosexual dating across mainland Chinese and Anglosphere Western cultures. The notes treat attraction, attachment, gendered expectations, family pressure, sexual timing, jealousy, apps, breakup psychology, and the historical transition from older courtship systems to contemporary dating. Equal weight is given to Chinese and Western cases, and the emphasis stays analytical rather than tactical: not how to date, but what dating reveals about male and female psychology under changing institutions.
 
 {{< lightning >}}
 UW has close-relationship material scattered across social psychology, personality, gender, and sociology, but no course that treats dating itself as a serious psychological object. That gap matters because modern dating is one of the main places where attachment, status, family, sexuality, economics, and platform culture collide. PSYCH 358 fills that gap with a comparative framework that takes both Chinese and Western dating cultures seriously and resists turning the subject into pickup advice or online grievance ideology.
+{{< /lightning >}}
+
+---
+
+### [PSYCH 359: The Psychology of Romantic Love](/1265/psych359/)
+A course organised around romantic love as a specific psychological state — not around the relationships that contain it. The notes cover Sternberg's triangular theory, Hatfield and Berscheid on passionate versus companionate love, Fisher's neurobiological model, Aron's self-expansion theory, Hazan and Shaver on adult attachment, Tennov on limerence, and Lee's love styles, alongside the cross-cultural literature establishing love's near-universality and a serious treatment of Chinese-language concepts (缘分, 暧昧, 一见钟情, 心动) that carve romantic experience at joints Anglophone psychology rarely notices. Humanities sources — Plato, Stendhal, Barthes, bell hooks, Illouz — are read as genuine observations, not as literary decoration.
+
+{{< lightning >}}
+UW has close-relationships material embedded in social psychology and a family sociology sequence, but nothing that treats love itself — as distinct from the relationships that carry it — as a rigorous psychological object. Separating the two is analytically useful: two people can have a functioning relationship without much love, and love can outlast a relationship by decades. PSYCH 359 fills that gap and pairs naturally with PSYCH 358 (dating) as the upstream emotional-science complement to a course about dating institutions.
+{{< /lightning >}}
+
+---
+
+### [PSYCH 360: Criminal Psychology](/1265/psych360/)
+A comparative criminal-psychology course covering the developmental, clinical, and social roots of offending; the psychology of the criminal-justice process (eyewitness memory, false confessions, juror decision-making, risk assessment); psychopathy and antisocial personality; violent and sexual offending; and rehabilitation. The Anglo-American forensic-psychology tradition (Bartol, Andrews & Bonta, Raine, Hare, Loftus) is read alongside mainland Chinese criminal psychology (犯罪心理学) as a co-equal case: inquisitorial rather than adversarial procedure, professional judges rather than lay juries, and a more centralized state role in defining both crime and rehabilitation. Explicitly not a true-crime course.
+
+{{< lightning >}}
+UW has abnormal psychology and a legal-studies programme, but no course that treats the psychology of crime, the offender, and the criminal-justice process as a unified subject — a standard offering at Simon Fraser (home of the PCL-R), John Jay, Leicester, and most large psychology departments. PSYCH 360 also resists the usual framing: the Anglophone forensic-psychology textbook tradition silently treats adversarial trials, jury decision-making, and insanity defences as universal facts, when they are in fact institutional choices that look very different in Chinese criminal procedure.
 {{< /lightning >}}
 
 ---
