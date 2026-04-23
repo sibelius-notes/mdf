@@ -188,11 +188,14 @@ Fairbairn 做了一件更激进的事：他不仅说力比多是寻求对象的�
 
 Donald Winnicott (1896–1971) 作为儿科医生与精神分析师，把客体关系推向了临床更贴地的发展理论。几个核心概念：
 
-- <strong>抱持环境（holding environment）</strong>：婴儿处于极端脆弱中，母亲提供的不仅是食物，而是一种让婴儿能"继续存在"的心理—身体容器。这个容器的稳定比它的完美更重要。
-- <strong>足够好的母亲（good-enough mother）</strong>：Winnicott (1953) 明确反对"完美母亲"的理想化；一个能在大多数时候回应、在有限时候失败的母亲是最合适的照料者，因为适度的失败让婴儿逐步体验到独立于客体的自我。
-- <strong>镜映（mirror-role of the mother）</strong>：母亲看向婴儿的眼神里应当能让婴儿看到自己——"当我看我母亲，我看见的是她在看我，以及她看我的样子"。这一现象后来被 Fonagy 等纳入<strong>心智化</strong>（mentalization）理论（Fonagy et al., 2002）。
-- <strong>过渡客体与过渡空间（transitional object / space）</strong>：婴儿所依恋的小毯子、玩偶既不完全是"我"也不完全是"非我"；它是在"纯粹主观的全能幻想"与"完全客观的外部现实"之间的中间地带。Winnicott 在 *Playing and Reality* (1971) 中进一步论证，这个中间地带是<strong>所有文化创造</strong>——艺术、宗教、游戏——的源头。
-- <strong>真实自我 / 虚假自我（True Self / False Self）</strong>：真实自我是婴儿的自发性（spontaneous gesture）被充分接住时生长出来的核心；虚假自我是为了保护真实自我而对外呈现的适应性表层。虚假自我并非病理——Winnicott (1960) 明确说，日常社交也需要虚假自我——只有当虚假自我取代了真实自我、且当事人与自身失去接触时才成为问题。
+<div class="key-box">
+<strong>Winnicott 的五个核心概念</strong><br><br>
+<strong>抱持环境（holding environment）</strong>：母亲提供的心理—身体容器，让婴儿能"继续存在"。容器的<em>稳定</em>比<em>完美</em>更重要。<br><br>
+<strong>足够好的母亲（good-enough mother）</strong>：能在大多数时候回应、在有限时候失败的照料者。适度失败让婴儿逐步体验到独立于客体的自我——完美母亲反而有害。<br><br>
+<strong>镜映（mirror-role of the mother）</strong>：母亲的眼神让婴儿在其中看见自己。"当我看我母亲，我看见的是她在看我，以及她看我的样子。"后被 Fonagy 等纳入心智化理论。<br><br>
+<strong>过渡客体与过渡空间（transitional object / space）</strong>：小毯子、玩偶——既不完全是"我"，也不完全是"非我"的中间地带。Winnicott 主张这一空间是<em>所有文化创造</em>（艺术、宗教、游戏）的源头。<br><br>
+<strong>真实自我 / 虚假自我（True Self / False Self）</strong>：真实自我由被充分接住的自发性生长而来；虚假自我是保护它的适应性表层。虚假自我本身不是病理（日常社交需要它），问题在于它是否<em>取代</em>了真实自我。
+</div>
 
 ## 2.5 后续发展：Mahler、Kernberg、Fonagy
 
@@ -320,11 +323,13 @@ Mary Ainsworth (1913–1999) 与 Bowlby 长期合作。她先在乌干达（1954
 
 基于婴儿的<strong>重逢行为</strong>（reunion behavior），她最早描述了三种类型（Ainsworth et al., 1978）：
 
-- <strong>B 安全型</strong>：在母亲离开时表现出一定痛苦，但在重逢时能被有效安抚，并重返探索。
-- <strong>A 回避型</strong>：在分离与重逢中都表现出较少情感，似乎与母亲"心理上保持距离"——但生理上（心率、皮质醇）依然高度激活，即他们并非"不痛苦"，只是压抑了行为表达。
-- <strong>C 矛盾/抗拒型</strong>：重逢时既寻求又抗拒安抚，难以被安抚，长时间不能回到探索。
-
-Main 与 Solomon (1986) 观察到一小群婴儿的行为不符合上述三类——他们会突然僵住、转圈、做出矛盾动作，被命名为 <strong>D 混乱型</strong>（disorganized）。这一类型与高风险背景（虐待、父母未解决的创伤）更强相关，也是日后研究成人病理性依恋最多引用的类别。
+<div class="definition">
+<strong>Ainsworth 的婴儿依恋四类型（依据重逢行为）</strong><br><br>
+<strong>B 安全型（Secure）</strong>：分离时表现一定痛苦，重逢时能被有效安抚并重返探索。这是健康发展的基准。<br><br>
+<strong>A 回避型（Avoidant）</strong>：分离与重逢中都表现出较少情感，"心理上保持距离"——但生理指标（心率、皮质醇）依然高度激活。并非不痛苦，只是压抑了行为表达。<br><br>
+<strong>C 矛盾/抗拒型（Ambivalent/Resistant）</strong>：重逢时既寻求又抗拒安抚，长时间无法回到探索。<br><br>
+<strong>D 混乱型（Disorganized）</strong>（Main &amp; Solomon, 1986）：行为不符合上述三类——突然僵住、转圈、做出矛盾动作。与高风险背景（虐待、父母未解决创伤）更强相关，是日后成人病理性依恋研究引用最多的类别。
+</div>
 
 ## 3.3 从 AAI 到成人依恋的两条路径
 
@@ -618,11 +623,14 @@ Alfred Adler (1870–1937) 与 Freud 共事十年，1911 年因与 Freud 在<str
 
 ## 6.2 核心概念
 
-- <strong>自卑感</strong>（Minderwertigkeitsgefühl）。Adler 把婴儿的无助与依赖视为普遍的自卑体验；自卑感是健康发展的推动力，不是病理。问题出在补偿过度——发展出<strong>自卑情结</strong>（inferiority complex）或与之对应的<strong>优越情结</strong>（superiority complex），两者都是对自卑感的不健康回应。
-- <strong>虚构的终极目标</strong>（fictional finalism；借自 Hans Vaihinger）。每个人在幼年建立一个关于"我要成为什么样的人"的主观目标，它不一定对应现实，但它组织了此后的认知、情感、行为。
-- <strong>生活风格</strong>（Lebensstil, style of life）。一种统一的、无意识的行为—认知模式，在约 4–5 岁左右定型，是个体用以追求终极目标的整体策略。Adler 的临床工作就是通过最早记忆（early recollections）、出生排序、家庭星座等线索重构来访者的生活风格。
-- <strong>共同体感觉</strong>（Gemeinschaftsgefühl, 常译"social interest"）。这是 Adler 晚期理论的核心，也是他最宝贵的伦理命题——心理健康的衡量标准不是内在状态，而是<strong>个体对人类共同体的归属感与贡献感</strong>。一个心理健康的人不是过着没有冲突的生活，而是把自己的活动组织为对他人的贡献。Adler 认为，任何回避贡献、仅追求个人优越的策略都是一种人生的逃避。
-- <strong>三大生活任务</strong>（three life tasks）：<strong>工作、友谊、爱</strong>。Adler 把心理健康的外在表现操作化为在这三个领域都能以合作姿态参与。
+<div class="key-box">
+<strong>阿德勒个体心理学的五个核心概念</strong><br><br>
+<strong>自卑感（Minderwertigkeitsgefühl）</strong>：婴儿的无助是普遍自卑体验的起点；自卑感本身是健康发展的<em>推动力</em>，不是病理。过度补偿才会发展为<strong>自卑情结</strong>或其镜像——<strong>优越情结</strong>。<br><br>
+<strong>虚构的终极目标（fictional finalism）</strong>：每个人在幼年形成"我要成为什么"的主观目标（借自 Vaihinger 的"仿佛哲学"）。目标不必符合现实，但它<em>组织了</em>此后全部的认知、情感与行为。<br><br>
+<strong>生活风格（Lebensstil, style of life）</strong>：约 4–5 岁定型的统一行为—认知模式，是追求终极目标的整体策略。Adler 通过最早记忆、出生排序、家庭星座重构来访者的生活风格。<br><br>
+<strong>共同体感觉（Gemeinschaftsgefühl）</strong>：心理健康的核心衡量标准——<em>不是内在平静</em>，而是个体对人类共同体的归属感与贡献感。任何单纯追求个人优越而回避贡献的策略，Adler 视为人生的逃避。<br><br>
+<strong>三大生活任务（three life tasks）：工作、友谊、爱</strong>。心理健康的外在表现：在这三个领域都能以合作姿态参与。
+</div>
 
 ## 6.3 《被讨厌的勇气》：日本再诠释
 
@@ -930,11 +938,14 @@ Kahneman (2011)；Gigerenzer (2007)；Maier & Seligman (2016)；Beck & Haigh (20
 
 Martin Heidegger (1889–1976) 的 *Sein und Zeit* (1927) 不自称"存在主义"，但它为 Sartre、Merleau-Ponty、Camus 提供了基本词汇。核心概念：
 
-- <strong>此在</strong>（Dasein）——"在此—存在"——人是那种对自己的存在提出疑问的存在者。
-- <strong>被抛</strong>（Geworfenheit）——我们发现自己已经处于特定的历史、语言、身体条件中；不是我们选择了这些条件。
-- <strong>日常性与"常人"</strong>（das Man）——在大多数时候我们以匿名方式活着，"人们都这么想"遮蔽了本真的此在。
-- <strong>烦</strong>（Sorge）——此在基本的关联结构：总是操心于某物、操心于与他人共在。
-- <strong>向死存在</strong>（Sein-zum-Tode）——死亡不是生的终点，而是<strong>使生命具有整体性的可能性</strong>；对死亡的本真面对打断日常性，让此在获得<strong>本真性</strong>（Eigentlichkeit / authenticity）。
+<div class="definition">
+<strong>Heidegger《存在与时间》核心词汇表</strong><br><br>
+<strong>此在（Dasein）</strong>——"在此—存在"。人是那种对自己的存在本身提出疑问的存在者；这一提问性使人区别于其他存在物。<br><br>
+<strong>被抛（Geworfenheit）</strong>——我们发现自己已经处于特定的历史、语言、身体条件中；这些条件不是我们选择的，却是我们存在的出发点。<br><br>
+<strong>日常性与"常人"（das Man）</strong>——日常生活中我们以匿名方式活着，"人们都这么想""大家都这样做"遮蔽了此在的本真可能性。<br><br>
+<strong>烦（Sorge）</strong>——此在基本的关联结构：此在总是操心于某物、操心于与他人共在，从不是纯粹孤立的点。<br><br>
+<strong>向死存在（Sein-zum-Tode）</strong>——死亡不是生命的外部终点，而是<em>使生命具有整体性的可能性</em>。本真地面对死亡能打断日常性，让此在获得<strong>本真性</strong>（Eigentlichkeit / authenticity）——一种结构性可能，不是道德评价。
+</div>
 
 Heidegger 的"本真性"不是一种道德称赞，而是一种结构性可能——此在可以以本真或非本真的方式存在，而<strong>日常性是非本真的默认</strong>。
 
@@ -942,8 +953,12 @@ Heidegger 的"本真性"不是一种道德称赞，而是一种结构性可能�
 
 Jean-Paul Sartre (1905–1980) 在 *L'Être et le Néant* (1943) 中以 Husserl 现象学为方法论，以 Heidegger 为结构蓝图，发展出他自己的存在主义。关键对立：
 
-- <strong>自在之物</strong>（être-en-soi）：事物性的存在，完全与自身同一。
-- <strong>自为之物</strong>（être-pour-soi）：意识的存在，永远超出自身，由"它不是什么"来界定。
+<div class="key-box">
+<strong>Sartre 的基本存在论对立</strong><br><br>
+<strong>自在之物（être-en-soi）</strong>：事物性的存在。完全与自身同一，没有否定性，没有可能性。石头"就是"石头。<br><br>
+<strong>自为之物（être-pour-soi）</strong>：意识的存在。永远超出自身，由"它不是什么"来界定。人"不是"任何固定的本质——意识总是以否定的方式与自身关系。<br><br>
+<strong>关键推论</strong>："存在先于本质"——人不是某个先定本质（上帝的计划、人性）的实例，而是先存在，再通过自由选择<em>造就</em>自己的本质。因此人"被判处自由"，承担<strong>坏信（mauvaise foi / bad faith）</strong>的诱惑：假装自己是自在之物（"我不得不这样，我就是咖啡厅服务员"）以逃避自由的重负。
+</div>
 
 从这里 Sartre 得出<strong>"存在先于本质"</strong>：人不是某个本质（上帝的计划、人性）的实例，而是先存在、再通过自由选择为自己造就本质。这带来他的另一个著名概念——<strong>自由的重负</strong>：人"被判处自由"，无法推卸选择，并因此承担<strong>坏信</strong>（mauvaise foi / bad faith）的诱惑——假装自己是自在之物（"我不得不这样，我是咖啡厅服务员")以逃避自由。
 
@@ -955,11 +970,15 @@ Jean-Paul Sartre (1905–1980) 在 *L'Être et le Néant* (1943) 中以 Husserl 
 
 Albert Camus (1913–1960) 拒绝"存在主义者"标签。他在 *Le Mythe de Sisyphe* (1942) 中把哲学的核心问题压缩为一句："真正严肃的哲学问题只有一个：自杀。"——如果意识到人对意义的渴求与世界的沉默之间有不可弥合的鸿沟（这就是他所谓的<strong>荒诞</strong>），人是否应当继续活下去？
 
-Camus 给出<strong>三种回应</strong>：
-
-1. <strong>肉体自杀</strong>——取消问题。Camus 拒绝。
-2. <strong>哲学自杀</strong>——诉诸宗教、绝对理念来消解荒诞的张力。Camus 说，这是回避而不是解决。他特别点名 Kierkegaard 的"信仰跳跃"属于此类。
-3. <strong>反抗</strong>（révolte）——保持清醒地看到荒诞，不跳出它也不消解它，而是在其中继续生活。Sisyphus 是这种姿态的形象：无意义的推石任务本身不变，但 Sisyphus 通过认识它、承担它而赢得尊严。"我们必须想象 Sisyphus 是幸福的"是这个姿态的最终结语。
+<div class="key-box">
+<strong>Camus 对荒诞的三种回应（《西西弗斯神话》）</strong><br><br>
+核心问题：人对意义的渴求与世界的沉默之间存在不可弥合的鸿沟——即<strong>荒诞</strong>。面对它，有三条路：<br><br>
+<ol>
+<li><strong>肉体自杀</strong>：取消提问者以终结问题。Camus 明确拒绝——它不是解决，是逃跑。</li>
+<li><strong>哲学自杀</strong>：诉诸宗教、绝对理念、意义系统来<em>消解</em>荒诞的张力。Camus 同样拒绝——这是回避，不是面对。他点名 Kierkegaard 的"信仰跳跃"属于此类。</li>
+<li><strong>反抗（révolte）</strong>：保持清醒地看到荒诞，既不跳出它也不消解它，在其中继续生活。西西弗斯无意义地推石头——任务本身不变，但他通过<em>认识它、承担它</em>而赢得尊严。<br>"我们必须想象西西弗斯是幸福的。"</li>
+</ol>
+</div>
 
 Camus 与 Sartre 在 1952 年因对斯大林主义的立场分歧而公开决裂。Camus 后续在 *L'Homme révolté* (1951) 中批判一切以"历史必然性"为名的暴力——这是他与 Sartre 分裂的底层原因之一。
 
@@ -1028,9 +1047,12 @@ Camus 与 Sartre 在 1952 年因对斯大林主义的立场分歧而公开决裂
 
 王阳明（1472–1529）生于明代中期，少年习朱熹之学，于<strong>格物</strong>一事颠沛多年未得，后贬谪贵州龙场，于夜中忽然领悟"<strong>圣人之道，吾性自足</strong>"，由此奠定他日后的心学纲领。核心命题有三：
 
-- <strong>心即理</strong>。朱熹主张"理在事物"，格物是即物穷理；阳明主张<strong>理不在外</strong>，"心外无理，心外无物"——伦理规范不是外在于心的原理，而是良知的显发。
-- <strong>知行合一</strong>。"知而不行，只是未知"。在阳明看来，把"知道"与"做"分开，本身就已经是认知的扭曲——真正的知必然包含行的发动。这不是现代意义上的"想到就马上做到"，而是对知与行作为同一过程两面的本体论主张。
-- <strong>致良知</strong>。良知是每个人天然具有的是非判断能力；工夫不是去外部找真理，而是<strong>去除遮蔽良知的私欲、把良知推致于事事物物</strong>。晚年的<strong>四句教</strong>："无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物"，是这一体系的浓缩。
+<div class="key-box">
+<strong>王阳明心学三大命题</strong><br><br>
+<strong>心即理</strong>：朱熹主张"理在事物"，格物是向外穷理；阳明主张<em>理不在外</em>——"心外无理，心外无物"。伦理规范不是外在原理，而是良知的内在显发。<br><br>
+<strong>知行合一</strong>："知而不行，只是未知。"把"知道"与"实行"分开，本身已是认知扭曲——真正的知<em>必然</em>包含行的发动。这不是"要立刻行动"的励志口号，而是关于知与行作为同一过程两面的本体论主张。<br><br>
+<strong>致良知</strong>：良知是每人天然具有的是非判断能力，工夫不是向外寻找真理，而是去除遮蔽良知的私欲、把良知推致于事事物物。晚年<strong>四句教</strong>（"无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物"）是整套体系的浓缩。
+</div>
 
 阳明学的历史位置：它是对宋代朱熹理学的内部修正，与明代官僚—士人阶层的修身实践、与日本江户时代的阳明学（中江藤树、大塩平八郎）都有深刻关系。它不是一套"如何更自信地生活"的个人修养术，而是关于<strong>本体—工夫—经世</strong>一体的儒家整体学问。
 
@@ -1111,10 +1133,14 @@ Beauvoir 与 Sartre 哲学上是伙伴关系，但她的《第二性》把 Sartr
 
 Debbie Ging (2019) 在 "Alphas, Betas, and Incels" 一文中把 incel 置于更广义的<strong>manosphere</strong>（男权球）中分析。她识别出几个并列但不同的社群：
 
-- <strong>PUA（pick-up artists）</strong>：以"改变 beta 男性到 alpha 男性"的"游戏"技术为核心；
-- <strong>MRA（men's rights activists）</strong>：主张男性在法律、教育、家庭法上系统受歧视；
-- <strong>MGTOW（men going their own way）</strong>：主张男性从婚姻与长期关系中退出；
-- <strong>Incel</strong>：以不可获得性/情爱伴侣为核心叙事。
+<div class="definition">
+<strong>Manosphere 的四个主要分支（Ging 2019）</strong><br><br>
+<strong>PUA（pick-up artists，搭讪艺术家）</strong>：以"游戏"技术把 beta 男性改造为 alpha 男性，核心是通过可学习的吸引力策略获取性伴侣。<br><br>
+<strong>MRA（men's rights activists，男权运动者）</strong>：主张男性在法律、教育、家庭法等制度层面系统受歧视，重点是政治—法律层面的权益诉求。<br><br>
+<strong>MGTOW（men going their own way，自行其道男性）</strong>：主张男性单方面退出婚姻与长期浪漫关系，以规避被认为对男性不利的关系结构。<br><br>
+<strong>Incel（involuntary celibate，非自愿独身者）</strong>：以"无法获得情爱伴侣"为核心叙事，包含 blackpill（放弃希望的生物决定论）与对女性及 Chad 的系统性敌意。<br><br>
+<strong>共同词汇</strong>："Chad"（顶层男性）、"Stacy"（顶层女性）、"blackpill"——用<em>伪进化心理学</em>词汇把复杂社会经济—性别关系重述为生物学等级。
+</div>
 
 Ging 的论证是：尽管这些社群政治立场不同，但共同使用一套<strong>伪进化心理学</strong>的词汇——"Chad"（等级顶端的男性）、"Stacy"（等级顶端的女性）、"blackpill"（放弃希望的宿命论）——把复杂的社会经济—性别关系重述为生物学等级。Ging et al. (2025) 最新的 *New Media & Society* 文章用大规模图像数据分析 incel 视觉文化中的<strong>厌恶凝视</strong>。
 
