@@ -798,6 +798,5 @@ figure.score figcaption {
   }
   #back-to-top:hover {
     color: var(--link);
-    transform: translateY(-2px);
   }
 }
