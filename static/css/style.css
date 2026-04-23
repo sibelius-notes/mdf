@@ -23,6 +23,14 @@
   --lightning-glow: 0 0 0 1px rgba(245, 197, 24, 0.08), 0 2px 20px rgba(245, 197, 24, 0.12);
   --lightning-glow-hover: 0 0 0 1px rgba(245, 197, 24, 0.18), 0 4px 28px rgba(245, 197, 24, 0.22);
   --lightning-stripe: rgba(245, 197, 24, 0.03);
+  /* Seven-dimension framework (dark-tuned, higher luminance for contrast on dark bg) */
+  --dim-theory: #818cf8;
+  --dim-empirical: #34d399;
+  --dim-contestation: #c084fc;
+  --dim-chinese: #fb7185;
+  --dim-platform: #22d3ee;
+  --dim-demand: #fbbf24;
+  --dim-risk: #f87171;
 }
 
 :root[data-theme="light"] {
@@ -49,6 +57,14 @@
   --lightning-glow: 0 1px 6px rgba(154, 104, 0, 0.1);
   --lightning-glow-hover: 0 2px 12px rgba(154, 104, 0, 0.18);
   --lightning-stripe: rgba(154, 104, 0, 0.04);
+  /* Seven-dimension framework (light-tuned, deeper saturation for contrast on white bg) */
+  --dim-theory: #4f46e5;
+  --dim-empirical: #059669;
+  --dim-contestation: #7c3aed;
+  --dim-chinese: #e11d48;
+  --dim-platform: #0891b2;
+  --dim-demand: #d97706;
+  --dim-risk: #dc2626;
 }
 
 /* === Reset & Base === */
@@ -650,4 +666,138 @@ figure.score figcaption {
   font-size: 0.82em;
   color: var(--text-muted);
   font-style: italic;
+}
+
+/* === Seven-Dimension Framework Tags ===
+ * Inline pill badges with icon + colored accent, one per analytic dimension.
+ * SVG icons are masked so they inherit `--dim-color` automatically per theme.
+ * Use: <span class="dim dim-theory">学理维度</span>
+ */
+.dim {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32em;
+  padding: 0.08em 0.55em 0.14em;
+  margin-right: 0.2em;
+  border-radius: 0.55em;
+  font-size: 0.86em;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  vertical-align: 0.04em;
+  white-space: nowrap;
+  color: var(--dim-color);
+  background: color-mix(in srgb, var(--dim-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--dim-color) 32%, transparent);
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+.dim:hover {
+  background: color-mix(in srgb, var(--dim-color) 20%, transparent);
+  border-color: color-mix(in srgb, var(--dim-color) 50%, transparent);
+  transform: translateY(-1px);
+}
+.dim::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  flex-shrink: 0;
+}
+
+/* 1. 学理维度 — open book */
+.dim-theory { --dim-color: var(--dim-theory); }
+.dim-theory::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='4' width='8' height='16' rx='0.8' fill='black'/%3E%3Crect x='13' y='4' width='8' height='16' rx='0.8' fill='black'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='4' width='8' height='16' rx='0.8' fill='black'/%3E%3Crect x='13' y='4' width='8' height='16' rx='0.8' fill='black'/%3E%3C/svg%3E");
+}
+
+/* 2. 实证维度 — magnifying glass */
+.dim-empirical { --dim-color: var(--dim-empirical); }
+.dim-empirical::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='10' cy='10' r='5.5' fill='none' stroke='black' stroke-width='2.6'/%3E%3Cpath d='M14.5 14.5l6 6' stroke='black' stroke-width='2.8' stroke-linecap='round'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='10' cy='10' r='5.5' fill='none' stroke='black' stroke-width='2.6'/%3E%3Cpath d='M14.5 14.5l6 6' stroke='black' stroke-width='2.8' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* 3. 学派内部维度 — opposing chevrons */
+.dim-contestation { --dim-color: var(--dim-contestation); }
+.dim-contestation::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2 12l7-6v4h6V6l7 6-7 6v-4H9v4z' fill='black'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2 12l7-6v4h6V6l7 6-7 6v-4H9v4z' fill='black'/%3E%3C/svg%3E");
+}
+
+/* 4. 中国文化维度 — stylized 中 character (rectangle + vertical bar) */
+.dim-chinese { --dim-color: var(--dim-chinese); }
+.dim-chinese::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='5' y='7' width='14' height='10' rx='1' fill='none' stroke='black' stroke-width='2.2'/%3E%3Crect x='10.8' y='3' width='2.4' height='18' fill='black'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='5' y='7' width='14' height='10' rx='1' fill='none' stroke='black' stroke-width='2.2'/%3E%3Crect x='10.8' y='3' width='2.4' height='18' fill='black'/%3E%3C/svg%3E");
+}
+
+/* 5. 平台维度 — stacked feed bars */
+.dim-platform { --dim-color: var(--dim-platform); }
+.dim-platform::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='5' width='18' height='3' rx='0.5' fill='black'/%3E%3Crect x='3' y='10.5' width='18' height='3' rx='0.5' fill='black'/%3E%3Crect x='3' y='16' width='18' height='3' rx='0.5' fill='black'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='5' width='18' height='3' rx='0.5' fill='black'/%3E%3Crect x='3' y='10.5' width='18' height='3' rx='0.5' fill='black'/%3E%3Crect x='3' y='16' width='18' height='3' rx='0.5' fill='black'/%3E%3C/svg%3E");
+}
+
+/* 6. 社会需求维度 — person silhouette */
+.dim-demand { --dim-color: var(--dim-demand); }
+.dim-demand::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='8' r='4' fill='black'/%3E%3Cpath d='M4 21c0-4.5 3.5-8 8-8s8 3.5 8 8z' fill='black'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='8' r='4' fill='black'/%3E%3Cpath d='M4 21c0-4.5 3.5-8 8-8s8 3.5 8 8z' fill='black'/%3E%3C/svg%3E");
+}
+
+/* 7. 副作用维度 — warning triangle with exclamation (evenodd cutout) */
+.dim-risk { --dim-color: var(--dim-risk); }
+.dim-risk::before {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M12 2L1 21h22L12 2zm-1 7h2v6h-2V9zm0 8h2v2h-2z' fill='black'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M12 2L1 21h22L12 2zm-1 7h2v6h-2V9zm0 8h2v2h-2z' fill='black'/%3E%3C/svg%3E");
+}
+
+/* Fallback for browsers without color-mix (pre-2023) — solid background */
+@supports not (background: color-mix(in srgb, red 20%, transparent)) {
+  .dim {
+    background: transparent;
+    border-color: var(--dim-color);
+  }
+}
+
+/* === Back-to-top button (desktop only) === */
+@media (min-width: 768px) {
+  #back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s, color 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  #back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #back-to-top:hover {
+    color: var(--link);
+    transform: translateY(-2px);
+  }
 }
