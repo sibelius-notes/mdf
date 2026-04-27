@@ -98,30 +98,30 @@ H.P. Grice 在 *Logic and Conversation*（1975）中给出**合作原则**（Coo
 
 下图是 190 条样本回答按主标签归类后的**显示数比例**。
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" preserveAspectRatio="xMinYMin meet" style="max-width:100%;height:auto;font-family:-apple-system,BlinkMacSystemFont,&quot;PingFang SC&quot;,sans-serif;">
-<text x="360.0" y="20" text-anchor="middle" font-size="14" font-weight="600" fill="#222">190 条回答的国别归类分布（n=190）</text>
-<text x="192" y="58.2" text-anchor="end" font-size="13" fill="#333">美国-结构倒逼</text>
-<rect x="200" y="40" width="460.0" height="26" fill="#c0392b" rx="3"/>
-<text x="668.0" y="58.2" font-size="12" fill="#222">72 (37.9%)</text>
-<text x="192" y="98.2" text-anchor="end" font-size="13" fill="#333">其他/段子/混合</text>
-<rect x="200" y="80" width="172.5" height="26" fill="#bdc3c7" rx="3"/>
-<text x="380.5" y="98.2" font-size="12" fill="#222">27 (14.2%)</text>
-<text x="192" y="138.2" text-anchor="end" font-size="13" fill="#333">技术输入国</text>
-<rect x="200" y="120" width="159.7" height="26" fill="#27ae60" rx="3"/>
-<text x="367.7" y="138.2" font-size="12" fill="#222">25 (13.2%)</text>
-<text x="192" y="178.2" text-anchor="end" font-size="13" fill="#333">俄罗斯/苏联</text>
-<rect x="200" y="160" width="146.9" height="26" fill="#2980b9" rx="3"/>
-<text x="354.9" y="178.2" font-size="12" fill="#222">23 (12.1%)</text>
-<text x="192" y="218.2" text-anchor="end" font-size="13" fill="#333">朝鲜</text>
-<rect x="200" y="200" width="102.2" height="26" fill="#7f8c8d" rx="3"/>
-<text x="310.2" y="218.2" font-size="12" fill="#222">16 (8.4%)</text>
-<text x="192" y="258.2" text-anchor="end" font-size="13" fill="#333">美国-历史援助</text>
-<rect x="200" y="240" width="95.8" height="26" fill="#e67e22" rx="3"/>
-<text x="303.8" y="258.2" font-size="12" fill="#222">15 (7.9%)</text>
-<text x="192" y="298.2" text-anchor="end" font-size="13" fill="#333">中国自己/无朋友</text>
-<rect x="200" y="280" width="76.7" height="26" fill="#f0a500" rx="3"/>
-<text x="284.7" y="298.2" font-size="12" fill="#222">12 (6.3%)</text>
-<text x="360.0" y="350" text-anchor="middle" font-size="11" fill="#666">美国合计（结构倒逼 + 历史援助）= 87 条，约占 45.8%</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" preserveAspectRatio="xMinYMin meet" style="max-width:100%;height:auto;font-family:-apple-system,BlinkMacSystemFont,&quot;PingFang SC&quot;,sans-serif;color:var(--text,#2c2c2e);">
+<text x="360" y="20" text-anchor="middle" font-size="14" font-weight="600" fill="currentColor">190 条回答的国别归类分布（n=190）</text>
+<text x="192" y="58.2" text-anchor="end" font-size="13" fill="currentColor">美国-结构倒逼</text>
+<rect x="200" y="40" width="410" height="26" fill="#c0392b" rx="3"/>
+<text x="618" y="58.2" font-size="12" fill="currentColor">72 (37.9%)</text>
+<text x="192" y="98.2" text-anchor="end" font-size="13" fill="currentColor">其他/段子/混合</text>
+<rect x="200" y="80" width="153.8" height="26" fill="#95a5a6" rx="3"/>
+<text x="361.8" y="98.2" font-size="12" fill="currentColor">27 (14.2%)</text>
+<text x="192" y="138.2" text-anchor="end" font-size="13" fill="currentColor">技术输入国</text>
+<rect x="200" y="120" width="142.4" height="26" fill="#27ae60" rx="3"/>
+<text x="350.4" y="138.2" font-size="12" fill="currentColor">25 (13.2%)</text>
+<text x="192" y="178.2" text-anchor="end" font-size="13" fill="currentColor">俄罗斯/苏联</text>
+<rect x="200" y="160" width="131.0" height="26" fill="#2980b9" rx="3"/>
+<text x="339.0" y="178.2" font-size="12" fill="currentColor">23 (12.1%)</text>
+<text x="192" y="218.2" text-anchor="end" font-size="13" fill="currentColor">朝鲜</text>
+<rect x="200" y="200" width="91.1" height="26" fill="#7f8c8d" rx="3"/>
+<text x="299.1" y="218.2" font-size="12" fill="currentColor">16 (8.4%)</text>
+<text x="192" y="258.2" text-anchor="end" font-size="13" fill="currentColor">美国-历史援助</text>
+<rect x="200" y="240" width="85.4" height="26" fill="#e67e22" rx="3"/>
+<text x="293.4" y="258.2" font-size="12" fill="currentColor">15 (7.9%)</text>
+<text x="192" y="298.2" text-anchor="end" font-size="13" fill="currentColor">中国自己/无朋友</text>
+<rect x="200" y="280" width="68.3" height="26" fill="#f0a500" rx="3"/>
+<text x="276.3" y="298.2" font-size="12" fill="currentColor">12 (6.3%)</text>
+<text x="360" y="350" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.6">美国合计（结构倒逼 + 历史援助）= 87 条，约占 45.8%</text>
 </svg>
 
 **读图说明：**
@@ -818,8 +818,6 @@ Festinger 的理论解释了一个本题独有的张力：很多否认"美国支
 Han Rongbin（佐治亚大学）通过长时段网络人种志研究指出：**中文网络上最重要的亲体制声音并不是被普遍报道的有偿"五毛"，而是出于真实身份认同主动攻击批评者的"自干五"**。这一群体通过与"公知"对手的持续争斗建构连贯的内群身份——攻击行为本身就是身份生产。**Han 的更深论点在 *Contesting Cyberspace* 中**：威权体制在线生存力量主要不来自审查，而来自**意见碎片化与替代共识的缺席**——话语竞争替代了民主竞争。这一框架使本题元评论中的攻击行为可以被读为**身份生产实践**，而不仅仅是修辞错误。
 
 这一视角也使得"指控对方为美分"的攻击具有**与字面意义无关的功能性合理性**——攻击者不是在证明对方真是美分，而是在向同温层公开自己的位置。**攻击的真实受众不是被攻击者，而是与攻击者同立场的旁观者**。这一观察对本文 §5.4 的边界讨论尤其关键。
-
-## 5.4 反例与边界：何时质疑动机是合法的
 
 ## 5.4 反例与边界：何时质疑动机是合法的
 
