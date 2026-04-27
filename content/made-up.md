@@ -439,6 +439,15 @@ PHIL 145 teaches the tools; PHIL 145c applies them to cases where the emotional 
 
 ---
 
+### [PHIL 145c — Discourse Analysis (Chinese)](/1219/phil145c-discourse/)
+Written in Chinese. A topical extension of PHIL 145c that shifts the analytical object from a single text to a corpus of nearly 200 simultaneous answers under one Zhihu question — "which country supports China the most?" The notes develop a new bucket-then-evaluate framework: every answer is sorted into one of seven mutually exclusive buckets, each bucket gets a typical argument skeleton plus an ARG evaluation table plus one most-explanatory social theory, and the chapter opens with an inline SVG distribution chart. A long meta-chapter analyzes the "美国间谍" / "美分" accusation pattern as five stacked fallacies (情境型 ad hominem, genetic, motive, poisoning the well, unfalsifiable conspiracy) and through seven social theories (Kahan identity-protective cognition with the 2007 *J. Empirical Legal Studies* paper, Kunda motivated reasoning, Whitson–Galinsky 2008 *Science* on illusory pattern perception, van Prooijen on the three triggers of conspiratorial sense-making, Tajfel + Goffman, Festinger, Han Rongbin on 自干五). Comparative chapters draw on Katzenstein–Keohane's anti-Americanism typology, Susan Shirk's 2008-turn argument, Pomfret's "Buddhist cycle" of US-China relations, Iriye's "inner history" framework, and a parallel Western-platform chapter showing the same shill-accusation pattern operates on Reddit (r/Sino, r/genzedong), Quora, and X — covering Russiagate, the COVID lab-leak reversal, and 2023 Israel-Hamas Reddit polarization. A closing methodological chapter takes up Mill on liberty, Popper on the open society, and Habermas on the ideal speech situation as standards for what critical thinking can mean in an asymmetric discursive environment.
+
+{{< lightning >}}
+PHIL 145c handles single-text cases; this extension handles many-text discourse. The two require different machinery: a per-case six-section template versus a bucket-typology with statistical front matter. The notes push deeper into history (Sino-American, Sino-Soviet, Sino-DPRK), into the philosophy of how one analyzes a discourse one is also a participant in (Gadamer, Skinner, Grice, 殷海光), and into comparative Western-platform analysis to argue the diagnosed pattern is structural rather than China-specific. The corpus chosen — a question whose displayed top answers overwhelmingly named the United States, in defiance of the dominant nationalist register — was useful precisely because it forces the analyst to evaluate friends and opponents by the same ARG yardstick. The `-discourse` suffix marks this as the first of an open series of topical extensions to PHIL 145c.
+{{< /lightning >}}
+
+---
+
 ## Psychology
 
 ### [PSYCH 099: The Algorithmic Self — Popular Psychology, Psychoanalysis, and Existentialism on Chinese Short-Video Platforms](/1265/psych099/)
