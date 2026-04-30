@@ -320,10 +320,10 @@ Rearranging,
 Since the left-side depends only on time \(t\) and the right-side depends only on space \(x\), each side must be a constant. Call this constant \(-\lambda\). This yields two **ordinary** differential equations
 
 \[
-\begin{aligned}
+\begin{align}
 M''(x) &= -\lambda M(x), \tag{2.7} \\
 N'' &= -c^2\lambda N. \tag{2.8}
-\end{aligned}
+\end{align}
 \]
 
 The boundary conditions also need to be considered: for all time \(t \geq 0\),
