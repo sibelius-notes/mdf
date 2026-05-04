@@ -515,6 +515,17 @@ UW has strong real courses on the sociology of education and higher education, b
 
 ---
 
+## Computer Science
+
+### [CS 798: AI Music Generation](/1259/cs798/)
+A graduate special-topics course on generative models for music and audio. The notes cover the two-stage latent generative modeling paradigm (VQ-VAE, latent diffusion, flow matching), autoregressive sequence models (Music Transformer, MusicGen), DDSP and differentiable signal processing, conditioning and control (text, style, timing), evaluation metrics for generative audio, and the legal and ethical dimensions of training on copyrighted recordings.
+
+{{< lightning >}}
+UW has strong machine-learning graduate offerings (CS 885, STAT 946) but nothing dedicated to music and audio generation — the subfield that produced Jukebox, MusicGen, Stable Audio, Suno, and Udio in rapid succession after 2020. CS 798 fills that gap by treating audio as a first-class modality: the compression and generation challenges are genuinely different from images and text, and the music-specific structure (pitch, rhythm, timbre, harmony) demands its own set of tools. Chris Donahue built the CMU 15-798 course on exactly this material; the notes follow his F2025 syllabus closely.
+{{< /lightning >}}
+
+---
+
 ## Rotating-Topics Composites (-rest)
 
 The `-rest` notes below are not single courses. Each is a synthetic composite that stitches together several offerings of a UW rotating-topics graduate course — one whose subject matter changes every term — into one coherent textbook-style document. The courses themselves exist; the unified narrative, the chapter-by-chapter compression, and the cross-references between offerings are invented here. For any given term, only one of the chapters in a `-rest` file corresponds to the course as actually taught; the other chapters describe what was taught in other terms. These notes are written for the reader who wants a map of the subject's rotation across recent years, not for the reader studying for a specific final.
