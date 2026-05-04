@@ -29,7 +29,7 @@ Two properties of operations are of fundamental importance. An operation \(*\) i
 ## Groups
 
 A **group** is a pair \((G, \cdot)\) where \(G\) is a set and \(\cdot\) is an associative binary operation on \(G\) such that:
-1. There exists an **identity element** \(e \in G\) with \(eg = ge = g\) for all \(g \in G$.
+1. There exists an **identity element** \(e \in G\) with \(eg = ge = g\) for all \(g \in G\).
 2. Every \(g \in G\) has an **inverse** \(g^{-1} \in G\) with \(gg^{-1} = g^{-1}g = e\).
 
 Identities are unique (if \(e\) and \(e'\) are both identities, then \(e = e \cdot e' = e'\)) and inverses are unique given associativity (the proof is a two-line manipulation using left and right inverses). The order \(|G|\) of a group is the cardinality of the underlying set; infinite groups have \(|G| = \infty\). A group is **abelian** if the operation is also commutative.
@@ -86,7 +86,7 @@ The subgroups of \(\mathbb{Z}\) are exactly the sets \(m\mathbb{Z} = \{mk : k \i
 
 A **group homomorphism** from \((G, \cdot)\) to \((H, *)\) is a function \(\phi \colon G \to H\) that respects the group operations: \(\phi(g_1 \cdot g_2) = \phi(g_1) * \phi(g_2)\) for all \(g_1, g_2 \in G\). A homomorphism automatically satisfies \(\phi(e_G) = e_H\) and \(\phi(g^{-1}) = \phi(g)^{-1}\).
 
-Two subsets of particular importance are the **kernel** \(\ker\phi = \{g \in G : \phi(g) = e_H\}\) and the **image** \(\mathrm{Im}\,\phi = \phi(G)\). Both are subgroups (kernel of \(G\), image of \(H\)), but the kernel has an additional property: it is **normal** in \(G\), meaning \(gKg^{-1} \subseteq K\) for all \(g \in G$.
+Two subsets of particular importance are the **kernel** \(\ker\phi = \{g \in G : \phi(g) = e_H\}\) and the **image** \(\mathrm{Im}\,\phi = \phi(G)\). Both are subgroups (kernel of \(G\), image of \(H\)), but the kernel has an additional property: it is **normal** in \(G\), meaning \(gKg^{-1} \subseteq K\) for all \(g \in G\).
 
 An **isomorphism** is a bijective homomorphism (equivalently, a homomorphism with a two-sided inverse). Groups \(G\) and \(H\) are **isomorphic** (written \(G \cong H\)) if an isomorphism between them exists. Isomorphic groups are, for all structural purposes, the same group with relabeled elements. The classification of groups up to isomorphism is the central project of group theory.
 
@@ -150,7 +150,7 @@ The condition for an **internal direct product** — when a group \(G\) can be w
 
 A **group action** of \(G\) on a set \(X\) is a homomorphism \(\phi \colon G \to S_X\) (the group of bijections of \(X\)), or equivalently, a function \(G \times X \to X\), \((g, x) \mapsto g \cdot x\), satisfying \(e \cdot x = x\) and \((gh) \cdot x = g \cdot (h \cdot x)\). Group actions are the language for expressing symmetry concretely.
 
-For a group action on \(X\), the **orbit** of \(x \in X\) is \(\mathcal{O}_x = \{g \cdot x : g \in G\}\) and the **stabilizer** of \(x\) is \(G_x = \{g \in G : g \cdot x = x\}$. Orbits partition \(X\); stabilizers are subgroups of \(G\).
+For a group action on \(X\), the **orbit** of \(x \in X\) is \(\mathcal{O}_x = \{g \cdot x : g \in G\}\) and the **stabilizer** of \(x\) is \(G_x = \{g \in G : g \cdot x = x\}\). Orbits partition \(X\); stabilizers are subgroups of \(G\).
 
 <div class="theorem">
 <strong>Orbit-Stabilizer Theorem:</strong> For any action of a finite group \(G\) on \(X\), and any \(x \in X\),
@@ -173,7 +173,7 @@ Cayley's theorem says that permutation groups are universal — every abstract g
 
 ## Conjugation and the Class Equation
 
-The **conjugation action** of \(G\) on itself sends \((g, x) \mapsto gxg^{-1}\). The orbits under this action are the **conjugacy classes**: elements \(x, y \in G\) are conjugate if \(y = gxg^{-1}\) for some \(g$. In an abelian group, every conjugacy class has size 1 (every element is its own class). The stabilizer of \(x\) under conjugation is the **centralizer** \(C_G(x) = \{g \in G : gx = xg\}\), and by the orbit-stabilizer theorem the size of the conjugacy class of \(x\) is \([G : C_G(x)]\).
+The **conjugation action** of \(G\) on itself sends \((g, x) \mapsto gxg^{-1}\). The orbits under this action are the **conjugacy classes**: elements \(x, y \in G\) are conjugate if \(y = gxg^{-1}\) for some \(g\). In an abelian group, every conjugacy class has size 1 (every element is its own class). The stabilizer of \(x\) under conjugation is the **centralizer** \(C_G(x) = \{g \in G : gx = xg\}\), and by the orbit-stabilizer theorem the size of the conjugacy class of \(x\) is \([G : C_G(x)]\).
 
 Since conjugacy classes partition \(G\) and the center \(Z(G)\) consists precisely of the singleton conjugacy classes:
 
@@ -281,7 +281,7 @@ The existence of maximal ideals in any commutative ring relies on **Zorn's lemma
 
 ## Prime Ideals and Integral Domains
 
-A proper ideal \(P \subsetneq R\) is **prime** if whenever \(ab \in P$, either \(a \in P\) or \(b \in P\). Equivalently, \(R/P\) is an integral domain. Every maximal ideal is prime (since fields are integral domains), but not conversely: \((0)\) is a prime ideal in \(\mathbb{Z}\) (since \(\mathbb{Z}\) is an integral domain) but is not maximal (since \((2) \supsetneq (0)\)).
+A proper ideal \(P \subsetneq R\) is **prime** if whenever \(ab \in P\), either \(a \in P\) or \(b \in P\). Equivalently, \(R/P\) is an integral domain. Every maximal ideal is prime (since fields are integral domains), but not conversely: \((0)\) is a prime ideal in \(\mathbb{Z}\) (since \(\mathbb{Z}\) is an integral domain) but is not maximal (since \((2) \supsetneq (0)\)).
 
 The language of prime and maximal ideals generalizes the elementary number theory of prime and composite integers. In \(\mathbb{Z}\), the prime ideals are \((0)\) and \((p)\) for prime \(p\); the maximal ideals are \((p)\) for prime \(p\). The ring \(\mathbb{Z}\) itself is not a field (integers don't have multiplicative inverses), but it is an integral domain — captured by \((0)\) being prime.
 

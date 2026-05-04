@@ -129,7 +129,7 @@ The structure of ideals encodes deep information about the ring, especially abou
 
 <div class="definition">
 
-**Definition (Prime and maximal ideals).** A proper ideal \(P\) is **prime** if \(ab \in P \Rightarrow a \in P$ or $b \in P\). A proper ideal \(M\) is **maximal** if there is no ideal \(I\) with \(M \subsetneq I \subsetneq R\).
+**Definition (Prime and maximal ideals).** A proper ideal \(P\) is **prime** if \(ab \in P \Rightarrow a \in P\) or \(b \in P\). A proper ideal \(M\) is **maximal** if there is no ideal \(I\) with \(M \subsetneq I \subsetneq R\).
 
 </div>
 
@@ -165,7 +165,7 @@ The use of Zorn's Lemma here is essential — it is not constructive. There exis
 
 The **polynomial ring** \(R[x]\) over a commutative ring \(R\) consists of polynomials \(a_0 + a_1 x + \cdots + a_n x^n\) with coefficients in \(R\), added and multiplied in the standard way.
 
-Key facts: if \(R\) is an integral domain, so is \(R[x]\) (the leading coefficient of a product is the product of the leading coefficients). If \(R\) is a UFD, so is \(R[x]$ (Gauss's lemma + induction). If \(F\) is a field, then \(F[x]\) is a Euclidean domain (with degree as the norm), hence a PID, hence a UFD.
+Key facts: if \(R\) is an integral domain, so is \(R[x]\) (the leading coefficient of a product is the product of the leading coefficients). If \(R\) is a UFD, so is \(R[x]\) (Gauss's lemma + induction). If \(F\) is a field, then \(F[x]\) is a Euclidean domain (with degree as the norm), hence a PID, hence a UFD.
 
 **Universal property**: for any ring homomorphism \(\phi : R \to S\) and element \(s \in S\) with \(\phi(r)s = s\phi(r)\) for all \(r\), there is a unique ring homomorphism \(\tilde\phi : R[x] \to S\) extending \(\phi\) with \(\tilde\phi(x) = s\). This is the **evaluation homomorphism** \(\text{ev}_s : f \mapsto f(s)\) when \(R \subseteq S\).
 
@@ -278,7 +278,7 @@ The theory of field extensions is the language needed to answer the constructibi
 
 **Tower theorem**: if \(F/L/K\) are successive extensions (K ⊆ L ⊆ F), then \([F : K] = [F : L][L : K]\).
 
-**Adjoining an element**: \(K(\alpha)\) denotes the smallest subfield of \(F\) containing \(K\) and \(\alpha\). It equals the fraction field of \(K[\alpha]\) (polynomials in \(\alpha$ with coefficients in \(K\)).
+**Adjoining an element**: \(K(\alpha)\) denotes the smallest subfield of \(F\) containing \(K\) and \(\alpha\). It equals the fraction field of \(K[\alpha]\) (polynomials in \(\alpha\) with coefficients in \(K\)).
 
 ## Algebraic vs. Transcendental Elements
 
