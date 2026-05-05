@@ -15,6 +15,12 @@
   <hr>
 
   <div class="course-content" data-pagefind-body>
+    {{ if and .Params.made_up .Params.why }}
+    <div class="lightning-box">
+      <div class="lightning-box-header"><span class="lightning-bolt">⚡</span> Why make it up</div>
+      <div class="lightning-box-body">{{ .Params.why | markdownify }}</div>
+    </div>
+    {{ end }}
     {{ .Content }}
   </div>
 
