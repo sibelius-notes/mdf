@@ -17,7 +17,7 @@
           <span class="course-term-badge">{{ .CurrentSection.Title }}</span>
           {{ with .Params.prof }}<span class="course-prof">{{ . }}</span>{{ end }}
         </span>
-        <span class="course-words">Study time: {{ partial "format-study-time.html" (dict "minutes" $study.minutes "style" "short") }}</span>
+        <span class="course-words">Study time: {{ partial "format-study-time.html" (dict "minutes" $study.minutes "style" "short" "studyDayMinutes" 1440) }}</span>
       </a>
     {{ end }}
     </div>
