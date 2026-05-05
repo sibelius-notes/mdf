@@ -1,4 +1,6 @@
 ---
+why: |
+  Kinetic theory is the bridge between the microscopic world of particles and the macroscopic world of continuum mechanics — it explains *why* the Navier-Stokes equations hold and *when* they break down. The subject connects naturally to UW's fluid mechanics and PDE courses but requires its own mathematical language: the Boltzmann equation, collision operators, and the Chapman-Enskog machinery.
 made_up: true
 title: "AMATH 860: Kinetic Theory and Transport Equations"
 subjects: "AMATH"

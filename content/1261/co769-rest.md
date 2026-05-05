@@ -1,4 +1,6 @@
 ---
+why: |
+  CO 769 offerings are rarer than the other rotating topics courses, so the composite compensates with dense per-chapter treatment (125–130 lines each). Either chapter stands on its own as a first introduction to its subfield.
 made_up: true
 title: "CO 769: Topics in Continuous Optimization"
 subjects: "CO"

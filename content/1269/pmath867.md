@@ -1,4 +1,6 @@
 ---
+why: |
+  Geometric group theory asks: what does a group *look like* when you zoom out and ignore the algebra? The resulting landscape — hyperbolic groups, boundaries at infinity, quasi-isometric rigidity — is both visually intuitive and technically deep, and it reorganises classical group theory in a surprising way.
 made_up: true
 title: "PMATH 867: Geometric Group Theory"
 subjects: "PMATH"

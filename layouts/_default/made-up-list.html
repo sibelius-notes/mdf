@@ -30,6 +30,12 @@
           {{ with .Params.prof }}<span class="course-prof">{{ . }}</span>{{ end }}
         </span>
         <span class="course-words">Study time: {{ partial "format-study-time.html" (dict "minutes" $study.minutes "style" "short" "studyDayMinutes" 1440) }}</span>
+        {{ with .Params.why }}
+        <div class="lightning-box">
+          <div class="lightning-box-header"><span class="lightning-bolt">⚡</span> Why make it up</div>
+          <div class="lightning-box-body">{{ . | markdownify }}</div>
+        </div>
+        {{ end }}
       </a>
     {{ end }}
     </div>

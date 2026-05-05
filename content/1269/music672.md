@@ -1,4 +1,6 @@
 ---
+why: |
+  MUSIC 370 (Theory 3) introduced "prolongation" in a paragraph; MUSIC 371 (Theory 4) spent a class on it without going too much in details. Schenkerian analysis is a full analytical system requiring a semester to master. Indiana (T555), Yale, Harvard, Eastman, and NYU all teach it as a standalone graduate course. Cadwallader and Gagné's textbook is the standard reference.
 made_up: true
 title: "MUSIC 672: Schenkerian Analysis"
 subjects: "MUSIC"

@@ -1,4 +1,6 @@
 ---
+why: |
+  UW's theory sequence (MUSIC 270–271) covers chromatic harmony and orchestration but has no dedicated counterpoint or fugue course — skills that Wilfrid Laurier (next door) requires in MU361. Every serious theory student learns to write species counterpoint; UW makes them pick it up implicitly.
 made_up: true
 title: "MUSIC 272: Counterpoint and Fugue"
 subjects: "MUSIC"

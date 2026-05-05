@@ -1,4 +1,6 @@
 ---
+why: |
+  The standard popular music curriculum is almost entirely Anglo-American. Billions of people consume, argue about, and make music in traditions that never appear in a Western syllabus. MUSIC 142 corrects that imbalance without treating non-Western music as merely derivative.
 made_up: true
 title: "MUSIC 142: Popular Music in Other Cultures"
 subjects: "MUSIC"

@@ -1,4 +1,6 @@
 ---
+why: |
+  MUSIC 371 (Theory 4) devotes one chapter to post-tonal concepts; MUSIC 377 spends an entire semester on them. Straus's *Introduction to Post-Tonal Theory*, Forte's *Structure of Atonal Music*, and Lewin's *Generalized Musical Intervals* deserve more than a week's coverage — as UC Irvine, U Chicago, Indiana, Yale, and Eastman all recognise.
 made_up: true
 title: "MUSIC 377: Post-Tonal Music Theory"
 subjects: "MUSIC"

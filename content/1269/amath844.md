@@ -1,4 +1,6 @@
 ---
+why: |
+  Real-world materials — composites, porous media, biological tissues — have structure at multiple spatial scales. Homogenization theory provides the rigorous mathematical framework for deriving effective macroscopic equations, extending both asymptotic methods (AMATH 732) and numerical PDEs (AMATH 741) to problems where direct simulation is computationally infeasible.
 made_up: true
 title: "AMATH 844: Homogenization and Multiscale Methods"
 subjects: "AMATH"

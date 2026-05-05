@@ -1,4 +1,6 @@
 ---
+why: |
+  Combustion theory is a classical applied mathematics subject — it is where matched asymptotic expansions were first deployed at industrial scale — yet UW has no course on it. The subject applies PDEs, asymptotic methods, and dynamical systems to chemistry and propulsion, and is taught at Cambridge DAMTP, Caltech, Princeton, Stanford, and MIT.
 made_up: true
 title: "AMATH 845: Combustion Theory and Reactive Flows"
 subjects: "AMATH"

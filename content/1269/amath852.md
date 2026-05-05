@@ -1,4 +1,6 @@
 ---
+why: |
+  Seismic wave propagation is one of the most mathematically rich areas of geophysics — combining PDE theory, asymptotic methods, spectral theory, and inverse problems — yet UW has no course on it. The subject is taught at Caltech, Cambridge, Princeton, Stanford, MIT, and Oxford, and is central to understanding Earth's interior structure.
 made_up: true
 title: "AMATH 852: Mathematical Geophysics and Seismic Wave Propagation"
 subjects: "AMATH"

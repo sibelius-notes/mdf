@@ -1,4 +1,6 @@
 ---
+why: |
+  Every music theory graduate student will teach; almost none receive formal pedagogical training. Eastman's graduate pedagogy certificate, Peabody's MM in Theory Pedagogy, and Michigan's graduate certificate all address this gap. UW's graduate students are assigned to teach MUSIC 261 with no preparation beyond their own undergraduate experience.
 made_up: true
 title: "MUSIC 678: Music Theory Pedagogy"
 subjects: "MUSIC"

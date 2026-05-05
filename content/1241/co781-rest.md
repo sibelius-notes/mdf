@@ -1,4 +1,6 @@
 ---
+why: |
+  CO 781 rotates among several quantum-information topics; Leung's quantum-error-correction offerings share enough overlap that a combined treatment is more coherent than two separate ones.
 made_up: true
 title: "CO 781: Topics in Quantum Information"
 prof: "Debbie Leung"

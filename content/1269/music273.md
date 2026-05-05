@@ -1,4 +1,6 @@
 ---
+why: |
+  MUSIC 371 (Theory 4) mentions modes in one table; MUSIC 240 covers jazz history without harmonic analysis. Neither course teaches the practical jazz harmony that any jazz performer or composer needs — the material covered in full depth at Berklee, Manhattan School, NEC, and Eastman. Sikora's *Jazz Harmony* and Levine's *Jazz Theory Book* are the primary references.
 made_up: true
 title: "MUSIC 273: Jazz Theory and Harmony"
 subjects: "MUSIC"

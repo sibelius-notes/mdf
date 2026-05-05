@@ -1,4 +1,6 @@
 ---
+why: |
+  Inverse problems sit at the intersection of functional analysis, numerical PDEs, and computation — all core AMATH subjects — yet UW has no dedicated course. The field has become central to modern applied mathematics, from medical imaging to weather prediction to seismic exploration, and is taught at MIT, Caltech, Chicago, Cambridge, and Oxford.
 made_up: true
 title: "AMATH 791: Inverse Problems and Data Assimilation"
 subjects: "AMATH"

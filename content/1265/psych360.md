@@ -1,4 +1,6 @@
 ---
+why: |
+  UW has abnormal psychology and a legal-studies programme, but no course that treats the psychology of crime, the offender, and the criminal-justice process as a unified subject — a standard offering at Simon Fraser (home of the PCL-R), John Jay, Leicester, and most large psychology departments. PSYCH 360 also resists the usual framing: the Anglophone forensic-psychology textbook tradition silently treats adversarial trials, jury decision-making, and insanity defences as universal facts, when they are in fact institutional choices that look very different in Chinese criminal procedure.
 made_up: true
 title: "PSYCH 360: Criminal Psychology"
 subjects: "PSYCH"

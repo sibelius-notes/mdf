@@ -1,4 +1,6 @@
 ---
+why: |
+  PMATH 990 is the most open-ended rotating-topics course in the PMATH curriculum. The three chapters cover the operator-algebraic, complexity-theoretic, and free-probabilistic corners of what "pure mathematics" currently means at UW.
 made_up: true
 title: "PMATH 990: Topics in Pure Mathematics"
 subjects: "PMATH"

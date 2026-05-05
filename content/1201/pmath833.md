@@ -1,4 +1,6 @@
 ---
+why: |
+  PMATH 833 at UW (taught by Nico Sprunk) covers abstract harmonic analysis: Haar measure, Pontryagin duality, representations of compact and locally compact groups, the Peter-Weyl theorem, amenable groups. Geometric and discrete harmonic analysis — the two dominant modern traditions — are not part of the course. Both Parts II and III were written as pure synthesis: Part II drawing on Stein's Princeton lecture notes and the wave packet literature up through Wang-Zahl; Part III on Ben Krause's AMS textbook (2022), recommended by Terence Tao. The unifying figure across all three parts is Bourgain, who made foundational contributions to abstract multiplier theory (Part I), the Kakeya problem (Part II), and polynomial ergodic theory (Part III) — the only mathematician whose work spans the entire arc of the notes.
 made_up: true
 title: "PMATH 833: Harmonic Analysis"
 subjects: "PMATH"

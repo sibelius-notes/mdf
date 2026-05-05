@@ -1,4 +1,6 @@
 ---
+why: |
+  MUSIC 232 and 233 (World Music survey courses) describe what non-Western music sounds like; MUSIC 676 teaches how to study it rigorously. Columbia (GR8412), Yale (MUSI 699), Harvard, Indiana, and UCLA all teach ethnomusicological methods as a graduate requirement. UW has nothing comparable.
 made_up: true
 title: "MUSIC 676: Ethnomusicological Methods and Fieldwork"
 subjects: "MUSIC"

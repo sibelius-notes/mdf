@@ -1,4 +1,6 @@
 ---
+why: |
+  UW has close-relationship material scattered across social psychology, personality, gender, and sociology, but no course that treats dating itself as a serious psychological object. That gap matters because modern dating is one of the main places where attachment, status, family, sexuality, economics, and platform culture collide. PSYCH 358 fills that gap with a comparative framework that takes both Chinese and Western dating cultures seriously and resists turning the subject into pickup advice or online grievance ideology.
 made_up: true
 title: "PSYCH 358: Psychology of Dating"
 subjects: "PSYCH"

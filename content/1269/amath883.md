@@ -1,4 +1,6 @@
 ---
+why: |
+  UW has AMATH 383 (Intro to Mathematical Biology) and graduate courses on oncology (AMATH 881) and cell biology (AMATH 882), but no graduate course on epidemiology and population dynamics — a major branch of mathematical biology highlighted during the COVID-19 pandemic. The subject is classical (Kermack-McKendrick, 1927) yet remains at the frontier of applied mathematics.
 made_up: true
 title: "AMATH 883: Mathematical Epidemiology and Population Dynamics"
 subjects: "AMATH"

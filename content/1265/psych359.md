@@ -1,4 +1,6 @@
 ---
+why: |
+  UW has close-relationships material embedded in social psychology and a family sociology sequence, but nothing that treats love itself — as distinct from the relationships that carry it — as a rigorous psychological object. Separating the two is analytically useful: two people can have a functioning relationship without much love, and love can outlast a relationship by decades. PSYCH 359 fills that gap and pairs naturally with PSYCH 358 (dating) as the upstream emotional-science complement to a course about dating institutions.
 made_up: true
 title: "PSYCH 359: The Psychology of Romantic Love"
 subjects: "PSYCH"

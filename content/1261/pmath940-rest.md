@@ -1,4 +1,6 @@
 ---
+why: |
+  The composite traces how UW's number theory curriculum rotates between algebraic, geometric, and analytic threads, with Stewart's repeated appearances as the unifying presence in the Diophantine geometry lineage.
 made_up: true
 title: "PMATH 940: Topics in Number Theory"
 subjects: PMATH

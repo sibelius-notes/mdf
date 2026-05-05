@@ -1,4 +1,6 @@
 ---
+why: |
+  UW's PMATH sequence goes deep into algebra and number theory but stops just short of class field theory, which sits at the threshold between advanced coursework and research. It is one of the most complete and satisfying theories in all of mathematics — a theory where everything works out — and deserved a set of notes.
 made_up: true
 title: "PMATH 841: Class Field Theory"
 subjects: "PMATH"

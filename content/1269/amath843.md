@@ -1,4 +1,6 @@
 ---
+why: |
+  UW's numerical PDE curriculum covers finite differences (AMATH 741) and finite elements (AMATH 841) but not boundary integral methods — the third major numerical PDE paradigm. NYU Courant is the world center for this subject (Greengard, Rokhlin, O'Neil), and the fast multipole method was called one of the top ten algorithms of the twentieth century.
 made_up: true
 title: "AMATH 843: Integral Equation Methods for PDEs"
 subjects: "AMATH"

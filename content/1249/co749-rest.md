@@ -1,4 +1,6 @@
 ---
+why: |
+  CO 749 offerings on structural graph theory are rare; Geelen's F16 course on the Robertson–Seymour structure theorem is the most developed recent instance and receives the bulk of the treatment. The F24 pointer marks the subject's continuation into matroid minors and induced-subgraph analogues.
 made_up: true
 title: "CO 749: Topics in Graph Theory"
 subjects: "CO"

@@ -1,4 +1,6 @@
 ---
+why: |
+  Geometric representation theory is a modern synthesis that rewrites classical results in a language where geometry does the heavy lifting. It is not taught as a single coherent course anywhere in the standard curriculum, yet it underlies much of contemporary research.
 made_up: true
 title: "PMATH 847: Geometric Representation Theory"
 subjects: "PMATH"

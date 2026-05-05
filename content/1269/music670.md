@@ -1,4 +1,6 @@
 ---
+why: |
+  Yale's MUSI 697 and Indiana's M501 are required doctoral proseminars in research methods; UW has no equivalent. Graduate students in musicology and music theory need formal training in how to use archives, read critical editions, conduct a literature review, and write for publication — skills that cannot be absorbed incidentally from coursework.
 made_up: true
 title: "MUSIC 670: Musicology Research Methods and Scholarly Writing"
 subjects: "MUSIC"

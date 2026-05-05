@@ -1,4 +1,6 @@
 ---
+why: |
+  CO 739 has rotated across a strikingly wide spectrum in the past decade. A single student will see one offering; a single composite lets a reader see the full arc — which is where the subject's connections to algebra, geometry, and probability become visible.
 made_up: true
 title: "CO 739: Topics in Combinatorics"
 subjects: "CO"

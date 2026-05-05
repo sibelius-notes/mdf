@@ -1,4 +1,6 @@
 ---
+why: |
+  AMATH 390 covers Fourier analysis, scales, and temperaments — the mathematics of music. MUSIC 276 covers the other half: how the ear and brain process sound. Psychoacoustics is taught at Stanford (MUSIC 150), MIT (21M.380), Cornell, and UC Berkeley but has no home at UW.
 made_up: true
 title: "MUSIC 276: Psychoacoustics and the Science of Musical Sound"
 subjects: "MUSIC"

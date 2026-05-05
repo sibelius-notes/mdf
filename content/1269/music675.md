@@ -1,4 +1,6 @@
 ---
+why: |
+  Music scholarship since the 1990s has been fundamentally shaped by cultural theory — gender, race, postcolonialism, disability, sound studies. Harvard, Princeton, Penn, and Queens College CUNY all require doctoral students to engage with this literature. UW's graduate music offerings do not include a course in critical musicology.
 made_up: true
 title: "MUSIC 675: Critical Musicology and Cultural Theory"
 subjects: "MUSIC"

@@ -1,4 +1,6 @@
 ---
+why: |
+  MUSIC 275 introduces recording and MIDI. MUSIC 279 goes deep: the mathematics of FM synthesis, the architecture of a modular synthesizer, the signal flow of a professional mix, and the production techniques behind recorded pop. Berklee's Electronic Production degree, Stanford CCRMA, and Carnegie Mellon all teach this material; UW does not.
 made_up: true
 title: "MUSIC 279: Sound Synthesis and Music Production"
 subjects: "MUSIC"

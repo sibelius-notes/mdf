@@ -1,4 +1,6 @@
 ---
+why: |
+  MUSIC 140 ends around 1980, just as popular music was about to undergo its most dramatic transformation since the invention of rock and roll. The visual economy of MTV, the cultural politics of hip-hop, and the collapse of the major-label system are all left hanging. MUSIC 141 closes that chapter.
 made_up: true
 title: "MUSIC 141: Popular Music After 1980"
 subjects: "MUSIC"

@@ -1,4 +1,6 @@
 ---
+why: |
+  Hodge theory is one of the most beautiful results in all of mathematics — it says that on a compact Kähler manifold, the topology and the complex analysis constrain each other in a surprisingly rigid way. The subject bridges complex analysis, differential geometry, and algebraic topology but rarely appears in a single course.
 made_up: true
 title: "PMATH 852: Several Complex Variables and Hodge Theory"
 subjects: "PMATH"

@@ -1,4 +1,6 @@
 ---
+why: |
+  The reference model for every other `-rest` file in this chapter. Six offerings, six chapters, each at textbook depth with definitions, theorems, and worked examples from the standard public references for that topic.
 made_up: true
 title: "CO 759: Topics in Discrete Optimization"
 subjects: "CO"

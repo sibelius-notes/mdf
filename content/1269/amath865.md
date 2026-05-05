@@ -1,4 +1,6 @@
 ---
+why: |
+  UW has AMATH 362 (Mathematics of Climate Change) at the undergraduate level but no graduate GFD course. Geophysical fluid dynamics is a classical applied mathematics subject — it shaped the careers of people like Pedlosky, Gill, and Vallis — and is taught at MIT, Cambridge, Princeton, Oxford, and NYU Courant. The subject combines fluid mechanics, PDEs, and dynamical systems in a physically rich setting.
 made_up: true
 title: "AMATH 865: Geophysical Fluid Dynamics"
 subjects: "AMATH"

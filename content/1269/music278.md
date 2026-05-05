@@ -1,4 +1,6 @@
 ---
+why: |
+  MUSIC 275 (Music Technology) covers recording tools and MIDI — the what of electronic music. MUSIC 278 covers the art form itself: the composers, the aesthetics, the defining works, and the ideas that drove each era from Pierre Schaeffer's tape experiments to the spectral composers' acoustic-analysis methods.
 made_up: true
 title: "MUSIC 278: Electronic Music: History and Aesthetics"
 subjects: "MUSIC"

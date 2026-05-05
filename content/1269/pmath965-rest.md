@@ -1,4 +1,6 @@
 ---
+why: |
+  PMATH 965 spans the widest topic range of any `-rest` file — nine chapters covering everything from Berger's classification to Donaldson–Seiberg–Witten four-manifold theory to Kontsevich's motivic integration. Each chapter is written as a standalone introduction.
 made_up: true
 title: "PMATH 965: Topics in Geometry and Topology"
 subjects: "PMATH"

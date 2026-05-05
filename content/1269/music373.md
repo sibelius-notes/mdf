@@ -1,4 +1,6 @@
 ---
+why: |
+  UW has no dedicated form and analysis course — a staple at Harvard, Yale, Princeton, Cambridge, Eastman, and Indiana. MUSIC 371 and 372 cover harmony and orchestration; they do not teach the systematic analysis of musical form that every music scholar and practitioner needs.
 made_up: true
 title: "MUSIC 373: Form and Musical Analysis"
 subjects: "MUSIC"

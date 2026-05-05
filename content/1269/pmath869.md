@@ -1,4 +1,6 @@
 ---
+why: |
+  Knot theory is one of the most accessible entry points to research-level topology — the objects are easy to draw, the invariants are computable, and the open problems are genuinely hard. It also serves as the gateway to Floer homology and other cutting-edge tools.
 made_up: true
 title: "PMATH 869: Knot Theory and Low-Dimensional Topology"
 subjects: "PMATH"

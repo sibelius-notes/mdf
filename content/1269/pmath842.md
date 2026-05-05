@@ -1,4 +1,6 @@
 ---
+why: |
+  The Langlands program is arguably the central organising vision of modern number theory and representation theory. No introductory course notes on the subject exist for this curriculum; writing them forces a synthesis of material scattered across half a dozen graduate textbooks.
 made_up: true
 title: "PMATH 842: Automorphic Forms and the Langlands Program"
 subjects: "PMATH"

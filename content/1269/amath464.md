@@ -1,4 +1,6 @@
 ---
+why: |
+  Waterloo teaches solid mechanics across several engineering-faculty courses without a corresponding math-faculty treatment. AMATH 464 was invented to pair with amath361 (continuum) and amath463 (fluid mechanics) so a math-oriented reader has a single rigorous text covering the full classical solid-mechanics toolkit — from the flexure formula and Mohr's circle to laminate theory, fracture mechanics, and the finite element method. The exposition follows Timoshenko and Goodier, Gere and Goodno, Roark's formulas, Ugural-Fenster, and Boresi-Schmidt as primary references.
 made_up: true
 title: "AMATH 464: Solid Mechanics"
 subjects: "AMATH"

@@ -1,4 +1,6 @@
 ---
+why: |
+  MUSIC 376 (Composition) focuses on concert music; no UW course teaches the specific craft of the popular song — the subject of dedicated programmes at Berklee, NYU Steinhardt, Belmont, and WLU (MU344). Analysing what makes a great hook, how a verse earns its chorus, or how prosody shapes melodic identity is a genuine academic skill.
 made_up: true
 title: "MUSIC 375: Songwriting: Analysis and Craft"
 subjects: "MUSIC"

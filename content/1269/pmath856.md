@@ -1,4 +1,6 @@
 ---
+why: |
+  Geometric measure theory provides the right framework for minimal surfaces and variational problems in geometry, but its foundational machinery — Rademacher's theorem, the compactness theorem for currents — is rarely assembled in one place for a graduate student audience.
 made_up: true
 title: "PMATH 856: Geometric Measure Theory"
 subjects: "PMATH"

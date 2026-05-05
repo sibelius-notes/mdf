@@ -1,4 +1,6 @@
 ---
+why: |
+  UW's music offerings include popular music history, opera history, and Western art music surveys, but nothing that treats the musical as a serious historical form in its own right. That leaves a conspicuous gap. Musical theatre sits exactly at the junction of popular song, stagecraft, dance, commerce, voice, and mass media; it also became one of the key vehicles through which Broadway aesthetics entered China. MUSIC 144 fills that gap by treating the musical not as a light add-on to opera or pop, but as a hybrid art form with its own history, techniques, and global afterlife.
 made_up: true
 title: "MUSIC 144: History of Musical Theatre"
 subjects: "MUSIC"

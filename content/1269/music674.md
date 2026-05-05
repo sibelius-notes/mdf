@@ -1,4 +1,6 @@
 ---
+why: |
+  Understanding why music theory looks the way it does requires reading it historically — tracing how Pythagorean mathematics became Rameau's fundamental bass became Schenker's Ursatz became Lewin's GIS. Yale requires MUSI 720–721 for all doctoral students; Indiana requires T623–T624. UW has no equivalent.
 made_up: true
 title: "MUSIC 674: History of Music Theory"
 subjects: "MUSIC"

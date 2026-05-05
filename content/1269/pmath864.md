@@ -1,4 +1,6 @@
 ---
+why: |
+  Vertex algebras are the algebraic structure underlying a large swath of modern mathematical physics and the geometric Langlands program, yet they are almost never taught in a mathematics department. The subject rewards the reader with one of the deepest connections between algebra and physics.
 made_up: true
 title: "PMATH 864: Infinite-Dimensional Lie Algebras and Vertex Algebras"
 subjects: "PMATH"

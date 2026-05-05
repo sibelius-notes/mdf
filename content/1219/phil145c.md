@@ -1,4 +1,6 @@
 ---
+why: |
+  PHIL 145 teaches the tools; PHIL 145c applies them to cases where the emotional stakes are high and the fallacies are real. Chinese internet discourse in particular offers rich material: the arguments are public, the stakes feel urgent to participants, and the logical errors are instructive precisely because they are so easy to make.
 made_up: true
 title: "PHIL 145: 批判性思维——案例研究"
 subjects: "PHIL"

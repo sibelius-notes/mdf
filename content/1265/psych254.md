@@ -1,4 +1,6 @@
 ---
+why: |
+  UW teaches social psychology and consumer behaviour but has no dedicated course on persuasion as a unified subject, despite its being one of the most applied branches of social psychology and a standard upper-year offering at Ohio State (where Petty built the field), Arizona State (Cialdini's home institution), Michigan, and Annenberg. PSYCH 254 also refuses the usual Anglo-centric framing: Chinese rhetorical traditions have their own centuries-long theory of influence that is rarely placed in dialogue with the ELM or Cialdini's six principles.
 made_up: true
 title: "PSYCH 254: Psychology of Persuasion"
 subjects: "PSYCH"

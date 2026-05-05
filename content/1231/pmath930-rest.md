@@ -1,4 +1,6 @@
 ---
+why: |
+  PMATH 930 rotates across model theory, universal algebra, and combinatorics. The composite presents each as a motivational first-lecture tour so that a student scanning the chapters can decide which offering fits their research interests.
 made_up: true
 title: "PMATH 930: Topics in Logic"
 subjects: PMATH

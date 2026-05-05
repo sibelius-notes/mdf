@@ -1,4 +1,6 @@
 ---
+why: |
+  MUSIC 140 (Popular Music, Simon Wood) is history and cultural studies; MUSIC 277 is harmonic and formal analysis. Taught at Yale, NYU, Cambridge, Liverpool, and UNT; missing entirely from UW's theory curriculum, which treats popular music as outside the domain of serious analysis.
 made_up: true
 title: "MUSIC 277: Popular Music Theory and Analysis"
 subjects: "MUSIC"

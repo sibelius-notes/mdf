@@ -1,4 +1,6 @@
 ---
+why: |
+  UW has general fluid mechanics (AMATH 463/863) and mathematical biology (383/881/882) but nothing at their intersection — the fluid mechanics of living systems. Biological fluid dynamics is a thriving DAMTP subject (Cambridge Part III, taught by Goldstein and Lauga) that combines Stokes flow theory with biological function, and is also taught at Oxford, Stanford, and MIT.
 made_up: true
 title: "AMATH 848: Biological Fluid Dynamics"
 subjects: "AMATH"

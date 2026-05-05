@@ -1,4 +1,6 @@
 ---
+why: |
+  The strands of PMATH 950 most visible in recent years have been analytic: operator algebras, free probability, and their geometric counterparts. The composite stitches these into a single coherent pass through the Paulsen / Kennedy / Brannan orbit of offerings.
 made_up: true
 title: "PMATH 950: Topics in Analysis"
 subjects: "PMATH"

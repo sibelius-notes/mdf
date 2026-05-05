@@ -1,4 +1,6 @@
 ---
+why: |
+  PHIL 145c handles single-text cases; this extension handles many-text discourse. The two require different machinery: a per-case six-section template versus a bucket-typology with statistical front matter. The notes push deeper into history (Sino-American, Sino-Soviet, Sino-DPRK), into the philosophy of how one analyzes a discourse one is also a participant in (Gadamer, Skinner, Grice, 殷海光), and into comparative Western-platform analysis to argue the diagnosed pattern is structural rather than China-specific. The corpus chosen — a question whose displayed top answers overwhelmingly named the United States, in defiance of the dominant nationalist register — was useful precisely because it forces the analyst to evaluate friends and opponents by the same ARG yardstick. The `-discourse` suffix marks this as the first of an open series of topical extensions to PHIL 145c.
 made_up: true
 title: "PHIL 145C: 多源舆论分析"
 subjects: "PHIL"

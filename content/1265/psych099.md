@@ -1,4 +1,6 @@
 ---
+why: |
+  UW has PHIL 145 for critical thinking and introductory psychology for the substantive content, but no course that teaches a student to read popular-psychology short videos the way PHIL 145 teaches them to read a newspaper editorial. For most Chinese-speaking undergraduates, Douyin psychology is now the dominant vehicle through which ideas like "attachment style", "原生家庭 trauma", or "existential authenticity" enter self-understanding — yet those ideas are never examined against the original literature. PSYCH 099 fills that gap with both systematic source-recovery and a comparative lens on how the same compression dynamic operates on Western platforms.
 made_up: true
 title: "PSYCH 099: The Algorithmic Self — Popular Psychology, Psychoanalysis, and Existentialism on Chinese Short-Video Platforms"
 subjects: "PSYCH"

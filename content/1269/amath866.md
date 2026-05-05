@@ -1,4 +1,6 @@
 ---
+why: |
+  MHD extends the fluid mechanics of AMATH 863 to electrically conducting fluids — the state of matter in stars, fusion reactors, and the solar wind. The subject is a classical DAMTP topic taught at Cambridge, Princeton, Caltech, Oxford, and MIT, and it sits squarely at the intersection of fluid mechanics, PDEs, and mathematical physics.
 made_up: true
 title: "AMATH 866: Magnetohydrodynamics and Plasma Physics"
 subjects: "AMATH"

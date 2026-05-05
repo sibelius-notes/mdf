@@ -1,4 +1,6 @@
 ---
+why: |
+  PMATH 945 illustrates how broadly "algebra" stretches at UW — from categorical foundations to quantum information to dynamical systems. The composite is written so each chapter reads as a first-lecture tour of its subfield.
 made_up: true
 title: "PMATH 945: Topics in Algebra"
 subjects: PMATH

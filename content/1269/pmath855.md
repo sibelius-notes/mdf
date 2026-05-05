@@ -1,4 +1,6 @@
 ---
+why: |
+  Microlocal analysis is the modern language of linear PDE and mathematical physics, yet it sits in an awkward gap: too advanced for a standard PDE course, rarely taught as a standalone subject. The phase-space perspective it introduces is indispensable for anyone doing analysis.
 made_up: true
 title: "PMATH 855: Microlocal Analysis"
 subjects: "PMATH"

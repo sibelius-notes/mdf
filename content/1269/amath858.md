@@ -1,4 +1,6 @@
 ---
+why: |
+  Free boundary problems are PDE problems where the domain itself is unknown — they arise in solidification, crystal growth, ice formation, and tumor growth. The subject has its own deep mathematical theory (Caffarelli's regularity results, Γ-convergence of phase-field models) and is taught at Cambridge DAMTP (Worster), NYU Courant, Oxford, and Chicago.
 made_up: true
 title: "AMATH 858: Free Boundary Problems and Phase Transitions"
 subjects: "AMATH"
