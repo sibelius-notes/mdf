@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "CO 769: Topics in Continuous Optimization"
 subjects: "CO"
 ---

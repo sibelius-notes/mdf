@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PMATH 930: Topics in Logic"
 subjects: PMATH
 ---

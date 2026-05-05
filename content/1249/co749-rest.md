@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "CO 749: Topics in Graph Theory"
 subjects: "CO"
 ---

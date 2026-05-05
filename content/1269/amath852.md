@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 852: Mathematical Geophysics and Seismic Wave Propagation"
 subjects: "AMATH"
 ---

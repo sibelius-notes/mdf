@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PHIL 145C: 多源舆论分析"
 subjects: "PHIL"
 ---

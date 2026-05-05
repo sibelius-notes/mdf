@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 373: Form and Musical Analysis"
 subjects: "MUSIC"
 ---

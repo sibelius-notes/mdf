@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 278: Electronic Music: History and Aesthetics"
 subjects: "MUSIC"
 ---

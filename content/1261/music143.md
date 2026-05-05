@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 143: The Other Side of the Record"
 subjects: "MUSIC"
 ---

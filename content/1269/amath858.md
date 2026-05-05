@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 858: Free Boundary Problems and Phase Transitions"
 subjects: "AMATH"
 ---

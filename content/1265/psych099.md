@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PSYCH 099: The Algorithmic Self — Popular Psychology, Psychoanalysis, and Existentialism on Chinese Short-Video Platforms"
 subjects: "PSYCH"
 ---

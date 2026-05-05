@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 844: Homogenization and Multiscale Methods"
 subjects: "AMATH"
 ---

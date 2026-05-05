@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PMATH 842: Automorphic Forms and the Langlands Program"
 subjects: "PMATH"
 ---

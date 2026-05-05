@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PMATH 847: Geometric Representation Theory"
 subjects: "PMATH"
 ---

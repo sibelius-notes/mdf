@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "CO 781: Topics in Quantum Information"
 prof: "Debbie Leung"
 subjects: "CO"

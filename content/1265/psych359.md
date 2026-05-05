@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PSYCH 359: The Psychology of Romantic Love"
 subjects: "PSYCH"
 ---

@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PMATH 867: Geometric Group Theory"
 subjects: "PMATH"
 ---

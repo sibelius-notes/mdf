@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 676: Ethnomusicological Methods and Fieldwork"
 subjects: "MUSIC"
 ---

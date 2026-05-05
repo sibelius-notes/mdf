@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 860: Kinetic Theory and Transport Equations"
 subjects: "AMATH"
 ---

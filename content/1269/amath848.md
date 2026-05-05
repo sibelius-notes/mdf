@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 848: Biological Fluid Dynamics"
 subjects: "AMATH"
 ---

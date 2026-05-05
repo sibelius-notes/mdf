@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 142: Popular Music in Other Cultures"
 subjects: "MUSIC"
 ---

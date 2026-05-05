@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 276: Psychoacoustics and the Science of Musical Sound"
 subjects: "MUSIC"
 ---

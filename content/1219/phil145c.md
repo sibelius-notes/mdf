@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PHIL 145: 批判性思维——案例研究"
 subjects: "PHIL"
 ---

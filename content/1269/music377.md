@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 377: Post-Tonal Music Theory"
 subjects: "MUSIC"
 ---

@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PSYCH 360: Criminal Psychology"
 subjects: "PSYCH"
 ---

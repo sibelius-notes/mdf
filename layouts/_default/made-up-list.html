@@ -1,0 +1,39 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+
+  {{ $madeUpPages := where .Site.RegularPages "Params.made_up" true }}
+
+  {{ $disciplines := slice
+    (dict "label" "Pure Mathematics"               "code" "PMATH")
+    (dict "label" "Combinatorics and Optimization" "code" "CO")
+    (dict "label" "Music"                          "code" "MUSIC")
+    (dict "label" "Applied Mathematics"            "code" "AMATH")
+    (dict "label" "Philosophy"                     "code" "PHIL")
+    (dict "label" "Psychology"                     "code" "PSYCH")
+    (dict "label" "Sociology"                      "code" "SOC")
+    (dict "label" "Computer Science"               "code" "CS")
+  }}
+
+  {{ range $disciplines }}
+    {{ $code := .code }}
+    {{ $pages := where $madeUpPages "Params.subjects" $code }}
+    {{ if gt (len $pages) 0 }}
+    <h2>{{ .label }}</h2>
+    <div class="course-grid">
+    {{ range $pages.ByTitle }}
+      {{ $study := partialCached "study-stats.html" . .RelPermalink }}
+      <a href="{{ .RelPermalink }}" class="course-card">
+        <span class="course-code">{{ .Title }}</span>
+        <span class="course-meta">
+          <span class="course-term-badge">{{ .CurrentSection.Title }}</span>
+          {{ with .Params.prof }}<span class="course-prof">{{ . }}</span>{{ end }}
+        </span>
+        <span class="course-words">Study time: {{ partial "format-study-time.html" (dict "minutes" $study.minutes "style" "short" "studyDayMinutes" 1440) }}</span>
+      </a>
+    {{ end }}
+    </div>
+    {{ end }}
+  {{ end }}
+</article>
+{{ end }}

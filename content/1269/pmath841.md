@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PMATH 841: Class Field Theory"
 subjects: "PMATH"
 ---

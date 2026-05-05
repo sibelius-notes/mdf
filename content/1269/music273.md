@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 273: Jazz Theory and Harmony"
 subjects: "MUSIC"
 ---

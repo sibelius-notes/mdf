@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 791: Inverse Problems and Data Assimilation"
 subjects: "AMATH"
 ---

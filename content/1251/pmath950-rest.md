@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PMATH 950: Topics in Analysis"
 subjects: "PMATH"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Made-Up Courses"
+layout: "made-up-list"
 ---
 
 These are courses that do not exist at the University of Waterloo — at least not under these names or in quite this form. The subject matter is real: the mathematics is rigorous, the music history is accurate, the psychology draws on the primary literature, the sociology is grounded in theory. What is invented is the course number, the syllabus, and the institutional home. The disciplines represented are pure mathematics, combinatorics and optimization, music theory and history, applied mathematics, philosophy, psychology, sociology, and computer science. Each entry below gives the course title, a short description of what it covers, and a note on why this particular gap was worth filling fictionally.

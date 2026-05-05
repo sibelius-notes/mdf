@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PMATH 965: Topics in Geometry and Topology"
 subjects: "PMATH"
 ---

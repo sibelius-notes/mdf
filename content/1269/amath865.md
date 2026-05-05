@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 865: Geophysical Fluid Dynamics"
 subjects: "AMATH"
 ---

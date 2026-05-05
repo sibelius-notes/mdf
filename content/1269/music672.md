@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 672: Schenkerian Analysis"
 subjects: "MUSIC"
 ---

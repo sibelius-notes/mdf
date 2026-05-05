@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 675: Critical Musicology and Cultural Theory"
 subjects: "MUSIC"
 ---

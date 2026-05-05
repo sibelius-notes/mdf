@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 678: Music Theory Pedagogy"
 subjects: "MUSIC"
 ---

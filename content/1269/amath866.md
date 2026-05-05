@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 866: Magnetohydrodynamics and Plasma Physics"
 subjects: "AMATH"
 ---

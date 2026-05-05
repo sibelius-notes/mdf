@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PMATH 833: Harmonic Analysis"
 subjects: "PMATH"
 prof: "Nico Spronk"

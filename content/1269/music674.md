@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 674: History of Music Theory"
 subjects: "MUSIC"
 ---

@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 141: Popular Music After 1980"
 subjects: "MUSIC"
 ---

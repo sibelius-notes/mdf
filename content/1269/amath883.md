@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 883: Mathematical Epidemiology and Population Dynamics"
 subjects: "AMATH"
 ---

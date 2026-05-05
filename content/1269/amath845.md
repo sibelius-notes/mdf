@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 845: Combustion Theory and Reactive Flows"
 subjects: "AMATH"
 ---

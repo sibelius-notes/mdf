@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 843: Integral Equation Methods for PDEs"
 subjects: "AMATH"
 ---

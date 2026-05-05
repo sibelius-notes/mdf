@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "CO 759: Topics in Discrete Optimization"
 subjects: "CO"
 ---

@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 670: Musicology Research Methods and Scholarly Writing"
 subjects: "MUSIC"
 ---

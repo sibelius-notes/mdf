@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 277: Popular Music Theory and Analysis"
 subjects: "MUSIC"
 ---

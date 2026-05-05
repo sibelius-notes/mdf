@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 144: History of Musical Theatre"
 subjects: "MUSIC"
 ---

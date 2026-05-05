@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 375: Songwriting: Analysis and Craft"
 subjects: "MUSIC"
 ---

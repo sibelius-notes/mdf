@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PSYCH 254: Psychology of Persuasion"
 subjects: "PSYCH"
 ---

@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PMATH 990: Topics in Pure Mathematics"
 subjects: "PMATH"
 ---

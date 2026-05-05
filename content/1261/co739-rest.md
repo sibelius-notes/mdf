@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "CO 739: Topics in Combinatorics"
 subjects: "CO"
 ---

@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "MUSIC 279: Sound Synthesis and Music Production"
 subjects: "MUSIC"
 ---

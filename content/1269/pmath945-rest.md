@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "PMATH 945: Topics in Algebra"
 subjects: PMATH
 ---

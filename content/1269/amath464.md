@@ -1,4 +1,5 @@
 ---
+made_up: true
 title: "AMATH 464: Solid Mechanics"
 subjects: "AMATH"
 ---
