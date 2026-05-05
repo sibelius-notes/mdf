@@ -1,6 +1,6 @@
 {{- $minutes := .minutes -}}
 {{- $style := default "short" .style -}}
-{{- $studyDayMinutes := 480 -}}
+{{- $studyDayMinutes := default 480 .studyDayMinutes -}}
 {{- if eq $style "total" -}}
   {{- $days := div (add $minutes (sub $studyDayMinutes 1)) $studyDayMinutes -}}
   {{- $years := div $days 365 -}}

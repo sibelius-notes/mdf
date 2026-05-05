@@ -4,7 +4,7 @@
     <h1 class="course-title caveat">{{ .Title }}</h1>
     {{ with .Params.prof }}<p class="course-prof caveat">{{ . }}</p>{{ end }}
     {{ $study := partialCached "study-stats.html" . .RelPermalink }}
-    <p class="reading-time">Estimated study time: {{ partial "format-study-time.html" (dict "minutes" $study.minutes "style" "short") }}</p>
+    <p class="reading-time">Estimated study time: {{ partial "format-study-time.html" (dict "minutes" $study.minutes "style" "short" "studyDayMinutes" 1440) }}</p>
   </header>
 
   <details open class="toc-details">
