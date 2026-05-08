@@ -27,6 +27,8 @@ Operas start with words before one note is written. The **libretto** (literally 
 
 An **aria** is a solo song written for a main character. It focuses on the expression of a character's emotions and reactions to the plot — time stands still while the character reflects on inner thoughts and feelings. An aria is essentially a monologue in poetic stanza form, featuring repetition of both text and music, usually in some kind of patterned form.
 
+{{< score id="music261/01-aria-vs-recitative" caption="Recitative vs. aria in notation: bars 1–2 show recitative — declamatory, syllabic, sparse bass accompaniment; bars 3–4 show aria style — lyrical, melismatic, richer harmonic support. The contrast captures opera's fundamental alternation between motion and reflection." >}}
+
 Here are three examples of arias that illustrate different approaches:
 
 **Monteverdi, *L'Orfeo* (1607), "Vi Ricorda":** Orpheus expresses his happiness and gratitude for his bride, Eurydice. This is a **strophic** aria — the same music is used with different words for each verse — separated by instrumental interludes. Notice the strong, regular rhythm.
@@ -36,6 +38,8 @@ Here are three examples of arias that illustrate different approaches:
 <em>Monteverdi, "Vi Ricorda" from L'Orfeo</em>
 
 <strong>Handel, <em>Messiah</em> (1742), "Rejoice Greatly":</strong> This is a <strong>da capo aria</strong> in A B A' form — an opening section, a contrasting section, and then a return of the opening music and words, but now more ornamented. Notice the strong meter in threes (12/8 time).
+
+{{< score id="music261/02-da-capo-form" caption="Da capo aria form (ABA'): the A section in G major, a contrasting B section in E minor, and the D.C. al Fine directive — the singer returns to the beginning and adds improvised ornamentation, transforming the familiar A into the embellished A'." >}}
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/tktWeIQ-uaw?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
@@ -191,6 +195,8 @@ The scene uses <strong>tonal centres</strong> to convey different levels of awar
 
 As the Messenger narrates the death of Eurydice — how a serpent bit her while she was gathering flowers — the style varies from straight narration to the highly emotive. The music becomes more <strong>chromatic</strong> (using notes outside the key, moving by semitone), with jarring, unexpected harmonic juxtapositions that convey enormous emotional impact.
 
+{{< score id="music261/06-lament-chromatic-bass" caption="Lament aria over chromatic ground bass (passus duriusculus): the bass descends chromatically from G to D in 3/4, cycling twice beneath a falling vocal line with suspensions — the Baroque emblem of grief, used by Purcell, Monteverdi, and countless others to convey inexorable sorrow." >}}
+
 > <strong>Messenger:</strong>
 > In un fiorito prato / In a flowered meadow
 > Con l'altre sue compagne / with her companions
@@ -240,6 +246,8 @@ The act closes with a five-part madrigal by the chorus, functioning as a <strong
 ## Act III: "Possente spirto" ("Powerful Spirit")
 
 In Act III, Orpheus faces his greatest challenge. He must convince Charon, the boatman, to ferry him across the River Styx into the underworld. Orpheus pulls out all the stops — singing in an elaborate, embellished <strong>singing style</strong> while accompanying himself on the lyre.
+
+{{< score id="music261/03-orfeo-possente-spirto" caption="Monteverdi, 'Possente spirto' (L'Orfeo, 1607): ornate vocal writing with multiple turns, trills, mordents, and running passaggi — the Baroque singer's art of embellishment deployed as Orpheus's supreme argument to move the gods." >}}
 
 Monteverdi included two versions in the 1609 published score: a plain, spare melody and a version with elaborate vocal flourishes. The ornamented version was probably how it was performed at the première.
 
@@ -318,6 +326,8 @@ Then a <strong>sinfonia</strong> (instrumental composition) begins, anticipating
 
 ![Score excerpt: Sinfonia with full orchestra from Giulio Cesare](/pics/261/261-3-giulio-cesare-score-sinfonia.jpeg)
 
+{{< score id="music261/04-handel-bravura" caption="Handel, Giulio Cesare style — Baroque bravura aria: cascading 16th-note runs spanning two octaves, with ornamental trills on approach tones. This coloratura virtuosity was the chief vehicle for expressing heroic character in opera seria." >}}
+
 ### Cleopatra's Aria: "V'adoro, pupille" ("I adore you, eyes")
 
 When Cleopatra finally sings her aria, it is a magnificent <strong>da capo aria</strong> in A B A' form:
@@ -387,6 +397,8 @@ The story of <em>La serva padrona</em> revolves around a clever servant who outw
 In Part I, Uberto complains that Serpina has not brought him his chocolate on time and has become a dictator in his home. He tells Vespone to go and find him a wife who will be more docile and obedient. But Serpina overhears this and offers herself — to which Uberto is adamant: anybody but her.
 
 In Part II, Serpina pulls Vespone aside to join her scheme. She tells Uberto she plans to marry a certain Captain Tempest, a ruthless tyrant. When Uberto asks to meet this suitor, she introduces the disguised Vespone, who — being mute — says nothing. Serpina explains that the silent Captain demands a dowry, and if he does not receive the money, he will insist that Uberto marry Serpina in his place. Valuing money above peace and quiet, Uberto agrees to marry Serpina. When Vespone reveals himself, Uberto realizes — or at least convinces himself — that he has loved Serpina all along.
+
+{{< score id="music261/05-buffo-patter" caption="Opera buffa patter style: rapid syllabic repeated notes in 2/4 at brisk tempo — the parlando patter song that became the comic bass's signature, from Pergolesi's Uberto to Rossini and Mozart's Leporello." >}}
 
 ## Excerpt 1: Serpina's Aria — "A Serpina penserete"
 
@@ -477,7 +489,9 @@ In Act II, Don Giovanni continues to evade consequences. He and Leporello find t
 
 Mozart's opera marks a significant departure from the Baroque opera seria of Handel's day. Where Baroque opera followed a stop-and-start pattern of recitative-aria pairs, Mozart's operas have dramatic continuity and forward momentum. They are still <strong>number operas</strong> — containing self-contained arias and ensembles that can be extracted and performed in concert — but these numbers are far more integrated into the dramatic fabric. The music is more continuous, more fast-paced. Recitative remains largely in the <em>secco</em> style with basso continuo accompaniment — a holdover from the Baroque era, with the harpsichord still filling in despite being supplanted elsewhere by the piano — but it is more emotionally charged than in earlier opera.
 
-Mozart also gives far greater importance to <strong>ensembles</strong> — duets, trios, and the closing sextet — as opposed to the parade of solo arias that dominated opera seria. <em>Giulio Cesare</em> had twenty-nine arias; <em>Don Giovanni</em> balances its arias with dramatically and musically significant ensemble numbers. And the characters themselves are different: not gods and heroes from mythology, but real people with complex, contradictory feelings — something that would not have been possible without the precedent set by Pergolesi's <em>La serva padrona</em> and its gift of a rich aria to a servant girl.
+Mozart also gives far greater importance to <strong>ensembles</strong> — duets, trios, and the closing sextet — as opposed to the parade of solo arias that dominated opera seria. <em>Giulio Cesare</em> had twenty-nine arias; <em>Don Giovanni</em> balances its arias with dramatically and musically significant ensemble numbers.
+
+{{< score id="music261/08-mozart-ensemble" caption="Classic opera ensemble texture: Soprano, Tenor, and Bass each carry independent melodic lines simultaneously — contrasting rhythmic profiles, voice crossing, and harmonic interlocking that no solo aria can achieve. This multi-voice independence is what makes the operatic ensemble dramatically irreplaceable." >}} And the characters themselves are different: not gods and heroes from mythology, but real people with complex, contradictory feelings — something that would not have been possible without the precedent set by Pergolesi's <em>La serva padrona</em> and its gift of a rich aria to a servant girl.
 
 ## Mozart the Dramatist
 
@@ -489,7 +503,11 @@ The third hallmark is <strong>ambivalence</strong>. Donna Elvira cannot bring he
 
 ## The Overture
 
-The overture to <em>Don Giovanni</em> is a purely instrumental piece played before the curtain rises, and it functions as a microcosm of the entire opera — a mini-portrait of Don Giovanni's dual nature. It is cast in <strong>sonata form</strong> with a slow introduction in D minor that gives way to an Allegro exposition in D major. These two keys — D minor and D major — are dramatically significant throughout the opera. The dark, ominous music of the D minor introduction returns later in the eerie cemetery scene where Don Giovanni and Leporello encounter the Commendatore's statue, so the overture foreshadows that terrifying moment. The contrast of D minor's darkness with D major's brilliance captures the two sides of Don Giovanni: how he portrays himself and how he truly is beneath the surface.
+The overture to <em>Don Giovanni</em> is a purely instrumental piece played before the curtain rises, and it functions as a microcosm of the entire opera — a mini-portrait of Don Giovanni's dual nature. It is cast in <strong>sonata form</strong> with a slow introduction in D minor that gives way to an Allegro exposition in D major.
+
+{{< score id="music261/07-don-giovanni-overture" caption="Mozart, Don Giovanni overture motif: bar 1 is the thunderclap D minor chord (ff), bars 2–3 present the scalic descent in agitated 8th notes, bar 4 arrives on the dominant A — the tonal opposition of D minor/D major that haunts the entire opera." >}}
+
+These two keys — D minor and D major — are dramatically significant throughout the opera. The dark, ominous music of the D minor introduction returns later in the eerie cemetery scene where Don Giovanni and Leporello encounter the Commendatore's statue, so the overture foreshadows that terrifying moment. The contrast of D minor's darkness with D major's brilliance captures the two sides of Don Giovanni: how he portrays himself and how he truly is beneath the surface.
 
 The overture is also dramatically integrated in a practical sense: it does not end with a final cadence but segues directly into Scene 1, plunging the audience straight into the action.
 
@@ -783,6 +801,8 @@ Rosina is notoriously difficult to cast. She is supposed to be about fifteen or 
 
 Rossini uses recitative in the traditional 18th-century manner — <strong>secco recitative</strong> with basso continuo accompaniment (harpsichord and cello), a texture that still sounds remarkably Baroque. At the other end of the spectrum is the singing of arias in the <strong>bel canto</strong> style — literally "beautiful singing" — which demands wide range, great agility, lyrical ability, and florid ornamentation, much of it improvised and all of it meant to sound effortless despite requiring extraordinary training. Bel canto was the defining vocal style of early 19th-century Italian opera.
 
+{{< score id="music261/10-bel-canto-ornamentation" caption="Bel canto ornamentation: bars 1–2 show the plain melody; bars 3–4 show the same melody ornamented with grace note, trill, turn, and appoggiatura — the vocabulary of spontaneous-sounding elaboration that distinguishes the trained bel canto singer from an amateur." >}}
+
 Rossini was a master of large-scale form. Where Handel's opera seria alternated individual recitatives and da capo arias in a relatively rigid stop-and-start pattern, Rossini built entire scenes around a single aria or ensemble, integrating recitative, slow and fast sections, and orchestral passages into coherent dramatic units. The plot could move forward even within arias, not just in recitative. His standard aria form is the <strong>double aria</strong> — a two-part structure consisting of a slow first section called the <strong>cantabile</strong> and a fast second section called the <strong>cabaletta</strong>, often separated by a transitional passage called the <strong>tempo di mezzo</strong> in which some change of circumstances precipitates a change in the music. A fuller scene might also include an orchestral introduction and a <strong>scena</strong> (recitative) before the cantabile. This same formal template could be applied to duets, trios, and other ensembles as well.
 
 One thinks of the analogy of a favorite television formula: the content changes every week — every opera — but the structural framework remains, and it works every time. Rossini's formal template was adopted by other Italian composers including Bellini, Donizetti, and Verdi; it became ubiquitous in 19th-century Italian opera.
@@ -887,6 +907,8 @@ Readings:
 - Hudson, Elizabeth. "Gilda Seduced: A Tale Untold." <em>Cambridge Opera Journal</em> 4, no. 3 (1992): 229–51.
 
 ## Innocence in a Corrupt World
+
+{{< score id="music261/09-verismo-declamation" caption="Verismo vocal style: speech-like syllabic delivery at pp suddenly erupts into a passionate lyric phrase (ff), then retreats. This alternation of parlando and outburst, characteristic of Verdi's later style and Puccini's mature work, makes the voice feel like an uncensored expression of inner turmoil." >}}
 
 Giuseppe Verdi (1813–1901) was the dominant figure in Italian opera for half a century after Donizetti. Born in northern Italy, the son of an innkeeper, Verdi showed musical aptitude from the start — by age nine he was working as a church organist. He pursued a career as an opera composer in Milan, but his early years were shadowed by devastating personal loss: his two children died in infancy, followed by the early death of his wife, Margherita. In the very midst of this grief, in 1842, his opera <em>Nabucco</em> launched him as a star composer, and the next eleven years became the busiest of his career. A kind of triptych of masterworks emerged — <em>Rigoletto</em> (1851), <em>Il trovatore</em> (1853), and <em>La traviata</em> (1853) — after which he gradually slowed his production of new operas. By 1871, he had retired from the stage and turned his attention to his farm.
 

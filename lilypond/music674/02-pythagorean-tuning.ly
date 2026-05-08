@@ -1,15 +1,31 @@
 \version "2.24.0"
-\paper { indent = 0 ragged-right = ##t line-width = 14\cm }
-% Stacked perfect fifths C-G-D-A-E; major third C-E is Pythagorean (81:64), sharper than just
+\paper { indent = 0 ragged-right = ##t line-width = 13\cm }
+% Pythagorean tuning: chain of seven perfect fifths (C-G-D-A-E-B-F#) in treble
+% compared simultaneously with the C major diatonic scale in bass
 \score {
-  \new Staff {
-    \clef treble \key c \major \time 4/4
-    \omit Score.BarNumber
-    c'2^\markup { \small "C" }
-    g'2^\markup { \small "G (×3/2)" }
-    d''2^\markup { \small "D (×3/2)" }
-    a'2^\markup { \small "A (×3/2)" }
-    e''1^\markup { \small "E=81:64 (sharp!)" }
-  }
+  \new GrandStaff <<
+    \new Staff {
+      \clef treble \key c \major \time 4/4
+      \omit Score.BarNumber
+      c'1^\markup { \small "C  1:1" }
+      g'1^\markup { \small "G  3:2" }
+      d''1^\markup { \small "D  9:8" }
+      a'1^\markup { \small "A  27:16" }
+      e''1^\markup { \small "E  81:64" }
+      b'1^\markup { \small "B  243:128" }
+      fis''1^\markup { \small "F♯ 729:512" }
+    }
+    \new Staff {
+      \clef bass \key c \major \time 4/4
+      \omit Score.BarNumber
+      c1_\markup { \small "C scale" }
+      d1
+      e1
+      f1
+      g1
+      a1
+      b1
+    }
+  >>
   \layout { }
 }

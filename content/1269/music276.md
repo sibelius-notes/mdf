@@ -365,7 +365,7 @@ f_1 = \frac{1}{2 \times 0.65}\sqrt{\frac{70}{3.5 \times 10^{-3}}} = \frac{1}{1.3
 Depressing the string at the fifth fret reduces the effective length to \(L' \approx 0.488\) m, raising the frequency by a factor of \(0.65/0.488 \approx 1.333 = 4/3\), corresponding to a perfect fourth — just as the fret positions on a guitar approximate the ratios of just intonation.
 </div>
 
-{{< score id="music276/07-just-intonation-scale" caption="Just intonation scale: C major with ratio annotations 1/1 through 2/1, illustrating the fret-ratio relationship." >}}
+{{< score id="music674/10-just-intonation-scale" caption="Just intonation scale: C major with ratio annotations 1/1 through 2/1, illustrating the fret-ratio relationship." >}}
 
 The formula \(f_n = \frac{n}{2L}\sqrt{T/\mu}\) encodes the three classical means of controlling pitch: length (stopping), tension (tuning pegs, capo), and linear density (wound strings for bass). A string twice as long, at equal tension and density, vibrates one octave lower. A string under twice the tension vibrates \(\sqrt{2}\) times faster — roughly a tritone (six semitones) higher in equal temperament.
 
@@ -847,7 +847,7 @@ The Pythagorean major third has frequency ratio \((3/2)^4 / 4 = 81/64 \approx 1.
 \]
 The two whole tones are the *major tone* (9:8 \(\approx 203.9\) cents) and the *minor tone* (10:9 \(\approx 182.4\) cents), differing by the syntonic comma (21.5 cents). Just intonation gives maximally consonant triads in a single key but creates serious problems for modulation: the same pitch may need to be tuned differently depending on whether it functions as the major third of one chord or the fifth of another. Just intonation is most naturally suited to a cappella choral singing, where singers can continuously adjust pitch to minimize roughness.
 
-{{< score id="music276/07-just-intonation-scale" caption="Just intonation C major scale with ratio annotations 1/1 through 2/1: the pure intervals that minimize roughness between partials." >}}
+{{< score id="music674/10-just-intonation-scale" caption="Just intonation C major scale with ratio annotations 1/1 through 2/1: the pure intervals that minimize roughness between partials." >}}
 
 {{< score id="music276/09-pythagorean-scale" caption="Pythagorean tuning: stacked pure fifths (C, G, D, A, E, B, F#) — pure fifths but sharper major thirds (81/64 vs. 5/4)." >}}
 
@@ -1198,7 +1198,7 @@ Grisey's *Partiels* (1975), for large ensemble, begins with the sound of a low E
 <strong>Example S.2.</strong> In 31-TET, the step size is \(1200/31 \approx 38.7\) cents. The major third is \(10 \times 38.7 \approx 387\) cents — only 0.7 cents sharp of just. The perfect fifth is \(18 \times 38.7 \approx 696.8\) cents — only 5.2 cents flat of just (almost identical to quarter-comma meantone). The harmonic seventh (7:4 \(\approx 968.8\) cents) is approximated by \(25 \times 38.7 \approx 967.7\) cents — only 1.1 cents flat. This extraordinary approximation quality of 31-TET for low-prime harmonics was recognized by Christiaan Huygens in 1691, long before the systematic study of microtonal temperaments.
 </div>
 
-{{< score id="music276/07-just-intonation-scale" caption="Example S.2: Just intonation scale ratios — 31-TET approximates these ratios to within 1¢ for the major third and harmonic seventh." >}}
+{{< score id="music674/10-just-intonation-scale" caption="Example S.2: Just intonation scale ratios — 31-TET approximates these ratios to within 1¢ for the major third and harmonic seventh." >}}
 
 The development of electronic and computer music has liberated composers from the physical constraints of fixed-pitch mechanical instruments. Arbitrary frequency ratios, including irrational ones, can be specified and realized with perfect accuracy. Composers such as Harry Partch (who built custom instruments in 43-tone just intonation), La Monte Young (who explored sustained just-intonation drones), and James Tenney (who used rational frequency ratios derived from the harmonic series in a rigorous compositional framework) have demonstrated that the tonal resources of just intonation far exceed those of any equal temperament, at the cost of requiring purpose-built instruments or electronic realization. The science of tuning systems is therefore not a closed chapter from the 18th century but a living field at the intersection of acoustics, mathematics, and compositional aesthetics.
 
@@ -1241,7 +1241,6 @@ The following table collects the key quantitative parameters that have appeared 
 | CD dynamic range (16-bit) | SQNR | 98 (approx.) | dB |
 </div>
 
-{{< score id="music276/24-melodic-minor" caption="Melodic vs. harmonic minor scales in A: the raised 6th and 7th degrees of the melodic minor (ascending) contrast with the augmented 2nd of the harmonic minor." >}}
 
 These numbers are not mere cataloguing; each one is the crystallized result of a physical derivation, an experimental measurement, or both, and each connects directly to the practical decisions made by instrument makers, concert hall architects, recording engineers, and performing musicians every day. The science of musical sound is, ultimately, a science of these connections — the web of relationships linking the restoring force in a vibrating string, the nonlinear mechanics of a bowed bow hair, the logarithmic mapping of the basilar membrane, the roughness of a mistuned third, the reflections from the plasterwork of a 19th-century Viennese concert hall, and the subjective experience of beauty in organized sound.
 

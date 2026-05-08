@@ -44,6 +44,8 @@ The third stream is **keyboard music** — music for harpsichord, clavichord, an
 
 The most distinctive textural feature of Baroque music is the **basso continuo**, a system of accompaniment that underpins virtually every genre of the period. The bass line, played by a low melodic instrument (typically a cello, bassoon, or viola da gamba), was reinforced harmonically by a keyboard or plucked instrument (organ, harpsichord, lute, or theorbo) that improvised chords above it. This improvisation was guided by a system of **figured bass notation**: numerals written beneath the bass line indicating which intervals above the bass should be filled in, but leaving the precise voicing and elaboration to the performer's discretion. The result was music with a clearly polarized texture — a prominent melody in the treble and an equally prominent bass foundation, with inner voices filled in more or less freely. This **treble-bass polarity** is fundamentally different from the equal-voice polyphony of the Renaissance, and it marks Baroque music as a new departure.
 
+{{< score id="music254/04-basso-continuo" caption="Basso continuo realization: melody above a bass line with figured bass numerals (5/3, 6, 6/4, 5/3) guiding the harmonist's improvisation." >}}
+
 As the Baroque progressed, the continuo group typically involved two instruments: a melodic bass instrument that reinforced the bass line, and a chordal instrument that provided the harmonic filling. Different instrument combinations were chosen for expressive effect: a theorbo (a long-necked lute capable of very deep bass tones) lent an intimate, plucked quality, while an organ provided sustained warmth appropriate to sacred music.
 
 The Baroque also saw the expanded combination of voices and instruments, producing new colours and contrasts. This mixing of timbres introduced a new practical challenge: instruments of different families were tuned according to different systems. String instruments could be readily adjusted in pitch, but keyboard instruments could not. The most common keyboard tuning system of the early and middle Baroque was **mean-tone temperament**, which produced beautifully pure thirds in the most common keys but harsh, unusable results in distant keys. The gradual move toward **equal temperament** — dividing the octave into twelve equal semitones — represented a practical compromise that sacrificed a small degree of harmonic purity in exchange for the ability to play in any key with equal facility. Bach's *Well-Tempered Clavier* is the most famous demonstration of what equal (or near-equal) temperament made possible.
@@ -90,6 +92,8 @@ The Camerata's discussions ranged across literature, science, and the arts, but 
 
 Their solution was **monody**: accompanied solo singing, in which a single voice delivered the text over a simple instrumental accompaniment. In monody, every word could be heard clearly, and the vocal line could mirror the rhythm and inflection of natural speech. The texture was simple — a solo voice plus basso continuo — but the expressive potential was considered revolutionary. This prototype of what would become **recitative** made opera possible.
 
+{{< score id="music254/01-recitative" caption="Secco recitative style: syllabic voice over sparse bass punctuations, the hallmark of early Baroque monody." >}}
+
 ## Caccini and Monody
 
 Caccini's songs, published in the collection *Le nuove musiche* (The New Music, 1602), are among the earliest surviving examples of monody. His song "Amarilli, mia bella" illustrates the new style: a single vocal line over a bass, with the melody carefully shaped to reflect the accents and emotions of the Italian text, ornamented with the kinds of embellishments that Caccini regarded as the singer's prerogative. The style points directly toward recitative, that musico-dramatic parlance halfway between song and speech that made opera possible.
@@ -135,6 +139,8 @@ Musically, *L'Orfeo* is far more ambitious than its predecessors:
 Act II of *L'Orfeo* contains one of the most dramatic structural contrasts in opera. It opens in an atmosphere of pastoral bliss.
 
 **Orfeo's aria** ("Vi ricorda, o boschi ombrosi") is strophic — the same music repeated for each stanza — with a strong dance rhythm and a **ritornello** (a recurring instrumental refrain of five parts) framing each verse. The bass continuo alone accompanies the voice. The music radiates uncomplicated joy, and the regularity of the strophic form suggests a world in happy equilibrium.
+
+{{< score id="music254/02-aria-ritornello" caption="Aria ritornello theme (A section): a 4-bar opening gesture in triple meter with a trill on the climax pitch, closing with a PAC." >}}
 
 **A short shepherd's song** continues the pastoral mood.
 
@@ -332,6 +338,8 @@ The **courante** is in a moderate triple or compound meter with an upbeat, and i
 
 The **sarabande** is slow and dignified, in triple meter with a characteristic emphasis on the **second beat** — a weighty suspension that gives the dance its stately quality.
 
+{{< score id="music254/05-dance-suite-movement" caption="Baroque sarabande in A minor: dotted melody with weight on beat 2, supported by a simple harmonic bass." >}}
+
 The **gigue** (English "jig") is fast, in compound meter (6/4), with wide melodic leaps and continuous triplet subdivisions.
 
 ### Ornamentation in French Harpsichord Music
@@ -372,9 +380,13 @@ A **fugue** is a musical genre based on the systematic imitation of a theme (cal
 
 A fugue begins with an **exposition**: a section in which each voice states the entire subject exactly once. The first voice states the subject alone in the tonic key. A second voice then enters with the subject transposed up a fifth (or down a fourth) — this transposed statement is called the **answer**. While the second voice is presenting the answer, the first voice often continues with a **countersubject**: a secondary theme designed to sound well against the subject in counterpoint, and typically recurring whenever the subject appears. A third voice then enters with the subject (usually in the tonic again), and so on until all voices have been heard once. The exposition ends at that point.
 
+{{< score id="music254/06-fugue-subject-answer" caption="Fugue exposition: subject enters in soprano (bar 1), answer enters a fifth lower in bass (bar 2), countersubject continues above." >}}
+
 After the exposition, a fugue typically alternates between **episodes** — sections in which the subject is absent, usually built from fragments of the subject or countersubject in sequences — and **statements** of the subject in various keys, moving through a circle of modulations before eventually returning to the tonic. Advanced fugal techniques include:
 
 **Stretto**: overlapping entries of the subject, where one voice begins the subject before a previous voice has finished stating it, creating an intensification of the imitative texture.
+
+{{< score id="music254/07-fugue-stretto-episode" caption="Fugue episode and stretto: sequential descending passage in bars 1–2, overlapping subject entries in bars 3–4." >}}
 
 **Augmentation**: the subject in doubled note values (twice as slow).
 
@@ -466,6 +478,8 @@ Central to Lully's achievement was the adaptation of **recitative to the French 
 The excerpt from Act II, Scene 5 — in which Armide finds the sleeping Renaud and prepares to kill him, only to find herself unable — is one of the most dramatically intense moments in French Baroque opera.
 
 **The Overture** opens the opera in the standard **French overture** form that Lully invented: two sections in ||: A :||: B :|| structure. The first section (A) is **slow, duple, and majestic** — a stately, homophonic texture with characteristic **dotted rhythms**, performed with **overdotting** (the dotted note held even longer than written, the short note shortened further) and *notes inégales*. The second section (B) is faster, in compound triple meter (6/4), with **imitative counterpoint** among the instruments. At the end of section B, the tempo slows and the duple meter briefly returns, giving the overture a sense of enclosure.
+
+{{< score id="music254/03-french-overture" caption="French overture: slow dotted section (bars 1–2) followed by fast fugal running passages (bars 3–4)." >}}
 
 **The Divertissement** (Act II, Scene 4, "Laissons au tendre amour") is an extended interlude of **ballet**, **solo airs**, and **choral singing** intended as pure entertainment — the *divertissement* was a fixed structural feature of every act, and French audiences expected and relished it.
 
@@ -636,11 +650,15 @@ A **phrase** is a short melodic unit (typically two or four bars) that feels lik
 
 Within phrases, **melodic segments** (short motives or gestures) function as building blocks. The internal organization of a theme — the way its segments combine into phrases and phrases into periods — was what theorists like **Heinrich Christoph Koch** (in his *Introductory Essay on Composition*, 1782–93) analyzed when they described Classical formal structure.
 
+{{< score id="music254/10-classical-phrase" caption="Classical sentence structure: basic idea (bars 1–2), continuation (bar 3), cadential V⁷–I (bar 4)." >}}
+
 ### Harmony and Texture
 
 Classical harmony **supports** the melodic phrase structure: harmonic rhythm (the rate at which chords change) is synchronized with phrase structure, so that harmonic arrivals reinforce the melodic cadences. Compared to Baroque music, harmonies change **less frequently**, placing greater emphasis on the melody itself.
 
 The characteristic texture of Classical keyboard music includes the **Alberti bass**: an accompaniment pattern in the left hand in which the notes of a chord are broken into a repeating low–high–middle–high pattern. Named after the composer Domenico Alberti (though he did not invent it), this pattern creates a steady pulse without the harmonic density of Baroque counterpoint, keeping the texture light and transparent.
+
+{{< score id="music254/08-galant-alberti" caption="Galant melody with Alberti bass: the light, transparent Classical texture that replaced Baroque counterpoint." >}}
 
 ### Form and Emotion
 
@@ -720,6 +738,8 @@ Its essential principle, as described by Koch in the 1780s, is an **expanded bin
 **Development**: The opening of the second section, which takes the material of the exposition through a series of keys and transformations — fragmenting themes, combining them contrapuntally, and creating harmonic instability.
 
 **Recapitulation**: The return of the exposition's material, now entirely in the tonic — including the second theme, which was in the dominant during the exposition.
+
+{{< score id="music254/09-sonata-form-schema" caption="Sonata form schema in notation: P-theme (I), transition, MC rest, S-theme (V), and EEC double bar." >}}
 
 K. 332 is a model of Mozart's ability to **mix contrasting styles** within a single movement, moving between them with such naturalness that the contrasts feel dramatically motivated rather than arbitrary.
 

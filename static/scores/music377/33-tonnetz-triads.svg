@@ -1,307 +1,479 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="68.58mm" height="51.92mm" viewBox="0.0000 0.0000 39.0250 29.5477">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="49.58mm" height="75.34mm" viewBox="-1.1826 0.0000 28.2138 42.8744">
 <style type="text/css">
 <![CDATA[
 tspan { white-space: pre; }
 ]]>
 </style>
-<g transform="translate(11.8600, 25.9977)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+<g transform="translate(14.1993, 30.4905)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 27.9977)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="38.9750" y2="0"/>
+<g transform="translate(0.0000, 32.4905)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="26.9812" y2="0"/>
 </g>
-<g transform="translate(0.0000, 26.9977)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="38.9750" y2="0"/>
+<g transform="translate(0.0000, 31.4905)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="26.9812" y2="0"/>
 </g>
-<g transform="translate(0.0000, 25.9977)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="38.9750" y2="0"/>
+<g transform="translate(0.0000, 30.4905)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="26.9812" y2="0"/>
 </g>
-<g transform="translate(0.0000, 24.9977)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="38.9750" y2="0"/>
+<g transform="translate(0.0000, 29.4905)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="26.9812" y2="0"/>
 </g>
-<g transform="translate(0.0000, 23.9977)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="38.9750" y2="0"/>
+<g transform="translate(0.0000, 28.4905)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="26.9812" y2="0"/>
 </g>
-<g transform="translate(38.8350, 25.9977)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+<g transform="translate(26.8412, -0.0000)">
+<rect x="0.0000" y="32.5405" width="0.1900" height="5.3340" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(28.1601, 25.9977)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+<g transform="translate(0.0000, 41.8744)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="26.9812" y2="0"/>
 </g>
-<g transform="translate(0.0000, 4.9977)">
-<rect x="30.0751" y="-0.1000" width="2.6275" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 40.8744)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="26.9812" y2="0"/>
 </g>
-<g transform="translate(0.0000, 5.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 39.8744)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="26.9812" y2="0"/>
 </g>
-<g transform="translate(0.0000, 6.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 38.8744)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="26.9812" y2="0"/>
 </g>
-<g transform="translate(0.0000, 7.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 37.8744)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="26.9812" y2="0"/>
 </g>
-<g transform="translate(0.0000, 8.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(26.8412, 39.8744)">
+<rect x="0.0000" y="-2.0500" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 9.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(26.8412, 30.4905)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 10.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(14.1993, -0.0000)">
+<rect x="0.0000" y="32.5405" width="0.1900" height="5.3340" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 11.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(14.1993, 39.8744)">
+<rect x="0.0000" y="-2.0500" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 12.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 4.4905)">
+<rect x="20.5397" y="-0.1000" width="1.8967" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 13.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 5.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 14.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 6.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 15.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 7.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 16.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 8.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 17.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 9.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 18.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 10.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 19.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 11.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 20.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 12.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 21.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 13.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 22.9977)">
-<rect x="29.7596" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 14.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 9.9977)">
-<rect x="21.9251" y="-0.1000" width="2.6275" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 15.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 10.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 16.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 11.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 17.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 12.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 18.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 13.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 19.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 14.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 20.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 15.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 21.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 16.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 22.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 17.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 23.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 18.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 24.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 19.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 25.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 20.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 26.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 21.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 27.4905)">
+<rect x="20.3704" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 22.9977)">
-<rect x="21.6096" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 10.4905)">
+<rect x="16.2643" y="-0.1000" width="1.8967" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 11.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 11.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 12.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 12.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 13.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 13.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 14.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 14.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 15.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 15.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 16.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 16.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 17.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 17.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 18.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 18.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 19.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 19.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 20.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 20.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 21.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 21.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 22.9977)">
-<rect x="13.4595" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 22.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 15.9977)">
-<rect x="5.3095" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 23.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 16.9977)">
-<rect x="5.3095" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 24.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 17.9977)">
-<rect x="5.3095" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 25.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 18.9977)">
-<rect x="5.3095" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 26.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 19.9977)">
-<rect x="5.3095" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 27.4905)">
+<rect x="16.0950" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 20.9977)">
-<rect x="5.3095" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 13.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 21.9977)">
-<rect x="5.3095" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 14.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 22.9977)">
-<rect x="5.3095" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 15.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(20.0101, 25.9977)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+<g transform="translate(0.0000, 16.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:16:7:8">
-<g transform="translate(5.8000, 24.4977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<g transform="translate(0.0000, 17.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 18.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 19.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 20.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 21.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 22.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 23.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 24.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 25.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 26.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 27.4905)">
+<rect x="9.7311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 16.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 17.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 18.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 19.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 20.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 21.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 22.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 23.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 24.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 25.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 26.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 27.4905)">
+<rect x="5.4557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:31:8:9">
+<g transform="translate(16.4393, 40.3744)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:16:10:11">
-<g transform="translate(5.8000, 19.9977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:14:9:10">
+<g transform="translate(5.8000, 25.4905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:16:15:16">
-<g transform="translate(5.8000, 15.4977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:14:12:13">
+<g transform="translate(5.8000, 20.9905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:16:19:20">
-<g transform="translate(5.8000, 14.4927)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:14:17:18">
+<g transform="translate(5.8000, 16.4905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:14:21:22">
+<g transform="translate(5.8000, 8.1746)">
 <text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
-<tspan>E major</tspan>
+<tspan>E maj  (center)</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(0.8000, 26.9977)">
+<g transform="translate(0.8000, 31.4905)">
 <path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
 c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
 c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
 c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
 </g>
-<g transform="translate(4.3500, 19.9977)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:28:8:9">
+<g transform="translate(5.8000, 39.3744)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:28:10:11">
+<g transform="translate(5.8000, 37.3244)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>root E</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(0.8000, 38.8744)">
+<path transform="scale(0.0040, -0.0040)" d="M557 -125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM557 125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM232 263c172 0 293 -88 293 -251c0 -263 -263 -414 -516 -521c-3 -3 -6 -4 -9 -4c-7 0 -13 6 -13 13c0 3 1 6 4 9
+c202 118 412 265 412 493c0 120 -63 235 -171 235c-74 0 -129 -54 -154 -126c11 5 22 8 34 8c55 0 100 -45 100 -100c0 -58 -44 -106 -100 -106c-60 0 -112 47 -112 106c0 133 102 244 232 244z" fill="currentColor"/>
+</g>
+<g transform="translate(5.8650, 30.4905)">
+<rect x="-0.0650" y="-13.7410" width="0.1300" height="13.7410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(4.3500, 20.9905)">
 <path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
 v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:17:7:8">
-<g transform="translate(13.9500, 20.9977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<g transform="translate(5.8650, 39.8744)">
+<rect x="-0.0650" y="-0.2410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:15:9:10">
+<g transform="translate(10.0754, 21.9905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:17:10:11">
-<g transform="translate(13.9500, 16.4977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:15:12:13">
+<g transform="translate(10.0754, 17.4905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:17:13:14">
-<g transform="translate(13.9500, 11.9977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:15:15:16">
+<g transform="translate(10.0754, 12.9905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:15:19:20">
+<g transform="translate(10.0754, 6.4784)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>P: E min</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:29:8:9">
+<g transform="translate(10.0754, 39.3744)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:29:10:11">
+<g transform="translate(10.0754, 35.7083)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>root E</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(10.1404, 30.4905)">
+<rect x="-0.0650" y="-17.2410" width="0.1300" height="17.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(10.1404, 39.8744)">
+<rect x="-0.0650" y="-0.2410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:17:9:10">
+<g transform="translate(16.4393, 19.4905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:17:14:15">
+<g transform="translate(16.4393, 14.9905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
 <a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:17:17:18">
-<g transform="translate(13.9500, 7.5377)">
+<g transform="translate(16.4393, 10.4905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:17:23:24">
+<g transform="translate(16.4393, 1.2499)">
 <text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
-<tspan>P: E minor</tspan>
+<tspan>L: C♯ min</tspan>
 </text>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:18:7:8">
-<g transform="translate(22.1001, 18.4977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
-</g>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:18:12:13">
-<g transform="translate(22.1001, 13.9977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
-</g>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:18:15:16">
-<g transform="translate(22.1001, 9.4977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
-</g>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:18:21:22">
-<g transform="translate(22.1001, 2.5139)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:31:12:13">
+<g transform="translate(16.4393, 36.4303)">
 <text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
-<tspan>L: C♯ minor</tspan>
+<tspan>root C♯</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(20.6501, 18.4977)">
+<g transform="translate(-0.0600, 35.1824)">
+<rect x="0.0000" y="-6.7420" width="0.1600" height="13.4840" ry="0.0500" fill="currentColor"/>
+</g>
+<g transform="translate(16.5043, 30.4905)">
+<rect x="-0.0650" y="-19.7410" width="0.1300" height="19.7410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(14.9893, 19.4905)">
 <path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
 v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
 </g>
-<g transform="translate(20.6501, 9.4977)">
+<g transform="translate(14.9893, 10.4905)">
 <path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
 v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:19:7:8">
-<g transform="translate(30.2501, 16.4977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<g transform="translate(17.7517, 39.8744)">
+<rect x="-0.0650" y="-3.0000" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(14.9893, 40.3744)">
+<path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
+v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
+</g>
+<g transform="translate(-0.3600, 35.1824)">
+<path transform="scale(0.0040, -0.0040)" d="M-81 -375c0 261 -135 372 -135 375c0 18 135 99 135 375c0 267 -111 504 -111 801c0 192 45 372 180 510c15 15 39 -6 24 -21c-99 -102 -132 -231 -132 -369c0 -264 105 -495 105 -786c0 -189 -48 -372 -177 -510c129 -138 177 -321 177 -510c0 -291 -105 -522 -105 -786
+c0 -138 33 -267 132 -369c15 -15 -9 -36 -24 -21c-135 138 -180 318 -180 510c0 297 111 534 111 801z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:18:9:10">
+<g transform="translate(20.7147, 19.9905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:19:12:13">
-<g transform="translate(30.2501, 11.9977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:18:11:12">
+<g transform="translate(20.7147, 11.9905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:19:15:16">
-<g transform="translate(30.2501, 4.4977)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:18:17:18">
+<g transform="translate(20.7147, 3.9905)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:19:22:23">
-<g transform="translate(30.2501, 1.2499)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:18:24:25">
+<g transform="translate(20.7147, 2.8660)">
 <text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
-<tspan>R: C♯ minor</tspan>
+<tspan>R: B maj</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(28.8001, 16.4977)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:32:8:9">
+<g transform="translate(20.7147, 40.8744)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music377/33-tonnetz-triads.ly:32:10:11">
+<g transform="translate(20.7147, 34.6966)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>root B</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(20.7797, 30.4905)">
+<rect x="-0.0650" y="-26.2410" width="0.1300" height="26.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(19.2647, 11.9905)">
 <path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
 v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
 </g>
-<g transform="translate(28.8001, 4.4977)">
+<g transform="translate(19.2647, 3.9905)">
 <path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
 v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
+</g>
+<g transform="translate(22.0271, 39.8744)">
+<rect x="-0.0650" y="-2.5000" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
 </g>
 </svg>

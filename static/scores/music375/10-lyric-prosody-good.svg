@@ -1,165 +1,351 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="77.28mm" height="16.79mm" viewBox="0.0000 -0.0210 43.9768 9.5549">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="86.81mm" height="39.40mm" viewBox="0.0000 -3.0345 49.3981 22.4210">
 <style type="text/css">
 <![CDATA[
 tspan { white-space: pre; }
 ]]>
 </style>
-<g transform="translate(0.0000, 6.7790)">
-<rect x="38.2865" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(29.4058, 1.9367)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 6.7790)">
+<g transform="translate(0.0000, 4.9367)">
+<rect x="41.5311" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 4.9367)">
 <rect x="25.1970" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 5.7790)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.9268" y2="0"/>
+<g transform="translate(0.0000, 3.9367)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="47.1713" y2="0"/>
 </g>
-<g transform="translate(0.0000, 4.7790)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.9268" y2="0"/>
+<g transform="translate(0.0000, 2.9367)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="47.1713" y2="0"/>
 </g>
-<g transform="translate(0.0000, 3.7790)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.9268" y2="0"/>
+<g transform="translate(0.0000, 1.9367)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="47.1713" y2="0"/>
 </g>
-<g transform="translate(0.0000, 2.7790)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.9268" y2="0"/>
+<g transform="translate(0.0000, 0.9367)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="47.1713" y2="0"/>
 </g>
-<g transform="translate(0.0000, 1.7790)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.9268" y2="0"/>
+<g transform="translate(0.0000, -0.0633)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="47.1713" y2="0"/>
 </g>
-<g transform="translate(43.7868, 3.7790)">
+<g transform="translate(47.0313, 1.9367)">
 <rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(29.4058, 3.7790)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:8:2:3">
+<g transform="translate(8.7000, -1.0978)">
+<text font-family="sans-serif" font-size="2.6165" text-anchor="start" fill="currentColor">
+<tspan>C</tspan>
+</text>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:9:6:7">
-<g transform="translate(8.7000, 4.7790)">
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:14:2:3">
+<g transform="translate(8.7000, 2.9367)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(0.8000, 4.7790)">
+<g transform="translate(0.8000, 2.9367)">
 <path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
 c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
 c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
 c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:5:17:18">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:12:15:16">
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:5:31:32">
-<g transform="translate(5.0000, 3.7790)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:12:29:30">
+<g transform="translate(5.0000, 1.9367)">
 <path transform="scale(0.0040, -0.0040)" d="M250 262c116 0 176 -106 176 -163c0 -40 -30 -72 -67 -72c-31 0 -75 25 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12
 c0 -22 -50 -174 -183 -174c-59 0 -250 19 -250 263c0 62 18 262 250 262z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:13:4:5">
-<g transform="translate(5.8012, 9.4966)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:26:8:9">
+<g transform="translate(5.8012, 7.6543)">
 <text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
 <tspan>COME</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(9.9392, 3.7790)">
+<g transform="translate(9.9392, 1.9367)">
 <rect x="-0.0650" y="-2.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(14.8311, 2.5890)">
-<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.9983 -0.0100 2.9983 0.3900 0.0400 0.2000 0.0400 -0.2000"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:9:9:10">
-<g transform="translate(13.6569, 5.2790)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:14:5:6">
+<g transform="translate(13.6569, 3.4367)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:13:9:10">
-<g transform="translate(13.3530, 9.4966)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:26:13:14">
+<g transform="translate(13.3530, 7.6543)">
 <text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
 <tspan>to</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(14.8961, 3.7790)">
+<g transform="translate(14.8961, 1.9367)">
 <rect x="-0.0650" y="-1.1859" width="0.1300" height="2.4998" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:9:12:13">
-<g transform="translate(16.5652, 5.7790)">
+<g transform="translate(14.8311, 0.7467)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.9983 -0.0100 2.9983 0.3900 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:14:8:9">
+<g transform="translate(16.5652, 3.9367)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:13:12:13">
-<g transform="translate(15.7150, 9.4966)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:26:16:17">
+<g transform="translate(15.7150, 7.6543)">
 <text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
 <tspan>me</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(17.8044, 3.7790)">
+<g transform="translate(17.8044, 1.9367)">
 <rect x="-0.0650" y="-1.0041" width="0.1300" height="2.8180" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:9:14:15">
-<g transform="translate(20.2930, 6.2790)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:14:10:11">
+<g transform="translate(20.2930, 4.4367)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:13:15:16">
-<g transform="translate(19.1696, 9.4966)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:26:19:20">
+<g transform="translate(19.1696, 7.6543)">
 <text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
 <tspan>and</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(21.5322, 3.7790)">
+<g transform="translate(21.5322, 1.9367)">
 <rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:9:17:18">
-<g transform="translate(25.5230, 6.7790)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:14:13:14">
+<g transform="translate(25.5230, 4.9367)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:13:19:20">
-<g transform="translate(23.1705, 9.4966)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:26:23:24">
+<g transform="translate(23.1705, 7.6543)">
 <text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
 <tspan>STAY</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(26.7623, 3.7790)">
+<g transform="translate(26.7623, 1.9367)">
 <rect x="-0.0650" y="-0.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:9:21:22">
-<g transform="translate(30.4958, 5.7790)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:8:7:8">
+<g transform="translate(30.4958, -1.0978)">
+<text font-family="sans-serif" font-size="2.6165" text-anchor="start" fill="currentColor">
+<tspan>G</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:15:2:3">
+<g transform="translate(30.4958, 3.9367)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:13:24:25">
-<g transform="translate(30.6016, 9.4966)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:26:28:29">
+<g transform="translate(30.6016, 7.6543)">
 <text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
 <tspan>a</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(31.7350, 3.7790)">
+<g transform="translate(31.7350, 1.9367)">
 <rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:9:24:25">
-<g transform="translate(34.5309, 6.2790)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:15:5:6">
+<g transform="translate(34.5309, 4.4367)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:13:26:27">
-<g transform="translate(32.1442, 9.4966)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:26:30:31">
+<g transform="translate(32.1442, 7.6543)">
 <text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
 <tspan>while.</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(35.7701, 3.7790)">
+<g transform="translate(35.7701, 1.9367)">
 <rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:9:26:27">
-<g transform="translate(38.6309, 6.7790)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:15:7:8">
+<g transform="translate(41.8754, 4.9367)">
 <path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
 c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(39.9432, 3.7790)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:27:8:9">
+<g transform="translate(38.6717, 7.6543)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>CLOSE</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(43.1878, 1.9367)">
+<rect x="-0.0650" y="-0.5000" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(34.2579, 13.0938)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 16.0938)">
+<rect x="42.8078" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 16.0938)">
+<rect x="35.0219" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 15.0938)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="49.3481" y2="0"/>
+</g>
+<g transform="translate(0.0000, 14.0938)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="49.3481" y2="0"/>
+</g>
+<g transform="translate(0.0000, 13.0938)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="49.3481" y2="0"/>
+</g>
+<g transform="translate(0.0000, 12.0938)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="49.3481" y2="0"/>
+</g>
+<g transform="translate(0.0000, 11.0938)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="49.3481" y2="0"/>
+</g>
+<g transform="translate(48.7981, 13.0938)">
+<rect x="0.0000" y="-2.0000" width="0.6000" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(48.3081, 13.0938)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(0.8000, 14.0938)">
+<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
+c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
+c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
+c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:8:12:13">
+<g transform="translate(5.8000, 9.5938)">
+<text font-family="sans-serif" font-size="2.6165" text-anchor="start" fill="currentColor">
+<tspan>A</tspan>
+</text>
+</g>
+<g transform="translate(7.5755, 9.5938)">
+<text font-family="sans-serif" font-size="2.6165" text-anchor="start" fill="currentColor">
+<tspan>m</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:16:2:3">
+<g transform="translate(5.8000, 13.5938)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:27:14:15">
+<g transform="translate(4.1986, 18.8536)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>your</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(7.0392, 13.0938)">
+<rect x="-0.0650" y="-3.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(11.8628, 11.0938)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="4.5006 -0.0100 4.5006 0.3900 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:16:6:7">
+<g transform="translate(10.6886, 14.0938)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:27:19:20">
+<g transform="translate(9.1556, 18.8536)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>eyes</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(11.9278, 13.0938)">
+<rect x="-0.0650" y="-1.9973" width="0.1300" height="2.8112" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:16:9:10">
+<g transform="translate(15.0993, 14.5938)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:27:24:25">
+<g transform="translate(13.9759, 18.8536)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>and</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(16.3385, 13.0938)">
+<rect x="-0.0650" y="-1.8127" width="0.1300" height="3.1266" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:16:11:12">
+<g transform="translate(22.8559, 15.0938)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:27:28:29">
+<g transform="translate(17.9768, 18.8536)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>BREATHE</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(24.0951, 13.0938)">
+<rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:16:14:15">
+<g transform="translate(30.3394, 15.5938)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:27:36:37">
+<g transform="translate(29.4892, 18.8536)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>the</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(31.5787, 13.0938)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:8:19:20">
+<g transform="translate(35.3479, 9.5938)">
+<text font-family="sans-serif" font-size="2.6165" text-anchor="start" fill="currentColor">
+<tspan>F</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:17:2:3">
+<g transform="translate(35.3479, 16.0938)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:27:40:41">
+<g transform="translate(33.4393, 18.8536)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>light.</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(36.5872, 13.0938)">
+<rect x="-0.0650" y="-0.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:17:5:6">
+<g transform="translate(39.4479, 15.5938)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(40.6872, 13.0938)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/10-lyric-prosody-good.ly:17:7:8">
+<g transform="translate(43.1522, 16.0938)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(44.4645, 13.0938)">
 <rect x="-0.0650" y="-0.5000" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
 </g>
 </svg>

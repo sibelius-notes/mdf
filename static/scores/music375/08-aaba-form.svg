@@ -1,340 +1,318 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="122.82mm" height="29.97mm" viewBox="0.0000 0.0000 69.8890 17.0548">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="125.70mm" height="30.65mm" viewBox="0.0000 -0.0000 71.5276 17.4443">
 <style type="text/css">
 <![CDATA[
 tspan { white-space: pre; }
 ]]>
 </style>
-<g transform="translate(20.7223, 5.2315)">
+<g transform="translate(20.7223, 6.5443)">
 <rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 7.2315)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="69.8390" y2="0"/>
+<g transform="translate(0.0000, 8.5443)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="71.4776" y2="0"/>
 </g>
-<g transform="translate(0.0000, 6.2315)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="69.8390" y2="0"/>
+<g transform="translate(0.0000, 7.5443)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="71.4776" y2="0"/>
 </g>
-<g transform="translate(0.0000, 5.2315)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="69.8390" y2="0"/>
+<g transform="translate(0.0000, 6.5443)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="71.4776" y2="0"/>
 </g>
-<g transform="translate(0.0000, 4.2315)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="69.8390" y2="0"/>
+<g transform="translate(0.0000, 5.5443)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="71.4776" y2="0"/>
 </g>
-<g transform="translate(0.0000, 3.2315)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="69.8390" y2="0"/>
+<g transform="translate(0.0000, 4.5443)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="71.4776" y2="0"/>
 </g>
-<g transform="translate(69.6990, 5.2315)">
+<g transform="translate(71.3376, 6.5443)">
 <rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(56.6938, 5.2315)">
+<g transform="translate(58.0931, 6.5443)">
 <rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(45.3303, 5.2315)">
+<g transform="translate(46.7939, 6.5443)">
 <rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 2.2315)">
-<rect x="57.6006" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 3.5443)">
+<rect x="34.6955" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(32.0858, 5.2315)">
+<g transform="translate(32.2816, 6.0443)">
+<path transform="scale(0.0040, -0.0040)" d="M0 0c0 31 25 56 56 56s56 -25 56 -56s-25 -56 -56 -56s-56 25 -56 56z" fill="currentColor"/>
+</g>
+<g transform="translate(32.2816, 7.0443)">
+<path transform="scale(0.0040, -0.0040)" d="M0 0c0 31 25 56 56 56s56 -25 56 -56s-25 -56 -56 -56s-56 25 -56 56z" fill="currentColor"/>
+</g>
+<g transform="translate(33.5216, 6.5443)">
+<rect x="0.0000" y="-2.0000" width="0.6000" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(33.0316, 6.5443)">
 <rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.8000, 6.2315)">
+<g transform="translate(0.8000, 7.5443)">
 <path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
 c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
 c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
 c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:5:17:18">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:9:17:18">
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:5:31:32">
-<g transform="translate(5.0000, 5.2315)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:9:31:32">
+<g transform="translate(5.0000, 6.5443)">
 <path transform="scale(0.0040, -0.0040)" d="M250 262c116 0 176 -106 176 -163c0 -40 -30 -72 -67 -72c-31 0 -75 25 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12
 c0 -22 -50 -174 -183 -174c-59 0 -250 19 -250 263c0 62 18 262 250 262z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:9:6:7">
-<g transform="translate(3.3650, 2.3815)">
-<text font-family="serif" font-weight="bold" font-size="2.7719" text-anchor="start" fill="currentColor">
-<tspan>A</tspan>
-</text>
-</g>
-</a>
-<g transform="translate(8.7650, 5.2315)">
-<rect x="-0.0650" y="-0.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:10:9:10">
-<g transform="translate(11.9523, 3.7315)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(12.0173, 5.2315)">
-<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:10:11:12">
-<g transform="translate(15.2045, 2.7315)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(15.2695, 5.2315)">
-<rect x="-0.0650" y="-2.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:10:13:14">
-<g transform="translate(17.9568, 3.7315)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(18.0218, 5.2315)">
-<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:10:17:18">
-<g transform="translate(22.0017, 3.2315)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(22.0667, 5.2315)">
-<rect x="-0.0650" y="-1.8139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:10:20:21">
-<g transform="translate(25.0039, 3.7315)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(25.0689, 5.2315)">
-<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:10:22:23">
-<g transform="translate(28.0062, 4.2315)">
-<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
-c25 17 88 50 188 50z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(28.0712, 5.2315)">
-<rect x="-0.0650" y="-0.7410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
-</g>
 <a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:13:6:7">
-<g transform="translate(33.3080, 4.7315)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+<g transform="translate(3.7170, 3.6943)">
+<rect x="-0.3520" y="-0.1000" width="2.7184" height="0.1000" ry="0.0000" fill="currentColor"/>
 </g>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:12:6:7">
-<g transform="translate(31.1736, 2.3815)">
-<text font-family="serif" font-weight="bold" font-size="2.7719" text-anchor="start" fill="currentColor">
+<g transform="translate(3.7170, 1.2131)">
+<rect x="-0.3520" y="-0.1000" width="2.7184" height="0.1000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(3.3650, 3.3423)">
+<rect x="0" y="-2.1292" width="0.1000" height="2.3812" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(5.9834, 3.3423)">
+<rect x="0" y="-2.1292" width="0.1000" height="2.3812" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(3.7170, 3.3423)">
+<text font-family="serif" font-size="2.7719" text-anchor="start" fill="currentColor">
 <tspan>A</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(33.3730, 5.2315)">
+<g transform="translate(8.7650, 6.5443)">
 <rect x="-0.0650" y="-0.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:13:9:10">
-<g transform="translate(36.5603, 3.7315)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:15:11:12">
+<g transform="translate(11.9523, 5.0443)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(36.6253, 5.2315)">
+<g transform="translate(12.0173, 6.5443)">
 <rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:10:6:7">
-<g transform="translate(8.7000, 4.7315)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:15:13:14">
+<g transform="translate(15.2045, 4.0443)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(39.8775, 5.2315)">
+<g transform="translate(15.2695, 6.5443)">
 <rect x="-0.0650" y="-2.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:13:13:14">
-<g transform="translate(42.5648, 3.7315)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:15:15:16">
+<g transform="translate(17.9568, 5.0443)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(42.6298, 5.2315)">
+<g transform="translate(18.0218, 6.5443)">
 <rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(66.9985, 5.2315)">
-<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:16:14:15">
-<g transform="translate(66.9335, 3.7315)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:15:19:20">
+<g transform="translate(22.0017, 4.5443)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:13:17:18">
-<g transform="translate(46.6097, 3.2315)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(46.6747, 5.2315)">
+<g transform="translate(22.0667, 6.5443)">
 <rect x="-0.0650" y="-1.8139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:13:20:21">
-<g transform="translate(49.6120, 3.7315)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:15:22:23">
+<g transform="translate(25.0039, 5.0443)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(49.6770, 5.2315)">
+<g transform="translate(25.0689, 6.5443)">
 <rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:13:22:23">
-<g transform="translate(52.6142, 4.2315)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:15:24:25">
+<g transform="translate(28.0062, 5.5443)">
 <path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
 c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(52.6792, 5.2315)">
+<g transform="translate(28.0712, 6.5443)">
 <rect x="-0.0650" y="-0.7410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(63.9962, 5.2315)">
-<rect x="-0.0650" y="-1.8139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:16:6:7">
-<g transform="translate(57.9267, 2.2315)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:6:7">
+<g transform="translate(35.0216, 3.5443)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:15:6:7">
-<g transform="translate(55.8670, 1.8353)">
-<text font-family="serif" font-weight="bold" font-size="2.7719" text-anchor="start" fill="currentColor">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:18:6:7">
+<g transform="translate(32.6547, 2.5393)">
+<rect x="-0.3520" y="-0.1000" width="2.5477" height="0.1000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(32.6547, 0.1000)">
+<rect x="-0.3520" y="-0.1000" width="2.5477" height="0.1000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(32.3027, 2.1873)">
+<rect x="0" y="-2.0873" width="0.1000" height="2.3393" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(34.7504, 2.1873)">
+<rect x="0" y="-2.0873" width="0.1000" height="2.3393" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(32.6547, 2.1873)">
+<text font-family="serif" font-size="2.7719" text-anchor="start" fill="currentColor">
 <tspan>B</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(57.9917, 5.2315)">
+<g transform="translate(35.0866, 6.5443)">
 <rect x="-0.0650" y="-2.8139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:16:12:13">
-<g transform="translate(63.9312, 3.2315)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:10:11">
+<g transform="translate(38.0238, 4.0443)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:16:10:11">
-<g transform="translate(60.9289, 2.7315)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(60.9939, 5.2315)">
+<g transform="translate(38.0888, 6.5443)">
 <rect x="-0.0650" y="-2.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:13:11:12">
-<g transform="translate(39.8125, 2.7315)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:15:8:9">
+<g transform="translate(8.7000, 6.0443)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(15.8484, 13.5048)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+<g transform="translate(41.0911, 6.5443)">
+<rect x="-0.0650" y="-1.8139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 15.5048)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="40.3821" y2="0"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:14:15">
+<g transform="translate(44.0284, 5.0443)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 14.5048)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="40.3821" y2="0"/>
-</g>
-<g transform="translate(0.0000, 13.5048)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="40.3821" y2="0"/>
-</g>
-<g transform="translate(0.0000, 12.5048)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="40.3821" y2="0"/>
-</g>
-<g transform="translate(0.0000, 11.5048)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="40.3821" y2="0"/>
-</g>
-<g transform="translate(40.2421, 13.5048)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(29.0929, 13.5048)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<g transform="translate(20.3879, 13.5048)">
+</a>
+<g transform="translate(44.0934, 6.5443)">
 <rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(0.8000, 14.5048)">
+<g transform="translate(68.6371, 6.5443)">
+<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:22:13:14">
+<g transform="translate(68.5721, 5.0443)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:18:19">
+<g transform="translate(48.0447, 5.5443)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(48.1097, 6.5443)">
+<rect x="-0.0650" y="-0.8139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:21:22">
+<g transform="translate(51.0470, 5.0443)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(51.1120, 6.5443)">
+<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:23:24">
+<g transform="translate(54.0492, 4.5443)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(54.1142, 6.5443)">
+<rect x="-0.0650" y="-1.7410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(65.8848, 6.5443)">
+<rect x="-0.0650" y="-2.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:22:6:7">
+<g transform="translate(59.3153, 6.0443)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:21:6:7">
+<g transform="translate(57.1809, 3.6943)">
+<rect x="-0.3520" y="-0.1000" width="2.7184" height="0.1000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(57.1809, 1.2131)">
+<rect x="-0.3520" y="-0.1000" width="2.7184" height="0.1000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(56.8289, 3.3423)">
+<rect x="0" y="-2.1292" width="0.1000" height="2.3812" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(59.4473, 3.3423)">
+<rect x="0" y="-2.1292" width="0.1000" height="2.3812" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(57.1809, 3.3423)">
+<text font-family="serif" font-size="2.7719" text-anchor="start" fill="currentColor">
+<tspan>A</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(59.3803, 6.5443)">
+<rect x="-0.0650" y="-0.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:22:11:12">
+<g transform="translate(65.8198, 4.0443)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:22:9:10">
+<g transform="translate(62.5676, 5.0443)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(62.6326, 6.5443)">
+<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:12:13">
+<g transform="translate(41.0261, 4.5443)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(0.0000, 15.8943)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="16.7098" y2="0"/>
+</g>
+<g transform="translate(0.0000, 14.8943)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="16.7098" y2="0"/>
+</g>
+<g transform="translate(0.0000, 13.8943)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="16.7098" y2="0"/>
+</g>
+<g transform="translate(0.0000, 12.8943)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="16.7098" y2="0"/>
+</g>
+<g transform="translate(0.0000, 11.8943)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="16.7098" y2="0"/>
+</g>
+<g transform="translate(16.1598, 13.8943)">
+<rect x="0.0000" y="-2.0000" width="0.6000" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(15.6698, 13.8943)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(0.8000, 14.8943)">
 <path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
 c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
 c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
 c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:16:18:19">
-<g transform="translate(5.8000, 12.5048)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:22:17:18">
+<g transform="translate(5.8000, 11.8943)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(5.8650, 13.5048)">
-<rect x="-0.0650" y="-0.8139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:16:21:22">
-<g transform="translate(8.8023, 12.0048)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(8.8673, 13.5048)">
-<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:16:23:24">
-<g transform="translate(11.8045, 11.5048)">
-<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
-c25 17 88 50 188 50z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(11.8695, 13.5048)">
-<rect x="-0.0650" y="-1.7410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:6:7">
-<g transform="translate(17.0706, 13.0048)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:18:6:7">
-<g transform="translate(14.9362, 10.6548)">
-<text font-family="serif" font-weight="bold" font-size="2.7719" text-anchor="start" fill="currentColor">
-<tspan>A</tspan>
-</text>
-</g>
-</a>
-<g transform="translate(17.1356, 13.5048)">
-<rect x="-0.0650" y="-0.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:9:10">
-<g transform="translate(20.3229, 12.0048)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:11:12">
-<g transform="translate(23.5751, 11.0048)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(23.6401, 13.5048)">
-<rect x="-0.0650" y="-2.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:13:14">
-<g transform="translate(26.3274, 12.0048)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(26.3924, 13.5048)">
-<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:17:18">
-<g transform="translate(30.3723, 11.5048)">
-<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
-</g>
-</a>
-<g transform="translate(30.4373, 13.5048)">
+<g transform="translate(5.8650, 13.8943)">
 <rect x="-0.0650" y="-1.8139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:20:21">
-<g transform="translate(33.3746, 12.0048)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:22:20:21">
+<g transform="translate(8.8023, 12.3943)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(33.4396, 13.5048)">
+<g transform="translate(8.8673, 13.8943)">
 <rect x="-0.0650" y="-1.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:19:22:23">
-<g transform="translate(36.1268, 13.0048)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music375/08-aaba-form.ly:22:22:23">
+<g transform="translate(11.5545, 13.3943)">
 <path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
 c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(36.1918, 13.5048)">
+<g transform="translate(11.6195, 13.8943)">
 <rect x="-0.0650" y="-0.2410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
 </g>
 </svg>

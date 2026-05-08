@@ -1,14 +1,27 @@
 \version "2.24.0"
-\paper { indent = 0 ragged-right = ##t line-width = 14\cm }
+\paper { indent = 0 ragged-right = ##t line-width = 13\cm }
+
+upper = \relative c'' {
+  \clef treble \key c \major \time 4/4
+  \omit Score.BarNumber
+  % Sawtooth rhythm: accent on each downbeat with staccato decay
+  c8->\mf c8 d8-> d8 e8-> e8 r4 |
+  e8-> e8 d8-> d8 c2-> |
+}
+
+lower = \relative c {
+  \clef bass \key c \major \time 4/4
+  \omit Score.BarNumber
+  % Pedal C bass throughout
+  c2._\markup { \tiny "sawtooth: all harmonics present" } c4 |
+  c1 |
+}
+
 \score {
-  \new Staff {
-    \clef treble \key c \major \time 5/4
-    \omit Score.BarNumber
-    c'1^\markup { \small "H1 (A₁ = 1)" }
-    c''2^\markup { \small "H2 (A₂ = 1/2)" }
-    g''4^\markup { \small "H3 (1/3)" }
-    c'''4^\markup { \small "H4 (1/4)" }
-    e'''4^\markup { \small "H5 (1/5)" }
-  }
+  \new GrandStaff <<
+    \new Staff \upper
+    \new Staff \lower
+  >>
+  \header { piece = \markup { \bold "Sawtooth Waveform: All Harmonics Present" } }
   \layout { }
 }

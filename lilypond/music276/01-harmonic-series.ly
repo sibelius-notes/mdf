@@ -1,18 +1,28 @@
 \version "2.24.0"
-\paper { indent = 0 ragged-right = ##t line-width = 14\cm }
+\paper { indent = 0 ragged-right = ##t line-width = 13\cm }
+
+upper = \relative c'' {
+  \clef treble \key c \major \time 4/4
+  \omit Score.BarNumber
+  \tempo \markup { \italic "ad lib." }
+  c4^\markup { \tiny "2" } g^\markup { \tiny "3" } c^\markup { \tiny "4" } e^\markup { \tiny "5" }
+  g4^\markup { \tiny "6" } bes^\markup { \tiny "7" } c2^\markup { \tiny "8" }
+}
+
+lower = \relative c {
+  \clef bass \key c \major \time 4/4
+  \omit Score.BarNumber
+  c1_\markup { \tiny "fundamental (1)" }
+  c1_\markup { \tiny "C2 — 65.4 Hz" }
+}
+
 \score {
-  \new Staff {
-    \clef bass \key c \major \time 8/4
-    \omit Score.BarNumber
-    c,1^\markup { \small "C2 (65 Hz) 1st" }
-    c^\markup { \small "C3 (131 Hz) 2nd" }
-    g^\markup { \small "G3 (196 Hz) 3rd" }
-    \clef treble
-    c'^\markup { \small "C4 (262 Hz) 4th" }
-    e'^\markup { \small "E4 (327 Hz) 5th" }
-    g'^\markup { \small "G4 (393 Hz) 6th" }
-    bes'^\markup { \small "Bb4 (458 Hz) 7th" }
-    c''^\markup { \small "C5 (523 Hz) 8th" }
-  }
+  <<
+    \new GrandStaff <<
+      \new Staff \upper
+      \new Staff \lower
+    >>
+  >>
+  \header { piece = \markup { \bold "Harmonic Series on C2" } }
   \layout { }
 }

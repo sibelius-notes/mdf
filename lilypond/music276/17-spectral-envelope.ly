@@ -1,15 +1,27 @@
 \version "2.24.0"
-\paper { indent = 0 ragged-right = ##t line-width = 14\cm }
+\paper { indent = 0 ragged-right = ##t line-width = 13\cm }
+
+upper = \relative c'' {
+  \clef treble \key c \major \time 4/4
+  \omit Score.BarNumber
+  % Piano: short staccato notes with fp — sharp attack
+  c4-.\fp^\markup { \tiny "Piano: ADSR sharp attack" } r4 c4-.\fp r4 |
+  c4-.\fp r4 c4-.\fp r4 |
+}
+
+lower = \relative c' {
+  \clef treble \key c \major \time 4/4
+  \omit Score.BarNumber
+  % Organ: long sustained with hairpins — flat sustain
+  c2\mf\< c2\! |
+  c2\> c2\mf\! |
+}
+
 \score {
-  \new Staff {
-    \clef treble \key c \major \time 6/4
-    \omit Score.BarNumber
-    c'1^\markup { \small "H1 (forte)" }
-    c''2^\markup { \small "H2 (mf)" }
-    g''4^\markup { \small "H3 (mp)" }
-    c'''4^\markup { \small "H4 (p)" }
-    e'''4^\markup { \small "H5 (pp)" }
-    g'''4^\markup { \small "H6 (ppp)" }
-  }
+  \new GrandStaff <<
+    \new Staff \upper
+    \new Staff \lower
+  >>
+  \header { piece = \markup { \bold "Spectral Envelope: Piano vs. Organ ADSR" } }
   \layout { }
 }

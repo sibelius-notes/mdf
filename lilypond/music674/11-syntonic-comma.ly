@@ -1,12 +1,33 @@
 \version "2.24.0"
-\paper { indent = 0 ragged-right = ##t line-width = 14\cm }
-% Syntonic comma: just major third (5:4) vs Pythagorean major third (81:64) side by side
+\paper { indent = 0 ragged-right = ##t line-width = 13\cm }
+% Syntonic comma (81:80 = 21.5¢): Pythagorean E vs Just E above C
+% Bar 1: Pythagorean E (four fifths up from C: 81/64 above C)
+% Bar 2: Just E (pure major third: 5/4 = 80/64 above C)
+% The difference = syntonic comma = 81:80
 \score {
-  \new Staff {
-    \clef treble \key c \major \time 4/4
-    \omit Score.BarNumber
-    <c' e'>1^\markup { \small "5:4 just M3" }
-    <c' eis'>1^\markup { \small "81:64 Pyth. M3 (+21.5¢)" }
-  }
+  \new GrandStaff <<
+    \new Staff {
+      \clef treble \key c \major \time 4/4
+      \omit Score.BarNumber
+      eis'1^\markup {
+        \column {
+          \small "Pythagorean E"
+          \small "(81/64 ≈ 408¢)"
+        }
+      }
+      e'1^\markup {
+        \column {
+          \small "Just E"
+          \small "(5/4 = 80/64 ≈ 386¢)"
+        }
+      }
+    }
+    \new Staff {
+      \clef bass \key c \major \time 4/4
+      \omit Score.BarNumber
+      c1_\markup { \small "C (bass)" }
+      c1^\markup { \small "syntonic comma = 21.5¢" }
+    }
+  >>
   \layout { }
 }

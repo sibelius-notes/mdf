@@ -1,134 +1,271 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="58.75mm" height="26.32mm" viewBox="0.0000 0.0000 33.4345 14.9799">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="132.06mm" height="32.52mm" viewBox="-1.1750 -0.0000 75.1521 18.5041">
 <style type="text/css">
 <![CDATA[
 tspan { white-space: pre; }
 ]]>
 </style>
-<g transform="translate(0.0000, 6.4299)">
-<rect x="26.4164" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
-</g>
-<g transform="translate(0.0000, 7.4299)">
-<rect x="26.4164" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
-</g>
-<g transform="translate(0.0000, 8.4299)">
-<rect x="26.4164" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
-</g>
-<g transform="translate(0.0000, 7.4299)">
-<rect x="22.9453" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
-</g>
-<g transform="translate(0.0000, 8.4299)">
-<rect x="22.9453" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
-</g>
-<g transform="translate(0.0000, 14.4299)">
-<rect x="8.1142" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
-</g>
-<g transform="translate(0.0000, 13.4299)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="33.3845" y2="0"/>
-</g>
-<g transform="translate(0.0000, 12.4299)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="33.3845" y2="0"/>
-</g>
-<g transform="translate(0.0000, 11.4299)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="33.3845" y2="0"/>
-</g>
-<g transform="translate(0.0000, 10.4299)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="33.3845" y2="0"/>
-</g>
-<g transform="translate(0.0000, 9.4299)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="33.3845" y2="0"/>
-</g>
-<g transform="translate(16.7311, 11.4299)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:7:4:5">
-<g transform="translate(8.6047, 14.4299)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
-</g>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:7:7:8">
-<g transform="translate(8.6047, 8.5007)">
-<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
-<tspan>H1 (A₁ = 1)</tspan>
+<g transform="translate(0.0000, 1.4911)">
+<text font-family="serif" font-weight="bold" font-size="2.2000" text-anchor="start" fill="currentColor">
+<tspan>Sawtooth Waveform: All Harmonics Present</tspan>
 </text>
 </g>
+<g transform="translate(0.0000, 7.3254)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.5881" y2="0"/>
+</g>
+<g transform="translate(0.0000, 6.3254)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.5881" y2="0"/>
+</g>
+<g transform="translate(0.0000, 5.3254)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.5881" y2="0"/>
+</g>
+<g transform="translate(0.0000, 4.3254)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.5881" y2="0"/>
+</g>
+<g transform="translate(0.0000, 3.3254)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.5881" y2="0"/>
+</g>
+<g transform="translate(43.4481, 1.5464)">
+<rect x="0.0000" y="5.8290" width="0.1900" height="5.0328" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 16.4083)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.5881" y2="0"/>
+</g>
+<g transform="translate(0.0000, 15.4083)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.5881" y2="0"/>
+</g>
+<g transform="translate(0.0000, 14.4083)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.5881" y2="0"/>
+</g>
+<g transform="translate(0.0000, 13.4083)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.5881" y2="0"/>
+</g>
+<g transform="translate(0.0000, 12.4083)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="43.5881" y2="0"/>
+</g>
+<g transform="translate(43.4481, 14.4083)">
+<rect x="0.0000" y="-2.0500" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(43.4481, 5.3254)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(27.3368, 1.5464)">
+<rect x="0.0000" y="5.8290" width="0.1900" height="5.0328" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(27.3368, 14.4083)">
+<rect x="0.0000" y="-2.0500" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(27.3368, 5.3254)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:2:3">
+<g transform="translate(8.7000, 4.8254)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
 </a>
-<g transform="translate(0.8000, 12.4299)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:6:7">
+<g transform="translate(7.9010, 10.0002)">
+<g>
+<path transform="scale(0.0040, -0.0040)" d="M-43 140c0 14 58 159 151 159c22 0 36 -20 41 -45c22 26 51 45 81 45c23 0 38 -21 44 -46c22 27 51 46 80 46c33 0 59 -35 59 -69c0 -5 -1 -10 -2 -15l-35 -149c0 -2 -1 -4 -1 -5c0 -5 2 -8 7 -8c21 0 48 37 61 37c6 0 11 -4 11 -10c0 -11 -77 -87 -138 -87
+c-20 0 -32 13 -32 32c0 4 0 7 1 11l39 165c1 5 2 9 2 14c0 10 -4 18 -14 18c-16 0 -33 -16 -39 -32l-53 -183c-3 -10 -12 -18 -22 -18h-41c-10 0 -16 8 -13 18l52 183c2 6 3 11 3 16c0 9 -4 16 -13 16c-15 0 -34 -14 -41 -33l-62 -182c-3 -10 -14 -18 -24 -18h-41
+c-10 0 -15 8 -12 18l63 183c2 5 2 10 2 15c0 10 -3 17 -13 17c-29 0 -54 -53 -66 -87c-4 -11 -15 -17 -23 -17c-7 0 -12 4 -12 11z" fill="currentColor"/>
+
+<path transform="translate(1.6389, 0.0000) scale(0.0040, -0.0040)" d="M253 245l-50 -163c-30 -99 -121 -255 -218 -255c-45 0 -87 27 -87 69c0 39 17 77 52 77c24 0 44 -20 44 -44c0 -30 -38 -24 -38 -54c0 -10 11 -11 23 -11h6c48 0 61 58 73 108l68 273h-49c-11 0 -19 8 -19 19s8 19 19 19h60c32 96 118 191 213 191c45 0 87 -27 87 -69
+c0 -39 -17 -77 -52 -77c-24 0 -44 19 -44 43c0 30 38 25 38 55c0 10 -10 11 -22 11h-7c-62 0 -70 -88 -86 -154h55c11 0 19 -8 19 -19s-8 -19 -19 -19h-66z" fill="currentColor"/>
+</g>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:4:5">
+<g transform="translate(9.3521, 2.6554)">
+<path transform="scale(0.0040, -0.0040)" d="M-173 68c-8 2 -15 9 -15 18c0 10 9 19 19 19c2 0 3 -1 5 -1l337 -86c8 -2 15 -9 15 -18s-7 -16 -15 -18l-337 -86c-2 0 -3 -1 -5 -1c-10 0 -19 9 -19 19c0 9 7 16 15 18l206 53l109 15l-109 15z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(0.8000, 6.3254)">
 <path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
 c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
 c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
 c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:5:17:18">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:5:15:16">
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:5:31:32">
-<g transform="translate(5.1366, 11.4299)">
-<path transform="scale(0.0040, -0.0040)" d="M164 292c-91 0 -102 -51 -118 -51c-8 0 -15 6 -15 15v228c0 10 8 18 17 16c45 -8 90 -13 135 -13s91 5 136 13c15 2 22 -10 16 -16c-67 -67 -163 -93 -258 -93c-9 0 -16 -8 -16 -17v-96c28 28 64 43 103 43c115 0 185 -51 185 -161c0 -94 -87 -160 -186 -160
-c-82 0 -163 39 -163 113c0 36 30 66 66 66s65 -30 65 -66c0 -25 -40 -28 -40 -53c0 -30 37 -37 72 -37c57 0 70 71 70 137c0 63 -15 132 -69 132z" fill="currentColor"/>
-</g>
-<g transform="translate(5.0000, 13.4460)">
-<path transform="scale(0.0040, -0.0040)" d="M196 117h117c0 -48 27 -94 72 -94c8 0 12 -5 12 -11s-4 -12 -12 -12c-44 0 -87 13 -131 13s-87 -13 -131 -13c-8 0 -12 6 -12 12s4 11 12 11c45 0 73 46 73 94zM-2 148c0 12 140 143 140 336c0 10 7 19 16 16c23 -7 47 -13 71 -13s48 6 71 13c14 4 23 -9 17 -16
-l-284 -330h167v131c0 34 34 27 68 72c22 30 23 56 36 56c6 0 13 -5 13 -14v-245h72c10 0 15 -7 15 -14s-5 -15 -15 -15h-72v-8h-117v8h-167c-23 0 -31 14 -31 23z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:5:29:30">
+<g transform="translate(5.0000, 5.3254)">
+<path transform="scale(0.0040, -0.0040)" d="M250 262c116 0 176 -106 176 -163c0 -40 -30 -72 -67 -72c-31 0 -75 25 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12
+c0 -22 -50 -174 -183 -174c-59 0 -250 19 -250 263c0 62 18 262 250 262z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:4:5">
-<g transform="translate(14.6648, 10.9299)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:16:2:3">
+<g transform="translate(8.7000, 14.9083)">
 <path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
 c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:8:9">
-<g transform="translate(14.6648, 3.1818)">
-<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
-<tspan>H2 (A₂ = 1/2)</tspan>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:16:5:6">
+<g transform="translate(8.7000, 18.1307)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>sawtooth: all harmonics present</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(14.7298, 11.4299)">
-<rect x="-0.0650" y="-0.2410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+<g transform="translate(0.8000, 13.4083)">
+<path transform="scale(0.0040, -0.0040)" d="M557 -125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM557 125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM232 263c172 0 293 -88 293 -251c0 -263 -263 -414 -516 -521c-3 -3 -6 -4 -9 -4c-7 0 -13 6 -13 13c0 3 1 6 4 9
+c202 118 412 265 412 493c0 120 -63 235 -171 235c-74 0 -129 -54 -154 -126c11 5 22 8 34 8c55 0 100 -45 100 -100c0 -58 -44 -106 -100 -106c-60 0 -112 47 -112 106c0 133 102 244 232 244z" fill="currentColor"/>
 </g>
-<g transform="translate(26.8074, 11.4299)">
-<rect x="-0.0650" y="-4.8139" width="0.1300" height="4.8139" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:13:13:14">
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:13:27:28">
+<g transform="translate(5.0000, 14.4083)">
+<path transform="scale(0.0040, -0.0040)" d="M250 262c116 0 176 -106 176 -163c0 -40 -30 -72 -67 -72c-31 0 -75 25 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12
+c0 -22 -50 -174 -183 -174c-59 0 -250 19 -250 263c0 62 18 262 250 262z" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:11:9:10">
-<g transform="translate(26.7424, 4.0009)">
-<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
-<tspan>H5 (1/5)</tspan>
-</text>
+</a>
+<g transform="translate(8.7650, 5.3254)">
+<rect x="-0.0650" y="-0.3139" width="0.1300" height="2.5007" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(10.5273, 14.9083)">
+<path transform="scale(0.0040, -0.0040)" d="M0 0c0 31 25 56 56 56s56 -25 56 -56s-25 -56 -56 -56s-56 25 -56 56z" fill="currentColor"/>
+</g>
+<g transform="translate(10.0123, 14.4083)">
+<rect x="-0.0650" y="-3.0000" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:10:11">
+<g transform="translate(11.2042, 4.8254)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(11.2692, 5.3254)">
+<rect x="-0.0650" y="-0.3139" width="0.1300" height="2.3762" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:13:14">
+<g transform="translate(13.7084, 4.3254)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:15:16">
+<g transform="translate(14.3605, 2.6554)">
+<path transform="scale(0.0040, -0.0040)" d="M-173 68c-8 2 -15 9 -15 18c0 10 9 19 19 19c2 0 3 -1 5 -1l337 -86c8 -2 15 -9 15 -18s-7 -16 -15 -18l-337 -86c-2 0 -3 -1 -5 -1c-10 0 -19 9 -19 19c0 9 7 16 15 18l206 53l109 15l-109 15z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(13.7734, 5.3254)">
+<rect x="-0.0650" y="-0.8139" width="0.1300" height="2.7516" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:18:19">
+<g transform="translate(16.2126, 4.3254)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(16.2776, 5.3254)">
+<rect x="-0.0650" y="-0.8139" width="0.1300" height="2.6271" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:21:22">
+<g transform="translate(18.7168, 3.8254)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:23:24">
+<g transform="translate(19.3689, 2.6554)">
+<path transform="scale(0.0040, -0.0040)" d="M-173 68c-8 2 -15 9 -15 18c0 10 9 19 19 19c2 0 3 -1 5 -1l337 -86c8 -2 15 -9 15 -18s-7 -16 -15 -18l-337 -86c-2 0 -3 -1 -5 -1c-10 0 -19 9 -19 19c0 9 7 16 15 18l206 53l109 15l-109 15z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(18.7818, 5.3254)">
+<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:26:27">
+<g transform="translate(21.2211, 3.8254)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(21.2861, 5.3254)">
+<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.1239" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:8:29:30">
+<g transform="translate(23.7253, 5.3254)">
+<path transform="scale(0.0040, -0.0040)" d="M-6 78c0 59 124 83 124 182c0 24 -8 49 -25 69l-35 42c-3 3 -4 7 -4 10c0 9 9 15 17 15c4 0 8 -1 11 -5l151 -180c7 -9 10 -17 10 -25c0 -59 -124 -83 -124 -182c0 -24 7 -49 24 -69l84 -99c3 -3 4 -7 4 -10c0 -9 -8 -16 -16 -16s-45 44 -109 44c-16 0 -53 0 -53 -67
+c0 -35 11 -74 28 -94c7 -8 -5 -19 -12 -11c-45 54 -92 148 -92 202c0 41 27 42 40 42c33 0 78 -13 119 -31l-132 158c-7 9 -10 17 -10 25z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:16:58:59">
+<g transform="translate(23.7253, 14.9083)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(24.9645, 14.4083)">
+<rect x="-0.0650" y="-3.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(18.7168, 7.1354)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.5942 -0.2000 2.5942 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(28.6176, 7.1354)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="7.6026 0.1800 7.6026 0.5800 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:9:2:3">
+<g transform="translate(28.6176, 3.8254)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
 <a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:9:4:5">
-<g transform="translate(20.0191, 8.9299)">
+<g transform="translate(29.2697, 2.6554)">
+<path transform="scale(0.0040, -0.0040)" d="M-173 68c-8 2 -15 9 -15 18c0 10 9 19 19 19c2 0 3 -1 5 -1l337 -86c8 -2 15 -9 15 -18s-7 -16 -15 -18l-337 -86c-2 0 -3 -1 -5 -1c-10 0 -19 9 -19 19c0 9 7 16 15 18l206 53l109 15l-109 15z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:17:2:3">
+<g transform="translate(28.6176, 14.9083)">
+<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(-0.0600, 9.8669)">
+<rect x="0.0000" y="-6.5914" width="0.1600" height="13.1828" ry="0.0500" fill="currentColor"/>
+</g>
+<g transform="translate(28.6826, 5.3254)">
+<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.1271" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(-0.3600, 9.8669)">
+<path transform="scale(0.0040, -0.0040)" d="M-81 -366c0 255 -132 363 -132 366c0 18 132 96 132 366c0 261 -108 495 -108 789c0 189 45 366 177 501c15 15 39 -6 24 -21c-99 -99 -132 -228 -132 -363c0 -258 105 -483 105 -771c0 -186 -45 -366 -174 -501c129 -135 174 -315 174 -501c0 -288 -105 -513 -105 -771
+c0 -135 33 -264 132 -363c15 -15 -9 -36 -24 -21c-132 135 -177 312 -177 501c0 294 108 528 108 789z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:9:7:8">
+<g transform="translate(31.1218, 3.8254)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:9:8:9">
-<g transform="translate(20.0191, 5.4101)">
-<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
-<tspan>H3 (1/3)</tspan>
-</text>
+<g transform="translate(31.1868, 5.3254)">
+<rect x="-0.0650" y="-1.3139" width="0.1300" height="3.2516" ry="0.0400" fill="currentColor"/>
 </g>
-</a>
-<g transform="translate(20.0841, 11.4299)">
-<rect x="-0.0650" y="-2.3139" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
-</g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:11:4:5">
-<g transform="translate(26.7424, 6.4299)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:9:10:11">
+<g transform="translate(33.6260, 4.3254)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:10:4:5">
-<g transform="translate(23.2714, 7.4299)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:9:12:13">
+<g transform="translate(34.2781, 2.6554)">
+<path transform="scale(0.0040, -0.0040)" d="M-173 68c-8 2 -15 9 -15 18c0 10 9 19 19 19c2 0 3 -1 5 -1l337 -86c8 -2 15 -9 15 -18s-7 -16 -15 -18l-337 -86c-2 0 -3 -1 -5 -1c-10 0 -19 9 -19 19c0 9 7 16 15 18l206 53l109 15l-109 15z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(33.6910, 5.3254)">
+<rect x="-0.0650" y="-0.8139" width="0.1300" height="2.8762" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:9:15:16">
+<g transform="translate(36.1302, 4.3254)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:10:9:10">
-<g transform="translate(23.2714, 1.3609)">
-<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
-<tspan>H4 (1/4)</tspan>
-</text>
+<g transform="translate(36.1952, 5.3254)">
+<rect x="-0.0650" y="-0.8139" width="0.1300" height="3.0007" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:9:18:19">
+<g transform="translate(38.6344, 4.8254)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(23.3364, 11.4299)">
-<rect x="-0.0650" y="-3.8139" width="0.1300" height="3.8139" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music276/30-sawtooth-spectrum.ly:9:20:21">
+<g transform="translate(39.3231, 2.6554)">
+<path transform="scale(0.0040, -0.0040)" d="M-173 68c-8 2 -15 9 -15 18c0 10 9 19 19 19c2 0 3 -1 5 -1l337 -86c8 -2 15 -9 15 -18s-7 -16 -15 -18l-337 -86c-2 0 -3 -1 -5 -1c-10 0 -19 9 -19 19c0 9 7 16 15 18l206 53l109 15l-109 15z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(38.6994, 5.3254)">
+<rect x="-0.0650" y="-0.2410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(8.7000, 7.5154)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="7.6026 -0.5800 7.6026 -0.1800 0.0400 0.2000 0.0400 -0.2000"/>
 </g>
 </svg>

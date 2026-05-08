@@ -1,23 +1,37 @@
 \version "2.24.0"
 \paper { indent = 0 ragged-right = ##t line-width = 13\cm }
+% Tonnetz: E major and its PLR neighbors, each as voiced chord on GrandStaff
+% E major, P→E minor, L→C# minor, R→B major
 \score {
-  % Tonnetz: show E major and its three neighbors (P, L, R)
-  % E major {4,8,11} = E G# B
-  % P: E minor {4,7,11} = E G B
-  % L: C# minor {1,4,8} = C# E G#
-  % R: C# major {1,5,8} -> actually {4,8,1}={1,4,8}=C#,E,G# = C#min; use R formula
-  % R{4,8,11}: move root up by M2: {4+9,8,11}={1,8,11}=C#,G#,B = C# minor?
-  % Using formula R{r,r+4,r+7}={r+4,r+7,r+9}: {8,11,1} = G#,B,C# = C# minor
-  \new Staff \with { \omit KeySignature } {
-    \clef treble
-    \omit Score.BarNumber
-    \override Staff.TimeSignature.stencil = ##f
-    \relative c' {
-      <e' gis' b'>1^\markup { \tiny "E major" }
-      <e' g' b'>1^\markup { \tiny "P: E minor" }
-      <cis' e' gis'>1^\markup { \tiny "L: C♯ minor" }
-      <gis' b' cis''>1^\markup { \tiny "R: C♯ minor" }
+  \new GrandStaff <<
+    \new Staff \with { \omit KeySignature } {
+      \clef treble
+      \omit Score.BarNumber
+      \override Staff.TimeSignature.stencil = ##f
+      \relative c'' {
+        \time 4/4
+        % E major: E G# B  (Tonnetz center)
+        <e' gis' b'>2^\markup { \tiny "E maj  (center)" }
+        <e' g' b'>2^\markup { \tiny "P: E min" }
+        |
+        <cis' e' gis'>2^\markup { \tiny "L: C♯ min" }
+        <b dis'' fis''>2^\markup { \tiny "R: B maj" }
+      }
     }
-  }
+    \new Staff \with { \omit KeySignature } {
+      \clef bass
+      \omit Score.BarNumber
+      \override Staff.TimeSignature.stencil = ##f
+      \relative c {
+        \time 4/4
+        % Bass roots: E, E, C#, B
+        e2^\markup { \tiny "root E" }
+        e2^\markup { \tiny "root E" }
+        |
+        cis2^\markup { \tiny "root C♯" }
+        b2^\markup { \tiny "root B" }
+      }
+    }
+  >>
   \layout { }
 }

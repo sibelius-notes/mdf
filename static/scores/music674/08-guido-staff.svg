@@ -1,88 +1,261 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="49.45mm" height="11.25mm" viewBox="0.0000 -0.0000 28.1425 6.4000">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="70.32mm" height="33.08mm" viewBox="-8.9167 0.0001 40.0169 18.8239">
 <style type="text/css">
 <![CDATA[
 tspan { white-space: pre; }
 ]]>
 </style>
-<g transform="translate(0.0000, 5.0000)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="28.0925" y2="0"/>
+<g transform="translate(0.0000, 7.2901)">
+<rect x="26.0460" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 4.0000)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="28.0925" y2="0"/>
+<g transform="translate(0.0000, 7.2901)">
+<rect x="5.4739" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 3.0000)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="28.0925" y2="0"/>
+<g transform="translate(0.0000, 6.2901)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0502" y2="0"/>
 </g>
-<g transform="translate(0.0000, 2.0000)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="28.0925" y2="0"/>
+<g transform="translate(0.0000, 5.2901)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0502" y2="0"/>
 </g>
-<g transform="translate(0.0000, 1.0000)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="28.0925" y2="0"/>
+<g transform="translate(0.0000, 4.2901)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0502" y2="0"/>
 </g>
-<g transform="translate(27.5425, 3.0000)">
-<rect x="0.0000" y="-2.0000" width="0.6000" height="4.0000" ry="0.0000" fill="currentColor"/>
+<g transform="translate(0.0000, 3.2901)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0502" y2="0"/>
 </g>
-<g transform="translate(27.0525, 3.0000)">
-<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+<g transform="translate(0.0000, 2.2901)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0502" y2="0"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:10:16:17">
-<g transform="translate(14.8068, 3.5000)">
+<g transform="translate(30.5002, -0.0000)">
+<rect x="0.0000" y="6.3401" width="0.6000" height="4.9500" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(30.0102, -0.0000)">
+<rect x="0.0000" y="6.3401" width="0.1900" height="4.9500" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(30.5002, 13.2901)">
+<rect x="0.0000" y="-2.0500" width="0.6000" height="4.0500" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(30.0102, 13.2901)">
+<rect x="0.0000" y="-2.0500" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 15.2901)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0502" y2="0"/>
+</g>
+<g transform="translate(0.0000, 14.2901)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0502" y2="0"/>
+</g>
+<g transform="translate(0.0000, 13.2901)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0502" y2="0"/>
+</g>
+<g transform="translate(0.0000, 12.2901)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0502" y2="0"/>
+</g>
+<g transform="translate(0.0000, 11.2901)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0502" y2="0"/>
+</g>
+<g transform="translate(30.5002, 4.2901)">
+<rect x="0.0000" y="-2.0000" width="0.6000" height="4.0500" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(30.0102, 4.2901)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:25:26:27">
+<g transform="translate(15.7821, 18.7901)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>fa</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(-1.3100, 2.0151)">
+<path transform="scale(0.0040, -0.0040)" d="M0 -56v87c0 14 11 25 25 25h50c159 0 271 136 362 270c12 17 38 -1 26 -18c-99 -144 -215 -364 -388 -364h-75z" fill="currentColor"/>
+</g>
+<g transform="translate(-1.3100, 15.5651)">
+<path transform="scale(0.0040, -0.0040)" d="M0 56h75c173 0 289 -220 388 -364c12 -17 -14 -35 -26 -18c-91 134 -203 270 -362 270h-50c-14 0 -25 11 -25 25v87z" fill="currentColor"/>
+</g>
+<g transform="translate(-1.3100, 8.7901)">
+<rect x="0.0000" y="-6.5950" width="0.4500" height="13.1900" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(-0.0600, 8.7901)">
+<rect x="0.0000" y="-6.5500" width="0.1600" height="13.1000" ry="0.0500" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:13:6:7">
+<g transform="translate(5.8000, 7.2901)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:10:4:5">
-<g transform="translate(5.8000, 5.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:13:9:10">
+<g transform="translate(5.8000, 1.3610)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>no staff lines: pitch approximate</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(0.8000, 5.2901)">
+<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
+c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
+c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
+c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:22:6:7">
+<g transform="translate(5.8000, 15.2901)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(0.8000, 5.0000)">
+<g transform="translate(0.8000, 15.2901)">
 <path transform="scale(0.0040, -0.0040)" d="M35 -150c0 -14 11 -25 25 -25h130c14 0 25 11 25 25v50c0 14 -11 25 -25 25h-130c-14 0 -25 -11 -25 -25v-50zM35 100c0 -14 11 -25 25 -25h130c14 0 25 11 25 25v50c0 14 -11 25 -25 25h-130c-14 0 -25 -11 -25 -25v-50zM215 550c0 6 7 10 17 10s18 -4 18 -10v-250v-600
 c0 -12 -9 -18 -18 -18s-17 6 -17 18c0 19 -8 37 -25 37h-130c-17 0 -25 -18 -25 -37v-40c0 -6 -7 -10 -17 -10s-18 4 -18 10v40v600v490c0 6 8 10 18 10s17 -4 17 -10v-490c0 -19 8 -37 25 -37h130c17 0 25 18 25 37v250z" fill="currentColor"/>
 </g>
-<g transform="translate(7.0392, 3.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:25:17:18">
+<g transform="translate(5.4961, 18.7901)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>ut</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(7.0392, 4.2901)">
+<rect x="-0.0650" y="-0.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(7.0392, 13.2901)">
 <rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:10:8:9">
-<g transform="translate(8.8023, 4.5000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:14:6:7">
+<g transform="translate(9.2287, 6.7901)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(10.0415, 3.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:22:10:11">
+<g transform="translate(9.2287, 14.7901)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:25:20:21">
+<g transform="translate(8.9248, 18.7901)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>re</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(10.4679, 4.2901)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(10.4679, 13.2901)">
 <rect x="-0.0650" y="-2.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:10:12:13">
-<g transform="translate(11.8045, 4.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:14:10:11">
+<g transform="translate(12.6574, 6.2901)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(13.0437, 3.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:22:14:15">
+<g transform="translate(12.6574, 14.2901)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:25:23:24">
+<g transform="translate(12.0120, 18.7901)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>mi</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(13.8966, 4.2901)">
+<rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(13.8966, 13.2901)">
 <rect x="-0.0650" y="-2.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<g transform="translate(16.0460, 3.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:14:14:15">
+<g transform="translate(16.0860, 5.7901)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:22:18:19">
+<g transform="translate(16.0860, 13.7901)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(17.3253, 4.2901)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(17.3253, 13.2901)">
 <rect x="-0.0650" y="-3.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:10:20:21">
-<g transform="translate(17.8090, 4.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:14:18:19">
+<g transform="translate(19.5147, 6.2901)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(19.0482, 3.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:22:22:23">
+<g transform="translate(19.5147, 14.2901)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:25:29:30">
+<g transform="translate(18.8694, 18.7901)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>mi</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(20.7539, 4.2901)">
+<rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(20.7539, 13.2901)">
 <rect x="-0.0650" y="-2.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:10:24:25">
-<g transform="translate(20.8113, 4.5000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:14:22:23">
+<g transform="translate(22.9434, 6.7901)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(22.0505, 3.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:22:26:27">
+<g transform="translate(22.9434, 14.7901)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:25:32:33">
+<g transform="translate(22.6395, 18.7901)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>re</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(24.1826, 4.2901)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(24.1826, 13.2901)">
 <rect x="-0.0650" y="-2.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:10:28:29">
-<g transform="translate(23.8135, 5.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:14:26:27">
+<g transform="translate(26.3721, 7.2901)">
 <path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(25.0528, 3.0000)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:22:30:31">
+<g transform="translate(26.3721, 15.2901)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/08-guido-staff.ly:25:35:36">
+<g transform="translate(26.0682, 18.7901)">
+<text font-family="serif" font-size="2.4697" text-anchor="start" fill="currentColor">
+<tspan>ut</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(27.6113, 4.2901)">
+<rect x="-0.0650" y="-0.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(27.6113, 13.2901)">
 <rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(-6.0145, 13.8831)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>Guido</tspan>
+</text>
+</g>
+<g transform="translate(-8.9167, 4.8831)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>Pre-Guido</tspan>
+</text>
 </g>
 </svg>

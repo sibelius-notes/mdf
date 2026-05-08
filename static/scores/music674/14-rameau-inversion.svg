@@ -1,114 +1,401 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="63.37mm" height="16.91mm" viewBox="0.0000 0.0001 36.0625 9.6218">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="54.77mm" height="56.83mm" viewBox="-0.0600 0.0001 31.1674 32.3374">
 <style type="text/css">
 <![CDATA[
 tspan { white-space: pre; }
 ]]>
 </style>
-<g transform="translate(14.7600, 6.0718)">
+<g transform="translate(17.3513, 7.3621)">
 <rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 8.0718)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="36.0125" y2="0"/>
+<g transform="translate(0.0000, 9.3621)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
 </g>
-<g transform="translate(0.0000, 7.0718)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="36.0125" y2="0"/>
+<g transform="translate(0.0000, 8.3621)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
 </g>
-<g transform="translate(0.0000, 6.0718)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="36.0125" y2="0"/>
+<g transform="translate(0.0000, 7.3621)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
 </g>
-<g transform="translate(0.0000, 5.0718)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="36.0125" y2="0"/>
+<g transform="translate(0.0000, 6.3621)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
 </g>
-<g transform="translate(0.0000, 4.0718)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="36.0125" y2="0"/>
+<g transform="translate(0.0000, 5.3621)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
 </g>
-<g transform="translate(35.8725, 6.0718)">
+<g transform="translate(30.9174, 26.0347)">
 <rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(22.9101, 6.0718)">
+<g transform="translate(30.9174, 17.0347)">
 <rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(0.0000, 9.0718)">
-<rect x="8.2095" y="-0.1000" width="2.9430" height="0.2000" ry="0.1000" fill="currentColor"/>
+<g transform="translate(0.0000, 19.0347)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:8:5:6">
-<g transform="translate(8.7000, 9.0718)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<g transform="translate(0.0000, 18.0347)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
+</g>
+<g transform="translate(0.0000, 17.0347)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
+</g>
+<g transform="translate(0.0000, 16.0347)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
+</g>
+<g transform="translate(0.0000, 15.0347)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
+</g>
+<g transform="translate(30.9174, 7.3621)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 29.0347)">
+<rect x="23.2857" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 30.0347)">
+<rect x="23.2857" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 29.0347)">
+<rect x="18.2822" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 30.0347)">
+<rect x="18.2822" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 29.0347)">
+<rect x="12.6540" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 30.0347)">
+<rect x="12.6540" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 29.0347)">
+<rect x="8.3557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 30.0347)">
+<rect x="8.3557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 28.0347)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
+</g>
+<g transform="translate(0.0000, 27.0347)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
+</g>
+<g transform="translate(0.0000, 26.0347)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
+</g>
+<g transform="translate(0.0000, 25.0347)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
+</g>
+<g transform="translate(0.0000, 24.0347)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="31.0574" y2="0"/>
+</g>
+<g transform="translate(17.3513, 26.0347)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(17.3513, 17.0347)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 10.3621)">
+<rect x="23.2857" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(0.0000, 10.3621)">
+<rect x="8.3557" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:18:25:26">
+<g transform="translate(18.6265, 14.4847)">
+<path transform="scale(0.0022, -0.0022)" d="M148 501c10 0 41 -15 72 -15c32 0 63 15 76 15c15 0 26 -11 26 -21c0 -4 -1 -7 -4 -10l-264 -291h134v4c0 60 50 41 75 85c7 11 8 24 14 36c3 7 10 10 17 10c11 0 24 -8 24 -25v-110h70c18 0 27 -14 27 -27s-9 -27 -27 -27h-70c2 -45 36 -82 80 -82c14 0 22 -10 22 -21
+s-8 -22 -22 -22c-49 0 -96 14 -145 14s-97 -14 -146 -14c-14 0 -21 11 -21 22s7 21 21 21c44 0 79 37 81 82h-134c-43 0 -57 25 -57 42c0 5 1 10 3 12c73 81 123 182 123 291c0 17 11 31 25 31z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:8:8:9">
-<g transform="translate(8.7000, 8.0718)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:32:6:7">
+<g transform="translate(18.6265, 30.0347)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:8:11:12">
-<g transform="translate(8.7000, 7.0718)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:11:7:8">
+<g transform="translate(8.7000, 10.3621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:8:15:16">
-<g transform="translate(8.7000, 3.1426)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:11:10:11">
+<g transform="translate(8.7000, 9.3621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:11:13:14">
+<g transform="translate(8.7000, 8.3621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:11:17:18">
+<g transform="translate(8.7000, 3.2087)">
 <text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
-<tspan>root (5–3)</tspan>
+<tspan>root (5/3)</tspan>
 </text>
 </g>
 </a>
-<g transform="translate(0.8000, 7.0718)">
+<g transform="translate(0.8000, 8.3621)">
 <path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
 c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
 c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
 c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
 </g>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:6:17:18">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:9:19:20">
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:6:31:32">
-<g transform="translate(5.0000, 6.0718)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:9:33:34">
+<g transform="translate(5.0000, 7.3621)">
 <path transform="scale(0.0040, -0.0040)" d="M250 262c116 0 176 -106 176 -163c0 -40 -30 -72 -67 -72c-31 0 -75 25 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12
 c0 -22 -50 -174 -183 -174c-59 0 -250 19 -250 263c0 62 18 262 250 262z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:9:5:6">
-<g transform="translate(16.8500, 8.0718)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:18:9:10">
+<g transform="translate(8.7000, 12.9847)">
+<path transform="scale(0.0022, -0.0022)" d="M83 500c8 0 69 -14 131 -14c54 0 133 15 134 15c17 0 27 -12 27 -22c0 -13 -88 -100 -234 -100c-17 0 -31 -14 -31 -31v-41c25 25 63 25 98 25h4c115 0 182 -55 182 -166c0 -99 -96 -166 -202 -166c-88 0 -169 52 -169 133c0 32 26 58 58 58s58 -26 58 -58
+c0 -22 -36 -26 -36 -48c0 -36 47 -42 89 -42c52 0 73 63 73 123c0 53 -7 112 -53 112c-133 0 -86 -44 -128 -44c-14 0 -28 10 -28 27v209c0 17 12 30 27 30z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:9:8:9">
-<g transform="translate(16.8500, 7.0718)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:18:11:12">
+<g transform="translate(8.7000, 14.4847)">
+<path transform="scale(0.0022, -0.0022)" d="M296 266c0 -54 84 -40 84 -125c0 -94 -83 -141 -186 -141c-84 0 -159 54 -159 133c0 32 26 58 58 58s58 -26 58 -58c0 -22 -36 -26 -36 -48c0 -33 41 -42 79 -42c41 0 57 50 57 98v21c0 44 -3 77 -44 77h-65c-18 0 -27 14 -27 27s9 27 27 27h65c42 0 44 36 44 83v11
+c0 43 -20 70 -61 70c-33 0 -68 -9 -68 -38c0 -19 31 -23 31 -42c0 -28 -22 -51 -50 -51s-51 23 -51 51c0 71 64 123 138 123c93 0 174 -31 174 -113c0 -94 -68 -67 -68 -121z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:9:11:12">
-<g transform="translate(16.8500, 5.5718)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:24:6:7">
+<g transform="translate(8.7000, 17.5347)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:9:16:17">
-<g transform="translate(16.8500, 1.3610)">
+<g transform="translate(0.8000, 16.0347)">
+<path transform="scale(0.0040, -0.0040)" d="M557 -125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM557 125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM232 263c172 0 293 -88 293 -251c0 -263 -263 -414 -516 -521c-3 -3 -6 -4 -9 -4c-7 0 -13 6 -13 13c0 3 1 6 4 9
+c202 118 412 265 412 493c0 120 -63 235 -171 235c-74 0 -129 -54 -154 -126c11 5 22 8 34 8c55 0 100 -45 100 -100c0 -58 -44 -106 -100 -106c-60 0 -112 47 -112 106c0 133 102 244 232 244z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:22:17:18">
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:22:31:32">
+<g transform="translate(5.0000, 17.0347)">
+<path transform="scale(0.0040, -0.0040)" d="M250 262c116 0 176 -106 176 -163c0 -40 -30 -72 -67 -72c-31 0 -75 25 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12
+c0 -22 -50 -174 -183 -174c-59 0 -250 19 -250 263c0 62 18 262 250 262z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:30:6:7">
+<g transform="translate(8.7000, 30.0347)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:30:9:10">
+<g transform="translate(8.7000, 32.3374)">
 <text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
-<tspan>1st inv. (6–3)</tspan>
+<tspan>I</tspan>
 </text>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:10:5:6">
-<g transform="translate(25.0001, 7.0718)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<g transform="translate(0.8000, 25.0347)">
+<path transform="scale(0.0040, -0.0040)" d="M557 -125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM557 125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM232 263c172 0 293 -88 293 -251c0 -263 -263 -414 -516 -521c-3 -3 -6 -4 -9 -4c-7 0 -13 6 -13 13c0 3 1 6 4 9
+c202 118 412 265 412 493c0 120 -63 235 -171 235c-74 0 -129 -54 -154 -126c11 5 22 8 34 8c55 0 100 -45 100 -100c0 -58 -44 -106 -100 -106c-60 0 -112 47 -112 106c0 133 102 244 232 244z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:27:17:18">
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:27:31:32">
+<g transform="translate(5.0000, 26.0347)">
+<path transform="scale(0.0040, -0.0040)" d="M250 262c116 0 176 -106 176 -163c0 -40 -30 -72 -67 -72c-31 0 -75 25 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12
+c0 -22 -50 -174 -183 -174c-59 0 -250 19 -250 263c0 62 18 262 250 262z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:10:8:9">
-<g transform="translate(25.0001, 5.5718)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<g transform="translate(10.0123, 7.3621)">
+<rect x="-0.0650" y="-2.5000" width="0.1300" height="5.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(10.0123, 17.0347)">
+<rect x="-0.0650" y="-3.0000" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(10.0123, 26.0347)">
+<rect x="-0.0650" y="-0.0000" width="0.1300" height="3.7410" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:12:7:8">
+<g transform="translate(12.9983, 9.3621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:10:12:13">
-<g transform="translate(25.0001, 4.5718)">
-<path transform="scale(0.0040, -0.0040)" d="M213 112c-45 0 -69 -34 -69 -88c0 -102 89 -136 134 -136s69 34 69 88c0 102 -89 136 -134 136zM245 136c144 0 246 -65 246 -136s-102 -136 -246 -136s-245 65 -245 136s101 136 245 136z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:12:10:11">
+<g transform="translate(12.9983, 8.3621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
 </g>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:10:17:18">
-<g transform="translate(25.0001, 3.1426)">
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:12:13:14">
+<g transform="translate(12.9983, 6.8621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:12:18:19">
+<g transform="translate(12.9983, 1.3610)">
 <text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
-<tspan>2nd inv. (6–4)</tspan>
+<tspan>1st inv. (6/3)</tspan>
 </text>
 </g>
 </a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:18:16:17">
+<g transform="translate(12.9983, 12.9847)">
+<path transform="scale(0.0022, -0.0022)" d="M207 226c-44 0 -46 -40 -46 -92s2 -91 46 -91c46 0 55 38 55 91s-9 92 -55 92zM161 257c14 8 29 12 46 12c103 0 177 -41 177 -135s-74 -134 -177 -134c-114 0 -176 124 -176 250c0 129 77 250 197 250c75 0 141 -52 141 -123c0 -32 -26 -58 -58 -58s-58 26 -58 58
+c0 21 35 23 35 44c0 26 -31 36 -60 36c-61 0 -69 -60 -69 -129c0 -23 2 -48 2 -71z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:18:18:19">
+<g transform="translate(12.9983, 14.4847)">
+<path transform="scale(0.0022, -0.0022)" d="M296 266c0 -54 84 -40 84 -125c0 -94 -83 -141 -186 -141c-84 0 -159 54 -159 133c0 32 26 58 58 58s58 -26 58 -58c0 -22 -36 -26 -36 -48c0 -33 41 -42 79 -42c41 0 57 50 57 98v21c0 44 -3 77 -44 77h-65c-18 0 -27 14 -27 27s9 27 27 27h65c42 0 44 36 44 83v11
+c0 43 -20 70 -61 70c-33 0 -68 -9 -68 -38c0 -19 31 -23 31 -42c0 -28 -22 -51 -50 -51s-51 23 -51 51c0 71 64 123 138 123c93 0 174 -31 174 -113c0 -94 -68 -67 -68 -121z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:24:9:10">
+<g transform="translate(12.9983, 16.5347)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:31:6:7">
+<g transform="translate(12.9983, 30.0347)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:31:9:10">
+<g transform="translate(12.9983, 32.3374)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>I</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(14.3107, 7.3621)">
+<rect x="-0.0650" y="-3.6667" width="0.1300" height="5.4077" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(13.0633, 17.0347)">
+<rect x="-0.0650" y="-0.2410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(14.3107, 26.0347)">
+<rect x="-0.0650" y="-0.0000" width="0.1300" height="3.7410" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:13:7:8">
+<g transform="translate(18.6265, 8.3621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:13:10:11">
+<g transform="translate(18.6265, 6.8621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:13:14:15">
+<g transform="translate(18.6265, 5.8621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:13:19:20">
+<g transform="translate(18.6265, 4.3753)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>2nd inv. (6/4)</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:18:23:24">
+<g transform="translate(18.6265, 12.9847)">
+<path transform="scale(0.0022, -0.0022)" d="M207 226c-44 0 -46 -40 -46 -92s2 -91 46 -91c46 0 55 38 55 91s-9 92 -55 92zM161 257c14 8 29 12 46 12c103 0 177 -41 177 -135s-74 -134 -177 -134c-114 0 -176 124 -176 250c0 129 77 250 197 250c75 0 141 -52 141 -123c0 -32 -26 -58 -58 -58s-58 26 -58 58
+c0 21 35 23 35 44c0 26 -31 36 -60 36c-61 0 -69 -60 -69 -129c0 -23 2 -48 2 -71z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:24:12:13">
+<g transform="translate(18.6265, 15.5347)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(-0.0600, 16.6984)">
+<rect x="0.0000" y="-11.3863" width="0.1600" height="22.7725" ry="0.0500" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:32:9:10">
+<g transform="translate(18.6265, 32.3374)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>I</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(18.6915, 7.3621)">
+<rect x="-0.0650" y="-1.2410" width="0.1300" height="5.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(18.6915, 17.0347)">
+<rect x="-0.0650" y="-1.2410" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(19.9389, 26.0347)">
+<rect x="-0.0650" y="-0.0000" width="0.1300" height="3.7410" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:14:7:8">
+<g transform="translate(23.6300, 10.3621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:14:10:11">
+<g transform="translate(23.6300, 9.3621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:14:13:14">
+<g transform="translate(23.6300, 8.3621)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:14:17:18">
+<g transform="translate(23.6300, 2.3056)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>root (5/3)</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:18:30:31">
+<g transform="translate(23.6300, 12.9847)">
+<path transform="scale(0.0022, -0.0022)" d="M83 500c8 0 69 -14 131 -14c54 0 133 15 134 15c17 0 27 -12 27 -22c0 -13 -88 -100 -234 -100c-17 0 -31 -14 -31 -31v-41c25 25 63 25 98 25h4c115 0 182 -55 182 -166c0 -99 -96 -166 -202 -166c-88 0 -169 52 -169 133c0 32 26 58 58 58s58 -26 58 -58
+c0 -22 -36 -26 -36 -48c0 -36 47 -42 89 -42c52 0 73 63 73 123c0 53 -7 112 -53 112c-133 0 -86 -44 -128 -44c-14 0 -28 10 -28 27v209c0 17 12 30 27 30z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:18:32:33">
+<g transform="translate(23.6300, 14.4847)">
+<path transform="scale(0.0022, -0.0022)" d="M296 266c0 -54 84 -40 84 -125c0 -94 -83 -141 -186 -141c-84 0 -159 54 -159 133c0 32 26 58 58 58s58 -26 58 -58c0 -22 -36 -26 -36 -48c0 -33 41 -42 79 -42c41 0 57 50 57 98v21c0 44 -3 77 -44 77h-65c-18 0 -27 14 -27 27s9 27 27 27h65c42 0 44 36 44 83v11
+c0 43 -20 70 -61 70c-33 0 -68 -9 -68 -38c0 -19 31 -23 31 -42c0 -28 -22 -51 -50 -51s-51 23 -51 51c0 71 64 123 138 123c93 0 174 -31 174 -113c0 -94 -68 -67 -68 -121z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:24:15:16">
+<g transform="translate(23.6300, 17.5347)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:33:6:7">
+<g transform="translate(23.6300, 30.0347)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music674/14-rameau-inversion.ly:33:9:10">
+<g transform="translate(23.6300, 32.3374)">
+<text font-family="serif" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>I</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(24.9424, 7.3621)">
+<rect x="-0.0650" y="-2.5000" width="0.1300" height="5.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(24.9424, 17.0347)">
+<rect x="-0.0650" y="-3.0000" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(24.9424, 26.0347)">
+<rect x="-0.0650" y="-0.0000" width="0.1300" height="3.7410" ry="0.0400" fill="currentColor"/>
+</g>
 </svg>

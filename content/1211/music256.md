@@ -147,6 +147,8 @@ Three alternative scale systems are particularly important in Debussy's music:
 
 The <strong>whole-tone scale</strong> contains only whole steps (e.g., C–D–E–F♯–G♯–A♯), producing a shimmering, directionless quality with no leading tone to pull toward a resolution.
 
+{{< score id="music256/02-whole-tone-debussy" caption="Whole-tone scale passage: 6-note run C–D–E–F♯–G♯–A♯ over an augmented triad — Debussy's 'no leading tone, no tonic' sound world." >}}
+
 The <strong>pentatonic scale</strong> uses five notes (e.g., C–D–E–G–A) and is found in folk music traditions worldwide, from East Asian to Celtic. It sounds open and consonant.
 
 The <strong>octatonic scale</strong> alternates whole and half steps (e.g., C–D–E♭–F–G♭–A♭–A–B), creating a symmetrical collection with a distinctive, slightly mysterious colour.
@@ -166,6 +168,8 @@ The orchestra is large, but it is deployed for <strong>tone colour</strong> rath
 ### Oscillating Pattern and the Musorgsky Connection
 
 The opening of "Nuages" features an <strong>oscillating pattern</strong> of fifths and thirds — a gently rocking figure that establishes an atmosphere of stillness and suspension. This pattern is modelled on the piano accompaniment in Musorgsky's "The Idle, Noisy Day is Over" from <em>Sunless</em>. Each appearance of the oscillating pattern features different tone colours and pitches, maintaining the same gestural shape while constantly varying its surface.
+
+{{< score id="music256/01-nuages-parallel-chords" caption="Debussy, Nuages: parallel major 9th chords sliding chromatically (F♯maj9→Emaj9→D♭maj9) over a sustained C pedal — non-functional parallel planing." >}}
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/WkhAcvfh1gs?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
@@ -283,6 +287,8 @@ In his late works — including his final piano sonatas and <em>Vers la flamme</
 
 The effect is striking: the chords do not project the familiar yearning toward resolution that characterizes Romantic harmony. Instead, Scriabin's late music creates a sense of <strong>ecstatic transcendence</strong> — a mystical quality of floating beyond desire, of enlightenment rather than longing.
 
+{{< score id="music256/03-vers-la-flamme-mystic" caption="Scriabin's 'mystic chord' (C–F♯–B♭–E–A–D, [0,6,10,4,9,2]): static whole-note cluster then arpeggio — the referential sonority replacing tonal function." >}}
+
 ## <em>Vers la flamme</em>, Op. 72 (1914, NAWM 177)
 
 <em>Vers la flamme</em> (<em>Toward the Flame</em>) is a one-movement tone poem for piano — a genre that would normally imply an orchestral work, but Scriabin conceives the piano in orchestral terms.
@@ -380,6 +386,8 @@ The melodies in <em>The Rite</em> are <strong>anti-lyrical</strong> — they are
 
 The harmonic language is built on unresolved <strong>dissonance</strong>. The famous opening chord of the "Dances of the Adolescent Girls" is a superimposition of an F♭ major triad and an E♭ dominant seventh chord — together containing all seven notes of the A♭ harmonic minor scale. This chord does not resolve; it simply pounds away, a block of sound. Throughout <em>The Rite</em>, Stravinsky juxtaposes <strong>static blocks of sound</strong> rather than connecting chords through functional progressions. The sense of tonality is destroyed — or rather, replaced by a new kind of harmonic organization based on the superimposition and alternation of fixed sonorities.
 
+{{< score id="music256/04-rite-augurs" caption="Stravinsky, Augurs of Spring: E♭ major triad (upper) + E dominant 7th (lower) simultaneously — bitonality with irregular accent pulse in 8/4." >}}
+
 ### Overall Effect and Legacy
 
 The overall effect of <em>The Rite of Spring</em> is one of controlled violence — a return to something primal and elemental in human experience. The premiere famously provoked a <strong>riot</strong> in the audience at the Théâtre des Champs-Élysées — some cheered, others booed, fistfights broke out, and the police were called. The American critic Carl Van Vechten, present that evening, reported that he was so transported by the music that he found himself — to his shock — pounding on the head of the man seated in front of him. Both men, he later wrote, had been "carried beyond themselves." The chaos was so extreme that the choreographer Nijinsky had to stand on a chair in the wings, counting out the beat for his dancers because the audience's noise drowned out the orchestra. Stravinsky himself stood nearby, gripping Nijinsky's coattail to keep him from tumbling off the chair.
@@ -469,6 +477,8 @@ The song is structured as a <strong>passacaglia</strong> — a set of variations
 
 The <strong>three-note motive</strong> — ascending a minor third, then descending a major third — saturates the texture with obsessive thoroughness. Six intertwined statements appear in just the first three bars. The motive is presented forwards, backwards, and upside-down. The effect is claustrophobic, suggesting Pierrot's moonlit obsession.
 
+{{< score id="music256/05-pierrot-nacht" caption="Schoenberg, Pierrot lunaire 'Nacht': 3-note passacaglia cell B–G–E in bass (ascending m3, descending M3) with fragmented atonal response above." >}}
+
 The entire song is set in a <strong>deep, dark register</strong>: the piano stays mostly in bass clef or descends, and the instruments are bass clarinet and cello — the darkest members of the ensemble.
 
 ### Expressionism and <em>Sprechstimme</em>
@@ -508,6 +518,8 @@ The row has special properties: each of its four usable forms begins and ends wi
 ![Schoenberg, Piano Suite, Op. 25 — Prelude, with tone row annotations (P6, I6, R6)](/pics/256/256-4a-schoenberg-suite-prelude-annotated.jpeg)
 
 The Prelude is Schoenberg's first completed twelve-tone piece. It divides the row into <strong>tetrachords</strong> (four-note collections) that function both as melodic lines and as chords. Despite the rigorous system underlying it, the piece has a free, improvisational character.
+
+{{< score id="music256/06-schoenberg-op25-row" caption="Schoenberg, Piano Suite Op. 25: P0 row (E–F–G–D♭–F♯–E♭…) in the right hand against I5 inversion in the left — serialist two-voice counterpoint." >}}
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/IWL45-ODKsM?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
@@ -628,6 +640,8 @@ The first movement is cast in <strong>sonata form</strong> — the standard Clas
 
 Webern deploys the chamber orchestra using a technique called <strong>Klangfarbenmelodie</strong> — a German term coined by Schoenberg meaning "tone-colour melody." A single melodic line is distributed among different instruments note by note, so that the changing timbres become an essential dimension of the musical structure. The resulting texture is called <strong>pointillism</strong>: a succession of tiny points or wisps of sound, analogous to the dots of colour in a Pointillist painting.
 
+{{< score id="music256/07-webern-pointillist" caption="Webern pointillist style: isolated single notes with large leaps, extreme dynamics (ppp–pp), and vast space between events — Klangfarbenmelodie in notation." >}}
+
 ### What Makes It a Symphony?
 
 Size does not matter. What makes Webern's Op. 21 a symphony is its intensity, its concentration, and its monumental thought — compressed into a crystalline miniature.
@@ -729,6 +743,8 @@ Readings:
 ## Stravinsky and Neoclassicism (1919–1951)
 
 Stravinsky is the composer most associated with Neoclassicism. After the visceral primitivism of <em>The Rite of Spring</em>, he turned away from Russian folk music and toward earlier Western art music — imitation, quotation, and allusion to models from the Baroque, Classical, and earlier periods. His first neoclassical work was <em>Pulcinella</em> (1919), a ballet based on music attributed to Pergolesi. Stravinsky himself described it as "my discovery of the past — the epiphany through which the whole of my later music became possible. It was a backwards glance of course, but it was a look into the mirror too." His last neoclassical work was <em>The Rake's Progress</em> (1951), a full-scale opera in the tradition of Mozart.
+
+{{< score id="music256/08-stravinsky-neoclassical" caption="Stravinsky neoclassical 'wrong-note' style: crisp C major diatonic passage with unexpected B♭ and F♯ intrusions — the ironic distance of Pulcinella." >}}
 
 Stravinsky's Neoclassicism is characterized by <strong>emotional detachment</strong> and an <strong>anti-Romantic</strong> stance. But these older models are filtered through Stravinsky's own distinctive idiom — the irregular rhythms, the dissonance, the brilliant orchestral colour that are unmistakably his. He drew on a wide range of models: Classical forms, Baroque counterpoint, and even contemporary popular idioms.
 
@@ -862,6 +878,8 @@ What Bartók found in peasant music was what he called "artistic perfection" —
 Bartók's <strong>harmonic materials</strong> are derived from the scales, rhythms, and melodies of peasant music: modal scales, mixed modes, and rhythmic devices drawn from folk dance (shifting and asymmetrical meters such as 2+3 or 5+3). Peasant music, he wrote, "freed me from the tyrannical rule of the major and minor keys."
 
 His approach to tonality is <strong>neotonal</strong>: tonal centres exist but are established through pitch assertion rather than functional harmony. Tritone relationships (such as C and F♯) are characteristic. He wrote in traditional forms (bagatelles, concertos, string quartets, fugues) while also exploring proportional and mirror forms. His synthesis of peasant music with classical technique — unified by a love of dissonance and symmetry — produced a musical language of extraordinary power and originality.
+
+{{< score id="music256/09-bartok-polymodal" caption="Bartók polymodal counterpoint: C Lydian (raised F♯, treble) sounding simultaneously against C Phrygian (lowered D♭, bass) — polymodal friction." >}}
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/-rpcqShz5Gs?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
@@ -1080,6 +1098,8 @@ Olivier Messiaen was a French composer, organist, and one of the most influentia
 Three elements define Messiaen's distinctive sound:
 
 <strong>Harmony</strong>: Messiaen developed what he called <strong>modes of limited transposition</strong> — scales (including the whole-tone and octatonic) that produce the same collection of pitches when transposed by certain intervals. These modes suggest contemplation and the negation of desire — a static, luminous harmonic world quite unlike the goal-directed harmony of the tonal tradition.
+
+{{< score id="music256/10-messiaen-modes" caption="Messiaen Mode 2 (octatonic, C–D♭–E♭–E–F♯–G–A–B♭): parallel stacked-third chords with octatonic bass line — 'limited transposition' means only 3 distinct transpositions." >}}
 
 <strong>Rhythm</strong>: Messiaen rejected traditional Western meters entirely. He worked with <strong>durations</strong> rather than meter, employed <strong>non-retrogradable rhythms</strong> (palindromic patterns that read the same forwards and backwards), and incorporated the notated rhythms of birdsong. For Messiaen, rhythm was the "realm of time, ruled by the divine."
 

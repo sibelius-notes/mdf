@@ -208,7 +208,7 @@ The NNS representation in C major reads:
 - Bridge: 6m – 5 – 4 – 1 – 3 (the "3" is major, acting as secondary dominant)
 </div>
 
-{{< score id="music277/34-secondary-dominant" caption="Secondary dominant V/vi (E7 → Am) within I–V–vi–IV, as in the bridge of 'Let It Be'." >}}
+{{< score id="music273/24-secondary-dominant-chain" caption="Secondary dominant V/vi (E7 → Am) within I–V–vi–IV, as in the bridge of 'Let It Be'. (See also music673 §7.)" >}}
 
 ---
 
@@ -298,7 +298,7 @@ This "bluesy" seventh is one of the clearest markers of African American musical
 harmony.
 </div>
 
-{{< score id="music277/06-12-bar-blues" caption="12-bar blues chord progression: I7–I7–I7–I7 / IV7–IV7–I7–I7 / V7–IV7–I7–V7 (turnaround)." >}}
+{{< score id="music273/31-blues-harmony-12bar" caption="12-bar jazz blues in B♭: standard changes with walking bass and a bebop head melody — the harmonic schema underlying blues rock from Chuck Berry to Clapton." >}}
 
 {{< score id="music277/36-blues-seventh-chords" caption="I7, IV7, V7 in C: all three chords carry the dominant seventh, a blues-specific harmonic color." >}}
 
@@ -358,7 +358,6 @@ The absence of a leading tone means there is no classical dominant-function V ch
 Aeolian; instead, the ♭VII chord typically moves to i in a form of Aeolian pseudo-cadence.
 </div>
 
-{{< score id="music277/33-aeolian-mode" caption="A Aeolian (natural minor) scale: A–B–C–D–E–F–G. The absence of G♯ removes the leading tone." >}}
 
 {{< score id="music277/04-aeolian-loop" caption="Aeolian loop i–♭VII–♭VI–♭VII (Am–G–F–G): the brooding circular progression of 'Stairway to Heaven' and 'Alone'." >}}
 

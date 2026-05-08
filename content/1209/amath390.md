@@ -513,6 +513,8 @@ is referred to as a mode. (Context indicates whether the transient behaviour or 
 
 The solution (2.15) shows that the sound of a vibrating string is the sum of multiple (in theory infinite) frequencies. The lowest frequency in the response is called the **fundamental frequency**. For a stretched string this is \(\frac{\pi c}{\ell}\) rad/s or \(\frac{\pi c}{2\pi\ell}\) Hz. The frequencies above the fundamental frequency are called **overtones**. Note that the individual frequencies in the response are all integer multiples of the lowest frequency. These overtones are called **harmonics**.
 
+{{< score id="amath390/01-harmonic-series-strings" caption="Harmonic series on C2: partials 1–8 as pitches, each labeled with its frequency ratio. The first six produce the intervals of the just major triad." >}}
+
 ![Schematic spectrogram of a guitar string showing harmonics as evenly spaced horizontal bands at integer multiples of the fundamental frequency f₀](/pics/390/fig-harmonics-guitar.png)
 
 ## Harmonics of Piano and Harpsichord
@@ -731,6 +733,8 @@ The analysis predicts that the frequencies \(\omega_k = \frac{k\pi c}{\ell}\) ar
 
 Overtones that occur as integer multiples of the fundamental are also called **harmonics**.
 
+{{< score id="amath390/15-harmonic-rhythm-fourier" caption="Fourier decomposition: a complex tone approximated by its first three harmonics at amplitudes 1, ½, ⅓. The sum converges to the sawtooth waveform of a bowed string." >}}
+
 ## Clarinet
 
 A **clarinet** has a **reed** made of thin cane at the mouthpiece. The player blows into the mouthpiece, causing the reed to vibrate. As the reed bends under the pressure of the airstream, it behaves as a spring, repeatedly closing and opening the mouthpiece. This back-and-forth motion produces vibrations in the air column at the mouthpiece. As with the flute, this initial motion then causes the air column trapped in the clarinet body to vibrate at its natural frequency. The reed is forced by the air column and vibrates at the same frequency.
@@ -788,6 +792,8 @@ The analysis predicts that the frequencies \(\omega_k = \frac{(2k-1)c}{4\ell}\) 
 Although these overtones are harmonics, **only the odd harmonics are present**. This is reflected in the spectrogram of a clarinet.
 
 ![Schematic spectrogram of clarinet A4 (440Hz) showing only odd harmonics present. Even harmonics (2f₀, 4f₀, 6f₀) are absent, as predicted by the closed-open tube theory.](/pics/390/fig-harmonics-clarinet.png)
+
+{{< score id="amath390/14-mode-shapes-pipe" caption="Vibration modes of open vs. closed pipes: open pipes produce all harmonics; closed pipes produce only odd harmonics, giving the clarinet its hollow timbre." >}}
 
 ## Vocabulary
 
@@ -1255,6 +1261,8 @@ The intervals between successive notes are:
 
 giving the pattern big -- big -- small -- (big) -- big -- big -- small. Note that \(\frac{9}{8} = 1.125\) and \(\left(\frac{256}{243}\right)^2 = 1.1098 \approx \frac{9}{8}\).
 
+{{< score id="amath390/02-pythagorean-scale" caption="Pythagorean major scale built by stacking pure 3:2 fifths. Each note labeled with its ratio from C; the major third E = 81:64 (+408¢) is sharper than the just E = 5:4 (+386¢)." >}}
+
 All the harmonics of \(2f\) are in common with those of \(f\). Half of the harmonics of \(\frac{3}{2}f\) are in common with those of \(f\), and one-third of the harmonics of \(\frac{4}{3}f\) are in common with those of \(f\). However, most of the notes in the Pythagorean scale are in ratios of large numbers of the root note. One-quarter of the harmonics of \(\frac{5}{4}\) are in common with those of \(f\); this ratio is close to \(\frac{81}{64}\) but not equal. As a result, intervals other than the octave, fourth, and fifth can sound discordant, and sounds from the same scale often do not sound harmonious together. This limits **polyphony** -- the practice of playing multiple notes simultaneously.
 
 ## Just Intonation
@@ -1279,6 +1287,10 @@ The scale does not have the same tone--tone--semitone pattern as the Pythagorean
 
 Just intonation has more chords with low ratios than the Pythagorean scale. The triads on do, fa, and so (I, IV, V) are in ratios of \(4:5:6\) -- they are "justly" tuned. However, not all chords work: the note re (II) has a fifth of \(\frac{5/3}{9/8} = \frac{40}{27} \neq \frac{3}{2}\), meaning the triad built on re is not a pure fifth. This fundamental limitation motivates the search for other tuning systems.
 
+{{< score id="amath390/03-just-intonation-scale" caption="Just intonation major scale (5-limit): ratios 1/1, 9/8, 5/4, 4/3, 3/2, 5/3, 15/8, 2/1. The thirds and sixths are pure; the 9:8 and 10:9 whole tones differ by the syntonic comma." >}}
+
+{{< score id="amath390/11-just-triad-overtones" caption="The just major triad as overtone harmony: partials 4, 5, 6 of C2 yield C4–E4–G4 in ratio 4:5:6, the acoustic basis for major-triad consonance." >}}
+
 # Chapter 8: Transposition
 
 The problem of transposition -- changing the home note of a scale while preserving the relationships between notes -- reveals deep mathematical constraints on any tuning system. In this chapter, we examine why no fixed-pitch tuning system can simultaneously achieve perfect harmony and unlimited transposability, and how different compromises have been reached throughout history.
@@ -1295,6 +1307,8 @@ Going up 12 fifths is close to 7 octaves. The difference is
 
 This small discrepancy is called the **Pythagorean comma**. Each time a scale is created by transposition -- starting a new note, either a fifth up or a fifth down from the previous scale -- a new note is introduced. This creates what is known as the **spiral of fifths**: transposition into a scale with a different tonic creates new notes in a never-ending spiral.
 
+{{< score id="amath390/06-pythagorean-comma" caption="Pythagorean comma: twelve pure fifths (B♯) overshoot seven pure octaves (C) by 23.46¢ — the discrepancy that makes equal temperament necessary." >}}
+
 The fundamental impossibility can be stated precisely: we need integers \(n, m\) such that
 
 \[
@@ -1302,6 +1316,10 @@ The fundamental impossibility can be stated precisely: we need integers \(n, m\)
 \]
 
 But this requires a power of 3 to equal a power of 2, which is **not possible** since 3 and 2 are distinct primes. It is therefore impossible to go up a number of perfect fifths and eventually return to the original note, modulo an octave. All temperaments will be a compromise.
+
+{{< score id="amath390/07-syntonic-comma" caption="Syntonic comma (21.5¢): the Pythagorean E (81:64, +408¢) is sharper than the just E (5:4, +386¢) by one syntonic comma — the discrepancy between chain-of-fifths tuning and ratio-based tuning." >}}
+
+{{< score id="amath390/09-cents-deviation-chart" caption="Cent deviations from 12-TET for the full major scale: treble staff shows Pythagorean deviations, bass staff shows just-intonation deviations. Note the large −14¢ for just E and +10¢ for Pythagorean B." >}}
 
 Transposition is even worse in just intonation. Starting on the fifth note "G" (frequency \(\frac{3}{2}\) and building a just scale with the same ratios yields two new notes for each transposition, and the spiral of fifths expands even more rapidly.
 
@@ -1320,6 +1338,10 @@ so the semitone is \(s = \frac{8}{5^{5/4}}\).
 The fifth in this system is \(r = 5^{1/4} = 1.49535 \approx \frac{3}{2}\). Transposing four fifths is a third (modulo octaves), and 12 fifths is 3 thirds. Since \(\left(\frac{5}{4}\right)^3 = \frac{125}{64} < 2\), we do not get a cycle of fifths. One fifth is usually made large in a seldom-used key, yielding a very discordant **wolf fifth**. It was possible that a keyboard was tuned differently for different pieces.
 
 Various modifications of meantone make it easier to play in different keys, with intervals slightly different in different keys so the spiral of fifths becomes a circle, but far-away keys have discordant intervals. Because the intervals are different, different keys have noticeably different character. Such tunings are sometimes called **well-tempered**. Many different schemes existed, with Werckmeister's being particularly popular. Well-tempered tuning was commonly used until roughly 1850--1900.
+
+{{< score id="amath390/08-meantone-scale" caption="Quarter-comma meantone scale: the fifth is narrowed to 5^(1/4) ≈ 696.6¢ so that four stacked fifths produce a pure major third (386¢). The wolf fifth G♯–E♭ (≈737¢) appears in bar 9." >}}
+
+{{< score id="amath390/12-wolf-fifth-meantone" caption="Wolf fifth in meantone temperament: the interval G♯–E♭ is ~737¢ — far wider than the 697¢ meantone fifth — because E♭ and D♯ are different pitches in non-equal systems." >}}
 
 ## Equal Temperament
 
@@ -1342,6 +1364,12 @@ The crucial property is that shifting through 12 fifths goes back to the start:
 \]
 
 The spiral of fifths becomes a **circle of fifths**, and there are no problems with transposition. Every key sounds the same.
+
+{{< score id="amath390/04-equal-temperament-scale" caption="12-TET major scale: each semitone is exactly 100¢, each note labeled by its cent value. The equal-tempered major third (400¢) is 14¢ sharper than the just major third (386¢)." >}}
+
+{{< score id="amath390/05-scale-comparison" caption="Comparison of Pythagorean, just, and 12-TET tuning for the major third and major sixth. Pythagorean E is +8¢ above 12-TET; just E is −14¢ below." >}}
+
+{{< score id="amath390/13-equal-temperament-fifths" caption="Circle of fifths in 12-TET: each step is exactly 700¢, and twelve steps close the circle perfectly since 12 × 700¢ = 8400¢ = 7 × 1200¢." >}}
 
 ## Cents
 
@@ -1422,6 +1450,8 @@ y(t) = \sin(2\pi(\bar{f} - \Delta)t) + \sin(2\pi(\bar{f} + \Delta)t) = 2\cos(2\p
 \]
 
 This sounds like \(\bar{f}\) Hz with amplitude oscillating with frequency \(2\Delta\): beats. The deliberate use of beating gives gamelan music its characteristic shimmering quality.
+
+{{< score id="amath390/10-beats-interval" caption="Acoustic beats: C4 and D4 sounding simultaneously produce 32 Hz roughness; C4 and C4+2¢ produce 2 Hz slow beating." >}}
 
 ## Classification of Scales
 

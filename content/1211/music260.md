@@ -41,6 +41,8 @@ By the **modern period**, around 1900, the dominant orchestral genre was the sym
 
 Symphonies do have notes, and so it helps to understand how to read an orchestral score. You do not need to be able to read music to appreciate a symphony — what matters most is listening. But looking at a score can give you a great deal of information, and you can follow the shape of a performance even without reading every note.
 
+{{< score id="music260/01-score-reading" caption="Orchestral score layout: Violin I carries the melody (top), Viola provides inner harmony, and Cello walks the bass line (bottom). Scores always read from highest-pitched family at the top to lowest at the bottom." >}}
+
 Scores provide helpful information right at the beginning of a work. Consider the opening of Beethoven's *Symphony No. 5*, first movement:
 
 ![Beethoven Symphony No. 5, opening score](/pics/260/260-1a-beethoven5-score.png)
@@ -57,6 +59,8 @@ The score also gives us the key signature, time signature, and tempo indication 
 
 ## Instruments of the Orchestra
 
+{{< score id="music260/08-classical-instrumentation" caption="Classical orchestra balance in four families: Strings carry the melodic arpeggio, Woodwinds sustain harmony, Brass reinforce with long tones, and Timpani punctuate on the downbeat — the textural template of the Classical symphony." >}}
+
 ![Seating arrangement of a symphony orchestra](/pics/260/260-1a-orchestra-layout.png)
 
 The conductor stands at the front, often on a podium. The strings are positioned toward the front — there are proportionally more string players than wind, brass, or percussion players, but strings are quieter, so proximity to the audience helps balance the sound. Sometimes the violas and cellos swap positions, but strings are always in front. The woodwinds sit in the center behind the violas, the brass instruments behind them, and percussion at the back.
@@ -64,6 +68,8 @@ The conductor stands at the front, often on a podium. The strings are positioned
 Philharmonia Orchestra — video guide to the instruments of the orchestra:
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/videoseries?list=PLqR22EoucCyccs5J639SCefaM7mD9dMSz" frameborder="0" allowfullscreen></iframe></div>
+
+{{< score id="music260/03-mannheim-crescendo" caption="Mannheim crescendo gesture: a sustained pp opening swells through mp and mf to a full-orchestra ff unison — the signature effect of the Mannheim court orchestra that thrilled 18th-century audiences." >}}
 
 
 # Origins of the Symphony
@@ -150,6 +156,8 @@ The remaining movements follow what became the norm for the rest of the Classica
 
 Since sonata form will be central to understanding every symphony we study, a quick review is essential.
 
+{{< score id="music260/02-sonata-form-overview" caption="Sonata form in notation: P-theme establishes I, a transition leads to a medial caesura rest (MC ‖), the S-theme enters in V, and the C-zone confirms the new key. Each label marks a structural function, not just a melody." >}}
+
 ![Sonata form diagram](/pics/260/260-sonata-form-diagram.png)
 
 <strong>Sonata form</strong> is a two-part (binary) structure that became the standard first-movement form of classical symphonies, string quartets, and keyboard sonatas. The two sections are marked by repeat signs:
@@ -186,6 +194,8 @@ He met Mozart in 1784, and there was apparently much mutual admiration between t
 Even in his early symphonies, Haydn made contributions that transformed the genre. Symphonies were central to his output — he composed at least 106 of them. When he started, the symphony was considered a light, galant, overture-style work. He brought it to the level of a much more sophisticated, serious genre that was a real test of a composer's ability. The function changed: symphonies were written not just for amateurs to enjoy but for connoisseurs who could appreciate what lay beneath the surface — things requiring musical expertise to catch.
 
 One of the most salient features of Haydn's works is his <strong>wit</strong> — a sophisticated sense of humor and love of musical surprises. The <em>Surprise Symphony</em> is the famous example, but we will encounter plenty of others.
+
+{{< score id="music260/04-haydn-surprise" caption="Haydn, Symphony No. 94 'Surprise': a gentle pp binary theme (bars 1–4) is shattered by a sudden ff chord in bar 5 — Haydn's famous joke on any audience member who had dozed off. The pp return in bars 6–8 restores the innocent character." >}}
 
 ## The Sonata Cycle
 
@@ -240,6 +250,8 @@ The recapitulation pauses on a diminished chord, and then a 17-bar <strong>coda<
 <strong>Movement III</strong> (Adagio, E major): A gentle slow movement with muted strings (<em>con sordino</em>) in simple binary form — maximum contrast after the intensity of the first two movements.
 
 <strong>Movement IV</strong> (Presto, E minor, sonata form): Another monothematic form, but different from the first movement — the primary theme is developed all the way to the end of the exposition rather than simply restated in the new key. In the recapitulation, Haydn <strong>disguises the return of the tonic</strong>: it does not coincide with the arrival of the main theme, again working against audience expectations.
+
+{{< score id="music260/05-haydn-development" caption="Haydn's developmental procedure: the full 4-note motive (bar 1) is fragmented to 2 notes (bar 2), then sequenced a step lower twice (bars 3–4), arriving on the dominant — Classical fragmentation and sequence in miniature." >}}
 
 ## Summary: Haydn's Early Contributions
 
@@ -309,6 +321,8 @@ Mozart started in the court of the Bishop of Salzburg, his father's patron. In 1
 ## Mozart's Symphonies: Overview
 
 Mozart's works are catalogued by <strong>K numbers</strong> (after Ludwig von Köchel, who catalogued them in 1862). As with Haydn, there are discrepancies, spurious works, and inaccurate designations.
+
+{{< score id="music260/06-mozart-symphony-theme" caption="Mozart symphony opening style: a forte fanfare (bar 1) immediately gives way to a piano, stepwise lyrical continuation (bars 2–4) — the Classical contrast of strength and grace that defines his orchestral voice." >}}
 
 <strong>Early symphonies</strong>: Mozart copied the symphonies of other composers (e.g., J.C. Bach in London) in the galant style that dominated the early part of his career. Symphonies in this period had a utilitarian function — they were used to quiet the audience or close concerts. The orchestra accompanied soloists; the symphony was not yet the main event.
 
@@ -387,6 +401,8 @@ The <em>Eroica</em> was revolutionary in scale and ambition. It is nearly twice 
 <strong>Movement II</strong> (<em>Marcia funebre</em>, C minor): A funeral march — unprecedented in a symphony. Its somber grandeur and emotional depth set a new standard for the slow movement.
 
 <strong>Movement III</strong> (Scherzo, E-flat major): Beethoven replaces the minuet with a <strong>scherzo</strong> — faster, more energetic, more dramatic. This would become standard in his later symphonies.
+
+{{< score id="music260/07-beethoven-scherzo" caption="Beethoven scherzo character: sforzando accents on beat 2 displace the expected downbeat (bars 1–3), while the sparse bass keeps the pulse ambiguous — the comic unpredictability that made the scherzo Beethoven's preferred alternative to the courtly minuet." >}}
 
 <strong>Movement IV</strong> (Finale): A set of variations on a theme Beethoven had used before, building to a triumphant conclusion. The finale's weight and complexity match the first movement, establishing the four-movement symphony as a dramatic arc.
 

@@ -830,7 +830,7 @@ The culminating synthesis of Schenker's theoretical project, *Der freie Satz* (*
 </ul>
 </div>
 
-{{< score id="music674/19-schenker-ursatz" caption="Schenker Ursatz: Urlinie (3̂–2̂–1̂) in the soprano over Bassbrechung (I–V–I) in the bass." >}}
+{{< score id="music672/02-ursatz-third-line" caption="Schenker Ursatz: Urlinie (3̂–2̂–1̂) in the soprano over Bassbrechung (I–V–I) in the bass." >}}
 
 The analytical procedure of Schenkerian analysis is essentially a process of "reduction" — progressively removing foreground elaborations to reveal the middleground prolongations, then removing those to reveal the background Ursatz.
 Graphical representation uses open noteheads (whole notes) for structural tones, filled noteheads for subordinate tones, and slurs and beams to indicate prolongational spans and linear progressions.
@@ -840,7 +840,7 @@ The reductive graph is the primary medium of Schenkerian analysis, and learning 
 A Schenkerian analysis of the opening of a Bach chorale might identify the surface as a series of four-voice chords. A foreground reduction eliminates passing tones and neighbor notes within individual voices. A middleground reduction shows a linear progression from \(\hat{3}\) descending through \(\hat{2}\) to \(\hat{1}\), supported by an I–V–I harmonic motion. The background is the Ursatz itself: Urlinie \(\hat{3}\)–\(\hat{2}\)–\(\hat{1}\) over the Bassbrechung I–V–I. The entire analytical project demonstrates that the surface diversity of the music flows from this single, simple background structure through systematic prolongation.
 </div>
 
-{{< score id="music674/19-schenker-ursatz" caption="Ursatz background sketch: Urlinie 3̂–2̂–1̂ over Bassbrechung I–V–I, the universal background of all tonal masterworks." >}}
+{{< score id="music672/02-ursatz-third-line" caption="Ursatz background sketch: Urlinie 3̂–2̂–1̂ over Bassbrechung I–V–I, the universal background of all tonal masterworks." >}}
 
 ### 6.5 Schenker's Cultural Politics
 
@@ -932,7 +932,7 @@ The method is built around the **tone row** (German: *Reihe*), an ordering of al
 This yields up to 48 row forms, often displayed in the twelve-by-twelve row table from which all compositional pitch material is derived.
 </div>
 
-{{< score id="music674/34-twelve-tone-row" caption="Schoenberg twelve-tone row (P0): a sample ordering of all 12 pitch classes as the generative row." >}}
+{{< score id="music377/20-twelve-tone-row" caption="Schoenberg Op. 25 Prelude: row P0 as right-hand melody over R0 in the left hand — the generative row in its original compositional context." >}}
 
 Schoenberg insisted that the twelve-tone method did not abolish musical sense but reorganized it: the row replaces the scale as the source of pitch relationships, counterpoint and register still create texture and hierarchy, and large-scale form still articulates musical time.
 **Combinatoriality** — the property of certain row hexachords that, combined with a transformed version, yield an aggregate of all twelve pitch classes — was an important structural resource for Schoenberg and became central to Babbitt's subsequent theorization.

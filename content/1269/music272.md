@@ -58,7 +58,7 @@ The interval classification of Definition 1.1 has a deeper physical justificatio
 The consonance of an interval is thus directly proportional to the proximity of its constituent partials in the harmonic series: the more harmonics two tones share, the more consonant they sound. Dissonances — seconds and sevenths — correspond to pairs of partials that are close in frequency but not integer multiples of a common fundamental, producing the acoustic "beating" (amplitude fluctuation at frequency \(|f_1 - f_2|\)) that the ear perceives as roughness or tension.
 </div>
 
-{{< score id="music272/04-harmonic-series" caption="The first six partials of the harmonic series on C, yielding the ratios 1:1, 2:1, 3:2, 4:3, 5:4, 6:5." >}}
+{{< score id="music276/01-harmonic-series" caption="The first six partials of the harmonic series on C, yielding the ratios 1:1, 2:1, 3:2, 4:3, 5:4, 6:5." >}}
 
 This theorem is the physical foundation of the contrapuntal consonance hierarchy. The perfect consonances (unison, fifth, octave) share the most harmonics; the imperfect consonances (thirds, sixths) share somewhat fewer but still enough for clear fusion; dissonances share very few, producing the acoustic roughness that the mind associates with incompleteness and motion. Species counterpoint is, in this light, a system for managing the density of shared harmonics between simultaneously sounding voices — for ensuring that the texture maintains sufficient harmonic resonance on strong beats while permitting localized acoustic tension on weak beats.
 
@@ -222,7 +222,7 @@ Before the full establishment of major-minor tonality in the seventeenth century
 Each plagal mode uses the same final as its authentic counterpart but spans the range a fourth below rather than a fifth above the final.
 </div>
 
-{{< score id="music272/15-church-modes" caption="The six authentic church modes on the white keys, each starting on its final: Dorian (D), Phrygian (E), Lydian (F), Mixolydian (G), Aeolian (A), Ionian (C)." >}}
+{{< score id="music674/23-medieval-modes" caption="The six authentic church modes on the white keys, each starting on its final: Dorian (D), Phrygian (E), Lydian (F), Mixolydian (G), Aeolian (A), Ionian (C)." >}}
 
 The modal system profoundly influences the character of Renaissance counterpoint in ways that extend beyond the simple question of which pitches are available. Each mode has its own characteristic melodic gestures, its own range of available cadential formulas, and its own emotional character as perceived by Renaissance theorists. The Phrygian mode, for instance, with its unique semitone at the bottom (E–F rather than the whole step at the bottom of all other modes) produces a characteristic cadential gesture — the Phrygian cadence, in which the bass descends by semitone (E to D#, or in transposition any descent by semitone) — that sounds strikingly different from all other cadential approaches and persists in tonal music as a special expressive device even after the modal system was supplanted by major-minor tonality.
 
@@ -1113,7 +1113,7 @@ Beyond its role as a compositional discipline, counterpoint provides an indispen
 The Ursatz is the deepest structural level of a tonal composition; all other features of the music — themes, harmonies, rhythms, textures — are elaborations of this primordial two-voice counterpoint.
 </div>
 
-{{< score id="music272/53-ursatz-sketch" caption="The Ursatz: Urlinie 3̂–2̂–1̂ in the soprano above a Bassbrechung I–V–I in the bass — the primordial two-voice skeleton from which all tonal elaboration proceeds." >}}
+{{< score id="music672/02-ursatz-third-line" caption="The Ursatz: Urlinie 3̂–2̂–1̂ in the soprano above a Bassbrechung I–V–I in the bass — the primordial two-voice skeleton from which all tonal elaboration proceeds." >}}
 
 Schenker's theory is controversial in its details but profound in its central claim: that tonal music is, at its deepest level, two-voice counterpoint. Every tonal composition from Bach to Brahms, in this view, is an elaboration of the two-voice framework that the species system teaches. To study counterpoint is to study the grammar of which tonal composition is the literature — the rules of the language in which the masterworks of Western music are written.
 

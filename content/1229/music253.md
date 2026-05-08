@@ -44,6 +44,8 @@ Courtly patronage also fostered the development of secular vocal genres. The **t
 
 Medieval musicians inherited from antiquity a theoretical framework centered on the concept of the **tetrachord** — a group of four notes spanning the interval of a perfect fourth. The ancient Greek musical system was built by joining tetrachords in various configurations. Two tetrachords placed end to end, sharing a common note (conjunct) or separated by a whole tone (disjunct), produced scales of different ranges. The internal arrangement of intervals within the tetrachord determined the **genus** of the scale: diatonic (two whole tones and a semitone), chromatic (a minor third and two semitones), or enharmonic (a major third and two quarter-tones). Of these, the diatonic genus became the foundation of Western medieval music.
 
+{{< score id="music253/01-tetrachord" caption="The diatonic tetrachord descending E–D–C–B, with tone–tone–semitone intervals." >}}
+
 The transmission of Greek theory to the medieval West occurred primarily through Latin intermediaries. Boethius's *De institutione musica* (early sixth century) remained the single most authoritative theoretical treatise throughout the Middle Ages, although its highly mathematical and speculative approach had limited practical application for working musicians. More practically influential were later theorists such as **Hucbald of Saint-Amand** (c. 840–930), **Guido of Arezzo** (c. 991–1033), and the anonymous authors of numerous medieval treatises who adapted Greek concepts to the realities of liturgical practice.
 
 Guido of Arezzo deserves particular mention for his revolutionary contributions to music pedagogy. His development of the **staff** — a system of horizontal lines on which notes could be precisely placed to indicate pitch — transformed the practice of musical notation. He also introduced the technique of **solmization**, assigning syllables (*ut, re, mi, fa, sol, la*) to the six notes of the **hexachord**, a six-note pattern defined by a specific arrangement of whole tones and semitones (T–T–S–T–T). The critical interval was the semitone between *mi* and *fa*, which served as a landmark for orientation within the pitch system. Through the process of **mutation**, a singer could shift from one hexachord to another, navigating the entire range of the musical system by identifying the location of *mi*–*fa* semitones.
@@ -123,6 +125,8 @@ Each mode is defined by two characteristics: its **final** (the note on which th
 
 Medieval theorists attributed distinct emotional or expressive qualities to each mode, drawing on (and often misunderstanding) ancient Greek ideas about the ethical properties of scales. Mode 1 (Dorian) was often described as serious and suitable for any subject; Mode 3 (Phrygian) was considered mystical or harsh; Mode 5 (Lydian) was described as joyful; and so forth. While these characterizations should not be taken too literally, they reflect a deeply held conviction that the tonal structure of a melody was not merely a technical matter but carried expressive and even moral significance.
 
+{{< score id="music253/02-dorian-mode" caption="The Dorian mode on D as an ascending scale, with mi–fa semitone pairs between E–F and C–D." >}}
+
 ## 3.3 Neumes and the Development of Notation
 
 The history of Western musical notation is, in its earliest stages, the history of chant notation. The first efforts to represent chant melodies in writing appeared in the ninth century in the form of **neumes** — small signs written above the text of a chant to indicate the general shape of the melody. The earliest neumes, known as **adiastematic** or **staffless** neumes, did not specify exact pitches or intervals; they showed only whether the melody ascended, descended, or remained on the same pitch. A singer using such a manuscript needed to already know the melody; the neumes served as a reminder, not a prescription.
@@ -132,6 +136,8 @@ The principal early neumatic notations include **Saint Gall neumes** (from the S
 The critical breakthrough came with the development of **diastematic** (or **heighted**) notation, in which neumes were arranged on or between horizontal lines to indicate precise pitch relationships. **Guido of Arezzo** (c. 991–1033) is traditionally credited with establishing the four-line staff and with the use of colored lines (red for F, yellow or green for C) to anchor the pitch system. Guido's innovations, described in his treatises *Micrologus* and the *Epistola de ignoto cantu*, revolutionized music education by making it possible to sing an unfamiliar melody at sight — a capacity he famously claimed could reduce the training of a cantor from ten years to one or two.
 
 The subsequent development of notation proceeded through several stages. **Square notation**, which emerged in the twelfth and thirteenth centuries in French manuscripts, replaced the earlier cursive neumes with angular, clearly defined shapes that indicated both pitch and (to some degree) duration. This style of notation remains in use today in modern chant books, such as those published by the monks of Solesmes. Meanwhile, the development of **mensural notation** in the thirteenth century — associated with the theoretical writings of **Franco of Cologne** — introduced systematic distinctions of rhythmic duration, paving the way for the complex polyphonic music of the late Middle Ages and Renaissance.
+
+{{< score id="music253/06-chant-phrase" caption="A plainchant antiphon phrase in Dorian mode — no staff lines or barlines, as in free Gregorian rhythm." >}}
 
 ## 3.4 Chant Genres and Forms
 
@@ -199,11 +205,15 @@ The earliest descriptions of polyphonic singing in the West appear in theoretica
 
 The *Musica enchiriadis* also describes a form of organum in which the accompanying voice is constrained from descending below a certain pitch, producing a mixture of parallel and oblique motion. This seemingly small modification had profound implications, for it introduced the principle of **contrary motion** — the idea that two voices could move in opposite directions — which would become a fundamental feature of Western contrapuntal technique.
 
+{{< score id="music253/03-organum-parallel" caption="Parallel organum: the organal voice (vox organalis) doubles the chant a perfect fifth below in strict parallel motion." >}}
+
 ## 5.2 The Development of Free Organum
 
 Over the next two centuries, organum evolved from its initial simplicity into a more flexible and expressive practice. The treatise *Ad organum faciendum* (c. 1100) describes a style of **free organum** in which the added voice (now placed above the chant, rather than below) moves with considerable independence, employing contrary motion, oblique motion, and occasional parallel motion, while the two voices converge on consonant intervals (unisons, fourths, fifths, and octaves) at structurally important points. This development marked a decisive shift: the added voice was no longer a mechanical shadow of the chant but an independent melodic entity with its own contour and character.
 
 The repertoire of the **Saint Martial** school (associated with the abbey of Saint Martial in Limoges, southern France) and the **Santiago de Compostela** manuscript (from the pilgrimage cathedral in northwestern Spain) provide important evidence of eleventh- and twelfth-century organum practice. These sources preserve two-voice compositions in which a highly ornate upper voice unfolds in elaborate melismas above the sustained notes of the chant in the lower voice. This texture — known as **sustained-tone** or **melismatic organum** — represents a significant stage in the development of polyphonic writing and foreshadows the achievements of the Notre Dame school.
+
+{{< score id="music253/04-notre-dame-organum" caption="Notre Dame melismatic organum: the duplum spins a florid melisma above a long-held tenor note." >}}
 
 ## 5.3 The Notre Dame School: Léonin and Pérotin
 
@@ -219,7 +229,11 @@ Pérotin expanded the polyphonic texture from two voices to three and four, crea
 
 The creative energy of the Notre Dame school also produced two important new genres: the **motet** and the **conductus**. The motet originated as a textual elaboration of the clausulae — the self-contained discant sections extracted from larger organum compositions. By adding new Latin texts to the upper voices of these clausulae, musicians created a new genre in which multiple voices sang different texts simultaneously. The practice of adding different texts — even in different languages — to each voice produced the characteristic **polytextual** motet of the thirteenth century, a sophisticated and often bewildering genre in which a French love poem might sound simultaneously with a Latin hymn, all above a fragment of Gregorian chant in the tenor.
 
+{{< score id="music253/07-motet-two-voice" caption="Two-voice motet texture: the motetus moves in breve motion above a modal tenor in long notes." >}}
+
 The **conductus** was a composition for one or more voices that, unlike organum and the motet, was not based on a pre-existing chant melody. Instead, all voices in a conductus were newly composed, giving the genre a harmonic and melodic unity that distinguished it from the layered textures of the motet. Conducti served various functions — processional songs, ceremonial pieces, political commentary — and their freely composed character represents an important step toward the concept of fully original composition.
+
+{{< score id="music253/08-cadential-formula" caption="Clausula cadential formula: the discantus descends stepwise to the final while the tenor approaches from below." >}}
 
 ## 5.5 Rhythmic Modes and Mensural Notation
 
@@ -235,6 +249,8 @@ The development of the **rhythmic modes** at Notre Dame was a landmark in the hi
 | 6    | Short–Short–Short| Eighth–Eighth–Eighth   |
 
 These modes were indicated not by individual note shapes (as in later mensural notation) but by characteristic patterns of **ligatures** — groups of notes joined together in the notation. The system was elegant but limited, and by the mid-thirteenth century, theorists such as **Franco of Cologne** developed a more flexible system of **mensural notation** in which the shape of each individual note indicated its rhythmic value. Franco's *Ars cantus mensurabilis* (c. 1280) established the basic principles of mensural notation that would govern rhythmic notation for the next three centuries.
+
+{{< score id="music253/05-rhythmic-mode" caption="The six rhythmic modes in notation: each bar demonstrates one modal pattern, from long-short (Mode I) to equal breves (Mode VI)." >}}
 
 ---
 

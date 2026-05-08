@@ -77,6 +77,8 @@ The first movement is in **sonata form** with a **slow introduction**, a feature
 
 The slow introduction is marked **Grave** (solemn). It opens with a grand, serious gesture: a low C-minor *forte-piano* chord that functions as a cry of pain, plunging the listener immediately into the emotional journey. The first theme struggles to rise from C upward, reaching as far as E-flat before collapsing back down — already conveying difficulty and struggle. It briefly arrives in E-flat major around measure 5, but this brightness is short-lived. Pulsating chords and a descending bass line accompany a grieving motive that keeps trying to rise. At measure 9, a climax is reached on a dominant seventh chord, followed by a pause and a sweeping chromatic scale downward that leads into the fast part of the movement. The slow introduction also contains two **cadenza-like passages** (mm. 4 and 10) that give it a concerto-like quality, and its **dotted rhythms** recall the regal character of a **French overture**.
 
+{{< score id="music255/01-pathetique-introduction" caption="Beethoven, Pathétique Op. 13 — Grave introduction: C minor, dotted rhythms, dramatic forte-piano chord, descending bass." >}}
+
 ### Exposition: Themes and Character
 
 The exposition begins at measure 11, marked *allegro molto e con brio* (very fast and with spirit). After the heavy grief of the Grave, this section represents an attempt to overcome suffering. As is typical of Classical forms, the exposition repeats (though some recordings unusually repeat the slow introduction as well, which is not standard practice).
@@ -115,6 +117,8 @@ The symphony is imbued with the ideal of **heroic greatness**. The theme of hero
 
 The **protagonist** of this drama is the opening motive, presented at the very beginning of the work by the cellos after two loud, emphatic chords from the full orchestra. The theme enters softly, in a **pastoral** character: it is in triple meter, resembling a German peasant dance called the **Deutsche**. This implies that the protagonist is of common origin — an everyday person. But this regular, everyday figure will undergo radical transformation over the course of the movement, achieving heroic stature through the drama of the music.
 
+{{< score id="music255/02-eroica-theme" caption="Beethoven, Eroica Op. 55 — P-theme in E♭ major: heroic fanfare opening, Allegro con brio, triple meter." >}}
+
 The textbook (Example 24.2) illustrates the successive transformations of this main theme:
 
 - **(a)** The original form: pastoral, quiet, in the cello
@@ -122,6 +126,8 @@ The textbook (Example 24.2) illustrates the successive transformations of this m
 - **(c)** Transformed into a new theme in the development section
 - **(d)** Striving upward, tumbling back down
 - **(e)** Achieving a new, sustained form — scored for **horn**, an instrument associated with fanfare and heroism. Here, the protagonist's potential for heroism is fully realized.
+
+{{< score id="music255/03-eroica-motivic" caption="Eroica motivic development: full theme (bar 1) → 3-note cell Eb–G–Bb (bar 2) → inversion (bar 3) → 2-note fragment (bar 4)." >}}
 
 ### The Antagonist: Rhythmic and Metric Disruption
 
@@ -217,6 +223,8 @@ Beethoven gave this section a remarkable title: <strong>"Heiliger Dankgesang ein
 
 The theme is carried by the first violin in a series of phrases, each consisting of eight half notes, harmonized in four parts like a hymn. The cadences fall on F, and the presence of B-natural rather than B-flat signals the <strong>Lydian mode</strong> — the scale one produces by playing all the white notes on a piano from F to F. This gives the music an archaic, modal quality. Beethoven specifically associated the Lydian mode with healing and recovery, which is surely why he chose it for this movement of thanksgiving.
 
+{{< score id="music255/04-heiliger-lydian" caption="Beethoven, Op. 132 'Heiliger Dankgesang' — F Lydian chorale: whole-note hymn phrases with characteristic raised B♮." >}}
+
 <p align="center">♪ <i>Beethoven, String Quartet in A Minor, Op. 132 — III. Molto adagio, "Heiliger Dankgesang" (Section A)</i> ♪</p>
 
 ### Section B (mm. 31--83): "Neue Kraft fuhlend" (Feeling New Strength)
@@ -310,6 +318,10 @@ Schubert drew his song texts from many writers. His favorite was probably <stron
 The <strong>music was the equal of the words</strong>, and Schubert chose forms that suited the shape and meaning of each text. Some songs are <strong>strophic</strong> — the same music for each stanza, presenting a single image or mood. Others are <strong>modified strophic</strong>, repeating music for some strophes while varying or introducing new music for others, sometimes in <strong>ABA</strong> or <strong>bar form (AAB)</strong>. His finest songs are often <strong>through-composed</strong>, with new music for each stanza; the most famous example is <em>Der Erlkonig</em>, a ballad depicting a father galloping on horseback to save his dying child. Even through-composed works, however, achieve unity through recurring themes, a tonal scheme, or a consistent figuration running through the entire piece.
 
 Schubert possessed an extraordinary <strong>gift for beautiful melodies</strong> that captured the character, mood, and situation of a poem; some have the natural, unpretentious quality of <strong>folksong</strong>. His piano accompaniments were remarkably varied, each one fitted to the poem's mood and the personality of its protagonist, often reflecting a specific image in the text. His <strong>harmony</strong> went further afield than was customary, with modulations by <strong>third</strong> rather than by fifth, reinforcing the poetry's tensions and dramatic qualities. Unusual harmonic relationships served as powerful expressive devices. In all these ways, Schubert set the standard that later song composers strove to match.
+
+{{< score id="music255/05-schubert-lied-melody" caption="Schubert Lied style: vocal melody with Erlkönig text over galloping triplet bass accompaniment, D minor." >}}
+
+{{< score id="music255/06-schubert-modulation" caption="Schubert's third-relationship modulation: C major → E major via chromatic pivot, a hallmark of Romantic harmonic language." >}}
 
 ## Schubert, <em>Gretchen am Spinnrade</em> (NAWM 132)
 
@@ -421,6 +433,8 @@ Schumann's publications before 1840 were almost entirely <strong>solo piano</str
 
 <strong>Eusebius</strong> (NAWM 136a) is a <strong>visionary dreamer</strong>, named after a fourth-century pope. The music is a <strong>dreamy fantasy</strong> with a <strong>slow chromatic bass</strong> and a melody cast in <strong>septuplets</strong> — groups of seven notes played against the regular pulse, lending the music an otherworldly, floating quality. It sounds deceptively simple but is extraordinarily difficult to play smoothly and dreamily.
 
+{{< score id="music255/11-schumann-short-form" caption="Schumann Charakterstück: improvisatory melody with unexpected rests, off-beat sforzandos, and 'innig' marking — the Romantic character piece." >}}
+
 <strong>Florestan</strong> (NAWM 136b) is the polar opposite, named after the hero of Beethoven's opera <em>Fidelio</em> — a prisoner of conscience during the French Revolution, a figure of strength and defiance. In Schumann's hands, Florestan is <strong>mercurial</strong>, with <strong>rapidly changing moods</strong>. The music is an <strong>impassioned waltz</strong> with <strong>angular melodies</strong>, <strong>pulsating dissonances</strong>, and <strong>offbeat sforzandos</strong>. Sudden sections of <strong>Adagio</strong> interrupt the forward rush at measures 9 and 19; above measure 19, Schumann writes <strong>"Papillon?"</strong> — a reference to his earlier work <em>Papillons</em>, weaving an intertextual thread between compositions.
 
 <strong>Coquette</strong> (NAWM 136c) follows immediately, depicting a flirtatious figure at the carnival ball. It is a <strong>waltz with lilt and charm</strong>, perhaps suggesting the distraction that has made Florestan so moody.
@@ -487,6 +501,8 @@ The <strong>form</strong> is straightforward: <strong>A A ||: B A :||: C A :||</
 
 The <strong>nocturne</strong> — French for <strong>"night piece"</strong> — connects with the Romantic fascination with <strong>night, dreams, and the unconscious</strong>. Chopin borrowed the title and concept from the Irish pianist-composer <strong>John Field</strong>, who had published sixteen nocturnes between 1815 and 1836. These are short <strong>mood pieces</strong> with embellished melodies and sonorous accompaniments, and Chopin took the genre far beyond Field's originals.
 
+{{< score id="music255/09-chopin-nocturne" caption="Chopin nocturne style: ornate bel canto melody with trill and turn ornaments over broken-chord bass, B♭ major, 3/4." >}}
+
 The style draws on <strong>bel canto</strong> vocal writing — "beautiful singing" — particularly the opera arias of <strong>Bellini</strong>. The nocturne is essentially an <strong>ornamented song with an arpeggiated accompaniment</strong>: the left hand provides flowing figuration while the right hand spins out a melody. But the <strong>melody ranges widely</strong>, with <strong>large leaps</strong> and <strong>florid embellishment</strong> that resemble <strong>coloratura</strong> singing yet go far beyond what any voice could achieve. There are substantial <strong>virtuoso elements</strong>: <strong>cadenza-like passagework</strong> in the right hand over steady sixteenths in the left.
 
 The <strong>form</strong> is songlike — <strong>modified strophic</strong>, like verses without text. There are <strong>three "stanzas" plus a coda</strong>, each stanza varied. Within each stanza, two themes (<strong>A</strong> and <strong>B</strong>) appear with a transition, starting in <strong>D-flat major</strong> and ending on the <strong>dominant</strong> of D-flat to lead back to the tonic. The opening measures are notably <strong>placid</strong>, with the <strong>sustain pedal</strong> held until a harmony change in measure 5, allowing the sound to ring and establishing the dreamy, nocturnal atmosphere. The key of D-flat major, with its five flats, means the pianist uses many <strong>black keys</strong>, which are raised above the white keys and in some ways lie more naturally under the fingers — a practical consideration that partly explains Chopin's fondness for flat keys.
@@ -522,6 +538,10 @@ The form can be interpreted in several ways. At its simplest, it is a <strong>se
 ### Key Scheme
 
 Regardless of how one interprets the form, the <strong>key scheme is revolutionary</strong>. The piece moves by <strong>major-third relationships</strong> — <strong>D-flat to A to F</strong> — which <strong>equally divide the octave</strong> into three parts. These keys share very few notes in common, and such remote tonal relationships effectively <strong>negate traditional tonal hierarchy</strong>, moving far beyond what earlier composers would have attempted. This technique had a profound influence on contemporary and subsequent composers, anticipating the dissolution of traditional tonality that would characterize much of the music to come.
+
+{{< score id="music255/10-romantic-augmented-sixth" caption="Romantic chromatic harmony: German augmented sixth chord (Ger+6) in A minor, intensifying the approach to the dominant." >}}
+
+{{< score id="music255/12-late-romantic-sequence" caption="Chromatic descending-fifth sequence (G7→C→E7→A→C♯7→F♯→B♭7→E♭): Brahms/Dvořák expansion of functional harmony." >}}
 
 <p align="center">♪ <i>Liszt, Trois études de concert, No. 3: Un sospiro</i> ♪</p>
 
@@ -1151,6 +1171,8 @@ Several hallmarks of Wagner's compositional language are on full display in <em>
 
 <strong>Harmony.</strong> Wagner's music is highly <strong>chromatic</strong>, saturated with notes outside the main key and journeying to far-flung tonal areas. He introduces dissonance and eludes resolution, creating a visceral sense of constant <strong>yearning</strong> -- really one of the central themes of the entire work. The Prelude to <em>Tristan</em> is widely regarded as one of the decisive turning points in the history of Western music.
 
+{{< score id="music255/07-wagner-chromatic-motion" caption="Tristanesque chromatic voice leading: sustained upper harmony over chromatic bass ascent C–C♯–D–D♯, the defining gesture of late Romantic style." >}}
+
 <strong>Dramatic Continuity and "Endless Melody."</strong> Wagner sought a <strong>melodic continuum</strong> -- a constant flux of singing that moves fluidly from speechlike declamation to soaring lyrical lines. The vocal setting is mostly <strong>syllabic</strong> because Wagner labored over the text and considered its clarity essential. In Act I, Scene 5, for instance, the text is always paramount, even as the vocal lines shift between conversational and exalted styles.
 
 <strong>The Orchestra.</strong> Wagner required a large orchestra and was extremely specific about instrumentation; some brass instruments were even created specifically for his music. The orchestra plays the role of an additional character, conveying the drama more powerfully than the voices alone. The singers sometimes blend into the orchestral web, becoming part of a larger sonic tapestry.
@@ -1490,6 +1512,8 @@ His catalogue of major works is vast: **four symphonies** (we will listen to the
 Brahms possessed a **unique personal style**. He worked very slowly and was **severely self-critical**, holding himself to the highest standards. He was deeply versed in the music of the past -- not only Beethoven and the early Romantics but also Renaissance and Baroque composers whose editions he had helped to prepare. He synthesized elements drawn from these traditions with current classical and folk idioms. He was especially fond of **Hungarian Romani (Gypsy) style**, and he had a genuine gift for melody and the direct expression of emotion.
 
 Two short works illustrate these qualities nicely: the orchestral *Hungarian Dance in G Minor, No. 1*, with its fiery rhythmic energy, and the tender *Intermezzo, Op. 118, No. 2 in A Major*, famously recorded by the great pianist **Arthur Rubinstein**. Both pieces show Brahms's remarkable ability to combine learned craft with immediate emotional appeal.
+
+{{< score id="music255/08-brahms-intermezzo" caption="Brahms lyrical style: flowing cantabile melody in A♭ major, rich harmonic thirds in the bass, 'Andante teneramente' — the essence of German lyricism." >}}
 
 ### Orchestral Works: The Road to the Symphony
 

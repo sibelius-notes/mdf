@@ -48,6 +48,8 @@ Every tonal piece has a **tonic** — a central pitch that the music is "about" 
 
 **Dissonance** (harmonic tension, "what we don't like") and **consonance** (harmonic stability, "what we like") are central to understanding musical movement. Dissonance is *necessary* for the phenomenon of musical motion. Certain combinations of sounds "lead to," "imply," or "demand" certain other combinations. Everyone senses this, trained or not — and there is still no fully accepted explanation for it.
 
+{{< score id="music100/01-melody-harmony-rhythm" caption="The three basic elements of music shown simultaneously: a four-bar melody in C major (top staff), block-chord harmonic support using the I–V–vi–IV progression (middle), and a combined bass drum + hi-hat rhythmic pattern (bottom)." >}}
+
 ### Rhythm
 
 **Rhythm** is the temporal aspect of music — from the ancient Greek *rhythmos*, "flow." The Western understanding of rhythm tends to reduce it to "marking off time," which is notoriously unsophisticated compared to many world traditions.
@@ -89,13 +91,19 @@ Tempo may also be specified precisely with a **metronome marking** (e.g., ♩ = 
 
 <p align="center">♪ <i>Gregorian Chant, Kyrie</i> ♪</p>
 
+{{< score id="music100/02-texture-monophony" caption="Monophony: a single unaccompanied melodic line in C major — one voice, no harmony, no counterpoint." >}}
+
 **Song texture** (also called **homophony**) is a single prominent melody with chordal accompaniment. This is the most familiar texture in Western music — virtually all pop songs use it.
 
 <p align="center">♪ <i>Ravel, Pavane pour une infante défunte</i> ♪</p>
 
+{{< score id="music100/03-texture-homophony" caption="Homophony: the same melody supported by whole-note block chords in the bass (I–IV–V–I), the most common texture in Western music." >}}
+
 **Polyphony** consists of two or more independent melodic voices of roughly equal importance, occurring simultaneously. It is the most difficult texture both to compose and to hear. When polyphony follows strict rules for combining melodies, it is called **counterpoint** — from the Latin *punctus contra punctum*, "note against note." A simple example is a round ("Row, Row, Row Your Boat," "Frère Jacques"), where the same melody is staggered in time, creating harmony through overlap. J. S. Bach's *Art of Fugue* represents the pinnacle of contrapuntal mastery.
 
 <p align="center">♪ <i>J. S. Bach, Art of Fugue</i> ♪</p>
+
+{{< score id="music100/04-texture-polyphony" caption="Polyphony: two melodically independent voices — the treble moves in eighth-note figures while the bass moves in contrasting quarter-note motion." >}}
 
 Real musical works often mix all three textures. Handel's *Messiah: Hallelujah* Chorus, for instance, moves through monophony (brief unisons), song texture, and polyphony in the space of a few minutes — making it a useful listening guide for all three.
 
@@ -113,9 +121,15 @@ Fundamentally, there are really only two things a composer can do: repeat the sa
 
 The simplest forms are labelled with letters. **Binary form** (A–B) has two contrasting sections. **Ternary** or "arch" form (A–B–A) adds a return of the opening material, as in *Twinkle, Twinkle*. Many songs follow A–A–B–A: "Somewhere Over the Rainbow," "I Got Rhythm." Rock, blues, and jazz frequently use the **12-bar blues** form (A–A–B). These are *very* loose descriptors — a short tune and a long symphony can both be described as A–B–A; the label tells you about proportion and return, not absolute length.
 
+{{< score id="music100/05-binary-form" caption="Binary form (A–B): an A section in C major ending on a half cadence, and a B section moving to G major, each repeated with volta brackets." >}}
+
+{{< score id="music100/06-ternary-form" caption="Ternary form (A–B–A'): an A section in C major, a contrasting B section in A minor, and a modified return of A — the 'arch' principle." >}}
+
 Large-scale classical music uses named forms: **sonata**, **theme and variations**, and **rondo**, discussed in depth in Week 7.
 
 **Rondo form** (A–B–A–C–A–D–A–...) features a recurring main theme (the "refrain") alternating with contrasting episodes.
+
+{{< score id="music100/07-rondo-form" caption="Rondo form (A–B–A–C–A): the A refrain in C major recurs between contrasting episodes in F major (B) and G major (C), each labeled above the staff." >}}
 
 <p align="center">♪ <i>Haydn, Rondo (String Quartet No. 30)</i> ♪</p>
 
@@ -225,6 +239,8 @@ Renaissance sacred music is characterized by:
 
 **Josquin des Prez** was the undisputed master of Renaissance polyphony. What set him apart was his insistence that musical setting must serve the *emotion* of the text. His *Kyrie* from the *Pange Lingua* Mass (1520), based on a plainchant hymn, shows his supple, expressive handling of imitative counterpoint.
 
+{{< score id="music100/08-josquin-imitation" caption="Renaissance imitative counterpoint (Josquin-style): the subject enters in the upper voice on G, and the bass voice imitates it two bars later on C — a stretto-like entry pair characteristic of Renaissance polyphony." >}}
+
 <p align="center">♪ <i>Josquin des Prez, Kyrie from Pange Lingua Mass (1520)</i> ♪</p>
 
 ## Palestrina and the Counter-Reformation
@@ -294,6 +310,8 @@ Opera developed first in Italy, growing out of the **Commedia dell'Arte** and co
 ## Cantata
 
 A **cantata** is a work for vocalists with instrumental accompaniment, setting a poetic text. **Sacred cantatas** were written for the Lutheran service. They are always based on a **chorale** (a Lutheran hymn tune) and incorporate arias, recitatives, and choruses — but are *not* staged. **J. S. Bach** (1685–1750) wrote hundreds.
+
+{{< score id="music100/09-baroque-forms" caption="Four characteristic Baroque gestures: a declamatory cantata recitative (bar 1), a fugue subject in eighth notes (bar 2), a sarabande-style dotted dance rhythm in 3/4 (bars 3–4), and a concerto grosso forte/piano alternation (bar 5)." >}}
 
 <p align="center">♪ <i>J. S. Bach, "A Mighty Fortress Is Our God" (Ein feste Burg) — cantata + chorale</i> ♪</p>
 

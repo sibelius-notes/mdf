@@ -173,7 +173,7 @@ Beyond AABA and verse-chorus, the song repertoire includes a range of additional
 The standard lyric structure of the blues strophe consists of three lines: the first line (four measures over I) states a situation; the second line (four measures, beginning on IV) repeats or elaborates the first line; the third line (four measures, beginning on V) provides a resolution, commentary, or reversal. The twelve-bar form is simultaneously the verse (it carries narrative content), the chorus (it carries the hook), and the complete formal unit.
 </div>
 
-{{< score id="music375/34-twelve-bar-blues" caption="Twelve-bar blues harmonic schema in C: I⁷ (4 bars) | IV⁷ (2 bars) | I⁷ (2 bars) | V⁷ (1 bar) | IV⁷ (1 bar) | I⁷–V⁷ (2 bars)" >}}
+{{< score id="music273/31-blues-harmony-12bar" caption="Twelve-bar jazz blues in B♭: the standard harmonic schema underlying classic blues songwriting, with walking bass and a bebop melody." >}}
 
 The twelve-bar blues form is one of the most influential formal frameworks in the history of American music. It entered rock and roll through its African American blues roots, providing the formal container for recordings by Chuck Berry, Little Richard, and Elvis Presley in the 1950s, and was absorbed into British rock in the 1960s by The Beatles, The Rolling Stones, and The Animals. Even songs that do not use the twelve-bar form often inherit aspects of the blues harmonic vocabulary and strophic formal logic through this lineage.
 
@@ -511,8 +511,8 @@ The **Aeolian loop** (i–VII–VI–VII) is a circular schema that avoids the d
 <strong>Definition 4.2 (Andalusian Cadence).</strong> The <em>Andalusian cadence</em> is a descending minor-mode progression: i–VII–VI–V (in A minor: Am–G–F–E major). Its distinguishing feature is the descending stepwise bass line from the tonic down to the dominant — a bass line that, in strict voice-leading terms, moves through three diatonic scale degrees before arriving on the dominant. The terminal V chord is typically major (using the raised seventh degree of the harmonic minor), creating a leading-tone tension directed back toward the tonic. The Andalusian cadence is named for its association with flamenco music but is ubiquitous in rock, pop, and film music, associated with fatalism, urgency, and dramatic momentum.
 </div>
 
-{{< score id="music375/32-aeolian-loop" caption="Aeolian loop i–VII–VI–VII in A minor: circular, non-cadential schema characteristic of minor-mode rock" >}}
-{{< score id="music375/33-andalusian-cadence" caption="Andalusian cadence i–VII–VI–V in A minor: the descending bass line drives toward the dominant with fatalistic urgency" >}}
+{{< score id="music277/04-aeolian-loop" caption="Aeolian loop i–♭VII–♭VI–♭VII in A minor: circular, non-cadential schema characteristic of minor-mode rock" >}}
+{{< score id="music277/05-andalusian-cadence" caption="Andalusian cadence i–♭VII–♭VI–V in A minor: the descending bass line drives toward the dominant with fatalistic urgency" >}}
 
 ### 4.3b Extended and Altered Chords in Pop and Jazz-Influenced Song
 

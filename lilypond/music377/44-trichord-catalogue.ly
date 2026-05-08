@@ -1,24 +1,38 @@
 \version "2.24.0"
 \paper { indent = 0 ragged-right = ##t line-width = 13\cm }
+% Six most-used trichord classes shown as 1-bar rhythmic gestures
+% [3-1] chromatic cluster, [3-3] (014), [3-4] (015), [3-5] (016), [3-7] (025), [3-11] minor triad
 \score {
-  % All 12 trichord set classes
   \new Staff \with { \omit KeySignature } {
     \clef treble
     \omit Score.BarNumber
     \override Staff.TimeSignature.stencil = ##f
-    \relative c' {
-      <c' des' d'>1^\markup { \tiny "[3-1]" }
-      <c' des' ees'>1^\markup { \tiny "[3-2]" }
-      <c' des' e'>1^\markup { \tiny "[3-3]" }
-      <c' des' f'>1^\markup { \tiny "[3-4]" }
-      <c' des' fis'>1^\markup { \tiny "[3-5]" }
-      <c' d' e'>1^\markup { \tiny "[3-6]" }
-      <c' d' f'>1^\markup { \tiny "[3-7]" }
-      <c' d' fis'>1^\markup { \tiny "[3-8]" }
-      <c' d' g'>1^\markup { \tiny "[3-9]" }
-      <c' ees' fis'>1^\markup { \tiny "[3-10]" }
-      <c' ees' g'>1^\markup { \tiny "[3-11]" }
-      <c' e' gis'>1^\markup { \tiny "[3-12]" }
+    \relative c'' {
+      \time 3/4
+      % [3-1] (012): chromatic cluster — appoggiatura approach
+      des'8^\markup { \tiny "[3-1] (012)" }
+      c'8 cis'4 r4
+      \bar "||"
+      % [3-3] (014): m2 + M3 — Schoenberg-style
+      c'8^\markup { \tiny "[3-3] (014)" }
+      des'8 e'4 r4
+      \bar "||"
+      % [3-4] (015): m2 + P4 — quartal with semitone
+      c'8^\markup { \tiny "[3-4] (015)" }
+      des'8 f'4 r4
+      \bar "||"
+      % [3-5] (016): tritone + semitone — Webern split
+      c'8^\markup { \tiny "[3-5] (016)" }
+      des'8 fis'4 r4
+      \bar "||"
+      % [3-7] (025): P4 + M2 — quartal gesture
+      c'8^\markup { \tiny "[3-7] (025)" }
+      d'8 f'4 r4
+      \bar "||"
+      % [3-11] (037): minor triad — triadic gesture
+      c'8^\markup { \tiny "[3-11] (037)" }
+      ees'8 g'4 r4
+      \bar "|."
     }
   }
   \layout { }
