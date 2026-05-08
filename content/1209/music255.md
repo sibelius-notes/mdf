@@ -323,6 +323,8 @@ Schubert possessed an extraordinary <strong>gift for beautiful melodies</strong>
 
 {{< score id="music255/06-schubert-modulation" caption="Schubert's third-relationship modulation: C major → E major via chromatic pivot, a hallmark of Romantic harmonic language." >}}
 
+{{< score id="music255/13-erlkonig-gallop" caption="Schubert, Erlkönig D. 328 — the galloping piano ostinato: relentless triplet 8th-notes in the right hand against octave bass pulses evoke the father's desperate horseback ride, D minor." >}}
+
 ## Schubert, <em>Gretchen am Spinnrade</em> (NAWM 132)
 
 Schubert's <em>Gretchen am Spinnrade</em> ("Gretchen at the Spinning Wheel") was composed in <strong>1814</strong>, when the composer was just seventeen years old, and published in 1821. He was no novice at seventeen: he had already written over forty songs and was entering his mature style. The text is drawn from <strong>Goethe's</strong> drama <em>Faust</em>, one of the best-known literary works of the period. In this scene, Gretchen sits alone at home, spinning thread on her spinning wheel and thinking about the handsome Faust she has recently met. The audience of Schubert's day would have known the full story — that Faust makes a pact with the devil in order to have a life of knowledge and experience, and that he seduces the innocent Gretchen with devastating consequences. Listening to the song, then, one hears Gretchen's present infatuation shadowed by the knowledge of her future tragedy.
@@ -384,6 +386,8 @@ The <strong>piano</strong> is equally relentless: <strong>incessantly repeated, 
 The <strong>harmony</strong> is firmly rooted in <strong>C major</strong>, with a <strong>conclusive cadence</strong> at the end — quite unlike the ambiguity of the first song. Yet there is enormous <strong>dissonance and tension</strong> within the chords, particularly the <strong>four-note seventh chords</strong> that appear throughout (for example, measures 5--9). The major key and the emphatic cadence create an effect of grim determination, while the persistent dissonances betray the anguish the poet claims not to feel.
 
 <p align="center">♪ <i>Schumann, Dichterliebe, No. 7: "Ich grolle nicht"</i> ♪</p>
+
+{{< score id="music255/16-wolf-lied-texture" caption="Wolf/Schumann Lied texture: piano right hand doubles the vocal melody while an independent inner voice moves below — the piano as equal partner, E major, 'innig' character." >}}
 
 ## Song Beyond the Art-Song Tradition
 
@@ -1573,6 +1577,8 @@ The **development section** showcases Brahms's contrapuntal skill, incorporating
 
 <p align="center">&#9835; <i>Brahms, Quintet for Piano and Strings in F Minor, Op. 34 -- I. Allegro non troppo</i> &#9835;</p>
 
+{{< score id="music255/15-brahms-developing-variation" caption="Brahms developing variation: 4-bar phrase (a) in F major, then 4-bar variant (a') with the same pitches rhythmically displaced into syncopated off-beats — every bar grows from the last, yet the material sounds entirely fresh." >}}
+
 ### Brahms's Place
 
 It is important at this point to step back and consider Brahms's place, not only in his own musical world but in how he impacted later composers. He was often called a <strong>conservative</strong> when compared on the surface to other composers who followed Wagner's ideas, but he was actually a <strong>path breaker</strong>. That is why someone like Arnold Schoenberg in the twentieth century, himself considered a radical, could look back and, instead of "Brahms the conservative," call him <strong>"Brahms the progressive,"</strong> identifying innovations that lay beneath the seemingly traditional surface. Brahms introduced new elements into traditional forms, and when composers use forms that are traditional, that are older, they are too often dismissed as conservative -- yet composers can do really quite remarkable things within those traditional forms and truly transform them. Brahms is one of those people and is recognized to this day for that achievement.
@@ -1602,6 +1608,8 @@ Between 1848 and 1858 he composed twelve <strong>symphonic poems</strong> (thirt
 The sources for these works were wonderfully varied. <em>Prometheus</em> (1850--55) drew on myth and a poem by <strong>Herder</strong>; <em>Mazeppa</em> (1852--54) was based on a poem by <strong>Victor Hugo</strong>. Liszt also composed <strong>programmatic symphonies</strong> bearing literary titles: the <em>Faust Symphony</em> (1854), an enormous work lasting about seventy minutes across three movements, and the <em>Dante Symphony</em> (1856). The story of Faust, as we have discovered, was central to much Romantic music -- a story that composers turned to in more than one genre and on more than one occasion.
 
 Central to Liszt's compositional method was <strong>thematic transformation</strong> -- the process of transforming a theme or motive into entirely new themes, thereby providing unity, variety, and a narrative-like logic to a composition. It is a little bit like Brahms's developing variation, but different in that these transformations present different characters or different moods of a character, reflecting and portraying the programmatic subject. In <em>Les preludes</em> (<em>The Preludes</em>, 1854), linked to a poem by <strong>Alphonse-Marie de Lamartine</strong>, the music follows the same sequence of moods as the poem. A <strong>three-note motive</strong> is modified and expanded to take on different characters corresponding to the program. Examples (b) through (h) in the textbook (Example 29.4, p. 724) show the motive in various guises; example (i) presents a more distant metamorphosis -- a contrasting theme that is itself transformed. The technique ensures that what sounds like constantly fresh invention is, at a deeper level, always traceable to a single seed.
+
+{{< score id="music255/14-liszt-transformation" caption="Liszt thematic transformation: the same 4-note A major cell as (a) lyrical cantabile in 3/4 and (b) martial dotted march in 2/4 — one melody, two radically different characters, demonstrating how Liszt gave programmatic works their narrative unity." >}}
 
 <p align="center">&#9835; <i>Liszt, Les preludes, S. 97</i> &#9835;</p>
 
@@ -1692,6 +1700,8 @@ What Strauss creates across these variations is a <strong>dream world</strong>: 
 <em>R. Strauss, Don Quixote, Op. 35 -- Complete performance (Orchestra dell'Accademia Nazionale di Santa Cecilia; conductor: G. Pehlivanian).</em>
 
 <p align="center">&#9835; <i>R. Strauss, Don Quixote, Op. 35 -- Variations 1 and 2</i> &#9835;</p>
+
+{{< score id="music255/17-mahler-lied-style" caption="Mahler late-Romantic song style: long lyrical vocal line over a spare, wide-spaced piano — the orchestra reduced to its essence, G major, con espressione." >}}
 
 ### The Legacy of the New German School
 

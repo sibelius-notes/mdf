@@ -60,6 +60,8 @@ The instrumental accompaniment in recitative is usually quite spare and sparse, 
 - <strong><em>Secco</strong></em> ("dry"): Simple chordal punctuation consisting of just a bass line and an instrument filling in the chords — the <strong>basso continuo</strong> (a sustaining bass instrument plus a chording instrument such as harpsichord or organ).
 - <strong><em>Accompagnato</strong></em> ("accompanied"): A fuller accompaniment that includes other instruments of the orchestra, creating a richer texture for moments of heightened drama.
 
+{{< score id="music261/11-secco-recitative" caption="Secco recitative anatomy: the voice delivers text in speech-rhythm melody over sustained bass chords that punctuate phrase endings rather than moving in time with the voice. The two phrases each close with a cadential drop in the bass — the harmonic landmarks that orient the listener in the absence of regular meter." >}}
+
 Here are two examples of recitative:
 
 <strong>Handel, <em>Giulio Cesare</em>, Act II, sc. 1, "Eseguisti…":</strong> Cleopatra and her friend Nireno conspire to enchant Julius Caesar. Notice how spare the accompaniment is, allowing the voices to follow natural speech rhythms in their dialogue. The accompaniment style here is <em>secco</em>.
@@ -491,6 +493,8 @@ Mozart's opera marks a significant departure from the Baroque opera seria of Han
 
 Mozart also gives far greater importance to <strong>ensembles</strong> — duets, trios, and the closing sextet — as opposed to the parade of solo arias that dominated opera seria. <em>Giulio Cesare</em> had twenty-nine arias; <em>Don Giovanni</em> balances its arias with dramatically and musically significant ensemble numbers.
 
+{{< score id="music261/16-finale-ensemble" caption="Operatic ensemble finale texture: soprano, mezzo, and tenor each enter two bars apart with the same rising subject — a staggered imitative entry that creates forward momentum before the voices converge in block harmony. The staggered start is a hallmark of Mozart's act finales, allowing each character to assert their individual voice before being absorbed into the collective." >}}
+
 {{< score id="music261/08-mozart-ensemble" caption="Classic opera ensemble texture: Soprano, Tenor, and Bass each carry independent melodic lines simultaneously — contrasting rhythmic profiles, voice crossing, and harmonic interlocking that no solo aria can achieve. This multi-voice independence is what makes the operatic ensemble dramatically irreplaceable." >}} And the characters themselves are different: not gods and heroes from mythology, but real people with complex, contradictory feelings — something that would not have been possible without the precedent set by Pergolesi's <em>La serva padrona</em> and its gift of a rich aria to a servant girl.
 
 ## Mozart the Dramatist
@@ -613,6 +617,8 @@ Readings:
 The opera's origins lie in a true story from the French Revolution, in which a woman disguised herself as a man, got hired as a prison guard, and managed to free her incarcerated husband. This tale was first turned into a French libretto by Bouilly under the title <em>Léonore, ou l'amour conjugal</em> — "Leonora, or Married Love." Beethoven, deeply attracted to the story, commissioned a German translation. The German libretto was written by Sonnleithner in 1805, revised by von Breuning in 1806, and finally reworked by Treitschke for the successful 1814 version.
 
 <em>Fidelio</em> belongs to two genres simultaneously. It is a <strong>French rescue opera</strong> — a genre of post-revolutionary opera especially popular in Vienna around 1800, characterized by tales of undeserved suffering, sacrifice for love and noble ideals, heroic resolve, villainy, and last-minute salvation. It is also a <strong>Singspiel</strong> — a German opera with spoken dialogue instead of recitative. The Singspiel tradition was originally comic and sentimental, but later works — Mozart's <em>Die Zauberflöte</em> being another famous example — incorporated more serious stories.
+
+{{< score id="music261/15-singspiel-folktune" caption="Singspiel folk-style tune in G major: a simple diatonic eight-bar melody (two four-bar phrases) in 2/4 with a plain tonic–dominant bass — the kind of guileless, strophic lied that Singspiel interspersed among its spoken dialogue, accessible to amateur singers and reflecting the Enlightenment ideal of natural simplicity." >}}
 
 ## Characters and Story
 
@@ -857,6 +863,8 @@ The vocal line launches into coloratura passages of astonishing virtuosity, depi
 
 Is Rosina a shy, innocent girl — or a beguiling, confident vixen? The music suggests she is both, all wrapped up in one extraordinary aria. The role is so demanding that singers typically add their own elaborate embellishments, sometimes to the point where Rossini himself complained that the result barely touched the notes he had written.
 
+{{< score id="music261/14-bel-canto-coloratura" caption="Bel canto coloratura cadenza in A major: bar 1 ascends the scale from A′ to A′′ in even eighth notes (the passaggio); bar 2 adds a trill on the peak note before falling by step; bar 3 descends a second scale and bar 4 adds a terminal trill — the four-bar gesture that Rossini, Donizetti, and Bellini used to crown a cadential approach." >}}
+
 ## Don Basilio's Aria: "La calunnia è un venticello"
 
 Don Basilio's aria in Act I, Scene 2, No. 6 — "La calunnia è un venticello" ("Slander is a little breeze") — is a masterpiece of <strong>word painting</strong>, in which the music literally depicts the meaning of the text. Basilio is conspiring with Dr. Bartolo to start a rumor about the Count that will drive him out of town, and he relishes the task.
@@ -1034,6 +1042,8 @@ Several features of Wagner's musical language are essential to understanding <em
 <strong>Orchestra.</strong> The orchestra in Wagner's music dramas is enormous, and Wagner was extremely specific about instrumentation — some brass instruments were even created specifically to play his music. More importantly, the orchestra functions as an actor or character in its own right, often conveying the drama more powerfully than the voices. The singers become part of a web of orchestral sound, their vocal lines interwoven with the instrumental texture rather than floating above it.
 
 <strong><em>Leitmotif.</strong></em> The <strong>leitmotif</strong> ("leading motive") is a short musical theme that represents a person, place, or object. Unlike the curse motive in <em>Rigoletto</em>, which appears at a few key moments, Wagner's leitmotifs pervade the entire score — at virtually any point in the music, at least one leitmotif is present. They are transformed, combined, and developed as the drama progresses, creating a dense network of musical meaning.
+
+{{< score id="music261/12-wagner-leitmotif" caption="Wagner 'fate' style leitmotif: a four-note chromatic descent (D′′–C♯′′–C′′–B′) over shifting chromatic harmony — A7 to Dm to G7 to E7 to Am — illustrates how a short motif can be harmonically recoloured at each appearance, accumulating weight through repetition and transformation rather than through melodic development." >}}
 
 <strong>Singers.</strong> Wagner's vocal demands require a <strong>Heldentenor</strong> ("heroic tenor") and a <strong>dramatic soprano</strong> — voices powerful enough to project over the massive orchestra. This music requires enormous stamina from singers and orchestral players alike.
 
@@ -1327,6 +1337,8 @@ In Act III, at dawn on the ramparts of the Castel Sant'Angelo, Cavaradossi waits
 The three locations of <em>Tosca</em> are real places in Rome that audiences in 1900 — and visitors today — can walk through: the church of Sant'Andrea della Valle (Act I), Scarpia's chambers in the Palazzo Farnese (Act II), and the upper ramparts of the Castel Sant'Angelo (Act III), with its famous angel statue atop the fortress. Puccini was meticulous about authenticity. He researched the exact sites and their sounds: for the Te Deum in Act I, he studied the melodies to which the hymn was set in Roman churches and adapted the music to the exact pitch of the great bell of St. Peter's Basilica, which is not far from Sant'Andrea and easily heard. The political backdrop is equally specific: Rome in June 1800, on the eve of Napoleon's victory at Marengo.
 
 ### Verismo
+
+{{< score id="music261/13-puccini-verismo" caption="Puccini verismo lyrical phrase: a wide-arched four-bar melody in A♭ major soars over a chromatic bass that descends by semitone (A♭–G–G♭–F–E♭–E–F–G♭), creating the typical verismo tension between vocal expansiveness and harmonically unstable, emotionally charged accompaniment." >}}
 
 <em>Tosca</em> belongs to the <strong>verismo</strong> movement — <em>verita</em> meaning "truth" in Italian. This was a late nineteenth-century Italian approach to opera that applied seriousness and tragedy to events and characters of everyday life, presenting extreme passion and violent action. <em>Tosca</em> exhibits verismo characteristics in abundance: an excess of emotion leading to both murder and suicide; a dramatic pace closer to a spoken play than a traditional opera (the entire action unfolds in under two hours); brutality and violence, including torture heard offstage and murder committed in full view of the audience; the sadism and lechery of Scarpia, who dominates the story even after his death; and a suicide that closes the opera with shattering finality. This unrelenting intensity contributed to a hostile reception from some critics, though the public ultimately embraced the work.
 

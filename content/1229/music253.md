@@ -50,6 +50,8 @@ The transmission of Greek theory to the medieval West occurred primarily through
 
 Guido of Arezzo deserves particular mention for his revolutionary contributions to music pedagogy. His development of the **staff** — a system of horizontal lines on which notes could be precisely placed to indicate pitch — transformed the practice of musical notation. He also introduced the technique of **solmization**, assigning syllables (*ut, re, mi, fa, sol, la*) to the six notes of the **hexachord**, a six-note pattern defined by a specific arrangement of whole tones and semitones (T–T–S–T–T). The critical interval was the semitone between *mi* and *fa*, which served as a landmark for orientation within the pitch system. Through the process of **mutation**, a singer could shift from one hexachord to another, navigating the entire range of the musical system by identifying the location of *mi*–*fa* semitones.
 
+{{< score id="music253/11-hexachord" caption="Guido's three hexachords: naturale (C), molle (F, with B♭), and durum (G, with B♮). Each six-note group ascends ut–re–mi–fa–sol–la; the mi–fa semitone is the anchor for mutation between hexachords." >}}
+
 ## 1.5 Music at the Margins: Ethiopian and Jewish Sacred Traditions
 
 Western music history has traditionally been narrated as a largely European phenomenon, but a fuller understanding of the medieval soundscape requires attention to the diverse musical traditions that flourished outside — or at the margins of — Latin Christendom. Two traditions of particular significance are Ethiopian sacred chant and Jewish liturgical music.
@@ -177,6 +179,8 @@ Melodically, troubadour songs tend to be relatively simple, predominantly stepwi
 
 The performance context of troubadour song is also uncertain. Troubadours may have performed their own songs or entrusted them to professional performers called **joglars** (jongleurs). Instrumental accompaniment — on the **vielle** (a bowed string instrument), **harp**, or **lute** — is suggested by literary sources and iconographic evidence, but no instrumental parts survive. The relationship between the composed melody and improvised accompaniment or embellishment remains speculative.
 
+{{< score id="music253/10-troubadour-monody" caption="A trouvère canso in Rhythmic Mode I (long–short): a single melodic line in Dorian on D, notated in 3/4 to reflect the long–short modal pattern. The stepwise motion, limited range, and periodic cadences on D are characteristic of the genre." >}}
+
 ## 4.3 The Trouvères of Northern France
 
 The **trouvère** tradition of northern France represents the direct transplantation of the troubadour aesthetic into the French-speaking (langue d'oïl) culture of the north. The trouvères, active from the mid-twelfth to the late thirteenth century, adopted the themes, forms, and conventions of the troubadours but wrote in Old French. The trouvère repertoire is considerably larger than that of the troubadours: over two thousand melodies survive, many in manuscripts that present them with relatively clear notation.
@@ -270,6 +274,8 @@ Vitry was not only a theorist but also a composer of considerable achievement. H
 
 Vitry's motets, such as *Garrit Gallus / In nova fert / Neuma*, often carry political or topical texts in their upper voices — commentaries on papal politics, French royal affairs, or contemporary controversies — layered above the liturgical tenor. The combination of structural rigor in the tenor with expressive freedom in the upper voices, and the layering of multiple texts (often in different languages), makes the isorhythmic motet one of the most intellectually demanding genres in the history of Western music.
 
+{{< score id="music253/09-isorhythmic-motet" caption="Isorhythmic motet texture: the tenor repeats a fixed talea rhythm (long–long pattern in 6/4) while the duplum moves freely above it. The four-bar talea cycles four times, illustrating how color and talea interact to create deep structural repetition." >}}
+
 ## 6.3 Guillaume de Machaut: The Supreme Poet-Composer
 
 **Guillaume de Machaut** (c. 1300–1377) stands as the towering figure of fourteenth-century music. A poet, composer, and cleric who served as secretary to John of Luxembourg, King of Bohemia, and later held canonries at Reims Cathedral, Machaut was a prolific and versatile artist whose surviving output includes motets, secular songs (lais, virelais, rondeaux, ballades), and the celebrated *Messe de Nostre Dame* — the earliest complete polyphonic setting of the Mass Ordinary by a single composer.
@@ -281,6 +287,8 @@ Machaut's secular songs, numbering over one hundred, exploit the three principal
 - The **virelai**, structured as AbbaA, with a refrain framing each stanza.
 
 Machaut's settings of these forms range from simple monophonic virelais to elaborate three- and four-voice ballades and rondeaux of extraordinary sophistication. His rondeau *Ma fin est mon commencement* ("My end is my beginning") is a famous example of musical ingenuity: the cantus voice sings the same melody as the tenor, but in retrograde (backwards), while the contratenor reads its own melody forwards and then backwards, making the piece a perfect musical palindrome — a literal embodiment of its text.
+
+{{< score id="music253/12-machaut-rondeau" caption="Machaut rondeau opening: a two-voice texture in Dorian on D — the cantus carries an arching lyrical melody while the tenor provides a slower-moving harmonic foundation. Intervals of thirds and sixths between the voices reflect the emerging preference for full consonance." >}}
 
 ## 6.4 The Messe de Nostre Dame
 
@@ -338,6 +346,8 @@ The most important English composer of the early fifteenth century was **John Du
 
 English musical practice also contributed the technique of **fauxbourdon** (or its English cousin, the **English discant** tradition), in which a plainchant melody in the top voice is accompanied by two lower voices moving in parallel motion at the intervals of a third and a sixth below. The result is a succession of first-inversion triads — a sound that, to modern ears, approaches the familiar consonance of tonal harmony. While the historical relationship between English discant and Continental fauxbourdon remains debated, the practical result was a harmonic richness that profoundly influenced the development of fifteenth-century polyphony.
 
+{{< score id="music253/14-fauxbourdon" caption="Fauxbourdon in F major: the cantus carries the chant melody while the contratenor moves in parallel thirds below and the tenor moves in parallel sixths below the cantus, producing a succession of first-inversion 6/3 triads — the warm, consonant sound that defined the English manner." >}}
+
 ## 8.2 The Burgundian Court
 
 The **Duchy of Burgundy**, under the rule of the Valois dukes Philip the Bold (r. 1363–1404), John the Fearless (r. 1404–1419), Philip the Good (r. 1419–1467), and Charles the Bold (r. 1467–1477), became the most magnificent and culturally ambitious court in fifteenth-century Europe. The Burgundian lands, stretching from the duchy proper in eastern France through the wealthy commercial cities of the Low Countries, generated enormous wealth from trade, industry, and taxation, and the Valois dukes channeled a substantial portion of this wealth into artistic patronage of extraordinary lavishness.
@@ -351,6 +361,8 @@ The Burgundian court chapel, staffed by the finest singers and composers recruit
 Dufay's output encompasses virtually every genre of the period. His **chansons** — settings of French lyric poetry in the formes fixes (rondeau, ballade, virelai) — are among the finest examples of the Burgundian chanson, combining graceful melodic invention with a sophisticated handling of three-voice texture. His sacred music includes hymns, Magnificat settings, and some of the earliest and most influential examples of the **cyclic Mass** — a setting of the complete Mass Ordinary unified by a common musical element, typically a **cantus firmus** (a pre-existing melody, sacred or secular, placed in the tenor voice as a structural foundation for the entire work).
 
 Dufay's *Missa Se la face ay pale* is a landmark work that exemplifies the cyclic cantus-firmus technique. The tenor of each movement is built on the melody of Dufay's own chanson "Se la face ay pale" ("If my face is pale"), presented at different speeds (augmentation) in different movements, creating large-scale structural coherence across the five movements of the Ordinary. His *Missa L'homme armé*, based on the popular secular tune "L'homme armé" ("The Armed Man"), initiated a tradition that would inspire dozens of Mass settings by subsequent composers.
+
+{{< score id="music253/15-homorhythmic-chanson" caption="Homorhythmic chanson style (Sermisy/Claudin tradition): all four voices move in block chords on the same rhythm, delivering the text with maximum clarity. The superius leads with a singable diatonic melody in G major while the lower voices provide consonant harmonic support — the chanson parisienne texture that dominated the 1520s–1540s." >}}
 
 Dufay's motet *Nuper rosarum flores*, composed for the consecration of Florence Cathedral (the Duomo) in 1436, is one of the most famous occasional compositions of the fifteenth century. The work's proportional structure has been interpreted by some scholars as reflecting the architectural proportions of Brunelleschi's dome, though this interpretation remains debated.
 
@@ -405,6 +417,8 @@ Josquin's motets are equally distinguished. *Ave Maria... virgo serena*, perhaps
 The technique of **imitative counterpoint** — also called **pervading imitation** or **through-imitation** — that Josquin brought to its highest development became the defining texture of Renaissance polyphony. In this technique, a composition is organized as a succession of "points of imitation," each initiated by the introduction of a melodic subject (or **soggetto**) in one voice, which is then taken up by the remaining voices in turn before all voices combine in a passage of free counterpoint leading to a cadence. The next point of imitation begins with a new subject derived from the next phrase of text, and the process continues through the entire composition.
 
 This structural principle — flexible, text-responsive, and capable of generating music of great beauty and variety — proved extraordinarily adaptable. It served equally well for the motet, the Mass, the chanson, and (later) the madrigal, and it remained the foundation of sacred polyphonic composition throughout the sixteenth century. The refinement and codification of imitative counterpoint by Josquin and his contemporaries — including **Heinrich Isaac** (c. 1450–1517), **Jacob Obrecht** (c. 1457–1505), **Pierre de la Rue** (c. 1452–1518), and **Jean Mouton** (c. 1459–1522) — constitutes one of the supreme achievements of Western musical art.
+
+{{< score id="music253/13-josquin-imitation" caption="Renaissance point of imitation in Josquin style: the superius introduces a rising four-note soggetto in C major; the tenor answers two bars later at the fifth below (F major), creating the staggered, overlapping texture that defines pervading imitation." >}}
 
 ---
 

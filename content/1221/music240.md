@@ -40,6 +40,8 @@ The music that crystallized in New Orleans around 1900–1917 featured a distinc
 
 The **Original Dixieland Jass Band** (ODJB) — a group of white New Orleans musicians — made the first jazz recordings in New York on January 30, 1917. The fact that the first jazz recordings were made by a white group rather than the African American musicians who had largely created the music is a bitter irony that runs through jazz history. Their two-sided Columbia disc featured "Livery Stable Blues" and "Dixie Jass Band One-Step." Although the ODJB's music is rough and novelty-inflected by later standards, these recordings introduced jazz to the wider American public and sparked immediate fascination.
 
+{{< score id="music240/12-ragtime-syncopation" caption="Ragtime syncopation: 4 bars of a typical Scott Joplin-style RH melody with off-beat ties and syncopated accents over a steady march bass (oom-pah in LH) — the rhythmic tension between the two hands that defines the ragtime aesthetic." >}}
+
 **Jelly Roll Morton** (1890–1941) was perhaps the most important New Orleans jazz musician of the earliest period and certainly the most colorful self-promoter. Morton, born Ferdinand Joseph LaMothe, was a Creole pianist and composer who claimed — with some justice — to have "invented jazz" in 1902. His formal education and Creole cultural background gave him theoretical tools that most of his contemporaries lacked, and his compositions for his band the **Red Hot Peppers** showed an unusual attention to arrangement, form, and texture. He pioneered the use of contrasting sections, dynamics, and varied instrumental combinations within jazz performance. His "Maple Leaf Rag"-era recordings from the mid-1920s documented a style of jazz composition that was already giving way to the freer ensemble improvisation that would come to define the music, but Morton's approach to structure would resurface repeatedly in jazz's later history.
 
 ## Louis Armstrong and the Birth of the Jazz Soloist
@@ -114,6 +116,8 @@ While Chicago developed its distinctive jazz scene, New York City — and specif
 
 **Harlem stride piano** was the dominant keyboard style of this world. Developed by figures like **James P. Johnson**, **Fats Waller**, and **Willie "The Lion" Smith**, stride piano took the march-like left-hand pattern of ragtime — alternating bass notes with mid-range chords — and made it more powerful, more harmonically adventurous, and more bluesy. The stride pianist's left hand covered enormous distances on the keyboard at high speed, while the right hand improvised intricate melodies and countermelodies. It was physically demanding, rhythmically propulsive, and harmonically sophisticated, and it became the foundation for subsequent jazz piano styles.
 
+{{< score id="music240/11-stride-piano-lh" caption="Stride piano left hand (bass clef only): 4 bars in F major alternating single bass notes (F, Bb, C, F) with mid-range chords — the 'oom-pah' engine that drives the harmonic and rhythmic foundation of the Harlem stride style." >}}
+
 **James P. Johnson** (1894–1955) was the stride master who taught Fats Waller and influenced the young Duke Ellington. His "Carolina Shout" (1921) was a standard test piece: every Harlem pianist had to be able to play it. Johnson aspired to compose extended classical works drawing on African American musical traditions, and his ambition foreshadowed Duke Ellington's later attempts to push jazz beyond entertainment into art.
 
 **Fats Waller** (1904–1943) was Johnson's student and the most commercially successful stride pianist, a brilliant musical comedian whose personality overwhelmed his considerable compositional gifts. Waller's humor and showmanship made him a radio and recording star, but beneath the clowning was a genuine artist: his 1929 "Handful of Keys" is a tour-de-force of stride that rivals anything in the tradition.
@@ -155,6 +159,8 @@ Goodman's 1938 Carnegie Hall concert was one of the most celebrated events in ja
 Other major white bandleaders of the swing era included **Artie Shaw** (1910–2004), a clarinet virtuoso whose orchestra rivaled Goodman's in popularity and who was notorious for suddenly abandoning music at the height of success; **Glenn Miller** (1904–1944), whose precise reed section sound ("the Miller sound") produced some of the era's most enduring commercial hits ("In the Mood," "Pennsylvania 6-5000"); and **Tommy Dorsey** (1905–1956), whose trombone technique and orchestra's smooth sound made him another major figure.
 
 **Jimmie Lunceford** (1902–1947) led perhaps the greatest Black big band of the swing era in purely musical terms, though his orchestra received less commercial attention than Goodman's or Ellington's. The Lunceford band was known for its precision, its showmanship — musicians would throw their instruments in the air and catch them on the beat — and its two-beat feel, which gave it an unusually light swing. Arranger **Sy Oliver** was crucial to the band's sound.
+
+{{< score id="music240/13-big-band-soli" caption="Big band soli passage: 4 bars of parallel block chords in Bb major, three voices moving in rhythmic unison — the 'soli' texture in which an entire section plays a single harmonized line, creating the wall-of-sound effect characteristic of Lunceford and Ellington." >}}
 
 ---
 
@@ -228,6 +234,8 @@ Parker's improvisational style was characterized by extraordinary speed of thoug
 
 {{< score id="music240/04-bebop-head" caption="Bebop head melody in B♭ major: a four-bar phrase featuring chromatic passing tones, triplet pickups, and off-beat accents — the characteristic vocabulary of Parker and Gillespie's new jazz language." >}}
 
+{{< score id="music240/15-bebop-chromatic-approach" caption="Bebop chromatic approach tones: upper and lower chromatic neighbors (marked with arrows) leading into chord tones on Bb7 and Eb7 — the technique Parker and Gillespie used to add harmonic color and directional momentum to their lines." >}}
+
 Parker's recordings with Dizzy Gillespie from 1945 on Savoy and Dial Records — particularly **"Ko-Ko"** (a contrafact on "Cherokee"), **"Billie's Bounce"** (a blues), **"Now's the Time"** (another blues), and **"Embraceable You"** (a ballad) — are the foundational documents of bebop. "Ko-Ko" opens with an extraordinary introduction in which Parker improvises on "Cherokee"'s demanding chord changes at a blistering tempo, demonstrating that he had completely mastered the harmonic material that had intimidated him years before.
 
 Parker's personal life was as turbulent as his music. He was addicted to heroin from his teens, a dependency that damaged his health, his relationships, and his career while never destroying his musical genius. He died at thirty-four; the coroner estimated his age at fifty-five.
@@ -289,6 +297,8 @@ The foundational document of cool jazz was a series of recordings made in 1949�
 **Gerry Mulligan** (1927–1996) was the baritone saxophonist and co-arranger on the Birth of the Cool sessions and went on to be one of cool jazz's central figures. His most celebrated formation was the **piano-less quartet** he co-led in Los Angeles in 1952 with trumpeter **Chet Baker** (1929–1988). Eliminating the piano freed the two horn players to create a spontaneous contrapuntal conversation, their lines weaving around each other in an updated version of New Orleans collective improvisation. Mulligan's baritone played with unusual lightness and mobility for such a large instrument; Baker's playing and singing were notable for their almost ethereally pure lyrical quality.
 
 **Chet Baker** became a cultural phenomenon in the early 1950s, his film-star looks and vulnerable, intimate singing style making him a crossover star who appealed to audiences far beyond jazz. His recordings of songs like "My Funny Valentine" and "Let's Get Lost" defined a particular mode of jazz lyricism — introspective, quietly melancholic, romantic — that remains his signature.
+
+{{< score id="music240/14-cool-jazz-melody" caption="Cool jazz melodic style: a 4-bar smooth, wide-interval melody over a ii–V–I progression in F major (Gm7–C7–Fmaj7) with walking bass — the unhurried lyricism and open harmonic space that define Miles Davis's Birth of the Cool aesthetic." >}}
 
 The **Modern Jazz Quartet** (MJQ) — **John Lewis** (piano), **Milt Jackson** (vibraphone), **Percy Heath** (bass), and **Connie Kay** (drums) — was the institutional expression of cool jazz's formal aspirations. Founded in 1952, the MJQ operated like a classical chamber ensemble: the members wore tuxedos, insisted on concert-hall listening conditions, and played Lewis's highly organized compositions with a precision and formal integrity unusual in jazz. Lewis composed **fugues**, **rondos**, and other classical forms and adapted them to jazz improvisation. The MJQ's integration of European compositional technique with jazz swing was the model for what became known as **Third Stream** music.
 

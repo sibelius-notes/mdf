@@ -820,6 +820,8 @@ The fugue exposition (mm. 1–23) presents the subject in D through successive e
 
 The second section (mm. 24–45) moves away from strict fugal procedure: ostinato layers build up, the clarinet presents the fugue subject four times while other parts create metric conflict, and trombone glissandi add jazz colour. <strong>Polytonality</strong> — the simultaneous sounding of two or more keys — and <strong>polyrhythms</strong> thicken the texture.
 
+{{< score id="music256/12-polyrhythm-3-against-2" caption="Polyrhythm 3 against 2: right hand triplet 8th-notes (3 per beat) sound simultaneously against left-hand regular 8th-notes (2 per beat) — both pulses share the same barline but subdivide time differently." >}}
+
 The third section (mm. 46–59) returns to the tonic and combines and rearranges the earlier elements before fading to a quiet transition.
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/nWpAQ6AWMDA?rel=0&start=210" frameborder="0" allowfullscreen></iframe></div>
@@ -880,6 +882,8 @@ Bartók's <strong>harmonic materials</strong> are derived from the scales, rhyth
 His approach to tonality is <strong>neotonal</strong>: tonal centres exist but are established through pitch assertion rather than functional harmony. Tritone relationships (such as C and F♯) are characteristic. He wrote in traditional forms (bagatelles, concertos, string quartets, fugues) while also exploring proportional and mirror forms. His synthesis of peasant music with classical technique — unified by a love of dissonance and symmetry — produced a musical language of extraordinary power and originality.
 
 {{< score id="music256/09-bartok-polymodal" caption="Bartók polymodal counterpoint: C Lydian (raised F♯, treble) sounding simultaneously against C Phrygian (lowered D♭, bass) — polymodal friction." >}}
+
+{{< score id="music256/11-quartal-chords" caption="Quartal harmony (Hindemith/Bartók style): four-note stacks of perfect 4ths (C–F–B♭–E♭) moving in parallel — replacing the stacked-thirds triad with a new harmonic unit." >}}
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/-rpcqShz5Gs?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
@@ -1034,6 +1038,8 @@ Readings:
 ## Henry Cowell (1897–1965)
 
 Henry Cowell, from California, had little training in the European tradition — which may have been precisely what freed him to explore radical new approaches to making sound. His early piano music introduced <strong>tone clusters</strong> — chords produced by striking the keyboard with the fist or forearm. His eclectic approach to composition and his deep interest in non-Western music had an enormous impact on younger composers — most notably <strong>John Cage</strong>, who was one of Cowell's students, absorbing not just new techniques but a philosophy: that any sound, made by any means, could be musical.
+
+{{< score id="music256/13-tone-cluster" caption="Tone cluster notation (Cowell style): white-key cluster C–D–E–F–G–A–B as a single chord, then a chromatic semitone cluster C–C♯–D–D♯–E–F — the fist or forearm replaces the finger." >}}
 
 Cowell also founded the periodical <em>New Music</em>, which promoted concerts and published scores by Ives, Schoenberg, and other modernist and <strong>Ultramodernist</strong> composers — a vital infrastructure for the American avant-garde.
 
@@ -1338,6 +1344,8 @@ Reich's thinking was profoundly influenced by non-Western rhythmic traditions, p
 
 Two tape loops of this phrase are superimposed. Because one loop is slightly shorter than the other, it gradually moves ahead — the two copies drift out of phase, creating a shifting pattern of echoes and rhythmic interactions. The texture progressively thickens: 2 simultaneous loops become 4, then 8. As the phasing process continues, the words dissolve into pure sound — the consonants and vowels (k, m, sh, uh, oh) become musical material in their own right.
 
+{{< score id="music256/14-reich-phase-pattern" caption="Reich phase pattern (Piano Phase style): the same 12-note E major figure in both staves, with the lower staff offset by one 8th-note — as the offset grows, new composite rhythms emerge as audible byproducts." >}}
+
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/aVXc9Veo_B8?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 <em>Reich, Come Out</em>
@@ -1402,6 +1410,8 @@ Overlapping, rapidly descending scales of various lengths cascade through the sa
 The opening section presents overlapping descending lines all within the same range (B′ to A♭), producing the falling sensation without any actual descent in register. The lengths of the individual descending figures are irregular, preventing the listener from predicting the pattern.
 
 The piece has no definable form in the traditional sense — it unfolds as a series of events marked by constant variation: expanding and contracting ranges, rising and falling registral envelopes of descending scales, and a gradual dissolution. The ending fades into nothingness.
+
+{{< score id="music256/15-spectral-overtone-chord" caption="Spectral chord: partials 4–11 above a low C fundamental stacked as a single sonority — C, E, G, B♭ (slightly flat), C, D, E, F♯ approximated in equal temperament. Spectralist composers (Grisey, Murail) built entire harmonic languages from the acoustic overtone series." >}}
 
 ---
 

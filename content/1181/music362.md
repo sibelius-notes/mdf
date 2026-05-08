@@ -65,6 +65,8 @@ The French *claveciniste* tradition — represented by composers such as Franço
 Couperin's *L'Art de toucher le clavecin* (1716) remains one of the most important treatises on keyboard technique from the Baroque era, addressing issues of fingering, ornamentation, and expressive performance that would continue to influence keyboard pedagogy for centuries.
 The French harpsichord tradition cultivated an aesthetic of refinement and wit, using descriptive titles — "Les Barricades mystérieuses," "Le Tic-Toc-Choc," "La Poule" — to establish an intimate, conversational relationship between composer and listener.
 
+{{< score id="music362/13-baroque-ornaments" caption="Baroque ornament types written out in full: a trill (rapid alternation of the written note with its upper neighbor), a mordent or pralltriller (single lower-neighbor flick), and a turn (four-note figure circling around the main note) — each labeled with its abbreviation sign." >}}
+
 **German harpsichords** and clavichords served a tradition that placed particular emphasis on contrapuntal skill and learned composition.
 The North German organ school, with figures such as Dieterich Buxtehude, Jan Pieterszoon Sweelinck (by influence), and Georg Böhm, cultivated an elaborate, virtuosic style that influenced the young Johann Sebastian Bach.
 The South German and Austrian traditions contributed dance-based suite movements and a growing interest in galant melody that would eventually lead toward the Classical style.
@@ -365,6 +367,8 @@ J. C. Bach's keyboard style is characterized by singing melodies, graceful accom
 
 His keyboard concertos and sonatas were among the first works composed specifically for the piano, and they exerted a decisive influence on the young Mozart, who met J. C. Bach in London in 1764–65 and later arranged several of his sonata movements as piano concertos.
 The graceful, Italianate lyricism of J. C. Bach's keyboard writing helped establish the melodic style that would become central to Classical pianism.
+
+{{< score id="music362/14-clementi-sonatina" caption="Clementi sonatina texture: 4 bars of clean, early-Classical melody in C major (RH) over a continuous Alberti bass (LH: low–high–middle–high broken chord) — the defining texture of J. C. Bach, Clementi, and early Mozart that replaced Baroque polyphony with singing homophony." >}}
 
 The transition from Baroque to Classical keyboard style can be understood as a shift in fundamental aesthetic priorities.
 Where the Baroque valued continuous motivic spinning, contrapuntal density, and the unity of a single **Affekt** (emotional state) within a movement, the Classical style favored contrast, periodic phrase structure, and the dramatic interplay of contrasting ideas.
@@ -836,6 +840,8 @@ The work is not music for children to play but rather a sophisticated artistic m
 
 "Dreaming" (*Träumerei*) is one of the most famous piano pieces ever written: a simple, arch-shaped melody that rises and falls with an inevitability that makes it seem less composed than discovered.
 Its apparent simplicity conceals sophisticated harmonic movement and a subtle asymmetry of phrase structure.
+
+{{< score id="music362/15-schumann-character" caption="Schumann character piece texture in A minor: a 4-bar melody in the outer voice sustained over a tied, syncopated inner voice held across the bar line — the rhythmic ambiguity that gives Schumann's music its characteristic floating, 'between the beats' quality." >}}
 
 The final piece, "The Poet Speaks," steps outside the world of childhood to reflect upon it from the adult perspective, its recitative-like passages suggesting a voice speaking in tones of tender wisdom.
 
@@ -1471,6 +1477,8 @@ Major piano works:
 - **Out of Doors** (1926): five movements exploring music and nature
 - **Three piano concertos**: from percussive ferocity (First) to luminous serenity (Third)
 
+{{< score id="music362/16-bartok-asymmetric" caption="Bartók asymmetric meter: 4 bars in 7/8 with a Bulgarian-style 2+2+3 rhythmic grouping — the opening melody traces a modal scale while the bass holds a drone, evoking the folk-music sources Bartók absorbed from his ethnomusicological fieldwork." >}}
+
 Bartók's significance for the piano literature extends beyond his own compositions.
 As an ethnomusicologist, he demonstrated that folk music from outside the Western European mainstream could serve as a legitimate and fertile source for art music composition — a principle that has influenced composers worldwide, from the Americans (Copland, Harris) to the Japanese (Takemitsu) to the African (Akin Euba, Joshua Uzoigwe).
 As a pedagogue, he created in the *Mikrokosmos* a comprehensive educational tool that remains unsurpassed for its systematic introduction of modern musical concepts and techniques.
@@ -1520,6 +1528,8 @@ His music demonstrates that tonal composition remained a viable and expressive o
 
 Nine piano sonatas, five concertos.
 Distinctive combination of percussive rhythmic drive, sardonic wit, lyrical beauty, and virtuosic brilliance.
+
+{{< score id="music362/17-modern-piano-gesture" caption="Modern percussive piano gesture (Prokofiev/Bartók style): 4 bars of sharp staccato dissonances — parallel minor 2nds and major 7ths in both hands — at extreme dynamic contrasts (ff to p to fff), treating the piano as a percussion instrument rather than a singing voice." >}}
 
 Early works (*Toccata, Op. 11*; *Sarcasms, Op. 17*) established him as an enfant terrible.
 The wartime "War Sonatas" (Nos. 6, 7, 8) are monumental works combining rhythmic energy with new depth of expression.

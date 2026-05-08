@@ -268,6 +268,8 @@ The work demonstrates how early Baroque composers transferred the expressive voc
 
 This trio sonata exemplifies the **sonata da chiesa** in its standard four-movement form (Grave – Allegro – Adagio – Allegro), scored for two violins and basso continuo (cello and organ), with four performers in total.
 
+{{< score id="music254/12-trio-sonata" caption="Corelli-style trio sonata texture: two violin voices move in chains of suspensions — each holds a note into the next harmony to create a dissonance before resolving — while the basso continuo walks steadily beneath. The 6–5 and 7–6 suspension chains produce the characteristic intertwined tension and release of Baroque string writing." >}}
+
 **Movement 1 (Grave)**: The slow opening movement is built on a **walking bass** — a continuo line that moves steadily in even notes, providing a rhythmic foundation beneath the overlying voices. The two violins engage in **chains of suspensions**: each voice holds a note over a harmonic change, creating a dissonance that resolves downward before the next suspension arrives, producing a linked sequence of harmonic tensions and releases that was one of the signature textures of Baroque music.
 
 **Movement 2 (Allegro)**: The fast movement is **fugal** — all four voices (including the basso continuo) engage in imitative counterpoint, each stating a common theme in turn before weaving it into a contrapuntal texture.
@@ -293,6 +295,8 @@ This concerto is from Vivaldi's *L'estro armonico* (Harmonic Inspiration), Op. 3
 **Ritornello form** is one of the most important structural innovations of the Baroque. A **ritornello** (Italian for "little return") is a recurrent passage for the full orchestra that functions as a structural pillar, marking the beginning of the movement and returning at various points throughout in different keys. Between the ritornello statements come **episodes** — virtuosic passages for the soloist that explore contrasting material or develop ideas from the ritornello. The ritornello is typically built from several small, recognizable **units** (often labelled a, b, c by analysts), which can be combined, shortened, or reordered in their various returns, giving the form both architectural clarity and expressive flexibility. The final ritornello returns in the tonic key, providing closure. The contrast between the full orchestra's ritornello and the soloist's episodes was the Baroque concerto's primary dramatic mechanism.
 
 The slow middle movement presents a completely different character: the orchestra retreats almost entirely, and the soloist sings a long, ornate melody in the minor mode, over a walking bass — the concerto's lyrical heart, framed by the vigor of the outer movements.
+
+{{< score id="music254/11-descending-sequence" caption="Baroque descending-5ths circle sequence: the harmony progresses D7–G–C7–F (each chord a fifth below the last) while the bass walks steadily downward by step — the Rosalia pattern that Baroque composers used to generate harmonic motion and propulsive momentum in transitions and episodes." >}}
 
 ---
 
@@ -505,6 +509,8 @@ Dido's brief recitative is laden with word painting. A **melisma** (a single syl
 
 This aria is built on one of the most celebrated musical devices in the Baroque repertoire: the **ground bass** (*basso ostinato*, "persistent bass"). A ground bass is a short melodic pattern in the bass that repeats continuously throughout a piece or movement, while the melody above it changes freely. Purcell's bass pattern descends chromatically from G down through F♯, F♮, E♮, E♭, and D before returning to G — a five-bar unit that the bass line states **eleven times** in succession.
 
+{{< score id="music254/13-ground-bass-aria" caption="Handel-style aria over a four-bar ground bass ostinato: the bass pattern in D minor repeats twice while the vocal melody above it varies freely — the first cycle is syllabic and restrained, the second adds melodic ornament and rhythmic movement, demonstrating how basso ostinato enables variation without losing the ruminative emotional weight of lament." >}}
+
 The choice of a ground bass was not arbitrary. The descending chromatic bass had been associated with **lament** in Italian music since the early seventeenth century — it appears in Monteverdi's operatic laments and becomes a recognizable convention throughout the Baroque. By anchoring Dido's final aria on this symbol, Purcell places her death within the entire tradition of operatic grief. The melody Dido sings above the repeating bass is deliberately **dissonant** against it at key moments: suspensions and clashes accumulate as her final phrases arrive, and the repeating bass continues remorselessly beneath the vocal line, as if the world keeps turning even in the face of personal tragedy.
 
 **Chorus: "With drooping wings"**
@@ -660,6 +666,8 @@ The characteristic texture of Classical keyboard music includes the **Alberti ba
 
 {{< score id="music254/08-galant-alberti" caption="Galant melody with Alberti bass: the light, transparent Classical texture that replaced Baroque counterpoint." >}}
 
+{{< score id="music254/15-mozart-alberti" caption="Mozart singing-allegro texture: a cantabile melody in C major sings above a steady Alberti-bass left hand — root on the beat, fifth on the upbeat, third in between — creating harmonic clarity without counterpoint. This four-bar phrase illustrates the balance between vocal lyricism and instrumental idiomatic writing that defines Mozart's keyboard style." >}}
+
 ### Form and Emotion
 
 Classical forms are organized by the **functional contrasts** within a movement: the musical material fulfils different roles — beginnings that establish a character and key, middles that create tension and instability, endings that confirm and close. These functional roles correspond to the rhetorical structure of a formal speech or oration, as theorists of the time recognized.
@@ -744,6 +752,8 @@ Its essential principle, as described by Koch in the 1780s, is an **expanded bin
 K. 332 is a model of Mozart's ability to **mix contrasting styles** within a single movement, moving between them with such naturalness that the contrasts feel dramatically motivated rather than arbitrary.
 
 **First theme group (1T, m. 1)**: A song-like melody over a broken-chord accompaniment — clearly in the galant style. But at m. 5, Mozart introduces **imitation** in the left hand, a momentary gesture toward the **learned** contrapuntal style. At m. 12, hunting horn figures in the outer voices introduce a third style — the pastoral-heroic world of the outdoors aristocracy.
+
+{{< score id="music254/14-mannheim-rocket" caption="Mannheim orchestral rhetoric: bar 1 is the 'rocket' — a fortissimo arpeggio launching from C upward through the triad to C′′′; bars 2–3 answer with the 'sigh' gesture — a falling major second B′′–A′′ followed by a cadential descent. The Mannheim school pioneered these gestural contrasts as building blocks of symphonic argument." >}}
 
 **Transition (TR, m. 22)**: A dramatic shift to the style known as **Sturm und Drang** (German: Storm and Stress) — a style associated with the German literary movement of the 1770s and characterized by **minor mode**, **forte dynamics**, **chromatic harmony**, and **strong dissonances**. The sudden violence of this transition, after the gentle opening, is one of the movement's most striking effects.
 

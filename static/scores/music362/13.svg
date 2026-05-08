@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="210.00mm" height="297.00mm" viewBox="0.0000 -0.0000 119.5016 169.0094">
+<style type="text/css">
+<![CDATA[
+tspan { white-space: pre; }
+]]>
+</style>
+<g transform="translate(22.7622, 10.6068)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="58.2312" y2="0"/>
+</g>
+<g transform="translate(22.7622, 9.6068)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="58.2312" y2="0"/>
+</g>
+<g transform="translate(22.7622, 8.6068)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="58.2312" y2="0"/>
+</g>
+<g transform="translate(22.7622, 7.6068)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="58.2312" y2="0"/>
+</g>
+<g transform="translate(22.7622, 6.6068)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="58.2312" y2="0"/>
+</g>
+<g transform="translate(62.1073, 8.6068)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:15:16:17">
+<g transform="translate(70.7099, 9.1068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:12:6:7">
+<g transform="translate(53.7959, 10.1068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(51.6159, 6.6068)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="3.4442 -0.0100 3.4442 0.3900 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(51.6159, 7.4168)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="3.4442 -0.0100 3.4442 0.3900 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:8:4:5">
+<g transform="translate(31.4622, 10.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:8:8:9">
+<g transform="translate(31.4622, 5.7233)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>tr (trill)</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(23.5622, 9.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
+c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
+c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
+c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:6:17:18">
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:6:31:32">
+<g transform="translate(27.7622, 8.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M250 262c116 0 176 -106 176 -163c0 -40 -30 -72 -67 -72c-31 0 -75 25 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12
+c0 -22 -50 -174 -183 -174c-59 0 -250 19 -250 263c0 62 18 262 250 262z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(32.7014, 8.6068)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(32.6364, 7.6068)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="7.6026 -0.2000 7.6026 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(32.6364, 8.4168)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="7.6026 -0.2000 7.6026 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:9:6:7">
+<g transform="translate(33.9664, 11.1068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(35.2056, 8.6068)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:9:11:12">
+<g transform="translate(36.4706, 10.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(37.7098, 8.6068)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:9:16:17">
+<g transform="translate(38.9748, 11.1068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(40.2140, 8.6068)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:9:21:22">
+<g transform="translate(41.4790, 10.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(42.7183, 8.6068)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(76.1784, 8.6068)">
+<rect x="-0.0650" y="-1.5000" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:9:26:27">
+<g transform="translate(43.9833, 11.1068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(45.2225, 8.6068)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:16:4:5">
+<g transform="translate(74.8661, 10.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:9:31:32">
+<g transform="translate(46.4875, 10.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(47.7267, 8.6068)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:11:4:5">
+<g transform="translate(50.4417, 9.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:11:8:9">
+<g transform="translate(50.4417, 5.6468)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>prall (mordent)</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(51.6809, 8.6068)">
+<rect x="-0.0650" y="-1.9965" width="0.1300" height="2.8103" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(42.6533, 7.6068)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.0984 -0.2000 5.0984 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(42.6533, 8.4168)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.5942 -0.2000 2.5942 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(55.0351, 8.6068)">
+<rect x="-0.0650" y="-1.8135" width="0.1300" height="3.1274" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(52.3459, 10.1068)">
+<path transform="scale(0.0040, -0.0040)" d="M0 119c0 8 5 15 13 18l46 17v158c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17
+v-158c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60zM179 95l-83 -30v-160l83 30v160z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:12:13:14">
+<g transform="translate(56.3001, 9.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(58.0543, 9.1068)">
+<path transform="scale(0.0040, -0.0040)" d="M0 0c0 31 25 56 56 56s56 -25 56 -56s-25 -56 -56 -56s-56 25 -56 56z" fill="currentColor"/>
+</g>
+<g transform="translate(57.5393, 8.6068)">
+<rect x="-0.0650" y="-2.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:14:4:5">
+<g transform="translate(63.1973, 8.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:14:8:9">
+<g transform="translate(63.1973, 4.8829)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>turn</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(64.4365, 8.6068)">
+<rect x="-0.0650" y="-2.9984" width="0.1300" height="2.8123" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:15:6:7">
+<g transform="translate(65.7015, 9.1068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(66.9407, 8.6068)">
+<rect x="-0.0650" y="-2.9361" width="0.1300" height="3.2500" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(71.9491, 8.6068)">
+<rect x="-0.0650" y="-2.8116" width="0.1300" height="3.1255" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music362/13-baroque-ornaments.ly:15:11:12">
+<g transform="translate(68.2057, 9.6068)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(69.4449, 8.6068)">
+<rect x="-0.0650" y="-2.8739" width="0.1300" height="3.6878" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(72.4641, 9.1068)">
+<path transform="scale(0.0040, -0.0040)" d="M0 0c0 31 25 56 56 56s56 -25 56 -56s-25 -56 -56 -56s-56 25 -56 56z" fill="currentColor"/>
+</g>
+<g transform="translate(64.3715, 5.6068)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="7.6026 -0.0100 7.6026 0.3900 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(64.3715, 6.4168)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.0984 -0.0723 5.0984 0.3277 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(34.5530, 165.1202)">
+<a xlink:href="https://lilypond.org/">
+<rect x="0.0000" y="-0.4748" width="50.3955" height="2.0024" fill="none" stroke="none" stroke-width="0.0"/>
+</a>
+</g>
+<g transform="translate(34.5530, 165.1202)">
+<text font-family="serif" font-size="2.2000" text-anchor="start" fill="currentColor">
+<tspan>Music engraving by LilyPond 2.24.4—www.lilypond.org</tspan>
+</text>
+</g>
+</svg>

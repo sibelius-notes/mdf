@@ -170,6 +170,8 @@ Since sonata form will be central to understanding every symphony we study, a qu
 
 The key scheme is the crucial element: we start in the tonic, move away from it, and return. As we will see, different composers handle every aspect of this scheme differently — and those differences are what make the history of the symphony so fascinating.
 
+{{< score id="music260/13-sonata-form-diagram" caption="Sonata form as musical notation: P-theme in C major (bars 1–2), transition (bars 3–4), S-theme in G major (bars 5–6) — the three structural zones of the exposition labelled P, TR, and S in score." >}}
+
 
 # The Classical Symphony — Early Haydn
 
@@ -369,6 +371,8 @@ The exposition presents contrasting themes, but all three are constructed from <
 
 A fugue-like section appears before the second theme. But it is the <strong>coda</strong> (m.356) that is truly extraordinary: a <strong>five-voice fugato</strong> — like a miniature fugue, presenting themes in counterpoint. Beginning at m.372, each voice introduces all the motives in turn, passed from cello to viola to violin II to violin I to bass. Galant-style ideas appear in perfectly strict fugue — a <strong>reconciliation between the learned and the galant styles</strong> that defined the century. One theme (b) is left out of the fugato and functions as a return to symphonic style (m.402).
 
+{{< score id="music260/10-mozart-symphony40-theme" caption="Mozart, Symphony No. 40 in G minor, K. 550 — opening P-theme: the famous repeated-note figure in violins, 2+2-bar antecedent–consequent phrase, pp, G minor." >}}
+
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/CJkUpFWAIm4?rel=0" frameborder="0" allowfullscreen></iframe></div>
 
 <em>Mozart, Symphony No. 40 in G minor — London Mozart Players</em>
@@ -409,6 +413,8 @@ The <em>Eroica</em> was revolutionary in scale and ambition. It is nearly twice 
 ## Symphony No. 5 in C minor (1808)
 
 Perhaps the most famous symphony ever written, the Fifth is built almost entirely from its iconic four-note opening motif: <em>short-short-short-long</em>.
+
+{{< score id="music260/09-beethoven-fifth-opening" caption="Beethoven, Symphony No. 5 — the famous 4-note opening motif (short–short–short–long) with fermata; C minor, 2/4. Note the opening rest: it is not G–G–G–E♭ but rest–G–G–G–E♭." >}}
 
 <p align="center">♪ <i>Beethoven, Symphony No. 5 — I. Allegro con brio</i> ♪</p>
 
@@ -545,6 +551,8 @@ The form is a <strong>giant compound sonata form</strong> — similar to Schuman
 
 A slow introduction in C major presents a <strong>3-note motive</strong> that is transformed throughout the entire work. The primary theme is derived from this introductory motive through <strong>thematic transformation</strong> — the process of modifying a theme or motive into new themes, providing unity, variety, and narrative logic. The 3-note motive is modified and expanded, taking on different characters in each section.
 
+{{< score id="music260/12-development-sequence" caption="Romantic development-section descending sequence: 4-bar falling-fifths progression G→Em→C→Am with the melody stepping down by third in each bar — the engine that drives Romantic development sections through multiple key areas." >}}
+
 Liszt also wrote programmatic symphonies — the <em>Faust Symphony</em> (1854) and <em>Dante Symphony</em> (1856) — but it was the symphonic poem that became his most influential contribution. Composers across Europe adopted the genre. His thematic transformation technique and chromatic harmonies helped form Wagner's style after 1854. Most significantly, Liszt challenged the legacy of Beethoven and impacted every symphonic composer for the rest of the 19<sup>th</sup> century.
 
 
@@ -580,6 +588,8 @@ Brahms's First Symphony is purely instrumental with no program. It appears to fo
 <strong>Movement III</strong> (Allegretto, A-flat major, 2/4): Brahms replaces the scherzo with a lyrical <strong>intermezzo</strong> — gentler than Beethoven's scherzos, in duple rather than triple meter. ABA form.
 
 <strong>Movement IV</strong>: Slow introduction in C minor – sonata movement in C major. The horns usher in C major in the slow introduction. The exposition begins with a main theme that is a direct reference to the "Ode to Joy" from Beethoven's Ninth Symphony — Brahms deliberately inviting the comparison. The journey from C minor to C major parallels Beethoven's Fifth.
+
+{{< score id="music260/11-brahms-sym1-finale" caption="Brahms, Symphony No. 1, Op. 68 — IV. finale main theme in C major: broad, singing melody over solid harmonic thirds in the bass — the deliberate echo of Beethoven's 'Ode to Joy' that Brahms acknowledged with a smile." >}}
 
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/EGRqIGOAPcE?rel=0&start=1980" frameborder="0" allowfullscreen></iframe></div>
 

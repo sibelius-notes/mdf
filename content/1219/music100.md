@@ -44,9 +44,17 @@ A **melodic sequence** occurs when a rhythm-and-pitch pattern is repeated starti
 
 Every tonal piece has a **tonic** — a central pitch that the music is "about" and toward which it gravitates. Most common-practice Western music (roughly 1600–1900) is **tonal**. Music that uses primarily the major or minor pitch-set is **diatonic**; music using pitches outside the scale is **chromatic**.
 
+{{< score id="music100/11-i-iv-v-i-progression" caption="The I–IV–V–I harmonic progression in C major: the tonic (I), subdominant (IV), dominant (V), and return to tonic — the most fundamental chord sequence in Western tonal music, heard in countless folk songs, hymns, and classical themes." >}}
+
+{{< score id="music100/15-interval-chart" caption="The C major scale with interval names above each successive note: P1 (unison), M2, M3, P4, P5, M6, M7, P8 — the interval vocabulary that underlies all tonal melody and harmony." >}}
+
 **Major/minor tonality** carries emotional, "feel" connotations in most cultures: major is typically perceived as "happy," minor as "sad." This is neatly demonstrated by playing *Mary Had a Little Lamb* in both modes.
 
 **Dissonance** (harmonic tension, "what we don't like") and **consonance** (harmonic stability, "what we like") are central to understanding musical movement. Dissonance is *necessary* for the phenomenon of musical motion. Certain combinations of sounds "lead to," "imply," or "demand" certain other combinations. Everyone senses this, trained or not — and there is still no fully accepted explanation for it.
+
+The moments at which a phrase comes to rest are called **cadences**. There are four main types: the **perfect authentic cadence** (PAC, V→I with soprano on the tonic) is the strongest close; the **imperfect authentic cadence** (IAC, V→I but soprano lands on the third or fifth) is weaker; the **half cadence** (HC, ending on V) leaves the phrase open; and the **deceptive cadence** (DC, V→vi) resolves to an unexpected chord, creating surprise.
+
+{{< score id="music100/10-cadence-types" caption="The four cadence types in C major (3/4): PAC (V–I, soprano on do), IAC (V–I, soprano on mi), HC (I–V, phrase left open), and DC (V–vi, deceptive resolution to A minor) — each 2 bars, labeled above the bass." >}}
 
 {{< score id="music100/01-melody-harmony-rhythm" caption="The three basic elements of music shown simultaneously: a four-bar melody in C major (top staff), block-chord harmonic support using the I–V–vi–IV progression (middle), and a combined bass drum + hi-hat rhythmic pattern (bottom)." >}}
 
@@ -55,6 +63,8 @@ Every tonal piece has a **tonic** — a central pitch that the music is "about" 
 **Rhythm** is the temporal aspect of music — from the ancient Greek *rhythmos*, "flow." The Western understanding of rhythm tends to reduce it to "marking off time," which is notoriously unsophisticated compared to many world traditions.
 
 Rhythm organizes around a regular **pulse** or beat. When beats are grouped into patterns of stress, we get **meter** — marked off in notation by "measures" and "bar lines." **Duple meter** groups beats in twos (strong-weak), while **triple meter** groups them in threes (strong-weak-weak).
+
+{{< score id="music100/13-simple-vs-compound-meter" caption="Simple meter (4/4) versus compound meter (6/8): the same melodic idea heard in two different metric frameworks — four equal beats per bar vs. two compound beats subdivided into three, producing the characteristic lilt of compound meter." >}}
 
 **Tempo** is the rate of the pulse. It is usually indicated by Italian terms established in the period 1600–1750:
 
@@ -73,6 +83,8 @@ Tempo may also be specified precisely with a **metronome marking** (e.g., ♩ = 
 ## Expression: Dynamics
 
 **Expression** breathes life into music. Beyond tempo, **dynamics** — the volume of sound — add an expressive dimension also indicated by Italian terms:
+
+{{< score id="music100/14-dynamic-contrast" caption="Dynamic contrast: the same 2-bar phrase in C major played first at pp (pianissimo) and then at ff (fortissimo) — identical notes, radically different expressive impact." >}}
 
 | Italian Term | Meaning |
 |---|---|
@@ -126,6 +138,8 @@ The simplest forms are labelled with letters. **Binary form** (A–B) has two co
 {{< score id="music100/06-ternary-form" caption="Ternary form (A–B–A'): an A section in C major, a contrasting B section in A minor, and a modified return of A — the 'arch' principle." >}}
 
 Large-scale classical music uses named forms: **sonata**, **theme and variations**, and **rondo**, discussed in depth in Week 7.
+
+{{< score id="music100/12-theme-and-variation" caption="Theme and variation: a 4-bar theme in C major (block chords) followed by a rhythmic variation that breaks every note into running eighth-note pairs — the harmony is identical, but the surface animation transforms the character entirely." >}}
 
 **Rondo form** (A–B–A–C–A–D–A–...) features a recurring main theme (the "refrain") alternating with contrasting episodes.
 

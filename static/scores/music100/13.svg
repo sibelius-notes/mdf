@@ -1,0 +1,317 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="210.00mm" height="297.00mm" viewBox="0.0000 -0.0000 119.5016 169.0094">
+<style type="text/css">
+<![CDATA[
+tspan { white-space: pre; }
+]]>
+</style>
+<g transform="translate(46.7658, 8.4428)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(22.7622, 10.4428)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="56.7903" y2="0"/>
+</g>
+<g transform="translate(22.7622, 9.4428)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="56.7903" y2="0"/>
+</g>
+<g transform="translate(22.7622, 8.4428)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="56.7903" y2="0"/>
+</g>
+<g transform="translate(22.7622, 7.4428)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="56.7903" y2="0"/>
+</g>
+<g transform="translate(22.7622, 6.4428)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="56.7903" y2="0"/>
+</g>
+<g transform="translate(79.4125, 8.4428)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(61.7243, 8.4428)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(22.7622, 11.4428)">
+<rect x="45.9942" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(22.7622, 11.4428)">
+<rect x="35.8618" y="-0.1000" width="2.0660" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(22.7622, 11.4428)">
+<rect x="8.3739" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(72.8241, 6.6328)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.0984 -0.2000 5.0984 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(77.8975, 8.4428)">
+<rect x="-0.0650" y="-1.8100" width="0.1300" height="3.6239" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(56.5034, 8.4428)">
+<rect x="-0.0650" y="-1.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:9:4:5">
+<g transform="translate(31.4622, 11.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:9:7:8">
+<g transform="translate(31.4622, 13.6278)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>1</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(23.5622, 9.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
+c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
+c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
+c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:6:17:18">
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:8:4:5">
+<g transform="translate(27.7622, 8.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M250 262c116 0 176 -106 176 -163c0 -40 -30 -72 -67 -72c-31 0 -75 25 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12
+c0 -22 -50 -174 -183 -174c-59 0 -250 19 -250 263c0 62 18 262 250 262z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:7:4:5">
+<g transform="translate(26.1272, 5.1736)">
+<text font-family="serif" font-weight="bold" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>Simple (4/4)</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(32.7014, 8.4428)">
+<rect x="-0.0650" y="-0.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:9:30:31">
+<g transform="translate(35.4164, 10.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:9:33:34">
+<g transform="translate(35.4164, 12.6278)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>2</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(36.6556, 8.4428)">
+<rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:10:4:5">
+<g transform="translate(39.3706, 9.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:10:7:8">
+<g transform="translate(39.3706, 12.1328)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>3</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(40.6098, 8.4428)">
+<rect x="-0.0650" y="-2.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:10:30:31">
+<g transform="translate(42.8248, 10.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:10:33:34">
+<g transform="translate(42.8248, 12.6278)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>4</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(44.0640, 8.4428)">
+<rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:11:4:5">
+<g transform="translate(47.8558, 9.9428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(49.0950, 8.4428)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:11:8:9">
+<g transform="translate(51.5600, 10.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(52.7992, 8.4428)">
+<rect x="-0.0650" y="-1.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:11:12:13">
+<g transform="translate(55.2642, 10.9428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:11:16:17">
+<g transform="translate(58.9684, 11.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M314 65c0 23 -19 41 -42 41c-39 0 -204 -110 -231 -143c-7 -8 -10 -18 -10 -28c0 -23 19 -41 42 -41c39 0 203 110 230 143c7 8 11 18 11 28zM262 136c41 0 82 -14 82 -71c0 -26 -16 -112 -74 -151c-25 -17 -87 -50 -187 -50c-41 0 -83 14 -83 71c0 26 16 112 74 151
+c25 17 88 50 188 50z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(60.2807, 8.4428)">
+<rect x="-0.0650" y="-0.5000" width="0.1300" height="3.2410" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:14:4:5">
+<g transform="translate(69.0825, 11.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:14:7:8">
+<g transform="translate(69.0825, 13.6278)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>1</tspan>
+</text>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:13:4:5">
+<g transform="translate(65.6655, 8.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M170 259c-51 0 -53 -43 -53 -100v-18v-18c0 -57 2 -100 53 -100c57 0 61 51 61 118s-4 118 -61 118zM117 266c15 10 33 16 53 16c101 0 170 -46 170 -141s-69 -141 -170 -141c-112 0 -170 124 -170 250c0 128 72 250 190 250c70 0 136 -39 136 -103
+c0 -36 -29 -66 -65 -66s-66 30 -66 66c0 24 40 25 40 49c0 20 -23 31 -45 31c-66 0 -75 -65 -75 -139c0 -24 2 -48 2 -72z" fill="currentColor"/>
+</g>
+<g transform="translate(65.6143, 10.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M261 287c25 30 44 64 44 103c0 54 -55 87 -114 87c-46 0 -73 -36 -73 -71c0 -21 10 -42 31 -54zM292 269c23 -13 80 -54 80 -125c0 -73 -66 -144 -189 -144c-94 0 -183 54 -183 140c0 50 36 87 72 123c-37 28 -55 66 -55 103c0 68 60 134 174 134c80 0 157 -39 157 -110
+c0 -46 -25 -86 -56 -121zM103 244c-31 -30 -59 -61 -59 -104c0 -69 66 -117 139 -117c54 0 86 42 86 83c0 24 -10 48 -35 62z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:12:4:5">
+<g transform="translate(58.7686, 5.1736)">
+<text font-family="serif" font-weight="bold" font-size="1.9598" text-anchor="start" fill="currentColor">
+<tspan>Compound (6/8)</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(70.3217, 8.4428)">
+<rect x="-0.0650" y="-0.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(70.3867, 7.9828)">
+<path transform="scale(0.0040, -0.0040)" d="M0 0v-250h-16v250h16zM0 0c0 -197 207 -336 207 -533c0 -71 -15 -141 -41 -207c-5 -8 -13 -12 -20 -12c-13 0 -26 11 -23 27c26 61 42 126 42 192c0 103 -94 208 -165 283v250z" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:14:30:31">
+<g transform="translate(71.6499, 10.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(72.8891, 8.4428)">
+<rect x="-0.0650" y="-1.8100" width="0.1300" height="3.6239" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:14:34:35">
+<g transform="translate(74.4041, 9.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:14:37:38">
+<g transform="translate(74.4041, 12.1328)">
+<text font-family="serif" font-size="1.7459" text-anchor="start" fill="currentColor">
+<tspan>4</tspan>
+</text>
+</g>
+</a>
+<g transform="translate(75.6433, 8.4428)">
+<rect x="-0.0650" y="-1.8100" width="0.1300" height="2.6239" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:14:60:61">
+<g transform="translate(76.6583, 10.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(22.7622, 23.4428)">
+<rect x="17.7450" y="-0.1000" width="1.9563" height="0.2000" ry="0.1000" fill="currentColor"/>
+</g>
+<g transform="translate(22.7622, 22.4428)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="24.2253" y2="0"/>
+</g>
+<g transform="translate(22.7622, 21.4428)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="24.2253" y2="0"/>
+</g>
+<g transform="translate(22.7622, 20.4428)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="24.2253" y2="0"/>
+</g>
+<g transform="translate(22.7622, 19.4428)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="24.2253" y2="0"/>
+</g>
+<g transform="translate(22.7622, 18.4428)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="0" x2="24.2253" y2="0"/>
+</g>
+<g transform="translate(43.4375, 20.4428)">
+<rect x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+</g>
+<g transform="translate(36.9991, 19.4428)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.5942 -0.0100 2.5942 0.3900 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<g transform="translate(23.5622, 21.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M266 -635h-6c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65h4zM461 -203c68 24 113 90 113 164c0 90 -66 179 -173 190c19 -89 48 -242 60 -354zM74 28c0 -145 141 -247 264 -247
+c1 0 47 0 82 6c-7 64 -29 203 -63 364c-79 -8 -124 -61 -124 -119c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-15 0 -126 62 -126 187c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM250 553c-29 96 -52 170 -52 346
+c0 115 55 224 149 292c6 5 14 5 20 0c68 -80 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207c2 0 7 1 13 1c155 0 256 -128 256 -261c0 -113 -74 -212 -180 -246c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -119 -88 -225 -202 -228l1 43
+c93 2 153 92 159 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-5 -1 -44 -8 -89 -8c-193 0 -333 180 -333 374c0 177 131 306 248 441zM428 916c0 34 1 66 -20 129c-99 -48 -162 -149 -162 -259c0 -52 12 -115 36 -194c80 97 146 198 146 324z" fill="currentColor"/>
+</g>
+<g transform="translate(29.7364, 18.4428)">
+<polygon stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="4.8484 -0.2000 4.8484 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:14:64:65">
+<g transform="translate(28.5622, 21.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(29.8014, 20.4428)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.8139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:14:68:69">
+<g transform="translate(31.0664, 20.9428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(32.3056, 20.4428)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="2.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:15:4:5">
+<g transform="translate(33.3206, 21.9428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(34.5598, 20.4428)">
+<rect x="-0.0650" y="-2.0000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:15:8:9">
+<g transform="translate(35.8248, 22.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(37.0641, 20.4428)">
+<rect x="-0.0650" y="-0.9953" width="0.1300" height="2.8092" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:15:12:13">
+<g transform="translate(38.3291, 22.9428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(39.5683, 20.4428)">
+<rect x="-0.0650" y="-0.8147" width="0.1300" height="3.1286" ry="0.0400" fill="currentColor"/>
+</g>
+<a style="color:inherit;" xlink:href="textedit:///Users/181081/mdf/lilypond/music100/13-simple-vs-compound-meter.ly:15:16:17">
+<g transform="translate(40.8333, 23.4428)">
+<path transform="scale(0.0040, -0.0040)" d="M218 136c66 0 108 -36 108 -89c0 -89 -113 -183 -218 -183c-66 0 -108 36 -108 89c0 89 113 183 218 183z" fill="currentColor"/>
+</g>
+</a>
+<g transform="translate(42.5875, 22.9428)">
+<path transform="scale(0.0040, -0.0040)" d="M0 0c0 31 25 56 56 56s56 -25 56 -56s-25 -56 -56 -56s-56 25 -56 56z" fill="currentColor"/>
+</g>
+<g transform="translate(42.0725, 20.4428)">
+<rect x="-0.0650" y="-0.5000" width="0.1300" height="3.3139" ry="0.0400" fill="currentColor"/>
+</g>
+<g transform="translate(34.5530, 165.1202)">
+<a xlink:href="https://lilypond.org/">
+<rect x="0.0000" y="-0.4748" width="50.3955" height="2.0024" fill="none" stroke="none" stroke-width="0.0"/>
+</a>
+</g>
+<g transform="translate(34.5530, 165.1202)">
+<text font-family="serif" font-size="2.2000" text-anchor="start" fill="currentColor">
+<tspan>Music engraving by LilyPond 2.24.4—www.lilypond.org</tspan>
+</text>
+</g>
+</svg>
