@@ -71,7 +71,6 @@ A spanning set may contain redundancy — some vectors expressible in terms of t
       <path d="M0,0 L0,7 L7,3.5 z" fill="#ef4444"/>
     </marker>
   </defs>
-
   <!-- Right panel: three coplanar (dependent) vectors -->
   <text x="360" y="14" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor">Linearly Dependent</text>
   <line x1="280" y1="110" x2="440" y2="110" stroke="currentColor" stroke-width="0.8"/>

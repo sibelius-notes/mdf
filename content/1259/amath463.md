@@ -434,31 +434,26 @@ Two important limits follow immediately:
   <text x="40" y="114" text-anchor="end" font-size="10">0.5</text>
   <line x1="45" y1="50" x2="50" y2="50" stroke="#333" stroke-width="1"/>
   <text x="40" y="54" text-anchor="end" font-size="10">1.0</text>
-
   <!-- tanh(kH) curve: ω²/(gk) = tanh(kH), sampled points -->
   <!-- tanh(x): 0.197,0.462,0.716,0.905,0.964,0.988,0.995 for x=0.2,0.5,1,2,3,4,5 -->
   <!-- mapping: kH axis from 50 to 370 (range 320 for kH 0..4), ω axis from 200 to 20 (range 180 for 0..1) -->
   <!-- kH=0: tanh=0 → (50,200); kH=0.5→(130,117); kH=1→(210,71); kH=2→(290,37); kH=3→(330,27); kH=4→(354,22) -->
   <polyline points="50,200 90,166 130,117 170,84 210,71 250,57 290,37 330,27 354,22" fill="none" stroke="#4488cc" stroke-width="2.5"/>
   <text x="356" y="19" fill="#4488cc" font-size="11">tanh(kH)</text>
-
   <!-- Deep-water asymptote: ω²/(gk)=1 → horizontal line at y=50 -->
   <line x1="50" y1="50" x2="370" y2="50" stroke="#cc4422" stroke-width="1.5" stroke-dasharray="7,4"/>
   <text x="310" y="44" fill="#cc4422" font-size="11">Deep water: ω²=gk</text>
-
   <!-- Shallow-water linear: ω²/(gk) = kH → line through origin with slope 1 in our coords -->
   <!-- At kH=0: y=200; at kH=1: y=200-180*1=20; so almost vertical — scale down: show as 45° in first quadrant -->
   <!-- Let's use kH→ x-axis at 80px per unit; y axis maps kH also for shallow: y=200-(180*kH) -->
   <polyline points="50,200 90,182 130,164 170,146 185,139" fill="none" stroke="#33aa55" stroke-width="1.5" stroke-dasharray="5,3"/>
   <text x="186" y="136" fill="#33aa55" font-size="11">Shallow: ω²=gHk²</text>
-
   <!-- label regions -->
   <text x="190" y="180" text-anchor="middle" fill="#888" font-size="10">Shallow (kH≪1)</text>
   <text x="330" y="80" text-anchor="middle" fill="#888" font-size="10">Deep (kH≫1)</text>
   <!-- vertical at kH=1 marking transition -->
   <line x1="210" y1="200" x2="210" y2="20" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
   <text x="212" y="30" fill="#aaa" font-size="10">kH=1</text>
-
   <defs>
     <marker id="arA1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
     <marker id="arA2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
@@ -537,7 +532,6 @@ A perfect linear profile. The shear stress on each plate is \(\tau = \mu U/h\). 
   <text x="18" y="17" font-size="11" font-style="italic">y</text>
   <text x="110" y="110" text-anchor="middle" font-size="11" fill="#4488cc">u(y)=Uy/h</text>
   <text x="110" y="195" text-anchor="middle" font-weight="bold" font-size="11">Plane Couette</text>
-
   <!-- Poiseuille flow (right panel) -->
   <rect x="300" y="20" width="160" height="10" fill="#888" rx="1"/>
   <rect x="300" y="170" width="160" height="10" fill="#888" rx="1"/>
@@ -560,7 +554,6 @@ A perfect linear profile. The shear stress on each plate is \(\tau = \mu U/h\). 
   <text x="288" y="17" font-size="11" font-style="italic">y</text>
   <text x="390" y="195" text-anchor="middle" font-weight="bold" font-size="11">Plane Poiseuille</text>
   <text x="420" y="100" font-size="10" fill="#4488cc">u_max</text>
-
   <defs>
     <marker id="arC1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#e05"/></marker>
     <marker id="arC2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#33aa55"/></marker>
@@ -845,36 +838,30 @@ where \(C \approx 1.5\) is the Kolmogorov constant. This \(k^{-5/3}\) power law 
   <text x="30" y="18" font-size="12" font-style="italic">E(k)</text>
   <text x="200" y="220" text-anchor="middle" font-size="10" fill="#888">(log scale)</text>
   <text x="20" y="115" font-size="10" fill="#888" transform="rotate(-90,20,115)">(log scale)</text>
-
   <!-- Energy-containing range: flat/rising left part -->
   <polyline points="55,60 90,55 130,58 160,70" fill="none" stroke="#4488cc" stroke-width="2.5"/>
   <!-- Inertial subrange: -5/3 slope -->
   <polyline points="160,70 200,90 240,115 280,145 310,165" fill="none" stroke="#4488cc" stroke-width="2.5"/>
   <!-- Dissipation range: steep drop -->
   <polyline points="310,165 330,178 345,192 355,200" fill="none" stroke="#4488cc" stroke-width="2.5"/>
-
   <!-- slope indicator for -5/3 -->
   <line x1="175" y1="72" x2="295" y2="150" stroke="#cc4422" stroke-width="1" stroke-dasharray="4,3"/>
   <line x1="175" y1="72" x2="295" y2="72" stroke="#cc4422" stroke-width="1" stroke-dasharray="2,2"/>
   <line x1="295" y1="72" x2="295" y2="150" stroke="#cc4422" stroke-width="1" stroke-dasharray="2,2"/>
   <text x="310" y="112" fill="#cc4422" font-size="11">−5/3</text>
-
   <!-- region labels -->
   <text x="100" y="40" text-anchor="middle" fill="#888" font-size="10">Energy</text>
   <text x="100" y="52" text-anchor="middle" fill="#888" font-size="10">injection</text>
   <text x="235" y="85" text-anchor="middle" fill="#33aa55" font-size="11" font-weight="bold">Inertial</text>
   <text x="235" y="97" text-anchor="middle" fill="#33aa55" font-size="10">subrange</text>
   <text x="340" y="140" fill="#888" font-size="10">Dissipation</text>
-
   <!-- k_L and k_Kolmogorov markers -->
   <line x1="155" y1="200" x2="155" y2="70" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
   <text x="155" y="215" text-anchor="middle" font-size="10" fill="#888">k_L</text>
   <line x1="310" y1="200" x2="310" y2="165" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
   <text x="310" y="215" text-anchor="middle" font-size="10" fill="#888">k_η</text>
-
   <!-- formula -->
   <text x="200" y="135" text-anchor="middle" fill="#4488cc" font-size="12" font-style="italic">E(k) = Cε²/³k⁻⁵/³</text>
-
   <defs>
     <marker id="arF1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
     <marker id="arF2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
@@ -915,7 +902,6 @@ with **von Kármán constant** \(\kappa \approx 0.41\) and intercept \(B \approx
   <text x="348" y="198" font-size="12" font-style="italic">y⁺</text>
   <text x="42" y="18" font-size="12" font-style="italic">u⁺</text>
   <text x="200" y="218" text-anchor="middle" font-size="10" fill="#888">(log scale in y⁺)</text>
-
   <!-- x-axis tick marks (log scale): y+=1,5,30,300 → map to positions -->
   <!-- x range 55..345 = 290px for y+ 0.5..1000 (log10: -0.3..3 range 3.3) → scale 290/3.3=88px/decade -->
   <!-- y+=1 → log10=0 → x = 55 + 88*(0-(-0.3))=55+26=81 -->
@@ -930,7 +916,6 @@ with **von Kármán constant** \(\kappa \approx 0.41\) and intercept \(B \approx
   <text x="212" y="210" text-anchor="middle" font-size="9">30</text>
   <line x1="300" y1="195" x2="300" y2="200" stroke="#333" stroke-width="1"/>
   <text x="300" y="210" text-anchor="middle" font-size="9">300</text>
-
   <!-- u+ axis ticks: 0,5,10,15,20,25 → y range 195..25=170px for u+ 0..25 → scale 6.8px/unit -->
   <line x1="50" y1="161" x2="55" y2="161" stroke="#333" stroke-width="1"/>
   <text x="48" y="165" text-anchor="end" font-size="9">5</text>
@@ -942,16 +927,13 @@ with **von Kármán constant** \(\kappa \approx 0.41\) and intercept \(B \approx
   <text x="48" y="63" text-anchor="end" font-size="9">20</text>
   <line x1="50" y1="25" x2="55" y2="25" stroke="#333" stroke-width="1"/>
   <text x="48" y="29" text-anchor="end" font-size="9">25</text>
-
   <!-- Viscous sublayer: u+ = y+ (linear, from y+=1 to y+=5) -->
   <line x1="55" y1="195" x2="143" y2="161" stroke="#cc4422" stroke-width="2"/>
   <text x="90" y="170" fill="#cc4422" font-size="10">u⁺=y⁺</text>
   <text x="90" y="182" fill="#cc4422" font-size="9">viscous sublayer</text>
-
   <!-- Buffer layer (y+=5 to 30): curve transition -->
   <path d="M 143,161 Q 175,142 212,120" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
   <text x="175" y="135" fill="#888" font-size="9">buffer</text>
-
   <!-- Log law: u+ = (1/0.41)ln(y+) + 5.2 = 2.44 ln(y+) + 5.2 -->
   <!-- At y+=30: u+ = 2.44*ln(30)+5.2 = 2.44*3.4+5.2=8.3+5.2=13.5 → y-coord = 195-13.5*6.8=195-92=103 ✓ close to 120 -->
   <!-- At y+=300: u+ = 2.44*ln(300)+5.2 = 2.44*5.7+5.2=13.9+5.2=19.1 → y-coord=195-19.1*6.8=195-130=65 -->
@@ -959,11 +941,9 @@ with **von Kármán constant** \(\kappa \approx 0.41\) and intercept \(B \approx
   <text x="240" y="75" fill="#4488cc" font-size="11">u⁺ = (1/κ)ln y⁺ + B</text>
   <text x="240" y="86" fill="#4488cc" font-size="10">κ≈0.41, B≈5.2</text>
   <text x="240" y="97" fill="#4488cc" font-size="9">log layer</text>
-
   <!-- region boundary lines -->
   <line x1="143" y1="195" x2="143" y2="20" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3,3"/>
   <line x1="212" y1="195" x2="212" y2="20" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3,3"/>
-
   <defs>
     <marker id="arG1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
     <marker id="arG2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
@@ -1397,7 +1377,6 @@ At \(t = t_{break}\), the solution becomes multi-valued: the wave has **broken**
   <text x="193" y="198" font-size="12" font-style="italic">x</text>
   <text x="20" y="18" font-size="12" font-style="italic">t</text>
   <text x="110" y="212" text-anchor="middle" font-weight="bold" font-size="11">Characteristic diagram</text>
-
   <!-- characteristics: fast from left (large u₀), slow from right -->
   <!-- fast characteristics converge -->
   <line x1="40" y1="195" x2="115" y2="30" stroke="#4488cc" stroke-width="1.5"/>
@@ -1414,26 +1393,21 @@ At \(t = t_{break}\), the solution becomes multi-valued: the wave has **broken**
   <text x="108" y="62" fill="#e05" font-size="10">t_break</text>
   <!-- label -->
   <text x="150" y="28" fill="#e05" font-size="10">shock</text>
-
   <!-- Right: wave profile steepening -->
   <line x1="240" y1="195" x2="420" y2="195" stroke="#333" stroke-width="1.5" marker-end="url(#arH1)"/>
   <line x1="240" y1="195" x2="240" y2="20" stroke="#333" stroke-width="1.5" marker-end="url(#arH2)"/>
   <text x="423" y="198" font-size="12" font-style="italic">x</text>
   <text x="230" y="18" font-size="12" font-style="italic">u</text>
   <text x="330" y="212" text-anchor="middle" font-weight="bold" font-size="11">Wave steepening</text>
-
   <!-- Initial profile: smooth hump -->
   <path d="M 250,170 Q 290,140 320,80 Q 345,130 380,170" fill="none" stroke="#4488cc" stroke-width="2" stroke-dasharray="5,3"/>
   <text x="302" y="72" fill="#4488cc" font-size="10">t=0</text>
-
   <!-- Later profile: steepened right side -->
   <path d="M 255,170 Q 295,145 330,90 Q 352,120 370,170" fill="none" stroke="#33aa55" stroke-width="2"/>
   <text x="352" y="108" fill="#33aa55" font-size="10">t&lt;t_break</text>
-
   <!-- Near breaking: vertical front -->
   <path d="M 260,170 Q 300,148 340,100 L 345,100 L 345,170" fill="none" stroke="#e05" stroke-width="2.5"/>
   <text x="355" y="120" fill="#e05" font-size="10">t≈t_break</text>
-
   <defs>
     <marker id="arH1" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
     <marker id="arH2" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>

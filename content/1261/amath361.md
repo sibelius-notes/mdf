@@ -103,7 +103,6 @@ The stress relaxes exponentially to zero with relaxation time \(\tau_M = \eta/G\
   <!-- labels -->
   <text x="64" y="125" text-anchor="middle" font-size="12" font-style="italic">G</text>
   <text x="130" y="125" text-anchor="middle" font-size="12" font-style="italic">η</text>
-
   <!-- Kelvin-Voigt: spring parallel with dashpot -->
   <text x="390" y="18" text-anchor="middle" font-weight="bold">Kelvin-Voigt (parallel)</text>
   <!-- left wall -->
@@ -129,7 +128,6 @@ The stress relaxes exponentially to zero with relaxation time \(\tau_M = \eta/G\
   <!-- labels -->
   <text x="341" y="68" text-anchor="middle" font-size="12" font-style="italic">G</text>
   <text x="340" y="137" text-anchor="middle" font-size="12" font-style="italic">η</text>
-
   <!-- SLS: KV element in series with a spring -->
   <text x="590" y="18" text-anchor="middle" font-weight="bold">Zener / SLS</text>
   <!-- left wall -->
@@ -156,7 +154,6 @@ The stress relaxes exponentially to zero with relaxation time \(\tau_M = \eta/G\
   <text x="538" y="132" text-anchor="middle" font-size="11" font-style="italic">G₁</text>
   <text x="588" y="62" text-anchor="middle" font-size="11" font-style="italic">G₂</text>
   <text x="592" y="145" text-anchor="middle" font-size="11" font-style="italic">η</text>
-
   <defs>
     <marker id="arr" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
       <polygon points="0 0, 8 3, 0 6" fill="#e05"/>
@@ -264,7 +261,6 @@ The **oscillatory test** applies \(f(t) = f_0 \sin(\omega t)\) and observes the 
   <text x="225" y="90" fill="#33aa55" font-size="11">SLS</text>
   <!-- equilibrium line -->
   <line x1="40" y1="97" x2="225" y2="97" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
-
   <!-- Right panel: Relaxation Modulus G(t) -->
   <line x1="310" y1="165" x2="500" y2="165" stroke="#333" stroke-width="1.5"/>
   <line x1="310" y1="165" x2="310" y2="20" stroke="#333" stroke-width="1.5"/>
@@ -330,7 +326,6 @@ This linear approximation is valid for metals under service loads, geological ro
   <!-- Reference square (dashed) -->
   <rect x="50" y="60" width="80" height="80" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3"/>
   <text x="90" y="55" text-anchor="middle" fill="#888" font-size="11">Reference</text>
-
   <!-- Normal strain e_11: stretched in x -->
   <rect x="200" y="60" width="110" height="80" fill="rgba(68,136,204,0.1)" stroke="#4488cc" stroke-width="2"/>
   <text x="255" y="55" text-anchor="middle" fill="#4488cc" font-size="11">Normal strain</text>
@@ -340,20 +335,17 @@ This linear approximation is valid for metals under service loads, geological ro
   <line x1="314" y1="100" x2="325" y2="100" stroke="#4488cc" stroke-width="1.5" marker-end="url(#arB)"/>
   <!-- reference outline dashed -->
   <rect x="215" y="60" width="80" height="80" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
-
   <!-- Shear strain e_12: shearing -->
   <polygon points="50,310 130,310 135,390 55,390" fill="rgba(204,68,34,0.1)" stroke="#cc4422" stroke-width="2" transform="translate(220,-220)"/>
   <text x="385" y="55" text-anchor="middle" fill="#cc4422" font-size="11">Shear strain</text>
   <text x="385" y="45" text-anchor="middle" fill="#cc4422" font-size="10" font-style="italic">e₁₂ = ½(∂u₁/∂x₂ + ∂u₂/∂x₁)</text>
   <!-- reference outline dashed -->
   <rect x="350" y="90" width="80" height="80" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
-
   <!-- axes labels -->
   <line x1="30" y1="155" x2="30" y2="50" stroke="#333" stroke-width="1.5" marker-end="url(#arD)"/>
   <line x1="30" y1="155" x2="145" y2="155" stroke="#333" stroke-width="1.5" marker-end="url(#arD)"/>
   <text x="148" y="158" font-size="11" font-style="italic">x₁</text>
   <text x="22" y="46" font-size="11" font-style="italic">x₂</text>
-
   <defs>
     <marker id="arB" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#4488cc"/></marker>
     <marker id="arD" markerWidth="7" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#333"/></marker>
