@@ -16,6 +16,46 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"></script>
 <script>
+  function latexToUnicode(tex) {
+    var sup = {'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹',
+               'n':'ⁿ','i':'ⁱ','j':'ʲ','k':'ᵏ','m':'ᵐ','p':'ᵖ','r':'ʳ','s':'ˢ','t':'ᵗ','a':'ᵃ',
+               '-':'⁻','+':'⁺','=':'⁼','(':'⁽',')':'⁾'};
+    var sub = {'0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉',
+               'n':'ₙ','i':'ᵢ','j':'ⱼ','k':'ₖ','m':'ₘ','p':'ₚ','r':'ᵣ','s':'ₛ','t':'ₜ',
+               'a':'ₐ','e':'ₑ','o':'ₒ','x':'ₓ'};
+    function mapStr(s, m) { return s.split('').map(function(c){return m[c]||c;}).join(''); }
+    return tex
+      .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g,'($1/$2)')
+      .replace(/\\mathbb\{([A-Z])\}/g,function(_,c){return {R:'ℝ',Z:'ℤ',C:'ℂ',N:'ℕ',Q:'ℚ',F:'𝔽',H:'ℍ',P:'ℙ'}[c]||c;})
+      .replace(/\\mathcal\{([A-Z])\}/g,function(_,c){return {A:'𝒜',B:'ℬ',C:'𝒞',D:'𝒟',E:'ℰ',F:'ℱ',G:'𝒢',H:'ℋ',I:'ℐ',J:'𝒥',K:'𝒦',L:'ℒ',M:'ℳ',N:'𝒩',O:'𝒪',P:'𝒫',Q:'𝒬',R:'ℛ',S:'𝒮',T:'𝒯',U:'𝒰',V:'𝒱',W:'𝒲',X:'𝒳',Y:'𝒴',Z:'𝒵'}[c]||c;})
+      .replace(/\\text\{([^}]*)\}/g,'$1').replace(/\\mathrm\{([^}]*)\}/g,'$1')
+      .replace(/\\mathbf\{([^}]*)\}/g,'$1').replace(/\\mathit\{([^}]*)\}/g,'$1')
+      .replace(/\^\{([^}]*)\}/g,function(_,s){return mapStr(s,sup);})
+      .replace(/_\{([^}]*)\}/g,function(_,s){return mapStr(s,sub);})
+      .replace(/\^(.)/g,function(_,c){return sup[c]||'^'+c;})
+      .replace(/_(.)/g,function(_,c){return sub[c]||'_'+c;})
+      .replace(/\\alpha/g,'α').replace(/\\beta/g,'β').replace(/\\gamma/g,'γ').replace(/\\delta/g,'δ')
+      .replace(/\\epsilon/g,'ε').replace(/\\varepsilon/g,'ε').replace(/\\zeta/g,'ζ').replace(/\\eta/g,'η')
+      .replace(/\\theta/g,'θ').replace(/\\vartheta/g,'ϑ').replace(/\\iota/g,'ι').replace(/\\kappa/g,'κ')
+      .replace(/\\lambda/g,'λ').replace(/\\mu/g,'μ').replace(/\\nu/g,'ν').replace(/\\xi/g,'ξ')
+      .replace(/\\pi/g,'π').replace(/\\rho/g,'ρ').replace(/\\sigma/g,'σ').replace(/\\tau/g,'τ')
+      .replace(/\\upsilon/g,'υ').replace(/\\phi/g,'φ').replace(/\\varphi/g,'φ').replace(/\\chi/g,'χ')
+      .replace(/\\psi/g,'ψ').replace(/\\omega/g,'ω')
+      .replace(/\\Gamma/g,'Γ').replace(/\\Delta/g,'Δ').replace(/\\Theta/g,'Θ').replace(/\\Lambda/g,'Λ')
+      .replace(/\\Xi/g,'Ξ').replace(/\\Pi/g,'Π').replace(/\\Sigma/g,'Σ').replace(/\\Upsilon/g,'Υ')
+      .replace(/\\Phi/g,'Φ').replace(/\\Psi/g,'Ψ').replace(/\\Omega/g,'Ω')
+      .replace(/\\infty/g,'∞').replace(/\\partial/g,'∂').replace(/\\nabla/g,'∇')
+      .replace(/\\times/g,'×').replace(/\\cdot/g,'·').replace(/\\circ/g,'∘')
+      .replace(/\\to\b/g,'→').replace(/\\rightarrow/g,'→').replace(/\\leftarrow/g,'←')
+      .replace(/\\in\b/g,'∈').replace(/\\notin/g,'∉').replace(/\\subset/g,'⊂').replace(/\\subseteq/g,'⊆')
+      .replace(/\\cup/g,'∪').replace(/\\cap/g,'∩').replace(/\\leq/g,'≤').replace(/\\geq/g,'≥')
+      .replace(/\\neq/g,'≠').replace(/\\approx/g,'≈').replace(/\\equiv/g,'≡')
+      .replace(/\\oplus/g,'⊕').replace(/\\otimes/g,'⊗').replace(/\\forall/g,'∀').replace(/\\exists/g,'∃')
+      .replace(/\\pm/g,'±').replace(/\\sqrt/g,'√').replace(/\\ldots/g,'…').replace(/\\cdots/g,'⋯')
+      .replace(/\\[a-zA-Z]+\*?/g,'').replace(/[{}]/g,'')
+      .replace(/\s+/g,' ').trim();
+  }
+
   document.addEventListener("DOMContentLoaded", function() {
     renderMathInElement(document.body, {
       delimiters: [
@@ -24,13 +64,19 @@
       ],
       throwOnError: false
     });
-    // Replace KaTeX-rendered math in TOC links with plain text from the heading
     var toc = document.getElementById("TableOfContents");
     if (toc) {
       toc.querySelectorAll('a[href^="#"]').forEach(function(link) {
         var id = link.getAttribute("href").slice(1);
         var heading = document.getElementById(id);
-        if (heading) link.textContent = heading.textContent;
+        if (!heading || !heading.querySelector('.katex')) return;
+        var clone = heading.cloneNode(true);
+        clone.querySelectorAll('.katex').forEach(function(k) {
+          var ann = k.querySelector('annotation[encoding="application/x-tex"]');
+          var text = ann ? latexToUnicode(ann.textContent) : k.textContent;
+          k.parentNode.replaceChild(document.createTextNode(text), k);
+        });
+        link.textContent = clone.textContent;
       });
     }
   });
