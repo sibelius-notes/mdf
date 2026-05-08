@@ -24,6 +24,15 @@
       ],
       throwOnError: false
     });
+    // Replace KaTeX-rendered math in TOC links with plain text from the heading
+    var toc = document.getElementById("TableOfContents");
+    if (toc) {
+      toc.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        var id = link.getAttribute("href").slice(1);
+        var heading = document.getElementById(id);
+        if (heading) link.textContent = heading.textContent;
+      });
+    }
   });
 </script>
 
