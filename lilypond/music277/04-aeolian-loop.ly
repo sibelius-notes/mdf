@@ -1,22 +1,38 @@
+% Aeolian loop i–VII–VI–VII in A minor: Stairway to Heaven, Burn, Don't Fear the Reaper.
 \version "2.24.0"
 \paper { indent = 0 ragged-right = ##t line-width = 14\cm }
+
+harmScheme = \chordmode {
+  \set chordChanges = ##t
+  a1:m g1 f1 g1
+}
+
+melody = {
+  \clef treble \key a \minor \time 4/4
+  \omit Score.BarNumber
+  a'4 c''4 e''4 c''4 |
+  b'4 g'4 d'4 g'4 |
+  a'4 f'4 c'4 f'4 |
+  g'4 b'4 d''4 b'4 |
+  \bar "|."
+}
+
+bassline = {
+  \clef bass \key a \minor \time 4/4
+  \omit Score.BarNumber
+  a,2 e2 |
+  g,2 d2 |
+  f,2 c2 |
+  g,2 d2 |
+  \bar "|."
+}
+
 \score {
   <<
-    \new ChordNames {
-      \chordmode { a1:m g1 f1 g1 }
-    }
+    \new ChordNames \harmScheme
     \new GrandStaff <<
-      \new Staff {
-        \clef treble \key a \minor \time 4/4
-        \omit Score.BarNumber
-        % Aeolian loop i–VII–VI–VII in A minor
-        e'1 d'1 c'1 d'1
-      }
-      \new Staff {
-        \clef bass \key a \minor \time 4/4
-        \omit Score.BarNumber
-        <a, c e>1 <g, b, d>1 <f, a, c>1 <g, b, d>1
-      }
+      \new Staff \melody
+      \new Staff \bassline
     >>
   >>
   \layout { }
