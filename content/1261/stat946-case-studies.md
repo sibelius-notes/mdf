@@ -2,6 +2,7 @@
 title: "STAT 946: Case Studies in Data Science"
 prof: "Martin Lysy"
 subjects: "STAT"
+ai_track: true
 ---
 
 ## Sources and References

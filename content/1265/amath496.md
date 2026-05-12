@@ -20,6 +20,7 @@ why: |
 made_up: true
 title: "AMATH 496: AI and Scientific Discovery"
 subjects: "AMATH"
+ai_track: true
 ---
 
 - Jumper, John, et al. "Highly Accurate Protein Structure Prediction with AlphaFold." *Nature* 596 (2021): 583–589.

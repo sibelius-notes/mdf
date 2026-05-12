@@ -2,6 +2,7 @@
 title: "ECE 493: Machine Learning Techniques for Chip Design"
 prof: "Nachiket Kapre"
 subjects: "ECE"
+ai_track: true
 ---
 
 ## Sources and References

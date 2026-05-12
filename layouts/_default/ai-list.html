@@ -1,0 +1,42 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  <p class="page-intro">All courses across UWaterloo that engage with artificial intelligence — from core ML and deep learning through mathematics, philosophy, economics, art, health, and environment.</p>
+
+  {{ $aiPages := where .Site.RegularPages "Params.ai_track" true }}
+
+  {{ $sections := slice
+    (dict "label" "Core AI & Machine Learning"        "subjects" (slice "CS" "SYDE" "ECE"))
+    (dict "label" "Mathematics, Statistics & Physics" "subjects" (slice "STAT" "AMATH" "PHYS"))
+    (dict "label" "Ethics, Philosophy & Society"      "subjects" (slice "PHIL" "PSYCH" "SOC" "HIST"))
+    (dict "label" "Economics & Finance"               "subjects" (slice "ECON" "AFM"))
+    (dict "label" "Arts, Health & Environment"        "subjects" (slice "FINE" "BME" "ENVS"))
+  }}
+
+  {{ range $sections }}
+    {{ $sec := . }}
+    {{ $pages := slice }}
+    {{ range $aiPages }}
+      {{ if in $sec.subjects .Params.subjects }}
+        {{ $pages = $pages | append . }}
+      {{ end }}
+    {{ end }}
+    {{ if gt (len $pages) 0 }}
+    <h2>{{ $sec.label }}</h2>
+    <div class="course-grid">
+    {{ range $pages.ByTitle }}
+      {{ $study := partialCached "study-stats.html" . .RelPermalink }}
+      <a href="{{ .RelPermalink }}" class="course-card{{ if .Params.made_up }} made-up{{ end }}">
+        <span class="course-code">{{ .Title }}</span>
+        <span class="course-meta">
+          <span class="course-term-badge">{{ .CurrentSection.Title }}</span>
+          {{ with .Params.prof }}<span class="course-prof">{{ . }}</span>{{ end }}
+        </span>
+        <span class="course-words">Study time: {{ partial "format-study-time.html" (dict "minutes" $study.minutes "style" "short" "studyDayMinutes" 1440) }}</span>
+      </a>
+    {{ end }}
+    </div>
+    {{ end }}
+  {{ end }}
+</article>
+{{ end }}

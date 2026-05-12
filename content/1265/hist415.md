@@ -13,6 +13,7 @@ why: |
 made_up: true
 title: "HIST 415: A History of Artificial Intelligence"
 subjects: "HIST"
+ai_track: true
 ---
 
 ## Sources and References

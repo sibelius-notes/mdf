@@ -14,6 +14,7 @@ why: |
 made_up: true
 title: "FINE 430: Generative AI and Creative Practice"
 subjects: "FINE"
+ai_track: true
 ---
 
 - Goodfellow, Ian, et al. "Generative Adversarial Nets." *NIPS 2014.*

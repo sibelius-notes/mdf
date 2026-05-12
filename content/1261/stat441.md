@@ -2,6 +2,7 @@
 title: "STAT 441: Statistical Learning — Classification"
 subjects: "STAT"
 prof: "Matthias Schonlau"
+ai_track: true
 ---
 
 ## Sources and References

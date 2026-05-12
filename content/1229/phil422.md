@@ -2,6 +2,7 @@
 title: "PHIL 422: Fairness and Anti-Discrimination in AI"
 prof: "Patricia Marino"
 subjects: "PHIL"
+ai_track: true
 ---
 
 ## Sources and References

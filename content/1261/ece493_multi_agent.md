@@ -2,6 +2,7 @@
 title: "ECE 493: Foundations of Multi-Agent Systems"
 prof: "Seyed Majid Zahedi"
 subjects: "ECE"
+ai_track: true
 ---
 
 ## Sources and References

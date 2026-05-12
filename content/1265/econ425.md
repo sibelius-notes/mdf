@@ -14,6 +14,7 @@ why: |
 made_up: true
 title: "ECON 425: The Economics of Artificial Intelligence"
 subjects: "ECON"
+ai_track: true
 ---
 
 ## Sources and References

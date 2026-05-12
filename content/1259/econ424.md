@@ -2,6 +2,7 @@
 title: "ECON 424: Machine Learning in Economics"
 prof: "Mikko Packalen"
 subjects: "ECON"
+ai_track: true
 ---
 
 ## Sources and References

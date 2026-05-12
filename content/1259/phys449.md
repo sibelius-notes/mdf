@@ -2,6 +2,7 @@
 title: "PHYS 449: Machine Learning in Physics"
 prof: "Roger Melko"
 subjects: "PHYS"
+ai_track: true
 ---
 
 ## Sources and References

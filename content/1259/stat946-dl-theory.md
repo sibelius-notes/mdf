@@ -2,6 +2,7 @@
 title: "STAT 946: Deep Learning Theory"
 prof: "Mufan Li"
 subjects: "STAT"
+ai_track: true
 ---
 
 ## Sources and References

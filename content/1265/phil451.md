@@ -15,6 +15,7 @@ why: |
 made_up: true
 title: "PHIL 451: AI Ethics, Law, and Governance"
 subjects: "PHIL"
+ai_track: true
 ---
 
 ## Sources and References

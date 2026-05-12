@@ -2,6 +2,7 @@
 title: "ECE 493: Neural Networks and Deep Learning"
 prof: "Elliot Creager"
 subjects: "ECE"
+ai_track: true
 ---
 
 ## Sources and References

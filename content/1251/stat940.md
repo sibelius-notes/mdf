@@ -2,6 +2,7 @@
 title: "STAT 940: Deep Learning"
 prof: "Ali Ghodsi"
 subjects: "STAT"
+ai_track: true
 ---
 
 ## Sources and References

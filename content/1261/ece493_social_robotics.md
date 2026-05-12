@@ -2,6 +2,7 @@
 title: "ECE 493: Social Robotics — Foundations, Technology and Applications of Human-Centered Robotics"
 prof: "Kerstin Dautenhahn"
 subjects: "ECE"
+ai_track: true
 ---
 
 ## Sources and References
