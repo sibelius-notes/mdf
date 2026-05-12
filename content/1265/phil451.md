@@ -15,7 +15,6 @@ why: |
 made_up: true
 title: "PHIL 451: AI Ethics, Law, and Governance"
 subjects: "PHIL"
-prof: "Margaret Hartley"
 ---
 
 ## Sources and References

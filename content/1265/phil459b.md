@@ -14,7 +14,6 @@ why: |
 made_up: true
 title: "PHIL 459b: Philosophy of Artificial Intelligence"
 subjects: "PHIL"
-prof: "Karen Frost-Arnold"
 ---
 
 - Turing, Alan. "Computing Machinery and Intelligence." *Mind* 59, no. 236 (1950): 433–460.

@@ -13,7 +13,6 @@ why: |
 made_up: true
 title: "HIST 415: A History of Artificial Intelligence"
 subjects: "HIST"
-prof: "Sarah Hartwell"
 ---
 
 ## Sources and References

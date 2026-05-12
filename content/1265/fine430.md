@@ -14,7 +14,6 @@ why: |
 made_up: true
 title: "FINE 430: Generative AI and Creative Practice"
 subjects: "FINE"
-prof: "David Rokeby"
 ---
 
 - Goodfellow, Ian, et al. "Generative Adversarial Nets." *NIPS 2014.*

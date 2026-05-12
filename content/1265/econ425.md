@@ -14,7 +14,6 @@ why: |
 made_up: true
 title: "ECON 425: The Economics of Artificial Intelligence"
 subjects: "ECON"
-prof: "Gillian Foster"
 ---
 
 ## Sources and References

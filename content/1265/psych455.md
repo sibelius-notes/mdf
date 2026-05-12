@@ -13,7 +13,6 @@ why: |
 made_up: true
 title: "PSYCH 455: The Psychology of Human–AI Interaction"
 subjects: "PSYCH"
-prof: "Jennifer Ware"
 ---
 
 - Reeves, Byron, and Clifford Nass. *The Media Equation: How People Treat Computers, Television, and New Media Like Real People and Places.* Cambridge University Press, 1996.

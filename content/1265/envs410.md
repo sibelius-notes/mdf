@@ -14,7 +14,6 @@ why: |
 made_up: true
 title: "ENVS 410: AI, Climate, and Environmental Justice"
 subjects: "ENVS"
-prof: "Kyle Whyte"
 ---
 
 - Rolnick, David, et al. "Tackling Climate Change with Machine Learning." *ACM Computing Surveys* 55, no. 2 (2022): 1–96.
