@@ -7,4 +7,5 @@ migrate.sh
 firebase-debug.log
 .codex
 tmp/
-
+.DS_Store
+*DS_Store
