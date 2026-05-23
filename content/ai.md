@@ -1,4 +1,4 @@
 ---
-title: "AI at UWaterloo"
+title: "AI Collection"
 layout: "ai-list"
 ---

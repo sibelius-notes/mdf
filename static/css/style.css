@@ -280,6 +280,71 @@ body {
   transform: translateY(-1px);
 }
 
+/* === Discipline Collapsibles (made-up page) === */
+.discipline-details {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+  background: var(--bg-card);
+  overflow: hidden;
+}
+.discipline-details[open] {
+  padding-bottom: 1rem;
+}
+.discipline-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  border-bottom: 1px solid transparent;
+  transition: background 0.15s;
+}
+.discipline-details[open] .discipline-summary {
+  border-bottom-color: var(--border);
+}
+.discipline-summary::-webkit-details-marker { display: none; }
+.discipline-summary::marker { display: none; }
+.discipline-summary:hover {
+  background: var(--bg-secondary);
+}
+.discipline-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--heading);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.discipline-name::before {
+  content: "▸";
+  font-size: 0.8em;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+  display: inline-block;
+}
+.discipline-details[open] .discipline-name::before {
+  transform: rotate(90deg);
+}
+.discipline-count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+.discipline-details .course-grid {
+  padding: 1rem 1.2rem 0;
+  margin-top: 0;
+}
+
 /* === Course Grid === */
 .course-grid {
   display: grid;
