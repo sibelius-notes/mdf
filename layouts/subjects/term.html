@@ -15,7 +15,7 @@
         {{ $suffixMatches := findRE `[A-Za-z]+$` $courseID 1 }}
         {{ $suffix := "" }}
         {{ if gt (len $suffixMatches) 0 }}{{ $suffix = lower (index $suffixMatches 0) }}{{ end }}
-        {{ $sortKey = printf "%06d-%s-%s" (int $digits) $suffix (.Title | lower) }}
+        {{ $sortKey = printf "%06d-%s-%s" (int (strings.TrimLeft "0" $digits | default "0")) $suffix (.Title | lower) }}
       {{ end }}
       {{ $sorted = $sorted | append (dict "page" . "sortKey" $sortKey) }}
     {{ end }}
