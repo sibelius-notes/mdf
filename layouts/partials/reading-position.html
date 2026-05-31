@@ -1,0 +1,104 @@
+<script>
+  // Remember and resume the last read position per course page.
+  (function () {
+    var root = document.querySelector('.course-content');
+    if (!root) return; // course content pages only
+
+    var key = 'readpos:' + location.pathname;
+    var NEAR_TOP = 120;       // px from the top counts as "back to start"
+    var NEAR_BOTTOM = 120;    // px from the end counts as "finished"
+    var LOOKAHEAD = 80;       // a heading within this many px below the top is "current"
+
+    function read() {
+      try { return JSON.parse(localStorage.getItem(key)); }
+      catch (e) { return null; }
+    }
+    function write(v) {
+      try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {}
+    }
+    function clear() {
+      try { localStorage.removeItem(key); } catch (e) {}
+    }
+
+    var headings = Array.prototype.slice.call(
+      root.querySelectorAll('h1[id],h2[id],h3[id],h4[id]')
+    );
+
+    var btn = null;
+    function hideButton() {
+      if (btn) { btn.classList.remove('visible'); }
+    }
+
+    // --- Restore: show a tap-to-resume button if we have a valid marker ---
+    var stored = read();
+    if (stored && stored.id && document.getElementById(stored.id)) {
+      btn = document.createElement('button');
+      btn.id = 'resume-reading';
+      var label = (stored.label || 'where you left off');
+      btn.innerHTML = 'Continue from "' +
+        label.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+        '" ↓';
+      btn.setAttribute('aria-label', 'Resume reading from ' + label);
+      btn.addEventListener('click', function () {
+        var h = document.getElementById(stored.id);
+        if (!h) { hideButton(); return; }
+        var target = h.getBoundingClientRect().top + window.scrollY + (stored.offset || 0);
+        window.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
+        hideButton();
+      });
+      document.body.appendChild(btn);
+      // Make it visible on the next frame so the transition runs.
+      requestAnimationFrame(function () { btn.classList.add('visible'); });
+    }
+
+    // --- Track: save the nearest heading + fine offset while scrolling ---
+    var ticking = false;
+    var dismissedButton = false;
+
+    function update() {
+      ticking = false;
+      var y = window.scrollY;
+      var docH = document.documentElement.scrollHeight;
+
+      // First scroll dismisses the resume button so it doesn't linger.
+      if (btn && !dismissedButton && y > NEAR_TOP) {
+        dismissedButton = true;
+        hideButton();
+      }
+
+      // Auto-clear when back near the top or finished at the bottom.
+      if (y <= NEAR_TOP || (y + window.innerHeight >= docH - NEAR_BOTTOM)) {
+        clear();
+        return;
+      }
+
+      // Find the last heading at or above the viewport top.
+      var current = null;
+      var threshold = y + LOOKAHEAD;
+      for (var i = 0; i < headings.length; i++) {
+        var top = headings[i].getBoundingClientRect().top + y;
+        if (top <= threshold) { current = headings[i]; }
+        else { break; }
+      }
+      if (!current) return;
+
+      var headingTop = current.getBoundingClientRect().top + y;
+      var lbl = (current.textContent || '').trim().replace(/\s+/g, ' ');
+      if (lbl.length > 60) { lbl = lbl.slice(0, 59) + '…'; }
+
+      write({
+        id: current.id,
+        offset: Math.round(y - headingTop),
+        label: lbl,
+        ts: Date.now()
+      });
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }, { passive: true });
+  })();
+</script>

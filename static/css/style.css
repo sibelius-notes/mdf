@@ -865,3 +865,49 @@ figure.score figcaption {
     color: var(--link);
   }
 }
+
+/* === Resume-reading button (all viewports; mobile is the primary case) === */
+#resume-reading {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%) translateY(0.5rem);
+  z-index: 1000;
+  max-width: calc(100vw - 2rem);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s, color 0.15s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+#resume-reading.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+#resume-reading:hover {
+  color: var(--link);
+}
+
+/* On desktop, sit just left of the back-to-top button instead of dead-center. */
+@media (min-width: 768px) {
+  #resume-reading {
+    left: auto;
+    right: 2rem;
+    bottom: 4.8rem;
+    transform: translateY(0.5rem);
+  }
+  #resume-reading.visible {
+    transform: translateY(0);
+  }
+}
