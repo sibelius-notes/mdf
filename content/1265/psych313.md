@@ -2281,7 +2281,9 @@ Bourdieu（1986）的"文化资本"概念可以在此被调用：家训作为制
 **学术注记**：这一逻辑与 Bandura（1977）的社会学习理论和 Dweck（2006）的成长型心态（growth mindset）研究在机制上高度相容。Dweck 的研究发现，被教导"你很努力"（过程归因）的儿童比被教导"你很聪明"（特质归因）的儿童在面对困难时表现出更高的坚持性。然而，Dweck 本人指出，成长型心态的干预在家庭环境中往往效果不稳定，原因正在于父母自身的固定型心态（fixed mindset）会通过日常互动不断稀释干预效果。要改变孩子的心态，最有效的途径是改变父母对自身失败与成功的解读方式。
 
 <div class="remark">
+
 **伦理与应用边界**：本节的代际循环分析，在临床实践中需要与"父母内疚"效应仔细区分。研究显示，过度聚焦于原生家庭影响，有时会强化父母的无力感（"我被我的过去决定了"），而非激发主体性（"我可以在理解中做出不同的选择"）。心智化干预（如 Fonagy 的 MBT-P）与依恋为基础的父母辅导（attachment-based parenting interventions），其目标正是在这两个极端之间找到一条有效的路径：既不否认早年经历的影响，也不使父母在这一影响前陷入宿命论。（参见：Fonagy, P. et al. (2002). *Affect Regulation, Mentalization and the Development of the Self*. Karnac；Bandura, A. (1977). *Social Learning Theory*. Prentice Hall；van IJzendoorn, M. H. (1995). Adult attachment representations, parental responsiveness, and infant attachment: A meta-analysis. *Psychological Bulletin*, 117(3), 387–403。）
+
 </div>
 
 ---

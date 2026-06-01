@@ -3439,7 +3439,9 @@ Y(s) = G(s)\, U(s), \qquad G(s) = C(sI-A)^{-1}B + D.
 \]
 
 <div class="definition">
+
 **Definition 23.1 (Transfer function).** The **transfer function** of the LTI system \((A,B,C,D)\) is the rational matrix \(G(s) = C(sI-A)^{-1}B + D\). A scalar transfer function is written as a ratio of polynomials \(G(s) = N(s)/D(s)\) in lowest terms; the roots of \(N\) are the **zeros** and the roots of \(D\) are the **poles** of \(G\). The transfer function is **proper** if \(\deg N \le \deg D\) and **strictly proper** if \(\deg N < \deg D\).
+
 </div>
 
 Because \((sI-A)^{-1} = \operatorname{adj}(sI-A)/\det(sI-A)\), every pole of \(G\) is an eigenvalue of \(A\); the converse can fail when uncontrollable or unobservable modes cancel in the product \(C(sI-A)^{-1}B\). This is the frequency-domain shadow of the Kalman decomposition of Part II: only the controllable and observable subsystem appears in \(G(s)\).
@@ -3467,7 +3469,9 @@ with **natural frequency** \(\omega_n > 0\) and **damping ratio** \(\zeta \ge 0\
 A commonly used 2% **settling-time** estimate is \(t_s \approx 4/(\zeta\omega_n)\), and the 10–90% **rise time** satisfies \(t_r \approx (0.8 + 2.5\zeta)/\omega_n\) for \(0.3 \le \zeta \le 0.8\).
 
 <div class="remark">
+
 **Dominant-pole approximation.** If a system has two complex poles near the \(j\omega\)-axis and all other poles have real parts at least 5–10 times more negative, the slow pair dominates the transient and the higher-order system is well approximated by a second-order prototype with matched \(\zeta,\omega_n\). This is the workhorse sizing rule of undergraduate controls design.
+
 </div>
 
 **Worked example (ME 360, DC motor).** An armature-controlled DC motor with load inertia \(J\), viscous damping \(b\), back-EMF constant \(K_e\) and torque constant \(K_t\) (neglecting armature inductance) has transfer function from voltage \(V(s)\) to angular velocity \(\Omega(s)\)
@@ -3483,6 +3487,7 @@ Engineers draw systems as **block diagrams**: arrows carry Laplace-transformed s
 ### Series, Parallel, Feedback
 
 <div class="theorem">
+
 **Theorem 24.1 (Elementary interconnections).** For scalar transfer functions \(G_1, G_2\):
 - **Series.** If \(y = G_2 G_1 u\), the equivalent block is \(G_1G_2\).
 - **Parallel.** If \(y = (G_1 + G_2)u\), the equivalent is \(G_1 + G_2\).
@@ -3521,7 +3526,9 @@ S(s) = \frac{1}{1 + L(s)}.
 Immediately \(S(s) + T(s) = 1\) for all \(s\). This identity is the single most consequential algebraic fact in classical control: it says that at every frequency, disturbance rejection (small \(|S|\)) and noise attenuation (small \(|T|\)) trade off against each other. Low-frequency disturbances are rejected by making \(|L|\) large, which makes \(|T| \approx 1\) and \(|S| \approx 0\); high-frequency sensor noise is attenuated by rolling off \(|L|\), which makes \(|T| \approx 0\) and \(|S| \approx 1\). The **crossover frequency** \(\omega_c\) where \(|L(j\omega_c)| = 1\) is where the transition happens, and it is the single number that a Bode-plot designer sets most deliberately.
 
 <div class="remark">
+
 **Relation to Part II.** Sensitivity \(S\) plays the role of a closed-loop input-to-disturbance map; in the LQR problem of Chapter 21, the analogous trade-off was encoded by the ratio between state penalty \(Q\) and input penalty \(R\). Classical \(S/T\) design and modern \(H_\infty\) design (outside our scope) are the two systematic ways to tune this trade-off.
+
 </div>
 
 ## Chapter 25 — The Root Locus Method
@@ -3594,6 +3601,7 @@ at resonant frequency \(\omega_r = \omega_n\sqrt{1-2\zeta^2}\).
 Consider the loop transfer function \(L(j\omega)\).
 
 <div class="definition">
+
 **Definition 26.1.** The **gain crossover frequency** \(\omega_{gc}\) satisfies \(|L(j\omega_{gc})| = 1\); the **phase crossover frequency** \(\omega_{pc}\) satisfies \(\angle L(j\omega_{pc}) = -180^\circ\). The **phase margin** is
 \[
 \mathrm{PM} = 180^\circ + \angle L(j\omega_{gc}),
@@ -3617,6 +3625,7 @@ The Nyquist criterion expresses closed-loop stability in terms of a single geome
 ### Contour Mapping and the Argument Principle
 
 <div class="theorem">
+
 **Theorem 27.1 (Cauchy's argument principle).** Let \(L(s)\) be meromorphic in a simply connected region containing a simple closed contour \(\Gamma\) traversed once clockwise, with no poles or zeros of \(1+L\) on \(\Gamma\). Let \(Z\) and \(P\) be the numbers of zeros and poles of \(1+L\) inside \(\Gamma\), each counted with multiplicity. Then the image contour \((1+L)(\Gamma)\) encircles the origin
 \[
 N = Z - P
@@ -3633,6 +3642,7 @@ Choose \(\Gamma\) to be the **Nyquist contour**: the imaginary axis from \(-j\in
 ### The Criterion
 
 <div class="theorem">
+
 **Theorem 27.2 (Nyquist).** For the unity-feedback loop with \(L(s)\) having \(P\) open-loop poles in the open right half-plane and none on the imaginary axis, the closed-loop transfer function \(L/(1+L)\) has
 \[
 Z = N + P
@@ -3681,6 +3691,7 @@ with \(N\) typically 5–20. Many industrial controllers also use **setpoint wei
 ### Ziegler–Nichols Tuning
 
 <div class="definition">
+
 **Ziegler–Nichols step-response method.** Apply a step to the open-loop plant, identify dead time \(L\) and reaction slope \(R\) on the tangent line at the inflection point (see Chapter 30), and set
 \[
 \begin{array}{lcccc}
@@ -3693,6 +3704,7 @@ with \(N\) typically 5–20. Many industrial controllers also use **setpoint wei
 </div>
 
 <div class="definition">
+
 **Ziegler–Nichols ultimate-gain method.** With \(K_i=K_d=0\), raise \(K_p\) until the loop oscillates at sustained amplitude with gain \(K_u\) and period \(T_u\). Set
 \[
 \begin{array}{lccc}
@@ -3794,5 +3806,7 @@ K_u \approx \frac{4d}{\pi a}, \qquad T_u \approx \text{observed period},
 directly giving the ultimate-gain parameters used by Ziegler–Nichols. This test is safe (the closed loop stays bounded), fast (one period), and automatable; it is the foundation of commercial "autotune" buttons on industrial PID controllers.
 
 <div class="remark">
+
 **Where to go next.** Readers who have absorbed Parts I–III can move to multivariable control (Doyle, Francis, Tannenbaum, *Feedback Control Theory*), robust and \(H_\infty\) control (Zhou, Doyle, Glover), or nonlinear control (Khalil, *Nonlinear Systems*). The state-space language of Part II and the frequency-domain language of Part III are genuinely complementary: modern robust-control theory is explicitly built on their synthesis via the small-gain theorem and the Youla parametrisation.
+
 </div>

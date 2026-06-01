@@ -1900,6 +1900,7 @@ Each group expresses the ratio of two physical effects, and the flow regime is g
 ### Similitude
 
 <div class="definition">
+
 Two flows are in **similitude** if they satisfy, in order of increasing strength:
 <ol>
 <li><strong>Geometric similarity</strong>: model and prototype have identical shape up to a length scale \(\lambda_L\).</li>
@@ -1992,6 +1993,7 @@ For engineering purposes, one packages the pressure drop over a length \(L\) of 
 \Delta p = f\,\frac{L}{D}\,\frac{\rho U^2}{2}, \qquad h_f = f\,\frac{L}{D}\,\frac{U^2}{2g},
 \]
 where \(U = Q/A\) is the area-averaged velocity and \(f\) is the **Darcy friction factor**.
+
 </div>
 
 Comparing with the Hagen–Poiseuille result gives, for laminar flow,

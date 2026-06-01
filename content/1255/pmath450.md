@@ -710,10 +710,12 @@ is surjective (and hence an isometric isomorphism).
 
 <div class="proof">
 <strong>Proof.</strong> We have \( (L^p)^* \cong L^q \) (by the Riesz representation theorem) and \( (L^q)^* \cong L^p \) (by the same theorem, since \( 1/q + 1/p = 1 \) and \( 1 < q < \infty \)). Thus \( (L^p)^{**} \cong (L^q)^* \cong L^p \). One verifies that the double dual identification is indeed the canonical embedding \( \iota \), so \( L^p \) is reflexive.
+
 </div>
 
 <div class="remark">
 The spaces \( L^1 \) and \( L^\infty \) are generally <em>not</em> reflexive. We have \( (L^1)^* \cong L^\infty \), but \( (L^\infty)^* \supsetneq L^1 \), so \( (L^1)^{**} \cong (L^\infty)^* \not\cong L^1 \) in general.
+
 </div>
 
 ---

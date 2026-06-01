@@ -1882,12 +1882,14 @@ This illustrates a fundamental principle: the Legendre transform converts "curva
 <em>Proof of the Fenchel–Moreau theorem.</em> By definition, \(f^{**}(x) = \sup_y (\langle x, y \rangle - f^*(y)) = \sup_y \inf_z (\langle x, y \rangle - \langle z, y \rangle + f(z))\). Since \(\inf_z \sup_y \geq \sup_y \inf_z\) always (minimax inequality), and for convex lsc \(f\) the minimax is attained (by the saddle-point theorem for convex-concave functions), we get \(f^{**}(x) \leq f(x)\).
 
 For the reverse, notice that \(f^{**}(x) = \sup\{l(x) : l \text{ affine}, l \leq f\}\) (supremum over all affine minorants of \(f\)). Since convex lsc functions are pointwise suprema of their affine minorants (by the Hahn–Banach theorem), we get \(f^{**}(x) = f(x)\).
+
 </div>
 
 <div class="remark">
 <strong>The Fenchel–Moreau theorem as a perfect duality.</strong> The biconjugate theorem says: "the Legendre transform of the Legendre transform is the identity, for convex lsc functions." This is the analogue of the bipolar theorem \((K^\circ)^\circ = K\) for convex bodies. The condition "convex and lower semicontinuous" is analogous to "closed convex containing the origin" — both are the conditions ensuring that the object is already as "closed" as possible in the appropriate topology.
 
 Geometrically: \(f^{**}(x)\) is the convex lower semicontinuous envelope of \(f\) — the largest convex lsc function below \(f\). If \(f\) is already convex and lsc, this envelope equals \(f\) itself.
+
 </div>
 
 ## 8.2b Computing the Legendre Transform: Worked Examples in \(\mathbb{R}^n\)

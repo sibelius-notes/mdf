@@ -439,6 +439,7 @@ Informally, \(\mathcal{C}^{\mathrm{op}}\) is \(\mathcal{C}\) with all arrows rev
 
 <div class="example">
 <strong>Example 4.2 (The Dual Vector Space Functor).</strong> The assignment \(V \mapsto V^* = \mathrm{Hom}_k(V, k)\) is a contravariant functor \((-)^* : \mathbf{Vect}_k \to \mathbf{Vect}_k\), equivalently a covariant functor \((-)^* : \mathbf{Vect}_k^{\mathrm{op}} \to \mathbf{Vect}_k\). A linear map \(T : V \to W\) induces the <em>transpose</em> \(T^* : W^* \to V^*\) (note the reversal!) by \(T^*(\phi) = \phi \circ T\). The double dual is then a covariant functor and the evaluation map \(\eta : \mathrm{Id} \Rightarrow (-)^{**}\) is the natural isomorphism of Example 3.2.
+
 </div>
 
 <div class="example">

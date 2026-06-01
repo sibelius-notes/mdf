@@ -241,6 +241,7 @@ An equally remarkable example is <strong>James' space</strong> \( J \), the subs
 \sup_{n_1 < n_2 < \cdots < n_k} \left[(x_{n_1} - x_{n_2})^2 + (x_{n_2} - x_{n_3})^2 + \cdots + (x_{n_{k-1}} - x_{n_k})^2\right]^{1/2} < \infty.
 \]
 James' space is isometrically isomorphic to its own double dual \( J^{**} \), yet is <em>not reflexive</em> — it sits as a proper closed subspace of codimension one in \( J^{**} \). This answered (negatively) the conjecture that isomorphic identification with the double dual forces reflexivity.
+
 </div>
 
 ## Bounded Linear Operators
@@ -318,6 +319,7 @@ x = \sum_{n=1}^\infty x_n e_n, \quad x_n \in \mathbb{K}.
 
 <div class="definition">
 <strong>Definition 1.I (Canonical embedding and reflexivity).</strong> Let \( X \) be a normed linear space. For \( z \in X \), define \( \hat{z} : X^* \to \mathbb{K} \) by \( \hat{z}(x^*) = x^*(z) \). The map \( J : X \to X^{**} \), \( J(z) = \hat{z} \), is the <strong>canonical embedding</strong> of \( X \) into its double dual. The map \( J \) is a linear isometry (after the Hahn-Banach Theorem is established). If \( J \) is surjective (an isometric bijection onto \( X^{**} \)), then \( X \) is called <strong>reflexive</strong>.
+
 </div>
 
 Reflexivity is a powerful structural property: reflexive Banach spaces have weakly compact unit balls (by the Banach-Alaoglu Theorem), which enables many compactness arguments. The spaces \( \ell^p \) for \( 1 < p < \infty \) are reflexive; \( \ell^1 \), \( \ell^\infty \), and \( c_0 \) are not.
@@ -1307,6 +1309,7 @@ The classical Hahn-Banach theorems extend dominated or bounded linear functional
 \overline{W} = \bigcap \{ \ker f : f \in V^*, \; W \subseteq \ker f \}.
 \]
 In particular: (a) \( W \) is dense iff \( f \in V^* \) and \( f|_W = 0 \) implies \( f = 0 \); (b) the canonical embedding \( J : X \to X^{**} \) is an isometry (so \( \|x\| = \sup\{|x^*(x)| : x^* \in X^*, \|x^*\| \leq 1\} \)).
+
 </div>
 
 <div class="corollary">
@@ -1387,6 +1390,7 @@ This is a profound result: for convex sets, norm closure and weak closure agree.
 
 <div class="theorem">
 <strong>Theorem 8.10 (Goldstein's Theorem).</strong> Let \( X \) be a Banach space and \( J : X \to X^{**} \) the canonical embedding. Then \( J(X_1) \) is weak\( ^* \)-dense in \( X_1^{**} \) (where \( X_1, X_1^{**} \) denote the respective closed unit balls). Consequently, \( J(X) \) is weak\( ^* \)-dense in \( X^{**} \).
+
 </div>
 
 <div class="proposition">

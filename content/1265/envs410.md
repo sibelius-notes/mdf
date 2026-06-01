@@ -149,7 +149,9 @@ Loewen et al.'s analysis of data colonialism and climate AI extends the critique
 </div>
 
 <div class="remark">
+
 The concept of **relational accountability** in Indigenous research ethics, developed by Indigenous scholars including Linda Tuhiwai Smith and Shawn Wilson, provides a useful counterpoint to the extractive data model. Relational accountability holds that research relationships — including the relationships between researchers, communities, data, and the land — carry ongoing ethical obligations that do not terminate with the publication of a paper or the deposit of data in a repository. Applied to AI for climate, relational accountability would require not only consent at the point of data collection but sustained relationships between AI development teams and the communities whose knowledge and territories are involved, and mechanisms for those communities to participate in decisions about how AI systems are developed, evaluated, and deployed.
+
 </div>
 
 # Chapter 7: Environmental Justice and the AI Infrastructure Chain

@@ -2204,7 +2204,9 @@ Cohen 与 Felson（1979）的**日常活动理论**（routine activity theory）
 **节点三：第一次与成年犯罪者的稳定接触**。日常活动理论指出，犯罪机会的发生需要犯罪者与目标的汇聚；但犯罪社会化理论指出，更危险的汇聚是青少年与"高犯罪技能成年人"的稳定接触关系。这一节点是家庭与社区监督可以实际介入的窗口。
 
 <div class="remark">
+
 **方法论与伦理边界**：本补充对财产犯罪升级路径的机制描述，是对已有案例模式的学术还原，而非操作指南或犯罪的病理化论断。需要明确区分以下两类陈述：（a）"犯罪技能习得遵循可预测的社会化路径"——这是一个关于机制的实证性描述；（b）"犯罪能力的拥有者具有固定的犯罪人格"——这是一个被本课程第7—10章明确质疑的类型学断言。两者之间的区别，直接影响干预设计的伦理取向：前者导向发展性干预（改变轨迹），后者导向标签性排斥（固化身份）。（参见：Cohen, L. E., & Felson, M. (1979). Social change and crime rate trends: A routine activity approach. *American Sociological Review*, 44(4), 588–608；Sutherland, E. H. (1939). *Principles of Criminology* (3rd ed.). Lippincott；Maruna, S. (2001). *Making Good: How Ex-Convicts Reform and Rebuild Their Lives*. APA；Gilligan, J. (1996). *Violence: Reflections on a National Epidemic*. Vintage。）
+
 </div>
 
 ---

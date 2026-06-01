@@ -133,6 +133,7 @@ Player I wins if \( \bigcap_n V_n \cap A \neq \emptyset \); Player II wins if \(
 
 <div class="theorem">
 <strong>Theorem (Banach-Oxtoby).</strong> In a Polish space \( X \), Player II has a winning strategy in \( \mathbf{G}^{**}(A) \) if and only if \( A \) is meager. Player I has a winning strategy if and only if \( A \) is comeager in some nonempty open set.
+
 </div>
 
 This result has striking consequences. It shows that the notion of meagerness is invariant under the "projective" operations that appear throughout descriptive set theory — a set defined by a game where one player can force the outcome into the set must have the Baire property. The Banach-Mazur game is the prototype for the Gale-Stewart and other determinacy games that appear in the deeper parts of the subject.
